@@ -32,15 +32,15 @@ ship "Bounder"
     "fuel capacity" 900
     "cargo space" 40
     "outfit space" 220
-    "weapon capacity" 50
-    "engine capacity" 110
+    "weapon capacity" 45
+    "engine capacity" 100
     weapon
       "blast radius" 30
       "shield damage" 300
       "hull damage" 150
       "hit force" 450
   outfits
-    "Blaster Turret" 2
+    "Anti-Missile Turret" 2
     "nGVF-CC Fuel Cell"
     "LP036a Battery Pack"
     "D14-RN Shield Generator"
@@ -49,8 +49,8 @@ ship "Bounder"
     "Hyperdrive"
   engine -12 44
   engine 12 44
-  turret -37 4 "Blaster Turret"
-  turret 37 4 "Blaster Turret"
+  turret -37 4 "Anti-Missile Turret"
+  turret 37 4 "Anti-Missile Turret"
   leak "leak" 60 50
   explode "tiny explosion" 10
   explode "small explosion" 20
@@ -60,8 +60,7 @@ ship "Bounder"
 
 ship "Bounder" "Bounder (Hai)"
   outfits
-    "Pulse Turret"
-    "Bullfrog Anti-Missile"
+    "Bullfrog Anti-Missile" 2
     "Pebble Core"
     "Hai Fissure Batteries"
     "D14-RN Shield Generator"
