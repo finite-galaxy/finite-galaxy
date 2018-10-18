@@ -17,14 +17,12 @@ ship "Quarg Skylark"
     "drag" 12.3
     "heat dissipation" .7
     "fuel capacity" 1000
-    "ramscoop" 10
     "cargo space" 200
-    "outfit space" 600
+    "outfit space" 750
     "weapon capacity" 200
     "engine capacity" 120
-    "energy generation" 85
-    "hull repair rate" 5
-    "hull energy" 5
+    "ramscoop" 10
+    "asteroid scan power" 100
     weapon
       "blast radius" 250
       "shield damage" 1000
@@ -33,12 +31,15 @@ ship "Quarg Skylark"
   outfits
     "Quarg Skylance" 2
     "Quarg Anti-Missile" 2
-    "Nanotech Battery"
     "Quantum Shield Generator"
-    "Intrusion Countermeasures" 120
+    "Quantum Hull Repair"
+    "Antimatter Core"
+    "Nanotech Battery"
+    "Neutrino Cooling"
     "Medium Graviton Thruster"
     "Medium Graviton Steering"
     "Jump Drive"
+    "Intrusion Countermeasures" 120
   engine -15 117
   engine 15 117
   turret -12 -80 "Quarg Skylance"
@@ -68,14 +69,12 @@ ship "Quarg Wardragon"
     "drag" 9.3
     "heat dissipation" .5
     "fuel capacity" 800
-    "ramscoop" 10
     "cargo space" 50
-    "outfit space" 600
+    "outfit space" 800
     "weapon capacity" 200
     "engine capacity" 120
-    "energy generation" 85
-    "hull repair rate" 5
-    "hull energy" 5
+    "ramscoop" 10
+    "tactical scan power" 100
     weapon
       "blast radius" 250
       "shield damage" 1000
@@ -84,12 +83,15 @@ ship "Quarg Wardragon"
   outfits
     "Quarg Skylance" 2
     "Quarg Anti-Missile" 2
-    "Nanotech Battery"
     "Quantum Shield Generator"
-    "Intrusion Countermeasures" 160
+    "Quantum Hull Repair"
+    "Antimatter Core"
+    "Nanotech Battery"
+    "Neutrino Cooling"
     "Medium Graviton Thruster"
     "Medium Graviton Steering"
     "Jump Drive"
+    "Intrusion Countermeasures" 120
   engine -14 47
   engine 14 47
   turret -29 6 "Quarg Skylance"
@@ -103,4 +105,3 @@ ship "Quarg Wardragon"
   explode "huge explosion" 20
   "final explode" "final explosion medium"
   description "The Wardragon is used by the Quarg as a light warship."
-
