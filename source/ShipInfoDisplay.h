@@ -58,6 +58,7 @@ private:
 	
 private:
 	std::vector<std::string> tableLabels;
+	std::vector<std::string> fuelTable;
 	std::vector<std::string> energyTable;
 	std::vector<std::string> heatTable;
 	
