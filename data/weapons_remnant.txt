@@ -1,241 +1,241 @@
 outfit "Inhibitor Cannon"
-	category "Guns"
-	licenses
-		Remnant
-	cost 471000
-	thumbnail "outfit/inhibitor cannon"
-	"mass" 16
-	"outfit space" -16
-	"weapon capacity" -16
-	"gun ports" -1
-	weapon
-		sprite "projectile/inhibitor"
-			"frame rate" 10
-			"no repeat"
-		sound "inhibitor"
-		"hit effect" "inhibitor impact" 3
-		"inaccuracy" .5
-		"velocity" 36
-		"random velocity" .5
-		"lifetime" 24
-		"reload" 13
-		"cluster"
-		"firing energy" 26
-		"firing heat" 45.5
-		"firing force" 13
-		"shield damage" 26
-		"hull damage" 19.5
-		"hit force" 39
-		"slowing damage" .5
-	description `Nearly a century ago, a Remnant scout exploring space north of the Ember Waste came under fire from an alien fleet armed with weapons that interfered with the scout's engines. The story says that the Remnant captain calmly told her crew, "We aren't going home until we steal that weapon." That alien technology became the basis of the Inhibitor Cannon.`
+  category "Guns"
+  licenses
+    Remnant
+  cost 471000
+  thumbnail "outfit/inhibitor cannon"
+  "mass" 16
+  "outfit space" -16
+  "weapon capacity" -16
+  "gun ports" -1
+  weapon
+    sprite "projectile/inhibitor"
+      "frame rate" 10
+      "no repeat"
+    sound "inhibitor"
+    "hit effect" "inhibitor impact" 3
+    "inaccuracy" .5
+    "velocity" 36
+    "random velocity" .5
+    "lifetime" 24
+    "reload" 13
+    "cluster"
+    "firing energy" 26
+    "firing heat" 45.5
+    "firing force" 13
+    "shield damage" 26
+    "hull damage" 19.5
+    "hit force" 39
+    "slowing damage" .5
+  description `Nearly a century ago, a Remnant scout exploring space north of the Ember Waste came under fire from an alien fleet armed with weapons that interfered with the scout's engines. The story says that the Remnant captain calmly told her crew, "We aren't going home until we steal that weapon." That alien technology became the basis of the Inhibitor Cannon.`
 
 effect "inhibitor impact"
-	sprite "effect/inhibitor impact"
-		"frame rate" 30
-		"no repeat"
-	"lifetime" 11
-	"velocity scale" -.05
-	"random angle" 360
-	"random velocity" 6
-	"random frame rate" 15
+  sprite "effect/inhibitor impact"
+    "frame rate" 30
+    "no repeat"
+  "lifetime" 11
+  "velocity scale" -.05
+  "random angle" 360
+  "random velocity" 6
+  "random frame rate" 15
 
 
 outfit "Thrasher Cannon"
-	category "Guns"
-	licenses
-		Remnant
-	cost 218000
-	thumbnail "outfit/thrasher cannon"
-	"mass" 10
-	"outfit space" -10
-	"weapon capacity" -10
-	"gun ports" -1
-	weapon
-		sprite "projectile/thrasher"
-			"frame rate" 10
-			"random start frame"
-			"no repeat"
-		sound "particle"
-		"hit effect" "thrasher impact"
-		"inaccuracy" 9
-		"velocity" 10
-		"lifetime" 36
-		"reload" 20
-		"firing energy" 36
-		"firing heat" 27
-		"shield damage" 38
-		"hull damage" 46
-	description "This weapon was originally developed in an attempt to reverse engineer a long-range energy projectile favored by an alien species that the Remnant encountered nearby. In the process they discovered that by adding more energy to the projectiles they could do a lot more damage in exchange for shorter range, and the Thrasher Cannon was born."
+  category "Guns"
+  licenses
+    Remnant
+  cost 218000
+  thumbnail "outfit/thrasher cannon"
+  "mass" 10
+  "outfit space" -10
+  "weapon capacity" -10
+  "gun ports" -1
+  weapon
+    sprite "projectile/thrasher"
+      "frame rate" 10
+      "random start frame"
+      "no repeat"
+    sound "particle"
+    "hit effect" "thrasher impact"
+    "inaccuracy" 9
+    "velocity" 10
+    "lifetime" 36
+    "reload" 20
+    "firing energy" 36
+    "firing heat" 27
+    "shield damage" 38
+    "hull damage" 46
+  description "This weapon was originally developed in an attempt to reverse engineer a long-range energy projectile favored by an alien species that the Remnant encountered nearby. In the process they discovered that by adding more energy to the projectiles they could do a lot more damage in exchange for shorter range, and the Thrasher Cannon was born."
 
 effect "thrasher impact"
-	sprite "effect/thrasher impact"
-		"frame rate" 30
-		"no repeat"
-	"lifetime" 11
-	"velocity scale" -.1
-	"random angle" 360
-	"random spin" 30
-	"random velocity" 3
+  sprite "effect/thrasher impact"
+    "frame rate" 30
+    "no repeat"
+  "lifetime" 11
+  "velocity scale" -.1
+  "random angle" 360
+  "random spin" 30
+  "random velocity" 3
 
 
 outfit "Thrasher Turret"
-	category "Turrets"
-	licenses
-		Remnant
-	cost 980000
-	thumbnail "outfit/thrasher turret"
-	"mass" 49
-	"outfit space" -49
-	"weapon capacity" -49
-	"required crew" 1
-	"turret mounts" -1
-	weapon
-		sprite "projectile/thrasher"
-			"frame rate" 10
-			"random start frame"
-			"no repeat"
-		"hardpoint sprite" "hardpoint/thrasher turret"
-		"hardpoint offset" 6.
-		sound "particle"
-		"hit effect" "thrasher impact"
-		"inaccuracy" 6
-		"turret turn" 2.4
-		"velocity" 10
-		"lifetime" 36
-		"reload" 5
-		"firing energy" 36
-		"firing heat" 27
-		"shield damage" 38
-		"hull damage" 46
-	description "This turret mounts four Thrasher Cannons on a single rotating base. The resulting weapon deals a very satisfying amount of damage when fired from close range, especially against a slow-moving target."
+  category "Turrets"
+  licenses
+    Remnant
+  cost 980000
+  thumbnail "outfit/thrasher turret"
+  "mass" 49
+  "outfit space" -49
+  "weapon capacity" -49
+  "required crew" 1
+  "turret mounts" -1
+  weapon
+    sprite "projectile/thrasher"
+      "frame rate" 10
+      "random start frame"
+      "no repeat"
+    "hardpoint sprite" "hardpoint/thrasher turret"
+    "hardpoint offset" 6.
+    sound "particle"
+    "hit effect" "thrasher impact"
+    "inaccuracy" 6
+    "turret turn" 2.4
+    "velocity" 10
+    "lifetime" 36
+    "reload" 5
+    "firing energy" 36
+    "firing heat" 27
+    "shield damage" 38
+    "hull damage" 46
+  description "This turret mounts four Thrasher Cannons on a single rotating base. The resulting weapon deals a very satisfying amount of damage when fired from close range, especially against a slow-moving target."
 
 
 outfit "Point Defense Turret"
-	category "Turrets"
-	licenses
-		Remnant
-	cost 1120000
-	thumbnail "outfit/point defense"
-	"mass" 33
-	"outfit space" -33
-	"weapon capacity" -33
-	"turret mounts" -1
-	weapon
-		"hardpoint sprite" "hardpoint/point defense"
-		"fire effect" "point defense fire"
-		"die effect" "point defense hit"
-		"die effect" "point defense die"
-		"anti-missile" 42
-		"velocity" 270
-		"lifetime" 1
-		"reload" 10
-		"firing energy" 62
-		"firing heat" 18
-	description "Not long after the Remnant settled on Aventine, they began to discover caches of alien technology in vaults deep under the mountains, guarded by ancient but still-functioning point-defense systems. The Remnant learned how to duplicate those defense systems, and they are now considered to be much more useful than most of the items that they were guarding."
+  category "Turrets"
+  licenses
+    Remnant
+  cost 1120000
+  thumbnail "outfit/point defense"
+  "mass" 33
+  "outfit space" -33
+  "weapon capacity" -33
+  "turret mounts" -1
+  weapon
+    "hardpoint sprite" "hardpoint/point defense"
+    "fire effect" "point defense fire"
+    "die effect" "point defense hit"
+    "die effect" "point defense die"
+    "anti-missile" 42
+    "velocity" 270
+    "lifetime" 1
+    "reload" 10
+    "firing energy" 62
+    "firing heat" 18
+  description "Not long after the Remnant settled on Aventine, they began to discover caches of alien technology in vaults deep under the mountains, guarded by ancient but still-functioning point-defense systems. The Remnant learned how to duplicate those defense systems, and they are now considered to be much more useful than most of the items that they were guarding."
 
 effect "point defense fire"
-	sprite "effect/point defense fire"
-		"frame rate" 17
-		"no repeat"
-	"velocity scale" .5
-	lifetime 10
+  sprite "effect/point defense fire"
+    "frame rate" 17
+    "no repeat"
+  "velocity scale" .5
+  lifetime 10
 
 effect "point defense hit"
-	sprite "effect/point defense hit"
-		"frame rate" 13
-		"no repeat"
-	lifetime 10
-	"velocity scale" .2
+  sprite "effect/point defense hit"
+    "frame rate" 13
+    "no repeat"
+  lifetime 10
+  "velocity scale" .2
 
 effect "point defense die"
-	sprite "effect/point defense die"
-		"frame rate" 20
-		"no repeat"
-	lifetime 15
-	"velocity scale" .2
+  sprite "effect/point defense die"
+    "frame rate" 20
+    "no repeat"
+  lifetime 15
+  "velocity scale" .2
 
 
 outfit "EMP Torpedo"
-	plural "EMP Torpedoes"
-	category "Ammunition"
-	cost 4400
-	thumbnail "outfit/emp torpedo"
-	"mass" 1
-	"emp torpedo capacity" -1
-	description "This is ammunition for the EMP Torpedo Bay, a weapon that is manufactured by the Remnant."
+  plural "EMP Torpedoes"
+  category "Ammunition"
+  cost 4400
+  thumbnail "outfit/emp torpedo"
+  "mass" 1
+  "emp torpedo capacity" -1
+  description "This is ammunition for the EMP Torpedo Bay, a weapon that is manufactured by the Remnant."
 
 outfit "EMP Torpedo Bay"
-	category "Secondary Weapons"
-	licenses
-		Remnant
-	cost 583000
-	thumbnail "outfit/emp torpedo bay"
-	"mass" 9
-	"outfit space" -18
-	"weapon capacity" -18
-	"gun ports" -1
-	"emp torpedo capacity" 9
-	weapon
-		sprite "projectile/emp torpedo"
-			"frame rate" 2
-			"no repeat"
-		sound "torpedo"
-		ammo "EMP Torpedo"
-		icon "icon/emp"
-		"fire effect" "emp torpedo fire" 5
-		"hit effect" "nuke explosion"
-		"hit effect" "emp ring" 30
-		"hit effect" "emp spark" 20
-		"die effect" "tiny explosion"
-		stream
-		"reload" 330
-		"firing energy" 400
-		"firing heat" 18
-		"inaccuracy" 5
-		"lifetime" 300
-		"velocity" 7
-		"acceleration" .7
-		"drag" .1
-		"turn" 2
-		"homing" 3
-		"infrared tracking" .7
-		"radar tracking" .8
-		"trigger radius" 50
-		"blast radius" 200
-		"shield damage" 700
-		"hull damage" 100
-		"ion damage" 48
-		"hit force" 90
-		"missile strength" 80
-	description "Electromagnetic pulse weapons were developed by the Remnant during the early days of their colony, when they were living in fear that the Alphas would overrun human space and expand beyond it."
+  category "Secondary Weapons"
+  licenses
+    Remnant
+  cost 583000
+  thumbnail "outfit/emp torpedo bay"
+  "mass" 9
+  "outfit space" -18
+  "weapon capacity" -18
+  "gun ports" -1
+  "emp torpedo capacity" 9
+  weapon
+    sprite "projectile/emp torpedo"
+      "frame rate" 2
+      "no repeat"
+    sound "torpedo"
+    ammo "EMP Torpedo"
+    icon "icon/emp"
+    "fire effect" "emp torpedo fire" 5
+    "hit effect" "nuke explosion"
+    "hit effect" "emp ring" 30
+    "hit effect" "emp spark" 20
+    "die effect" "tiny explosion"
+    stream
+    "reload" 330
+    "firing energy" 400
+    "firing heat" 18
+    "inaccuracy" 5
+    "lifetime" 300
+    "velocity" 7
+    "acceleration" .7
+    "drag" .1
+    "turn" 2
+    "homing" 3
+    "infrared tracking" .7
+    "radar tracking" .8
+    "trigger radius" 50
+    "blast radius" 200
+    "shield damage" 700
+    "hull damage" 100
+    "ion damage" 48
+    "hit force" 90
+    "missile strength" 80
+  description "Electromagnetic pulse weapons were developed by the Remnant during the early days of their colony, when they were living in fear that the Alphas would overrun human space and expand beyond it."
 
 effect "emp torpedo fire"
-	sprite "effect/emp torpedo fire"
-		"no repeat"
-		"frame rate" 10
-	"lifetime" 31
-	"random frame rate" 10
-	"random velocity" 7
-	"random angle" 10
-	"random spin" 2
+  sprite "effect/emp torpedo fire"
+    "no repeat"
+    "frame rate" 10
+  "lifetime" 31
+  "random frame rate" 10
+  "random velocity" 7
+  "random angle" 10
+  "random spin" 2
 
 effect "emp ring"
-	sprite "effect/emp ring"
-		"no repeat"
-		"frame rate" 12
-	"lifetime" 60
-	"random frame rate" 6
-	"velocity scale" 0.1
-	"random angle" 360
-	"random velocity" 4
+  sprite "effect/emp ring"
+    "no repeat"
+    "frame rate" 12
+  "lifetime" 60
+  "random frame rate" 6
+  "velocity scale" 0.1
+  "random angle" 360
+  "random velocity" 4
 
 effect "emp spark"
-	sprite "effect/emp spark"
-		"no repeat"
-		"frame rate" 8
-	"lifetime" 45
-	"random frame rate" 6
-	"velocity scale" 0.1
-	"random angle" 360
-	"random velocity" 7
+  sprite "effect/emp spark"
+    "no repeat"
+    "frame rate" 8
+  "lifetime" 45
+  "random frame rate" 6
+  "velocity scale" 0.1
+  "random angle" 360
+  "random velocity" 7
 
