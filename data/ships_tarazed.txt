@@ -301,9 +301,8 @@ ship "Kestrel"
       "hull damage" 1300
       "hit force" 3900
   outfits
-    "Particle Cannon" 4
-    "Torpedo Launcher" 2
-    "Torpedo" 60
+    "Torpedo Launcher" 6
+    "Torpedo" 180
     "Heavy Laser Turret" 4
     "Fusion Reactor"
     "LP144a Battery Pack"
@@ -314,10 +313,10 @@ ship "Kestrel"
     "Hyperdrive"
   engine -14 177
   engine 14 177
-  gun -31 66 "Particle Cannon"
-  gun 31 66 "Particle Cannon"
-  gun -53 61 "Particle Cannon"
-  gun 53 61 "Particle Cannon"
+  gun -31 66 "Torpedo Launcher"
+  gun 31 66 "Torpedo Launcher"
+  gun -53 61 "Torpedo Launcher"
+  gun 53 61 "Torpedo Launcher"
   gun -75 57 "Torpedo Launcher"
   gun 75 57 "Torpedo Launcher"
   turret -7 -4 "Heavy Laser Turret"
@@ -593,18 +592,18 @@ ship "Unknown Ship Type"
   sprite "ship/kestrel"
   attributes
     category "Heavy Warship"
-    "cost" 10300000
+    "cost" 14700000
     "shields" 17400
     "hull" 6200
-    "required crew" 72
+    "required crew" 64
     "bunks" 128
     "mass" 740
-    "drag" 12.5
-    "heat dissipation" .45
+    "drag" 9.8
+    "heat dissipation" .6
     "fuel capacity" 500
     "cargo space" 120
-    "outfit space" 810
-    "weapon capacity" 380
+    "outfit space" 820
+    "weapon capacity" 390
     "engine capacity" 210
     weapon
       "blast radius" 260
@@ -612,9 +611,8 @@ ship "Unknown Ship Type"
       "hull damage" 1300
       "hit force" 3900
   outfits
-    "Particle Cannon" 4
-    "Torpedo Launcher" 2
-    "Torpedo" 60
+    "Torpedo Launcher" 6
+    "Torpedo" 180
     "Heavy Laser Turret" 4
     "Fusion Reactor"
     "LP144a Battery Pack"
@@ -625,10 +623,10 @@ ship "Unknown Ship Type"
     "Hyperdrive"
   engine -14 177
   engine 14 177
-  gun -31 66 "Particle Cannon"
-  gun 31 66 "Particle Cannon"
-  gun -53 61 "Particle Cannon"
-  gun 53 61 "Particle Cannon"
+  gun -31 66 "Torpedo Launcher"
+  gun 31 66 "Torpedo Launcher"
+  gun -53 61 "Torpedo Launcher"
+  gun 53 61 "Torpedo Launcher"
   gun -75 57 "Torpedo Launcher"
   gun 75 57 "Torpedo Launcher"
   turret -7 -4 "Heavy Laser Turret"
