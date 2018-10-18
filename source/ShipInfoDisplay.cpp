@@ -280,6 +280,15 @@ void ShipInfoDisplay::UpdateAttributes(const Ship &ship, const Depreciation &dep
 			+ attributes.Get("turning heat")
 			+ attributes.Get("afterburner heat"))));
 	attributesHeight += 20;
+
+	if(attributes.Get("cloak"))
+	{
+		tableLabels.push_back("cloaking:");
+		energyTable.push_back(Format::Number(-60. * attributes.Get("cloaking energy")));
+		heatTable.push_back(Format::Number(60. * attributes.Get("cloaking heat")));
+		attributesHeight += 20;
+	}
+	
 	double firingEnergy = 0.;
 	double firingHeat = 0.;
 	for(const auto &it : ship.Outfits())
