@@ -41,7 +41,7 @@ ship "Barb"
     "heat dissipation" .78
     "outfit space" 85
     "weapon capacity" 24
-    "engine capacity" 22
+    "engine capacity" 20
     weapon
       "blast radius" 12
       "shield damage" 120
@@ -69,7 +69,7 @@ ship "Barb" "Barb (Gatling)"
     "Gatling Gun Ammo" 3000
     "Anti-Missile Turret"
     "nGVF-AA Fuel Cell"
-    Supercapacitor 3
+    "Supercapacitor" 3
     "D14-RN Shield Generator"
     "X1050 Ion Engines"
 
@@ -77,35 +77,14 @@ ship "Barb" "Barb (Proton)"
   sprite "ship/barbp"
   thumbnail "thumbnail/barbp"
   attributes
-    category "Fighter"
-    "cost" 50000
-    "shields" 800
-    "hull" 200
-    "required crew" 1
-    "bunks" 1
-    "mass" 20
-    "drag" .8
-    "heat dissipation" .78
-    "outfit space" 85
     "weapon capacity" 28
-    "engine capacity" 22
-    weapon
-      "blast radius" 12
-      "shield damage" 120
-      "hull damage" 60
-      "hit force" 180
   outfits
     "Proton Gun"
     "nGVF-AA Fuel Cell"
-    Supercapacitor
+    "Supercapacitor"
     "D14-RN Shield Generator"
     "X1050 Ion Engines"
-  engine -10 28
-  engine 9 28
   gun -9 -29 "Proton Gun"
-  leak "leak" 60 50
-  explode "tiny explosion" 15
-  explode "small explosion" 5
   description `The Barb's commercial success spurred demand for a variant equipped with a Proton Gun. Syndicated Systems had to remove the turret mounting hardware to fit the powerful cannon, but the result is a level of short-range firepower that is unheard-of for a craft its size.`
 
 
