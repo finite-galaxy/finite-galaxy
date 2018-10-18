@@ -1,5 +1,33 @@
+start
+	date 18 10 3018
+	system "Rutilicus"
+	planet "New Boston"
+	account
+		credits 480000
+		score 400
+		mortgage Mortgage
+			principal 480000
+			interest 0.004
+			term 365
+	set "license: Pilot's"
+
+
+
+conversation "intro"
+	scene "scene/lobby"
+	`The bank's architecture is what you would have called "futuristic" back when you dreamed that the future would be less squalid than the present: story above story of curves and spires and balconies, all in gleaming metal. A doorman stands by each of the heavy glass doors. You are wearing your very best clothes, but you feel shabby next to them.`
+	`	The loan broker's office is equally intimidating. Large computer monitors fill the walls, with stock quotes and other information spilling down them almost too fast to read. You occasionally glimpse the names of places that you have only seen in movies: Aldebaran. Tarazed. Earth.`
+	`	The pen is heavy as lead but glides almost without friction as you print your initials on the bottom of page after page of ominous legal documents and sign several dozen statements, notices, and agreements. The banker, a balding middle-aged man in a suit that you suspect costs more than the spaceship you are about to purchase, flips the pages past you quickly, uttering a curt, "Sign here. Now here," as he points to each page. He moves swiftly, mechanically.`
+	`	The only moment when he becomes truly animated is when explaining the Truth in Lending statement to you. "You are borrowing 480,000 credits," he says, "to be repaid over the course of one year. Your daily interest rate is 0.4%, which means that your daily payments are 2,503 credits, and by the end of the year you will have paid... 434,000 credits in interest. Sign here." He grins.`
+	`	You sign your name one final time:`
+	name
+	`	The elevator is so well-tuned that you do not even realize it is moving until it has deposited you back in the lobby. But as you leave the bank, you are smiling. This crazy adventure suddenly feels real to you. You are going to do it. You are finally going to get off this planet.`
+	`	Compared to the bank, you feel much more at home in the shipyard, walking among the rusted out hulks and newer ships that gleam in the sunlight. You smell grease and dirt and rocket fuel; wonderful smells. There are three ship models within your price range. Which one you choose will determine your future...`
+
+
+
 event "remembrance day"
-	date 19 2 3014
+	date 19 2 3019
 
 
 
@@ -21,7 +49,7 @@ mission "remembrance day"
 
 
 event "war begins"
-	date 4 7 3014
+	date 4 7 3019
 	system "Gamma Corvi"
 		government "Free Worlds"
 		fleet "Small Southern Merchants" 600
@@ -138,7 +166,7 @@ mission "event: war begins"
 				decline
 
 event "initial deployment 1"
-	date 24 7 3014
+	date 24 7 3019
 	system "Spica"
 		fleet "Small Southern Merchants" 1200
 		fleet "Large Southern Merchants" 1700
@@ -240,7 +268,7 @@ event "initial deployment 1"
 		description `The Navy has recently requisitioned one of the abandoned mining towns and begun refurbishing it for a secure military base, with the mining tunnels used as deep underground bunkers.`
 
 event "initial deployment 2"
-	date 14 8 3014
+	date 14 8 3019
 	planet "Martini"
 		"required reputation" 10
 	system "Izar"
@@ -409,7 +437,7 @@ event "initial deployment 2"
 		fleet "Navy Surveillance" 1600
 
 event "initial deployment 3"
-	date 29 8 3014
+	date 29 8 3019
 	system "Zubenelgenubi"
 		fleet "Small Southern Merchants" 500
 		fleet "Large Southern Merchants" 900
@@ -645,7 +673,7 @@ event "southern carriers 4"
 			"Lance (Gatling)" 4
 
 event "initial deployment 4"
-	date 17 9 3014
+	date 17 9 3019
 	planet "Geminus"
 		"required reputation" 10
 	system "Sargas"
