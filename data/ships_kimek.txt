@@ -1,0 +1,193 @@
+shipyard "Kimek Variants"
+  "Kimek Briar"
+  "Kimek Spire"
+  "Kimek Thistle"
+  "Kimek Thorn"
+
+
+
+ship "Kimek Briar"
+  sprite "ship/kimek briar"
+  thumbnail "thumbnail/kimek briar"
+  attributes
+    category "Transport"
+    licenses
+      Coalition
+    "cost" 1532000
+    "shields" 3600
+    "hull" 1700
+    "required crew" 3
+    "bunks" 25
+    "mass" 180
+    "drag" 3.8
+    "heat dissipation" .75
+    "fuel capacity" 700
+    "cargo space" 21
+    "outfit space" 245
+    "weapon capacity" 89
+    "engine capacity" 60
+    weapon
+      "blast radius" 34
+      "shield damage" 340
+      "hull damage" 170
+      "hit force" 510
+  outfits
+    "Small Collector Module" 2
+    "Small Battery Module" 2
+    "Small Shield Module" 2
+    "Large Thrust Module"
+    "Large Steering Module"
+    "Hyperdrive"
+  engine -12 85 .5
+  engine 0 89 1.2
+  engine 12 85 .5
+  gun -10 -52
+  gun 10 -52
+  turret 0 -14
+  explode "tiny explosion" 5
+  explode "small explosion" 20
+  explode "medium explosion" 5
+  "final explode" "final explosion medium"
+  description `With more than twice the population of the Saryds and Arachi combined, the Kimek are constantly in need of transport ships to carry individuals from one world to another.`
+
+ship "Kimek Spire"
+  sprite "ship/kimek spire"
+  thumbnail "thumbnail/kimek spire"
+  attributes
+    category "Transport"
+    licenses
+      Coalition
+    "cost" 9375000
+    "shields" 14200
+    "hull" 4900
+    "required crew" 19
+    "bunks" 197
+    "mass" 570
+    "drag" 8.4
+    "heat dissipation" .60
+    "fuel capacity" 800
+    "cargo space" 64
+    "outfit space" 489
+    "weapon capacity" 256
+    "engine capacity" 129
+    weapon
+      "blast radius" 140
+      "shield damage" 1400
+      "hull damage" 700
+      "hit force" 2100
+  outfits
+    "Large Collector Module"
+    "Small Collector Module"
+    "Large Battery Module"
+    "Large Shield Module"
+    "Small Shield Module"
+    "Large Thrust Module" 2
+    "Large Steering Module" 2
+    "Small Steering Module"
+    "Hyperdrive"
+  engine -22 221 .6
+  engine -10 219 .8
+  engine 10 219 .8
+  engine 22 221 .6
+  gun -14 -183
+  gun 14 -183
+  turret 0 -153
+  turret 0 -43
+  turret -42 131
+  turret 42 131
+  explode "small explosion" 10
+  explode "medium explosion" 30
+  explode "large explosion" 20
+  explode "huge explosion" 5
+  "final explode" "final explosion large"
+  description `The Spire is the largest passenger transport in Coalition space, able to carry nearly two hundred individuals... as long as they're comfortable staying in the tiny bunk rooms that are primarily designed to meet the needs of a Kimek. Most of the ceilings are too short for a Saryd to stand up straight, and the beds are too small for an Arach to stretch their legs out comfortably.`
+
+ship "Kimek Thistle"
+  sprite "ship/kimek thistle"
+  thumbnail "thumbnail/kimek thistle"
+  attributes
+    category "Transport"
+    licenses
+      Coalition
+    "cost" 2904000
+    "shields" 7500
+    "hull" 2800
+    "required crew" 7
+    "bunks" 52
+    "mass" 270
+    "drag" 5.8
+    "heat dissipation" .70
+    "fuel capacity" 700
+    "cargo space" 29
+    "outfit space" 321
+    "weapon capacity" 118
+    "engine capacity" 87
+    weapon
+      "blast radius" 60
+      "shield damage" 600
+      "hull damage" 300
+      "hit force" 900
+  outfits
+    "Large Collector Module"
+    "Small Battery Module"
+    "Small Shield Module" 3
+    "Large Thrust Module"
+    "Small Thrust Module" 2
+    "Large Steering Module"
+    "Small Steering Module"
+    "Hyperdrive"
+  engine -13 120 .7
+  engine 0 123 1
+  engine 13 120 .7
+  gun -11 -92
+  gun 11 -92
+  turret -13 3
+  turret 13 3
+  explode "small explosion" 10
+  explode "medium explosion" 30
+  explode "large explosion" 10
+  "final explode" "final explosion medium"
+  description `The Kimek love traveling so much that some of them will happily spend months at a time in a transport this size, and the passengers often grow into a tight-knit community by the end of their journeys together.`
+
+ship "Kimek Thorn"
+  sprite "ship/kimek thorn"
+  thumbnail "thumbnail/kimek thorn"
+  attributes
+    category "Transport"
+    licenses
+      Coalition
+    "cost" 440000
+    "shields" 1400
+    "hull" 800
+    "required crew" 1
+    "bunks" 7
+    "mass" 80
+    "drag" 1.8
+    "heat dissipation" .80
+    "fuel capacity" 600
+    "cargo space" 12
+    "outfit space" 133
+    "weapon capacity" 40
+    "engine capacity" 38
+    weapon
+      "blast radius" 14
+      "shield damage" 140
+      "hull damage" 70
+      "hit force" 210
+  outfits
+    "Small Collector Module"
+    "Small Battery Module"
+    "Small Shield Module"
+    "Small Thrust Module" 2
+    "Small Steering Module" 2
+    "Hyperdrive"
+  engine -8 41 .7
+  engine 0 43 1
+  engine 8 41 .7
+  gun -8 -23
+  gun 8 -23
+  explode "tiny explosion" 10
+  explode "small explosion" 5
+  "final explode" "final explosion small"
+  description `The Thorn is the Kimek equivalent of a shuttle, and thanks to their speed and maneuverability they are used throughout Coalition space for transferring passengers from one ship to another or from a planet into orbit.`
+

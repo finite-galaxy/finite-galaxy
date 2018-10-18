@@ -1,0 +1,205 @@
+shipyard "Saryd Variants"
+  "Saryd Runabout"
+  "Saryd Sojourner"
+  "Saryd Traveler"
+  "Saryd Visitor"
+
+
+
+ship "Saryd Runabout"
+  sprite "ship/saryd runabout"
+  thumbnail "thumbnail/saryd runabout"
+  attributes
+    category "Light Freighter"
+    licenses
+      Coalition
+    "cost" 942000
+    "shields" 2000
+    "hull" 1400
+    "required crew" 2
+    "bunks" 13
+    "mass" 140
+    "drag" 2.8
+    "heat dissipation" .70
+    "fuel capacity" 400
+    "cargo space" 42
+    "outfit space" 172
+    "weapon capacity" 44
+    "engine capacity" 42
+    weapon
+      "blast radius" 22
+      "shield damage" 220
+      "hull damage" 110
+      "hit force" 330
+  outfits
+    "Small Collector Module" 2
+    "Small Battery Module"
+    "Small Shield Module"
+    "Small Thrust Module" 2
+    "Small Steering Module" 3
+    "Hyperdrive"
+  engine -14 52 1
+  engine 14 52 1
+  gun -21 -4
+  gun 21 -4
+  explode "tiny explosion" 10
+  explode "small explosion" 10
+  "final explode" "final explosion small"
+  description `Saryds place high value both on solitude, but also on community and collaboration. So, it is not surprising that their smallest spacefaring vessel requires a team of at least two individuals to operate it. It is quite common for a lone Saryd to take on a Kimek or Arach copilot as a way of building cross-species friendships.`
+
+
+
+ship "Saryd Sojourner"
+  sprite "ship/saryd sojourner"
+  thumbnail "thumbnail/saryd sojourner"
+  attributes
+    category "Heavy Freighter"
+    licenses
+      Coalition
+    "cost" 11075000
+    "shields" 13000
+    "hull" 7700
+    "required crew" 17
+    "bunks" 84
+    "mass" 640
+    "drag" 12.9
+    "heat dissipation" .50
+    "fuel capacity" 800
+    "cargo space" 260
+    "outfit space" 568
+    "weapon capacity" 202
+    "engine capacity" 156
+    weapon
+      "blast radius" 200
+      "shield damage" 2000
+      "hull damage" 1000
+      "hit force" 3000
+  outfits
+    "Large Collector Module"
+    "Small Collector Module" 3
+    "Large Battery Module"
+    "Large Shield Module"
+    "Small Repair Module" 2
+    "Large Thrust Module" 2
+    "Small Thrust Module" 3
+    "Large Steering Module" 2
+    "Small Steering Module"
+    "Hyperdrive"
+  engine -24 176 .6
+  engine -11 181 .8
+  engine 11 181 .8
+  engine 24 176 .6
+  gun -23 -104
+  gun 23 -104
+  turret -17 -104
+  turret 17 -104
+  turret 0 -96
+  turret 0 157
+  explode "small explosion" 20
+  explode "medium explosion" 30
+  explode "large explosion" 10
+  explode "huge explosion" 10
+  "final explode" "final explosion large"
+  description `When the first wars were fought against the Quarg, the Saryds had been spacefaring for more than ten thousand Earth years, and their starship technology was considerably more advanced than the Kimek or the Arachi. At that time, ships similar to the modern Sojourner were the most powerful capital ships in the Coalition fleet.`
+
+
+
+ship "Saryd Traveler"
+  sprite "ship/saryd traveler"
+  thumbnail "thumbnail/saryd traveler"
+  attributes
+    category "Heavy Freighter"
+    licenses
+      Coalition
+    "cost" 3385000
+    "shields" 6500
+    "hull" 4000
+    "required crew" 10
+    "bunks" 45
+    "mass" 350
+    "drag" 5.5
+    "heat dissipation" .60
+    "fuel capacity" 600
+    "cargo space" 137
+    "outfit space" 466
+    "weapon capacity" 177
+    "engine capacity" 79
+    weapon
+      "blast radius" 72
+      "shield damage" 720
+      "hull damage" 360
+      "hit force" 1080
+  outfits
+    "Small Collector Module" 3
+    "Small Battery Module" 2
+    "Small Shield Module" 2
+    "Small Repair Module"
+    "Large Thrust Module"
+    "Small Thrust Module"
+    "Large Steering Module"
+    "Small Steering Module"
+    "Hyperdrive"
+  engine -30 87 .7
+  engine -21 86 .7
+  engine 21 86 .7
+  engine 30 87 .7
+  gun -32 -18
+  gun 32 -18
+  gun -22 -18
+  gun 22 -18
+  turret -41 9
+  turret 41 9
+  explode "small explosion" 30
+  explode "medium explosion" 20
+  explode "large explosion" 10
+  "final explode" "final explosion medium"
+  description `Travelers were originally designed as science vessels, thousands of years ago before the Saryds had catalogued all the life forms and physical phenomena of every world in Coalition space. Today, many Saryd communities still choose to live in a Traveler and journey together from system to system rather than putting down roots on a planet.`
+
+
+
+ship "Saryd Visitor"
+  sprite "ship/saryd visitor"
+  thumbnail "thumbnail/saryd visitor"
+  attributes
+    category "Light Freighter"
+    licenses
+      Coalition
+    "cost" 1982000
+    "shields" 4000
+    "hull" 2400
+    "required crew" 5
+    "bunks" 29
+    "mass" 270
+    "drag" 4.4
+    "heat dissipation" .65
+    "fuel capacity" 400
+    "cargo space" 98
+    "outfit space" 320
+    "weapon capacity" 90
+    "engine capacity" 57
+    weapon
+      "blast radius" 42
+      "shield damage" 420
+      "hull damage" 210
+      "hit force" 630
+  outfits
+    "Small Collector Module" 2
+    "Small Battery Module" 2
+    "Small Shield Module"
+    "Small Repair Module"
+    "Small Thrust Module" 3
+    "Large Steering Module"
+    "Hyperdrive"
+  engine -23 75 .6
+  engine -11 78 .8
+  engine 11 78 .8
+  engine 23 75 .6
+  gun -15 -51
+  gun 15 -51
+  turret 0 26
+  explode "tiny explosion" 20
+  explode "small explosion" 30
+  explode "medium explosion" 5
+  "final explode" "final explosion medium"
+  description `Rather than specializing in carrying passengers or carrying cargo, Saryds seek to make their ships as well-balanced and versatile as possible. As a result, the crew of a typical Visitor can count on performing a different sort of job every week.`
+

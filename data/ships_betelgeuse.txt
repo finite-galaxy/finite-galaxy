@@ -1,0 +1,611 @@
+shipyard "Betelgeuse Variants"
+  "Behemoth"
+  "Behemoth (Hai)"
+  "Behemoth (Heavy)"
+  "Behemoth (Proton)"
+  "Behemoth (Speedy)"
+  "Berserker"
+  "Berserker (Afterburner)"
+  "Firebird"
+  "Firebird (Hai Shields)"
+  "Firebird (Hai Weapons)"
+  "Firebird (Missile)"
+  "Firebird (Plasma)"
+  "Heavy Shuttle"
+  "Heavy Shuttle (Armed)"
+  "Leviathan"
+  "Leviathan (Hai Engines)"
+  "Leviathan (Hai Weapons)"
+  "Leviathan (Heavy)"
+  "Leviathan (Laser)"
+  "Shuttle"
+  "Star Queen"
+  "Star Queen (Hai)"
+
+
+
+ship "Behemoth"
+  sprite "ship/behemoth"
+  thumbnail "thumbnail/behemoth"
+  attributes
+    category "Heavy Freighter"
+    "cost" 10800000
+    "shields" 7600
+    "hull" 6300
+    "required crew" 12
+    "bunks" 30
+    "mass" 540
+    "drag" 11.7
+    "heat dissipation" .4
+    "fuel capacity" 600
+    "cargo space" 490
+    "outfit space" 510
+    "weapon capacity" 280
+    "engine capacity" 90
+    weapon
+      "blast radius" 140
+      "shield damage" 1400
+      "hull damage" 700
+      "hit force" 2100
+  outfits
+    "Heavy Laser Turret" 4
+    "Heavy Anti-Missile Turret" 2
+    "NT-200 Nucleovoltaic"
+    "LP144a Battery Pack"
+    "D41-HY Shield Generator"
+    "Small Radar Jammer"
+    "X3700 Ion Thruster"
+    "X3200 Ion Steering"
+    "Scram Drive"
+  engine -34 154
+  engine 34 154
+  gun -27 -83
+  gun 27 -83
+  turret -34 -64 "Heavy Laser Turret"
+  turret 34 -64 "Heavy Anti-Missile Turret"
+  turret -58 11 "Heavy Laser Turret"
+  turret 58 11 "Heavy Laser Turret"
+  turret -24 78 "Heavy Anti-Missile Turret"
+  turret 24 78 "Heavy Laser Turret"
+  leak "leak" 30 50
+  leak "flame" 30 80
+  leak "big leak" 50 30
+  explode "small explosion" 15
+  explode "medium explosion" 25
+  explode "large explosion" 35
+  explode "huge explosion" 20
+  "final explode" "final explosion large"
+  description "The Behemoth is a recent ship design from Betelgeuse Shipyards, designed as an alternative to the Syndicate Bulk Freighter. Although its cargo capacity is somewhat lower, it is also more manoeuvrable, and packs a heavier armament by default."
+
+ship "Behemoth" "Behemoth (Hai)"
+  outfits
+    "Sidewinder Missile Launcher" 2
+    "Sidewinder Missile" 100
+    "Pulse Turret" 6
+    "Boulder Reactor"
+    "Hai Ravine Batteries"
+    "Hai Diamond Regenerator"
+    "Large Radar Jammer"
+    "Liquid Nitrogen Cooler"
+    "Outfits Expansion" 6
+    `"Benga" Atomic Thruster`
+    `"Biroo" Atomic Steering`
+    `"Benga" Atomic Steering`
+    "Hyperdrive"
+
+ship "Behemoth" "Behemoth (Heavy)"
+  outfits
+    "Torpedo Launcher" 2
+    Torpedo 60
+    "Quad Blaster Turret" 2
+    "Plasma Turret" 2
+    "Heavy Anti-Missile Turret" 2
+    "Laser Rifle" 16
+    "Fusion Reactor"
+    "Supercapacitor"
+    "D94-YV Shield Generator"
+    "Outfits Expansion" 6
+    "Liquid Helium Cooler"
+    "Liquid Nitrogen Cooler"
+    "Greyhound Plasma Thruster"
+    "Impala Plasma Steering"
+    "Hyperdrive"
+  turret "Quad Blaster Turret"
+  turret "Quad Blaster Turret"
+  turret "Plasma Turret"
+  turret "Plasma Turret"
+  turret "Heavy Anti-Missile Turret"
+  turret "Heavy Anti-Missile Turret"
+
+ship "Behemoth" "Behemoth (Proton)"
+  outfits
+    "Sidewinder Missile Launcher" 2
+    "Sidewinder Missile" 100
+    "Proton Turret" 4
+    "Heavy Anti-Missile Turret" 2
+    "Breeder Reactor"
+    "LP144a Battery Pack"
+    "D94-YV Shield Generator"
+    "Large Radar Jammer"
+    "Liquid Nitrogen Cooler"
+    "Outfits Expansion" 6
+    "A250 Atomic Thruster"
+    "A125 Atomic Steering"
+    "A375 Atomic Steering"
+    "Scram Drive"
+  turret "Proton Turret"
+  turret "Proton Turret"
+  turret "Proton Turret"
+  turret "Proton Turret"
+  turret "Heavy Anti-Missile Turret"
+  turret "Heavy Anti-Missile Turret"
+
+ship "Behemoth" "Behemoth (Speedy)"
+  outfits
+    "Sidewinder Missile Launcher" 2
+    "Sidewinder Missile" 100
+    "Heavy Laser Turret" 6
+    "Breeder Reactor"
+    "LP144a Battery Pack"
+    "D94-YV Shield Generator"
+    "Large Radar Jammer"
+    "Liquid Nitrogen Cooler"
+    "Outfits Expansion" 6
+    "A250 Atomic Thruster"
+    "A125 Atomic Steering"
+    "A375 Atomic Steering"
+    "Scram Drive"
+
+
+
+ship "Berserker"
+  sprite "ship/berserker"
+  thumbnail "thumbnail/berserker"
+  attributes
+    category "Interceptor"
+    "cost" 520000
+    "shields" 2200
+    "hull" 500
+    "required crew" 1
+    "bunks" 2
+    "mass" 110
+    "drag" 2.2
+    "heat dissipation" .85
+    "fuel capacity" 400
+    "cargo space" 10
+    "outfit space" 200
+    "weapon capacity" 35
+    "engine capacity" 65
+    weapon
+      "blast radius" 30
+      "shield damage" 300
+      "hull damage" 150
+      "hit force" 450
+  outfits
+    "Beam Laser" 4
+    "nGVF-CC Fuel Cell"
+    "LP072a Battery Pack"
+    "D23-QP Shield Generator"
+    "X2700 Ion Thruster"
+    "X3200 Ion Steering"
+    "Hyperdrive"
+  engine -10 45
+  engine 10 45
+  gun -20 12
+  gun 20 12
+  gun -44 10
+  gun 44 10
+  leak "leak" 60 50
+  leak "flame" 80 80
+  explode "tiny explosion" 10
+  explode "small explosion" 15
+  "final explode" "final explosion small"
+  description "Once one of the most popular interceptor-class ships, the Berserker's popularity is now waning in favor of more modern and versatile ships like the Hawk. Although limited numbers are still produced by Betelgeuse Shipyards, most Berserkers that are in service today are more than half a century old."
+
+ship "Berserker" "Berserker (Afterburner)"
+  outfits
+    "Energy Blaster" 2
+    "Javelin Pod" 2
+    "Javelin" 400
+    "nGVF-CC Fuel Cell"
+    "LP036a Battery Pack"
+    "D23-QP Shield Generator"
+    "Ramscoop"
+    "Chipmunk Plasma Thruster"
+    "Greyhound Plasma Steering"
+    "Afterburner"
+    "Hyperdrive"
+
+
+
+ship "Firebird"
+  sprite "ship/firebird"
+  thumbnail "thumbnail/firebird"
+  attributes
+    category "Medium Warship"
+    "cost" 3700000
+    "shields" 6400
+    "hull" 2800
+    "required crew" 7
+    "bunks" 22
+    "mass" 290
+    "drag" 4.5
+    "heat dissipation" .6
+    "fuel capacity" 400
+    "cargo space" 50
+    "outfit space" 400
+    "weapon capacity" 160
+    "engine capacity" 100
+    weapon
+      "blast radius" 100
+      "shield damage" 1000
+      "hull damage" 500
+      "hit force" 1500
+  outfits
+    "Heavy Laser" 4
+    "Heavy Laser Turret" 2
+    "RT-I Radiothermal"
+    "nGVF-AA Fuel Cell"
+    "LP144a Battery Pack"
+    "D41-HY Shield Generator"
+    "X3700 Ion Thruster"
+    "X3200 Ion Steering"
+    "Hyperdrive"
+  engine -33 65
+  engine 33 65
+  gun -28 -27 "Heavy Laser"
+  gun 28 -27 "Heavy Laser"
+  gun -39 -13 "Heavy Laser"
+  gun 39 -13 "Heavy Laser"
+  turret -5 3 "Heavy Laser Turret"
+  turret 5 3 "Heavy Laser Turret"
+  leak "leak" 50 50
+  leak "flame" 30 80
+  explode "tiny explosion" 18
+  explode "small explosion" 36
+  explode "medium explosion" 24
+  explode "large explosion" 8
+  "final explode" "final explosion medium"
+  description "The Betelgeuse Shipyards Firebird is a warship with a long and storied past; Firebirds fought on both sides of the Alpha Wars over half a millennium ago, and although the equipment and systems have been upgraded continuously since then, the basic design remains almost the same. The Firebird is also a very rugged ship and easy to repair; supposedly a few of the Firebirds that fought in those wars are still in service today."
+
+ship "Firebird" "Firebird (Hai Shields)"
+  outfits
+    "Plasma Cannon" 4
+    "Bullfrog Anti-Missile" 2
+    "Breeder Reactor"
+    "Hai Fissure Batteries"
+    "Hai Diamond Regenerator"
+    "Hai Corundum Regenerator" 2
+    "Liquid Nitrogen Cooler"
+    "Hai Williwaw Cooling"
+    "Outfits Expansion" 2
+    "X3700 Ion Thruster"
+    "A375 Atomic Steering"
+    "Hyperdrive"
+
+ship "Firebird" "Firebird (Hai Weapons)"
+  outfits
+    "Ion Cannon" 2
+    "Pulse Cannon" 2
+    "Chameleon Anti-Missile"
+    "Bullfrog Anti-Missile"
+    "Geode Reactor"
+    "Hai Gorge Batteries"
+    "D41-HY Shield Generator"
+    "Hai Williwaw Cooling" 2
+    "X3700 Ion Thruster"
+    "X3200 Ion Steering"
+    "Hyperdrive"
+
+ship "Firebird" "Firebird (Missile)"
+  outfits
+    "Meteor Missile Launcher" 2
+    "Meteor Missile" 70
+    "Torpedo Launcher" 2
+    Torpedo 60
+    "Heavy Laser Turret" 2
+    "Fission Reactor"
+    "LP072a Battery Pack"
+    "D94-YV Shield Generator"
+    "Outfits Expansion"
+    "Impala Plasma Thruster"
+    "A375 Atomic Steering"
+    "Hyperdrive"
+  gun "Meteor Missile Launcher"
+  gun "Meteor Missile Launcher"
+  gun "Torpedo Launcher"
+  gun "Torpedo Launcher"
+
+ship "Firebird" "Firebird (Plasma)"
+  outfits
+    "Plasma Cannon" 4
+    "Quad Blaster Turret" 2
+    "Breeder Reactor"
+    "LP072a Battery Pack"
+    "LP036a Battery Pack"
+    "D41-HY Shield Generator"
+    "Liquid Nitrogen Cooler"
+    "Outfits Expansion"
+    "X3700 Ion Thruster"
+    "A375 Atomic Steering"
+    "Hyperdrive"
+
+
+
+ship "Heavy Shuttle"
+  sprite "ship/heavy shuttle"
+  thumbnail "thumbnail/heavy shuttle"
+  attributes
+    category "Transport"
+    "cost" 320000
+    "shields" 700
+    "hull" 700
+    "required crew" 1
+    "bunks" 8
+    "mass" 110
+    "drag" 2.1
+    "heat dissipation" .8
+    "fuel capacity" 500
+    "cargo space" 35
+    "outfit space" 120
+    "weapon capacity" 10
+    "engine capacity" 60
+    weapon
+      "blast radius" 12
+      "shield damage" 120
+      "hull damage" 60
+      "hit force" 180
+  outfits
+    "nGVF-AA Fuel Cell"
+    "LP036a Battery Pack"
+    "D14-RN Shield Generator"
+    "X2700 Ion Thruster"
+    "X2200 Ion Steering"
+    "Hyperdrive"
+  engine 6 30
+  engine -6 30
+  gun -7 -37
+  gun 7 -37
+  leak "leak" 60 50
+  explode "tiny explosion" 10
+  explode "small explosion" 5
+  description "The Heavy Shuttle is an updated shuttle model from Betelgeuse Shipyards, attempting to improve on their perennial classic by offering slightly better cargo and passenger capacity, at the expense of some speed and manoeuvrability."
+
+ship "Heavy Shuttle" "Heavy Shuttle (Armed)"
+  outfits
+    "Energy Blaster" 2
+    "nGVF-BB Fuel Cell"
+    "LP036a Battery Pack"
+    "D14-RN Shield Generator"
+    "Chipmunk Plasma Thruster"
+    "Chipmunk Plasma Steering"
+    "Hyperdrive"
+
+
+
+ship "Leviathan"
+  sprite "ship/leviathan"
+  thumbnail "thumbnail/leviathan"
+  attributes
+    category "Heavy Warship"
+    "cost" 9800000
+    "shields" 14400
+    "hull" 5000
+    "required crew" 43
+    "bunks" 64
+    "mass" 480
+    "drag" 7.6
+    "heat dissipation" .5
+    "fuel capacity" 500
+    "cargo space" 80
+    "outfit space" 620
+    "weapon capacity" 240
+    "engine capacity" 120
+    weapon
+      "blast radius" 80
+      "shield damage" 800
+      "hull damage" 400
+      "hit force" 1200
+  outfits
+    "Particle Cannon" 4
+    "Quad Blaster Turret" 4
+    "Fusion Reactor"
+    "LP144a Battery Pack"
+    "D67-TM Shield Generator"
+    "Liquid Helium Cooler"
+    "X3700 Ion Thruster"
+    "X4200 Ion Steering"
+    "Hyperdrive"
+  engine -25 125
+  engine 25 125
+  gun -39 -33 "Particle Cannon"
+  gun 39 -33 "Particle Cannon"
+  gun -51 -21 "Particle Cannon"
+  gun 51 -21 "Particle Cannon"
+  turret -15 -50 "Quad Blaster Turret"
+  turret 15 -50 "Quad Blaster Turret"
+  turret -25 10 "Quad Blaster Turret"
+  turret 25 10 "Quad Blaster Turret"
+  leak "leak" 50 50
+  leak "flame" 30 80
+  leak "big leak" 60 30
+  explode "tiny explosion" 18
+  explode "small explosion" 36
+  explode "medium explosion" 24
+  explode "large explosion" 8
+  "final explode" "final explosion large"
+  description "The Betelgeuse Shipyards Leviathan has been in service since long before the Republic existed. Although considered today to be an outdated and clunky model, it is still a force to be reckoned with."
+
+ship "Leviathan" "Leviathan (Hai Engines)"
+  outfits
+    "Particle Cannon" 4
+    "Quad Blaster Turret" 2
+    "Chameleon Anti-Missile" 2
+    "Boulder Reactor"
+    "Hai Ravine Batteries"
+    "D67-TM Shield Generator"
+    "Liquid Helium Cooler"
+    `"Bondir" Atomic Thruster`
+    `"Bondir" Atomic Steering`
+    "Hyperdrive"
+
+ship "Leviathan" "Leviathan (Hai Weapons)"
+  outfits
+    "Hai Tracker Pod" 4
+    "Hai Tracker" 224
+    "Heavy Laser Turret" 4
+    "Boulder Reactor"
+    "Hai Ravine Batteries"
+    "Hai Diamond Regenerator"
+    "Liquid Nitrogen Cooler"
+    "Impala Plasma Thruster"
+    "A375 Atomic Steering"
+    "Afterburner"
+    "Scram Drive"
+    "Ramscoop"
+
+ship "Leviathan" "Leviathan (Heavy)"
+  outfits
+    "Torpedo Launcher" 2
+    "Torpedo" 60
+    "Meteor Missile Launcher" 2
+    "Meteor Missile" 70
+    "Heavy Laser Turret" 4
+    "Breeder Reactor"
+    "LP036a Battery Pack"
+    "D94-YV Shield Generator" 2
+    "Liquid Nitrogen Cooler"
+    "Impala Plasma Thruster"
+    "A375 Atomic Steering"
+    "Afterburner"
+    "Scram Drive"
+    "Ramscoop"
+  gun "Meteor Missile Launcher"
+  gun "Meteor Missile Launcher"
+  gun "Torpedo Launcher"
+  gun "Torpedo Launcher"
+
+ship "Leviathan" "Leviathan (Laser)"
+  outfits
+    "Heavy Laser" 4
+    "Heavy Laser Turret" 4
+    "Armageddon Core"
+    "LP036a Battery Pack"
+    "Supercapacitor"
+    "D94-YV Shield Generator"
+    "Liquid Helium Cooler"
+    "Ramscoop"
+    "A370 Atomic Thruster"
+    "A525 Atomic Steering"
+    "Hyperdrive"
+
+
+
+ship "Shuttle"
+  sprite "ship/shuttle"
+    "frame time" 4
+    "delay" 14
+    "random start frame"
+  thumbnail "thumbnail/shuttle"
+  attributes
+    category "Transport"
+    "cost" 180000
+    "shields" 500
+    "hull" 600
+    "required crew" 1
+    "bunks" 6
+    "mass" 70
+    "drag" 1.7
+    "heat dissipation" .8
+    "fuel capacity" 400
+    "cargo space" 20
+    "outfit space" 120
+    "weapon capacity" 10
+    "engine capacity" 60
+    weapon
+      "blast radius" 12
+      "shield damage" 120
+      "hull damage" 60
+      "hit force" 180
+  outfits
+    "nGVF-AA Fuel Cell"
+    "LP036a Battery Pack"
+    "D14-RN Shield Generator"
+    "X2700 Ion Thruster"
+    "X2200 Ion Steering"
+    "Hyperdrive"
+  engine 6 30
+  engine -6 30
+  gun 0 -30
+  leak "leak" 60 50
+  explode "tiny explosion" 10
+  explode "small explosion" 5
+  description "Although Betelgeuse Shipyards produces other ship models as well, the majority of their profits come from sales of the Shuttle. This versatile ship serves equally well as a passenger transport or a cargo courier. It also happens to be the cheapest ship you can buy which is capable of hyperspace travel."
+  description `  Shuttles are not designed to withstand combat of any sort, but they are fast and maneuverable enough to get out of harm's way if attacked by a larger, slower ship. Although they are typically unarmed, they have enough space for one weapon, which is the origin of the popular phrase, "as useless as a blaster cannon on a shuttlecraft."`
+
+
+
+
+ship "Star Queen"
+  sprite "ship/star queen"
+  thumbnail "thumbnail/star queen"
+  attributes
+    category "Transport"
+    "cost" 5500000
+    "shields" 4100
+    "hull" 2200
+    "required crew" 43
+    "bunks" 112
+    "mass" 230
+    "drag" 5.5
+    "heat dissipation" .65
+    "fuel capacity" 500
+    "cargo space" 60
+    "outfit space" 360
+    "weapon capacity" 120
+    "engine capacity" 100
+    weapon
+      "blast radius" 60
+      "shield damage" 600
+      "hull damage" 300
+      "hit force" 900
+  outfits
+    "Sidewinder Missile Launcher" 3
+    "Sidewinder Missile" 150
+    "Heavy Anti-Missile Turret" 2
+    "NT-200 Nucleovoltaic"
+    "LP072a Battery Pack"
+    "D94-YV Shield Generator"
+    "Large Radar Jammer"
+    "X3700 Ion Thruster"
+    "X3200 Ion Steering"
+    "Hyperdrive"
+  engine -18 116
+  engine 18 116
+  gun 0 -116 "Sidewinder Missile Launcher"
+  gun -22 -80 "Sidewinder Missile Launcher"
+  gun 22 -80 "Sidewinder Missile Launcher"
+  turret -28 -9 "Heavy Anti-Missile Turret"
+  turret 28 -9 "Heavy Anti-Missile Turret"
+  leak "leak" 50 50
+  leak "big leak" 80 30
+  explode "tiny explosion" 10
+  explode "small explosion" 25
+  explode "medium explosion" 25
+  explode "large explosion" 10
+  "final explode" "final explosion medium"
+  description "The Star Queen is a relic of a more peaceful period of galactic history: a luxury liner for high-end tourists. Every cabin has its own mini-bar, and the bathrooms have marble tile and showers that use actual hot water instead of chemicals or sonic vibrations."
+
+ship "Star Queen" "Star Queen (Hai)"
+  outfits
+    "Hai Tracker Pod" 3
+    "Hai Tracker" 168
+    "Chameleon Anti-Missile" 2
+    "NT-200 Nucleovoltaic"
+    "Hai Fissure Batteries"
+    "D94-YV Shield Generator"
+    "Small Radar Jammer"
+    "X3700 Ion Thruster"
+    "A375 Atomic Steering"
+    "Hyperdrive"
+

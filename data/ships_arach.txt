@@ -1,0 +1,257 @@
+shipyard "Arach Variants"
+  "Arach Courier"
+  "Arach Freighter"
+  "Arach Hulk"
+  "Arach Spindle"
+  "Arach Transport"
+
+
+
+ship "Arach Courier"
+  sprite "ship/arach courier"
+  thumbnail "thumbnail/arach courier"
+  attributes
+    category "Light Freighter"
+    licenses
+      Coalition
+    "cost" 723000
+    "shields" 1200
+    "hull" 2000
+    "required crew" 1
+    "bunks" 1
+    "mass" 100
+    "drag" 2.9
+    "heat dissipation" .65
+    "fuel capacity" 300
+    "cargo space" 78
+    "outfit space" 148
+    "weapon capacity" 39
+    "engine capacity" 40
+    weapon
+      "blast radius" 20
+      "shield damage" 200
+      "hull damage" 100
+      "hit force" 300
+  outfits
+    "Small Collector Module"
+    "Small Battery Module"
+    "Small Repair Module"
+    "Small Thrust Module" 2
+    "Small Steering Module" 2
+    "Hyperdrive"
+  engine -27 58 .6
+  engine -15 58 .8
+  engine 15 58 .8
+  engine 27 58 .6
+  gun -14 -38
+  gun 14 -38
+  explode "tiny explosion" 10
+  explode "small explosion" 10
+  "final explode" "final explosion small"
+  description `These hardy little cargo ships are the perfect size for young Arachi just setting out into the sky with dreams of one day building their own merchant fleets. Of course, an Arach lucky enough to be born into one of the great Houses can probably find a patron to buy them a much larger ship instead.`
+
+
+
+ship "Arach Freighter"
+  sprite "ship/arach freighter"
+  thumbnail "thumbnail/arach freighter"
+  attributes
+    category "Light Freighter"
+    licenses
+      Coalition
+    "cost" 4580000
+    "shields" 3400
+    "hull" 8500
+    "required crew" 3
+    "bunks" 10
+    "mass" 380
+    "drag" 10.6
+    "heat dissipation" .55
+    "fuel capacity" 500
+    "cargo space" 310
+    "outfit space" 349
+    "weapon capacity" 132
+    "engine capacity" 92
+    weapon
+      "blast radius" 80
+      "shield damage" 800
+      "hull damage" 400
+      "hit force" 1200
+  outfits
+    "Small Collector Module" 3
+    "Small Battery Module" 2
+    "Small Shield Module"
+    "Small Repair Module" 2
+    "Large Thrust Module"
+    "Small Thrust Module" 2
+    "Large Steering Module"
+    "Small Steering Module" 2
+    "Hyperdrive"
+  engine -18 141 .7
+  engine 0 143 1
+  engine 18 141 .7
+  gun -19 -112
+  gun 19 -112
+  turret -41 37
+  turret 41 37
+  explode "tiny explosion" 10
+  explode "small explosion" 15
+  explode "medium explosion" 15
+  "final explode" "final explosion medium"
+  description `Arach cargo ship hulls are legendary for their durability. It is not uncommon for a large Arach family to convert a freighter that is no longer space-worthy into a planet-side dwelling, and even in the harshest of conditions these converted houses can last for hundreds of years with little or no exterior maintenance.`
+
+
+
+ship "Arach Hulk"
+  sprite "ship/arach hulk"
+  thumbnail "thumbnail/arach hulk"
+  attributes
+    category "Heavy Freighter"
+    licenses
+      Coalition
+    "cost" 9978000
+    "shields" 5700
+    "hull" 13800
+    "required crew" 8
+    "bunks" 14
+    "mass" 670
+    "drag" 18.9
+    "heat dissipation" .50
+    "fuel capacity" 500
+    "cargo space" 541
+    "outfit space" 520
+    "weapon capacity" 208
+    "engine capacity" 148
+    weapon
+      "blast radius" 120
+      "shield damage" 1200
+      "hull damage" 600
+      "hit force" 1800
+  outfits
+    "Large Collector Module"
+    "Large Battery Module"
+    "Small Battery Module"
+    "Small Shield Module" 2
+    "Large Repair Module"
+    "Large Thrust Module" 2
+    "Small Thrust Module" 2
+    "Large Steering Module" 2
+    "Small Steering Module" 2
+    "Hyperdrive"
+  engine -13 198 .7
+  engine 0 199 1
+  engine 13 198 .7
+  gun -27 -88
+  gun 27 -88
+  turret 0 -65
+  turret -90 88
+  turret 90 88
+  turret 0 189
+  explode "small explosion" 10
+  explode "medium explosion" 20
+  explode "large explosion" 30
+  explode "huge explosion" 10
+  "final explode" "final explosion large"
+  description `The Arachi believe that efficient functionality is the highest form of beauty, and none of their ships demonstrate that principle more clearly than the ugly yet utilitarian Hulk, designed with detachable side pods that can be swapped out on a planet in a matter of minutes if the captain is in a hurry to reach the next destination.`
+
+
+
+ship "Arach Spindle"
+  sprite "ship/arach spindle"
+  thumbnail "thumbnail/arach spindle"
+  attributes
+    category "Heavy Freighter"
+    licenses
+      Coalition
+    "cost" 6652000
+    "shields" 5000
+    "hull" 9700
+    "required crew" 4
+    "bunks" 14
+    "mass" 340
+    "drag" 10.8
+    "heat dissipation" .55
+    "fuel capacity" 500
+    "cargo space" 280
+    "outfit space" 434
+    "weapon capacity" 138
+    "engine capacity" 148
+    weapon
+      "blast radius" 100
+      "shield damage" 1000
+      "hull damage" 500
+      "hit force" 1500
+  outfits
+    "Large Collector Module"
+    "Large Battery Module"
+    "Small Battery Module"
+    "Small Shield Module" 2
+    "Small Repair Module" 3
+    "Cooling Module"
+    "Large Thrust Module" 2
+    "Small Thrust Module" 3
+    "Large Steering Module" 2
+    "Small Steering Module" 1
+    "Hyperdrive"
+  engine -13 198 .7
+  engine 0 199 1
+  engine 13 198 .7
+  gun -27 -88
+  gun 27 -88
+  turret 0 -65
+  turret 0 189
+  explode "small explosion" 10
+  explode "medium explosion" 20
+  explode "large explosion" 20
+  "final explode" "final explosion large"
+  description `The Arach Hulk is an ungainly, lumbering behemoth of a ship, but with its side pods removed it becomes the much more maneuverable Spindle. Because of its much lower cargo space, usually the only reason a fleet would include a Spindle is if they are planning on picking up new cargo pods at their destination.`
+
+
+
+ship "Arach Transport"
+  sprite "ship/arach transport"
+  thumbnail "thumbnail/arach transport"
+  attributes
+    category "Light Freighter"
+    licenses
+      Coalition
+    "cost" 2772000
+    "shields" 2300
+    "hull" 4800
+    "required crew" 2
+    "bunks" 5
+    "mass" 280
+    "drag" 7.2
+    "heat dissipation" .60
+    "fuel capacity" 400
+    "cargo space" 190
+    "outfit space" 281
+    "weapon capacity" 96
+    "engine capacity" 70
+    weapon
+      "blast radius" 40
+      "shield damage" 400
+      "hull damage" 200
+      "hit force" 600
+  outfits
+    "Small Collector Module" 2
+    "Small Battery Module"
+    "Small Shield Module"
+    "Small Repair Module"
+    "Large Thrust Module"
+    "Large Steering Module"
+    "Small Steering Module"
+    "Hyperdrive"
+  engine -14 117 .4
+  engine -7 117 .9
+  engine 7 117 .9
+  engine 14 117 .4
+  gun -22 13
+  gun 22 13
+  turret 0 -77
+  explode "small explosion" 10
+  explode "medium explosion" 30
+  explode "large explosion" 5
+  "final explode" "final explosion medium"
+  description `The Arach Transport is the oldest of their ship designs, dating back to the time when they first joined the Coalition in overthrowing the Quarg and capturing their ringworlds. Back then, Transports were occasionally used as warships, but now, thousands of years later, they are considered outdated compared to the latest Heliarch military ships.`
+

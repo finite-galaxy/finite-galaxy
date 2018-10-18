@@ -1,0 +1,358 @@
+shipyard "Megaparsec Variants"
+  "Bounder"
+  "Bounder (Hai)"
+  "Manta"
+  "Manta (Mark II)"
+  "Manta (Nuclear)"
+  "Manta (Proton)"
+  "Quicksilver"
+  "Quicksilver (Mark II)"
+  "Quicksilver (Proton)"
+  "Quicksilver (Scanner)"
+  "Splinter"
+  "Splinter (Laser)"
+  "Splinter (Mark II)"
+  "Splinter (Proton)"
+
+
+
+ship "Bounder"
+  sprite "ship/bounder"
+  thumbnail "thumbnail/bounder"
+  attributes
+    category "Transport"
+    "cost" 1140000
+    "shields" 2200
+    "hull" 700
+    "required crew" 1
+    "bunks" 17
+    "mass" 130
+    "drag" 3.7
+    "heat dissipation" .8
+    "fuel capacity" 900
+    "cargo space" 40
+    "outfit space" 220
+    "weapon capacity" 50
+    "engine capacity" 110
+    weapon
+      "blast radius" 30
+      "shield damage" 300
+      "hull damage" 150
+      "hit force" 450
+  outfits
+    "Blaster Turret" 2
+    "nGVF-CC Fuel Cell"
+    "LP036a Battery Pack"
+    "D14-RN Shield Generator"
+    "X3700 Ion Thruster"
+    "X3200 Ion Steering"
+    "Hyperdrive"
+  engine -12 44
+  engine 12 44
+  turret -37 4 "Blaster Turret"
+  turret 37 4 "Blaster Turret"
+  leak "leak" 60 50
+  explode "tiny explosion" 10
+  explode "small explosion" 20
+  explode "medium explosion" 15
+  "final explode" "final explosion small"
+  description "The Megaparsec Bounder is a scout ship and courier, designed not for battle but for carrying passengers and small amounts of cargo across large distances quickly."
+
+ship "Bounder" "Bounder (Hai)"
+  outfits
+    "Pulse Turret"
+    "Bullfrog Anti-Missile"
+    "Pebble Core"
+    "Hai Fissure Batteries"
+    "D14-RN Shield Generator"
+    "Hai Williwaw Cooling"
+    "X3700 Ion Thruster"
+    "X3200 Ion Steering"
+    "Hyperdrive"
+
+
+
+ship "Manta"
+  sprite "ship/manta"
+  thumbnail "thumbnail/manta"
+  attributes
+    category "Medium Warship"
+    "cost" 3400000
+    "shields" 5900
+    "hull" 1500
+    "required crew" 6
+    "bunks" 10
+    "mass" 170
+    "drag" 4.7
+    "heat dissipation" .8
+    "fuel capacity" 400
+    "cargo space" 20
+    "outfit space" 350
+    "weapon capacity" 140
+    "engine capacity" 100
+    weapon
+      "blast radius" 80
+      "shield damage" 800
+      "hull damage" 400
+      "hit force" 1200
+  outfits
+    "Particle Cannon" 4
+    "Meteor Missile Launcher" 2
+    "Meteor Missile" 70
+    "RT-I Radiothermal"
+    "LP144a Battery Pack"
+    "D14-RN Shield Generator"
+    "X3700 Ion Thruster"
+    "X3200 Ion Steering"
+    "Hyperdrive"
+  engine -33 38
+  engine 33 38
+  gun -21 -35 "Particle Cannon"
+  gun 21 -35 "Particle Cannon"
+  gun -27 -35 "Particle Cannon"
+  gun 27 -35 "Particle Cannon"
+  gun -66 -32 "Meteor Missile Launcher"
+  gun 66 -32 "Meteor Missile Launcher"
+  leak "leak" 60 50
+  leak "flame" 40 80
+  explode "tiny explosion" 10
+  explode "small explosion" 20
+  explode "medium explosion" 15
+  "final explode" "final explosion small"
+  description "After their Quicksilver light warship with its armament of particle cannons became a large success with convoy escorts and planetary defense forces, Megaparsec decided to develop a larger ship with similar maneuverability but heavier firepower. The Manta is the result: a ship with enough long-range firepower that fleeing from a battle with it is almost impossible."
+
+ship "Manta" "Manta (Mark II)"
+  outfits
+    "Particle Cannon" 4
+    "Meteor Missile Launcher" 2
+    "Meteor Missile" 70
+    "Fission Reactor"
+    "LP072a Battery Pack"
+    "S-270 Regenerator"
+    "Water Coolant System"
+    "Outfits Expansion"
+    "A250 Atomic Thruster"
+    "A375 Atomic Steering"
+    "Hyperdrive"
+    "Ionic Afterburner"
+  gun "Particle Cannon"
+  gun "Particle Cannon"
+  gun "Particle Cannon"
+  gun "Particle Cannon"
+  gun "Meteor Missile Launcher"
+  gun "Meteor Missile Launcher"
+
+ship "Manta" "Manta (Nuclear)"
+  outfits
+    "Particle Cannon" 4
+    "Nuclear Missile" 2
+    "Fission Reactor"
+    "LP072a Battery Pack"
+    "S-270 Regenerator"
+    "Water Coolant System"
+    "Outfits Expansion"
+    "A250 Atomic Thruster"
+    "A375 Atomic Steering"
+    "Hyperdrive"
+  gun "Particle Cannon"
+  gun "Particle Cannon"
+  gun "Particle Cannon"
+  gun "Particle Cannon"
+  gun "Nuclear Missile"
+  gun "Nuclear Missile"
+
+ship "Manta" "Manta (Proton)"
+  outfits
+    "Meteor Missile Launcher" 2
+    "Meteor Missile" 70
+    "Proton Gun" 4
+    "RT-I Radiothermal"
+    "LP144a Battery Pack"
+    "D14-RN Shield Generator"
+    "X3700 Ion Thruster"
+    "X3200 Ion Steering"
+    "Hyperdrive"
+  gun "Meteor Missile Launcher"
+  gun "Meteor Missile Launcher"
+  gun "Proton Gun"
+  gun "Proton Gun"
+  gun "Proton Gun"
+  gun "Proton Gun"
+
+
+
+ship "Quicksilver"
+  sprite "ship/quicksilver"
+  thumbnail "thumbnail/quicksilver"
+  attributes
+    category "Light Warship"
+    "cost" 1090000
+    "shields" 3000
+    "hull" 800
+    "required crew" 3
+    "bunks" 6
+    "mass" 120
+    "drag" 2.7
+    "heat dissipation" .8
+    "fuel capacity" 400
+    "cargo space" 10
+    "outfit space" 240
+    "weapon capacity" 60
+    "engine capacity" 70
+    weapon
+      "blast radius" 40
+      "shield damage" 400
+      "hull damage" 200
+      "hit force" 600
+  outfits
+    "Particle Cannon" 2
+    "RT-I Radiothermal"
+    "LP036a Battery Pack"
+    "D23-QP Shield Generator"
+    "Cooling Ducts"
+    "Greyhound Plasma Thruster"
+    "Greyhound Plasma Steering"
+    "Hyperdrive"
+  engine -17 54
+  engine 17 54
+  gun -6 -38 "Particle Cannon"
+  gun 6 -38 "Particle Cannon"
+  leak "leak" 50 50
+  explode "tiny explosion" 12
+  explode "small explosion" 16
+  "final explode" "final explosion small"
+  description "The Megaparsec Quicksilver is a warship built around a single concept: to design the smallest and fastest ship capable of carrying two particle cannons. Because of its speed and long weapons range, the Quicksilver can keep a safe distance from most targets and bombard them with particle bursts until they are destroyed."
+
+ship "Quicksilver" "Quicksilver (Mark II)"
+  outfits
+    "Particle Cannon" 2
+    "RT-I Radiothermal"
+    "LP036a Battery Pack"
+    "D23-QP Shield Generator"
+    "Cooling Ducts"
+    "Greyhound Plasma Thruster"
+    "Greyhound Plasma Steering"
+    "Hyperdrive"
+
+ship "Quicksilver" "Quicksilver (Proton)"
+  outfits
+    "Proton Gun" 2
+    "RT-I Radiothermal"
+    "LP036a Battery Pack"
+    "D23-QP Shield Generator"
+    "Cooling Ducts"
+    "Greyhound Plasma Thruster"
+    "Greyhound Plasma Steering"
+    "Hyperdrive"
+
+ship "Quicksilver" "Quicksilver (Scanner)"
+  outfits
+    "Particle Cannon" 2
+    "RT-I Radiothermal"
+    "LP036a Battery Pack"
+    "D23-QP Shield Generator"
+    "Cooling Ducts"
+    "Cargo Scanner"
+    "Greyhound Plasma Thruster"
+    "Greyhound Plasma Steering"
+    "Hyperdrive"
+
+
+
+ship "Splinter"
+  sprite "ship/splinter"
+  thumbnail "thumbnail/splinter"
+  attributes
+    category "Medium Warship"
+    "cost" 3100000
+    "shields" 5200
+    "hull" 1700
+    "required crew" 7
+    "bunks" 21
+    "mass" 250
+    "drag" 4.0
+    "heat dissipation" .7
+    "fuel capacity" 600
+    "cargo space" 75
+    "outfit space" 400
+    "weapon capacity" 150
+    "engine capacity" 100
+    weapon
+      "blast radius" 60
+      "shield damage" 600
+      "hull damage" 300
+      "hit force" 900
+  outfits
+    "Proton Gun" 2
+    "Blaster Turret" 3
+    "RT-I Radiothermal"
+    "LP144a Battery Pack"
+    "D67-TM Shield Generator"
+    "Small Radar Jammer" 2
+    "Water Coolant System"
+    "X3700 Ion Thruster"
+    "X3200 Ion Steering"
+    "Hyperdrive"
+  engine -15 115
+  engine 15 115
+  gun -15 -80 "Proton Gun"
+  gun 15 -80 "Proton Gun"
+  turret -17 -28 "Blaster Turret"
+  turret 0 -28 "Blaster Turret"
+  turret 17 -28 "Blaster Turret"
+  leak "leak" 60 50
+  leak "flame" 40 80
+  leak "big leak" 90 30
+  explode "tiny explosion" 18
+  explode "small explosion" 36
+  explode "medium explosion" 24
+  explode "large explosion" 8
+  "final explode" "final explosion medium"
+  description "The Splinter is the largest warship produced by the Megaparsec shipyard. It is designed to be faster and more maneuverable than other ships of a similar size, in order to serve as a heavy escort ship or as part of a planetary defense and patrol fleet. Because of its intended use in merchant convoys, it also has a fair amount of cargo space."
+
+ship "Splinter" "Splinter (Laser)"
+  outfits
+    "Heavy Laser" 2
+    "Heavy Laser Turret" 2
+    "Heavy Anti-Missile Turret"
+    "Water Coolant System"
+    "Fission Reactor"
+    "LP036a Battery Pack"
+    "D94-YV Shield Generator"
+    "X3700 Ion Thruster"
+    "Impala Plasma Steering"
+    "Hyperdrive"
+  turret "Heavy Laser Turret"
+  turret "Heavy Anti-Missile Turret"
+  turret "Heavy Laser Turret"
+
+ship "Splinter" "Splinter (Mark II)"
+  outfits
+    "Particle Cannon" 2
+    "Quad Blaster Turret" 3
+    "Fusion Reactor"
+    "Supercapacitor"
+    "S-970 Regenerator"
+    "Water Coolant System" 4
+    "Outfits Expansion" 2
+    "A250 Atomic Thruster"
+    "A375 Atomic Steering"
+    "Hyperdrive"
+    "Ionic Afterburner"
+
+ship "Splinter" "Splinter (Proton)"
+  outfits
+    "Proton Gun" 2
+    "Proton Turret" 2
+    "Anti-Missile Turret"
+    "Water Coolant System"
+    "Fission Reactor"
+    "LP036a Battery Pack"
+    "D94-YV Shield Generator"
+    "X3700 Ion Thruster"
+    "Impala Plasma Steering"
+    "Hyperdrive"
+  turret "Proton Turret"
+  turret "Anti-Missile Turret"
+  turret "Proton Turret"
+

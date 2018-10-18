@@ -1,3 +1,29 @@
+shipyard "Hai Variants"
+  "Aphid"
+  "Aphid (Anti-Missile)"
+  "Flea"
+  "Lightning Bug"
+  "Lightning Bug (Pulse)"
+  "Pond Strider"
+  "Shield Beetle"
+  "Shield Beetle (Jump)"
+  "Shield Beetle (Jump, Tracker)"
+  "Shield Beetle (Pulse)"
+  "Shield Beetle (Tracker)"
+  "Solifuge"
+  "Solifuge (Jump)"
+  "Solifuge (Jump, Pulse)"
+  "Solifuge (Jump, Tracker)"
+  "Solifuge (Pulse)"
+  "Solifuge (Tracker)"
+  "Violin Spider"
+  "Violin Spider (Pulse)"
+  "Water Bug"
+  "Water Bug (Jump)"
+  "Water Bug (Pulse)"
+
+
+
 ship "Aphid"
   sprite "ship/hai aphid"
   thumbnail "thumbnail/hai aphid"
@@ -79,7 +105,6 @@ ship "Flea"
     "Sand Cell"
     "Hai Chasm Batteries"
     `"Baellie" Atomic Engines`
-
   engine 0 27
   gun 0 -27 "Railgun"
   explode "tiny explosion" 15
@@ -185,7 +210,6 @@ ship "Pond Strider"
     `"Biroo" Atomic Steering`
     "Hai Williwaw Cooling" 3
     "Hyperdrive"
-    
   engine -23 80
   engine 23 80
   gun 0 -76 "Pulse Cannon"
@@ -400,8 +424,7 @@ ship "Solifuge"
     `"Benga" Atomic Steering`
     `"Bufaer" Atomic Steering`
     `"Bondir" Atomic Thruster`
-    "Hyperdrive"
-      
+    "Hyperdrive" 
   engine -28 135.5
   engine 28 135.5
   gun 0 -140 "Hai Tracker Pod"
@@ -560,7 +583,6 @@ ship "Violin Spider"
     "Pulse Rifle"
     `"Basrem" Atomic Steering`
     `"Basrem" Atomic Thruster`
-
   engine -15 30
   engine 15 30
   gun 0 -31 "Hai Tracker Pod"
@@ -664,3 +686,4 @@ ship "Water Bug" "Water Bug (Pulse)"
     `"Benga" Atomic Thruster`
     `"Benga" Atomic Steering`
     "Hyperdrive"
+

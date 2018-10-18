@@ -1,3 +1,57 @@
+shipyard "Remnant Variants"
+  "Gascraft"
+  "Starling"
+  "Starling (Heavy)"
+  "Starling (Hunter)"
+  "Starling (Sniper)"
+  "Starling (Thrasher)"
+  "Albatross"
+  "Albatross (Heavy)"
+  "Albatross (Sniper)"
+  "Albatross (Turret)"
+
+
+
+ship "Gascraft"
+  plural "Gascraft"
+  sprite "ship/gascraft"
+  thumbnail "thumbnail/gascraft"
+  attributes
+    category Transport
+    cost 530000
+    "shields" 800
+    "hull" 1500
+    "required crew" 1
+    "bunks" 1
+    "mass" 80
+    "drag" 1.7
+    "heat dissipation" 0.9
+    "fuel capacity" 700
+    "cargo space" 8
+    "outfit space" 90
+    "engine capacity" 34
+    "shield generation" 0.6
+    "shield energy" 0.4
+    "hull repair rate" 1.2
+    "hull energy" 0.9
+    "gaslining" 1
+  outfits
+    "Millennium Cell"
+    "Supercapacitor"
+    "Emergency Ramscoop"
+    "Quantum Key Stone"
+    
+    "Crucible-Class Thruster"
+    "Crucible-Class Steering"
+    "Hyperdrive"
+  
+  engine 0 30
+  explode "tiny explosion" 8
+  explode "small explosion" 7
+  description "Centuries ago, the Remnant built these ships in order to explore the upper atmosphere of nearby gas giants. The Archons took issue with the Remnant's research methods, and the studies were unable to be completed. The remaining gascraft have been gathering dust in storage for centuries while the Remnant waits to see if the anger of the Archons will subside."
+
+
+
 ship "Starling"
   sprite "ship/starling"
   thumbnail "thumbnail/starling"
@@ -33,17 +87,14 @@ ship "Starling"
   outfits
     "Inhibitor Cannon" 3
     "Point Defense Turret"
-    
     "Epoch Cell"
     "Crystal Capacitor"
     "Emergency Ramscoop" 2
     "Quantum Key Stone"
-    
     "Forge-Class Thruster"
     "Forge-Class Steering"
     "Crucible-Class Steering"
     "Hyperdrive"
-  
   engine -16 82 0.7
   engine 16 82 0.7
   engine 0 90 1
@@ -64,70 +115,59 @@ ship "Starling" "Starling (Heavy)"
   outfits
     "Thrasher Cannon" 5
     "Point Defense Turret"
-    
     "Epoch Cell"
     "Millennium Cell"
     "Crystal Capacitor"
-    
     "Forge-Class Thruster"
     "Forge-Class Steering"
     "Hyperdrive"
+
+ship "Starling" "Starling (Hunter)"
+  outfits
+    "Inhibitor Cannon" 2
+    "Thrasher Turret"
+    "Epoch Cell"
+    "Millennium Cell"
+    "Crystal Capacitor"
+    "Emergency Ramscoop"
+    "Forge-Class Thruster"
+    "Forge-Class Steering"
+    "Hyperdrive"
+  gun
+  gun "Inhibitor Cannon"
+  gun "Inhibitor Cannon"
+  gun
+  gun
 
 ship "Starling" "Starling (Sniper)"
   outfits
     "EMP Torpedo Bay"
     "Inhibitor Cannon" 4
     "EMP Torpedo" 9
-    
     "Epoch Cell"
     "Crystal Capacitor"
     "Emergency Ramscoop"
     "Quantum Key Stone"
-    
     "Forge-Class Thruster"
     "Smelter-Class Steering"
     "Hyperdrive"
-  
   gun "EMP Torpedo Bay"
   gun "Inhibitor Cannon"
   gun "Inhibitor Cannon"
   gun "Inhibitor Cannon"
   gun "Inhibitor Cannon"
 
-ship "Starling" "Starling (Hunter)"
-  outfits
-    "Inhibitor Cannon" 2
-    "Thrasher Turret"
-    
-    "Epoch Cell"
-    "Millennium Cell"
-    "Crystal Capacitor"
-    "Emergency Ramscoop"
-    
-    "Forge-Class Thruster"
-    "Forge-Class Steering"
-    "Hyperdrive"
-  
-  gun
-  gun "Inhibitor Cannon"
-  gun "Inhibitor Cannon"
-  gun
-  gun
-
 ship "Starling" "Starling (Thrasher)"
   outfits
     "Thrasher Cannon" 3
     "Thrasher Turret"
-    
     "Epoch Cell"
     "Millennium Cell"
     "Crystal Capacitor"
     "Quantum Key Stone"
-    
     "Forge-Class Thruster"
     "Forge-Class Steering"
     "Hyperdrive"
-  
   gun "Thrasher Cannon"
   gun "Thrasher Cannon"
   gun "Thrasher Cannon"
@@ -170,17 +210,14 @@ ship "Albatross"
     "Inhibitor Cannon" 6
     "Thrasher Turret" 2
     "Point Defense Turret"
-    
     "Aeon Cell"
     "Epoch Cell"
     "Crystal Capacitor"
     "Thermoelectric Cooler" 2
     "Quantum Key Stone"
-    
     "Smelter-Class Thruster"
     "Smelter-Class Steering"
     "Hyperdrive"
-  
   engine -28 155 .8
   engine 28 155 .8
   engine 0 184 .9
@@ -203,25 +240,51 @@ ship "Albatross"
   "final explode" "final explosion large" 1
   description "Once they left human space, it became apparent to the Remnant that they would need to build their own shipyards in order to defend themselves if they were discovered by the Alphas or any other unfriendly faction. Using new composite materials that they discovered, they built ships very different from anything seen in human space."
 
+ship "Albatross" "Albatross (Heavy)"
+  outfits
+    "Inhibitor Cannon" 3
+    "Thrasher Cannon" 4
+    "Thrasher Turret" 3
+    "Aeon Cell"
+    "Epoch Cell"
+    "Millennium Cell"
+    "Crystal Capacitor" 2
+    "Thermoelectric Cooler" 2
+    "Outfits Expansion" 4
+    "Forge-Class Thruster"
+    "Crucible-Class Thruster"
+    "Smelter-Class Steering"
+    "Forge-Class Steering"
+    "Hyperdrive"
+  gun "Inhibitor Cannon"
+  gun "Inhibitor Cannon"
+  gun "Inhibitor Cannon"
+  gun "Thrasher Cannon"
+  gun "Thrasher Cannon"
+  gun "Thrasher Cannon"
+  gun "Thrasher Cannon"
+  turret "Thrasher Turret"
+  turret "Thrasher Turret"
+  turret
+  turret
+  turret "Thrasher Turret"
+
 ship "Albatross" "Albatross (Sniper)"
   outfits
     "Inhibitor Cannon" 5
     "EMP Torpedo Bay" 2
     "Point Defense Turret" 3
     "EMP Torpedo" 18
-    
     "Aeon Cell"
     "Epoch Cell"
     "Crystal Capacitor"
     "Thermoelectric Cooler" 2
     "Quantum Key Stone"
-    
     "Forge-Class Thruster"
     "Crucible-Class Thruster"
     "Smelter-Class Steering"
     "Forge-Class Steering"
     "Hyperdrive"
-  
   gun "Inhibitor Cannon"
   gun "Inhibitor Cannon"
   gun "Inhibitor Cannon"
@@ -229,7 +292,6 @@ ship "Albatross" "Albatross (Sniper)"
   gun "Inhibitor Cannon"
   gun "EMP Torpedo Bay"
   gun "EMP Torpedo Bay"
-  
   turret "Point Defense Turret"
   turret "Point Defense Turret"
   turret
@@ -240,92 +302,18 @@ ship "Albatross" "Albatross (Turret)"
   outfits
     "Thrasher Turret" 4
     "Point Defense Turret"
-    
     "Aeon Cell"
     "Epoch Cell"
     "Millennium Cell"
     "Crystal Capacitor"
     "Thermoelectric Cooler"
     "Outfits Expansion" 2
-    
     "Smelter-Class Thruster"
     "Smelter-Class Steering"
     "Hyperdrive"
-  
   turret "Thrasher Turret"
   turret "Thrasher Turret"
   turret "Thrasher Turret"
   turret "Thrasher Turret"
   turret "Point Defense Turret"
 
-ship "Albatross" "Albatross (Heavy)"
-  outfits
-    "Inhibitor Cannon" 3
-    "Thrasher Cannon" 4
-    "Thrasher Turret" 3
-    
-    "Aeon Cell"
-    "Epoch Cell"
-    "Millennium Cell"
-    "Crystal Capacitor" 2
-    "Thermoelectric Cooler" 2
-    "Outfits Expansion" 4
-    
-    "Forge-Class Thruster"
-    "Crucible-Class Thruster"
-    "Smelter-Class Steering"
-    "Forge-Class Steering"
-    "Hyperdrive"
-  
-  gun "Inhibitor Cannon"
-  gun "Inhibitor Cannon"
-  gun "Inhibitor Cannon"
-  gun "Thrasher Cannon"
-  gun "Thrasher Cannon"
-  gun "Thrasher Cannon"
-  gun "Thrasher Cannon"
-  turret "Thrasher Turret"
-  turret "Thrasher Turret"
-  turret
-  turret
-  turret "Thrasher Turret"
-
-
-
-ship "Gascraft"
-  plural "Gascraft"
-  sprite "ship/gascraft"
-  thumbnail "thumbnail/gascraft"
-  attributes
-    category Transport
-    cost 530000
-    "shields" 800
-    "hull" 1500
-    "required crew" 1
-    "bunks" 1
-    "mass" 80
-    "drag" 1.7
-    "heat dissipation" 0.9
-    "fuel capacity" 700
-    "cargo space" 8
-    "outfit space" 90
-    "engine capacity" 34
-    "shield generation" 0.6
-    "shield energy" 0.4
-    "hull repair rate" 1.2
-    "hull energy" 0.9
-    "gaslining" 1
-  outfits
-    "Millennium Cell"
-    "Supercapacitor"
-    "Emergency Ramscoop"
-    "Quantum Key Stone"
-    
-    "Crucible-Class Thruster"
-    "Crucible-Class Steering"
-    "Hyperdrive"
-  
-  engine 0 30
-  explode "tiny explosion" 8
-  explode "small explosion" 7
-  description "Centuries ago, the Remnant built these ships in order to explore the upper atmosphere of nearby gas giants. The Archons took issue with the Remnant's research methods, and the studies were unable to be completed. The remaining gascraft have been gathering dust in storage for centuries while the Remnant waits to see if the anger of the Archons will subside."
