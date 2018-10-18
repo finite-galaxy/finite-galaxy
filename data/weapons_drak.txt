@@ -42,23 +42,6 @@ outfit "Drak Draining Field"
     "ion damage" .5
   description "This device produces a field that drains energy from any ship within it."
 
-outfit "Drak Anti-Missile Field"
-  category "Turrets"
-  cost 1000000
-  thumbnail "outfit/unknown"
-  "mass" 66
-  "outfit space" -66
-  "weapon capacity" -66
-  "turret mounts" -1
-  weapon
-    "velocity" 400
-    "lifetime" 1
-    "reload" 1
-    "firing energy" 10
-    "firing heat" 1
-    "anti-missile" 100
-  description "This device produces a field that destroys any missiles that come within it."
-
 outfit "Drak Turret"
   category "Turrets"
   cost 1000000
@@ -152,4 +135,23 @@ effect "antimatter dust"
   "velocity scale" .1
   "random velocity" 12
   "random spin" 50
+
+
+
+outfit "Drak Anti-Missile Field"
+  category "Anti-Missile"
+  cost 1000000
+  thumbnail "outfit/unknown"
+  "mass" 66
+  "outfit space" -66
+  "weapon capacity" -66
+  "turret mounts" -1
+  weapon
+    "velocity" 400
+    "lifetime" 1
+    "reload" 1
+    "firing energy" 10
+    "firing heat" 1
+    "anti-missile" 100
+  description "This device produces a field that destroys any missiles that come within it."
 

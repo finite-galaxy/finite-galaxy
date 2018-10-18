@@ -174,35 +174,7 @@ outfit "Moonbeam Turret"
     "hull damage" 8.4
   description "This turret only carries a single Moonbeam weapon, but with its duty cycle increased so it can do 50% more damage than the non-turreted version."
 
-outfit "Wanderer Anti-Missile"
-  category "Turrets"
-  licenses
-    "Wanderer Outfits"
-  cost 850000
-  thumbnail "outfit/wanderer anti-missile"
-  "mass" 24
-  "outfit space" -24
-  "weapon capacity" -24
-  "turret mounts" -1
-  weapon
-    "hardpoint sprite" "hardpoint/wanderer anti-missile"
-    "hardpoint offset" 6.
-    "hit effect" "wanderer anti-missile"
-    "anti-missile" 40
-    "velocity" 360
-    "lifetime" 1
-    "reload" 20
-    "firing energy" 50
-    "firing heat" 12
-  description "As a defense against the tracker pods used by the Unfettered Hai, the Wanderers have developed a hard-hitting anti-missile system that can knock almost any missile out of the sky with a single shot."
 
-effect "wanderer anti-missile"
-  sprite "effect/wanderer anti-missile"
-    "no repeat"
-    "frame rate" 6
-  sound "heavy anti-missile"
-  "lifetime" 31
-  "velocity scale" 1
 
 outfit "Thunderhead Launcher"
   category "Secondary Weapons"
@@ -272,7 +244,7 @@ outfit "Thunderhead"
     "missile strength" 3
 
 outfit "Thunderhead Storage Array"
-  category "Ammunition"
+  category "Ammunition Storage"
   licenses
     "Wanderer Outfits"
   cost 36000
@@ -282,4 +254,36 @@ outfit "Thunderhead Storage Array"
   "thunderhead capacity" 20
   ammo "Thunderhead Missile"
   description "The Thunderhead Storage Array is used to store extra ammunition for Thunderhead Launchers."
+
+
+
+outfit "Wanderer Anti-Missile"
+  category "Anti-Missile"
+  licenses
+    "Wanderer Outfits"
+  cost 850000
+  thumbnail "outfit/wanderer anti-missile"
+  "mass" 24
+  "outfit space" -24
+  "weapon capacity" -24
+  "turret mounts" -1
+  weapon
+    "hardpoint sprite" "hardpoint/wanderer anti-missile"
+    "hardpoint offset" 6.
+    "hit effect" "wanderer anti-missile"
+    "anti-missile" 40
+    "velocity" 360
+    "lifetime" 1
+    "reload" 20
+    "firing energy" 50
+    "firing heat" 12
+  description "As a defense against the tracker pods used by the Unfettered Hai, the Wanderers have developed a hard-hitting anti-missile system that can knock almost any missile out of the sky with a single shot."
+
+effect "wanderer anti-missile"
+  sprite "effect/wanderer anti-missile"
+    "no repeat"
+    "frame rate" 6
+  sound "heavy anti-missile"
+  "lifetime" 31
+  "velocity scale" 1
 

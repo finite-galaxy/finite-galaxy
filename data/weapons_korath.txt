@@ -79,36 +79,6 @@ effect "banisher impact"
   "velocity scale" 0.
 
 
-outfit "Korath Warder"
-  category "Turrets"
-  cost 845000
-  thumbnail "outfit/warder"
-  "mass" 28
-  "outfit space" -28
-  "weapon capacity" -28
-  "energy capacity" 50
-  "turret mounts" -1
-  weapon
-    "hardpoint sprite" "hardpoint/warder"
-    "hardpoint offset" 3.
-    "hit effect" "korath warder"
-    "anti-missile" 10
-    "velocity" 350
-    "lifetime" 1
-    "reload" 5
-    "firing energy" 24
-    "firing heat" 10
-  description "This anti-missile system helps defend Korath warships from long-range attacks."
-
-effect "korath warder"
-  sprite "effect/warder"
-    "no repeat"
-    "frame rate" 6
-  sound "warder"
-  "lifetime" 11
-  "velocity scale" 1
-
-
 outfit "Korath Fire-Lance"
   category "Guns"
   cost 697000
@@ -223,7 +193,7 @@ outfit "Korath Piercer"
   description "This missile is fired from a Korath Piercer Launcher."
 
 outfit "Korath Piercer Rack"
-  category "Ammunition"
+  category "Ammunition Storage"
   cost 56000
   thumbnail "outfit/korath piercer storage"
   "mass" 2.2
@@ -375,7 +345,7 @@ outfit "Korath Mine"
   description "This is ammunition for a Korath Minelayer. Each mine splits into eleven submunitions after it is deployed."
 
 outfit "Korath Mine Rack"
-  category "Ammunition"
+  category "Ammunition Storage"
   cost 31500
   thumbnail "outfit/korath mine storage"
   "mass" 2.7
@@ -566,3 +536,35 @@ effect "slicer impact"
   "random spin" 2
   "random velocity" .1
   "velocity scale" -.002
+
+
+
+outfit "Korath Warder"
+  category "Anti-Missile"
+  cost 845000
+  thumbnail "outfit/warder"
+  "mass" 28
+  "outfit space" -28
+  "weapon capacity" -28
+  "energy capacity" 50
+  "turret mounts" -1
+  weapon
+    "hardpoint sprite" "hardpoint/warder"
+    "hardpoint offset" 3.
+    "hit effect" "korath warder"
+    "anti-missile" 10
+    "velocity" 350
+    "lifetime" 1
+    "reload" 5
+    "firing energy" 24
+    "firing heat" 10
+  description "This anti-missile system helps defend Korath warships from long-range attacks."
+
+effect "korath warder"
+  sprite "effect/warder"
+    "no repeat"
+    "frame rate" 6
+  sound "warder"
+  "lifetime" 11
+  "velocity scale" 1
+

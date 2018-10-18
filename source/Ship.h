@@ -51,9 +51,6 @@ class Visual;
 // limits of what the AI knows how to command them to do.
 class Ship : public Body, public std::enable_shared_from_this<Ship> {
 public:
-	// These are all the possible category strings for ships.
-	static const std::vector<std::string> CATEGORIES;
-	
 	class Bay {
 	public:
 		Bay(double x, double y, bool isFighter) : point(x * .5, y * .5), isFighter(isFighter) {}

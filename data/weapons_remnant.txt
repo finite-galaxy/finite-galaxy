@@ -110,50 +110,6 @@ outfit "Thrasher Turret"
   description "This turret mounts four Thrasher Cannons on a single rotating base. The resulting weapon deals a very satisfying amount of damage when fired from close range, especially against a slow-moving target."
 
 
-outfit "Point Defense Turret"
-  category "Turrets"
-  licenses
-    Remnant
-  cost 1120000
-  thumbnail "outfit/point defense"
-  "mass" 33
-  "outfit space" -33
-  "weapon capacity" -33
-  "turret mounts" -1
-  weapon
-    "hardpoint sprite" "hardpoint/point defense"
-    "fire effect" "point defense fire"
-    "die effect" "point defense hit"
-    "die effect" "point defense die"
-    "anti-missile" 42
-    "velocity" 270
-    "lifetime" 1
-    "reload" 10
-    "firing energy" 62
-    "firing heat" 18
-  description "Not long after the Remnant settled on Aventine, they began to discover caches of alien technology in vaults deep under the mountains, guarded by ancient but still-functioning point-defense systems. The Remnant learned how to duplicate those defense systems, and they are now considered to be much more useful than most of the items that they were guarding."
-
-effect "point defense fire"
-  sprite "effect/point defense fire"
-    "frame rate" 17
-    "no repeat"
-  "velocity scale" .5
-  lifetime 10
-
-effect "point defense hit"
-  sprite "effect/point defense hit"
-    "frame rate" 13
-    "no repeat"
-  lifetime 10
-  "velocity scale" .2
-
-effect "point defense die"
-  sprite "effect/point defense die"
-    "frame rate" 20
-    "no repeat"
-  lifetime 15
-  "velocity scale" .2
-
 
 outfit "EMP Torpedo"
   plural "EMP Torpedoes"
@@ -238,4 +194,50 @@ effect "emp spark"
   "velocity scale" 0.1
   "random angle" 360
   "random velocity" 7
+
+
+
+outfit "Point Defense Turret"
+  category "Anti-Missile"
+  licenses
+    Remnant
+  cost 1120000
+  thumbnail "outfit/point defense"
+  "mass" 33
+  "outfit space" -33
+  "weapon capacity" -33
+  "turret mounts" -1
+  weapon
+    "hardpoint sprite" "hardpoint/point defense"
+    "fire effect" "point defense fire"
+    "die effect" "point defense hit"
+    "die effect" "point defense die"
+    "anti-missile" 42
+    "velocity" 270
+    "lifetime" 1
+    "reload" 10
+    "firing energy" 62
+    "firing heat" 18
+  description "Not long after the Remnant settled on Aventine, they began to discover caches of alien technology in vaults deep under the mountains, guarded by ancient but still-functioning point-defense systems. The Remnant learned how to duplicate those defense systems, and they are now considered to be much more useful than most of the items that they were guarding."
+
+effect "point defense fire"
+  sprite "effect/point defense fire"
+    "frame rate" 17
+    "no repeat"
+  "velocity scale" .5
+  lifetime 10
+
+effect "point defense hit"
+  sprite "effect/point defense hit"
+    "frame rate" 13
+    "no repeat"
+  lifetime 10
+  "velocity scale" .2
+
+effect "point defense die"
+  sprite "effect/point defense die"
+    "frame rate" 20
+    "no repeat"
+  lifetime 15
+  "velocity scale" .2
 

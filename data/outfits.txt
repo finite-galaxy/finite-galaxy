@@ -1,6 +1,6 @@
 outfit "Cooling Ducts"
   plural "Cooling Ducts"
-  category "Systems"
+  category "Cooling"
   cost 10000
   thumbnail "outfit/cooling ducts"
   "mass" 5
@@ -9,7 +9,7 @@ outfit "Cooling Ducts"
   description "When trying to cram as many high-powered outfits as possible into a ship, occasionally you reach the point where it is sporadically overheating and shutting down. In that case, you may need to install one of these."
 
 outfit "Water Coolant System"
-  category "Systems"
+  category "Cooling"
   cost 25000
   thumbnail "outfit/water cooling"
   "mass" 10
@@ -18,7 +18,7 @@ outfit "Water Coolant System"
   description "This system is a step up from ordinary cooling ducts; it circulates water in between an external radiator and your ship's hottest internal components to keep them from overheating."
 
 outfit "Liquid Nitrogen Cooler"
-  category "Systems"
+  category "Cooling"
   cost 60000
   thumbnail "outfit/liquid nitrogen"
   "mass" 20
@@ -27,7 +27,7 @@ outfit "Liquid Nitrogen Cooler"
   description "For ships with extreme cooling needs, liquid nitrogen is the answer. One of these coolers will dissipate the heat produced by anything but the heaviest of armaments."
 
 outfit "Liquid Helium Cooler"
-  category "Systems"
+  category "Cooling"
   cost 150000
   thumbnail "outfit/liquid helium"
   "mass" 40
@@ -37,7 +37,7 @@ outfit "Liquid Helium Cooler"
 
 
 outfit "D14-RN Shield Generator"
-  category "Systems"
+  category "Regeneration"
   cost 20000
   thumbnail "outfit/tiny shield"
   "mass" 15
@@ -47,7 +47,7 @@ outfit "D14-RN Shield Generator"
   description "This is the standard shield generator for fighters and interceptors, as well as for many non-combat starships. Although it is possible for a ship to have no shield generator at all, recharging its shield matrix only when landed in a hospitable spaceport, life in deep space is unpredictable enough that most pilots find shield generators to be well worth the space they take up."
 
 outfit "D23-QP Shield Generator"
-  category "Systems"
+  category "Regeneration"
   cost 35000
   thumbnail "outfit/small shield"
   "mass" 22
@@ -57,7 +57,7 @@ outfit "D23-QP Shield Generator"
   description "This is a slightly more powerful shield generator than the standard model installed in most small ships. If combat lasts long enough, the increased recharge rate is enough to give you an edge, but recharging your shields completely will still take a long time."
 
 outfit "D41-HY Shield Generator"
-  category "Systems"
+  category "Regeneration"
   cost 65000
   thumbnail "outfit/medium shield"
   "mass" 30
@@ -67,7 +67,7 @@ outfit "D41-HY Shield Generator"
   description "This is a more powerful shield generator designed for ships that are likely to see frequent combat, or that have such a large shield capacity that recharging them would take a long time with a smaller generator."
 
 outfit "D67-TM Shield Generator"
-  category "Systems"
+  category "Regeneration"
   cost 120000
   thumbnail "outfit/large shield"
   "mass" 45
@@ -77,7 +77,7 @@ outfit "D67-TM Shield Generator"
   description "This shield generator is powerful enough that in combat against some particularly weak ships, they may not even be capable of depleting your shields as fast as they recharge."
 
 outfit "D94-YV Shield Generator"
-  category "Systems"
+  category "Regeneration"
   cost 200000
   thumbnail "outfit/huge shield"
   "mass" 60
@@ -87,7 +87,7 @@ outfit "D94-YV Shield Generator"
   description "This is the most powerful shield generator available in human space. Because of their large size, D94-YV shield generators are mostly used in large warships, but you can fit one in a smaller ship if you are willing to sacrifice engine power or weaponry to make space for it."
 
 outfit "S-270 Regenerator"
-  category "Systems"
+  category "Regeneration"
   cost 220000
   thumbnail "outfit/small regenerator"
   "mass" 12
@@ -99,7 +99,7 @@ outfit "S-270 Regenerator"
   description "A shield regenerator works by subtly modifying the geometry of your shield matrix in order to make your shields more malleable and therefore much easier to recharge. Unfortunately, this causes your shields to also become less efficient, which draws energy away from your other systems, even when not charging shields, and creates heat."
 
 outfit "S-970 Regenerator"
-  category "Systems"
+  category "Regeneration"
   cost 800000
   thumbnail "outfit/large regenerator"
   "mass" 37
@@ -335,8 +335,8 @@ outfit "Security Station"
   category "Hand to Hand"
   cost 42000
   thumbnail "outfit/security station"
-  "mass" 2
-  "outfit space" -2
+  "mass" 1
+  "outfit space" -1
   "capture defense" 3.4
   "unplunderable" 1
   description "This is a specially designed barricade, which can be installed in the hallways of your ship as a powerful defense against anyone who boards you in an attempt to take over your ship."

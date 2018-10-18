@@ -1,5 +1,5 @@
 outfit "Small Biochemical Cell"
-  category "Power"
+  category "Energy Generation"
   licenses
     "Wanderer Outfits"
   cost 230000
@@ -12,7 +12,7 @@ outfit "Small Biochemical Cell"
   description "This tiny generator draws energy from the metabolic byproducts of a collection of microorganisms that have been engineered by the Wanderers specifically for this purpose."
 
 outfit "Large Biochemical Cell"
-  category "Power"
+  category "Energy Generation"
   licenses
     "Wanderer Outfits"
   cost 940000
@@ -25,7 +25,7 @@ outfit "Large Biochemical Cell"
   description "The Wanderers are masters of unusual and efficient technology. This bioreactor is fueled by a culture of microorganisms that produce a small electric charge."
 
 outfit "Red Sun Reactor"
-  category "Power"
+  category "Energy Generation"
   licenses
     "Wanderer Outfits"
   cost 3800000
@@ -38,7 +38,7 @@ outfit "Red Sun Reactor"
   description "The Wanderers have recently begun producing this tiny reactor as a way to squeeze a bit more energy production into their warships."
 
 outfit "Yellow Sun Reactor"
-  category "Power"
+  category "Energy Generation"
   licenses
     "Wanderer Outfits"
   cost 7500000
@@ -51,7 +51,7 @@ outfit "Yellow Sun Reactor"
   description "This is a compact nuclear reactor designed by the Wanderers. In addition to generating power, it is able to store a small amount of energy."
 
 outfit "White Sun Reactor"
-  category "Power"
+  category "Energy Generation"
   licenses
     "Wanderer Outfits"
   cost 13900000
@@ -64,7 +64,7 @@ outfit "White Sun Reactor"
   description "The White Sun is a large nuclear reactor that the Wanderers use for powering their Strong Wind warships."
 
 outfit "Blue Sun Reactor"
-  category "Power"
+  category "Energy Generation"
   licenses
     "Wanderer Outfits"
   cost 21500000
@@ -77,8 +77,9 @@ outfit "Blue Sun Reactor"
   description "As the Wanderers have begun producing heavy warships, a need has arisen for larger and larger reactor cores to power them."
 
 
+
 outfit "Bright Cloud Shielding"
-  category "Systems"
+  category "Regeneration"
   licenses
     "Wanderer Outfits"
   cost 220000
@@ -90,7 +91,7 @@ outfit "Bright Cloud Shielding"
   description "This small Wanderer shield generator is able to recharge a ship's shields at a considerable rate, but it also consumes more energy than some other shield generators do."
 
 outfit "Dark Storm Shielding"
-  category "Systems"
+  category "Regeneration"
   licenses
     "Wanderer Outfits"
   cost 800000
@@ -100,6 +101,21 @@ outfit "Dark Storm Shielding"
   "shield generation" 3.5
   "shield energy" 7.0
   description "This Wanderer shield generator can restore a ship's shield strength more quickly than any human shielding technology, but while recharging shields it also draws a much larger amount of power."
+
+
+
+outfit "Wanderer Heat Sink"
+  category "Cooling"
+  licenses
+    "Wanderer Outfits"
+  cost 94000
+  thumbnail "outfit/wanderer heat sink"
+  "mass" 12
+  "outfit space" -12
+  "cooling" 19
+  description "Most Wanderer systems are so efficient that ancillary cooling is unnecessary. As a result, their recent attempts to add cooling to their heavy warships are somewhat rudimentary."
+
+
 
 outfit "Wanderer Ramscoop"
   category "Systems"
@@ -112,17 +128,6 @@ outfit "Wanderer Ramscoop"
   "ramscoop" 4
   description "Wanderer ships are designed to be self-sufficient even when traveling through uninhabited space, and their compact and efficient ramscoops are a key part of that self-sufficiency."
 
-
-outfit "Wanderer Heat Sink"
-  category "Systems"
-  licenses
-    "Wanderer Outfits"
-  cost 94000
-  thumbnail "outfit/wanderer heat sink"
-  "mass" 12
-  "outfit space" -12
-  "cooling" 19
-  description "Most Wanderer systems are so efficient that ancillary cooling is unnecessary. As a result, their recent attempts to add cooling to their heavy warships are somewhat rudimentary."
 
 
 outfit "Wanderer Outfits License"
