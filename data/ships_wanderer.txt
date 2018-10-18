@@ -806,6 +806,17 @@ ship "Deep River" "Deep River 4"
 		"drag" -.4
 		"cargo space" -228
 
+ship "Deep River" "Deep River (Jump, Unarmed)"
+	outfits
+		"White Sun Reactor"
+		"Dark Storm Shielding" 3
+		"Fuel Pod"
+		"Type 2 Radiant Thruster"
+		"Type 4 Radiant Steering"
+		"Jump Drive"
+
+
+
 ship "Deep River Transport"
 	sprite "ship/deep river"
 	thumbnail "thumbnail/deep river"
@@ -855,3 +866,4 @@ ship "Deep River Transport"
 	explode "huge explosion" 20
 	"final explode" "final explosion large"
 	description "This is a Deep River freighter that has been converted into a transport ship for refugees."
+

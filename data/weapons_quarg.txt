@@ -8,25 +8,6 @@
 # WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A
 # PARTICULAR PURPOSE.  See the GNU General Public License for more details.
 
-outfit "Nanotech Battery"
-	plural "Nanotech Batteries"
-	category "Power"
-	cost 3000000
-	thumbnail "outfit/unknown"
-	"mass" 50
-	"outfit space" -50
-	"energy capacity" 30000
-
-outfit "Antimatter Core"
-	category "Power"
-	cost 100000000
-	thumbnail "outfit/unknown"
-	"mass" 80
-	"outfit space" -80
-	"energy generation" 80
-	"heat generation" 20
-
-
 outfit "Quarg Skylance"
 	category "Turrets"
 	cost 18000000
@@ -84,43 +65,3 @@ effect "quarg anti-missile"
 	"lifetime" 21
 	"velocity scale" 1
 
-
-outfit "Intrusion Countermeasures"
-	plural "Intrusion Countermeasures"
-	category "Hand to Hand"
-	thumbnail "outfit/unknown"
-	"capture defense" 60
-	"unplunderable" 1
-	description "Quarg ships are outfitted with special systems for repelling boarders. Because no one wants to be caught by the Quarg with stolen technology, these systems are pretty much worthless on the open market."
-
-outfit "Medium Graviton Thruster"
-	category "Engines"
-	"cost" 20000000
-	thumbnail "outfit/unknown"
-	"mass" 70
-	"outfit space" -70
-	"engine capacity" -70
-	"thrust" 80
-	"thrusting energy" 20
-	"thrusting heat" 10
-	"flare sprite" "effect/medium graviton flare"
-
-outfit "Medium Graviton Steering"
-	category "Engines"
-	"cost" 16000000
-	thumbnail "outfit/unknown"
-	"mass" 50
-	"outfit space" -50
-	"engine capacity" -50
-	"turn" 1600
-	"turning energy" 10
-	"turning heat" 5
-
-outfit "Quantum Shield Generator"
-	category "Systems"
-	cost 30000000
-	thumbnail "outfit/unknown"
-	"mass" 120
-	"outfit space" -120
-	"shield generation" 10
-	"shield energy" 10
