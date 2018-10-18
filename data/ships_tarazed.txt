@@ -78,16 +78,16 @@ ship "Falcon"
   thumbnail "thumbnail/falcon"
   attributes
     category "Heavy Warship"
-    "cost" 10900000
+    "cost" 9800000
     "shields" 12800
     "hull" 3700
-    "required crew" 52
-    "bunks" 75
+    "required crew" 32
+    "bunks" 64
     "mass" 510
     "drag" 6.7
     "heat dissipation" .7
     "fuel capacity" 600
-    "cargo space" 90
+    "cargo space" 80
     "outfit space" 540
     "weapon capacity" 240
     "engine capacity" 150
@@ -98,8 +98,6 @@ ship "Falcon"
       "hit force" 2400
   outfits
     "Plasma Cannon" 2
-    "Torpedo Launcher" 2
-    "Torpedo" 60
     "Quad Blaster Turret" 4
     "Breeder Reactor"
     "LP144a Battery Pack"
@@ -113,8 +111,6 @@ ship "Falcon"
   engine 17 143
   gun -17 -88 "Plasma Cannon"
   gun 17 -88 "Plasma Cannon"
-  gun -17 -88 "Torpedo Launcher"
-  gun 17 -88 "Torpedo Launcher"
   turret -16 -24 "Quad Blaster Turret"
   turret 16 -24 "Quad Blaster Turret"
   turret -57 40 "Quad Blaster Turret"
@@ -133,23 +129,19 @@ ship "Falcon" "Falcon (Heavy)"
   outfits
     "Torpedo Launcher" 2
     "Torpedo" 60
-    "Meteor Missile Launcher" 2
-    "Meteor Missile" 70
     "Heavy Laser Turret" 4
     "Fusion Reactor"
     "D67-TM Shield Generator"
-    "Small Radar Jammer"
+    "Large Radar Jammer"
     "Orca Plasma Thruster"
     "A375 Atomic Steering"
     "Hyperdrive"
   gun "Torpedo Launcher"
   gun "Torpedo Launcher"
-  gun "Meteor Missile Launcher"
-  gun "Meteor Missile Launcher"
 
 ship "Falcon" "Falcon (Laser)"
   outfits
-    "Heavy Laser" 4
+    "Heavy Laser" 2
     "Heavy Laser Turret" 4
     "Breeder Reactor"
     "LP072a Battery Pack"
@@ -350,11 +342,11 @@ ship "Osprey"
   thumbnail "thumbnail/osprey"
   attributes
     category "Medium Warship"
-    "cost" 4400000
+    "cost" 4900000
     "shields" 7200
     "hull" 1600
-    "required crew" 9
-    "bunks" 24
+    "required crew" 16
+    "bunks" 32
     "mass" 270
     "drag" 6.1
     "heat dissipation" .8
@@ -454,8 +446,8 @@ ship "Raven"
     "cost" 1800000
     "shields" 4700
     "hull" 1400
-    "required crew" 6
-    "bunks" 13
+    "required crew" 4
+    "bunks" 8
     "mass" 130
     "drag" 3.7
     "heat dissipation" .8
