@@ -682,7 +682,6 @@ mission "FW Plasma Testing 1B"
   on offer
     log "People" "Edward Tivrusky" `Barmy Edward is the Chief Offensive Engineer at Kraz Cybernetics, known for his inventive and sometimes impractical weapon designs. Supposedly, his engineers gave him the "Barmy" sobriquet after an incident where an experimental epoxy cannon he was working on exploded and glued him to the ceiling.`
     conversation
-      scene "scene/loc5"
       `You are met in the spaceport by a junior engineer from Kraz Cybernetics, who leads you to their facility and introduces you to his boss, who is known as "Barmy Edward." Edward is wearing a set of thick welding glasses and smoking a cigarette. "Pleased to meet you," he says, extending a hand that is encased in a heavy leather glove.`
       choice
         `  "Pleased to meet you, too, sir."`
@@ -703,7 +702,6 @@ mission "FW Plasma Testing 1B"
       
       label explain
       `  "Of course," he says. "Anyway, I bet you're wondering what new toys we're going to let you play with." You nod. He says, "We've been trying to come up with a weapon for our capital ships, something that's a match for one of the Navy's heavy laser turrets. Something more elegant than those awful quad blaster turrets the Syndicate makes. So I thought, why not take the biggest thing we've got, and then mount a pair of them on a turret?" He beckons for you to follow, and leads you through a door and into a hangar.`
-      scene "outfit/plasma turret"
       `  In front of you is a turret. It is almost absurdly large: a pair of plasma cannons mounted on a massive rotating base. "Sixty tons," says Barmy Edward. "Draws more power than... well, than anything else, practically. Runs a little hot, too."`
       choice
         `  "It's so... big!"`
@@ -742,7 +740,6 @@ mission "FW Plasma Testing 1B"
     event "plasma turret available" 50
     log "Assisted a Kraz Cybernetics engineer known as Barmy Edward with a test of a new and extremely powerful plasma cannon turret."
     conversation
-      scene "scene/loc7"
       `When you enter the hangar, the Window-Blind has just returned, and a team of engineers are looking it over. Barmy Edward puts down his work to come over and debrief you. "How did the turrets perform?" he asks.`
       choice
         `  "Very impressive. I want a few of those on my own ship."`
@@ -791,7 +788,6 @@ mission "plasma turret available"
   on offer
     conversation
       `When you land, a message pops up on your communicator from Barmy Edward. A photograph is enclosed as well. The message reads:`
-      scene "outfit/plasma turret"
       `  Rejoice, Captain! The next time you are on Rust, you will be able to purchase plasma turrets for your very own.`
       `        Regards,`
       `            B. Edward Tivrusky`
@@ -1061,7 +1057,6 @@ mission "FW Flamethrower 2"
         `  (Yes.)`
         `  (No.)`
           defer
-      scene scene/loc5
       `  You give your name to the receptionist, and she directs you to the hangar where the weapons group does their design and prototyping. Barmy Edward shakes your hand warmly and says, "Here's the deal. We've got a new weapon, something a little out of the ordinary. We're hoping it will be useful against the pirates, in particular. Interested in helping us?"`
       `  "Of course," you say.`
       `  "Great," he says. "I won't share the details, because I want you to get the full effect of the surprise. But, there's a ship in orbit, the Doombat, that has been fitted with a few of these new weapons. Your job will be to fight it and disable it, then tell us what you think of its weapons."`
@@ -1082,7 +1077,6 @@ mission "FW Flamethrower 2"
     event "flamethrower available" 30
     log "Assisted Barmy Edward with another weapon test: this time, a flamethrower weapon that works by overheating and disabling its target rather than dealing lots of damage to it. It may or may not be useful in actual combat."
     conversation
-      scene outfit/flamethrower
       `You head to the hangar to meet up with Barmy Edward, and find him tinkering with a large gun you don't recognize. Presumably, this is the flamethrower that you were just attacked with in orbit. "It runs on hyperspace fuel, you see," he says. "So, what did you think?"`
       choice
         `  "It's a terrifying weapon."`
@@ -1476,7 +1470,6 @@ mission "FW Pirates 4"
       choice
         `  "What do you think our odds are of a successful negotiation?"`
         `  "What do we do if diplomacy doesn't work?"`
-      scene scene/army0
       `  Before he has a chance to respond, the sky lights up with incoming particle beams, and you see one of the Terebinth's engines erupt in a gout of flames. "What the hell?" says Alondo.`
       `  The captain of the Terebinth, who is standing next to you, stares slack-jawed at his ship for a second before jumping into action. "Captain <last>," he says, "fire up your ship immediately and go after whoever is attacking us. I'll call for backup, but you will need to keep the attackers distracted until they arrive."`
         launch

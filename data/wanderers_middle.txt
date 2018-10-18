@@ -178,7 +178,6 @@ mission "Wanderers: Mereti Controller"
     log `Discovered that the "Kor Mereti" drone ships are controlled by some sort of collective and decentralized artificial intelligence, with no obvious weaknesses.`
     outfit "Reasoning Node" -1
     conversation
-      scene "outfit/reasoning node"
       `You hand off the Reasoning Node that you recovered from a Kor Mereti drone to a team of Wanderer scientists. A few hours later they report back to you. "This is a very [robust, redundant] design," says the lead scientist. "Each of these nodes has enough [processing power? intelligence?] to control one of the drones, but they are also [linked, interconnected] via a hyperspace network. So, all the drones [communicate, confer] with each other and are capable of making [strategic decisions?] as a collective."`
       choice
         `  "So no one is commanding the drones?"`
@@ -204,7 +203,6 @@ mission "Wanderers: Sestor Controller"
     log `The "Kor Sestor" drones turn out to all be controlled remotely, presumably by either an artificial intelligence or by Korath leaders in hiding on one of their worlds. If the control center could be found, it would be possible to gain control of the entire Kor Sestor fleet.`
     outfit "Control Transceiver" -1
     conversation
-      scene "outfit/control transceiver"
       `A team of Wanderer scientists examines the Control Transceiver that you salvaged from a Kor Sestor drone. "It is a remote control," they tell you. "Very little [computing power? autonomy?]. The ship receives [commands, directives] from some other source and sends back information on its own [status, observations]."`
       choice
         `  "Is there any way we could track the source of the commands?"`
