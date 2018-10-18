@@ -301,22 +301,19 @@ tip "  + outfits:"
 tip "idle:"
   `Energy and heat generated when this ship is idle, i.e. not firing weapons, turning, or thrusting.`
 
-tip "moving:"
-  `Energy consumed and heat generated when this ship is turning and thrusting. This is in addition to the "idle" amount.`
+tip "cloaking:"
+  `Energy consumed and heat generated when this ship is using its cloaking. (This is in addition to the "idle" amount.)`
 
 tip "firing:"
-  `Energy consumed and heat generated when this ship is firing all its weapons. This is in addition to the "idle" amount.`
+  `Energy consumed and heat generated when this ship is firing all its weapons. (This is in addition to the "idle" amount.)`
 
-tip "shields / hull:"
-  `Energy consumed and heat generated when this ship is recharging shields and repairing its hull at the same time. This is in addition to the "idle" amount.`
+tip "moving:"
+  `Energy consumed and heat generated when this ship is turning and thrusting. (This is in addition to the "idle" amount.)`
 
-tip "repairing hull:"
-  `Energy consumed and heat generated when this ship is repairing its hull. This is in addition to the "idle" amount.`
+tip "recovering:"
+  `Energy consumed and heat generated when this ship is recharging shields, repairing its hull, and using its active cooling at the same time. (This is in addition to the "idle" amount.)`
 
-tip "charging shields:"
-  `Energy consumed and heat generated when this ship is recharging its shields. This is in addition to the "idle" amount.`
-
-tip "max:"
+tip "capacity:"
   `Energy storage capacity and maximum safe level for heat generation. Energy capacity allows a ship to temporarily draw more energy than it produces. The heat maximum is the highest your heat generation can be without eventually causing your ship to overheat.`
 
 
