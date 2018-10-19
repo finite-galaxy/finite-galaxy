@@ -8,6 +8,7 @@ shipyard "Southbound Variants"
   "Bastion"
   "Bastion (Heavy)"
   "Bastion (Laser)"
+  "Bastion (Plasma)"
   "Bastion (Scanner)"
   "Clipper"
   "Clipper (Heavy)"
@@ -228,6 +229,17 @@ ship "Bastion" "Bastion (Laser)"
   turret "Heavy Anti-Missile Turret"
   turret "Heavy Laser Turret"
   turret "Heavy Laser Turret"
+
+ship "Bastion" "Bastion (Plasma)"
+  outfits
+    "Plasma Turret" 3
+    "Fusion Reactor"
+    "LP072a Battery Pack"
+    "D67-TM Shield Generator"
+    "Liquid Helium Cooler"
+    "Impala Plasma Thruster"
+    "Impala Plasma Steering"
+    "Hyperdrive"
 
 ship "Bastion" "Bastion (Scanner)"
   outfits
