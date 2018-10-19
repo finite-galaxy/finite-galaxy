@@ -1,13 +1,15 @@
 shipyard "Quarg Variants"
-  "Quarg Skylark"
-  "Quarg Wardragon"
+  "Skylark"
+  "Wardragon"
 
 
 
-ship "Quarg Skylark"
+ship "Skylark"
   sprite "ship/skylark"
   attributes
     category "Heavy Warship"
+    licenses
+      Quarg
     "cost" 5900000
     "shields" 120000
     "hull" 70000
@@ -56,10 +58,12 @@ ship "Quarg Skylark"
 
 
 
-ship "Quarg Wardragon"
+ship "Wardragon"
   sprite "ship/wardragon"
   attributes
     category "Heavy Warship"
+    licenses
+      Quarg
     "cost" 5900000
     "shields" 160000
     "hull" 50000
@@ -105,3 +109,4 @@ ship "Quarg Wardragon"
   explode "huge explosion" 20
   "final explode" "final explosion medium"
   description "The Wardragon is used by the Quarg as a light warship."
+

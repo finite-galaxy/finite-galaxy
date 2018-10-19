@@ -1,18 +1,18 @@
 shipyard "Heliarch Variants"
-  "Heliarch Interdictor"
-  "Heliarch Interdictor (Bombardment)"
-  "Heliarch Neutralizer"
-  "Heliarch Neutralizer (Missile)"
-  "Heliarch Neutralizer (Nimble)"
-  "Heliarch Neutralizer (Scrappy)"
-  "Heliarch Punisher"
-  "Heliarch Punisher (Interdicting)"
-  "Heliarch Punisher (Missile)"
-  "Heliarch Punisher (Scrappy)"
+  "Interdictor"
+  "Interdictor (Bombardment)"
+  "Neutralizer"
+  "Neutralizer (Missile)"
+  "Neutralizer (Nimble)"
+  "Neutralizer (Scrappy)"
+  "Punisher"
+  "Punisher (Interdicting)"
+  "Punisher (Missile)"
+  "Punisher (Scrappy)"
 
 
 
-ship "Heliarch Interdictor"
+ship "Interdictor"
   sprite "ship/heliarch interdictor"
   thumbnail "thumbnail/heliarch interdictor"
   attributes
@@ -66,7 +66,7 @@ ship "Heliarch Interdictor"
   "final explode" "final explosion large" 1
   description `Anyone who incurs the wrath of the Heliarchs cannot count on making a fast getaway thanks to the Interdictors, which were primarily designed to carry a pair of attractor and repulsor beams that can hold a ship a safe distance away while pushing it around enough to prevent it from getting a hyperspace lock to jump out of the system.`
 
-ship "Heliarch Interdictor" "Heliarch Interdictor (Bombardment)"
+ship "Interdictor" "Interdictor (Bombardment)"
   outfits
     "Finisher Pod" 2
     "Finisher Torpedo" 80
@@ -85,7 +85,7 @@ ship "Heliarch Interdictor" "Heliarch Interdictor (Bombardment)"
 
 
 
-ship "Heliarch Neutralizer"
+ship "Neutralizer"
   sprite "ship/heliarch neutralizer"
   thumbnail "thumbnail/heliarch neutralizer"
   attributes
@@ -136,7 +136,7 @@ ship "Heliarch Neutralizer"
   "final explode" "final explosion medium" 1
   description `The most common Heliarch patrol ship, Neutralizers are designed to be just strong enough to keep an enemy vessel occupied until reinforcements can arrive.`
 
-ship "Heliarch Neutralizer" "Heliarch Neutralizer (Missile)"
+ship "Neutralizer" "Neutralizer (Missile)"
   outfits
     "Finisher Pod" 2
     "Finisher Torpedo" 80
@@ -156,7 +156,7 @@ ship "Heliarch Neutralizer" "Heliarch Neutralizer (Missile)"
   gun
   gun
 
-ship "Heliarch Neutralizer" "Heliarch Neutralizer (Nimble)"
+ship "Neutralizer" "Neutralizer (Nimble)"
   outfits
     "Ion Rain Gun" 4
     "Small Reactor Module" 2
@@ -171,7 +171,7 @@ ship "Heliarch Neutralizer" "Heliarch Neutralizer (Nimble)"
     "Small Steering Module"
     "Hyperdrive"
 
-ship "Heliarch Neutralizer" "Heliarch Neutralizer (Scrappy)"
+ship "Neutralizer" "Neutralizer (Scrappy)"
   outfits
     "Bombardment Cannon" 4
     "Small Reactor Module" 2
@@ -189,7 +189,7 @@ ship "Heliarch Neutralizer" "Heliarch Neutralizer (Scrappy)"
 
 
 
-ship "Heliarch Punisher"
+ship "Punisher"
   sprite "ship/heliarch punisher"
   thumbnail "thumbnail/heliarch punisher"
   attributes
@@ -250,7 +250,7 @@ ship "Heliarch Punisher"
   "final explode" "final explosion large" 1
   description `Although not quite as strong or powerful as the Quarg ships that they are designed to oppose, Heliarch Punishers are versatile and durable ships. Rumors say that the Heliarchs have a small stash of stolen Quarg Skylances that they can outfit the Punishers with in times of war.`
 
-ship "Heliarch Punisher" "Heliarch Punisher (Interdicting)"
+ship "Punisher" "Punisher (Interdicting)"
   outfits
     "Bombardment Cannon" 4
     "Finisher Pod" 2
@@ -280,7 +280,7 @@ ship "Heliarch Punisher" "Heliarch Punisher (Interdicting)"
   turret "Heliarch Repulsor"
   turret "Bombardment Turret"
 
-ship "Heliarch Punisher" "Heliarch Punisher (Missile)"
+ship "Punisher" "Punisher (Missile)"
   outfits
     "Finisher Pod" 6
     "Finisher Torpedo" 240
@@ -302,7 +302,7 @@ ship "Heliarch Punisher" "Heliarch Punisher (Missile)"
   turret "Heliarch Repulsor"
   turret
 
-ship "Heliarch Punisher" "Heliarch Punisher (Scrappy)"
+ship "Punisher" "Punisher (Scrappy)"
   outfits
     "Bombardment Cannon" 6
     "Bombardment Turret" 4
