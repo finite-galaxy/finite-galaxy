@@ -18,27 +18,27 @@ class UI;
 // credits and basic information on the currently loaded player.
 class MenuPanel : public Panel {
 public:
-	MenuPanel(PlayerInfo &player, UI &gamePanels);
-	
-	virtual void Step() override;
-	virtual void Draw() override;
-	
-	// New player "conversation" callback.
-	void OnCallback(int value);
-	
-	
+  MenuPanel(PlayerInfo &player, UI &gamePanels);
+  
+  virtual void Step() override;
+  virtual void Draw() override;
+  
+  // New player "conversation" callback.
+  void OnCallback(int value);
+  
+  
 protected:
-	// Only override the ones you need; the default action is to return false.
-	virtual bool KeyDown(SDL_Keycode key, Uint16 mod, const Command &command) override;
-	
-	
+  // Only override the ones you need; the default action is to return false.
+  virtual bool KeyDown(SDL_Keycode key, Uint16 mod, const Command &command) override;
+  
+  
 private:
-	PlayerInfo &player;
-	UI &gamePanels;
-	
-	std::vector<std::string> credits;
-	unsigned scroll;
-	int progress = 0;
+  PlayerInfo &player;
+  UI &gamePanels;
+  
+  std::vector<std::string> credits;
+  unsigned scroll;
+  int progress = 0;
 };
 
 

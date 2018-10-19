@@ -13,27 +13,27 @@ class DataNode;
 // Class representing a set of rules for generating random ship names.
 class Phrase {
 public:
-	void Load(const DataNode &node);
-	
-	const std::string &Name() const;
-	std::string Get() const;
-	
-	
+  void Load(const DataNode &node);
+  
+  const std::string &Name() const;
+  std::string Get() const;
+  
+  
 private:
-	bool ReferencesPhrase(const Phrase *phrase) const;
-	
-	
+  bool ReferencesPhrase(const Phrase *phrase) const;
+  
+  
 private:
-	class Part {
-	public:
-		std::vector<std::string> words;
-		std::vector<const Phrase *> phrases;
-	};
-	
-	
+  class Part {
+  public:
+    std::vector<std::string> words;
+    std::vector<const Phrase *> phrases;
+  };
+  
+  
 private:
-	std::string name;
-	std::vector<std::vector<Part>> parts;
+  std::string name;
+  std::vector<std::vector<Part>> parts;
 };
 
 

@@ -27,56 +27,56 @@ class System;
 // names are chosen based on a given random "phrase" generator.
 class Fleet {
 public:
-	Fleet() = default;
-	// Construct and Load() at the same time.
-	Fleet(const DataNode &node);
-	
-	void Load(const DataNode &node);
-	
-	// Get the government of this fleet.
-	const Government *GetGovernment() const;
-	
-	void Enter(const System &system, std::list<std::shared_ptr<Ship>> &ships, const Planet *planet = nullptr) const;
-	// Place a fleet in the given system, already "in action."
-	void Place(const System &system, std::list<std::shared_ptr<Ship>> &ships, bool carried = true) const;
-	
-	// Do the randomization to make a ship enter or be in the given system.
-	// Return the system that was chosen for the ship to enter from.
-	static const System *Enter(const System &system, Ship &ship, const System *source = nullptr);
-	static void Place(const System &system, Ship &ship);
-	
-	int64_t Strength() const;
-	
-	
+  Fleet() = default;
+  // Construct and Load() at the same time.
+  Fleet(const DataNode &node);
+  
+  void Load(const DataNode &node);
+  
+  // Get the government of this fleet.
+  const Government *GetGovernment() const;
+  
+  void Enter(const System &system, std::list<std::shared_ptr<Ship>> &ships, const Planet *planet = nullptr) const;
+  // Place a fleet in the given system, already "in action."
+  void Place(const System &system, std::list<std::shared_ptr<Ship>> &ships, bool carried = true) const;
+  
+  // Do the randomization to make a ship enter or be in the given system.
+  // Return the system that was chosen for the ship to enter from.
+  static const System *Enter(const System &system, Ship &ship, const System *source = nullptr);
+  static void Place(const System &system, Ship &ship);
+  
+  int64_t Strength() const;
+  
+  
 private:
-	class Variant {
-	public:
-		explicit Variant(const DataNode &node);
-		
-		int weight;
-		std::vector<const Ship *> ships;
-	};
-	
-	
+  class Variant {
+  public:
+    explicit Variant(const DataNode &node);
+    
+    int weight;
+    std::vector<const Ship *> ships;
+  };
+  
+  
 private:
-	const Variant &ChooseVariant() const;
-	static Point ChooseCenter(const System &system);
-	std::vector<std::shared_ptr<Ship>> Instantiate(const Variant &variant) const;
-	bool PlaceFighter(std::shared_ptr<Ship> fighter, std::vector<std::shared_ptr<Ship>> &placed) const;
-	void SetCargo(Ship *ship) const;
-	
-	
+  const Variant &ChooseVariant() const;
+  static Point ChooseCenter(const System &system);
+  std::vector<std::shared_ptr<Ship>> Instantiate(const Variant &variant) const;
+  bool PlaceFighter(std::shared_ptr<Ship> fighter, std::vector<std::shared_ptr<Ship>> &placed) const;
+  void SetCargo(Ship *ship) const;
+  
+  
 private:
-	std::string fleetName;
-	const Government *government = nullptr;
-	const Phrase *names = nullptr;
-	const Phrase *fighterNames = nullptr;
-	std::vector<Variant> variants;
-	int cargo = 3;
-	std::vector<std::string> commodities;
-	int total = 0;
-	
-	Personality personality;
+  std::string fleetName;
+  const Government *government = nullptr;
+  const Phrase *names = nullptr;
+  const Phrase *fighterNames = nullptr;
+  std::vector<Variant> variants;
+  int cargo = 3;
+  std::vector<std::string> commodities;
+  int total = 0;
+  
+  Personality personality;
 };
 
 

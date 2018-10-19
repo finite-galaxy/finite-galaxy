@@ -16,26 +16,26 @@ using namespace std;
 // and the given credit score (which should be between 200 and 800).
 int64_t Mortgage::Maximum(int64_t annualRevenue, int creditScore, int64_t currentPayments)
 {
-	const int term = 365;
-	annualRevenue -= term * currentPayments;
-	if(annualRevenue <= 0)
-		return 0;
-	
-	double interest = (600 - creditScore / 2) * .00001;
-	double power = pow(1. + interest, term);
-	double multiplier = interest * term * power / (power - 1.);
-	return static_cast<int64_t>(max(0., annualRevenue / multiplier));
+  const int term = 365;
+  annualRevenue -= term * currentPayments;
+  if(annualRevenue <= 0)
+    return 0;
+  
+  double interest = (600 - creditScore / 2) * .00001;
+  double power = pow(1. + interest, term);
+  double multiplier = interest * term * power / (power - 1.);
+  return static_cast<int64_t>(max(0., annualRevenue / multiplier));
 }
 
 
 
 // Create a new mortgage of the given amount.
 Mortgage::Mortgage(int64_t principal, int creditScore, int term)
-	: type(creditScore <= 0 ? "Fine" : "Mortgage"),
-	principal(principal),
-	interest((600 - creditScore / 2) * .00001),
-	interestString("0." + to_string(600 - creditScore / 2) + "%"),
-	term(term)
+  : type(creditScore <= 0 ? "Fine" : "Mortgage"),
+  principal(principal),
+  interest((600 - creditScore / 2) * .00001),
+  interestString("0." + to_string(600 - creditScore / 2) + "%"),
+  term(term)
 {
 }
 
@@ -44,7 +44,7 @@ Mortgage::Mortgage(int64_t principal, int creditScore, int term)
 // Construct and Load() at the same time.
 Mortgage::Mortgage(const DataNode &node)
 {
-	Load(node);
+  Load(node);
 }
 
 
@@ -52,38 +52,38 @@ Mortgage::Mortgage(const DataNode &node)
 // Load or save mortgage data.
 void Mortgage::Load(const DataNode &node)
 {
-	if(node.Size() >= 2)
-		type = node.Token(1);
-	else
-		type = "Mortgage";
-	
-	for(const DataNode &child : node)
-	{
-		if(child.Token(0) == "principal" && child.Size() >= 2)
-			principal = child.Value(1);
-		else if(child.Token(0) == "interest" && child.Size() >= 2)
-		{
-			interest = child.Value(1);
-			int f = 100000. * interest;
-			interestString = "0." + to_string(f) + "%";
-		}
-		else if(child.Token(0) == "term" && child.Size() >= 2)
-			term = child.Value(1);
-	}
+  if(node.Size() >= 2)
+    type = node.Token(1);
+  else
+    type = "Mortgage";
+  
+  for(const DataNode &child : node)
+  {
+    if(child.Token(0) == "principal" && child.Size() >= 2)
+      principal = child.Value(1);
+    else if(child.Token(0) == "interest" && child.Size() >= 2)
+    {
+      interest = child.Value(1);
+      int f = 100000. * interest;
+      interestString = "0." + to_string(f) + "%";
+    }
+    else if(child.Token(0) == "term" && child.Size() >= 2)
+      term = child.Value(1);
+  }
 }
 
 
 
 void Mortgage::Save(DataWriter &out) const
 {
-	out.Write("mortgage", type);
-	out.BeginChild();
-	{
-		out.Write("principal", principal);
-		out.Write("interest", interest);
-		out.Write("term", term);
-	}
-	out.EndChild();
+  out.Write("mortgage", type);
+  out.BeginChild();
+  {
+    out.Write("principal", principal);
+    out.Write("interest", interest);
+    out.Write("term", term);
+  }
+  out.EndChild();
 }
 
 
@@ -91,19 +91,19 @@ void Mortgage::Save(DataWriter &out) const
 // Make a mortgage payment. The return value is the amount paid.
 int64_t Mortgage::MakePayment()
 {
-	int64_t payment = Payment();
-	MissPayment();
-	principal -= payment;
-	--term;
-	
-	return payment;
+  int64_t payment = Payment();
+  MissPayment();
+  principal -= payment;
+  --term;
+  
+  return payment;
 }
 
 
 
 void Mortgage::MissPayment()
 {
-	principal += lround(principal * interest);
+  principal += lround(principal * interest);
 }
 
 
@@ -114,9 +114,9 @@ void Mortgage::MissPayment()
 // principal remaining is less than the given amount.
 int64_t Mortgage::PayExtra(int64_t amount)
 {
-	amount = min(principal, amount);
-	principal -= amount;
-	return amount;
+  amount = min(principal, amount);
+  principal -= amount;
+  return amount;
 }
 
 
@@ -125,7 +125,7 @@ int64_t Mortgage::PayExtra(int64_t amount)
 // and "Fine" if this is a fine imposed on you for illegal activities.
 const string &Mortgage::Type() const
 {
-	return type;
+  return type;
 }
 
 
@@ -133,7 +133,7 @@ const string &Mortgage::Type() const
 // Get the remaining mortgage principal.
 int64_t Mortgage::Principal() const
 {
-	return principal;
+  return principal;
 }
 
 
@@ -142,7 +142,7 @@ int64_t Mortgage::Principal() const
 // program will ever do with this is display it.
 const string &Mortgage::Interest() const
 {
-	return interestString;
+  return interestString;
 }
 
 
@@ -150,7 +150,7 @@ const string &Mortgage::Interest() const
 // Get the remaining number of payments that must be made.
 int Mortgage::Term() const
 {
-	return term;
+  return term;
 }
 
 
@@ -158,10 +158,10 @@ int Mortgage::Term() const
 // Check the amount of the next payment due (rounded to the nearest credit).
 int64_t Mortgage::Payment() const
 {
-	if(!interest)
-		return round(principal / term);
-	
-	// Always require every payment to be at least 1 credit.
-	double power = pow(1. + interest, term);
-	return max<int64_t>(1, round(principal * interest * power / (power - 1.)));
+  if(!interest)
+    return round(principal / term);
+  
+  // Always require every payment to be at least 1 credit.
+  double power = pow(1. + interest, term);
+  return max<int64_t>(1, round(principal * interest * power / (power - 1.)));
 }

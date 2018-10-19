@@ -16,7 +16,7 @@ using namespace std;
 
 
 Sprite::Sprite(const string &name)
-	: name(name)
+  : name(name)
 {
 }
 
@@ -24,7 +24,7 @@ Sprite::Sprite(const string &name)
 
 const string &Sprite::Name() const
 {
-	return name;
+  return name;
 }
 
 
@@ -32,42 +32,42 @@ const string &Sprite::Name() const
 // Upload the given frames. The given buffer will be cleared afterwards.
 void Sprite::AddFrames(ImageBuffer &buffer, bool is2x)
 {
-	// Do nothing if the buffer is empty.
-	if(!buffer.Pixels())
-		return;
-	
-	// If this is the 1x image, its dimensions determine the sprite's size.
-	if(!is2x)
-	{
-		width = buffer.Width();
-		height = buffer.Height();
-		frames = buffer.Frames();
-	}
-	
-	// Check whether this sprite is large enough to require size reduction.
-	if(Preferences::Has("Reduce large graphics") && buffer.Width() * buffer.Height() >= 1000000)
-		buffer.ShrinkToHalfSize();
-	
-	// Upload the images as a single array texture.
-	glGenTextures(1, &texture[is2x]);
-	glBindTexture(GL_TEXTURE_2D_ARRAY, texture[is2x]);
-	
-	// Use linear interpolation and no wrapping.
-	glTexParameteri(GL_TEXTURE_2D_ARRAY, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
-	glTexParameteri(GL_TEXTURE_2D_ARRAY, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
-	glTexParameteri(GL_TEXTURE_2D_ARRAY, GL_TEXTURE_WRAP_S, GL_CLAMP_TO_EDGE);
-	glTexParameteri(GL_TEXTURE_2D_ARRAY, GL_TEXTURE_WRAP_T, GL_CLAMP_TO_EDGE);
-	
-	// Upload the image data.
-	glTexImage3D(GL_TEXTURE_2D_ARRAY, 0, GL_RGBA8, // target, mipmap level, internal format,
-		buffer.Width(), buffer.Height(), buffer.Frames(), // width, height, depth,
-		0, GL_BGRA, GL_UNSIGNED_BYTE, buffer.Pixels()); // border, input format, data type, data.
-	
-	// Unbind the texture.
-	glBindTexture(GL_TEXTURE_2D_ARRAY, 0);
-	
-	// Free the ImageBuffer memory.
-	buffer.Clear();
+  // Do nothing if the buffer is empty.
+  if(!buffer.Pixels())
+    return;
+  
+  // If this is the 1x image, its dimensions determine the sprite's size.
+  if(!is2x)
+  {
+    width = buffer.Width();
+    height = buffer.Height();
+    frames = buffer.Frames();
+  }
+  
+  // Check whether this sprite is large enough to require size reduction.
+  if(Preferences::Has("Reduce large graphics") && buffer.Width() * buffer.Height() >= 1000000)
+    buffer.ShrinkToHalfSize();
+  
+  // Upload the images as a single array texture.
+  glGenTextures(1, &texture[is2x]);
+  glBindTexture(GL_TEXTURE_2D_ARRAY, texture[is2x]);
+  
+  // Use linear interpolation and no wrapping.
+  glTexParameteri(GL_TEXTURE_2D_ARRAY, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
+  glTexParameteri(GL_TEXTURE_2D_ARRAY, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
+  glTexParameteri(GL_TEXTURE_2D_ARRAY, GL_TEXTURE_WRAP_S, GL_CLAMP_TO_EDGE);
+  glTexParameteri(GL_TEXTURE_2D_ARRAY, GL_TEXTURE_WRAP_T, GL_CLAMP_TO_EDGE);
+  
+  // Upload the image data.
+  glTexImage3D(GL_TEXTURE_2D_ARRAY, 0, GL_RGBA8, // target, mipmap level, internal format,
+    buffer.Width(), buffer.Height(), buffer.Frames(), // width, height, depth,
+    0, GL_BGRA, GL_UNSIGNED_BYTE, buffer.Pixels()); // border, input format, data type, data.
+  
+  // Unbind the texture.
+  glBindTexture(GL_TEXTURE_2D_ARRAY, 0);
+  
+  // Free the ImageBuffer memory.
+  buffer.Clear();
 }
 
 
@@ -76,8 +76,8 @@ void Sprite::AddFrames(ImageBuffer &buffer, bool is2x)
 // vector will be cleared.
 void Sprite::AddMasks(vector<Mask> &masks)
 {
-	this->masks.swap(masks);
-	masks.clear();
+  this->masks.swap(masks);
+  masks.clear();
 }
 
 
@@ -85,13 +85,13 @@ void Sprite::AddMasks(vector<Mask> &masks)
 // Free up all textures loaded for this sprite.
 void Sprite::Unload()
 {
-	glDeleteTextures(2, texture);
-	texture[0] = texture[1] = 0;
-	
-	masks.clear();
-	width = 0.f;
-	height = 0.f;
-	frames = 0;
+  glDeleteTextures(2, texture);
+  texture[0] = texture[1] = 0;
+  
+  masks.clear();
+  width = 0.f;
+  height = 0.f;
+  frames = 0;
 }
 
 
@@ -99,7 +99,7 @@ void Sprite::Unload()
 // Get the width, in pixels, of the 1x image.
 float Sprite::Width() const
 {
-	return width;
+  return width;
 }
 
 
@@ -107,7 +107,7 @@ float Sprite::Width() const
 // Get the height, in pixels, of the 1x image.
 float Sprite::Height() const
 {
-	return height;
+  return height;
 }
 
 
@@ -115,7 +115,7 @@ float Sprite::Height() const
 // Get the number of frames in the animation.
 int Sprite::Frames() const
 {
-	return frames;
+  return frames;
 }
 
 
@@ -124,7 +124,7 @@ int Sprite::Frames() const
 // shifting of corner to center coordinates.
 Point Sprite::Center() const
 {
-	return Point(.5 * width, .5 * height);
+  return Point(.5 * width, .5 * height);
 }
 
 
@@ -132,7 +132,7 @@ Point Sprite::Center() const
 // Get the texture index, based on whether the screen is high DPI or not.
 uint32_t Sprite::Texture() const
 {
-	return Texture(Screen::IsHighResolution());
+  return Texture(Screen::IsHighResolution());
 }
 
 
@@ -140,7 +140,7 @@ uint32_t Sprite::Texture() const
 // Get the index of the texture for the given high DPI mode.
 uint32_t Sprite::Texture(bool isHighDPI) const
 {
-	return (isHighDPI && texture[1]) ? texture[1] : texture[0];
+  return (isHighDPI && texture[1]) ? texture[1] : texture[0];
 }
 
 
@@ -148,10 +148,10 @@ uint32_t Sprite::Texture(bool isHighDPI) const
 // Get the collision mask for the given frame of the animation.
 const Mask &Sprite::GetMask(int frame) const
 {
-	static const Mask EMPTY;
-	if(frame < 0 || masks.empty())
-		return EMPTY;
-	
-	// Assume that if a masks array exists, it has the right number of frames.
-	return masks[frame % masks.size()];
+  static const Mask EMPTY;
+  if(frame < 0 || masks.empty())
+    return EMPTY;
+  
+  // Assume that if a masks array exists, it has the right number of frames.
+  return masks[frame % masks.size()];
 }

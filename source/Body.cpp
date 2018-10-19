@@ -18,7 +18,7 @@ using namespace std;
 
 // Constructor, based on a Sprite.
 Body::Body(const Sprite *sprite, Point position, Point velocity, Angle facing, double zoom)
-	: position(position), velocity(velocity), angle(facing), zoom(zoom), sprite(sprite), randomize(true)
+  : position(position), velocity(velocity), angle(facing), zoom(zoom), sprite(sprite), randomize(true)
 {
 }
 
@@ -27,11 +27,11 @@ Body::Body(const Sprite *sprite, Point position, Point velocity, Angle facing, d
 // Constructor, based on the animation from another Body object.
 Body::Body(const Body &sprite, Point position, Point velocity, Angle facing, double zoom)
 {
-	*this = sprite;
-	this->position = position;
-	this->velocity = velocity;
-	this->angle = facing;
-	this->zoom = zoom;
+  *this = sprite;
+  this->position = position;
+  this->velocity = velocity;
+  this->angle = facing;
+  this->zoom = zoom;
 }
 
 
@@ -39,7 +39,7 @@ Body::Body(const Body &sprite, Point position, Point velocity, Angle facing, dou
 // Check that this Body has a sprite and that the sprite has at least one frame.
 bool Body::HasSprite() const
 {
-	return (sprite && sprite->Frames());
+  return (sprite && sprite->Frames());
 }
 
 
@@ -47,7 +47,7 @@ bool Body::HasSprite() const
 // Access the underlying Sprite object.
 const Sprite *Body::GetSprite() const
 {
-	return sprite;
+  return sprite;
 }
 
 
@@ -55,7 +55,7 @@ const Sprite *Body::GetSprite() const
 // Get the width of this object, in world coordinates (i.e. taking zoom into account).
 double Body::Width() const
 {
-	return sprite ? (.5 * zoom) * sprite->Width() : 0.;
+  return sprite ? (.5 * zoom) * sprite->Width() : 0.;
 }
 
 
@@ -63,7 +63,7 @@ double Body::Width() const
 // Get the height of this object, in world coordinates (i.e. taking zoom into account).
 double Body::Height() const
 {
-	return sprite ? (.5 * zoom) * sprite->Height() : 0.;
+  return sprite ? (.5 * zoom) * sprite->Height() : 0.;
 }
 
 
@@ -71,7 +71,7 @@ double Body::Height() const
 // Get the farthest a part of this sprite can be from its center.
 double Body::Radius() const
 {
-	return .5 * Point(Width(), Height()).Length();
+  return .5 * Point(Width(), Height()).Length();
 }
 
 
@@ -79,7 +79,7 @@ double Body::Radius() const
 // Which color swizzle should be applied to the sprite?
 int Body::GetSwizzle() const
 {
-	return swizzle;
+  return swizzle;
 }
 
 
@@ -88,10 +88,10 @@ int Body::GetSwizzle() const
 // will return the frame from the most recently given step.
 float Body::GetFrame(int step) const
 {
-	if(step >= 0)
-		SetStep(step);
-	
-	return frame;
+  if(step >= 0)
+    SetStep(step);
+  
+  return frame;
 }
 
 
@@ -100,11 +100,11 @@ float Body::GetFrame(int step) const
 // return the mask from the most recently given step.
 const Mask &Body::GetMask(int step) const
 {
-	if(step >= 0)
-		SetStep(step);
-	
-	static const Mask EMPTY;
-	return sprite ? sprite->GetMask(round(frame)) : EMPTY;
+  if(step >= 0)
+    SetStep(step);
+  
+  static const Mask EMPTY;
+  return sprite ? sprite->GetMask(round(frame)) : EMPTY;
 }
 
 
@@ -112,7 +112,7 @@ const Mask &Body::GetMask(int step) const
 // Position, in world coordinates (zero is the system center).
 const Point &Body::Position() const
 {
-	return position;
+  return position;
 }
 
 
@@ -120,7 +120,7 @@ const Point &Body::Position() const
 // Velocity, in pixels per second.
 const Point &Body::Velocity() const
 {
-	return velocity;
+  return velocity;
 }
 
 
@@ -128,7 +128,7 @@ const Point &Body::Velocity() const
 // Direction this Body is facing in.
 const Angle &Body::Facing() const
 {
-	return angle;
+  return angle;
 }
 
 
@@ -137,7 +137,7 @@ const Angle &Body::Facing() const
 // and transform that should be applied to the sprite before drawing it.
 Point Body::Unit() const
 {
-	return angle.Unit() * (.5 * Zoom());
+  return angle.Unit() * (.5 * Zoom());
 }
 
 
@@ -145,7 +145,7 @@ Point Body::Unit() const
 // Zoom factor. This controls how big the sprite should be drawn.
 double Body::Zoom() const
 {
-	return max(zoom, 0.f);
+  return max(zoom, 0.f);
 }
 
 
@@ -153,7 +153,7 @@ double Body::Zoom() const
 // Check if this object is marked for removal from the game.
 bool Body::ShouldBeRemoved() const
 {
-	return shouldBeRemoved;
+  return shouldBeRemoved;
 }
 
 
@@ -162,7 +162,7 @@ bool Body::ShouldBeRemoved() const
 // on the Body class can figure out which objects will collide.
 const Government *Body::GetGovernment() const
 {
-	return government;
+  return government;
 }
 
 
@@ -170,39 +170,39 @@ const Government *Body::GetGovernment() const
 // Load the sprite specification, including all animation attributes.
 void Body::LoadSprite(const DataNode &node)
 {
-	if(node.Size() < 2)
-		return;
-	sprite = SpriteSet::Get(node.Token(1));
-	
-	// The only time the animation does not start on a specific frame is if no
-	// start frame is specified and it repeats. Since a frame that does not
-	// start at zero starts when the game started, it does not make sense for it
-	// to do that unless it is repeating endlessly.
-	for(const DataNode &child : node)
-	{
-		if(child.Token(0) == "frame rate" && child.Size() >= 2 && child.Value(1) >= 0.)
-			frameRate = child.Value(1) / 60.;
-		else if(child.Token(0) == "frame time" && child.Size() >= 2 && child.Value(1) > 0.)
-			frameRate = 1. / child.Value(1);
-		else if(child.Token(0) == "delay" && child.Size() >= 2 && child.Value(1) > 0.)
-			delay = child.Value(1);
-		else if(child.Token(0) == "start frame" && child.Size() >= 2)
-		{
-			frameOffset += child.Value(1);
-			startAtZero = true;
-		}
-		else if(child.Token(0) == "random start frame")
-			randomize = true;
-		else if(child.Token(0) == "no repeat")
-		{
-			repeat = false;
-			startAtZero = true;
-		}
-		else if(child.Token(0) == "rewind")
-			rewind = true;
-		else
-			child.PrintTrace("Skipping unrecognized attribute:");
-	}
+  if(node.Size() < 2)
+    return;
+  sprite = SpriteSet::Get(node.Token(1));
+  
+  // The only time the animation does not start on a specific frame is if no
+  // start frame is specified and it repeats. Since a frame that does not
+  // start at zero starts when the game started, it does not make sense for it
+  // to do that unless it is repeating endlessly.
+  for(const DataNode &child : node)
+  {
+    if(child.Token(0) == "frame rate" && child.Size() >= 2 && child.Value(1) >= 0.)
+      frameRate = child.Value(1) / 60.;
+    else if(child.Token(0) == "frame time" && child.Size() >= 2 && child.Value(1) > 0.)
+      frameRate = 1. / child.Value(1);
+    else if(child.Token(0) == "delay" && child.Size() >= 2 && child.Value(1) > 0.)
+      delay = child.Value(1);
+    else if(child.Token(0) == "start frame" && child.Size() >= 2)
+    {
+      frameOffset += child.Value(1);
+      startAtZero = true;
+    }
+    else if(child.Token(0) == "random start frame")
+      randomize = true;
+    else if(child.Token(0) == "no repeat")
+    {
+      repeat = false;
+      startAtZero = true;
+    }
+    else if(child.Token(0) == "rewind")
+      rewind = true;
+    else
+      child.PrintTrace("Skipping unrecognized attribute:");
+  }
 }
 
 
@@ -210,24 +210,24 @@ void Body::LoadSprite(const DataNode &node)
 // Save the sprite specification, including all animation attributes.
 void Body::SaveSprite(DataWriter &out, const string &tag) const
 {
-	if(!sprite)
-		return;
-	
-	out.Write(tag, sprite->Name());
-	out.BeginChild();
-	{
-		if(frameRate != static_cast<float>(2. / 60.))
-			out.Write("frame rate", frameRate * 60.);
-		if(delay)
-			out.Write("delay", delay);
-		if(randomize)
-			out.Write("random start frame");
-		if(!repeat)
-			out.Write("no repeat");
-		if(rewind)
-			out.Write("rewind");
-	}
-	out.EndChild();
+  if(!sprite)
+    return;
+  
+  out.Write(tag, sprite->Name());
+  out.BeginChild();
+  {
+    if(frameRate != static_cast<float>(2. / 60.))
+      out.Write("frame rate", frameRate * 60.);
+    if(delay)
+      out.Write("delay", delay);
+    if(randomize)
+      out.Write("random start frame");
+    if(!repeat)
+      out.Write("no repeat");
+    if(rewind)
+      out.Write("rewind");
+  }
+  out.EndChild();
 }
 
 
@@ -235,8 +235,8 @@ void Body::SaveSprite(DataWriter &out, const string &tag) const
 // Set the sprite.
 void Body::SetSprite(const Sprite *sprite)
 {
-	this->sprite = sprite;
-	currentStep = -1;
+  this->sprite = sprite;
+  currentStep = -1;
 }
 
 
@@ -244,7 +244,7 @@ void Body::SetSprite(const Sprite *sprite)
 // Set the color swizzle.
 void Body::SetSwizzle(int swizzle)
 {
-	this->swizzle = swizzle;
+  this->swizzle = swizzle;
 }
 
 
@@ -253,7 +253,7 @@ void Body::SetSwizzle(int swizzle)
 // a sprite instead of a full animation data structure.
 void Body::SetFrameRate(double framesPerSecond)
 {
-	frameRate = framesPerSecond / 60.;
+  frameRate = framesPerSecond / 60.;
 }
 
 
@@ -261,14 +261,14 @@ void Body::SetFrameRate(double framesPerSecond)
 // Add the given amount to the frame rate.
 void Body::AddFrameRate(double framesPerSecond)
 {
-	frameRate += framesPerSecond / 60.;
+  frameRate += framesPerSecond / 60.;
 }
 
 
 
 void Body::PauseAnimation()
 {
-	++pause;
+  ++pause;
 }
 
 
@@ -276,7 +276,7 @@ void Body::PauseAnimation()
 // Mark this object to be removed from the game.
 void Body::MarkForRemoval()
 {
-	shouldBeRemoved = true;
+  shouldBeRemoved = true;
 }
 
 
@@ -284,7 +284,7 @@ void Body::MarkForRemoval()
 // Mark this object to not be removed from the game.
 void Body::UnmarkForRemoval()
 {
-	shouldBeRemoved = false;
+  shouldBeRemoved = false;
 }
 
 
@@ -292,68 +292,68 @@ void Body::UnmarkForRemoval()
 // Set the current time step.
 void Body::SetStep(int step) const
 {
-	// If the animation is paused, reduce the step by however many frames it has
-	// been paused for.
-	step -= pause;
-	
-	// If the step is negative or there is no sprite, do nothing. This updates
-	// and caches the mask and the frame so that if further queries are made at
-	// this same time step, we don't need to redo the calculations.
-	if(step == currentStep || step < 0 || !sprite || !sprite->Frames())
-		return;
-	currentStep = step;
-	
-	// If the sprite only has one frame, no need to animate anything.
-	float frames = sprite->Frames();
-	if(frames <= 1.f)
-	{
-		frame = 0.f;
-		return;
-	}
-	float lastFrame = frames - 1.f;
-	// This is the number of frames per full cycle. If rewinding, a full cycle
-	// includes the first and last frames once and every other frame twice.
-	float cycle = (rewind ? 2.f * lastFrame : frames) + delay;
-	
-	// If this is the very first step, fill in some values that we could not set
-	// until we knew the sprite's frame count and the starting step.
-	if(randomize)
-	{
-		randomize = false;
-		// The random offset can be a fractional frame.
-		frameOffset += Random::Real() * cycle;
-	}
-	else if(startAtZero)
-	{
-		startAtZero = false;
-		// Adjust frameOffset so that this step's frame is exactly 0 (no fade).
-		frameOffset -= frameRate * step;
-	}
-	
-	// Figure out what fraction of the way in between frames we are. Avoid any
-	// possible floating-point glitches that might result in a negative frame.
-	frame = max(0.f, frameRate * step + frameOffset);
-	// If repeating, wrap the frame index by the total cycle time.
-	if(repeat)
-		frame = fmod(frame, cycle);
-	
-	if(!rewind)
-	{
-		// If not repeating, frame should never go higher than the index of the
-		// final frame.
-		if(!repeat)
-			frame = min(frame, lastFrame);
-		else if(frame >= frames)
-		{
-			// If we're in the delay portion of the loop, set the frame to 0.
-			frame = 0.f;
-		}
-	}
-	else if(frame >= lastFrame)
-	{
-		// In rewind mode, once you get to the last frame, count backwards.
-		// Regardless of whether we're repeating, if the frame count gets to
-		// be less than 0, clamp it to 0.
-		frame = max(0.f, lastFrame * 2.f - frame);
-	}
+  // If the animation is paused, reduce the step by however many frames it has
+  // been paused for.
+  step -= pause;
+  
+  // If the step is negative or there is no sprite, do nothing. This updates
+  // and caches the mask and the frame so that if further queries are made at
+  // this same time step, we don't need to redo the calculations.
+  if(step == currentStep || step < 0 || !sprite || !sprite->Frames())
+    return;
+  currentStep = step;
+  
+  // If the sprite only has one frame, no need to animate anything.
+  float frames = sprite->Frames();
+  if(frames <= 1.f)
+  {
+    frame = 0.f;
+    return;
+  }
+  float lastFrame = frames - 1.f;
+  // This is the number of frames per full cycle. If rewinding, a full cycle
+  // includes the first and last frames once and every other frame twice.
+  float cycle = (rewind ? 2.f * lastFrame : frames) + delay;
+  
+  // If this is the very first step, fill in some values that we could not set
+  // until we knew the sprite's frame count and the starting step.
+  if(randomize)
+  {
+    randomize = false;
+    // The random offset can be a fractional frame.
+    frameOffset += Random::Real() * cycle;
+  }
+  else if(startAtZero)
+  {
+    startAtZero = false;
+    // Adjust frameOffset so that this step's frame is exactly 0 (no fade).
+    frameOffset -= frameRate * step;
+  }
+  
+  // Figure out what fraction of the way in between frames we are. Avoid any
+  // possible floating-point glitches that might result in a negative frame.
+  frame = max(0.f, frameRate * step + frameOffset);
+  // If repeating, wrap the frame index by the total cycle time.
+  if(repeat)
+    frame = fmod(frame, cycle);
+  
+  if(!rewind)
+  {
+    // If not repeating, frame should never go higher than the index of the
+    // final frame.
+    if(!repeat)
+      frame = min(frame, lastFrame);
+    else if(frame >= frames)
+    {
+      // If we're in the delay portion of the loop, set the frame to 0.
+      frame = 0.f;
+    }
+  }
+  else if(frame >= lastFrame)
+  {
+    // In rewind mode, once you get to the last frame, count backwards.
+    // Regardless of whether we're repeating, if the frame count gets to
+    // be less than 0, clamp it to 0.
+    frame = max(0.f, lastFrame * 2.f - frame);
+  }
 }

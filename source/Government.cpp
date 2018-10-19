@@ -15,7 +15,7 @@
 using namespace std;
 
 namespace {
-	unsigned nextID = 0;
+  unsigned nextID = 0;
 }
 
 
@@ -23,15 +23,15 @@ namespace {
 // Default constructor.
 Government::Government()
 {
-	// Default penalties:
-	penaltyFor[ShipEvent::ASSIST] = -0.1;
-	penaltyFor[ShipEvent::DISABLE] = 0.5;
-	penaltyFor[ShipEvent::BOARD] = 0.3;
-	penaltyFor[ShipEvent::CAPTURE] = 1.;
-	penaltyFor[ShipEvent::DESTROY] = 1.;
-	penaltyFor[ShipEvent::ATROCITY] = 10.;
-	
-	id = nextID++;
+  // Default penalties:
+  penaltyFor[ShipEvent::ASSIST] = -0.1;
+  penaltyFor[ShipEvent::DISABLE] = 0.5;
+  penaltyFor[ShipEvent::BOARD] = 0.3;
+  penaltyFor[ShipEvent::CAPTURE] = 1.;
+  penaltyFor[ShipEvent::DESTROY] = 1.;
+  penaltyFor[ShipEvent::ATROCITY] = 10.;
+  
+  id = nextID++;
 }
 
 
@@ -39,83 +39,83 @@ Government::Government()
 // Load a government's definition from a file.
 void Government::Load(const DataNode &node)
 {
-	if(node.Size() >= 2)
-		name = node.Token(1);
-	
-	for(const DataNode &child : node)
-	{
-		if(child.Token(0) == "swizzle" && child.Size() >= 2)
-			swizzle = child.Value(1);
-		else if(child.Token(0) == "color" && child.Size() >= 4)
-			color = Color(child.Value(1), child.Value(2), child.Value(3));
-		else if(child.Token(0) == "player reputation" && child.Size() >= 2)
-			initialPlayerReputation = child.Value(1);
-		else if(child.Token(0) == "crew attack" && child.Size() >= 2)
-			crewAttack = max(0., child.Value(1));
-		else if(child.Token(0) == "crew defense" && child.Size() >= 2)
-			crewDefense = max(0., child.Value(1));
-		else if(child.Token(0) == "attitude toward")
-		{
-			for(const DataNode &grand : child)
-			{
-				if(grand.Size() >= 2)
-				{
-					const Government *gov = GameData::Governments().Get(grand.Token(0));
-					attitudeToward.resize(nextID, 0.);
-					attitudeToward[gov->id] = grand.Value(1);
-				}
-				else
-					grand.PrintTrace("Skipping unrecognized attribute:");
-			}
-		}
-		else if(child.Token(0) == "penalty for")
-		{
-			for(const DataNode &grand : child)
-				if(grand.Size() >= 2)
-				{
-					if(grand.Token(0) == "assist")
-						penaltyFor[ShipEvent::ASSIST] = grand.Value(1);
-					else if(grand.Token(0) == "disable")
-						penaltyFor[ShipEvent::DISABLE] = grand.Value(1);
-					else if(grand.Token(0) == "board")
-						penaltyFor[ShipEvent::BOARD] = grand.Value(1);
-					else if(grand.Token(0) == "capture")
-						penaltyFor[ShipEvent::CAPTURE] = grand.Value(1);
-					else if(grand.Token(0) == "destroy")
-						penaltyFor[ShipEvent::DESTROY] = grand.Value(1);
-					else if(grand.Token(0) == "atrocity")
-						penaltyFor[ShipEvent::ATROCITY] = grand.Value(1);
-					else
-						grand.PrintTrace("Skipping unrecognized attribute:");
-				}
-		}
-		else if(child.Token(0) == "bribe" && child.Size() >= 2)
-			bribe = child.Value(1);
-		else if(child.Token(0) == "fine" && child.Size() >= 2)
-			fine = child.Value(1);
-		else if(child.Token(0) == "death sentence" && child.Size() >= 2)
-			deathSentence = GameData::Conversations().Get(child.Token(1));
-		else if(child.Token(0) == "friendly hail" && child.Size() >= 2)
-			friendlyHail = GameData::Phrases().Get(child.Token(1));
-		else if(child.Token(0) == "friendly disabled hail" && child.Size() >= 2)
-			friendlyDisabledHail = GameData::Phrases().Get(child.Token(1));
-		else if(child.Token(0) == "hostile hail" && child.Size() >= 2)
-			hostileHail = GameData::Phrases().Get(child.Token(1));
-		else if(child.Token(0) == "hostile disabled hail" && child.Size() >= 2)
-			hostileDisabledHail = GameData::Phrases().Get(child.Token(1));
-		else if(child.Token(0) == "language" && child.Size() >= 2)
-			language = child.Token(1);
-		else if(child.Token(0) == "raid" && child.Size() >= 2)
-			raidFleet = GameData::Fleets().Get(child.Token(1));
-		else
-			child.PrintTrace("Skipping unrecognized attribute:");
-	}
-	
-	// Default to the standard disabled hail messages.
-	if(!friendlyDisabledHail)
-		friendlyDisabledHail = GameData::Phrases().Get("friendly disabled");
-	if(!hostileDisabledHail)
-		hostileDisabledHail = GameData::Phrases().Get("hostile disabled");
+  if(node.Size() >= 2)
+    name = node.Token(1);
+  
+  for(const DataNode &child : node)
+  {
+    if(child.Token(0) == "swizzle" && child.Size() >= 2)
+      swizzle = child.Value(1);
+    else if(child.Token(0) == "color" && child.Size() >= 4)
+      color = Color(child.Value(1), child.Value(2), child.Value(3));
+    else if(child.Token(0) == "player reputation" && child.Size() >= 2)
+      initialPlayerReputation = child.Value(1);
+    else if(child.Token(0) == "crew attack" && child.Size() >= 2)
+      crewAttack = max(0., child.Value(1));
+    else if(child.Token(0) == "crew defense" && child.Size() >= 2)
+      crewDefense = max(0., child.Value(1));
+    else if(child.Token(0) == "attitude toward")
+    {
+      for(const DataNode &grand : child)
+      {
+        if(grand.Size() >= 2)
+        {
+          const Government *gov = GameData::Governments().Get(grand.Token(0));
+          attitudeToward.resize(nextID, 0.);
+          attitudeToward[gov->id] = grand.Value(1);
+        }
+        else
+          grand.PrintTrace("Skipping unrecognized attribute:");
+      }
+    }
+    else if(child.Token(0) == "penalty for")
+    {
+      for(const DataNode &grand : child)
+        if(grand.Size() >= 2)
+        {
+          if(grand.Token(0) == "assist")
+            penaltyFor[ShipEvent::ASSIST] = grand.Value(1);
+          else if(grand.Token(0) == "disable")
+            penaltyFor[ShipEvent::DISABLE] = grand.Value(1);
+          else if(grand.Token(0) == "board")
+            penaltyFor[ShipEvent::BOARD] = grand.Value(1);
+          else if(grand.Token(0) == "capture")
+            penaltyFor[ShipEvent::CAPTURE] = grand.Value(1);
+          else if(grand.Token(0) == "destroy")
+            penaltyFor[ShipEvent::DESTROY] = grand.Value(1);
+          else if(grand.Token(0) == "atrocity")
+            penaltyFor[ShipEvent::ATROCITY] = grand.Value(1);
+          else
+            grand.PrintTrace("Skipping unrecognized attribute:");
+        }
+    }
+    else if(child.Token(0) == "bribe" && child.Size() >= 2)
+      bribe = child.Value(1);
+    else if(child.Token(0) == "fine" && child.Size() >= 2)
+      fine = child.Value(1);
+    else if(child.Token(0) == "death sentence" && child.Size() >= 2)
+      deathSentence = GameData::Conversations().Get(child.Token(1));
+    else if(child.Token(0) == "friendly hail" && child.Size() >= 2)
+      friendlyHail = GameData::Phrases().Get(child.Token(1));
+    else if(child.Token(0) == "friendly disabled hail" && child.Size() >= 2)
+      friendlyDisabledHail = GameData::Phrases().Get(child.Token(1));
+    else if(child.Token(0) == "hostile hail" && child.Size() >= 2)
+      hostileHail = GameData::Phrases().Get(child.Token(1));
+    else if(child.Token(0) == "hostile disabled hail" && child.Size() >= 2)
+      hostileDisabledHail = GameData::Phrases().Get(child.Token(1));
+    else if(child.Token(0) == "language" && child.Size() >= 2)
+      language = child.Token(1);
+    else if(child.Token(0) == "raid" && child.Size() >= 2)
+      raidFleet = GameData::Fleets().Get(child.Token(1));
+    else
+      child.PrintTrace("Skipping unrecognized attribute:");
+  }
+  
+  // Default to the standard disabled hail messages.
+  if(!friendlyDisabledHail)
+    friendlyDisabledHail = GameData::Phrases().Get("friendly disabled");
+  if(!hostileDisabledHail)
+    hostileDisabledHail = GameData::Phrases().Get("hostile disabled");
 }
 
 
@@ -123,7 +123,7 @@ void Government::Load(const DataNode &node)
 // Get the name of this government.
 const string &Government::GetName() const
 {
-	return name;
+  return name;
 }
 
 
@@ -131,7 +131,7 @@ const string &Government::GetName() const
 // Get the color swizzle to use for ships of this government.
 int Government::GetSwizzle() const
 {
-	return swizzle;
+  return swizzle;
 }
 
 
@@ -139,7 +139,7 @@ int Government::GetSwizzle() const
 // Get the color to use for displaying this government on the map.
 const Color &Government::GetColor() const
 {
-	return color;
+  return color;
 }
 
 
@@ -148,22 +148,22 @@ const Color &Government::GetColor() const
 // toward the player.
 double Government::AttitudeToward(const Government *other) const
 {
-	if(!other)
-		return 0.;
-	if(other == this)
-		return 1.;
-	
-	if(attitudeToward.size() <= other->id)
-		return 0.;
-	
-	return attitudeToward[other->id];
+  if(!other)
+    return 0.;
+  if(other == this)
+    return 1.;
+  
+  if(attitudeToward.size() <= other->id)
+    return 0.;
+  
+  return attitudeToward[other->id];
 }
 
 
 
 double Government::InitialPlayerReputation() const
 {
-	return initialPlayerReputation;
+  return initialPlayerReputation;
 }
 
 
@@ -171,11 +171,11 @@ double Government::InitialPlayerReputation() const
 // Get the amount that your reputation changes for the given offense.
 double Government::PenaltyFor(int eventType) const
 {
-	double penalty = 0.;
-	for(const auto &it : penaltyFor)
-		if(eventType & it.first)
-			penalty += it.second;
-	return penalty;
+  double penalty = 0.;
+  for(const auto &it : penaltyFor)
+    if(eventType & it.first)
+      penalty += it.second;
+  return penalty;
 }
 
 
@@ -184,21 +184,21 @@ double Government::PenaltyFor(int eventType) const
 // fraction of your fleet's value. (Zero means they cannot be bribed.)
 double Government::GetBribeFraction() const
 {
-	return bribe;
+  return bribe;
 }
 
 
 
 double Government::GetFineFraction() const
 {
-	return fine;
+  return fine;
 }
 
 
 
 const Conversation *Government::DeathSentence() const
 {
-	return deathSentence;
+  return deathSentence;
 }
 
 
@@ -207,14 +207,14 @@ const Conversation *Government::DeathSentence() const
 // and if the ship is disabled).
 string Government::GetHail(bool isDisabled) const
 {
-	const Phrase *phrase = nullptr;
-	
-	if(IsEnemy())
-		phrase = isDisabled ? hostileDisabledHail : hostileHail;
-	else
-		phrase = isDisabled ? friendlyDisabledHail : friendlyHail;
-		
-	return phrase ? phrase->Get() : "";
+  const Phrase *phrase = nullptr;
+  
+  if(IsEnemy())
+    phrase = isDisabled ? hostileDisabledHail : hostileHail;
+  else
+    phrase = isDisabled ? friendlyDisabledHail : friendlyHail;
+    
+  return phrase ? phrase->Get() : "";
 }
 
 
@@ -222,7 +222,7 @@ string Government::GetHail(bool isDisabled) const
 // Find out if this government speaks a different language.
 const string &Government::Language() const
 {
-	return language;
+  return language;
 }
 
 
@@ -231,16 +231,16 @@ const string &Government::Language() const
 // it is null, there are no pirate raids.
 const Fleet *Government::RaidFleet() const
 {
-	return raidFleet;
+  return raidFleet;
 }
 
 
-	
+  
 // Check if, according to the politics stored by GameData, this government is
 // an enemy of the given government right now.
 bool Government::IsEnemy(const Government *other) const
 {
-	return GameData::GetPolitics().IsEnemy(this, other);
+  return GameData::GetPolitics().IsEnemy(this, other);
 }
 
 
@@ -248,7 +248,7 @@ bool Government::IsEnemy(const Government *other) const
 // Check if this government is an enemy of the player.
 bool Government::IsEnemy() const
 {
-	return GameData::GetPolitics().IsEnemy(this, GameData::PlayerGovernment());
+  return GameData::GetPolitics().IsEnemy(this, GameData::PlayerGovernment());
 }
 
 
@@ -256,7 +256,7 @@ bool Government::IsEnemy() const
 // Check if this is the player government.
 bool Government::IsPlayer() const
 {
-	return (this == GameData::PlayerGovernment());
+  return (this == GameData::PlayerGovernment());
 }
 
 
@@ -267,7 +267,7 @@ bool Government::IsPlayer() const
 // reputation.
 void Government::Offend(int eventType, int count) const
 {
-	return GameData::GetPolitics().Offend(this, eventType, count);
+  return GameData::GetPolitics().Offend(this, eventType, count);
 }
 
 
@@ -275,7 +275,7 @@ void Government::Offend(int eventType, int count) const
 // Bribe this government to be friendly to you for one day.
 void Government::Bribe() const
 {
-	GameData::GetPolitics().Bribe(this);
+  GameData::GetPolitics().Bribe(this);
 }
 
 
@@ -284,7 +284,7 @@ void Government::Bribe() const
 // Each government can only fine you once per day.
 string Government::Fine(PlayerInfo &player, int scan, const Ship *target, double security) const
 {
-	return GameData::GetPolitics().Fine(player, this, scan, target, security);
+  return GameData::GetPolitics().Fine(player, this, scan, target, security);
 }
 
 
@@ -292,34 +292,34 @@ string Government::Fine(PlayerInfo &player, int scan, const Ship *target, double
 // Get or set the player's reputation with this government.
 double Government::Reputation() const
 {
-	return GameData::GetPolitics().Reputation(this);
+  return GameData::GetPolitics().Reputation(this);
 }
 
 
 
 void Government::AddReputation(double value) const
 {
-	GameData::GetPolitics().AddReputation(this, value);
+  GameData::GetPolitics().AddReputation(this, value);
 }
 
 
 
 void Government::SetReputation(double value) const
 {
-	GameData::GetPolitics().SetReputation(this, value);
+  GameData::GetPolitics().SetReputation(this, value);
 }
 
 
 
 double Government::CrewAttack() const
 {
-	return crewAttack;
+  return crewAttack;
 }
 
 
 
 double Government::CrewDefense() const
 {
-	return crewDefense;
+  return crewDefense;
 }
 

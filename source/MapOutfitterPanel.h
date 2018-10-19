@@ -20,38 +20,38 @@ class Sprite;
 // to see which systems it is available in.
 class MapOutfitterPanel : public MapSalesPanel {
 public:
-	explicit MapOutfitterPanel(PlayerInfo &player);
-	explicit MapOutfitterPanel(const MapPanel &panel, bool onlyHere = false);
-	
-	
+  explicit MapOutfitterPanel(PlayerInfo &player);
+  explicit MapOutfitterPanel(const MapPanel &panel, bool onlyHere = false);
+  
+  
 protected:
-	virtual const Sprite *SelectedSprite() const override;
-	virtual const Sprite *CompareSprite() const override;
-	virtual const ItemInfoDisplay &SelectedInfo() const override;
-	virtual const ItemInfoDisplay &CompareInfo() const override;
-	virtual const std::string &KeyLabel(int index) const override;
+  virtual const Sprite *SelectedSprite() const override;
+  virtual const Sprite *CompareSprite() const override;
+  virtual const ItemInfoDisplay &SelectedInfo() const override;
+  virtual const ItemInfoDisplay &CompareInfo() const override;
+  virtual const std::string &KeyLabel(int index) const override;
 
-	virtual void Select(int index) override;
-	virtual void Compare(int index) override;
-	virtual double SystemValue(const System *system) const override;
-	virtual int FindItem(const std::string &text) const override;
-	
-	virtual void DrawItems() override;
-	
-	
+  virtual void Select(int index) override;
+  virtual void Compare(int index) override;
+  virtual double SystemValue(const System *system) const override;
+  virtual int FindItem(const std::string &text) const override;
+  
+  virtual void DrawItems() override;
+  
+  
 private:
-	void Init();
-	
-	
+  void Init();
+  
+  
 private:
-	std::map<std::string, std::vector<const Outfit *>> catalog;
-	std::vector<const Outfit *> list;
-	
-	const Outfit *selected = nullptr;
-	const Outfit *compare = nullptr;
-	
-	OutfitInfoDisplay selectedInfo;
-	OutfitInfoDisplay compareInfo;
+  std::map<std::string, std::vector<const Outfit *>> catalog;
+  std::vector<const Outfit *> list;
+  
+  const Outfit *selected = nullptr;
+  const Outfit *compare = nullptr;
+  
+  OutfitInfoDisplay selectedInfo;
+  OutfitInfoDisplay compareInfo;
 };
 
 

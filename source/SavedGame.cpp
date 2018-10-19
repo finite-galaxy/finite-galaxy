@@ -1,4 +1,4 @@
-// SavedGame.h
+// SavedGame.cpp
 
 #include "SavedGame.h"
 
@@ -14,126 +14,126 @@ using namespace std;
 
 SavedGame::SavedGame(const string &path)
 {
-	Load(path);
+  Load(path);
 }
 
 
 
 void SavedGame::Load(const string &path)
 {
-	Clear();
-	DataFile file(path);
-	if(file.begin() != file.end())
-		this->path = path;
-	
-	for(const DataNode &node : file)
-	{
-		if(node.Token(0) == "pilot" && node.Size() >= 3)
-			name = node.Token(1) + " " + node.Token(2);
-		else if(node.Token(0) == "date" && node.Size() >= 4)
-			date = Date(node.Value(1), node.Value(2), node.Value(3)).ToString();
-		else if(node.Token(0) == "system" && node.Size() >= 2)
-			system = node.Token(1);
-		else if(node.Token(0) == "planet" && node.Size() >= 2)
-			planet = node.Token(1);
-		else if(node.Token(0) == "account")
-		{
-			for(const DataNode &child : node)
-				if(child.Token(0) == "credits" && child.Size() >= 2)
-				{
-					credits = Format::Credits(child.Value(1));
-					break;
-				}
-		}
-		else if(node.Token(0) == "ship" && !shipSprite)
-		{
-			for(const DataNode &child : node)
-			{
-				if(child.Token(0) == "name" && child.Size() >= 2)
-					shipName = child.Token(1);
-				else if(child.Token(0) == "sprite" && child.Size() >= 2)
-					shipSprite = SpriteSet::Get(child.Token(1));
-			}
-		}
-	}
+  Clear();
+  DataFile file(path);
+  if(file.begin() != file.end())
+    this->path = path;
+  
+  for(const DataNode &node : file)
+  {
+    if(node.Token(0) == "pilot" && node.Size() >= 3)
+      name = node.Token(1) + " " + node.Token(2);
+    else if(node.Token(0) == "date" && node.Size() >= 4)
+      date = Date(node.Value(1), node.Value(2), node.Value(3)).ToString();
+    else if(node.Token(0) == "system" && node.Size() >= 2)
+      system = node.Token(1);
+    else if(node.Token(0) == "planet" && node.Size() >= 2)
+      planet = node.Token(1);
+    else if(node.Token(0) == "account")
+    {
+      for(const DataNode &child : node)
+        if(child.Token(0) == "credits" && child.Size() >= 2)
+        {
+          credits = Format::Credits(child.Value(1));
+          break;
+        }
+    }
+    else if(node.Token(0) == "ship" && !shipSprite)
+    {
+      for(const DataNode &child : node)
+      {
+        if(child.Token(0) == "name" && child.Size() >= 2)
+          shipName = child.Token(1);
+        else if(child.Token(0) == "sprite" && child.Size() >= 2)
+          shipSprite = SpriteSet::Get(child.Token(1));
+      }
+    }
+  }
 }
 
 
 
 const string &SavedGame::Path() const
 {
-	return path;
+  return path;
 }
 
 
 
 bool SavedGame::IsLoaded() const
 {
-	return !path.empty();
+  return !path.empty();
 }
 
 
 
 void SavedGame::Clear()
 {
-	path.clear();
-	
-	name.clear();
-	credits.clear();
-	date.clear();
-	
-	system.clear();
-	planet.clear();
-	
-	shipSprite = nullptr;
-	shipName.clear();
+  path.clear();
+  
+  name.clear();
+  credits.clear();
+  date.clear();
+  
+  system.clear();
+  planet.clear();
+  
+  shipSprite = nullptr;
+  shipName.clear();
 }
 
 
 
 const string &SavedGame::Name() const
 {
-	return name;
+  return name;
 }
 
 
 
 const string &SavedGame::Credits() const
 {
-	return credits;
+  return credits;
 }
 
 
 
 const string &SavedGame::GetDate() const
 {
-	return date;
+  return date;
 }
 
 
 
 const string &SavedGame::GetSystem() const
 {
-	return system;
+  return system;
 }
 
 
 
 const string &SavedGame::GetPlanet() const
 {
-	return planet;
+  return planet;
 }
 
 
 
 const Sprite *SavedGame::ShipSprite() const
 {
-	return shipSprite;
+  return shipSprite;
 }
 
 
 
 const string &SavedGame::ShipName() const
 {
-	return shipName;
+  return shipName;
 }

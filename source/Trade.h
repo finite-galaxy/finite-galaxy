@@ -16,25 +16,25 @@ class DataNode;
 // deliver, say, "eggs" or "frozen meat" instead of generic "food".
 class Trade {
 public:
-	class Commodity {
-	public:
-		std::string name;
-		int low = 0;
-		int high = 0;
-		std::vector<std::string> items;
-	};
-	
-	
+  class Commodity {
+  public:
+    std::string name;
+    int low = 0;
+    int high = 0;
+    std::vector<std::string> items;
+  };
+  
+  
 public:
-	void Load(const DataNode &node);
-	
-	const std::vector<Commodity> &Commodities() const;
-	const std::vector<Commodity> &SpecialCommodities() const;
-	
-	
+  void Load(const DataNode &node);
+  
+  const std::vector<Commodity> &Commodities() const;
+  const std::vector<Commodity> &SpecialCommodities() const;
+  
+  
 private:
-	std::vector<Commodity> commodities;
-	std::vector<Commodity> specialCommodities;
+  std::vector<Commodity> commodities;
+  std::vector<Commodity> specialCommodities;
 };
 
 

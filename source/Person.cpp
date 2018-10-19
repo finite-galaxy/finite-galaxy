@@ -14,26 +14,26 @@ using namespace std;
 
 void Person::Load(const DataNode &node)
 {
-	for(const DataNode &child : node)
-	{
-		if(child.Token(0) == "system")
-			location.Load(child);
-		if(child.Token(0) == "frequency" && child.Size() >= 2)
-			frequency = child.Value(1);
-		else if(child.Token(0) == "ship" && child.Size() >= 2)
-		{
-			ships.emplace_back(new Ship);
-			ships.back()->Load(child);
-		}
-		else if(child.Token(0) == "government" && child.Size() >= 2)
-			government = GameData::Governments().Get(child.Token(1));
-		else if(child.Token(0) == "personality")
-			personality.Load(child);
-		else if(child.Token(0) == "phrase")
-			hail.Load(child);
-		else
-			child.PrintTrace("Skipping unrecognized attribute:");
-	}
+  for(const DataNode &child : node)
+  {
+    if(child.Token(0) == "system")
+      location.Load(child);
+    if(child.Token(0) == "frequency" && child.Size() >= 2)
+      frequency = child.Value(1);
+    else if(child.Token(0) == "ship" && child.Size() >= 2)
+    {
+      ships.emplace_back(new Ship);
+      ships.back()->Load(child);
+    }
+    else if(child.Token(0) == "government" && child.Size() >= 2)
+      government = GameData::Governments().Get(child.Token(1));
+    else if(child.Token(0) == "personality")
+      personality.Load(child);
+    else if(child.Token(0) == "phrase")
+      hail.Load(child);
+    else
+      child.PrintTrace("Skipping unrecognized attribute:");
+  }
 }
 
 
@@ -41,8 +41,8 @@ void Person::Load(const DataNode &node)
 // Finish loading all the ships in this person specification.
 void Person::FinishLoading()
 {
-	for(const shared_ptr<Ship> &ship : ships)
-		ship->FinishLoading(true);
+  for(const shared_ptr<Ship> &ship : ships)
+    ship->FinishLoading(true);
 }
 
 
@@ -51,12 +51,12 @@ void Person::FinishLoading()
 // person is dead or already active, this will return zero.
 int Person::Frequency(const System *system) const
 {
-	// Because persons always enter a system via one of the regular hyperspace
-	// links, don't create them in systems with no links.
-	if(!system || IsDestroyed() || IsPlaced() || system->Links().empty())
-		return 0;
-	
-	return (location.IsEmpty() || location.Matches(system)) ? frequency : 0;
+  // Because persons always enter a system via one of the regular hyperspace
+  // links, don't create them in systems with no links.
+  if(!system || IsDestroyed() || IsPlaced() || system->Links().empty())
+    return 0;
+  
+  return (location.IsEmpty() || location.Matches(system)) ? frequency : 0;
 }
 
 
@@ -65,39 +65,39 @@ int Person::Frequency(const System *system) const
 // will be recycled every time this person appears.
 const list<shared_ptr<Ship>> &Person::Ships() const
 {
-	return ships;
+  return ships;
 }
 
 
 
 const Government *Person::GetGovernment() const
 {
-	return government;
+  return government;
 }
 
 
 
 const Personality &Person::GetPersonality() const
 {
-	return personality;
+  return personality;
 }
 
 
 
 const Phrase &Person::GetHail() const
 {
-	return hail;
+  return hail;
 }
 
 
 
 bool Person::IsDestroyed() const
 {
-	if(ships.empty() || !ships.front())
-		return true;
-	
-	const Ship &flagship = *ships.front();
-	return (flagship.IsDestroyed() || (flagship.GetSystem() && flagship.GetGovernment() != government));
+  if(ships.empty() || !ships.front())
+    return true;
+  
+  const Ship &flagship = *ships.front();
+  return (flagship.IsDestroyed() || (flagship.GetSystem() && flagship.GetGovernment() != government));
 }
 
 
@@ -105,8 +105,8 @@ bool Person::IsDestroyed() const
 // Mark this person as destroyed.
 void Person::Destroy()
 {
-	for(const shared_ptr<Ship> &ship : ships)
-		ship->Destroy();
+  for(const shared_ptr<Ship> &ship : ships)
+    ship->Destroy();
 }
 
 
@@ -114,12 +114,12 @@ void Person::Destroy()
 // Mark this person as no longer destroyed.
 void Person::Restore()
 {
-	for(const shared_ptr<Ship> &ship : ships)
-	{
-		ship->Restore();
-		ship->SetSystem(nullptr);
-		ship->SetPlanet(nullptr);
-	}
+  for(const shared_ptr<Ship> &ship : ships)
+  {
+    ship->Restore();
+    ship->SetSystem(nullptr);
+    ship->SetPlanet(nullptr);
+  }
 }
 
 
@@ -127,11 +127,11 @@ void Person::Restore()
 // Check if a person is already placed somehwere.
 bool Person::IsPlaced() const
 {
-	for(const shared_ptr<Ship> &ship : ships)
-		if(ship->GetSystem())
-			return true;
-	
-	return false;
+  for(const shared_ptr<Ship> &ship : ships)
+    if(ship->GetSystem())
+      return true;
+  
+  return false;
 }
 
 
@@ -139,6 +139,6 @@ bool Person::IsPlaced() const
 // Mark this person as being no longer "placed" somewhere.
 void Person::ClearPlacement()
 {
-	if(!IsDestroyed())
-		Restore();
+  if(!IsDestroyed())
+    Restore();
 }

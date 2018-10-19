@@ -23,37 +23,37 @@ class Sprite;
 // match the motion; otherwise they would seem to jitter around.
 class StarField {
 public:
-	void Init(int stars, int width);
-	void SetHaze(const Sprite *sprite);
-	
-	void Draw(const Point &pos, const Point &vel, double zoom = 1.) const;
-	
-	
+  void Init(int stars, int width);
+  void SetHaze(const Sprite *sprite);
+  
+  void Draw(const Point &pos, const Point &vel, double zoom = 1.) const;
+  
+  
 private:
-	void SetUpGraphics();
-	void MakeStars(int stars, int width);
-	
-	
+  void SetUpGraphics();
+  void MakeStars(int stars, int width);
+  
+  
 private:
-	int widthMod;
-	int tileCols;
-	std::vector<int> tileIndex;
-	
-	std::vector<Body> haze;
-	
-	Shader shader;
-	GLuint vao;
-	GLuint vbo;
-	
-	GLuint offsetI;
-	GLuint sizeI;
-	GLuint cornerI;
-	
-	GLuint scaleI;
-	GLuint rotateI;
-	GLuint elongationI;
-	GLuint translateI;
-	GLuint brightnessI;
+  int widthMod;
+  int tileCols;
+  std::vector<int> tileIndex;
+  
+  std::vector<Body> haze;
+  
+  Shader shader;
+  GLuint vao;
+  GLuint vbo;
+  
+  GLuint offsetI;
+  GLuint sizeI;
+  GLuint cornerI;
+  
+  GLuint scaleI;
+  GLuint rotateI;
+  GLuint elongationI;
+  GLuint translateI;
+  GLuint brightnessI;
 };
 
 

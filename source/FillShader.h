@@ -13,9 +13,9 @@ class Color;
 // part of the screen, or with additive colors (alpha = 0) as well.
 class FillShader {
 public:
-	static void Init();
-	
-	static void Fill(const Point &center, const Point &size, const Color &color);
+  static void Init();
+  
+  static void Fill(const Point &center, const Point &size, const Color &color);
 };
 
 

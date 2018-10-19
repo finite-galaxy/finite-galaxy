@@ -16,13 +16,13 @@ using namespace std;
 
 // Object default constructor.
 StellarObject::StellarObject()
-	: planet(nullptr),
-	distance(0.), speed(0.), offset(0.), parent(-1),
-	message(nullptr), isStar(false), isStation(false), isMoon(false)
+  : planet(nullptr),
+  distance(0.), speed(0.), offset(0.), parent(-1),
+  message(nullptr), isStar(false), isStation(false), isMoon(false)
 {
-	// Unlike ships and projectiles, stellar objects are not drawn shrunk to half size,
-	// because they do not need to be so sharp.
-	zoom = 2.;
+  // Unlike ships and projectiles, stellar objects are not drawn shrunk to half size,
+  // because they do not need to be so sharp.
+  zoom = 2.;
 }
 
 
@@ -30,16 +30,16 @@ StellarObject::StellarObject()
 // Get the radius of this planet, i.e. how close you must be to land.
 double StellarObject::Radius() const
 {
-	double radius = -1.;
-	if(HasSprite())
-		radius = .5 * min(Width(), Height());
-	
-	// Special case: stars may have a huge cloud around them, but only count the
-	// core of the cloud as part of the radius.
-	if(isStar)
-		radius = min(radius, 80.);
-	
-	return radius;
+  double radius = -1.;
+  if(HasSprite())
+    radius = .5 * min(Width(), Height());
+  
+  // Special case: stars may have a huge cloud around them, but only count the
+  // core of the cloud as part of the radius.
+  if(isStar)
+    radius = min(radius, 80.);
+  
+  return radius;
 }
 
 
@@ -49,7 +49,7 @@ double StellarObject::Radius() const
 // function will just return nullptr.
 const Planet *StellarObject::GetPlanet() const
 {
-	return planet;
+  return planet;
 }
 
 
@@ -57,8 +57,8 @@ const Planet *StellarObject::GetPlanet() const
 // Only planets that you can land on have names.
 const string &StellarObject::Name() const
 {
-	static const string UNKNOWN = "???";
-	return (planet && !planet->Name().empty()) ? planet->Name() : UNKNOWN;
+  static const string UNKNOWN = "???";
+  return (planet && !planet->Name().empty()) ? planet->Name() : UNKNOWN;
 }
 
 
@@ -67,12 +67,12 @@ const string &StellarObject::Name() const
 // explaining why (e.g. too hot, too cold, etc.).
 const string &StellarObject::LandingMessage() const
 {
-	// Check if there's a custom message for this sprite type.
-	if(GameData::HasLandingMessage(GetSprite()))
-		return GameData::LandingMessage(GetSprite());
-	
-	static const string EMPTY;
-	return (message ? *message : EMPTY);
+  // Check if there's a custom message for this sprite type.
+  if(GameData::HasLandingMessage(GetSprite()))
+    return GameData::LandingMessage(GetSprite());
+  
+  static const string EMPTY;
+  return (message ? *message : EMPTY);
 }
 
 
@@ -80,20 +80,20 @@ const string &StellarObject::LandingMessage() const
 // Get the color to be used for displaying this object.
 int StellarObject::RadarType(const Ship *ship) const
 {
-	if(IsStar())
-		return Radar::SPECIAL;
-	else if(!planet || !planet->IsAccessible(ship))
-		return Radar::INACTIVE;
-	else if(planet->IsWormhole())
-		return Radar::ANOMALOUS;
-	else if(GameData::GetPolitics().HasDominated(planet))
-		return Radar::PLAYER;
-	else if(planet->CanLand())
-		return Radar::FRIENDLY;
-	else if(!planet->GetGovernment()->IsEnemy())
-		return Radar::UNFRIENDLY;
-	
-	return Radar::HOSTILE;
+  if(IsStar())
+    return Radar::SPECIAL;
+  else if(!planet || !planet->IsAccessible(ship))
+    return Radar::INACTIVE;
+  else if(planet->IsWormhole())
+    return Radar::ANOMALOUS;
+  else if(GameData::GetPolitics().HasDominated(planet))
+    return Radar::PLAYER;
+  else if(planet->CanLand())
+    return Radar::FRIENDLY;
+  else if(!planet->GetGovernment()->IsEnemy())
+    return Radar::UNFRIENDLY;
+  
+  return Radar::HOSTILE;
 }
 
 
@@ -101,7 +101,7 @@ int StellarObject::RadarType(const Ship *ship) const
 // Check if this is a star.
 bool StellarObject::IsStar() const
 {
-	return isStar;
+  return isStar;
 }
 
 
@@ -109,7 +109,7 @@ bool StellarObject::IsStar() const
 // Check if this is a station.
 bool StellarObject::IsStation() const
 {
-	return isStation;
+  return isStation;
 }
 
 
@@ -117,7 +117,7 @@ bool StellarObject::IsStation() const
 // Check if this is a moon.
 bool StellarObject::IsMoon() const
 {
-	return isMoon;
+  return isMoon;
 }
 
 
@@ -125,7 +125,7 @@ bool StellarObject::IsMoon() const
 // Get this object's parent index (in the System's vector of objects).
 int StellarObject::Parent() const
 {
-	return parent;
+  return parent;
 }
 
 
@@ -133,5 +133,5 @@ int StellarObject::Parent() const
 // Find out how far this object is from its parent.
 double StellarObject::Distance() const
 {
-	return distance;
+  return distance;
 }

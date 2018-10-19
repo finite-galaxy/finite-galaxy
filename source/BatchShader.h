@@ -13,12 +13,12 @@ class Sprite;
 // sprite, whether it should be drawn high DPI, and the vertex data.
 class BatchShader {
 public:
-	// Initialize the shaders.
-	static void Init();
-	
-	static void Bind();
-	static void Add(const Sprite *sprite, bool isHighDPI, const std::vector<float> &data);
-	static void Unbind();
+  // Initialize the shaders.
+  static void Init();
+  
+  static void Bind();
+  static void Add(const Sprite *sprite, bool isHighDPI, const std::vector<float> &data);
+  static void Unbind();
 };
 
 

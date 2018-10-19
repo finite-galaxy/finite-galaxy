@@ -14,7 +14,7 @@ using namespace std;
 
 Table::Table()
 {
-	Clear();
+  Clear();
 }
 
 
@@ -23,27 +23,27 @@ Table::Table()
 // list (one column of text, left aligned).
 void Table::Clear()
 {
-	columns.clear();
-	
-	font = &FontSet::Get(14);
-	rowSize = Point(0., 20.);
-	center = Point(0., font->Height() / 2);
-	lineSize = Point(0., 1.);
-	lineOff = Point(0., font->Height() + 1);
-	
-	point = Point();
-	it = columns.begin();
-	color = Color(1., 0.);
+  columns.clear();
+  
+  font = &FontSet::Get(14);
+  rowSize = Point(0., 20.);
+  center = Point(0., font->Height() / 2);
+  lineSize = Point(0., 1.);
+  lineOff = Point(0., font->Height() + 1);
+  
+  point = Point();
+  it = columns.begin();
+  color = Color(1., 0.);
 }
 
 
 
 void Table::AddColumn(int x, Align align)
 {
-	columns.emplace_back(x, align == LEFT ? 0. : align == RIGHT ? -1. : -.5);
-	
-	// This may invalidate iterators, so:
-	it = columns.begin();
+  columns.emplace_back(x, align == LEFT ? 0. : align == RIGHT ? -1. : -.5);
+  
+  // This may invalidate iterators, so:
+  it = columns.begin();
 }
 
 
@@ -51,9 +51,9 @@ void Table::AddColumn(int x, Align align)
 // Set the font size. Default is 14 pixels.
 void Table::SetFontSize(int size)
 {
-	font = &FontSet::Get(size);
-	lineOff.Y() = font->Height() + 1;
-	center.Y() = font->Height() / 2;
+  font = &FontSet::Get(size);
+  lineOff.Y() = font->Height() + 1;
+  center.Y() = font->Height() / 2;
 }
 
 
@@ -61,7 +61,7 @@ void Table::SetFontSize(int size)
 // Set the row height. Default is 20 pixels.
 void Table::SetRowHeight(int height)
 {
-	rowSize.Y() = height;
+  rowSize.Y() = height;
 }
 
 
@@ -70,14 +70,14 @@ void Table::SetRowHeight(int height)
 // this will also set the width of the underline.
 void Table::SetHighlight(int startX, int endX)
 {
-	rowSize.X() = endX - startX;
-	center.X() = (endX + startX) / 2;
-	
-	if(!lineSize.X())
-	{
-		lineSize.X() = rowSize.X();
-		lineOff.X() = center.X();
-	}
+  rowSize.X() = endX - startX;
+  center.X() = (endX + startX) / 2;
+  
+  if(!lineSize.X())
+  {
+    lineSize.X() = rowSize.X();
+    lineOff.X() = center.X();
+  }
 }
 
 
@@ -86,14 +86,14 @@ void Table::SetHighlight(int startX, int endX)
 // will also set the width of the highlight.
 void Table::SetUnderline(int startX, int endX)
 {
-	lineSize.X() = endX - startX;
-	lineOff.X() = (endX + startX) / 2;
-	
-	if(!rowSize.X())
-	{
-		rowSize.X() = lineSize.X();
-		center.X() = lineOff.X();
-	}
+  lineSize.X() = endX - startX;
+  lineOff.X() = (endX + startX) / 2;
+  
+  if(!rowSize.X())
+  {
+    rowSize.X() = lineSize.X();
+    center.X() = lineOff.X();
+  }
 }
 
 
@@ -103,8 +103,8 @@ void Table::SetUnderline(int startX, int endX)
 // increased based on the row height, and a new row begins.
 void Table::DrawAt(const Point &point) const
 {
-	this->point = point + Point(0., (rowSize.Y() - font->Height()) / 2);
-	it = columns.begin();
+  this->point = point + Point(0., (rowSize.Y() - font->Height()) / 2);
+  it = columns.begin();
 }
 
 
@@ -112,7 +112,7 @@ void Table::DrawAt(const Point &point) const
 // Set the color for drawing text and underlines.
 void Table::SetColor(const Color &color) const
 {
-	this->color = color;
+  this->color = color;
 }
 
 
@@ -120,14 +120,14 @@ void Table::SetColor(const Color &color) const
 // Advance to the next field without drawing anything.
 void Table::Advance(int fields) const
 {
-	while(fields-- > 0)
-	{
-		if(columns.empty() || ++it == columns.end())
-		{
-			it = columns.begin();
-			point.Y() += rowSize.Y();
-		}
-	}
+  while(fields-- > 0)
+  {
+    if(columns.empty() || ++it == columns.end())
+    {
+      it = columns.begin();
+      point.Y() += rowSize.Y();
+    }
+  }
 }
 
 
@@ -135,7 +135,7 @@ void Table::Advance(int fields) const
 // Draw a single text field, and move on to the next one.
 void Table::Draw(const string &text) const
 {
-	Draw(text, color);
+  Draw(text, color);
 }
 
 
@@ -144,29 +144,29 @@ void Table::Draw(const string &text) const
 // previously set color will be used for future fields.
 void Table::Draw(const string &text, const Color &color) const
 {
-	if(font)
-	{
-		Point pos = point;
-		if(it != columns.end())
-			pos += Point(it->offset + it->align * font->Width(text), 0.);
-		font->Draw(text, pos, color);
-	}
-	
-	Advance();
+  if(font)
+  {
+    Point pos = point;
+    if(it != columns.end())
+      pos += Point(it->offset + it->align * font->Width(text), 0.);
+    font->Draw(text, pos, color);
+  }
+  
+  Advance();
 }
 
 
 
 void Table::Draw(double value) const
 {
-	Draw(value, color);
+  Draw(value, color);
 }
 
 
 
 void Table::Draw(double value, const Color &color) const
 {
-	Draw(Format::Number(value), color);
+  Draw(Format::Number(value), color);
 }
 
 
@@ -174,14 +174,14 @@ void Table::Draw(double value, const Color &color) const
 // Draw an underline under the text for the current row.
 void Table::DrawUnderline() const
 {
-	DrawUnderline(color);
+  DrawUnderline(color);
 }
 
 
 
 void Table::DrawUnderline(const Color &color) const
 {
-	FillShader::Fill(point + lineOff - Point(0., 2.), lineSize, color);
+  FillShader::Fill(point + lineOff - Point(0., 2.), lineSize, color);
 }
 
 
@@ -189,14 +189,14 @@ void Table::DrawUnderline(const Color &color) const
 // Highlight the current row.
 void Table::DrawHighlight() const
 {
-	DrawHighlight(color);
+  DrawHighlight(color);
 }
 
 
 
 void Table::DrawHighlight(const Color &color) const
 {
-	FillShader::Fill(GetCenterPoint(), GetRowSize(), color);
+  FillShader::Fill(GetCenterPoint(), GetRowSize(), color);
 }
 
 
@@ -205,16 +205,16 @@ void Table::DrawHighlight(const Color &color) const
 // be called in the middle of a row, or the fields will not line up.
 void Table::DrawGap(int y) const
 {
-	point.Y() += y;
+  point.Y() += y;
 }
 
 
-	
+  
 // Get the point that should be passed to DrawAt() to start the next row at
 // the given location.
 Point Table::GetPoint()
 {
-	return point - Point(0., (rowSize.Y() - font->Height()) / 2);
+  return point - Point(0., (rowSize.Y() - font->Height()) / 2);
 }
 
 
@@ -223,33 +223,33 @@ Point Table::GetPoint()
 // what screen region constitutes a mouse click on this particular row.
 Point Table::GetCenterPoint() const
 {
-	return point + center;
+  return point + center;
 }
 
 
 
 Point Table::GetRowSize() const
 {
-	return rowSize;
+  return rowSize;
 }
 
 
 
 Rectangle Table::GetRowBounds() const
 {
-	return Rectangle(GetCenterPoint(), GetRowSize());
+  return Rectangle(GetCenterPoint(), GetRowSize());
 }
 
 
 
 Table::Column::Column()
-	: offset(0.), align(0.)
+  : offset(0.), align(0.)
 {
 }
 
 
 
 Table::Column::Column(double offset, double align)
-	: offset(offset), align(align)
+  : offset(offset), align(align)
 {
 }

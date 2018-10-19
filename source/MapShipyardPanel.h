@@ -20,38 +20,38 @@ class Sprite;
 // to see which systems it is available in.
 class MapShipyardPanel : public MapSalesPanel {
 public:
-	explicit MapShipyardPanel(PlayerInfo &player);
-	explicit MapShipyardPanel(const MapPanel &panel, bool onlyHere = false);
-	
-	
+  explicit MapShipyardPanel(PlayerInfo &player);
+  explicit MapShipyardPanel(const MapPanel &panel, bool onlyHere = false);
+  
+  
 protected:
-	virtual const Sprite *SelectedSprite() const override;
-	virtual const Sprite *CompareSprite() const override;
-	virtual const ItemInfoDisplay &SelectedInfo() const override;
-	virtual const ItemInfoDisplay &CompareInfo() const override;
-	virtual const std::string &KeyLabel(int index) const override;
+  virtual const Sprite *SelectedSprite() const override;
+  virtual const Sprite *CompareSprite() const override;
+  virtual const ItemInfoDisplay &SelectedInfo() const override;
+  virtual const ItemInfoDisplay &CompareInfo() const override;
+  virtual const std::string &KeyLabel(int index) const override;
 
-	virtual void Select(int index) override;
-	virtual void Compare(int index) override;
-	virtual double SystemValue(const System *system) const override;
-	virtual int FindItem(const std::string &text) const override;
-	
-	virtual void DrawItems() override;
-	
-	
+  virtual void Select(int index) override;
+  virtual void Compare(int index) override;
+  virtual double SystemValue(const System *system) const override;
+  virtual int FindItem(const std::string &text) const override;
+  
+  virtual void DrawItems() override;
+  
+  
 private:
-	void Init();
-	
-	
+  void Init();
+  
+  
 private:
-	std::map<std::string, std::vector<const Ship *>> catalog;
-	std::vector<const Ship *> list;
-	
-	const Ship *selected = nullptr;
-	const Ship *compare = nullptr;
-	
-	ShipInfoDisplay selectedInfo;
-	ShipInfoDisplay compareInfo;
+  std::map<std::string, std::vector<const Ship *>> catalog;
+  std::vector<const Ship *> list;
+  
+  const Ship *selected = nullptr;
+  const Ship *compare = nullptr;
+  
+  ShipInfoDisplay selectedInfo;
+  ShipInfoDisplay compareInfo;
 };
 
 

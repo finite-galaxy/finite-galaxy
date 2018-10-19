@@ -10,35 +10,35 @@ using namespace std;
 
 File::File(const string &path, bool write)
 {
-	file = Files::Open(path, write);
+  file = Files::Open(path, write);
 }
 
 
 
 File::File(File &&other)
-	: file(other.file)
+  : file(other.file)
 {
-	other.file = nullptr;
+  other.file = nullptr;
 }
 
 
 
 File::~File()
 {
-	if(file)
-		fclose(file);
+  if(file)
+    fclose(file);
 }
 
 
 
 File::operator bool() const
 {
-	return file;
+  return file;
 }
 
 
 
 File::operator FILE*() const
 {
-	return file;
+  return file;
 }

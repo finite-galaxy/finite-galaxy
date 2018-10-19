@@ -17,22 +17,22 @@ class PlayerInfo;
 // missions that are marked as originating in the spaceport.
 class SpaceportPanel : public Panel {
 public:
-	explicit SpaceportPanel(PlayerInfo &player);
-	
-	void UpdateNews();
-	
-	virtual void Step() override;
-	virtual void Draw() override;
-	
-	
+  explicit SpaceportPanel(PlayerInfo &player);
+  
+  void UpdateNews();
+  
+  virtual void Step() override;
+  virtual void Draw() override;
+  
+  
 private:
-	PlayerInfo &player;
-	WrappedText text;
-	
-	// Current news item (if any):
-	bool hasNews = false;
-	Information newsInfo;
-	WrappedText newsMessage;
+  PlayerInfo &player;
+  WrappedText text;
+  
+  // Current news item (if any):
+  bool hasNews = false;
+  Information newsInfo;
+  WrappedText newsMessage;
 };
 
 

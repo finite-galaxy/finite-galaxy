@@ -11,17 +11,17 @@ using namespace std;
 
 
 WrappedText::WrappedText()
-	: font(nullptr), space(0), wrapWidth(1000), tabWidth(0),
-	  lineHeight(0), paragraphBreak(0), alignment(JUSTIFIED), height(0)
+  : font(nullptr), space(0), wrapWidth(1000), tabWidth(0),
+    lineHeight(0), paragraphBreak(0), alignment(JUSTIFIED), height(0)
 {
 }
 
 
 
 WrappedText::WrappedText(const Font &font)
-	: WrappedText()
+  : WrappedText()
 {
-	SetFont(font);
+  SetFont(font);
 }
 
 
@@ -29,14 +29,14 @@ WrappedText::WrappedText(const Font &font)
 // Set the alignment mode.
 WrappedText::Align WrappedText::Alignment() const
 {
-	return alignment;
+  return alignment;
 }
 
 
 
 void WrappedText::SetAlignment(Align align)
 {
-	alignment = align;
+  alignment = align;
 }
 
 
@@ -44,14 +44,14 @@ void WrappedText::SetAlignment(Align align)
 // Set the wrap width. This does not include any margins.
 int WrappedText::WrapWidth() const
 {
-	return wrapWidth;
+  return wrapWidth;
 }
 
 
 
 void WrappedText::SetWrapWidth(int width)
 {
-	wrapWidth = width;
+  wrapWidth = width;
 }
 
 
@@ -61,12 +61,12 @@ void WrappedText::SetWrapWidth(int width)
 // and the alignment separately.
 void WrappedText::SetFont(const Font &font)
 {
-	this->font = &font;
-	
-	space = font.Space();
-	SetTabWidth(4 * space);
-	SetLineHeight(font.Height() * 120 / 100);
-	SetParagraphBreak(font.Height() * 40 / 100);
+  this->font = &font;
+  
+  space = font.Space();
+  SetTabWidth(4 * space);
+  SetLineHeight(font.Height() * 120 / 100);
+  SetParagraphBreak(font.Height() * 40 / 100);
 }
 
 
@@ -74,14 +74,14 @@ void WrappedText::SetFont(const Font &font)
 // Set the width in pixels of a single '\t' character.
 int WrappedText::TabWidth() const
 {
-	return tabWidth;
+  return tabWidth;
 }
 
 
 
 void WrappedText::SetTabWidth(int width)
 {
-	tabWidth = width;
+  tabWidth = width;
 }
 
 
@@ -89,14 +89,14 @@ void WrappedText::SetTabWidth(int width)
 // Set the height in pixels of one line of text within a paragraph.
 int WrappedText::LineHeight() const
 {
-	return lineHeight;
+  return lineHeight;
 }
 
 
 
 void WrappedText::SetLineHeight(int height)
 {
-	lineHeight = height;
+  lineHeight = height;
 }
 
 
@@ -104,14 +104,14 @@ void WrappedText::SetLineHeight(int height)
 // Set the extra spacing in pixels to be added in between paragraphs.
 int WrappedText::ParagraphBreak() const
 {
-	return paragraphBreak;
+  return paragraphBreak;
 }
 
 
 
 void WrappedText::SetParagraphBreak(int height)
 {
-	paragraphBreak = height;
+  paragraphBreak = height;
 }
 
 
@@ -120,18 +120,18 @@ void WrappedText::SetParagraphBreak(int height)
 // always begin at (0, 0).
 void WrappedText::Wrap(const string &str)
 {
-	SetText(str.data(), str.length());
-	
-	Wrap();
+  SetText(str.data(), str.length());
+  
+  Wrap();
 }
 
 
 
 void WrappedText::Wrap(const char *str)
 {
-	SetText(str, strlen(str));
-	
-	Wrap();
+  SetText(str, strlen(str));
+  
+  Wrap();
 }
 
 
@@ -139,7 +139,7 @@ void WrappedText::Wrap(const char *str)
 // Get the height of the wrapped text.
 int WrappedText::Height() const
 {
-	return height;
+  return height;
 }
 
 
@@ -147,14 +147,14 @@ int WrappedText::Height() const
 // Draw the text.
 void WrappedText::Draw(const Point &topLeft, const Color &color) const
 {
-	for(const Word &w : words)
-		font->Draw(text.c_str() + w.Index(), w.Pos() + topLeft, color);
+  for(const Word &w : words)
+    font->Draw(text.c_str() + w.Index(), w.Pos() + topLeft, color);
 }
 
 
 
 WrappedText::Word::Word()
-	: index(0), x(0), y(0)
+  : index(0), x(0), y(0)
 {
 }
 
@@ -162,158 +162,158 @@ WrappedText::Word::Word()
 
 size_t WrappedText::Word::Index() const
 {
-	return index;
+  return index;
 }
 
 
 
 Point WrappedText::Word::Pos() const
 {
-	return Point(x, y);
+  return Point(x, y);
 }
 
 
 
 void WrappedText::SetText(const char *it, size_t length)
 {
-	// Clear any previous word-wrapping data. It becomes invalid as soon as the
-	// underlying text buffer changes.
-	words.clear();
-	
-	// Reallocate that buffer.
-	text.assign(it, length);
+  // Clear any previous word-wrapping data. It becomes invalid as soon as the
+  // underlying text buffer changes.
+  words.clear();
+  
+  // Reallocate that buffer.
+  text.assign(it, length);
 }
 
 
 
 void WrappedText::Wrap()
 {
-	height = 0;
-	if(text.empty() || !font)
-		return;
-	
-	// Do this as a finite state machine.
-	Word word;
-	bool hasWord = false;
-	
-	// Keep track of how wide the current line is. This is just so we know how
-	// much extra space must be allotted by the alignment code.
-	int lineWidth = 0;
-	// This is the index in the "words" vector of the first word on this line.
-	unsigned lineBegin = 0;
-	
-	// TODO: handle single words that are longer than the wrap width. Right now
-	// they are simply drawn un-broken, and thus extend beyond the margin.
-	// TODO: break words at hyphens, or even do automatic hyphenation. This
-	// would require a different format for the buffer, though, because it means
-	// inserting '\0' characters even where there is no whitespace.
-	
-	for(string::iterator it = text.begin(); it != text.end(); ++it)
-	{
-		char c = *it;
-		
-		// Whenever we encounter whitespace, the current word needs wrapping.
-		if(c <= ' ' && hasWord)
-		{
-			// Break the string at this point, and measure the word's width.
-			*it = '\0';
-			int width = font->Width(text.c_str() + word.index);
-			if(word.x + width > wrapWidth)
-			{
-				// If adding this word would overflow the length of the line, this
-				// word will be the first on the next line.
-				word.y += lineHeight;
-				word.x = 0;
-				
-				// Adjust the spacing of words in the now-complete line.
-				AdjustLine(lineBegin, lineWidth, false);
-			}
-			// Store this word, then advance the x position to the end of it.
-			words.push_back(word);
-			word.x += width;
-			// Keep track of how wide this line is now that this word is added.
-			lineWidth = word.x;
-			// We currently are not inside a word.
-			hasWord = false;
-		}
-		
-		// If that whitespace was a newline, we must handle that, too.
-		if(c == '\n')
-		{
-			// The next word will begin on a new line.
-			word.y += lineHeight + paragraphBreak;
-			word.x = 0;
-			
-			// Adjust the word spacings on the now-completed line.
-			AdjustLine(lineBegin, lineWidth, true);
-		}
-		// Otherwise, whitespace just adds to the x position.
-		else if(c <= ' ')
-			word.x += Space(c);
-		// If we've reached the start of a new word, remember where it begins.
-		else if(!hasWord)
-		{
-			hasWord = true;
-			word.index = it - text.begin();
-		}
-	}
-	// Handle the final word.
-	if(hasWord)
-	{
-		int width = font->Width(text.c_str() + word.index);
-		if(word.x + width > wrapWidth)
-		{
-			// If adding this word would overflow the length of the line, this
-			// final word will be the first (and only) on the next line.
-			word.y += lineHeight;
-			word.x = 0;
-			
-			// Adjust the spacing of words in the now-complete line.
-			AdjustLine(lineBegin, lineWidth, false);
-		}
-		// Add this final word to the existing words.
-		words.push_back(word);
-		word.y += lineHeight + paragraphBreak;
-		// Keep track of how wide this line is now that this word is added.
-		word.x += width;
-		lineWidth = word.x;
-	}
-	// Adjust the spacing of words in the final line of text.
-	AdjustLine(lineBegin, lineWidth, true);
-	
-	height = word.y;
+  height = 0;
+  if(text.empty() || !font)
+    return;
+  
+  // Do this as a finite state machine.
+  Word word;
+  bool hasWord = false;
+  
+  // Keep track of how wide the current line is. This is just so we know how
+  // much extra space must be allotted by the alignment code.
+  int lineWidth = 0;
+  // This is the index in the "words" vector of the first word on this line.
+  unsigned lineBegin = 0;
+  
+  // TODO: handle single words that are longer than the wrap width. Right now
+  // they are simply drawn un-broken, and thus extend beyond the margin.
+  // TODO: break words at hyphens, or even do automatic hyphenation. This
+  // would require a different format for the buffer, though, because it means
+  // inserting '\0' characters even where there is no whitespace.
+  
+  for(string::iterator it = text.begin(); it != text.end(); ++it)
+  {
+    char c = *it;
+    
+    // Whenever we encounter whitespace, the current word needs wrapping.
+    if(c <= ' ' && hasWord)
+    {
+      // Break the string at this point, and measure the word's width.
+      *it = '\0';
+      int width = font->Width(text.c_str() + word.index);
+      if(word.x + width > wrapWidth)
+      {
+        // If adding this word would overflow the length of the line, this
+        // word will be the first on the next line.
+        word.y += lineHeight;
+        word.x = 0;
+        
+        // Adjust the spacing of words in the now-complete line.
+        AdjustLine(lineBegin, lineWidth, false);
+      }
+      // Store this word, then advance the x position to the end of it.
+      words.push_back(word);
+      word.x += width;
+      // Keep track of how wide this line is now that this word is added.
+      lineWidth = word.x;
+      // We currently are not inside a word.
+      hasWord = false;
+    }
+    
+    // If that whitespace was a newline, we must handle that, too.
+    if(c == '\n')
+    {
+      // The next word will begin on a new line.
+      word.y += lineHeight + paragraphBreak;
+      word.x = 0;
+      
+      // Adjust the word spacings on the now-completed line.
+      AdjustLine(lineBegin, lineWidth, true);
+    }
+    // Otherwise, whitespace just adds to the x position.
+    else if(c <= ' ')
+      word.x += Space(c);
+    // If we've reached the start of a new word, remember where it begins.
+    else if(!hasWord)
+    {
+      hasWord = true;
+      word.index = it - text.begin();
+    }
+  }
+  // Handle the final word.
+  if(hasWord)
+  {
+    int width = font->Width(text.c_str() + word.index);
+    if(word.x + width > wrapWidth)
+    {
+      // If adding this word would overflow the length of the line, this
+      // final word will be the first (and only) on the next line.
+      word.y += lineHeight;
+      word.x = 0;
+      
+      // Adjust the spacing of words in the now-complete line.
+      AdjustLine(lineBegin, lineWidth, false);
+    }
+    // Add this final word to the existing words.
+    words.push_back(word);
+    word.y += lineHeight + paragraphBreak;
+    // Keep track of how wide this line is now that this word is added.
+    word.x += width;
+    lineWidth = word.x;
+  }
+  // Adjust the spacing of words in the final line of text.
+  AdjustLine(lineBegin, lineWidth, true);
+  
+  height = word.y;
 }
 
 
 
 void WrappedText::AdjustLine(unsigned &lineBegin, int &lineWidth, bool isEnd)
 {
-	int wordCount = words.size() - lineBegin;
-	int extraSpace = wrapWidth - lineWidth;
-	
-	// Figure out how much space is left over. Depending on the alignment, we
-	// will add that space to the left, to the right, to both sides, or to the
-	// space in between the words. Exception: the last line of a "justified"
-	// paragraph is left aligned, not justified.
-	if(alignment == JUSTIFIED && !isEnd && wordCount > 1)
-	{
-		for(int i = 0; i < wordCount; ++i)
-			words[lineBegin + i].x += extraSpace * i / (wordCount - 1);
-	}
-	else if(alignment == CENTER || alignment == RIGHT)
-	{
-		int shift = (alignment == CENTER) ? extraSpace / 2 : extraSpace;
-		for(int i = 0; i < wordCount; ++i)
-			words[lineBegin + i].x += shift;
-	}
-	
-	lineBegin = words.size();
-	lineWidth = 0;
+  int wordCount = words.size() - lineBegin;
+  int extraSpace = wrapWidth - lineWidth;
+  
+  // Figure out how much space is left over. Depending on the alignment, we
+  // will add that space to the left, to the right, to both sides, or to the
+  // space in between the words. Exception: the last line of a "justified"
+  // paragraph is left aligned, not justified.
+  if(alignment == JUSTIFIED && !isEnd && wordCount > 1)
+  {
+    for(int i = 0; i < wordCount; ++i)
+      words[lineBegin + i].x += extraSpace * i / (wordCount - 1);
+  }
+  else if(alignment == CENTER || alignment == RIGHT)
+  {
+    int shift = (alignment == CENTER) ? extraSpace / 2 : extraSpace;
+    for(int i = 0; i < wordCount; ++i)
+      words[lineBegin + i].x += shift;
+  }
+  
+  lineBegin = words.size();
+  lineWidth = 0;
 }
 
 
 
 int WrappedText::Space(char c) const
 {
-	return (c == ' ') ? space : (c == '\t') ? tabWidth : 0;
+  return (c == ' ') ? space : (c == '\t') ? tabWidth : 0;
 }

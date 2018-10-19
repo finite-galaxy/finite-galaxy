@@ -41,7 +41,7 @@ void Panel::Draw()
 // drawing any of the panels under it.
 bool Panel::IsFullScreen()
 {
-	return isFullScreen;
+  return isFullScreen;
 }
 
 
@@ -50,7 +50,7 @@ bool Panel::IsFullScreen()
 // passed to any panel under it. By default, all panels do this.
 bool Panel::TrapAllEvents()
 {
-	return trapAllEvents;
+  return trapAllEvents;
 }
 
 
@@ -58,7 +58,7 @@ bool Panel::TrapAllEvents()
 // Check if this panel can be "interrupted" to return to the main menu.
 bool Panel::IsInterruptible() const
 {
-	return isInterruptible;
+  return isInterruptible;
 }
 
 
@@ -66,7 +66,7 @@ bool Panel::IsInterruptible() const
 // Clear the list of clickable zones.
 void Panel::ClearZones()
 {
-	zones.clear();
+  zones.clear();
 }
 
 
@@ -74,16 +74,16 @@ void Panel::ClearZones()
 // Add a clickable zone to the panel.
 void Panel::AddZone(const Rectangle &rect, const function<void()> &fun)
 {
-	// The most recently added zone will typically correspond to what was drawn
-	// most recently, so it should be on top.
-	zones.emplace_front(rect, fun);
+  // The most recently added zone will typically correspond to what was drawn
+  // most recently, so it should be on top.
+  zones.emplace_front(rect, fun);
 }
 
 
 
 void Panel::AddZone(const Rectangle &rect, SDL_Keycode key)
 {
-	AddZone(rect, [this, key](){ this->KeyDown(key, 0, Command()); });
+  AddZone(rect, [this, key](){ this->KeyDown(key, 0, Command()); });
 }
 
 
@@ -92,17 +92,17 @@ void Panel::AddZone(const Rectangle &rect, SDL_Keycode key)
 // so, apply that zone's action and return true.
 bool Panel::ZoneClick(const Point &point)
 {
-	for(const Zone &zone : zones)
-		if(zone.Contains(point))
-		{
-			// If the panel is in editing mode, make sure it knows that a mouse
-			// click has broken it out of that mode, so it doesn't interpret a
-			// button press and a text character entered.
-			EndEditing();
-			zone.Click();
-			return true;
-		}
-	return false;
+  for(const Zone &zone : zones)
+    if(zone.Contains(point))
+    {
+      // If the panel is in editing mode, make sure it knows that a mouse
+      // click has broken it out of that mode, so it doesn't interpret a
+      // button press and a text character entered.
+      EndEditing();
+      zone.Click();
+      return true;
+    }
+  return false;
 }
 
 
@@ -110,90 +110,90 @@ bool Panel::ZoneClick(const Point &point)
 // Only override the ones you need; the default action is to return false.
 bool Panel::KeyDown(SDL_Keycode key, Uint16 mod, const Command &command)
 {
-	return false;
+  return false;
 }
 
 
 
 bool Panel::Click(int x, int y, int clicks)
 {
-	return false;
+  return false;
 }
 
 
 
 bool Panel::RClick(int x, int y)
 {
-	return false;
+  return false;
 }
 
 
 
 bool Panel::Hover(int x, int y)
 {
-	return false;
+  return false;
 }
 
 
 
 bool Panel::Drag(double dx, double dy)
 {
-	return false;
+  return false;
 }
 
 
 
 bool Panel::Scroll(double dx, double dy)
 {
-	return false;
+  return false;
 }
 
 
 
 bool Panel::Release(int x, int y)
 {
-	return false;
+  return false;
 }
 
 
-	
+  
 void Panel::SetIsFullScreen(bool set)
 {
-	isFullScreen = set;
+  isFullScreen = set;
 }
 
 
 
 void Panel::SetTrapAllEvents(bool set)
 {
-	trapAllEvents = set;
+  trapAllEvents = set;
 }
 
 
 
 void Panel::SetInterruptible(bool set)
 {
-	isInterruptible = set;
+  isInterruptible = set;
 }
 
 
-	
+  
 // Dim the background of this panel.
 void Panel::DrawBackdrop() const
 {
-	if(!GetUI()->IsTop(this))
-		return;
-	
-	// Darken everything but the dialog.
-	const Color &back = *GameData::Colors().Get("dialog backdrop");
-	FillShader::Fill(Point(), Point(Screen::Width(), Screen::Height()), back);
+  if(!GetUI()->IsTop(this))
+    return;
+  
+  // Darken everything but the dialog.
+  const Color &back = *GameData::Colors().Get("dialog backdrop");
+  FillShader::Fill(Point(), Point(Screen::Width(), Screen::Height()), back);
 }
 
 
 
 UI *Panel::GetUI() const
 {
-	return ui;
+  return ui;
 }
 
 
@@ -204,7 +204,7 @@ UI *Panel::GetUI() const
 // user-defined command key will override it.
 bool Panel::DoKey(SDL_Keycode key, Uint16 mod)
 {
-	return KeyDown(key, mod, Command());
+  return KeyDown(key, mod, Command());
 }
 
 
@@ -213,17 +213,17 @@ bool Panel::DoKey(SDL_Keycode key, Uint16 mod)
 // something you are buying, so the shared function is defined here:
 int Panel::Modifier()
 {
-	SDL_Keymod mod = SDL_GetModState();
-	
-	int modifier = 1;
-	if(mod & KMOD_ALT)
-		modifier *= 500;
-	if(mod & (KMOD_CTRL | KMOD_GUI))
-		modifier *= 20;
-	if(mod & KMOD_SHIFT)
-		modifier *= 5;
-	
-	return modifier;
+  SDL_Keymod mod = SDL_GetModState();
+  
+  int modifier = 1;
+  if(mod & KMOD_ALT)
+    modifier *= 500;
+  if(mod & (KMOD_CTRL | KMOD_GUI))
+    modifier *= 20;
+  if(mod & KMOD_SHIFT)
+    modifier *= 5;
+  
+  return modifier;
 }
 
 
@@ -232,23 +232,23 @@ int Panel::Modifier()
 // if the message was displayed.
 bool Panel::DoHelp(const string &name) const
 {
-	string preference = "help: " + name;
-	if(Preferences::Has(preference))
-		return false;
-	
-	const string &message = GameData::HelpMessage(name);
-	if(message.empty())
-		return false;
-	
-	Preferences::Set(preference);
-	ui->Push(new Dialog(message));
-	
-	return true;
+  string preference = "help: " + name;
+  if(Preferences::Has(preference))
+    return false;
+  
+  const string &message = GameData::HelpMessage(name);
+  if(message.empty())
+    return false;
+  
+  Preferences::Set(preference);
+  ui->Push(new Dialog(message));
+  
+  return true;
 }
 
 
 
 void Panel::SetUI(UI *ui)
 {
-	this->ui = ui;
+  this->ui = ui;
 }

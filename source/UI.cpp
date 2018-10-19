@@ -16,7 +16,7 @@ using namespace std;
 
 // Default constructor.
 UI::UI()
-	: isDone(false)
+  : isDone(false)
 {
 }
 
@@ -26,64 +26,64 @@ UI::UI()
 // of them handles it. If none do, this returns false.
 bool UI::Handle(const SDL_Event &event)
 {
-	bool handled = false;
-	
-	vector<shared_ptr<Panel>>::iterator it = stack.end();
-	while(it != stack.begin() && !handled)
-	{
-		--it;
-		// Panels that are about to be popped cannot handle any other events.
-		if(count(toPop.begin(), toPop.end(), it->get()))
-			continue;
-		
-		if(event.type == SDL_MOUSEMOTION)
-		{
-			if(event.motion.state & SDL_BUTTON(1))
-				handled = (*it)->Drag(
-					event.motion.xrel * 100. / Screen::Zoom(),
-					event.motion.yrel * 100. / Screen::Zoom());
-			else
-				handled = (*it)->Hover(
-					Screen::Left() + event.motion.x * 100 / Screen::Zoom(),
-					Screen::Top() + event.motion.y * 100 / Screen::Zoom());
-		}
-		else if(event.type == SDL_MOUSEBUTTONDOWN)
-		{
-			int x = Screen::Left() + event.button.x * 100 / Screen::Zoom();
-			int y = Screen::Top() + event.button.y * 100 / Screen::Zoom();
-			if(event.button.button == 1)
-			{
-				handled = (*it)->ZoneClick(Point(x, y));
-				if(!handled)
-					handled = (*it)->Click(x, y, event.button.clicks);
-			}
-			else if(event.button.button == 3)
-				handled = (*it)->RClick(x, y);
-		}
-		else if(event.type == SDL_MOUSEBUTTONUP)
-		{
-			int x = Screen::Left() + event.button.x * 100 / Screen::Zoom();
-			int y = Screen::Top() + event.button.y * 100 / Screen::Zoom();
-			handled = (*it)->Release(x, y);
-		}
-		else if(event.type == SDL_MOUSEWHEEL)
-			handled = (*it)->Scroll(event.wheel.x, event.wheel.y);
-		else if(event.type == SDL_KEYDOWN)
-		{
-			Command command(event.key.keysym.sym);
-			handled = (*it)->KeyDown(event.key.keysym.sym, event.key.keysym.mod, command);
-		}
-		
-		// If this panel does not want anything below it to receive events, do
-		// not let this event trickle further down the stack.
-		if((*it)->TrapAllEvents())
-			break;
-	}
-	
-	// Handle any queued push or pop commands.
-	PushOrPop();
-	
-	return handled;
+  bool handled = false;
+  
+  vector<shared_ptr<Panel>>::iterator it = stack.end();
+  while(it != stack.begin() && !handled)
+  {
+    --it;
+    // Panels that are about to be popped cannot handle any other events.
+    if(count(toPop.begin(), toPop.end(), it->get()))
+      continue;
+    
+    if(event.type == SDL_MOUSEMOTION)
+    {
+      if(event.motion.state & SDL_BUTTON(1))
+        handled = (*it)->Drag(
+          event.motion.xrel * 100. / Screen::Zoom(),
+          event.motion.yrel * 100. / Screen::Zoom());
+      else
+        handled = (*it)->Hover(
+          Screen::Left() + event.motion.x * 100 / Screen::Zoom(),
+          Screen::Top() + event.motion.y * 100 / Screen::Zoom());
+    }
+    else if(event.type == SDL_MOUSEBUTTONDOWN)
+    {
+      int x = Screen::Left() + event.button.x * 100 / Screen::Zoom();
+      int y = Screen::Top() + event.button.y * 100 / Screen::Zoom();
+      if(event.button.button == 1)
+      {
+        handled = (*it)->ZoneClick(Point(x, y));
+        if(!handled)
+          handled = (*it)->Click(x, y, event.button.clicks);
+      }
+      else if(event.button.button == 3)
+        handled = (*it)->RClick(x, y);
+    }
+    else if(event.type == SDL_MOUSEBUTTONUP)
+    {
+      int x = Screen::Left() + event.button.x * 100 / Screen::Zoom();
+      int y = Screen::Top() + event.button.y * 100 / Screen::Zoom();
+      handled = (*it)->Release(x, y);
+    }
+    else if(event.type == SDL_MOUSEWHEEL)
+      handled = (*it)->Scroll(event.wheel.x, event.wheel.y);
+    else if(event.type == SDL_KEYDOWN)
+    {
+      Command command(event.key.keysym.sym);
+      handled = (*it)->KeyDown(event.key.keysym.sym, event.key.keysym.mod, command);
+    }
+    
+    // If this panel does not want anything below it to receive events, do
+    // not let this event trickle further down the stack.
+    if((*it)->TrapAllEvents())
+      break;
+  }
+  
+  // Handle any queued push or pop commands.
+  PushOrPop();
+  
+  return handled;
 }
 
 
@@ -91,12 +91,12 @@ bool UI::Handle(const SDL_Event &event)
 // Step all the panels forward (advance animations, move objects, etc.).
 void UI::StepAll()
 {
-	// Handle any queued push or pop commands.
-	PushOrPop();
-	
-	// Step all the panels.
-	for(shared_ptr<Panel> &panel : stack)
-		panel->Step();
+  // Handle any queued push or pop commands.
+  PushOrPop();
+  
+  // Step all the panels.
+  for(shared_ptr<Panel> &panel : stack)
+    panel->Step();
 }
 
 
@@ -104,19 +104,19 @@ void UI::StepAll()
 // Draw all the panels.
 void UI::DrawAll()
 {
-	// First, clear all the clickable zones. New ones will be added in the
-	// course of drawing the screen.
-	for(const shared_ptr<Panel> &it : stack)
-		it->ClearZones();
-	
-	// Find the topmost full-screen panel. Nothing below that needs to be drawn.
-	vector<shared_ptr<Panel>>::const_iterator it = stack.end();
-	while(it != stack.begin())
-		if((*--it)->IsFullScreen())
-			break;
-	
-	for( ; it != stack.end(); ++it)
-		(*it)->Draw();
+  // First, clear all the clickable zones. New ones will be added in the
+  // course of drawing the screen.
+  for(const shared_ptr<Panel> &it : stack)
+    it->ClearZones();
+  
+  // Find the topmost full-screen panel. Nothing below that needs to be drawn.
+  vector<shared_ptr<Panel>>::const_iterator it = stack.end();
+  while(it != stack.begin())
+    if((*--it)->IsFullScreen())
+      break;
+  
+  for( ; it != stack.end(); ++it)
+    (*it)->Draw();
 }
 
 
@@ -124,15 +124,15 @@ void UI::DrawAll()
 // Add the given panel to the stack. UI is responsible for deleting it.
 void UI::Push(Panel *panel)
 {
-	Push(shared_ptr<Panel>(panel));
+  Push(shared_ptr<Panel>(panel));
 }
 
 
 
 void UI::Push(const shared_ptr<Panel> &panel)
 {
-	panel->SetUI(this);
-	toPush.push_back(panel);
+  panel->SetUI(this);
+  toPush.push_back(panel);
 }
 
 
@@ -142,7 +142,7 @@ void UI::Push(const shared_ptr<Panel> &panel)
 // a panel to Pop() itself.
 void UI::Pop(const Panel *panel)
 {
-	toPop.push_back(panel);
+  toPop.push_back(panel);
 }
 
 
@@ -152,7 +152,7 @@ void UI::Pop(const Panel *panel)
 // considered.
 bool UI::IsTop(const Panel *panel) const
 {
-	return (!stack.empty() && stack.back().get() == panel);
+  return (!stack.empty() && stack.back().get() == panel);
 }
 
 
@@ -161,13 +161,13 @@ bool UI::IsTop(const Panel *panel) const
 // this Step).
 shared_ptr<Panel> UI::Top() const
 {
-	if(!toPush.empty())
-		return toPush.back();
-	
-	if(!stack.empty())
-		return stack.back();
-	
-	return shared_ptr<Panel>();
+  if(!toPush.empty())
+    return toPush.back();
+  
+  if(!stack.empty())
+    return stack.back();
+  
+  return shared_ptr<Panel>();
 }
 
 
@@ -175,10 +175,10 @@ shared_ptr<Panel> UI::Top() const
 // Delete all the panels and clear the "done" flag.
 void UI::Reset()
 {
-	stack.clear();
-	toPush.clear();
-	toPop.clear();
-	isDone = false;
+  stack.clear();
+  toPush.clear();
+  toPop.clear();
+  isDone = false;
 }
 
 
@@ -186,15 +186,15 @@ void UI::Reset()
 // Get the lower-most panel.
 shared_ptr<Panel> UI::Root() const
 {
-	if(stack.empty())
-	{
-		if(toPush.empty())
-			return shared_ptr<Panel>();
-		
-		return toPush.front();
-	}
-	
-	return stack.front();
+  if(stack.empty())
+  {
+    if(toPush.empty())
+      return shared_ptr<Panel>();
+    
+    return toPush.front();
+  }
+  
+  return stack.front();
 }
 
 
@@ -202,7 +202,7 @@ shared_ptr<Panel> UI::Root() const
 // Tell the UI to quit.
 void UI::Quit()
 {
-	isDone = true;
+  isDone = true;
 }
 
 
@@ -210,7 +210,7 @@ void UI::Quit()
 // Check if it is time to quit.
 bool UI::IsDone() const
 {
-	return isDone;
+  return isDone;
 }
 
 
@@ -218,7 +218,7 @@ bool UI::IsDone() const
 // Check if it is time to quit.
 bool UI::IsEmpty() const
 {
-	return stack.empty() && toPush.empty();
+  return stack.empty() && toPush.empty();
 }
 
 
@@ -226,10 +226,10 @@ bool UI::IsEmpty() const
 // Get the current mouse position.
 Point UI::GetMouse()
 {
-	int x = 0;
-	int y = 0;
-	SDL_GetMouseState(&x, &y);
-	return Screen::TopLeft() + Point(x, y) * (100. / Screen::Zoom());
+  int x = 0;
+  int y = 0;
+  SDL_GetMouseState(&x, &y);
+  return Screen::TopLeft() + Point(x, y) * (100. / Screen::Zoom());
 }
 
 
@@ -237,22 +237,22 @@ Point UI::GetMouse()
 // If a push or pop is queued, apply it.
 void UI::PushOrPop()
 {
-	// Handle any panels that should be added.
-	for(shared_ptr<Panel> &panel : toPush)
-		if(panel)
-			stack.push_back(panel);
-	toPush.clear();
-	
-	// These panels should be popped but not deleted (because someone else
-	// owns them and is managing their creation and deletion).
-	for(const Panel *panel : toPop)
-	{
-		for(auto it = stack.begin(); it != stack.end(); ++it)
-			if(it->get() == panel)
-			{
-				it = stack.erase(it);
-				break;
-			}
-	}
-	toPop.clear();
+  // Handle any panels that should be added.
+  for(shared_ptr<Panel> &panel : toPush)
+    if(panel)
+      stack.push_back(panel);
+  toPush.clear();
+  
+  // These panels should be popped but not deleted (because someone else
+  // owns them and is managing their creation and deletion).
+  for(const Panel *panel : toPop)
+  {
+    for(auto it = stack.begin(); it != stack.end(); ++it)
+      if(it->get() == panel)
+      {
+        it = stack.erase(it);
+        break;
+      }
+  }
+  toPop.clear();
 }

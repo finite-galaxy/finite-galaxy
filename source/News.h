@@ -19,25 +19,25 @@ class Sprite;
 // news. One specification can contain many possible portraits and messages.
 class News {
 public:
-	void Load(const DataNode &node);
-	
-	// Check if this news item is available on the given planet.
-	bool Matches(const Planet *planet) const;
-	
-	// Get the speaker's name.
-	std::string Name() const;
-	// Pick a portrait at random out of the possible options.
-	const Sprite *Portrait() const;
-	// Get the speaker's message, chosen randomly.
-	std::string Message() const;
-	
-	
+  void Load(const DataNode &node);
+  
+  // Check if this news item is available on the given planet.
+  bool Matches(const Planet *planet) const;
+  
+  // Get the speaker's name.
+  std::string Name() const;
+  // Pick a portrait at random out of the possible options.
+  const Sprite *Portrait() const;
+  // Get the speaker's message, chosen randomly.
+  std::string Message() const;
+  
+  
 private:
-	LocationFilter location;
-	
-	Phrase names;
-	std::vector<const Sprite *> portraits;
-	Phrase messages;
+  LocationFilter location;
+  
+  Phrase names;
+  std::vector<const Sprite *> portraits;
+  Phrase messages;
 };
 
 #endif

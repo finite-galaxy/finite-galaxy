@@ -16,23 +16,23 @@
 template <class Type>
 class ClickZone : public Rectangle {
 public:
-	// Constructor. The "dimensions" are the full width and height of the zone.
-	explicit ClickZone(const Rectangle &rect, Type value = 0);
-	ClickZone(Point center, Point dimensions, Type value = 0);
-	
-	// Retrieve the value associated with this zone.
-	Type Value() const;
-	
-	
+  // Constructor. The "dimensions" are the full width and height of the zone.
+  explicit ClickZone(const Rectangle &rect, Type value = 0);
+  ClickZone(Point center, Point dimensions, Type value = 0);
+  
+  // Retrieve the value associated with this zone.
+  Type Value() const;
+  
+  
 private:
-	Type value;
+  Type value;
 };
 
 
 
 template <class Type>
 ClickZone<Type>::ClickZone(Point center, Point dimensions, Type value)
-	: Rectangle(center, dimensions), value(value)
+  : Rectangle(center, dimensions), value(value)
 {
 }
 
@@ -40,7 +40,7 @@ ClickZone<Type>::ClickZone(Point center, Point dimensions, Type value)
 
 template <class Type>
 ClickZone<Type>::ClickZone(const Rectangle &rect, Type value)
-	: Rectangle(rect), value(value)
+  : Rectangle(rect), value(value)
 {
 }
 
@@ -49,7 +49,7 @@ ClickZone<Type>::ClickZone(const Rectangle &rect, Type value)
 template <class Type>
 Type ClickZone<Type>::Value() const
 {
-	return value;
+  return value;
 }
 
 

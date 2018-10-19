@@ -14,13 +14,13 @@ class Sprite;
 // but with no OpenGL textures associated with it (so it will draw nothing).
 class SpriteSet {
 public:
-	static const Sprite *Get(const std::string &name);
-	
-	
+  static const Sprite *Get(const std::string &name);
+  
+  
 private:
-	// Only SpriteQueue is allowed to modify the sprites.
-	friend class SpriteQueue;
-	static Sprite *Modify(const std::string &name);
+  // Only SpriteQueue is allowed to modify the sprites.
+  friend class SpriteQueue;
+  static Sprite *Modify(const std::string &name);
 };
 
 

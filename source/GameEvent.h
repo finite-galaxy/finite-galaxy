@@ -27,29 +27,29 @@ class System;
 // the player the next time they land  on a planet after that event happens.
 class GameEvent {
 public:
-	GameEvent() = default;
-	// Construct and Load() at the same time.
-	GameEvent(const DataNode &node);
-	
-	void Load(const DataNode &node);
-	void Save(DataWriter &out) const;
-	const std::string &Name() const;
-	
-	const Date &GetDate() const;
-	void SetDate(const Date &date);
-	
-	void Apply(PlayerInfo &player);
-	
-	
+  GameEvent() = default;
+  // Construct and Load() at the same time.
+  GameEvent(const DataNode &node);
+  
+  void Load(const DataNode &node);
+  void Save(DataWriter &out) const;
+  const std::string &Name() const;
+  
+  const Date &GetDate() const;
+  void SetDate(const Date &date);
+  
+  void Apply(PlayerInfo &player);
+  
+  
 private:
-	Date date;
-	std::string name;
-	ConditionSet conditionsToApply;
-	std::list<DataNode> changes;
-	std::vector<const System *> systemsToVisit;
-	std::vector<const Planet *> planetsToVisit;
-	std::vector<const System *> systemsToUnvisit;
-	std::vector<const Planet *> planetsToUnvisit;
+  Date date;
+  std::string name;
+  ConditionSet conditionsToApply;
+  std::list<DataNode> changes;
+  std::vector<const System *> systemsToVisit;
+  std::vector<const Planet *> planetsToVisit;
+  std::vector<const System *> systemsToUnvisit;
+  std::vector<const Planet *> planetsToUnvisit;
 };
 
 

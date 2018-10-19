@@ -19,26 +19,26 @@
 // strings or as floating point values; see DataNode for more information.
 class DataFile {
 public:
-	// A DataFile can be loaded either from a file path or an istream.
-	DataFile() = default;
-	explicit DataFile(const std::string &path);
-	explicit DataFile(std::istream &in);
-	
-	void Load(const std::string &path);
-	void Load(std::istream &in);
-	
-	// Functions for iterating through all DataNodes in this file.
-	std::list<DataNode>::const_iterator begin() const;
-	std::list<DataNode>::const_iterator end() const;
-	
-	
+  // A DataFile can be loaded either from a file path or an istream.
+  DataFile() = default;
+  explicit DataFile(const std::string &path);
+  explicit DataFile(std::istream &in);
+  
+  void Load(const std::string &path);
+  void Load(std::istream &in);
+  
+  // Functions for iterating through all DataNodes in this file.
+  std::list<DataNode>::const_iterator begin() const;
+  std::list<DataNode>::const_iterator end() const;
+  
+  
 private:
-	void Load(const char *it, const char *end);
-	
-	
+  void Load(const char *it, const char *end);
+  
+  
 private:
-	// This is the container for all DataNodes in this file.
-	DataNode root;
+  // This is the container for all DataNodes in this file.
+  DataNode root;
 };
 
 

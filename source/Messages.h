@@ -15,26 +15,26 @@
 // to keep repeated messages from filling up the whole screen.
 class Messages {
 public:
-	class Entry {
-	public:
-		Entry() = default;
-		Entry(int step, const std::string &message) : step(step), message(message) {}
-		
-		int step;
-		std::string message;
-	};
-	
+  class Entry {
+  public:
+    Entry() = default;
+    Entry(int step, const std::string &message) : step(step), message(message) {}
+    
+    int step;
+    std::string message;
+  };
+  
 public:
-	// Add a message to the list.
-	static void Add(const std::string &message, bool isImportant = true);
-	
-	// Get the messages for the given game step. Any messages that are too old
-	// will be culled out, and new ones that have just been added will have
-	// their "step" set to the given value.
-	static const std::vector<Entry> &Get(int step);
-	
-	// Reset the messages (i.e. because a new game was loaded).
-	static void Reset();
+  // Add a message to the list.
+  static void Add(const std::string &message, bool isImportant = true);
+  
+  // Get the messages for the given game step. Any messages that are too old
+  // will be culled out, and new ones that have just been added will have
+  // their "step" set to the given value.
+  static const std::vector<Entry> &Get(int step);
+  
+  // Reset the messages (i.e. because a new game was loaded).
+  static void Reset();
 };
 
 

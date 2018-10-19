@@ -22,176 +22,176 @@ class Sprite;
 // string to double significantly reduces access time.
 class Weapon {
 public:
-	// Load from a "weapon" node, either in an outfit or in a ship (explosion).
-	void LoadWeapon(const DataNode &node);
-	bool IsWeapon() const;
-	
-	// Get assets used by this weapon.
-	const Body &WeaponSprite() const;
-	const Body &HardpointSprite() const;
-	const Sound *WeaponSound() const;
-	const Outfit *Ammo() const;
-	const Sprite *Icon() const;
-	
-	// Effects to be created at the start or end of the weapon's lifetime.
-	const std::map<const Effect *, int> &FireEffects() const;
-	const std::map<const Effect *, int> &LiveEffects() const;
-	const std::map<const Effect *, int> &HitEffects() const;
-	const std::map<const Effect *, int> &DieEffects() const;
-	const std::map<const Outfit *, int> &Submunitions() const;
-	
-	// Accessor functions for various attributes.
-	int Lifetime() const;
-	int RandomLifetime() const;
-	double Reload() const;
-	double BurstReload() const;
-	int BurstCount() const;
-	int Homing() const;
-	
-	int MissileStrength() const;
-	int AntiMissile() const;
-	// Weapons of the same type will alternate firing (streaming) rather than
-	// firing all at once (clustering) if the weapon is not an anti-missile and
-	// is not vulnerable to anti-missile, or has the "stream" attribute.
-	bool IsStreamed() const;
-	
-	double Velocity() const;
-	double RandomVelocity() const;
-	double Acceleration() const;
-	double Drag() const;
-	double HardpointOffset() const;
-	
-	double Turn() const;
-	double Inaccuracy() const;
-	double TurretTurn() const;
-	
-	double Tracking() const;
-	double OpticalTracking() const;
-	double InfraredTracking() const;
-	double RadarTracking() const;
-	
-	double FiringEnergy() const;
-	double FiringForce() const;
-	double FiringFuel() const;
-	double FiringHeat() const;
-	
-	double SplitRange() const;
-	double TriggerRadius() const;
-	double BlastRadius() const;
-	double HitForce() const;
-	
-	// A "safe" weapon hits only hostile ships (even if it has a blast radius).
-	// A "phasing" weapon hits only its intended target; it passes through
-	// everything else, including asteroids.
-	bool IsSafe() const;
-	bool IsPhasing() const;
-	// Blast radius weapons will scale damage and hit force based on distance,
-	// unless the "no damage scaling" keyphrase is used in the weapon definition.
-	bool IsDamageScaled() const;
-	
-	// These values include all submunitions:
-	double ShieldDamage() const;
-	double HullDamage() const;
-	double FuelDamage() const;
-	double HeatDamage() const;
-	double IonDamage() const;
-	double DisruptionDamage() const;
-	double SlowingDamage() const;
-	// Check if this weapon does damage. If not, attacking a ship with this
-	// weapon is not a provocation (even if you push or pull it).
-	bool DoesDamage() const;
-	
-	double Piercing() const;
-	
-	double TotalLifetime() const;
-	double Range() const;
-	
-	
+  // Load from a "weapon" node, either in an outfit or in a ship (explosion).
+  void LoadWeapon(const DataNode &node);
+  bool IsWeapon() const;
+  
+  // Get assets used by this weapon.
+  const Body &WeaponSprite() const;
+  const Body &HardpointSprite() const;
+  const Sound *WeaponSound() const;
+  const Outfit *Ammo() const;
+  const Sprite *Icon() const;
+  
+  // Effects to be created at the start or end of the weapon's lifetime.
+  const std::map<const Effect *, int> &FireEffects() const;
+  const std::map<const Effect *, int> &LiveEffects() const;
+  const std::map<const Effect *, int> &HitEffects() const;
+  const std::map<const Effect *, int> &DieEffects() const;
+  const std::map<const Outfit *, int> &Submunitions() const;
+  
+  // Accessor functions for various attributes.
+  int Lifetime() const;
+  int RandomLifetime() const;
+  double Reload() const;
+  double BurstReload() const;
+  int BurstCount() const;
+  int Homing() const;
+  
+  int MissileStrength() const;
+  int AntiMissile() const;
+  // Weapons of the same type will alternate firing (streaming) rather than
+  // firing all at once (clustering) if the weapon is not an anti-missile and
+  // is not vulnerable to anti-missile, or has the "stream" attribute.
+  bool IsStreamed() const;
+  
+  double Velocity() const;
+  double RandomVelocity() const;
+  double Acceleration() const;
+  double Drag() const;
+  double HardpointOffset() const;
+  
+  double Turn() const;
+  double Inaccuracy() const;
+  double TurretTurn() const;
+  
+  double Tracking() const;
+  double OpticalTracking() const;
+  double InfraredTracking() const;
+  double RadarTracking() const;
+  
+  double FiringEnergy() const;
+  double FiringForce() const;
+  double FiringFuel() const;
+  double FiringHeat() const;
+  
+  double SplitRange() const;
+  double TriggerRadius() const;
+  double BlastRadius() const;
+  double HitForce() const;
+  
+  // A "safe" weapon hits only hostile ships (even if it has a blast radius).
+  // A "phasing" weapon hits only its intended target; it passes through
+  // everything else, including asteroids.
+  bool IsSafe() const;
+  bool IsPhasing() const;
+  // Blast radius weapons will scale damage and hit force based on distance,
+  // unless the "no damage scaling" keyphrase is used in the weapon definition.
+  bool IsDamageScaled() const;
+  
+  // These values include all submunitions:
+  double ShieldDamage() const;
+  double HullDamage() const;
+  double FuelDamage() const;
+  double HeatDamage() const;
+  double IonDamage() const;
+  double DisruptionDamage() const;
+  double SlowingDamage() const;
+  // Check if this weapon does damage. If not, attacking a ship with this
+  // weapon is not a provocation (even if you push or pull it).
+  bool DoesDamage() const;
+  
+  double Piercing() const;
+  
+  double TotalLifetime() const;
+  double Range() const;
+  
+  
 protected:
-	// Legacy support: allow turret outfits with no turn rate to specify a
-	// default turnrate.
-	void SetTurretTurn(double rate);
-	
-	const Outfit *ammo = nullptr;
-	
-	
+  // Legacy support: allow turret outfits with no turn rate to specify a
+  // default turnrate.
+  void SetTurretTurn(double rate);
+  
+  const Outfit *ammo = nullptr;
+  
+  
 private:
-	double TotalDamage(int index) const;
-	
-	
+  double TotalDamage(int index) const;
+  
+  
 private:
-	// Sprites and sounds.
-	Body sprite;
-	Body hardpointSprite;
-	const Sound *sound = nullptr;
-	const Sprite *icon = nullptr;
-	
-	// Fire, die and hit effects.
-	std::map<const Effect *, int> fireEffects;
-	std::map<const Effect *, int> liveEffects;
-	std::map<const Effect *, int> hitEffects;
-	std::map<const Effect *, int> dieEffects;
-	std::map<const Outfit *, int> submunitions;
-	
-	// This stores whether or not the weapon has been loaded.
-	bool isWeapon = false;
-	bool isStreamed = false;
-	bool isSafe = false;
-	bool isPhasing = false;
-	bool isDamageScaled = true;
-	
-	// Attributes.
-	int lifetime = 0;
-	int randomLifetime = 0;
-	double reload = 1.;
-	double burstReload = 1.;
-	int burstCount = 1;
-	int homing = 0;
-	
-	int missileStrength = 0;
-	int antiMissile = 0;
-	
-	double velocity = 0.;
-	double randomVelocity = 0.;
-	double acceleration = 0.;
-	double drag = 0.;
-	double hardpointOffset = 0.;
-	
-	double turn = 0.;
-	double inaccuracy = 0.;
-	double turretTurn = 0.;
-	
-	double tracking = 0.;
-	double opticalTracking = 0.;
-	double infraredTracking = 0.;
-	double radarTracking = 0.;
-	
-	double firingEnergy = 0.;
-	double firingForce = 0.;
-	double firingFuel = 0.;
-	double firingHeat = 0.;
-	
-	double splitRange = 0.;
-	double triggerRadius = 0.;
-	double blastRadius = 0.;
-	
-	static const int DAMAGE_TYPES = 8;
-	static const int SHIELD_DAMAGE = 0;
-	static const int HULL_DAMAGE = 1;
-	static const int FUEL_DAMAGE = 2;
-	static const int HEAT_DAMAGE = 3;
-	static const int ION_DAMAGE = 4;
-	static const int DISRUPTION_DAMAGE = 5;
-	static const int SLOWING_DAMAGE = 6;
-	static const int HIT_FORCE = 7;
-	mutable double damage[DAMAGE_TYPES] = {0., 0., 0., 0., 0., 0., 0., 0.};
-	
-	double piercing = 0.;
-	
-	// Cache the calculation of these values, for faster access.
-	mutable bool calculatedDamage = true;
-	mutable bool doesDamage = false;
-	mutable double totalLifetime = -1.;
+  // Sprites and sounds.
+  Body sprite;
+  Body hardpointSprite;
+  const Sound *sound = nullptr;
+  const Sprite *icon = nullptr;
+  
+  // Fire, die and hit effects.
+  std::map<const Effect *, int> fireEffects;
+  std::map<const Effect *, int> liveEffects;
+  std::map<const Effect *, int> hitEffects;
+  std::map<const Effect *, int> dieEffects;
+  std::map<const Outfit *, int> submunitions;
+  
+  // This stores whether or not the weapon has been loaded.
+  bool isWeapon = false;
+  bool isStreamed = false;
+  bool isSafe = false;
+  bool isPhasing = false;
+  bool isDamageScaled = true;
+  
+  // Attributes.
+  int lifetime = 0;
+  int randomLifetime = 0;
+  double reload = 1.;
+  double burstReload = 1.;
+  int burstCount = 1;
+  int homing = 0;
+  
+  int missileStrength = 0;
+  int antiMissile = 0;
+  
+  double velocity = 0.;
+  double randomVelocity = 0.;
+  double acceleration = 0.;
+  double drag = 0.;
+  double hardpointOffset = 0.;
+  
+  double turn = 0.;
+  double inaccuracy = 0.;
+  double turretTurn = 0.;
+  
+  double tracking = 0.;
+  double opticalTracking = 0.;
+  double infraredTracking = 0.;
+  double radarTracking = 0.;
+  
+  double firingEnergy = 0.;
+  double firingForce = 0.;
+  double firingFuel = 0.;
+  double firingHeat = 0.;
+  
+  double splitRange = 0.;
+  double triggerRadius = 0.;
+  double blastRadius = 0.;
+  
+  static const int DAMAGE_TYPES = 8;
+  static const int SHIELD_DAMAGE = 0;
+  static const int HULL_DAMAGE = 1;
+  static const int FUEL_DAMAGE = 2;
+  static const int HEAT_DAMAGE = 3;
+  static const int ION_DAMAGE = 4;
+  static const int DISRUPTION_DAMAGE = 5;
+  static const int SLOWING_DAMAGE = 6;
+  static const int HIT_FORCE = 7;
+  mutable double damage[DAMAGE_TYPES] = {0., 0., 0., 0., 0., 0., 0., 0.};
+  
+  double piercing = 0.;
+  
+  // Cache the calculation of these values, for faster access.
+  mutable bool calculatedDamage = true;
+  mutable bool doesDamage = false;
+  mutable double totalLifetime = -1.;
 };
 
 

@@ -13,20 +13,20 @@
 // of the classes representing a particular shader.
 class Shader {
 public:
-	Shader() = default;
-	Shader(const char *vertex, const char *fragment);
-	
-	GLuint Object() const;
-	GLint Attrib(const char *name) const;
-	GLint Uniform(const char *name) const;
-	
-	
+  Shader() = default;
+  Shader(const char *vertex, const char *fragment);
+  
+  GLuint Object() const;
+  GLint Attrib(const char *name) const;
+  GLint Uniform(const char *name) const;
+  
+  
 private:
-	GLuint Compile(const char *str, GLenum type);
-	
-	
+  GLuint Compile(const char *str, GLenum type);
+  
+  
 private:
-	GLuint program;
+  GLuint program;
 };
 
 

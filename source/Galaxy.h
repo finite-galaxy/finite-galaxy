@@ -15,15 +15,15 @@ class Sprite;
 // will never accidentally scroll the view from one to the other.
 class Galaxy {
 public:
-	void Load(const DataNode &node);
-	
-	const Point &Position() const;
-	const Sprite *GetSprite() const;
-	
-	
+  void Load(const DataNode &node);
+  
+  const Point &Position() const;
+  const Sprite *GetSprite() const;
+  
+  
 private:
-	Point position;
-	const Sprite *sprite = nullptr;
+  Point position;
+  const Sprite *sprite = nullptr;
 };
 
 #endif
