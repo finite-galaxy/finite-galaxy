@@ -164,7 +164,7 @@ ship "Manta" "Manta (Proton)"
   outfits
     "Meteor Missile Launcher" 2
     "Meteor Missile" 70
-    "Proton Gun" 4
+    "Proton Cannon" 4
     "RT-I Radiothermal"
     "LP144a Battery Pack"
     "D14-RN Shield Generator"
@@ -173,10 +173,10 @@ ship "Manta" "Manta (Proton)"
     "Hyperdrive"
   gun "Meteor Missile Launcher"
   gun "Meteor Missile Launcher"
-  gun "Proton Gun"
-  gun "Proton Gun"
-  gun "Proton Gun"
-  gun "Proton Gun"
+  gun "Proton Cannon"
+  gun "Proton Cannon"
+  gun "Proton Cannon"
+  gun "Proton Cannon"
 
 
 
@@ -235,7 +235,7 @@ ship "Quicksilver" "Quicksilver (Mark II)"
 
 ship "Quicksilver" "Quicksilver (Proton)"
   outfits
-    "Proton Gun" 2
+    "Proton Cannon" 2
     "RT-I Radiothermal"
     "LP036a Battery Pack"
     "D23-QP Shield Generator"
@@ -282,8 +282,8 @@ ship "Splinter"
       "hull damage" 300
       "hit force" 900
   outfits
-    "Proton Gun" 2
-    "Blaster Turret" 3
+    "Proton Cannon" 2
+    "2X Blaster Turret" 3
     "RT-I Radiothermal"
     "LP144a Battery Pack"
     "D67-TM Shield Generator"
@@ -294,11 +294,11 @@ ship "Splinter"
     "Hyperdrive"
   engine -15 115
   engine 15 115
-  gun -15 -80 "Proton Gun"
-  gun 15 -80 "Proton Gun"
-  turret -17 -28 "Blaster Turret"
-  turret 0 -28 "Blaster Turret"
-  turret 17 -28 "Blaster Turret"
+  gun -15 -80 "Proton Cannon"
+  gun 15 -80 "Proton Cannon"
+  turret -17 -28 "2X Blaster Turret"
+  turret 0 -28 "2X Blaster Turret"
+  turret 17 -28 "2X Blaster Turret"
   leak "leak" 60 50
   leak "flame" 40 80
   leak "big leak" 90 30
@@ -328,7 +328,7 @@ ship "Splinter" "Splinter (Laser)"
 ship "Splinter" "Splinter (Mark II)"
   outfits
     "Particle Cannon" 2
-    "Quad Blaster Turret" 3
+    "4X Blaster Turret" 3
     "Fusion Reactor"
     "Supercapacitor"
     "S-970 Regenerator"
@@ -341,7 +341,7 @@ ship "Splinter" "Splinter (Mark II)"
 
 ship "Splinter" "Splinter (Proton)"
   outfits
-    "Proton Gun" 2
+    "Proton Cannon" 2
     "Proton Turret" 2
     "Anti-Missile Turret"
     "Water Coolant System"

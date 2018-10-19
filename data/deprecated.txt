@@ -1,48 +1,186 @@
 # Note: this file contains outfits that are no longer used in the game, but that
 # must be maintained in case anyone installed one of them while they were available.
 
+# deprecated because of spelling
+outfit "Command Center"
+  category "Deprecated"
+  cost 437000
+  thumbnail "outfit/unknown"
+  "mass" 8
+  "outfit space" -24
+  "bunks" 1
+  "required crew" 1
+  "automaton" -1
+
+# deprecated in favour of outfits without species name
+outfit "Heliarch Attractor"
+  category "Deprecated"
+  cost 2187000
+  thumbnail "outfit/unknown"
+  "mass" 49
+  "outfit space" -49
+  "weapon capacity" -49
+  "required crew" 1
+  "turret mounts" -1
+  weapon
+    sprite "projectile/attractor"
+      "frame rate" 5.2
+      "random start frame"
+    "hardpoint sprite" "hardpoint/heliarch attractor"
+    "hardpoint offset" 9.
+    sound "heliarch attractor"
+    "hit effect" "attractor impact"
+    "inaccuracy" 2
+    "turret turn" 4.1
+    "velocity" 640
+    "lifetime" 1
+    "reload" 1
+    "firing energy" 4.8
+    "firing heat" 4.5
+    "shield damage" 5.4
+    "hull damage" 4.2
+    "firing force" -30
+    "hit force" -30
+
+outfit "Heliarch Repulsor"
+  category "Deprecated"
+  cost 2549000
+  thumbnail "outfit/unknown"
+  "mass" 56
+  "outfit space" -56
+  "weapon capacity" -56
+  "required crew" 1
+  "turret mounts" -1
+  weapon
+    sprite "projectile/repulsor"
+      "frame rate" 3.2
+      "random start frame"
+    "hardpoint sprite" "hardpoint/heliarch repulsor"
+    "hardpoint offset" 9.
+    sound "heliarch repulsor"
+    "hit effect" "repulsor impact"
+    "inaccuracy" 3
+    "turret turn" 3.4
+    "velocity" 560
+    "lifetime" 1
+    "reload" 1
+    "firing energy" 5.9
+    "firing heat" 1.2
+    "shield damage" 3.6
+    "hull damage" 5.8
+    "firing force" 60
+    "hit force" 60
+    "slowing damage" .1
+
+outfit "Korath Piercer Rack"
+  category "Deprecated"
+  cost 56000
+  thumbnail "outfit/unknown"
+  "mass" 2.2
+  "outfit space" -7
+  "piercer capacity" 16
+  ammo "Korath Piercer"
+
+outfit "Korath Mine Rack"
+  category "Deprecated"
+  cost 31500
+  thumbnail "outfit/unknown"
+  "mass" 2.7
+  "outfit space" -9
+  "minelayer capacity" 9
+  ammo "Korath Mine"
+
+# deprecated to allow for more consistent names
+outfit "Blaster Turret"
+  category "Deprecated"
+  cost 100000
+  thumbnail "outfit/unknown"
+  "mass" 15
+  "outfit space" -15
+  "weapon capacity" -15
+  "turret mounts" -1
+  "required crew" 1
+  weapon
+    sprite "projectile/blaster"
+    "hardpoint sprite" "hardpoint/blaster turret"
+    "hardpoint offset" 9.
+    sound "blaster"
+    "hit effect" "blaster impact"
+    "inaccuracy" 3
+    "turret turn" 3.7
+    "velocity" 8.5
+    "lifetime" 60
+    "reload" 6
+    "firing energy" 9.6
+    "firing heat" 30
+    "shield damage" 9.6
+    "hull damage" 6
+
+outfit "Quad Blaster Turret"
+  category "Deprecated"
+  cost 230000
+  thumbnail "outfit/unknown"
+  "mass" 25
+  "outfit space" -25
+  "weapon capacity" -25
+  "turret mounts" -1
+  "required crew" 1
+  weapon
+    sprite "projectile/blaster"
+    "hardpoint sprite" "hardpoint/quad blaster turret"
+    "hardpoint offset" 9.
+    sound "blaster"
+    "hit effect" "blaster impact"
+    "inaccuracy" 3
+    "turret turn" 3.2
+    "velocity" 8.5
+    "lifetime" 60
+    "reload" 3
+    "firing energy" 9.6
+    "firing heat" 30
+    "shield damage" 9.6
+    "hull damage" 6
+
+
+
 outfit "Korath Tek'far Reactor"
-  category "Energy Generation"
+  category "Deprecated"
   cost 1200000
   thumbnail "outfit/unknown"
   "mass" 25
   "outfit space" -25
   "energy generation" 3.9
   "heat generation" 7.3
-  description "This is a miniature nuclear reactor, used by the Korath to power their fighters."
 
 outfit "Korath Tek'nel Reactor"
-  category "Energy Generation"
+  category "Deprecated"
   cost 14000000
   thumbnail "outfit/unknown"
   "mass" 140
   "outfit space" -140
   "energy generation" 27.1
   "heat generation" 80
-  description "This massive reactor was designed by the Korath to meet the power needs of their largest ships."
 
 
 outfit "Korath Shield Generator"
-  category "Regeneration"
+  category "Deprecated"
   cost 1700000
   thumbnail "outfit/unknown"
   "mass" 52
   "outfit space" -52
   "shield generation" 2.4
   "shield energy" 2.4
-  description "Korath fighters are not able to recharge their shields, but their larger ships are equipped with one of these."
 
 outfit "Korath Heat Shunt"
-  category "Cooling"
+  category "Deprecated"
   cost 450000
   thumbnail "outfit/unknown"
   "mass" 34
   "outfit space" -34
   "cooling" 78
-  description "Korath weapons generate extreme amounts of heat, and the cooling systems they require are massive."
 
 outfit "Korath Ark'torbal Thruster"
-  category "Engines"
+  category "Deprecated"
   "cost" 40000
   thumbnail "outfit/unknown"
   "mass" 17
@@ -54,10 +192,9 @@ outfit "Korath Ark'torbal Thruster"
   "flare sprite" "effect/plasma flare/tiny"
     "frame rate" 5
   "flare sound" "plasma tiny"
-  description "This engine is used by Korath fighters."
 
 outfit "Korath Ark'parat Steering"
-  category "Engines"
+  category "Deprecated"
   "cost" 36000
   thumbnail "outfit/unknown"
   "mass" 12
@@ -66,10 +203,9 @@ outfit "Korath Ark'parat Steering"
   "turn" 240
   "turning energy" .6
   "turning heat" .7
-  description "This engine is used by Korath fighters."
 
 outfit "Korath Jak'torbal Thruster"
-  category "Engines"
+  category "Deprecated"
   "cost" 317000
   thumbnail "outfit/unknown"
   "mass" 89
@@ -81,10 +217,9 @@ outfit "Korath Jak'torbal Thruster"
   "flare sprite" "effect/plasma flare/large"
     "frame rate" 8
   "flare sound" "plasma large"
-  description "This engine is used in the Korath capital ships."
 
 outfit "Korath Jak'parat Steering"
-  category "Engines"
+  category "Deprecated"
   "cost" 2740000
   thumbnail "outfit/unknown"
   "mass" 67
@@ -93,26 +228,56 @@ outfit "Korath Jak'parat Steering"
   "turn" 1680
   "turning energy" 3.1
   "turning heat" 7.9
-  description "This engine is used in the Korath capital ships."
 
 
-# Deprecated in favor of the Outfits Expansion, which has a cooling penalty that
+# renamed to cannon
+outfit "Proton Gun"
+  category "Deprecated"
+  cost 150000
+  thumbnail "outfit/unknown"
+  "mass" 28
+  "outfit space" -28
+  "weapon capacity" -28
+  "gun ports" -1
+  weapon
+    sprite "projectile/proton"
+    sound "proton"
+    "hit effect" "proton impact" 3
+    "inaccuracy" 4
+    "submunition" "Proton Fragment" 3
+    "velocity" 24
+    "lifetime" 2
+    "reload" 8
+    "firing energy" 15
+    "firing force" 2
+    "firing heat" 60
+
+# deprecated because one bunk room size is sufficient
+outfit "Small Bunk Room"
+  category "Deprecated"
+  cost 20000
+  thumbnail "outfit/unknown"
+  "mass" 3
+  "bunks" 2
+  "outfit space" -12
+  unplunderable 1
+
+# Deprecated in favour of the Outfits Expansion, which has a cooling penalty that
 # stacks up and limits how many you can install.
 outfit "Mass Expansion"
-  category "Systems"
+  category "Deprecated"
   cost 50000
-  thumbnail "outfit/blue screwdriver"
+  thumbnail "outfit/unknown"
   "mass" 5
   "outfit space" 15
   "cargo space" -20
   unplunderable 1
-  description "A mass expansion allows you to sacrifice some cargo space in order to make room for more outfits, in situations where you need just a bit more space to install a particular system. It does not increase your weapon or engine space unfortunately."
 
 # Deprecated to give it a less generic name.
 outfit "Reverse Thruster"
-  category "Engines"
+  category "Deprecated"
   "cost" 140000
-  thumbnail "outfit/reverse thruster"
+  thumbnail "outfit/unknown"
   "mass" 22
   "outfit space" -22
   "weapon capacity" -22
@@ -122,18 +287,17 @@ outfit "Reverse Thruster"
 
 # Deprecated because it unbalances the capture dynamics, among other things.
 outfit "NDR-114 Android"
-  category "Systems"
+  category "Deprecated"
   cost 80000
-  thumbnail "outfit/android"
+  thumbnail "outfit/unknown"
   "required crew" -1
   unplunderable 1
-  description "For the price of more than two year's salary, you can replace one of your crew members with a robotic counterpart. Androids possess sufficient intelligence to perform most work, but each ship still needs a human captain. And, due to long-standing convention, robots are not allowed to take part in hand to hand combat."
 
 # Deprecated for 0.9.2 due to long outfit names.
 outfit "Bullfrog Anti-Missile Turret"
-  category "Anti-Missile"
+  category "Deprecated"
   cost 55000
-  thumbnail "outfit/anti-missile hai"
+  thumbnail "outfit/unknown"
   "mass" 10
   "outfit space" -10
   "weapon capacity" -10
@@ -147,12 +311,11 @@ outfit "Bullfrog Anti-Missile Turret"
     "firing energy" 12
     "firing heat" 5
     "stream"
-  description ""
 
 outfit "Chameleon Anti-Missile Turret"
-  category "Anti-Missile"
+  category "Deprecated"
   cost 140000
-  thumbnail "outfit/heavy anti-missile hai"
+  thumbnail "outfit/unknown"
   "mass" 22
   "outfit space" -22
   "weapon capacity" -22
@@ -166,7 +329,6 @@ outfit "Chameleon Anti-Missile Turret"
     "firing energy" 23
     "firing heat" 6
     "stream"
-  description ""
 
 # Because of "big explosion" being renamed to "large explosion":
 effect "big explosion"
@@ -180,3 +342,4 @@ effect "big explosion"
   "random spin" 4
   "random frame rate" 5
   "velocity scale" .4
+

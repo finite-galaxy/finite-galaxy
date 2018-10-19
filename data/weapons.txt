@@ -20,7 +20,15 @@ outfit "Energy Blaster"
     "hull damage" 6
   description "Although not the most accurate or damaging of weapons, the Energy Blaster is popular because it is small enough to be installed on even the tiniest of ships. One blaster is not enough to do appreciable damage to anything larger than a fighter, but a ship equipped with several of them becomes a force to be reckoned with."
 
-outfit "Blaster Turret"
+effect "blaster impact"
+  sprite "effect/blaster impact"
+    "no repeat"
+    "frame rate" 30
+  "lifetime" 7
+  "random angle" 40
+  "velocity scale" -.05
+
+outfit "2X Blaster Turret"
   category "Turrets"
   cost 100000
   thumbnail "outfit/blaster turret"
@@ -45,16 +53,16 @@ outfit "Blaster Turret"
     "firing heat" 30
     "shield damage" 9.6
     "hull damage" 6
-  description "A Blaster Turret is a pair of Energy Blasters mounted on a rotating platform, allowing it to fire in any direction. Sophisticated software algorithms allow the turret to correct for a target's motion, making the Blaster Turret effective even against small, quickly moving fighters. Because it needs a special mounting point with a 360 degree field of view, not all ships are capable of being equipped with a turret."
+  description "The 2X Blaster Turret is a pair of Energy Blasters mounted on a rotating platform, allowing it to fire in any direction. Sophisticated software algorithms allow the turret to correct for a target's motion, making the Blaster Turret effective even against small, quickly moving fighters. Because it needs a special mounting point with a 360 degree field of view, not all ships are capable of being equipped with a turret."
 
-outfit "Quad Blaster Turret"
+outfit "4X Blaster Turret"
   category "Turrets"
-  cost 230000
+  cost 210000
   thumbnail "outfit/quad blaster turret"
-  "mass" 25
-  "drag" .25
-  "outfit space" -25
-  "weapon capacity" -25
+  "mass" 26
+  "drag" .26
+  "outfit space" -26
+  "weapon capacity" -26
   "turret mounts" -1
   "required crew" 1
   weapon
@@ -64,7 +72,7 @@ outfit "Quad Blaster Turret"
     sound "blaster"
     "hit effect" "blaster impact"
     "inaccuracy" 3
-    "turret turn" 2.40
+    "turret turn" 2.31
     "velocity" 23
     "lifetime" 30
     "reload" 3
@@ -72,15 +80,61 @@ outfit "Quad Blaster Turret"
     "firing heat" 30
     "shield damage" 9.6
     "hull damage" 6
-  description "A Quad Blaster Turret carries four guns on a single turret mount, doubling the firepower of an ordinary Blaster Turret for ships with enough space to install one and energy to drive it."
+  description "The 4X Blaster Turret carries four Blasters on a single turret mount, doubling the firepower of an ordinary blaster turret for ships with enough space to install one and energy to drive it."
 
-effect "blaster impact"
-  sprite "effect/blaster impact"
-    "no repeat"
-    "frame rate" 30
-  "lifetime" 7
-  "random angle" 40
-  "velocity scale" -.05
+outfit "6X Blaster Turret"
+  category "Turrets"
+  cost 320000
+  thumbnail "outfit/unknown"
+  "mass" 37
+  "drag" .37
+  "outfit space" -37
+  "weapon capacity" -37
+  "turret mounts" -1
+  "required crew" 1
+  weapon
+    sprite "projectile/blaster"
+    "hardpoint sprite" "hardpoint/quad blaster turret"
+    "hardpoint offset" 9.
+    sound "blaster"
+    "hit effect" "blaster impact"
+    "inaccuracy" 3
+    "turret turn" 1.62
+    "velocity" 23
+    "lifetime" 30
+    "reload" 2
+    "firing energy" 9.6
+    "firing heat" 30
+    "shield damage" 9.6
+    "hull damage" 6
+  description "The 6x Blaster Turret, a single mount with six Blasters, is very powerful for its size, but also highly inefficient."
+
+outfit "8X Blaster Turret"
+  category "Turrets"
+  cost 430000
+  thumbnail "outfit/unknown"
+  "mass" 48
+  "drag" .48
+  "outfit space" -48
+  "weapon capacity" -48
+  "turret mounts" -1
+  "required crew" 1
+  weapon
+    sprite "projectile/blaster"
+    "hardpoint sprite" "hardpoint/quad blaster turret"
+    "hardpoint offset" 9.
+    sound "blaster"
+    "hit effect" "blaster impact"
+    "inaccuracy" 3
+    "turret turn" 1.25
+    "velocity" 23
+    "lifetime" 30
+    "reload" 1.5
+    "firing energy" 9.6
+    "firing heat" 30
+    "shield damage" 9.6
+    "hull damage" 6
+  description "The 8X Blaster Turret consists of eight Blasters attached to a single mount, thus having a lot of firepower concentrated in a single spot. It is useful for quickly destroying ships, although its high energy consumption and heat production make it unattractive for prolonged space fights. Though cruder and less efficient than its competition, the 8X Blaster Turret maintains a loyal following among captains dissatisfied with laser weapons' short range and low shield damage."
 
 
 outfit "Modified Blaster"
@@ -378,8 +432,37 @@ effect "particle impact"
   "velocity scale" -.05
   "random spin" 10
 
+outfit "Particle Turret"
+  category "Turrets"
+  cost 620000
+  thumbnail "outfit/unknown"
+  "mass" 72
+  "drag" .72
+  "outfit space" -72
+  "weapon capacity" -72
+  "turret mounts" -1
+  "required crew" 1
+  weapon
+    sprite "projectile/particle beam"
+    "hardpoint sprite" "hardpoint/proton turret"
+    "hardpoint offset" 14.
+    sound "particle"
+    "hit effect" "particle impact"
+    "inaccuracy" .5
+    "turret turn" 0.83
+    "velocity" 30
+    "lifetime" 32
+    "reload" 10
+    "firing energy" 35
+    "firing force" 10
+    "firing heat" 120
+    "hit force" 80
+    "shield damage" 54
+    "hull damage" 52
+  description "The Particle Turret is a huge turret designed to be used on the largest Navy warships, to allow them to bombard opponents from a distance."
 
-outfit "Proton Gun"
+
+outfit "Proton Cannon"
   category "Guns"
   cost 150000
   thumbnail "outfit/proton cannon"
@@ -399,7 +482,7 @@ outfit "Proton Gun"
     "firing energy" 15
     "firing force" 2
     "firing heat" 60
-  description "The Proton Gun started out as the Syndicate's attempt to reverse engineer and mass produce a cheap competitor for the Particle Cannon. Unfortunately, they were unable to find a reliable way to keep the beam coherent, but the resulting weapon is still popular with some captains, particularly as an anti-fighter gun."
+  description "The Proton Cannon started out as the Syndicate's attempt to reverse engineer and mass produce a cheap competitor for the Particle Cannon. Unfortunately, they were unable to find a reliable way to keep the beam coherent, but the resulting weapon is still popular with some captains, particularly as an anti-fighter gun."
 
 outfit "Proton Fragment"
   weapon
@@ -421,15 +504,14 @@ effect "proton impact"
   "random angle" 2
   "velocity scale" -.005
 
-
 outfit "Proton Turret"
   category "Turrets"
-  cost 260000
+  cost 560000
   thumbnail "outfit/proton turret"
-  "mass" 34
-  "drag" .34
-  "outfit space" -34
-  "weapon capacity" -34
+  "mass" 66
+  "drag" .66
+  "outfit space" -66
+  "weapon capacity" -66
   "turret mounts" -1
   "required crew" 1
   weapon
@@ -439,11 +521,11 @@ outfit "Proton Turret"
     sound "proton"
     "hit effect" "proton impact" 3
     "inaccuracy" 4
-    "turret turn" 1.76
+    "turret turn" .91
     "submunition" "Proton Fragment" 3
     "velocity" 25
     "lifetime" 2
-    "reload" 8
+    "reload" 4
     "firing energy" 15
     "firing force" 2
     "firing heat" 60
@@ -475,6 +557,17 @@ outfit "Plasma Cannon"
     "heat damage" 340
   description "The Plasma Cannon fires bursts of superheated plasma. In addition to damaging your target, these plasma bursts impart a significant amount of heat, especially to a target whose shields are down."
 
+effect "plasma explosion"
+  sprite "effect/plasma explosion"
+    "no repeat"
+    "frame rate" 20
+  sound "explosion tiny"
+  "lifetime" 21
+  "random angle" 360
+  "random velocity" .1
+  "random spin" 4
+  "velocity scale" -.05
+
 outfit "Plasma Turret"
   category "Turrets"
   cost 520000
@@ -504,17 +597,6 @@ outfit "Plasma Turret"
     "hull damage" 25
     "heat damage" 340
   description "The Plasma Turret is a pair of plasma cannons mounted on a turret so that they can fire in any direction. It is a fearsome weapon, but only the largest of ships have the space and the energy that it requires."
-
-effect "plasma explosion"
-  sprite "effect/plasma explosion"
-    "no repeat"
-    "frame rate" 20
-  sound "explosion tiny"
-  "lifetime" 21
-  "random angle" 360
-  "random velocity" .1
-  "random spin" 4
-  "velocity scale" -.05
 
 
 

@@ -40,8 +40,8 @@ ship "Interdictor"
   outfits
     "Finisher Pod" 2
     "Finisher Torpedo" 80
-    "Heliarch Attractor"
-    "Heliarch Repulsor"
+    "Attractor"
+    "Repulsor"
     "Large Reactor Module"
     "Large Battery Module"
     "Large Shield Module" 2
@@ -57,8 +57,8 @@ ship "Interdictor"
   engine 30 163 .5
   gun -20 -98 "Finisher Pod"
   gun 20 -98 "Finisher Pod"
-  turret -8 -63 "Heliarch Attractor"
-  turret 8 -63 "Heliarch Repulsor"
+  turret -8 -63 "Attractor"
+  turret 8 -63 "Repulsor"
   explode "small explosion" 20
   explode "medium explosion" 50
   explode "large explosion" 30
@@ -255,8 +255,8 @@ ship "Punisher" "Punisher (Interdicting)"
     "Bombardment Cannon" 4
     "Finisher Pod" 2
     "Finisher Torpedo" 80
-    "Heliarch Attractor" 2
-    "Heliarch Repulsor"
+    "Attractor" 2
+    "Repulsor"
     "Bombardment Turret"
     "Large Reactor Module" 2
     "Large Battery Module"
@@ -275,16 +275,16 @@ ship "Punisher" "Punisher (Interdicting)"
   gun "Bombardment Cannon"
   gun "Finisher Pod"
   gun "Finisher Pod"
-  turret "Heliarch Attractor"
-  turret "Heliarch Attractor"
-  turret "Heliarch Repulsor"
+  turret "Attractor"
+  turret "Attractor"
+  turret "Repulsor"
   turret "Bombardment Turret"
 
 ship "Punisher" "Punisher (Missile)"
   outfits
     "Finisher Pod" 6
     "Finisher Torpedo" 240
-    "Heliarch Repulsor"
+    "Repulsor"
     "Large Reactor Module"
     "Small Reactor Module"
     "Large Battery Module"
@@ -299,7 +299,7 @@ ship "Punisher" "Punisher (Missile)"
     "Hyperdrive"
   turret
   turret
-  turret "Heliarch Repulsor"
+  turret "Repulsor"
   turret
 
 ship "Punisher" "Punisher (Scrappy)"

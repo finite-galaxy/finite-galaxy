@@ -49,7 +49,7 @@ ship "Barb"
       "hit force" 180
   outfits
     "Energy Blaster"
-    "Blaster Turret"
+    "2X Blaster Turret"
     "nGVF-AA Fuel Cell"
     "LP036a Battery Pack"
     "D14-RN Shield Generator"
@@ -57,7 +57,7 @@ ship "Barb"
   engine -10 28
   engine 9 28
   gun -9 -29 "Energy Blaster"
-  turret 8 6 "Blaster Turret"
+  turret 8 6 "2X Blaster Turret"
   leak "leak" 60 50
   explode "tiny explosion" 15
   explode "small explosion" 5
@@ -79,12 +79,12 @@ ship "Barb" "Barb (Proton)"
   attributes
     "weapon capacity" 28
   outfits
-    "Proton Gun"
+    "Proton Cannon"
     "nGVF-AA Fuel Cell"
     "Supercapacitor"
     "D14-RN Shield Generator"
     "X1050 Ion Engines"
-  gun -9 -29 "Proton Gun"
+  gun -9 -29 "Proton Cannon"
   description `The Barb's commercial success spurred demand for a variant equipped with a Proton Gun. Syndicated Systems had to remove the turret mounting hardware to fit the powerful cannon, but the result is a level of short-range firepower that is unheard-of for a craft its size.`
 
 
@@ -180,7 +180,7 @@ ship "Bulk Freighter"
 
 ship "Bulk Freighter" "Bulk Freighter (Blaster)"
   outfits
-    "Quad Blaster Turret" 5
+    "4X Blaster Turret" 5
     "Meteor Missile Launcher" 2
     "Meteor Missile" 70
     "Fusion Reactor"
@@ -333,7 +333,7 @@ ship "Freighter"
       "hull damage" 200
       "hit force" 600
   outfits
-    "Blaster Turret" 2
+    "2X Blaster Turret" 2
     "Heavy Anti-Missile Turret"
     "nGVF-EE Fuel Cell"
     "LP036a Battery Pack"
@@ -343,9 +343,9 @@ ship "Freighter"
     "Scram Drive"
   engine -9 97
   engine 9 97
-  turret 0 -52 "Blaster Turret"
+  turret 0 -52 "2X Blaster Turret"
   turret 0 6 "Heavy Anti-Missile Turret"
-  turret 0 65 "Blaster Turret"
+  turret 0 65 "2X Blaster Turret"
   leak "leak" 60 50
   leak "flame" 50 80
   explode "tiny explosion" 10
@@ -406,7 +406,7 @@ ship "Freighter" "Freighter (Proton)"
 
 ship "Freighter" "Freighter (Secret Cargo)"
   outfits
-    "Blaster Turret" 2
+    "2X Blaster Turret" 2
     "Heavy Anti-Missile Turret"
     "nGVF-EE Fuel Cell"
     "LP036a Battery Pack"
@@ -415,9 +415,9 @@ ship "Freighter" "Freighter (Secret Cargo)"
     "X2200 Ion Steering"
     "Scram Drive"
     "Secret Cargo"
-  turret "Blaster Turret"
+  turret "2X Blaster Turret"
   turret "Heavy Anti-Missile Turret"
-  turret "Blaster Turret"
+  turret "2X Blaster Turret"
 
 
 
@@ -447,7 +447,7 @@ ship "Protector"
   outfits
     "Torpedo Launcher" 2
     "Torpedo" 60
-    "Quad Blaster Turret" 6
+    "4X Blaster Turret" 6
     "Fusion Reactor"
     "LP288a Battery Pack"
     "D67-TM Shield Generator"
@@ -460,12 +460,12 @@ ship "Protector"
   engine 11 125
   gun -15 -100 "Torpedo Launcher"
   gun 15 -100 "Torpedo Launcher"
-  turret -54 -54 "Quad Blaster Turret"
-  turret 54 -54 "Quad Blaster Turret"
-  turret -73 0 "Quad Blaster Turret"
-  turret 73 0 "Quad Blaster Turret"
-  turret -54 54 "Quad Blaster Turret"
-  turret 54 54 "Quad Blaster Turret"
+  turret -54 -54 "4X Blaster Turret"
+  turret 54 -54 "4X Blaster Turret"
+  turret -73 0 "4X Blaster Turret"
+  turret 73 0 "4X Blaster Turret"
+  turret -54 54 "4X Blaster Turret"
+  turret 54 54 "4X Blaster Turret"
   leak "leak" 60 50
   leak "flame" 20 80
   explode "tiny explosion" 18
@@ -549,7 +549,7 @@ ship "Star Barge"
 
 ship "Star Barge" "Star Barge (Armed)"
   outfits
-    "Blaster Turret"
+    "2X Blaster Turret"
     "nGVF-BB Fuel Cell"
     "LP036a Battery Pack"
     "D14-RN Shield Generator"
@@ -583,7 +583,7 @@ ship "Vanguard"
       "hull damage" 800
       "hit force" 2400
   outfits
-    "Proton Gun" 7
+    "Proton Cannon" 7
     "Anti-Missile Turret"
     "Fusion Reactor"
     "LP072a Battery Pack"
@@ -594,13 +594,13 @@ ship "Vanguard"
     "Hyperdrive"
   engine -15 130
   engine 15 130
-  gun 0 -132 "Proton Gun"
-  gun -22 -122 "Proton Gun"
-  gun 22 -122 "Proton Gun"
-  gun -21 -45 "Proton Gun"
-  gun 21 -45 "Proton Gun"
-  gun -31 -45 "Proton Gun"
-  gun 31 -45 "Proton Gun"
+  gun 0 -132 "Proton Cannon"
+  gun -22 -122 "Proton Cannon"
+  gun 22 -122 "Proton Cannon"
+  gun -21 -45 "Proton Cannon"
+  gun 21 -45 "Proton Cannon"
+  gun -31 -45 "Proton Cannon"
+  gun 31 -45 "Proton Cannon"
   turret 0 42 "Anti-Missile Turret"
   leak "leak" 60 50
   leak "flame" 30 80
@@ -676,7 +676,7 @@ ship "Wasp"
 
 ship "Wasp" "Wasp (Proton)"
   outfits
-    "Proton Gun"
+    "Proton Cannon"
     "nGVF-BB Fuel Cell"
     "LP036a Battery Pack"
     "D14-RN Shield Generator"
