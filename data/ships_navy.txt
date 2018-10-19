@@ -1,34 +1,66 @@
 shipyard "Navy Variants"
-  "Carrier"
-  "Carrier (Alpha)"
-  "Carrier (Jump)"
-  "Carrier (Mark II)"
   "Combat Drone"
-  "Cruiser"
-  "Cruiser (Heavy)"
-  "Cruiser (Jump)"
-  "Cruiser (Mark II)"
-  "Frigate"
-  "Frigate (Mark II)"
-  "Gunboat"
-  "Gunboat (Mark II)"
+  "Jupiter"
+  "Jupiter (Alpha)"
+  "Jupiter (Jump)"
+  "Jupiter (Mark II)"
   "Lance"
-  "Lance (Gatling)"
-  "Rainmaker"
-  "Rainmaker (Mark II)"
+  "Mars"
+  "Mars (Mark II)"
+  "Mercury"
+  "Mercury (Mark II)"
+  "Saturn"
+  "Saturn (Heavy)"
+  "Saturn (Jump)"
+  "Saturn (Mark II)"
   "Surveillance Drone"
+  "Venus"
+  "Venus (Mark II)"
 
 
 
-# Jupiter
-ship "Carrier"
+ship "Combat Drone"
+  sprite "ship/combat drone"
+  thumbnail "thumbnail/combat drone"
+  attributes
+    category "Drone"
+    licenses
+      Navy
+    "cost" 83000
+    "hull" 700
+    "mass" 20
+    "drag" .59
+    "heat dissipation" .9
+    "outfit space" 58
+    "weapon capacity" 8
+    "engine capacity" 28
+    "automaton" 1
+    weapon
+      "blast radius" 5
+      "shield damage" 50
+      "hull damage" 25
+      "hit force" 75
+  outfits
+    "Beam Laser"
+    "nGVF-AA Fuel Cell"
+    "Supercapacitor"
+    "X1700 Ion Thruster"
+    "X1200 Ion Steering"
+  engine -9 29
+  engine 9 29
+  gun 0 -29 "Beam Laser"
+  explode "tiny explosion" 15
+  description "Combat Drones are pilotless attack ships used primarily by the Republic Navy. Although very weak and easy to destroy, they can be very effective in large numbers. Because drones do not need a cockpit, they can be filled entirely with equipment and solid metal, which makes their hulls stronger than other small ships."
+
+
+
+ship "Jupiter"
   sprite "ship/carrier"
   thumbnail "thumbnail/carrier"
   attributes
     category "Heavy Warship"
     licenses
       Navy
-      Carrier
     "cost" 15200000
     "shields" 21400
     "hull" 8300
@@ -94,9 +126,9 @@ ship "Carrier"
   explode "large explosion" 40
   explode "huge explosion" 10
   "final explode" "final explosion large"
-  description "The Carrier is more than just a warship: it is practically a mobile space station, with docking bays for an entire squadron of drones and fighters and enough crew to fill a small village. Although designed primarily for engaging enemies from a distance, a Carrier can also do significant damage in close combat."
+  description "The Jupiter is more than just a warship: it is practically a mobile space station, with docking bays for an entire squadron of drones and fighters and enough crew to fill a small village. Although designed primarily for engaging enemies from a distance, a Jupiter can also do significant damage in close combat."
 
-ship "Carrier" "Carrier (Alpha)"
+ship "Jupiter" "Jupiter (Alpha)"
   outfits
     "Ion Cannon" 2
     "Hai Tracker Pod" 4
@@ -126,7 +158,7 @@ ship "Carrier" "Carrier (Alpha)"
   turret "Korath Disruptor"
   turret "Korath Slicer Turret"
 
-ship "Carrier" "Carrier (Jump)"
+ship "Jupiter" "Jupiter (Jump)"
   outfits
     "Particle Cannon" 4
     "Sidewinder Missile Launcher" 4
@@ -157,7 +189,7 @@ ship "Carrier" "Carrier (Jump)"
   turret "Heavy Anti-Missile Turret"
   turret "Electron Turret"
 
-ship "Carrier" "Carrier (Mark II)"
+ship "Jupiter" "Jupiter (Mark II)"
   outfits
     "Particle Cannon" 4
     "Sidewinder Missile Launcher" 4
@@ -188,50 +220,187 @@ ship "Carrier" "Carrier (Mark II)"
 
 
 
-ship "Combat Drone"
-  sprite "ship/combat drone"
-  thumbnail "thumbnail/combat drone"
+ship "Lance"
+  sprite "ship/lance"
+  thumbnail "thumbnail/lance"
   attributes
-    category "Drone"
+    category "Fighter"
     licenses
       Navy
-    "cost" 83000
-    "hull" 700
-    "mass" 20
-    "drag" .59
-    "heat dissipation" .9
-    "outfit space" 58
-    "weapon capacity" 8
-    "engine capacity" 28
-    "automaton" 1
+    "cost" 93000
+    "shields" 800
+    "hull" 400
+    "required crew" 1
+    "bunks" 1
+    "mass" 30
+    "drag" .7
+    "heat dissipation" .8
+    "outfit space" 100
+    "weapon capacity" 20
+    "engine capacity" 30
     weapon
-      "blast radius" 5
-      "shield damage" 50
-      "hull damage" 25
-      "hit force" 75
+      "blast radius" 12
+      "shield damage" 120
+      "hull damage" 60
+      "hit force" 180
   outfits
-    "Beam Laser"
+    "Beam Laser" 2
     "nGVF-AA Fuel Cell"
-    "Supercapacitor"
+    "LP036a Battery Pack"
+    "D14-RN Shield Generator"
     "X1700 Ion Thruster"
     "X1200 Ion Steering"
-  engine -9 29
-  engine 9 29
-  gun 0 -29 "Beam Laser"
+  engine -15 30
+  engine 15 30
+  gun -14 -10 "Beam Laser"
+  gun 14 -10 "Beam Laser"
   explode "tiny explosion" 15
-  description "Combat Drones are pilotless attack ships used primarily by the Republic Navy. Although very weak and easy to destroy, they can be very effective in large numbers. Because drones do not need a cockpit, they can be filled entirely with equipment and solid metal, which makes their hulls stronger than other small ships."
+  explode "small explosion" 5
+  description "The Lance is the primary fighter used by the Republic Navy. As with all fighters, it is weak by itself but very effective as part of a larger squadron."
 
 
 
-# Saturn
-ship "Cruiser"
+ship "Mars"
+  sprite "ship/gunboat"
+  thumbnail "thumbnail/gunboat"
+  attributes
+    category "Light Warship"
+    licenses
+      Navy
+    "cost" 3200000
+    "shields" 5800
+    "hull" 1400
+    "required crew" 7
+    "bunks" 12
+    "mass" 150
+    "drag" 3.1
+    "heat dissipation" .8
+    "fuel capacity" 600
+    "cargo space" 50
+    "outfit space" 270
+    "weapon capacity" 100
+    "engine capacity" 90
+    weapon
+      "blast radius" 72
+      "shield damage" 720
+      "hull damage" 360
+      "hit force" 1080
+  outfits
+    "Heavy Laser" 2
+    "Heavy Laser Turret"
+    "RT-I Radiothermal"
+    "LP144a Battery Pack"
+    "D14-RN Shield Generator"
+    "Cargo Scanner"
+    "Outfit Scanner"
+    "X3700 Ion Thruster"
+    "X2200 Ion Steering"
+    "Hyperdrive"
+  engine -12 57
+  engine 12 57
+  gun -28 -28 "Heavy Laser"
+  gun 28 -28 "Heavy Laser"
+  turret 0 -8 "Heavy Laser Turret"
+  leak "leak" 50 50
+  leak "flame" 80 80
+  explode "tiny explosion" 10
+  explode "small explosion" 20
+  explode "medium explosion" 15
+  "final explode" "final explosion small"
+  description "The Navy Mars is designed for engaging targets at short range, and also serves as the Navy's mobile sensor platform, scanning ships for illegal equipment or cargo."
+
+ship "Mars" "Mars (Mark II)"
+  outfits
+    "Electron Beam" 2
+    "Electron Turret"
+    "Fission Reactor"
+    "LP072a Battery Pack"
+    "D41-HY Shield Generator"
+    "Water Coolant System"
+    "Outfits Expansion" 2
+    "A250 Atomic Thruster"
+    "A255 Atomic Steering"
+    "Hyperdrive"
+
+
+
+ship "Mercury"
+  sprite "ship/rainmaker"
+  thumbnail "thumbnail/rainmaker"
+  attributes
+    category "Light Warship"
+    licenses
+      Navy
+    "cost" 1580000
+    "shields" 3500
+    "hull" 1200
+    "required crew" 7
+    "bunks" 14
+    "mass" 180
+    "drag" 3.8
+    "heat dissipation" .6
+    "fuel capacity" 500
+    "cargo space" 25
+    "outfit space" 230
+    "weapon capacity" 60
+    "engine capacity" 50
+    weapon
+      "blast radius" 40
+      "shield damage" 400
+      "hull damage" 200
+      "hit force" 600
+  outfits
+    "Energy Blaster" 2
+    "Meteor Missile Launcher" 4
+    "Meteor Missile" 140
+    "nGVF-CC Fuel Cell"
+    "LP036a Battery Pack"
+    "D14-RN Shield Generator"
+    "X2700 Ion Thruster"
+    "X2200 Ion Steering"
+    "Hyperdrive"
+  engine -8 46
+  engine 8 46
+  gun -10 -30 "Energy Blaster"
+  gun 10 -30 "Energy Blaster"
+  gun -27 -5 "Meteor Missile Launcher"
+  gun 27 -5 "Meteor Missile Launcher"
+  gun -17 -5 "Meteor Missile Launcher"
+  gun 17 -5 "Meteor Missile Launcher"
+  leak "leak" 50 50
+  explode "tiny explosion" 10
+  explode "small explosion" 20
+  explode "medium explosion" 15
+  "final explode" "final explosion small"
+  description "The Mercury is a missile boat built in the Republic Navy Yard. It comes equipped with four missile launchers and enough ammunition to destroy even ships many times its size. Because of their lack of manoeuvrability and relatively light shielding, Mercury serve best as long-range attack ships, and once their missile supply is spent, they are relatively useless in combat."
+
+ship "Mercury" "Mercury (Mark II)"
+  outfits
+    "Sidewinder Missile Launcher" 4
+    "Sidewinder Missile" 200
+    "nGVF-CC Fuel Cell"
+    "LP036a Battery Pack"
+    "D67-TM Shield Generator"
+    "Fuel Pod"
+    "A120 Atomic Thruster"
+    "A125 Atomic Steering"
+    "Scram Drive"
+  gun
+  gun
+  gun "Sidewinder Missile Launcher"
+  gun "Sidewinder Missile Launcher"
+  gun "Sidewinder Missile Launcher"
+  gun "Sidewinder Missile Launcher"
+
+
+
+ship "Saturn"
   sprite "ship/cruiser"
   thumbnail "thumbnail/cruiser"
   attributes
     category "Heavy Warship"
     licenses
       Navy
-      Cruiser
     "cost" 11200000
     "shields" 19600
     "hull" 6400
@@ -289,9 +458,9 @@ ship "Cruiser"
   explode "large explosion" 40
   explode "huge explosion" 10
   "final explode" "final explosion large"
-  description "The Republic Cruiser is a relatively recent design, a much larger version of the Frigate designed to be able to take on an entire pirate fleet if necessary. In addition to a wide variety of weaponry, Cruisers have space to carry four attack drones: fast, pilotless fighters that can be controlled remotely."
+  description "The Republic Saturn is a relatively recent design, a much larger version of the Venus designed to be able to take on an entire pirate fleet if necessary. In addition to a wide variety of weaponry, Saturns have space to carry four attack drones: fast, pilotless fighters that can be controlled remotely."
 
-ship "Cruiser" "Cruiser (Heavy)"
+ship "Saturn" "Saturn (Heavy)"
   outfits
     "Heavy Rocket Launcher" 2
     "Heavy Rocket" 40
@@ -323,7 +492,7 @@ ship "Cruiser" "Cruiser (Heavy)"
   turret "Heavy Laser Turret"
   turret "Heavy Anti-Missile Turret"
 
-ship "Cruiser" "Cruiser (Jump)"
+ship "Saturn" "Saturn (Jump)"
   outfits
     "Typhoon Launcher" 2
     "Typhoon Torpedo" 60
@@ -353,7 +522,7 @@ ship "Cruiser" "Cruiser (Jump)"
   turret "Electron Turret"
   turret "Heavy Anti-Missile Turret"
 
-ship "Cruiser" "Cruiser (Mark II)"
+ship "Saturn" "Saturn (Mark II)"
   outfits
     "Typhoon Launcher" 2
     "Typhoon Torpedo" 60
@@ -382,8 +551,40 @@ ship "Cruiser" "Cruiser (Mark II)"
 
 
 
-# Venus
-ship "Frigate"
+ship "Surveillance Drone"
+  sprite "ship/surveillance drone"
+  thumbnail "thumbnail/surveillance drone"
+  attributes
+    category "Drone"
+    licenses
+      Navy
+    "cost" 50000
+    "hull" 300
+    "mass" 15
+    "drag" .53
+    "heat dissipation" .9
+    "outfit space" 53
+    "weapon capacity" 0
+    "engine capacity" 28
+    "automaton" 1
+    weapon
+      "blast radius" 3
+      "shield damage" 30
+      "hull damage" 15
+      "hit force" 45
+  outfits
+    "nGVF-AA Fuel Cell"
+    "Surveillance Pod"
+    "X1700 Ion Thruster"
+    "X1200 Ion Steering"
+  engine -5 29
+  engine 5 29
+  explode "tiny explosion" 15
+  description "Surveillance Drones are unarmed drones used by the Republic navy to scan ships and planets in a star system."
+
+
+
+ship "Venus"
   sprite "ship/frigate"
   thumbnail "thumbnail/frigate"
   attributes
@@ -436,9 +637,9 @@ ship "Frigate"
   explode "medium explosion" 24
   explode "large explosion" 8
   "final explode" "final explosion medium"
-  description "For centuries, the Frigate was the largest warship produced by the Republic Navy Yard, but now they seem quite small compared to a Cruiser or a Carrier. Armed with a variety of weapons, and with relatively good maneuverability for a ship its size, the Frigate is equally capable at fending off small fighters or bombarding larger ships."
+  description "For centuries, the Venus was the largest warship produced by the Republic Navy Yard, but now they seem quite small compared to a Saturn or a Jupiter. Armed with a variety of weapons, and with relatively good maneuverability for a ship its size, the Venus is equally capable at fending off small fighters or bombarding larger ships."
 
-ship "Frigate" "Frigate (Mark II)"
+ship "Venus" "Venus (Mark II)"
   outfits
     "Particle Cannon" 4
     "Anti-Missile Turret"
@@ -455,221 +656,4 @@ ship "Frigate" "Frigate (Mark II)"
   turret "Anti-Missile Turret"
   turret "Blaster Turret"
   turret "Blaster Turret"
-
-
-
-# Mars
-ship "Gunboat"
-  sprite "ship/gunboat"
-  thumbnail "thumbnail/gunboat"
-  attributes
-    category "Light Warship"
-    licenses
-      Navy
-    "cost" 3200000
-    "shields" 5800
-    "hull" 1400
-    "required crew" 7
-    "bunks" 12
-    "mass" 150
-    "drag" 3.1
-    "heat dissipation" .8
-    "fuel capacity" 600
-    "cargo space" 50
-    "outfit space" 270
-    "weapon capacity" 100
-    "engine capacity" 90
-    weapon
-      "blast radius" 72
-      "shield damage" 720
-      "hull damage" 360
-      "hit force" 1080
-  outfits
-    "Heavy Laser" 2
-    "Heavy Laser Turret"
-    "RT-I Radiothermal"
-    "LP144a Battery Pack"
-    "D14-RN Shield Generator"
-    "Cargo Scanner"
-    "Outfit Scanner"
-    "X3700 Ion Thruster"
-    "X2200 Ion Steering"
-    "Hyperdrive"
-  engine -12 57
-  engine 12 57
-  gun -28 -28 "Heavy Laser"
-  gun 28 -28 "Heavy Laser"
-  turret 0 -8 "Heavy Laser Turret"
-  leak "leak" 50 50
-  leak "flame" 80 80
-  explode "tiny explosion" 10
-  explode "small explosion" 20
-  explode "medium explosion" 15
-  "final explode" "final explosion small"
-  description "The Navy Gunboat is designed for engaging targets at short range, and also serves as the Navy's mobile sensor platform, scanning ships for illegal equipment or cargo."
-
-ship "Gunboat" "Gunboat (Mark II)"
-  outfits
-    "Electron Beam" 2
-    "Electron Turret"
-    "Fission Reactor"
-    "LP072a Battery Pack"
-    "D41-HY Shield Generator"
-    "Water Coolant System"
-    "Outfits Expansion" 2
-    "A250 Atomic Thruster"
-    "A255 Atomic Steering"
-    "Hyperdrive"
-
-
-
-ship "Lance"
-  sprite "ship/lance"
-  thumbnail "thumbnail/lance"
-  attributes
-    category "Fighter"
-    "cost" 93000
-    "shields" 800
-    "hull" 400
-    "required crew" 1
-    "bunks" 1
-    "mass" 30
-    "drag" .7
-    "heat dissipation" .8
-    "outfit space" 100
-    "weapon capacity" 20
-    "engine capacity" 30
-    weapon
-      "blast radius" 12
-      "shield damage" 120
-      "hull damage" 60
-      "hit force" 180
-  outfits
-    "Beam Laser" 2
-    "nGVF-AA Fuel Cell"
-    "LP036a Battery Pack"
-    "D14-RN Shield Generator"
-    "X1700 Ion Thruster"
-    "X1200 Ion Steering"
-  engine -15 30
-  engine 15 30
-  gun -14 -10 "Beam Laser"
-  gun 14 -10 "Beam Laser"
-  explode "tiny explosion" 15
-  explode "small explosion" 5
-  description "The Lance is the primary fighter used by the Republic Navy. As with all fighters, it is weak by itself but very effective as part of a larger squadron."
-
-ship "Lance" "Lance (Gatling)"
-  outfits
-    "Gatling Gun" 2
-    "Gatling Gun Ammo" 6000
-    Supercapacitor
-    "nGVF-BB Fuel Cell"
-    "D14-RN Shield Generator"
-    "X1700 Ion Thruster"
-    "X1200 Ion Steering"
-
-
-
-# Mercury
-ship "Rainmaker"
-  sprite "ship/rainmaker"
-  thumbnail "thumbnail/rainmaker"
-  attributes
-    category "Light Warship"
-    licenses
-      Navy
-    "cost" 1580000
-    "shields" 3500
-    "hull" 1200
-    "required crew" 7
-    "bunks" 14
-    "mass" 180
-    "drag" 3.8
-    "heat dissipation" .6
-    "fuel capacity" 500
-    "cargo space" 25
-    "outfit space" 230
-    "weapon capacity" 60
-    "engine capacity" 50
-    weapon
-      "blast radius" 40
-      "shield damage" 400
-      "hull damage" 200
-      "hit force" 600
-  outfits
-    "Energy Blaster" 2
-    "Meteor Missile Launcher" 4
-    "Meteor Missile" 140
-    "nGVF-CC Fuel Cell"
-    "LP036a Battery Pack"
-    "D14-RN Shield Generator"
-    "X2700 Ion Thruster"
-    "X2200 Ion Steering"
-    "Hyperdrive"
-  engine -8 46
-  engine 8 46
-  gun -10 -30 "Energy Blaster"
-  gun 10 -30 "Energy Blaster"
-  gun -27 -5 "Meteor Missile Launcher"
-  gun 27 -5 "Meteor Missile Launcher"
-  gun -17 -5 "Meteor Missile Launcher"
-  gun 17 -5 "Meteor Missile Launcher"
-  leak "leak" 50 50
-  explode "tiny explosion" 10
-  explode "small explosion" 20
-  explode "medium explosion" 15
-  "final explode" "final explosion small"
-  description "The Rainmaker is a missile boat built in the Republic Navy Yard. It comes equipped with four missile launchers and enough ammunition to destroy even ships many times its size. Because of their lack of manoeuvrability and relatively light shielding, Rainmakers serve best as long-range attack ships, and once their missile supply is spent, they are relatively useless in combat."
-
-ship "Rainmaker" "Rainmaker (Mark II)"
-  outfits
-    "Sidewinder Missile Launcher" 4
-    "Sidewinder Missile" 200
-    "nGVF-CC Fuel Cell"
-    "LP036a Battery Pack"
-    "D67-TM Shield Generator"
-    "Fuel Pod"
-    "A120 Atomic Thruster"
-    "A125 Atomic Steering"
-    "Scram Drive"
-  gun
-  gun
-  gun "Sidewinder Missile Launcher"
-  gun "Sidewinder Missile Launcher"
-  gun "Sidewinder Missile Launcher"
-  gun "Sidewinder Missile Launcher"
-
-
-
-ship "Surveillance Drone"
-  sprite "ship/surveillance drone"
-  thumbnail "thumbnail/surveillance drone"
-  attributes
-    category "Drone"
-    licenses
-      Navy
-    "cost" 50000
-    "hull" 300
-    "mass" 15
-    "drag" .53
-    "heat dissipation" .9
-    "outfit space" 53
-    "weapon capacity" 0
-    "engine capacity" 28
-    "automaton" 1
-    weapon
-      "blast radius" 3
-      "shield damage" 30
-      "hull damage" 15
-      "hit force" 45
-  outfits
-    "nGVF-AA Fuel Cell"
-    "Surveillance Pod"
-    "X1700 Ion Thruster"
-    "X1200 Ion Steering"
-  engine -5 29
-  engine 5 29
-  explode "tiny explosion" 15
-  description "Surveillance Drones are unarmed drones used by the Republic navy to scan ships and planets in a star system."
 

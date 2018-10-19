@@ -586,27 +586,17 @@ event "southern carriers 4"
     "Skein"
   fleet "Large Northern Merchants"
     fighters "free worlds fighter"
-    add variant 2
+    add variant 4
       "Hauler III"
       "Hauler II"
       "Roost (Sidewinder)"
+      "Lance" 2
       "Dagger" 2
-      "Lance" 2
-    add variant 2
-      "Hauler III"
-      "Hauler II"
-      "Roost (Sidewinder)"
-      "Lance (Gatling)" 2
-      "Lance" 2
-    add variant 2
+      "Boxwing" 2
+    add variant 4
       "Roost" 3
+      "Lance" 4
       "Dagger" 4
-      "Lance" 4
-      "Boxwing" 4
-    add variant 2
-      "Roost" 3
-      "Lance (Gatling)" 4
-      "Lance" 4
       "Boxwing" 4
 
   fleet "Large Independent"
@@ -1054,55 +1044,55 @@ event "fw safe passage ends"
 event "navy using mark ii ships"
   fleet "Small Republic"
     add variant 12
-      "Rainmaker (Mark II)" 2
+      "Mercury (Mark II)" 2
     add variant 12
-      "Gunboat (Mark II)"
-      "Rainmaker (Mark II)"
+      "Mars (Mark II)"
+      "Mercury (Mark II)"
     add variant 9
-      "Frigate (Mark II)"
+      "Venus (Mark II)"
     add variant 6
-      "Gunboat (Mark II)" 2
+      "Mars (Mark II)" 2
     add variant 3
-      "Rainmaker (Mark II)" 3
+      "Mercury (Mark II)" 3
     add variant 12
-      "Gunboat (Mark II)"
+      "Mars (Mark II)"
     remove variant
       "Protector"
   
   fleet "Large Republic"
     add variant 12
-      "Frigate (Mark II)" 2
-      "Rainmaker (Mark II)"
-      "Gunboat (Mark II)"
+      "Venus (Mark II)" 2
+      "Mercury (Mark II)"
+      "Mars (Mark II)"
     add variant 6
-      "Cruiser (Mark II)"
+      "Saturn (Mark II)"
       "Combat Drone" 4
     add variant 6
-      "Cruiser (Mark II)"
+      "Saturn (Mark II)"
       "Combat Drone" 4
-      "Frigate (Mark II)"
-      "Rainmaker (Mark II)"
+      "Venus (Mark II)"
+      "Mercury (Mark II)"
     add variant 6
-      "Carrier (Mark II)"
+      "Jupiter (Mark II)"
       "Lance" 4
       "Combat Drone" 6
     add variant 3
-      "Carrier (Mark II)"
+      "Jupiter (Mark II)"
       "Lance" 4
       "Combat Drone" 6
-      "Cruiser (Mark II)"
+      "Saturn (Mark II)"
       "Combat Drone" 4
-      "Frigate (Mark II)" 2
-      "Rainmaker (Mark II)" 2
-      "Gunboat (Mark II)" 2
+      "Venus (Mark II)" 2
+      "Mercury (Mark II)" 2
+      "Mars (Mark II)" 2
     add variant 3
-      "Cruiser (Mark II)"
+      "Saturn (Mark II)"
       "Combat Drone" 4
-      "Frigate (Mark II)" 2
+      "Venus (Mark II)" 2
     add variant 3
-      "Frigate (Mark II)"
-      "Rainmaker (Mark II)" 2
-      "Gunboat (Mark II)"
+      "Venus (Mark II)"
+      "Mercury (Mark II)" 2
+      "Mars (Mark II)"
 
 
 
@@ -1113,7 +1103,7 @@ fleet "gunboat only"
   personality
     heroic
   variant
-    "Gunboat (Mark II)"
+    "Mars (Mark II)"
 
 event "gunboats in Alnasl"
   system Alnasl

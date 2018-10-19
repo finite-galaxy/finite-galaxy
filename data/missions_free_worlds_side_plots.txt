@@ -300,8 +300,8 @@ mission "FW Wolf Pack 2A"
     government "Republic"
     system "Sarin"
     personality heroic staying
-    ship "Gunboat (Mark II)" "R.N.S. Atherstone"
-    ship "Gunboat (Mark II)" "R.N.S. Tyndale"
+    ship "Mars (Mark II)" "R.N.S. Atherstone"
+    ship "Mars (Mark II)" "R.N.S. Tyndale"
   
   on complete
     event "wolf pack 3 ready" 10
@@ -447,7 +447,7 @@ mission "FW Wolf Pack 4"
       fighters "republic fighter"
       cargo 0
       variant
-        "Carrier"
+        "Jupiter"
         "Lance" 4
         "Combat Drone" 6
   
@@ -523,7 +523,7 @@ mission "FW Stack Core 1B"
       names "republic capital"
       cargo 0
       variant
-        "Gunboat" 2
+        "Mars" 2
   
   on complete
     event "stack core for sale" 25

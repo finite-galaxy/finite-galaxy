@@ -13,7 +13,7 @@ mission "FW Reconciliation 1"
   npc accompany save
     personality escort timid
     government "Navy Intelligence"
-    ship "Gunboat (Mark II)" "Eye of Horus"
+    ship "Mars (Mark II)" "Eye of Horus"
   
   on visit
     dialog "You have reached <planet>, but you left Raven's ship behind! Better depart and wait for them to arrive in this star system."
@@ -125,7 +125,7 @@ mission "FW Reconciliation 1B"
   npc accompany save
     personality escort timid
     government "Navy Intelligence"
-    ship "Gunboat (Mark II)" "Eye of Horus"
+    ship "Mars (Mark II)" "Eye of Horus"
   
   on visit
     dialog "You have reached <planet>, but you've either left Raven's ship behind, or failed to destroy some of the Syndicate ships watching you."
@@ -169,7 +169,7 @@ mission "FW Reconciliation 1C"
   npc accompany save
     personality escort timid
     government "Navy Intelligence"
-    ship "Gunboat (Mark II)" "Eye of Horus"
+    ship "Mars (Mark II)" "Eye of Horus"
   
   on visit
     dialog "You have reached <planet>, but you left Raven's ship behind! Better depart and wait for them to arrive in this star system."
@@ -214,7 +214,7 @@ mission "FW Reconciliation 2"
   npc accompany save
     personality escort timid
     government "Navy Intelligence"
-    ship "Gunboat (Mark II)" "Eye of Horus"
+    ship "Mars (Mark II)" "Eye of Horus"
   
   on visit
     dialog "You have reached <planet>, but you left Raven's ship behind! Better depart and wait for them to arrive in this star system."
@@ -305,7 +305,7 @@ mission "FW Reconciliation 2A"
   npc accompany save
     personality escort timid
     government "Navy Intelligence"
-    ship "Gunboat (Mark II)" "Eye of Horus"
+    ship "Mars (Mark II)" "Eye of Horus"
   
   on visit
     dialog "You have reached <planet>, but you left Raven's ship behind! Better depart and wait for them to arrive in this star system."
@@ -396,20 +396,20 @@ mission "FW Defend Farpoint"
       names "republic capital"
       fighters "republic fighter"
       variant
-        "Carrier"
+        "Jupiter"
         "Lance" 4
         "Combat Drone" 6
-        "Cruiser"
+        "Saturn"
         "Combat Drone" 4
-        "Rainmaker" 2
+        "Mercury" 2
     fleet
       names "republic capital"
       fighters "republic fighter"
       variant
-        "Cruiser (Mark II)"
+        "Saturn (Mark II)"
         "Combat Drone" 4
-        "Rainmaker (Mark II)" 2
-        "Gunboat (Mark II)" 2
+        "Mercury (Mark II)" 2
+        "Mars (Mark II)" 2
   
   npc disable
     government Pirate
@@ -654,7 +654,7 @@ mission "FW Syndicate Capture 1"
   on offer
     log "Preparing to invade Syndicate space with a joint strike force made up of Free Worlds, Deep security, and Oathkeeper ships. The plan is to capture one of the Syndicate executives and bring him to trial."
     conversation
-      `You land on Earth and make a show of being very busy ensuring that the Free Worlds ambassadors are comfortable and well cared for, until finally you receive a secure message from Edrick. He tells you that the convoy from the Deep is landing on Mars right now, and an Oathkeeper cruiser is visiting the shipyard on Luna. As soon as you are ready, you can take off, and travel together into the heart of Syndicate space.`
+      `You land on Earth and make a show of being very busy ensuring that the Free Worlds ambassadors are comfortable and well cared for, until finally you receive a secure message from Edrick. He tells you that the convoy from the Deep is landing on Mars right now, and an Oathkeeper Saturn is visiting the shipyard on Luna. As soon as you are ready, you can take off, and travel together into the heart of Syndicate space.`
       `  You make an excuse to depart, and return to your ship. "Well," says Ijs, "this is it. If we're lucky, they won't see us coming, but no matter what, getting back out of Syndicate space will be a nightmare. Good luck, all."`
         accept
   
@@ -666,7 +666,7 @@ mission "FW Syndicate Capture 1"
   npc accompany save
     personality escort heroic waiting
     government "Navy (Oathkeeper)"
-    ship "Cruiser (Mark II)" "N.S. Hand of Justice"
+    ship "Saturn (Mark II)" "N.S. Hand of Justice"
   
   npc accompany save
     personality escort heroic waiting
@@ -719,7 +719,7 @@ mission "FW Syndicate Capture 1B"
   npc
     personality escort heroic waiting
     government "Navy (Oathkeeper)"
-    ship "Cruiser (Mark II)" "N.S. Hand of Justice"
+    ship "Saturn (Mark II)" "N.S. Hand of Justice"
     ship "Combat Drone" "Red One"
     ship "Combat Drone" "Red Two"
     ship "Combat Drone" "Red Three"
@@ -1557,7 +1557,7 @@ mission "FW Pug 3C"
         `  "Sure, I'm sure we could arrange something."`
           goto yes
       
-      `  Freya laughs. "Give him a break, <first>. He's just thinking like an engineer, rather than a tactician. I mean, I'd certainly jump at the chance to tour a Cruiser even at a time like this."`
+      `  Freya laughs. "Give him a break, <first>. He's just thinking like an engineer, rather than a tactician. I mean, I'd certainly jump at the chance to tour a Saturn even at a time like this."`
       
       label yes
       `  The supervisor seems irked that his engineers are more interested in exploring nifty new ship technology than in the task at hand, but he grudgingly offers to give you a tour of the Navy Yard in exchange for letting his engineers take a closer look at the Dreadnoughts. Freya whispers to you, "Just think of this as another step toward peace and reconciliation."`
@@ -1574,10 +1574,10 @@ mission "FW Pug 3C"
   npc accompany save
     personality escort
     government "Republic"
-    ship "Cruiser (Mark II)" "R.N.S. Everest"
-    ship "Cruiser (Mark II)" "R.N.S. Denali"
-    ship "Carrier (Mark II)" "R.N.S. Vesuvius"
-    ship "Carrier (Mark II)" "R.N.S. Haleakala"
+    ship "Saturn (Mark II)" "R.N.S. Everest"
+    ship "Saturn (Mark II)" "R.N.S. Denali"
+    ship "Jupiter (Mark II)" "R.N.S. Vesuvius"
+    ship "Jupiter (Mark II)" "R.N.S. Haleakala"
   
   on visit
     dialog "You have reached <planet>, but part of your fleet is not here yet. Better depart and wait for them to arrive in this star system."
@@ -1602,10 +1602,10 @@ mission "FW Pug 4: Escorts"
   npc kill
     personality escort heroic disables
     government "Republic"
-    ship "Cruiser (Jump)" "R.N.S. Everest"
-    ship "Cruiser (Jump)" "R.N.S. Denali"
-    ship "Carrier (Jump)" "R.N.S. Vesuvius"
-    ship "Carrier (Jump)" "R.N.S. Haleakala"
+    ship "Saturn (Jump)" "R.N.S. Everest"
+    ship "Saturn (Jump)" "R.N.S. Denali"
+    ship "Jupiter (Jump)" "R.N.S. Vesuvius"
+    ship "Jupiter (Jump)" "R.N.S. Haleakala"
     ship "Dagger" "Red One"
     ship "Dagger" "Red Two"
     ship "Dagger" "Red Three"
@@ -1952,17 +1952,17 @@ mission "FW Pug 5A"
       names "republic capital"
       fighters "republic fighter"
       variant
-        "Cruiser (Mark II)"
+        "Saturn (Mark II)"
         "Combat Drone" 4
-        "Frigate (Mark II)" 2
+        "Venus (Mark II)" 2
     fleet
       names "republic capital"
       fighters "republic fighter"
       variant
-        "Carrier (Mark II)"
+        "Jupiter (Mark II)"
         "Lance" 4
         "Combat Drone" 6
-        "Gunboat (Mark II)" 3
+        "Mars (Mark II)" 3
 
 
 
@@ -1993,17 +1993,17 @@ mission "FW Pug 5B"
       names "republic capital"
       fighters "republic fighter"
       variant
-        "Cruiser (Mark II)"
+        "Saturn (Mark II)"
         "Combat Drone" 4
-        "Frigate (Mark II)" 2
+        "Venus (Mark II)" 2
     fleet
       names "republic capital"
       fighters "republic fighter"
       variant
-        "Carrier (Mark II)"
+        "Jupiter (Mark II)"
         "Lance" 4
         "Combat Drone" 6
-        "Gunboat (Mark II)" 3
+        "Mars (Mark II)" 3
   
   npc evade
     government Pug
@@ -2057,17 +2057,17 @@ mission "FW Pug 6"
       names "republic capital"
       fighters "republic fighter"
       variant
-        "Cruiser (Mark II)"
+        "Saturn (Mark II)"
         "Combat Drone" 4
-        "Frigate (Mark II)" 2
+        "Venus (Mark II)" 2
     fleet 2
       names "republic capital"
       fighters "republic fighter"
       variant
-        "Carrier (Mark II)"
+        "Jupiter (Mark II)"
         "Lance" 4
         "Combat Drone" 6
-        "Gunboat (Mark II)" 3
+        "Mars (Mark II)" 3
   npc
     government Republic
     personality disables
@@ -2075,17 +2075,17 @@ mission "FW Pug 6"
       names "republic capital"
       fighters "republic fighter"
       variant
-        "Cruiser"
+        "Saturn"
         "Combat Drone" 4
-        "Frigate" 2
+        "Venus" 2
     fleet 2
       names "republic capital"
       fighters "republic fighter"
       variant
-        "Carrier"
+        "Jupiter"
         "Lance" 4
         "Combat Drone" 6
-        "Gunboat" 3
+        "Mars" 3
   npc
     personality disables waiting
     government Syndicate
@@ -2186,7 +2186,7 @@ mission "FW Syndicate Extremists 1"
   npc accompany save
     government "Navy (Oathkeeper)"
     personality escort heroic
-    ship "Cruiser (Mark II)" "N.S. Peacemaker"
+    ship "Saturn (Mark II)" "N.S. Peacemaker"
   
   on visit
     dialog "You have reached <planet>, but you left the <npc> behind! Better depart and wait for them to arrive in this star system."
@@ -2209,7 +2209,7 @@ mission "FW Syndicate Extremists 1A"
   on offer
     log "With the Pug defeated, it is finally time to deal with the Syndicate extremists and the Alphas that they allied with. The extremists are armed with nuclear missiles, but the Syndicate CEO has agreed to provide a cloaking device that will make it possible to dodge the missiles."
     conversation
-      `The presence of a Navy cruiser in orbit seldom goes unnoticed, especially a cruiser captained by someone as famous as William Danforth. As soon as you land, a Syndicate employee meets you and escorts you, Freya, and Danforth to the office of Alastair Korban, the CEO. He does not seem very happy to see you. "I only just got word that the aliens were defeated a few days ago," he says. "I'm surprised you're back here already."`
+      `The presence of a Navy Saturn in orbit seldom goes unnoticed, especially a Saturn captained by someone as famous as William Danforth. As soon as you land, a Syndicate employee meets you and escorts you, Freya, and Danforth to the office of Alastair Korban, the CEO. He does not seem very happy to see you. "I only just got word that the aliens were defeated a few days ago," he says. "I'm surprised you're back here already."`
       `  Danforth says, "I've got a whole Navy fleet just a few jumps away from here who are itching to destroy something. So here's the deal. You name me some targets: the men who were responsible for the terrorist attack. Then I will do you a favor and take them off your hands. Fair enough?"`
       `  Korban sighs, and then opens his desk and pulls out a sheet of paper. "This is my resignation letter," he says. "I've been working on it since my first meeting with Captain <last>. I've failed in my leadership of this company. But you have no idea how deep that failure goes."`
       choice
@@ -2252,7 +2252,7 @@ mission "FW Syndicate Extremists 1A"
   npc accompany save
     government "Navy (Oathkeeper)"
     personality escort heroic
-    ship "Cruiser (Mark II)" "N.S. Peacemaker"
+    ship "Saturn (Mark II)" "N.S. Peacemaker"
   
   on visit
     dialog "You have reached <planet>, but you left the <npc> behind! Better depart and wait for them to arrive in this star system."
@@ -2335,10 +2335,10 @@ mission "FW Syndicate Extremists 1B"
       names "republic capital"
       fighters "republic fighter"
       variant
-        "Carrier (Mark II)" 3
+        "Jupiter (Mark II)" 3
         "Lance" 12
         "Combat Drone" 18
-        "Cruiser (Mark II)" 3
+        "Saturn (Mark II)" 3
         "Combat Drone" 12
 
 
@@ -2362,7 +2362,7 @@ mission "FW Syndicate Extremists 1C"
     event "navy occupies algenib"
     event "navy done with algenib" 50
     conversation
-      `Soon after you land, more Navy ships begin pouring into the system, including Admiral Danforth's own cruiser. Navy soldiers and ships are scouring the whole surface of the planet; there is very little chance that any of the Alphas who remain here will be able to escape their detection. Admiral Danforth meets with you and Freya and thanks you for providing the decoy that kept his own ships from bearing the brunt of the Alphas' nuclear arsenal.`
+      `Soon after you land, more Navy ships begin pouring into the system, including Admiral Danforth's own Saturn. Navy soldiers and ships are scouring the whole surface of the planet; there is very little chance that any of the Alphas who remain here will be able to escape their detection. Admiral Danforth meets with you and Freya and thanks you for providing the decoy that kept his own ships from bearing the brunt of the Alphas' nuclear arsenal.`
       `  "Do you need us to do anything more here?" asks Freya.`
       `  "No," he says, "and I hear that Parliament wants to speak with you, Captain <last>. Something about an official commendation for your part in the battle against the Pug, I think. Meanwhile, this may not be the end of our trouble with the Syndicate, but at least it's a good start. It's been an honor to fight alongside you."`
       choice

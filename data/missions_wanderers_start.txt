@@ -820,7 +820,7 @@ mission "Wanderers: Alpha Surveillance C"
     not "Wanderers: Alpha Surveillance C (Naughty): offered"
   on offer
     conversation
-      `When you meet up with Iktat Rek, he shows you a picture of a Navy Carrier. "The sensors [observed, detected] this ship entering the Hi Yahr system via jump drive," he says. You tell him that it is a human military vessel. "Do you think your military could be [assisting, abetting] the Unfettered?" he asks.`
+      `When you meet up with Iktat Rek, he shows you a picture of a Navy Jupiter. "The sensors [observed, detected] this ship entering the Hi Yahr system via jump drive," he says. You tell him that it is a human military vessel. "Do you think your military could be [assisting, abetting] the Unfettered?" he asks.`
       choice
         `  "It's possible, but it could also be a stolen ship. I wouldn't expect the Navy to side with the Unfettered."`
           goto no
@@ -867,7 +867,7 @@ mission "Wanderers: Alpha Surveillance C (Naughty)"
         clear "stole a wanderer micro-sat"
       `  "I am glad you [admitted, confessed] that," says Rek. "Please be more [honest, obedient] in the future." You retrieve the hidden surveillance device and return it to him.`
       label carrier
-      `  "Thank you," says Rek. "Now, here is what we discovered." He shows you a picture of a Navy Carrier. "The sensors [observed, detected] this ship entering the Hi Yahr system via jump drive," he says. You tell him that it is a human military vessel. "Do you think your military could be [assisting, abetting] the Unfettered?" he asks.`
+      `  "Thank you," says Rek. "Now, here is what we discovered." He shows you a picture of a Navy Jupiter. "The sensors [observed, detected] this ship entering the Hi Yahr system via jump drive," he says. You tell him that it is a human military vessel. "Do you think your military could be [assisting, abetting] the Unfettered?" he asks.`
       choice
         `  "It's possible, but it could also be a stolen ship. I wouldn't expect the Navy to side with the Unfettered."`
           goto no
@@ -951,7 +951,7 @@ mission "Wanderers: Alpha Surveillance D"
       `You are met in the spaceport by a bearded, middle-aged human man and a Quarg with exceptionally wrinkly skin. The Quarg says, "I hear that you need help against the Alphas. My friend Elias here has lived among us for a long time, and has told me much about the Alphas, their wars and their depredations."`
       `  The human shakes hands with you and introduces himself as Elias Hanover. He says, "The Quarg are very hesitant to take sides in what they view as an internal human conflict. And they are equally hesitant to entrust their technology to a stranger like you. But if the Alphas are gathering strength and amassing alien technology, they must be stopped."`
       `  The Quarg says, "Elias is a trusted friend of ours. We have given him a device for tracking a ship traveling by jump drive, and programmed it with the parameters of a human carrier ship. Do not try to take the device from him. He will lead you to find your quarry, and then you must return the device to us immediately."`
-      `  Elias asks, "If we find them, are you prepared to take on a Carrier by yourself?"`
+      `  Elias asks, "If we find them, are you prepared to take on a Jupiter by yourself?"`
       choice
         `  "Yes, my ship is stronger than anything in human space."`
           goto end
@@ -962,7 +962,7 @@ mission "Wanderers: Alpha Surveillance D"
         accept
   
   on enter "Hi Yahr"
-    dialog `As you enter the system, Elias checks his tracker device. "Yup, I'm picking up signs of a jump-enabled Carrier," he says. "The path goes east, beyond the edge of Hai space."`
+    dialog `As you enter the system, Elias checks his tracker device. "Yup, I'm picking up signs of a jump-enabled Jupiter," he says. "The path goes east, beyond the edge of Hai space."`
   on enter "Celeborim"
     dialog `Elias checks the tracker again. "Southeast, from here," he says. Meanwhile, your ship's warning sirens begin going off; there are alien ships here, and they don't seem friendly.`
   on enter "Asikafarnut"
@@ -974,7 +974,7 @@ mission "Wanderers: Alpha Surveillance D"
   on enter "Makferuti"
     dialog `Elias frowns as he looks at the tracker's readout. "I think we've taken a wrong turn. No sign of jump drives being used in this system," he says.`
   on enter "Host"
-    dialog `When you enter this system, your sensors pick up a Navy Carrier in orbit around an Earth-like planet. It appears that you have found the Alpha base. "That's them," says Hanover. "I hope you're strong enough to destroy them." The carrier starts to launch fighters: Korath ones, not human ships. This might be a difficult fight...`
+    dialog `When you enter this system, your sensors pick up a Navy Jupiter in orbit around an Earth-like planet. It appears that you have found the Alpha base. "That's them," says Hanover. "I hope you're strong enough to destroy them." The Jupiter starts to launch fighters: Korath ones, not human ships. This might be a difficult fight...`
   
   npc
     government "Kor Sestor"
@@ -990,8 +990,8 @@ mission "Wanderers: Alpha Surveillance D"
     government "Alpha"
     system "Host"
     personality heroic nemesis staying vindictive target
-    ship "Carrier (Alpha)" "Giftbringer"
-    dialog "The Alpha Carrier has been destroyed. You can now return to the Quarg ringworld and plan your next steps."
+    ship "Jupiter (Alpha)" "Giftbringer"
+    dialog "The Alpha Jupiter has been destroyed. You can now return to the Quarg ringworld and plan your next steps."
   npc
     government "Alpha"
     system "Host"
@@ -1008,7 +1008,7 @@ mission "Wanderers: Alpha Surveillance D"
     ship "Far Lek 14" "Ralph"
   
   on complete
-    log "Defeated a Navy Carrier, presumably being operated by the Alphas, that was equipped with Korath fighters and drones. Presumably there is an Alpha base hidden somewhere on the earth-like planet that the carrier was guarding."
+    log "Defeated a Navy Jupiter, presumably being operated by the Alphas, that was equipped with Korath fighters and drones. Presumably there is an Alpha base hidden somewhere on the earth-like planet that they were guarding."
     conversation
       `When you land back on <planet>, Elias says that he should go and immediately return the tracking device to his Quarg friend. "After that," he says, "we'll need to figure out who can help us to locate and bust open the Alpha base. Meet me in the spaceport when you're ready."`
 
@@ -1057,7 +1057,7 @@ mission "Wanderers: Alpha Surveillance E"
 
 mission "Wanderers: Alpha Surveillance F"
   name "Invade Avalon"
-  description "Escort Admiral Danforth's Navy Cruiser to <destination> and land on the planet with them. They will attempt to locate and eliminate the Alpha base."
+  description "Escort Admiral Danforth's Navy Saturn to <destination> and land on the planet with them. They will attempt to locate and eliminate the Alpha base."
   autosave
   source "Farpoint"
   destination "Avalon"
@@ -1066,7 +1066,7 @@ mission "Wanderers: Alpha Surveillance F"
     has "Wanderers: Alpha Surveillance E: done"
   
   on offer
-    log "Admiral Danforth agreed to bring his cruiser to the planet in Korath space where the Alphas seem to be hiding, with enough troops and equipment to launch an assault on the base."
+    log "Admiral Danforth agreed to bring his Saturn to the planet in Korath space where the Alphas seem to be hiding, with enough troops and equipment to launch an assault on the base."
     log "Factions" "Oathkeepers" `However, the true reason that the powerful Oathkeeper fleet is positioned in the North is not just to keep the pirates at bay, but also to stand as a last defense in case the Hai decide to invade human space. Apparently the Navy has known about the Hai and the wormhole linking their space to human space for some time, but chooses not to make that knowledge public.`
     conversation
       `Danforth welcomes you into his private office and uses a device to sweep the room for bugs. "Please forgive my caution," he says when he is done. "Now, show me where this planet is."`
@@ -1091,7 +1091,7 @@ mission "Wanderers: Alpha Surveillance F"
   npc accompany save
     government "Navy (Oathkeeper)"
     personality escort heroic
-    ship "Cruiser (Jump)" "N.S. Peacemaker"
+    ship "Saturn (Jump)" "N.S. Peacemaker"
 
 
 
@@ -1109,18 +1109,18 @@ mission "Wanderers: Alpha Surveillance G"
     log "The Alphas have fled from the base on Avalon. The Oathkeepers destroyed what is left of the base, which will hopefully set the Alphas back quite a bit."
     conversation
       `It does not take long for Danforth's team to locate the Alpha base, buried deep underground in a network of limestone caves. You and Danforth hover your ships above the site to catch anyone who tries to take off and escape. Danforth keeps you updated on the progress of the troops. "Breached the perimeter. Dealing with some booby traps. Explosives, poison gas. Nasty stuff. No sign of inhabitants, but they were here recently. Place looks cleaned out. Extensive base. Hangars, labs, supply rooms. Probably took them a century to build."`
-      `  His troops spend a while exploring the base and eventually conclude that the Alphas packed up and left soon after you destroyed the carrier. Once the place has been thoroughly explored and they are sure there are no more clues to be found, Danforth tells them, "Okay, blow the place. No sense in leaving them a base to return to."`
+      `  His troops spend a while exploring the base and eventually conclude that the Alphas packed up and left soon after you destroyed the Jupiter. Once the place has been thoroughly explored and they are sure there are no more clues to be found, Danforth tells them, "Okay, blow the place. No sense in leaving them a base to return to."`
       choice
         `  "So this was all for nothing?"`
         `  "I wish we had been able to catch them."`
-      `  "Don't feel so bad," says Danforth. "At least you took out their Carrier. If you had come for me without engaging them, chances are they would still have figured their cover was blown and fled. And now they're on the run, which is going to limit their ability to make mischief."`
+      `  "Don't feel so bad," says Danforth. "At least you took out their Jupiter. If you had come for me without engaging them, chances are they would still have figured their cover was blown and fled. And now they're on the run, which is going to limit their ability to make mischief."`
       `  Danforth's ship collects his troops and takes off. A few seconds later he hails you. "Captain, we have incoming ships from the far side of the planet," he says. "My ship is no match for them. Let's get out of here." It looks like this world is not completely uninhabited, after all...`
         launch
   
   npc accompany save
     government "Navy (Oathkeeper)"
     personality escort heroic
-    ship "Cruiser (Jump)" "N.S. Peacemaker"
+    ship "Saturn (Jump)" "N.S. Peacemaker"
   npc
     government "Alpha"
     personality heroic staying vindictive
@@ -1223,7 +1223,7 @@ mission "Wanderers: Alpha Surveillance H"
         `  "If he's not an Alpha, you have no right to imprison us."`
         `  "If you're convinced that neither of us is an Alpha, will you please let us go?"`
       `  "I suppose so," says the officer. As they release you from the chairs, he says to Elias, "If you are what I believe you are, we can help you to complete your work at last. Gather your siblings. Join us. Together we can put an end to the Alphas." Still, Elias says nothing.`
-      `  They lead you out into the hallway and you realize you are on board a Navy Cruiser. As you leave the ship, the officer tells Elias, "Think about what I said."`
+      `  They lead you out into the hallway and you realize you are on board a Navy Saturn. As you leave the ship, the officer tells Elias, "Think about what I said."`
       `  Elias remains quiet while you are in earshot of the ship, then says, "Let's meet up with Danforth back in the spaceport and see what he thinks we should do next."`
         accept
 
