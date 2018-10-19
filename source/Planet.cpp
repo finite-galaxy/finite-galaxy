@@ -523,10 +523,10 @@ string Planet::DemandTribute(PlayerInfo &player) const
       gov->Offend(ShipEvent::PROVOKE);
     // Terrorizing a planet is not taken lightly by it or its allies.
     GetGovernment()->Offend(ShipEvent::ATROCITY);
-    return "Our defense fleet will make short work of you.";
+    return "Our defence fleet will make short work of you.";
   }
   
-  // The player has already demanded tribute. Have they defeated the entire defense fleet?
+  // The player has already demanded tribute. Have they defeated the entire defence fleet?
   bool isDefeated = (defenseDeployed == defenseFleets.size());
   for(const shared_ptr<Ship> &ship : defenders)
     if(!ship->IsDisabled() && !ship->IsYours())
@@ -545,7 +545,7 @@ string Planet::DemandTribute(PlayerInfo &player) const
 
 
 
-// While being tributed, attempt to spawn the next specified defense fleet.
+// While being tributed, attempt to spawn the next specified defence fleet.
 void Planet::DeployDefense(list<shared_ptr<Ship>> &ships) const
 {
   if(!isDefending || Random::Int(60) || defenseDeployed == defenseFleets.size())
