@@ -54,36 +54,6 @@ mission "remembrance day"
 
 event "war begins"
   date 4 7 3019
-  system "Gamma Corvi"
-    government "Free Worlds"
-    fleet "Small Southern Merchants" 600
-    fleet "Large Southern Merchants" 1400
-    fleet "Small Free Worlds" 600
-    fleet "Large Free Worlds" 1300
-  system "Spica"
-    government "Free Worlds"
-  system "Minkar"
-    government "Free Worlds"
-  system "Acrux"
-    government "Free Worlds"
-  system "Mimosa"
-    government "Free Worlds"
-  system "Kraz"
-    government "Free Worlds"
-  system "Izar"
-    government "Free Worlds"
-  system "Zeta Centauri"
-    government "Free Worlds"
-  system "Hadar"
-    government "Free Worlds"
-  system "Alkaid"
-    government "Free Worlds"
-  system "Zubeneschamali"
-    government "Free Worlds"
-  system "Kochab"
-    government "Free Worlds"
-  system "Ildaria"
-    government "Free Worlds"
   system "Zubenelgenubi"
     government "Free Worlds"
   system "Sabik"
@@ -150,9 +120,6 @@ event "war begins"
     description `Martini is a world of exotic beaches and perfect weather. The Republic's central bank and the galactic stock exchange were previously headquartered here, before a terrorist attack destroyed them and a large portion of the capital city as well.`
     "required reputation" 100
     security .9
-  planet "Bourne"
-    description `Bourne is a well-developed industrial world that was first settled four centuries ago. Its cities are home to some of the richest individuals in this section of the galaxy, but also home to tens of thousands of homeless people, and many others whose factory jobs are barely providing enough to make ends meet.`
-    description `Bourne is also the seat of government for the newly formed Coalition of Free Worlds.`
 
 mission "event: war begins"
   landing
@@ -922,9 +889,15 @@ event "oathkeepers founded"
 event "Tarazed neutrality"
   system "Tarazed"
     government "Neutral"
+  system "Umbral"
+    government "Neutral"
   system "Dabih"
     government "Neutral"
+  system "Lurata"
+    government "Neutral"
   system "Albireo"
+    government "Neutral"
+  system "Sadr"
     government "Neutral"
   system "Girtab"
     government "Neutral"
@@ -1216,6 +1189,8 @@ event "fw southern expansion"
     fleet "Large Southern Merchants" 4000
     fleet "Small Republic" 400
     fleet "Large Republic" 500
+  system "Eltanin"
+    government "Free Worlds"
   planet "New Iceland"
     description `New Iceland is a perpetually hazy volcanic world, with a slightly caustic atmosphere but enough reserves of metal and petrochemicals to draw a large number of settlers. Some of those settlers also make a living as farmers, and a few well-developed factory towns produce goods for export to other worlds.`
     description `  In the wake of their defeat in the south, the Navy has begun to set up a massive new base here on New Iceland, in order to allow them to continue to have a strong presence in this sector.`
@@ -1421,6 +1396,12 @@ event "fw expanded and cut"
   system "Peacock"
     government "Free Worlds"
   system "Kaus Australis"
+    government "Free Worlds"
+  system "Orvala"
+    government "Free Worlds"
+  system "Naper"
+    government "Free Worlds"
+  system "Tais"
     government "Free Worlds"
   system "Delta Sagittarii"
     government "Republic"
@@ -2107,6 +2088,8 @@ event "fwc southern liberation"
     fleet "Small Southern Pirates" 2000
     fleet "Large Southern Pirates" 5000
     fleet "Navy Surveillance" 4000
+  system "Eltanin"
+    government "Free Worlds"
 
 
 
@@ -2121,7 +2104,12 @@ event "fwc attack kaus borealis"
 
 
 event "fwc capture kaus borealis"
+  system "Alnasl"
+    government "Free Worlds"
+  system "Eber"
+    government "Free Worlds"
   system "Alpha Arae"
+    government "Free Worlds"
     fleet "Small Southern Merchants" 5000
     fleet "Large Southern Merchants" 6000
     fleet "Small Free Worlds" 1000
@@ -2146,6 +2134,8 @@ event "fwc attack cebalrai"
 
 
 event "fwc capture cebalrai"
+  system "Hintar"
+    government "Free Worlds"
   system "Cebalrai"
     government "Free Worlds"
     fleet "Small Southern Merchants" 1000
@@ -2154,7 +2144,6 @@ event "fwc capture cebalrai"
     fleet "Large Free Worlds" 400
     fleet "Large Republic" 2000
   system "Kaus Borealis"
-    government "Free Worlds"
     fleet "Small Southern Merchants" 2000
     fleet "Large Southern Merchants" 4000
     fleet "Small Free Worlds" 600
