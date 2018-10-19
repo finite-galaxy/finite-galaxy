@@ -1,14 +1,14 @@
 shipyard "Remnant Variants"
   "Gascraft"
-  "Starling"
-  "Starling (Heavy)"
-  "Starling (Hunter)"
-  "Starling (Sniper)"
-  "Starling (Thrasher)"
-  "Albatross"
-  "Albatross (Heavy)"
-  "Albatross (Sniper)"
-  "Albatross (Turret)"
+  "Shadow"
+  "Shadow (Heavy)"
+  "Shadow (Hunter)"
+  "Shadow (Sniper)"
+  "Shadow (Thrasher)"
+  "Twilight"
+  "Twilight (Heavy)"
+  "Twilight (Sniper)"
+  "Twilight (Turret)"
 
 
 
@@ -53,7 +53,7 @@ ship "Gascraft"
 
 
 
-ship "Starling"
+ship "Shadow"
   sprite "ship/starling"
   thumbnail "thumbnail/starling"
   attributes
@@ -111,9 +111,9 @@ ship "Starling"
   explode "medium explosion" 10
   "final explode" "final explosion small" 1
   description "One of the strangest and most useful things that the Remnant discovered in the abandoned worlds of the Ember Waste is alien cloaking technology. They designed their scout ships to be able to cloak when needed, in order to explore alien territory without being seen... or to escape in a hurry after stealing something particularly valuable from those aliens."
-  description "  The cloaking technology is built into the Starling's hull; it cannot be removed or transferred to another ship."
+  description "  The cloaking technology is built into the Shadow's hull; it cannot be removed or transferred to another ship."
 
-ship "Starling" "Starling (Heavy)"
+ship "Shadow" "Shadow (Heavy)"
   outfits
     "Thrasher Cannon" 5
     "Point Defense Turret"
@@ -124,7 +124,7 @@ ship "Starling" "Starling (Heavy)"
     "Forge-Class Steering"
     "Hyperdrive"
 
-ship "Starling" "Starling (Hunter)"
+ship "Shadow" "Shadow (Hunter)"
   outfits
     "Inhibitor Cannon" 2
     "Thrasher Turret"
@@ -141,7 +141,7 @@ ship "Starling" "Starling (Hunter)"
   gun
   gun
 
-ship "Starling" "Starling (Sniper)"
+ship "Shadow" "Shadow (Sniper)"
   outfits
     "EMP Torpedo Bay"
     "Inhibitor Cannon" 4
@@ -159,7 +159,7 @@ ship "Starling" "Starling (Sniper)"
   gun "Inhibitor Cannon"
   gun "Inhibitor Cannon"
 
-ship "Starling" "Starling (Thrasher)"
+ship "Shadow" "Shadow (Thrasher)"
   outfits
     "Thrasher Cannon" 3
     "Thrasher Turret"
@@ -178,8 +178,8 @@ ship "Starling" "Starling (Thrasher)"
 
 
 
-ship "Albatross"
-  plural "Albatrosses"
+ship "Twilight"
+  plural "Twilightes"
   sprite "ship/albatross"
   thumbnail "thumbnail/albatross"
   attributes
@@ -243,7 +243,7 @@ ship "Albatross"
   "final explode" "final explosion large" 1
   description "Once they left human space, it became apparent to the Remnant that they would need to build their own shipyards in order to defend themselves if they were discovered by the Alphas or any other unfriendly faction. Using new composite materials that they discovered, they built ships very different from anything seen in human space."
 
-ship "Albatross" "Albatross (Heavy)"
+ship "Twilight" "Twilight (Heavy)"
   outfits
     "Inhibitor Cannon" 3
     "Thrasher Cannon" 4
@@ -272,7 +272,7 @@ ship "Albatross" "Albatross (Heavy)"
   turret
   turret "Thrasher Turret"
 
-ship "Albatross" "Albatross (Sniper)"
+ship "Twilight" "Twilight (Sniper)"
   outfits
     "Inhibitor Cannon" 5
     "EMP Torpedo Bay" 2
@@ -301,7 +301,7 @@ ship "Albatross" "Albatross (Sniper)"
   turret
   turret "Point Defense Turret"
 
-ship "Albatross" "Albatross (Turret)"
+ship "Twilight" "Twilight (Turret)"
   outfits
     "Thrasher Turret" 4
     "Point Defense Turret"
