@@ -29,9 +29,8 @@ ship "Bounder"
     "mass" 130
     "drag" 3.7
     "heat dissipation" .8
-    "fuel capacity" 900
     "cargo space" 40
-    "outfit space" 220
+    "outfit space" 310
     "weapon capacity" 45
     "engine capacity" 100
     weapon
@@ -46,6 +45,7 @@ ship "Bounder"
     "D14-RN Shield Generator"
     "X3700 Ion Thruster"
     "X3200 Ion Steering"
+    "Fuel Barrel" 90
     "Hyperdrive"
   engine -12 44
   engine 12 44
@@ -67,6 +67,7 @@ ship "Bounder" "Bounder (Hai)"
     "Hai Williwaw Cooling"
     "X3700 Ion Thruster"
     "X3200 Ion Steering"
+    "Fuel Barrel" 90
     "Hyperdrive"
 
 
@@ -84,9 +85,8 @@ ship "Manta"
     "mass" 170
     "drag" 4.7
     "heat dissipation" .8
-    "fuel capacity" 400
     "cargo space" 20
-    "outfit space" 350
+    "outfit space" 430
     "weapon capacity" 140
     "engine capacity" 100
     weapon
@@ -103,6 +103,7 @@ ship "Manta"
     "D14-RN Shield Generator"
     "X3700 Ion Thruster"
     "X3200 Ion Steering"
+    "Fuel Barrel" 40
     "Hyperdrive"
   engine -33 38
   engine 33 38
@@ -132,8 +133,9 @@ ship "Manta" "Manta (Mark II)"
     "Outfits Expansion"
     "A250 Atomic Thruster"
     "A375 Atomic Steering"
-    "Hyperdrive"
     "Ionic Afterburner"
+    "Fuel Barrel" 40
+    "Hyperdrive"
   gun "Particle Cannon"
   gun "Particle Cannon"
   gun "Particle Cannon"
@@ -152,6 +154,7 @@ ship "Manta" "Manta (Nuclear)"
     "Outfits Expansion"
     "A250 Atomic Thruster"
     "A375 Atomic Steering"
+    "Fuel Barrel" 40
     "Hyperdrive"
   gun "Particle Cannon"
   gun "Particle Cannon"
@@ -170,6 +173,7 @@ ship "Manta" "Manta (Proton)"
     "D14-RN Shield Generator"
     "X3700 Ion Thruster"
     "X3200 Ion Steering"
+    "Fuel Barrel" 40
     "Hyperdrive"
   gun "Meteor Missile Launcher"
   gun "Meteor Missile Launcher"
@@ -193,9 +197,8 @@ ship "Quicksilver"
     "mass" 120
     "drag" 2.7
     "heat dissipation" .8
-    "fuel capacity" 400
     "cargo space" 10
-    "outfit space" 240
+    "outfit space" 280
     "weapon capacity" 60
     "engine capacity" 70
     weapon
@@ -211,6 +214,7 @@ ship "Quicksilver"
     "Cooling Ducts"
     "Greyhound Plasma Thruster"
     "Greyhound Plasma Steering"
+    "Fuel Barrel" 40
     "Hyperdrive"
   engine -17 54
   engine 17 54
@@ -231,6 +235,7 @@ ship "Quicksilver" "Quicksilver (Mark II)"
     "Cooling Ducts"
     "Greyhound Plasma Thruster"
     "Greyhound Plasma Steering"
+    "Fuel Barrel" 40
     "Hyperdrive"
 
 ship "Quicksilver" "Quicksilver (Proton)"
@@ -242,6 +247,7 @@ ship "Quicksilver" "Quicksilver (Proton)"
     "Cooling Ducts"
     "Greyhound Plasma Thruster"
     "Greyhound Plasma Steering"
+    "Fuel Barrel" 40
     "Hyperdrive"
 
 ship "Quicksilver" "Quicksilver (Scanner)"
@@ -254,6 +260,7 @@ ship "Quicksilver" "Quicksilver (Scanner)"
     "Cargo Scanner"
     "Greyhound Plasma Thruster"
     "Greyhound Plasma Steering"
+    "Fuel Barrel" 40
     "Hyperdrive"
 
 
@@ -271,9 +278,8 @@ ship "Splinter"
     "mass" 250
     "drag" 4.0
     "heat dissipation" .7
-    "fuel capacity" 600
     "cargo space" 75
-    "outfit space" 400
+    "outfit space" 460
     "weapon capacity" 150
     "engine capacity" 100
     weapon
@@ -291,6 +297,7 @@ ship "Splinter"
     "Water Coolant System"
     "X3700 Ion Thruster"
     "X3200 Ion Steering"
+    "Fuel Barrel" 60
     "Hyperdrive"
   engine -15 115
   engine 15 115
@@ -319,7 +326,8 @@ ship "Splinter" "Splinter (Laser)"
     "LP036a Battery Pack"
     "D94-YV Shield Generator"
     "X3700 Ion Thruster"
-    "Impala Plasma Steering"
+    "X3200 Ion Steering"
+    "Fuel Barrel" 60
     "Hyperdrive"
   turret "Heavy Laser Turret"
   turret "Heavy Anti-Missile Turret"
@@ -336,8 +344,9 @@ ship "Splinter" "Splinter (Mark II)"
     "Outfits Expansion" 2
     "A250 Atomic Thruster"
     "A375 Atomic Steering"
-    "Hyperdrive"
     "Ionic Afterburner"
+    "Fuel Barrel" 60
+    "Hyperdrive"
 
 ship "Splinter" "Splinter (Proton)"
   outfits
@@ -349,7 +358,8 @@ ship "Splinter" "Splinter (Proton)"
     "LP036a Battery Pack"
     "D94-YV Shield Generator"
     "X3700 Ion Thruster"
-    "Impala Plasma Steering"
+    "X3200 Ion Steering"
+    "Fuel Barrel" 60
     "Hyperdrive"
   turret "Proton Turret"
   turret "Anti-Missile Turret"

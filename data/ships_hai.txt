@@ -37,9 +37,8 @@ ship "Aphid"
     "mass" 100
     "drag" 1.9
     "heat dissipation" .90
-    "fuel capacity" 400
     "cargo space" 51
-    "outfit space" 185
+    "outfit space" 217
     "weapon capacity" 37
     "engine capacity" 48
     weapon
@@ -55,6 +54,7 @@ ship "Aphid"
     "Hai Williwaw Cooling"
     `"Basrem" Atomic Thruster`
     `"Basrem" Atomic Steering`
+    "Fuel Pod" 4
     "Hyperdrive"
   engine -8 40
   engine 8 40
@@ -75,6 +75,7 @@ ship "Aphid" "Aphid (Anti-Missile)"
     "Pulse Rifle"
     `"Benga" Atomic Thruster`
     `"Benga" Atomic Steering`
+    "Fuel Pod" 4
     "Hyperdrive"
 
 
@@ -125,9 +126,8 @@ ship "Lightning Bug"
     "mass" 220
     "drag" 3.8
     "heat dissipation" .85
-    "fuel capacity" 600
     "cargo space" 73
-    "outfit space" 278
+    "outfit space" 356
     "weapon capacity" 87
     "engine capacity" 93
     weapon
@@ -145,6 +145,7 @@ ship "Lightning Bug"
     "Quantum Keystone"
     `"Benga" Atomic Thruster`
     `"Biroo" Atomic Steering`
+    "Fuel Pod" 6
     "Hyperdrive"
   engine -40 22
   engine 40 22
@@ -169,6 +170,7 @@ ship "Lightning Bug" "Lightning Bug (Pulse)"
     "Pulse Rifle" 2
     `"Biroo" Atomic Thruster`
     `"Benga" Atomic Steering`
+    "Fuel Pod" 6
     "Hyperdrive"
 
 
@@ -186,9 +188,8 @@ ship "Pond Strider"
     "mass" 132
     "drag" 3.6
     "heat dissipation" .65
-    "fuel capacity" 300
     "cargo space" 71
-    "outfit space" 354
+    "outfit space" 378
     "weapon capacity" 129
     "engine capacity" 76
     weapon
@@ -209,6 +210,7 @@ ship "Pond Strider"
     `"Benga" Atomic Thruster`
     `"Biroo" Atomic Steering`
     "Hai Williwaw Cooling" 3
+    "Fuel Pod" 3
     "Hyperdrive"
   engine -23 80
   engine 23 80
@@ -249,9 +251,8 @@ ship "Shield Beetle"
     "mass" 650
     "drag" 8.8
     "heat dissipation" .60
-    "fuel capacity" 500
     "cargo space" 142
-    "outfit space" 798
+    "outfit space" 838
     "weapon capacity" 333
     "engine capacity" 150
     weapon
@@ -273,6 +274,7 @@ ship "Shield Beetle"
     "Quantum Keystone"
     `"Bondir" Atomic Thruster`
     `"Bufaer" Atomic Steering`
+    "Fuel Pod" 5
     "Hyperdrive"
   engine -44 133
   engine 44 133
@@ -313,6 +315,7 @@ ship "Shield Beetle" "Shield Beetle (Jump)"
     "Pulse Rifle" 55
     `"Bondir" Atomic Thruster`
     `"Bufaer" Atomic Steering`
+    "Fuel Pod" 5
     "Jump Drive"
   gun "Ion Cannon"
   gun "Ion Cannon"
@@ -341,6 +344,7 @@ ship "Shield Beetle" "Shield Beetle (Jump, Tracker)"
     "Pulse Rifle" 47
     `"Bondir" Atomic Thruster`
     `"Bufaer" Atomic Steering`
+    "Fuel Pod" 5
     "Jump Drive"
 
 ship "Shield Beetle" "Shield Beetle (Pulse)"
@@ -356,6 +360,7 @@ ship "Shield Beetle" "Shield Beetle (Pulse)"
     "Pulse Rifle" 27
     `"Bondir" Atomic Thruster`
     `"Bufaer" Atomic Steering`
+    "Fuel Pod" 5
     "Hyperdrive"
   gun "Ion Cannon"
   gun "Ion Cannon"
@@ -380,6 +385,7 @@ ship "Shield Beetle" "Shield Beetle (Tracker)"
     "Pulse Rifle" 32
     `"Bondir" Atomic Thruster`
     `"Bufaer" Atomic Steering`
+    "Fuel Pod" 5
     "Hyperdrive"
 
 
@@ -397,9 +403,8 @@ ship "Solifuge"
     "mass" 925
     "drag" 15.4
     "heat dissipation" .42
-    "fuel capacity" 600
     "cargo space" 142
-    "outfit space" 828
+    "outfit space" 876
     "weapon capacity" 342
     "engine capacity" 166
     weapon
@@ -422,6 +427,7 @@ ship "Solifuge"
     `"Benga" Atomic Steering`
     `"Bufaer" Atomic Steering`
     `"Bondir" Atomic Thruster`
+    "Fuel Pod" 6
     "Hyperdrive" 
   engine -28 135.5
   engine 28 135.5
@@ -467,6 +473,7 @@ ship "Solifuge" "Solifuge (Jump)"
     `"Benga" Atomic Steering`
     `"Bufaer" Atomic Steering`
     `"Bondir" Atomic Thruster`
+    "Fuel Pod" 6
     "Jump Drive"
 
 ship "Solifuge" "Solifuge (Jump, Pulse)"
@@ -484,6 +491,7 @@ ship "Solifuge" "Solifuge (Jump, Pulse)"
     `"Benga" Atomic Steering`
     `"Bufaer" Atomic Steering`
     `"Bondir" Atomic Thruster`
+    "Fuel Pod" 6
     "Jump Drive"
   gun "Pulse Cannon"
   gun "Pulse Cannon"
@@ -507,6 +515,7 @@ ship "Solifuge" "Solifuge (Jump, Tracker)"
     `"Benga" Atomic Steering`
     `"Bufaer" Atomic Steering`
     `"Bondir" Atomic Thruster`
+    "Fuel Pod" 6
     "Jump Drive"
 
 ship "Solifuge" "Solifuge (Pulse)"
@@ -524,6 +533,7 @@ ship "Solifuge" "Solifuge (Pulse)"
     `"Benga" Atomic Steering`
     `"Bufaer" Atomic Steering`
     `"Bondir" Atomic Thruster`
+    "Fuel Pod" 6
     "Hyperdrive"
   gun "Pulse Cannon"
   gun "Pulse Cannon"
@@ -547,6 +557,7 @@ ship "Solifuge" "Solifuge (Tracker)"
     `"Benga" Atomic Steering`
     `"Bufaer" Atomic Steering`
     `"Bondir" Atomic Thruster`
+    "Fuel Pod" 6
     "Hyperdrive"
 
 
@@ -615,9 +626,8 @@ ship "Water Bug"
     "mass" 270
     "drag" 5.9
     "heat dissipation" .75
-    "fuel capacity" 600
     "cargo space" 197
-    "outfit space" 368
+    "outfit space" 416
     "weapon capacity" 145
     "engine capacity" 64
     weapon
@@ -638,6 +648,7 @@ ship "Water Bug"
     "Quantum Keystone"
     `"Benga" Atomic Thruster`
     `"Benga" Atomic Steering`
+    "Fuel Pod" 6
     "Hyperdrive"
   engine -50 33
   engine 50 33
@@ -668,6 +679,7 @@ ship "Water Bug" "Water Bug (Jump)"
     "Pulse Rifle" 8
     `"Benga" Atomic Thruster`
     `"Benga" Atomic Steering`
+    "Fuel Pod" 6
     "Jump Drive"
 
 ship "Water Bug" "Water Bug (Pulse)"
@@ -683,5 +695,6 @@ ship "Water Bug" "Water Bug (Pulse)"
     "Pulse Rifle" 3
     `"Benga" Atomic Thruster`
     `"Benga" Atomic Steering`
+    "Fuel Pod" 6
     "Hyperdrive"
 

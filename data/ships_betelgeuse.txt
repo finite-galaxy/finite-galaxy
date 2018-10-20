@@ -37,9 +37,8 @@ ship "Behemoth"
     "mass" 540
     "drag" 11.7
     "heat dissipation" .4
-    "fuel capacity" 600
     "cargo space" 490
-    "outfit space" 510
+    "outfit space" 570
     "weapon capacity" 280
     "engine capacity" 90
     weapon
@@ -56,6 +55,7 @@ ship "Behemoth"
     "Small Radar Jammer"
     "X3700 Ion Thruster"
     "X3200 Ion Steering"
+    "Fuel Barrel" 60
     "Scram Drive"
   engine -34 154
   engine 34 154
@@ -91,6 +91,7 @@ ship "Behemoth" "Behemoth (Hai)"
     `"Benga" Atomic Thruster`
     `"Biroo" Atomic Steering`
     `"Benga" Atomic Steering`
+    "Fuel Barrel" 60
     "Hyperdrive"
 
 ship "Behemoth" "Behemoth (Heavy)"
@@ -109,6 +110,7 @@ ship "Behemoth" "Behemoth (Heavy)"
     "Liquid Nitrogen Cooler"
     "Greyhound Plasma Thruster"
     "Impala Plasma Steering"
+    "Fuel Barrel" 60
     "Hyperdrive"
   turret "4X Blaster Turret"
   turret "4X Blaster Turret"
@@ -132,6 +134,7 @@ ship "Behemoth" "Behemoth (Proton)"
     "A250 Atomic Thruster"
     "A125 Atomic Steering"
     "A375 Atomic Steering"
+    "Fuel Barrel" 60
     "Scram Drive"
   turret "Proton Turret"
   turret "Proton Turret"
@@ -152,8 +155,9 @@ ship "Behemoth" "Behemoth (Speedy)"
     "Liquid Nitrogen Cooler"
     "Outfits Expansion" 6
     "A250 Atomic Thruster"
-    "A125 Atomic Steering"
     "A375 Atomic Steering"
+    "A125 Atomic Steering"
+    "Fuel Barrel" 60
     "Scram Drive"
 
 
@@ -171,9 +175,8 @@ ship "Berserker"
     "mass" 110
     "drag" 2.2
     "heat dissipation" .85
-    "fuel capacity" 400
     "cargo space" 10
-    "outfit space" 200
+    "outfit space" 240
     "weapon capacity" 35
     "engine capacity" 65
     weapon
@@ -190,6 +193,7 @@ ship "Berserker"
     "D23-QP Shield Generator"
     "X2700 Ion Thruster"
     "X3200 Ion Steering"
+    "Fuel Barrel" 40
     "Hyperdrive"
   engine -10 45
   engine 10 45
@@ -216,6 +220,7 @@ ship "Berserker" "Berserker (Afterburner)"
     "Chipmunk Plasma Thruster"
     "Greyhound Plasma Steering"
     "Afterburner"
+    "Fuel Barrel" 40
     "Hyperdrive"
 
 
@@ -233,9 +238,8 @@ ship "Firebird"
     "mass" 290
     "drag" 4.5
     "heat dissipation" .6
-    "fuel capacity" 400
     "cargo space" 50
-    "outfit space" 400
+    "outfit space" 440
     "weapon capacity" 160
     "engine capacity" 100
     weapon
@@ -252,6 +256,7 @@ ship "Firebird"
     "D41-HY Shield Generator"
     "X3700 Ion Thruster"
     "X3200 Ion Steering"
+    "Fuel Barrel" 40
     "Hyperdrive"
   engine -33 65
   engine 33 65
@@ -283,6 +288,7 @@ ship "Firebird" "Firebird (Hai Shields)"
     "Outfits Expansion" 2
     "X3700 Ion Thruster"
     "A375 Atomic Steering"
+    "Fuel Barrel" 40
     "Hyperdrive"
 
 ship "Firebird" "Firebird (Hai Weapons)"
@@ -297,6 +303,7 @@ ship "Firebird" "Firebird (Hai Weapons)"
     "Hai Williwaw Cooling" 2
     "X3700 Ion Thruster"
     "X3200 Ion Steering"
+    "Fuel Barrel" 40
     "Hyperdrive"
 
 ship "Firebird" "Firebird (Missile)"
@@ -312,6 +319,7 @@ ship "Firebird" "Firebird (Missile)"
     "Outfits Expansion"
     "Impala Plasma Thruster"
     "A375 Atomic Steering"
+    "Fuel Barrel" 40
     "Hyperdrive"
   gun "Meteor Missile Launcher"
   gun "Meteor Missile Launcher"
@@ -330,6 +338,7 @@ ship "Firebird" "Firebird (Plasma)"
     "Outfits Expansion"
     "X3700 Ion Thruster"
     "A375 Atomic Steering"
+    "Fuel Barrel" 40
     "Hyperdrive"
 
 
@@ -347,9 +356,8 @@ ship "Heavy Shuttle"
     "mass" 110
     "drag" 2.1
     "heat dissipation" .8
-    "fuel capacity" 500
     "cargo space" 35
-    "outfit space" 120
+    "outfit space" 170
     "weapon capacity" 10
     "engine capacity" 60
     weapon
@@ -363,6 +371,7 @@ ship "Heavy Shuttle"
     "D14-RN Shield Generator"
     "X2700 Ion Thruster"
     "X2200 Ion Steering"
+    "Fuel Barrel" 50
     "Hyperdrive"
   engine 6 30
   engine -6 30
@@ -381,6 +390,7 @@ ship "Heavy Shuttle" "Heavy Shuttle (Armed)"
     "D14-RN Shield Generator"
     "Chipmunk Plasma Thruster"
     "Chipmunk Plasma Steering"
+    "Fuel Barrel" 50
     "Hyperdrive"
 
 
@@ -398,9 +408,8 @@ ship "Leviathan"
     "mass" 480
     "drag" 7.6
     "heat dissipation" .5
-    "fuel capacity" 500
     "cargo space" 100
-    "outfit space" 620
+    "outfit space" 670
     "weapon capacity" 240
     "engine capacity" 120
     weapon
@@ -417,6 +426,7 @@ ship "Leviathan"
     "Liquid Helium Cooler"
     "X3700 Ion Thruster"
     "X4200 Ion Steering"
+    "Fuel Barrel" 50
     "Hyperdrive"
   engine -25 125
   engine 25 125
@@ -449,6 +459,7 @@ ship "Leviathan" "Leviathan (Hai Engines)"
     "Liquid Helium Cooler"
     `"Bondir" Atomic Thruster`
     `"Bondir" Atomic Steering`
+    "Fuel Barrel" 50
     "Hyperdrive"
 
 ship "Leviathan" "Leviathan (Hai Weapons)"
@@ -459,12 +470,13 @@ ship "Leviathan" "Leviathan (Hai Weapons)"
     "Boulder Reactor"
     "Hai Ravine Batteries"
     "Hai Diamond Regenerator"
+    "Ramscoop"
     "Liquid Nitrogen Cooler"
     "Impala Plasma Thruster"
     "A375 Atomic Steering"
     "Afterburner"
+    "Fuel Barrel" 50
     "Scram Drive"
-    "Ramscoop"
 
 ship "Leviathan" "Leviathan (Heavy)"
   outfits
@@ -477,11 +489,12 @@ ship "Leviathan" "Leviathan (Heavy)"
     "LP036a Battery Pack"
     "D94-YV Shield Generator" 2
     "Liquid Nitrogen Cooler"
+    "Ramscoop"
     "Impala Plasma Thruster"
     "A375 Atomic Steering"
     "Afterburner"
+    "Fuel Barrel" 50
     "Scram Drive"
-    "Ramscoop"
   gun "Meteor Missile Launcher"
   gun "Meteor Missile Launcher"
   gun "Torpedo Launcher"
@@ -499,6 +512,7 @@ ship "Leviathan" "Leviathan (Laser)"
     "Ramscoop"
     "A370 Atomic Thruster"
     "A525 Atomic Steering"
+    "Fuel Barrel" 50
     "Hyperdrive"
 
 
@@ -519,9 +533,8 @@ ship "Shuttle"
     "mass" 70
     "drag" 1.7
     "heat dissipation" .8
-    "fuel capacity" 400
     "cargo space" 20
-    "outfit space" 120
+    "outfit space" 160
     "weapon capacity" 10
     "engine capacity" 60
     weapon
@@ -535,6 +548,7 @@ ship "Shuttle"
     "D14-RN Shield Generator"
     "X2700 Ion Thruster"
     "X2200 Ion Steering"
+    "Fuel Barrel" 40
     "Hyperdrive"
   engine 6 30
   engine -6 30
@@ -561,9 +575,8 @@ ship "Star Queen"
     "mass" 230
     "drag" 5.5
     "heat dissipation" .65
-    "fuel capacity" 500
     "cargo space" 60
-    "outfit space" 360
+    "outfit space" 410
     "weapon capacity" 120
     "engine capacity" 100
     weapon
@@ -581,6 +594,7 @@ ship "Star Queen"
     "Large Radar Jammer"
     "X3700 Ion Thruster"
     "X3200 Ion Steering"
+    "Fuel Barrel" 50
     "Hyperdrive"
   engine -18 116
   engine 18 116
@@ -609,5 +623,6 @@ ship "Star Queen" "Star Queen (Hai)"
     "Small Radar Jammer"
     "X3700 Ion Thruster"
     "A375 Atomic Steering"
+    "Fuel Barrel" 50
     "Hyperdrive"
 

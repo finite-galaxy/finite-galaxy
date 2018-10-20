@@ -39,9 +39,8 @@ ship "Blackbird"
     "mass" 220
     "drag" 5.0
     "heat dissipation" .7
-    "fuel capacity" 700
     "cargo space" 60
-    "outfit space" 350
+    "outfit space" 420
     "weapon capacity" 90
     "engine capacity" 110
     weapon
@@ -57,6 +56,7 @@ ship "Blackbird"
     "Small Radar Jammer"
     "Impala Plasma Thruster"
     "Impala Plasma Steering"
+    "Fuel Barrel" 70
     "Hyperdrive"
   engine -40 55
   engine 40 55
@@ -86,9 +86,8 @@ ship "Falcon"
     "mass" 510
     "drag" 6.7
     "heat dissipation" .7
-    "fuel capacity" 600
     "cargo space" 80
-    "outfit space" 540
+    "outfit space" 600
     "weapon capacity" 240
     "engine capacity" 150
     weapon
@@ -106,6 +105,7 @@ ship "Falcon"
     "Liquid Nitrogen Cooler"
     "Impala Plasma Thruster"
     "Impala Plasma Steering"
+    "Fuel Barrel" 60
     "Hyperdrive"
   engine -17 143
   engine 17 143
@@ -135,6 +135,7 @@ ship "Falcon" "Falcon (Heavy)"
     "Large Radar Jammer"
     "Orca Plasma Thruster"
     "A375 Atomic Steering"
+    "Fuel Barrel" 60
     "Hyperdrive"
   gun "Torpedo Launcher"
   gun "Torpedo Launcher"
@@ -149,6 +150,7 @@ ship "Falcon" "Falcon (Laser)"
     "Small Radar Jammer"
     "Impala Plasma Thruster"
     "Orca Plasma Steering"
+    "Fuel Barrel" 60
     "Hyperdrive"
 
 ship "Falcon" "Falcon (Plasma)"
@@ -161,6 +163,7 @@ ship "Falcon" "Falcon (Plasma)"
     "Liquid Nitrogen Cooler"
     "Impala Plasma Thruster"
     "Impala Plasma Steering"
+    "Fuel Barrel" 60
     "Hyperdrive"
 
 
@@ -218,9 +221,8 @@ ship "Hawk"
     "mass" 150
     "drag" 2.1
     "heat dissipation" .8
-    "fuel capacity" 300
     "cargo space" 20
-    "outfit space" 200
+    "outfit space" 230
     "weapon capacity" 50
     "engine capacity" 70
     weapon
@@ -235,6 +237,7 @@ ship "Hawk"
     "D23-QP Shield Generator"
     "Greyhound Plasma Thruster"
     "Greyhound Plasma Steering"
+    "Fuel Barrel" 30
     "Hyperdrive"
   engine -24 41
   engine 24 41
@@ -255,6 +258,7 @@ ship "Hawk" "Hawk (Rocket)"
     "D41-HY Shield Generator"
     "Greyhound Plasma Thruster"
     "Greyhound Plasma Steering"
+    "Fuel Barrel" 30
     "Hyperdrive"
 
 ship "Hawk" "Hawk (Speedy)"
@@ -265,6 +269,7 @@ ship "Hawk" "Hawk (Speedy)"
     "D41-HY Shield Generator"
     "A250 Atomic Thruster"
     "A255 Atomic Steering"
+    "Fuel Barrel" 30
     "Hyperdrive"
 
 
@@ -282,9 +287,8 @@ ship "Kestrel"
     "mass" 740
     "drag" 9.8
     "heat dissipation" .6
-    "fuel capacity" 500
     "cargo space" 120
-    "outfit space" 820
+    "outfit space" 870
     "weapon capacity" 390
     "engine capacity" 210
     weapon
@@ -301,7 +305,8 @@ ship "Kestrel"
     "D94-YV Shield Generator"
     "Liquid Nitrogen Cooler"
     "Orca Plasma Thruster"
-    "X5200 Ion Steering"
+    "Orca Plasma Steering"
+    "Fuel Barrel" 50
     "Hyperdrive"
   engine -14 177
   engine 14 177
@@ -350,9 +355,8 @@ ship "Osprey"
     "mass" 270
     "drag" 6.1
     "heat dissipation" .8
-    "fuel capacity" 600
     "cargo space" 40
-    "outfit space" 450
+    "outfit space" 510
     "weapon capacity" 180
     "engine capacity" 130
     weapon
@@ -370,6 +374,7 @@ ship "Osprey"
     "Liquid Helium Cooler"
     "Impala Plasma Thruster"
     "Impala Plasma Steering"
+    "Fuel Barrel" 60
     "Hyperdrive"
   engine -40 67
   engine 40 67
@@ -401,6 +406,7 @@ ship "Osprey" "Osprey (Alien Weapons)"
     "Liquid Nitrogen Cooler"
     `"Bondir" Atomic Thruster`
     `"Bondir" Atomic Steering`
+    "Fuel Barrel" 60
     "Hyperdrive"
 
 ship "Osprey" "Osprey (Laser)"
@@ -414,6 +420,7 @@ ship "Osprey" "Osprey (Laser)"
     "Water Coolant System"
     "Impala Plasma Thruster"
     "X4200 Ion Steering"
+    "Fuel Barrel" 60
     "Hyperdrive"
 
 ship "Osprey" "Osprey (Missile)"
@@ -430,6 +437,7 @@ ship "Osprey" "Osprey (Missile)"
     "Water Coolant System"
     "A520 Atomic Thruster"
     "A375 Atomic Steering"
+    "Fuel Barrel" 60
     "Hyperdrive"
   gun "Heavy Rocket Launcher"
   gun "Heavy Rocket Launcher"
@@ -451,9 +459,8 @@ ship "Raven"
     "mass" 130
     "drag" 3.7
     "heat dissipation" .8
-    "fuel capacity" 500
     "cargo space" 30
-    "outfit space" 280
+    "outfit space" 330
     "weapon capacity" 90
     "engine capacity" 100
     weapon
@@ -468,6 +475,7 @@ ship "Raven"
     "D41-HY Shield Generator"
     "X3700 Ion Thruster"
     "X3200 Ion Steering"
+    "Fuel Barrel" 50
     "Hyperdrive"
   engine -12 43
   engine 12 43
@@ -491,8 +499,9 @@ ship "Raven" "Raven (Afterburner)"
     "D41-HY Shield Generator"
     "X3700 Ion Thruster"
     "X3200 Ion Steering"
-    "Hyperdrive"
     "Afterburner"
+    "Fuel Barrel" 50
+    "Hyperdrive"
 
 ship "Raven" "Raven (Heavy)"
   outfits
@@ -506,6 +515,7 @@ ship "Raven" "Raven (Heavy)"
     "Cooling Ducts"
     "A250 Atomic Thruster"
     "A375 Atomic Steering"
+    "Fuel Barrel" 50
     "Hyperdrive"
   gun "Particle Cannon"
   gun "Particle Cannon"
@@ -527,9 +537,8 @@ ship "Sparrow"
     "mass" 50
     "drag" 1.0
     "heat dissipation" .8
-    "fuel capacity" 300
     "cargo space" 15
-    "outfit space" 130
+    "outfit space" 160
     "weapon capacity" 20
     "engine capacity" 40
     weapon
@@ -544,6 +553,7 @@ ship "Sparrow"
     "D14-RN Shield Generator"
     "Chipmunk Plasma Thruster"
     "Chipmunk Plasma Steering"
+    "Fuel Barrel" 30
     "Hyperdrive"
   engine -5 35
   engine 5 35
@@ -564,6 +574,7 @@ ship "Sparrow" "Sparrow (Gatling)"
     "D14-RN Shield Generator"
     "Chipmunk Plasma Thruster"
     "Chipmunk Plasma Steering"
+    "Fuel Barrel" 30
     "Hyperdrive"
 
 ship "Sparrow" "Sparrow (Patrol)"
@@ -576,6 +587,7 @@ ship "Sparrow" "Sparrow (Patrol)"
     "Outfit Scanner"
     "Chipmunk Plasma Thruster"
     "Chipmunk Plasma Steering"
+    "Fuel Barrel" 30
     "Hyperdrive"
 
 
@@ -592,9 +604,8 @@ ship "Unknown Ship Type"
     "mass" 740
     "drag" 9.8
     "heat dissipation" .6
-    "fuel capacity" 500
     "cargo space" 120
-    "outfit space" 820
+    "outfit space" 870
     "weapon capacity" 390
     "engine capacity" 210
     weapon
@@ -611,7 +622,8 @@ ship "Unknown Ship Type"
     "D94-YV Shield Generator"
     "Liquid Nitrogen Cooler"
     "Orca Plasma Thruster"
-    "X5200 Ion Steering"
+    "Orca Plasma Steering"
+    "Fuel Barrel" 50
     "Hyperdrive"
   engine -14 177
   engine 14 177

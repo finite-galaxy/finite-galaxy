@@ -27,9 +27,8 @@ ship "Interdictor"
     "mass" 520
     "drag" 7.4
     "heat dissipation" .70
-    "fuel capacity" 800
     "cargo space" 79
-    "outfit space" 544
+    "outfit space" 608
     "weapon capacity" 179
     "engine capacity" 135
     weapon
@@ -50,6 +49,7 @@ ship "Interdictor"
     "Scanning Module" 3
     "Large Thrust Module" 2
     "Large Steering Module" 2
+    "Fuel Pod" 8
     "Hyperdrive"
   engine -30 163 .5
   engine -20 163 .85
@@ -81,6 +81,7 @@ ship "Interdictor" "Interdictor (Bombardment)"
     "Small Thrust Module"
     "Large Steering Module" 2
     "Small Steering Module"
+    "Fuel Pod" 8
     "Hyperdrive"
 
 
@@ -100,9 +101,8 @@ ship "Neutralizer"
     "mass" 270
     "drag" 4.1
     "heat dissipation" .75
-    "fuel capacity" 1000
     "cargo space" 36
-    "outfit space" 367
+    "outfit space" 447
     "weapon capacity" 72
     "engine capacity" 102
     weapon
@@ -122,6 +122,7 @@ ship "Neutralizer"
     "Small Thrust Module" 2
     "Large Steering Module"
     "Small Steering Module" 2
+    "Fuel Pod" 10
     "Hyperdrive"
   engine -17 82 .7
   engine 0 74 1
@@ -150,6 +151,7 @@ ship "Neutralizer" "Neutralizer (Missile)"
     "Small Thrust Module" 2
     "Large Steering Module"
     "Small Steering Module" 2
+    "Fuel Pod" 10
     "Hyperdrive"
   gun "Finisher Pod"
   gun "Finisher Pod"
@@ -169,6 +171,7 @@ ship "Neutralizer" "Neutralizer (Nimble)"
     "Small Thrust Module"
     "Large Steering Module" 2
     "Small Steering Module"
+    "Fuel Pod" 10
     "Hyperdrive"
 
 ship "Neutralizer" "Neutralizer (Scrappy)"
@@ -185,6 +188,7 @@ ship "Neutralizer" "Neutralizer (Scrappy)"
     "Large Thrust Module"
     "Small Thrust Module"
     "Large Steering Module" 2
+    "Fuel Pod" 10
     "Hyperdrive"
 
 
@@ -204,9 +208,8 @@ ship "Punisher"
     "mass" 780
     "drag" 12.2
     "heat dissipation" .60
-    "fuel capacity" 600
     "cargo space" 94
-    "outfit space" 885
+    "outfit space" 933
     "weapon capacity" 324
     "engine capacity" 187
     weapon
@@ -229,6 +232,7 @@ ship "Punisher"
     "Small Thrust Module" 2
     "Large Steering Module" 2
     "Small Steering Module" 2
+    "Fuel Pod" 6
     "Hyperdrive"
   engine -24 184 .6
   engine 0 187 1.1
@@ -268,6 +272,7 @@ ship "Punisher" "Punisher (Interdicting)"
     "Small Thrust Module" 2
     "Large Steering Module" 2
     "Small Steering Module" 2
+    "Fuel Pod" 6
     "Hyperdrive"
   gun "Bombardment Cannon"
   gun "Bombardment Cannon"
@@ -296,6 +301,7 @@ ship "Punisher" "Punisher (Missile)"
     "Large Thrust Module" 4
     "Large Steering Module" 2
     "Small Steering Module"
+    "Fuel Pod" 6
     "Hyperdrive"
   turret
   turret
@@ -318,5 +324,6 @@ ship "Punisher" "Punisher (Scrappy)"
     "Small Thrust Module"
     "Large Steering Module" 4
     "Small Steering Module" 2
+    "Fuel Pod" 6
     "Hyperdrive"
 

@@ -26,9 +26,8 @@ ship "Gascraft"
     "mass" 80
     "drag" 1.7
     "heat dissipation" 0.9
-    "fuel capacity" 700
     "cargo space" 8
-    "outfit space" 90
+    "outfit space" 146
     "engine capacity" 34
     "shield generation" 0.6
     "shield energy" 0.4
@@ -41,11 +40,10 @@ ship "Gascraft"
     "Supercapacitor"
     "Emergency Ramscoop"
     "Quantum Key Stone"
-    
     "Crucible-Class Thruster"
     "Crucible-Class Steering"
+    "Fuel Pod" 7
     "Hyperdrive"
-  
   engine 0 30
   explode "tiny explosion" 8
   explode "small explosion" 7
@@ -68,9 +66,8 @@ ship "Shadow"
     "mass" 270
     "drag" 3.8
     "heat dissipation" 0.7
-    "fuel capacity" 900
     "cargo space" 36
-    "outfit space" 312
+    "outfit space" 384
     "weapon capacity" 83
     "engine capacity" 94
     "shield generation" 1.8
@@ -96,6 +93,7 @@ ship "Shadow"
     "Forge-Class Thruster"
     "Forge-Class Steering"
     "Crucible-Class Steering"
+    "Fuel Pod" 9
     "Hyperdrive"
   engine -16 82 0.7
   engine 16 82 0.7
@@ -122,6 +120,7 @@ ship "Shadow" "Shadow (Heavy)"
     "Crystal Capacitor"
     "Forge-Class Thruster"
     "Forge-Class Steering"
+    "Fuel Pod" 9
     "Hyperdrive"
 
 ship "Shadow" "Shadow (Hunter)"
@@ -134,6 +133,7 @@ ship "Shadow" "Shadow (Hunter)"
     "Emergency Ramscoop"
     "Forge-Class Thruster"
     "Forge-Class Steering"
+    "Fuel Pod" 9
     "Hyperdrive"
   gun
   gun "Inhibitor Cannon"
@@ -152,6 +152,7 @@ ship "Shadow" "Shadow (Sniper)"
     "Quantum Key Stone"
     "Forge-Class Thruster"
     "Smelter-Class Steering"
+    "Fuel Pod" 9
     "Hyperdrive"
   gun "EMP Torpedo Bay"
   gun "Inhibitor Cannon"
@@ -169,6 +170,7 @@ ship "Shadow" "Shadow (Thrasher)"
     "Quantum Key Stone"
     "Forge-Class Thruster"
     "Forge-Class Steering"
+    "Fuel Pod" 9
     "Hyperdrive"
   gun "Thrasher Cannon"
   gun "Thrasher Cannon"
@@ -195,10 +197,9 @@ ship "Twilight"
     "mass" 610
     "drag" 8.6
     "heat dissipation" 0.6
-    "fuel capacity" 600
-    "engine capacity" 142
-    "outfit space" 658
+    "outfit space" 706
     "weapon capacity" 236
+    "engine capacity" 142
     "shield generation" 5.2
     "shield energy" 4.6
     "hull repair rate" 1.5
@@ -220,6 +221,7 @@ ship "Twilight"
     "Quantum Key Stone"
     "Smelter-Class Thruster"
     "Smelter-Class Steering"
+    "Fuel Pod" 6
     "Hyperdrive"
   engine -28 155 .8
   engine 28 155 .8
@@ -258,6 +260,7 @@ ship "Twilight" "Twilight (Heavy)"
     "Crucible-Class Thruster"
     "Smelter-Class Steering"
     "Forge-Class Steering"
+    "Fuel Pod" 6
     "Hyperdrive"
   gun "Inhibitor Cannon"
   gun "Inhibitor Cannon"
@@ -287,6 +290,7 @@ ship "Twilight" "Twilight (Sniper)"
     "Crucible-Class Thruster"
     "Smelter-Class Steering"
     "Forge-Class Steering"
+    "Fuel Pod" 6
     "Hyperdrive"
   gun "Inhibitor Cannon"
   gun "Inhibitor Cannon"
@@ -313,6 +317,7 @@ ship "Twilight" "Twilight (Turret)"
     "Outfits Expansion" 2
     "Smelter-Class Thruster"
     "Smelter-Class Steering"
+    "Fuel Pod" 6
     "Hyperdrive"
   turret "Thrasher Turret"
   turret "Thrasher Turret"

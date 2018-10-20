@@ -20,12 +20,11 @@ ship "Arfecta"
     "mass" 670
     "drag" 7.5
     "heat dissipation" .8
-    "fuel capacity" 1200
-    "fuel generation" .2
     "cargo space" 64
-    "outfit space" 640
+    "outfit space" 740
     "weapon capacity" 390
     "engine capacity" 220
+    "fuel generation" .2
     "energy capacity" 10000
     "energy generation" 200
     "heat generation" 10
@@ -47,6 +46,7 @@ ship "Arfecta"
     "Pug Lohmar Thruster"
     "Pug Lohmar Steering"
     "Pug Lohmar Steering"
+    "Fuel Pod" 12
     "Jump Drive"
   engine -15 164
   engine 15 164
@@ -78,9 +78,8 @@ ship "Enfolta"
     "mass" 410
     "drag" 5.9
     "heat dissipation" .7
-    "fuel capacity" 600
     "cargo space" 40
-    "outfit space" 360
+    "outfit space" 410
     "weapon capacity" 184
     "engine capacity" 106
     "energy capacity" 2000
@@ -99,9 +98,10 @@ ship "Enfolta"
     "Pug Seeker" 2
     "Pug Zapper Turret"
     "Pug Biodefenses" 6
-    "Jump Drive"
     "Pug Cormet Thruster"
     "Pug Cormet Steering"
+    "Fuel Pod" 6
+    "Jump Drive"
   engine -11 68
   engine 11 68
   gun -11 -85 "Pug Zapper"
@@ -132,9 +132,8 @@ ship "Maboro"
     "mass" 940
     "drag" 9.8
     "heat dissipation" .6
-    "fuel capacity" 600
     "cargo space" 70
-    "outfit space" 560
+    "outfit space" 610
     "weapon capacity" 309
     "engine capacity" 148
     "energy capacity" 4000
@@ -153,9 +152,10 @@ ship "Maboro"
     "Pug Zapper Turret" 2
     "Pug Anti-Missile"
     "Pug Biodefenses" 8
-    "Jump Drive"
     "Pug Lohmar Thruster"
     "Pug Lohmar Steering"
+    "Fuel Pod" 6
+    "Jump Drive"
   engine -20 136
   engine 20 136
   gun -20 -150 "Pug Seeker"
@@ -188,9 +188,8 @@ ship "Zibruka"
     "mass" 240
     "drag" 3.1
     "heat dissipation" .8
-    "fuel capacity" 600
     "cargo space" 20
-    "outfit space" 180
+    "outfit space" 230
     "weapon capacity" 68
     "engine capacity" 76
     "energy capacity" 1000
@@ -207,9 +206,10 @@ ship "Zibruka"
   outfits
     "Pug Zapper" 2
     "Pug Biodefenses" 4
-    "Jump Drive"
     "Pug Akfar Thruster"
     "Pug Akfar Steering"
+    "Fuel Pod" 6
+    "Jump Drive"
   engine -7 35
   engine 7 35
   gun -15 -42 "Pug Zapper"

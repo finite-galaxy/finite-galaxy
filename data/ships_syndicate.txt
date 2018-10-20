@@ -138,9 +138,8 @@ ship "Bulk Freighter"
     "mass" 870
     "drag" 15.8
     "heat dissipation" .5
-    "fuel capacity" 600
     "cargo space" 600
-    "outfit space" 410
+    "outfit space" 470
     "weapon capacity" 180
     "engine capacity" 85
     weapon
@@ -158,6 +157,7 @@ ship "Bulk Freighter"
     "D23-QP Shield Generator"
     "X3700 Ion Thruster"
     "X3200 Ion Steering"
+    "Fuel Barrel" 60
     "Scram Drive"
   engine -22 198
   engine 22 198
@@ -190,6 +190,7 @@ ship "Bulk Freighter" "Bulk Freighter (Blaster)"
     "Outfits Expansion" 2
     "A250 Atomic Thruster"
     "A375 Atomic Steering"
+    "Fuel Barrel" 60
     "Scram Drive"
 
 ship "Bulk Freighter" "Bulk Freighter (Hai)"
@@ -204,6 +205,7 @@ ship "Bulk Freighter" "Bulk Freighter (Hai)"
     "X3700 Ion Thruster"
     `"Benga" Atomic Steering`
     `"Basrem" Atomic Steering`
+    "Fuel Barrel" 60
     "Scram Drive"
   turret "Pulse Turret"
   turret "Pulse Turret"
@@ -224,6 +226,7 @@ ship "Bulk Freighter" "Bulk Freighter (Heavy)"
     "Outfits Expansion"
     "A250 Atomic Thruster"
     "A375 Atomic Steering"
+    "Fuel Barrel" 60
     "Scram Drive"
   turret "Laser Turret"
   turret "Laser Turret"
@@ -243,6 +246,7 @@ ship "Bulk Freighter" "Bulk Freighter (Proton)"
     "Outfits Expansion"
     "A250 Atomic Thruster"
     "A375 Atomic Steering"
+    "Fuel Barrel" 60
     "Scram Drive"
 
 
@@ -260,9 +264,8 @@ ship "Class C Freighter"
     "mass" 810
     "drag" 16.4
     "heat dissipation" .5
-    "fuel capacity" 600
     "cargo space" 20
-    "outfit space" 400
+    "outfit space" 460
     "weapon capacity" 140
     "engine capacity" 85
     weapon
@@ -278,6 +281,7 @@ ship "Class C Freighter"
     "D94-YV Shield Generator"
     "X3700 Ion Thruster"
     "X3200 Ion Steering"
+    "Fuel Barrel" 60
     "Scram Drive"
   engine -22 198
   engine 22 198
@@ -322,9 +326,8 @@ ship "Freighter"
     "mass" 240
     "drag" 5.6
     "heat dissipation" .6
-    "fuel capacity" 600
     "cargo space" 150
-    "outfit space" 250
+    "outfit space" 310
     "weapon capacity" 80
     "engine capacity" 70
     weapon
@@ -340,6 +343,7 @@ ship "Freighter"
     "D14-RN Shield Generator"
     "X2700 Ion Thruster"
     "X2200 Ion Steering"
+    "Fuel Barrel" 60
     "Scram Drive"
   engine -9 97
   engine 9 97
@@ -366,6 +370,7 @@ ship "Freighter" "Freighter (Fancy)"
     "Outfits Expansion"
     "Greyhound Plasma Thruster"
     "X3200 Ion Steering"
+    "Fuel Barrel" 60
     "Scram Drive"
   turret "Laser Turret"
   turret "Heavy Anti-Missile Turret"
@@ -383,6 +388,7 @@ ship "Freighter" "Freighter (Hai)"
     "Outfits Expansion"
     "Greyhound Plasma Thruster"
     "X3200 Ion Steering"
+    "Fuel Barrel" 60
     "Hyperdrive"
   turret "Pulse Turret"
   turret "Bullfrog Anti-Missile"
@@ -399,6 +405,7 @@ ship "Freighter" "Freighter (Proton)"
     "Outfits Expansion"
     "Greyhound Plasma Thruster"
     "X3200 Ion Steering"
+    "Fuel Barrel" 60
     "Scram Drive"
   turret "Proton Turret"
   turret "Heavy Anti-Missile Turret"
@@ -413,6 +420,7 @@ ship "Freighter" "Freighter (Secret Cargo)"
     "D14-RN Shield Generator"
     "X2700 Ion Thruster"
     "X2200 Ion Steering"
+    "Fuel Barrel" 60
     "Scram Drive"
     "Secret Cargo"
   turret "2X Blaster Turret"
@@ -434,9 +442,8 @@ ship "Protector"
     "mass" 500
     "drag" 10.3
     "heat dissipation" .6
-    "fuel capacity" 400
     "cargo space" 50
-    "outfit space" 570
+    "outfit space" 610
     "weapon capacity" 220
     "engine capacity" 100
     weapon
@@ -455,6 +462,7 @@ ship "Protector"
     "Liquid Nitrogen Cooler"
     "X3700 Ion Thruster"
     "X3200 Ion Steering"
+    "Fuel Barrel" 40
     "Hyperdrive"
   engine -11 125
   engine 11 125
@@ -486,6 +494,7 @@ ship "Protector" "Protector (Laser)"
     "Water Coolant System"
     "A370 Atomic Thruster"
     "A375 Atomic Steering"
+    "Fuel Barrel" 40
     "Hyperdrive"
   turret "Laser Turret"
   turret "Laser Turret"
@@ -504,6 +513,7 @@ ship "Protector" "Protector (Proton)"
     "Water Coolant System"
     "A370 Atomic Thruster"
     "A375 Atomic Steering"
+    "Fuel Barrel" 40
     "Hyperdrive"
 
 
@@ -521,9 +531,8 @@ ship "Star Barge"
     "mass" 70
     "drag" 2.4
     "heat dissipation" .8
-    "fuel capacity" 300
     "cargo space" 50
-    "outfit space" 130
+    "outfit space" 160
     "weapon capacity" 20
     "engine capacity" 40
     weapon
@@ -537,6 +546,7 @@ ship "Star Barge"
     "D14-RN Shield Generator"
     "Chipmunk Plasma Thruster"
     "Chipmunk Plasma Steering"
+    "Fuel Barrel" 30
     "Hyperdrive"
   engine -9 38
   engine 9 38
@@ -555,6 +565,7 @@ ship "Star Barge" "Star Barge (Armed)"
     "D14-RN Shield Generator"
     "Chipmunk Plasma Thruster"
     "Chipmunk Plasma Steering"
+    "Fuel Barrel" 30
     "Hyperdrive"
 
 
@@ -572,9 +583,8 @@ ship "Vanguard"
     "mass" 500
     "drag" 8
     "heat dissipation" .6
-    "fuel capacity" 400
     "cargo space" 50
-    "outfit space" 560
+    "outfit space" 600
     "weapon capacity" 220
     "engine capacity" 120
     weapon
@@ -591,6 +601,7 @@ ship "Vanguard"
     "Liquid Nitrogen Cooler"
     "X3700 Ion Thruster"
     "X4200 Ion Steering"
+    "Fuel Barrel" 40
     "Hyperdrive"
   engine -15 130
   engine 15 130
@@ -620,6 +631,7 @@ ship "Vanguard" "Vanguard (Particle)"
     "Liquid Nitrogen Cooler"
     "X3700 Ion Thruster"
     "X4200 Ion Steering"
+    "Fuel Barrel" 40
     "Hyperdrive"
   gun "Particle Cannon"
   gun "Particle Cannon"
@@ -644,9 +656,8 @@ ship "Wasp"
     "mass" 60
     "drag" 1.2
     "heat dissipation" .8
-    "fuel capacity" 400
     "cargo space" 10
-    "outfit space" 150
+    "outfit space" 190
     "weapon capacity" 28
     "engine capacity" 60
     weapon
@@ -663,6 +674,7 @@ ship "Wasp"
     "D14-RN Shield Generator"
     "X2700 Ion Thruster"
     "X2200 Ion Steering"
+    "Fuel Barrel" 40
     "Hyperdrive"
   engine -6 33
   engine 6 33
@@ -682,5 +694,6 @@ ship "Wasp" "Wasp (Proton)"
     "D14-RN Shield Generator"
     "X2700 Ion Thruster"
     "X2200 Ion Steering"
+    "Fuel Barrel" 40
     "Hyperdrive"
 
