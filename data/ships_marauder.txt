@@ -1,4 +1,8 @@
 shipyard "Marauder Variants Variants"
+  "Marauder Argosy"
+  "Marauder Argosy (Blaster)"
+  "Marauder Argosy (Heavy)"
+  "Marauder Argosy (Missile)"
   "Marauder Arrow"
   "Marauder Arrow (Engines)"
   "Marauder Arrow (Weapons)"
@@ -26,10 +30,99 @@ shipyard "Marauder Variants Variants"
   "Marauder Splinter"
   "Marauder Splinter (Engines)"
   "Marauder Splinter (Weapons)"
-  "Modified Argosy"
-  "Modified Argosy (Blaster)"
-  "Modified Argosy (Heavy)"
-  "Modified Argosy (Missile)"
+
+
+
+ship "Marauder Argosy"
+  plural "Marauder Argosies"
+  sprite "ship/modified argosy"
+  thumbnail "thumbnail/modified argosy"
+  attributes
+    category "Medium Warship"
+    "cost" 1960000
+    "shields" 4800
+    "hull" 1900
+    "required crew" 5
+    "bunks" 12
+    "mass" 250
+    "drag" 6.2
+    "heat dissipation" .6
+    "fuel capacity" 400
+    "cargo space" 60
+    "outfit space" 340
+    "weapon capacity" 140
+    "engine capacity" 80
+    weapon
+      "blast radius" 80
+      "shield damage" 800
+      "hull damage" 400
+      "hit force" 1200
+  outfits
+    "Heavy Laser" 4
+    "Heavy Laser Turret" 2
+    "NT-200 Nucleovoltaic"
+    "LP072a Battery Pack"
+    "D23-QP Shield Generator"
+    "Small Radar Jammer"
+    "Greyhound Plasma Thruster"
+    "X3200 Ion Steering"
+    "Hyperdrive"
+  engine -20 91
+  engine 20 91
+  gun -22 -37 "Heavy Laser"
+  gun 22 -37 "Heavy Laser"
+  gun -23 -37 "Heavy Laser"
+  gun 23 -37 "Heavy Laser"
+  turret 0 -12 "Heavy Laser Turret"
+  turret 0 8 "Heavy Laser Turret"
+  leak "leak" 70 50
+  leak "flame" 30 80
+  explode "tiny explosion" 10
+  explode "small explosion" 25
+  explode "medium explosion" 30
+  explode "large explosion" 15
+  "final explode" "final explosion medium"
+  description "The Argosy has long been a favorite ship for pirates, who have come up with many tricks for modifying them to be more suitable as warships."
+
+ship "Marauder Argosy" "Marauder Argosy (Blaster)"
+  outfits
+    "Modified Blaster" 4
+    "4X Blaster Turret" 2
+    "Fission Reactor"
+    "LP144a Battery Pack"
+    "D67-TM Shield Generator"
+    "Small Radar Jammer"
+    "Liquid Nitrogen Cooler"
+    "Greyhound Plasma Thruster"
+    "X3200 Ion Steering"
+    "Hyperdrive"
+
+ship "Marauder Argosy" "Marauder Argosy (Heavy)"
+  outfits
+    "Heavy Laser" 4
+    "Heavy Laser Turret" 2
+    "Fission Reactor"
+    "LP036a Battery Pack"
+    "D23-QP Shield Generator"
+    "Water Coolant System"
+    "A250 Atomic Thruster"
+    "A375 Atomic Steering"
+    "Hyperdrive"
+
+ship "Marauder Argosy" "Marauder Argosy (Missile)"
+  outfits
+    "Meteor Missile Launcher" 2
+    "Meteor Missile" 70
+    "Torpedo Launcher" 2
+    "Torpedo" 60
+    "Heavy Laser Turret"
+    "Heavy Anti-Missile Turret"
+    "S3 Thermionic"
+    "LP072a Battery Pack"
+    "D41-HY Shield Generator"
+    "X3700 Ion Thruster"
+    "Greyhound Plasma Steering"
+    "Hyperdrive"
 
 
 
@@ -943,97 +1036,4 @@ ship "Marauder Splinter" "Marauder Splinter (Weapons)"
   turret 0 -28 "Heavy Anti-Missile Turret"
   turret 17 -28 "4X Blaster Turret"
   description "This Splinter has had extensive modification to its weapons space, with two new forward hard points on either side of the bridge. Large sections of the hull are covered with extra shield emitters and hull plating. Much of the stock cargo space has been converted to space for outfits, weapons and engines, coupled with streamlining of existing internal systems make the prospect of meeting this flexible war machine in an uninhabited system seem pretty unappealing."
-
-
-
-ship "Modified Argosy"
-  plural "Modified Argosies"
-  sprite "ship/modified argosy"
-  thumbnail "thumbnail/modified argosy"
-  attributes
-    category "Light Warship"
-    "cost" 1960000
-    "shields" 4800
-    "hull" 1900
-    "required crew" 5
-    "bunks" 12
-    "mass" 250
-    "drag" 6.2
-    "heat dissipation" .6
-    "fuel capacity" 400
-    "cargo space" 60
-    "outfit space" 340
-    "weapon capacity" 140
-    "engine capacity" 80
-    weapon
-      "blast radius" 80
-      "shield damage" 800
-      "hull damage" 400
-      "hit force" 1200
-  outfits
-    "Heavy Laser" 4
-    "Heavy Laser Turret" 2
-    "NT-200 Nucleovoltaic"
-    "LP072a Battery Pack"
-    "D23-QP Shield Generator"
-    "Small Radar Jammer"
-    "Greyhound Plasma Thruster"
-    "X3200 Ion Steering"
-    "Hyperdrive"
-  engine -20 91
-  engine 20 91
-  gun -22 -37 "Heavy Laser"
-  gun 22 -37 "Heavy Laser"
-  gun -23 -37 "Heavy Laser"
-  gun 23 -37 "Heavy Laser"
-  turret 0 -12 "Heavy Laser Turret"
-  turret 0 8 "Heavy Laser Turret"
-  leak "leak" 70 50
-  leak "flame" 30 80
-  explode "tiny explosion" 10
-  explode "small explosion" 25
-  explode "medium explosion" 30
-  explode "large explosion" 15
-  "final explode" "final explosion medium"
-  description "The Argosy has long been a favorite ship for pirates, who have come up with many tricks for modifying them to be more suitable as warships."
-
-ship "Modified Argosy" "Modified Argosy (Blaster)"
-  outfits
-    "Modified Blaster" 4
-    "4X Blaster Turret" 2
-    "Fission Reactor"
-    "LP144a Battery Pack"
-    "D67-TM Shield Generator"
-    "Small Radar Jammer"
-    "Liquid Nitrogen Cooler"
-    "Greyhound Plasma Thruster"
-    "X3200 Ion Steering"
-    "Hyperdrive"
-
-ship "Modified Argosy" "Modified Argosy (Heavy)"
-  outfits
-    "Heavy Laser" 4
-    "Heavy Laser Turret" 2
-    "Fission Reactor"
-    "LP036a Battery Pack"
-    "D23-QP Shield Generator"
-    "Water Coolant System"
-    "A250 Atomic Thruster"
-    "A375 Atomic Steering"
-    "Hyperdrive"
-
-ship "Modified Argosy" "Modified Argosy (Missile)"
-  outfits
-    "Meteor Missile Launcher" 2
-    "Meteor Missile" 70
-    "Torpedo Launcher" 2
-    "Torpedo" 60
-    "Heavy Laser Turret"
-    "Heavy Anti-Missile Turret"
-    "S3 Thermionic"
-    "LP072a Battery Pack"
-    "D41-HY Shield Generator"
-    "X3700 Ion Thruster"
-    "Greyhound Plasma Steering"
-    "Hyperdrive"
 
