@@ -449,27 +449,9 @@ fleet "Large Northern Merchants"
   variant 2
     "Freighter" 3
     "Firebird (Missile)"
-  variant 20
+  variant 50
     "Freighter" 2
-    "Corvette"
-  variant 10
-    "Freighter" 2
-    "Corvette (Speedy)"
-  variant 10
-    "Freighter" 2
-    "Corvette (Missile)"
-  variant 10
-    "Freighter" 3
-    "Corvette"
-  variant 3
-    "Freighter" 3
-    "Corvette (Speedy)"
-  variant 3
-    "Freighter" 3
-    "Corvette (Missile)"
-  variant 1
-    "Freighter (Hai)" 2
-    "Corvette"
+    "Headhunter"
   variant 6
     "Freighter" 4
     "Leviathan"
@@ -670,21 +652,6 @@ fleet "Large Human Merchants (Hai)"
   variant 2
     "Freighter" 3
     "Firebird (Missile)"
-  variant 20
-    "Freighter" 2
-    "Corvette"
-  variant 10
-    "Freighter" 2
-    "Corvette (Hai)"
-  variant 10
-    "Freighter (Hai)" 2
-    "Corvette (Missile)"
-  variant 10
-    "Freighter" 3
-    "Corvette"
-  variant 3
-    "Freighter (Hai)" 3
-    "Corvette (Hai)"
   variant 6
     "Freighter (Hai)" 4
     "Leviathan"
@@ -1173,7 +1140,7 @@ fleet "Large Deep Merchants"
   variant 5
     "Aerie"
     "Dagger" 2
-    "Corvette"
+    "Headhunter"
   variant 3
     "Aerie"
     "Dagger" 2
@@ -1228,25 +1195,13 @@ fleet "Small Deep Security"
   cargo 0
   personality
     heroic
-  variant 4
+  variant 1
     "Aerie"
     "Dagger" 2
-  variant 3
-    "Raven"
   variant 1
-    "Raven (Heavy)"
+    "Headhunter" 2
   variant 1
-    "Raven (Afterburner)"
-  variant 3
-    "Headhunter"
-  variant 2
-    "Headhunter (Particle)"
-  variant 4
-    "Corvette"
-  variant 2
-    "Corvette (Speedy)"
-  variant 2
-    "Corvette (Missile)"
+    "Headhunter" 3
 
 fleet "Large Deep Security"
   government "Deep Security"
@@ -1255,55 +1210,31 @@ fleet "Large Deep Security"
   cargo 0
   personality
     heroic
-  variant 5
+  variant 6
     "Aerie"
     "Dagger" 2
-    "Corvette"
-  variant 2
-    "Aerie"
-    "Dagger" 2
-    "Corvette (Missile)"
-  variant 2
-    "Aerie"
-    "Dagger" 2
-    "Corvette (Speedy)"
+    "Headhunter"
   variant 3
     "Aerie"
     "Dagger" 2
-    "Raven"
-  variant 1
-    "Aerie"
-    "Dagger" 2
-    "Raven (Heavy)"
-  variant 1
-    "Aerie"
-    "Dagger" 2
-    "Raven (Afterburner)"
-  variant 4
-    "Raven" 2
-  variant 2
-    "Raven (Heavy)" 2
-  variant 3
     "Headhunter" 2
-  variant 2
-    "Headhunter (Particle)" 2
+  variant 3
+    "Aerie"
+    "Dagger" 2
+    "Headhunter" 3
   variant 3
     "Aerie" 2
     "Dagger" 4
-  variant 8
-    "Corvette"
-    "Raven"
-  variant 4
-    "Corvette (Speedy)"
-    "Raven (Afterburner)"
-  variant 4
-    "Corvette (Missile)"
-    "Raven (Heavy)"
-  variant 5
-    "Corvette" 2
-  variant 3
-    "Corvette (Speedy)"
-    "Corvette (Missile)"
+  variant 6
+    "Chariot"
+  variant 2
+    "Chariot"
+    "Headhunter"
+  variant 2
+    "Chariot"
+    "Headhunter" 2
+  variant 2
+    "Chariot" 2
 
 fleet "Small Oathkeeper"
   government "Navy (Oathkeeper)"
@@ -1824,12 +1755,6 @@ fleet "Small Northern Pirates"
     "Raven (Afterburner)"
   variant 1
     "Raven (Heavy)"
-  variant 2
-    "Corvette"
-  variant 1
-    "Corvette (Missile)"
-  variant 1
-    "Corvette (Speedy)"
 
 fleet "Large Northern Pirates"
   government "Pirate"
@@ -1844,20 +1769,20 @@ fleet "Large Northern Pirates"
   variant 2
     "Firebird (Plasma)"
   variant 3
+    "Firebird" 2
+  variant 1
     "Firebird"
-    "Corvette"
-  variant 1
     "Firebird (Plasma)"
-    "Corvette (Speedy)"
+  variant 1
+    "Firebird"
+    "Firebird (Missile)"
   variant 1
     "Firebird (Missile)"
-    "Corvette (Missile)"
-  variant 1
     "Firebird (Plasma)"
-    "Corvette (Missile)"
   variant 1
-    "Firebird (Missile)"
-    "Corvette (Speedy)"
+    "Firebird (Missile)" 2
+  variant 1
+    "Firebird (Plasma)" 2
   variant 2
     "Firebird"
     "Fury"
@@ -1993,11 +1918,10 @@ fleet "pirate raid"
   variant 2
     "Firebird (Plasma)"
   variant 3
-    "Firebird"
-    "Corvette"
+    "Firebird" 2
   variant 1
+    "Firebird"
     "Firebird (Plasma)"
-    "Corvette (Speedy)"
   variant 2
     "Firebird"
     "Berserker" 2
@@ -2080,7 +2004,7 @@ fleet "Bounty Hunters"
     "Aerie"
     "Fury (Missile)"
   variant 1
-    "Corvette"
+    "Firebird"
     "Fury (Missile)"
   variant 1
     "Osprey"
@@ -2603,7 +2527,7 @@ fleet "Hired Guns"
     "Dagger"
   variant 1
     "Leviathan (Laser)"
-    "Corvette"
+    "Firebird"
   variant 1
     "Leviathan (Laser)"
     "Splinter (Laser)"
@@ -2616,7 +2540,7 @@ fleet "Hired Guns"
     "Dagger"
   variant 1
     "Falcon (Laser)"
-    "Corvette"
+    "Firebird"
   variant 1
     "Falcon (Laser)"
     "Splinter (Laser)"
@@ -2629,7 +2553,7 @@ fleet "Hired Guns"
     "Dagger"
   variant 1
     "Vanguard (Particle)"
-    "Corvette"
+    "Firebird"
   variant 1
     "Vanguard (Particle)"
     "Splinter (Laser)"
@@ -2647,7 +2571,7 @@ fleet "Hired Guns"
   variant 1
     "Bactrian (Hired Gun)"
     "Dagger" 3
-    "Corvette"
+    "Firebird"
   variant 1
     "Bactrian (Hired Gun)"
     "Dagger" 3

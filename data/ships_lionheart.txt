@@ -6,6 +6,7 @@ shipyard "Lionheart Variants"
   "Bactrian (Hai Engines)"
   "Bactrian (Hai Weapons)"
   "Bactrian (Hired Gun)"
+  "Chariot"
   "Dagger"
   "Flivver"
   "Flivver (Hai)"
@@ -260,7 +261,7 @@ ship "Bactrian" "Bactrian (Hired Gun)"
 
 
 
-ship "Corvette"
+ship "Chariot"
   sprite "ship/corvette"
   thumbnail "thumbnail/corvette"
   attributes
@@ -276,7 +277,7 @@ ship "Corvette"
     "fuel capacity" 500
     "cargo space" 40
     "outfit space" 420
-    "weapon capacity" 150
+    "weapon capacity" 170
     "engine capacity" 100
     weapon
       "blast radius" 80
@@ -284,23 +285,24 @@ ship "Corvette"
       "hull damage" 400
       "hit force" 1200
   outfits
-    "Heavy Laser" 4
-    "Heavy Laser Turret" 2
-    "NT-200 Nucleovoltaic"
-    "LP072a Battery Pack"
+    "Electron Beam" 4
+    "Electron Turret"
+    "Heavy Anti-Missile Turret"
     "D67-TM Shield Generator"
-    "Large Radar Jammer"
+    "Fusion Reactor"
+    "LP036a Battery Pack"
+    "Liquid Nitrogen Cooler"
     "A370 Atomic Thruster"
     "A375 Atomic Steering"
     "Hyperdrive"
   engine -11 118
   engine 11 118
-  gun -12 -68 "Heavy Laser"
-  gun 12 -68 "Heavy Laser"
-  gun -14 -60 "Heavy Laser"
-  gun 14 -60 "Heavy Laser"
-  turret 0 -11 "Heavy Laser Turret"
-  turret 0 74 "Heavy Laser Turret"
+  gun -12 -68 "Electron Beam"
+  gun 12 -68 "Electron Beam"
+  gun -14 -60 "Electron Beam"
+  gun 14 -60 "Electron Beam"
+  turret 0 -11 "Electron Turret"
+  turret 0 74 "Heavy Anti-Missile Turret"
   leak "leak" 40 50
   leak "flame" 50 80
   leak "big leak" 90 30
@@ -309,54 +311,7 @@ ship "Corvette"
   explode "medium explosion" 24
   explode "large explosion" 8
   "final explode" "final explosion medium"
-  description "Incorporating new, experimental lightweight materials, the Lionheart Corvette combines the speed and agility of a fighter with the armament of a heavy warship. Its weak hull is more than compensated for by its advanced shielding matrix."
-
-ship "Corvette" "Corvette (Hai)"
-  outfits
-    "Hai Tracker Pod" 4
-    "Hai Tracker" 224
-    "Heavy Anti-Missile Turret" 2
-    "Fission Reactor"
-    "LP036a Battery Pack"
-    "D94-YV Shield Generator"
-    "Cooling Ducts"
-    "Cargo Expansion"
-    `"Biroo" Atomic Thruster`
-    `"Bondir" Atomic Steering`
-    "Hyperdrive"
-
-ship "Corvette" "Corvette (Missile)"
-  outfits
-    "Torpedo Launcher" 2
-    "Torpedo" 60
-    "Sidewinder Missile Launcher" 2
-    "Sidewinder Missile" 100
-    "Heavy Anti-Missile Turret" 2
-    "Fission Reactor"
-    "LP036a Battery Pack"
-    "D94-YV Shield Generator"
-    "Cooling Ducts"
-    "Cargo Expansion"
-    "A370 Atomic Thruster"
-    "A375 Atomic Steering"
-    "Hyperdrive"
-  gun "Sidewinder Missile Launcher"
-  gun "Sidewinder Missile Launcher"
-  gun "Torpedo Launcher"
-  gun "Torpedo Launcher"
-
-ship "Corvette" "Corvette (Speedy)"
-  outfits
-    "Particle Cannon" 4
-    "Heavy Anti-Missile Turret"
-    "Fusion Reactor"
-    "Supercapacitor"
-    "D41-HY Shield Generator"
-    "Liquid Nitrogen Cooler"
-    "Cooling Ducts"
-    "A370 Atomic Thruster"
-    "A375 Atomic Steering"
-    "Hyperdrive"
+  description "Incorporating new, experimental lightweight materials, the Lionheart Chariot combines the speed and agility of a fighter with the armament of a heavy warship. Its weak hull is more than compensated for by its advanced shielding matrix."
 
 
 
