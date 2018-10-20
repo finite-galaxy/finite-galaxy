@@ -36,6 +36,7 @@ outfit "Liquid Helium Cooler"
   description "Liquid helium is the ultimate in cooling technology. Given how much space this cooling system takes up, you may be better off just installing more efficient, low-heat components instead, but where that is not an option, this cooler can handle almost anything you throw at it."
 
 
+
 outfit "D14-RN Shield Generator"
   category "Regeneration"
   cost 20000
@@ -111,6 +112,7 @@ outfit "S-970 Regenerator"
   description "The S-970 Shield Regenerator is an advanced type of shield recharging technology. Unfortunately, its power needs are rather high, and the shifts it makes in your shield configuration also result in some feedback that causes heat to build up in the regenerator, even when your shields are at full strength."
 
 
+
 outfit "Small Radar Jammer"
   category "Systems"
   cost 70000
@@ -132,7 +134,7 @@ outfit "Large Radar Jammer"
 
 outfit "Ramscoop"
   category "Systems"
-  cost 60000
+  cost 100000
   thumbnail "outfit/ramscoop"
   "mass" 10
   "outfit space" -10
@@ -150,9 +152,19 @@ outfit "Catalytic Ramscoop"
   description "Ramscoop technology has been almost unchanged for centuries, because with nearly every system in human space settled there has not been a pressing need for ships to generate their own fuel. But with the Free Worlds war making travel once again more difficult, some engineers in the Deep recently invented a much-improved ramscoop for use in their merchant fleets."
 
 
+outfit "Fuel Pod"
+  category "Systems"
+  cost 25000
+  thumbnail "outfit/fuel pod"
+  "mass" 8
+  "outfit space" -8
+  "fuel capacity" 100
+  description "A fuel pod increases your fuel capacity, allowing your ship to make one additional hyperspace jump before it needs to land and refuel."
+
+
 outfit "Hyperdrive"
   category "Systems"
-  cost 50000
+  cost 250000
   thumbnail "outfit/hyperdrive"
   "mass" 20
   "outfit space" -20
@@ -164,7 +176,7 @@ outfit "Hyperdrive"
 
 outfit "Scram Drive"
   category "Systems"
-  cost 90000
+  cost 500000
   thumbnail "outfit/scram drive"
   "mass" 30
   "outfit space" -30
@@ -243,7 +255,7 @@ outfit "Surveillance Pod"
 
 outfit "Cloaking Device"
   category "Systems"
-  cost 1200000
+  cost 10000000
   "mass" 10
   "outfit space" -10
   "cloak" .01
@@ -253,55 +265,66 @@ outfit "Cloaking Device"
   description "You're sure the cloaking device is here somewhere, but you can't see it."
 
 
+outfit "Armour Plating"
+  category "Expansion"
+  cost 50000
+  thumbnail "outfit/unknown"
+  "shields" -500
+  "hull" 500
+  "mass" 10
+  "drag" 0.2
+  description "Install armour plating to strengthen your hull. It slows down your ship and you have to remove some shield emitters."
+  
+outfit "Bunk Room"
+  category "Systems"
+  cost 30000
+  thumbnail "outfit/bunk"
+  "mass" 2
+  "bunks" 2
+  "cargo space" -10
+  "energy consumption" .04
+  description "If you really want to make space for a few more passengers (or crew members, if you're trying to capture other ships), you can expand the living space of your ship into the area usually reserved for cargo."
+  
+outfit "Cargo Expansion"
+  category "Systems"
+  cost 20000
+  thumbnail "outfit/screwdriver_red"
+  "mass" 2
+  "cargo space" 8
+  "outfit space" -10
+  "unplunderable" 1
+  description "If being able to carry more cargo is more important to you than having advanced weapons or other systems, a cargo expansion will significantly increase the size of your cargo hold."
+
+outfit "Interference Plating"
+  category "Systems"
+  cost 60000
+  thumbnail "outfit/interference plating"
+  "mass" 5
+  "heat dissipation" -.05
+  "scan interference" .5
+  description "If you're in the habit of carrying illegal cargo or outfits, this plating increases the odds that a scan of your ship will fail to detect it. The more of these you install, the better your chances of evading detection. They won't keep anyone from noticing if you're flying an unlicensed ship, however. Furthermore, it reduces your ability to vent heat."
+
 outfit "Outfits Expansion"
   category "Systems"
-  cost 50000
+  cost 40000
   thumbnail "outfit/screwdriver_blue"
-  "mass" 5
-  "outfit space" 15
-  "cargo space" -20
-  "cooling inefficiency" 1
+  "mass" 2
+  "outfit space" 8
+  "cargo space" -10
+  "cooling inefficiency" .5
   "heat dissipation" -.01
   "unplunderable" 1
   description "This expansion allows you to sacrifice some cargo space in order to make room for more outfits, in situations where you need just a bit more space to install a particular system. It does not increase your weapon or engine space."
   description "  Unfortunately, rearranging the interior of your ship in such a fundamental way tends to interfere with its cooling systems."
 
-outfit "Cargo Expansion"
-  category "Systems"
-  cost 30000
-  thumbnail "outfit/screwdriver_red"
-  "mass" 5
-  "cargo space" 15
-  "outfit space" -20
-  "unplunderable" 1
-  description "If being able to carry more cargo is more important to you than having advanced weapons or other systems, a cargo expansion will significantly increase the size of your cargo hold."
-
-outfit "Bunk Room"
-  category "Systems"
-  cost 40000
-  thumbnail "outfit/bunk"
-  "mass" 5
-  "bunks" 4
-  "outfit space" -20
-  description "If you really want to make space for a few more passengers (or crew members, if you're trying to capture other ships), you can expand the living space of your ship into the area usually reserved for outfits."
-
-outfit "Fuel Pod"
-  category "Systems"
-  cost 20000
-  thumbnail "outfit/fuel pod"
-  "mass" 8
-  "outfit space" -8
-  "fuel capacity" 100
-  description "A fuel pod increases your fuel capacity, allowing your ship to make one additional hyperspace jump before it needs to land and refuel."
-
-outfit "Interference Plating"
-  category "Systems"
-  cost 50000
-  thumbnail "outfit/interference plating"
-  "mass" 4
-  "outfit space" -4
-  "scan interference" .5
-  description "If you're in the habit of carrying illegal cargo or outfits, this plating increases the odds that a scan of your ship will fail to detect it. The more of these you install, the better your chances of evading detection. They won't keep anyone from noticing if you're flying an unlicensed ship, however."
+outfit "Shields Expansion"
+  category "Expansion"
+  cost 10000
+  thumbnail "outfit/unknown"
+  "shields" 100
+  "hull" -100
+  "outfit space" -1
+  description "Remove part of your hull to install more shield emitters."
 
 
 
