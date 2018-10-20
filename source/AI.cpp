@@ -1964,7 +1964,8 @@ bool AI::ShouldUseAfterburner(Ship &ship)
   if(energy == 0.)
     energy = ship.Attributes().Get("energy generation")
         + 0.2 * ship.Attributes().Get("solar collection")
-        - ship.Attributes().Get("energy consumption");
+        - ship.Attributes().Get("energy consumption")
+        - (ship.Attributes().Get("bunks") / 60.);
   double outputHeat = ship.Attributes().Get("afterburner heat") / (100 * ship.Mass());
   if((!neededFuel || fuel - neededFuel > ship.JumpFuel())
       && (!neededEnergy || neededEnergy / energy < 0.25)

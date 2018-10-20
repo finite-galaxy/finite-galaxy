@@ -680,8 +680,8 @@ int64_t Ship::ChassisCost() const
 // or impossible to fly.
 string Ship::FlightCheck() const
 {
-  double generation = attributes.Get("energy generation") - attributes.Get("energy consumption");
-   double burning = attributes.Get("fuel energy"); 
+  double generation = attributes.Get("energy generation") - attributes.Get("energy consumption") - (attributes.Get("bunks") / 60.);
+  double burning = attributes.Get("fuel energy"); 
   double solar = attributes.Get("solar collection");
   double battery = attributes.Get("energy capacity");
   double energy = generation + burning + solar + battery;
@@ -1583,7 +1583,7 @@ void Ship::DoGeneration()
     
     double coolingEfficiency = CoolingEfficiency();
      fuel += attributes.Get("fuel generation"); 
-    energy += attributes.Get("energy generation") - attributes.Get("energy consumption");
+    energy += attributes.Get("energy generation") - attributes.Get("energy consumption") - (attributes.Get("bunks") / 60.);
     energy -= ionization;
     heat += attributes.Get("heat generation");
     heat -= coolingEfficiency * attributes.Get("cooling");
