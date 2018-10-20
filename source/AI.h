@@ -75,7 +75,7 @@ private:
   void MoveEscort(Ship &ship, Command &command) const;
   static void Refuel(Ship &ship, Command &command);
   static bool CanRefuel(const Ship &ship, const StellarObject *target);
-  
+
   // Methods of moving from the current position to a desired position / orientation.
   static double TurnBackward(const Ship &ship);
   static double TurnToward(const Ship &ship, const Point &vector);

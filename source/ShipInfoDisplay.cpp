@@ -12,6 +12,7 @@
 #include "Table.h"
 
 #include <algorithm>
+#include <cmath>
 #include <map>
 #include <sstream>
 
@@ -154,9 +155,10 @@ void ShipInfoDisplay::UpdateAttributes(const Ship &ship, const Depreciation &dep
     attributeValues.push_back(Format::Number(attributes.Get("hull")));
   }
   attributesHeight += 20;
-  double emptyMass = ship.Mass();
-  attributeLabels.push_back(isGeneric ? "mass with no cargo:" : "mass:");
-  attributeValues.push_back(Format::Number(emptyMass));
+
+  attributeLabels.push_back("required crew / bunks:");
+  attributeValues.push_back(Format::Number(ship.RequiredCrew())
+    + " / " + Format::Number(attributes.Get("bunks")));
   attributesHeight += 20;
   attributeLabels.push_back(isGeneric ? "cargo space:" : "cargo:");
   if(isGeneric)
@@ -165,38 +167,9 @@ void ShipInfoDisplay::UpdateAttributes(const Ship &ship, const Depreciation &dep
     attributeValues.push_back(Format::Number(ship.Cargo().Used())
       + " / " + Format::Number(attributes.Get("cargo space")));
   attributesHeight += 20;
-  attributeLabels.push_back("required crew / bunks:");
-  attributeValues.push_back(Format::Number(ship.RequiredCrew())
-    + " / " + Format::Number(attributes.Get("bunks")));
-  attributesHeight += 20;
-  
-  double fullMass = emptyMass + (isGeneric ? attributes.Get("cargo space") : ship.Cargo().Used());
-  isGeneric &= (fullMass != emptyMass);
-  double forwardThrust = attributes.Get("thrust") ? attributes.Get("thrust") : attributes.Get("afterburner thrust");
-  attributeLabels.push_back(string());
-  attributeValues.push_back(string());
-  attributesHeight += 10;
-  attributeLabels.push_back(isGeneric ? "movement, full / no cargo:" : "movement:");
-  attributeValues.push_back(string());
-  attributesHeight += 20;
-  attributeLabels.push_back("max speed:");
-  attributeValues.push_back(Format::Number(60. * forwardThrust / attributes.Get("drag")));
-  attributesHeight += 20;
-  
-  attributeLabels.push_back("acceleration:");
-  if(!isGeneric)
-    attributeValues.push_back(Format::Number(3600. * forwardThrust / fullMass));
-  else
-    attributeValues.push_back(Format::Number(3600. * forwardThrust / fullMass)
-      + " / " + Format::Number(3600. *forwardThrust / emptyMass));
-  attributesHeight += 20;
-  
-  attributeLabels.push_back("turning:");
-  if(!isGeneric)
-    attributeValues.push_back(Format::Number(60. * attributes.Get("turn") / fullMass));
-  else
-    attributeValues.push_back(Format::Number(60. * attributes.Get("turn") / fullMass)
-      + " / " + Format::Number(60. * attributes.Get("turn") / emptyMass));
+  double emptyMass = ship.Mass();
+  attributeLabels.push_back(isGeneric ? "mass with no cargo:" : "mass:");
+  attributeValues.push_back(Format::Number(emptyMass));
   attributesHeight += 20;
   
   // Find out how much outfit, engine, and weapon space the chassis has.
@@ -213,10 +186,6 @@ void ShipInfoDisplay::UpdateAttributes(const Ship &ship, const Depreciation &dep
   for(const auto &it : ship.Outfits())
     for(auto &cit : chassis)
       cit.second -= it.second * it.first->Get(cit.first);
-  
-  attributeLabels.push_back(string());
-  attributeValues.push_back(string());
-  attributesHeight += 10;
   for(unsigned i = 0; i < NAMES.size(); i += 2)
   {
     attributeLabels.push_back(NAMES[i]);
@@ -224,7 +193,6 @@ void ShipInfoDisplay::UpdateAttributes(const Ship &ship, const Depreciation &dep
       + " / " + Format::Number(chassis[NAMES[i + 1]]));
     attributesHeight += 20;
   }
-  
   if(ship.BaysFree(false))
   {
     attributeLabels.push_back("drone bays:");
@@ -237,7 +205,134 @@ void ShipInfoDisplay::UpdateAttributes(const Ship &ship, const Depreciation &dep
     attributeValues.push_back(to_string(ship.BaysFree(true)));
     attributesHeight += 20;
   }
+
+  // Miscellaneous
+  if(isGeneric)
+  {
+    attributeLabels.push_back(string());
+    attributeValues.push_back(string());
+    attributesHeight += 10;
+    if(attributes.Get("radar jamming"))
+    {
+      attributeLabels.push_back("radar jamming:");
+      attributeValues.push_back(Format::Number(attributes.Get("radar jamming")));
+      attributesHeight += 20;
+    }
+    if(attributes.Get("ramscoop"))
+    {
+      attributeLabels.push_back("ramscoop:");
+      attributeValues.push_back(Format::Number(attributes.Get("ramscoop")));
+      attributesHeight += 20;
+    }
+    if(attributes.Get("scan interference"))
+    {
+      attributeLabels.push_back("chance to block scan:");
+      attributeValues.push_back(Format::Number(100.  
+        - 100. / (1. + attributes.Get("scan interference"))) + "%");
+      attributesHeight += 20;
+    }
+    if(attributes.Get("asteroid scan power"))
+    {
+      attributeLabels.push_back("asteroid scan range:");
+      attributeValues.push_back(Format::Number(100. * sqrt(attributes.Get("asteroid scan power"))));
+      attributesHeight += 20;
+    }
+    if(attributes.Get("cargo scan power"))
+    {
+      attributeLabels.push_back("cargo scan range:");
+      attributeValues.push_back(Format::Number(100. * sqrt(attributes.Get("cargo scan power"))));
+      attributesHeight += 20;
+    }
+    if(attributes.Get("outfit scan power"))
+    {
+      attributeLabels.push_back("outfit scan range:");
+      attributeValues.push_back(Format::Number(100. * sqrt(attributes.Get("outfit scan power"))));
+      attributesHeight += 20;
+    }
+    if(attributes.Get("tactical scan power"))
+    {
+      attributeLabels.push_back("tactical scan range:");
+      attributeValues.push_back(Format::Number(100. * sqrt(attributes.Get("tactical scan power"))));
+      attributesHeight += 20;
+    }
+  }
   
+  // Movement
+  double fullMass = emptyMass + (isGeneric ? attributes.Get("cargo space") : ship.Cargo().Used());
+  isGeneric &= (fullMass != emptyMass);
+  double thruster = attributes.Get("thrust");
+  double afterburner = attributes.Get("afterburner thrust");
+  double reverse = -attributes.Get("reverse thrust");
+  double turning = attributes.Get("turn");
+  //double hyperjumpfuel = attributes.Get("jump fuel");
+  double forwardThrust = reverse && !thruster ? reverse : thruster;
+  attributeLabels.push_back(string());
+  attributeValues.push_back(string());
+  attributesHeight += 10;
+  attributeLabels.push_back("full / no cargo:");
+  attributeValues.push_back(" ");
+  attributesHeight += 20;
+  
+  /*
+  if(!attributes.Get("carried") && (attributes.Get("hyperdrive") || attributes.Get("jump drive")))
+  {
+    attributeLabels.push_back("    jump fuel:");
+    if(!isGeneric)
+      attributeValues.push_back(Format::Number(hyperjumpfuel * fullMass * 0.001));
+    else
+      attributeValues.push_back(Format::Number(hyperjumpfuel * fullMass * 0.001)
+        + " / " + Format::Number(hyperjumpfuel * emptyMass * 0.001));
+    attributesHeight += 20;
+  }
+  */
+
+  attributeLabels.push_back("    maximum velocity:");
+  if(afterburner)
+    attributeValues.push_back(Format::Number(60. * forwardThrust / attributes.Get("drag")) 
+      + " + " + Format::Number(60. * afterburner / attributes.Get("drag")));
+  else
+    attributeValues.push_back(Format::Number(60. * forwardThrust / attributes.Get("drag")));
+  attributesHeight += 20;  
+
+  attributeLabels.push_back("    acceleration:");
+  if(!isGeneric)
+    attributeValues.push_back(Format::Number(3600. * thruster / fullMass));
+  else
+    attributeValues.push_back(Format::Number(3600. * thruster / fullMass)
+      + " / " + Format::Number(3600. * thruster / emptyMass));
+  attributesHeight += 20;
+
+  if(afterburner)
+  {
+    attributeLabels.push_back("    afterburner:");
+    if(!isGeneric)
+      attributeValues.push_back(Format::Number(3600. * afterburner / fullMass));
+    else
+      attributeValues.push_back(Format::Number(3600. * afterburner / fullMass)
+        + " / " + Format::Number(3600. * afterburner / emptyMass));
+    attributesHeight += 20;
+  }
+
+  if(reverse)
+  {
+    attributeLabels.push_back("    reverse:");
+    if(!isGeneric)
+      attributeValues.push_back(Format::Number(3600. * reverse / fullMass));
+    else
+      attributeValues.push_back(Format::Number(3600. * reverse / fullMass)
+        + " / " + Format::Number(3600. * reverse / emptyMass));
+    attributesHeight += 20;
+  }
+
+  attributeLabels.push_back("    turning:");
+  if(!isGeneric)
+    attributeValues.push_back(Format::Number(60. * turning / fullMass));
+  else
+    attributeValues.push_back(Format::Number(60. * turning / fullMass)
+      + " / " + Format::Number(60. * turning / emptyMass));
+  attributesHeight += 20;
+  
+  // fuel/energy/heat table
   tableLabels.clear();
   fuelTable.clear();
   energyTable.clear();
@@ -252,8 +347,8 @@ void ShipInfoDisplay::UpdateAttributes(const Ship &ship, const Depreciation &dep
   energyTable.push_back(Format::Number(
     60. * (attributes.Get("energy generation")
       + attributes.Get("solar collection")
-      - attributes.Get("energy consumption")
-      + attributes.Get("fuel energy"))));
+      + attributes.Get("fuel energy")
+      - attributes.Get("energy consumption"))));
   double efficiency = ship.CoolingEfficiency();
   heatTable.push_back(Format::Number(
     60. * (attributes.Get("heat generation")
@@ -370,7 +465,8 @@ void ShipInfoDisplay::UpdateOutfits(const Ship &ship, const Depreciation &deprec
   saleLabels.push_back("empty hull:");
   saleValues.push_back(Format::Credits(chassisCost));
   saleHeight += 20;
-  saleLabels.push_back("  + outfits:");
+  saleLabels.push_back("    + outfits:");
   saleValues.push_back(Format::Credits(totalCost - chassisCost));
   saleHeight += 5;
 }
+
