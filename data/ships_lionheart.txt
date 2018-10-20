@@ -550,8 +550,8 @@ ship "Mule"
       "hull damage" 500
       "hit force" 1500
   outfits
-    "Sidewinder Missile Launcher" 2
-    "Sidewinder Missile" 100
+    "Torpedo Launcher"
+    "Torpedo" 30
     "Heavy Laser Turret" 3
     "Heavy Anti-Missile Turret"
     "NT-200 Nucleovoltaic"
@@ -564,8 +564,7 @@ ship "Mule"
     "Hyperdrive"    
   engine -12 123
   engine 12 123
-  gun -9 -119 "Sidewinder Missile Launcher"
-  gun 9 -119 "Sidewinder Missile Launcher"
+  gun 0 -123 "Torpedo Launcher"
   turret 22 -65 "Heavy Laser Turret"
   turret -37 -21 "Heavy Laser Turret"
   turret 39 35 "Heavy Laser Turret"
@@ -582,8 +581,8 @@ ship "Mule"
 
 ship "Mule" "Mule (Hai Engines)"
   outfits
-    "Sidewinder Missile Launcher" 2
-    "Sidewinder Missile" 100
+    "Torpedo Launcher"
+    "Torpedo" 30
     "Heavy Laser Turret" 3
     "Chameleon Anti-Missile"
     "Boulder Reactor"
@@ -601,7 +600,8 @@ ship "Mule" "Mule (Hai Engines)"
 
 ship "Mule" "Mule (Hai Weapons)"
   outfits
-    "Ion Cannon"
+    "Hai Tracker Pod"
+    "Hai Tracker" 56
     "Pulse Turret" 4
     "Geode Reactor"
     "Hai Ravine Batteries"
@@ -616,9 +616,9 @@ ship "Mule" "Mule (Hai Weapons)"
 
 ship "Mule" "Mule (Heavy)"
   outfits
+    "Torpedo Launcher"
+    "Torpedo" 30
     "Heavy Laser Turret" 4
-    "Sidewinder Missile Launcher" 2
-    "Sidewinder Missile" 100
     "Fission Reactor"
     "LP072a Battery Pack"
     "Supercapacitor" 4
