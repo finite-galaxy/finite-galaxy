@@ -20,13 +20,13 @@ ship "Model 8"
     "automaton" 1
     "mass" 110
     "drag" 3.2
-    "heat dissipation" 1.5
+    "heat dissipation" 1.4
     "fuel capacity" 200
     "cargo space" 29
     "outfit space" 220
     "weapon capacity" 49
     "engine capacity" 60
-    "self destruct" .60
+    "self destruct" .9
     "ramscoop" 3
     weapon
       "blast radius" 100
@@ -38,10 +38,10 @@ ship "Model 8"
     "Generator (Furnace Class)"
     "Generator (Candle Class)"
     "Systems Core (Small)"
-    "Reasoning Node"
     "Thruster (Comet Class)"
     "Steering (Lunar Class)"
     "Hyperdrive"
+    "Reasoning Node"
   engine -11 49
   engine 11 49
   gun 9 -36 "Korath Slicer"
@@ -70,7 +70,7 @@ ship "Model 16"
     "outfit space" 426
     "weapon capacity" 149
     "engine capacity" 107
-    "self destruct" .65
+    "self destruct" .9
     "ramscoop" 3
     weapon
       "blast radius" 200
@@ -86,10 +86,10 @@ ship "Model 16"
     "Generator (Inferno Class)"
     "Systems Core (Small)"
     "Small Heat Shunt"
-    "Reasoning Node"
     "Thruster (Planetary Class)"
     "Steering (Lunar Class)"
     "Hyperdrive"
+    "Reasoning Node" 2
   engine -10 99
   engine 10 99
   gun 0 -99 "Korath Minelayer"
@@ -115,13 +115,13 @@ ship "Model 32"
     "automaton" 1
     "mass" 370
     "drag" 9.0
-    "heat dissipation" 1.3
+    "heat dissipation" 1.2
     "fuel capacity" 400
     "cargo space" 16
     "outfit space" 481
     "weapon capacity" 205
     "engine capacity" 110
-    "self destruct" .70
+    "self destruct" .9
     "ramscoop" 3
     weapon
       "blast radius" 240
@@ -137,10 +137,10 @@ ship "Model 32"
     "Generator (Candle Class)"
     "Systems Core (Small)"
     "Small Heat Shunt"
-    "Reasoning Node"
     "Thruster (Planetary Class)"
     "Steering (Lunar Class)"
     "Hyperdrive"
+    "Reasoning Node" 3
   engine -10 128
   engine 10 128
   gun 0 -129 "Korath Minelayer"
@@ -173,7 +173,7 @@ ship "Model 64"
     "outfit space" 567
     "weapon capacity" 263
     "engine capacity" 114
-    "self destruct" .74
+    "self destruct" .9
     "ramscoop" 3
     weapon
       "blast radius" 280
@@ -188,11 +188,11 @@ ship "Model 64"
     "Double Plasma Core"
     "Generator (Furnace Class)"
     "Systems Core (Medium)"
-    "Reasoning Node" 2
     "Thruster (Lunar Class)"
     "Thruster (Asteroid Class)"
     "Steering (Planetary Class)"
     "Hyperdrive"
+    "Reasoning Node" 4
   engine -19 159
   engine 19 159
   gun 0 -159 "Korath Minelayer"
@@ -223,10 +223,10 @@ ship "Model 128"
     "heat dissipation" 1.0
     "fuel capacity" 400
     "cargo space" 53
-    "outfit space" 713
+    "outfit space" 716
     "weapon capacity" 344
     "engine capacity" 132
-    "self destruct" .77
+    "self destruct" .9
     "ramscoop" 3
     weapon
       "blast radius" 320
@@ -241,11 +241,11 @@ ship "Model 128"
     "Double Plasma Core"
     "Generator (Inferno Class)"
     "Systems Core (Medium)"
-    "Reasoning Node" 2
     "Thruster (Planetary Class)"
     "Steering (Planetary Class)"
     "Steering (Asteroid Class)"
     "Hyperdrive"
+    "Reasoning Node" 5
   engine -14 178
   engine 14 178
   gun -11 -166 "Korath Minelayer"
@@ -281,7 +281,7 @@ ship "Model 256"
     "outfit space" 857
     "weapon capacity" 393
     "engine capacity" 145
-    "self destruct" .79
+    "self destruct" .9
     "ramscoop" 3
     weapon
       "blast radius" 340
@@ -296,11 +296,11 @@ ship "Model 256"
     "Triple Plasma Core"
     "Systems Core (Large)"
     "Large Heat Shunt"
-    "Reasoning Node" 3
     "Thruster (Planetary Class)"
     "Steering (Planetary Class)"
     "Steering (Comet Class)"
     "Hyperdrive"
+    "Reasoning Node" 6
   engine -60 147
   engine 60 147
   gun -22 -148 "Korath Minelayer"
@@ -337,7 +337,7 @@ ship "Model 512"
     "outfit space" 994
     "weapon capacity" 440
     "engine capacity" 161
-    "self destruct" .80
+    "self destruct" .9
     "ramscoop" 3
     weapon
       "blast radius" 380
@@ -354,10 +354,10 @@ ship "Model 512"
     "Systems Core (Large)"
     "Large Heat Shunt"
     "Small Heat Shunt" 2
-    "Reasoning Node" 3
     "Thruster (Planetary Class)"
     "Steering (Stellar Class)"
     "Hyperdrive"
+    "Reasoning Node" 7
   engine -145 97
   engine 145 97
   gun -22 -143 "Korath Minelayer"

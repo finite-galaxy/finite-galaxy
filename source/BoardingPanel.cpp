@@ -180,12 +180,7 @@ void BoardingPanel::Draw()
   }
   if(victim && victim->IsCapturable() && !victim->IsYours())
   {
-    // If you haven't initiated capture yet, show the self destruct odds in
-    // the attack odds. It's illogical for you to have access to that info,
-    // but not knowing what your true odds are is annoying.
     double odds = attackOdds.Odds(crew, vCrew);
-    if(!isCapturing)
-      odds *= (1. - victim->Attributes().Get("self destruct"));
     info.SetString("attack odds",
       Round(100. * odds) + "%");
     info.SetString("attack casualties",
@@ -283,16 +278,6 @@ bool BoardingPanel::KeyDown(SDL_Keycode key, Uint16 mod, const Command &command)
   }
   else if(key == 'c' && CanCapture())
   {
-    // A ship that self-destructs checks once when you board it, and again
-    // when you try to capture it, to see if it will self-destruct. This is
-    // so that capturing will be harder than plundering.
-    if(Random::Real() < victim->Attributes().Get("self destruct"))
-    {
-      victim->SelfDestruct();
-      GetUI()->Pop(this);
-      GetUI()->Push(new Dialog("The moment you blast through the airlock, a series of explosions rocks the enemy ship. They appear to have set off their self-destruct sequence..."));
-      return true;
-    }
     isCapturing = true;
     messages.push_back("The airlock blasts open. Combat has begun!");
     messages.push_back("(It will end if you both choose to \"defend.\")");
