@@ -18,7 +18,8 @@ using namespace std;
 namespace {  
   const map<string, string> BOOLEAN_ATTRIBUTES = {
     {"installable", "This is not an installable item."},
-    {"unplunderable", "This outfit cannot be plundered."},
+    {"plunderable", "Can be plundered when installed."},
+    {"unplunderable", "Can never be plundered."},
     {"hyperdrive", "Allows you to make hyperjumps."},
     {"jump drive", "Lets you jump to any nearby system."}
   };

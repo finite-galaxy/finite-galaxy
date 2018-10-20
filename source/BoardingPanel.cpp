@@ -75,16 +75,17 @@ BoardingPanel::BoardingPanel(PlayerInfo &player, const shared_ptr<Ship> &victim)
     if(shipIsFirst)
     {
       outfit = sit->first;
-      // Don't include outfits that are installed and unplunderable. But,
-      // "unplunderable" outfits can still be stolen from cargo.
-      if(!sit->first->Get("unplunderable"))
+      // Only include outfits that are plunderable when installed.
+      if(sit->first->Get("plunderable"))
         count += sit->second;
       ++sit;
     }
     if(cargoIsFirst)
     {
       outfit = cit->first;
-      count += cit->second;
+      // Exclude outfits that can never be stolen from cargo.
+      if(!sit->first->Get("unplunderable"))
+        count += cit->second;
       ++cit;
     }
     if(outfit && count)
