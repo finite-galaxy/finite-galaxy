@@ -9,7 +9,7 @@ shipyard "Pug Variants"
 ship "Arfecta"
   sprite "ship/pug arfecta"
   attributes
-    category "Medium Warship"
+    category "Heavy Warship"
     licenses
       Pug
     "cost" 90000000
@@ -40,21 +40,20 @@ ship "Arfecta"
       "hit force" 7000
   outfits
     "Tier 3 Anti-Missile" 2
-    "Pug Gridfire Turret" 3
+    "Gridfire Turret" 3
+    "Biodefences" 12
     "Cloaking Device"
-    "Pug Biodefenses" 12
-    "Pug Lohmar Thruster"
-    "Pug Lohmar Steering"
-    "Pug Lohmar Steering"
+    "Lohmar Thruster"
+    "Lohmar Steering" 2
     "Fuel Pod" 12
     "Jump Drive"
   engine -15 164
   engine 15 164
   turret -50 -29 "Tier 3 Anti-Missile"
   turret 50 -29 "Tier 3 Anti-Missile"
-  turret 0 40 "Pug Gridfire Turret"
-  turret -73 84 "Pug Gridfire Turret"
-  turret 73 84 "Pug Gridfire Turret"
+  turret 0 40 "Gridfire Turret"
+  turret -73 84 "Gridfire Turret"
+  turret 73 84 "Gridfire Turret"
   explode "tiny explosion" 100
   explode "small explosion" 60
   explode "medium explosion" 30
@@ -94,21 +93,21 @@ ship "Enfolta"
       "hull damage" 360
       "hit force" 1080
   outfits
-    "Pug Zapper" 2
-    "Pug Seeker" 2
-    "Pug Zapper Turret"
-    "Pug Biodefenses" 6
-    "Pug Cormet Thruster"
-    "Pug Cormet Steering"
+    "Seeker" 2
+    "Zapper Cannon" 2
+    "Zapper Turret"
+    "Biodefences" 6
+    "Cormet Thruster"
+    "Cormet Steering"
     "Fuel Pod" 6
     "Jump Drive"
   engine -11 68
   engine 11 68
-  gun -11 -85 "Pug Zapper"
-  gun 11 -85 "Pug Zapper"
-  gun -11 -85 "Pug Seeker"
-  gun 11 -85 "Pug Seeker"
-  turret 0 7 "Pug Zapper Turret"
+  gun -11 -85 "Zapper Cannon"
+  gun 11 -85 "Zapper Cannon"
+  gun -11 -85 "Seeker"
+  gun 11 -85 "Seeker"
+  turret 0 7 "Zapper Turret"
   explode "tiny explosion" 5
   explode "small explosion" 20
   explode "medium explosion" 25
@@ -148,23 +147,23 @@ ship "Maboro"
       "hull damage" 600
       "hit force" 1800
   outfits
-    "Pug Seeker" 4
-    "Pug Zapper Turret" 2
+    "Seeker" 4
+    "Zapper Turret" 2
     "Pug Anti-Missile"
-    "Pug Biodefenses" 8
-    "Pug Lohmar Thruster"
-    "Pug Lohmar Steering"
+    "Biodefences" 8
+    "Lohmar Thruster"
+    "Lohmar Steering"
     "Fuel Pod" 6
     "Jump Drive"
   engine -20 136
   engine 20 136
-  gun -20 -150 "Pug Seeker"
-  gun 20 -150 "Pug Seeker"
-  gun -10 -150 "Pug Seeker"
-  gun 10 -150 "Pug Seeker"
+  gun -20 -150 "Seeker"
+  gun 20 -150 "Seeker"
+  gun -10 -150 "Seeker"
+  gun 10 -150 "Seeker"
   turret 0 -50 "Pug Anti-Missile"
-  turret -15 -35 "Pug Zapper Turret"
-  turret 15 -35 "Pug Zapper Turret"
+  turret -15 -35 "Zapper Turret"
+  turret 15 -35 "Zapper Turret"
   explode "small explosion" 25
   explode "medium explosion" 30
   explode "large explosion" 20
@@ -204,16 +203,16 @@ ship "Zibruka"
       "hull damage" 200
       "hit force" 600
   outfits
-    "Pug Zapper" 2
-    "Pug Biodefenses" 4
-    "Pug Akfar Thruster"
-    "Pug Akfar Steering"
+    "Zapper Cannon" 2
+    "Biodefences" 4
+    "Akfar Thruster"
+    "Akfar Steering"
     "Fuel Pod" 6
     "Jump Drive"
   engine -7 35
   engine 7 35
-  gun -15 -42 "Pug Zapper"
-  gun 15 -42 "Pug Zapper"
+  gun -15 -42 "Zapper Cannon"
+  gun 15 -42 "Zapper Cannon"
   explode "tiny explosion" 10
   explode "small explosion" 15
   explode "medium explosion" 20

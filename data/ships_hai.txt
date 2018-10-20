@@ -49,9 +49,9 @@ ship "Aphid"
   outfits
     "Pulse Turret"
     "Pebble Core"
-    "Hai Fissure Batteries"
-    "Hai Corundum Regenerator"
-    "Hai Williwaw Cooling"
+    "Fissure Batteries"
+    "Corundum Regenerator"
+    "Williwaw Cooling"
     `"Basrem" Atomic Thruster`
     `"Basrem" Atomic Steering`
     "Fuel Pod" 4
@@ -68,9 +68,9 @@ ship "Aphid" "Aphid (Anti-Missile)"
   outfits
     "Chameleon Anti-Missile"
     "Pebble Core"
-    "Hai Fissure Batteries"
-    "Hai Corundum Regenerator"
-    "Hai Williwaw Cooling"
+    "Fissure Batteries"
+    "Corundum Regenerator"
+    "Williwaw Cooling"
     "Quantum Keystone"
     "Pulse Rifle"
     `"Benga" Atomic Thruster`
@@ -104,7 +104,7 @@ ship "Flea"
     "Railgun"
     "Railgun Slug" 160
     "Sand Cell"
-    "Hai Chasm Batteries"
+    "Chasm Batteries"
     `"Baellie" Atomic Engines`
   engine 0 27
   gun 0 -27 "Railgun"
@@ -139,9 +139,9 @@ ship "Lightning Bug"
     "Ion Cannon"
     "Bullfrog Anti-Missile" 2
     "Geode Reactor"
-    "Hai Gorge Batteries"
-    "Hai Corundum Regenerator"
-    "Hai Williwaw Cooling"
+    "Gorge Batteries"
+    "Corundum Regenerator"
+    "Williwaw Cooling"
     "Quantum Keystone"
     `"Benga" Atomic Thruster`
     `"Biroo" Atomic Steering`
@@ -161,12 +161,12 @@ ship "Lightning Bug"
 
 ship "Lightning Bug" "Lightning Bug (Pulse)"
   outfits
-    "Hai Tracker Pod"
-    "Hai Tracker" 56
+    "Tracker Pod"
+    "Tracker" 56
     "Pulse Turret" 2
     "Geode Reactor"
-    "Hai Gorge Batteries"
-    "Hai Corundum Regenerator"
+    "Gorge Batteries"
+    "Corundum Regenerator"
     "Pulse Rifle" 2
     `"Biroo" Atomic Thruster`
     `"Benga" Atomic Steering`
@@ -203,13 +203,13 @@ ship "Pond Strider"
     "Pulse Cannon"
     "Pulse Turret" 2
     "Bullfrog Anti-Missile" 
-    "Hai Diamond Regenerator"
-    "Hai Chasm Batteries"
-    "Hai Gorge Batteries"
+    "Diamond Regenerator"
+    "Chasm Batteries"
+    "Gorge Batteries"
     "Geode Reactor"
+    "Williwaw Cooling" 3
     `"Benga" Atomic Thruster`
     `"Biroo" Atomic Steering`
-    "Hai Williwaw Cooling" 3
     "Fuel Pod" 3
     "Hyperdrive"
   engine -23 80
@@ -262,15 +262,15 @@ ship "Shield Beetle"
       "hit force" 3000
   outfits
     "Ion Cannon" 4
-    "Hai Tracker Pod" 4
-    "Hai Tracker" 224
+    "Tracker Pod" 4
+    "Tracker" 224
     "Chameleon Anti-Missile" 2
     "Boulder Reactor"
     "Geode Reactor"
-    "Hai Gorge Batteries"
-    "Hai Ravine Batteries"
-    "Hai Diamond Regenerator"
-    "Hai Williwaw Cooling" 2
+    "Gorge Batteries"
+    "Ravine Batteries"
+    "Diamond Regenerator"
+    "Williwaw Cooling" 2
     "Quantum Keystone"
     `"Bondir" Atomic Thruster`
     `"Bufaer" Atomic Steering`
@@ -280,12 +280,12 @@ ship "Shield Beetle"
   engine 44 133
   gun -22 -102 "Ion Cannon"
   gun 22 -102 "Ion Cannon"
-  gun -34 -68 "Hai Tracker Pod"
-  gun 34 -68 "Hai Tracker Pod"
+  gun -34 -68 "Tracker Pod"
+  gun 34 -68 "Tracker Pod"
   gun -49 -38 "Ion Cannon"
   gun 49 -38 "Ion Cannon"
-  gun -61 -14 "Hai Tracker Pod"
-  gun 61 -14 "Hai Tracker Pod"
+  gun -61 -14 "Tracker Pod"
+  gun 61 -14 "Tracker Pod"
   turret -39 48
   turret 39 48
   turret -57 75 "Chameleon Anti-Missile"
@@ -301,17 +301,17 @@ ship "Shield Beetle"
 ship "Shield Beetle" "Shield Beetle (Jump)"
   outfits
     "Ion Cannon" 4
-    "Hai Tracker Pod" 4
-    "Hai Tracker" 224
+    "Tracker Pod" 4
+    "Tracker" 224
     "Chameleon Anti-Missile" 2
     "Boulder Reactor" 2
-    "Hai Chasm Batteries" 2
-    "Hai Fissure Batteries"
-    "Hai Gorge Batteries"
+    "Chasm Batteries" 2
+    "Fissure Batteries"
+    "Gorge Batteries"
     "Outfits Expansion" 4
-    "Hai Diamond Regenerator" 2
+    "Diamond Regenerator" 2
     "Fuel Pod" 3
-    "Hai Williwaw Cooling" 4
+    "Williwaw Cooling" 4
     "Pulse Rifle" 55
     `"Bondir" Atomic Thruster`
     `"Bufaer" Atomic Steering`
@@ -319,12 +319,12 @@ ship "Shield Beetle" "Shield Beetle (Jump)"
     "Jump Drive"
   gun "Ion Cannon"
   gun "Ion Cannon"
-  gun "Hai Tracker Pod"
-  gun "Hai Tracker Pod"
+  gun "Tracker Pod"
+  gun "Tracker Pod"
   gun "Ion Cannon"
   gun "Ion Cannon"
-  gun "Hai Tracker Pod"
-  gun "Hai Tracker Pod"
+  gun "Tracker Pod"
+  gun "Tracker Pod"
   turret
   turret
   turret "Chameleon Anti-Missile"
@@ -332,15 +332,15 @@ ship "Shield Beetle" "Shield Beetle (Jump)"
 
 ship "Shield Beetle" "Shield Beetle (Jump, Tracker)"
   outfits
-    "Hai Tracker Pod" 8
-    "Hai Tracker" 448
+    "Tracker Pod" 8
+    "Tracker" 448
     "Pulse Turret" 4
     "Boulder Reactor" 2
-    "Hai Ravine Batteries"
+    "Ravine Batteries"
     "Outfits Expansion" 4
-    "Hai Diamond Regenerator" 2
+    "Diamond Regenerator" 2
     "Fuel Pod" 3
-    "Hai Williwaw Cooling" 6
+    "Williwaw Cooling" 6
     "Pulse Rifle" 47
     `"Bondir" Atomic Thruster`
     `"Bufaer" Atomic Steering`
@@ -354,9 +354,9 @@ ship "Shield Beetle" "Shield Beetle (Pulse)"
     "Pulse Turret" 4
     "Boulder Reactor"
     "Geode Reactor"
-    "Hai Ravine Batteries"
-    "Hai Diamond Regenerator" 2
-    "Hai Williwaw Cooling" 3
+    "Ravine Batteries"
+    "Diamond Regenerator" 2
+    "Williwaw Cooling" 3
     "Pulse Rifle" 27
     `"Bondir" Atomic Thruster`
     `"Bufaer" Atomic Steering`
@@ -373,14 +373,14 @@ ship "Shield Beetle" "Shield Beetle (Pulse)"
 
 ship "Shield Beetle" "Shield Beetle (Tracker)"
   outfits
-    "Hai Tracker Pod" 8
-    "Hai Tracker" 448
+    "Tracker Pod" 8
+    "Tracker" 448
     "Pulse Turret" 4
     "Boulder Reactor"
     "Geode Reactor"
-    "Hai Valley Batteries"
-    "Hai Diamond Regenerator"
-    "Hai Williwaw Cooling" 2
+    "Valley Batteries"
+    "Diamond Regenerator"
+    "Williwaw Cooling" 2
     "Quantum Keystone"
     "Pulse Rifle" 32
     `"Bondir" Atomic Thruster`
@@ -413,16 +413,16 @@ ship "Solifuge"
       "hull damage" 2250
       "hit force" 3500
   outfits
-    "Hai Tracker Pod"
-    "Hai Tracker" 56
+    "Tracker Pod"
+    "Tracker" 56
     "Ion Cannon" 4
     "Pulse Turret" 2
     "Chameleon Anti-Missile"
     "Bullfrog Anti-Missile" 4
     "Boulder Reactor" 2
-    "Hai Gorge Batteries"
-    "Hai Diamond Regenerator"
-    "Hai Williwaw Cooling" 6
+    "Gorge Batteries"
+    "Diamond Regenerator"
+    "Williwaw Cooling" 6
     "Quantum Keystone"
     `"Benga" Atomic Steering`
     `"Bufaer" Atomic Steering`
@@ -431,7 +431,7 @@ ship "Solifuge"
     "Hyperdrive" 
   engine -28 135.5
   engine 28 135.5
-  gun 0 -140 "Hai Tracker Pod"
+  gun 0 -140 "Tracker Pod"
   gun -11.5 -138.5 "Ion Cannon"
   gun 11.5 -138.5 "Ion Cannon"
   gun -9.5 -101 "Ion Cannon"
@@ -459,16 +459,16 @@ ship "Solifuge"
 
 ship "Solifuge" "Solifuge (Jump)"
   outfits
-    "Hai Tracker Pod"
-    "Hai Tracker" 56
+    "Tracker Pod"
+    "Tracker" 56
     "Ion Cannon" 4
     "Pulse Turret" 2
     "Chameleon Anti-Missile"
     "Bullfrog Anti-Missile" 4
     "Boulder Reactor" 2
-    "Hai Gorge Batteries"
-    "Hai Diamond Regenerator"
-    "Hai Williwaw Cooling" 6
+    "Gorge Batteries"
+    "Diamond Regenerator"
+    "Williwaw Cooling" 6
     "Pulse Rifle" 86
     `"Benga" Atomic Steering`
     `"Bufaer" Atomic Steering`
@@ -483,10 +483,10 @@ ship "Solifuge" "Solifuge (Jump, Pulse)"
     "Pulse Turret" 5
     "Bullfrog Anti-Missile" 2
     "Boulder Reactor" 2
-    "Hai Fissure Batteries"
-    "Hai Corundum Regenerator"
-    "Hai Diamond Regenerator"
-    "Hai Williwaw Cooling" 8
+    "Fissure Batteries"
+    "Corundum Regenerator"
+    "Diamond Regenerator"
+    "Williwaw Cooling" 8
     "Pulse Rifle" 71
     `"Benga" Atomic Steering`
     `"Bufaer" Atomic Steering`
@@ -501,16 +501,16 @@ ship "Solifuge" "Solifuge (Jump, Pulse)"
 
 ship "Solifuge" "Solifuge (Jump, Tracker)"
   outfits
-    "Hai Tracker Pod" 5
-    "Hai Tracker" 280
+    "Tracker Pod" 5
+    "Tracker" 280
     "Pulse Turret" 4
     "Chameleon Anti-Missile"
     "Bullfrog Anti-Missile" 2
     "Boulder Reactor" 2
-    "Hai Gorge Batteries"
-    "Hai Corundum Regenerator"
-    "Hai Diamond Regenerator" 2
-    "Hai Williwaw Cooling" 6
+    "Gorge Batteries"
+    "Corundum Regenerator"
+    "Diamond Regenerator" 2
+    "Williwaw Cooling" 6
     "Pulse Rifle" 68
     `"Benga" Atomic Steering`
     `"Bufaer" Atomic Steering`
@@ -525,10 +525,10 @@ ship "Solifuge" "Solifuge (Pulse)"
     "Pulse Turret" 5
     "Bullfrog Anti-Missile" 2
     "Boulder Reactor" 2
-    "Hai Fissure Batteries"
-    "Hai Corundum Regenerator"
-    "Hai Diamond Regenerator"
-    "Hai Williwaw Cooling" 8
+    "Fissure Batteries"
+    "Corundum Regenerator"
+    "Diamond Regenerator"
+    "Williwaw Cooling" 8
     "Pulse Rifle" 62
     `"Benga" Atomic Steering`
     `"Bufaer" Atomic Steering`
@@ -543,16 +543,16 @@ ship "Solifuge" "Solifuge (Pulse)"
 
 ship "Solifuge" "Solifuge (Tracker)"
   outfits
-    "Hai Tracker Pod" 5
-    "Hai Tracker" 280
+    "Tracker Pod" 5
+    "Tracker" 280
     "Pulse Turret" 4
     "Chameleon Anti-Missile"
     "Bullfrog Anti-Missile" 2
     "Boulder Reactor" 2
-    "Hai Gorge Batteries"
-    "Hai Corundum Regenerator"
-    "Hai Diamond Regenerator" 2
-    "Hai Williwaw Cooling" 6
+    "Gorge Batteries"
+    "Corundum Regenerator"
+    "Diamond Regenerator" 2
+    "Williwaw Cooling" 6
     "Pulse Rifle" 59
     `"Benga" Atomic Steering`
     `"Bufaer" Atomic Steering`
@@ -584,17 +584,17 @@ ship "Violin Spider"
       "hull damage" 60
       "hit force" 180
   outfits
-    "Hai Tracker Pod"
-    "Hai Tracker" 56
+    "Tracker Pod"
+    "Tracker" 56
     "Pebble Core"
     Supercapacitor
-    "Hai Williwaw Cooling"
+    "Williwaw Cooling"
     "Pulse Rifle"
     `"Basrem" Atomic Steering`
     `"Basrem" Atomic Thruster`
   engine -15 30
   engine 15 30
-  gun 0 -31 "Hai Tracker Pod"
+  gun 0 -31 "Tracker Pod"
   turret 0 5
   explode "tiny explosion" 15
   explode "small explosion" 5
@@ -604,8 +604,8 @@ ship "Violin Spider" "Violin Spider (Pulse)"
   outfits
     "Pulse Cannon"
     "Pebble Core"
-    "Hai Chasm Batteries"
-    "Hai Williwaw Cooling"
+    "Chasm Batteries"
+    "Williwaw Cooling"
     "Quantum Keystone"
     "Pulse Rifle"
     `"Basrem" Atomic Steering`
@@ -636,15 +636,15 @@ ship "Water Bug"
       "hull damage" 620
       "hit force" 1860
   outfits
-    "Hai Tracker Pod" 2
-    "Hai Tracker" 112
+    "Tracker Pod" 2
+    "Tracker" 112
     "Pulse Turret"
     "Chameleon Anti-Missile" 2
     "Geode Reactor"
-    "Hai Gorge Batteries"
-    "Hai Chasm Batteries"
-    "Hai Diamond Regenerator"
-    "Hai Williwaw Cooling"
+    "Gorge Batteries"
+    "Chasm Batteries"
+    "Diamond Regenerator"
+    "Williwaw Cooling"
     "Quantum Keystone"
     `"Benga" Atomic Thruster`
     `"Benga" Atomic Steering`
@@ -652,8 +652,8 @@ ship "Water Bug"
     "Hyperdrive"
   engine -50 33
   engine 50 33
-  gun -24 -53 "Hai Tracker Pod"
-  gun 24 -53 "Hai Tracker Pod"
+  gun -24 -53 "Tracker Pod"
+  gun 24 -53 "Tracker Pod"
   turret 0 -10 "Pulse Turret"
   turret -17 17 "Chameleon Anti-Missile"
   turret 17 17 "Chameleon Anti-Missile"
@@ -666,15 +666,15 @@ ship "Water Bug"
 
 ship "Water Bug" "Water Bug (Jump)"
   outfits
-    "Hai Tracker Pod" 2
-    "Hai Tracker" 112
+    "Tracker Pod" 2
+    "Tracker" 112
     "Pulse Turret"
     "Chameleon Anti-Missile" 2
     "Geode Reactor"
-    "Hai Gorge Batteries"
-    "Hai Chasm Batteries"
-    "Hai Diamond Regenerator"
-    "Hai Williwaw Cooling"
+    "Gorge Batteries"
+    "Chasm Batteries"
+    "Diamond Regenerator"
+    "Williwaw Cooling"
     "Quantum Keystone"
     "Pulse Rifle" 8
     `"Benga" Atomic Thruster`
@@ -684,14 +684,14 @@ ship "Water Bug" "Water Bug (Jump)"
 
 ship "Water Bug" "Water Bug (Pulse)"
   outfits
-    "Hai Tracker Pod" 2
-    "Hai Tracker" 112
+    "Tracker Pod" 2
+    "Tracker" 112
     "Pulse Turret" 3
     "Geode Reactor"
-    "Hai Gorge Batteries"
-    "Hai Chasm Batteries"
-    "Hai Diamond Regenerator"
-    "Hai Williwaw Cooling"
+    "Gorge Batteries"
+    "Chasm Batteries"
+    "Diamond Regenerator"
+    "Williwaw Cooling"
     "Pulse Rifle" 3
     `"Benga" Atomic Thruster`
     `"Benga" Atomic Steering`

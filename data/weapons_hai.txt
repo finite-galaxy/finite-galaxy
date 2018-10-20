@@ -1,7 +1,7 @@
 outfit "Pulse Cannon"
   category "Guns"
   cost 130000
-  thumbnail "outfit/pulse cannon"
+  thumbnail "outfit/pulse_cannon"
   "mass" 13
   "outfit space" -13
   "weapon capacity" -13
@@ -23,7 +23,7 @@ outfit "Pulse Cannon"
 outfit "Pulse Turret"
   category "Turrets"
   cost 590000
-  thumbnail "outfit/pulse turret"
+  thumbnail "outfit/pulse_turret"
   "mass" 34
   "drag" .34
   "outfit space" -34
@@ -61,7 +61,7 @@ effect "pulse impact"
 outfit "Ion Cannon"
   category "Guns"
   cost 490000
-  thumbnail "outfit/ion cannon"
+  thumbnail "outfit/ion_cannon"
   "mass" 47
   "outfit space" -47
   "weapon capacity" -47
@@ -171,7 +171,7 @@ effect "rail sparks"
   "random spin" 30
 
 
-outfit "Hai Tracker"
+outfit "Tracker"
   category "Ammunition"
   cost 1000
   thumbnail "outfit/tracker"
@@ -190,7 +190,7 @@ outfit "Tracker Storage Pod"
   ammo "Hai Tracker"
   description "The Tracker Storage Pod is used to store extra ammunition for Tracker Pods."
 
-outfit "Hai Tracker Pod"
+outfit "Tracker Pod"
   category "Secondary Weapons"
   cost 150000
   thumbnail "outfit/tracker_launcher"
@@ -204,7 +204,7 @@ outfit "Hai Tracker Pod"
       "frame rate" 10
       "random start frame"
     sound "tracker"
-    ammo "Hai Tracker"
+    ammo "Tracker"
     icon "icon/tracker"
     "fire effect" "tracker fire"
     "hit effect" "tracker impact"
@@ -263,7 +263,7 @@ effect "tracker cloud"
 outfit "Bullfrog Anti-Missile"
   category "Anti-Missile"
   cost 11000
-  thumbnail "outfit/anti-missile hai"
+  thumbnail "outfit/anti-missile_bullfrog"
   "mass" 10
   "drag" .10
   "outfit space" -10
@@ -286,7 +286,7 @@ outfit "Bullfrog Anti-Missile"
 outfit "Chameleon Anti-Missile"
   category "Anti-Missile"
   cost 28000
-  thumbnail "outfit/heavy anti-missile hai"
+  thumbnail "outfit/anti-missile_chameleon"
   "mass" 22
   "drag" .22
   "outfit space" -22
