@@ -149,6 +149,7 @@ outfit "Catalytic Ramscoop"
   "ramscoop" 7
   description "Ramscoop technology has been almost unchanged for centuries, because with nearly every system in human space settled there has not been a pressing need for ships to generate their own fuel. But with the Free Worlds war making travel once again more difficult, some engineers in the Deep recently invented a much-improved ramscoop for use in their merchant fleets."
 
+
 outfit "Hyperdrive"
   category "Systems"
   cost 50000
@@ -204,15 +205,6 @@ outfit "Outfit Scanner"
   "outfit scan speed" 1
   description "This scanner allows you to determine what outfits are installed in the ship you are currently targeting, if you are willing to risk flying close enough to it to get a reading! The Republic Navy uses these scanners to detect when ships are equipped with illegal weaponry. Installing more than one increases the scan range and speed."
 
-outfit "Asteroid Scanner"
-  category "Systems"
-  cost 192000
-  thumbnail "outfit/scanner_asteroid"
-  "mass" 6
-  "outfit space" -6
-  "asteroid scan power" 40
-  description "This highly specialized scanning system can analyze the mineral composition of nearby asteroids and identify the ones that contain valuable materials."
-
 outfit "Tactical Scanner"
   category "Systems"
   cost 144000
@@ -222,10 +214,21 @@ outfit "Tactical Scanner"
   "tactical scan power" 32
   description "A tactical scanner allows your ship to determine the fuel, energy, heat, and crew complement of nearby targets. For centuries tactical scanners were only employed by the Navy, but recently Kraz Cybernetics has begun manufacturing them for use by militia ships."
 
+outfit "Asteroid Scanner"
+  category "Systems"
+  cost 192000
+  thumbnail "outfit/scanner_asteroid"
+  "mass" 6
+  "outfit space" -6
+  "asteroid scan power" 40
+  description "This highly specialized scanning system can analyse the mineral composition of nearby asteroids and identify the ones that contain valuable materials."
+
 outfit "Surveillance Pod"
   category "Systems"
   cost 122500
   thumbnail "outfit/surveillance pod"
+  licenses
+    Navy
   "mass" 5
   "outfit space" -5
   "outfit scan power" 16
@@ -321,16 +324,6 @@ outfit "Fragmentation Grenades"
   "unplunderable" 1
   description "Fragmentation grenades are an only marginally legal weapon for hand-to-hand combat when boarding a ship, useful for flushing out defenders who are hunkered down in defensible choke points inside their own ship. They are much less useful as a defensive weapon, but still better than nothing."
 
-outfit "Security Station"
-  category "Hand to Hand"
-  cost 42000
-  thumbnail "outfit/security station"
-  "mass" 1
-  "outfit space" -1
-  "capture defense" 3.4
-  "unplunderable" 1
-  description "This is a specially designed barricade, which can be installed in the hallways of your ship as a powerful defense against anyone who boards you in an attempt to take over your ship."
-
 outfit "Nerve Gas"
   plural "Nerve Gas"
   category "Hand to Hand"
@@ -341,6 +334,17 @@ outfit "Nerve Gas"
   "illegal" 1000000
   "unplunderable" 1
   description "This is a highly illegal weapon for hand to hand combat when boarding an enemy ship. Because chemical weapons are banned by interstellar law, you can be severely fined for getting caught in possession of nerve gas canisters. But, they do clear out an enemy ship quicker than just about anything else..."
+
+outfit "Security Station"
+  category "Hand to Hand"
+  cost 42000
+  thumbnail "outfit/security station"
+  "mass" 1
+  "outfit space" -1
+  "capture defense" 3.4
+  "unplunderable" 1
+  description "This is a specially designed barricade, which can be installed in the hallways of your ship as a powerful defense against anyone who boards you in an attempt to take over your ship."
+
 
 
 outfit "Local Map"
