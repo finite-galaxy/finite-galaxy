@@ -15,12 +15,20 @@
 
 using namespace std;
 
-namespace {
+namespace {  
+  const map<string, string> BOOLEAN_ATTRIBUTES = {
+    {"installable", "This is not an installable item."},
+    {"unplunderable", "This outfit cannot be plundered."},
+    {"hyperdrive", "Allows you to make hyperjumps."},
+    {"jump drive", "Lets you jump to any nearby system."}
+  };
+
   const map<string, double> SCALE = {
     {"active cooling", 60.},
     {"afterburner energy", 60.},
     {"afterburner fuel", 60.},
     {"afterburner heat", 60.},
+    {"afterburner thrust", 60. * 60.},
     {"cloak", 60.},
     {"cloaking energy", 60.},
     {"cloaking fuel", 60.},
@@ -39,33 +47,24 @@ namespace {
     {"hull fuel", 60.},
     {"hull heat", 60.},
     {"jump speed", 60.},
+    {"reverse thrust", 60. * 60.},
     {"reverse thrusting energy", 60.},
     {"reverse thrusting heat", 60.},
-    {"shield generation", 60.},
     {"shield energy", 60.},
     {"shield fuel", 60.},
+    {"shield generation", 60.},
     {"shield heat", 60.},
     {"solar collection", 60.},
+    {"thrust", 60. * 60.},
     {"thrusting energy", 60.},
     {"thrusting heat", 60.},
     {"turn", 60.},
     {"turning energy", 60.},
     {"turning heat", 60.},
     
-    {"thrust", 60. * 60.},
-    {"reverse thrust", 60. * 60.},
-    {"afterburner thrust", 60. * 60.},
-    
-    {"ion resistance", 60. * 100.},
     {"disruption resistance", 60. * 100.},
+    {"ion resistance", 60. * 100.},
     {"slowing resistance", 60. * 100.}
-  };
-  
-  const map<string, string> BOOLEAN_ATTRIBUTES = {
-    {"unplunderable", "This outfit cannot be plundered."},
-    {"installable", "This is not an installable item."},
-    {"hyperdrive", "Allows you to make hyperjumps."},
-    {"jump drive", "Lets you jump to any nearby system."}
   };
 }
 
@@ -223,12 +222,87 @@ void OutfitInfoDisplay::UpdateAttributes(const Outfit &outfit)
     attributesHeight += 10;
   }
   
+  static const vector<string> VALUE_NAMES = {
+    "shield damage",
+    "hull damage",
+    "disruption damage",
+    "fuel damage",
+    "ion damage",
+    "heat damage",
+    "slowing damage",
+    "hit force",
+    "firing fuel",
+    "firing energy",
+    "firing heat",
+    "firing force"
+  };
+  
+  vector<double> values = {
+    outfit.ShieldDamage(),
+    outfit.HullDamage(),
+    outfit.DisruptionDamage() * 100.,
+    outfit.FuelDamage(),
+    outfit.IonDamage() * 100.,
+    outfit.HeatDamage(),
+    outfit.SlowingDamage() * 100.,
+    outfit.HitForce(),
+    outfit.FiringFuel(),
+    outfit.FiringEnergy(),
+    outfit.FiringHeat(),
+    outfit.FiringForce()
+  };
+  
+  double reload = outfit.Reload();
+  bool isContinuous = (reload <= 1);
+  // Add any per shot and per second values to the table.
+  if(reload)
+  {
+    if(isContinuous)
+    {
+      attributeLabels.emplace_back("per second:");
+      attributeValues.emplace_back(" ");
+      attributesHeight += 10;
+      for(unsigned i = 0; i < values.size(); ++i)
+        if(values[i])
+        {
+          attributeLabels.emplace_back("    " + VALUE_NAMES[i] + ":");
+          attributeValues.emplace_back(Format::Number(60. * values[i] / reload));
+          attributesHeight += 20;
+        }
+    }
+    else
+    {
+      attributeLabels.emplace_back("per shot / per second:");
+      attributeValues.emplace_back(" ");
+      attributesHeight += 10;
+      for(unsigned i = 0; i < values.size(); ++i)
+        if(values[i])
+        {
+          attributeLabels.emplace_back("    " + VALUE_NAMES[i] + ":");
+          attributeValues.emplace_back(Format::Number(values[i]) + " / " + Format::Number(60. * values[i] / reload));
+          attributesHeight += 20;
+        }
+    }
+  }
+  
+  // Pad the table.
+  attributeLabels.emplace_back();
+  attributeValues.emplace_back();
+  attributesHeight += 10;
+  
   if(outfit.Ammo())
   {
-    attributeLabels.emplace_back("ammo:");
+    attributeLabels.emplace_back("ammunition:");
     attributeValues.emplace_back(outfit.Ammo()->Name());
     attributesHeight += 20;
   }
+  
+  attributeLabels.emplace_back("shots per second:");
+  if(isContinuous)
+    attributeValues.emplace_back("continuous");
+  else
+    attributeValues.emplace_back(Format::Number(60. / reload));
+  attributesHeight += 20;
 
   if (outfit.Lifetime() > 1)
   {
@@ -243,54 +317,6 @@ void OutfitInfoDisplay::UpdateAttributes(const Outfit &outfit)
     attributeValues.emplace_back(Format::Number(outfit.Range()));
     attributesHeight += 20;
   }
-  
-  static const vector<string> VALUE_NAMES = {
-    "shield damage",
-    "hull damage",
-    "fuel damage",
-    "heat damage",
-    "ion damage",
-    "slowing damage",
-    "disruption damage",
-    "firing energy",
-    "firing heat",
-    "firing fuel"
-  };
-  
-  vector<double> values = {
-    outfit.ShieldDamage(),
-    outfit.HullDamage(),
-    outfit.FuelDamage(),
-    outfit.HeatDamage(),
-    outfit.IonDamage() * 100.,
-    outfit.SlowingDamage() * 100.,
-    outfit.DisruptionDamage() * 100.,
-    outfit.FiringEnergy(),
-    outfit.FiringHeat(),
-    outfit.FiringFuel()
-  };
-  
-  // Add any per-second values to the table.
-  double reload = outfit.Reload();
-  if(reload)
-  {
-    static const string PER_SECOND = " / second:";
-    for(unsigned i = 0; i < values.size(); ++i)
-      if(values[i])
-      {
-        attributeLabels.emplace_back(VALUE_NAMES[i] + PER_SECOND);
-        attributeValues.emplace_back(Format::Number(60. * values[i] / reload));
-        attributesHeight += 20;
-      }
-  }
-  
-  bool isContinuous = (reload <= 1);
-  attributeLabels.emplace_back("shots / second:");
-  if(isContinuous)
-    attributeValues.emplace_back("continuous");
-  else
-    attributeValues.emplace_back(Format::Number(60. / reload));
-  attributesHeight += 20;
   
   double turretTurn = outfit.TurretTurn() * 60.;
   if(turretTurn)
@@ -336,25 +362,6 @@ void OutfitInfoDisplay::UpdateAttributes(const Outfit &outfit)
       attributesHeight += 20;
     }
   
-  // Pad the table.
-  attributeLabels.emplace_back();
-  attributeValues.emplace_back();
-  attributesHeight += 10;
-  
-  // Add per-shot values to the table. If the weapon fires continuously,
-  // the values have already been added.
-  if(!isContinuous)
-  {
-    static const string PER_SHOT = " / shot:";
-    for(unsigned i = 0; i < VALUE_NAMES.size(); ++i)
-      if(values[i])
-      {
-        attributeLabels.emplace_back(VALUE_NAMES[i] + PER_SHOT);
-        attributeValues.emplace_back(Format::Number(values[i]));
-        attributesHeight += 20;
-      }
-  }
-  
   static const vector<string> OTHER_NAMES = {
     "inaccuracy:",
     "blast radius:",
@@ -376,3 +383,4 @@ void OutfitInfoDisplay::UpdateAttributes(const Outfit &outfit)
       attributesHeight += 20;
     }
 }
+
