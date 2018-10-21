@@ -51,26 +51,26 @@ else:
 
 
 buildDirectory = env["BUILDDIR"] + "/" + env["mode"]
-VariantDir(buildDirectory, "source", duplicate = 0)
+VariantDir(buildDirectory, "code", duplicate = 0)
 
-sky = env.Program("endless-sky", Glob(buildDirectory + "/*.cpp"))
+sky = env.Program("finite-galaxy", Glob(buildDirectory + "/*.cpp"))
 
 
 # Install the binary:
 env.Install("$DESTDIR$PREFIX/games", sky)
 
 # Install the desktop file:
-env.Install("$DESTDIR$PREFIX/share/applications", "endless-sky.desktop")
+env.Install("$DESTDIR$PREFIX/share/applications", "finite-galaxy.desktop")
 
 # Install app center metadata:
-env.Install("$DESTDIR$PREFIX/share/appdata", "endless-sky.appdata.xml")
+env.Install("$DESTDIR$PREFIX/share/appdata", "finite-galaxy.appdata.xml")
 
 # Install icons, keeping track of all the paths.
 # Most Ubuntu apps supply 16, 22, 24, 32, 48, and 256, and sometimes others.
 sizes = ["16", "22", "24", "32", "48", "64", "128", "256", "512"]
 icons = []
 for size in sizes:
-	destination = "$DESTDIR$PREFIX/share/icons/hicolor/" + size + "/apps/endless-sky.png"
+	destination = "$DESTDIR$PREFIX/share/icons/hicolor/" + size + "/apps/finite-galaxy.png"
 	icons.append(destination)
 	env.InstallAs(destination, "icons/" + size + ".png")
 
@@ -85,8 +85,8 @@ if env.get("PREFIX").startswith("/usr/"):
 
 # Install the man page.
 env.Command(
-	"$DESTDIR$PREFIX/share/man/man6/endless-sky.6.gz",
-	"endless-sky.6",
+	"$DESTDIR$PREFIX/share/man/man6/finite-galaxy.6.gz",
+	"finite-galaxy.6",
 	"gzip -c $SOURCE > $TARGET")
 
 # Install the data files.
@@ -98,11 +98,11 @@ def RecursiveInstall(env, target, source):
 			RecursiveInstall(env, os.path.join(target, name), node.abspath)
 		else:
 			env.Install(target, node)
-RecursiveInstall(env, "$DESTDIR$PREFIX/share/games/endless-sky/data", "data")
-RecursiveInstall(env, "$DESTDIR$PREFIX/share/games/endless-sky/images", "images")
-RecursiveInstall(env, "$DESTDIR$PREFIX/share/games/endless-sky/sounds", "sounds")
-env.Install("$DESTDIR$PREFIX/share/games/endless-sky", "credits.txt")
-env.Install("$DESTDIR$PREFIX/share/games/endless-sky", "keys.txt")
+RecursiveInstall(env, "$DESTDIR$PREFIX/share/games/finite-galaxy/data", "data")
+RecursiveInstall(env, "$DESTDIR$PREFIX/share/games/finite-galaxy/images", "images")
+RecursiveInstall(env, "$DESTDIR$PREFIX/share/games/finite-galaxy/sounds", "sounds")
+env.Install("$DESTDIR$PREFIX/share/games/finite-galaxy", "credits.txt")
+env.Install("$DESTDIR$PREFIX/share/games/finite-galaxy", "keys.txt")
 
 # Make the word "install" in the command line do an installation.
 env.Alias("install", "$DESTDIR$PREFIX")
