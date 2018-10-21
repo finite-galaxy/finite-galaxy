@@ -1,8 +1,10 @@
 outfit "EMP Torpedo"
   plural "EMP Torpedoes"
   category "Ammunition"
-  cost 4400
   thumbnail "outfit/emp"
+  licenses
+    Remnant
+  cost 4400
   "mass" 1
   "plunderable" 1
   "emp torpedo capacity" -1
@@ -10,10 +12,10 @@ outfit "EMP Torpedo"
 
 outfit "EMP Torpedo Bay"
   category "Secondary Weapons"
+  thumbnail "outfit/emp_launcher"
   licenses
     Remnant
   cost 583000
-  thumbnail "outfit/emp_launcher"
   "mass" 9
   "outfit space" -18
   "weapon capacity" -18
@@ -87,10 +89,10 @@ effect "emp spark"
 
 outfit "Inhibitor Cannon"
   category "Cannons"
+  thumbnail "outfit/inhibitor_cannon"
   licenses
     Remnant
   cost 471000
-  thumbnail "outfit/inhibitor_cannon"
   "mass" 16
   "outfit space" -16
   "weapon capacity" -16
@@ -129,10 +131,10 @@ effect "inhibitor impact"
 
 outfit "Thrasher Cannon"
   category "Cannons"
+  thumbnail "outfit/thrasher_cannon"
   licenses
     Remnant
   cost 218000
-  thumbnail "outfit/thrasher_cannon"
   "mass" 10
   "outfit space" -10
   "weapon capacity" -10
@@ -167,10 +169,10 @@ effect "thrasher impact"
 
 outfit "Thrasher Turret"
   category "Turrets"
+  thumbnail "outfit/thrasher_turret"
   licenses
     Remnant
   cost 980000
-  thumbnail "outfit/thrasher_turret"
   "mass" 49
   "drag" .49
   "outfit space" -49
@@ -201,10 +203,10 @@ outfit "Thrasher Turret"
 
 outfit "Point Defense Turret"
   category "Anti-Missile"
+  thumbnail "outfit/point_defence"
   licenses
     Remnant
   cost 1120000
-  thumbnail "outfit/point_defence"
   "mass" 33
   "drag" .33
   "outfit space" -33

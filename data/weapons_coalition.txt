@@ -1,8 +1,10 @@
 outfit "Finisher Torpedo"
   plural "Finisher Torpedoes"
   category "Ammunition"
-  cost 32000
   thumbnail "outfit/finisher"
+  licenses
+    Heliarch
+  cost 32000
   "mass" .5
   "plunderable" 1
   "finisher capacity" -1
@@ -10,10 +12,10 @@ outfit "Finisher Torpedo"
 
 outfit "Finisher Pod"
   category "Secondary Weapons"
+  thumbnail "outfit/finisher_launcher"
   licenses
     Heliarch
   cost 1370000
-  thumbnail "outfit/finisher_launcher"
   "mass" 16
   "outfit space" -36
   "weapon capacity" -36
@@ -106,10 +108,10 @@ effect "finisher fragment"
 
 outfit "Bombardment Cannon"
   category "Cannons"
+  thumbnail "outfit/bombardment_cannon"
   licenses
     Heliarch
   cost 437000
-  thumbnail "outfit/bombardment_cannon"
   "mass" 12
   "outfit space" -12
   "weapon capacity" -12
@@ -133,10 +135,10 @@ outfit "Bombardment Cannon"
 
 outfit "Bombardment Turret"
   category "Turrets"
+  thumbnail "outfit/bombardment_turret"
   licenses
     Heliarch
   cost 1845000
-  thumbnail "outfit/bombardment_turret"
   "mass" 43
   "drag" .43
   "outfit space" -43
@@ -177,10 +179,10 @@ effect "bombardment impact"
 
 outfit "Attractor"
   category "Turrets"
+  thumbnail "outfit/attractor"
   licenses
     Heliarch
   cost 2187000
-  thumbnail "outfit/attractor"
   "mass" 49
   "drag" .49
   "outfit space" -49
@@ -221,10 +223,10 @@ effect "attractor impact"
 
 outfit "Repulsor"
   category "Turrets"
+  thumbnail "outfit/repulsor"
   licenses
     Heliarch
   cost 2549000
-  thumbnail "outfit/repulsor"
   "mass" 56
   "drag" .56
   "outfit space" -56
@@ -266,10 +268,10 @@ effect "repulsor impact"
 
 outfit "Ion Rain Gun"
   category "Cannons"
+  thumbnail "outfit/ion_rain_cannon"
   licenses
     Heliarch
   cost 798000
-  thumbnail "outfit/ion_rain_cannon"
   "mass" 17
   "outfit space" -17
   "weapon capacity" -17
