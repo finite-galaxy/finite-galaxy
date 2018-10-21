@@ -35,7 +35,7 @@ ship "Autumn Leaf"
   sprite "ship/autumn leaf"
   thumbnail "thumbnail/autumn leaf"
   attributes
-    category "Light Warship"
+    category "Corvette"
     licences
       Wanderer
     "cost" 12500000
@@ -237,54 +237,17 @@ ship "Deep River" "Deep River (Jump, Unarmed)"
     "Fuel Pod" 6
     "Jump Drive"
 
-
-
-ship "Deep River Transport"
-  sprite "ship/deep river"
-  thumbnail "thumbnail/deep river"
-  attributes
-    category "Transport"
-    licences
-      Wanderer
-    "cost" 18300000
-    "shields" 17600
-    "hull" 47500
-    "required crew" 13
-    "bunks" 166
-    "mass" 750
-    "drag" 9.4
-    "heat dissipation" .6
-    "cargo space" 74
-    "outfit space" 361
-    "weapon capacity" 114
-    "engine capacity" 83
-    weapon
-      "blast radius" 280
-      "shield damage" 2800
-      "hull damage" 1400
-      "hit force" 4200
+ship "Deep River" "Deep River Transport"
   outfits
-    "Wanderer Anti-Missile" 4
     "Yellow Sun Reactor"
     "Dark Storm Shielding"
     "Wanderer Ramscoop"
+    "Bunk Room" 124
+    "Cargo Expansion" 13
     "Type 2 Radiant Thruster"
     "Type 4 Radiant Steering"
     "Fuel Pod" 5
     "Hyperdrive"
-  engine 53 345 .7
-  engine 0 345
-  engine -53 345 .7
-  turret -36 -205 "Wanderer Anti-Missile"
-  turret 36 -205 "Wanderer Anti-Missile"
-  turret -36 330 "Wanderer Anti-Missile"
-  turret 36 330 "Wanderer Anti-Missile"
-  explode "small explosion" 80
-  explode "medium explosion" 60
-  explode "large explosion" 30
-  explode "huge explosion" 20
-  "final explode" "final explosion large"
-  description "This is a Deep River freighter that has been converted into a transport ship for refugees."
 
 
 
@@ -292,7 +255,7 @@ ship "Derecho"
   sprite "ship/derecho"
   thumbnail "thumbnail/derecho"
   attributes
-    category "Heavy Warship"
+    category "Frigate"
     licences
       "Wanderer Military"
     "cost" 30500000
@@ -387,7 +350,7 @@ ship "Earth Shaper"
   sprite "ship/earth shaper"
   thumbnail "thumbnail/earth shaper"
   attributes
-    category "Freighter"
+    category "Interceptor"
     licences
       Wanderer
     "cost" 500000
@@ -458,7 +421,7 @@ ship "Hurricane"
   sprite "ship/hurricane"
   thumbnail "thumbnail/hurricane"
   attributes
-    category "Heavy Warship"
+    category "Destroyer"
     licences
       "Wanderer Military"
     "cost" 39100000
@@ -562,7 +525,7 @@ ship "Strong Wind"
   sprite "ship/strong wind"
   thumbnail "thumbnail/strong wind"
   attributes
-    category "Medium Warship"
+    category "Corvette"
     licences
       "Wanderer Military"
     "cost" 16100000
@@ -614,7 +577,7 @@ ship "Summer Leaf"
   sprite "ship/summer leaf"
   thumbnail "thumbnail/summer leaf"
   attributes
-    category "Light Warship"
+    category "Corvette"
     licences
       Wanderer
     "cost" 9500000
@@ -659,7 +622,7 @@ ship "Tempest"
   sprite "ship/tempest"
   thumbnail "thumbnail/tempest"
   attributes
-    category "Medium Warship"
+    category "Corvette"
     licences
       "Wanderer Military"
     "cost" 19700000
@@ -749,7 +712,7 @@ ship "Winter Gale"
   sprite "ship/winter gale"
   thumbnail "thumbnail/winter gale"
   attributes
-    category "Light Warship"
+    category "Corvette"
     licences
       "Wanderer Military"
     "cost" 14100000

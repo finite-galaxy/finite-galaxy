@@ -19,15 +19,50 @@ categories "outfit"
 
 
 categories "ship"
+  "Freighter" # cargo space > (hull mass + outfit space) / 2
+# proper warships, with x = hull mass + outfit space
+  "Battleship" # x > 2500
+  "Cruiser" # x > 2000 
+  "Destroyer" # x > 1500
+  "Frigate" # x > 1000
+  "Corvette" # x > 500
+# lesser vessels
+  "Interceptor" # capable of independent hyperspace travel
+  "Fighter" # carried in fighter bays
+  "Drone" # carried in drone bays
+# grandfathering deprecated categories
   "Transport"
-  "Freighter"
+  "Heavy Freighter"
+  "Light Freighter"
   "Heavy Warship"
   "Medium Warship"
   "Light Warship"
-  "Interceptor"
-  "Fighter"
-  "Drone"
-# grandfathering deprecated categories
-  "Heavy Freighter"
-  "Light Freighter"
+
+
+
+# manufacturers "ship"
+#  "Arach"
+#  "Betelgeuse"
+#  "Drak"
+#  "Hai"
+#  "Hauler"
+#  "Heliarch"
+#  "Kimek"
+#  "Korath"
+#  "Kor Mereti"
+#  "Kor Sestor"
+#  "Lionheart"
+#  "Marauder"
+#  "Megaparsec"
+#  "Nanobot"
+#  "Navy"
+#  "Pug"
+#  "Quarg"
+#  "Remnant"
+#  "Saryd"
+#  "Southbound"
+#  "Syndicate"
+#  "Tarazed"
+#  "Void Sprite"
+#  "Wanderer"
 

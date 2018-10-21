@@ -76,16 +76,14 @@ ship "Barb" "Barb (Gatling)"
 ship "Barb" "Barb (Proton)"
   sprite "ship/barbp"
   thumbnail "thumbnail/barbp"
-  attributes
-    "weapon capacity" 28
+  add attributes
+    "weapon capacity" 4
   outfits
     "Proton Cannon"
     "nGVF-AA Fuel Cell"
     "Supercapacitor"
     "D14-RN Shield Generator"
     "X1050 Ion Engines"
-  gun -9 -29 "Proton Cannon"
-  description `The Barb's commercial success spurred demand for a variant equipped with a Proton Gun. Syndicated Systems had to remove the turret mounting hardware to fit the powerful cannon, but the result is a level of short-range firepower that is unheard-of for a craft its size.`
 
 
 
@@ -138,7 +136,7 @@ ship "Bulk Freighter"
     "mass" 870
     "drag" 15.8
     "heat dissipation" .5
-    "cargo space" 600
+    "cargo space" 640
     "outfit space" 470
     "weapon capacity" 180
     "engine capacity" 85
@@ -249,46 +247,28 @@ ship "Bulk Freighter" "Bulk Freighter (Proton)"
     "Fuel Barrel" 60
     "Scram Drive"
 
-
-
-ship "Class C Freighter"
-  sprite "ship/bulk freighter"
-  thumbnail "thumbnail/bulk freighter"
-  attributes
-    category "Heavy Warship"
-    "cost" 11400000
-    "shields" 13500
-    "hull" 7600
-    "required crew" 18
-    "bunks" 43
-    "mass" 810
-    "drag" 16.4
-    "heat dissipation" .5
-    "cargo space" 20
-    "outfit space" 460
-    "weapon capacity" 140
-    "engine capacity" 85
-    weapon
-      "blast radius" 200
-      "shield damage" 2000
-      "hull damage" 1000
-      "hit force" 3000
+ship "Bulk Freighter" "Class C Freighter"
+  add attributes
+    "cost" 3000000
+    "shields" 10000
+    "required crew" 12
+    "cargo space" -480
   outfits
     "Heavy Laser Turret" 2
     "Heavy Anti-Missile Turret" 2
     "Fission Reactor"
     "LP072a Battery Pack"
     "D94-YV Shield Generator"
+    "Bunk Room" 15
     "X3700 Ion Thruster"
     "X3200 Ion Steering"
     "Fuel Barrel" 60
     "Scram Drive"
-  engine -22 198
-  engine 22 198
-  turret -12 -155 "Heavy Laser Turret"
-  turret 12 -155 "Heavy Anti-Missile Turret"
-  turret 30 175 "Heavy Laser Turret"
-  turret -30 175 "Heavy Anti-Missile Turret"
+  turret "Heavy Laser Turret"
+  turret "Heavy Anti-Missile Turret"
+  turret
+  turret "Heavy Laser Turret"
+  turret "Heavy Anti-Missile Turret"
   drone -66 -115 left
   drone -66 -65 left
   drone -66 -15 left
@@ -301,14 +281,6 @@ ship "Class C Freighter"
   drone 66 35 right
   drone 66 85 right
   drone 66 135 right
-  leak "leak" 30 50
-  leak "flame" 50 80
-  leak "big leak" 40 30
-  explode "small explosion" 15
-  explode "medium explosion" 25
-  explode "large explosion" 35
-  explode "huge explosion" 20
-  "final explode" "final explosion large"
   description `The Class C "Freighter" is a stealth warship designed by the Syndicate for baiting pirates with the offer of a seemingly helpless, ordinary bulk freighter. Inside, its cargo space has all been converted into drone bays, allowing it to carry a dozen combat drones.`
 
 
@@ -317,7 +289,7 @@ ship "Freighter"
   sprite "ship/freighter"
   thumbnail "thumbnail/freighter"
   attributes
-    category "Freighter"
+    category "Corvette"
     "cost" 730000
     "shields" 2000
     "hull" 2000
@@ -326,7 +298,7 @@ ship "Freighter"
     "mass" 240
     "drag" 5.6
     "heat dissipation" .6
-    "cargo space" 150
+    "cargo space" 160
     "outfit space" 310
     "weapon capacity" 80
     "engine capacity" 70
@@ -433,7 +405,7 @@ ship "Protector"
   sprite "ship/protector"
   thumbnail "thumbnail/protector"
   attributes
-    category "Heavy Warship"
+    category "Frigate"
     "cost" 5500000
     "shields" 9500
     "hull" 6500
@@ -522,7 +494,7 @@ ship "Star Barge"
   sprite "ship/star barge"
   thumbnail "thumbnail/star barge"
   attributes
-    category "Freighter"
+    category "Interceptor"
     "cost" 210000
     "shields" 600
     "hull" 1000
@@ -531,7 +503,7 @@ ship "Star Barge"
     "mass" 70
     "drag" 2.4
     "heat dissipation" .8
-    "cargo space" 50
+    "cargo space" 40
     "outfit space" 160
     "weapon capacity" 20
     "engine capacity" 40
@@ -574,7 +546,7 @@ ship "Vanguard"
   sprite "ship/vanguard"
   thumbnail "thumbnail/vanguard"
   attributes
-    category "Heavy Warship"
+    category "Frigate"
     "cost" 7200000
     "shields" 9800
     "hull" 6000
