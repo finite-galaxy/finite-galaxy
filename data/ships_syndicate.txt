@@ -53,7 +53,7 @@ ship "Barb"
     "nGVF-AA Fuel Cell"
     "LP036a Battery Pack"
     "D14-RN Shield Generator"
-    "X1050 Ion Engines"
+    "XC900 Ion Engines"
   engine -10 28
   engine 9 28
   gun -9 -29 "Energy Blaster"
@@ -71,7 +71,7 @@ ship "Barb" "Barb (Gatling)"
     "nGVF-AA Fuel Cell"
     "Supercapacitor" 3
     "D14-RN Shield Generator"
-    "X1050 Ion Engines"
+    "XC900 Ion Engines"
 
 ship "Barb" "Barb (Proton)"
   sprite "ship/barbp"
@@ -83,7 +83,7 @@ ship "Barb" "Barb (Proton)"
     "nGVF-AA Fuel Cell"
     "Supercapacitor"
     "D14-RN Shield Generator"
-    "X1050 Ion Engines"
+    "XC900 Ion Engines"
 
 
 
@@ -109,8 +109,9 @@ ship "Boxwing"
       "hull damage" 60
       "hit force" 180
   outfits
-    "nGVF-AA Fuel Cell"
-    "X1050 Ion Engines"
+    "KP-6 Photovoltaic Panel" 5
+    "LP036a Battery Pack"
+    "XC900 Ion Engines"
   engine 23 -1
   engine -23 -1
   engine 19 29
@@ -146,26 +147,23 @@ ship "Bulk Freighter"
       "hull damage" 600
       "hit force" 1800
   outfits
-    "Sidewinder Missile Launcher" 2
-    "Sidewinder Missile" 100
-    "Laser Turret" 3
-    "Heavy Anti-Missile Turret" 2
+    "8X Blaster Turret"
+    "Anti-Missile Turret" 4
     "RT-I Radiothermal"
     "LP144a Battery Pack"
     "D23-QP Shield Generator"
     "X3700 Ion Thruster"
     "X3200 Ion Steering"
+    "XR3700 Ion Reverse"
     "Fuel Barrel" 60
     "Scram Drive"
   engine -22 198
   engine 22 198
-  gun -20 -175 "Sidewinder Missile Launcher"
-  gun 20 -175 "Sidewinder Missile Launcher"
-  turret -12 -155 "Laser Turret"
-  turret 12 -155 "Heavy Anti-Missile Turret"
-  turret 0 5 "Laser Turret"
-  turret -30 175 "Heavy Anti-Missile Turret"
-  turret 30 175 "Laser Turret"
+  turret -12 -155 "Anti-Missile Turret"
+  turret 12 -155 "Anti-Missile Turret"
+  turret 0 5 "8X Blaster Turret"
+  turret -30 175 "Anti-Missile Turret"
+  turret 30 175 "Anti-Missile Turret"
   leak "leak" 40 50
   leak "flame" 30 80
   leak "big leak" 50 30
@@ -178,25 +176,27 @@ ship "Bulk Freighter"
 
 ship "Bulk Freighter" "Bulk Freighter (Blaster)"
   outfits
-    "4X Blaster Turret" 5
-    "Meteor Missile Launcher" 2
-    "Meteor Missile" 70
+    "6X Blaster Turret" 4
+    "Heavy Anti-Missile Turret"
     "Fusion Reactor"
     "LP072a Battery Pack"
     "D94-YV Shield Generator"
     "Water Coolant System"
     "Outfits Expansion" 2
-    "A250 Atomic Thruster"
-    "A375 Atomic Steering"
+    "X3700 Ion Thruster"
+    "X3200 Ion Steering"
     "Fuel Barrel" 60
     "Scram Drive"
+  turret "6X Blaster Turret"
+  turret "6X Blaster Turret"
+  turret "Heavy Anti-Missile Turret"
+  turret "6X Blaster Turret"
+  turret "6X Blaster Turret"
 
 ship "Bulk Freighter" "Bulk Freighter (Hai)"
   outfits
-    "Sidewinder Missile Launcher" 2
-    "Sidewinder Missile" 100
-    "Pulse Turret" 2
-    "Chameleon Anti-Missile" 3
+    "Pulse Turret" 4
+    "Chameleon Anti-Missile"
     "RT-I Radiothermal"
     "Ravine Batteries"
     "D23-QP Shield Generator"
@@ -208,16 +208,13 @@ ship "Bulk Freighter" "Bulk Freighter (Hai)"
   turret "Pulse Turret"
   turret "Pulse Turret"
   turret "Chameleon Anti-Missile"
-  turret "Chameleon Anti-Missile"
-  turret "Chameleon Anti-Missile"
+  turret "Pulse Turret"
+  turret "Pulse Turret"
 
 ship "Bulk Freighter" "Bulk Freighter (Heavy)"
   outfits
-    "Laser Turret" 2
-    "Heavy Laser Turret" 2
-    "Heavy Anti-Missile Turret"
-    "Meteor Missile Launcher" 2
-    "Meteor Missile" 70
+    "Heavy Laser Turret" 4
+    "Anti-Missile Turret"
     "Fission Reactor"
     "LP072a Battery Pack"
     "D94-YV Shield Generator"
@@ -226,18 +223,16 @@ ship "Bulk Freighter" "Bulk Freighter (Heavy)"
     "A375 Atomic Steering"
     "Fuel Barrel" 60
     "Scram Drive"
-  turret "Laser Turret"
-  turret "Laser Turret"
-  turret "Heavy Anti-Missile Turret"
+  turret "Heavy Laser Turret"
+  turret "Heavy Laser Turret"
+  turret "Anti-Missile Turret"
   turret "Heavy Laser Turret"
   turret "Heavy Laser Turret"
 
 ship "Bulk Freighter" "Bulk Freighter (Proton)"
   outfits
-    "Proton Turret" 3
+    "Proton Turret" 2
     "Heavy Anti-Missile Turret"
-    "Meteor Missile Launcher" 2
-    "Meteor Missile" 70
     "Fission Reactor"
     "LP072a Battery Pack"
     "D94-YV Shield Generator"
@@ -308,20 +303,21 @@ ship "Freighter"
       "hull damage" 200
       "hit force" 600
   outfits
-    "2X Blaster Turret" 2
-    "Heavy Anti-Missile Turret"
+    "4X Blaster Turret"
+    "Anti-Missile Turret" 2
     "nGVF-EE Fuel Cell"
     "LP036a Battery Pack"
     "D14-RN Shield Generator"
     "X2700 Ion Thruster"
     "X2200 Ion Steering"
+    "XR1700 Ion Reverse"
     "Fuel Barrel" 60
-    "Scram Drive"
+    "Hyperdrive"
   engine -9 97
   engine 9 97
-  turret 0 -52 "2X Blaster Turret"
-  turret 0 6 "Heavy Anti-Missile Turret"
-  turret 0 65 "2X Blaster Turret"
+  turret 0 -52 "Anti-Missile Turret"
+  turret 0 6 "4X Blaster Turret"
+  turret 0 65 "Anti-Missile Turret"
   leak "leak" 60 50
   leak "flame" 50 80
   explode "tiny explosion" 10
@@ -340,10 +336,11 @@ ship "Freighter" "Freighter (Fancy)"
     "D14-RN Shield Generator"
     "Ramscoop"
     "Outfits Expansion"
-    "Greyhound Plasma Thruster"
-    "X3200 Ion Steering"
+    "X2700 Ion Thruster"
+    "X2200 Ion Steering"
+    "XR1700 Ion Reverse"
     "Fuel Barrel" 60
-    "Scram Drive"
+    "Hyperdrive"
   turret "Laser Turret"
   turret "Heavy Anti-Missile Turret"
   turret "Laser Turret"
@@ -358,8 +355,9 @@ ship "Freighter" "Freighter (Hai)"
     "D14-RN Shield Generator"
     "Ramscoop"
     "Outfits Expansion"
-    "Greyhound Plasma Thruster"
-    "X3200 Ion Steering"
+    "X2700 Ion Thruster"
+    "X2200 Ion Steering"
+    "XR1700 Ion Reverse"
     "Fuel Barrel" 60
     "Hyperdrive"
   turret "Pulse Turret"
@@ -369,35 +367,37 @@ ship "Freighter" "Freighter (Hai)"
 ship "Freighter" "Freighter (Proton)"
   outfits
     "Proton Turret"
-    "Heavy Anti-Missile Turret"
+    "Anti-Missile Turret"
     "NT-200 Nucleovoltaic"
     "Supercapacitor"
     "D14-RN Shield Generator"
     "Ramscoop"
     "Outfits Expansion"
-    "Greyhound Plasma Thruster"
-    "X3200 Ion Steering"
+    "X2700 Ion Thruster"
+    "X2200 Ion Steering"
+    "XR1700 Ion Reverse"
     "Fuel Barrel" 60
-    "Scram Drive"
+    "Hyperdrive"
+  turret "Anti-Missile Turret"
   turret "Proton Turret"
-  turret "Heavy Anti-Missile Turret"
   turret
 
 ship "Freighter" "Freighter (Secret Cargo)"
   outfits
-    "2X Blaster Turret" 2
-    "Heavy Anti-Missile Turret"
+    "4X Blaster Turret"
+    "Anti-Missile Turret" 2
     "nGVF-EE Fuel Cell"
     "LP036a Battery Pack"
     "D14-RN Shield Generator"
     "X2700 Ion Thruster"
     "X2200 Ion Steering"
+    "XR1700 Ion Reverse"
     "Fuel Barrel" 60
-    "Scram Drive"
+    "Hyperdrive"
     "Secret Cargo"
-  turret "2X Blaster Turret"
-  turret "Heavy Anti-Missile Turret"
-  turret "2X Blaster Turret"
+  turret "Anti-Missile Turret"
+  turret "4X Blaster Turret"
+  turret "Anti-Missile Turret"
 
 
 
@@ -516,8 +516,8 @@ ship "Star Barge"
     "nGVF-BB Fuel Cell"
     "LP036a Battery Pack"
     "D14-RN Shield Generator"
-    "Chipmunk Plasma Thruster"
-    "Chipmunk Plasma Steering"
+    "X1700 Ion Thruster"
+    "X1200 Ion Steering"
     "Fuel Barrel" 30
     "Hyperdrive"
   engine -9 38
@@ -535,8 +535,8 @@ ship "Star Barge" "Star Barge (Armed)"
     "nGVF-BB Fuel Cell"
     "LP036a Battery Pack"
     "D14-RN Shield Generator"
-    "Chipmunk Plasma Thruster"
-    "Chipmunk Plasma Steering"
+    "X1700 Ion Thruster"
+    "X1200 Ion Steering"
     "Fuel Barrel" 30
     "Hyperdrive"
 
