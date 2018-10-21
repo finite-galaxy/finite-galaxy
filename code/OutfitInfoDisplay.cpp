@@ -81,7 +81,7 @@ OutfitInfoDisplay::OutfitInfoDisplay(const Outfit &outfit, const PlayerInfo &pla
 // Call this every time the ship changes.
 void OutfitInfoDisplay::Update(const Outfit &outfit, const PlayerInfo &player, bool canSell)
 {
-  UpdateDescription(outfit.Description(), outfit.Licenses(), false);
+  UpdateDescription(outfit.Description(), outfit.Licences(), false);
   UpdateRequirements(outfit, player, canSell);
   UpdateAttributes(outfit);
   

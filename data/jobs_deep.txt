@@ -134,7 +134,7 @@ mission "Mystery retrieval"
 
 mission "Transport scientists"
   name "Transport scientists"
-  description "A team of <bunks> scientists needs some research notes analyzed at the facility on <stopovers>. Take the scientists there and then return them to <planet> for <payment>."
+  description "A team of <bunks> scientists needs some research notes analysed at the facility on <stopovers>. Take the scientists there and then return them to <planet> for <payment>."
   job
   repeat
   to offer
@@ -146,7 +146,7 @@ mission "Transport scientists"
     attributes research
     distance 2 50
   on stopover
-    dialog "The scientists have been giddily discussing the results of their research during the entire trip. You're happy for a bit of peace and quiet as they make tracks for a prominent research lab to have the results analyzed. You prepare for the return journey to <planet>."
+    dialog "The scientists have been giddily discussing the results of their research during the entire trip. You're happy for a bit of peace and quiet as they make tracks for a prominent research lab to have the results analysed. You prepare for the return journey to <planet>."
   on complete
     dialog "You bid goodbye to the scientists and accept your payment of <payment>."
     payment

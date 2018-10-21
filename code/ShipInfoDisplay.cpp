@@ -30,7 +30,7 @@ ShipInfoDisplay::ShipInfoDisplay(const Ship &ship, const Depreciation &depreciat
 // Call this every time the ship changes.
 void ShipInfoDisplay::Update(const Ship &ship, const Depreciation &depreciation, int day)
 {
-  UpdateDescription(ship.Description(), ship.Attributes().Licenses(), true);
+  UpdateDescription(ship.Description(), ship.Attributes().Licences(), true);
   UpdateAttributes(ship, depreciation, day);
   UpdateOutfits(ship, depreciation, day);
   

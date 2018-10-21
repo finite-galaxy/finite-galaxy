@@ -58,10 +58,10 @@ void Outfit::Load(const DataNode &node)
       cost = child.Value(1);
     else if(child.Token(0) == "mass" && child.Size() >= 2)
       mass = child.Value(1);
-    else if(child.Token(0) == "licenses")
+    else if(child.Token(0) == "licences")
     {
       for(const DataNode &grand : child)
-        licenses.push_back(grand.Token(0));
+        licences.push_back(grand.Token(0));
     }
     else if(child.Size() >= 2)
       attributes[child.Token(0)] = child.Value(1);
@@ -104,10 +104,10 @@ const string &Outfit::Description() const
 
 
 
-// Get the licenses needed to purchase this outfit.
-const vector<string> &Outfit::Licenses() const
+// Get the licences needed to purchase this outfit.
+const vector<string> &Outfit::Licences() const
 {
-  return licenses;
+  return licences;
 }
 
 

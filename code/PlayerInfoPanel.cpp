@@ -521,8 +521,8 @@ void PlayerInfoPanel::DrawPlayer(const Rectangle &bounds)
   DrawList(tribute, table, "tribute:", 4);
   
   int maxRows = static_cast<int>(250. - 30. - table.GetPoint().Y()) / 20;
-  auto licenses = Match(player, "license: ", " License");
-  DrawList(licenses, table, "licenses:", maxRows, false);
+  auto licences = Match(player, "licence: ", " Licence");
+  DrawList(licences, table, "licences:", maxRows, false);
 }
 
 

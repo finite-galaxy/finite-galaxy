@@ -253,7 +253,7 @@ mission "Visit Wanderers Again"
   
   on accept
     set "language: Wanderer"
-    set "license: Wanderer Outfits"
+    set "licence: Wanderer Outfits"
     event "wanderer technology available"
 
 event "wanderer technology available" #Name unchanged for compatibility
@@ -271,7 +271,7 @@ mission "Wanderer Hail Patch"
   to offer
     has "event: wanderer technology available"
   on offer
-    set "license: Wanderer Outfits"
+    set "licence: Wanderer Outfits"
     event "wanderer technology available"
     fail
 
@@ -579,7 +579,7 @@ mission "Wanderers: Unfettered Diplomacy 1C"
         accept
   on complete
     "reputation: Wanderer" >?= 20
-    set "license: Wanderer"
+    set "licence: Wanderer"
     log "Managed to broker a temporary ceasefire between the Unfettered Hai and the Wanderers. Was granted access to purchase the non-military Wanderer ships, as a reward."
     conversation
       `When you return to <planet>, Iktat Rek meets with Ambassador Sayari and a few of the Wanderer elders. The elders thank you for the role that you played in negotiating a temporary peace, and Rek says, "We will [reward, honor] you by allowing you to purchase our ships, all but the [ship of war, battleship]."`
@@ -798,14 +798,14 @@ mission "Wanderers: Alpha Surveillance B"
   
   on offer
     conversation
-      `It has been a month since you deployed the surveillance devices in the Unfettered home systems. It's time for you to go back and retrieve whatever recordings they made. You'll then be able to bring the recordings back to Iktat Rek on <planet> to decrypt and analyze them.`
+      `It has been a month since you deployed the surveillance devices in the Unfettered home systems. It's time for you to go back and retrieve whatever recordings they made. You'll then be able to bring the recordings back to Iktat Rek on <planet> to decrypt and analyse them.`
       `  Hopefully you will be able to collect the data without the Unfettered intercepting the transmissions and realizing they have been spied on.`
         accept
   
   on complete
     conversation
       `When you arrive at the spaceport, you contact Iktat Rek and send him a copy of the encrypted recordings. You also mention to him that the Unfettered attacked you after you sent out the data retrieval signal. "That is [unfortunate, regrettable]," says Rek. "I hope they will [cool off, calm down] in time. I suspect you could buy their [friendship, favor] back with another jump drive, or just ignore their [attacks, antagonism] for now."`
-      `  You ask what you should do next, and Rek says, "We need some time to [analyze, inspect] the sensor logs. Meet me in the spaceport in an hour."`
+      `  You ask what you should do next, and Rek says, "We need some time to [analyse, inspect] the sensor logs. Meet me in the spaceport in an hour."`
 
 
 
@@ -1797,7 +1797,7 @@ mission "Wanderers Solifuge Recon 2"
       has "Wanderers Pond Strider Recon 1: done"
   on offer
     log "Received permission to purchase warships from the Wanderers, including a new one called the Tempest."
-    set "license: Wanderer Military"
+    set "licence: Wanderer Military"
     conversation
       `Sobari Tele'ek, the military commander whom you met earlier, greets you when you land. "The human who enjoys taking part in fights!" he says. "I am glad you have come. We have two [pieces, items] of good news for you. The first is that we have decided it is [permissible? prudent?] to allow you to purchase our warships. That will include the new [ugly, brutish] one, the Tempest."`
       `  "Thank you," you say.`

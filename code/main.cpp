@@ -125,7 +125,7 @@ int main(int argc, char *argv[])
 #endif
     SDL_GL_SetAttribute(SDL_GL_CONTEXT_PROFILE_MASK, SDL_GL_CONTEXT_PROFILE_CORE);
     
-    SDL_Window *window = SDL_CreateWindow("Endless Sky",
+    SDL_Window *window = SDL_CreateWindow("Finite Galaxy",
       SDL_WINDOWPOS_UNDEFINED, SDL_WINDOWPOS_UNDEFINED,
       windowWidth, windowHeight, flags);
     if(!window)
@@ -163,7 +163,7 @@ int main(int argc, char *argv[])
     if(*glVersion < '3')
     {
       ostringstream out;
-      out << "Endless Sky requires OpenGL version 3.0 or higher." << endl;
+      out << "Finite Galaxy requires OpenGL version 3.0 or higher." << endl;
       out << "Your OpenGL version is " << glVersion << ", GLSL version " << glslVersion << "." << endl;
       out << "Please update your graphics drivers.";
       return DoError(out.str(), window, context);
@@ -210,7 +210,7 @@ int main(int argc, char *argv[])
 #endif
       menuPanels.Push(new Dialog(
         "Note: your computer does not support the \"texture swizzling\" OpenGL feature, "
-        "which Endless Sky uses to draw ships in different colors depending on which "
+        "which Finite Galaxy uses to draw ships in different colors depending on which "
         "government they belong to. So, all human ships will be the same color, which "
         "may be confusing. Consider upgrading your graphics driver (or your OS)."));
     
@@ -376,8 +376,8 @@ void PrintHelp()
   cerr << "    -c, --config <path>: save user's files to given directory." << endl;
   cerr << "    -d, --debug: turn on debugging features (e.g. caps lock slow motion)." << endl;
   cerr << endl;
-  cerr << "Report bugs to: mzahniser@gmail.com" << endl;
-  cerr << "Home page: <https://endless-sky.github.io>" << endl;
+  cerr << "Report bugs to: finite-galaxy@mail.com" << endl;
+  cerr << "Home page: <https://github.com/finite-galaxy/finite-galaxy>" << endl;
   cerr << endl;
 }
 
@@ -386,8 +386,8 @@ void PrintHelp()
 void PrintVersion()
 {
   cerr << endl;
-  cerr << "Endless Sky 0.9.8" << endl;
-  cerr << "License GPLv3+: GNU GPL version 3 or later: <https://gnu.org/licenses/gpl.html>" << endl;
+  cerr << "Finite Galaxy" << endl;
+  cerr << "Licence GPLv3+: GNU GPL version 3 or later: <https://gnu.org/licenses/gpl.html>" << endl;
   cerr << "This is free software: you are free to change and redistribute it." << endl;
   cerr << "There is NO WARRANTY, to the extent permitted by law." << endl;
   cerr << endl;
@@ -467,7 +467,7 @@ int DoError(string message, SDL_Window *window, SDL_GLContext context)
   SDL_MessageBoxData box;
   box.flags = SDL_MESSAGEBOX_ERROR;
   box.window = nullptr;
-  box.title = "Endless Sky: Error";
+  box.title = "Finite Galaxy: Error";
   box.message = message.c_str();
   box.colorScheme = nullptr;
   

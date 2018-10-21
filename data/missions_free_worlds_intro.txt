@@ -1,6 +1,6 @@
 mission "Pact Recon 0"
   name "Pirate Reconnaissance"
-  description "Fly through the <waypoints> systems, then report to <destination> so the Southern Defense Pact can analyze your logs of pirate activity (if any)."
+  description "Fly through the <waypoints> systems, then report to <destination> so the Southern Defense Pact can analyse your logs of pirate activity (if any)."
   waypoint "Alniyat"
   waypoint "Han"
   waypoint "Atria"
@@ -60,7 +60,7 @@ mission "Pact Recon 0"
 mission "Pact Recon 1"
   landing
   name "Pirate Reconnaissance"
-  description "Fly through the <waypoints> systems, then report to <destination> so the Southern Defense Pact can analyze your logs of pirate activity (if any)."
+  description "Fly through the <waypoints> systems, then report to <destination> so the Southern Defense Pact can analyse your logs of pirate activity (if any)."
   waypoint "Wei"
   waypoint "Alnasl"
   waypoint "Eber"
@@ -87,7 +87,7 @@ mission "Pact Recon 1"
 mission "Pact Recon 2"
   landing
   name "Pirate Reconnaissance"
-  description "Fly through the <waypoints> systems, then report to <destination> so the Southern Defense Pact can analyze your logs of pirate activity (if any)."
+  description "Fly through the <waypoints> systems, then report to <destination> so the Southern Defense Pact can analyse your logs of pirate activity (if any)."
   waypoint "Men"
   waypoint "Antares"
   waypoint "Shaula"
@@ -824,7 +824,7 @@ mission "FW Katya 2C"
     conversation
       `As soon as you land, Mr. Eyes fires up his sensors and begins collecting data. A few minutes later, Katya shows up. "Eyes!" she says. "It's great to see you again."`
       `  "You too, Councilor," he says.`
-      `  Katya hands you a credit chip for another <payment>. "Thanks again, Captain. Did Eyes explain the plan to you?" You nod. "Well," she says, "if you've got space for the two of us and want to be a part of seeing justice done, let's meet up in the spaceport once Eyes is done analyzing his data."`
+      `  Katya hands you a credit chip for another <payment>. "Thanks again, Captain. Did Eyes explain the plan to you?" You nod. "Well," she says, "if you've got space for the two of us and want to be a part of seeing justice done, let's meet up in the spaceport once Eyes is done analysing his data."`
 
 
 
@@ -2030,11 +2030,12 @@ mission "Defend Sabik"
   on complete
     dialog `The Navy has been driven off, but at a great cost. You should probably visit the spaceport and see if Tomek is there, or someone else who can tell you what to do next.`
 
-mission "FWCarrier License"
+mission "FWCarrier Licence"
   invisible
   landing
   to offer
     has "event: joined the free worlds"
   on offer
-    set "license: Militia Carrier"
+    set "licence: Militia Carrier"
     fail
+

@@ -58,9 +58,9 @@ private:
   static bool ShipCanSell(const Ship *ship, const Outfit *outfit);
   static void DrawOutfit(const Outfit &outfit, const Point &center, bool isSelected, bool isOwned);
   bool HasMapped(int mapSize) const;
-  bool IsLicense(const std::string &name) const;
-  bool HasLicense(const std::string &name) const;
-  std::string LicenseName(const std::string &name) const;
+  bool IsLicence(const std::string &name) const;
+  bool HasLicence(const std::string &name) const;
+  std::string LicenceName(const std::string &name) const;
   void CheckRefill();
   void Refill();
   // Shared code for reducing the selected ships to those that have the

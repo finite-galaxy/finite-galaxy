@@ -147,11 +147,11 @@ bool ShipyardPanel::CanBuy() const
   
   int64_t cost = player.StockDepreciation().Value(*selectedShip, day);
   
-  // Check that the player has any necessary licenses.
-  int64_t licenseCost = LicenseCost(&selectedShip->Attributes());
-  if(licenseCost < 0)
+  // Check that the player has any necessary licences.
+  int64_t licenceCost = LicenceCost(&selectedShip->Attributes());
+  if(licenceCost < 0)
     return false;
-  cost += licenseCost;
+  cost += licenceCost;
   
   return (player.Accounts().Credits() >= cost);
 }
@@ -160,15 +160,15 @@ bool ShipyardPanel::CanBuy() const
 
 void ShipyardPanel::Buy(bool fromCargo)
 {
-  int64_t licenseCost = LicenseCost(&selectedShip->Attributes());
-  if(licenseCost < 0)
+  int64_t licenceCost = LicenceCost(&selectedShip->Attributes());
+  if(licenceCost < 0)
     return;
   
   modifier = Modifier();
   string message;
-  if(licenseCost)
-    message = "Note: you will need to pay " + Format::Credits(licenseCost)
-      + " credits for the licenses required to operate this ship, in addition to its cost."
+  if(licenceCost)
+    message = "Note: you will need to pay " + Format::Credits(licenceCost)
+      + " credits for the licences required to operate this ship, in addition to its cost."
       " If that is okay with you, go ahead and enter a name for your brand new ";
   else
     message = "Enter a name for your brand new ";
@@ -190,16 +190,16 @@ void ShipyardPanel::FailBuy() const
   
   int64_t cost = player.StockDepreciation().Value(*selectedShip, day);
   
-  // Check that the player has any necessary licenses.
-  int64_t licenseCost = LicenseCost(&selectedShip->Attributes());
-  if(licenseCost < 0)
+  // Check that the player has any necessary licences.
+  int64_t licenceCost = LicenceCost(&selectedShip->Attributes());
+  if(licenceCost < 0)
   {
-    GetUI()->Push(new Dialog("Buying this ship requires a special license. "
+    GetUI()->Push(new Dialog("Buying this ship requires a special licence. "
       "You will probably need to complete some sort of mission to get one."));
     return;
   }
   
-  cost += licenseCost;
+  cost += licenceCost;
   if(player.Accounts().Credits() < cost)
   {
     for(const auto &it : player.Ships())
@@ -284,13 +284,13 @@ bool ShipyardPanel::CanSellMultiple() const
 
 void ShipyardPanel::BuyShip(const string &name)
 {
-  int64_t licenseCost = LicenseCost(&selectedShip->Attributes());
-  if(licenseCost)
+  int64_t licenceCost = LicenceCost(&selectedShip->Attributes());
+  if(licenceCost)
   {
-    player.Accounts().AddCredits(-licenseCost);
-    for(const string &licenseName : selectedShip->Attributes().Licenses())
-      if(player.GetCondition("license: " + licenseName) <= 0)
-        player.Conditions()["license: " + licenseName] = true;
+    player.Accounts().AddCredits(-licenceCost);
+    for(const string &licenceName : selectedShip->Attributes().Licences())
+      if(player.GetCondition("licence: " + licenceName) <= 0)
+        player.Conditions()["licence: " + licenceName] = true;
   }
   
   for(int i = 1; i <= modifier; ++i)

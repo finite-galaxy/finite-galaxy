@@ -43,12 +43,12 @@ OutfitterPanel::OutfitterPanel(PlayerInfo &player)
   for(const pair<const string, Outfit> &it : GameData::Outfits())
     catalog[it.second.Category()].insert(it.first);
   
-  // Add owned licenses
-  const string PREFIX = "license: ";
+  // Add owned licences
+  const string PREFIX = "licence: ";
   for(auto &it : player.Conditions())
     if(it.first.compare(0, PREFIX.length(), PREFIX) == 0 && it.second > 0)
     {
-      const string name = it.first.substr(PREFIX.length()) + " License";
+      const string name = it.first.substr(PREFIX.length()) + " Licence";
       const Outfit *outfit = GameData::Outfits().Get(name);
       if(outfit)
         catalog[outfit->Category()].insert(name);
@@ -99,7 +99,7 @@ bool OutfitterPanel::HasItem(const string &name) const
     if(ship->OutfitCount(outfit))
       return true;
   
-  if(showForSale && HasLicense(name))
+  if(showForSale && HasLicence(name))
     return true;
   
   return false;
@@ -118,18 +118,18 @@ void OutfitterPanel::DrawItem(const string &name, const Point &point, int scroll
   bool isOwned = playerShip && playerShip->OutfitCount(outfit);
   DrawOutfit(*outfit, point, isSelected, isOwned);
   
-  // Check if this outfit is a "license".
-  bool isLicense = IsLicense(name);
+  // Check if this outfit is a "licence".
+  bool isLicence = IsLicence(name);
   int mapSize = outfit->Get("map");
   
   const Font &font = FontSet::Get(14);
   const Color &bright = *GameData::Colors().Get("bright");
-  if(playerShip || isLicense || mapSize)
+  if(playerShip || isLicence || mapSize)
   {
     int minCount = numeric_limits<int>::max();
     int maxCount = 0;
-    if(isLicense)
-      minCount = maxCount = player.GetCondition(LicenseName(name));
+    if(isLicence)
+      minCount = maxCount = player.GetCondition(LicenceName(name));
     else if(mapSize)
       minCount = maxCount = HasMapped(mapSize);
     else
@@ -225,16 +225,16 @@ bool OutfitterPanel::CanBuy() const
   
   // Determine what you will have to pay to buy this outfit.
   int64_t cost = player.StockDepreciation().Value(selectedOutfit, day);
-  // Check that the player has any necessary licenses.
-  int64_t licenseCost = LicenseCost(selectedOutfit);
-  if(licenseCost < 0)
+  // Check that the player has any necessary licences.
+  int64_t licenceCost = LicenceCost(selectedOutfit);
+  if(licenceCost < 0)
     return false;
-  cost += licenseCost;
+  cost += licenceCost;
   // If you have this in your cargo hold, installing it is free.
   if(cost > player.Accounts().Credits() && !isInCargo)
     return false;
   
-  if(HasLicense(selectedOutfit->Name()))
+  if(HasLicence(selectedOutfit->Name()))
     return false;
   
   if(!playerShip)
@@ -254,13 +254,13 @@ bool OutfitterPanel::CanBuy() const
 
 void OutfitterPanel::Buy(bool fromCargo)
 {
-  int64_t licenseCost = LicenseCost(selectedOutfit);
-  if(licenseCost)
+  int64_t licenceCost = LicenceCost(selectedOutfit);
+  if(licenceCost)
   {
-    player.Accounts().AddCredits(-licenseCost);
-    for(const string &licenseName : selectedOutfit->Licenses())
-      if(!player.GetCondition("license: " + licenseName))
-        player.Conditions()["license: " + licenseName] = true;
+    player.Accounts().AddCredits(-licenceCost);
+    for(const string &licenceName : selectedOutfit->Licences())
+      if(!player.GetCondition("licence: " + licenceName))
+        player.Conditions()["licence: " + licenceName] = true;
   }
   
   int modifier = Modifier();
@@ -282,10 +282,10 @@ void OutfitterPanel::Buy(bool fromCargo)
       return;
     }
     
-    // Special case: licenses.
-    if(IsLicense(selectedOutfit->Name()))
+    // Special case: licences.
+    if(IsLicence(selectedOutfit->Name()))
     {
-      int &entry = player.Conditions()[LicenseName(selectedOutfit->Name())];
+      int &entry = player.Conditions()[LicenceName(selectedOutfit->Name())];
       if(entry <= 0)
       {
         entry = true;
@@ -348,19 +348,19 @@ void OutfitterPanel::FailBuy() const
       + Format::Credits(credits) + "."));
     return;
   }
-  // Check that the player has any necessary licenses.
-  int64_t licenseCost = LicenseCost(selectedOutfit);
-  if(licenseCost < 0)
+  // Check that the player has any necessary licences.
+  int64_t licenceCost = LicenceCost(selectedOutfit);
+  if(licenceCost < 0)
   {
     GetUI()->Push(new Dialog(
-      "You cannot buy this outfit, because it requires a license that you don't have."));
+      "You cannot buy this outfit, because it requires a licence that you don't have."));
     return;
   }
-  if(!isInCargo && cost + licenseCost > credits)
+  if(!isInCargo && cost + licenceCost > credits)
   {
     GetUI()->Push(new Dialog(
       "You don't have enough money to buy this outfit, because it will cost you an extra "
-      + Format::Credits(licenseCost) + " credits to buy the necessary licenses."));
+      + Format::Credits(licenceCost) + " credits to buy the necessary licences."));
     return;
   }
   
@@ -379,9 +379,9 @@ void OutfitterPanel::FailBuy() const
     return;
   }
   
-  if(HasLicense(selectedOutfit->Name()))
+  if(HasLicence(selectedOutfit->Name()))
   {
-    GetUI()->Push(new Dialog("You already have one of these licenses, "
+    GetUI()->Push(new Dialog("You already have one of these licences, "
       "so there is no reason to buy another."));
     return;
   }
@@ -551,8 +551,8 @@ void OutfitterPanel::FailSell(bool toCargo) const
     return;
   else if(selectedOutfit->Get("map"))
     GetUI()->Push(new Dialog("You cannot " + verb + " maps. Once you buy one, it is yours permanently."));
-  else if(HasLicense(selectedOutfit->Name()))
-    GetUI()->Push(new Dialog("You cannot " + verb + " licenses. Once you obtain one, it is yours permanently."));
+  else if(HasLicence(selectedOutfit->Name()))
+    GetUI()->Push(new Dialog("You cannot " + verb + " licences. Once you obtain one, it is yours permanently."));
   else
   {
     bool hasOutfit = !toCargo && player.Cargo().Get(selectedOutfit);
@@ -724,12 +724,12 @@ bool OutfitterPanel::HasMapped(int mapSize) const
 
 
 
-bool OutfitterPanel::IsLicense(const string &name) const
+bool OutfitterPanel::IsLicence(const string &name) const
 {
-  static const string &LICENSE = " License";
-  if(name.length() < LICENSE.length())
+  static const string &LICENCE = " Licence";
+  if(name.length() < LICENCE.length())
     return false;
-  if(name.compare(name.length() - LICENSE.length(), LICENSE.length(), LICENSE))
+  if(name.compare(name.length() - LICENCE.length(), LICENCE.length(), LICENCE))
     return false;
   
   return true;
@@ -737,17 +737,17 @@ bool OutfitterPanel::IsLicense(const string &name) const
 
 
 
-bool OutfitterPanel::HasLicense(const string &name) const
+bool OutfitterPanel::HasLicence(const string &name) const
 {
-  return (IsLicense(name) && player.GetCondition(LicenseName(name)) > 0);
+  return (IsLicence(name) && player.GetCondition(LicenceName(name)) > 0);
 }
 
 
 
-string OutfitterPanel::LicenseName(const string &name) const
+string OutfitterPanel::LicenceName(const string &name) const
 {
-  static const string &LICENSE = " License";
-  return "license: " + name.substr(0, name.length() - LICENSE.length());
+  static const string &LICENCE = " Licence";
+  return "licence: " + name.substr(0, name.length() - LICENCE.length());
 }
 
 

@@ -797,9 +797,9 @@ bool ShopPanel::Scroll(double dx, double dy)
 
 
 
-int64_t ShopPanel::LicenseCost(const Outfit *outfit) const
+int64_t ShopPanel::LicenceCost(const Outfit *outfit) const
 {
-  // Don't require a license for an outfit that you have in cargo or that you
+  // Don't require a licence for an outfit that you have in cargo or that you
   // just sold to the outfitter. (Otherwise, there would be no way to transfer
   // a restricted plundered outfit between ships or from cargo to a ship.)
   if(player.Cargo().Get(outfit) || player.Stock(outfit) > 0)
@@ -808,13 +808,13 @@ int64_t ShopPanel::LicenseCost(const Outfit *outfit) const
   const Sale<Outfit> &available = player.GetPlanet()->Outfitter();
   
   int64_t cost = 0;
-  for(const string &name : outfit->Licenses())
-    if(!player.GetCondition("license: " + name))
+  for(const string &name : outfit->Licences())
+    if(!player.GetCondition("licence: " + name))
     {
-      const Outfit *license = GameData::Outfits().Find(name + " License");
-      if(!license || !license->Cost() || !available.Has(license))
+      const Outfit *licence = GameData::Outfits().Find(name + " Licence");
+      if(!licence || !licence->Cost() || !available.Has(licence))
         return -1;
-      cost += license->Cost();
+      cost += licence->Cost();
     }
   return cost;
 }
