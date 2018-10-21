@@ -1,5 +1,5 @@
 outfit "Zapper Cannon"
-  category "Guns"
+  category "Cannons"
   cost 290000
   thumbnail "outfit/zapper_cannon"
   "mass" 25
@@ -37,7 +37,7 @@ outfit "Zapper Turret"
     sprite "projectile/lightning"
       "frame rate" 60
       "random start frame"
-    "hardpoint sprite" "hardpoint/pug zapper turret"
+    "hardpoint sprite" "hardpoint/zapper_turret"
     "hardpoint offset" 7.
     sound "zapper"
     "hit effect" "skylance impact"
@@ -54,7 +54,7 @@ outfit "Zapper Turret"
 
 
 outfit "Seeker"
-  category "Guns"
+  category "Cannons"
   cost 540000
   thumbnail "outfit/seeker"
   "mass" 34
@@ -159,7 +159,7 @@ outfit "Pug Anti-Missile"
   "turret mounts" -1
   "radar jamming" 1
   weapon
-    "hardpoint sprite" "hardpoint/pug anti-missile"
+    "hardpoint sprite" "hardpoint/anti-missile_pug"
     "hardpoint offset" 6.
     "hit effect" "pug anti-missile"
     "anti-missile" 5

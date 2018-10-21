@@ -4,6 +4,15 @@
 
 
 # deprecated because of spelling
+outfit "Aluminum"
+  plural "Aluminum"
+  category "Deprecated"
+  thumbnail "outfit/unknown"
+  cost 1800
+  "flotsam sprite" "effect/flotsam aluminium"
+  "mass" 1
+  "installable" -1
+
 outfit "Command Center"
   category "Deprecated"
   thumbnail "outfit/unknown"
@@ -317,8 +326,6 @@ outfit "Heliarch Attractor"
     sprite "projectile/attractor"
       "frame rate" 5.2
       "random start frame"
-    "hardpoint sprite" "hardpoint/heliarch attractor"
-    "hardpoint offset" 9.
     sound "heliarch attractor"
     "hit effect" "attractor impact"
     "inaccuracy" 2
@@ -346,8 +353,6 @@ outfit "Heliarch Repulsor"
     sprite "projectile/repulsor"
       "frame rate" 3.2
       "random start frame"
-    "hardpoint sprite" "hardpoint/heliarch repulsor"
-    "hardpoint offset" 9.
     sound "heliarch repulsor"
     "hit effect" "repulsor impact"
     "inaccuracy" 3
@@ -376,8 +381,6 @@ outfit "Korath Banisher"
   weapon
     sprite "projectile/banisher"
       "frame rate" 60
-    "hardpoint sprite" "hardpoint/banisher"
-    "hardpoint offset" 5.
     sound "banisher"
     "hit effect" "banisher impact"
     "inaccuracy" .4
@@ -434,8 +437,6 @@ outfit "Korath Disruptor"
   weapon
     sprite "projectile/disruptor"
       "frame rate" 15
-    "hardpoint sprite" "hardpoint/disruptor"
-    "hardpoint offset" 15.
     sound "disruptor"
     "hit effect" "disruptor impact"
     "inaccuracy" 1
@@ -487,8 +488,6 @@ outfit "Korath Grab-Strike"
     sprite "projectile/grab-strike"
       "frame rate" 25
       "random start frame"
-    "hardpoint sprite" "hardpoint/grab-strike"
-    "hardpoint offset" 7.
     sound "grab-strike"
     "hit effect" "grab-strike impact"
     "die effect" "grab-strike impact"
@@ -684,8 +683,6 @@ outfit "Korath Repeater Turret"
   weapon
     sprite "projectile/repeater"
       "frame rate" 5
-    "hardpoint sprite" "hardpoint/repeater turret"
-    "hardpoint offset" 7.
     sound "repeater"
     "hit effect" "repeater impact"
     "inaccuracy" 3
@@ -738,8 +735,6 @@ outfit "Korath Slicer Turret"
   weapon
     sprite "projectile/slicer"
       "frame rate" 6
-    "hardpoint sprite" "hardpoint/slicer turret"
-    "hardpoint offset" 17.
     sound "slicer"
     "hit effect" "slicer impact"
     "inaccuracy" 0
@@ -764,8 +759,6 @@ outfit "Korath Warder"
   "energy capacity" 50
   "turret mounts" -1
   weapon
-    "hardpoint sprite" "hardpoint/warder"
-    "hardpoint offset" 3.
     "hit effect" "korath warder"
     "anti-missile" 10
     "velocity" 350
@@ -812,8 +805,6 @@ outfit "Pug Zapper Turret"
     sprite "projectile/lightning"
       "frame rate" 60
       "random start frame"
-    "hardpoint sprite" "hardpoint/pug zapper turret"
-    "hardpoint offset" 7.
     sound "zapper"
     "hit effect" "skylance impact"
     "inaccuracy" .3
@@ -1003,8 +994,6 @@ outfit "Blaster Turret"
   "required crew" 1
   weapon
     sprite "projectile/blaster"
-    "hardpoint sprite" "hardpoint/blaster turret"
-    "hardpoint offset" 9.
     sound "blaster"
     "hit effect" "blaster impact"
     "inaccuracy" 3
@@ -1028,8 +1017,6 @@ outfit "Quad Blaster Turret"
   "required crew" 1
   weapon
     sprite "projectile/blaster"
-    "hardpoint sprite" "hardpoint/quad blaster turret"
-    "hardpoint offset" 9.
     sound "blaster"
     "hit effect" "blaster impact"
     "inaccuracy" 3

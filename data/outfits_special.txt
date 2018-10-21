@@ -1,20 +1,65 @@
-minable "aluminum"
+# Maps
+outfit "Local Map"
+  category "Special"
+  cost 1000
+  thumbnail "outfit/map"
+  "map" 12
+  description "This data chip contains complete information on the twelve star systems closest to this one: planets, ports, governments, trade prices, available services, etc. You can get all the same information just by exploring those systems yourself, but having a map can save you from making wrong turns if you are trying to travel through new territory to reach a certain system quickly."
+
+
+# Licences
+outfit "Coalition License"
+  category "Special"
+  description "Completed a lot of Coalition jobs and received permission to purchase civilian technology and ships."
+
+outfit "Militia Carrier License"
+  category "Special"
+  description "Officially joined the Free Worlds. Received permission to purchase their Militia-only carriers."
+
+outfit "Navy License"
+  category "Special"
+  description "It is unusual, but not unheard of, for private citizens to be given the right to purchase Navy ships for their own private use. Recently, certain rich worlds have also begun petitioning Parliament for special permission to purchase Navy warships for their private security forces."
+
+outfit "Pilot's License"
+  category "Special"
+  cost 50000
+  description "Without a pilot's license, you cannot purchase a ship on a Republic planet. And if you buy an unlicensed ship on another planet and then bring it into Republic space, you can be fined until you cough up the money for a license. Needless to say, this policy is not terribly popular with freelance merchant captains."
+
+outfit "Remnant License"
+  category "Special"
+  description "The prefects have reached a consensus that you should be considered a valuable friend of the Remnant, and shall be given permission to purchase their ships and technology."
+
+outfit "Wanderer License"
+  category "Special"
+  description "Managed to broker a temporary ceasefire between the Unfettered Hai and the Wanderers. Was granted access to purchase the non-military Wanderer ships, as a reward."
+
+outfit "Wanderer Military License"
+  category "Special"
+  description "Received permission to purchase warships from the Wanderers, including a new one called the Tempest."
+
+outfit "Wanderer Outfits License"
+  category "Special"
+  description "Spoke with a Wanderer ambassador named Iktat Rek using the translation device and received permission to purchase some of their technology, but not their ships."
+
+
+# Harvesting
+minable "aluminium"
   sprite "asteroid/silicon/spin"
   hull 1000
-  payload "Aluminum" 40
+  payload "Aluminium" 40
   explode "smoke" 40
   explode "bolide" 40
   explode "final explosion large"
 
-outfit "Aluminum"
-  plural "Aluminum"
+outfit "Aluminium"
+  plural "Aluminium"
   category "Special"
   cost 1800
-  thumbnail "outfit/harvested aluminum"
-  "flotsam sprite" "effect/flotsam aluminum"
+  thumbnail "outfit/harvested_aluminium"
+  "flotsam sprite" "effect/flotsam aluminium"
   "mass" 1
   "installable" -1
-  description "Lightweight and rust resistant, aluminum is often used for the hulls of civilian spacecraft that do not need to be able to stand up to prolonged weapons fire."
+  description "Lightweight and rust resistant, aluminium is often used for the hulls of civilian spacecraft that do not need to be able to stand up to prolonged weapons fire."
 
 
 minable "copper"
@@ -29,7 +74,7 @@ outfit "Copper"
   plural "Copper"
   category "Special"
   cost 3000
-  thumbnail "outfit/harvested copper"
+  thumbnail "outfit/harvested_copper"
   "flotsam sprite" "effect/flotsam copper"
   "mass" 1
   "installable" -1
@@ -48,7 +93,7 @@ outfit "Gold"
   plural "Gold"
   category "Special"
   cost 8000
-  thumbnail "outfit/harvested gold"
+  thumbnail "outfit/harvested_gold"
   "flotsam sprite" "effect/flotsam gold"
   "mass" 1
   "installable" -1
@@ -67,7 +112,7 @@ outfit "Iron"
   plural "Iron"
   category "Special"
   cost 1200
-  thumbnail "outfit/harvested iron"
+  thumbnail "outfit/harvested_iron"
   "flotsam sprite" "effect/flotsam iron"
   "mass" 1
   "installable" -1
@@ -86,7 +131,7 @@ outfit "Lead"
   plural "Lead"
   category "Special"
   cost 900
-  thumbnail "outfit/harvested lead"
+  thumbnail "outfit/harvested_lead"
   "flotsam sprite" "effect/flotsam lead"
   "mass" 1
   "installable" -1
@@ -105,7 +150,7 @@ outfit "Neodymium"
   plural "Neodymium"
   category "Special"
   cost 3800
-  thumbnail "outfit/harvested neodymium"
+  thumbnail "outfit/harvested_neodymium"
   "flotsam sprite" "effect/flotsam neodymium"
   "mass" 1
   "installable" -1
@@ -124,7 +169,7 @@ outfit "Platinum"
   plural "Platinum"
   category "Special"
   cost 10000
-  thumbnail "outfit/harvested platinum"
+  thumbnail "outfit/harvested_platinum"
   "flotsam sprite" "effect/flotsam platinum"
   "mass" 1
   "installable" -1
@@ -143,7 +188,7 @@ outfit "Silicon"
   plural "Silicon"
   category "Special"
   cost 400
-  thumbnail "outfit/harvested silicon"
+  thumbnail "outfit/harvested_silicium"
   "flotsam sprite" "effect/flotsam silicon"
   "mass" 1
   "installable" -1
@@ -162,7 +207,7 @@ outfit "Silver"
   plural "Silver"
   category "Special"
   cost 6000
-  thumbnail "outfit/harvested silver"
+  thumbnail "outfit/harvested_silver"
   "flotsam sprite" "effect/flotsam silver"
   "mass" 1
   "installable" -1
@@ -181,7 +226,7 @@ outfit "Titanium"
   plural "Titanium"
   category "Special"
   cost 2500
-  thumbnail "outfit/harvested titanium"
+  thumbnail "outfit/harvested_titanium"
   "flotsam sprite" "effect/flotsam titanium"
   "mass" 1
   "installable" -1
@@ -200,7 +245,7 @@ outfit "Tungsten"
   plural "Tungsten"
   category "Special"
   cost 4500
-  thumbnail "outfit/harvested tungsten"
+  thumbnail "outfit/harvested_tungsten"
   "flotsam sprite" "effect/flotsam tungsten"
   "mass" 1
   "installable" -1
@@ -219,8 +264,9 @@ outfit "Uranium"
   plural "Uranium"
   category "Special"
   cost 5000
-  thumbnail "outfit/harvested uranium"
+  thumbnail "outfit/harvested_uranium"
   "flotsam sprite" "effect/flotsam uranium"
   "mass" 1
   "installable" -1
   description "Uranium is best known for its use in the nuclear reactors that power large starships. Its most stable isotope U-238 is also used for ultra-strong hull plating and for armor-piercing projectiles."
+

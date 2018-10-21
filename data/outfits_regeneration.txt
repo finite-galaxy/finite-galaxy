@@ -1,0 +1,251 @@
+# Coalition
+outfit "Small Shield Module"
+  category "Regeneration"
+  licenses
+    Coalition
+  cost 84000
+  thumbnail "outfit/small shield module"
+  "mass" 11
+  "outfit space" -11
+  "shield generation" .28
+  "shield energy" .28
+  "shield heat" .1
+  description "Although combat is almost unheard of in Coalition space, almost all of their ships are able to recharge their shields when necessary."
+
+outfit "Large Shield Module"
+  category "Regeneration"
+  licenses
+    Coalition
+  cost 553000
+  thumbnail "outfit/large shield module"
+  "mass" 39
+  "outfit space" -39
+  "shield generation" 1.3
+  "shield energy" 1.3
+  "shield heat" .5
+  description "The Coalition manufactures heavy shield generators for their ships in case they ever face aggression from the Quarg or another species."
+
+outfit "Small Repair Module"
+  category "Regeneration"
+  licenses
+    Coalition
+  cost 64000
+  thumbnail "outfit/small repair module"
+  "mass" 6
+  "outfit space" -6
+  "hull repair rate" .12
+  "hull energy" .12
+  "hull heat" .1
+  description "Arachi ships, which rely more on strong hull than on energy shields, often carry one of these repair modules to allow damaged hull plating to be patched back together on the fly."
+
+outfit "Large Repair Module"
+  category "Regeneration"
+  licenses
+    Coalition
+  cost 553000
+  thumbnail "outfit/large repair module"
+  "mass" 21
+  "outfit space" -21
+  "hull repair rate" .57
+  "hull energy" .57
+  "hull heat" .5
+  description "This hub houses a small fleet of repair robots that can climb around on a ship's hull and repair damage to it, even in the middle of combat."
+
+
+# Hai
+outfit "Corundum Regenerator"
+  category "Regeneration"
+  cost 300000
+  thumbnail "outfit/small regenerator hai"
+  "mass" 16
+  "outfit space" -16
+  "shield generation" .7
+  "shield energy" .7
+  "energy consumption" .3
+  "shield heat" 3
+  description "Hai shield regenerators work by subtly modifying the geometry and harmonics of your shield matrix in order to make your shields more malleable and therefore much easier to recharge. Unfortunately, this system requires a constant power source, and generates a fair bit of heat while regenerating."
+
+outfit "Diamond Regenerator"
+  category "Regeneration"
+  cost 1150000
+  thumbnail "outfit/large regenerator hai"
+  "mass" 49
+  "outfit space" -49
+  "shield generation" 2.5
+  "shield energy" 2.5
+  "shield heat" 9
+  "energy consumption" .9
+  description "The Hai Diamond Shield Regenerator is an advanced type of shield recharging technology. Unfortunately, its power needs are quite high, and the shifts it makes to your shield matrix causes intense heat at the regenerator when your shields are charging. The Hai usually employ Williwaw Cooling when they use this regenerator."
+
+
+# Human
+outfit "D14-RN Shield Generator"
+  category "Regeneration"
+  cost 20000
+  thumbnail "outfit/shield_tiny"
+  "mass" 15
+  "outfit space" -15
+  "shield generation" .2
+  "shield energy" .2
+  description "This is the standard shield generator for fighters and interceptors, as well as for many non-combat starships. Although it is possible for a ship to have no shield generator at all, recharging its shield matrix only when landed in a hospitable spaceport, life in deep space is unpredictable enough that most pilots find shield generators to be well worth the space they take up."
+
+outfit "D23-QP Shield Generator"
+  category "Regeneration"
+  cost 35000
+  thumbnail "outfit/shield_small"
+  "mass" 22
+  "outfit space" -22
+  "shield generation" .32
+  "shield energy" .32
+  description "This is a slightly more powerful shield generator than the standard model installed in most small ships. If combat lasts long enough, the increased recharge rate is enough to give you an edge, but recharging your shields completely will still take a long time."
+
+outfit "D41-HY Shield Generator"
+  category "Regeneration"
+  cost 65000
+  thumbnail "outfit/shield_medium"
+  "mass" 30
+  "outfit space" -30
+  "shield generation" .51
+  "shield energy" .51
+  description "This is a more powerful shield generator designed for ships that are likely to see frequent combat, or that have such a large shield capacity that recharging them would take a long time with a smaller generator."
+
+outfit "D67-TM Shield Generator"
+  category "Regeneration"
+  cost 120000
+  thumbnail "outfit/shield_large"
+  "mass" 45
+  "outfit space" -45
+  "shield generation" .82
+  "shield energy" .82
+  description "This shield generator is powerful enough that in combat against some particularly weak ships, they may not even be capable of depleting your shields as fast as they recharge."
+
+outfit "D94-YV Shield Generator"
+  category "Regeneration"
+  cost 200000
+  thumbnail "outfit/shield_huge"
+  "mass" 60
+  "outfit space" -60
+  "shield generation" 1.31
+  "shield energy" 1.31
+  description "This is the most powerful shield generator available in human space. Because of their large size, D94-YV shield generators are mostly used in large warships, but you can fit one in a smaller ship if you are willing to sacrifice engine power or weaponry to make space for it."
+
+outfit "S-270 Regenerator"
+  category "Regeneration"
+  cost 220000
+  thumbnail "outfit/small regenerator"
+  "mass" 12
+  "outfit space" -12
+  "shield generation" .6
+  "shield energy" .6
+  "energy consumption" .3
+  "heat generation" 2
+  description "A shield regenerator works by subtly modifying the geometry of your shield matrix in order to make your shields more malleable and therefore much easier to recharge. Unfortunately, this causes your shields to also become less efficient, which draws energy away from your other systems, even when not charging shields, and creates heat."
+
+outfit "S-970 Regenerator"
+  category "Regeneration"
+  cost 800000
+  thumbnail "outfit/large regenerator"
+  "mass" 37
+  "outfit space" -37
+  "shield generation" 2.3
+  "shield energy" 2.3
+  "energy consumption" .9
+  "heat generation" 6
+  description "The S-970 Shield Regenerator is an advanced type of shield recharging technology. Unfortunately, its power needs are rather high, and the shifts it makes in your shield configuration also result in some feedback that causes heat to build up in the regenerator, even when your shields are at full strength."
+
+
+# Korath
+outfit "Systems Core (Small)"
+  plural "Systems Cores (Small)"
+  category "Regeneration"
+  cost 1452000
+  thumbnail "outfit/systems_core_small"
+  "mass" 31
+  "outfit space" -31
+  "shield generation" 1.6
+  "shield energy" 2.4
+  "hull repair rate" 0.2
+  "hull energy" 0.2
+  "hull heat" 0.3
+  "energy capacity" 1300
+  "radar jamming" 1
+  description `The heart of any Korath ship is the Systems Core, which houses the ship's central computer, shield generators, and a small number of "hull-walking" welding robots that can make minor repairs to the ship's outer armor while in flight.`
+
+outfit "Systems Core (Medium)"
+  plural "Systems Cores (Medium)"
+  category "Regeneration"
+  cost 3630000
+  thumbnail "outfit/systems_core_medium"
+  "mass" 53
+  "outfit space" -53
+  "shield generation" 3.1
+  "shield energy" 4.6
+  "hull repair rate" 0.4
+  "hull energy" 0.4
+  "hull heat" 0.6
+  "energy capacity" 2600
+  "radar jamming" 2
+  description `This "systems core" houses a powerful computer, shield generators, and a control center for small repair robots that can walk across a ship's exterior on magnetic feet and slowly repair damage to the hull.`
+
+outfit "Systems Core (Large)"
+  plural "Systems Cores (Large)"
+  category "Regeneration"
+  cost 9075000
+  thumbnail "outfit/systems_core_large"
+  "mass" 91
+  "outfit space" -91
+  "shield generation" 6.0
+  "shield energy" 8.8
+  "hull repair rate" 0.8
+  "hull energy" 0.8
+  "hull heat" 1.2
+  "energy capacity" 5200
+  "radar jamming" 3
+  description `This massive bank of computers, shield generators, and repair stations holds everything needed to keep the very largest of Korath ships in working condition.`
+
+
+# Quarg
+outfit "Quantum Hull Repair"
+  category "Regeneration"
+  cost 20000000
+  thumbnail "outfit/unknown"
+  "mass" 60
+  "outfit space" -60
+  "hull repair rate" 5
+  "hull energy" 5
+
+outfit "Quantum Shield Generator"
+  category "Regeneration"
+  cost 30000000
+  thumbnail "outfit/unknown"
+  "mass" 120
+  "outfit space" -120
+  "shield generation" 10
+  "shield energy" 10
+
+
+# Wanderer
+outfit "Bright Cloud Shielding"
+  category "Regeneration"
+  licenses
+    "Wanderer Outfits"
+  cost 220000
+  thumbnail "outfit/bright cloud"
+  "mass" 19
+  "outfit space" -19
+  "shield generation" 1.5
+  "shield energy" 3.0
+  description "This small Wanderer shield generator is able to recharge a ship's shields at a considerable rate, but it also consumes more energy than some other shield generators do."
+
+outfit "Dark Storm Shielding"
+  category "Regeneration"
+  licenses
+    "Wanderer Outfits"
+  cost 800000
+  thumbnail "outfit/dark storm"
+  "mass" 41
+  "outfit space" -41
+  "shield generation" 3.5
+  "shield energy" 7.0
+  description "This Wanderer shield generator can restore a ship's shield strength more quickly than any human shielding technology, but while recharging shields it also draws a much larger amount of power."
+

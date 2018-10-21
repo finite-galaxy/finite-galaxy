@@ -1,72 +1,12 @@
-outfit "Bombardment Cannon"
-  category "Guns"
-  licenses
-    Heliarch
-  cost 437000
-  thumbnail "outfit/bombardment_cannon"
-  "mass" 12
-  "outfit space" -12
-  "weapon capacity" -12
-  "gun ports" -1
-  weapon
-    sprite "projectile/bombardment"
-      "frame rate" 3.2
-      "no repeat"
-    sound "bombardment"
-    "hit effect" "bombardment impact"
-    "inaccuracy" 4
-    "velocity" 6
-    "random velocity" 1
-    "lifetime" 200
-    "reload" 9
-    "firing energy" 17
-    "firing heat" 14
-    "shield damage" 22
-    "hull damage" 25
-  description `The Bombardment Cannon was designed during the original war with the Quarg, in order to give Heliarch civilian ships a way to strike Quarg warships from a safe distance. But now, as with all their weapons, its use is limited to Heliarch warships.`
-
-outfit "Bombardment Turret"
-  category "Turrets"
-  licenses
-    Heliarch
-  cost 1845000
-  thumbnail "outfit/bombardment_turret"
-  "mass" 43
-  "drag" .43
-  "outfit space" -43
-  "weapon capacity" -43
-  "required crew" 1
-  "turret mounts" -1
-  weapon
-    sprite "projectile/bombardment"
-      "frame rate" 3.2
-      "no repeat"
-    "hardpoint sprite" "hardpoint/bombardment turret"
-    "hardpoint offset" 10.
-    sound "bombardment"
-    "hit effect" "bombardment impact"
-    "inaccuracy" 4
-    "turret turn" 1.40
-    "velocity" 6
-    "random velocity" 1
-    "lifetime" 200
-    "reload" 3
-    "firing energy" 17
-    "firing heat" 14
-    "shield damage" 22
-    "hull damage" 25
-  description `A Bombardment Turret is not one of the most dangerous Heliarch weapons, but it has the advantage that it can hit targets a considerable distance away.`
-
-effect "bombardment impact"
-  sprite "effect/bombardment impact"
-    "no repeat"
-    "frame rate" 40
-  "lifetime" 7
-  "random angle" 40
-  "random velocity" 2
-  "random spin" 20
-  "velocity scale" -.2
-
+outfit "Finisher Torpedo"
+  plural "Finisher Torpedoes"
+  category "Ammunition"
+  cost 32000
+  thumbnail "outfit/finisher"
+  "mass" .5
+  "plunderable" 1
+  "finisher capacity" -1
+  description `This extremely powerful but also expensive missile is ammunition for the Heliarch Finisher Pod.`
 
 outfit "Finisher Pod"
   category "Secondary Weapons"
@@ -125,16 +65,6 @@ outfit "Active Finisher"
     "hull damage" 1900
     "hit force" 750
 
-outfit "Finisher Torpedo"
-  plural "Finisher Torpedoes"
-  category "Ammunition"
-  cost 32000
-  thumbnail "outfit/finisher"
-  "mass" .5
-  "plunderable" 1
-  "finisher capacity" -1
-  description `This extremely powerful but also expensive missile is ammunition for the Heliarch Finisher Pod.`
-
 effect "finisher sparks"
   sprite "effect/finisher sparks"
     "no repeat"
@@ -173,6 +103,78 @@ effect "finisher fragment"
   "velocity scale" -.1
 
 
+
+outfit "Bombardment Cannon"
+  category "Cannons"
+  licenses
+    Heliarch
+  cost 437000
+  thumbnail "outfit/bombardment_cannon"
+  "mass" 12
+  "outfit space" -12
+  "weapon capacity" -12
+  "gun ports" -1
+  weapon
+    sprite "projectile/bombardment"
+      "frame rate" 3.2
+      "no repeat"
+    sound "bombardment"
+    "hit effect" "bombardment impact"
+    "inaccuracy" 4
+    "velocity" 6
+    "random velocity" 1
+    "lifetime" 200
+    "reload" 9
+    "firing energy" 17
+    "firing heat" 14
+    "shield damage" 22
+    "hull damage" 25
+  description `The Bombardment Cannon was designed during the original war with the Quarg, in order to give Heliarch civilian ships a way to strike Quarg warships from a safe distance. But now, as with all their weapons, its use is limited to Heliarch warships.`
+
+outfit "Bombardment Turret"
+  category "Turrets"
+  licenses
+    Heliarch
+  cost 1845000
+  thumbnail "outfit/bombardment_turret"
+  "mass" 43
+  "drag" .43
+  "outfit space" -43
+  "weapon capacity" -43
+  "required crew" 1
+  "turret mounts" -1
+  weapon
+    sprite "projectile/bombardment"
+      "frame rate" 3.2
+      "no repeat"
+    "hardpoint sprite" "hardpoint/bombardment_turret"
+    "hardpoint offset" 10.
+    sound "bombardment"
+    "hit effect" "bombardment impact"
+    "inaccuracy" 4
+    "turret turn" 1.40
+    "velocity" 6
+    "random velocity" 1
+    "lifetime" 200
+    "reload" 3
+    "firing energy" 17
+    "firing heat" 14
+    "shield damage" 22
+    "hull damage" 25
+  description `A Bombardment Turret is not one of the most dangerous Heliarch weapons, but it has the advantage that it can hit targets a considerable distance away.`
+
+effect "bombardment impact"
+  sprite "effect/bombardment impact"
+    "no repeat"
+    "frame rate" 40
+  "lifetime" 7
+  "random angle" 40
+  "random velocity" 2
+  "random spin" 20
+  "velocity scale" -.2
+
+
+
 outfit "Attractor"
   category "Turrets"
   licenses
@@ -189,7 +191,7 @@ outfit "Attractor"
     sprite "projectile/attractor"
       "frame rate" 5.2
       "random start frame"
-    "hardpoint sprite" "hardpoint/heliarch attractor"
+    "hardpoint sprite" "hardpoint/attractor"
     "hardpoint offset" 9.
     sound "heliarch attractor"
     "hit effect" "attractor impact"
@@ -233,7 +235,7 @@ outfit "Repulsor"
     sprite "projectile/repulsor"
       "frame rate" 3.2
       "random start frame"
-    "hardpoint sprite" "hardpoint/heliarch repulsor"
+    "hardpoint sprite" "hardpoint/repulsor"
     "hardpoint offset" 9.
     sound "heliarch repulsor"
     "hit effect" "repulsor impact"
@@ -263,11 +265,11 @@ effect "repulsor impact"
 
 
 outfit "Ion Rain Gun"
-  category "Guns"
+  category "Cannons"
   licenses
     Heliarch
   cost 798000
-  thumbnail "outfit/ion rain gun"
+  thumbnail "outfit/ion_rain_cannon"
   "mass" 17
   "outfit space" -17
   "weapon capacity" -17

@@ -1,0 +1,264 @@
+# Drives
+outfit "Hyperdrive"
+  category "Systems"
+  cost 250000
+  thumbnail "outfit/hyperdrive"
+  "mass" 20
+  "outfit space" -20
+  "jump speed" .2
+  "jump fuel" 100
+  "hyperdrive" 1
+  description "This mysterious box sits quietly at the heart of your ship, thinking its own inscrutable thoughts. When it comes time to travel between the stars it sets off a nuclear fusion reaction powerful enough to level an entire city, and then somehow tucks the resulting explosion in between the folds of regular space-time like a wasp stinging an oak leaf to lay her eggs inside. Your ship rides the resulting ripple in the fabric of space."
+  description "  They say that fewer than a dozen human beings alive today understand the inner workings of the hyperdrive."
+
+outfit "Scram Drive"
+  category "Systems"
+  cost 500000
+  thumbnail "outfit/scram_drive"
+  "mass" 30
+  "outfit space" -30
+  "scram drive" .2
+  "jump fuel" 150
+  "hyperdrive" 1
+  description "A Scram Drive is a specially designed hyperdrive that works even if your ship is traveling at a much higher speed, at the expense of using more fuel. If you are being pursued by pirates (or just want to get somewhere in a hurry) that extra bit of speed can make a big difference."
+
+outfit "Jump Drive"
+  category "Systems"
+  cost 1000000
+  thumbnail "outfit/jump_drive"
+  "mass" 20
+  "outfit space" -20
+  "jump speed" .3
+  "jump fuel" 200
+  "jump drive" 1
+  description "The workings of the Jump Drive are a total mystery. The best that human scientists have been able to find out is that this device is a containment field for matter in a state that cannot normally exist in this universe; if the drive is opened up, the field collapses and its contents disappear. Therefore, even though a few jump drives have been captured over the years, it has so far proved impossible to reverse engineer them."
+
+
+# Fuel
+outfit "Fuel Barrel"
+  category "Systems"
+  cost 2000
+  thumbnail "outfit/unknown"
+  "mass" 1
+  "outfit space" -1
+  "fuel capacity" 10
+  description "A fuel barrel is tiny and thus increases your fuel capacity by only a small amount, therefore you need large numbers of them for each hyperspace jump."
+
+outfit "Fuel Pod"
+  category "Systems"
+  cost 25000
+  thumbnail "outfit/fuel_pod"
+  "mass" 8
+  "outfit space" -8
+  "fuel capacity" 100
+  description "A fuel pod increases your fuel capacity, allowing your ship to make one additional hyperspace jump before it needs to land and refuel."
+
+outfit "Fuel Processor"
+  category "Systems"
+  cost 400000
+  thumbnail "outfit/fuel_processor"
+  "mass" 30
+  "outfit space" -30
+  "fuel capacity" 400
+  "ramscoop" 1
+  description "The fuel processor was developed during the latter half of the Korath Civil War, when Korath factions attempted to provide for their war effort by raiding the Hai for supplies. Their ships would often end up stranded after they had run out of fuel and were unable to escape from the Hai military fleets, prompting the creation of this hybrid fuel storage and ramscoop device. These outfits are now the main source of fuel for the remaining Korath in the galaxy."
+
+
+# Miscellaneous
+outfit "Cloaking Device"
+  category "Systems"
+  cost 10000000
+  "mass" 10
+  "outfit space" -10
+  "cloak" .01
+  "cloaking energy" 1
+  "cloaking fuel" .2
+  "unplunderable" 1
+  description "You're sure the cloaking device is here somewhere, but you can't see it."
+
+outfit "Command Centre"
+  category "Systems"
+  cost 437000
+  thumbnail "outfit/command_centre"
+  "mass" 8
+  "outfit space" -24
+  "bunks" 1
+  "required crew" 1
+  "automaton" -1
+  "energy consumption" .02
+  description "In response to occasional raids by the robotic war machines left behind after their recent conflict, the Kor Efret have developed this minimal, spartan command centre that can be installed in a captured robotic ship to allow a pilot to override the AI and interface with the ship's controls. The command centre only provides a single bunk for the captain, so more may be necessary if the ship has turrets or other systems that require crew."
+
+outfit "Control Transceiver"
+  category "Systems"
+  cost "7000"
+  thumbnail "outfit/control_transceiver"
+  "mass" 1
+  "outfit space" -1
+  "plunderable" 1
+  description "This is a miniaturized communication device, which can be connected to all the major systems of a Kor Sestor automaton, apparently as a way of controlling them remotely. The communications are encrypted and authenticated in a way that would make it nearly impossible to spoof the control signals."
+
+outfit "Quantum Keystone"
+  category "Systems"
+  cost 12000
+  thumbnail "outfit/keystone"
+  "mass" 1
+  "outfit space" -1
+  "quantum keystone" 1
+  description "This chunk of rock from the mountains on the Hai homeworld is apparently nothing more than a good luck charm, but the Hai have decorated their ships with them since the height of their empire. More superstitious Hai claim that the stones somehow reduce the nausea induced by hyperspace jumps by making travel between star systems easier."
+
+outfit "Quantum Key Stone"
+  category "Systems"
+  licenses
+    Remnant
+  cost 240000
+  thumbnail "outfit/keystone"
+  "mass" 1
+  "outfit space" -1
+  "quantum keystone" 1
+  description "This precious artifact attunes a ship's quantum oscillations in a way that allows it to travel through certain otherwise impassible wormholes in the Ember Waste. The stones are rare and valuable, because they can only be mined from one location in the Waste."
+
+outfit "Reasoning Node"
+  category "Systems"
+  cost "23000"
+  thumbnail "outfit/reasoning_node"
+  "mass" 1
+  "outfit space" -1
+  "plunderable" 1
+  "self destruct" .01
+  description "This is some sort of advanced, miniature computer combined with various sensor inputs and a hyperspace communication relay. Presumably, in some way it controls the Mereti automata or allows them to more easily coordinate their actions with each other."
+
+
+# Radar jammers
+outfit "Large Radar Jammer"
+  category "Systems"
+  cost 490000
+  thumbnail "outfit/radar_jammer_large"
+  "mass" 14
+  "outfit space" -14
+  "radar jamming" 10
+  description "This high-power radar jammer will make it much more difficult for missiles that rely on radar to track you. It will not affect missiles that track you optically or that look for your ship's heat signature."
+
+outfit "Small Radar Jammer"
+  category "Systems"
+  cost 70000
+  thumbnail "outfit/radar_jammer_small"
+  "mass" 4
+  "outfit space" -4
+  "radar jamming" 2
+  description "This radar jammer is designed to interfere with Sidewinders and any other missiles that rely on radar for tracking their targets. Jamming will occasionally cause missiles to lose their target locks."
+
+
+# Ramscoops
+outfit "Catalytic Ramscoop"
+  category "Systems"
+  cost 320000
+  thumbnail "outfit/ramscoop_catalytic"
+  "mass" 16
+  "outfit space" -16
+  "ramscoop" 7
+  description "Ramscoop technology has been almost unchanged for centuries, because with nearly every system in human space settled there has not been a pressing need for ships to generate their own fuel. But with the Free Worlds war making travel once again more difficult, some engineers in the Deep recently invented a much-improved ramscoop for use in their merchant fleets."
+
+outfit "Emergency Ramscoop"
+  category "Systems"
+  licenses
+    Remnant
+  cost 72000
+  thumbnail "outfit/ramscoop_emergency"
+  "mass" 4
+  "outfit space" -4
+  "ramscoop" 0.5
+  description "The Ember Waste is the sort of place where only a very foolish captain would travel without some sort of device for replenishing hyperspace fuel. This ramscoop is not particularly powerful, but it allows a ship to explore without fear of getting stranded."
+
+outfit "Ramscoop"
+  category "Systems"
+  cost 100000
+  thumbnail "outfit/ramscoop"
+  "mass" 10
+  "outfit space" -10
+  "ramscoop" 1
+  description "In the early days of space exploration, when ships could travel through half a dozen systems before encountering an established colony where they could refuel, ramscoops were an essential piece of equipment, harvesting plasma from the solar wind to refill your hyperspace fuel tanks. Although you can install more than one ramscoop, additional ramscoops on a single ship are not as effective as the first."
+  description "  (As a safety measure, all ships are able to harvest tiny amounts of fuel by flying close to a star, but this outfit allows you to accumulate fuel much more quickly. The closer you are to the star, the faster fuel will accumulate.)"
+
+outfit "Wanderer Ramscoop"
+  category "Systems"
+  licenses
+    "Wanderer Outfits"
+  cost 460000
+  thumbnail "outfit/ramscoop_wanderer"
+  "mass" 7
+  "outfit space" -7
+  "ramscoop" 4
+  description "Wanderer ships are designed to be self-sufficient even when traveling through uninhabited space, and their compact and efficient ramscoops are a key part of that self-sufficiency."
+
+
+# Scanners
+outfit "Asteroid Scanner"
+  category "Systems"
+  cost 192000
+  thumbnail "outfit/scanner_asteroid"
+  "mass" 6
+  "outfit space" -6
+  "asteroid scan power" 40
+  description "This highly specialized scanning system can analyse the mineral composition of nearby asteroids and identify the ones that contain valuable materials."
+
+outfit "Cargo Scanner"
+  category "Systems"
+  cost 8000
+  thumbnail "outfit/scanner_cargo"
+  "mass" 1
+  "outfit space" -1
+  "cargo scan power" 9
+  "cargo scan speed" 1
+  description "This scanner allows you to scan the cargo holds of the ship you are currently targeting, as long as you are flying close enough to it. Patrol craft use cargo scanners to detect illegal contraband. Installing more than one increases the scan range and speed."
+
+outfit "Outfit Scanner"
+  category "Systems"
+  cost 24000
+  thumbnail "outfit/scanner_outfit"
+  "mass" 2
+  "outfit space" -2
+  "outfit scan power" 25
+  "outfit scan speed" 1
+  description "This scanner allows you to determine what outfits are installed in the ship you are currently targeting, if you are willing to risk flying close enough to it to get a reading! The Republic Navy uses these scanners to detect when ships are equipped with illegal weaponry. Installing more than one increases the scan range and speed."
+
+outfit "Scanning Module"
+  category "Systems"
+  licenses
+    Heliarch
+  cost 215000
+  thumbnail "outfit/unknown"
+  "mass" 3
+  "outfit space" -3
+  "outfit scan power" 25
+  "outfit scan speed" 1
+  "cargo scan power" 25
+  "cargo scan speed" 1
+  "tactical scan power" 25
+  description "This system allows the Heliarchs to scan nearby ships."
+
+outfit "Surveillance Pod"
+  category "Systems"
+  cost 122500
+  thumbnail "outfit/surveillance pod"
+  licenses
+    Navy
+  "mass" 5
+  "outfit space" -5
+  "outfit scan power" 16
+  "outfit scan speed" 2
+  "cargo scan power" 4
+  "cargo scan speed" 2
+  "atmosphere scan" 100
+  "tactical scan power" 9
+  "plunderable" 1
+  description "This is Navy technology, a collection of scanners designed to fit perfectly inside one of their surveillance drones. Since the outputs are fairly standard, you could connect it to your own ship's systems if you want. Installing more than one increases the scan range and speed."
+
+outfit "Tactical Scanner"
+  category "Systems"
+  cost 144000
+  thumbnail "outfit/scanner_tactical"
+  "mass" 4
+  "outfit space" -4
+  "tactical scan power" 32
+  description "A tactical scanner allows your ship to determine the fuel, energy, heat, and crew complement of nearby targets. For centuries tactical scanners were only employed by the Navy, but recently Kraz Cybernetics has begun manufacturing them for use by militia ships."
+

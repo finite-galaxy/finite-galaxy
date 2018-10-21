@@ -1,117 +1,3 @@
-outfit "Inhibitor Cannon"
-  category "Guns"
-  licenses
-    Remnant
-  cost 471000
-  thumbnail "outfit/inhibitor_cannon"
-  "mass" 16
-  "outfit space" -16
-  "weapon capacity" -16
-  "gun ports" -1
-  weapon
-    sprite "projectile/inhibitor"
-      "frame rate" 10
-      "no repeat"
-    sound "inhibitor"
-    "hit effect" "inhibitor impact" 3
-    "inaccuracy" .5
-    "velocity" 36
-    "random velocity" .5
-    "lifetime" 32
-    "reload" 13
-    "cluster"
-    "firing energy" 26
-    "firing heat" 45.5
-    "firing force" 13
-    "shield damage" 26
-    "hull damage" 19.5
-    "hit force" 39
-    "slowing damage" .5
-  description `Nearly a century ago, a Remnant scout exploring space north of the Ember Waste came under fire from an alien fleet armed with weapons that interfered with the scout's engines. The story says that the Remnant captain calmly told her crew, "We aren't going home until we steal that weapon." That alien technology became the basis of the Inhibitor Cannon.`
-
-effect "inhibitor impact"
-  sprite "effect/inhibitor impact"
-    "frame rate" 30
-    "no repeat"
-  "lifetime" 11
-  "velocity scale" -.05
-  "random angle" 360
-  "random velocity" 6
-  "random frame rate" 15
-
-
-outfit "Thrasher Cannon"
-  category "Guns"
-  licenses
-    Remnant
-  cost 218000
-  thumbnail "outfit/thrasher_cannon"
-  "mass" 10
-  "outfit space" -10
-  "weapon capacity" -10
-  "gun ports" -1
-  weapon
-    sprite "projectile/thrasher"
-      "frame rate" 10
-      "random start frame"
-      "no repeat"
-    sound "particle"
-    "hit effect" "thrasher impact"
-    "inaccuracy" 9
-    "velocity" 10
-    "lifetime" 48
-    "reload" 20
-    "firing energy" 36
-    "firing heat" 27
-    "shield damage" 38
-    "hull damage" 46
-  description "This weapon was originally developed in an attempt to reverse engineer a long-range energy projectile favored by an alien species that the Remnant encountered nearby. In the process they discovered that by adding more energy to the projectiles they could do a lot more damage in exchange for shorter range, and the Thrasher Cannon was born."
-
-effect "thrasher impact"
-  sprite "effect/thrasher impact"
-    "frame rate" 30
-    "no repeat"
-  "lifetime" 11
-  "velocity scale" -.1
-  "random angle" 360
-  "random spin" 30
-  "random velocity" 3
-
-
-outfit "Thrasher Turret"
-  category "Turrets"
-  licenses
-    Remnant
-  cost 980000
-  thumbnail "outfit/thrasher_turret"
-  "mass" 49
-  "drag" .49
-  "outfit space" -49
-  "weapon capacity" -49
-  "required crew" 1
-  "turret mounts" -1
-  weapon
-    sprite "projectile/thrasher"
-      "frame rate" 10
-      "random start frame"
-      "no repeat"
-    "hardpoint sprite" "hardpoint/thrasher turret"
-    "hardpoint offset" 6.
-    sound "particle"
-    "hit effect" "thrasher impact"
-    "inaccuracy" 6
-    "turret turn" 1.22
-    "velocity" 10
-    "lifetime" 48
-    "reload" 5
-    "firing energy" 36
-    "firing heat" 27
-    "shield damage" 38
-    "hull damage" 46
-  description "This turret mounts four Thrasher Cannons on a single rotating base. The resulting weapon deals a very satisfying amount of damage when fired from close range, especially against a slow-moving target."
-
-
-
 outfit "EMP Torpedo"
   plural "EMP Torpedoes"
   category "Ammunition"
@@ -199,19 +85,133 @@ effect "emp spark"
 
 
 
+outfit "Inhibitor Cannon"
+  category "Cannons"
+  licenses
+    Remnant
+  cost 471000
+  thumbnail "outfit/inhibitor_cannon"
+  "mass" 16
+  "outfit space" -16
+  "weapon capacity" -16
+  "gun ports" -1
+  weapon
+    sprite "projectile/inhibitor"
+      "frame rate" 10
+      "no repeat"
+    sound "inhibitor"
+    "hit effect" "inhibitor impact" 3
+    "inaccuracy" .5
+    "velocity" 36
+    "random velocity" .5
+    "lifetime" 32
+    "reload" 13
+    "cluster"
+    "firing energy" 26
+    "firing heat" 45.5
+    "firing force" 13
+    "shield damage" 26
+    "hull damage" 19.5
+    "hit force" 39
+    "slowing damage" .5
+  description `Nearly a century ago, a Remnant scout exploring space north of the Ember Waste came under fire from an alien fleet armed with weapons that interfered with the scout's engines. The story says that the Remnant captain calmly told her crew, "We aren't going home until we steal that weapon." That alien technology became the basis of the Inhibitor Cannon.`
+
+effect "inhibitor impact"
+  sprite "effect/inhibitor impact"
+    "frame rate" 30
+    "no repeat"
+  "lifetime" 11
+  "velocity scale" -.05
+  "random angle" 360
+  "random velocity" 6
+  "random frame rate" 15
+
+
+outfit "Thrasher Cannon"
+  category "Cannons"
+  licenses
+    Remnant
+  cost 218000
+  thumbnail "outfit/thrasher_cannon"
+  "mass" 10
+  "outfit space" -10
+  "weapon capacity" -10
+  "gun ports" -1
+  weapon
+    sprite "projectile/thrasher"
+      "frame rate" 10
+      "random start frame"
+      "no repeat"
+    sound "particle"
+    "hit effect" "thrasher impact"
+    "inaccuracy" 9
+    "velocity" 10
+    "lifetime" 48
+    "reload" 20
+    "firing energy" 36
+    "firing heat" 27
+    "shield damage" 38
+    "hull damage" 46
+  description "This weapon was originally developed in an attempt to reverse engineer a long-range energy projectile favored by an alien species that the Remnant encountered nearby. In the process they discovered that by adding more energy to the projectiles they could do a lot more damage in exchange for shorter range, and the Thrasher Cannon was born."
+
+effect "thrasher impact"
+  sprite "effect/thrasher impact"
+    "frame rate" 30
+    "no repeat"
+  "lifetime" 11
+  "velocity scale" -.1
+  "random angle" 360
+  "random spin" 30
+  "random velocity" 3
+
+
+outfit "Thrasher Turret"
+  category "Turrets"
+  licenses
+    Remnant
+  cost 980000
+  thumbnail "outfit/thrasher_turret"
+  "mass" 49
+  "drag" .49
+  "outfit space" -49
+  "weapon capacity" -49
+  "required crew" 1
+  "turret mounts" -1
+  weapon
+    sprite "projectile/thrasher"
+      "frame rate" 10
+      "random start frame"
+      "no repeat"
+    "hardpoint sprite" "hardpoint/thrasher_turret"
+    "hardpoint offset" 6.
+    sound "particle"
+    "hit effect" "thrasher impact"
+    "inaccuracy" 6
+    "turret turn" 1.22
+    "velocity" 10
+    "lifetime" 48
+    "reload" 5
+    "firing energy" 36
+    "firing heat" 27
+    "shield damage" 38
+    "hull damage" 46
+  description "This turret mounts four Thrasher Cannons on a single rotating base. The resulting weapon deals a very satisfying amount of damage when fired from close range, especially against a slow-moving target."
+
+
+
 outfit "Point Defense Turret"
   category "Anti-Missile"
   licenses
     Remnant
   cost 1120000
-  thumbnail "outfit/point defense"
+  thumbnail "outfit/point_defence"
   "mass" 33
   "drag" .33
   "outfit space" -33
   "weapon capacity" -33
   "turret mounts" -1
   weapon
-    "hardpoint sprite" "hardpoint/point defense"
+    "hardpoint sprite" "hardpoint/point_defence"
     "fire effect" "point defense fire"
     "die effect" "point defense hit"
     "die effect" "point defense die"

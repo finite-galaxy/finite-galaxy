@@ -36,7 +36,7 @@ effect "banisher impact"
 
 
 outfit "Detainer"
-  category "Guns"
+  category "Cannons"
   cost 1340000
   thumbnail "outfit/detainer"
   "mass" 76
@@ -138,7 +138,7 @@ effect "disruptor impact"
 
 
 outfit "Fire-Lance"
-  category "Guns"
+  category "Cannons"
   cost 697000
   thumbnail "outfit/fire-lance"
   "mass" 22
@@ -186,7 +186,7 @@ outfit "Grab-Striker"
     sprite "projectile/grab-strike"
       "frame rate" 25
       "random start frame"
-    "hardpoint sprite" "hardpoint/grab-strike"
+    "hardpoint sprite" "hardpoint/grab-striker"
     "hardpoint offset" 7.
     sound "grab-strike"
     "hit effect" "grab-strike impact"
@@ -215,10 +215,6 @@ effect "grab-strike impact"
   "lifetime" 15
   "random angle" 360
   "velocity scale" -.1
-
-
-
-
 
 
 
@@ -413,7 +409,7 @@ effect "piercer explosion"
 
 
 outfit "Repeater Cannon"
-  category "Guns"
+  category "Cannons"
   cost 306000
   thumbnail "outfit/repeater_cannon"
   "mass" 11
@@ -497,7 +493,7 @@ outfit "Slicer"
   weapon
     sprite "projectile/slicer"
       "frame rate" 6
-    "hardpoint sprite" "hardpoint/slicer turret"
+    "hardpoint sprite" "hardpoint/slicer"
     "hardpoint offset" 17.
     sound "slicer"
     "hit effect" "slicer impact"

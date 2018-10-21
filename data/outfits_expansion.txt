@@ -1,0 +1,61 @@
+outfit "Armour Plating"
+  category "Expansion"
+  cost 50000
+  thumbnail "outfit/unknown"
+  "shields" -500
+  "hull" 500
+  "mass" 10
+  "drag" 0.2
+  description "Install armour plating to strengthen your hull. It slows down your ship and you have to remove some shield emitters."
+  
+outfit "Bunk Room"
+  category "Expansion"
+  cost 30000
+  thumbnail "outfit/bunk"
+  "mass" 2
+  "bunks" 2
+  "cargo space" -10
+  "energy consumption" .04
+  description "If you really want to make space for a few more passengers (or crew members, if you're trying to capture other ships), you can expand the living space of your ship into the area usually reserved for cargo."
+  
+outfit "Cargo Expansion"
+  category "Expansion"
+  cost 20000
+  thumbnail "outfit/screwdriver_red"
+  "mass" 2
+  "cargo space" 8
+  "outfit space" -10
+  "unplunderable" 1
+  description "If being able to carry more cargo is more important to you than having advanced weapons or other systems, a cargo expansion will significantly increase the size of your cargo hold."
+
+outfit "Interference Plating"
+  category "Expansion"
+  cost 60000
+  thumbnail "outfit/interference_plating"
+  "mass" 5
+  "heat dissipation" -.05
+  "scan interference" .5
+  description "If you're in the habit of carrying illegal cargo or outfits, this plating increases the odds that a scan of your ship will fail to detect it. The more of these you install, the better your chances of evading detection. They won't keep anyone from noticing if you're flying an unlicensed ship, however. Furthermore, it reduces your ability to vent heat."
+
+outfit "Outfits Expansion"
+  category "Expansion"
+  cost 40000
+  thumbnail "outfit/screwdriver_blue"
+  "mass" 2
+  "outfit space" 8
+  "cargo space" -10
+  "cooling inefficiency" .5
+  "heat dissipation" -.01
+  "unplunderable" 1
+  description "This expansion allows you to sacrifice some cargo space in order to make room for more outfits, in situations where you need just a bit more space to install a particular system. It does not increase your weapon or engine space."
+  description "  Unfortunately, rearranging the interior of your ship in such a fundamental way tends to interfere with its cooling systems."
+
+outfit "Shields Expansion"
+  category "Expansion"
+  cost 10000
+  thumbnail "outfit/unknown"
+  "shields" 100
+  "hull" -100
+  "outfit space" -1
+  description "Remove part of your hull to install more shield emitters."
+
