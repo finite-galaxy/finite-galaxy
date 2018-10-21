@@ -51,7 +51,7 @@ else:
 
 
 buildDirectory = env["BUILDDIR"] + "/" + env["mode"]
-VariantDir(buildDirectory, "code", duplicate = 0)
+VariantDir(buildDirectory, "source", duplicate = 0)
 
 sky = env.Program("finite-galaxy", Glob(buildDirectory + "/*.cpp"))
 
@@ -106,3 +106,4 @@ env.Install("$DESTDIR$PREFIX/share/games/finite-galaxy", "keys.txt")
 
 # Make the word "install" in the command line do an installation.
 env.Alias("install", "$DESTDIR$PREFIX")
+
