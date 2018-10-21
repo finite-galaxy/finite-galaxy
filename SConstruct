@@ -51,7 +51,7 @@ else:
 
 
 buildDirectory = env["BUILDDIR"] + "/" + env["mode"]
-VariantDir(buildDirectory, "source", duplicate = 0)
+VariantDir(buildDirectory, "code", duplicate = 0)
 
 sky = env.Program("finite-galaxy", Glob(buildDirectory + "/*.cpp"))
 
