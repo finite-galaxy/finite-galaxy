@@ -35,15 +35,15 @@ ship "Chaser"
       "hull damage" 160
       "hit force" 480
   outfits
-    "Korath Fire-Lance"
+    "Fire-Lance"
     "Generator (Furnace Class)"
     "Small Heat Shunt"
-    "Korath Repeater Rifle" 
+    "Repeater Rifle" 
     "Thruster (Asteroid Class)"
     "Steering (Asteroid Class)"
   engine -7 23
   engine 7 23
-  gun 0 -28 "Korath Fire-Lance"
+  gun 0 -28 "Fire-Lance"
   explode "tiny explosion" 20
   description "The Korath Chaser is a fighter typically deployed in pairs."
 
@@ -74,26 +74,26 @@ ship "Raider"
       "hull damage" 1800
       "hit force" 5400
   outfits
-    "Korath Grab-Strike" 4
-    "Korath Banisher"
-    "Korath Warder"
+    "Grab-Striker" 4
+    "Banisher"
+    "Warder"
     "Triple Plasma Core"
     "Systems Core (Medium)"
     "Large Heat Shunt" 2
     "Small Heat Shunt"
-    "Korath Repeater Rifle" 200
+    "Repeater Rifle" 200
     "Thruster (Planetary Class)"
     "Steering (Planetary Class)"
     "Fuel Processor" 2
     "Jump Drive"
   engine -20 130
   engine 20 130
-  turret -8 -145 "Korath Grab-Strike"
-  turret 8 -145 "Korath Grab-Strike"
-  turret -34 -143 "Korath Grab-Strike"
-  turret 34 -143 "Korath Grab-Strike"
-  turret 0 35 "Korath Banisher"
-  turret 0 90 "Korath Warder"
+  turret -8 -145 "Grab-Striker"
+  turret 8 -145 "Grab-Striker"
+  turret -34 -143 "Grab-Striker"
+  turret 34 -143 "Grab-Striker"
+  turret 0 35 "Banisher"
+  turret 0 90 "Warder"
   fighter -75 100
   fighter 75 100
   explode "tiny explosion" 20
@@ -107,14 +107,14 @@ ship "Raider"
 ship "Raider" "Raider (Hyperdrive)"
   sprite "ship/raider"
   outfits
-    "Korath Grab-Strike" 4
-    "Korath Banisher"
-    "Korath Warder"
+    "Grab-Striker" 4
+    "Banisher"
+    "Warder"
     "Triple Plasma Core"
     "Systems Core (Medium)"
     "Large Heat Shunt" 2
     "Small Heat Shunt"
-    "Korath Repeater Rifle" 200
+    "Repeater Rifle" 200
     "Thruster (Planetary Class)"
     "Steering (Planetary Class)"
     "Fuel Processor" 2
@@ -147,13 +147,13 @@ ship "World-Ship A"
       "hull damage" 4000
       "hit force" 12000
   outfits
-    "Korath Grab-Strike" 2
-    "Korath Banisher" 4
-    "Korath Warder" 2
+    "Grab-Striker" 2
+    "Banisher" 4
+    "Warder" 2
     "Triple Plasma Core"
     "Systems Core (Large)"
     "Large Heat Shunt" 2
-    "Korath Repeater Rifle" 150
+    "Repeater Rifle" 150
     "Thruster (Planetary Class)"
     "Steering (Planetary Class)"
     "Fuel Processor" 3
@@ -161,14 +161,14 @@ ship "World-Ship A"
   engine -37 343 .8
   engine 0 343 .9
   engine 37 343 .8
-  turret -76 -157 "Korath Banisher"
-  turret 76 -157 "Korath Banisher"
-  turret -59 -135 "Korath Grab-Strike"
-  turret 59 -135 "Korath Grab-Strike"
-  turret -61 -6 "Korath Warder"
-  turret 61 -6 "Korath Warder"
-  turret -66 210 "Korath Banisher"
-  turret 66 210 "Korath Banisher"
+  turret -76 -157 "Banisher"
+  turret 76 -157 "Banisher"
+  turret -59 -135 "Grab-Striker"
+  turret 59 -135 "Grab-Striker"
+  turret -61 -6 "Warder"
+  turret 61 -6 "Warder"
+  turret -66 210 "Banisher"
+  turret 66 210 "Banisher"
   explode "tiny explosion" 30
   explode "small explosion" 45
   explode "medium explosion" 50
@@ -179,13 +179,13 @@ ship "World-Ship A"
 
 ship "World-Ship A" "World-Ship A (Jump)"
   outfits
-    "Korath Grab-Strike" 2
-    "Korath Banisher" 4
-    "Korath Warder" 2
+    "Grab-Striker" 2
+    "Banisher" 4
+    "Warder" 2
     "Triple Plasma Core"
     "Systems Core (Large)"
     "Large Heat Shunt" 2
-    "Korath Repeater Rifle" 150
+    "Repeater Rifle" 150
     "Thruster (Planetary Class)"
     "Steering (Planetary Class)"
     "Fuel Processor" 3
@@ -216,13 +216,13 @@ ship "World-Ship B"
       "hull damage" 4000
       "hit force" 12000
   outfits
-    "Korath Grab-Strike" 2
-    "Korath Banisher" 4
-    "Korath Warder" 2
+    "Grab-Striker" 2
+    "Banisher" 4
+    "Warder" 2
     "Triple Plasma Core"
     "Systems Core (Large)"
     "Large Heat Shunt" 2
-    "Korath Repeater Rifle" 150
+    "Repeater Rifle" 150
     "Thruster (Planetary Class)"
     "Steering (Planetary Class)"
     "Fuel Processor" 3
@@ -230,14 +230,14 @@ ship "World-Ship B"
   engine -37 343 .8
   engine 0 343 .9
   engine 37 343 .8
-  turret -76 -219 "Korath Banisher"
-  turret 76 -219 "Korath Banisher"
-  turret -75 -112 "Korath Grab-Strike"
-  turret 75 -112 "Korath Grab-Strike"
-  turret 0 -92 "Korath Warder"
-  turret -83 165 "Korath Banisher"
-  turret 83 165 "Korath Banisher"
-  turret 0 277 "Korath Warder"
+  turret -76 -219 "Banisher"
+  turret 76 -219 "Banisher"
+  turret -75 -112 "Grab-Striker"
+  turret 75 -112 "Grab-Striker"
+  turret 0 -92 "Warder"
+  turret -83 165 "Banisher"
+  turret 83 165 "Banisher"
+  turret 0 277 "Warder"
   explode "tiny explosion" 30
   explode "small explosion" 45
   explode "medium explosion" 50
@@ -248,13 +248,13 @@ ship "World-Ship B"
 
 ship "World-Ship B" "World-Ship B (Jump)"
   outfits
-    "Korath Grab-Strike" 2
-    "Korath Banisher" 4
-    "Korath Warder" 2
+    "Grab-Striker" 2
+    "Banisher" 4
+    "Warder" 2
     "Triple Plasma Core"
     "Systems Core (Large)"
     "Large Heat Shunt" 2
-    "Korath Repeater Rifle" 150
+    "Repeater Rifle" 150
     "Thruster (Planetary Class)"
     "Steering (Planetary Class)"
     "Fuel Processor" 3
@@ -285,13 +285,13 @@ ship "World-Ship C"
       "hull damage" 4000
       "hit force" 12000
   outfits
-    "Korath Grab-Strike" 2
-    "Korath Banisher" 4
-    "Korath Warder" 2
+    "Grab-Striker" 2
+    "Banisher" 4
+    "Warder" 2
     "Triple Plasma Core"
     "Systems Core (Large)"
     "Large Heat Shunt" 2
-    "Korath Repeater Rifle" 150
+    "Repeater Rifle" 150
     "Thruster (Planetary Class)"
     "Steering (Planetary Class)"
     "Fuel Processor" 3
@@ -299,14 +299,14 @@ ship "World-Ship C"
   engine -37 343 .8
   engine 0 343 .9
   engine 37 343 .8
-  turret -45 -243 "Korath Banisher"
-  turret 45 -243 "Korath Banisher"
-  turret -47 -136 "Korath Grab-Strike"
-  turret 47 -136 "Korath Grab-Strike"
-  turret -70 57 "Korath Warder"
-  turret 70 57 "Korath Warder"
-  turret -91 290 "Korath Banisher"
-  turret 91 290 "Korath Banisher"
+  turret -45 -243 "Banisher"
+  turret 45 -243 "Banisher"
+  turret -47 -136 "Grab-Striker"
+  turret 47 -136 "Grab-Striker"
+  turret -70 57 "Warder"
+  turret 70 57 "Warder"
+  turret -91 290 "Banisher"
+  turret 91 290 "Banisher"
   explode "tiny explosion" 30
   explode "small explosion" 45
   explode "medium explosion" 50
@@ -317,13 +317,13 @@ ship "World-Ship C"
 
 ship "World-Ship C" "World-Ship C (Jump)"
   outfits
-    "Korath Grab-Strike" 2
-    "Korath Banisher" 4
-    "Korath Warder" 2
+    "Grab-Striker" 2
+    "Banisher" 4
+    "Warder" 2
     "Triple Plasma Core"
     "Systems Core (Large)"
     "Large Heat Shunt" 2
-    "Korath Repeater Rifle" 150
+    "Repeater Rifle" 150
     "Thruster (Planetary Class)"
     "Steering (Planetary Class)"
     "Fuel Processor" 3

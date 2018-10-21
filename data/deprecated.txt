@@ -52,13 +52,144 @@ outfit "Proton Gun"
 
 
 # deprecated in favour of outfits without species name
+outfit "Drak Antimatter Cannon"
+  category "Deprecated"
+  thumbnail "outfit/unknown"
+	cost 10000000
+	"mass" 96
+	"outfit space" -96
+	"weapon capacity" -96
+	"gun ports" -1
+	"inscrutable" 1
+	weapon
+		"inaccuracy" 0
+		"velocity" 20
+		"lifetime" 1
+		"submunition" "Drak Antimatter Fragment" 3
+		"hit effect" "antimatter dust" 10
+		"hit effect" "nuke explosion"
+		"safe"
+		"reload" 187
+		"firing energy" 5610
+		"firing heat" 1870
+		"blast radius" 100
+		"hit force" 1000
+
+outfit "Drak Antimatter Fragment"
+	weapon
+		sprite "projectile/drak bolt"
+			"frame rate" 9.835
+			"random start frame"
+		"live effect" "antimatter spark" 249
+		"live effect" "antimatter dust" 249
+		"hit effect" "antimatter dust" 10
+		"hit effect" "nuke explosion"
+		"safe"
+		"inaccuracy" 1
+		"lifetime" 499
+		"hit force" 1000
+		"shield damage" 5610
+		"hull damage" 5610
+		"blast radius" 100
+
+outfit "Drak Anti-Missile Field"
+  category "Deprecated"
+  thumbnail "outfit/unknown"
+	cost 1000000
+	"mass" 66
+	"outfit space" -66
+	"weapon capacity" -66
+	"turret mounts" -1
+	weapon
+		"velocity" 400
+		"lifetime" 1
+		"reload" 1
+		"firing energy" 10
+		"firing heat" 1
+		"anti-missile" 100
+
+outfit "Drak Distancer"
+  category "Deprecated"
+  thumbnail "outfit/unknown"
+	cost 1000000
+	"mass" 64
+	"outfit space" -64
+	"weapon capacity" -64
+	"turret mounts" -1
+	weapon
+		"fire effect" "distancer flare"
+		"velocity" 2000
+		"lifetime" 1
+		"reload" 1
+		"firing energy" 15
+		"firing heat" 10
+		"firing force" 60
+
+effect "distancer flare"
+	sprite "effect/distancer"
+		"frame rate" 1.618
+	"lifetime" 0
+	"velocity scale" 1
+
+outfit "Drak Draining Field"
+  category "Deprecated"
+  thumbnail "outfit/unknown"
+	cost 1000000
+	"mass" 84
+	"outfit space" -84
+	"weapon capacity" -84
+	"turret mounts" -1
+	weapon
+		"velocity" 400
+		"lifetime" 1
+		"reload" 1
+		"firing energy" 20
+		"firing heat" 5
+		"firing force" 30
+		"hit force" 60
+		"shield damage" 50
+		"ion damage" .5
+
+outfit "Drak Turret"
+  category "Deprecated"
+  thumbnail "outfit/unknown"
+	cost 1000000
+	"mass" 48
+	"outfit space" -48
+	"weapon capacity" -48
+	"turret mounts" -1
+	weapon
+		sprite "projectile/drak bolt"
+			"frame rate" 13.318
+			"random start frame"
+		"hit effect" "drak bolt impact"
+		"inaccuracy" 1
+		"velocity" 36
+		"lifetime" 30
+		"reload" 16
+		"firing energy" 160
+		"firing heat" 160
+		"shield damage" 256
+		"hull damage" 256
+		"hit force" 120
+
+effect "drak bolt impact"
+	sprite "effect/drak bolt impact"
+		"no repeat"
+		"frame rate" 30
+	sound "explosion small"
+	"lifetime" 20
+	"random angle" 20
+	"velocity scale" -.05
+	"random spin" 10
+
+
 outfit "Hai Tracker"
   category "Deprecated"
   thumbnail "outfit/unknown"
   cost 1000
   "mass" .2
   "tracker capacity" -1
-  description "This is ammunition for a Tracker Pod."
 
 outfit "Hai Tracker Pod"
   category "Deprecated"
@@ -96,7 +227,6 @@ outfit "Hai Tracker Pod"
     "hull damage" 160
     "hit force" 350
     "missile strength" 16
-  description "Trackers are fast, powerful, and accurate homing weapons. Their only weakness is their large turning radius: if a Tracker misses its target, it takes a long time to turn around."
 
 outfit "Hai Corundum Regenerator"
   category "Deprecated"
@@ -108,7 +238,6 @@ outfit "Hai Corundum Regenerator"
   "shield energy" .7
   "energy consumption" .3
   "shield heat" 3
-  description "Hai shield regenerators work by subtly modifying the geometry and harmonics of your shield matrix in order to make your shields more malleable and therefore much easier to recharge. Unfortunately, this system requires a constant power source, and generates a fair bit of heat while regenerating."
 
 outfit "Hai Diamond Regenerator"
   category "Deprecated"
@@ -120,7 +249,6 @@ outfit "Hai Diamond Regenerator"
   "shield energy" 2.5
   "shield heat" 9
   "energy consumption" .9
-  description "The Hai Diamond Shield Regenerator is an advanced type of shield recharging technology. Unfortunately, its power needs are quite high, and the shifts it makes to your shield matrix causes intense heat at the regenerator when your shields are charging. The Hai usually employ Williwaw Cooling when they use this regenerator."
 
 outfit "Hai Williwaw Cooling"
   category "Deprecated"
@@ -129,7 +257,6 @@ outfit "Hai Williwaw Cooling"
   "mass" 8
   "outfit space" -8
   "cooling" 9.5
-  description "While Hai technology is fairly heat efficient, occasionally they outfit their ships such that they sporadically overheat and shut down. When that happens, they install these."
 
 outfit "Hai Chasm Batteries"
   plural "Hai Chasm Batteries"
@@ -139,7 +266,6 @@ outfit "Hai Chasm Batteries"
   "mass" 5
   "outfit space" -5
   "energy capacity" 491
-  description "Hai power storage technology is thousands of years old, but remarkably simple and robust. This is the smallest Hai battery pack."
 
 outfit "Hai Fissure Batteries"
   plural "Hai Fissure Batteries"
@@ -149,7 +275,6 @@ outfit "Hai Fissure Batteries"
   "mass" 15
   "outfit space" -15
   "energy capacity" 1709
-  description "This battery pack has more than three times the energy capacity of the Hai Chasm Batteries, allowing their ships to engage in combat for longer periods of time before running out of energy."
 
 outfit "Hai Gorge Batteries"
   plural "Hai Gorge Batteries"
@@ -159,7 +284,6 @@ outfit "Hai Gorge Batteries"
   "mass" 30
   "outfit space" -30
   "energy capacity" 3761
-  description "This medium-sized battery pack is ideal for most of the Hai power needs, allowing for medium length combat engagements, but could also be used keep a ship's heat footprint low with a small power generator and oversized engines."
 
 outfit "Hai Ravine Batteries"
   plural "Hai Ravine Batteries"
@@ -169,7 +293,6 @@ outfit "Hai Ravine Batteries"
   "mass" 60
   "outfit space" -60
   "energy capacity" 8205
-  description "This large battery pack boasts higher energy density than smaller models, and helps keep ships fighting in spite of sustaining several Ion Cannon impacts."
 
 outfit "Hai Valley Batteries"
   plural "Hai Valley Batteries"
@@ -179,7 +302,6 @@ outfit "Hai Valley Batteries"
   "mass" 120
   "outfit space" -120
   "energy capacity" 17777
-  description "While most Hai ships do not employ their largest battery model, a few very powerful warships are occasionally equipped with one, keeping their heat footprint low, and allowing them to survive longer in a fight against opponents carrying Ion Cannons."
 
 
 outfit "Heliarch Attractor"
@@ -242,14 +364,194 @@ outfit "Heliarch Repulsor"
     "slowing damage" .1
 
 
-outfit "Korath Piercer Rack"
+outfit "Korath Banisher"
   category "Deprecated"
   thumbnail "outfit/unknown"
-  cost 56000
-  "mass" 2.2
-  "outfit space" -7
-  "piercer capacity" 16
-  ammo "Korath Piercer"
+  cost 943000
+  "mass" 41
+  "outfit space" -41
+  "weapon capacity" -41
+  "turret mounts" -1
+  "required crew" 1
+  weapon
+    sprite "projectile/banisher"
+      "frame rate" 60
+    "hardpoint sprite" "hardpoint/banisher"
+    "hardpoint offset" 5.
+    sound "banisher"
+    "hit effect" "banisher impact"
+    "inaccuracy" .4
+    "turret turn" 4.2
+    "velocity" 590
+    "lifetime" 1
+    "reload" 1
+    "firing energy" 3.3
+    "firing heat" 4.9
+    "shield damage" 2.8
+    "hull damage" .9
+    "hit force" 40
+
+outfit "Korath Detainer"
+  category "Deprecated"
+  thumbnail "outfit/unknown"
+  cost 1340000
+  "mass" 76
+  "outfit space" -76
+  "weapon capacity" -76
+  "energy capacity" 1600
+  "gun ports" -1
+  weapon
+    sprite "projectile/detainer"
+      "frame rate" 2.5
+    sound "detainer"
+    "hit effect" "detainer impact" 3
+    "hit effect" "detainer smoke" 5
+    "live effect" "detainer sparks" 50
+    "inaccuracy" .5
+    "velocity" 14
+    "lifetime" 140
+    "reload" 60
+    "burst reload" 10
+    "burst count" 2
+    "firing energy" 756
+    "firing force" 40
+    "firing heat" 400
+    "hit force" 80
+    "shield damage" 320
+    "hull damage" 240
+    "slowing damage" 40
+    "blast radius" 20
+
+outfit "Korath Disruptor"
+  category "Deprecated"
+  thumbnail "outfit/unknown"
+  cost 983000
+  "mass" 35
+  "outfit space" -35
+  "weapon capacity" -35
+  "turret mounts" -1
+  "required crew" 1
+  weapon
+    sprite "projectile/disruptor"
+      "frame rate" 15
+    "hardpoint sprite" "hardpoint/disruptor"
+    "hardpoint offset" 15.
+    sound "disruptor"
+    "hit effect" "disruptor impact"
+    "inaccuracy" 1
+    "turret turn" 1.5
+    "velocity" 480
+    "lifetime" 1
+    "reload" 1
+    "firing energy" 8.0
+    "firing heat" 2.7
+    "shield damage" 3.8
+    "hull damage" .5
+    "disruption damage" .24
+
+outfit "Korath Fire-Lance"
+  category "Deprecated"
+  thumbnail "outfit/unknown"
+  cost 697000
+  "mass" 22
+  "outfit space" -22
+  "weapon capacity" -22
+  "gun ports" -1
+  weapon
+    sprite "projectile/fire-lance"
+      "frame rate" 12
+      "random start frame"
+    sound "fire-lance"
+    "hit effect" "fire-lance impact"
+    "inaccuracy" .4
+    "velocity" 350
+    "lifetime" 1
+    "reload" 1
+    "firing energy" 2.5
+    "firing heat" 1.7
+    "shield damage" 3.5
+    "hull damage" 1.5
+    "heat damage" 12
+
+outfit "Korath Grab-Strike"
+  category "Deprecated"
+  thumbnail "outfit/unknown"
+  cost 821000
+  "mass" 52
+  "outfit space" -52
+  "weapon capacity" -52
+  "energy capacity" 100
+  "turret mounts" -1
+  "required crew" 1
+  weapon
+    sprite "projectile/grab-strike"
+      "frame rate" 25
+      "random start frame"
+    "hardpoint sprite" "hardpoint/grab-strike"
+    "hardpoint offset" 7.
+    sound "grab-strike"
+    "hit effect" "grab-strike impact"
+    "die effect" "grab-strike impact"
+    "inaccuracy" 1
+    "turret turn" 1.9
+    "velocity" 10
+    "lifetime" 100
+    "reload" 20
+    "firing energy" 60
+    "firing heat" 150
+    "acceleration" 1
+    "drag" .1
+    "turn" .2
+    "homing" 4
+    "tracking" .7
+    "shield damage" 108
+    "hull damage" 32
+    "hit force" -160
+
+outfit "Korath Mine"
+  category "Deprecated"
+  thumbnail "outfit/unknown"
+  cost 3500
+  "mass" .7
+  "minelayer capacity" -1
+
+outfit "Korath Minelayer"
+  category "Deprecated"
+  thumbnail "outfit/unknown"
+  cost 1073000
+  "mass" 36
+  "outfit space" -48
+  "weapon capacity" -48
+  "energy capacity" 50
+  "gun ports" -1
+  "minelayer capacity" 17
+  weapon
+    sprite "projectile/korath minelayer"
+      "frame rate" .6
+      "no repeat"
+    sound "minelayer"
+    ammo "Korath Mine"
+    icon "icon/minelayer"
+    "fire effect" "minelayer fire"
+    "hit effect" "huge explosion"
+    "die effect" "minelayer split" 5
+    "submunition" "Korath Mine Submunition" 11
+    "inaccuracy" 10
+    "velocity" 3
+    "lifetime" 100
+    "reload" 180
+    "firing energy" 36
+    "firing heat" 36
+    "acceleration" .16
+    "drag" .04
+    "turn" 2
+    "homing" 4
+    "infrared tracking" .9
+    "missile strength" 35
+    "shield damage" -3200
+    "hull damage" -2400
+    "hit force" -150
+    "stream"
 
 outfit "Korath Mine Rack"
   category "Deprecated"
@@ -259,6 +561,218 @@ outfit "Korath Mine Rack"
   "outfit space" -9
   "minelayer capacity" 9
   ammo "Korath Mine"
+
+outfit "Korath Mine Submunition"
+  weapon
+    sprite "projectile/korath mine"
+      "frame rate" 1
+      "no repeat"
+    "hit effect" "large explosion"
+    "die effect" "tiny explosion"
+    "inaccuracy" 360
+    "lifetime" 1000
+    "random lifetime" 60
+    "acceleration" .00001
+    "velocity" 2
+    "random velocity" 5
+    "drag" .05
+    "shield damage" 350
+    "hull damage" 280
+    "hit force" 200
+    "missile strength" 22
+
+outfit "Korath Piercer"
+  category "Deprecated"
+  thumbnail "outfit/unknown"
+  cost 3500
+  "mass" .3
+  "piercer capacity" -1
+
+outfit "Korath Piercer Launcher"
+  category "Deprecated"
+  thumbnail "outfit/unknown"
+  cost 593000
+  "mass" 18
+  "outfit space" -27
+  "weapon capacity" -27
+  "energy capacity" 50
+  "gun ports" -1
+  "piercer capacity" 31
+  weapon
+    sprite "projectile/piercer"
+      "frame rate" 5
+      "random start frame"
+    sound "piercer"
+    ammo "Korath Piercer"
+    icon "icon/piercer"
+    "fire effect" "piercer fire"
+    "hit effect" "piercer impact"
+    "hit effect" "piercer explosion"
+    "die effect" "piercer explosion"
+    "inaccuracy" 3
+    "velocity" 18
+    "lifetime" 200
+    "reload" 72
+    "firing energy" 29
+    "firing heat" 144
+    "acceleration" .54
+    "drag" .03
+    "turn" 1.6
+    "homing" 4
+    "infrared tracking" .9
+    "shield damage" 290
+    "hull damage" 440
+    "piercing" .2
+    "hit force" 300
+    "missile strength" 73
+    "stream"
+
+outfit "Korath Piercer Rack"
+  category "Deprecated"
+  thumbnail "outfit/unknown"
+  cost 56000
+  "mass" 2.2
+  "outfit space" -7
+  "piercer capacity" 16
+  ammo "Korath Piercer"
+
+outfit "Korath Repeater"
+  category "Deprecated"
+  thumbnail "outfit/unknown"
+  cost 306000
+  "mass" 11
+  "outfit space" -11
+  "weapon capacity" -11
+  "energy capacity" 100
+  "gun ports" -1
+  weapon
+    sprite "projectile/repeater"
+      "frame rate" 5
+    sound "repeater"
+    "hit effect" "repeater impact"
+    "inaccuracy" 4
+    "velocity" 13
+    "lifetime" 40
+    "reload" 10
+    "burst reload" 4
+    "burst count" 3
+    "cluster"
+    "firing energy" 24
+    "firing heat" 108
+    "shield damage" 26
+    "hull damage" 22
+    "heat damage" 33
+
+outfit "Korath Repeater Rifle"
+  category "Deprecated"
+  thumbnail "outfit/unknown"
+  cost 73000
+  "capture attack" 1.6
+  "capture defense" 2.4
+  "unplunderable" 1
+
+outfit "Korath Repeater Turret"
+  category "Deprecated"
+  thumbnail "outfit/unknown"
+  cost 874000
+  "mass" 29
+  "outfit space" -29
+  "weapon capacity" -29
+  "energy capacity" 200
+  "required crew" 1
+  "turret mounts" -1
+  weapon
+    sprite "projectile/repeater"
+      "frame rate" 5
+    "hardpoint sprite" "hardpoint/repeater turret"
+    "hardpoint offset" 7.
+    sound "repeater"
+    "hit effect" "repeater impact"
+    "inaccuracy" 3
+    "turret turn" 2.6
+    "velocity" 13
+    "lifetime" 40
+    "reload" 5
+    "burst reload" 2
+    "burst count" 6
+    "cluster"
+    "firing energy" 24
+    "firing heat" 108
+    "shield damage" 26
+    "hull damage" 22
+    "heat damage" 33
+
+outfit "Korath Slicer"
+  category "Deprecated"
+  thumbnail "outfit/unknown"
+  cost 832000
+  "mass" 46
+  "outfit space" -46
+  "weapon capacity" -46
+  "gun ports" -1
+  weapon
+    sprite "projectile/slicer"
+      "frame rate" 6
+    sound "slicer"
+    "hit effect" "slicer impact"
+    "inaccuracy" 0
+    "velocity" 520
+    "lifetime" 1
+    "reload" 1.62
+    "burst reload" 1
+    "burst count" 17
+    "firing energy" 5.6
+    "firing heat" 17.8
+    "shield damage" 6.3
+    "hull damage" 16.7
+
+outfit "Korath Slicer Turret"
+  category "Deprecated"
+  thumbnail "outfit/unknown"
+  cost 1473000
+  "mass" 59
+  "outfit space" -59
+  "weapon capacity" -59
+  "turret mounts" -1
+  "required crew" 1
+  weapon
+    sprite "projectile/slicer"
+      "frame rate" 6
+    "hardpoint sprite" "hardpoint/slicer turret"
+    "hardpoint offset" 17.
+    sound "slicer"
+    "hit effect" "slicer impact"
+    "inaccuracy" 0
+    "turret turn" 2.9
+    "velocity" 520
+    "lifetime" 1
+    "reload" 1.62
+    "burst reload" 1
+    "burst count" 17
+    "firing energy" 5.6
+    "firing heat" 17.8
+    "shield damage" 6.3
+    "hull damage" 16.7
+
+outfit "Korath Warder"
+  category "Deprecated"
+  thumbnail "outfit/unknown"
+  cost 845000
+  "mass" 28
+  "outfit space" -28
+  "weapon capacity" -28
+  "energy capacity" 50
+  "turret mounts" -1
+  weapon
+    "hardpoint sprite" "hardpoint/warder"
+    "hardpoint offset" 3.
+    "hit effect" "korath warder"
+    "anti-missile" 10
+    "velocity" 350
+    "lifetime" 1
+    "reload" 5
+    "firing energy" 24
+    "firing heat" 10
 
 
 outfit "Pug Zapper"
@@ -284,7 +798,6 @@ outfit "Pug Zapper"
     "firing heat" 1.4
     "shield damage" 3.7
     "hull damage" 2.9
-  description "This is a formidable beam weapon, more damaging than even the most advanced energy beams that humanity has developed. Pug ships have integrated power plants that produce the considerable amount of energy that is needed to drive weapons like this one."
 
 outfit "Pug Zapper Turret"
   category "Deprecated"
@@ -312,7 +825,6 @@ outfit "Pug Zapper Turret"
     "firing heat" 2.8
     "shield damage" 7.4
     "hull damage" 5.8
-  description "Mounted on a turret, this Pug weapon becomes even more devastatingly powerful. However, its energy requirements are higher than most human ships can support."
 
 outfit "Pug Seeker"
   category "Deprecated"
@@ -344,7 +856,6 @@ outfit "Pug Seeker"
     "hull damage" 13
     "hit force" 2
     "missile strength" 40
-  description "You have no idea how this weapon works. It requires no ammunition, but its energy-based projectiles have the ability to home in on a target ship."
 
 outfit "Pug Gridfire Turret"
   category "Deprecated"
@@ -383,7 +894,6 @@ outfit "Pug Akfar Thruster"
   "flare sprite" "effect/ion flare/medium"
     "frame rate" 8
   "flare sound" "ion medium"
-  description "This is a small thruster designed by the Pug. It is not quite as powerful as a similarly sized atomic engine, but it makes up for that by being almost as energy efficient as ion engines."
 
 outfit "Pug Akfar Steering"
   category "Deprecated"
@@ -395,7 +905,6 @@ outfit "Pug Akfar Steering"
   "turn" 750
   "turning energy" 1.3
   "turning heat" 2.1
-  description "This is a small steering system designed by the Pug. It is not quite as powerful as a similarly sized atomic engine, but it makes up for that by being almost as energy efficient as ion engines."
 
 outfit "Pug Cormet Thruster"
   category "Deprecated"
@@ -410,7 +919,6 @@ outfit "Pug Cormet Thruster"
   "flare sprite" "effect/ion flare/large"
     "frame rate" 9
   "flare sound" "ion large"
-  description "This is a medium-sized thruster designed by the Pug. It is not quite as powerful as a similarly sized atomic engine, but it makes up for that by being almost as energy efficient as ion engines."
 
 outfit "Pug Cormet Steering"
   category "Deprecated"
@@ -422,7 +930,6 @@ outfit "Pug Cormet Steering"
   "turn" 1130
   "turning energy" 1.9
   "turning heat" 3.1
-  description "This is a medium-sized steering system designed by the Pug. It is not quite as powerful as a similarly sized atomic engine, but it makes up for that by being almost as energy efficient as ion engines."
 
 outfit "Pug Lohmar Thruster"
   category "Deprecated"
@@ -437,7 +944,6 @@ outfit "Pug Lohmar Thruster"
   "flare sprite" "effect/ion flare/huge"
     "frame rate" 9
   "flare sound" "ion huge"
-  description "This is a large thruster designed by the Pug. It is not quite as powerful as a similarly sized atomic engine, but it makes up for that by being almost as energy efficient as ion engines."
 
 outfit "Pug Lohmar Steering"
   category "Deprecated"
@@ -449,7 +955,6 @@ outfit "Pug Lohmar Steering"
   "turn" 1700
   "turning energy" 2.8
   "turning heat" 4.7
-  description "This is a large steering system designed by the Pug. It is not quite as powerful as a similarly sized atomic engine, but it makes up for that by being almost as energy efficient as ion engines."
 
 outfit "Pug Biodefenses"
   plural "Pug Biodefenses"
@@ -458,7 +963,6 @@ outfit "Pug Biodefenses"
   cost 100000
   "capture defense" 250
   "unplunderable" 1
-  description "This defense system is designed to release a suite of toxins that are lethal to human beings (and probably to some other species, as well) but which have no effect at all on the Pug."
 
 
 outfit "Quarg Skylance"

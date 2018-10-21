@@ -1,85 +1,4 @@
-outfit "Drak Distancer"
-  category "Turrets"
-  cost 1000000
-  thumbnail "outfit/unknown"
-  "mass" 64
-  "drag" .64
-  "outfit space" -64
-  "weapon capacity" -64
-  "turret mounts" -1
-  weapon
-    "fire effect" "distancer flare"
-    "velocity" 2000
-    "lifetime" 1
-    "reload" 1
-    "firing energy" 15
-    "firing heat" 10
-    "firing force" 60
-  description "This is a thruster that can produce force in any direction, allowing a Drak ship to keep a safe distance away from its target."
-
-effect "distancer flare"
-  sprite "effect/distancer"
-    "frame rate" 1.618
-  "lifetime" 0
-  "velocity scale" 1
-
-outfit "Drak Draining Field"
-  category "Turrets"
-  cost 1000000
-  thumbnail "outfit/unknown"
-  "mass" 84
-  "drag" .84
-  "outfit space" -84
-  "weapon capacity" -84
-  "turret mounts" -1
-  weapon
-    "velocity" 400
-    "lifetime" 1
-    "reload" 1
-    "firing energy" 20
-    "firing heat" 5
-    "firing force" 30
-    "hit force" 60
-    "shield damage" 50
-    "ion damage" .5
-  description "This device produces a field that drains energy from any ship within it."
-
-outfit "Drak Turret"
-  category "Turrets"
-  cost 1000000
-  thumbnail "outfit/unknown"
-  "mass" 48
-  "drag" .48
-  "outfit space" -48
-  "weapon capacity" -48
-  "turret mounts" -1
-  weapon
-    sprite "projectile/drak bolt"
-      "frame rate" 13.318
-      "random start frame"
-    "hit effect" "drak bolt impact"
-    "inaccuracy" 1
-    "velocity" 36
-    "lifetime" 30
-    "reload" 16
-    "firing energy" 160
-    "firing heat" 160
-    "shield damage" 256
-    "hull damage" 256
-    "hit force" 120
-  description "This is a turret based cannon with significant range and accuracy."
-
-effect "drak bolt impact"
-  sprite "effect/drak bolt impact"
-    "no repeat"
-    "frame rate" 30
-  sound "explosion small"
-  "lifetime" 20
-  "random angle" 20
-  "velocity scale" -.05
-  "random spin" 10
-
-outfit "Drak Antimatter Cannon"
+outfit "Antimatter Cannon"
   category "Guns"
   cost 10000000
   thumbnail "outfit/unknown"
@@ -92,7 +11,7 @@ outfit "Drak Antimatter Cannon"
     "inaccuracy" 0
     "velocity" 20
     "lifetime" 1
-    "submunition" "Drak Antimatter Fragment" 3
+    "submunition" "Antimatter Fragment" 3
     "hit effect" "antimatter dust" 10
     "hit effect" "nuke explosion"
     "safe"
@@ -103,7 +22,7 @@ outfit "Drak Antimatter Cannon"
     "hit force" 1000
   description "This is the Drak's ultimate weapon."
 
-outfit "Drak Antimatter Fragment"
+outfit "Antimatter Fragment"
   weapon
     sprite "projectile/drak bolt"
       "frame rate" 9.835
@@ -141,7 +60,7 @@ effect "antimatter dust"
 
 
 
-outfit "Drak Anti-Missile Field"
+outfit "Anti-Missile Field"
   category "Anti-Missile"
   cost 1000000
   thumbnail "outfit/unknown"
@@ -158,4 +77,89 @@ outfit "Drak Anti-Missile Field"
     "firing heat" 1
     "anti-missile" 100
   description "This device produces a field that destroys any missiles that come within it."
+
+
+
+outfit "Bolt Turret"
+  category "Turrets"
+  cost 1000000
+  thumbnail "outfit/unknown"
+  "mass" 48
+  "drag" .48
+  "outfit space" -48
+  "weapon capacity" -48
+  "turret mounts" -1
+  weapon
+    sprite "projectile/drak bolt"
+      "frame rate" 13.318
+      "random start frame"
+    "hit effect" "drak bolt impact"
+    "inaccuracy" 1
+    "velocity" 36
+    "lifetime" 30
+    "reload" 16
+    "firing energy" 160
+    "firing heat" 160
+    "shield damage" 256
+    "hull damage" 256
+    "hit force" 120
+  description "This is a turret based cannon with significant range and accuracy."
+
+effect "drak bolt impact"
+  sprite "effect/drak bolt impact"
+    "no repeat"
+    "frame rate" 30
+  sound "explosion small"
+  "lifetime" 20
+  "random angle" 20
+  "velocity scale" -.05
+  "random spin" 10
+
+
+outfit "Distancer"
+  category "Turrets"
+  cost 1000000
+  thumbnail "outfit/unknown"
+  "mass" 64
+  "drag" .64
+  "outfit space" -64
+  "weapon capacity" -64
+  "turret mounts" -1
+  weapon
+    "fire effect" "distancer flare"
+    "velocity" 2000
+    "lifetime" 1
+    "reload" 1
+    "firing energy" 15
+    "firing heat" 10
+    "firing force" 60
+  description "This is a thruster that can produce force in any direction, allowing a Drak ship to keep a safe distance away from its target."
+
+effect "distancer flare"
+  sprite "effect/distancer"
+    "frame rate" 1.618
+  "lifetime" 0
+  "velocity scale" 1
+
+
+outfit "Draining Field"
+  category "Turrets"
+  cost 1000000
+  thumbnail "outfit/unknown"
+  "mass" 84
+  "drag" .84
+  "outfit space" -84
+  "weapon capacity" -84
+  "turret mounts" -1
+  weapon
+    "velocity" 400
+    "lifetime" 1
+    "reload" 1
+    "firing energy" 20
+    "firing heat" 5
+    "firing force" 30
+    "hit force" 60
+    "shield damage" 50
+    "ion damage" .5
+  description "This device produces a field that drains energy from any ship within it."
 

@@ -1,50 +1,4 @@
-outfit "Korath Grab-Strike"
-  category "Turrets"
-  cost 821000
-  thumbnail "outfit/grab-strike"
-  "mass" 52
-  "drag" .52
-  "outfit space" -52
-  "weapon capacity" -52
-  "energy capacity" 100
-  "turret mounts" -1
-  "required crew" 1
-  weapon
-    sprite "projectile/grab-strike"
-      "frame rate" 25
-      "random start frame"
-    "hardpoint sprite" "hardpoint/grab-strike"
-    "hardpoint offset" 7.
-    sound "grab-strike"
-    "hit effect" "grab-strike impact"
-    "die effect" "grab-strike impact"
-    "inaccuracy" 1
-    "turret turn" 1.05
-    "velocity" 11
-    "lifetime" 120
-    "reload" 20
-    "firing energy" 60
-    "firing heat" 150
-    "acceleration" 1
-    "drag" .1
-    "turn" .2
-    "homing" 4
-    "tracking" .7
-    "shield damage" 108
-    "hull damage" 32
-    "hit force" -160
-  description "Korath Grab-Strike projectiles are designed to pull a target closer to the Korath ship, to keep it from escaping."
-
-effect "grab-strike impact"
-  sprite "effect/grab-strike impact"
-    "no repeat"
-    "frame rate" 20
-  "lifetime" 15
-  "random angle" 360
-  "velocity scale" -.1
-
-
-outfit "Korath Banisher"
+outfit "Banisher"
   category "Turrets"
   cost 943000
   thumbnail "outfit/banisher"
@@ -81,204 +35,7 @@ effect "banisher impact"
   "velocity scale" 0.
 
 
-outfit "Korath Fire-Lance"
-  category "Guns"
-  cost 697000
-  thumbnail "outfit/fire-lance"
-  "mass" 22
-  "outfit space" -22
-  "weapon capacity" -22
-  "gun ports" -1
-  weapon
-    sprite "projectile/fire-lance"
-      "frame rate" 12
-      "random start frame"
-    sound "fire-lance"
-    "hit effect" "fire-lance impact"
-    "inaccuracy" .4
-    "velocity" 470
-    "lifetime" 1
-    "reload" 1
-    "firing energy" 2.5
-    "firing heat" 1.7
-    "shield damage" 3.5
-    "hull damage" 1.5
-    "heat damage" 12
-  description "The Korath Fire-Lance is a medium-range beam weapon designed to be used by their fighters."
-
-effect "fire-lance impact"
-  sprite "effect/fire-lance impact"
-    "no repeat"
-    "frame rate" 20
-  "lifetime" 10
-  "random angle" 360
-  "velocity scale" 0.
-
-
-outfit "Korath Repeater"
-  category "Guns"
-  cost 306000
-  thumbnail "outfit/repeater"
-  "mass" 11
-  "outfit space" -11
-  "weapon capacity" -11
-  "energy capacity" 100
-  "gun ports" -1
-  weapon
-    sprite "projectile/repeater"
-      "frame rate" 5
-    sound "repeater"
-    "hit effect" "repeater impact"
-    "inaccuracy" 4
-    "velocity" 17
-    "lifetime" 40
-    "reload" 10
-    "burst reload" 4
-    "burst count" 3
-    "cluster"
-    "firing energy" 24
-    "firing heat" 108
-    "shield damage" 26
-    "hull damage" 22
-    "heat damage" 33
-  description "This is the smallest and simplest Korath projectile weapon, designed mostly for use on fighters and drones. As with most Korath technology, it generates a large amount of heat, enough that the gun must pause briefly after every few shots to cool down."
-
-effect "repeater impact"
-  sprite "effect/repeater impact"
-    "no repeat"
-    "frame rate" 12
-  "lifetime" 21
-  "random angle" 360
-  "random velocity" .6
-  "random spin" 100
-  "velocity scale" -.1
-
-outfit "Korath Repeater Turret"
-  category "Turrets"
-  cost 874000
-  thumbnail "outfit/repeater turret"
-  "mass" 29
-  "drag" .29
-  "outfit space" -29
-  "weapon capacity" -29
-  "energy capacity" 200
-  "required crew" 1
-  "turret mounts" -1
-  weapon
-    sprite "projectile/repeater"
-      "frame rate" 5
-    "hardpoint sprite" "hardpoint/repeater turret"
-    "hardpoint offset" 7.
-    sound "repeater"
-    "hit effect" "repeater impact"
-    "inaccuracy" 3
-    "turret turn" 2.07
-    "velocity" 17
-    "lifetime" 40
-    "reload" 5
-    "burst reload" 2
-    "burst count" 6
-    "cluster"
-    "firing energy" 24
-    "firing heat" 108
-    "shield damage" 26
-    "hull damage" 22
-    "heat damage" 33
-  description "Korath repeaters fire compact bolts of superheated plasma at their targets. For every one of these turrets installed on a ship, an auxiliary cooling system is typically required to cope with its heat output."
-
-
-outfit "Korath Piercer"
-  category "Ammunition"
-  cost 3500
-  thumbnail "outfit/piercer"
-  "mass" .3
-  "plunderable" 1
-  "piercer capacity" -1
-  description "This missile is fired from a Korath Piercer Launcher."
-
-outfit "Piercer Rack"
-  category "Ammunition Storage"
-  cost 112000
-  thumbnail "outfit/piercer_storage"
-  "mass" 4.7
-  "outfit space" -14
-  "piercer capacity" 31
-  ammo "Korath Piercer"
-  description "The Piercer Rack is used to store extra ammunition for Korath Piercer Launchers."
-
-outfit "Korath Piercer Launcher"
-  category "Secondary Weapons"
-  cost 593000
-  thumbnail "outfit/piercer_launcher"
-  "mass" 18
-  "outfit space" -27
-  "weapon capacity" -27
-  "energy capacity" 50
-  "gun ports" -1
-  "piercer capacity" 31
-  weapon
-    sprite "projectile/piercer"
-      "frame rate" 5
-      "random start frame"
-    sound "piercer"
-    ammo "Korath Piercer"
-    icon "icon/piercer"
-    "fire effect" "piercer fire"
-    "hit effect" "piercer impact"
-    "hit effect" "piercer explosion"
-    "die effect" "piercer explosion"
-    "inaccuracy" 3
-    "velocity" 18
-    "lifetime" 200
-    "reload" 72
-    "firing energy" 29
-    "firing heat" 144
-    "acceleration" .54
-    "drag" .03
-    "turn" 1.6
-    "homing" 4
-    "infrared tracking" .9
-    "shield damage" 290
-    "hull damage" 440
-    "piercing" .2
-    "hit force" 300
-    "missile strength" 73
-    "stream"
-  description "Korath Piercer missiles carry a pair of warheads. The first, a smaller one in the very tip of the missile, explodes on impact to blast a hole in the ship's shields to allow some of the subsequent, larger explosion to pierce through."
-
-effect "piercer fire"
-  sprite "effect/piercer fire"
-    "no repeat"
-    "frame rate" 8
-  "lifetime" 30
-  "random angle" 5
-  "random spin" 10
-  "random velocity" .5
-  "velocity scale" 1.2
-
-effect "piercer impact"
-  sprite "effect/piercer impact"
-    "no repeat"
-    "frame rate" 8
-  sound "explosion tiny"
-  "lifetime" 31
-  "random angle" 360
-  "random velocity" .1
-  "random spin" 60
-  "velocity scale" .001
-
-effect "piercer explosion"
-  sprite "effect/piercer explosion"
-    "no repeat"
-    "frame rate" 20
-  "lifetime" 28
-  "random angle" 360
-  "random velocity" .1
-  "random spin" 60
-  "velocity scale" .08
-
-
-outfit "Korath Detainer"
+outfit "Detainer"
   category "Guns"
   cost 1340000
   thumbnail "outfit/detainer"
@@ -308,7 +65,7 @@ outfit "Korath Detainer"
     "hull damage" 240
     "slowing damage" 40
     "blast radius" 20
-  description "Although not the most damaging weapon of its size, the Korath Detainer is feared for two reasons: its exceptionally long range, and its ability to interfere with the propulsion systems of any ship it strikes."
+  description "Although not the most damaging weapon of its size, the Detainer is feared for two reasons: its exceptionally long range, and its ability to interfere with the propulsion systems of any ship it strikes."
 
 effect "detainer sparks"
   sprite "effect/detainer sparks"
@@ -340,14 +97,139 @@ effect "detainer smoke"
   "velocity scale" -.01
 
 
-outfit "Korath Mine"
+outfit "Disruptor"
+  category "Turrets"
+  cost 983000
+  thumbnail "outfit/disruptor"
+  "mass" 35
+  "drag" .35
+  "outfit space" -35
+  "weapon capacity" -35
+  "turret mounts" -1
+  "required crew" 1
+  weapon
+    sprite "projectile/disruptor"
+      "frame rate" 15
+    "hardpoint sprite" "hardpoint/disruptor"
+    "hardpoint offset" 15.
+    sound "disruptor"
+    "hit effect" "disruptor impact"
+    "inaccuracy" 1
+    "turret turn" 1.71
+    "velocity" 620
+    "lifetime" 1
+    "reload" 1
+    "firing energy" 8.0
+    "firing heat" 2.7
+    "shield damage" 3.8
+    "hull damage" .5
+    "disruption damage" .24
+  description "Disruptors interfere with a ship's shields, allowing a ship's hull to be damaged even when shields are up. However, they do very little hull damage by themselves."
+
+effect "disruptor impact"
+  sprite "effect/static"
+    "no repeat"
+    "frame rate" 30
+  "lifetime" 13
+  "random angle" 360
+  "random spin" 10
+  "random velocity" 5
+  "velocity scale" -.004
+
+
+outfit "Fire-Lance"
+  category "Guns"
+  cost 697000
+  thumbnail "outfit/fire-lance"
+  "mass" 22
+  "outfit space" -22
+  "weapon capacity" -22
+  "gun ports" -1
+  weapon
+    sprite "projectile/fire-lance"
+      "frame rate" 12
+      "random start frame"
+    sound "fire-lance"
+    "hit effect" "fire-lance impact"
+    "inaccuracy" .4
+    "velocity" 470
+    "lifetime" 1
+    "reload" 1
+    "firing energy" 2.5
+    "firing heat" 1.7
+    "shield damage" 3.5
+    "hull damage" 1.5
+    "heat damage" 12
+  description "The Fire-Lance is a medium-range beam weapon designed to be used by their fighters."
+
+effect "fire-lance impact"
+  sprite "effect/fire-lance impact"
+    "no repeat"
+    "frame rate" 20
+  "lifetime" 10
+  "random angle" 360
+  "velocity scale" 0.
+
+
+outfit "Grab-Striker"
+  category "Turrets"
+  cost 821000
+  thumbnail "outfit/grab-striker"
+  "mass" 52
+  "drag" .52
+  "outfit space" -52
+  "weapon capacity" -52
+  "energy capacity" 100
+  "turret mounts" -1
+  "required crew" 1
+  weapon
+    sprite "projectile/grab-strike"
+      "frame rate" 25
+      "random start frame"
+    "hardpoint sprite" "hardpoint/grab-strike"
+    "hardpoint offset" 7.
+    sound "grab-strike"
+    "hit effect" "grab-strike impact"
+    "die effect" "grab-strike impact"
+    "inaccuracy" 1
+    "turret turn" 1.05
+    "velocity" 11
+    "lifetime" 120
+    "reload" 20
+    "firing energy" 60
+    "firing heat" 150
+    "acceleration" 1
+    "drag" .1
+    "turn" .2
+    "homing" 4
+    "tracking" .7
+    "shield damage" 108
+    "hull damage" 32
+    "hit force" -160
+  description "Grab-Striker projectiles are designed to pull a target closer to the Korath ship, to keep it from escaping."
+
+effect "grab-strike impact"
+  sprite "effect/grab-strike impact"
+    "no repeat"
+    "frame rate" 20
+  "lifetime" 15
+  "random angle" 360
+  "velocity scale" -.1
+
+
+
+
+
+
+
+outfit "Mine"
   category "Ammunition"
   cost 3500
   thumbnail "outfit/mine"
   "mass" .7
   "plunderable" 1
-  "minelayer capacity" -1
-  description "This is ammunition for a Korath Minelayer. Each mine splits into eleven submunitions after it is deployed."
+  "mine capacity" -1
+  description "This is ammunition for a Mine Launcher. Each mine splits into eleven submunitions after it is deployed."
 
 outfit "Mine Rack"
   category "Ammunition Storage"
@@ -355,11 +237,11 @@ outfit "Mine Rack"
   thumbnail "outfit/mine_storage"
   "mass" 4.1
   "outfit space" -17
-  "minelayer capacity" 17
-  ammo "Korath Mine"
-  description "The Mine Rack is used to store extra ammunition for Korath Minelayers."
+  "mine capacity" 17
+  ammo "Mine"
+  description "The Mine Rack is used to store extra ammunition for Mine Launchers."
 
-outfit "Korath Minelayer"
+outfit "Mine Launcher"
   category "Secondary Weapons"
   cost 1073000
   thumbnail "outfit/mine_launcher"
@@ -368,18 +250,18 @@ outfit "Korath Minelayer"
   "weapon capacity" -48
   "energy capacity" 50
   "gun ports" -1
-  "minelayer capacity" 17
+  "mine capacity" 17
   weapon
     sprite "projectile/korath minelayer"
       "frame rate" .6
       "no repeat"
     sound "minelayer"
-    ammo "Korath Mine"
+    ammo "Mine"
     icon "icon/minelayer"
     "fire effect" "minelayer fire"
     "hit effect" "huge explosion"
     "die effect" "minelayer split" 5
-    "submunition" "Korath Mine Submunition" 11
+    "submunition" "Mine Submunition" 11
     "inaccuracy" 10
     "velocity" 3
     "lifetime" 100
@@ -398,7 +280,7 @@ outfit "Korath Minelayer"
     "stream"
   description "This launcher fires cluster munitions that split into a cloud of stationary mines that each do a considerable amount of damage if a ship crashes into them. However, if a ship hits the mine before it has a chance to deploy, the damage is considerably reduced."
 
-outfit "Korath Mine Submunition"
+outfit "Mine Submunition"
   weapon
     sprite "projectile/korath mine"
       "frame rate" 1
@@ -439,75 +321,173 @@ effect "minelayer split"
   "velocity scale" .8
 
 
-outfit "Korath Disruptor"
-  category "Turrets"
-  cost 983000
-  thumbnail "outfit/disruptor"
-  "mass" 35
-  "drag" .35
-  "outfit space" -35
-  "weapon capacity" -35
-  "turret mounts" -1
-  "required crew" 1
+outfit "Piercer"
+  category "Ammunition"
+  cost 3500
+  thumbnail "outfit/piercer"
+  "mass" .3
+  "plunderable" 1
+  "piercer capacity" -1
+  description "This missile is fired from a Piercer Launcher."
+
+outfit "Piercer Rack"
+  category "Ammunition Storage"
+  cost 112000
+  thumbnail "outfit/piercer_storage"
+  "mass" 4.7
+  "outfit space" -14
+  "piercer capacity" 31
+  ammo "Piercer"
+  description "The Piercer Rack is used to store extra ammunition for Piercer Launchers."
+
+outfit "Piercer Launcher"
+  category "Secondary Weapons"
+  cost 593000
+  thumbnail "outfit/piercer_launcher"
+  "mass" 18
+  "outfit space" -27
+  "weapon capacity" -27
+  "energy capacity" 50
+  "gun ports" -1
+  "piercer capacity" 31
   weapon
-    sprite "projectile/disruptor"
-      "frame rate" 15
-    "hardpoint sprite" "hardpoint/disruptor"
-    "hardpoint offset" 15.
-    sound "disruptor"
-    "hit effect" "disruptor impact"
-    "inaccuracy" 1
-    "turret turn" 1.71
-    "velocity" 620
-    "lifetime" 1
-    "reload" 1
-    "firing energy" 8.0
-    "firing heat" 2.7
-    "shield damage" 3.8
-    "hull damage" .5
-    "disruption damage" .24
-  description "Korath Disruptors interfere with a ship's shields, allowing a ship's hull to be damaged even when shields are up. However, they do very little hull damage by themselves."
+    sprite "projectile/piercer"
+      "frame rate" 5
+      "random start frame"
+    sound "piercer"
+    ammo "Piercer"
+    icon "icon/piercer"
+    "fire effect" "piercer fire"
+    "hit effect" "piercer impact"
+    "hit effect" "piercer explosion"
+    "die effect" "piercer explosion"
+    "inaccuracy" 3
+    "velocity" 18
+    "lifetime" 200
+    "reload" 72
+    "firing energy" 29
+    "firing heat" 144
+    "acceleration" .54
+    "drag" .03
+    "turn" 1.6
+    "homing" 4
+    "infrared tracking" .9
+    "shield damage" 290
+    "hull damage" 440
+    "piercing" .2
+    "hit force" 300
+    "missile strength" 73
+    "stream"
+  description "Piercer missiles carry a pair of warheads. The first, a smaller one in the very tip of the missile, explodes on impact to blast a hole in the ship's shields to allow some of the subsequent, larger explosion to pierce through."
 
-effect "disruptor impact"
-  sprite "effect/static"
+effect "piercer fire"
+  sprite "effect/piercer fire"
     "no repeat"
-    "frame rate" 30
-  "lifetime" 13
-  "random angle" 360
+    "frame rate" 8
+  "lifetime" 30
+  "random angle" 5
   "random spin" 10
-  "random velocity" 5
-  "velocity scale" -.004
+  "random velocity" .5
+  "velocity scale" 1.2
+
+effect "piercer impact"
+  sprite "effect/piercer impact"
+    "no repeat"
+    "frame rate" 8
+  sound "explosion tiny"
+  "lifetime" 31
+  "random angle" 360
+  "random velocity" .1
+  "random spin" 60
+  "velocity scale" .001
+
+effect "piercer explosion"
+  sprite "effect/piercer explosion"
+    "no repeat"
+    "frame rate" 20
+  "lifetime" 28
+  "random angle" 360
+  "random velocity" .1
+  "random spin" 60
+  "velocity scale" .08
 
 
-outfit "Korath Slicer"
+outfit "Repeater Cannon"
   category "Guns"
-  cost 832000
-  thumbnail "outfit/slicer"
-  "mass" 46
-  "outfit space" -46
-  "weapon capacity" -46
+  cost 306000
+  thumbnail "outfit/repeater_cannon"
+  "mass" 11
+  "outfit space" -11
+  "weapon capacity" -11
+  "energy capacity" 100
   "gun ports" -1
   weapon
-    sprite "projectile/slicer"
-      "frame rate" 6
-    sound "slicer"
-    "hit effect" "slicer impact"
-    "inaccuracy" 0
-    "velocity" 680
-    "lifetime" 1
-    "reload" 1.62
-    "burst reload" 1
-    "burst count" 17
-    "firing energy" 5.6
-    "firing heat" 17.8
-    "shield damage" 6.3
-    "hull damage" 16.7
-  description "This massive beam weapon is relatively ineffective against shields, but cuts through hull armor like it's made of paper."
+    sprite "projectile/repeater"
+      "frame rate" 5
+    sound "repeater"
+    "hit effect" "repeater impact"
+    "inaccuracy" 4
+    "velocity" 17
+    "lifetime" 40
+    "reload" 10
+    "burst reload" 4
+    "burst count" 3
+    "cluster"
+    "firing energy" 24
+    "firing heat" 108
+    "shield damage" 26
+    "hull damage" 22
+    "heat damage" 33
+  description "This is the smallest and simplest Korath projectile weapon, designed mostly for use on fighters and drones. As with most Korath technology, it generates a large amount of heat, enough that the gun must pause briefly after every few shots to cool down."
 
-outfit "Korath Slicer Turret"
+effect "repeater impact"
+  sprite "effect/repeater impact"
+    "no repeat"
+    "frame rate" 12
+  "lifetime" 21
+  "random angle" 360
+  "random velocity" .6
+  "random spin" 100
+  "velocity scale" -.1
+
+outfit "Repeater Turret"
+  category "Turrets"
+  cost 874000
+  thumbnail "outfit/repeater_turret"
+  "mass" 29
+  "drag" .29
+  "outfit space" -29
+  "weapon capacity" -29
+  "energy capacity" 200
+  "required crew" 1
+  "turret mounts" -1
+  weapon
+    sprite "projectile/repeater"
+      "frame rate" 5
+    "hardpoint sprite" "hardpoint/repeater turret"
+    "hardpoint offset" 7.
+    sound "repeater"
+    "hit effect" "repeater impact"
+    "inaccuracy" 3
+    "turret turn" 2.07
+    "velocity" 17
+    "lifetime" 40
+    "reload" 5
+    "burst reload" 2
+    "burst count" 6
+    "cluster"
+    "firing energy" 24
+    "firing heat" 108
+    "shield damage" 26
+    "hull damage" 22
+    "heat damage" 33
+  description "Repeaters fire compact bolts of superheated plasma at their targets. For every one of these turrets installed on a ship, an auxiliary cooling system is typically required to cope with its heat output."
+
+
+outfit "Slicer"
   category "Turrets"
   cost 1473000
-  thumbnail "outfit/slicer turret"
+  thumbnail "outfit/slicer"
   "mass" 59
   "drag" .59
   "outfit space" -59
@@ -532,7 +512,7 @@ outfit "Korath Slicer Turret"
     "firing heat" 17.8
     "shield damage" 6.3
     "hull damage" 16.7
-  description "This turret fires a tightly focused energy beam that is particularly effective against hull armor. When paired with a disruptor turret, it is a deadly combination."
+  description "This turret fires a tightly focused energy beam that is particularly effective against hull armor. When paired with a Disruptor, it is a deadly combination."
 
 effect "slicer impact"
   sprite "effect/slicer impact"
@@ -545,8 +525,7 @@ effect "slicer impact"
   "velocity scale" -.002
 
 
-
-outfit "Korath Warder"
+outfit "Warder"
   category "Anti-Missile"
   cost 845000
   thumbnail "outfit/warder"
