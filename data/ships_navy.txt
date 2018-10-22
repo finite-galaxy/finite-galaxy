@@ -10,7 +10,6 @@ shipyard "Navy Variants"
   "Mercury"
   "Mercury (Mark II)"
   "Saturn"
-  "Saturn (Heavy)"
   "Saturn (Jump)"
   "Saturn (Mark II)"
   "Surveillance Drone"
@@ -33,8 +32,8 @@ ship "Combat Drone"
     "drag" .59
     "heat dissipation" .9
     "outfit space" 58
-      "engine capacity" 28
-      "weapon capacity" 8
+    "engine capacity" 28
+    "weapon capacity" 8
     weapon
       "blast radius" 5
       "shield damage" 50
@@ -44,13 +43,14 @@ ship "Combat Drone"
     "X1700 Ion Thruster"
     "X1200 Ion Steering"
 
-    "Beam Laser"
+    "Gatling Gun Ammo" 1500
+    "Gatling Gun"
 
     "nGVF-AA Fuel Cell"
     "Supercapacitor"
   engine -9 29
   engine 9 29
-  gun 0 -29 "Beam Laser"
+  gun 0 -29 "Gatling Gun"
   explode "tiny explosion" 15
   description "Combat Drones are pilotless attack ships used primarily by the Republic Navy. Although very weak and easy to destroy, they can be very effective in large numbers. Because drones do not need a cockpit, they can be filled entirely with equipment and solid metal, which makes their hulls stronger than other small ships."
 
@@ -69,12 +69,12 @@ ship "Jupiter"
     "required crew" 111
     "bunks" 184
     "mass" 910
-    "drag" 17.7
-    "heat dissipation" .45
+    "drag" 18.9
+    "heat dissipation" .4
     "cargo space" 100
-    "outfit space" 890
-      "engine capacity" 210
-      "weapon capacity" 370
+    "outfit space" 910
+    "engine capacity" 200
+    "weapon capacity" 350
     weapon
       "blast radius" 300
       "shield damage" 3000
@@ -84,9 +84,11 @@ ship "Jupiter"
     "A860 Atomic Thruster"
     "A525 Atomic Steering"
 
-    "Particle Cannon" 4
-    "Heavy Laser Turret" 3
-    "Heavy Anti-Missile Turret"
+    "Torpedo" 120
+    "Torpedo Launcher" 4
+    "Torpedo Storage Rack" 4
+    "Particle Turret" 2
+    "Heavy Anti-Missile Turret" 2
 
     "D94-YV Shield Generator"
     "Armageddon Core"
@@ -94,17 +96,20 @@ ship "Jupiter"
     "Liquid Helium Cooler"
     "Fuel Barrel" 70
     "Hyperdrive"
-    "Large Radar Jammer"
+    "Ramscoop"
+    "Tactical Scanner" 4
+    "Fragmentation Grenades" 80
+    "Laser Rifle" 160
   engine -35 200
   engine 35 200
-  gun -16 -176 "Particle Cannon"
-  gun 16 -176 "Particle Cannon"
-  gun -25 -166 "Particle Cannon"
-  gun 25 -166 "Particle Cannon"
-  turret 0 -114 "Heavy Laser Turret"
-  turret 0 15 "Heavy Laser Turret"
-  turret 0 103 "Heavy Anti-Missile Turret"
-  turret 0 157 "Heavy Laser Turret"
+  gun -16 -176 "Torpedo Launcher"
+  gun 16 -176 "Torpedo Launcher"
+  gun -25 -166 "Torpedo Launcher"
+  gun 25 -166 "Torpedo Launcher"
+  turret 0 -114 "Particle Turret"
+  turret 0 15 "Heavy Anti-Missile Turret"
+  turret 0 103 "Particle Turret"
+  turret 0 157 "Heavy Anti-Missile Turret"
   fighter -37 -65
   fighter 37 -65
   fighter -46 40
@@ -140,11 +145,10 @@ ship "Jupiter" "Jupiter (Alpha)"
     "Systems Core (Large)"
     "Triple Plasma Core"
     "Large Heat Shunt" 3
-    "Small Heat Shunt"
-    "Laser Rifle" 120
     "Fuel Processor" 2
     "Jump Drive"
-    "Outfits Expansion" 4
+    "Fragmentation Grenades" 80
+    "Laser Rifle" 160
   turret "Disruptor"
   turret "Slicer"
   turret "Disruptor"
@@ -156,21 +160,27 @@ ship "Jupiter" "Jupiter (Jump)"
     "A860 Atomic Thruster"
     "A525 Atomic Steering"
 
-    "Particle Cannon" 4
-    "Electron Turret" 3
-    "Heavy Anti-Missile Turret"
+    "Torpedo" 120
+    "Torpedo Launcher" 4
+    "Torpedo Storage Rack" 4
+    "Particle Turret" 2
+    "Heavy Anti-Missile Turret" 2
 
     "D94-YV Shield Generator"
     "Armageddon Core"
     "LP144a Battery Pack"
     "Liquid Helium Cooler"
+    "Catalytic Ramscoop"
     "Fuel Barrel" 80
     "Jump Drive"
-    "Outfits Expansion" 4
-  turret "Electron Turret"
-  turret "Electron Turret"
+    "Tactical Scanner" 4
+    "Outfits Expansion" 2
+    "Fragmentation Grenades" 80
+    "Laser Rifle" 160
+  turret "Particle Turret"
   turret "Heavy Anti-Missile Turret"
-  turret "Electron Turret"
+  turret "Particle Turret"
+  turret "Heavy Anti-Missile Turret"
 
 
 ship "Jupiter" "Jupiter (Mark II)"
@@ -178,22 +188,28 @@ ship "Jupiter" "Jupiter (Mark II)"
     "A860 Atomic Thruster"
     "A525 Atomic Steering"
 
-    "Particle Cannon" 4
-    "Electron Turret" 3
-    "Heavy Anti-Missile Turret"
+    "Typhoon Torpedo" 120
+    "Typhoon Storage Tube" 4
+    "Typhoon Launcher" 4
+    "Electron Turret" 2
+    "Heavy Anti-Missile Turret" 2
 
     "S-970 Regenerator"
     "S-270 Regenerator"
     "Armageddon Core"
     "LP144a Battery Pack"
     "Liquid Helium Cooler"
+    "Catalytic Ramscoop"
     "Fuel Barrel" 70
     "Hyperdrive"
-    "Outfits Expansion" 3
-  turret "Electron Turret"
+    "Tactical Scanner" 4
+    "Outfits Expansion" 2
+    "Fragmentation Grenades" 80
+    "Laser Rifle" 160
   turret "Electron Turret"
   turret "Heavy Anti-Missile Turret"
   turret "Electron Turret"
+  turret "Heavy Anti-Missile Turret"
 
 
 
@@ -213,8 +229,8 @@ ship "Lance"
     "drag" .7
     "heat dissipation" .8
     "outfit space" 100
-      "engine capacity" 30
-      "weapon capacity" 20
+    "engine capacity" 30
+    "weapon capacity" 20
     weapon
       "blast radius" 12
       "shield damage" 120
@@ -224,15 +240,19 @@ ship "Lance"
     "X1700 Ion Thruster"
     "X1200 Ion Steering"
 
-    "Beam Laser" 2
+    "Gatling Gun Ammo" 3000
+    "Gatling Gun" 2
 
     "D14-RN Shield Generator"
     "nGVF-AA Fuel Cell"
     "LP036a Battery Pack"
+    "Small Radar Jammer"
+    "Tactical Scanner"
+    "Laser Rifle"
   engine -15 30
   engine 15 30
-  gun -14 -10 "Beam Laser"
-  gun 14 -10 "Beam Laser"
+  gun -14 -10 "Gatling Gun"
+  gun 14 -10 "Gatling Gun"
   explode "tiny explosion" 15
   explode "small explosion" 5
   description "The Lance is the primary fighter used by the Republic Navy. As with all fighters, it is weak by itself but very effective as part of a larger squadron."
@@ -251,35 +271,41 @@ ship "Mars"
     "hull" 1400
     "required crew" 7
     "bunks" 12
-    "mass" 150
+    "mass" 110
     "drag" 3.1
     "heat dissipation" .8
-    "cargo space" 50
-    "outfit space" 330
-      "engine capacity" 90
-      "weapon capacity" 100
+    "cargo space" 25
+    "outfit space" 380
+    "engine capacity" 80
+    "weapon capacity" 100
     weapon
       "blast radius" 72
       "shield damage" 720
       "hull damage" 360
       "hit force" 1080
   outfits
-    "Heavy Laser" 2
+    "A250 Atomic Thruster"
+    "A375 Atomic Steering"
+
+    "Particle Cannon" 2
     "Heavy Laser Turret"
+
     "D23-QP Shield Generator"
-    "Dwarf Core"
+    "NT-200 Nucleovoltaic"
     "LP072a Battery Pack"
     "Cooling Ducts"
-    "Cargo Scanner"
-    "Outfit Scanner"
-    "A250 Atomic Thruster"
-    "A255 Atomic Steering"
+    "Cargo Scanner" 3
     "Fuel Barrel" 60
     "Hyperdrive"
+    "Outfit Scanner"
+    "Small Radar Jammer" 2
+    "Tactical Scanner"
+    "Fragmentation Grenades" 5
+    "Laser Rifle" 10
   engine -12 57
   engine 12 57
-  gun -28 -28 "Heavy Laser"
-  gun 28 -28 "Heavy Laser"
+  gun -28 -28 "Particle Cannon"
+  gun 28 -28 "Particle Cannon"
   turret 0 -8 "Heavy Laser Turret"
   leak "leak" 50 50
   leak "flame" 80 80
@@ -293,18 +319,23 @@ ship "Mars"
 ship "Mars" "Mars (Mark II)"
   outfits
     "A250 Atomic Thruster"
-    "A255 Atomic Steering"
+    "A375 Atomic Steering"
 
     "Electron Beam" 2
     "Electron Turret"
 
     "S-270 Regenerator"
-    "Dwarf Core"
+    "NT-200 Nucleovoltaic"
     "LP072a Battery Pack"
     "Cooling Ducts"
+    "Cargo Scanner" 3
     "Fuel Barrel" 60
     "Hyperdrive"
-    "Outfits Expansion" 2
+    "Outfit Scanner"
+    "Small Radar Jammer" 2
+    "Tactical Scanner"
+    "Fragmentation Grenades" 5
+    "Laser Rifle" 10
 
 
 
@@ -320,39 +351,43 @@ ship "Mercury"
     "hull" 1200
     "required crew" 7
     "bunks" 14
-    "mass" 180
+    "mass" 140
     "drag" 3.8
-    "heat dissipation" .6
-    "cargo space" 25
+    "heat dissipation" .8
+    "cargo space" 10
     "outfit space" 280
-      "engine capacity" 50
-      "weapon capacity" 60
+    "engine capacity" 60
+    "weapon capacity" 50
     weapon
       "blast radius" 40
       "shield damage" 400
       "hull damage" 200
       "hit force" 600
   outfits
-    "A120 Atomic Thruster"
+    "A250 Atomic Thruster"
     "A255 Atomic Steering"
 
-    "Meteor Missile" 140
-    "Meteor Missile Launcher" 4
-    "Energy Blaster" 2
+    "Javelin" 800
+    "Javelin Storage Crate" 4
+    "Javelin Pod" 4
 
     "D23-QP Shield Generator"
-    "RT-I Radiothermal"
+    "Dwarf Core"
     "LP036a Battery Pack"
     "Fuel Barrel" 50
     "Hyperdrive"
+    "Small Radar Jammer"
+    "Tactical Scanner"
+    "Fragmentation Grenades" 5
+    "Laser Rifle" 10
   engine -8 46
   engine 8 46
-  gun -10 -30 "Energy Blaster"
-  gun 10 -30 "Energy Blaster"
-  gun -27 -5 "Meteor Missile Launcher"
-  gun 27 -5 "Meteor Missile Launcher"
-  gun -17 -5 "Meteor Missile Launcher"
-  gun 17 -5 "Meteor Missile Launcher"
+  gun -10 -30
+  gun 10 -30
+  gun -27 -5 "Javelin Pod"
+  gun 27 -5 "Javelin Pod"
+  gun -17 -5 "Javelin Pod"
+  gun 17 -5 "Javelin Pod"
   leak "leak" 50 50
   explode "tiny explosion" 10
   explode "small explosion" 20
@@ -363,23 +398,28 @@ ship "Mercury"
 
 ship "Mercury" "Mercury (Mark II)"
   outfits
-    "A120 Atomic Thruster"
+    "A250 Atomic Thruster"
     "A255 Atomic Steering"
 
-    "Sidewinder Missile" 200
-    "Sidewinder Missile Launcher" 4
+    "Javelin" 800
+    "Javelin Storage Crate" 4
+    "Javelin Pod" 4
 
     "S-270 Regenerator"
-    "RT-I Radiothermal"
+    "Dwarf Core"
     "LP036a Battery Pack"
     "Fuel Barrel" 50
-    "Scram Drive"
+    "Hyperdrive"
+    "Small Radar Jammer"
+    "Tactical Scanner"
+    "Fragmentation Grenades" 5
+    "Laser Rifle" 10
   gun
   gun
-  gun "Sidewinder Missile Launcher"
-  gun "Sidewinder Missile Launcher"
-  gun "Sidewinder Missile Launcher"
-  gun "Sidewinder Missile Launcher"
+  gun "Javelin Pod"
+  gun "Javelin Pod"
+  gun "Javelin Pod"
+  gun "Javelin Pod"
 
 
 
@@ -395,13 +435,13 @@ ship "Saturn"
     "hull" 6400
     "required crew" 81
     "bunks" 136
-    "mass" 680
-    "drag" 10.1
-    "heat dissipation" .45
-    "cargo space" 60
-    "outfit space" 820
-      "engine capacity" 170
-      "weapon capacity" 320
+    "mass" 690
+    "drag" 9.8
+    "heat dissipation" .5
+    "cargo space" 70
+    "outfit space" 790
+    "engine capacity" 150
+    "weapon capacity" 300
     weapon
       "blast radius" 260
       "shield damage" 2600
@@ -411,30 +451,31 @@ ship "Saturn"
     "A520 Atomic Thruster"
     "A525 Atomic Steering"
 
-    "Particle Cannon" 4
-    "Sidewinder Missile Launcher" 2
-    "Sidewinder Missile" 100
-    "Heavy Laser Turret" 3
+    "Meteor Missile" 160
+    "Meteor Missile Box" 4
+    "Meteor Missile Launcher" 4
+    "Particle Turret" 3
     "Heavy Anti-Missile Turret"
 
     "D67-TM Shield Generator"
     "Fusion Reactor"
-    "LP144a Battery Pack"
+    "LP288a Battery Pack"
     "Liquid Nitrogen Cooler"
     "Fuel Barrel" 60
     "Hyperdrive"
-    "Large Radar Jammer"
+    "Ramscoop"
+    "Tactical Scanner" 3
+    "Fragmentation Grenades" 60
+    "Laser Rifle" 120
   engine -29 156
   engine 29 156
-  gun -31 -63 "Particle Cannon"
-  gun 31 -63 "Particle Cannon"
-  gun -41 -52 "Particle Cannon"
-  gun 41 -52 "Particle Cannon"
-  gun -20 -44 "Sidewinder Missile Launcher"
-  gun 20 -44 "Sidewinder Missile Launcher"
-  turret 0 -40 "Heavy Laser Turret"
-  turret -33 -19 "Heavy Laser Turret"
-  turret 33 -19 "Heavy Laser Turret"
+  gun -31 -63 "Meteor Missile Launcher"
+  gun 31 -63 "Meteor Missile Launcher"
+  gun -41 -52 "Meteor Missile Launcher"
+  gun 41 -52 "Meteor Missile Launcher"
+  turret 0 -40 "Particle Turret"
+  turret -33 -19 "Particle Turret"
+  turret 33 -19 "Particle Turret"
   turret 0 0 "Heavy Anti-Missile Turret"
   drone -25 18
   drone 25 18
@@ -452,71 +493,28 @@ ship "Saturn"
   description "The Republic Saturn is a relatively recent design, a much larger version of the Venus designed to be able to take on an entire pirate fleet if necessary. In addition to a wide variety of weaponry, Saturns have space to carry four attack drones: fast, pilotless fighters that can be controlled remotely."
 
 
-ship "Saturn" "Saturn (Heavy)"
-  outfits
-    "A520 Atomic Thruster"
-    "A525 Atomic Steering"
-
-    "Heavy Rocket" 40
-    "Heavy Rocket Launcher" 2
-    "Particle Cannon" 4
-    "Heavy Laser Turret" 2
-    "Heavy Anti-Missile Turret"
-    "4X Blaster Turret"
-
-    "D94-YV Shield Generator"
-    "Armageddon Core"
-    "Dwarf Core"
-    "Supercapacitor"
-    "Liquid Helium Cooler"
-    "Fuel Barrel" 60
-    "Scram Drive"
-    "Ramscoop"
-    "Outfits Expansion"
-    "Laser Rifle" 20
-    "Fragmentation Grenades" 20
-  gun "Particle Cannon"
-  gun "Particle Cannon"
-  gun "Particle Cannon"
-  gun "Particle Cannon"
-  gun "Heavy Rocket Launcher"
-  gun "Heavy Rocket Launcher"
-  turret "4X Blaster Turret"
-  turret "Heavy Laser Turret"
-  turret "Heavy Laser Turret"
-  turret "Heavy Anti-Missile Turret"
-
-
 ship "Saturn" "Saturn (Jump)"
   outfits
     "A520 Atomic Thruster"
     "A525 Atomic Steering"
 
-    "Sidewinder Missile" 200
-    "Typhoon Torpedo" 60
-    "Sidewinder Missile Launcher" 4
-    "Typhoon Launcher" 2
-    "Electron Turret" 3
+    "Meteor Missile" 160
+    "Meteor Missile Box" 4
+    "Meteor Missile Launcher" 4
+    "Particle Turret" 3
     "Heavy Anti-Missile Turret"
 
     "D67-TM Shield Generator"
     "Fusion Reactor"
-    "LP144a Battery Pack"
+    "LP288a Battery Pack"
     "Liquid Nitrogen Cooler"
+    "Catalytic Ramscoop"
     "Fuel Barrel" 80
     "Jump Drive"
-    "Ramscoop"
-    "Outfits Expansion" 2
-  gun "Sidewinder Missile Launcher"
-  gun "Sidewinder Missile Launcher"
-  gun "Typhoon Launcher"
-  gun "Typhoon Launcher"
-  gun "Sidewinder Missile Launcher"
-  gun "Sidewinder Missile Launcher"
-  turret "Electron Turret"
-  turret "Electron Turret"
-  turret "Electron Turret"
-  turret "Heavy Anti-Missile Turret"
+    "Tactical Scanner" 3
+    "Outfits Expansion" 4
+    "Fragmentation Grenades" 60
+    "Laser Rifle" 120
 
 
 ship "Saturn" "Saturn (Mark II)"
@@ -524,29 +522,20 @@ ship "Saturn" "Saturn (Mark II)"
     "A520 Atomic Thruster"
     "A525 Atomic Steering"
 
-    "Sidewinder Missile" 200
-    "Typhoon Torpedo" 60
-    "Sidewinder Missile Launcher" 4
-    "Typhoon Launcher" 2
+    "Electron Beam" 4
     "Electron Turret" 3
     "Heavy Anti-Missile Turret"
 
     "S-970 Regenerator"
     "Fusion Reactor"
-    "LP144a Battery Pack"
+    "LP288a Battery Pack"
     "Liquid Nitrogen Cooler"
+    "Catalytic Ramscoop"
     "Fuel Barrel" 60
     "Hyperdrive"
-  gun "Sidewinder Missile Launcher"
-  gun "Sidewinder Missile Launcher"
-  gun "Sidewinder Missile Launcher"
-  gun "Sidewinder Missile Launcher"
-  gun "Typhoon Launcher"
-  gun "Typhoon Launcher"
-  turret "Electron Turret"
-  turret "Electron Turret"
-  turret "Electron Turret"
-  turret "Heavy Anti-Missile Turret"
+    "Tactical Scanner" 3
+    "Fragmentation Grenades" 60
+    "Laser Rifle" 120
 
 
 
@@ -563,8 +552,8 @@ ship "Surveillance Drone"
     "mass" 15
     "drag" .53
     "heat dissipation" .9
-    "outfit space" 53
-      "engine capacity" 20
+    "outfit space" 60
+    "engine capacity" 20
     weapon
       "blast radius" 3
       "shield damage" 30
@@ -597,11 +586,11 @@ ship "Venus"
     "bunks" 44
     "mass" 310
     "drag" 5.2
-    "heat dissipation" .7
-    "cargo space" 35
-    "outfit space" 460
-      "engine capacity" 100
-      "weapon capacity" 170
+    "heat dissipation" .6
+    "cargo space" 45
+    "outfit space" 540
+    "engine capacity" 100
+    "weapon capacity" 200
     weapon
       "blast radius" 100
       "shield damage" 1000
@@ -611,8 +600,11 @@ ship "Venus"
     "A370 Atomic Thruster"
     "A375 Atomic Steering"
 
-    "Particle Cannon" 2
-    "2X Blaster Turret" 3
+    "Sidewinder Missile" 100
+    "Sidewinder Missile Rack" 2
+    "Sidewinder Missile Launcher" 2
+    "Particle Turret" 2
+    "Heavy Anti-Missile Turret"
 
     "D41-HY Shield Generator"
     "Fission Reactor"
@@ -620,13 +612,17 @@ ship "Venus"
     "Water Coolant System"
     "Fuel Barrel" 50
     "Hyperdrive"
+    "Ramscoop"
+    "Tactical Scanner" 2
+    "Fragmentation Grenades" 20
+    "Laser Rifle" 40
   engine -26 92
   engine 26 92
-  gun -10 -83 "Particle Cannon"
-  gun 10 -83 "Particle Cannon"
-  turret 0 -37 "2X Blaster Turret"
-  turret -12 -12 "2X Blaster Turret"
-  turret 12 -12 "2X Blaster Turret"
+  gun -10 -83 "Sidewinder Missile Launcher"
+  gun 10 -83 "Sidewinder Missile Launcher"
+  turret 0 -37 "Heavy Anti-Missile Turret"
+  turret -12 -12 "Particle Turret"
+  turret 12 -12 "Particle Turret"
   leak "leak" 40 50
   leak "flame" 50 80
   leak "big leak" 90 30
@@ -643,18 +639,21 @@ ship "Venus" "Venus (Mark II)"
     "A370 Atomic Thruster"
     "A375 Atomic Steering"
 
-    "Particle Cannon" 2
-    "2X Blaster Turret" 2
-    "Anti-Missile Turret"
+    "Electron Beam" 2
+    "Electron Turret" 2
+    "Heavy Anti-Missile Turret"
 
     "S-270 Regenerator" 2
     "Fission Reactor"
     "LP144a Battery Pack"
     "Water Coolant System"
+    "Catalytic Ramscoop"
     "Fuel Barrel" 50
     "Hyperdrive"
-    "Outfits Expansion"
-  turret "Anti-Missile Turret"
-  turret "2X Blaster Turret"
-  turret "2X Blaster Turret"
+    "Tactical Scanner" 2
+    "Fragmentation Grenades" 20
+    "Laser Rifle" 40
+  turret "Heavy Anti-Missile Turret"
+  turret "Electron Turret"
+  turret "Electron Turret"
 

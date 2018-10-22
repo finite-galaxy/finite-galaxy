@@ -305,7 +305,7 @@ mission "FW Recon 1"
       names "republic capital"
       fighters "republic fighter"
       variant
-        "Saturn (Heavy)"
+        "Saturn"
     conversation
       `As soon as you scan the <npc> its captain hails you. "Excuse me, captain," he says, "can I assist you with something?"`
       choice
@@ -359,7 +359,7 @@ mission "FW Recon 2"
       names "republic capital"
       fighters "republic fighter"
       variant
-        "Saturn (Heavy)" 4
+        "Saturn" 4
     dialog "You've scanned all the ships you can find here that seem to be upgraded for combat. Time to return to <planet> to collect your payment."
   
   on complete
