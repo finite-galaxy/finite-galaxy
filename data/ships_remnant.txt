@@ -25,10 +25,11 @@ ship "Gascraft"
     "bunks" 1
     "mass" 80
     "drag" 1.7
-    "heat dissipation" 0.9
+    "heat dissipation" 0.8
     "cargo space" 8
-    "outfit space" 146
-      "engine capacity" 34
+    "outfit space" 144
+    "engine capacity" 34
+# miscellaneous stats
     "shield generation" 0.6
     "shield energy" 0.4
     "hull repair rate" 1.2
@@ -69,8 +70,9 @@ ship "Shadow"
     "heat dissipation" 0.7
     "cargo space" 36
     "outfit space" 384
-      "engine capacity" 94
-      "weapon capacity" 83
+    "engine capacity" 94
+    "weapon capacity" 83
+# miscellaneous stats
     "shield generation" 1.8
     "shield energy" 1.2
     "hull repair rate" 0.8
@@ -129,6 +131,7 @@ ship "Shadow" "Shadow (Heavy)"
     "Fuel Pod" 9
     "Hyperdrive"
     "Quantum Key Stone"
+    "Outfits Expansion"
 
 
 ship "Shadow" "Shadow (Hunter)"
@@ -215,9 +218,10 @@ ship "Twilight"
     "mass" 610
     "drag" 8.6
     "heat dissipation" 0.6
-    "outfit space" 706
-      "engine capacity" 142
-      "weapon capacity" 236
+    "outfit space" 712
+    "engine capacity" 142
+    "weapon capacity" 236
+# miscellaneous stats
     "shield generation" 5.2
     "shield energy" 4.6
     "hull repair rate" 1.5
@@ -270,7 +274,6 @@ ship "Twilight"
 ship "Twilight" "Twilight (Heavy)"
   outfits
     "Forge-Class Thruster"
-    "Crucible-Class Thruster"
     "Smelter-Class Steering"
     "Forge-Class Steering"
 
@@ -282,12 +285,12 @@ ship "Twilight" "Twilight (Heavy)"
     "Epoch Cell"
     "Millennium Cell"
     "Crystal Capacitor" 2
-    "Thermoelectric Cooler" 2
+    "Thermoelectric Cooler" 4
     "Emergency Ramscoop"
     "Fuel Pod" 6
     "Hyperdrive"
     "Quantum Key Stone"
-    "Outfits Expansion" 4
+    "Outfits Expansion" 6
   gun "Inhibitor Cannon"
   gun "Inhibitor Cannon"
   gun "Inhibitor Cannon"
@@ -348,12 +351,12 @@ ship "Twilight" "Twilight (Turret)"
     "Epoch Cell"
     "Millennium Cell"
     "Crystal Capacitor"
-    "Thermoelectric Cooler"
+    "Thermoelectric Cooler" 2
     "Emergency Ramscoop"
     "Fuel Pod" 6
     "Hyperdrive"
     "Quantum Key Stone"
-    "Outfits Expansion" 2
+    "Outfits Expansion" 4
   turret "Thrasher Turret"
   turret "Thrasher Turret"
   turret "Thrasher Turret"
