@@ -31,8 +31,8 @@ ship "Bounder"
     "heat dissipation" .8
     "cargo space" 40
     "outfit space" 310
-      "engine capacity" 100
-      "weapon capacity" 45
+    "engine capacity" 90
+    "weapon capacity" 45
     weapon
       "blast radius" 30
       "shield damage" 300
@@ -44,8 +44,8 @@ ship "Bounder"
 
     "Anti-Missile Turret" 2
 
-    "D14-RN Shield Generator"
-    "nGVF-CC Fuel Cell"
+    "D23-QP Shield Generator"
+    "RT-I Radiothermal"
     "LP036a Battery Pack"
     "Fuel Barrel" 90
     "Hyperdrive"
@@ -63,18 +63,19 @@ ship "Bounder"
 
 ship "Bounder" "Bounder (Hai)"
   outfits
-    "X3700 Ion Thruster"
-    "X3200 Ion Steering"
+    `"Biroo" Atomic Steering`
+    `"Biroo" Atomic Thruster`
 
     "Chameleon Anti-Missile" 2
 
     "Corundum Regenerator"
     "Pebble Core"
-    "Fissure Batteries"
+    "Gorge Batteries"
     "Williwaw Cooling"
     "Fuel Barrel" 90
     "Hyperdrive"
     "Quantum Keystone"
+    "Outfits Expansion"
 
 
 
@@ -92,9 +93,9 @@ ship "Manta"
     "drag" 4.7
     "heat dissipation" .8
     "cargo space" 20
-    "outfit space" 430
-      "engine capacity" 100
-      "weapon capacity" 140
+    "outfit space" 390
+    "engine capacity" 100
+    "weapon capacity" 140
     weapon
       "blast radius" 80
       "shield damage" 800
@@ -104,13 +105,12 @@ ship "Manta"
     "X3700 Ion Thruster"
     "X3200 Ion Steering"
 
-    "Meteor Missile" 70
-    "Meteor Missile Launcher" 2
     "Particle Cannon" 4
 
-    "D14-RN Shield Generator"
+    "D23-QP Shield Generator"
     "RT-I Radiothermal"
     "LP144a Battery Pack"
+    "Water Coolant System"
     "Fuel Barrel" 40
     "Hyperdrive"
   engine -33 38
@@ -119,8 +119,6 @@ ship "Manta"
   gun 21 -35 "Particle Cannon"
   gun -27 -35 "Particle Cannon"
   gun 27 -35 "Particle Cannon"
-  gun -66 -32 "Meteor Missile Launcher"
-  gun 66 -32 "Meteor Missile Launcher"
   leak "leak" 60 50
   leak "flame" 40 80
   explode "tiny explosion" 10
@@ -132,50 +130,41 @@ ship "Manta"
 
 ship "Manta" "Manta (Mark II)"
   outfits
-    "A250 Atomic Thruster"
+    "A370 Atomic Thruster"
     "A375 Atomic Steering"
-    "Ionic Afterburner"
 
-    "Meteor Missile" 70
-    "Meteor Missile Launcher" 2
     "Particle Cannon" 4
 
     "S-270 Regenerator"
     "Fission Reactor"
     "LP072a Battery Pack"
-    "Water Coolant System"
+    "Liquid Nitrogen Cooler"
     "Fuel Barrel" 40
     "Hyperdrive"
-    "Outfits Expansion"
-  gun "Particle Cannon"
-  gun "Particle Cannon"
-  gun "Particle Cannon"
-  gun "Particle Cannon"
-  gun "Meteor Missile Launcher"
-  gun "Meteor Missile Launcher"
 
 
 ship "Manta" "Manta (Nuclear)"
   outfits
-    "A250 Atomic Thruster"
+    "A370 Atomic Thruster"
     "A375 Atomic Steering"
 
     "Nuclear Missile" 2
-    "Particle Cannon" 4
+    "Particle Cannon" 2
+    "Proton Cannon" 2
 
     "S-270 Regenerator"
     "Fission Reactor"
     "LP072a Battery Pack"
-    "Water Coolant System"
+    "Liquid Nitrogen Cooler"
     "Fuel Barrel" 40
     "Hyperdrive"
-    "Outfits Expansion"
-  gun "Particle Cannon"
-  gun "Particle Cannon"
-  gun "Particle Cannon"
-  gun "Particle Cannon"
-  gun "Nuclear Missile"
-  gun "Nuclear Missile"
+    "Outfits Expansion" 2
+  gun -21 -35 "Proton Cannon"
+  gun 21 -35 "Proton Cannon"
+  gun -27 -35 "Particle Cannon"
+  gun 27 -35 "Particle Cannon"
+  gun -66 -32 "Nuclear Missile"
+  gun 66 -32 "Nuclear Missile"
 
 
 ship "Manta" "Manta (Proton)"
@@ -183,21 +172,14 @@ ship "Manta" "Manta (Proton)"
     "X3700 Ion Thruster"
     "X3200 Ion Steering"
 
-    "Meteor Missile" 70
-    "Meteor Missile Launcher" 2
     "Proton Cannon" 4
 
-    "D14-RN Shield Generator"
+    "D23-QP Shield Generator"
     "RT-I Radiothermal"
     "LP144a Battery Pack"
+    "Water Coolant System"
     "Fuel Barrel" 40
     "Hyperdrive"
-  gun "Proton Cannon"
-  gun "Proton Cannon"
-  gun "Proton Cannon"
-  gun "Proton Cannon"
-  gun "Meteor Missile Launcher"
-  gun "Meteor Missile Launcher"
 
 
 
@@ -215,9 +197,9 @@ ship "Quicksilver"
     "drag" 2.7
     "heat dissipation" .8
     "cargo space" 10
-    "outfit space" 280
-      "engine capacity" 70
-      "weapon capacity" 60
+    "outfit space" 290
+    "engine capacity" 80
+    "weapon capacity" 60
     weapon
       "blast radius" 40
       "shield damage" 400
@@ -232,7 +214,7 @@ ship "Quicksilver"
     "D23-QP Shield Generator"
     "RT-I Radiothermal"
     "LP036a Battery Pack"
-    "Cooling Ducts"
+    "Water Coolant System"
     "Fuel Barrel" 40
     "Hyperdrive"
   engine -17 54
@@ -254,9 +236,9 @@ ship "Quicksilver" "Quicksilver (Mark II)"
     "Particle Cannon" 2
 
     "S-270 Regenerator"
-    "RT-I Radiothermal"
+    "Fission Reactor"
     "LP036a Battery Pack"
-    "Cooling Ducts"
+    "Liquid Nitrogen Cooler"
     "Fuel Barrel" 40
     "Hyperdrive"
 
@@ -271,7 +253,7 @@ ship "Quicksilver" "Quicksilver (Proton)"
     "D23-QP Shield Generator"
     "RT-I Radiothermal"
     "LP036a Battery Pack"
-    "Cooling Ducts"
+    "Water Coolant System"
     "Fuel Barrel" 40
     "Hyperdrive"
 
@@ -283,13 +265,14 @@ ship "Quicksilver" "Quicksilver (Scanner)"
 
     "Particle Cannon" 2
 
+    "D23-QP Shield Generator"
     "RT-I Radiothermal"
     "LP036a Battery Pack"
-    "D23-QP Shield Generator"
-    "Cooling Ducts"
+    "Water Coolant System"
     "Cargo Scanner"
     "Fuel Barrel" 40
     "Hyperdrive"
+    "Outfit Scanner"
 
 
 
@@ -306,10 +289,10 @@ ship "Splinter"
     "mass" 250
     "drag" 4.0
     "heat dissipation" .7
-    "cargo space" 75
+    "cargo space" 80
     "outfit space" 460
-      "engine capacity" 100
-      "weapon capacity" 150
+    "engine capacity" 110
+    "weapon capacity" 150
     weapon
       "blast radius" 60
       "shield damage" 600
@@ -319,8 +302,8 @@ ship "Splinter"
     "X3700 Ion Thruster"
     "X3200 Ion Steering"
 
-    "Proton Cannon" 2
-    "2X Blaster Turret" 2
+    "Particle Cannon" 2
+    "4X Blaster Turret" 2
     "Heavy Anti-Missile Turret"
 
     "D67-TM Shield Generator"
@@ -329,14 +312,13 @@ ship "Splinter"
     "Water Coolant System"
     "Fuel Barrel" 60
     "Hyperdrive"
-    "Small Radar Jammer" 2
   engine -15 115
   engine 15 115
-  gun -15 -80 "Proton Cannon"
-  gun 15 -80 "Proton Cannon"
-  turret -17 -28 "2X Blaster Turret"
+  gun -15 -80 "Particle Cannon"
+  gun 15 -80 "Particle Cannon"
+  turret -17 -28 "4X Blaster Turret"
   turret 0 -28 "Heavy Anti-Missile Turret"
-  turret 17 -28 "2X Blaster Turret"
+  turret 17 -28 "4X Blaster Turret"
   leak "leak" 60 50
   leak "flame" 40 80
   leak "big leak" 90 30
@@ -357,9 +339,9 @@ ship "Splinter" "Splinter (Laser)"
     "Heavy Laser Turret" 2
     "Heavy Anti-Missile Turret"
 
-    "D94-YV Shield Generator"
-    "Fission Reactor"
-    "LP036a Battery Pack"
+    "D67-TM Shield Generator"
+    "RT-I Radiothermal"
+    "LP144a Battery Pack"
     "Water Coolant System"
     "Fuel Barrel" 60
     "Hyperdrive"
@@ -374,15 +356,16 @@ ship "Splinter" "Splinter (Mark II)"
     "A375 Atomic Steering"
 
     "Particle Cannon" 2
-    "4X Blaster Turret" 3
+    "Heavy Laser Turret"
+    "Heavy Anti-Missile Turret"
 
     "S-970 Regenerator"
-    "Fusion Reactor"
-    "Supercapacitor"
-    "Water Coolant System" 4
+    "Fission Reactor"
+    "LP144a Battery Pack"
+    "Liquid Nitrogen Cooler"
     "Fuel Barrel" 60
     "Hyperdrive"
-    "Outfits Expansion" 2
+    "Outfits Expansion"
 
 
 ship "Splinter" "Splinter (Proton)"
@@ -390,16 +373,17 @@ ship "Splinter" "Splinter (Proton)"
     "X3700 Ion Thruster"
     "X3200 Ion Steering"
 
-    "Proton Turret" 2
-    "Anti-Missile Turret"
+    "Proton Cannon" 2
+    "4X Blaster Turret" 2
+    "Heavy Anti-Missile Turret"
 
-    "D94-YV Shield Generator"
-    "Fission Reactor"
-    "LP036a Battery Pack"
+    "D67-TM Shield Generator"
+    "RT-I Radiothermal"
+    "LP144a Battery Pack"
     "Water Coolant System"
     "Fuel Barrel" 60
     "Hyperdrive"
-  turret "Proton Turret"
-  turret "Anti-Missile Turret"
-  turret "Proton Turret"
+  turret "4X Blaster Turret"
+  turret "Heavy Anti-Missile Turret"
+  turret "4X Blaster Turret"
 
