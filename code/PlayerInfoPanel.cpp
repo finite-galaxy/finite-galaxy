@@ -543,10 +543,12 @@ void PlayerInfoPanel::DrawFleet(const Rectangle &bounds)
   // Table attributes.
   Table table;
   table.AddColumn(0, Table::LEFT);
-  table.AddColumn(220, Table::LEFT);
-  table.AddColumn(350, Table::LEFT);
-  table.AddColumn(550, Table::RIGHT);
-  table.AddColumn(610, Table::RIGHT);
+  table.AddColumn(180, Table::LEFT);
+  table.AddColumn(300, Table::LEFT);
+  table.AddColumn(470, Table::RIGHT);
+  table.AddColumn(520, Table::RIGHT);
+  table.AddColumn(570, Table::RIGHT);
+  table.AddColumn(620, Table::RIGHT);
   table.AddColumn(670, Table::RIGHT);
   table.AddColumn(730, Table::RIGHT);
   table.SetUnderline(0, 730);
@@ -558,10 +560,12 @@ void PlayerInfoPanel::DrawFleet(const Rectangle &bounds)
   table.Draw("ship");
   table.Draw("model");
   table.Draw("system");
+  table.Draw("crew");
   table.Draw("shields");
   table.Draw("hull");
   table.Draw("fuel");
-  table.Draw("crew");
+  table.Draw("energy");
+  table.Draw("heat");
   table.DrawGap(5);
   
   // Loop through all the player's ships.
@@ -595,16 +599,6 @@ void PlayerInfoPanel::DrawFleet(const Rectangle &bounds)
     const System *system = ship.GetSystem();
     table.Draw(system ? system->Name() : "");
     
-    string shields = to_string(static_cast<int>(100. * max(0., ship.Shields()))) + "%";
-    table.Draw(shields);
-    
-    string hull = to_string(static_cast<int>(100. * max(0., ship.Hull()))) + "%";
-    table.Draw(hull);
-    
-    string fuel = to_string(static_cast<int>(
-      ship.Attributes().Get("fuel capacity") * ship.Fuel()));
-    table.Draw(fuel);
-    
     // If this isn't the flagship, we'll remember how many crew it has, but
     // only the minimum number of crew need to be paid for.
     int crewCount = ship.Crew();
@@ -612,6 +606,21 @@ void PlayerInfoPanel::DrawFleet(const Rectangle &bounds)
       crewCount = min(crewCount, ship.RequiredCrew());
     string crew = (ship.IsParked() ? "Parked" : to_string(crewCount));
     table.Draw(crew);
+    
+    string shields = to_string(static_cast<int>(100. * max(0., ship.Shields()))) + "%";
+    table.Draw(shields);
+    
+    string hull = to_string(static_cast<int>(100. * max(0., ship.Hull()))) + "%";
+    table.Draw(hull);
+    
+    string fuel = to_string(static_cast<int>(100. * max(0., ship.Fuel()))) + "%";
+    table.Draw(fuel);
+    
+    string energy = to_string(static_cast<int>(100. * max(0., ship.Energy()))) + "%";
+    table.Draw(energy);
+    
+    string heat = to_string(static_cast<int>(100. * max(0., ship.Heat()))) + "%";
+    table.Draw(heat);
     
     ++index;
   }
