@@ -546,6 +546,8 @@ fleet "Unfettered Tribute"
   cargo 3
   variant
     "Water Bug (Jump)"
+  variant
+    "Water Bug (Pulse, Jump)"
 
 event "wanderer / unfettered peace"
   "reputation: Hai (Unfettered)" >?= 1
@@ -1815,7 +1817,7 @@ mission "Wanderers Solifuge Recon 2"
         "Solifuge"
         "Solifuge (Tracker)"
         "Violin Spider" 6
-        "Violin Spider (Pulse)" 6
+        "Violin Spider (Tracker)" 6
     dialog "That was the last of the new Unfettered ships. You can now report back to Tele'ek on <planet>."
   on complete
     conversation
@@ -2012,27 +2014,47 @@ event "battle for sich'ka'ara ends"
     add variant 3
       "Solifuge"
       "Violin Spider" 3
-      "Violin Spider (Pulse)" 3
-    add variant 1
-      "Solifuge (Pulse)"
+      "Violin Spider (Tracker)" 3
+    add variant 3
+      "Solifuge (Tracker)"
+      "Violin Spider" 3
+      "Violin Spider (Tracker)" 3
+      "Lightning Bug" 2
+    add variant 3
+      "Solifuge"
       "Solifuge (Tracker)"
       "Violin Spider" 6
-      "Violin Spider (Pulse)" 6
-    add variant 2
-      "Shield Beetle (Pulse)"
+      "Violin Spider (Tracker)" 6
+    add variant 1
+      "Shield Beetle"
       "Solifuge"
       "Violin Spider" 3
-      "Violin Spider (Pulse)" 3
+      "Violin Spider (Tracker)" 3
     add variant 1
       "Shield Beetle"
       "Solifuge (Tracker)"
-      "Violin Spider" 2
-      "Violin Spider (Pulse)" 4
-    add variant 2
-      "Solifuge (Pulse)"
-      "Violin Spider" 4
-      "Violin Spider (Pulse)" 2
-      "Lightning Bug" 2
+      "Violin Spider" 3
+      "Violin Spider (Tracker)" 3
+    add variant 1
+      "Shield Beetle (Pulse)"
+      "Solifuge"
+      "Violin Spider" 3
+      "Violin Spider (Tracker)" 3
+    add variant 1
+      "Shield Beetle (Pulse)"
+      "Solifuge (Tracker)"
+      "Violin Spider" 3
+      "Violin Spider (Tracker)" 3
+    add variant 1
+      "Shield Beetle (Tracker)"
+      "Solifuge"
+      "Violin Spider" 3
+      "Violin Spider (Tracker)" 3
+    add variant 1
+      "Shield Beetle (Tracker)"
+      "Solifuge (Tracker)"
+      "Violin Spider" 3
+      "Violin Spider (Tracker)" 3
 
 
 
@@ -2308,8 +2330,8 @@ mission "Wanderers Ap'arak 2"
       names "hai"
       variant
         "Shield Beetle" 2
-        "Shield Beetle (Tracker)" 1
         "Shield Beetle (Pulse)" 2
+        "Shield Beetle (Tracker)" 1
         "Water Bug" 3
         "Water Bug (Pulse)" 2
   npc evade
@@ -2320,10 +2342,9 @@ mission "Wanderers Ap'arak 2"
       names "hai"
       variant
         "Solifuge" 2
-        "Solifuge (Pulse)" 2
-        "Solifuge (Tracker)" 1
-        "Violin Spider" 12
-        "Violin Spider (Pulse)" 18
+        "Solifuge (Tracker)" 3
+        "Violin Spider" 15
+        "Violin Spider (Tracker)" 15
   npc evade
     personality heroic
     system "Chy'chra"
@@ -2332,15 +2353,14 @@ mission "Wanderers Ap'arak 2"
       names "hai"
       variant
         "Shield Beetle" 1
+        "Shield Beetle (Pulse)" 1
         "Shield Beetle (Tracker)" 1
-        "Shield Beetle (Pulse)" 2
-        "Water Bug" 4
-        "Water Bug (Pulse)" 2
-        "Solifuge" 1
-        "Solifuge (Pulse)" 1
-        "Solifuge (Tracker)" 1
-        "Violin Spider" 8
-        "Violin Spider (Pulse)" 10
+        "Water Bug" 3
+        "Water Bug (Pulse)" 3
+        "Solifuge" 2
+        "Solifuge (Tracker)" 2
+        "Violin Spider" 12
+        "Violin Spider (Tracker)" 12
   npc
     personality heroic
     government "Wanderer"

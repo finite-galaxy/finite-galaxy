@@ -45,14 +45,14 @@ outfit "rslug"
       "frame rate" 30
     "live effect" "rail sparks" 5
     "hit effect" "bullet impact"
-    "shield damage" 65
-    "hull damage" 95
     "homing" 1
     "optical tracking" .4
     "turn" .3
+    "piercing" .1
+    "shield damage" 65
+    "hull damage" 95
     "hit force" 44
     "missile strength" 14
-    "piercing" .1
 
 effect "bullet impact"
   sprite "effect/bullet impact"
@@ -80,7 +80,7 @@ outfit "Tracker"
   "mass" .25
   "plunderable" 1
   "tracker capacity" -1
-  description "This is ammunition for a Tracker Pod."
+  description "This is ammunition for a Tracker Launcher."
 
 outfit "Tracker Storage Pod"
   category "Ammunition Storage"
@@ -90,9 +90,9 @@ outfit "Tracker Storage Pod"
   "outfit space" -10
   "tracker capacity" 28
   ammo "Hai Tracker"
-  description "The Tracker Storage Pod is used to store extra ammunition for Tracker Pods."
+  description "The Tracker Storage Pod is used to store extra ammunition for Tracker Launchers."
 
-outfit "Tracker Pod"
+outfit "Tracker Launcher"
   category "Secondary Weapons"
   thumbnail "outfit/tracker_launcher"
   cost 150000
