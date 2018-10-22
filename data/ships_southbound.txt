@@ -314,9 +314,9 @@ ship "Clipper"
     "Greyhound Plasma Thruster"
     "Greyhound Plasma Steering"
 
-    "Javelin" 400
-    "Javelin Pod" 2
-    "Beam Laser" 2
+    "Javelin" 800
+    "Javelin Storage Crate" 4
+    "Javelin Pod" 4
 
     "D23-QP Shield Generator"
     "nGVF-DD Fuel Cell"
@@ -327,8 +327,8 @@ ship "Clipper"
   engine 20 45
   gun -23 -19 "Javelin Pod"
   gun 23 -19 "Javelin Pod"
-  gun -12 -7 "Beam Laser"
-  gun 12 -7 "Beam Laser"
+  gun -12 -7 "Javelin Pod"
+  gun 12 -7 "Javelin Pod"
   leak "leak" 60 50
   leak "flame" 50 80
   explode "tiny explosion" 15
