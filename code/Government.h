@@ -43,7 +43,7 @@ public:
   // toward the player.
   double AttitudeToward(const Government *other) const;
   double InitialPlayerReputation() const;
-  // Get the amount that your reputation changes for the given offense. The
+  // Get the amount that your reputation changes for the given offence. The
   // given value should be a combination of one or more ShipEvent values.
   double PenaltyFor(int eventType) const;
   // In order to successfully bribe this government you must pay them this
@@ -76,8 +76,8 @@ public:
   
   // Check if this is the player government.
   bool IsPlayer() const;
-  // Commit the given "offense" against this government (which may not
-  // actually consider it to be an offense). This may result in temporary
+  // Commit the given "offence" against this government (which may not
+  // actually consider it to be an offence). This may result in temporary
   // hostilities (if the even type is PROVOKE), or a permanent change to your
   // reputation.
   void Offend(int eventType, int count = 1) const;
@@ -92,9 +92,9 @@ public:
   void AddReputation(double value) const;
   void SetReputation(double value) const;
   
-  // Get the government's crew attack/defense values
+  // Get the government's crew attack/defence values
   double CrewAttack() const;
-  double CrewDefense() const;
+  double CrewDefence() const;
   
   
 private:
@@ -116,7 +116,7 @@ private:
   std::string language;
   const Fleet *raidFleet = nullptr;
   double crewAttack = 1.;
-  double crewDefense = 2.;
+  double crewDefence = 2.;
 };
 
 

@@ -23,19 +23,20 @@ ship "Runabout"
     "heat dissipation" .70
     "cargo space" 42
     "outfit space" 204
-    "weapon capacity" 44
-    "engine capacity" 42
+      "engine capacity" 42
+      "weapon capacity" 44
     weapon
       "blast radius" 22
       "shield damage" 220
       "hull damage" 110
       "hit force" 330
   outfits
+    "Small Thrust Module" 2
+    "Small Steering Module" 3
+
     "Small Collector Module" 2
     "Small Battery Module"
     "Small Shield Module"
-    "Small Thrust Module" 2
-    "Small Steering Module" 3
     "Fuel Pod" 4
     "Hyperdrive"
   engine -14 52 1
@@ -66,23 +67,24 @@ ship "Sojourner"
     "heat dissipation" .50
     "cargo space" 260
     "outfit space" 632
-    "weapon capacity" 202
-    "engine capacity" 156
+      "engine capacity" 156
+      "weapon capacity" 202
     weapon
       "blast radius" 200
       "shield damage" 2000
       "hull damage" 1000
       "hit force" 3000
   outfits
+    "Large Thrust Module" 2
+    "Small Thrust Module" 3
+    "Large Steering Module" 2
+    "Small Steering Module"
+
     "Large Collector Module"
     "Small Collector Module" 3
     "Large Battery Module"
     "Large Shield Module"
     "Small Repair Module" 2
-    "Large Thrust Module" 2
-    "Small Thrust Module" 3
-    "Large Steering Module" 2
-    "Small Steering Module"
     "Fuel Pod" 8
     "Hyperdrive"
   engine -24 176 .6
@@ -121,22 +123,23 @@ ship "Traveller"
     "heat dissipation" .60
     "cargo space" 137
     "outfit space" 514
-    "weapon capacity" 177
-    "engine capacity" 79
+      "engine capacity" 79
+      "weapon capacity" 177
     weapon
       "blast radius" 72
       "shield damage" 720
       "hull damage" 360
       "hit force" 1080
   outfits
-    "Small Collector Module" 3
-    "Small Battery Module" 2
-    "Small Shield Module" 2
-    "Small Repair Module"
     "Large Thrust Module"
     "Small Thrust Module"
     "Large Steering Module"
     "Small Steering Module"
+
+    "Small Collector Module" 3
+    "Small Battery Module" 2
+    "Small Shield Module" 2
+    "Small Repair Module"
     "Fuel Pod" 6
     "Hyperdrive"
   engine -30 87 .7
@@ -174,20 +177,21 @@ ship "Visitor"
     "heat dissipation" .65
     "cargo space" 98
     "outfit space" 352
-    "weapon capacity" 90
-    "engine capacity" 57
+      "engine capacity" 57
+      "weapon capacity" 90
     weapon
       "blast radius" 42
       "shield damage" 420
       "hull damage" 210
       "hit force" 630
   outfits
+    "Small Thrust Module" 3
+    "Large Steering Module"
+
     "Small Collector Module" 2
     "Small Battery Module" 2
     "Small Shield Module"
     "Small Repair Module"
-    "Small Thrust Module" 3
-    "Large Steering Module"
     "Fuel Pod" 4
     "Hyperdrive"
   engine -23 75 .6

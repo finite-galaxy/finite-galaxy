@@ -21,10 +21,9 @@ ship "Archon"
     "mass" 1200
     "drag" 27
     "heat dissipation" 40
-    "cargo space" 0
     "outfit space" 800
-    "weapon capacity" 600
-    "engine capacity" 200
+      "engine capacity" 200
+      "weapon capacity" 600
     "shield generation" 100
     "shield energy" 100
     "hull repair rate" 100
@@ -40,20 +39,22 @@ ship "Archon"
       "hull damage" 10000
       "hit force" 30000
   outfits
+    "Medium Graviton Thruster"
+    "Medium Graviton Steering"
+
     "Antimatter Cannon"
-    "Anti-Missile Field" 2
     "Bolt Turret" 3
     "Draining Field"
     "Distancer" 2
-    "Medium Graviton Thruster"
-    "Medium Graviton Steering"
+    "Anti-Missile Field" 2
+
     "Hyperdrive"
     "Jump Drive"
   engine -17 92
   engine 17 92
   gun 0 -74 "Antimatter Cannon"
-  turret 0 -10 "Anti-Missile Field"
-  turret 0 -10 "Anti-Missile Field"
+  turret -10 -10 "Anti-Missile Field"
+  turret 10 -10 "Anti-Missile Field"
   turret 0 -10 "Draining Field"
   turret -40 -13 "Bolt Turret"
   turret 40 -13 "Bolt Turret"
@@ -62,6 +63,7 @@ ship "Archon"
   turret 55 16 "Distancer"
   explode "nuke explosion" 3
   "final explode" "final explosion large"
+
 
 ship "Archon" "Archon (Cloaked)"
   "never disabled"

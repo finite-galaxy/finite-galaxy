@@ -28,24 +28,26 @@ ship "Combat Drone"
       Navy
     "cost" 83000
     "hull" 700
+    "automaton" 1
     "mass" 20
     "drag" .59
     "heat dissipation" .9
     "outfit space" 58
-    "weapon capacity" 8
-    "engine capacity" 28
-    "automaton" 1
+      "engine capacity" 28
+      "weapon capacity" 8
     weapon
       "blast radius" 5
       "shield damage" 50
       "hull damage" 25
       "hit force" 75
   outfits
-    "Beam Laser"
-    "nGVF-AA Fuel Cell"
-    "Supercapacitor"
     "X1700 Ion Thruster"
     "X1200 Ion Steering"
+
+    "Beam Laser"
+
+    "nGVF-AA Fuel Cell"
+    "Supercapacitor"
   engine -9 29
   engine 9 29
   gun 0 -29 "Beam Laser"
@@ -71,28 +73,30 @@ ship "Jupiter"
     "heat dissipation" .45
     "cargo space" 100
     "outfit space" 890
-    "weapon capacity" 370
-    "engine capacity" 210
+      "engine capacity" 210
+      "weapon capacity" 370
     weapon
       "blast radius" 300
       "shield damage" 3000
       "hull damage" 1500
       "hit force" 4500
   outfits
-    "Particle Cannon" 4
-    "Meteor Missile Launcher" 4
+    "A860 Atomic Thruster"
+    "A525 Atomic Steering"
+
     "Meteor Missile" 140
+    "Meteor Missile Launcher" 4
+    "Particle Cannon" 4
     "Heavy Laser Turret" 3
     "Heavy Anti-Missile Turret"
+
     "D94-YV Shield Generator"
     "Armageddon Core"
     "LP144a Battery Pack"
     "Liquid Helium Cooler"
-    "Large Radar Jammer"
-    "A860 Atomic Thruster"
-    "A525 Atomic Steering"
     "Fuel Barrel" 70
     "Hyperdrive"
+    "Large Radar Jammer"
   engine -35 200
   engine 35 200
   gun -16 -176 "Particle Cannon"
@@ -128,23 +132,26 @@ ship "Jupiter"
   "final explode" "final explosion large"
   description "The Jupiter is more than just a warship: it is practically a mobile space station, with docking bays for an entire squadron of drones and fighters and enough crew to fill a small village. Although designed primarily for engaging enemies from a distance, a Jupiter can also do significant damage in close combat."
 
+
 ship "Jupiter" "Jupiter (Alpha)"
   outfits
-    "Ion Cannon" 2
-    "Tracker Pod" 4
-    "Tracker" 224
-    "Disruptor" 2
-    "Slicer" 2
-    "Triple Plasma Core"
-    "Systems Core (Large)"
-    "Large Heat Shunt" 3
-    "Small Heat Shunt"
-    "Outfits Expansion" 4
-    "Laser Rifle" 120
     "A860 Atomic Thruster"
     "A525 Atomic Steering"
+
+    "Tracker" 224
+    "Tracker Pod" 4
+    "Ion Cannon" 2
+    "Disruptor" 2
+    "Slicer" 2
+
+    "Systems Core (Large)"
+    "Triple Plasma Core"
+    "Large Heat Shunt" 3
+    "Small Heat Shunt"
+    "Laser Rifle" 120
     "Fuel Processor" 2
     "Jump Drive"
+    "Outfits Expansion" 4
   gun "Tracker Pod"
   gun "Tracker Pod"
   gun "Ion Cannon"
@@ -158,22 +165,25 @@ ship "Jupiter" "Jupiter (Alpha)"
   turret "Disruptor"
   turret "Slicer"
 
+
 ship "Jupiter" "Jupiter (Jump)"
   outfits
-    "Particle Cannon" 4
-    "Sidewinder Missile Launcher" 4
+    "A860 Atomic Thruster"
+    "A525 Atomic Steering"
+
     "Sidewinder Missile" 200
+    "Sidewinder Missile Launcher" 4
+    "Particle Cannon" 4
     "Electron Turret" 3
     "Heavy Anti-Missile Turret"
+
     "D94-YV Shield Generator"
     "Armageddon Core"
     "LP144a Battery Pack"
     "Liquid Helium Cooler"
-    "Outfits Expansion" 4
-    "A860 Atomic Thruster"
-    "A525 Atomic Steering"
     "Fuel Barrel" 80
     "Jump Drive"
+    "Outfits Expansion" 4
   gun "Particle Cannon"
   gun "Particle Cannon"
   gun "Sidewinder Missile Launcher"
@@ -187,23 +197,26 @@ ship "Jupiter" "Jupiter (Jump)"
   turret "Heavy Anti-Missile Turret"
   turret "Electron Turret"
 
+
 ship "Jupiter" "Jupiter (Mark II)"
   outfits
-    "Particle Cannon" 4
-    "Sidewinder Missile Launcher" 4
+    "A860 Atomic Thruster"
+    "A525 Atomic Steering"
+
     "Sidewinder Missile" 200
+    "Sidewinder Missile Launcher" 4
+    "Particle Cannon" 4
     "Electron Turret" 3
     "Heavy Anti-Missile Turret"
+
     "S-970 Regenerator"
     "S-270 Regenerator"
     "Armageddon Core"
     "LP144a Battery Pack"
     "Liquid Helium Cooler"
-    "Outfits Expansion" 3
-    "A860 Atomic Thruster"
-    "A525 Atomic Steering"
     "Fuel Barrel" 70
     "Hyperdrive"
+    "Outfits Expansion" 3
   gun "Particle Cannon"
   gun "Particle Cannon"
   gun "Sidewinder Missile Launcher"
@@ -235,20 +248,22 @@ ship "Lance"
     "drag" .7
     "heat dissipation" .8
     "outfit space" 100
-    "weapon capacity" 20
-    "engine capacity" 30
+      "engine capacity" 30
+      "weapon capacity" 20
     weapon
       "blast radius" 12
       "shield damage" 120
       "hull damage" 60
       "hit force" 180
   outfits
-    "Beam Laser" 2
-    "nGVF-AA Fuel Cell"
-    "LP036a Battery Pack"
-    "D14-RN Shield Generator"
     "X1700 Ion Thruster"
     "X1200 Ion Steering"
+
+    "Beam Laser" 2
+
+    "D14-RN Shield Generator"
+    "nGVF-AA Fuel Cell"
+    "LP036a Battery Pack"
   engine -15 30
   engine 15 30
   gun -14 -10 "Beam Laser"
@@ -276,8 +291,8 @@ ship "Mars"
     "heat dissipation" .8
     "cargo space" 50
     "outfit space" 330
-    "weapon capacity" 100
-    "engine capacity" 90
+      "engine capacity" 90
+      "weapon capacity" 100
     weapon
       "blast radius" 72
       "shield damage" 720
@@ -309,19 +324,22 @@ ship "Mars"
   "final explode" "final explosion small"
   description "The Navy Mars is designed for engaging targets at short range, and also serves as the Navy's mobile sensor platform, scanning ships for illegal equipment or cargo."
 
+
 ship "Mars" "Mars (Mark II)"
   outfits
+    "A250 Atomic Thruster"
+    "A255 Atomic Steering"
+
     "Electron Beam" 2
     "Electron Turret"
+
     "S-270 Regenerator"
     "Dwarf Core"
     "LP072a Battery Pack"
     "Cooling Ducts"
-    "Outfits Expansion" 2
-    "A250 Atomic Thruster"
-    "A255 Atomic Steering"
     "Fuel Barrel" 60
     "Hyperdrive"
+    "Outfits Expansion" 2
 
 
 
@@ -342,22 +360,24 @@ ship "Mercury"
     "heat dissipation" .6
     "cargo space" 25
     "outfit space" 280
-    "weapon capacity" 60
-    "engine capacity" 50
+      "engine capacity" 50
+      "weapon capacity" 60
     weapon
       "blast radius" 40
       "shield damage" 400
       "hull damage" 200
       "hit force" 600
   outfits
-    "Energy Blaster" 2
-    "Meteor Missile Launcher" 4
+    "A120 Atomic Thruster"
+    "A255 Atomic Steering"
+
     "Meteor Missile" 140
+    "Meteor Missile Launcher" 4
+    "Energy Blaster" 2
+
     "D23-QP Shield Generator"
     "RT-I Radiothermal"
     "LP036a Battery Pack"
-    "A120 Atomic Thruster"
-    "A255 Atomic Steering"
     "Fuel Barrel" 50
     "Hyperdrive"
   engine -8 46
@@ -375,15 +395,18 @@ ship "Mercury"
   "final explode" "final explosion small"
   description "The Mercury is a missile boat built in the Republic Navy Yard. It comes equipped with four missile launchers and enough ammunition to destroy even ships many times its size. Because of their lack of manoeuvrability and relatively light shielding, Mercury serve best as long-range attack ships, and once their missile supply is spent, they are relatively useless in combat."
 
+
 ship "Mercury" "Mercury (Mark II)"
   outfits
-    "Sidewinder Missile Launcher" 4
+    "A120 Atomic Thruster"
+    "A255 Atomic Steering"
+
     "Sidewinder Missile" 200
+    "Sidewinder Missile Launcher" 4
+
     "S-270 Regenerator"
     "RT-I Radiothermal"
     "LP036a Battery Pack"
-    "A120 Atomic Thruster"
-    "A255 Atomic Steering"
     "Fuel Barrel" 50
     "Scram Drive"
   gun
@@ -412,28 +435,30 @@ ship "Saturn"
     "heat dissipation" .45
     "cargo space" 60
     "outfit space" 820
-    "weapon capacity" 320
-    "engine capacity" 170
+      "engine capacity" 170
+      "weapon capacity" 320
     weapon
       "blast radius" 260
       "shield damage" 2600
       "hull damage" 1300
       "hit force" 3900
   outfits
+    "A520 Atomic Thruster"
+    "A525 Atomic Steering"
+
     "Particle Cannon" 4
     "Sidewinder Missile Launcher" 2
     "Sidewinder Missile" 100
     "Heavy Laser Turret" 3
     "Heavy Anti-Missile Turret"
+
     "D67-TM Shield Generator"
     "Fusion Reactor"
     "LP144a Battery Pack"
     "Liquid Nitrogen Cooler"
-    "Large Radar Jammer"
-    "A520 Atomic Thruster"
-    "A525 Atomic Steering"
     "Fuel Barrel" 60
     "Hyperdrive"
+    "Large Radar Jammer"
   engine -29 156
   engine 29 156
   gun -31 -63 "Particle Cannon"
@@ -461,27 +486,30 @@ ship "Saturn"
   "final explode" "final explosion large"
   description "The Republic Saturn is a relatively recent design, a much larger version of the Venus designed to be able to take on an entire pirate fleet if necessary. In addition to a wide variety of weaponry, Saturns have space to carry four attack drones: fast, pilotless fighters that can be controlled remotely."
 
+
 ship "Saturn" "Saturn (Heavy)"
   outfits
-    "Heavy Rocket Launcher" 2
+    "A520 Atomic Thruster"
+    "A525 Atomic Steering"
+
     "Heavy Rocket" 40
+    "Heavy Rocket Launcher" 2
     "Particle Cannon" 4
     "Heavy Laser Turret" 2
     "Heavy Anti-Missile Turret"
     "4X Blaster Turret"
-    "Laser Rifle" 20
-    "Fragmentation Grenades" 20
+
+    "D94-YV Shield Generator"
     "Armageddon Core"
     "Dwarf Core"
     "Supercapacitor"
-    "D94-YV Shield Generator"
     "Liquid Helium Cooler"
-    "Ramscoop"
-    "Outfits Expansion"
-    "A520 Atomic Thruster"
-    "A525 Atomic Steering"
     "Fuel Barrel" 60
     "Scram Drive"
+    "Ramscoop"
+    "Outfits Expansion"
+    "Laser Rifle" 20
+    "Fragmentation Grenades" 20
   gun "Particle Cannon"
   gun "Particle Cannon"
   gun "Particle Cannon"
@@ -493,24 +521,27 @@ ship "Saturn" "Saturn (Heavy)"
   turret "Heavy Laser Turret"
   turret "Heavy Anti-Missile Turret"
 
+
 ship "Saturn" "Saturn (Jump)"
   outfits
-    "Typhoon Launcher" 2
+    "A520 Atomic Thruster"
+    "A525 Atomic Steering"
+
+    "Sidewinder Missile" 200
     "Typhoon Torpedo" 60
     "Sidewinder Missile Launcher" 4
-    "Sidewinder Missile" 200
+    "Typhoon Launcher" 2
     "Electron Turret" 3
     "Heavy Anti-Missile Turret"
+
     "D67-TM Shield Generator"
     "Fusion Reactor"
     "LP144a Battery Pack"
     "Liquid Nitrogen Cooler"
-    "Ramscoop"
-    "Outfits Expansion" 2
-    "A520 Atomic Thruster"
-    "A525 Atomic Steering"
     "Fuel Barrel" 80
     "Jump Drive"
+    "Ramscoop"
+    "Outfits Expansion" 2
   gun "Sidewinder Missile Launcher"
   gun "Sidewinder Missile Launcher"
   gun "Typhoon Launcher"
@@ -522,20 +553,23 @@ ship "Saturn" "Saturn (Jump)"
   turret "Electron Turret"
   turret "Heavy Anti-Missile Turret"
 
+
 ship "Saturn" "Saturn (Mark II)"
   outfits
-    "Typhoon Launcher" 2
+    "A520 Atomic Thruster"
+    "A525 Atomic Steering"
+
+    "Sidewinder Missile" 200
     "Typhoon Torpedo" 60
     "Sidewinder Missile Launcher" 4
-    "Sidewinder Missile" 200
+    "Typhoon Launcher" 2
     "Electron Turret" 3
     "Heavy Anti-Missile Turret"
+
     "S-970 Regenerator"
     "Fusion Reactor"
     "LP144a Battery Pack"
     "Liquid Nitrogen Cooler"
-    "A520 Atomic Thruster"
-    "A525 Atomic Steering"
     "Fuel Barrel" 60
     "Hyperdrive"
   gun "Sidewinder Missile Launcher"
@@ -560,23 +594,23 @@ ship "Surveillance Drone"
       Navy
     "cost" 50000
     "hull" 300
+    "automaton" 1
     "mass" 15
     "drag" .53
     "heat dissipation" .9
     "outfit space" 53
-    "weapon capacity" 0
-    "engine capacity" 20
-    "automaton" 1
+      "engine capacity" 20
     weapon
       "blast radius" 3
       "shield damage" 30
       "hull damage" 15
       "hit force" 45
   outfits
+    "XC900 Ion Engines"
+
     "KP-6 Photovoltaic Array"
     "LP036a Battery Pack"
     "Surveillance Pod"
-    "XC900 Ion Engines"
   engine -5 29
   engine 5 29
   explode "tiny explosion" 15
@@ -601,24 +635,26 @@ ship "Venus"
     "heat dissipation" .7
     "cargo space" 35
     "outfit space" 460
-    "weapon capacity" 170
-    "engine capacity" 100
+      "engine capacity" 100
+      "weapon capacity" 170
     weapon
       "blast radius" 100
       "shield damage" 1000
       "hull damage" 500
       "hit force" 1500
   outfits
-    "Particle Cannon" 2
-    "Torpedo Launcher" 2
+    "A370 Atomic Thruster"
+    "A375 Atomic Steering"
+
     "Torpedo" 60
+    "Torpedo Launcher" 2
+    "Particle Cannon" 2
     "2X Blaster Turret" 3
+
     "D41-HY Shield Generator"
     "Fission Reactor"
     "LP144a Battery Pack"
     "Water Coolant System"
-    "A370 Atomic Thruster"
-    "A375 Atomic Steering"
     "Fuel Barrel" 50
     "Hyperdrive"
   engine -26 92
@@ -640,20 +676,23 @@ ship "Venus"
   "final explode" "final explosion medium"
   description "For centuries, the Venus was the largest warship produced by the Republic Navy Yard, but now they seem quite small compared to a Saturn or a Jupiter. Armed with a variety of weapons, and with relatively good maneuverability for a ship its size, the Venus is equally capable at fending off small fighters or bombarding larger ships."
 
+
 ship "Venus" "Venus (Mark II)"
   outfits
+    "A370 Atomic Thruster"
+    "A375 Atomic Steering"
+
     "Particle Cannon" 4
-    "Anti-Missile Turret"
     "2X Blaster Turret" 2
+    "Anti-Missile Turret"
+
     "S-270 Regenerator" 2
     "Fission Reactor"
     "LP144a Battery Pack"
     "Water Coolant System"
-    "Outfits Expansion"
-    "A370 Atomic Thruster"
-    "A375 Atomic Steering"
     "Fuel Barrel" 50
     "Hyperdrive"
+    "Outfits Expansion"
   turret "Anti-Missile Turret"
   turret "2X Blaster Turret"
   turret "2X Blaster Turret"

@@ -40,23 +40,25 @@ ship "Argosy"
     "heat dissipation" .7
     "cargo space" 120
     "outfit space" 310
-    "weapon capacity" 90
-    "engine capacity" 80
+      "engine capacity" 80
+      "weapon capacity" 90
     weapon
       "blast radius" 60
       "shield damage" 600
       "hull damage" 300
       "hit force" 900
   outfits
-    "Energy Blaster" 2
-    "Meteor Missile Launcher" 2
-    "Meteor Missile" 70
-    "2X Blaster Turret" 2
-    "RT-I Radiothermal"
-    "LP072a Battery Pack"
-    "D23-QP Shield Generator"
     "Greyhound Plasma Thruster"
     "Greyhound Plasma Steering"
+
+    "Meteor Missile" 70
+    "Meteor Missile Launcher" 2
+    "Energy Blaster" 2
+    "2X Blaster Turret" 2
+
+    "D23-QP Shield Generator"
+    "RT-I Radiothermal"
+    "LP072a Battery Pack"
     "Fuel Barrel" 40
     "Hyperdrive"
   engine -20 91
@@ -77,75 +79,88 @@ ship "Argosy"
   description "The Argosy from Southbound Shipyards is very popular with merchants not because of its capacity, which is actually slightly smaller than the Syndicate Freighter, but because it can hold its own in combat even against a small pirate fleet."
   description "  The Argosy is also a very easy ship to upgrade with faster engines or more powerful weapons as needed, so many privately owned Argosies have very different capabilities than the stock model."
 
+
 ship "Argosy" "Argosy (Blaster)"
   outfits
-    "Energy Blaster" 4
-    "4X Blaster Turret" 2
-    "Fission Reactor"
-    "LP072a Battery Pack"
-    "D41-HY Shield Generator"
-    "Outfits Expansion"
     "Greyhound Plasma Thruster"
     "Impala Plasma Steering"
+
+    "Energy Blaster" 4
+    "4X Blaster Turret" 2
+
+    "D41-HY Shield Generator"
+    "Fission Reactor"
+    "LP072a Battery Pack"
     "Fuel Barrel" 40
     "Hyperdrive"
+    "Outfits Expansion"
+
 
 ship "Argosy" "Argosy (Laser)"
   outfits
+    "Greyhound Plasma Thruster"
+    "Impala Plasma Steering"
+
     "Beam Laser" 2
     "Heavy Laser" 2
     "Laser Turret" 2
+
+    "D67-TM Shield Generator"
     "NT-200 Nucleovoltaic"
     "Supercapacitor"
-    "D67-TM Shield Generator"
-    "Outfits Expansion" 2
-    "Greyhound Plasma Thruster"
-    "Impala Plasma Steering"
     "Fuel Barrel" 40
     "Hyperdrive"
+    "Outfits Expansion" 2
+
 
 ship "Argosy" "Argosy (Missile)"
   outfits
-    "Meteor Missile Launcher" 4
-    "Meteor Missile" 140
-    "Anti-Missile Turret"
-    "Heavy Anti-Missile Turret"
-    "Fission Reactor"
-    "Supercapacitor"
-    "D41-HY Shield Generator"
-    "Outfits Expansion"
     "A370 Atomic Thruster"
     "A255 Atomic Steering"
+
+    "Meteor Missile" 140
+    "Meteor Missile Launcher" 4
+    "Heavy Anti-Missile Turret"
+    "Anti-Missile Turret"
+
+    "D41-HY Shield Generator"
+    "Fission Reactor"
+    "Supercapacitor"
     "Fuel Barrel" 40
     "Hyperdrive"
-  turret "Anti-Missile Turret"
-  turret "Heavy Anti-Missile Turret"
+    "Outfits Expansion"
+
 
 ship "Argosy" "Argosy (Proton)"
   outfits
-    "Proton Cannon" 2
-    "Proton Turret"
-    "NT-200 Nucleovoltaic"
-    "Supercapacitor"
-    "D67-TM Shield Generator"
-    "Outfits Expansion" 2
     "Greyhound Plasma Thruster"
     "Impala Plasma Steering"
+
+    "Proton Cannon" 2
+    "Proton Turret"
+
+    "D67-TM Shield Generator"
+    "NT-200 Nucleovoltaic"
+    "Supercapacitor"
     "Fuel Barrel" 40
     "Hyperdrive"
+    "Outfits Expansion" 2
+
 
 ship "Argosy" "Argosy (Turret)"
   outfits
-    "Heavy Laser Turret" 2
-    "S3 Thermionic"
-    "LP072a Battery Pack"
-    "D41-HY Shield Generator"
-    "Small Radar Jammer"
-    "Outfits Expansion"
     "X3700 Ion Thruster"
     "Greyhound Plasma Steering"
+
+    "Heavy Laser Turret" 2
+
+    "D41-HY Shield Generator"
+    "S3 Thermionic"
+    "LP072a Battery Pack"
     "Fuel Barrel" 40
     "Hyperdrive"
+    "Small Radar Jammer"
+    "Outfits Expansion"
 
 
 
@@ -164,25 +179,27 @@ ship "Bastion"
     "heat dissipation" .5
     "cargo space" 110
     "outfit space" 520
-    "weapon capacity" 180
-    "engine capacity" 120
+      "engine capacity" 120
+      "weapon capacity" 180
     weapon
       "blast radius" 120
       "shield damage" 1200
       "hull damage" 600
       "hit force" 1800
   outfits
-    "Plasma Cannon" 2
-    "Heavy Rocket Launcher" 2
+    "Impala Plasma Thruster"
+    "Impala Plasma Steering"
+
     "Heavy Rocket" 40
+    "Heavy Rocket Launcher" 2
+    "Plasma Cannon" 2
     "2X Blaster Turret" 3
+
+    "D67-TM Shield Generator"
     "S3 Thermionic"
     "LP144a Battery Pack"
     "nGVF-BB Fuel Cell"
-    "D67-TM Shield Generator"
     "Water Coolant System"
-    "Impala Plasma Thruster"
-    "Impala Plasma Steering"
     "Fuel Barrel" 50
     "Hyperdrive"
   engine -28 85
@@ -202,67 +219,79 @@ ship "Bastion"
   explode "medium explosion" 30
   explode "large explosion" 20
   "final explode" "final explosion medium"
-  description "The Southbound Shipyards Bastion is designed as a heavy defense platform to accompany freighter convoys, in addition to having enough cargo capacity to serve as a freighter in its own right. Because of its heavy armament, it is classified as a warship rather than a freighter."
+  description "The Southbound Shipyards Bastion is designed as a heavy defence platform to accompany freighter convoys, in addition to having enough cargo capacity to serve as a freighter in its own right. Because of its heavy armament, it is classified as a warship rather than a freighter."
+
 
 ship "Bastion" "Bastion (Heavy)"
   outfits
-    "Plasma Cannon" 4
-    "4X Blaster Turret" 3
-    "Fusion Reactor"
-    "LP072a Battery Pack"
-    "D67-TM Shield Generator"
-    "Liquid Nitrogen Cooler"
-    "Outfits Expansion" 2
     "X3700 Ion Thruster"
     "Orca Plasma Steering"
+
+    "Plasma Cannon" 4
+    "4X Blaster Turret" 3
+
+    "D67-TM Shield Generator"
+    "Fusion Reactor"
+    "LP072a Battery Pack"
+    "Liquid Nitrogen Cooler"
     "Fuel Barrel" 50
     "Hyperdrive"
+    "Outfits Expansion" 2
+
 
 ship "Bastion" "Bastion (Laser)"
   outfits
-    "Heavy Laser" 4
-    "Heavy Anti-Missile Turret"
-    "Heavy Laser Turret" 2
-    "Fusion Reactor"
-    "Supercapacitor" 4
-    "D94-YV Shield Generator"
-    "Small Radar Jammer"
-    "Water Coolant System"
-    "Outfits Expansion"
     "A370 Atomic Thruster"
     "A525 Atomic Steering"
+
+    "Heavy Laser" 4
+    "Heavy Laser Turret" 2
+    "Heavy Anti-Missile Turret"
+
+    "D94-YV Shield Generator"
+    "Fusion Reactor"
+    "Supercapacitor" 4
+    "Water Coolant System"
     "Fuel Barrel" 50
     "Hyperdrive"
+    "Small Radar Jammer"
+    "Outfits Expansion"
   turret "Heavy Anti-Missile Turret"
   turret "Heavy Laser Turret"
   turret "Heavy Laser Turret"
 
+
 ship "Bastion" "Bastion (Plasma)"
   outfits
-    "Plasma Turret" 3
-    "Fusion Reactor"
-    "LP072a Battery Pack"
-    "D67-TM Shield Generator"
-    "Liquid Helium Cooler"
     "Impala Plasma Thruster"
     "Impala Plasma Steering"
+
+    "Plasma Turret" 3
+
+    "D67-TM Shield Generator"
+    "Fusion Reactor"
+    "LP072a Battery Pack"
+    "Liquid Helium Cooler"
     "Fuel Barrel" 50
     "Hyperdrive"
 
+
 ship "Bastion" "Bastion (Scanner)"
   outfits
-    "Plasma Cannon" 2
-    "Heavy Rocket Launcher" 2
+    "Impala Plasma Thruster"
+    "Impala Plasma Steering"
+
     "Heavy Rocket" 40
+    "Heavy Rocket Launcher" 2
+    "Plasma Cannon" 2
     "2X Blaster Turret" 3
+
+    "D67-TM Shield Generator"
     "S3 Thermionic"
     "LP144a Battery Pack"
     "nGVF-BB Fuel Cell"
-    "D67-TM Shield Generator"
     "Water Coolant System"
     "Cargo Scanner"
-    "Impala Plasma Thruster"
-    "Impala Plasma Steering"
     "Fuel Barrel" 50
     "Hyperdrive"
 
@@ -283,22 +312,24 @@ ship "Clipper"
     "heat dissipation" .8
     "cargo space" 70
     "outfit space" 310
-    "weapon capacity" 60
-    "engine capacity" 80
+      "engine capacity" 80
+      "weapon capacity" 60
     weapon
       "blast radius" 36
       "shield damage" 360
       "hull damage" 180
       "hit force" 540
   outfits
-    "Beam Laser" 2
-    "Javelin Pod" 2
-    "Javelin" 400
-    "nGVF-DD Fuel Cell"
-    "LP072a Battery Pack"
-    "D23-QP Shield Generator"
     "Greyhound Plasma Thruster"
     "Greyhound Plasma Steering"
+
+    "Javelin" 400
+    "Javelin Pod" 2
+    "Beam Laser" 2
+
+    "D23-QP Shield Generator"
+    "nGVF-DD Fuel Cell"
+    "LP072a Battery Pack"
     "Fuel Barrel" 50
     "Hyperdrive"
   engine -20 45
@@ -315,42 +346,51 @@ ship "Clipper"
   "final explode" "final explosion small"
   description "The Clipper is the smaller sister ship to the popular Southbound Shipyards Argosy. Although not able to carry as much cargo, Clippers are versatile ships that can be used as passenger transports, couriers, or even warships in a pinch, and they come with enough free space to be customized based on an individual captain's needs."
 
+
 ship "Clipper" "Clipper (Heavy)"
   outfits
-    "Heavy Rocket Launcher" 2
-    "Heavy Rocket" 40
-    "Meteor Missile Launcher" 2
-    "Meteor Missile" 70
-    "RT-I Radiothermal"
-    "Supercapacitor"
-    "D67-TM Shield Generator"
     "Greyhound Plasma Thruster"
     "Impala Plasma Steering"
+
+    "Meteor Missile" 70
+    "Heavy Rocket" 40
+    "Meteor Missile Launcher" 2
+    "Heavy Rocket Launcher" 2
+
+    "D67-TM Shield Generator"
+    "RT-I Radiothermal"
+    "Supercapacitor"
     "Fuel Barrel" 50
     "Scram Drive"
 
+
 ship "Clipper" "Clipper (Nuclear)"
   outfits
-    "Nuclear Missile" 4
-    "S3 Thermionic"
-    "Supercapacitor"
-    "D67-TM Shield Generator"
-    "Catalytic Ramscoop"
     "A250 Atomic Thruster"
     "A255 Atomic Steering"
+    "Afterburner"
+
+    "Nuclear Missile" 4
+
+    "D67-TM Shield Generator"
+    "S3 Thermionic"
+    "Supercapacitor"
+    "Catalytic Ramscoop"
     "Hyperdrive"
     "Fuel Barrel" 50
-    "Afterburner"
+
 
 ship "Clipper" "Clipper (Speedy)"
   outfits
-    "Heavy Laser" 4
-    "Fission Reactor"
-    "Supercapacitor"
-    "D41-HY Shield Generator"
-    "Cooling Ducts"
     "A370 Atomic Thruster"
     "A255 Atomic Steering"
+
+    "Heavy Laser" 4
+
+    "D41-HY Shield Generator"
+    "Fission Reactor"
+    "Supercapacitor"
+    "Cooling Ducts"
     "Fuel Barrel" 50
     "Hyperdrive"
 
@@ -371,26 +411,28 @@ ship "Dreadnought"
     "heat dissipation" .65
     "cargo space" 100
     "outfit space" 850
-    "weapon capacity" 360
-    "engine capacity" 180
+      "engine capacity" 180
+      "weapon capacity" 360
     weapon
       "blast radius" 260
       "shield damage" 2600
       "hull damage" 1300
       "hit force" 3900
   outfits
-    "Meteor Missile Launcher" 4
-    "Meteor Missile" 140
-    "Plasma Turret" 5
-    "Stack Core"
-    "LP144a Battery Pack"
-    "D41-HY Shield Generator"
-    "Small Radar Jammer"
-    "Liquid Helium Cooler"
     "Orca Plasma Thruster"
     "Orca Plasma Steering"
+
+    "Meteor Missile" 140
+    "Meteor Missile Launcher" 4
+    "Plasma Turret" 5
+
+    "D41-HY Shield Generator"
+    "Stack Core"
+    "LP144a Battery Pack"
+    "Liquid Helium Cooler"
     "Fuel Barrel" 60
     "Hyperdrive"
+    "Small Radar Jammer"
   engine -25 172
   engine 25 172
   gun -10 -167 "Meteor Missile Launcher"
@@ -413,20 +455,23 @@ ship "Dreadnought"
   "final explode" "final explosion large"
   description "The Dreadnought is a new warship that was designed by Southbound Shipyards in order to provide a large capital ship for the Free Worlds fleets, something capable of standing up to a Navy Saturn or even a Jupiter."
 
+
 ship "Dreadnought" "Dreadnought (Jump)"
   outfits
-    "Meteor Missile Launcher" 4
-    "Meteor Missile" 140
-    "Plasma Turret" 5
-    "Stack Core"
-    "LP144a Battery Pack"
-    "D41-HY Shield Generator"
-    "Small Radar Jammer"
-    "Liquid Helium Cooler"
     "Orca Plasma Thruster"
     "Orca Plasma Steering"
+
+    "Meteor Missile" 140
+    "Meteor Missile Launcher" 4
+    "Plasma Turret" 5
+
+    "D41-HY Shield Generator"
+    "Stack Core"
+    "LP144a Battery Pack"
+    "Liquid Helium Cooler"
     "Fuel Barrel" 60
     "Jump Drive"
+    "Small Radar Jammer"
 
 
 
@@ -446,20 +491,22 @@ ship "Fury"
     "heat dissipation" .9
     "cargo space" 15
     "outfit space" 220
-    "weapon capacity" 40
-    "engine capacity" 60
+      "engine capacity" 60
+      "weapon capacity" 40
     weapon
       "blast radius" 24
       "shield damage" 240
       "hull damage" 120
       "hit force" 360
   outfits
-    "Energy Blaster" 4
-    "nGVF-CC Fuel Cell"
-    "LP036a Battery Pack"
-    "D14-RN Shield Generator"
     "X2700 Ion Thruster"
     "X2200 Ion Steering"
+
+    "Energy Blaster" 4
+
+    "D14-RN Shield Generator"
+    "nGVF-CC Fuel Cell"
+    "LP036a Battery Pack"
     "Fuel Barrel" 60
     "Hyperdrive"
   engine -17 35
@@ -473,51 +520,63 @@ ship "Fury"
   explode "small explosion" 20
   description "The Fury is Southbound Shipyard's most popular design of escort ship. They have greater firepower than any other interceptor-class vessel, meaning that any pirate flying solo will think twice before attacking a convoy that is accompanied by a Fury. However, Furies are also much less maneuverable than other small ships."
 
+
 ship "Fury" "Fury (Flamethrower)"
   outfits
-    "Flamethrower" 4
-    "nGVF-BB Fuel Cell"
-    "Supercapacitor"
-    "D14-RN Shield Generator"
-    "Ramscoop"
     "X2700 Ion Thruster"
     "X2200 Ion Steering"
+
+    "Flamethrower" 4
+
+    "D14-RN Shield Generator"
+    "nGVF-BB Fuel Cell"
+    "Supercapacitor"
     "Fuel Barrel" 60
     "Hyperdrive"
+    "Ramscoop"
+
 
 ship "Fury" "Fury (Gatling)"
   outfits
-    "Gatling Gun" 4
-    "Gatling Gun Ammo" 6000
-    "nGVF-CC Fuel Cell"
-    "Supercapacitor"
-    "D23-QP Shield Generator"
     "X2700 Ion Thruster"
     "A125 Atomic Steering"
+
+    "Gatling Gun Ammo" 6000
+    "Gatling Gun" 4
+
+    "D23-QP Shield Generator"
+    "nGVF-CC Fuel Cell"
+    "Supercapacitor"
     "Fuel Barrel" 60
     "Hyperdrive"
+
 
 ship "Fury" "Fury (Laser)"
   outfits
-    "Heavy Laser" 2
-    "RT-I Radiothermal"
-    "Supercapacitor"
-    "D23-QP Shield Generator"
-    "Cooling Ducts"
     "Chipmunk Plasma Thruster"
     "A125 Atomic Steering"
+
+    "Heavy Laser" 2
+
+    "D23-QP Shield Generator"
+    "RT-I Radiothermal"
+    "Supercapacitor"
+    "Cooling Ducts"
     "Fuel Barrel" 60
     "Hyperdrive"
 
+
 ship "Fury" "Fury (Missile)"
   outfits
-    "Meteor Missile Launcher" 4
-    "Meteor Missile" 140
-    "nGVF-BB Fuel Cell"
-    "Supercapacitor" 3
-    "D14-RN Shield Generator"
     "Greyhound Plasma Thruster"
     "Chipmunk Plasma Steering"
+
+    "Meteor Missile" 140
+    "Meteor Missile Launcher" 4
+
+    "D14-RN Shield Generator"
+    "nGVF-BB Fuel Cell"
+    "Supercapacitor" 3
     "Fuel Barrel" 60
     "Hyperdrive"
 

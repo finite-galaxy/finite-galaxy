@@ -385,7 +385,7 @@ mission "FW Defend Farpoint"
     conversation
       `When you land back on Farpoint, Danforth eagerly meets you and asks what information you were able to obtain. You tell him. "So," he says, "one executive on Foundry, and one on Hephaestus. Both of those are core Syndicate planets, with billions of people on them. No way that would work. But this financial guy, Alexander Soylent... your contact says he lives on a giant yacht that sails around the ocean on Nimbus. Now, that's a much more inviting target. And from what Sawyer says, the Syndicate's financial arm were the ones who decided war would be beneficial in the first place."`
       `  As you're talking, one of Danforth's officers runs into the room. "Sir," he says, "we're detecting a pirate fleet incoming."`
-      `  Danforth swears. "This is my real job, of course," he explains, "defending the North from pirate invasion. This isn't the first attack we've had to repulse, and lately Parliament has been finding reasons to reassign my best ships elsewhere. Captain <last>, would you be willing to join the defense fleet? We'll finish this conversation once they've been driven off."`
+      `  Danforth swears. "This is my real job, of course," he explains, "defending the North from pirate invasion. This isn't the first attack we've had to repulse, and lately Parliament has been finding reasons to reassign my best ships elsewhere. Captain <last>, would you be willing to join the defence fleet? We'll finish this conversation once they've been driven off."`
       `  You hurry to your ship and join the defenders...`
         launch
   
@@ -464,7 +464,7 @@ mission "FW Embassy 1"
       choice
         `  "Thank you, sir."`
           goto next
-        `  "Wow, this is the biggest planetary defense bounty I've ever heard of."`
+        `  "Wow, this is the biggest planetary defence bounty I've ever heard of."`
       `  "That's purely for you as a private captain, to compensate you for your assistance," he says. "I wouldn't want you to think that I am in any way giving financial support to the Free Worlds, since that would be illegal."`
       `  "Of course not, sir," you say. "Thank you."`
       label next
@@ -1697,7 +1697,7 @@ mission "FW Pug 4A"
     conversation
       branch lost
         has "FW Pug 4: Escorts: done"
-      `Along with the remaining ships from the combined attack fleet, you land at the main spaceport on <origin>. The other ships are carrying trained soldiers and equipment for planetary defense: ground-based laser turrets, surface to air missiles, and tracking radar for incoming ships. The soldiers have come armed and ready to fight the Pug on the ground if necessary, but it turns out that all the Pug who were here took off in one of the ships that were trying to repulse your attack.`
+      `Along with the remaining ships from the combined attack fleet, you land at the main spaceport on <origin>. The other ships are carrying trained soldiers and equipment for planetary defence: ground-based laser turrets, surface to air missiles, and tracking radar for incoming ships. The soldiers have come armed and ready to fight the Pug on the ground if necessary, but it turns out that all the Pug who were here took off in one of the ships that were trying to repulse your attack.`
         goto generator
       
       label lost
@@ -2228,7 +2228,7 @@ mission "FW Syndicate Extremists 1A"
       `  "They have power. And knowledge. To some of us, that was enough," he says.`
       `  "Was that knowledge accurate?" asks Freya.`
       label information
-      `  "Very accurate," he says. "Our business flourished like never before. But then a month came when instead, the Oracle's predictions were bleak. A massive recession was coming, an end to the golden days of the Republic. We tried altering the model in every way we could: changing our production, our wages. We even asked the Oracle if dissolving the Syndicate would avert the recession. But its predictions remained the same. Then we learned from our contacts in Parliament about the Southern Defense Pact, and the fear that they were about to declare independence. So we asked the Oracle what would happen if war broke out."`
+      `  "Very accurate," he says. "Our business flourished like never before. But then a month came when instead, the Oracle's predictions were bleak. A massive recession was coming, an end to the golden days of the Republic. We tried altering the model in every way we could: changing our production, our wages. We even asked the Oracle if dissolving the Syndicate would avert the recession. But its predictions remained the same. Then we learned from our contacts in Parliament about the Southern Defence Pact, and the fear that they were about to declare independence. So we asked the Oracle what would happen if war broke out."`
       `  "You started a war... to save the economy?" says Danforth. He sounds disgusted.`
       `  Alastair nods. "The Alphas were only too glad to help. Especially with the nuclear research. Which, incidentally, is why I'm telling you all this, because if your fleet tries to take out the Alphas, they'll strike back with nukes."`
       choice

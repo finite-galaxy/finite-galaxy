@@ -154,11 +154,11 @@ void Planet::Load(const DataNode &node, const Set<Sale<Ship>> &ships, const Set<
     else if(key == "tribute")
     {
       tribute = child.Value(valueIndex);
-      bool resetFleets = !defenseFleets.empty();
+      bool resetFleets = !defenceFleets.empty();
       for(const DataNode &grand : child)
       {
         if(grand.Token(0) == "threshold" && grand.Size() >= 2)
-          defenseThreshold = grand.Value(1);
+          defenceThreshold = grand.Value(1);
         else if(grand.Token(0) == "fleet")
         {
           if(grand.Size() >= 2 && !grand.HasChildren())
@@ -166,10 +166,10 @@ void Planet::Load(const DataNode &node, const Set<Sale<Ship>> &ships, const Set<
             // Allow only one "tribute" node to define the tribute fleets.
             if(resetFleets)
             {
-              defenseFleets.clear();
+              defenceFleets.clear();
               resetFleets = false;
             }
-            defenseFleets.insert(defenseFleets.end(),
+            defenceFleets.insert(defenceFleets.end(),
                 grand.Size() >= 3 ? grand.Value(2) : 1,
                 GameData::Fleets().Get(grand.Token(1))
             );
@@ -195,7 +195,7 @@ void Planet::Load(const DataNode &node, const Set<Sale<Ship>> &ships, const Set<
       attributes.erase(AUTO_ATTRIBUTES[i]);
   }
 
-  inhabited = (HasSpaceport() || requiredReputation || !defenseFleets.empty()) && !attributes.count("uninhabited");
+  inhabited = (HasSpaceport() || requiredReputation || !defenceFleets.empty()) && !attributes.count("uninhabited");
 }
 
 
@@ -506,9 +506,9 @@ string Planet::DemandTribute(PlayerInfo &player) const
 {
   if(player.GetCondition("tribute: " + name))
     return "We are already paying you as much as we can afford.";
-  if(!tribute || defenseFleets.empty())
+  if(!tribute || defenceFleets.empty())
     return "Please don't joke about that sort of thing.";
-  if(player.GetCondition("combat rating") < defenseThreshold)
+  if(player.GetCondition("combat rating") < defenceThreshold)
     return "You're not worthy of our time.";
   
   // The player is scary enough for this planet to take notice. Check whether
@@ -517,7 +517,7 @@ string Planet::DemandTribute(PlayerInfo &player) const
   {
     isDefending = true;
     set<const Government *> toProvoke;
-    for(const auto &fleet : defenseFleets)
+    for(const auto &fleet : defenceFleets)
       toProvoke.insert(fleet->GetGovernment());
     for(const auto &gov : toProvoke)
       gov->Offend(ShipEvent::PROVOKE);
@@ -527,7 +527,7 @@ string Planet::DemandTribute(PlayerInfo &player) const
   }
   
   // The player has already demanded tribute. Have they defeated the entire defence fleet?
-  bool isDefeated = (defenseDeployed == defenseFleets.size());
+  bool isDefeated = (defenceDeployed == defenceFleets.size());
   for(const shared_ptr<Ship> &ship : defenders)
     if(!ship->IsDisabled() && !ship->IsYours())
     {
@@ -546,13 +546,13 @@ string Planet::DemandTribute(PlayerInfo &player) const
 
 
 // While being tributed, attempt to spawn the next specified defence fleet.
-void Planet::DeployDefense(list<shared_ptr<Ship>> &ships) const
+void Planet::DeployDefence(list<shared_ptr<Ship>> &ships) const
 {
-  if(!isDefending || Random::Int(60) || defenseDeployed == defenseFleets.size())
+  if(!isDefending || Random::Int(60) || defenceDeployed == defenceFleets.size())
     return;
   
   auto end = defenders.begin();
-  defenseFleets[defenseDeployed]->Enter(*GetSystem(), defenders, this);
+  defenceFleets[defenceDeployed]->Enter(*GetSystem(), defenders, this);
   ships.insert(ships.begin(), defenders.begin(), end);
   
   // All defenders use a special personality.
@@ -560,14 +560,15 @@ void Planet::DeployDefense(list<shared_ptr<Ship>> &ships) const
   for(auto it = defenders.begin(); it != end; ++it)
     (**it).SetPersonality(defenderPersonality);
   
-  ++defenseDeployed;
+  ++defenceDeployed;
 }
 
 
 
-void Planet::ResetDefense() const
+void Planet::ResetDefence() const
 {
   isDefending = false;
-  defenseDeployed = 0;
+  defenceDeployed = 0;
   defenders.clear();
 }
+

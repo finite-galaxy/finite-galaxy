@@ -110,7 +110,7 @@ private:
   // Calculating the odds of combat success, and the expected casualties, is
   // non-trivial. So, cache the results for all crew amounts up to full.
   CaptureOdds attackOdds;
-  CaptureOdds defenseOdds;
+  CaptureOdds defenceOdds;
   // These messages are shown to report the results of hand to hand combat.
   std::vector<std::string> messages;
 };

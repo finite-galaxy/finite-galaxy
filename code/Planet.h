@@ -108,8 +108,8 @@ public:
   
   // Demand tribute, and get the planet's response.
   std::string DemandTribute(PlayerInfo &player) const;
-  void DeployDefense(std::list<std::shared_ptr<Ship>> &ships) const;
-  void ResetDefense() const;
+  void DeployDefence(std::list<std::shared_ptr<Ship>> &ships) const;
+  void ResetDefence() const;
   
   
 private:
@@ -137,13 +137,13 @@ private:
   // The salary to be paid if this planet is dominated.
   int tribute = 0;
   // The minimum combat rating needed to dominate this planet.
-  int defenseThreshold = 4000;
+  int defenceThreshold = 4000;
   mutable bool isDefending = false;
-  // The defense fleets that should be spawned (in order of specification).
-  std::vector<const Fleet *> defenseFleets;
+  // The defence fleets that should be spawned (in order of specification).
+  std::vector<const Fleet *> defenceFleets;
   // How many fleets have been spawned, and the index of the next to be spawned.
-  mutable size_t defenseDeployed = 0;
-  // Ships that have been created by instantiating its defense fleets.
+  mutable size_t defenceDeployed = 0;
+  // Ships that have been created by instantiating its defence fleets.
   mutable std::list<std::shared_ptr<Ship>> defenders;
   
   std::vector<const System *> systems;

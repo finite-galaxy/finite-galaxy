@@ -28,22 +28,23 @@ ship "Gascraft"
     "heat dissipation" 0.9
     "cargo space" 8
     "outfit space" 146
-    "engine capacity" 34
+      "engine capacity" 34
     "shield generation" 0.6
     "shield energy" 0.4
     "hull repair rate" 1.2
     "hull energy" 0.9
+    "energy capacity" 250
     "scan interference" 1
     "gaslining" 1
   outfits
-    "Millennium Cell"
-    "Supercapacitor"
-    "Emergency Ramscoop"
-    "Quantum Key Stone"
     "Crucible-Class Thruster"
     "Crucible-Class Steering"
+
+    "Millennium Cell"
+    "Emergency Ramscoop"
     "Fuel Pod" 7
     "Hyperdrive"
+    "Quantum Key Stone"
   engine 0 30
   explode "tiny explosion" 8
   explode "small explosion" 7
@@ -68,8 +69,8 @@ ship "Shadow"
     "heat dissipation" 0.7
     "cargo space" 36
     "outfit space" 384
-    "weapon capacity" 83
-    "engine capacity" 94
+      "engine capacity" 94
+      "weapon capacity" 83
     "shield generation" 1.8
     "shield energy" 1.2
     "hull repair rate" 0.8
@@ -84,17 +85,18 @@ ship "Shadow"
       "hull damage" 400
       "hit force" 1200
   outfits
-    "Inhibitor Cannon" 3
-    "Point Defense Turret"
-    "Epoch Cell"
-    "Crystal Capacitor"
-    "Emergency Ramscoop" 2
-    "Quantum Key Stone"
     "Forge-Class Thruster"
     "Forge-Class Steering"
-    "Crucible-Class Steering"
+
+    "Inhibitor Cannon" 3
+    "Point Defence"
+
+    "Epoch Cell"
+    "Crystal Capacitor"
+    "Emergency Ramscoop"
     "Fuel Pod" 9
     "Hyperdrive"
+    "Quantum Key Stone"
   engine -16 82 0.7
   engine 16 82 0.7
   engine 0 90 1
@@ -103,7 +105,7 @@ ship "Shadow"
   gun 12 -72 "Inhibitor Cannon"
   gun -18 -49
   gun 18 -49
-  turret 0 2 "Point Defense Turret"
+  turret 0 2 "Point Defence"
   explode "tiny explosion" 40
   explode "small explosion" 20
   explode "medium explosion" 10
@@ -111,67 +113,83 @@ ship "Shadow"
   description "One of the strangest and most useful things that the Remnant discovered in the abandoned worlds of the Ember Waste is alien cloaking technology. They designed their scout ships to be able to cloak when needed, in order to explore alien territory without being seen... or to escape in a hurry after stealing something particularly valuable from those aliens."
   description "  The cloaking technology is built into the Shadow's hull; it cannot be removed or transferred to another ship."
 
+
 ship "Shadow" "Shadow (Heavy)"
   outfits
+    "Forge-Class Thruster"
+    "Forge-Class Steering"
+
     "Thrasher Cannon" 5
-    "Point Defense Turret"
+    "Point Defence"
+
     "Epoch Cell"
     "Millennium Cell"
     "Crystal Capacitor"
-    "Forge-Class Thruster"
-    "Forge-Class Steering"
+    "Emergency Ramscoop"
     "Fuel Pod" 9
     "Hyperdrive"
+    "Quantum Key Stone"
+
 
 ship "Shadow" "Shadow (Hunter)"
   outfits
+    "Forge-Class Thruster"
+    "Forge-Class Steering"
+
     "Inhibitor Cannon" 2
     "Thrasher Turret"
+
     "Epoch Cell"
     "Millennium Cell"
     "Crystal Capacitor"
     "Emergency Ramscoop"
-    "Forge-Class Thruster"
-    "Forge-Class Steering"
     "Fuel Pod" 9
     "Hyperdrive"
+    "Quantum Key Stone"
   gun
   gun "Inhibitor Cannon"
   gun "Inhibitor Cannon"
   gun
   gun
 
+
 ship "Shadow" "Shadow (Sniper)"
   outfits
+    "Forge-Class Thruster"
+    "Smelter-Class Steering"
+
+    "EMP Torpedo" 9
     "EMP Torpedo Bay"
     "Inhibitor Cannon" 4
-    "EMP Torpedo" 9
+
     "Epoch Cell"
     "Crystal Capacitor"
     "Emergency Ramscoop"
-    "Quantum Key Stone"
-    "Forge-Class Thruster"
-    "Smelter-Class Steering"
     "Fuel Pod" 9
     "Hyperdrive"
+    "Quantum Key Stone"
   gun "EMP Torpedo Bay"
   gun "Inhibitor Cannon"
   gun "Inhibitor Cannon"
   gun "Inhibitor Cannon"
   gun "Inhibitor Cannon"
 
+
 ship "Shadow" "Shadow (Thrasher)"
   outfits
+    "Forge-Class Thruster"
+    "Forge-Class Steering"
+
     "Thrasher Cannon" 3
     "Thrasher Turret"
+
     "Epoch Cell"
     "Millennium Cell"
     "Crystal Capacitor"
-    "Quantum Key Stone"
-    "Forge-Class Thruster"
-    "Forge-Class Steering"
+    "Emergency Ramscoop"
     "Fuel Pod" 9
     "Hyperdrive"
+    "Quantum Key Stone"
   gun "Thrasher Cannon"
   gun "Thrasher Cannon"
   gun "Thrasher Cannon"
@@ -198,8 +216,8 @@ ship "Twilight"
     "drag" 8.6
     "heat dissipation" 0.6
     "outfit space" 706
-    "weapon capacity" 236
-    "engine capacity" 142
+      "engine capacity" 142
+      "weapon capacity" 236
     "shield generation" 5.2
     "shield energy" 4.6
     "hull repair rate" 1.5
@@ -211,18 +229,21 @@ ship "Twilight"
       "hull damage" 1800
       "hit force" 5400
   outfits
+    "Smelter-Class Thruster"
+    "Smelter-Class Steering"
+
     "Inhibitor Cannon" 6
     "Thrasher Turret" 2
-    "Point Defense Turret"
+    "Point Defence"
+
     "Aeon Cell"
     "Epoch Cell"
     "Crystal Capacitor"
     "Thermoelectric Cooler" 2
-    "Quantum Key Stone"
-    "Smelter-Class Thruster"
-    "Smelter-Class Steering"
+    "Emergency Ramscoop"
     "Fuel Pod" 6
     "Hyperdrive"
+    "Quantum Key Stone"
   engine -28 155 .8
   engine 28 155 .8
   engine 0 184 .9
@@ -237,7 +258,7 @@ ship "Twilight"
   turret 23 -34 "Thrasher Turret"
   turret -74 62
   turret 74 62
-  turret 0 77 "Point Defense Turret"
+  turret 0 77 "Point Defence"
   explode "small explosion" 30
   explode "medium explosion" 60
   explode "large explosion" 40
@@ -245,23 +266,28 @@ ship "Twilight"
   "final explode" "final explosion large" 1
   description "Once they left human space, it became apparent to the Remnant that they would need to build their own shipyards in order to defend themselves if they were discovered by the Alphas or any other unfriendly faction. Using new composite materials that they discovered, they built ships very different from anything seen in human space."
 
+
 ship "Twilight" "Twilight (Heavy)"
   outfits
-    "Inhibitor Cannon" 3
+    "Forge-Class Thruster"
+    "Crucible-Class Thruster"
+    "Smelter-Class Steering"
+    "Forge-Class Steering"
+
     "Thrasher Cannon" 4
+    "Inhibitor Cannon" 3
     "Thrasher Turret" 3
+
     "Aeon Cell"
     "Epoch Cell"
     "Millennium Cell"
     "Crystal Capacitor" 2
     "Thermoelectric Cooler" 2
-    "Outfits Expansion" 4
-    "Forge-Class Thruster"
-    "Crucible-Class Thruster"
-    "Smelter-Class Steering"
-    "Forge-Class Steering"
+    "Emergency Ramscoop"
     "Fuel Pod" 6
     "Hyperdrive"
+    "Quantum Key Stone"
+    "Outfits Expansion" 4
   gun "Inhibitor Cannon"
   gun "Inhibitor Cannon"
   gun "Inhibitor Cannon"
@@ -275,23 +301,27 @@ ship "Twilight" "Twilight (Heavy)"
   turret
   turret "Thrasher Turret"
 
+
 ship "Twilight" "Twilight (Sniper)"
   outfits
-    "Inhibitor Cannon" 5
-    "EMP Torpedo Bay" 2
-    "Point Defense Turret" 3
+    "Forge-Class Thruster"
+    "Crucible-Class Thruster"
+    "Smelter-Class Steering"
+    "Forge-Class Steering"
+
     "EMP Torpedo" 18
+    "EMP Torpedo Bay" 2
+    "Inhibitor Cannon" 5
+    "Point Defence" 3
+
     "Aeon Cell"
     "Epoch Cell"
     "Crystal Capacitor"
     "Thermoelectric Cooler" 2
-    "Quantum Key Stone"
-    "Forge-Class Thruster"
-    "Crucible-Class Thruster"
-    "Smelter-Class Steering"
-    "Forge-Class Steering"
+    "Emergency Ramscoop"
     "Fuel Pod" 6
     "Hyperdrive"
+    "Quantum Key Stone"
   gun "Inhibitor Cannon"
   gun "Inhibitor Cannon"
   gun "Inhibitor Cannon"
@@ -299,29 +329,34 @@ ship "Twilight" "Twilight (Sniper)"
   gun "Inhibitor Cannon"
   gun "EMP Torpedo Bay"
   gun "EMP Torpedo Bay"
-  turret "Point Defense Turret"
-  turret "Point Defense Turret"
+  turret "Point Defence"
+  turret "Point Defence"
   turret
   turret
-  turret "Point Defense Turret"
+  turret "Point Defence"
+
 
 ship "Twilight" "Twilight (Turret)"
   outfits
+    "Smelter-Class Thruster"
+    "Smelter-Class Steering"
+
     "Thrasher Turret" 4
-    "Point Defense Turret"
+    "Point Defence"
+
     "Aeon Cell"
     "Epoch Cell"
     "Millennium Cell"
     "Crystal Capacitor"
     "Thermoelectric Cooler"
-    "Outfits Expansion" 2
-    "Smelter-Class Thruster"
-    "Smelter-Class Steering"
+    "Emergency Ramscoop"
     "Fuel Pod" 6
     "Hyperdrive"
+    "Quantum Key Stone"
+    "Outfits Expansion" 2
   turret "Thrasher Turret"
   turret "Thrasher Turret"
   turret "Thrasher Turret"
   turret "Thrasher Turret"
-  turret "Point Defense Turret"
+  turret "Point Defence"
 

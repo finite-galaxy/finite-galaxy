@@ -39,24 +39,26 @@ ship "Behemoth"
     "heat dissipation" .4
     "cargo space" 490
     "outfit space" 570
-    "weapon capacity" 280
-    "engine capacity" 90
+      "engine capacity" 90
+      "weapon capacity" 280
     weapon
       "blast radius" 140
       "shield damage" 1400
       "hull damage" 700
       "hit force" 2100
   outfits
-    "Heavy Laser Turret" 4
-    "Heavy Anti-Missile Turret" 2
-    "NT-200 Nucleovoltaic"
-    "LP144a Battery Pack"
-    "D41-HY Shield Generator"
-    "Small Radar Jammer"
     "X3700 Ion Thruster"
     "X3200 Ion Steering"
+
+    "Heavy Laser Turret" 4
+    "Heavy Anti-Missile Turret" 2
+
+    "D41-HY Shield Generator"
+    "NT-200 Nucleovoltaic"
+    "LP144a Battery Pack"
     "Fuel Barrel" 60
     "Scram Drive"
+    "Small Radar Jammer"
   engine -34 154
   engine 34 154
   gun -27 -83
@@ -77,65 +79,74 @@ ship "Behemoth"
   "final explode" "final explosion large"
   description "The Behemoth is a recent ship design from Betelgeuse Shipyards, designed as an alternative to the Syndicate Bulk Freighter. Although its cargo capacity is somewhat lower, it is also more manoeuvrable, and packs a heavier armament by default."
 
+
 ship "Behemoth" "Behemoth (Hai)"
   outfits
-    "Sidewinder Missile Launcher" 2
-    "Sidewinder Missile" 100
-    "Pulse Turret" 6
-    "Boulder Reactor"
-    "Ravine Batteries"
-    "Diamond Regenerator"
-    "Large Radar Jammer"
-    "Liquid Nitrogen Cooler"
-    "Outfits Expansion" 6
     `"Benga" Atomic Thruster`
     `"Biroo" Atomic Steering`
     `"Benga" Atomic Steering`
+
+    "Sidewinder Missile" 100
+    "Sidewinder Missile Launcher" 2
+    "Pulse Turret" 6
+
+    "Diamond Regenerator"
+    "Boulder Reactor"
+    "Ravine Batteries"
+    "Liquid Nitrogen Cooler"
     "Fuel Barrel" 60
     "Hyperdrive"
+    "Large Radar Jammer"
+    "Outfits Expansion" 6
+
 
 ship "Behemoth" "Behemoth (Heavy)"
   outfits
+    "Greyhound Plasma Thruster"
+    "Impala Plasma Steering"
+
+    "Torpedo" 60
     "Torpedo Launcher" 2
-    Torpedo 60
     "4X Blaster Turret" 2
     "Plasma Turret" 2
     "Heavy Anti-Missile Turret" 2
-    "Laser Rifle" 16
+
+    "D94-YV Shield Generator"
     "Fusion Reactor"
     "Supercapacitor"
-    "D94-YV Shield Generator"
-    "Outfits Expansion" 6
     "Liquid Helium Cooler"
     "Liquid Nitrogen Cooler"
-    "Greyhound Plasma Thruster"
-    "Impala Plasma Steering"
     "Fuel Barrel" 60
     "Hyperdrive"
+    "Outfits Expansion" 6
+    "Laser Rifle" 16
   turret "4X Blaster Turret"
   turret "4X Blaster Turret"
   turret "Plasma Turret"
   turret "Plasma Turret"
   turret "Heavy Anti-Missile Turret"
   turret "Heavy Anti-Missile Turret"
+
 
 ship "Behemoth" "Behemoth (Proton)"
   outfits
-    "Sidewinder Missile Launcher" 2
-    "Sidewinder Missile" 100
-    "Proton Turret" 4
-    "Heavy Anti-Missile Turret" 2
-    "Breeder Reactor"
-    "LP144a Battery Pack"
-    "D94-YV Shield Generator"
-    "Large Radar Jammer"
-    "Liquid Nitrogen Cooler"
-    "Outfits Expansion" 6
     "A250 Atomic Thruster"
     "A125 Atomic Steering"
     "A375 Atomic Steering"
+
+    "Sidewinder Missile" 100
+    "Sidewinder Missile Launcher" 2
+    "Proton Turret" 4
+    "Heavy Anti-Missile Turret" 2
+
+    "D94-YV Shield Generator"
+    "Breeder Reactor"
+    "LP144a Battery Pack"
+    "Liquid Nitrogen Cooler"
     "Fuel Barrel" 60
     "Scram Drive"
+    "Large Radar Jammer"
+    "Outfits Expansion" 6
   turret "Proton Turret"
   turret "Proton Turret"
   turret "Proton Turret"
@@ -143,22 +154,25 @@ ship "Behemoth" "Behemoth (Proton)"
   turret "Heavy Anti-Missile Turret"
   turret "Heavy Anti-Missile Turret"
 
+
 ship "Behemoth" "Behemoth (Speedy)"
   outfits
-    "Sidewinder Missile Launcher" 2
-    "Sidewinder Missile" 100
-    "Heavy Laser Turret" 6
-    "Breeder Reactor"
-    "LP144a Battery Pack"
-    "D94-YV Shield Generator"
-    "Large Radar Jammer"
-    "Liquid Nitrogen Cooler"
-    "Outfits Expansion" 6
     "A250 Atomic Thruster"
     "A375 Atomic Steering"
     "A125 Atomic Steering"
+
+    "Sidewinder Missile" 100
+    "Sidewinder Missile Launcher" 2
+    "Heavy Laser Turret" 6
+
+    "D94-YV Shield Generator"
+    "Breeder Reactor"
+    "LP144a Battery Pack"
+    "Liquid Nitrogen Cooler"
     "Fuel Barrel" 60
     "Scram Drive"
+    "Large Radar Jammer"
+    "Outfits Expansion" 6
 
 
 
@@ -177,22 +191,24 @@ ship "Berserker"
     "heat dissipation" .85
     "cargo space" 10
     "outfit space" 240
-    "weapon capacity" 35
-    "engine capacity" 65
+      "engine capacity" 65
+      "weapon capacity" 35
     weapon
       "blast radius" 30
       "shield damage" 300
       "hull damage" 150
       "hit force" 450
   outfits
-    "Gatling Gun" 4
-    "Bullet Boxes" 4
-    "Gatling Gun Ammo" 12000
-    "nGVF-CC Fuel Cell"
-    "LP036a Battery Pack"
-    "D23-QP Shield Generator"
     "X2700 Ion Thruster"
     "X3200 Ion Steering"
+
+    "Gatling Gun Ammo" 12000
+    "Bullet Boxes" 4
+    "Gatling Gun" 4
+
+    "D23-QP Shield Generator"
+    "nGVF-CC Fuel Cell"
+    "LP036a Battery Pack"
     "Fuel Barrel" 40
     "Hyperdrive"
   engine -10 45
@@ -208,20 +224,23 @@ ship "Berserker"
   "final explode" "final explosion small"
   description "Once one of the most popular interceptor-class ships, the Berserker's popularity is now waning in favor of more modern and versatile ships like the Hawk. Although limited numbers are still produced by Betelgeuse Shipyards, most Berserkers that are in service today are more than half a century old."
 
+
 ship "Berserker" "Berserker (Afterburner)"
   outfits
-    "Gatling Gun" 4
-    "Bullet Boxes" 4
-    "Gatling Gun Ammo" 12000
-    "nGVF-CC Fuel Cell"
-    "LP036a Battery Pack"
-    "D23-QP Shield Generator"
-    "Ramscoop"
     "Chipmunk Plasma Thruster"
     "Greyhound Plasma Steering"
     "Afterburner"
+
+    "Gatling Gun Ammo" 12000
+    "Bullet Boxes" 4
+    "Gatling Gun" 4
+
+    "D23-QP Shield Generator"
+    "nGVF-CC Fuel Cell"
+    "LP036a Battery Pack"
     "Fuel Barrel" 40
     "Hyperdrive"
+    "Ramscoop"
 
 
 
@@ -240,22 +259,24 @@ ship "Firebird"
     "heat dissipation" .6
     "cargo space" 50
     "outfit space" 440
-    "weapon capacity" 160
-    "engine capacity" 100
+      "engine capacity" 100
+      "weapon capacity" 160
     weapon
       "blast radius" 100
       "shield damage" 1000
       "hull damage" 500
       "hit force" 1500
   outfits
+    "X3700 Ion Thruster"
+    "X3200 Ion Steering"
+
     "Heavy Laser" 4
     "Heavy Laser Turret" 2
+
+    "D41-HY Shield Generator"
     "RT-I Radiothermal"
     "nGVF-AA Fuel Cell"
     "LP144a Battery Pack"
-    "D41-HY Shield Generator"
-    "X3700 Ion Thruster"
-    "X3200 Ion Steering"
     "Fuel Barrel" 40
     "Hyperdrive"
   engine -33 65
@@ -275,71 +296,79 @@ ship "Firebird"
   "final explode" "final explosion medium"
   description "The Betelgeuse Shipyards Firebird is a warship with a long and storied past; Firebirds fought on both sides of the Alpha Wars over half a millennium ago, and although the equipment and systems have been upgraded continuously since then, the basic design remains almost the same. The Firebird is also a very rugged ship and easy to repair; supposedly a few of the Firebirds that fought in those wars are still in service today."
 
+
 ship "Firebird" "Firebird (Hai Shields)"
   outfits
-    "Plasma Cannon" 4
-    "Bullfrog Anti-Missile" 2
-    "Breeder Reactor"
-    "Fissure Batteries"
-    "Diamond Regenerator"
-    "Corundum Regenerator" 2
-    "Liquid Nitrogen Cooler"
-    "Williwaw Cooling"
-    "Outfits Expansion" 2
     "X3700 Ion Thruster"
     "A375 Atomic Steering"
+
+    "Plasma Cannon" 4
+    "Bullfrog Anti-Missile" 2
+
+    "Diamond Regenerator"
+    "Corundum Regenerator" 2
+    "Breeder Reactor"
+    "Fissure Batteries"
+    "Liquid Nitrogen Cooler"
+    "Williwaw Cooling"
     "Fuel Barrel" 40
     "Hyperdrive"
+    "Outfits Expansion" 2
+
 
 ship "Firebird" "Firebird (Hai Weapons)"
   outfits
-    "Ion Cannon" 2
-    "Pulse Cannon" 2
-    "Chameleon Anti-Missile"
-    "Bullfrog Anti-Missile"
-    "Geode Reactor"
-    "Gorge Batteries"
-    "D41-HY Shield Generator"
-    "Williwaw Cooling" 2
     "X3700 Ion Thruster"
     "X3200 Ion Steering"
+
+    "Pulse Cannon" 2
+    "Ion Cannon" 2
+    "Chameleon Anti-Missile"
+    "Bullfrog Anti-Missile"
+
+    "D41-HY Shield Generator"
+    "Geode Reactor"
+    "Gorge Batteries"
+    "Williwaw Cooling" 2
     "Fuel Barrel" 40
     "Hyperdrive"
+
 
 ship "Firebird" "Firebird (Missile)"
   outfits
-    "Meteor Missile Launcher" 2
-    "Meteor Missile" 70
-    "Torpedo Launcher" 2
-    Torpedo 60
-    "Heavy Laser Turret" 2
-    "Fission Reactor"
-    "LP072a Battery Pack"
-    "D94-YV Shield Generator"
-    "Outfits Expansion"
     "Impala Plasma Thruster"
     "A375 Atomic Steering"
+
+    "Meteor Missile" 70
+    "Torpedo" 60
+    "Meteor Missile Launcher" 2
+    "Torpedo Launcher" 2
+    "Heavy Laser Turret" 2
+
+    "D94-YV Shield Generator"
+    "Fission Reactor"
+    "LP072a Battery Pack"
     "Fuel Barrel" 40
     "Hyperdrive"
-  gun "Meteor Missile Launcher"
-  gun "Meteor Missile Launcher"
-  gun "Torpedo Launcher"
-  gun "Torpedo Launcher"
+    "Outfits Expansion"
+
 
 ship "Firebird" "Firebird (Plasma)"
   outfits
+    "X3700 Ion Thruster"
+    "A375 Atomic Steering"
+
     "Plasma Cannon" 4
     "4X Blaster Turret" 2
+
+    "D41-HY Shield Generator"
     "Breeder Reactor"
     "LP072a Battery Pack"
     "LP036a Battery Pack"
-    "D41-HY Shield Generator"
     "Liquid Nitrogen Cooler"
-    "Outfits Expansion"
-    "X3700 Ion Thruster"
-    "A375 Atomic Steering"
     "Fuel Barrel" 40
     "Hyperdrive"
+    "Outfits Expansion"
 
 
 
@@ -358,19 +387,20 @@ ship "Heavy Shuttle"
     "heat dissipation" .8
     "cargo space" 35
     "outfit space" 170
-    "weapon capacity" 10
-    "engine capacity" 60
+      "engine capacity" 60
+      "weapon capacity" 10
     weapon
       "blast radius" 12
       "shield damage" 120
       "hull damage" 60
       "hit force" 180
   outfits
-    "nGVF-AA Fuel Cell"
-    "LP036a Battery Pack"
-    "D14-RN Shield Generator"
     "X2700 Ion Thruster"
     "X2200 Ion Steering"
+
+    "D14-RN Shield Generator"
+    "nGVF-AA Fuel Cell"
+    "LP036a Battery Pack"
     "Fuel Barrel" 50
     "Hyperdrive"
   engine 6 30
@@ -382,14 +412,17 @@ ship "Heavy Shuttle"
   explode "small explosion" 5
   description "The Heavy Shuttle is an updated shuttle model from Betelgeuse Shipyards, attempting to improve on their perennial classic by offering slightly better cargo and passenger capacity, at the expense of some speed and manoeuvrability."
 
+
 ship "Heavy Shuttle" "Heavy Shuttle (Armed)"
   outfits
-    "Energy Blaster" 2
-    "nGVF-BB Fuel Cell"
-    "LP036a Battery Pack"
-    "D14-RN Shield Generator"
     "Chipmunk Plasma Thruster"
     "Chipmunk Plasma Steering"
+
+    "Energy Blaster" 2
+
+    "D14-RN Shield Generator"
+    "nGVF-BB Fuel Cell"
+    "LP036a Battery Pack"
     "Fuel Barrel" 50
     "Hyperdrive"
 
@@ -410,22 +443,24 @@ ship "Leviathan"
     "heat dissipation" .5
     "cargo space" 100
     "outfit space" 670
-    "weapon capacity" 240
-    "engine capacity" 120
+      "engine capacity" 120
+      "weapon capacity" 240
     weapon
       "blast radius" 80
       "shield damage" 800
       "hull damage" 400
       "hit force" 1200
   outfits
-    "Particle Cannon" 4
-    "4X Blaster Turret" 4
-    "Fusion Reactor"
-    "LP144a Battery Pack"
-    "D67-TM Shield Generator"
-    "Liquid Helium Cooler"
     "X3700 Ion Thruster"
     "X4200 Ion Steering"
+
+    "Particle Cannon" 4
+    "4X Blaster Turret" 4
+
+    "D67-TM Shield Generator"
+    "Fusion Reactor"
+    "LP144a Battery Pack"
+    "Liquid Helium Cooler"
     "Fuel Barrel" 50
     "Hyperdrive"
   engine -25 125
@@ -448,72 +483,80 @@ ship "Leviathan"
   "final explode" "final explosion large"
   description "The Betelgeuse Shipyards Leviathan has been in service since long before the Republic existed. Although considered today to be an outdated and clunky model, it is still a force to be reckoned with."
 
+
 ship "Leviathan" "Leviathan (Hai Engines)"
   outfits
+    `"Bondir" Atomic Thruster`
+    `"Bondir" Atomic Steering`
+
     "Particle Cannon" 4
     "4X Blaster Turret" 2
     "Chameleon Anti-Missile" 2
+
+    "D67-TM Shield Generator"
     "Boulder Reactor"
     "Ravine Batteries"
-    "D67-TM Shield Generator"
     "Liquid Helium Cooler"
-    `"Bondir" Atomic Thruster`
-    `"Bondir" Atomic Steering`
     "Fuel Barrel" 50
     "Hyperdrive"
+
 
 ship "Leviathan" "Leviathan (Hai Weapons)"
   outfits
-    "Tracker Pod" 4
-    "Tracker" 224
-    "Heavy Laser Turret" 4
-    "Boulder Reactor"
-    "Ravine Batteries"
-    "Diamond Regenerator"
-    "Ramscoop"
-    "Liquid Nitrogen Cooler"
     "Impala Plasma Thruster"
     "A375 Atomic Steering"
     "Afterburner"
+
+    "Tracker" 224
+    "Tracker Pod" 4
+    "Heavy Laser Turret" 4
+
+    "Diamond Regenerator"
+    "Boulder Reactor"
+    "Ravine Batteries"
+    "Liquid Nitrogen Cooler"
     "Fuel Barrel" 50
     "Scram Drive"
+    "Ramscoop"
+
 
 ship "Leviathan" "Leviathan (Heavy)"
   outfits
-    "Torpedo Launcher" 2
-    "Torpedo" 60
-    "Meteor Missile Launcher" 2
-    "Meteor Missile" 70
-    "Heavy Laser Turret" 4
-    "Breeder Reactor"
-    "LP036a Battery Pack"
-    "D94-YV Shield Generator" 2
-    "Liquid Nitrogen Cooler"
-    "Ramscoop"
     "Impala Plasma Thruster"
     "A375 Atomic Steering"
     "Afterburner"
+
+    "Meteor Missile" 70
+    "Torpedo" 60
+    "Meteor Missile Launcher" 2
+    "Torpedo Launcher" 2
+    "Heavy Laser Turret" 4
+
+    "D94-YV Shield Generator" 2
+    "Breeder Reactor"
+    "LP036a Battery Pack"
+    "Liquid Nitrogen Cooler"
     "Fuel Barrel" 50
     "Scram Drive"
-  gun "Meteor Missile Launcher"
-  gun "Meteor Missile Launcher"
-  gun "Torpedo Launcher"
-  gun "Torpedo Launcher"
+    "Ramscoop"
+
 
 ship "Leviathan" "Leviathan (Laser)"
   outfits
+    "A370 Atomic Thruster"
+    "A525 Atomic Steering"
+
     "Heavy Laser" 4
     "Heavy Laser Turret" 4
+
+    "D94-YV Shield Generator"
     "Armageddon Core"
     "LP036a Battery Pack"
     "Supercapacitor"
-    "D94-YV Shield Generator"
     "Liquid Helium Cooler"
-    "Ramscoop"
-    "A370 Atomic Thruster"
-    "A525 Atomic Steering"
     "Fuel Barrel" 50
     "Hyperdrive"
+    "Ramscoop"
 
 
 
@@ -535,19 +578,20 @@ ship "Shuttle"
     "heat dissipation" .8
     "cargo space" 20
     "outfit space" 160
-    "weapon capacity" 10
-    "engine capacity" 60
+      "engine capacity" 60
+      "weapon capacity" 10
     weapon
       "blast radius" 12
       "shield damage" 120
       "hull damage" 60
       "hit force" 180
   outfits
-    "nGVF-AA Fuel Cell"
-    "LP036a Battery Pack"
-    "D14-RN Shield Generator"
     "X2700 Ion Thruster"
     "X2200 Ion Steering"
+
+    "D14-RN Shield Generator"
+    "nGVF-AA Fuel Cell"
+    "LP036a Battery Pack"
     "Fuel Barrel" 40
     "Hyperdrive"
   engine 6 30
@@ -577,25 +621,27 @@ ship "Star Queen"
     "heat dissipation" .65
     "cargo space" 60
     "outfit space" 410
-    "weapon capacity" 120
-    "engine capacity" 100
+      "engine capacity" 100
+      "weapon capacity" 120
     weapon
       "blast radius" 60
       "shield damage" 600
       "hull damage" 300
       "hit force" 900
   outfits
-    "Sidewinder Missile Launcher" 3
-    "Sidewinder Missile" 150
-    "Heavy Anti-Missile Turret" 2
-    "NT-200 Nucleovoltaic"
-    "LP072a Battery Pack"
-    "D94-YV Shield Generator"
-    "Large Radar Jammer"
     "X3700 Ion Thruster"
     "X3200 Ion Steering"
+
+    "Sidewinder Missile" 150
+    "Sidewinder Missile Launcher" 3
+    "Heavy Anti-Missile Turret" 2
+
+    "D94-YV Shield Generator"
+    "NT-200 Nucleovoltaic"
+    "LP072a Battery Pack"
     "Fuel Barrel" 50
     "Hyperdrive"
+    "Large Radar Jammer"
   engine -18 116
   engine 18 116
   gun 0 -116 "Sidewinder Missile Launcher"
@@ -612,17 +658,20 @@ ship "Star Queen"
   "final explode" "final explosion medium"
   description "The Star Queen is a relic of a more peaceful period of galactic history: a luxury liner for high-end tourists. Every cabin has its own mini-bar, and the bathrooms have marble tile and showers that use actual hot water instead of chemicals or sonic vibrations."
 
+
 ship "Star Queen" "Star Queen (Hai)"
   outfits
-    "Tracker Pod" 3
-    "Tracker" 168
-    "Chameleon Anti-Missile" 2
-    "NT-200 Nucleovoltaic"
-    "Fissure Batteries"
-    "D94-YV Shield Generator"
-    "Small Radar Jammer"
     "X3700 Ion Thruster"
     "A375 Atomic Steering"
+
+    "Tracker" 168
+    "Tracker Pod" 3
+    "Chameleon Anti-Missile" 2
+
+    "D94-YV Shield Generator"
+    "NT-200 Nucleovoltaic"
+    "Fissure Batteries"
     "Fuel Barrel" 50
     "Hyperdrive"
+    "Small Radar Jammer"
 

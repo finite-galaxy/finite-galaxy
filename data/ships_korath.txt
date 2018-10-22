@@ -1,7 +1,6 @@
 shipyard "Korath Variants"
   "Chaser"
   "Raider"
-  "Raider (Hyperdrive)"
   "World-Ship A"
   "World-Ship A (Jump)"
   "World-Ship B"
@@ -27,20 +26,22 @@ ship "Chaser"
     "drag" .9
     "heat dissipation" .9
     "outfit space" 92
-    "weapon capacity" 25
-    "engine capacity" 30
+      "engine capacity" 30
+      "weapon capacity" 25
     weapon
       "blast radius" 48
       "shield damage" 320
       "hull damage" 160
       "hit force" 480
   outfits
+    "Thruster (Asteroid Class)"
+    "Steering (Asteroid Class)"
+
     "Fire-Lance"
+
     "Generator (Furnace Class)"
     "Small Heat Shunt"
     "Repeater Rifle" 
-    "Thruster (Asteroid Class)"
-    "Steering (Asteroid Class)"
   engine -7 23
   engine 7 23
   gun 0 -28 "Fire-Lance"
@@ -66,25 +67,27 @@ ship "Raider"
     "heat dissipation" .5
     "cargo space" 175
     "outfit space" 777
-    "weapon capacity" 284
-    "engine capacity" 159
+      "engine capacity" 159
+      "weapon capacity" 284
     weapon
       "blast radius" 250
       "shield damage" 3600
       "hull damage" 1800
       "hit force" 5400
   outfits
+    "Thruster (Planetary Class)"
+    "Steering (Planetary Class)"
+
     "Grab-Striker" 4
     "Banisher"
     "Warder"
-    "Triple Plasma Core"
+
     "Systems Core (Medium)"
+    "Triple Plasma Core"
     "Large Heat Shunt" 3
-    "Repeater Rifle" 200
-    "Thruster (Planetary Class)"
-    "Steering (Planetary Class)"
     "Fuel Processor" 2
     "Jump Drive"
+    "Repeater Rifle" 200
   engine -20 130
   engine 20 130
   turret -8 -145 "Grab-Striker"
@@ -102,22 +105,6 @@ ship "Raider"
   explode "huge explosion" 10
   "final explode" "final explosion large"
   description "The Korath Raider is their warship of choice for plundering neighboring species."
-
-ship "Raider" "Raider (Hyperdrive)"
-  sprite "ship/raider"
-  outfits
-    "Grab-Striker" 4
-    "Banisher"
-    "Warder"
-    "Triple Plasma Core"
-    "Systems Core (Medium)"
-    "Large Heat Shunt" 2
-    "Small Heat Shunt"
-    "Repeater Rifle" 200
-    "Thruster (Planetary Class)"
-    "Steering (Planetary Class)"
-    "Fuel Processor" 2
-    "Hyperdrive"
 
 
 
@@ -138,25 +125,27 @@ ship "World-Ship A"
     "heat dissipation" .4
     "cargo space" 264
     "outfit space" 888
-    "weapon capacity" 328
-    "engine capacity" 165
+      "engine capacity" 165
+      "weapon capacity" 328
     weapon
       "blast radius" 400
       "shield damage" 8000
       "hull damage" 4000
       "hit force" 12000
   outfits
+    "Thruster (Planetary Class)"
+    "Steering (Planetary Class)"
+
     "Grab-Striker" 2
     "Banisher" 4
     "Warder" 2
-    "Triple Plasma Core"
+
     "Systems Core (Large)"
-    "Large Heat Shunt" 3
-    "Repeater Rifle" 150
-    "Thruster (Planetary Class)"
-    "Steering (Planetary Class)"
+    "Triple Plasma Core"
+    "Large Heat Shunt" 2
     "Fuel Processor" 3
     "Hyperdrive"
+    "Repeater Rifle" 150
   engine -37 343 .8
   engine 0 343 .9
   engine 37 343 .8
@@ -176,19 +165,22 @@ ship "World-Ship A"
   "final explode" "final explosion large"
   description "Korath World-Ships are massive nomadic habitats that hold all that is left of their people."
 
+
 ship "World-Ship A" "World-Ship A (Jump)"
   outfits
+    "Thruster (Planetary Class)"
+    "Steering (Planetary Class)"
+
     "Grab-Striker" 2
     "Banisher" 4
     "Warder" 2
-    "Triple Plasma Core"
+
     "Systems Core (Large)"
+    "Triple Plasma Core"
     "Large Heat Shunt" 2
-    "Repeater Rifle" 150
-    "Thruster (Planetary Class)"
-    "Steering (Planetary Class)"
     "Fuel Processor" 3
     "Jump Drive"
+    "Repeater Rifle" 150
 
 
 ship "World-Ship B"
@@ -207,25 +199,27 @@ ship "World-Ship B"
     "heat dissipation" .4
     "cargo space" 264
     "outfit space" 888
-    "weapon capacity" 328
-    "engine capacity" 165
+      "engine capacity" 165
+      "weapon capacity" 328
     weapon
       "blast radius" 400
       "shield damage" 8000
       "hull damage" 4000
       "hit force" 12000
   outfits
+    "Thruster (Planetary Class)"
+    "Steering (Planetary Class)"
+
     "Grab-Striker" 2
     "Banisher" 4
     "Warder" 2
-    "Triple Plasma Core"
+
     "Systems Core (Large)"
-    "Large Heat Shunt" 3
-    "Repeater Rifle" 150
-    "Thruster (Planetary Class)"
-    "Steering (Planetary Class)"
+    "Triple Plasma Core"
+    "Large Heat Shunt" 2
     "Fuel Processor" 3
     "Hyperdrive"
+    "Repeater Rifle" 150
   engine -37 343 .8
   engine 0 343 .9
   engine 37 343 .8
@@ -245,19 +239,22 @@ ship "World-Ship B"
   "final explode" "final explosion large"
   description "Korath World-Ships are massive nomadic habitats that hold all that is left of their people."
 
+
 ship "World-Ship B" "World-Ship B (Jump)"
   outfits
+    "Thruster (Planetary Class)"
+    "Steering (Planetary Class)"
+
     "Grab-Striker" 2
     "Banisher" 4
     "Warder" 2
-    "Triple Plasma Core"
+
     "Systems Core (Large)"
+    "Triple Plasma Core"
     "Large Heat Shunt" 2
-    "Repeater Rifle" 150
-    "Thruster (Planetary Class)"
-    "Steering (Planetary Class)"
     "Fuel Processor" 3
     "Jump Drive"
+    "Repeater Rifle" 150
 
 
 ship "World-Ship C"
@@ -276,25 +273,27 @@ ship "World-Ship C"
     "heat dissipation" .4
     "cargo space" 264
     "outfit space" 888
-    "weapon capacity" 328
-    "engine capacity" 165
+      "engine capacity" 165
+      "weapon capacity" 328
     weapon
       "blast radius" 400
       "shield damage" 8000
       "hull damage" 4000
       "hit force" 12000
   outfits
+    "Thruster (Planetary Class)"
+    "Steering (Planetary Class)"
+
     "Grab-Striker" 2
     "Banisher" 4
     "Warder" 2
-    "Triple Plasma Core"
+
     "Systems Core (Large)"
-    "Large Heat Shunt" 3
-    "Repeater Rifle" 150
-    "Thruster (Planetary Class)"
-    "Steering (Planetary Class)"
+    "Triple Plasma Core"
+    "Large Heat Shunt" 2
     "Fuel Processor" 3
     "Hyperdrive"
+    "Repeater Rifle" 150
   engine -37 343 .8
   engine 0 343 .9
   engine 37 343 .8
@@ -314,17 +313,20 @@ ship "World-Ship C"
   "final explode" "final explosion large"
   description "Korath World-Ships are massive nomadic habitats that hold all that is left of their people."
 
+
 ship "World-Ship C" "World-Ship C (Jump)"
   outfits
+    "Thruster (Planetary Class)"
+    "Steering (Planetary Class)"
+
     "Grab-Striker" 2
     "Banisher" 4
     "Warder" 2
-    "Triple Plasma Core"
+
     "Systems Core (Large)"
+    "Triple Plasma Core"
     "Large Heat Shunt" 2
-    "Repeater Rifle" 150
-    "Thruster (Planetary Class)"
-    "Steering (Planetary Class)"
     "Fuel Processor" 3
     "Jump Drive"
+    "Repeater Rifle" 150
 

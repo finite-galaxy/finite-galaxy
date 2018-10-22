@@ -43,7 +43,7 @@ private:
   // Map crew numbers into an index in the lookup table.
   int Index(int attackingCrew, int defendingCrew) const;
   
-  // Calculate attack or defense power for each number of crew members up to
+  // Calculate attack or defence power for each number of crew members up to
   // the given ship's full complement.
   static std::vector<double> Power(const Ship &ship, bool isDefender);
   

@@ -29,28 +29,30 @@ ship "Interdictor"
     "heat dissipation" .70
     "cargo space" 79
     "outfit space" 608
-    "weapon capacity" 179
-    "engine capacity" 135
+      "engine capacity" 135
+      "weapon capacity" 179
     weapon
       "blast radius" 250
       "shield damage" 3000
       "hull damage" 1500
       "hit force" 3800
   outfits
-    "Finisher Pod" 2
+    "Large Thrust Module" 2
+    "Large Steering Module" 2
+
     "Finisher Torpedo" 80
+    "Finisher Pod" 2
     "Attractor"
     "Repulsor"
+
     "Large Reactor Module"
     "Large Battery Module"
     "Large Shield Module" 2
     "Large Repair Module"
     "Cooling Module"
-    "Scanning Module" 3
-    "Large Thrust Module" 2
-    "Large Steering Module" 2
     "Fuel Pod" 8
     "Hyperdrive"
+    "Scanning Module" 3
   engine -30 163 .5
   engine -20 163 .85
   engine 20 163 .85
@@ -66,23 +68,26 @@ ship "Interdictor"
   "final explode" "final explosion large" 1
   description `Anyone who incurs the wrath of the Heliarchs cannot count on making a fast getaway thanks to the Interdictors, which were primarily designed to carry a pair of attractor and repulsor beams that can hold a ship a safe distance away while pushing it around enough to prevent it from getting a hyperspace lock to jump out of the system.`
 
+
 ship "Interdictor" "Interdictor (Bombardment)"
   outfits
-    "Finisher Pod" 2
-    "Finisher Torpedo" 80
-    "Bombardment Turret" 2
-    "Large Reactor Module"
-    "Large Battery Module"
-    "Large Shield Module" 2
-    "Large Repair Module"
-    "Cooling Module"
-    "Scanning Module" 3
     "Large Thrust Module" 2
     "Small Thrust Module"
     "Large Steering Module" 2
     "Small Steering Module"
+
+    "Finisher Torpedo" 80
+    "Finisher Pod" 2
+    "Bombardment Turret" 2
+
+    "Large Shield Module" 2
+    "Large Repair Module"
+    "Large Reactor Module"
+    "Large Battery Module"
+    "Cooling Module"
     "Fuel Pod" 8
     "Hyperdrive"
+    "Scanning Module" 3
 
 
 
@@ -103,27 +108,29 @@ ship "Neutralizer"
     "heat dissipation" .75
     "cargo space" 36
     "outfit space" 447
-    "weapon capacity" 72
-    "engine capacity" 102
+      "engine capacity" 102
+      "weapon capacity" 72
     weapon
       "blast radius" 150
       "shield damage" 1800
       "hull damage" 900
       "hit force" 2100
   outfits
-    "Ion Rain Gun" 4
-    "Small Reactor Module" 2
-    "Large Battery Module"
-    "Large Shield Module"
-    "Large Repair Module"
-    "Cooling Module"
-    "Scanning Module" 2
     "Large Thrust Module"
     "Small Thrust Module" 2
     "Large Steering Module"
     "Small Steering Module" 2
+
+    "Ion Rain Gun" 4
+
+    "Large Shield Module"
+    "Large Repair Module"
+    "Small Reactor Module" 2
+    "Large Battery Module"
+    "Cooling Module"
     "Fuel Pod" 10
     "Hyperdrive"
+    "Scanning Module" 2
   engine -17 82 .7
   engine 0 74 1
   engine 17 82 .7
@@ -137,59 +144,64 @@ ship "Neutralizer"
   "final explode" "final explosion medium" 1
   description `The most common Heliarch patrol ship, Neutralizers are designed to be just strong enough to keep an enemy vessel occupied until reinforcements can arrive.`
 
+
 ship "Neutralizer" "Neutralizer (Missile)"
   outfits
-    "Finisher Pod" 2
-    "Finisher Torpedo" 80
-    "Small Reactor Module"
-    "Large Battery Module"
-    "Large Shield Module"
-    "Large Repair Module"
-    "Cooling Module"
-    "Scanning Module" 2
     "Large Thrust Module"
     "Small Thrust Module" 2
     "Large Steering Module"
     "Small Steering Module" 2
+
+    "Finisher Torpedo" 80
+    "Finisher Pod" 2
+
+    "Large Shield Module"
+    "Large Repair Module"
+    "Small Reactor Module"
+    "Large Battery Module"
+    "Cooling Module"
     "Fuel Pod" 10
     "Hyperdrive"
-  gun "Finisher Pod"
-  gun "Finisher Pod"
-  gun
-  gun
+    "Scanning Module" 2
+
 
 ship "Neutralizer" "Neutralizer (Nimble)"
   outfits
-    "Ion Rain Gun" 4
-    "Small Reactor Module" 2
-    "Large Battery Module"
-    "Large Shield Module"
-    "Large Repair Module"
-    "Cooling Module"
-    "Scanning Module" 2
     "Large Thrust Module"
     "Small Thrust Module"
     "Large Steering Module" 2
     "Small Steering Module"
+
+    "Ion Rain Gun" 4
+
+    "Large Shield Module"
+    "Large Repair Module"
+    "Small Reactor Module" 2
+    "Large Battery Module"
+    "Cooling Module"
     "Fuel Pod" 10
     "Hyperdrive"
+    "Scanning Module" 2
+
 
 ship "Neutralizer" "Neutralizer (Scrappy)"
   outfits
-    "Bombardment Cannon" 4
-    "Small Reactor Module" 2
-    "Small Battery Module"
-    "Large Shield Module" 2
-    "Small Shield Module"
-    "Large Repair Module"
-    "Cooling Module" 2
-    "Scanning Module" 2
-    "Outfits Expansion"
     "Large Thrust Module"
     "Small Thrust Module"
     "Large Steering Module" 2
+
+    "Bombardment Cannon" 4
+
+    "Large Shield Module" 2
+    "Small Shield Module"
+    "Large Repair Module"
+    "Small Reactor Module" 2
+    "Small Battery Module"
+    "Cooling Module" 2
     "Fuel Pod" 10
     "Hyperdrive"
+    "Scanning Module" 2
+    "Outfits Expansion"
 
 
 
@@ -210,30 +222,32 @@ ship "Punisher"
     "heat dissipation" .60
     "cargo space" 94
     "outfit space" 933
-    "weapon capacity" 324
-    "engine capacity" 187
+      "engine capacity" 187
+      "weapon capacity" 324
     weapon
       "blast radius" 400
       "shield damage" 4800
       "hull damage" 2400
       "hit force" 6000
   outfits
-    "Ion Rain Gun" 4
-    "Finisher Pod" 2
+    "Large Thrust Module" 2
+    "Small Thrust Module" 2
+    "Large Steering Module" 2
+    "Small Steering Module" 2
+
     "Finisher Torpedo" 80
+    "Finisher Pod" 2
+    "Ion Rain Gun" 4
     "Bombardment Turret" 4
+
     "Large Reactor Module" 2
     "Large Battery Module"
     "Large Shield Module" 3
     "Large Repair Module" 2
     "Cooling Module" 3
-    "Scanning Module" 4
-    "Large Thrust Module" 2
-    "Small Thrust Module" 2
-    "Large Steering Module" 2
-    "Small Steering Module" 2
     "Fuel Pod" 6
     "Hyperdrive"
+    "Scanning Module" 4
   engine -24 184 .6
   engine 0 187 1.1
   engine 24 184 .6
@@ -254,26 +268,29 @@ ship "Punisher"
   "final explode" "final explosion large" 1
   description `Although not quite as strong or powerful as the Quarg ships that they are designed to oppose, Heliarch Punishers are versatile and durable ships. Rumors say that the Heliarchs have a small stash of stolen Quarg Skylances that they can outfit the Punishers with in times of war.`
 
+
 ship "Punisher" "Punisher (Interdicting)"
   outfits
-    "Bombardment Cannon" 4
-    "Finisher Pod" 2
-    "Finisher Torpedo" 80
-    "Attractor" 2
-    "Repulsor"
-    "Bombardment Turret"
-    "Large Reactor Module" 2
-    "Large Battery Module"
-    "Large Shield Module" 3
-    "Large Repair Module" 2
-    "Cooling Module" 3
-    "Scanning Module" 4
     "Large Thrust Module" 2
     "Small Thrust Module" 2
     "Large Steering Module" 2
     "Small Steering Module" 2
+
+    "Finisher Torpedo" 80
+    "Finisher Pod" 2
+    "Bombardment Cannon" 4
+    "Attractor" 2
+    "Repulsor"
+    "Bombardment Turret"
+
+    "Large Shield Module" 3
+    "Large Repair Module" 2
+    "Large Reactor Module" 2
+    "Large Battery Module"
+    "Cooling Module" 3
     "Fuel Pod" 6
     "Hyperdrive"
+    "Scanning Module" 4
   gun "Bombardment Cannon"
   gun "Bombardment Cannon"
   gun "Bombardment Cannon"
@@ -285,45 +302,51 @@ ship "Punisher" "Punisher (Interdicting)"
   turret "Repulsor"
   turret "Bombardment Turret"
 
+
 ship "Punisher" "Punisher (Missile)"
   outfits
-    "Finisher Pod" 6
-    "Finisher Torpedo" 240
-    "Repulsor"
-    "Large Reactor Module"
-    "Small Reactor Module"
-    "Large Battery Module"
-    "Large Shield Module" 5
-    "Large Repair Module" 2
-    "Cooling Module" 2
-    "Scanning Module" 4
-    "Outfits Expansion"
     "Large Thrust Module" 4
     "Large Steering Module" 2
     "Small Steering Module"
+
+    "Finisher Torpedo" 240
+    "Finisher Pod" 6
+    "Repulsor"
+
+    "Large Shield Module" 5
+    "Large Repair Module" 2
+    "Large Reactor Module"
+    "Small Reactor Module"
+    "Large Battery Module"
+    "Cooling Module" 2
     "Fuel Pod" 6
     "Hyperdrive"
+    "Scanning Module" 4
+    "Outfits Expansion"
   turret
   turret
   turret "Repulsor"
   turret
 
+
 ship "Punisher" "Punisher (Scrappy)"
   outfits
-    "Bombardment Cannon" 6
-    "Bombardment Turret" 4
-    "Large Reactor Module" 2
-    "Small Reactor Module"
-    "Large Battery Module"
-    "Large Shield Module" 4
-    "Large Repair Module" 2
-    "Cooling Module" 5
-    "Scanning Module" 4
-    "Outfits Expansion" 4
     "Large Thrust Module" 2
     "Small Thrust Module"
     "Large Steering Module" 4
     "Small Steering Module" 2
+
+    "Bombardment Cannon" 6
+    "Bombardment Turret" 4
+
+    "Large Shield Module" 4
+    "Large Repair Module" 2
+    "Large Reactor Module" 2
+    "Small Reactor Module"
+    "Large Battery Module"
+    "Cooling Module" 5
     "Fuel Pod" 6
     "Hyperdrive"
+    "Scanning Module" 4
+    "Outfits Expansion" 4
 

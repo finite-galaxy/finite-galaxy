@@ -65,16 +65,16 @@ event "ember waste label"
 
 
 
-mission "Remnant: Defense 1"
+mission "Remnant: Defence 1"
   source "Caelian"
   name "Defend <planet>"
   description "Assist in defending <planet> from a Korath raid, then return to the planet."
   to offer
     has "First Contact: Remnant: offered"
-    not "Remnant defense delay"
+    not "Remnant defence delay"
   on offer
     conversation
-      `In the relative quiet of this Remnant spaceport, it's unusually jarring when an alarm siren begins howling. All around you, people are rushing to get their ships into the air. Even though no one stops to explain to you what is happening, it's pretty clear that this is a planetary defense operation.`
+      `In the relative quiet of this Remnant spaceport, it's unusually jarring when an alarm siren begins howling. All around you, people are rushing to get their ships into the air. Even though no one stops to explain to you what is happening, it's pretty clear that this is a planetary defence operation.`
       choice
         `  (Assist the defenders.)`
           launch
@@ -82,8 +82,8 @@ mission "Remnant: Defense 1"
       `  You remain behind on the planet. You probably just missed out on a great opportunity to earn the gratitude of the Remnant.`
         defer
   on defer
-    set "Remnant defense delay"
-    event "remnant defense timer" 20
+    set "Remnant defence delay"
+    event "remnant defence timer" 20
   npc
     government "Remnant"
     personality staying uninterested disables plunders
@@ -97,18 +97,18 @@ mission "Remnant: Defense 1"
   on complete
     payment 200000
 
-event "remnant defense timer"
-  clear "Remnant defense delay"
+event "remnant defence timer"
+  clear "Remnant defence delay"
 
 
 
-mission "Remnant: Defense 2"
+mission "Remnant: Defence 2"
   landing
   source "Caelian"
   name "Remnant bounty"
   description "A Korath ship is flying around Remnant territory. Hunt it down and destroy it, then return to <planet> for payment."
   to offer
-    has "Remnant: Defense 1: done"
+    has "Remnant: Defence 1: done"
   on offer
     conversation
       `The people here are grateful for your help in fighting off the Korath raid, and they offer you a payment of 200,000 credits. They explain to you (in song, of course; the explanation takes the form of an epic ballad) that these raids have been taking place for nearly a century.`
@@ -160,7 +160,7 @@ mission "Remnant: Bounty"
   source
     government "Remnant"
   to offer
-    has "Remnant: Defense 2: done"
+    has "Remnant: Defence 2: done"
     random < 60
   npc kill
     government Korath
@@ -171,7 +171,7 @@ mission "Remnant: Bounty"
       names "korath"
       cargo 3
       variant
-        "Raider (Hyperdrive)"
+        "Raider"
     dialog "You have destroyed the Korath ship. You can now return to <planet> to collect your payment."
   on complete
     payment 200000
@@ -179,7 +179,7 @@ mission "Remnant: Bounty"
 
 
 
-mission "Remnant: Defense 3"
+mission "Remnant: Defence 3"
   landing
   name "Remnant surveillance"
   description "Travel to the <waypoints> system, destroy any Korath ships you find there, then deploy a Remnant surveillance satellite to give them advance warning of Korath raids in the future. Return to <planet> when you are done."
@@ -230,7 +230,7 @@ event "remnant: surveillance end"
 
 
 
-mission "Remnant: Key Stones"
+mission "Remnant: Keystones"
   name "Keystones"
   description "The manager of the outfitter on <planet>, a Remnant world, has offered to pay you six million credits in exchange for a shipment of fifty Quantum Keystones (which you will have to purchase from the Hai)."
   source "Viminal"
@@ -468,8 +468,8 @@ mission "Remnant: Technology Available"
   invisible
   to offer
     has "event: remnant: void sprite research"
-    has "Remnant: Key Stones: done"
-    has "Remnant: Defense 3: done"
+    has "Remnant: Keystones: done"
+    has "Remnant: Defence 3: done"
   source
     government "Remnant"
   on offer

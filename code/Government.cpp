@@ -52,8 +52,8 @@ void Government::Load(const DataNode &node)
       initialPlayerReputation = child.Value(1);
     else if(child.Token(0) == "crew attack" && child.Size() >= 2)
       crewAttack = max(0., child.Value(1));
-    else if(child.Token(0) == "crew defense" && child.Size() >= 2)
-      crewDefense = max(0., child.Value(1));
+    else if(child.Token(0) == "crew defence" && child.Size() >= 2)
+      crewDefence = max(0., child.Value(1));
     else if(child.Token(0) == "attitude toward")
     {
       for(const DataNode &grand : child)
@@ -168,7 +168,7 @@ double Government::InitialPlayerReputation() const
 
 
 
-// Get the amount that your reputation changes for the given offense.
+// Get the amount that your reputation changes for the given offence.
 double Government::PenaltyFor(int eventType) const
 {
   double penalty = 0.;
@@ -261,8 +261,8 @@ bool Government::IsPlayer() const
 
 
 
-// Commit the given "offense" against this government (which may not
-// actually consider it to be an offense). This may result in temporary
+// Commit the given "offence" against this government (which may not
+// actually consider it to be an offence). This may result in temporary
 // hostilities (if the even type is PROVOKE), or a permanent change to your
 // reputation.
 void Government::Offend(int eventType, int count) const
@@ -318,8 +318,8 @@ double Government::CrewAttack() const
 
 
 
-double Government::CrewDefense() const
+double Government::CrewDefence() const
 {
-  return crewDefense;
+  return crewDefence;
 }
 

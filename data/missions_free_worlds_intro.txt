@@ -1,6 +1,6 @@
 mission "Pact Recon 0"
   name "Pirate Reconnaissance"
-  description "Fly through the <waypoints> systems, then report to <destination> so the Southern Defense Pact can analyse your logs of pirate activity (if any)."
+  description "Fly through the <waypoints> systems, then report to <destination> so the Southern Defence Pact can analyse your logs of pirate activity (if any)."
   waypoint "Alniyat"
   waypoint "Han"
   waypoint "Atria"
@@ -26,10 +26,10 @@ mission "Pact Recon 0"
         `  "I wish I could help, but my ship is not a warship."`
           goto warship
       label help
-      `  "There is indeed," she says. "Have you heard of the Southern Mutual Defense Pact?"`
+      `  "There is indeed," she says. "Have you heard of the Southern Mutual Defence Pact?"`
         goto pact
       label warship
-      `  "There are other ways you could help us," she says. "Have you heard of the Southern Mutual Defense Pact?"`
+      `  "There are other ways you could help us," she says. "Have you heard of the Southern Mutual Defence Pact?"`
         goto pact
       label pact
       choice
@@ -48,7 +48,7 @@ mission "Pact Recon 0"
         accept
   
   on accept
-    log "Volunteered to help the Southern Mutual Defense Pact keep tabs on pirate activity in their region of space. Pirate attacks seem to be getting worse because the Navy doesn't bother to patrol down here anymore."
+    log "Volunteered to help the Southern Mutual Defence Pact keep tabs on pirate activity in their region of space. Pirate attacks seem to be getting worse because the Navy doesn't bother to patrol down here anymore."
   
   on complete
     payment 25000
@@ -60,7 +60,7 @@ mission "Pact Recon 0"
 mission "Pact Recon 1"
   landing
   name "Pirate Reconnaissance"
-  description "Fly through the <waypoints> systems, then report to <destination> so the Southern Defense Pact can analyse your logs of pirate activity (if any)."
+  description "Fly through the <waypoints> systems, then report to <destination> so the Southern Defence Pact can analyse your logs of pirate activity (if any)."
   waypoint "Wei"
   waypoint "Alnasl"
   waypoint "Eber"
@@ -87,7 +87,7 @@ mission "Pact Recon 1"
 mission "Pact Recon 2"
   landing
   name "Pirate Reconnaissance"
-  description "Fly through the <waypoints> systems, then report to <destination> so the Southern Defense Pact can analyse your logs of pirate activity (if any)."
+  description "Fly through the <waypoints> systems, then report to <destination> so the Southern Defence Pact can analyse your logs of pirate activity (if any)."
   waypoint "Men"
   waypoint "Antares"
   waypoint "Shaula"
@@ -155,7 +155,7 @@ mission "Pact Questioning"
     random < 15
   
   on offer
-    log "Apparently the Navy is suspicious of anyone who worked with the Southern Mutual Defense Pact; got questioned about it by an officer. It was unclear what his rank or position in the Navy was."
+    log "Apparently the Navy is suspicious of anyone who worked with the Southern Mutual Defence Pact; got questioned about it by an officer. It was unclear what his rank or position in the Navy was."
     conversation
       `As you are walking through the spaceport, a middle-aged man in a Navy uniform walks up to you and says, "Excuse me, Captain <last>. Could I speak with you for a few minutes?"`
       choice
@@ -164,10 +164,10 @@ mission "Pact Questioning"
           defer
       branch free
         has "event: war begins"
-      `  "Thank you," he says. "Am I correct that you have been assisting the Southern Mutual Defense Pact?"`
+      `  "Thank you," he says. "Am I correct that you have been assisting the Southern Mutual Defence Pact?"`
         goto start
       label free
-      `  "Thank you," he says. "Am I correct that you performed some missions for the Southern Defense Pact, back before they became the Free Worlds?"`
+      `  "Thank you," he says. "Am I correct that you performed some missions for the Southern Defence Pact, back before they became the Free Worlds?"`
       label start
       `  His voice is very friendly, and he is not armed or accompanied by any other officers that you can see, so it doesn't seem like you are in trouble or in danger of being arrested - especially since your work for the Pact was perfectly legal.`
       choice
@@ -1838,9 +1838,9 @@ mission "Rescue Katya 1"
   on accept
     set "chosen sides"
     event "capture of Kornephoros"
-    log "People" "Alondo Gruyere" `Alondo grew up on Bourne, the relatively prosperous planet on the edge of the Rim that is now the capital of the Free Worlds. He served as a Republic diplomat for years before becoming convinced that Parliament was just using him to "pacify" the less developed worlds in the South with empty promises. He joined the Southern Defense Pact in the early days, before it became the Free Worlds, and is now a member of the Council.`
+    log "People" "Alondo Gruyere" `Alondo grew up on Bourne, the relatively prosperous planet on the edge of the Rim that is now the capital of the Free Worlds. He served as a Republic diplomat for years before becoming convinced that Parliament was just using him to "pacify" the less developed worlds in the South with empty promises. He joined the Southern Defence Pact in the early days, before it became the Free Worlds, and is now a member of the Council.`
     log "People" "Tomek Voigt" `Tomek is a young and ambitious militia commander. His brilliant tactical leadership and charismatic personality gained him quite a following in the Dirt Belt region even before the Free Worlds came into existence. He was asked to join the Council in part because of his popularity with the local militias throughout the region.`
-    log "People" "Freya Winters" `Freya is an engineer, specializing in surveillance equipment but with a wide range of talents. She organized the "thousand eyes" program run by the Southern Defense Pact, which was an attempt to reduce the power of the pirate fleets in the region by tracking their fleet movements. Despite her relative lack of interest in politics, she was asked to join the Free Worlds Council because of her expertise in optimizing the distribution and management of resources.`
+    log "People" "Freya Winters" `Freya is an engineer, specializing in surveillance equipment but with a wide range of talents. She organized the "thousand eyes" program run by the Southern Defence Pact, which was an attempt to reduce the power of the pirate fleets in the region by tracking their fleet movements. Despite her relative lack of interest in politics, she was asked to join the Free Worlds Council because of her expertise in optimizing the distribution and management of resources.`
     log "People" "Jean-Jacques Soleau" `Known to most people simply as "JJ," Jean-Jacques grew up in the Dirt Belt and served in the Navy for years before quitting in frustration over the fact that the Navy was no longer defending his home region of space. He now serves on the Free Worlds Council, where he is tasked with coordinating actions between the local militias and shaping them into a single fighting force that can act in concert with each other.`
 
 

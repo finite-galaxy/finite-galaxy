@@ -454,7 +454,7 @@ void System::SetDate(const Date &date)
       object.angle = Angle(object.position);
     
     if(object.planet)
-      object.planet->ResetDefense();
+      object.planet->ResetDefence();
   }
 }
 

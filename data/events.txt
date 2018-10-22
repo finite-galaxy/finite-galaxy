@@ -2610,7 +2610,7 @@ event "wanderers: first tech increase"
     add fleet "Wanderer Flycatchers" 1000
   system "Ap'arak"
     add fleet "Wanderer Flycatchers" 1200
-  fleet "Wanderer Defense"
+  fleet "Wanderer Defence"
     add variant 2
       "Autumn Leaf" 2
     add variant 2
@@ -2648,30 +2648,30 @@ event "wanderers: unfettered invasion starts"
   system "Ik'kara'ka"
     fleet "Wanderer Freight" 1200
     fleet "Wanderer Drones" 900
-    fleet "Wanderer Defense" 200
+    fleet "Wanderer Defence" 200
     fleet "Wanderer Flycatchers" 200
     fleet "Small Unfettered" 1200
     fleet "Large Unfettered" 500
   system "Chy'chra"
     government "Hai (Unfettered)"
-    fleet "Wanderer Defense" 3000
+    fleet "Wanderer Defence" 3000
     fleet "Unfettered Raid" 1000
     fleet "Small Unfettered" 400
     fleet "Large Unfettered" 400
   system "Prakacha'a"
     fleet "Wanderer Freight" 900
     fleet "Wanderer Drones" 800
-    fleet "Wanderer Defense" 200
+    fleet "Wanderer Defence" 200
     fleet "Small Unfettered" 1800
     fleet "Large Unfettered" 800
   system "Ehma Ti"
     remove fleet "Unfettered Tribute"
   system "Sich'ka'ara"
-    add fleet "Wanderer Defense" 500
+    add fleet "Wanderer Defence" 500
     add fleet "Wanderer Flycatchers" 600
     add fleet "Large Unfettered" 1200
   system "Chirr'ay'akai"
-    add fleet "Wanderer Defense" 500
+    add fleet "Wanderer Defence" 500
     add fleet "Wanderer Flycatchers" 480
     add fleet "Large Unfettered" 1200
   "reputation: Hai (Unfettered)" <?= -100
@@ -2686,7 +2686,7 @@ event "wanderers: unfettered invasion starts"
     outfitter clear
 
 event "wanderers: tempest mass production"
-  fleet "Wanderer Defense"
+  fleet "Wanderer Defence"
     add variant 6
       "Tempest"
       "Summer Leaf"
@@ -2748,7 +2748,7 @@ event "wanderers: more systems lost"
     government "Hai (Unfettered)"
     fleet "Large Unfettered" 400
     fleet "Small Unfettered" 400
-    fleet "Wanderer Defense" 600
+    fleet "Wanderer Defence" 600
   planet "Vara Ke'stai"
     attributes "unfettered" "farming"
     description `The Wanderers worked for years to make this desert world bloom: planting hardy shrubs and cacti that eventually transform the sand into a soil that can hold moisture. In some regions, especially closer to the poles, the deserts have given way to dense forests, but near the equator there are still large stretches of dry and barren sand, broken by the occasional belt of green where a narrow river winds between the dunes.`
@@ -2772,7 +2772,7 @@ planet "The Eye"
 
 event "wanderers: the eye begins to open"
   system Sko'karak
-    fleet "Wanderer Defense" 500
+    fleet "Wanderer Defence" 500
     add object
       sprite planet/wisp
       distance 2331.95
@@ -2781,7 +2781,7 @@ event "wanderers: the eye begins to open"
 event "wanderers: the eye opens"
   unvisit Sabriset
   system Sabriset
-    add fleet "Wanderer Defense" 1200
+    add fleet "Wanderer Defence" 1200
     add fleet "Wanderer Drones" 600
     add fleet "Wanderer Freight" 4000
     add object "The Eye"
@@ -2789,17 +2789,17 @@ event "wanderers: the eye opens"
       distance 2022.87
       period 919.438
   system Sepriaptu
-    add fleet "Wanderer Defense" 1600
+    add fleet "Wanderer Defence" 1600
     add fleet "Wanderer Drones" 800
   system Kaliptari
     fleet "Large Quarg" 2000
     fleet "Small Kor Mereti" 8000
     fleet "Large Kor Mereti" 3600
-    fleet "Wanderer Defense" 1000
+    fleet "Wanderer Defence" 1000
     fleet "Wanderer Drones" 500
   system Solifar
     fleet "Large Quarg" 3000
-    fleet "Wanderer Defense" 1800
+    fleet "Wanderer Defence" 1800
     fleet "Wanderer Drones" 700
   system Fornarep
     fleet "Large Quarg" 1000
@@ -2848,7 +2848,7 @@ event "wanderers: the eye opens"
       period 2518.05
 
 event "wanderers: derecho mass production"
-  fleet "Wanderer Defense"
+  fleet "Wanderer Defence"
     add variant 4
       "Derecho"
       "Tempest"
@@ -2888,7 +2888,7 @@ event "wanderers: spera anatrusk colony"
     spaceport `  Oddly enough, they have also found enough time to plant a large garden on a terrace near the base of the canyon, where they are experimenting to find out which plant species will best grow in this arid environment. The Wanderer drive to understand and transform the local ecology is strong, indeed.`
 
 event "wanderers: hurricane mass production"
-  fleet "Wanderer Defense"
+  fleet "Wanderer Defence"
     add variant 5
       "Hurricane"
     add variant 2

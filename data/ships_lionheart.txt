@@ -38,25 +38,27 @@ ship "Aerie"
     "heat dissipation" .7
     "cargo space" 50
     "outfit space" 440
-    "weapon capacity" 150
-    "engine capacity" 95
+      "engine capacity" 95
+      "weapon capacity" 150
     weapon
       "blast radius" 80
       "shield damage" 800
       "hull damage" 400
       "hit force" 1200
   outfits
+    "A250 Atomic Thruster"
+    "A255 Atomic Steering"
+
     "Heavy Laser" 2
     "Heavy Laser Turret" 2
     "Heavy Anti-Missile Turret"
+
+    "D41-HY Shield Generator"
     "NT-200 Nucleovoltaic"
     "LP072a Battery Pack"
-    "D41-HY Shield Generator"
-    "Large Radar Jammer"
-    "A250 Atomic Thruster"
-    "A255 Atomic Steering"
     "Fuel Barrel" 50
     "Hyperdrive"
+    "Large Radar Jammer"
   engine -10 91
   engine 10 91
   gun -13 -79 "Heavy Laser"
@@ -93,25 +95,27 @@ ship "Arrow"
     "heat dissipation" .85
     "cargo space" 10
     "outfit space" 220
-    "weapon capacity" 50
-    "engine capacity" 60
+      "engine capacity" 60
+      "weapon capacity" 50
     weapon
       "blast radius" 24
       "shield damage" 240
       "hull damage" 120
       "hit force" 360
   outfits
-    "Sidewinder Missile Launcher" 2
+    "A250 Atomic Thruster"
+    "A255 Atomic Steering"
+
     "Sidewinder Missile" 100
+    "Sidewinder Missile Launcher" 2
     "Anti-Missile Turret"
+
     "Dwarf Core"
     "Supercapacitor"
     "D14-RN Shield Generator"
-    "Small Radar Jammer"
-    "A250 Atomic Thruster"
-    "A255 Atomic Steering"
     "Fuel Barrel" 40
     "Hyperdrive"
+    "Small Radar Jammer"
   engine -10 60
   engine 10 60
   gun -8 -34 "Sidewinder Missile Launcher"
@@ -124,19 +128,20 @@ ship "Arrow"
   "final explode" "final explosion small"
   description "The Arrow is a light transport, designed for bringing a small number of very rich passengers - CEOs, for example - from one planet to another with speed and style. It makes up for its light armament by being able to outrun nearly every other ship in the sky."
 
+
 ship "Arrow" "Arrow (Hai)"
   outfits
-    "Sidewinder Missile Launcher" 2
-    "Sidewinder Missile" 100
-    "Bullfrog Anti-Missile"
-    "Pebble Core"
-    "Supercapacitor" 2
-    "D14-RN Shield Generator"
-    "Small Radar Jammer"
     `"Benga" Atomic Thruster`
     `"Biroo" Atomic Steering`
+
+    "Chameleon Anti-Missile"
+
+    "Corundum Regenerator"
+    "Pebble Core"
+    "Chasm Batteries"
     "Fuel Barrel" 40
     "Hyperdrive"
+    "Small Radar Jammer"
 
 
 
@@ -155,27 +160,29 @@ ship "Bactrian"
     "heat dissipation" .4
     "cargo space" 530
     "outfit space" 810
-    "weapon capacity" 300
-    "engine capacity" 180
+      "engine capacity" 180
+      "weapon capacity" 300
     weapon
       "blast radius" 260
       "shield damage" 2600
       "hull damage" 1300
       "hit force" 3900
   outfits
-    "Torpedo Launcher" 3
-    "Torpedo" 90
-    "Heavy Laser Turret" 4
-    "Heavy Anti-Missile Turret" 2
-    "Fusion Reactor"
-    "LP144a Battery Pack"
-    "D94-YV Shield Generator"
-    "Large Radar Jammer"
-    "Ramscoop"
     "A520 Atomic Thruster"
     "A525 Atomic Steering"
+
+    "Torpedo" 90
+    "Torpedo Launcher" 3
+    "Heavy Laser Turret" 4
+    "Heavy Anti-Missile Turret" 2
+
+    "D94-YV Shield Generator"
+    "Fusion Reactor"
+    "LP144a Battery Pack"
     "Fuel Barrel" 70
     "Hyperdrive"
+    "Ramscoop"
+    "Large Radar Jammer"
   engine -18 230
   engine 18 230
   gun 0 -232 "Torpedo Launcher"
@@ -200,45 +207,48 @@ ship "Bactrian"
   "final explode" "final explosion large"
   description "The Lionheart Bactrian is the last of the great city-ships, a design hearkening back to the early days of space colonization when a long-distance vessel needed to be a self-contained world, able to survive for weeks at a time without encountering an inhabited planet. It is not only a freighter, but a carrier, and a capable warship either at short range or at a distance. Naturally, this versatility also makes it extremely expensive, and the Bactrian is not normally for sale to ordinary citizens who have not been vetted by the local government of the Deep."
 
+
 ship "Bactrian" "Bactrian (Hai Engines)"
   outfits
-    "Torpedo Launcher" 3
+    `"Bufaer" Atomic Thruster`
+    `"Bufaer" Atomic Steering`
+
     "Torpedo" 90
+    "Torpedo Launcher" 3
     "Heavy Laser Turret" 4
     "Heavy Anti-Missile Turret" 2
+
+    "D67-TM Shield Generator"
     "Fusion Reactor"
     "Geode Reactor"
     "Gorge Batteries"
-    "D67-TM Shield Generator"
     "Williwaw Cooling" 3
-    "Ramscoop"
-    "Outfits Expansion" 2
-    `"Bufaer" Atomic Thruster`
-    `"Bufaer" Atomic Steering`
     "Fuel Barrel" 70
     "Hyperdrive"
+    "Ramscoop"
+    "Outfits Expansion" 2
+
 
 ship "Bactrian" "Bactrian (Hai Weapons)"
   outfits
-    "Tracker Pod" 3
+    "A520 Atomic Thruster"
+    "A525 Atomic Steering"
+
     "Tracker" 168
-    "Chameleon Anti-Missile" 2
+    "Tracker Pod" 3
     "Pulse Turret" 2
     "Heavy Laser Turret" 2
+    "Chameleon Anti-Missile" 2
+
+    "Diamond Regenerator"
     "Fusion Reactor"
     "Pebble Core"
     "Ravine Batteries"
-    "Diamond Regenerator"
     "Williwaw Cooling" 2
-    "Ramscoop"
-    "Large Radar Jammer"
-    "A520 Atomic Thruster"
-    "A525 Atomic Steering"
     "Fuel Barrel" 70
     "Hyperdrive"
-  gun "Tracker Pod"
-  gun "Tracker Pod"
-  gun "Tracker Pod"
+    "Large Radar Jammer"
+    "Ramscoop"
   turret "Chameleon Anti-Missile"
   turret "Heavy Laser Turret"
   turret "Pulse Turret"
@@ -246,22 +256,25 @@ ship "Bactrian" "Bactrian (Hai Weapons)"
   turret "Chameleon Anti-Missile"
   turret "Heavy Laser Turret"
 
+
 ship "Bactrian" "Bactrian (Hired Gun)"
   outfits
-    "Heavy Laser" 3
-    "Heavy Laser Turret" 6
-    "Armageddon Core"
-    "LP144a Battery Pack"
-    "D94-YV Shield Generator"
-    "D41-HY Shield Generator"
-    "Liquid Nitrogen Cooler"
-    "Water Coolant System"
-    "Outfits Expansion" 2
-    "Large Radar Jammer"
     "A520 Atomic Thruster"
     "A525 Atomic Steering"
+
+    "Heavy Laser" 3
+    "Heavy Laser Turret" 6
+    "D94-YV Shield Generator"
+    "D41-HY Shield Generator"
+
+    "Armageddon Core"
+    "LP144a Battery Pack"
+    "Liquid Nitrogen Cooler"
+    "Water Coolant System"
     "Fuel Barrel" 70
     "Hyperdrive"
+    "Large Radar Jammer"
+    "Outfits Expansion" 2
 
 
 
@@ -280,23 +293,25 @@ ship "Chariot"
     "heat dissipation" .7
     "cargo space" 40
     "outfit space" 470
-    "weapon capacity" 170
-    "engine capacity" 100
+      "engine capacity" 100
+      "weapon capacity" 170
     weapon
       "blast radius" 80
       "shield damage" 800
       "hull damage" 400
       "hit force" 1200
   outfits
+    "A370 Atomic Thruster"
+    "A375 Atomic Steering"
+
     "Electron Beam" 4
     "Electron Turret"
     "Heavy Anti-Missile Turret"
+
     "D67-TM Shield Generator"
     "Fusion Reactor"
     "LP036a Battery Pack"
     "Liquid Nitrogen Cooler"
-    "A370 Atomic Thruster"
-    "A375 Atomic Steering"
     "Fuel Barrel" 50
     "Hyperdrive"
   engine -11 118
@@ -333,19 +348,21 @@ ship "Dagger"
     "drag" .63
     "heat dissipation" .9
     "outfit space" 90
-    "weapon capacity" 20
-    "engine capacity" 30
+      "engine capacity" 30
+      "weapon capacity" 20
     weapon
       "blast radius" 12
       "shield damage" 120
       "hull damage" 60
       "hit force" 180
   outfits
-    "Beam Laser" 2
-    "nGVF-BB Fuel Cell"
-    "D14-RN Shield Generator"
     "X1700 Ion Thruster"
     "X1200 Ion Steering"
+
+    "Beam Laser" 2
+
+    "D14-RN Shield Generator"
+    "nGVF-BB Fuel Cell"
   engine -15 30
   engine 15 30
   gun -14 -10 "Beam Laser"
@@ -372,20 +389,22 @@ ship "Flivver"
     "heat dissipation" .9
     "cargo space" 5
     "outfit space" 180
-    "weapon capacity" 25
-    "engine capacity" 45
+      "engine capacity" 45
+      "weapon capacity" 25
     weapon
       "blast radius" 16
       "shield damage" 160
       "hull damage" 80
       "hit force" 240
   outfits
-    "Beam Laser" 2
-    "nGVF-BB Fuel Cell"
-    "LP036a Battery Pack"
-    "D14-RN Shield Generator"
     "A120 Atomic Thruster"
     "A125 Atomic Steering"
+
+    "Beam Laser" 2
+
+    "D14-RN Shield Generator"
+    "nGVF-BB Fuel Cell"
+    "LP036a Battery Pack"
     "Fuel Barrel" 50
     "Hyperdrive"
   engine -16 27
@@ -397,23 +416,27 @@ ship "Flivver"
   explode "small explosion" 10
   description "With space for neither cargo nor passengers nor heavy weaponry, the Flivver's only selling point is speed. Flivvers are sold mostly to wealthy individuals who want to be able to travel the stars without needing to share a bunk room on a merchant transport with common people."
 
+
 ship "Flivver" "Flivver (Hai)"
   outfits
-    "RT-I Radiothermal"
-    "D14-RN Shield Generator"
-    "Williwaw Cooling"
     `"Basrem" Atomic Thruster`
     `"Benga" Atomic Steering`
+
+    "Corundum Regenerator"
+    "RT-I Radiothermal"
+    "Williwaw Cooling"
     "Fuel Barrel" 50
     "Hyperdrive"
 
+
 ship "Flivver" "Flivver (Racing)"
   outfits
-    "RT-I Radiothermal"
-    "D14-RN Shield Generator"
-    "Water Coolant System"
     "A120 Atomic Thruster"
     "A125 Atomic Steering"
+
+    "D14-RN Shield Generator"
+    "RT-I Radiothermal"
+    "Water Coolant System"
     "Fuel Barrel" 50
     "Hyperdrive"
 
@@ -434,21 +457,23 @@ ship "Headhunter"
     "heat dissipation" .8
     "cargo space" 40
     "outfit space" 290
-    "weapon capacity" 70
-    "engine capacity" 80
+      "engine capacity" 80
+      "weapon capacity" 70
     weapon
       "blast radius" 44
       "shield damage" 440
       "hull damage" 220
       "hit force" 660
   outfits
-    "Heavy Laser" 2
-    "Heavy Laser Turret"
-    "RT-I Radiothermal"
-    "LP072a Battery Pack"
-    "D23-QP Shield Generator"
     "A250 Atomic Thruster"
     "A255 Atomic Steering"
+
+    "Heavy Laser" 2
+    "Heavy Laser Turret"
+
+    "D23-QP Shield Generator"
+    "RT-I Radiothermal"
+    "LP072a Battery Pack"
     "Fuel Barrel" 40
     "Hyperdrive"
   engine -16 47
@@ -464,26 +489,32 @@ ship "Headhunter"
   "final explode" "final explosion small"
   description "The Headhunter is one of the newest ships designed by Lionheart: a versatile ship that can serve equally well for carrying cargo or for bounty hunting. As with many of Lionheart's designs, the hull is mostly composite fiber rather than metal, sacrificing armor strength for the sake of lighter weight and faster movement."
 
+
 ship "Headhunter" "Headhunter (Hai)"
   outfits
-    "Particle Cannon" 2
-    "Geode Reactor"
-    "Chasm Batteries"
-    "Corundum Regenerator"
-    "Williwaw Cooling"
     `"Biroo" Atomic Thruster`
     `"Biroo" Atomic Steering`
+
+    "Particle Cannon" 2
+
+    "Corundum Regenerator"
+    "Geode Reactor"
+    "Chasm Batteries"
+    "Williwaw Cooling"
     "Fuel Barrel" 40
     "Hyperdrive"
 
+
 ship "Headhunter" "Headhunter (Particle)"
   outfits
-    "Particle Cannon" 2
-    "NT-200 Nucleovoltaic"
-    "LP036a Battery Pack"
-    "D23-QP Shield Generator"
     "A250 Atomic Thruster"
     "A255 Atomic Steering"
+
+    "Particle Cannon" 2
+
+    "D23-QP Shield Generator"
+    "NT-200 Nucleovoltaic"
+    "LP036a Battery Pack"
     "Fuel Barrel" 40
     "Hyperdrive"
 
@@ -504,27 +535,29 @@ ship "Mule"
     "heat dissipation" .5
     "cargo space" 270
     "outfit space" 510
-    "weapon capacity" 210
-    "engine capacity" 110
+      "engine capacity" 110
+      "weapon capacity" 210
     weapon
       "blast radius" 100
       "shield damage" 1000
       "hull damage" 500
       "hit force" 1500
   outfits
-    "Torpedo Launcher"
-    "Torpedo" 30
-    "Heavy Laser Turret" 3
-    "Heavy Anti-Missile Turret"
-    "NT-200 Nucleovoltaic"
-    "LP072a Battery Pack"
-    "D41-HY Shield Generator"
-    "Small Radar Jammer" 2
-    "Ramscoop"
     "A250 Atomic Thruster"
     "A255 Atomic Steering"
+
+    "Torpedo" 30
+    "Torpedo Launcher"
+    "Heavy Laser Turret" 3
+    "Heavy Anti-Missile Turret"
+
+    "D41-HY Shield Generator"
+    "NT-200 Nucleovoltaic"
+    "LP072a Battery Pack"
     "Fuel Barrel" 60
-    "Hyperdrive"    
+    "Hyperdrive"
+    "Ramscoop"
+    "Small Radar Jammer" 2
   engine -12 123
   engine 12 123
   gun 0 -123 "Torpedo Launcher"
@@ -542,59 +575,68 @@ ship "Mule"
   "final explode" "final explosion medium"
   description "The Mule is as much of a hodgepodge as its looks suggest. The Lionheart ship designers combined a good deal of cargo space with a decent amount of weaponry and even a fighter bay, and ended up with a ship that is mostly used as a freighter but must be classified as a warship because of its heavy armament and shields."
 
+
 ship "Mule" "Mule (Hai Engines)"
   outfits
-    "Torpedo Launcher"
-    "Torpedo" 30
-    "Heavy Laser Turret" 3
-    "Chameleon Anti-Missile"
-    "Boulder Reactor"
-    "Fissure Batteries"
-    "D41-HY Shield Generator"
-    "Small Radar Jammer" 2
-    "Water Coolant System"
-    "Cooling Ducts"
-    "Outfits Expansion"
-    "Ramscoop"
     `"Bondir" Atomic Thruster`
     `"Biroo" Atomic Steering`
     `"Basrem" Atomic Steering`
+
+    "Torpedo" 30
+    "Torpedo Launcher"
+    "Heavy Laser Turret" 3
+    "Chameleon Anti-Missile"
+
+    "D41-HY Shield Generator"
+    "Boulder Reactor"
+    "Fissure Batteries"
+    "Water Coolant System"
+    "Cooling Ducts"
     "Fuel Barrel" 60
     "Hyperdrive"
+    "Ramscoop"
+    "Small Radar Jammer" 2
+    "Outfits Expansion"
+
 
 ship "Mule" "Mule (Hai Weapons)"
   outfits
-    "Tracker Pod"
+    "A250 Atomic Thruster"
+    "A255 Atomic Steering"
+
     "Tracker" 56
+    "Tracker Pod"
     "Pulse Turret" 4
+
+    "D67-TM Shield Generator"
     "Geode Reactor"
     "Ravine Batteries"
     "Fissure Batteries"
-    "D67-TM Shield Generator"
     "Water Coolant System"
-    "Outfits Expansion" 3
-    "Ramscoop"
-    "A250 Atomic Thruster"
-    "A255 Atomic Steering"
     "Fuel Barrel" 60
     "Hyperdrive"
+    "Ramscoop"
+    "Outfits Expansion" 3
+
 
 ship "Mule" "Mule (Heavy)"
   outfits
-    "Torpedo Launcher"
+    "A370 Atomic Thruster"
+    "A375 Atomic Steering"
+
     "Torpedo" 30
+    "Torpedo Launcher"
     "Heavy Laser Turret" 4
+
+    "D67-TM Shield Generator"
     "Fission Reactor"
     "LP072a Battery Pack"
     "Supercapacitor" 4
-    "D67-TM Shield Generator"
     "Water Coolant System"
-    "Outfits Expansion"
-    "Ramscoop"
-    "A370 Atomic Thruster"
-    "A375 Atomic Steering"
     "Fuel Barrel" 60
     "Hyperdrive"
+    "Ramscoop"
+    "Outfits Expansion"
 
 
 
@@ -613,25 +655,27 @@ ship "Scout"
     "heat dissipation" .7
     "cargo space" 55
     "outfit space" 300
-    "weapon capacity" 40
-    "engine capacity" 100
+      "engine capacity" 100
+      "weapon capacity" 40
     weapon
       "blast radius" 16
       "shield damage" 160
       "hull damage" 80
       "hit force" 240
   outfits
-    "Beam Laser" 2
-    "Laser Turret"
-    "nGVF-CC Fuel Cell"
-    "LP036a Battery Pack"
-    "D14-RN Shield Generator"
-    "Small Radar Jammer"
-    "Ramscoop"
     "A250 Atomic Thruster"
     "A255 Atomic Steering"
+
+    "Beam Laser" 2
+    "Laser Turret"
+
+    "D14-RN Shield Generator"
+    "nGVF-CC Fuel Cell"
+    "LP036a Battery Pack"
     "Fuel Barrel" 80
     "Hyperdrive"
+    "Ramscoop"
+    "Small Radar Jammer"
   engine -8 46
   engine 8 46
   gun -20 -7 "Beam Laser"
@@ -645,20 +689,23 @@ ship "Scout"
   "final explode" "final explosion small"
   description "The Lionheart Scoutship was designed back in the days when the galaxy was more sparsely populated, and ships prospecting for habitable worlds or worlds rich in resources would often travel far away from any habitable ports where they would be able to refuel. Although the galaxy has now been much more thoroughly explored, the Scout remains a popular ship for long-distance travel."
 
+
 ship "Scout" "Scout (Speedy)"
   outfits
-    "Meteor Missile Launcher"
-    "Meteor Missile" 35
-    "Sidewinder Missile Launcher"
-    "Sidewinder Missile" 50
-    "Anti-Missile Turret"
-    "NT-200 Nucleovoltaic"
-    "Supercapacitor"
-    "D23-QP Shield Generator"
-    "Cooling Ducts"
-    "Outfits Expansion"
     "A370 Atomic Thruster"
     "A255 Atomic Steering"
+
+    "Meteor Missile" 35
+    "Sidewinder Missile" 50
+    "Meteor Missile Launcher"
+    "Sidewinder Missile Launcher"
+    "Anti-Missile Turret"
+
+    "D23-QP Shield Generator"
+    "NT-200 Nucleovoltaic"
+    "Supercapacitor"
+    "Cooling Ducts"
     "Fuel Barrel" 80
     "Hyperdrive"
+    "Outfits Expansion"
 

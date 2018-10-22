@@ -96,7 +96,7 @@
 #   "Small Unfettered"
 #   "Unfettered Raid"
 # Wanderer:
-#   "Wanderer Defense"
+#   "Wanderer Defence"
 #   "Wanderer Drones"
 #   "Wanderer Flycatchers"
 #   "Wanderer Freight"
@@ -591,7 +591,7 @@ fleet "Large Hai"
   variant 1
     "Shield Beetle (Tracker)"
     "Lightning Bug"
-    "Aphid (Anti-Missile)" 4
+    "Aphid" 4
   variant 3
     "Shield Beetle"
     "Lightning Bug (Pulse)"
@@ -653,10 +653,10 @@ fleet "Small Hai"
     "Aphid" 5
   variant 2
     "Lightning Bug (Pulse)" 2
-    "Aphid (Anti-Missile)" 3
+    "Aphid" 3
   variant 2
     "Lightning Bug (Pulse)"
-    "Aphid (Anti-Missile)" 5
+    "Aphid" 5
   variant
     "Lightning Bug" 3
   variant
@@ -1049,18 +1049,18 @@ fleet "Large Kor Sestor"
     "Far Lek 14" 10
     "Met Par Tek 53" 2
   variant 4
-    "Kar Ik Vot 349 (Defense)"
+    "Kar Ik Vot 349"
     "Tek Far 71 - Lek (Close Quarters)"
     "Far Lek 14" 8
     "Met Par Tek 53 (Sniper)" 2
   variant 4
-    "Kar Ik Vot 349 (Offense)"
+    "Kar Ik Vot 349"
     "Tek Far 71 - Lek"
     "Far Lek 14" 9
     "Met Par Tek 53"
     "Met Par Tek 53 (Sniper)"
   variant 4
-    "Kar Ik Vot 349 (Trapper)"
+    "Kar Ik Vot 349"
     "Tek Far 71 - Lek (Close Quarters)"
     "Far Lek 14" 7
     "Met Par Tek 53"
@@ -1071,17 +1071,17 @@ fleet "Large Kor Sestor"
     "Far Osk 27" 9
     "Met Par Tek 53"
   variant 4
-    "Kar Ik Vot 349 (Defense)"
+    "Kar Ik Vot 349"
     "Tek Far 78 - Osk (Close Quarters)"
     "Far Osk 27" 7
     "Met Par Tek 53"
   variant 4
-    "Kar Ik Vot 349 (Offense)"
+    "Kar Ik Vot 349"
     "Tek Far 78 - Osk"
     "Far Osk 27" 8
     "Met Par Tek 53 (Sniper)"
   variant 4
-    "Kar Ik Vot 349 (Trapper)"
+    "Kar Ik Vot 349"
     "Tek Far 78 - Osk (Close Quarters)"
     "Far Osk 27" 6
     "Met Par Tek 53 (Sniper)"
@@ -1092,44 +1092,38 @@ fleet "Large Kor Sestor"
     "Tek Far 78 - Osk"
     "Far Osk 27" 9
   variant 2
-    "Kar Ik Vot 349 (Defense)"
+    "Kar Ik Vot 349"
     "Tek Far 71 - Lek (Close Quarters)"
     "Far Lek 14" 8
     "Tek Far 78 - Osk"
     "Far Osk 27" 8
   variant 2
-    "Kar Ik Vot 349 (Offense)"
+    "Kar Ik Vot 349"
     "Tek Far 71 - Lek"
     "Far Lek 14" 9
     "Tek Far 78 - Osk (Close Quarters)"
     "Far Osk 27" 7
   variant 2
-    "Kar Ik Vot 349 (Trapper)"
+    "Kar Ik Vot 349"
     "Tek Far 71 - Lek (Close Quarters)"
     "Far Lek 14" 7
     "Tek Far 78 - Osk (Close Quarters)"
     "Far Osk 27" 6
-  variant 2
+  variant 5
     "Kar Ik Vot 349"
-  variant 1
-    "Kar Ik Vot 349 (Defense)"
-  variant 1
-    "Kar Ik Vot 349 (Offense)"
-  variant 1
-    "Kar Ik Vot 349 (Trapper)"
   variant 2
     "Kar Ik Vot 349"
     "Met Par Tek 53" 3
   variant 1
-    "Kar Ik Vot 349 (Defense)"
+    "Kar Ik Vot 349"
     "Met Par Tek 53" 2
     "Met Par Tek 53 (Sniper)"
   variant 1
-    "Kar Ik Vot 349 (Offense)"
+    "Kar Ik Vot 349"
     "Met Par Tek 53"
     "Met Par Tek 53 (Sniper)" 2
   variant 1
-    "Kar Ik Vot 349 (Trapper)"
+    "Kar Ik Vot 349"
     "Met Par Tek 53 (Sniper)" 3
   variant 5
     "Tek Far 109" 3
@@ -3578,7 +3572,7 @@ fleet "Unfettered Raid"
 
 
 # Wanderer
-fleet "Wanderer Defense"
+fleet "Wanderer Defence"
   government "Wanderer"
   names "wanderer"
   personality

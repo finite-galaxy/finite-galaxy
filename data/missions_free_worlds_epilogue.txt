@@ -57,7 +57,7 @@ mission "FW Epilogue: Alondo"
           defer
       `  You meet up with Alondo at a local pub. He tells you that his life has continued to be quite full since the war ended and the Council was dissolved: he's been placed in charge of the Free Worlds diplomatic corps, whose main job appears to be to make sure all the individual worlds within the coalition feel like their concerns are being listened to. "It means lots of travel," he says, "and lots of fine meals with important people. And they're always interested to hear my stories from the war times."`
       `  You tell Alondo a bit about what you've been doing since the war ended. "Of course," he says, "you're traveling the galaxy. I knew from the start you weren't the kind who would quickly put down roots on a single planet."`
-      `  Alondo goes on to describe some of the inner workings of the Free Worlds Senate, and the mutual defense arrangement that forms the backbone of the coalition. "For a while there," he says, "it felt like there was so much bureaucracy that we couldn't get anything done, but now it's finally starting to function in the way all of us imagined. Quite an honor to have had a hand in the birth of a new government."`
+      `  Alondo goes on to describe some of the inner workings of the Free Worlds Senate, and the mutual defence arrangement that forms the backbone of the coalition. "For a while there," he says, "it felt like there was so much bureaucracy that we couldn't get anything done, but now it's finally starting to function in the way all of us imagined. Quite an honor to have had a hand in the birth of a new government."`
       choice
         `  "Spoken like a true bureaucrat."`
           goto bureaucrat
@@ -157,7 +157,7 @@ mission "FW Epilogue: Danforth"
         goto end
       
       label work
-      `  "Just the sort of work we all signed up for in the first place," he says. "Defending the defenseless, keeping the peace, helping silly novice pilots who run out of fuel."`
+      `  "Just the sort of work we all signed up for in the first place," he says. "Defending the defenceless, keeping the peace, helping silly novice pilots who run out of fuel."`
         goto end
       
       label end

@@ -2,8 +2,8 @@ shipyard "Sestor Variants"
   "Far Lek 14"
   "Far Osk 27"
   "Kar Ik Vot 349"
-  "Kar Ik Vot 349 (Defense)"
-  "Kar Ik Vot 349 (Offense)"
+  "Kar Ik Vot 349 (Defensive)"
+  "Kar Ik Vot 349 (Offensive)"
   "Kar Ik Vot 349 (Trapper)"
   "Met Par Tek 53"
   "Met Par Tek 53 (Sniper)"
@@ -28,8 +28,8 @@ ship "Far Lek 14"
     "drag" .8
     "heat dissipation" 1.1
     "outfit space" 65
-    "weapon capacity" 11
-    "engine capacity" 24
+      "engine capacity" 24
+      "weapon capacity" 11
     "self destruct" .9
     weapon
       "blast radius" 5
@@ -37,11 +37,13 @@ ship "Far Lek 14"
       "hull damage" 25
       "hit force" 75
   outfits
-    "Repeater Cannon"
-    "Generator (Candle Class)"
-    "Small Heat Shunt"
     "Thruster (Asteroid Class)"
     "Steering (Asteroid Class)"
+
+    "Repeater Cannon"
+
+    "Generator (Candle Class)"
+    "Small Heat Shunt"
   engine -2 28
   engine 8 28
   gun 0 -30
@@ -64,8 +66,8 @@ ship "Far Osk 27"
     "drag" 1.1
     "heat dissipation" 1.0
     "outfit space" 99
-    "weapon capacity" 22
-    "engine capacity" 24
+      "engine capacity" 24
+      "weapon capacity" 22
     "self destruct" .9
     weapon
       "blast radius" 12
@@ -73,11 +75,13 @@ ship "Far Osk 27"
       "hull damage" 60
       "hit force" 180
   outfits
-    "Repeater Cannon" 2
-    "Generator (Furnace Class)"
-    "Small Heat Shunt" 2
     "Thruster (Asteroid Class)"
     "Steering (Asteroid Class)"
+
+    "Repeater Cannon" 2
+
+    "Generator (Furnace Class)"
+    "Small Heat Shunt" 2
   engine -4 37
   engine 4 37
   gun 7 -15
@@ -102,8 +106,8 @@ ship "Kar Ik Vot 349"
     "heat dissipation" .5
     "cargo space" 87
     "outfit space" 1084
-    "weapon capacity" 447
-    "engine capacity" 173
+      "engine capacity" 173
+      "weapon capacity" 447
     "self destruct" .9
     "ramscoop" 2
     weapon
@@ -112,19 +116,21 @@ ship "Kar Ik Vot 349"
       "hull damage" 3200
       "hit force" 9600
   outfits
-    "Detainer" 2
-    "Piercer Launcher" 2
+    "Thruster (Planetary Class)"
+    "Steering (Stellar Class)"
+
     "Piercer" 62
-    "Warder" 2
+    "Piercer Launcher" 2
+    "Detainer" 2
     "Repeater Turret" 6
+    "Warder" 2
+
+    "Systems Core (Large)"
     "Triple Plasma Core"
     "Plasma Core"
-    "Systems Core (Large)"
     "Large Heat Shunt" 4
     "Small Heat Shunt" 2
     "Control Transceiver"
-    "Thruster (Planetary Class)"
-    "Steering (Stellar Class)"
     "Fuel Processor"
     "Hyperdrive"
   engine -24 237
@@ -149,25 +155,28 @@ ship "Kar Ik Vot 349"
   "final explode" "final explosion large"
   description "The largest and deadliest of the Kor Sestor robotic warships, a single one of these battlecruisers can hold its own against an entire fleet of lesser ships."
 
-ship "Kar Ik Vot 349" "Kar Ik Vot 349 (Defense)"
+
+ship "Kar Ik Vot 349" "Kar Ik Vot 349 (Defensive)"
   outfits
-    "Piercer Launcher" 4
-    "Piercer" 124
-    "Warder" 3
-    "Grab-Striker" 3
-    "Banisher" 2
-    "Triple Plasma Core"
-    "Plasma Core"
-    "Systems Core (Large)"
-    "Systems Core (Medium)"
-    "Large Heat Shunt" 3
-    "Outfits Expansion"
-    "Control Transceiver"
     "Thruster (Stellar Class)"
     "Steering (Planetary Class)"
+
+    "Piercer" 124
+    "Piercer Launcher" 4
+    "Banisher" 2
+    "Grab-Striker" 4
+    "Warder" 2
+
+    "Systems Core (Large)"
+    "Systems Core (Medium)"
+    "Triple Plasma Core"
+    "Plasma Core"
+    "Large Heat Shunt" 3
+    "Control Transceiver"
     "Fuel Processor"
     "Hyperdrive"
-  turret "Warder"
+    "Outfits Expansion"
+  turret "Grab-Striker"
   turret "Grab-Striker"
   turret "Grab-Striker"
   turret "Grab-Striker"
@@ -176,24 +185,27 @@ ship "Kar Ik Vot 349" "Kar Ik Vot 349 (Defense)"
   turret "Warder"
   turret "Warder"
 
-ship "Kar Ik Vot 349" "Kar Ik Vot 349 (Offense)"
+
+ship "Kar Ik Vot 349" "Kar Ik Vot 349 (Offensive)"
   outfits
-    "Piercer Launcher" 4
-    "Piercer" 124
-    "Repeater Turret" 6
-    "Grab-Striker" 2
-    "Triple Plasma Core"
-    "Plasma Core"
-    "Systems Core (Large)"
-    "Systems Core (Medium)"
-    "Large Heat Shunt" 5
-    "Outfits Expansion"
-    "Control Transceiver"
     "Thruster (Planetary Class)"
     "Thruster (Asteroid Class)"
     "Steering (Stellar Class)"
+
+    "Piercer" 124
+    "Piercer Launcher" 4
+    "Repeater Turret" 6
+    "Grab-Striker" 2
+
+    "Systems Core (Large)"
+    "Systems Core (Medium)"
+    "Triple Plasma Core"
+    "Plasma Core"
+    "Large Heat Shunt" 5
+    "Control Transceiver"
     "Fuel Processor"
     "Hyperdrive"
+    "Outfits Expansion"
   turret "Repeater Turret"
   turret "Repeater Turret"
   turret "Repeater Turret"
@@ -203,23 +215,26 @@ ship "Kar Ik Vot 349" "Kar Ik Vot 349 (Offense)"
   turret "Grab-Striker"
   turret "Grab-Striker"
 
+
 ship "Kar Ik Vot 349" "Kar Ik Vot 349 (Trapper)"
   outfits
-    "Detainer" 2
-    "Grab-Striker" 4
-    "Banisher" 2
-    "Triple Plasma Core"
-    "Double Plasma Core"
-    "Systems Core (Large)"
-    "Systems Core (Medium)"
-    "Large Heat Shunt" 3
-    "Small Heat Shunt"
-    "Outfits Expansion" 4
-    "Control Transceiver"
     "Thruster (Planetary Class)"
     "Steering (Stellar Class)"
+
+    "Detainer" 2
+    "Banisher" 2
+    "Grab-Striker" 4
+
+    "Systems Core (Large)"
+    "Systems Core (Medium)"
+    "Triple Plasma Core"
+    "Double Plasma Core"
+    "Large Heat Shunt" 3
+    "Small Heat Shunt"
+    "Control Transceiver"
     "Fuel Processor"
     "Hyperdrive"
+    "Outfits Expansion" 4
   gun "Detainer"
   gun "Detainer"
   gun
@@ -249,8 +264,8 @@ ship "Met Par Tek 53"
     "heat dissipation" .8
     "cargo space" 26
     "outfit space" 640
-    "weapon capacity" 213
-    "engine capacity" 110
+      "engine capacity" 110
+      "weapon capacity" 213
     "self destruct" .9
     "ramscoop" 2
     weapon
@@ -259,22 +274,25 @@ ship "Met Par Tek 53"
       "hull damage" 1600
       "hit force" 4800
   outfits
-    "Repeater Cannon" 3
-    "Repeater Turret" 6
-    "Double Plasma Core"
-    "Generator (Inferno Class)"
-    "Systems Core (Medium)"
-    "Large Heat Shunt" 3
-    "Control Transceiver"
     "Thruster (Lunar Class)"
     "Steering (Planetary Class)"
+
+    "Piercer" 31
+    "Piercer Launcher"
+    "Repeater Turret" 6
+
+    "Systems Core (Medium)"
+    "Double Plasma Core"
+    "Generator (Inferno Class)"
+    "Large Heat Shunt" 3
+    "Control Transceiver"
     "Fuel Processor"
     "Hyperdrive"
   engine -24 132
   engine 24 132
-  gun 0 -92 "Repeater Cannon"
-  gun -10 -65 "Repeater Cannon"
-  gun 10 -65 "Repeater Cannon"
+  gun 0 -92 "Piercer Launcher"
+  gun -10 -65
+  gun 10 -65
   turret -36 -45 "Repeater Turret"
   turret 36 -45 "Repeater Turret"
   turret -38 -28 "Repeater Turret"
@@ -289,33 +307,29 @@ ship "Met Par Tek 53"
   "final explode" "final explosion medium"
   description "Although this is the smallest Kor Sestor ship other than their fighters, it is larger than most human capital ships and considerably more powerful."
 
+
 ship "Met Par Tek 53" "Met Par Tek 53 (Sniper)"
   outfits
-    "Detainer"
-    "Piercer Launcher" 2
-    "Piercer" 62
-    "Grab-Striker"
-    "Warder"
-    "Double Plasma Core"
-    "Generator (Inferno Class)"
-    "Generator (Candle Class)"
-    "Systems Core (Medium)"
-    "Large Heat Shunt"
-    "Control Transceiver"
     "Thruster (Lunar Class)"
     "Steering (Planetary Class)"
     "Steering (Comet Class)"
+
+    "Piercer" 62
+    "Piercer Launcher" 2
+    "Detainer"
+    "Banisher" 2
+
+    "Systems Core (Medium)"
+    "Double Plasma Core"
+    "Generator (Inferno Class)"
+    "Generator (Candle Class)"
+    "Large Heat Shunt"
+    "Control Transceiver"
     "Fuel Processor"
     "Hyperdrive"
   gun "Detainer"
   gun "Piercer Launcher"
   gun "Piercer Launcher"
-  turret "Grab-Striker"
-  turret "Warder"
-  turret
-  turret
-  turret
-  turret
 
 
 
@@ -333,8 +347,8 @@ ship "Tek Far 71 - Lek"
     "heat dissipation" .6
     "cargo space" 36
     "outfit space" 563
-    "weapon capacity" 235
-    "engine capacity" 102
+      "engine capacity" 102
+      "weapon capacity" 235
     "self destruct" .9
     "ramscoop" 2
     weapon
@@ -343,18 +357,20 @@ ship "Tek Far 71 - Lek"
       "hull damage" 2000
       "hit force" 6000
   outfits
-    "Detainer"
-    "Piercer Launcher" 2
-    "Piercer" 62
-    "Banisher"
-    "Warder" 2
-    "Double Plasma Core"
-    "Generator (Furnace Class)"
-    "Systems Core (Medium)"
-    "Large Heat Shunt"
-    "Control Transceiver"
     "Thruster (Lunar Class)"
     "Steering (Lunar Class)"
+
+    "Piercer" 62
+    "Piercer Launcher" 2
+    "Detainer"
+    "Banisher"
+    "Warder" 2
+
+    "Systems Core (Medium)"
+    "Double Plasma Core"
+    "Generator (Furnace Class)"
+    "Large Heat Shunt"
+    "Control Transceiver"
     "Fuel Processor"
     "Hyperdrive"
   engine -9 219
@@ -384,22 +400,25 @@ ship "Tek Far 71 - Lek"
   "final explode" "final explosion large"
   description "The Kor Sestor war fleets rely heavily on small, powerful fighters and drones. This ship can carry up to ten of their drones, clamped to the exterior of its hull."
 
+
 ship "Tek Far 71 - Lek" "Tek Far 71 - Lek (Close Quarters)"
   outfits
+    "Thruster (Lunar Class)"
+    "Steering (Lunar Class)"
+
     "Detainer"
     "Repeater Turret" 3
     "Warder"
+
+    "Systems Core (Medium)"
     "Double Plasma Core"
     "Generator (Furnace Class)"
-    "Systems Core (Medium)"
     "Large Heat Shunt" 2
     "Small Heat Shunt"
-    "Outfits Expansion"
     "Control Transceiver"
-    "Thruster (Lunar Class)"
-    "Steering (Lunar Class)"
     "Fuel Processor"
     "Hyperdrive"
+    "Outfits Expansion"
   turret "Repeater Turret"
   turret "Repeater Turret"
   turret "Warder"
@@ -421,8 +440,8 @@ ship "Tek Far 78 - Osk"
     "heat dissipation" .55
     "cargo space" 43
     "outfit space" 641
-    "weapon capacity" 272
-    "engine capacity" 117
+      "engine capacity" 117
+      "weapon capacity" 272
     "self destruct" .9
     "ramscoop" 2
     weapon
@@ -431,18 +450,20 @@ ship "Tek Far 78 - Osk"
       "hull damage" 2200
       "hit force" 6600
   outfits
-    "Detainer"
-    "Piercer Launcher" 3
-    "Piercer" 93
-    "Banisher"
-    "Warder" 2
-    "Double Plasma Core"
-    "Generator (Inferno Class)"
-    "Systems Core (Medium)"
-    "Large Heat Shunt"
-    "Control Transceiver"
     "Thruster (Lunar Class)"
     "Steering (Planetary Class)"
+
+    "Piercer" 93
+    "Piercer Launcher" 3
+    "Detainer"
+    "Banisher"
+    "Warder" 2
+
+    "Systems Core (Medium)"
+    "Double Plasma Core"
+    "Generator (Inferno Class)"
+    "Large Heat Shunt"
+    "Control Transceiver"
     "Fuel Processor"
     "Hyperdrive"
   engine -9 245
@@ -473,20 +494,23 @@ ship "Tek Far 78 - Osk"
   "final explode" "final explosion large"
   description "This carrier is equipped with docking clamps for up to nine fighters. When loaded with a full complement of the powerful Kor Sestor robotic fighters, it is a formidable opponent."
 
+
 ship "Tek Far 78 - Osk" "Tek Far 78 - Osk (Close Quarters)"
   outfits
-    "Detainer"
-    "Warder" 2
-    "Repeater Turret" 3
-    "Triple Plasma Core"
-    "Systems Core (Medium)"
-    "Large Heat Shunt" 3
-    "Outfits Expansion"
-    "Control Transceiver"
     "Thruster (Lunar Class)"
     "Steering (Planetary Class)"
+
+    "Detainer"
+    "Repeater Turret" 3
+    "Warder" 2
+
+    "Systems Core (Medium)"
+    "Triple Plasma Core"
+    "Large Heat Shunt" 3
+    "Control Transceiver"
     "Fuel Processor"
     "Hyperdrive"
+    "Outfits Expansion"
   turret "Warder"
   turret "Repeater Turret"
   turret "Repeater Turret"
@@ -509,8 +533,8 @@ ship "Tek Far 109"
     "heat dissipation" .65
     "cargo space" 31
     "outfit space" 521
-    "weapon capacity" 217
-    "engine capacity" 98
+      "engine capacity" 98
+      "weapon capacity" 217
     "self destruct" .9
     "ramscoop" 2
     weapon
@@ -519,16 +543,18 @@ ship "Tek Far 109"
       "hull damage" 1600
       "hit force" 4800
   outfits
-    "Detainer"
-    "Piercer Launcher" 2
-    "Piercer" 62
-    "Banisher" 2
-    "Double Plasma Core"
-    "Systems Core (Medium)"
-    "Small Heat Shunt" 2
-    "Control Transceiver"
     "Thruster (Lunar Class)"
     "Steering (Planetary Class)"
+
+    "Piercer" 62
+    "Piercer Launcher" 2
+    "Detainer"
+    "Banisher" 2
+
+    "Systems Core (Medium)"
+    "Double Plasma Core"
+    "Small Heat Shunt" 2
+    "Control Transceiver"
     "Fuel Processor"
     "Hyperdrive"
   engine -9 205

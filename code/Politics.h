@@ -25,8 +25,8 @@ public:
   
   bool IsEnemy(const Government *first, const Government *second) const;
   
-  // Commit the given "offense" against the given government (which may not
-  // actually consider it to be an offense). This may result in temporary
+  // Commit the given "offence" against the given government (which may not
+  // actually consider it to be an offence). This may result in temporary
   // hostilities (if the event type is PROVOKE), or a permanent change to your
   // reputation.
   void Offend(const Government *gov, int eventType, int count = 1);

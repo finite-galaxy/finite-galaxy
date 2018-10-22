@@ -22,8 +22,8 @@ ship "Arfecta"
     "heat dissipation" .8
     "cargo space" 64
     "outfit space" 740
-    "weapon capacity" 390
-    "engine capacity" 220
+      "engine capacity" 220
+      "weapon capacity" 390
     "fuel generation" .20
     "energy capacity" 10000
     "energy generation" 200
@@ -39,14 +39,16 @@ ship "Arfecta"
       "hull damage" 4500
       "hit force" 7000
   outfits
-    "Tier 3 Anti-Missile" 2
-    "Gridfire Turret" 3
-    "Biodefences" 12
-    "Cloaking Device"
     "Lohmar Thruster"
     "Lohmar Steering" 2
+
+    "Tier 3 Anti-Missile" 2
+    "Gridfire Turret" 3
+
+    "Cloaking Device"
     "Fuel Pod" 12
     "Jump Drive"
+    "Biodefences" 12
   engine -15 164
   engine 15 164
   turret -50 -29 "Tier 3 Anti-Missile"
@@ -79,8 +81,8 @@ ship "Enfolta"
     "heat dissipation" .7
     "cargo space" 40
     "outfit space" 410
-    "weapon capacity" 184
-    "engine capacity" 106
+      "engine capacity" 106
+      "weapon capacity" 184
     "fuel generation" .10
     "energy capacity" 2000
     "energy generation" 22
@@ -94,14 +96,16 @@ ship "Enfolta"
       "hull damage" 360
       "hit force" 1080
   outfits
+    "Cormet Thruster"
+    "Cormet Steering"
+
     "Seeker" 2
     "Zapper Cannon" 2
     "Zapper Turret"
-    "Biodefences" 6
-    "Cormet Thruster"
-    "Cormet Steering"
+
     "Fuel Pod" 6
     "Jump Drive"
+    "Biodefences" 6
   engine -11 68
   engine 11 68
   gun -11 -85 "Zapper Cannon"
@@ -134,8 +138,8 @@ ship "Maboro"
     "heat dissipation" .6
     "cargo space" 70
     "outfit space" 610
-    "weapon capacity" 309
-    "engine capacity" 148
+      "engine capacity" 148
+      "weapon capacity" 309
     "fuel generation" .15
     "energy capacity" 4000
     "energy generation" 32
@@ -149,14 +153,16 @@ ship "Maboro"
       "hull damage" 600
       "hit force" 1800
   outfits
+    "Lohmar Thruster"
+    "Lohmar Steering"
+
     "Seeker" 4
     "Zapper Turret" 2
     "Pug Anti-Missile"
-    "Biodefences" 8
-    "Lohmar Thruster"
-    "Lohmar Steering"
+
     "Fuel Pod" 6
     "Jump Drive"
+    "Biodefences" 8
   engine -20 136
   engine 20 136
   gun -20 -150 "Seeker"
@@ -191,8 +197,8 @@ ship "Zibruka"
     "heat dissipation" .8
     "cargo space" 20
     "outfit space" 230
-    "weapon capacity" 68
-    "engine capacity" 76
+      "engine capacity" 76
+      "weapon capacity" 68
     "energy capacity" 1000
     "fuel generation" .05
     "energy generation" 10
@@ -206,12 +212,14 @@ ship "Zibruka"
       "hull damage" 200
       "hit force" 600
   outfits
-    "Zapper Cannon" 2
-    "Biodefences" 4
     "Akfar Thruster"
     "Akfar Steering"
+
+    "Zapper Cannon" 2
+
     "Fuel Pod" 6
     "Jump Drive"
+    "Biodefences" 4
   engine -7 35
   engine 7 35
   gun -15 -42 "Zapper Cannon"

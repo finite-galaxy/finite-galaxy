@@ -2257,7 +2257,7 @@ mission "Raid on Merchants (South)"
 
 
 
-mission "Northern Pirate Defense"
+mission "Northern Pirate Defence"
   name "Defend <planet>"
   repeat
   minor
@@ -2279,12 +2279,12 @@ mission "Northern Pirate Defense"
     fleet "Large Northern Pirates"
     fleet "Small Northern Pirates"
   on offer
-    conversation "northern pirate defense"
+    conversation "northern pirate defence"
   on complete
     payment 200000
     dialog `Many locals of <planet> thank you and collectively pay you <payment> for helping to drive off the Navy.`
 
-mission "Northern Pirate Defense [Unpaid]"
+mission "Northern Pirate Defence [Unpaid]"
   name "Defend <planet>"
   repeat
   minor
@@ -2307,21 +2307,21 @@ mission "Northern Pirate Defense [Unpaid]"
     fleet "Large Northern Pirates"
     fleet "Small Northern Pirates"
   on offer
-    conversation "northern pirate defense"
+    conversation "northern pirate defence"
   on complete
     dialog `Many locals of <planet> thank you for helping to drive off the Navy.`
 
-conversation "northern pirate defense"
-  `Suddenly you hear raised voices and shouting outside: "We are under attack! <planet> is under attack by the Navy! We need every combat-worthy ship to join the defenses!" This could be an easy way to get yourself killed, and you can't even guarantee that you will be paid for your work.`
+conversation "northern pirate defence"
+  `Suddenly you hear raised voices and shouting outside: "We are under attack! <planet> is under attack by the Navy! We need every combat-worthy ship to join the defences!" This could be an easy way to get yourself killed, and you can't even guarantee that you will be paid for your work.`
   choice
     `  (Stay here until the fight is over.)`
       decline
-    `  (Join the defense fleet.)`
+    `  (Join the defence fleet.)`
   `  Local pirate forces are preparing to repel the Navy attack. You join them, and take off together...`
     launch
 
 
-mission "Core Pirate Defense"
+mission "Core Pirate Defence"
   name "Defend <planet>"
   repeat
   minor
@@ -2343,12 +2343,12 @@ mission "Core Pirate Defense"
     personality plunders staying
     fleet "Small Core Pirates" 2
   on offer
-    conversation "core pirate defense"
+    conversation "core pirate defence"
   on complete
     payment 200000
     dialog `Many locals of <planet> thank you and collectively pay you <payment> for helping to drive off the Syndicate.`
 
-mission "Core Pirate Defense [Unpaid]"
+mission "Core Pirate Defence [Unpaid]"
   name "Defend <planet>"
   repeat
   minor
@@ -2370,21 +2370,21 @@ mission "Core Pirate Defense [Unpaid]"
     personality plunders staying
     fleet "Small Core Pirates" 2
   on offer
-    conversation "core pirate defense"
+    conversation "core pirate defence"
   on complete
     dialog `Many locals of <planet> thank you for helping to drive off the Syndicate.`
 
-conversation "core pirate defense"
-  `Suddenly you hear raised voices and shouting outside: "We are under attack! <planet> is under attack by the Syndicate! We need every combat-worthy ship to join the defenses!" This could be an easy way to get yourself killed, and you can't even guarantee that you will be paid for your work.`
+conversation "core pirate defence"
+  `Suddenly you hear raised voices and shouting outside: "We are under attack! <planet> is under attack by the Syndicate! We need every combat-worthy ship to join the defences!" This could be an easy way to get yourself killed, and you can't even guarantee that you will be paid for your work.`
   choice
     `  (Stay here until the fight is over.)`
       decline
-    `  (Join the defense fleet.)`
+    `  (Join the defence fleet.)`
   `  Local pirate forces are preparing to repel the Syndicate attack. You join them, and take off together...`
     launch
 
 
-mission "Southern Pirate Defense"
+mission "Southern Pirate Defence"
   name "Defend <planet>"
   repeat
   minor
@@ -2406,12 +2406,12 @@ mission "Southern Pirate Defense"
     personality plunders staying
     fleet "Small Southern Pirates" 2
   on offer
-    conversation "southern pirate defense"
+    conversation "southern pirate defence"
   on complete
     payment 200000
     dialog `Many locals of <planet> thank you and collectively pay you <payment> for helping to drive off the militia forces.`
 
-mission "Southern Pirate Defense [Unpaid]"
+mission "Southern Pirate Defence [Unpaid]"
   name "Defend <planet>"
   repeat
   minor
@@ -2433,27 +2433,20 @@ mission "Southern Pirate Defense [Unpaid]"
     personality plunders staying
     fleet "Small Southern Pirates" 2
   on offer
-    conversation "southern pirate defense"
+    conversation "southern pirate defence"
   on complete
     dialog `Many locals of <planet> thank you for helping to drive off the militia forces.`
 
-conversation "southern pirate defense"
-  `Suddenly you hear raised voices and shouting outside: "We are under attack! <planet> is under attack by the militia! We need every combat-worthy ship to join the defenses!" This could be an easy way to get yourself killed, and you can't even guarantee that you will be paid for your work.`
+conversation "southern pirate defence"
+  `Suddenly you hear raised voices and shouting outside: "We are under attack! <planet> is under attack by the militia! We need every combat-worthy ship to join the defences!" This could be an easy way to get yourself killed, and you can't even guarantee that you will be paid for your work.`
   choice
     `  (Stay here until the fight is over.)`
       decline
-    `  (Join the defense fleet.)`
+    `  (Join the defence fleet.)`
   `  Local pirate forces are preparing to repel the militia attack. You join them, and take off together...`
     launch
 
 
-
-outfit "Secret Cargo"
-  category "Special"
-  cost 0
-  thumbnail "outfit/unknown"
-  "mass" 1
-  description "Cargo stolen from a merchant ship which has caught the interest of a pirate warlord."
 
 mission "Cargo Theft (North)"
   name "Convoy near <system>"

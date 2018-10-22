@@ -41,23 +41,25 @@ ship "Blackbird"
     "heat dissipation" .7
     "cargo space" 60
     "outfit space" 420
-    "weapon capacity" 90
-    "engine capacity" 110
+      "engine capacity" 110
+      "weapon capacity" 90
     weapon
       "blast radius" 60
       "shield damage" 600
       "hull damage" 300
       "hit force" 900
   outfits
-    "Heavy Anti-Missile Turret" 2
-    "S3 Thermionic"
-    "LP072a Battery Pack"
-    "D23-QP Shield Generator"
-    "Small Radar Jammer"
     "Impala Plasma Thruster"
     "Impala Plasma Steering"
+
+    "Heavy Anti-Missile Turret" 2
+
+    "D23-QP Shield Generator"
+    "S3 Thermionic"
+    "LP072a Battery Pack"
     "Fuel Barrel" 70
     "Hyperdrive"
+    "Small Radar Jammer"
   engine -40 55
   engine 40 55
   turret -18 0 "Heavy Anti-Missile Turret"
@@ -88,25 +90,27 @@ ship "Falcon"
     "heat dissipation" .7
     "cargo space" 80
     "outfit space" 600
-    "weapon capacity" 240
-    "engine capacity" 150
+      "engine capacity" 150
+      "weapon capacity" 240
     weapon
       "blast radius" 160
       "shield damage" 1600
       "hull damage" 800
       "hit force" 2400
   outfits
-    "Plasma Cannon" 2
-    "4X Blaster Turret" 4
-    "Breeder Reactor"
-    "LP144a Battery Pack"
-    "D41-HY Shield Generator"
-    "Large Radar Jammer"
-    "Liquid Nitrogen Cooler"
     "Impala Plasma Thruster"
     "Impala Plasma Steering"
+
+    "Plasma Cannon" 2
+    "4X Blaster Turret" 4
+
+    "D41-HY Shield Generator"
+    "Breeder Reactor"
+    "LP144a Battery Pack"
+    "Liquid Nitrogen Cooler"
     "Fuel Barrel" 60
     "Hyperdrive"
+    "Large Radar Jammer"
   engine -17 143
   engine 17 143
   gun -17 -88 "Plasma Cannon"
@@ -125,46 +129,53 @@ ship "Falcon"
   "final explode" "final explosion medium"
   description "The Tarazed Falcon is one of the most powerful warships that civilians can buy, a sleeker and more maneuverable alternative to the venerable and somewhat outdated Leviathan."
 
+
 ship "Falcon" "Falcon (Heavy)"
   outfits
-    "Torpedo Launcher" 2
-    "Torpedo" 60
-    "Heavy Laser Turret" 4
-    "Fusion Reactor"
-    "D67-TM Shield Generator"
-    "Large Radar Jammer"
     "Orca Plasma Thruster"
     "A375 Atomic Steering"
+
+    "Torpedo" 60
+    "Torpedo Launcher" 2
+    "Heavy Laser Turret" 4
+
+    "D67-TM Shield Generator"
+    "Fusion Reactor"
     "Fuel Barrel" 60
     "Hyperdrive"
-  gun "Torpedo Launcher"
-  gun "Torpedo Launcher"
+    "Large Radar Jammer"
+
 
 ship "Falcon" "Falcon (Laser)"
   outfits
-    "Heavy Laser" 2
-    "Heavy Laser Turret" 4
-    "Breeder Reactor"
-    "LP072a Battery Pack"
-    "D94-YV Shield Generator"
-    "Small Radar Jammer"
     "Impala Plasma Thruster"
     "Orca Plasma Steering"
+
+    "Heavy Laser" 2
+    "Heavy Laser Turret" 4
+
+    "D94-YV Shield Generator"
+    "Breeder Reactor"
+    "LP072a Battery Pack"
     "Fuel Barrel" 60
     "Hyperdrive"
+    "Small Radar Jammer"
+
 
 ship "Falcon" "Falcon (Plasma)"
   outfits
-    "Plasma Turret" 4
-    "Breeder Reactor"
-    "LP144a Battery Pack"
-    "D41-HY Shield Generator"
-    "Small Radar Jammer"
-    "Liquid Nitrogen Cooler"
     "Impala Plasma Thruster"
     "Impala Plasma Steering"
+
+    "Plasma Turret" 4
+
+    "D41-HY Shield Generator"
+    "Breeder Reactor"
+    "LP144a Battery Pack"
+    "Liquid Nitrogen Cooler"
     "Fuel Barrel" 60
     "Hyperdrive"
+    "Small Radar Jammer"
 
 
 
@@ -183,20 +194,22 @@ ship "Finch"
     "drag" .83
     "heat dissipation" .85
     "outfit space" 110
-    "weapon capacity" 20
-    "engine capacity" 40
+      "engine capacity" 40
+      "weapon capacity" 20
     weapon
       "blast radius" 12
       "shield damage" 120
       "hull damage" 60
       "hit force" 180
   outfits
-    "Beam Laser" 2
-    "nGVF-BB Fuel Cell"
-    "LP036a Battery Pack"
-    "D14-RN Shield Generator"
     "Chipmunk Plasma Thruster"
     "Chipmunk Plasma Steering"
+
+    "Beam Laser" 2
+
+    "D14-RN Shield Generator"
+    "nGVF-BB Fuel Cell"
+    "LP036a Battery Pack"
   engine -5 32
   engine 5 32
   gun -7 -14 "Beam Laser"
@@ -223,20 +236,22 @@ ship "Hawk"
     "heat dissipation" .8
     "cargo space" 20
     "outfit space" 230
-    "weapon capacity" 50
-    "engine capacity" 70
+      "engine capacity" 70
+      "weapon capacity" 50
     weapon
       "blast radius" 30
       "shield damage" 300
       "hull damage" 150
       "hit force" 450
   outfits
-    "Heavy Laser" 2
-    "nGVF-CC Fuel Cell"
-    "LP036a Battery Pack"
-    "D23-QP Shield Generator"
     "Greyhound Plasma Thruster"
     "Greyhound Plasma Steering"
+
+    "Heavy Laser" 2
+
+    "D23-QP Shield Generator"
+    "nGVF-CC Fuel Cell"
+    "LP036a Battery Pack"
     "Fuel Barrel" 30
     "Hyperdrive"
   engine -24 41
@@ -249,26 +264,32 @@ ship "Hawk"
   "final explode" "final explosion small"
   description "The Tarazed Hawk is an interceptor-class warship often used as an escort for freighters or in a planetary militia's patrol squadron. Hawks are fast enough to chase down most smaller ships, while also being much more heavily armed and armored. They are also, of course, a favorite ship of pirate captains who have earned enough money to afford one."
 
+
 ship "Hawk" "Hawk (Rocket)"
   outfits
-    "Heavy Rocket Launcher" 2
-    "Heavy Rocket" 40
-    "RT-I Radiothermal"
-    "Supercapacitor" 2
-    "D41-HY Shield Generator"
     "Greyhound Plasma Thruster"
     "Greyhound Plasma Steering"
+
+    "Heavy Rocket" 40
+    "Heavy Rocket Launcher" 2
+
+    "D41-HY Shield Generator"
+    "RT-I Radiothermal"
+    "Supercapacitor" 2
     "Fuel Barrel" 30
     "Hyperdrive"
 
+
 ship "Hawk" "Hawk (Speedy)"
   outfits
-    "Heavy Laser" 2
-    "S3 Thermionic"
-    "Supercapacitor" 3
-    "D41-HY Shield Generator"
     "A250 Atomic Thruster"
     "A255 Atomic Steering"
+
+    "Heavy Laser" 2
+
+    "D41-HY Shield Generator"
+    "S3 Thermionic"
+    "Supercapacitor" 3
     "Fuel Barrel" 30
     "Hyperdrive"
 
@@ -289,23 +310,25 @@ ship "Kestrel"
     "heat dissipation" .6
     "cargo space" 120
     "outfit space" 870
-    "weapon capacity" 390
-    "engine capacity" 210
+      "engine capacity" 210
+      "weapon capacity" 390
     weapon
       "blast radius" 260
       "shield damage" 2600
       "hull damage" 1300
       "hit force" 3900
   outfits
-    "Torpedo Launcher" 6
-    "Torpedo" 180
-    "Heavy Laser Turret" 4
-    "Fusion Reactor"
-    "LP144a Battery Pack"
-    "D94-YV Shield Generator"
-    "Liquid Nitrogen Cooler"
     "Orca Plasma Thruster"
     "Orca Plasma Steering"
+
+    "Torpedo" 180
+    "Torpedo Launcher" 6
+    "Heavy Laser Turret" 4
+
+    "D94-YV Shield Generator"
+    "Fusion Reactor"
+    "LP144a Battery Pack"
+    "Liquid Nitrogen Cooler"
     "Fuel Barrel" 50
     "Hyperdrive"
   engine -14 177
@@ -327,14 +350,17 @@ ship "Kestrel"
   "final explode" "final explosion large"
   description "Several years ago, while visiting a sweat lodge in search of spiritual renewal, Tarazed's chief ship designer fell into a trance and journeyed to a reality separate from our own. There he saw visions of a strange and elegant starship. Returning to his work with renewed purpose, he spent the next seven years making the Kestrel a reality."
 
+
 ship "Kestrel" "Kestrel (More Engines)"
   add attributes
     "engine capacity" 30
+
 
 ship "Kestrel" "Kestrel (More Shields)"
   add attributes
     "shields" 2700
     "hull" 1300
+
 
 ship "Kestrel" "Kestrel (More Weapons)"
   add attributes
@@ -357,25 +383,27 @@ ship "Osprey"
     "heat dissipation" .8
     "cargo space" 40
     "outfit space" 510
-    "weapon capacity" 180
-    "engine capacity" 130
+      "engine capacity" 130
+      "weapon capacity" 180
     weapon
       "blast radius" 80
       "shield damage" 800
       "hull damage" 400
       "hit force" 1200
   outfits
-    "Plasma Cannon" 4
-    "4X Blaster Turret" 2
-    "Breeder Reactor"
-    "LP072a Battery Pack"
-    "D41-HY Shield Generator"
-    "Small Radar Jammer" 2
-    "Liquid Helium Cooler"
     "Impala Plasma Thruster"
     "Impala Plasma Steering"
+
+    "Plasma Cannon" 4
+    "4X Blaster Turret" 2
+
+    "D41-HY Shield Generator"
+    "Breeder Reactor"
+    "LP072a Battery Pack"
+    "Liquid Helium Cooler"
     "Fuel Barrel" 60
     "Hyperdrive"
+    "Small Radar Jammer" 2
   engine -40 67
   engine 40 67
   gun -8 -100 "Plasma Cannon"
@@ -394,55 +422,59 @@ ship "Osprey"
   "final explode" "final explosion medium"
   description "After the Blackbird gained surprising popularity as an agile light warship despite its original design as a transport, Tarazed decided to produce a new design specifically intended as a warship. The Osprey was the result. Although it is considered overpriced by most savvy pilots, it is nevertheless a perennial favorite among those who have the extra cash to spend on it."
 
+
 ship "Osprey" "Osprey (Alien Weapons)"
   outfits
+    `"Bondir" Atomic Thruster`
+    `"Bondir" Atomic Steering`
+
     "Ion Cannon" 2
     "Pulse Cannon" 2
     "Pulse Turret"
     "Chameleon Anti-Missile"
+
+    "Corundum Regenerator"
     "Boulder Reactor"
     "Fissure Batteries"
-    "Corundum Regenerator"
     "Liquid Nitrogen Cooler"
-    `"Bondir" Atomic Thruster`
-    `"Bondir" Atomic Steering`
     "Fuel Barrel" 60
     "Hyperdrive"
+
 
 ship "Osprey" "Osprey (Laser)"
   outfits
+    "Impala Plasma Thruster"
+    "X4200 Ion Steering"
+
     "Heavy Laser" 4
     "Heavy Laser Turret" 2
+
+    "D94-YV Shield Generator"
     "Breeder Reactor"
     "LP036a Battery Pack"
     "Supercapacitor" 4
-    "D94-YV Shield Generator"
     "Water Coolant System"
-    "Impala Plasma Thruster"
-    "X4200 Ion Steering"
     "Fuel Barrel" 60
     "Hyperdrive"
 
+
 ship "Osprey" "Osprey (Missile)"
   outfits
+    "A520 Atomic Thruster"
+    "A375 Atomic Steering"
     "Torpedo Launcher" 2
     "Torpedo" 60
     "Heavy Rocket Launcher" 2
     "Heavy Rocket" 40
     "Heavy Laser Turret" 2
+
+    "D41-HY Shield Generator"
     "Breeder Reactor"
     "LP036a Battery Pack"
     "Supercapacitor" 3
-    "D41-HY Shield Generator"
     "Water Coolant System"
-    "A520 Atomic Thruster"
-    "A375 Atomic Steering"
     "Fuel Barrel" 60
     "Hyperdrive"
-  gun "Heavy Rocket Launcher"
-  gun "Heavy Rocket Launcher"
-  gun "Torpedo Launcher"
-  gun "Torpedo Launcher"
 
 
 
@@ -461,20 +493,22 @@ ship "Raven"
     "heat dissipation" .8
     "cargo space" 30
     "outfit space" 330
-    "weapon capacity" 90
-    "engine capacity" 100
+      "engine capacity" 100
+      "weapon capacity" 90
     weapon
       "blast radius" 60
       "shield damage" 600
       "hull damage" 300
       "hit force" 900
   outfits
-    "Heavy Laser" 4
-    "RT-I Radiothermal"
-    "LP072a Battery Pack"
-    "D41-HY Shield Generator"
     "X3700 Ion Thruster"
     "X3200 Ion Steering"
+
+    "Heavy Laser" 4
+
+    "D41-HY Shield Generator"
+    "RT-I Radiothermal"
+    "LP072a Battery Pack"
     "Fuel Barrel" 50
     "Hyperdrive"
   engine -12 43
@@ -492,29 +526,35 @@ ship "Raven"
   "final explode" "final explosion small"
   description "The Tarazed Raven is their most popular warship, an agile and elegant vessel that can nevertheless deal out and absorb considerable damage. Ravens are a favorite ship for bounty hunters, because they are more than a match for pirate interceptors and can be used by a skilled pilot to take down much larger ships as well."
 
+
 ship "Raven" "Raven (Afterburner)"
   outfits
-    "Heavy Laser" 4
-    "NT-200 Nucleovoltaic"
-    "D41-HY Shield Generator"
     "X3700 Ion Thruster"
     "X3200 Ion Steering"
     "Afterburner"
+
+    "Heavy Laser" 4
+
+    "D41-HY Shield Generator"
+    "NT-200 Nucleovoltaic"
     "Fuel Barrel" 50
     "Hyperdrive"
 
+
 ship "Raven" "Raven (Heavy)"
   outfits
-    "Particle Cannon" 2
-    "Meteor Missile Launcher" 2
-    "Meteor Missile" 70
-    "Fission Reactor"
-    "Supercapacitor" 3
-    "D23-QP Shield Generator"
-    "Water Coolant System"
-    "Cooling Ducts"
     "A250 Atomic Thruster"
     "A375 Atomic Steering"
+
+    "Meteor Missile" 70
+    "Meteor Missile Launcher" 2
+    "Particle Cannon" 2
+
+    "D23-QP Shield Generator"
+    "Fission Reactor"
+    "Supercapacitor" 3
+    "Water Coolant System"
+    "Cooling Ducts"
     "Fuel Barrel" 50
     "Hyperdrive"
   gun "Particle Cannon"
@@ -539,20 +579,22 @@ ship "Sparrow"
     "heat dissipation" .8
     "cargo space" 15
     "outfit space" 160
-    "weapon capacity" 20
-    "engine capacity" 40
+      "engine capacity" 40
+      "weapon capacity" 20
     weapon
       "blast radius" 16
       "shield damage" 160
       "hull damage" 80
       "hit force" 240
   outfits
-    "Beam Laser" 2
-    "nGVF-BB Fuel Cell"
-    "LP036a Battery Pack"
-    "D14-RN Shield Generator"
     "Chipmunk Plasma Thruster"
     "Chipmunk Plasma Steering"
+
+    "Beam Laser" 2
+
+    "D14-RN Shield Generator"
+    "nGVF-BB Fuel Cell"
+    "LP036a Battery Pack"
     "Fuel Barrel" 30
     "Hyperdrive"
   engine -5 35
@@ -565,28 +607,34 @@ ship "Sparrow"
   description "Classified as an interceptor rather than a fighter because it has its own "Hyperdrive" instead of needing to be carried inside a larger ship, the Tarazed Sparrow is the smallest and cheapest combat ship available. Because of its limited cargo and passenger space, the primary way for a Sparrow pilot to pay the bills is by hunting pirates... or by becoming one. In either case, it is a perilous way to earn a living."
   description "  Insurance reports indicate that as many as two out of every three first-time ship buyers who choose to pilot a Sparrow lose their ship (and often, their life as well) within the first month of owning it."
 
+
 ship "Sparrow" "Sparrow (Gatling)"
   outfits
-    "Gatling Gun" 2
-    "Gatling Gun Ammo" 6000
-    "nGVF-AA Fuel Cell"
-    "LP036a Battery Pack"
-    "D14-RN Shield Generator"
     "Chipmunk Plasma Thruster"
     "Chipmunk Plasma Steering"
+
+    "Gatling Gun Ammo" 6000
+    "Gatling Gun" 2
+
+    "D14-RN Shield Generator"
+    "nGVF-AA Fuel Cell"
+    "LP036a Battery Pack"
     "Fuel Barrel" 30
     "Hyperdrive"
 
+
 ship "Sparrow" "Sparrow (Patrol)"
   outfits
-    "Beam Laser" 2
-    "nGVF-BB Fuel Cell"
-    "LP036a Battery Pack"
-    "D14-RN Shield Generator"
-    "Cargo Scanner"
-    "Outfit Scanner"
     "Chipmunk Plasma Thruster"
     "Chipmunk Plasma Steering"
+
+    "Beam Laser" 2
+
+    "D14-RN Shield Generator"
+    "nGVF-BB Fuel Cell"
+    "LP036a Battery Pack"
+    "Cargo Scanner"
+    "Outfit Scanner"
     "Fuel Barrel" 30
     "Hyperdrive"
 
@@ -606,23 +654,25 @@ ship "Unknown Ship Type"
     "heat dissipation" .6
     "cargo space" 120
     "outfit space" 870
-    "weapon capacity" 390
-    "engine capacity" 210
+      "engine capacity" 210
+      "weapon capacity" 390
     weapon
       "blast radius" 260
       "shield damage" 2600
       "hull damage" 1300
       "hit force" 3900
   outfits
-    "Torpedo Launcher" 6
-    "Torpedo" 180
-    "Heavy Laser Turret" 4
-    "Fusion Reactor"
-    "LP144a Battery Pack"
-    "D94-YV Shield Generator"
-    "Liquid Nitrogen Cooler"
     "Orca Plasma Thruster"
     "Orca Plasma Steering"
+
+    "Torpedo" 180
+    "Torpedo Launcher" 6
+    "Heavy Laser Turret" 4
+
+    "D94-YV Shield Generator"
+    "Fusion Reactor"
+    "LP144a Battery Pack"
+    "Liquid Nitrogen Cooler"
     "Fuel Barrel" 50
     "Hyperdrive"
   engine -14 177

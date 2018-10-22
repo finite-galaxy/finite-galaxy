@@ -189,7 +189,7 @@ mission "FW Southern Recon 1B"
       `  "We're going to have to fight them eventually, but first we need as much information as we can get on their new weapon systems. I'd like you to find one of their gunboats that has the new electron beams installed, steal one of them, and bring it back here. I imagine one of them can't be much bigger than twenty or thirty tons, so you ought to be able to find space for it. Think you can do that?"`
       choice
         `  "How can I find a gunboat that's all by itself? They're usually a part of a bigger fleet."`
-      `  She thinks about that for a moment, then says, "The Navy has shifted most of their capital ships to the defecting systems in the south. That means that some of the systems up north will have lighter defenses. You might try Wei or Alnasl. Good luck, Captain."`
+      `  She thinks about that for a moment, then says, "The Navy has shifted most of their capital ships to the defecting systems in the south. That means that some of the systems up north will have lighter defences. You might try Wei or Alnasl. Good luck, Captain."`
         accept
   
   to complete
@@ -853,7 +853,7 @@ mission "FW Northern 3"
       label east
       `  "Yes," says Freya. "Which means our fleets will be stretched thin. We really need them to ramp up Dreadnought production."`
       label zug
-      `  Alondo asks Freya, "Do you think you could help them in the shipyards? After all, you were a superb fleet supply manager back in the Defense Pact days."`
+      `  Alondo asks Freya, "Do you think you could help them in the shipyards? After all, you were a superb fleet supply manager back in the Defence Pact days."`
       `  "I'll do what I can, if you think you're all set here," says Freya.`
       `  "I'm fine," says Alondo, "and JJ is on Rastaban now, guarding our other flank. So you can take a break from being on the front." He heads back outside, and you and Freya get ready to visit the shipyards on <planet>.`
         accept
@@ -1259,7 +1259,7 @@ mission "FW Death of Nguyen"
 mission "FW Alphas 1.2A"
   landing
   name "Return to the Front"
-  description "Travel to <destination> to bolster the defenses there."
+  description "Travel to <destination> to bolster the defences there."
   source Poisonwood
   destination "New Tibet"
   to offer
@@ -1274,7 +1274,7 @@ mission "FW Alphas 1.2A"
       `The ships in orbit are eliminated, but there are still the Alphas and their servants here on the ground to take care of. Your escorts unload the troops, who spread throughout the city and quickly determine that, as far as the locals know, the Alphas are all holed up in a large factory on the outskirts of town. The locals also inform you that the Alphas have taken dozens of prisoners and are holding them in the factory.`
       `  As you are trying to prepare the Free Worlds troops to storm the building, suddenly one of your escorts, the Starry Warrior, takes off. You radio the captain, who responds, "Sorry, Captain, but I'm following orders. Alondo suspected you wouldn't like this." Then he opens fire on the factory, destroying everything within several blocks with blaster fire and torpedoes. He does not stop firing until there is nothing left but smoldering rubble in that entire section of the city.`
       `  The Alphas are presumably dead. So are their prisoners, and any of the locals who were unlucky enough to be close to the factory when it was destroyed. The governor of Poisonwood, unable to conceal her anger, asks you to take your troops and your ships and leave her world immediately.`
-      `  You send a message to the Council asking what you should do, and they tell you to leave the planet and join Alondo on <planet>, to help bolster the defenses there. You leave <origin> with a heavy heart, glad that the Alphas are gone but wishing things here on <origin> had ended differently.`
+      `  You send a message to the Council asking what you should do, and they tell you to leave the planet and join Alondo on <planet>, to help bolster the defences there. You leave <origin> with a heavy heart, glad that the Alphas are gone but wishing things here on <origin> had ended differently.`
         launch
   
   on complete
@@ -1334,7 +1334,7 @@ mission "FW Bloodsea 1.1"
     conversation
       `The local leaders are unwilling to meet aboard your ship, and Alondo is afraid you will be ambushed if you venture too far away from it, so eventually they agree to set up a tent on the landing pad next to yours and meet there. Outside, a storm is raging, the rain mixing with salt spray from the blood-red ocean nearby.`
       `  As you talk, it becomes clear that the inhabitants of Bloodsea are ashamed of how destitute and undeveloped their world is. Several of them have visited the island spaceport on Deep, and after dancing around the issue for a while, they make a request: if the Free Worlds builds them a real, modern island spaceport, they will join the Free Worlds.`
-      `  One of them lays out a detailed list of amenities the port must have: concrete seawalls, raised landing pads, floating docks, sturdy hangars and warehouses, and various defense systems "for when the others learn that we've decided to join you." Also, the deal is off if you show up in orbit with a fleet that "looks like an invasion fleet rather than a construction fleet."`
+      `  One of them lays out a detailed list of amenities the port must have: concrete seawalls, raised landing pads, floating docks, sturdy hangars and warehouses, and various defence systems "for when the others learn that we've decided to join you." Also, the deal is off if you show up in orbit with a fleet that "looks like an invasion fleet rather than a construction fleet."`
       `  You thank them and return to your ship. Alondo asks, "What do you think?"`
       choice
         `  "Well, building a spaceport is probably cheaper than fighting a major battle."`
@@ -1449,7 +1449,7 @@ mission "Ijs catches another ride"
     event "fw conservatory founded" 30
     conversation
       `Ijs approaches you with his duffel as you're stepping off the <ship>.`
-      `  "Thanks for getting me this close, but I really need to get to Winter as soon as possible. I hope you don't take offense that I've booked passage on another transport. Here's <payment> for getting me this far, anyway. I hope to see you again soon, Captain <last>."`
+      `  "Thanks for getting me this close, but I really need to get to Winter as soon as possible. I hope you don't take offence that I've booked passage on another transport. Here's <payment> for getting me this far, anyway. I hope to see you again soon, Captain <last>."`
         decline
     fail "FW Conservatory 1"
 
@@ -1631,7 +1631,7 @@ mission "FW Albatross 2A"
   
   on offer
     conversation
-      `Your meeting with the elders of Albatross happens in secret, by night. They are afraid that if their current pirate overlord, Ryk Bartlett, finds out that they have met with you, they will face retribution. JJ begins by describing the Free Worlds' offer: all the benefits of the mutual defense pact, in exchange for an agreement to uphold human rights and the rule of law, plus offering financial support for the Free Worlds.`
+      `Your meeting with the elders of Albatross happens in secret, by night. They are afraid that if their current pirate overlord, Ryk Bartlett, finds out that they have met with you, they will face retribution. JJ begins by describing the Free Worlds' offer: all the benefits of the mutual defence pact, in exchange for an agreement to uphold human rights and the rule of law, plus offering financial support for the Free Worlds.`
       `  "Begging your pardon," says one of the elders, "but what makes you different from any pirate organization that comes in here, demanding our money in return for 'protection'?"`
       choice
         `  (Let JJ answer that.)`
@@ -1783,7 +1783,7 @@ mission "FW Rand 1B"
     conversation
       `You meet up with the governor of Rand, and sign the papers to make her planet a part of the Free Worlds. The nearby systems are reporting no Navy interference: they seem to have been allowed to switch allegiances without any attempt by the Republic to stop them. Of course, that might partly be because these are mining planets, not as necessary to the Republic's survival as the farming worlds on the other end of the Dirt Belt.`
       `  Freya leaves the meeting to check up on her surveillance network, and rushes back into the room a few minutes later. JJ takes one look at the expression on her face and quickly excuses himself from the table. You join him outside in the hallway, and he asks Freya what's going on.`
-      `  "The Navy just invaded Delta Sagittarii and Rastaban," she says. "We're cut off from the rest of Free space. Our defense fleet was woefully outnumbered. Many ships were destroyed, and the rest fled back toward the Rim, or to Tarazed."`
+      `  "The Navy just invaded Delta Sagittarii and Rastaban," she says. "We're cut off from the rest of Free space. Our defence fleet was woefully outnumbered. Many ships were destroyed, and the rest fled back toward the Rim, or to Tarazed."`
       `  "I was afraid of this," says JJ, "but I didn't think it would happen so quickly. I wonder if they knew that these new worlds were joining us, and deliberately used them as a diversion."`
       choice
         `  "What do we do now?"`

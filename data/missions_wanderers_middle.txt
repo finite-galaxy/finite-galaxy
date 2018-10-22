@@ -222,7 +222,7 @@ event "wanderers: kaliptari battle ends"
     add fleet "Large Quarg" 2000
     add fleet "Small Kor Mereti" 8000
     add fleet "Large Kor Mereti" 3600
-    add fleet "Wanderer Defense" 1000
+    add fleet "Wanderer Defence" 1000
     add fleet "Wanderer Drones" 500
 
 mission "Wanderers: First Mereti Attack"
@@ -380,7 +380,7 @@ mission "Wanderers: Quarg Assistance 1"
 
       label end
       `  She says, "I'm worried about the Kor Mereti making another attack on my people. Do you think the Quarg would be willing to help protect us?"`
-      `  You agree that it's worth a try. She suggests that you visit the Quarg ringworld and try to find someone with the authority to send a defense fleet to guard the Wanderer settlement.`
+      `  You agree that it's worth a try. She suggests that you visit the Quarg ringworld and try to find someone with the authority to send a defence fleet to guard the Wanderer settlement.`
         accept
 
 
@@ -871,7 +871,7 @@ mission "Wanderers: Mind 1"
       `  Tema'a Iriket asks you, "Why do you think our [attempt, experiment] failed?"`
       choice
         `  "The Korath survivors say that the Mereti drones have a sort of immune system that allows them to reject any intrusion that seeks to disrupt or coopt their network."`
-        `  "Perhaps we just need a more sophisticated or intelligent program, something that could overpower the Mereti defenses."`
+        `  "Perhaps we just need a more sophisticated or intelligent program, something that could overpower the Mereti defences."`
 
       `  She thinks about that for a moment, then says, "In terraforming, we say that each planet has a [will, identity], and it will never work to [overrule, overpower] the planet. Instead, we must [collaborate, partner] with it. Perhaps we can do the same with this [consciousness]."`
       `  A stir of excitement passes through the Wanderers. Finally, this is a strategy that lines up with their preferred way of doing things. "What do you mean?" asks one of them.`
@@ -1120,7 +1120,7 @@ mission "Wanderers: Mind 7"
       `  "They seem to be [scavenging, hunting] for resources to build something," says Pa'aret. "It is [strange, surprising]; the Mereti drones until now were ignoring the planets in their [systems, territory]. Would you be [willing, bold] to land your ship on the surface and investigate?" You agree to do so.`
 
       label end
-      `  The Wanderers wish you the best of luck, and you prepare to return to the <system> system. Hopefully the Mereti drones will not become hostile once more while you are landed on the planet's surface, exposed and relatively defenseless.`
+      `  The Wanderers wish you the best of luck, and you prepare to return to the <system> system. Hopefully the Mereti drones will not become hostile once more while you are landed on the planet's surface, exposed and relatively defenceless.`
         accept
 
 
@@ -1277,7 +1277,7 @@ mission "Wanderers: Mentors 3"
     event "wanderers: desi seledrak" 24
     conversation
       `The mood among the Wanderer leaders is much lighter now that the danger from the Mereti drones appears to have been eliminated. In fact, they're now so intrigued by the emergent Mereti consciousness that they don't seem to be thinking about the more distant threat of the drones in Kor Sestor space. Instead, they want to focus on their true calling: terraforming planets.`
-      `  Sobari Tele'ek tells you, "We should take time to enjoy this [peace, respite]. We need not [face, deal with] the other drones immediately. We will be working to start a second [settlement, base] nearby. Visit us there when the base is [formed, established] and we will decide our next [actions, steps]. In the meantime, our latest ship of [war, defense] is now being produced on our [major, central] worlds, and you may buy one."`
+      `  Sobari Tele'ek tells you, "We should take time to enjoy this [peace, respite]. We need not [face, deal with] the other drones immediately. We will be working to start a second [settlement, base] nearby. Visit us there when the base is [formed, established] and we will decide our next [actions, steps]. In the meantime, our latest ship of [war, defence] is now being produced on our [major, central] worlds, and you may buy one."`
 
 
 
@@ -1515,7 +1515,7 @@ event "wanderers: battle in solifar begins"
 event "wanderers: battle in solifar ends"
   system Solifar
     fleet "Large Quarg" 3000
-    fleet "Wanderer Defense" 1800
+    fleet "Wanderer Defence" 1800
     fleet "Wanderer Drones" 700
     fleet "Wanderer Flycatchers" 800
 
@@ -1565,7 +1565,7 @@ mission "Wanderers: Sestor Attack"
       names "kor sestor"
       fighters "kor sestor fighter"
       variant
-        "Kar Ik Vot 349 (Defense)"
+        "Kar Ik Vot 349 (Defensive)"
         "Tek Far 78 - Osk (Close Quarters)"
         "Far Osk 27" 7
         "Met Par Tek 53"
@@ -1696,7 +1696,7 @@ mission "Wanderers: Sestor Search"
     system "Aya'k'k"
     government "Wanderer"
     personality derelict uninterested
-    fleet "Wanderer Defense"
+    fleet "Wanderer Defence"
     fleet "Wanderer Freight" 2
   npc
     system "Aya'k'k"
@@ -1925,7 +1925,7 @@ mission "Wanderers: Sestor: Farpoint Attack 1"
       names "kor sestor"
       fighters "kor sestor fighter"
       variant
-        "Kar Ik Vot 349 (Offense)"
+        "Kar Ik Vot 349 (Offensive)"
         "Tek Far 78 - Osk"
         "Far Osk 27" 8
         "Met Par Tek 53 (Sniper)"
@@ -1933,7 +1933,7 @@ mission "Wanderers: Sestor: Farpoint Attack 1"
       names "kor sestor"
       fighters "kor sestor fighter"
       variant
-        "Kar Ik Vot 349 (Defense)"
+        "Kar Ik Vot 349 (Defensive)"
         "Kar Ik Vot 349 (Trapper)"
     dialog `The Kor Sestor fleet has been driven off. Time to land and see what Danforth thinks you should do next.`
   npc
@@ -2183,7 +2183,7 @@ mission "Wanderers: Sestor: Farpoint Attack 2"
       names "kor sestor"
       fighters "kor sestor fighter"
       variant
-        "Kar Ik Vot 349 (Defense)"
+        "Kar Ik Vot 349 (Defensive)"
         "Tek Far 71 - Lek (Close Quarters)"
         "Far Lek 14" 8
         "Met Par Tek 53 (Sniper)" 2
@@ -2191,7 +2191,7 @@ mission "Wanderers: Sestor: Farpoint Attack 2"
       names "kor sestor"
       fighters "kor sestor fighter"
       variant
-        "Kar Ik Vot 349 (Offense)"
+        "Kar Ik Vot 349 (Offensive)"
         "Tek Far 78 - Osk"
         "Far Osk 27" 8
         "Met Par Tek 53 (Sniper)"
@@ -2207,7 +2207,7 @@ mission "Wanderers: Sestor: Farpoint Attack 2"
       names "kor sestor"
       fighters "kor sestor fighter"
       variant
-        "Kar Ik Vot 349 (Defense)"
+        "Kar Ik Vot 349 (Defensive)"
         "Tek Far 71 - Lek (Close Quarters)"
         "Far Lek 14" 8
         "Tek Far 78 - Osk"
@@ -2216,7 +2216,7 @@ mission "Wanderers: Sestor: Farpoint Attack 2"
       names "kor sestor"
       fighters "kor sestor fighter"
       variant
-        "Kar Ik Vot 349 (Offense)"
+        "Kar Ik Vot 349 (Offensive)"
         "Tek Far 71 - Lek"
         "Far Lek 14" 9
         "Tek Far 78 - Osk (Close Quarters)"
@@ -2234,14 +2234,14 @@ mission "Wanderers: Sestor: Farpoint Attack 2"
       names "kor sestor"
       fighters "kor sestor fighter"
       variant
-        "Kar Ik Vot 349 (Defense)"
+        "Kar Ik Vot 349 (Defensive)"
         "Met Par Tek 53" 2
         "Met Par Tek 53 (Sniper)"
     fleet
       names "kor sestor"
       fighters "kor sestor fighter"
       variant
-        "Kar Ik Vot 349 (Offense)"
+        "Kar Ik Vot 349 (Offensive)"
         "Met Par Tek 53"
         "Met Par Tek 53 (Sniper)" 2
     fleet
@@ -2302,7 +2302,7 @@ mission "Wanderers: Sestor: Scattered Remnant"
       names "kor sestor"
       fighters "kor sestor fighter"
       variant
-        "Kar Ik Vot 349 (Defense)"
+        "Kar Ik Vot 349 (Defensive)"
         "Tek Far 71 - Lek (Close Quarters)"
         "Far Lek 14" 8
         "Met Par Tek 53 (Sniper)" 2
@@ -2315,7 +2315,7 @@ mission "Wanderers: Sestor: Scattered Remnant"
       names "kor sestor"
       fighters "kor sestor fighter"
       variant
-        "Kar Ik Vot 349 (Offense)"
+        "Kar Ik Vot 349 (Offensive)"
         "Tek Far 78 - Osk"
         "Far Osk 27" 8
         "Met Par Tek 53 (Sniper)"
@@ -2336,7 +2336,7 @@ mission "Wanderers: Sestor: Scattered Remnant"
       names "kor sestor"
       fighters "kor sestor fighter"
       variant
-        "Kar Ik Vot 349 (Defense)"
+        "Kar Ik Vot 349 (Defensive)"
         "Tek Far 71 - Lek (Close Quarters)"
         "Far Lek 14" 8
         "Tek Far 78 - Osk"
@@ -2350,7 +2350,7 @@ mission "Wanderers: Sestor: Scattered Remnant"
       names "kor sestor"
       fighters "kor sestor fighter"
       variant
-        "Kar Ik Vot 349 (Offense)"
+        "Kar Ik Vot 349 (Offensive)"
         "Tek Far 71 - Lek"
         "Far Lek 14" 9
         "Tek Far 78 - Osk (Close Quarters)"
@@ -2378,7 +2378,7 @@ mission "Wanderers: Sestor: Scattered Remnant"
       names "kor sestor"
       fighters "kor sestor fighter"
       variant
-        "Kar Ik Vot 349 (Defense)"
+        "Kar Ik Vot 349 (Defensive)"
         "Met Par Tek 53" 2
         "Met Par Tek 53 (Sniper)"
     dialog `All of the Kor Sestor ships in this system have been eliminated.`
@@ -2390,7 +2390,7 @@ mission "Wanderers: Sestor: Scattered Remnant"
       names "kor sestor"
       fighters "kor sestor fighter"
       variant
-        "Kar Ik Vot 349 (Offense)"
+        "Kar Ik Vot 349 (Offensive)"
         "Met Par Tek 53"
         "Met Par Tek 53 (Sniper)" 2
     dialog `All of the Kor Sestor ships in this system have been eliminated.`
@@ -2846,9 +2846,9 @@ mission "Wanderers: Sestor: Scan Drones"
     government "Kor Sestor"
     personality heroic staying
     fleet "Large Kor Sestor"
-    ship "Kar Ik Vot 349 (Offense)" "07-546.2"
     ship "Kar Ik Vot 349 (Trapper)" "07-321.8"
-    ship "Kar Ik Vot 349 (Defense)" "07-963.4"
+    ship "Kar Ik Vot 349 (Offensive)" "07-546.2"
+    ship "Kar Ik Vot 349 (Defensive)" "07-963.4"
 
 
 
@@ -3077,7 +3077,7 @@ mission "Wanderers: Sestor: Factory 2"
       names "kor sestor"
       fighters "kor sestor fighter"
       variant
-        "Kar Ik Vot 349 (Offense)"
+        "Kar Ik Vot 349 (Offensive)"
         "Tek Far 78 - Osk"
         "Far Osk 27" 8
         "Met Par Tek 53 (Sniper)" 2
@@ -3179,9 +3179,9 @@ event "wanderers: exiles have drones"
     add variant
       "Kar Ik Vot 349"
     add variant
-      "Kar Ik Vot 349 (Defense)"
+      "Kar Ik Vot 349 (Defensive)"
     add variant
-      "Kar Ik Vot 349 (Offense)"
+      "Kar Ik Vot 349 (Offensive)"
     add variant
       "Kar Ik Vot 349 (Trapper)"
     add variant 1
@@ -3235,7 +3235,7 @@ event "wanderers: sabira eseskrai colony"
   system "Skeruto"
     government "Wanderer"
     fleet "Large Quarg" 1000
-    fleet "Wanderer Defense" 1200
+    fleet "Wanderer Defence" 1200
     fleet "Wanderer Drones" 800
     fleet "Kor Efret Home" 800
   system "Furmeliki"

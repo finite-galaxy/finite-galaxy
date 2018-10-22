@@ -1245,6 +1245,26 @@ outfit "Chameleon Anti-Missile Turret"
     "firing heat" 6
     "stream"
 
+outfit "Point Defense Turret"
+  category "Deprecated"
+  thumbnail "outfit/unknown"
+  cost 1120000
+  "mass" 33
+  "drag" .33
+  "outfit space" -33
+  "weapon capacity" -33
+  "turret mounts" -1
+  weapon
+    "fire effect" "point defense fire"
+    "die effect" "point defense hit"
+    "die effect" "point defense die"
+    "anti-missile" 42
+    "velocity" 270
+    "lifetime" 1
+    "reload" 10
+    "firing energy" 62
+    "firing heat" 18
+
 
 
 # Because of "big explosion" being renamed to "large explosion":

@@ -45,7 +45,7 @@ namespace {
 // Constructor.
 BoardingPanel::BoardingPanel(PlayerInfo &player, const shared_ptr<Ship> &victim)
   : player(player), you(player.FlagshipPtr()), victim(victim),
-  attackOdds(*you, *victim), defenseOdds(*victim, *you)
+  attackOdds(*you, *victim), defenceOdds(*victim, *you)
 {
   // The escape key should close this panel rather than bringing up the main menu.
   SetInterruptible(false);
@@ -166,16 +166,16 @@ void BoardingPanel::Draw()
     info.SetString("your crew", to_string(crew));
     info.SetString("your attack",
       Round(attackOdds.AttackerPower(crew)));
-    info.SetString("your defense",
-      Round(defenseOdds.DefenderPower(crew)));
+    info.SetString("your defence",
+      Round(defenceOdds.DefenderPower(crew)));
   }
   int vCrew = victim ? victim->Crew() : 0;
   if(victim && (victim->IsCapturable() || victim->IsYours()))
   {
     info.SetString("enemy crew", to_string(vCrew));
     info.SetString("enemy attack",
-      Round(defenseOdds.AttackerPower(vCrew)));
-    info.SetString("enemy defense",
+      Round(defenceOdds.AttackerPower(vCrew)));
+    info.SetString("enemy defence",
       Round(attackOdds.DefenderPower(vCrew)));
   }
   if(victim && victim->IsCapturable() && !victim->IsYours())
@@ -185,10 +185,10 @@ void BoardingPanel::Draw()
       Round(100. * odds) + "%");
     info.SetString("attack casualties",
       Round(attackOdds.AttackerCasualties(crew, vCrew)));
-    info.SetString("defense odds",
-      Round(100. * (1. - defenseOdds.Odds(vCrew, crew))) + "%");
-    info.SetString("defense casualties",
-      Round(defenseOdds.DefenderCasualties(vCrew, crew)));
+    info.SetString("defence odds",
+      Round(100. * (1. - defenceOdds.Odds(vCrew, crew))) + "%");
+    info.SetString("defence casualties",
+      Round(defenceOdds.DefenderCasualties(vCrew, crew)));
   }
   
   const Interface *interface = GameData::Interfaces().Get("boarding");
@@ -292,7 +292,7 @@ bool BoardingPanel::KeyDown(SDL_Keycode key, Uint16 mod, const Command &command)
     // to your ship in peace. That is to allow the player to "cancel" if
     // they did not really mean to try to capture the ship.
     bool youAttack = (key == 'a' && (yourStartCrew > 1 || !victim->RequiredCrew()));
-    bool enemyAttacks = defenseOdds.Odds(enemyStartCrew, yourStartCrew) > .5;
+    bool enemyAttacks = defenceOdds.Odds(enemyStartCrew, yourStartCrew) > .5;
     if(isFirstCaptureAction && !youAttack)
       enemyAttacks = false;
     isFirstCaptureAction = false;
@@ -323,9 +323,9 @@ bool BoardingPanel::KeyDown(SDL_Keycode key, Uint16 mod, const Command &command)
         // Your chance of winning this round is equal to the ratio of
         // your power to the enemy's power.
         double yourPower = (youAttack ?
-          attackOdds.AttackerPower(yourCrew) : defenseOdds.DefenderPower(yourCrew));
+          attackOdds.AttackerPower(yourCrew) : defenceOdds.DefenderPower(yourCrew));
         double enemyPower = (enemyAttacks ?
-          defenseOdds.AttackerPower(enemyCrew) : attackOdds.DefenderPower(enemyCrew));
+          defenceOdds.AttackerPower(enemyCrew) : attackOdds.DefenderPower(enemyCrew));
         
         double total = yourPower + enemyPower;
         if(!total)

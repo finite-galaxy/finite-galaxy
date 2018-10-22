@@ -295,7 +295,7 @@ mission "Wanderers Conversation"
           goto language
         `  "How long have you been fighting the Unfettered Hai?"`
       
-      `  "It has been nearly twenty [years, cycles] now," he says. "At first only a single Hai ship [visited, invaded] us, but back then we had no defenses in place to stop it. For years the ship only [harvested, stole] food from our frontier worlds, and avoided combat. In our culture it is an [obligation, duty] to share our food with one who [asks for, demands] it, so we did not oppose the Hai ship. But then more Hai ships came, attacked one of our worlds and took it for themselves, and killed many of our people. We built warships and drove them back, and yet their [raids, attacks] still continue."`
+      `  "It has been nearly twenty [years, cycles] now," he says. "At first only a single Hai ship [visited, invaded] us, but back then we had no defences in place to stop it. For years the ship only [harvested, stole] food from our frontier worlds, and avoided combat. In our culture it is an [obligation, duty] to share our food with one who [asks for, demands] it, so we did not oppose the Hai ship. But then more Hai ships came, attacked one of our worlds and took it for themselves, and killed many of our people. We built warships and drove them back, and yet their [raids, attacks] still continue."`
         goto food
       
       label language
@@ -375,7 +375,7 @@ mission "Wanderers: Defend Vara Ke'sok"
         `  "Yes, I will help drive the Unfettered away."`
           goto yes
         `  "No, I will not help you fight them."`
-      `  The Wanderer flies off to join the defense effort. A few hours later, the flashes in the sky end; the Unfettered have either been destroyed, or have gotten what they wanted and left.`
+      `  The Wanderer flies off to join the defence effort. A few hours later, the flashes in the sky end; the Unfettered have either been destroyed, or have gotten what they wanted and left.`
         defer
       label yes
       `  The Wanderer leaves to join one of the ships that is taking off, and you quickly ready your own ship to follow...`
@@ -425,7 +425,7 @@ event "Sich'ka'ara empty"
 event "Sich'ka'ara restored"
   system "Sich'ka'ara"
     add fleet "Wanderer Freight" 600
-    add fleet "Wanderer Defense" 2000
+    add fleet "Wanderer Defence" 2000
 
 
 
@@ -1067,7 +1067,7 @@ mission "Wanderers: Alpha Surveillance F"
   
   on offer
     log "Admiral Danforth agreed to bring his Saturn to the planet in Korath space where the Alphas seem to be hiding, with enough troops and equipment to launch an assault on the base."
-    log "Factions" "Oathkeepers" `However, the true reason that the powerful Oathkeeper fleet is positioned in the North is not just to keep the pirates at bay, but also to stand as a last defense in case the Hai decide to invade human space. Apparently the Navy has known about the Hai and the wormhole linking their space to human space for some time, but chooses not to make that knowledge public.`
+    log "Factions" "Oathkeepers" `However, the true reason that the powerful Oathkeeper fleet is positioned in the North is not just to keep the pirates at bay, but also to stand as a last defence in case the Hai decide to invade human space. Apparently the Navy has known about the Hai and the wormhole linking their space to human space for some time, but chooses not to make that knowledge public.`
     conversation
       `Danforth welcomes you into his private office and uses a device to sweep the room for bugs. "Please forgive my caution," he says when he is done. "Now, show me where this planet is."`
       `  You show him the planet on your map. "That's a long way out from human space," says Danforth. "All the way on the other side of Hai territory. Are the Hai rebels still occupying these systems?" He points to the three systems where the Unfettered live.`
@@ -1127,7 +1127,7 @@ mission "Wanderers: Alpha Surveillance G"
     fleet
       names "kor sestor"
       variant
-        "Kar Ik Vot 349 (Offense)"
+        "Kar Ik Vot 349 (Offensive)"
         "Met Par Tek 53 (Sniper)" 2
   
   on visit
@@ -1288,7 +1288,7 @@ mission "Wanderers: Alpha Surveillance J"
     event "wanderers: unfettered invasion starts" 64
     log "Reported to the Wanderers that the Alphas who had been selling jump drives to the Unfettered have been weakened and driven into hiding. The Wanderers are ramping up production of military ships to try to face the continuing Unfettered onslaught."
     conversation
-      `It's hard to be certain, but the activity around the spaceport seems more hectic than usual, and the Wanderers seem to have put some new ship models into production as well. When you ask Iktat Rek about it, he says, "When the Unfettered first [invaded, occupied] our territory, we had almost no weapons of [war, defense]. Since then we have retrieved old [designs, instructions] and begun preparing for what is to come, [unpleasant, unfortunate] though it may be."`
+      `It's hard to be certain, but the activity around the spaceport seems more hectic than usual, and the Wanderers seem to have put some new ship models into production as well. When you ask Iktat Rek about it, he says, "When the Unfettered first [invaded, occupied] our territory, we had almost no weapons of [war, defence]. Since then we have retrieved old [designs, instructions] and begun preparing for what is to come, [unpleasant, unfortunate] though it may be."`
       `  As you describe your mixed success at dealing with the Alphas, he shakes his wings and ruffles out his feathers in what seems to be a nervous, agitated gesture. "These Alpha [beings, creatures] sound more [dangerous, unreasonable, ruthless] than the Unfettered," he says. "Any [social, gregarious] species that evolves naturally develops certain [limits, checks, restraints] that an [artificial, constructed] species may not possess. How can we best [respond to, deal with] them?"`
       choice
         `  "It may be wisest to leave them alone."`
@@ -1491,7 +1491,7 @@ mission "Wanderers Invaded 2"
 event "capture of ik'kara'ka"
   system "Ik'kara'ka"
     government "Hai (Unfettered)"
-    fleet "Wanderer Defense" 1000
+    fleet "Wanderer Defence" 1000
     fleet "Small Unfettered" 600
     fleet "Large Unfettered" 400
   planet "Varu Mer'ek"
@@ -1937,7 +1937,7 @@ mission "Wanderers Defend Sich'ka'ara"
   on offer
     event "battle for sich'ka'ara begins"
     conversation
-      `Soon after the transports land, an alarm begins to sound and you see many Wanderers, the warriors in particular, rushing to board their ships. Sobari Tele'ek swoops down and lands next to your ship, and explains quickly, "We have detected a large Unfettered fleet [incoming, approaching]. Will you join in the defense?"`
+      `Soon after the transports land, an alarm begins to sound and you see many Wanderers, the warriors in particular, rushing to board their ships. Sobari Tele'ek swoops down and lands next to your ship, and explains quickly, "We have detected a large Unfettered fleet [incoming, approaching]. Will you join in the defence?"`
       `  You agree to help them, and begin preparing your ship for takeoff...`
         launch
   on visit
@@ -1988,21 +1988,21 @@ mission "Wanderers Defend Sich'ka'ara"
     log "Helped to defend a Wanderer world from yet another Unfettered attack. Meanwhile, the Wanderers are trying to move as many civilians as possible back to their home world, where they will be safe. But, their strategy seems to be based on the hope that sometime soon a wormhole will open and allow the Wanderer people to flee to a new territory and leave their old planets behind for the Unfettered to claim."
     event "battle for sich'ka'ara ends"
     conversation
-      `The Unfettered fleet has been driven off. Tele'ek thanks you for taking part in defending this world. "Unfortunately," he says, "I just received news that this was only half of the Unfettered [assault, attack]. An equally large fleet attacked the Chirr'ay'akai system, and overwhelmed the defenses there so [quickly, unexpectedly] that some of our people did not have time to [escape, evacuate] and have been forced into hiding. If you're willing to help rescue them, please meet me in the spaceport once I am done [debriefing, informing] the warriors."`
+      `The Unfettered fleet has been driven off. Tele'ek thanks you for taking part in defending this world. "Unfortunately," he says, "I just received news that this was only half of the Unfettered [assault, attack]. An equally large fleet attacked the Chirr'ay'akai system, and overwhelmed the defences there so [quickly, unexpectedly] that some of our people did not have time to [escape, evacuate] and have been forced into hiding. If you're willing to help rescue them, please meet me in the spaceport once I am done [debriefing, informing] the warriors."`
 
 event "battle for sich'ka'ara ends"
   system "Sich'ka'ara"
     add fleet "Wanderer Freight" 900
-    add fleet "Wanderer Defense" 400
+    add fleet "Wanderer Defence" 400
     add fleet "Large Unfettered" 400
   system "Chirr'ay'akai"
     government "Hai (Unfettered)"
-    fleet "Wanderer Defense" 800
+    fleet "Wanderer Defence" 800
     fleet "Large Unfettered" 400
     fleet "Small Unfettered" 400
   system "Prakacha'a"
     government "Hai (Unfettered)"
-    fleet "Wanderer Defense" 2000
+    fleet "Wanderer Defence" 2000
     fleet "Large Unfettered" 600
     fleet "Small Unfettered" 600
   planet "Kort Vek'kri"
@@ -2053,7 +2053,7 @@ mission "Wanderers Rescue 1"
         `  "No, I'm ready to go."`
           accept
         `  "Why do you need me to take part in this mission?"`
-      `  He says, "It matters deeply to some of our people to know that a member of another species is [assisting, journeying with] us in this conflict. Not merely for [morale? public relations?] but because your [support? acceptance?] gives our [self-defense, struggle] [moral weight? legitimacy?]." Your translator seems to be having trouble with the exact shades of meaning in his explanation.`
+      `  He says, "It matters deeply to some of our people to know that a member of another species is [assisting, journeying with] us in this conflict. Not merely for [morale? public relations?] but because your [support? acceptance?] gives our [self-defence, struggle] [moral weight? legitimacy?]." Your translator seems to be having trouble with the exact shades of meaning in his explanation.`
       `  You agree to join the expedition, and he introduces you to the captains of the two ships that will travel with you.`
         accept
   npc accompany save
@@ -2264,7 +2264,7 @@ mission "Wanderers Ap'arak 1"
       `  Three Wanderer nurses come and wheel Rek's bed out the door and into an elevator. At Rek's request, you join them. The elevator opens up to a wide and vaulted hallway lined on either side by Wanderers dressed in black, come to pay their last respects to Rek. It is like something out of a dream: the subterranean passage dense with the stately forms of Wanderer officials, the black-cloaked wings and shadows contrasting with the bright linen of the hospital bed and the white plumage of Rek's mother as she follows the cart to the threshold of the isolation chamber.`
       `  The door of the chamber snaps shut with a pneumatic hiss, and you make your way back up to the spaceport with the other visitors. One of the visitors is Emeka'a Isai, the former governor of Varu Mer'ek. She pulls you aside and says, "You should not [remain, dawdle] here, human. They will have need of you at the [front, battle line]. And the sight of you may be unwelcome to some of the [mourners? associates?] of Rek who are here."`
       choice
-        `  "Okay, I'll go to <planet> and aid in the defense."`
+        `  "Okay, I'll go to <planet> and aid in the defence."`
           accept
         `  "Wait, why would people be angry at me after all I've done to help?"`
       `  "Not angry at you," she says, "but some say the Molt is [triggered, provoked] by exposure to [alien, foreign] things: that your coming is what made Rek's body begin its [change, metamorphosis] too soon." She is silent for a moment, then says, "Please, do not be [concerned, grieved]. Rek may yet live, and rise to great renown as the first of a new [generation, race]. In any event, that is the past. Go, now, and help us to [secure, obtain] a future."`
@@ -2280,7 +2280,7 @@ event "battle for ap'arak ends"
   system "Ap'arak"
     add fleet "Wanderer Freight" 2000
     add fleet "Wanderer Drones" 4000
-    add fleet "Wanderer Defense" 600
+    add fleet "Wanderer Defence" 600
     add fleet "Large Unfettered" 700
 
 mission "Wanderers Ap'arak 2"

@@ -223,7 +223,7 @@ mission "FWC Cebalrai 1B"
   on offer
     event "fwc attack cebalrai"
     conversation
-      `You meet up with Tomek and Alondo and tell them that the defenses in the Cebalrai system did not seem particularly strong. "They must've seen the writing on the wall and pulled back the rest of their fleet," says Alondo.`
+      `You meet up with Tomek and Alondo and tell them that the defences in the Cebalrai system did not seem particularly strong. "They must've seen the writing on the wall and pulled back the rest of their fleet," says Alondo.`
       `  "Either that," says Tomek, "or they're wary of engaging us again now that they know we're willing to use nukes. Which I'm still not happy about, by the way. It's only a matter of time until they respond in kind. But in any case, our next move is clear: bring a fleet to Cebalrai and capture the system. <first>, you'll be in charge of that fleet. Alondo can travel with you to handle the diplomatic aftermath."`
         accept
   
@@ -471,7 +471,7 @@ mission "FWC Diplomacy 1B"
       `  "Well, I sincerely hope you're wrong," says Alondo. "I miss her. We might never have gotten into such dire straits if she had been leading us."`
         goto escort
       label escort
-      `  As you are returning to your ship, Alondo points out an Argosy parked next to you and says, "By the way, this ship will be escorting us on this mission. Providing a bit of extra defense."`
+      `  As you are returning to your ship, Alondo points out an Argosy parked next to you and says, "By the way, this ship will be escorting us on this mission. Providing a bit of extra defence."`
       choice
         `  "Um, I don't think an Argosy is strong enough to tip the scales in a battle against the Navy."`
         `  "Please tell me that thing isn't armed with nukes. Because that would cause a major diplomatic incident."`
@@ -591,7 +591,7 @@ mission "FWC Checkmate 1"
       `  "I see," she says. "Did you have a plan for what comes next, or are we just winging it now?"`
       `  Alondo says, "Unfortunately, we do have a plan. Our very last contingency plan. We call it the 'checkmate' option. Our fleet will push north--"`
       `  He is interrupted by one of Tomek's men running into the room. "Sir, we have a major Navy fleet incoming. We need all ships in the air immediately to repulse them. Reinforcements are on their way, but they may not get here for a while."`
-      `  Tomek says, "So, it begins. Captain <last>, get back to your ship and aid in the defense."`
+      `  Tomek says, "So, it begins. Captain <last>, get back to your ship and aid in the defence."`
         launch
   
   npc
@@ -749,7 +749,7 @@ mission "FWC Checkmate 1"
     event "fwc solace has nukes"
     "salary: Free Worlds" = 6000
     conversation
-      `Tomek and Alondo meet you when you land. Tomek says, "Good work aiding in the defense. Now we need to move before the Navy has time to regroup. And the Senate has decided that you will be in charge of the fleet that makes our counterattack."`
+      `Tomek and Alondo meet you when you land. Tomek says, "Good work aiding in the defence. Now we need to move before the Navy has time to regroup. And the Senate has decided that you will be in charge of the fleet that makes our counterattack."`
       `  Alondo says, "They have also approved a salary increase for you, to six thousand credits per diem. I know that's probably still not enough, but we are running a bit low on cash."`
       `  "One other thing," says Tomek. "I don't know how you'll feel about this, but I received word from Solace that they have nukes for sale if you want any. I'd advise against it, but it's up to you. Also, since you will be the flagship of our assault, you should make any improvements you feel are necessary to your ship. Then meet us back here, in the spaceport. Of course, if you're ready to go immediately that's fine, too."`
 
@@ -785,7 +785,7 @@ mission "FWC Checkmate 1: Equipment 2"
 
 mission "FWC Checkmate 1B"
   name "Attack Menkent"
-  description "The Wolf Pack has launched an initial attack on the Menkent system. Follow up with your fleet and finish off the Navy defenses. Katya will ride with you."
+  description "The Wolf Pack has launched an initial attack on the Menkent system. Follow up with your fleet and finish off the Navy defences. Katya will ride with you."
   autosave
   source Tundra
   destination "New Austria"
@@ -1785,7 +1785,7 @@ mission "FWC Pug 4A"
           goto attack
       
       label defend
-      `  "Don't worry," he says, "Navy reinforcements are arriving constantly. Soon our fleet here will be twice as strong as the one we committed to yesterday's attack." Reluctantly, you agree to trust the defenses to him while you bring Freya back into Free space to help open more of the hyperlinks.`
+      `  "Don't worry," he says, "Navy reinforcements are arriving constantly. Soon our fleet here will be twice as strong as the one we committed to yesterday's attack." Reluctantly, you agree to trust the defences to him while you bring Freya back into Free space to help open more of the hyperlinks.`
         accept
       label attack
       `  "'Such a big fleet'?" he says. "This is not even a twentieth of the Navy's current fighting power. And I think we'll need many more ships before we're ready to take on the alien homeworld. But don't worry, reinforcements are arriving here constantly. You go do your part, and we'll see to ours."`

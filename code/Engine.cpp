@@ -1164,11 +1164,11 @@ void Engine::CalculateStep()
   // bottom to top of the draw stack, but in some cases one object type must
   // "act" before another does.
   
-  // The only action stellar objects perform is to launch defense fleets.
+  // The only action stellar objects perform is to launch defence fleets.
   const System *playerSystem = player.GetSystem();
   for(const StellarObject &object : playerSystem->Objects())
     if(object.GetPlanet())
-      object.GetPlanet()->DeployDefense(newShips);
+      object.GetPlanet()->DeployDefence(newShips);
   
   // Keep track of the flagship to see if it jumps or enters a wormhole this turn.
   const Ship *flagship = player.Flagship();
