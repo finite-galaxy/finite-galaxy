@@ -166,8 +166,8 @@ mission "FW Southern Recon 1"
 
 mission "FW Southern Recon 1B"
   landing
-  name "Electron Beam"
-  description "Steal an Electron Beam from a Navy gunboat and return it to <planet> for Freya to look at. She thought your best bet for finding lone gunboats might be the Wei or Alnasl systems."
+  name "Electron Cannon"
+  description "Steal an Electron Cannon from a Navy gunboat and return it to <planet> for Freya to look at. She thought your best bet for finding a lone Mars might be the Wei or Alnasl systems."
   autosave
   source "Trinket"
   destination "Trinket"
@@ -186,9 +186,9 @@ mission "FW Southern Recon 1B"
       `  "Well," she says, "the plasma turrets weren't the only ace up our sleeve, but still, it's frustrating that the Navy still has such an advantage over us technologically."`
       `  "What should we do?" you ask.`
       label attack
-      `  "We're going to have to fight them eventually, but first we need as much information as we can get on their new weapon systems. I'd like you to find one of their gunboats that has the new electron beams installed, steal one of them, and bring it back here. I imagine one of them can't be much bigger than twenty or thirty tons, so you ought to be able to find space for it. Think you can do that?"`
+      `  "We're going to have to fight them eventually, but first we need as much information as we can get on their new weapon systems. I'd like you to find one of their gunboats that has the new electron beam cannons installed, steal one of them, and bring it back here. I imagine one of them can't be much bigger than twenty or thirty tons, so you ought to be able to find space for it. Think you can do that?"`
       choice
-        `  "How can I find a gunboat that's all by itself? They're usually a part of a bigger fleet."`
+        `  "How can I find a Mars that's all by itself? They're usually a part of a bigger fleet."`
       `  She thinks about that for a moment, then says, "The Navy has shifted most of their capital ships to the defecting systems in the south. That means that some of the systems up north will have lighter defences. You might try Wei or Alnasl. Good luck, Captain."`
         accept
   
@@ -198,8 +198,8 @@ mission "FW Southern Recon 1B"
     has "FW Southern Recon 1B (Turret): done"
   on complete
     fail "FW Southern Recon 1B (Turret)"
-    outfit "Electron Beam" -1
-    dialog `You hand off the Electron Beam to Freya's science team. They tell you that she's waiting for you in a cafe in the spaceport.`
+    outfit "Electron Cannon" -1
+    dialog `You hand off the Electron Cannon to Freya's science team. They tell you that she's waiting for you in a cafe in the spaceport.`
 
 
 

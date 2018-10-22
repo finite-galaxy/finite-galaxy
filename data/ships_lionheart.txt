@@ -49,7 +49,7 @@ ship "Aerie"
     "A250 Atomic Thruster"
     "A255 Atomic Steering"
 
-    "Heavy Laser" 2
+    "Heavy Laser Cannon" 2
     "Heavy Laser Turret" 2
     "Heavy Anti-Missile Turret"
 
@@ -61,8 +61,8 @@ ship "Aerie"
     "Large Radar Jammer"
   engine -10 91
   engine 10 91
-  gun -13 -79 "Heavy Laser"
-  gun 13 -79 "Heavy Laser"
+  gun -13 -79 "Heavy Laser Cannon"
+  gun 13 -79 "Heavy Laser Cannon"
   turret 0 0 "Heavy Anti-Missile Turret"
   turret -17 14 "Heavy Laser Turret"
   turret 17 14 "Heavy Laser Turret"
@@ -262,7 +262,7 @@ ship "Bactrian" "Bactrian (Hired Gun)"
     "A520 Atomic Thruster"
     "A525 Atomic Steering"
 
-    "Heavy Laser" 3
+    "Heavy Laser Cannon" 3
     "Heavy Laser Turret" 6
     "D94-YV Shield Generator"
     "D41-HY Shield Generator"
@@ -304,7 +304,7 @@ ship "Chariot"
     "A370 Atomic Thruster"
     "A375 Atomic Steering"
 
-    "Electron Beam" 4
+    "Electron Cannon" 4
     "Electron Turret"
     "Heavy Anti-Missile Turret"
 
@@ -316,10 +316,10 @@ ship "Chariot"
     "Hyperdrive"
   engine -11 118
   engine 11 118
-  gun -12 -68 "Electron Beam"
-  gun 12 -68 "Electron Beam"
-  gun -14 -60 "Electron Beam"
-  gun 14 -60 "Electron Beam"
+  gun -12 -68 "Electron Cannon"
+  gun 12 -68 "Electron Cannon"
+  gun -14 -60 "Electron Cannon"
+  gun 14 -60 "Electron Cannon"
   turret 0 -11 "Electron Turret"
   turret 0 74 "Heavy Anti-Missile Turret"
   leak "leak" 40 50
@@ -359,14 +359,14 @@ ship "Dagger"
     "X1700 Ion Thruster"
     "X1200 Ion Steering"
 
-    "Beam Laser" 2
+    "Laser Cannon" 2
 
     "D14-RN Shield Generator"
     "nGVF-BB Fuel Cell"
   engine -15 30
   engine 15 30
-  gun -14 -10 "Beam Laser"
-  gun 14 -10 "Beam Laser"
+  gun -14 -10 "Laser Cannon"
+  gun 14 -10 "Laser Cannon"
   leak "leak" 60 50
   explode "tiny explosion" 15
   explode "small explosion" 5
@@ -400,7 +400,7 @@ ship "Flivver"
     "A120 Atomic Thruster"
     "A125 Atomic Steering"
 
-    "Beam Laser" 2
+    "Laser Cannon" 2
 
     "D14-RN Shield Generator"
     "nGVF-BB Fuel Cell"
@@ -409,8 +409,8 @@ ship "Flivver"
     "Hyperdrive"
   engine -16 27
   engine 16 27
-  gun -6 -31 "Beam Laser"
-  gun 6 -31 "Beam Laser"
+  gun -6 -31 "Laser Cannon"
+  gun 6 -31 "Laser Cannon"
   leak "leak" 60 50
   explode "tiny explosion" 10
   explode "small explosion" 10
@@ -468,7 +468,7 @@ ship "Headhunter"
     "A250 Atomic Thruster"
     "A255 Atomic Steering"
 
-    "Heavy Laser" 2
+    "Heavy Laser Cannon" 2
     "Heavy Laser Turret"
 
     "D23-QP Shield Generator"
@@ -478,8 +478,8 @@ ship "Headhunter"
     "Hyperdrive"
   engine -16 47
   engine 16 47
-  gun -13 -27 "Heavy Laser"
-  gun 13 -27 "Heavy Laser"
+  gun -13 -27 "Heavy Laser Cannon"
+  gun 13 -27 "Heavy Laser Cannon"
   turret 0 9 "Heavy Laser Turret"
   leak "leak" 60 50
   leak "flame" 80 80
@@ -666,7 +666,7 @@ ship "Scout"
     "A250 Atomic Thruster"
     "A255 Atomic Steering"
 
-    "Beam Laser" 2
+    "Laser Cannon" 2
     "Laser Turret"
 
     "D14-RN Shield Generator"
@@ -678,8 +678,8 @@ ship "Scout"
     "Small Radar Jammer"
   engine -8 46
   engine 8 46
-  gun -20 -7 "Beam Laser"
-  gun 20 -7 "Beam Laser"
+  gun -20 -7 "Laser Cannon"
+  gun 20 -7 "Laser Cannon"
   turret 0 -7 "Laser Turret"
   explode "tiny explosion" 10
   explode "small explosion" 20
