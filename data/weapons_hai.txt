@@ -76,8 +76,8 @@ effect "rail sparks"
 outfit "Tracker"
   category "Ammunition"
   thumbnail "outfit/tracker"
-  cost 1000
-  "mass" .2
+  cost 2500
+  "mass" .25
   "plunderable" 1
   "tracker capacity" -1
   description "This is ammunition for a Tracker Pod."
@@ -85,8 +85,8 @@ outfit "Tracker"
 outfit "Tracker Storage Pod"
   category "Ammunition Storage"
   thumbnail "outfit/tracker_storage"
-  cost 28000
-  "mass" 4.4
+  cost 70000
+  "mass" 3
   "outfit space" -10
   "tracker capacity" 28
   ammo "Hai Tracker"
@@ -96,11 +96,11 @@ outfit "Tracker Pod"
   category "Secondary Weapons"
   thumbnail "outfit/tracker_launcher"
   cost 150000
-  "mass" 8
+  "mass" 12
   "outfit space" -19
   "weapon capacity" -19
   "gun ports" -1
-  "tracker capacity" 56
+  "tracker capacity" 28
   weapon
     sprite "projectile/tracker"
       "frame rate" 10

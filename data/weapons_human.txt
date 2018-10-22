@@ -2,7 +2,7 @@ outfit "Gatling Gun Ammo"
   plural "Gatling Gun Ammo"
   category "Ammunition"
   thumbnail "outfit/bullet"
-  cost 4
+  cost 2
   "mass" .002
   "plunderable" 1
   "gatling round capacity" -1
@@ -741,7 +741,7 @@ outfit "Meteor Missile Box"
   plural "Meteor Missile Boxes"
   category "Ammunition Storage"
   thumbnail "outfit/meteor_storage"
-  cost 9000
+  cost 10000
   "mass" 1
   "outfit space" -5
   "meteor capacity" 20
@@ -751,12 +751,12 @@ outfit "Meteor Missile Box"
 outfit "Meteor Missile Launcher"
   category "Secondary Weapons"
   thumbnail "outfit/meteor_launcher"
-  cost 15000
-  "mass" 3
+  cost 30000
+  "mass" 6
   "outfit space" -10
   "weapon capacity" -10
   "gun ports" -1
-  "meteor capacity" 35
+  "meteor capacity" 20
   weapon
     sprite "projectile/meteor"
       "no repeat"
@@ -795,7 +795,7 @@ effect "meteor fire"
 outfit "Sidewinder Missile"
   category "Ammunition"
   thumbnail "outfit/sidewinder"
-  cost 900
+  cost 1000
   "mass" .2
   "plunderable" 1
   "sidewinder capacity" -1
@@ -804,7 +804,7 @@ outfit "Sidewinder Missile"
 outfit "Sidewinder Missile Rack"
   category "Ammunition Storage"
   thumbnail "outfit/sidewinder_storage"
-  cost 20000
+  cost 25000
   "mass" 2
   "outfit space" -7
   "sidewinder capacity" 25
@@ -815,11 +815,11 @@ outfit "Sidewinder Missile Launcher"
   category "Secondary Weapons"
   thumbnail "outfit/sidewinder_launcher"
   cost 60000
-  "mass" 4
+  "mass" 9
   "outfit space" -14
   "weapon capacity" -14
   "gun ports" -1
-  "sidewinder capacity" 50
+  "sidewinder capacity" 25
   weapon
     sprite "projectile/sidewinder"
       "no repeat"
@@ -879,11 +879,11 @@ outfit "Javelin Pod"
   category "Secondary Weapons"
   thumbnail "outfit/javelin_launcher"
   cost 20000
-  "mass" 4
+  "mass" 8
   "outfit space" -12
   "weapon capacity" -12
   "gun ports" -1
-  "javelin capacity" 200
+  "javelin capacity" 100
   weapon
     sprite "projectile/javelin"
     sound "javelin"
@@ -916,7 +916,7 @@ outfit "Torpedo"
 outfit "Torpedo Storage Rack"
   category "Ammunition Storage"
   thumbnail "outfit/torpedo_storage"
-  cost 21000
+  cost 30000
   "mass" 3
   "outfit space" -9
   "torpedo capacity" 15
@@ -927,11 +927,11 @@ outfit "Torpedo Launcher"
   category "Secondary Weapons"
   thumbnail "outfit/torpedo_launcher"
   cost 80000
-  "mass" 13
+  "mass" 19
   "outfit space" -25
   "weapon capacity" -25
   "gun ports" -1
-  "torpedo capacity" 30
+  "torpedo capacity" 15
   weapon
     sprite "projectile/torpedo"
       "frame rate" 2
@@ -979,7 +979,7 @@ outfit "Typhoon Torpedo"
 outfit "Typhoon Storage Tube"
   category "Ammunition Storage"
   thumbnail "outfit/typhoon_storage"
-  cost 40500
+  cost 60000
   "mass" 3
   "outfit space" -12
   "typhoon capacity" 15
@@ -990,11 +990,11 @@ outfit "Typhoon Launcher"
   category "Secondary Weapons"
   thumbnail "outfit/typhoon_launcher"
   cost 260000
-  "mass" 20
+  "mass" 26
   "outfit space" -35
   "weapon capacity" -35
   "gun ports" -1
-  "typhoon capacity" 30
+  "typhoon capacity" 15
   weapon
     sprite "projectile/typhoon"
       "frame rate" 4
@@ -1041,7 +1041,7 @@ outfit "Heavy Rocket"
 outfit "Heavy Rocket Rack"
   category "Ammunition Storage"
   thumbnail "outfit/rocket_storage"
-  cost 20000
+  cost 15000
   "mass" 3
   "outfit space" -8
   "rocket capacity" 10
@@ -1052,11 +1052,11 @@ outfit "Heavy Rocket Launcher"
   category "Secondary Weapons"
   thumbnail "outfit/rocket_launcher"
   cost 40000
-  "mass" 10
+  "mass" 15
   "outfit space" -20
   "weapon capacity" -20
   "gun ports" -1
-  "rocket capacity" 20
+  "rocket capacity" 10
   weapon
     sprite "projectile/rocket"
       "frame rate" 4
@@ -1226,3 +1226,4 @@ effect "large anti-missile"
   sound "heavy anti-missile"
   "lifetime" 31
   "velocity scale" 1
+
