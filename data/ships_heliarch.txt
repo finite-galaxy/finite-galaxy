@@ -29,8 +29,8 @@ ship "Interdictor"
     "heat dissipation" .70
     "cargo space" 79
     "outfit space" 608
-      "engine capacity" 135
-      "weapon capacity" 179
+    "engine capacity" 135
+    "weapon capacity" 179
     weapon
       "blast radius" 250
       "shield damage" 3000
@@ -108,8 +108,8 @@ ship "Neutralizer"
     "heat dissipation" .75
     "cargo space" 36
     "outfit space" 447
-      "engine capacity" 102
-      "weapon capacity" 72
+    "engine capacity" 102
+    "weapon capacity" 72
     weapon
       "blast radius" 150
       "shield damage" 1800
@@ -157,7 +157,7 @@ ship "Neutralizer" "Neutralizer (Missile)"
 
     "Large Shield Module"
     "Large Repair Module"
-    "Small Reactor Module"
+    "Small Reactor Module" 2
     "Large Battery Module"
     "Cooling Module"
     "Fuel Pod" 10
@@ -167,10 +167,8 @@ ship "Neutralizer" "Neutralizer (Missile)"
 
 ship "Neutralizer" "Neutralizer (Nimble)"
   outfits
-    "Large Thrust Module"
-    "Small Thrust Module"
-    "Large Steering Module" 2
-    "Small Steering Module"
+    "Large Thrust Module" 2
+    "Large Steering Module" 
 
     "Ion Rain Gun" 4
 
@@ -187,21 +185,18 @@ ship "Neutralizer" "Neutralizer (Nimble)"
 ship "Neutralizer" "Neutralizer (Scrappy)"
   outfits
     "Large Thrust Module"
-    "Small Thrust Module"
     "Large Steering Module" 2
 
     "Bombardment Cannon" 4
 
     "Large Shield Module" 2
-    "Small Shield Module"
     "Large Repair Module"
     "Small Reactor Module" 2
-    "Small Battery Module"
-    "Cooling Module" 2
+    "Large Battery Module"
+    "Cooling Module"
     "Fuel Pod" 10
     "Hyperdrive"
     "Scanning Module" 2
-    "Outfits Expansion"
 
 
 
@@ -222,8 +217,8 @@ ship "Punisher"
     "heat dissipation" .60
     "cargo space" 94
     "outfit space" 933
-      "engine capacity" 187
-      "weapon capacity" 324
+    "engine capacity" 187
+    "weapon capacity" 324
     weapon
       "blast radius" 400
       "shield damage" 4800
@@ -305,24 +300,21 @@ ship "Punisher" "Punisher (Interdicting)"
 
 ship "Punisher" "Punisher (Missile)"
   outfits
-    "Large Thrust Module" 4
-    "Large Steering Module" 2
-    "Small Steering Module"
+    "Large Thrust Module" 3
+    "Large Steering Module" 3
 
     "Finisher Torpedo" 240
     "Finisher Pod" 6
     "Repulsor"
 
-    "Large Shield Module" 5
-    "Large Repair Module" 2
-    "Large Reactor Module"
-    "Small Reactor Module"
+    "Large Shield Module" 3
+    "Large Repair Module" 3
+    "Large Reactor Module" 2
     "Large Battery Module"
-    "Cooling Module" 2
+    "Cooling Module" 3
     "Fuel Pod" 6
     "Hyperdrive"
     "Scanning Module" 4
-    "Outfits Expansion"
   turret
   turret
   turret "Repulsor"
@@ -332,9 +324,7 @@ ship "Punisher" "Punisher (Missile)"
 ship "Punisher" "Punisher (Scrappy)"
   outfits
     "Large Thrust Module" 2
-    "Small Thrust Module"
     "Large Steering Module" 4
-    "Small Steering Module" 2
 
     "Bombardment Cannon" 6
     "Bombardment Turret" 4
@@ -342,11 +332,9 @@ ship "Punisher" "Punisher (Scrappy)"
     "Large Shield Module" 4
     "Large Repair Module" 2
     "Large Reactor Module" 2
-    "Small Reactor Module"
     "Large Battery Module"
-    "Cooling Module" 5
+    "Cooling Module" 4
     "Fuel Pod" 6
     "Hyperdrive"
     "Scanning Module" 4
-    "Outfits Expansion" 4
 

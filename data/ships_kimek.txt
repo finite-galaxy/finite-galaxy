@@ -23,8 +23,8 @@ ship "Briar"
     "heat dissipation" .75
     "cargo space" 21
     "outfit space" 301
-      "engine capacity" 60
-      "weapon capacity" 89
+    "engine capacity" 60
+    "weapon capacity" 89
     weapon
       "blast radius" 34
       "shield damage" 340
@@ -34,7 +34,7 @@ ship "Briar"
     "Large Thrust Module"
     "Large Steering Module"
 
-    "Small Collector Module" 2
+    "Large Collector Module"
     "Small Battery Module" 2
     "Small Shield Module" 2
     "Fuel Pod" 7
@@ -70,8 +70,8 @@ ship "Spire"
     "heat dissipation" .60
     "cargo space" 64
     "outfit space" 553
-      "engine capacity" 129
-      "weapon capacity" 256
+    "engine capacity" 129
+    "weapon capacity" 256
     weapon
       "blast radius" 140
       "shield damage" 1400
@@ -80,13 +80,10 @@ ship "Spire"
   outfits
     "Large Thrust Module" 2
     "Large Steering Module" 2
-    "Small Steering Module"
 
-    "Large Collector Module"
-    "Small Collector Module"
+    "Large Collector Module" 3
     "Large Battery Module"
     "Large Shield Module"
-    "Small Shield Module"
     "Fuel Pod" 8
     "Hyperdrive"
   engine -22 221 .6
@@ -125,8 +122,8 @@ ship "Thistle"
     "heat dissipation" .70
     "cargo space" 29
     "outfit space" 377
-      "engine capacity" 87
-      "weapon capacity" 118
+    "engine capacity" 91
+    "weapon capacity" 118
     weapon
       "blast radius" 60
       "shield damage" 600
@@ -136,10 +133,11 @@ ship "Thistle"
     "Large Thrust Module"
     "Small Thrust Module" 2
     "Large Steering Module"
-    "Small Steering Module"
+    "Small Steering Module" 2
 
     "Large Collector Module"
-    "Small Battery Module"
+    "Small Collector Module" 2
+    "Small Battery Module" 3
     "Small Shield Module" 3
     "Fuel Pod" 7
     "Hyperdrive"
@@ -175,8 +173,8 @@ ship "Thorn"
     "heat dissipation" .80
     "cargo space" 12
     "outfit space" 181
-      "engine capacity" 38
-      "weapon capacity" 40
+    "engine capacity" 38
+    "weapon capacity" 40
     weapon
       "blast radius" 14
       "shield damage" 140
@@ -186,7 +184,7 @@ ship "Thorn"
     "Small Thrust Module" 2
     "Small Steering Module" 2
 
-    "Small Collector Module"
+    "Small Collector Module" 2
     "Small Battery Module"
     "Small Shield Module"
     "Fuel Pod" 6
