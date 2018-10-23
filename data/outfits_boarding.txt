@@ -12,7 +12,7 @@ outfit "Biodefences"
 
 outfit "Laser Rifle"
   category "Boarding"
-  thumbnail "outfit/rifle_laser"
+  thumbnail "outfit/rifle_human"
   cost 8000
   "capture attack" .6
   "capture defence" .8
@@ -36,6 +36,16 @@ outfit "Intrusion Countermeasures"
   "capture defence" 60
   description "Quarg ships are outfitted with special systems for repelling boarders. Because no one wants to be caught by the Quarg with stolen technology, these systems are pretty much worthless on the open market."
 
+outfit "Ion Rifle"
+  category "Boarding"
+  licences
+    Heliarch
+  cost 25000
+  thumbnail "outfit/rifle_heliarch"
+  "capture attack" 1.2
+  "capture defense" 1.6
+  description "The Ion Rifle is a heavy hand-held weapon which shoots disrupting ions to kill its opponents. It was developed long ago. Because Coalition space is peaceful nowadays, sales are restricted by the Heliarchs, and nobody needs hand-to-hand weapons any more. Nevertheless, all Heliarch ships are equipped with a number of Ion Rifles, just in case."
+
 outfit "Nerve Gas"
   plural "Nerve Gas"
   category "Boarding"
@@ -46,19 +56,11 @@ outfit "Nerve Gas"
   "illegal" 1000000
   description "This is a highly illegal weapon for hand to hand combat when boarding an enemy ship. Because chemical weapons are banned by interstellar law, you can be severely fined for getting caught in possession of nerve gas canisters. But, they do clear out an enemy ship quicker than just about anything else..."
 
-outfit "Pulse Rifle"
-  category "Boarding"
-  thumbnail "outfit/rifle_hai"
-  cost 11000
-  "capture attack" .7
-  "capture defence" 1.0
-  description "The Pulse Rifle was first developed by the Hai to help protect their ships from boarders during the Korath raids. While it has since been adapted to more effectively incapacitate its target, if several bolts land in quick succession, the accumulated charge has a lethal effect on most species' nervous systems."
-
 outfit "Repeater Rifle"
   category "Boarding"
   thumbnail "outfit/rifle_korath"
   cost 73000
-  "capture attack" 1.6
+  "capture attack" 1.8
   "capture defence" 2.4
   description "This rifle is commonplace among the Korath, predating the creation of the Repeater by at least two centuries. As it uses superheated plasma instead of lasers, the rifle is slow to fire and can sometimes burn its user's hands if they aren't careful. It makes up for these setbacks by guaranteeing that those hit won't live long enough to fire back."
 
