@@ -11,6 +11,12 @@ shipyard "Betelgeuse Variants"
   "Firebird (Hai Weapons)"
   "Firebird (Missile)"
   "Firebird (Plasma)"
+  "Hauler I"
+  "Hauler I (Hai)"
+  "Hauler II"
+  "Hauler II (Hai)"
+  "Hauler III"
+  "Hauler III (Hai)"
   "Heavy Shuttle"
   "Heavy Shuttle (Armed)"
   "Leviathan"
@@ -19,8 +25,6 @@ shipyard "Betelgeuse Variants"
   "Leviathan (Heavy)"
   "Leviathan (Laser)"
   "Shuttle"
-  "Star Queen"
-  "Star Queen (Hai)"
 
 
 
@@ -372,6 +376,243 @@ ship "Firebird" "Firebird (Plasma)"
 
 
 
+ship "Hauler I"
+  sprite "ship/hauler i"
+  thumbnail "thumbnail/hauler i"
+  attributes
+    category "Corvette"
+    "cost" 1430000
+    "shields" 2500
+    "hull" 3700
+    "required crew" 4
+    "bunks" 10
+    "mass" 250
+    "drag" 10.5
+    "heat dissipation" .6
+    "cargo space" 140
+    "outfit space" 390
+    "engine capacity" 80
+    "weapon capacity" 140
+    weapon
+      "blast radius" 60
+      "shield damage" 600
+      "hull damage" 300
+      "hit force" 900
+  outfits
+    "Greyhound Plasma Thruster"
+    "Impala Plasma Steering"
+
+    "Meteor Missile" 80
+    "Meteor Missile Box" 2
+    "Meteor Missile Launcher" 2
+    "4X Blaster Turret" 2
+    "Heavy Anti-Missile Turret" 2
+
+    "D23-QP Shield Generator"
+    "S3 Thermionic"
+    "LP072a Battery Pack"
+    "Fuel Barrel" 40
+    "Hyperdrive"
+    "Small Radar Jammer"
+  engine -45 122
+  engine 45 122
+  gun -15 -91
+  gun 15 -91
+  turret -26 -49 "4X Blaster Turret"
+  turret 26 -49 "4X Blaster Turret"
+  turret -19 77 "Heavy Anti-Missile Turret"
+  turret 19 77 "Heavy Anti-Missile Turret"
+  leak "leak" 60 50
+  leak "flame" 50 80
+  leak "big leak" 90 30
+  explode "tiny explosion" 20
+  explode "small explosion" 35
+  explode "medium explosion" 20
+  explode "large explosion" 5
+  "final explode" "final explosion medium"
+  description "Several centuries ago, in the early days of the Republic, the sudden increase in commerce and space travel led to high demand for cargo ships. Haulers were first created simply by bolting a cockpit and engine block onto a cargo container, and the basic design has not changed much since then."
+
+
+ship "Hauler I" "Hauler I (Hai)"
+  outfits
+    `"Biroo" Atomic Thruster`
+    `"Biroo" Atomic Steering`
+
+    "Tracker" 112
+    "Tracker Storage Pod" 2
+    "Tracker Launcher" 2
+    "4X Blaster Turret" 2
+    "Chameleon Anti-Missile" 2
+
+    "Corundum Regenerator"
+    "Geode Reactor"
+    "Gorge Batteries"
+    "Williwaw Cooling"
+    "Fuel Barrel" 40
+    "Hyperdrive"
+    "Small Radar Jammer"
+    "Outfits Expansion" 2
+
+
+
+ship "Hauler II"
+  sprite "ship/hauler ii"
+  thumbnail "thumbnail/hauler ii"
+  attributes
+    category "Frigate"
+    "cost" 2340000
+    "shields" 2900
+    "hull" 5200
+    "required crew" 4
+    "bunks" 10
+    "mass" 360
+    "drag" 11.5
+    "heat dissipation" .6
+    "cargo space" 280
+    "outfit space" 390
+    "engine capacity" 80
+    "weapon capacity" 140
+    weapon
+      "blast radius" 80
+      "shield damage" 800
+      "hull damage" 400
+      "hit force" 1200
+  outfits
+    "Greyhound Plasma Thruster"
+    "Impala Plasma Steering"
+
+    "Meteor Missile" 80
+    "Meteor Missile Box" 2
+    "Meteor Missile Launcher" 2
+    "4X Blaster Turret" 2
+    "Heavy Anti-Missile Turret" 2
+
+    "D23-QP Shield Generator"
+    "S3 Thermionic"
+    "LP072a Battery Pack"
+    "Fuel Barrel" 40
+    "Hyperdrive"
+    "Small Radar Jammer"
+  engine -45 160
+  engine 45 160
+  gun -15 -128
+  gun 15 -128
+  turret -26 -85 "4X Blaster Turret"
+  turret 26 -85 "4X Blaster Turret"
+  turret -19 115 "Heavy Anti-Missile Turret"
+  turret 19 115 "Heavy Anti-Missile Turret"
+  leak "leak" 60 50
+  leak "flame" 40 80
+  leak "big leak" 80 30
+  explode "tiny explosion" 10
+  explode "small explosion" 25
+  explode "medium explosion" 30
+  explode "large explosion" 15
+  "final explode" "final explosion medium"
+  description "This is a mid-sized freighter, designed for a balance between cargo capacity and defensive capability. Centuries ago, various Hauler models made up nearly half of the merchant vessels in service, but today the design is considered somewhat outdated."
+
+
+ship "Hauler II" "Hauler II (Hai)"
+  outfits
+    `"Biroo" Atomic Thruster`
+    `"Biroo" Atomic Steering`
+
+    "Tracker" 112
+    "Tracker Storage Pod" 2
+    "Tracker Launcher" 2
+    "4X Blaster Turret" 2
+    "Chameleon Anti-Missile" 2
+
+    "Corundum Regenerator"
+    "Geode Reactor"
+    "Gorge Batteries"
+    "Williwaw Cooling"
+    "Fuel Barrel" 40
+    "Hyperdrive"
+    "Small Radar Jammer"
+    "Outfits Expansion" 2
+
+
+
+ship "Hauler III"
+  sprite "ship/hauler iii"
+  thumbnail "thumbnail/hauler iii"
+  attributes
+    category "Frigate"
+    "cost" 3260000
+    "shields" 3300
+    "hull" 6700
+    "required crew" 4
+    "bunks" 10
+    "mass" 470
+    "drag" 12.5
+    "heat dissipation" .6
+    "cargo space" 420
+    "outfit space" 390
+    "engine capacity" 80
+    "weapon capacity" 140
+    weapon
+      "blast radius" 100
+      "shield damage" 1000
+      "hull damage" 500
+      "hit force" 1500
+  outfits
+    "Greyhound Plasma Thruster"
+    "Impala Plasma Steering"
+
+    "Meteor Missile" 80
+    "Meteor Missile Box" 2
+    "Meteor Missile Launcher" 2
+    "4X Blaster Turret" 2
+    "Heavy Anti-Missile Turret" 2
+
+    "D23-QP Shield Generator"
+    "S3 Thermionic"
+    "LP072a Battery Pack"
+    "Fuel Barrel" 40
+    "Hyperdrive"
+    "Small Radar Jammer"
+  engine -45 196
+  engine 45 196
+  gun -15 -165
+  gun 15 -165
+  turret -26 -122 "4X Blaster Turret"
+  turret 26 -122 "4X Blaster Turret"
+  turret -19 151 "Heavy Anti-Missile Turret"
+  turret 19 151 "Heavy Anti-Missile Turret"
+  leak "leak" 50 50
+  leak "flame" 40 80
+  leak "big leak" 80 30
+  explode "small explosion" 15
+  explode "medium explosion" 30
+  explode "large explosion" 20
+  explode "huge explosion" 5
+  "final explode" "final explosion large"
+  description "Considered by many to be outdated, there are nonetheless many Haulers still in service due to their combination of comparatively low price and simple construction. This large version of the Hauler provides the best tradeoff between price and cargo space."
+
+
+ship "Hauler III" "Hauler III (Hai)"
+  outfits
+    `"Biroo" Atomic Thruster`
+    `"Biroo" Atomic Steering`
+
+    "Tracker" 112
+    "Tracker Storage Pod" 2
+    "Tracker Launcher" 2
+    "4X Blaster Turret" 2
+    "Chameleon Anti-Missile" 2
+
+    "Corundum Regenerator"
+    "Geode Reactor"
+    "Gorge Batteries"
+    "Williwaw Cooling"
+    "Fuel Barrel" 40
+    "Hyperdrive"
+    "Small Radar Jammer"
+    "Outfits Expansion" 2
+
+
+
 ship "Heavy Shuttle"
   sprite "ship/heavy shuttle"
   thumbnail "thumbnail/heavy shuttle"
@@ -602,76 +843,4 @@ ship "Shuttle"
   explode "small explosion" 5
   description "Although Betelgeuse Shipyards produces other ship models as well, the majority of their profits come from sales of the Shuttle. This versatile ship serves equally well as a passenger transport or a cargo courier. It also happens to be the cheapest ship you can buy which is capable of hyperspace travel."
   description `  Shuttles are not designed to withstand combat of any sort, but they are fast and maneuverable enough to get out of harm's way if attacked by a larger, slower ship. Although they are typically unarmed, they have enough space for one weapon, which is the origin of the popular phrase, "as useless as a blaster cannon on a shuttlecraft."`
-
-
-
-
-ship "Star Queen"
-  sprite "ship/star queen"
-  thumbnail "thumbnail/star queen"
-  attributes
-    category "Corvette"
-    "cost" 5500000
-    "shields" 4100
-    "hull" 2200
-    "required crew" 43
-    "bunks" 112
-    "mass" 230
-    "drag" 5.5
-    "heat dissipation" .65
-    "cargo space" 60
-    "outfit space" 410
-    "engine capacity" 100
-    "weapon capacity" 120
-    weapon
-      "blast radius" 60
-      "shield damage" 600
-      "hull damage" 300
-      "hit force" 900
-  outfits
-    "X3700 Ion Thruster"
-    "X3200 Ion Steering"
-
-    "Sidewinder Missile" 150
-    "Sidewinder Missile Launcher" 3
-    "Heavy Anti-Missile Turret" 2
-
-    "D94-YV Shield Generator"
-    "NT-200 Nucleovoltaic"
-    "LP072a Battery Pack"
-    "Fuel Barrel" 50
-    "Hyperdrive"
-    "Large Radar Jammer"
-  engine -18 116
-  engine 18 116
-  gun 0 -116 "Sidewinder Missile Launcher"
-  gun -22 -80 "Sidewinder Missile Launcher"
-  gun 22 -80 "Sidewinder Missile Launcher"
-  turret -28 -9 "Heavy Anti-Missile Turret"
-  turret 28 -9 "Heavy Anti-Missile Turret"
-  leak "leak" 50 50
-  leak "big leak" 80 30
-  explode "tiny explosion" 10
-  explode "small explosion" 25
-  explode "medium explosion" 25
-  explode "large explosion" 10
-  "final explode" "final explosion medium"
-  description "The Star Queen is a relic of a more peaceful period of galactic history: a luxury liner for high-end tourists. Every cabin has its own mini-bar, and the bathrooms have marble tile and showers that use actual hot water instead of chemicals or sonic vibrations."
-
-
-ship "Star Queen" "Star Queen (Hai)"
-  outfits
-    "X3700 Ion Thruster"
-    "A375 Atomic Steering"
-
-    "Tracker" 168
-    "Tracker Launcher" 3
-    "Chameleon Anti-Missile" 2
-
-    "D94-YV Shield Generator"
-    "NT-200 Nucleovoltaic"
-    "Fissure Batteries"
-    "Fuel Barrel" 50
-    "Hyperdrive"
-    "Small Radar Jammer"
 

@@ -18,6 +18,8 @@ shipyard "Syndicate Variants"
   "Protector (Proton)"
   "Star Barge"
   "Star Barge (Armed)"
+  "Star Queen"
+  "Star Queen (Hai)"
   "Vanguard"
   "Vanguard (Particle)"
   "Wasp"
@@ -569,6 +571,77 @@ ship "Star Barge" "Star Barge (Armed)"
     "LP036a Battery Pack"
     "Fuel Barrel" 30
     "Hyperdrive"
+
+
+
+ship "Star Queen"
+  sprite "ship/star queen"
+  thumbnail "thumbnail/star queen"
+  attributes
+    category "Corvette"
+    "cost" 5500000
+    "shields" 4100
+    "hull" 2200
+    "required crew" 43
+    "bunks" 112
+    "mass" 230
+    "drag" 5.5
+    "heat dissipation" .65
+    "cargo space" 60
+    "outfit space" 410
+    "engine capacity" 100
+    "weapon capacity" 120
+    weapon
+      "blast radius" 60
+      "shield damage" 600
+      "hull damage" 300
+      "hit force" 900
+  outfits
+    "X3700 Ion Thruster"
+    "X3200 Ion Steering"
+
+    "Sidewinder Missile" 150
+    "Sidewinder Missile Launcher" 3
+    "Heavy Anti-Missile Turret" 2
+
+    "D94-YV Shield Generator"
+    "NT-200 Nucleovoltaic"
+    "LP072a Battery Pack"
+    "Fuel Barrel" 50
+    "Hyperdrive"
+    "Large Radar Jammer"
+  engine -18 116
+  engine 18 116
+  gun 0 -116 "Sidewinder Missile Launcher"
+  gun -22 -80 "Sidewinder Missile Launcher"
+  gun 22 -80 "Sidewinder Missile Launcher"
+  turret -28 -9 "Heavy Anti-Missile Turret"
+  turret 28 -9 "Heavy Anti-Missile Turret"
+  leak "leak" 50 50
+  leak "big leak" 80 30
+  explode "tiny explosion" 10
+  explode "small explosion" 25
+  explode "medium explosion" 25
+  explode "large explosion" 10
+  "final explode" "final explosion medium"
+  description "The Star Queen is a relic of a more peaceful period of galactic history: a luxury liner for high-end tourists. Every cabin has its own mini-bar, and the bathrooms have marble tile and showers that use actual hot water instead of chemicals or sonic vibrations."
+
+
+ship "Star Queen" "Star Queen (Hai)"
+  outfits
+    "X3700 Ion Thruster"
+    "A375 Atomic Steering"
+
+    "Tracker" 168
+    "Tracker Launcher" 3
+    "Chameleon Anti-Missile" 2
+
+    "D94-YV Shield Generator"
+    "NT-200 Nucleovoltaic"
+    "Fissure Batteries"
+    "Fuel Barrel" 50
+    "Hyperdrive"
+    "Small Radar Jammer"
 
 
 
