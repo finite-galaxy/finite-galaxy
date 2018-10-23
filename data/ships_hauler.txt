@@ -1,6 +1,6 @@
 shipyard "Hauler Variants"
-  "Hauler"
-  "Hauler (Hai)"
+  "Hauler I"
+  "Hauler I (Hai)"
   "Hauler II"
   "Hauler II (Hai)"
   "Hauler III"
@@ -14,7 +14,7 @@ shipyard "Hauler Variants"
 
 
 
-ship "Hauler"
+ship "Hauler I"
   sprite "ship/hauler i"
   thumbnail "thumbnail/hauler i"
   attributes
@@ -23,7 +23,7 @@ ship "Hauler"
     "shields" 2500
     "hull" 3700
     "required crew" 4
-    "bunks" 12
+    "bunks" 10
     "mass" 250
     "drag" 10.5
     "heat dissipation" .6
@@ -40,7 +40,8 @@ ship "Hauler"
     "Greyhound Plasma Thruster"
     "Impala Plasma Steering"
 
-    "Meteor Missile" 70
+    "Meteor Missile" 80
+    "Meteor Missile Box" 2
     "Meteor Missile Launcher" 2
     "4X Blaster Turret" 2
     "Heavy Anti-Missile Turret" 2
@@ -56,9 +57,9 @@ ship "Hauler"
   gun -15 -91
   gun 15 -91
   turret -26 -49 "4X Blaster Turret"
-  turret 26 -49 "Heavy Anti-Missile Turret"
+  turret 26 -49 "4X Blaster Turret"
   turret -19 77 "Heavy Anti-Missile Turret"
-  turret 19 77 "4X Blaster Turret"
+  turret 19 77 "Heavy Anti-Missile Turret"
   leak "leak" 60 50
   leak "flame" 50 80
   leak "big leak" 90 30
@@ -70,14 +71,15 @@ ship "Hauler"
   description "Several centuries ago, in the early days of the Republic, the sudden increase in commerce and space travel led to high demand for cargo ships. Haulers were first created simply by bolting a cockpit and engine block onto a cargo container, and the basic design has not changed much since then."
 
 
-ship "Hauler" "Hauler (Hai)"
+ship "Hauler I" "Hauler I (Hai)"
   outfits
-    "Greyhound Plasma Thruster"
-    "Impala Plasma Steering"
+    `"Biroo" Atomic Thruster`
+    `"Biroo" Atomic Steering`
 
     "Tracker" 112
+    "Tracker Storage Pod" 2
     "Tracker Launcher" 2
-    "Pulse Turret" 2
+    "4X Blaster Turret" 2
     "Chameleon Anti-Missile" 2
 
     "Corundum Regenerator"
@@ -87,10 +89,7 @@ ship "Hauler" "Hauler (Hai)"
     "Fuel Barrel" 40
     "Hyperdrive"
     "Small Radar Jammer"
-  turret "Pulse Turret"
-  turret "Chameleon Anti-Missile"
-  turret "Chameleon Anti-Missile"
-  turret "Pulse Turret"
+    "Outfits Expansion" 2
 
 
 
@@ -98,12 +97,12 @@ ship "Hauler II"
   sprite "ship/hauler ii"
   thumbnail "thumbnail/hauler ii"
   attributes
-    category "Corvette"
+    category "Frigate"
     "cost" 2340000
     "shields" 2900
     "hull" 5200
     "required crew" 4
-    "bunks" 12
+    "bunks" 10
     "mass" 360
     "drag" 11.5
     "heat dissipation" .6
@@ -120,7 +119,8 @@ ship "Hauler II"
     "Greyhound Plasma Thruster"
     "Impala Plasma Steering"
 
-    "Meteor Missile" 70
+    "Meteor Missile" 80
+    "Meteor Missile Box" 2
     "Meteor Missile Launcher" 2
     "4X Blaster Turret" 2
     "Heavy Anti-Missile Turret" 2
@@ -136,9 +136,9 @@ ship "Hauler II"
   gun -15 -128
   gun 15 -128
   turret -26 -85 "4X Blaster Turret"
-  turret 26 -85 "Heavy Anti-Missile Turret"
+  turret 26 -85 "4X Blaster Turret"
   turret -19 115 "Heavy Anti-Missile Turret"
-  turret 19 115 "4X Blaster Turret"
+  turret 19 115 "Heavy Anti-Missile Turret"
   leak "leak" 60 50
   leak "flame" 40 80
   leak "big leak" 80 30
@@ -152,12 +152,13 @@ ship "Hauler II"
 
 ship "Hauler II" "Hauler II (Hai)"
   outfits
-    "Greyhound Plasma Thruster"
-    "Impala Plasma Steering"
+    `"Biroo" Atomic Thruster`
+    `"Biroo" Atomic Steering`
 
     "Tracker" 112
+    "Tracker Storage Pod" 2
     "Tracker Launcher" 2
-    "Pulse Turret" 2
+    "4X Blaster Turret" 2
     "Chameleon Anti-Missile" 2
 
     "Corundum Regenerator"
@@ -167,10 +168,7 @@ ship "Hauler II" "Hauler II (Hai)"
     "Fuel Barrel" 40
     "Hyperdrive"
     "Small Radar Jammer"
-  turret "Pulse Turret"
-  turret "Chameleon Anti-Missile"
-  turret "Chameleon Anti-Missile"
-  turret "Pulse Turret"
+    "Outfits Expansion" 2
 
 
 
@@ -178,12 +176,12 @@ ship "Hauler III"
   sprite "ship/hauler iii"
   thumbnail "thumbnail/hauler iii"
   attributes
-    category "Corvette"
+    category "Frigate"
     "cost" 3260000
     "shields" 3300
     "hull" 6700
     "required crew" 4
-    "bunks" 12
+    "bunks" 10
     "mass" 470
     "drag" 12.5
     "heat dissipation" .6
@@ -200,7 +198,8 @@ ship "Hauler III"
     "Greyhound Plasma Thruster"
     "Impala Plasma Steering"
 
-    "Meteor Missile" 70
+    "Meteor Missile" 80
+    "Meteor Missile Box" 2
     "Meteor Missile Launcher" 2
     "4X Blaster Turret" 2
     "Heavy Anti-Missile Turret" 2
@@ -216,9 +215,9 @@ ship "Hauler III"
   gun -15 -165
   gun 15 -165
   turret -26 -122 "4X Blaster Turret"
-  turret 26 -122 "Heavy Anti-Missile Turret"
+  turret 26 -122 "4X Blaster Turret"
   turret -19 151 "Heavy Anti-Missile Turret"
-  turret 19 151 "4X Blaster Turret"
+  turret 19 151 "Heavy Anti-Missile Turret"
   leak "leak" 50 50
   leak "flame" 40 80
   leak "big leak" 80 30
@@ -232,12 +231,13 @@ ship "Hauler III"
 
 ship "Hauler III" "Hauler III (Hai)"
   outfits
-    "Greyhound Plasma Thruster"
-    "Impala Plasma Steering"
+    `"Biroo" Atomic Thruster`
+    `"Biroo" Atomic Steering`
 
     "Tracker" 112
+    "Tracker Storage Pod" 2
     "Tracker Launcher" 2
-    "Pulse Turret" 2
+    "4X Blaster Turret" 2
     "Chameleon Anti-Missile" 2
 
     "Corundum Regenerator"
@@ -247,10 +247,7 @@ ship "Hauler III" "Hauler III (Hai)"
     "Fuel Barrel" 40
     "Hyperdrive"
     "Small Radar Jammer"
-  turret "Pulse Turret"
-  turret "Chameleon Anti-Missile"
-  turret "Chameleon Anti-Missile"
-  turret "Pulse Turret"
+    "Outfits Expansion" 2
 
 
 
@@ -263,12 +260,12 @@ ship "Nest"
     "shields" 2500
     "hull" 3700
     "required crew" 6
-    "bunks" 14
+    "bunks" 12
     "mass" 250
     "drag" 10.5
-    "heat dissipation" .67
-    "cargo space" 40
-    "outfit space" 450
+    "heat dissipation" .6
+    "cargo space" 30
+    "outfit space" 460
     "engine capacity" 80
     "weapon capacity" 140
     weapon
@@ -280,25 +277,26 @@ ship "Nest"
     "Greyhound Plasma Thruster"
     "Impala Plasma Steering"
 
-    "Meteor Missile" 70
+    "Meteor Missile" 80
+    "Meteor Missile Box" 2
     "Meteor Missile Launcher" 2
     "4X Blaster Turret" 2
     "Heavy Anti-Missile Turret" 2
 
     "D41-HY Shield Generator" 2
     "S3 Thermionic"
-    "LP072a Battery Pack"
+    "LP144a Battery Pack"
     "Fuel Barrel" 50
     "Hyperdrive"
-    "Large Radar Jammer"
+    "Small Radar Jammer"
   engine -45 122
   engine 45 122
   gun -15 -91
   gun 15 -91
   turret -26 -50 "4X Blaster Turret"
-  turret 26 -50 "Heavy Anti-Missile Turret"
+  turret 26 -50 "4X Blaster Turret"
   turret -18 75 "Heavy Anti-Missile Turret"
-  turret 18 75 "4X Blaster Turret"
+  turret 18 75 "Heavy Anti-Missile Turret"
   fighter -47 12 under
   fighter 47 12 under
   leak "leak" 60 50
@@ -318,6 +316,7 @@ ship "Nest" "Nest (Sidewinder)"
     "Impala Plasma Steering"
 
     "Sidewinder Missile" 100
+    "Sidewinder Missile Rack" 2
     "Sidewinder Missile Launcher" 2
     "4X Blaster Turret" 2
     "Heavy Anti-Missile Turret" 2
@@ -327,7 +326,7 @@ ship "Nest" "Nest (Sidewinder)"
     "LP144a Battery Pack"
     "Fuel Barrel" 50
     "Hyperdrive"
-    "Large Radar Jammer"
+    "Small Radar Jammer"
 
 
 
@@ -343,9 +342,9 @@ ship "Roost"
     "bunks" 16
     "mass" 360
     "drag" 11.5
-    "heat dissipation" .67
-    "cargo space" 80
-    "outfit space" 510
+    "heat dissipation" .6
+    "cargo space" 60
+    "outfit space" 530
     "engine capacity" 80
     "weapon capacity" 140
     weapon
@@ -357,25 +356,26 @@ ship "Roost"
     "Greyhound Plasma Thruster"
     "Impala Plasma Steering"
 
-    "Meteor Missile" 70
+    "Meteor Missile" 80
+    "Meteor Missile Box" 2
     "Meteor Missile Launcher" 2
     "4X Blaster Turret" 2
     "Heavy Anti-Missile Turret" 2
 
     "D41-HY Shield Generator" 4
     "S3 Thermionic"
-    "LP072a Battery Pack"
+    "LP144a Battery Pack"
     "Fuel Barrel" 60
     "Hyperdrive"
-    "Large Radar Jammer"
+    "Small Radar Jammer"
   engine -45 159
   engine 45 159
   gun -15 -128
   gun 15 -128
   turret -26 -85 "4X Blaster Turret"
-  turret 26 -85 "Heavy Anti-Missile Turret"
+  turret 26 -85 "4X Blaster Turret"
   turret -18 114 "Heavy Anti-Missile Turret"
-  turret 18 114 "4X Blaster Turret"
+  turret 18 114 "Heavy Anti-Missile Turret"
   fighter -47 -24 under
   fighter 47 -24 under
   fighter -47 50 under
@@ -397,6 +397,7 @@ ship "Roost" "Roost (Sidewinder)"
     "Impala Plasma Steering"
 
     "Sidewinder Missile" 100
+    "Sidewinder Missile Rack" 2
     "Sidewinder Missile Launcher" 2
     "4X Blaster Turret" 2
     "Heavy Anti-Missile Turret" 2
@@ -406,7 +407,7 @@ ship "Roost" "Roost (Sidewinder)"
     "S3 Thermionic"
     "Fuel Barrel" 60
     "Hyperdrive"
-    "Large Radar Jammer"
+    "Small Radar Jammer"
 
 
 
@@ -421,12 +422,12 @@ ship "Skein"
     "shields" 3300
     "hull" 6700
     "required crew" 10
-    "bunks" 18
+    "bunks" 20
     "mass" 470
     "drag" 12.5
-    "heat dissipation" .71
-    "cargo space" 120
-    "outfit space" 570
+    "heat dissipation" .6
+    "cargo space" 90
+    "outfit space" 600
     "engine capacity" 80
     "weapon capacity" 140
     weapon
@@ -438,25 +439,26 @@ ship "Skein"
     "Greyhound Plasma Thruster"
     "Impala Plasma Steering"
 
-    "Meteor Missile" 70
+    "Meteor Missile" 80
+    "Meteor Missile Box" 2
     "Meteor Missile Launcher" 2
     "4X Blaster Turret" 2
     "Heavy Anti-Missile Turret" 2
 
     "D41-HY Shield Generator" 6
     "S3 Thermionic"
-    "LP072a Battery Pack"
+    "LP144a Battery Pack"
     "Fuel Barrel" 70
     "Hyperdrive"
-    "Large Radar Jammer"
+    "Small Radar Jammer"
   engine -45 197
   engine 45 197
   gun -15 -165
   gun 15 -165
   turret -26 -123 "4X Blaster Turret"
-  turret 26 -123 "Heavy Anti-Missile Turret"
+  turret 26 -123 "4X Blaster Turret"
   turret -18.5 154 "Heavy Anti-Missile Turret"
-  turret 18.5 154 "4X Blaster Turret"
+  turret 18.5 154 "Heavy Anti-Missile Turret"
   fighter -47 -61 under
   fighter 47 -61 under
   fighter -47 14 under
@@ -480,14 +482,15 @@ ship "Skein" "Skein (Sidewinder)"
     "Impala Plasma Steering"
 
     "Sidewinder Missile" 100
+    "Sidewinder Missile Rack" 2
     "Sidewinder Missile Launcher" 2
     "4X Blaster Turret" 2
     "Heavy Anti-Missile Turret" 2
 
     "D94-YV Shield Generator" 3
+    "S3 Thermionic"
     "LP144a Battery Pack"
-    "Fission Reactor"
     "Fuel Barrel" 70
     "Hyperdrive"
-    "Large Radar Jammer"
+    "Small Radar Jammer"
 

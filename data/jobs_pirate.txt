@@ -1587,18 +1587,21 @@ mission "Escort Stolen Vessel (Extra Large, North, Dangerous Path)"
     personality escort
     fleet
       names "pirate"
-      variant 6
+      variant 5
+        "Leviathan (Heavy)"
+        "Freighter" 2
+      variant 3
+        "Leviathan (Laser)"
+        "Mule"
+      variant 4
+        "Leviathan"
+        "Hauler I"
+      variant 4
         "Leviathan"
         "Hauler II"
       variant 4
-        "Leviathan (Laser)"
-        "Hauler"
-      variant 4
-        "Leviathan (Heavy)"
-        "Freighter"
-      variant 1
-        "Bactrian"
-        "Shuttle"
+        "Leviathan"
+        "Hauler III"
   on complete
     payment 375000
     dialog "The captain of the <npc> thanks you for escorting them safely, and pays you <payment>."
@@ -1880,7 +1883,7 @@ mission "Escort Stolen Vessel (Extra Large, South, Dangerous Path)"
         "Bounder"
       variant 2
         "Falcon"
-        "Hauler"
+        "Hauler I"
       variant 2
         "Falcon (Laser)"
         "Freighter"
