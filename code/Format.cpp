@@ -50,12 +50,12 @@ string Format::Credits(int64_t value)
     return out.str();
   }
   
-  // Reserve enough space for something like "-123.456M".
+  // Reserve enough space for something like "-123.456 M".
   string result;
   result.reserve(8);
   
   // Handle numbers bigger than a million.
-  static const vector<char> SUFFIX = {'T', 'B', 'M'};
+  static const vector<char> SUFFIX = {' T', ' B', ' M'};
   static const vector<int64_t> THRESHOLD = {1000000000000ll, 1000000000ll, 1000000ll};
   for(size_t i = 0; i < SUFFIX.size(); ++i)
     if(absolute > THRESHOLD[i])
