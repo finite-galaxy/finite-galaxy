@@ -61,7 +61,7 @@ string Format::Credits(int64_t value)
     if(absolute > THRESHOLD[i])
     {
       result += SUFFIX[i];
-      result += <char>(' ');
+      result += static_cast<char>(' ');
       int decimals = (absolute / (THRESHOLD[i] / 1000)) % 1000;
       for(int d = 0; d < 3; ++d)
       {
