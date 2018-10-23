@@ -87,6 +87,76 @@ effect "emp spark"
 
 
 
+outfit "Thrasher Cannon"
+  category "Cannons"
+  thumbnail "outfit/thrasher_cannon"
+  licences
+    Remnant
+  cost 218000
+  "mass" 10
+  "outfit space" -10
+  "weapon capacity" -10
+  "gun ports" -1
+  weapon
+    sprite "projectile/thrasher"
+      "frame rate" 10
+      "random start frame"
+      "no repeat"
+    sound "particle"
+    "hit effect" "thrasher impact"
+    "inaccuracy" 9
+    "velocity" 10
+    "lifetime" 48
+    "reload" 20
+    "firing energy" 36
+    "firing heat" 27
+    "shield damage" 38
+    "hull damage" 46
+  description "This weapon was originally developed in an attempt to reverse engineer a long-range energy projectile favored by an alien species that the Remnant encountered nearby. In the process they discovered that by adding more energy to the projectiles they could do a lot more damage in exchange for shorter range, and the Thrasher Cannon was born."
+
+effect "thrasher impact"
+  sprite "effect/thrasher impact"
+    "frame rate" 30
+    "no repeat"
+  "lifetime" 11
+  "velocity scale" -.1
+  "random angle" 360
+  "random spin" 30
+  "random velocity" 3
+
+outfit "Thrasher Turret"
+  category "Turrets"
+  thumbnail "outfit/thrasher_turret"
+  licences
+    Remnant
+  cost 980000
+  "mass" 49
+  "drag" .49
+  "outfit space" -49
+  "weapon capacity" -49
+  "required crew" 1
+  "turret mounts" -1
+  weapon
+    sprite "projectile/thrasher"
+      "frame rate" 10
+      "random start frame"
+      "no repeat"
+    "hardpoint sprite" "hardpoint/thrasher_turret"
+    "hardpoint offset" 6.
+    sound "particle"
+    "hit effect" "thrasher impact"
+    "inaccuracy" 6
+    "turret turn" 1.22
+    "velocity" 10
+    "lifetime" 48
+    "reload" 5
+    "firing energy" 36
+    "firing heat" 27
+    "shield damage" 38
+    "hull damage" 46
+  description "This turret mounts four Thrasher Cannons on a single rotating base. The resulting weapon deals a very satisfying amount of damage when fired from close range, especially against a slow-moving target."
+
+
 outfit "Inhibitor Cannon"
   category "Cannons"
   thumbnail "outfit/inhibitor_cannon"
@@ -127,77 +197,6 @@ effect "inhibitor impact"
   "random angle" 360
   "random velocity" 6
   "random frame rate" 15
-
-
-outfit "Thrasher Cannon"
-  category "Cannons"
-  thumbnail "outfit/thrasher_cannon"
-  licences
-    Remnant
-  cost 218000
-  "mass" 10
-  "outfit space" -10
-  "weapon capacity" -10
-  "gun ports" -1
-  weapon
-    sprite "projectile/thrasher"
-      "frame rate" 10
-      "random start frame"
-      "no repeat"
-    sound "particle"
-    "hit effect" "thrasher impact"
-    "inaccuracy" 9
-    "velocity" 10
-    "lifetime" 48
-    "reload" 20
-    "firing energy" 36
-    "firing heat" 27
-    "shield damage" 38
-    "hull damage" 46
-  description "This weapon was originally developed in an attempt to reverse engineer a long-range energy projectile favored by an alien species that the Remnant encountered nearby. In the process they discovered that by adding more energy to the projectiles they could do a lot more damage in exchange for shorter range, and the Thrasher Cannon was born."
-
-effect "thrasher impact"
-  sprite "effect/thrasher impact"
-    "frame rate" 30
-    "no repeat"
-  "lifetime" 11
-  "velocity scale" -.1
-  "random angle" 360
-  "random spin" 30
-  "random velocity" 3
-
-
-outfit "Thrasher Turret"
-  category "Turrets"
-  thumbnail "outfit/thrasher_turret"
-  licences
-    Remnant
-  cost 980000
-  "mass" 49
-  "drag" .49
-  "outfit space" -49
-  "weapon capacity" -49
-  "required crew" 1
-  "turret mounts" -1
-  weapon
-    sprite "projectile/thrasher"
-      "frame rate" 10
-      "random start frame"
-      "no repeat"
-    "hardpoint sprite" "hardpoint/thrasher_turret"
-    "hardpoint offset" 6.
-    sound "particle"
-    "hit effect" "thrasher impact"
-    "inaccuracy" 6
-    "turret turn" 1.22
-    "velocity" 10
-    "lifetime" 48
-    "reload" 5
-    "firing energy" 36
-    "firing heat" 27
-    "shield damage" 38
-    "hull damage" 46
-  description "This turret mounts four Thrasher Cannons on a single rotating base. The resulting weapon deals a very satisfying amount of damage when fired from close range, especially against a slow-moving target."
 
 
 

@@ -59,27 +59,6 @@ effect "antimatter dust"
   "random spin" 50
 
 
-
-outfit "Anti-Missile Field"
-  category "Anti-Missile"
-  thumbnail "outfit/unknown"
-  cost 1000000
-  "mass" 66
-  "drag" .66
-  "outfit space" -66
-  "weapon capacity" -66
-  "turret mounts" -1
-  weapon
-    "velocity" 400
-    "lifetime" 1
-    "reload" 1
-    "firing energy" 10
-    "firing heat" 1
-    "anti-missile" 100
-  description "This device produces a field that destroys any missiles that come within it."
-
-
-
 outfit "Bolt Turret"
   category "Turrets"
   thumbnail "outfit/unknown"
@@ -162,4 +141,24 @@ outfit "Draining Field"
     "shield damage" 50
     "ion damage" .5
   description "This device produces a field that drains energy from any ship within it."
+
+
+
+outfit "Anti-Missile Field"
+  category "Anti-Missile"
+  thumbnail "outfit/unknown"
+  cost 1000000
+  "mass" 66
+  "drag" .66
+  "outfit space" -66
+  "weapon capacity" -66
+  "turret mounts" -1
+  weapon
+    "velocity" 400
+    "lifetime" 1
+    "reload" 1
+    "firing energy" 10
+    "firing heat" 1
+    "anti-missile" 100
+  description "This device produces a field that destroys any missiles that come within it."
 

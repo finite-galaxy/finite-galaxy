@@ -1,0 +1,344 @@
+outfit "Flamethrower"
+  category "Secondary Weapons"
+  thumbnail "outfit/flamethrower"
+  cost 190000
+  "mass" 9
+  "outfit space" -9
+  "weapon capacity" -9
+  "gun ports" -1
+  weapon
+    sprite "effect/explosion/small"
+      "frame rate" 60
+      "no repeat"
+    sound "flamethrower"
+    icon "icon/flamethrower"
+    "submunition" "Flamethrower Projectile"
+    "inaccuracy" 12
+    "velocity" 9
+    "lifetime" 5
+    "reload" 1
+    "firing energy" .1
+    "firing fuel" .25
+    "firing heat" 2
+  description "A crude but impressive-looking weapon, the Flamethrower ignites your hyperspace fuel and directs a stream of it towards your adversaries. The damage it does is relatively minor, but it can be useful for causing a target that is already operating near its thermal capacity to overheat, temporarily taking it out of the fight."
+
+outfit "Flamethrower Projectile"
+  weapon
+    sprite "projectile/flamethrower"
+      "frame rate" 17
+      "random start frame"
+    "hit effect" "flamethrower hit"
+    "die effect" "flamethrower die"
+    "inaccuracy" 20
+    "lifetime" 22
+    "shield damage" .8
+    "hull damage" .7
+    "heat damage" 200
+
+effect "flamethrower die"
+  sprite "effect/explosion/small"
+    "no repeat"
+    "frame rate" 15
+    "random start frame"
+  "lifetime" 24
+  "random angle" 360
+  "random velocity" .4
+  "random spin" 2
+  "random frame rate" 5
+  "velocity scale" .4
+
+effect "flamethrower hit"
+  sprite "effect/explosion/medium"
+    "no repeat"
+    "frame rate" 15
+    "random start frame"
+  "lifetime" 28
+  "random angle" 360
+  "random velocity" .6
+  "random spin" 3
+  "random frame rate" 5
+  "velocity scale" .4
+
+
+outfit "Heavy Rocket"
+  category "Ammunition"
+  thumbnail "outfit/rocket"
+  cost 1500
+  "mass" .5
+  "plunderable" 1
+  "rocket capacity" -1
+  description "Heavy Rockets are ammunition for the Heavy Rocket Launcher. You cannot install one unless you have first installed a launcher to fire it from. Each launcher holds up to 20 rockets."
+
+outfit "Heavy Rocket Rack"
+  category "Ammunition Storage"
+  thumbnail "outfit/rocket_storage"
+  cost 15000
+  "mass" 3
+  "outfit space" -8
+  "rocket capacity" 10
+  ammo "Heavy Rocket"
+  description "The Heavy Rocket Rack is used to store extra ammunition for Heavy Rocket Launchers."
+
+outfit "Heavy Rocket Launcher"
+  category "Secondary Weapons"
+  thumbnail "outfit/rocket_launcher"
+  cost 40000
+  "mass" 15
+  "outfit space" -20
+  "weapon capacity" -20
+  "gun ports" -1
+  "rocket capacity" 10
+  weapon
+    sprite "projectile/rocket"
+      "frame rate" 4
+    sound "rocket"
+    ammo "Heavy Rocket"
+    icon "icon/rocket"
+    "hit effect" "heavy rocket hit"
+    "die effect" "small explosion"
+    "inaccuracy" 1
+    "velocity" 9
+    "lifetime" 120
+    "reload" 240
+    "firing energy" 1
+    "firing heat" 250
+    "acceleration" .8
+    "drag" .1
+    "trigger radius" 30
+    "blast radius" 50
+    "shield damage" 850
+    "hull damage" 720
+    "hit force" 600
+    "missile strength" 16
+  description "Heavy Rockets are the most powerful missile weapon available, but at a price: instead of having a homing system, they simply fire straight forward and rely on a proximity trigger to set them off. Once triggered, however, they damage all ships within their blast radius, making them highly effective against clusters of fighters."
+
+effect "heavy rocket hit"
+  sprite "effect/explosion/huge"
+    "no repeat"
+    "frame rate" 15
+  sound "heavy rocket hit"
+  "lifetime" 36
+  "random angle" 360
+  "random velocity" 1
+  "random spin" 5
+  "random frame rate" 5
+  "velocity scale" .4
+
+
+outfit "Nuclear Missile"
+  category "Secondary Weapons"
+  thumbnail "outfit/nuke"
+  cost 1000000
+  "mass" 10
+  "outfit space" -10
+  "weapon capacity" -10
+  "gun ports" -1
+  weapon
+    sprite "projectile/missile"
+      "no repeat"
+      "frame rate" .25
+    sound "nuke"
+    ammo "Nuclear Missile"
+    stream
+    icon "icon/nuke"
+    "hit effect" "nuke explosion"
+    "hit effect" "nuke residue fast" 10
+    "hit effect" "nuke residue slow" 10
+    "die effect" "missile death"
+    "inaccuracy" 1
+    "velocity" 6
+    "lifetime" 800
+    "reload" 400
+    "firing energy" 10
+    "firing heat" 400
+    "acceleration" .8
+    "drag" .1
+    "turn" 2.5
+    "homing" 4
+    "radar tracking" .5
+    "optical tracking" 1
+    "trigger radius" 30
+    "blast radius" 150
+    "shield damage" 9000
+    "hull damage" 7000
+    "hit force" 4000
+    "missile strength" 200
+  description "It has been centuries since the last nuclear war was fought, and until very recently, most people in the galaxy assumed that that era of chaos and destruction was forever behind us..."
+  description "  [Nuclear missiles are a one-shot weapon: each missile occupies a gun slot, and after it is fired, the slot it was in is left empty.]"
+
+effect "nuke explosion"
+  sprite "effect/explosion/nuke"
+    "no repeat"
+    "frame rate" 30
+  sound "explosion nuke"
+  "lifetime" 15
+  "random angle" 360
+  "random velocity" 1
+  "random spin" 5
+  "velocity scale" .4
+
+effect "nuke residue fast"
+  sprite "effect/explosion/huge"
+    "no repeat"
+    "frame rate" 15
+  "lifetime" 36
+  "random angle" 360
+  "random velocity" 8
+  "random spin" 5
+  "velocity scale" 0.1
+
+effect "nuke residue slow"
+  sprite "effect/explosion/huge"
+    "no repeat"
+    "frame rate" 10
+  "lifetime" 60
+  "random angle" 360
+  "random velocity" 5
+  "random spin" 5
+  "velocity scale" 0.1
+
+
+
+outfit "Modified Blaster Cannon"
+  category "Cannons"
+  thumbnail "outfit/modified_blaster_cannon"
+  cost 21000
+  "mass" 6
+  "outfit space" -6
+  "weapon capacity" -6
+  "gun ports" -1
+  weapon
+    sprite "projectile/mod blaster"
+    sound "mod blaster"
+    "hit effect" "blaster impact"
+    "inaccuracy" 4
+    "velocity" 21
+    "lifetime" 30
+    "reload" 16
+    "firing energy" 15
+    "firing heat" 45
+    "shield damage" 15
+    "hull damage" 10
+  description "This is an energy blaster the design of which has been modified, to increase its power signifantly, at the cost of reduced fire rate. Effectively Modified Blasters are rather similar to ordinary blasters, only slightly better."
+
+outfit "Modified Blaster Turret"
+  category "Turrets"
+  thumbnail "outfit/modified_blaster_turret"
+  cost 140000
+  "mass" 18
+  "drag" .18
+  "outfit space" -18
+  "weapon capacity" -18
+  "turret mounts" -1
+  "required crew" 1
+  weapon
+    sprite "projectile/mod blaster"
+    "hardpoint sprite" "hardpoint/modified_blaster_turret"
+    "hardpoint offset" 9.
+    sound "mod blaster"
+    "hit effect" "blaster impact"
+    "inaccuracy" 4
+    "turret turn" 3.33
+    "velocity" 21
+    "lifetime" 30
+    "reload" 8
+    "firing energy" 15
+    "firing heat" 45
+    "shield damage" 15
+    "hull damage" 10
+  description "This is a turreted version of the Modified Blaster Cannon. These turrets are popular with pirates and others who are trying to cram as much firepower into their ships as possible."
+
+outfit "Modified Blaster Quad Turret"
+  category "Turrets"
+  thumbnail "outfit/modified_blaster_quad_turret"
+  cost 300000
+  "mass" 31
+  "drag" .31
+  "outfit space" -31
+  "weapon capacity" -31
+  "turret mounts" -1
+  "required crew" 1
+  weapon
+    sprite "projectile/mod blaster"
+    "hardpoint sprite" "hardpoint/modified_blaster_quad_turret"
+    "hardpoint offset" 9.
+    sound "mod blaster"
+    "hit effect" "blaster impact"
+    "inaccuracy" 4
+    "turret turn" 1.94
+    "velocity" 21
+    "lifetime" 30
+    "reload" 4
+    "firing energy" 15
+    "firing heat" 45
+    "shield damage" 15
+    "hull damage" 10
+  description "This jury-rigged weapon is a turbocharged version of the Modified Blaster Turret, mounting double the number of guns and fed with an even higher energy input. The crystals glow and crackle with power, and from 20 feet away you can feel the heat they're giving off. Each of these formidable turrets would likely require a dedicated cooling system to prevent its ship from going into thermal shutdown."
+
+
+outfit "Plasma Cannon"
+  category "Cannons"
+  thumbnail "outfit/plasma_cannon"
+  cost 190000
+  "mass" 25
+  "outfit space" -25
+  "weapon capacity" -25
+  "gun ports" -1
+  weapon
+    sprite "projectile/plasma"
+      "frame rate" 3
+    sound "plasma"
+    "hit effect" "plasma explosion"
+    "inaccuracy" 2
+    "velocity" 16
+    "lifetime" 40
+    "reload" 18
+    "firing energy" 30
+    "firing heat" 180
+    "hit force" 30
+    "shield damage" 63
+    "hull damage" 25
+    "heat damage" 340
+  description "The Plasma Cannon fires bursts of superheated plasma. In addition to damaging your target, these plasma bursts impart a significant amount of heat, especially to a target whose shields are down."
+
+effect "plasma explosion"
+  sprite "effect/plasma explosion"
+    "no repeat"
+    "frame rate" 20
+  sound "explosion tiny"
+  "lifetime" 21
+  "random angle" 360
+  "random velocity" .1
+  "random spin" 4
+  "velocity scale" -.05
+
+outfit "Plasma Turret"
+  category "Turrets"
+  thumbnail "outfit/plasma_turret"
+  cost 520000
+  "mass" 60
+  "drag" .60
+  "outfit space" -60
+  "weapon capacity" -60
+  "turret mounts" -1
+  "required crew" 1
+  weapon
+    sprite "projectile/plasma"
+      "frame rate" 3
+    "hardpoint sprite" "hardpoint/plasma_turret"
+    "hardpoint offset" 15.
+    sound "plasma"
+    "hit effect" "plasma explosion"
+    "inaccuracy" 2
+    "turret turn" 1.00
+    "velocity" 16
+    "lifetime" 40
+    "reload" 9
+    "firing energy" 30
+    "firing heat" 180
+    "hit force" 30
+    "shield damage" 63
+    "hull damage" 25
+    "heat damage" 340
+  description "The Plasma Turret is a pair of plasma cannons mounted on a turret so that they can fire in any direction. It is a fearsome weapon, but only the largest of ships have the space and the energy that it requires."
+

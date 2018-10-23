@@ -176,6 +176,45 @@ effect "bombardment impact"
   "velocity scale" -.2
 
 
+outfit "Ion Rain Gun"
+  category "Cannons"
+  thumbnail "outfit/ion_rain_cannon"
+  licences
+    Heliarch
+  cost 798000
+  "mass" 17
+  "outfit space" -17
+  "weapon capacity" -17
+  "gun ports" -1
+  weapon
+    sprite "projectile/ion rain"
+      "frame rate" 7
+      "random start frame"
+    sound "ion rain"
+    "hit effect" "ion rain impact"
+    "inaccuracy" 4.5
+    "velocity" 18
+    "random velocity" 3
+    "lifetime" 30
+    "random lifetime" 6
+    "reload" 4
+    "firing energy" 12
+    "firing heat" 4
+    "shield damage" 12
+    "hull damage" 2
+    "ion damage" .2
+  description "Heliarch ships primarily serve as a police force. This weapon is designed to neutralize a target's offensive capabilities until more Heliarch ships can join the fray."
+
+effect "ion rain impact"
+  sprite "effect/ion rain impact"
+    "no repeat"
+    "frame rate" 60
+  "lifetime" 5
+  "random angle" 360
+  "random spin" 2
+  "random velocity" 10
+  "velocity scale" -.1
+
 
 outfit "Attractor"
   category "Turrets"
@@ -264,44 +303,4 @@ effect "repulsor impact"
   "random spin" 10
   "random velocity" 4
   "velocity scale" .01
-
-
-outfit "Ion Rain Gun"
-  category "Cannons"
-  thumbnail "outfit/ion_rain_cannon"
-  licences
-    Heliarch
-  cost 798000
-  "mass" 17
-  "outfit space" -17
-  "weapon capacity" -17
-  "gun ports" -1
-  weapon
-    sprite "projectile/ion rain"
-      "frame rate" 7
-      "random start frame"
-    sound "ion rain"
-    "hit effect" "ion rain impact"
-    "inaccuracy" 4.5
-    "velocity" 18
-    "random velocity" 3
-    "lifetime" 30
-    "random lifetime" 6
-    "reload" 4
-    "firing energy" 12
-    "firing heat" 4
-    "shield damage" 12
-    "hull damage" 2
-    "ion damage" .2
-  description "Heliarch ships primarily serve as a police force. This weapon is designed to neutralize a target's offensive capabilities until more Heliarch ships can join the fray."
-
-effect "ion rain impact"
-  sprite "effect/ion rain impact"
-    "no repeat"
-    "frame rate" 60
-  "lifetime" 5
-  "random angle" 360
-  "random spin" 2
-  "random velocity" 10
-  "velocity scale" -.1
 

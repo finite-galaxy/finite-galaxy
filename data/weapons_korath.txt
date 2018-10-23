@@ -1,3 +1,194 @@
+outfit "Mine"
+  category "Ammunition"
+  thumbnail "outfit/mine"
+  cost 4500
+  "mass" .7
+  "plunderable" 1
+  "mine capacity" -1
+  description "This is ammunition for a Mine Launcher. Each mine splits into eleven submunitions after it is deployed."
+
+outfit "Mine Rack"
+  category "Ammunition Storage"
+  thumbnail "outfit/mine_storage"
+  cost 76500
+  "mass" 5.1
+  "outfit space" -17
+  "mine capacity" 17
+  ammo "Mine"
+  description "The Mine Rack is used to store extra ammunition for Mine Launchers."
+
+outfit "Mine Launcher"
+  category "Secondary Weapons"
+  thumbnail "outfit/mine_launcher"
+  cost 1073000
+  "mass" 36.1
+  "outfit space" -48
+  "weapon capacity" -48
+  "energy capacity" 50
+  "gun ports" -1
+  "mine capacity" 17
+  weapon
+    sprite "projectile/korath minelayer"
+      "frame rate" .6
+      "no repeat"
+    sound "minelayer"
+    ammo "Mine"
+    icon "icon/minelayer"
+    "fire effect" "minelayer fire"
+    "hit effect" "huge explosion"
+    "die effect" "minelayer split" 5
+    "submunition" "Mine Submunition" 11
+    "inaccuracy" 10
+    "velocity" 3
+    "lifetime" 100
+    "reload" 180
+    "firing energy" 36
+    "firing heat" 36
+    "acceleration" .16
+    "drag" .04
+    "turn" 2
+    "homing" 4
+    "infrared tracking" .9
+    "missile strength" 35
+    "shield damage" -3200
+    "hull damage" -2400
+    "hit force" -150
+    "stream"
+  description "This launcher fires cluster munitions that split into a cloud of stationary mines that each do a considerable amount of damage if a ship crashes into them. However, if a ship hits the mine before it has a chance to deploy, the damage is considerably reduced."
+
+outfit "Mine Submunition"
+  weapon
+    sprite "projectile/korath mine"
+      "frame rate" 1
+      "no repeat"
+    "hit effect" "large explosion"
+    "die effect" "tiny explosion"
+    "inaccuracy" 360
+    "lifetime" 1000
+    "random lifetime" 60
+    "acceleration" .00001
+    "velocity" 2
+    "random velocity" 5
+    "drag" .05
+    "shield damage" 350
+    "hull damage" 280
+    "hit force" 200
+    "missile strength" 22
+
+effect "minelayer fire"
+  sprite "effect/minelayer split"
+    "no repeat"
+    "frame rate" 3
+  "lifetime" 61
+  "random angle" 5
+  "random spin" 10
+  "random velocity" .5
+  "velocity scale" 1.2
+
+effect "minelayer split"
+  sprite "effect/minelayer split"
+    "no repeat"
+    "frame rate" 6
+  sound "mine deploy"
+  "lifetime" 31
+  "random angle" 360
+  "random spin" 5
+  "random velocity" 2.5
+  "velocity scale" .8
+
+
+outfit "Piercer"
+  category "Ammunition"
+  thumbnail "outfit/piercer"
+  cost 3500
+  "mass" .3
+  "plunderable" 1
+  "piercer capacity" -1
+  description "This missile is fired from a Piercer Launcher."
+
+outfit "Piercer Rack"
+  category "Ammunition Storage"
+  thumbnail "outfit/piercer_storage"
+  cost 108500
+  "mass" 4.7
+  "outfit space" -14
+  "piercer capacity" 31
+  ammo "Piercer"
+  description "The Piercer Rack is used to store extra ammunition for Piercer Launchers."
+
+outfit "Piercer Launcher"
+  category "Secondary Weapons"
+  thumbnail "outfit/piercer_launcher"
+  cost 593000
+  "mass" 17.7
+  "outfit space" -27
+  "weapon capacity" -27
+  "energy capacity" 50
+  "gun ports" -1
+  "piercer capacity" 31
+  weapon
+    sprite "projectile/piercer"
+      "frame rate" 5
+      "random start frame"
+    sound "piercer"
+    ammo "Piercer"
+    icon "icon/piercer"
+    "fire effect" "piercer fire"
+    "hit effect" "piercer impact"
+    "hit effect" "piercer explosion"
+    "die effect" "piercer explosion"
+    "inaccuracy" 3
+    "velocity" 18
+    "lifetime" 200
+    "reload" 72
+    "firing energy" 29
+    "firing heat" 144
+    "acceleration" .54
+    "drag" .03
+    "turn" 1.6
+    "homing" 4
+    "infrared tracking" .9
+    "shield damage" 290
+    "hull damage" 440
+    "piercing" .2
+    "hit force" 300
+    "missile strength" 73
+    "stream"
+  description "Piercer missiles carry a pair of warheads. The first, a smaller one in the very tip of the missile, explodes on impact to blast a hole in the ship's shields to allow some of the subsequent, larger explosion to pierce through."
+
+effect "piercer fire"
+  sprite "effect/piercer fire"
+    "no repeat"
+    "frame rate" 8
+  "lifetime" 30
+  "random angle" 5
+  "random spin" 10
+  "random velocity" .5
+  "velocity scale" 1.2
+
+effect "piercer impact"
+  sprite "effect/piercer impact"
+    "no repeat"
+    "frame rate" 8
+  sound "explosion tiny"
+  "lifetime" 31
+  "random angle" 360
+  "random velocity" .1
+  "random spin" 60
+  "velocity scale" .001
+
+effect "piercer explosion"
+  sprite "effect/piercer explosion"
+    "no repeat"
+    "frame rate" 20
+  "lifetime" 28
+  "random angle" 360
+  "random velocity" .1
+  "random spin" 60
+  "velocity scale" .08
+
+
+
 outfit "Banisher"
   category "Turrets"
   thumbnail "outfit/banisher"
@@ -217,197 +408,6 @@ effect "grab-strike impact"
   "velocity scale" -.1
 
 
-
-outfit "Mine"
-  category "Ammunition"
-  thumbnail "outfit/mine"
-  cost 4500
-  "mass" .7
-  "plunderable" 1
-  "mine capacity" -1
-  description "This is ammunition for a Mine Launcher. Each mine splits into eleven submunitions after it is deployed."
-
-outfit "Mine Rack"
-  category "Ammunition Storage"
-  thumbnail "outfit/mine_storage"
-  cost 76500
-  "mass" 5.1
-  "outfit space" -17
-  "mine capacity" 17
-  ammo "Mine"
-  description "The Mine Rack is used to store extra ammunition for Mine Launchers."
-
-outfit "Mine Launcher"
-  category "Secondary Weapons"
-  thumbnail "outfit/mine_launcher"
-  cost 1073000
-  "mass" 36.1
-  "outfit space" -48
-  "weapon capacity" -48
-  "energy capacity" 50
-  "gun ports" -1
-  "mine capacity" 17
-  weapon
-    sprite "projectile/korath minelayer"
-      "frame rate" .6
-      "no repeat"
-    sound "minelayer"
-    ammo "Mine"
-    icon "icon/minelayer"
-    "fire effect" "minelayer fire"
-    "hit effect" "huge explosion"
-    "die effect" "minelayer split" 5
-    "submunition" "Mine Submunition" 11
-    "inaccuracy" 10
-    "velocity" 3
-    "lifetime" 100
-    "reload" 180
-    "firing energy" 36
-    "firing heat" 36
-    "acceleration" .16
-    "drag" .04
-    "turn" 2
-    "homing" 4
-    "infrared tracking" .9
-    "missile strength" 35
-    "shield damage" -3200
-    "hull damage" -2400
-    "hit force" -150
-    "stream"
-  description "This launcher fires cluster munitions that split into a cloud of stationary mines that each do a considerable amount of damage if a ship crashes into them. However, if a ship hits the mine before it has a chance to deploy, the damage is considerably reduced."
-
-outfit "Mine Submunition"
-  weapon
-    sprite "projectile/korath mine"
-      "frame rate" 1
-      "no repeat"
-    "hit effect" "large explosion"
-    "die effect" "tiny explosion"
-    "inaccuracy" 360
-    "lifetime" 1000
-    "random lifetime" 60
-    "acceleration" .00001
-    "velocity" 2
-    "random velocity" 5
-    "drag" .05
-    "shield damage" 350
-    "hull damage" 280
-    "hit force" 200
-    "missile strength" 22
-
-effect "minelayer fire"
-  sprite "effect/minelayer split"
-    "no repeat"
-    "frame rate" 3
-  "lifetime" 61
-  "random angle" 5
-  "random spin" 10
-  "random velocity" .5
-  "velocity scale" 1.2
-
-effect "minelayer split"
-  sprite "effect/minelayer split"
-    "no repeat"
-    "frame rate" 6
-  sound "mine deploy"
-  "lifetime" 31
-  "random angle" 360
-  "random spin" 5
-  "random velocity" 2.5
-  "velocity scale" .8
-
-
-outfit "Piercer"
-  category "Ammunition"
-  thumbnail "outfit/piercer"
-  cost 3500
-  "mass" .3
-  "plunderable" 1
-  "piercer capacity" -1
-  description "This missile is fired from a Piercer Launcher."
-
-outfit "Piercer Rack"
-  category "Ammunition Storage"
-  thumbnail "outfit/piercer_storage"
-  cost 108500
-  "mass" 4.7
-  "outfit space" -14
-  "piercer capacity" 31
-  ammo "Piercer"
-  description "The Piercer Rack is used to store extra ammunition for Piercer Launchers."
-
-outfit "Piercer Launcher"
-  category "Secondary Weapons"
-  thumbnail "outfit/piercer_launcher"
-  cost 593000
-  "mass" 17.7
-  "outfit space" -27
-  "weapon capacity" -27
-  "energy capacity" 50
-  "gun ports" -1
-  "piercer capacity" 31
-  weapon
-    sprite "projectile/piercer"
-      "frame rate" 5
-      "random start frame"
-    sound "piercer"
-    ammo "Piercer"
-    icon "icon/piercer"
-    "fire effect" "piercer fire"
-    "hit effect" "piercer impact"
-    "hit effect" "piercer explosion"
-    "die effect" "piercer explosion"
-    "inaccuracy" 3
-    "velocity" 18
-    "lifetime" 200
-    "reload" 72
-    "firing energy" 29
-    "firing heat" 144
-    "acceleration" .54
-    "drag" .03
-    "turn" 1.6
-    "homing" 4
-    "infrared tracking" .9
-    "shield damage" 290
-    "hull damage" 440
-    "piercing" .2
-    "hit force" 300
-    "missile strength" 73
-    "stream"
-  description "Piercer missiles carry a pair of warheads. The first, a smaller one in the very tip of the missile, explodes on impact to blast a hole in the ship's shields to allow some of the subsequent, larger explosion to pierce through."
-
-effect "piercer fire"
-  sprite "effect/piercer fire"
-    "no repeat"
-    "frame rate" 8
-  "lifetime" 30
-  "random angle" 5
-  "random spin" 10
-  "random velocity" .5
-  "velocity scale" 1.2
-
-effect "piercer impact"
-  sprite "effect/piercer impact"
-    "no repeat"
-    "frame rate" 8
-  sound "explosion tiny"
-  "lifetime" 31
-  "random angle" 360
-  "random velocity" .1
-  "random spin" 60
-  "velocity scale" .001
-
-effect "piercer explosion"
-  sprite "effect/piercer explosion"
-    "no repeat"
-    "frame rate" 20
-  "lifetime" 28
-  "random angle" 360
-  "random velocity" .1
-  "random spin" 60
-  "velocity scale" .08
-
-
 outfit "Repeater Cannon"
   category "Cannons"
   thumbnail "outfit/repeater_cannon"
@@ -519,6 +519,7 @@ effect "slicer impact"
   "random spin" 2
   "random velocity" .1
   "velocity scale" -.002
+
 
 
 outfit "Warder"

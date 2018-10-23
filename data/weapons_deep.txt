@@ -1,0 +1,310 @@
+outfit "Torpedo"
+  plural "Torpedoes"
+  category "Ammunition"
+  thumbnail "outfit/torpedo"
+  cost 2000
+  "mass" .4
+  "plunderable" 1
+  "torpedo capacity" -1
+  description "Torpedoes are ammunition for the Torpedo Launcher. Each Torpedo Launcher can hold 30 of them. You cannot install torpedoes unless you have also installed a launcher to fire them from."
+
+outfit "Torpedo Storage Rack"
+  category "Ammunition Storage"
+  thumbnail "outfit/torpedo_storage"
+  cost 30000
+  "mass" 3
+  "outfit space" -9
+  "torpedo capacity" 15
+  ammo "Torpedo"
+  description "The Torpedo Storage Rack is used to store extra ammunition for Torpedo Launchers."
+
+outfit "Torpedo Launcher"
+  category "Secondary Weapons"
+  thumbnail "outfit/torpedo_launcher"
+  cost 80000
+  "mass" 19
+  "outfit space" -25
+  "weapon capacity" -25
+  "gun ports" -1
+  "torpedo capacity" 15
+  weapon
+    sprite "projectile/torpedo"
+      "frame rate" 2
+      "random start frame"
+    sound "torpedo"
+    ammo "Torpedo"
+    icon "icon/torpedo"
+    "fire effect" "torpedo fire"
+    "hit effect" "torpedo hit"
+    "die effect" "tiny explosion"
+    "inaccuracy" 5
+    "velocity" 8
+    "lifetime" 480
+    "reload" 150
+    "firing energy" 2
+    "firing heat" 45
+    "acceleration" .15
+    "drag" .025
+    "turn" 1.25
+    "homing" 3
+    "optical tracking" .8
+    "shield damage" 680
+    "hull damage" 680
+    "hit force" 300
+    "missile strength" 30
+  description "Torpedoes are the most powerful homing weapon, but they move slowly enough that fast ships can simply outrun them, making them most useful against large targets or against small ships at times when they are too distracted to dodge. Torpedo launchers are also much larger than other missile systems, so they are most often found in capital ships."
+
+effect "torpedo fire"
+  sprite "effect/torpedo fire"
+    "no repeat"
+    "frame rate" 10
+  "lifetime" 15
+
+
+outfit "Typhoon Torpedo"
+  plural "Typhoon Torpedoes"
+  category "Ammunition"
+  thumbnail "outfit/typhoon"
+  cost 4000
+  "mass" .6
+  "plunderable" 1
+  "typhoon capacity" -1
+  description "Typhoon Torpedoes are ammunition for the Typhoon Launcher. Each launcher can hold 30 of them. You cannot install Typhoon Torpedoes unless you have also installed a launcher to fire them from."
+
+outfit "Typhoon Storage Tube"
+  category "Ammunition Storage"
+  thumbnail "outfit/typhoon_storage"
+  cost 60000
+  "mass" 3
+  "outfit space" -12
+  "typhoon capacity" 15
+  ammo "Typhoon Torpedo"
+  description "The Typhoon Storage Tube is used to store extra ammunition for Typhoon Launchers."
+
+outfit "Typhoon Launcher"
+  category "Secondary Weapons"
+  thumbnail "outfit/typhoon_launcher"
+  cost 260000
+  "mass" 26
+  "outfit space" -35
+  "weapon capacity" -35
+  "gun ports" -1
+  "typhoon capacity" 15
+  weapon
+    sprite "projectile/typhoon"
+      "frame rate" 4
+      "random start frame"
+    sound "typhoon"
+    ammo "Typhoon Torpedo"
+    icon "icon/typhoon"
+    "fire effect" "typhoon fire"
+    "hit effect" "torpedo hit"
+    "die effect" "tiny explosion"
+    "inaccuracy" 5
+    "velocity" 5
+    "lifetime" 600
+    "reload" 120
+    "firing energy" 4
+    "firing heat" 50
+    "acceleration" .1
+    "drag" .02
+    "turn" 1.0
+    "homing" 4
+    "optical tracking" .9
+    "shield damage" 880
+    "hull damage" 880
+    "hit force" 450
+    "missile strength" 40
+  description "Typhoon Torpedoes are an improved torpedo technology; they do considerably more damage than ordinary torpedoes. However, they are also much slower, because they are intended mostly for use against large and slow-moving capital ships. As a result, sufficiently skilled pilots can often dodge around them."
+
+effect "typhoon fire"
+  sprite "effect/typhoon fire"
+    "no repeat"
+    "frame rate" 10
+  "lifetime" 15
+
+
+
+outfit "Laser Cannon"
+  category "Cannons"
+  thumbnail "outfit/laser_cannon"
+  cost 34000
+  "mass" 8
+  "outfit space" -8
+  "weapon capacity" -8
+  "gun ports" -1
+  weapon
+    sprite "projectile/laser"
+      "frame rate" 1
+    sound "laser"
+    "hit effect" "beam laser impact"
+    "inaccuracy" .5
+    "velocity" 400
+    "lifetime" 1
+    "reload" 1
+    "firing energy" .5
+    "firing heat" 1.2
+    "shield damage" .9
+    "hull damage" 1.3
+  description "In the early part of the space era, the settlements in the region of space known as the Deep developed in relative isolation from the rest of human space. One result of that isolation is that their weapons technology mostly uses beam weapons, instead of the energy projectile weapons that are more common elsewhere."
+
+outfit "Laser Turret"
+  category "Turrets"
+  thumbnail "outfit/laser_turret"
+  cost 170000
+  "mass" 22
+  "drag" .22
+  "outfit space" -22
+  "weapon capacity" -22
+  "turret mounts" -1
+  "required crew" 1
+  weapon
+    sprite "projectile/2x laser"
+      "frame rate" 1
+    "hardpoint sprite" "hardpoint/laser_turret"
+    "hardpoint offset" 7.
+    sound "laser"
+    "hit effect" "beam laser impact"
+    "inaccuracy" .5
+    "turret turn" 2.73
+    "velocity" 400
+    "lifetime" 1
+    "reload" 1
+    "firing energy" 1
+    "firing heat" 2.4
+    "shield damage" 1.8
+    "hull damage" 2.6
+  description "Laser Turrets are hated by fighter pilots because it is nearly impossible to dodge them once you are within their reach. This turret carries a pair of lasers and can swivel almost instantly to fire on new targets as they approach. Laser Turrets are especially useful when mounted on slow-moving freighters to fend off packs of small pirate vessels."
+
+effect "beam laser impact"
+  sprite "effect/laser impact"
+    "no repeat"
+    "frame rate" 30
+  "lifetime" 5
+  "random angle" 2
+  "random spin" 1
+  "velocity scale" -.005
+
+
+outfit "Heavy Laser Cannon"
+  category "Cannons"
+  thumbnail "outfit/heavy_laser_cannon"
+  cost 60000
+  "mass" 15
+  "outfit space" -15
+  "weapon capacity" -15
+  "gun ports" -1
+  weapon
+    sprite "projectile/heavy laser"
+      "frame rate" 1
+    sound "heavy laser"
+    "hit effect" "heavy laser impact"
+    "inaccuracy" .4
+    "velocity" 500
+    "lifetime" 1
+    "reload" 1
+    "firing energy" 1
+    "firing heat" 2.1
+    "shield damage" 1.7
+    "hull damage" 2.4
+  description "The Heavy Laser Cannon is an upgraded Laser Cannon with a significantly longer range and higher power. It is mostly intended for larger ships, where energy and space are plentiful, but some pilots consider a single Heavy Laser to be a worthwhile alternative to a pair of ordinary lasers, because the longer range makes up for the fact that it does slightly less than twice as much damage."
+
+outfit "Heavy Laser Turret"
+  category "Turrets"
+  thumbnail "outfit/heavy_laser_turret"
+  cost 320000
+  "mass" 38
+  "drag" .38
+  "outfit space" -38
+  "weapon capacity" -38
+  "turret mounts" -1
+  "required crew" 1
+  weapon
+    sprite "projectile/2x heavy laser"
+      "frame rate" 1
+    "hardpoint sprite" "hardpoint/heavy_laser_turret"
+    "hardpoint offset" 8.
+    sound "heavy laser"
+    "hit effect" "heavy laser impact"
+    "inaccuracy" .4
+    "turret turn" 1.58
+    "velocity" 500
+    "lifetime" 1
+    "reload" 1
+    "firing energy" 2
+    "firing heat" 4.2
+    "shield damage" 3.4
+    "hull damage" 4.8
+  description "For ships with enough space to install one, the Heavy Laser Turret is a powerful weapon, equally useful for driving off fighters and for bombarding larger targets with continuous fire without having to worry about pointing your ship in the right direction."
+
+effect "heavy laser impact"
+  sprite "effect/heavy laser impact"
+    "no repeat"
+    "frame rate" 30
+  "lifetime" 5
+  "random angle" 2
+  "random spin" 1
+  "random velocity" 1
+  "velocity scale" -.007
+
+
+outfit "Electron Cannon"
+  category "Cannons"
+  thumbnail "outfit/electron_cannon"
+  cost 170000
+  "mass" 22
+  "outfit space" -22
+  "weapon capacity" -22
+  "gun ports" -1
+  weapon
+    sprite "projectile/electron"
+      "frame rate" 60
+    sound "electron beam"
+    "hit effect" "electron impact"
+    "inaccuracy" .3
+    "velocity" 600
+    "lifetime" 1
+    "reload" 1
+    "firing energy" 1.5
+    "firing heat" 2.7
+    "shield damage" 2.4
+    "hull damage" 3.3
+  description "The Electron Cannon is a recent development by the Deep Sky labs, a more powerful beam weapon with a design similar to their perennially popular laser guns."
+
+outfit "Electron Turret"
+  category "Turrets"
+  thumbnail "outfit/electron_turret"
+  cost 720000
+  "mass" 54
+  "drag" .54
+  "outfit space" -54
+  "weapon capacity" -54
+  "turret mounts" -1
+  "required crew" 1
+  weapon
+    sprite "projectile/2x electron"
+      "frame rate" 60
+    "hardpoint sprite" "hardpoint/electron_turret"
+    "hardpoint offset" 8.
+    sound "electron beam"
+    "hit effect" "electron impact"
+    "inaccuracy" .3
+    "turret turn" 1.11
+    "velocity" 600
+    "lifetime" 1
+    "reload" 1
+    "firing energy" 3.0
+    "firing heat" 5.4
+    "shield damage" 4.8
+    "hull damage" 6.6
+  description "This turret places two of Deep Sky's recently developed electron beam weapons onto a rotating turret, providing unsurpassed accuracy and power for shooting down fast-moving targets."
+
+effect "electron impact"
+  sprite "effect/electron impact"
+    "no repeat"
+    "frame rate" 30
+  "lifetime" 5
+  "random angle" 2
+  "random spin" 1
+  "velocity scale" -.003
+

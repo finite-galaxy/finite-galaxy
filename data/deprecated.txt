@@ -1138,6 +1138,24 @@ outfit "Blaster Turret"
     "shield damage" 9.6
     "hull damage" 6
 
+outfit "Gatling Gun Ammo"
+  plural "Gatling Gun Ammo"
+  category "Deprecated"
+  thumbnail "outfit/unknown"
+  cost 4
+  "mass" .002
+  "gatling round capacity" -1
+
+outfit "Bullet Boxes"
+  plural "Bullet Boxes"
+  category "Deprecated"
+  thumbnail "outfit/unknown"
+  cost 3000
+  "mass" 2
+  "outfit space" -5
+  "gatling round capacity" 1500
+  ammo "Gatling Gun Ammo"
+
 outfit "Quad Blaster Turret"
   category "Deprecated"
   thumbnail "outfit/unknown"

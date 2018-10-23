@@ -1,0 +1,299 @@
+outfit "Gatling Round"
+  category "Ammunition"
+  thumbnail "outfit/bullet"
+  cost 2
+  "mass" .002
+  "plunderable" 1
+  "gatling round capacity" -1
+  description "This simple cartridge is the ammunition for the Gatling Gun, with a projectile of depleted nuclear fuel or an illuminated tracer round. Since this ammunition is primarily manufactured on pirate worlds by slave children in poor working conditions, muzzle velocity can vary by up to 30%, and tracer distribution is seldom uniform."
+
+outfit "Gatling Bullet Boxes"
+  plural "Gatling Bullet Boxes"
+  category "Ammunition Storage"
+  thumbnail "outfit/bullet_storage"
+  cost 3000
+  "mass" 1
+  "outfit space" -4
+  "gatling round capacity" 1500
+  ammo "Gatling Round"
+  description "Bullet Boxes are used to store extra ammunition for Gatling Guns."
+
+outfit "Gatling Gun"
+  category "Secondary Weapons"
+  thumbnail "outfit/bullet_launcher"
+  cost 10000
+  "mass" 5
+  "outfit space" -8
+  "weapon capacity" -8
+  "gun ports" -1
+  "gatling round capacity" 1500
+  weapon
+    sprite "projectile/tinyflare"
+      "random start frame"
+    sound "explosion tiny"
+    ammo "Gatling Round"
+    icon "icon/gat"
+    "inaccuracy" 2
+    "velocity" 16
+    "lifetime" 1
+    "reload" 3
+    "burst count" 180
+    "burst reload" 1
+    "firing energy" .03
+    "firing heat" 2.5
+    "submunition" "gbullet"
+    "cluster"
+    "hit effect" "bullet impact"
+  description `When Dr. Richard J. Gatling invented the rapid-fire gun bearing his name in the 19th Century A.D., he hoped that its destructiveness would lead to the end of war itself. Over a millennium later, this modern incarnation of the gatling gun sees action in the stars, a testament to its fundamentally robust design - and Dr. Gatling's naivete. While capable of a high fire rate, this gun needs to cool down for twice as long as it fires, and can only sustain a maximum of three seconds of continuous fire.`
+
+outfit "gbullet"
+  weapon
+    sprite "projectile/bullet"
+      "delay" 5
+      "random start frame"
+      "frame rate" 0
+    "random velocity" 8
+    "lifetime" 20
+    "random lifetime" 5
+    "shield damage" 3
+    "hull damage" 5
+    "hit force" 2
+    "hit effect" "bullet impact"
+
+
+outfit "Javelin"
+  category "Ammunition"
+  thumbnail "outfit/javelin"
+  cost 50
+  "mass" .04
+  "plunderable" 1
+  "javelin capacity" -1
+  description "A Javelin missile is ammunition for the Javelin Pod; without a Pod to store them in you cannot purchase or use Javelins. Each pod stores up to 200 Javelins."
+
+outfit "Javelin Storage Crate"
+  category "Ammunition Storage"
+  thumbnail "outfit/javelin_storage"
+  cost 5000
+  "mass" 2
+  "outfit space" -6
+  "javelin capacity" 100
+  ammo "Javelin"
+  description "The Javelin Storage Crate is used to store extra ammunition for Javelin Pods."
+
+outfit "Javelin Pod"
+  category "Secondary Weapons"
+  thumbnail "outfit/javelin_launcher"
+  cost 20000
+  "mass" 8
+  "outfit space" -12
+  "weapon capacity" -12
+  "gun ports" -1
+  "javelin capacity" 100
+  weapon
+    sprite "projectile/javelin"
+    sound "javelin"
+    ammo "Javelin"
+    icon "icon/javelin"
+    "hit effect" "tiny explosion"
+    "inaccuracy" 1
+    "velocity" 12
+    "lifetime" 60
+    "reload" 15
+    "firing energy" .2
+    "firing heat" 12
+    "shield damage" 57
+    "hull damage" 36
+    "hit force" 50
+    "missile strength" 2
+  description "The Javelin Pod fires a rapid stream of unguided missiles. A Javelin Pod does far more damage than any gun of a comparable size, and has a longer range as well, but once a ship has fired off all its ammunition it must leave combat and find a planet where it can buy more, which makes Javelins less useful in protracted battles. As a result, they are very popular with pirates as a way to quickly disable a small target."
+
+
+outfit "Sidewinder Missile"
+  category "Ammunition"
+  thumbnail "outfit/sidewinder"
+  cost 1000
+  "mass" .2
+  "plunderable" 1
+  "sidewinder capacity" -1
+  description "The Sidewinder Missile is ammunition for the Sidewinder Missile Launcher; each launcher that you have installed can be armed with up to 50 of them. You cannot install a missile without a launcher to fire it from."
+
+outfit "Sidewinder Missile Rack"
+  category "Ammunition Storage"
+  thumbnail "outfit/sidewinder_storage"
+  cost 25000
+  "mass" 2
+  "outfit space" -7
+  "sidewinder capacity" 25
+  ammo "Sidewinder Missile"
+  description "The Sidewinder Missile Rack is used to store extra ammunition for Sidewinder Missile Launchers."
+
+outfit "Sidewinder Missile Launcher"
+  category "Secondary Weapons"
+  thumbnail "outfit/sidewinder_launcher"
+  cost 60000
+  "mass" 9
+  "outfit space" -14
+  "weapon capacity" -14
+  "gun ports" -1
+  "sidewinder capacity" 25
+  weapon
+    sprite "projectile/sidewinder"
+      "no repeat"
+      "frame rate" .25
+    sound "sidewinder"
+    ammo "Sidewinder Missile"
+    icon "icon/sidewinder"
+    "fire effect" "sidewinder fire"
+    "die effect" "missile death"
+    "hit effect" "missile hit"
+    "inaccuracy" 4
+    "velocity" 14
+    "lifetime" 480
+    "reload" 60
+    "firing energy" 1
+    "firing heat" 15
+    "acceleration" 1.2
+    "drag" .1
+    "turn" 3.0
+    "homing" 4
+    "radar tracking" .9
+    "shield damage" 180
+    "hull damage" 120
+    "hit force" 170
+    "missile strength" 12
+  description "The Sidewinder Missile is designed by Lovelace Labs, which is ironically also the designer of the Anti-Missile Turret. Rumors say that the two engineering teams at Lovelace who make the missiles and the anti-missiles are locked in furious competition with each other: the result has been generation after generation of smarter missiles and then smarter turrets to fend them off."
+  description "  Although not as powerful or cheap as the popular Meteor missiles, Sidewinders have several advantages, including their superior maneuverability, better tracking systems, and protective casings that make them much harder for anti-missile systems to destroy."
+
+effect "sidewinder fire"
+  sprite "effect/sidewinder fire"
+    "no repeat"
+    "frame rate" 30
+  "lifetime" 9
+  "random velocity" 2
+
+
+
+outfit "Particle Cannon"
+  category "Cannons"
+  thumbnail "outfit/particle_cannon"
+  cost 220000
+  "mass" 30
+  "outfit space" -30
+  "weapon capacity" -30
+  "gun ports" -1
+  weapon
+    sprite "projectile/particle beam"
+    sound "particle"
+    "hit effect" "particle impact"
+    "inaccuracy" .5
+    "velocity" 30
+    "lifetime" 32
+    "reload" 20
+    "firing energy" 35
+    "firing force" 10
+    "firing heat" 120
+    "hit force" 80
+    "shield damage" 54
+    "hull damage" 52
+  description "The Particle Cannon works by accelerating a short burst of particles to near-relativistic speeds. When mounted on a ship that can turn fast enough to keep it trained on approaching ships, it becomes a nearly unbeatable weapon, capable of destroying smaller ships before they can even approach close enough for their comparatively short-ranged weapons to be effective."
+
+effect "particle impact"
+  sprite "effect/particle impact"
+    "no repeat"
+    "frame rate" 30
+  sound "explosion small"
+  "lifetime" 20
+  "random angle" 2
+  "velocity scale" -.05
+  "random spin" 10
+
+outfit "Particle Turret"
+  category "Turrets"
+  thumbnail "outfit/unknown"
+  cost 620000
+  "mass" 70
+  "drag" .70
+  "outfit space" -70
+  "weapon capacity" -70
+  "turret mounts" -1
+  "required crew" 1
+  weapon
+    sprite "projectile/particle beam"
+    "hardpoint sprite" "hardpoint/proton_turret"
+    "hardpoint offset" 14.
+    sound "particle"
+    "hit effect" "particle impact"
+    "inaccuracy" .5
+    "turret turn" 0.86
+    "velocity" 30
+    "lifetime" 32
+    "reload" 10
+    "firing energy" 35
+    "firing force" 10
+    "firing heat" 120
+    "hit force" 80
+    "shield damage" 54
+    "hull damage" 52
+  description "The Particle Turret is a huge turret designed to be used on the largest Navy warships, to allow them to bombard opponents from a distance."
+
+
+
+outfit "Anti-Missile Turret"
+  category "Anti-Missile"
+  thumbnail "outfit/anti-missile"
+  cost 120000
+  "mass" 16
+  "drag" .16
+  "outfit space" -16
+  "weapon capacity" -16
+  "turret mounts" -1
+  weapon
+    "hardpoint sprite" "hardpoint/anti-missile"
+    "hardpoint offset" 4.
+    "hit effect" "small anti-missile"
+    "anti-missile" 5
+    "velocity" 150
+    "lifetime" 1
+    "reload" 8
+    "firing energy" 5
+    "firing heat" 3
+  description "Centuries ago, space battles were fought mostly with missiles, with the outcome dependent only on which ship had more shielding or ammunition. Lovelace Labs was originally founded to remedy that situation by developing a protective system that could shoot missiles out of the air, defending freighter convoys from pirates who could otherwise simply bombard them into submission without ever venturing within range of their guns."
+
+effect "small anti-missile"
+  sprite "effect/small anti missile"
+    "no repeat"
+    "frame rate" 3
+  sound "anti-missile"
+  "lifetime" 21
+  "velocity scale" 1
+
+
+outfit "Heavy Anti-Missile Turret"
+  category "Anti-Missile"
+  thumbnail "outfit/anti-missile_heavy"
+  cost 300000
+  "mass" 30
+  "drag" .30
+  "outfit space" -30
+  "weapon capacity" -30
+  "turret mounts" -1
+  weapon
+    "hardpoint sprite" "hardpoint/anti-missile_heavy"
+    "hardpoint offset" 5.
+    "hit effect" "large anti-missile"
+    "anti-missile" 8
+    "velocity" 200
+    "lifetime" 1
+    "reload" 6
+    "firing energy" 10
+    "firing heat" 5
+  description "The Heavy Anti-Missile turret has a longer range, higher power, and shorter reload time than its smaller sibling. The only way to overcome it is by firing missiles in a cluster so that while one is being targeted, the others can get through, and as a result all missile systems on the market now default to firing in clusters if multiple copies of the same launcher are installed, rather than staggering their fire as ordinary guns do."
+
+effect "large anti-missile"
+  sprite "effect/large anti missile"
+    "no repeat"
+    "frame rate" 2
+  sound "heavy anti-missile"
+  "lifetime" 31
+  "velocity scale" 1
+
