@@ -7,7 +7,7 @@ shipyard "Quarg Variants"
 ship "Skylark"
   sprite "ship/skylark"
   attributes
-    category "Frigate"
+    category "Destroyer"
     licences
       Quarg
     "cost" 5900000
@@ -15,15 +15,14 @@ ship "Skylark"
     "hull" 70000
     "required crew" 120
     "bunks" 210
-    "mass" 400
+    "mass" 460
     "drag" 12.3
     "heat dissipation" .7
     "cargo space" 200
-    "outfit space" 800
+    "outfit space" 850
     "engine capacity" 120
     "weapon capacity" 200
 # miscellaneous stats
-    "fuel capacity" 1000
     "ramscoop" 10
     "asteroid scan power" 100
     weapon
@@ -43,6 +42,7 @@ ship "Skylark"
     "Antimatter Core"
     "Nanotech Battery"
     "Neutrino Cooling"
+    "Hyperspace Tank" 5
     "Jump Drive"
     "Intrusion Countermeasures" 120
   engine -15 117
@@ -72,15 +72,14 @@ ship "Wardragon"
     "hull" 50000
     "required crew" 160
     "bunks" 180
-    "mass" 350
+    "mass" 360
     "drag" 9.3
     "heat dissipation" .5
     "cargo space" 50
-    "outfit space" 800
+    "outfit space" 850
     "engine capacity" 120
     "weapon capacity" 200
 # miscellaneous stats
-    "fuel capacity" 800
     "ramscoop" 10
     "tactical scan power" 100
     weapon
@@ -100,6 +99,7 @@ ship "Wardragon"
     "Antimatter Core"
     "Nanotech Battery"
     "Neutrino Cooling"
+    "Hyperspace Tank" 4
     "Jump Drive"
     "Intrusion Countermeasures" 120
   engine -14 47

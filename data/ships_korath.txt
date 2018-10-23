@@ -26,8 +26,8 @@ ship "Chaser"
     "drag" .9
     "heat dissipation" .9
     "outfit space" 92
-      "engine capacity" 30
-      "weapon capacity" 25
+    "engine capacity" 30
+    "weapon capacity" 25
     weapon
       "blast radius" 48
       "shield damage" 320
@@ -62,13 +62,13 @@ ship "Raider"
     "hull" 9000
     "required crew" 145
     "bunks" 250
-    "mass" 725
+    "mass" 720
     "drag" 12
     "heat dissipation" .5
     "cargo space" 175
     "outfit space" 777
-      "engine capacity" 159
-      "weapon capacity" 284
+    "engine capacity" 159
+    "weapon capacity" 284
     weapon
       "blast radius" 250
       "shield damage" 3600
@@ -110,81 +110,6 @@ ship "Raider"
 
 ship "World-Ship A"
   sprite "ship/world-ship a"
-#  thumbnail "thumbnail/world-ship"
-  attributes
-    category "Battleship"
-    licences
-      Korath
-    cost 47690000
-    shields 47000
-    hull 34000
-    "required crew" 794
-    "bunks" 1492
-    "mass" 1735
-    "drag" 21
-    "heat dissipation" .4
-    "cargo space" 264
-    "outfit space" 888
-      "engine capacity" 165
-      "weapon capacity" 328
-    weapon
-      "blast radius" 400
-      "shield damage" 8000
-      "hull damage" 4000
-      "hit force" 12000
-  outfits
-    "Thruster (Planetary Class)"
-    "Steering (Planetary Class)"
-
-    "Grab-Striker" 2
-    "Banisher" 4
-    "Warder" 2
-
-    "Systems Core (Large)"
-    "Triple Plasma Core"
-    "Large Heat Shunt" 2
-    "Fuel Processor" 3
-    "Hyperdrive"
-    "Repeater Rifle" 150
-  engine -37 343 .8
-  engine 0 343 .9
-  engine 37 343 .8
-  turret -76 -157 "Banisher"
-  turret 76 -157 "Banisher"
-  turret -59 -135 "Grab-Striker"
-  turret 59 -135 "Grab-Striker"
-  turret -61 -6 "Warder"
-  turret 61 -6 "Warder"
-  turret -66 210 "Banisher"
-  turret 66 210 "Banisher"
-  explode "tiny explosion" 30
-  explode "small explosion" 45
-  explode "medium explosion" 50
-  explode "large explosion" 40
-  explode "huge explosion" 50
-  "final explode" "final explosion large"
-  description "Korath World-Ships are massive nomadic habitats that hold all that is left of their people."
-
-
-ship "World-Ship A" "World-Ship A (Jump)"
-  outfits
-    "Thruster (Planetary Class)"
-    "Steering (Planetary Class)"
-
-    "Grab-Striker" 2
-    "Banisher" 4
-    "Warder" 2
-
-    "Systems Core (Large)"
-    "Triple Plasma Core"
-    "Large Heat Shunt" 2
-    "Fuel Processor" 3
-    "Jump Drive"
-    "Repeater Rifle" 150
-
-
-ship "World-Ship B"
-  sprite "ship/world-ship b"
   attributes
     category "Battleship"
     licences
@@ -192,22 +117,22 @@ ship "World-Ship B"
     cost 47690000
     shields 52000
     hull 29000
-    "required crew" 794
-    "bunks" 1492
-    "mass" 1735
+    "required crew" 814
+    "bunks" 1472
+    "mass" 1785
     "drag" 21
     "heat dissipation" .4
-    "cargo space" 264
-    "outfit space" 888
-      "engine capacity" 165
-      "weapon capacity" 328
+    "cargo space" 234
+    "outfit space" 999
+    "engine capacity" 173
+    "weapon capacity" 328
     weapon
       "blast radius" 400
       "shield damage" 8000
       "hull damage" 4000
       "hit force" 12000
   outfits
-    "Thruster (Planetary Class)"
+    "Thruster (Stellar Class)"
     "Steering (Planetary Class)"
 
     "Grab-Striker" 2
@@ -216,7 +141,8 @@ ship "World-Ship B"
 
     "Systems Core (Large)"
     "Triple Plasma Core"
-    "Large Heat Shunt" 2
+    "Plasma Core"
+    "Large Heat Shunt" 3
     "Fuel Processor" 3
     "Hyperdrive"
     "Repeater Rifle" 150
@@ -240,9 +166,9 @@ ship "World-Ship B"
   description "Korath World-Ships are massive nomadic habitats that hold all that is left of their people."
 
 
-ship "World-Ship B" "World-Ship B (Jump)"
+ship "World-Ship A" "World-Ship A (Jump)"
   outfits
-    "Thruster (Planetary Class)"
+    "Thruster (Stellar Class)"
     "Steering (Planetary Class)"
 
     "Grab-Striker" 2
@@ -251,7 +177,85 @@ ship "World-Ship B" "World-Ship B (Jump)"
 
     "Systems Core (Large)"
     "Triple Plasma Core"
-    "Large Heat Shunt" 2
+    "Plasma Core"
+    "Large Heat Shunt" 3
+    "Fuel Processor" 3
+    "Jump Drive"
+    "Repeater Rifle" 150
+
+
+ship "World-Ship B"
+  sprite "ship/world-ship b"
+#  thumbnail "thumbnail/world-ship"
+  attributes
+    category "Battleship"
+    licences
+      Korath
+    cost 47690000
+    shields 47000
+    hull 34000
+    "required crew" 804
+    "bunks" 1482
+    "mass" 1885
+    "drag" 21
+    "heat dissipation" .4
+    "cargo space" 264
+    "outfit space" 999
+    "engine capacity" 173
+    "weapon capacity" 328
+    weapon
+      "blast radius" 400
+      "shield damage" 8000
+      "hull damage" 4000
+      "hit force" 12000
+  outfits
+    "Thruster (Stellar Class)"
+    "Steering (Planetary Class)"
+
+    "Grab-Striker" 2
+    "Banisher" 4
+    "Warder" 2
+
+    "Systems Core (Large)"
+    "Triple Plasma Core"
+    "Plasma Core"
+    "Large Heat Shunt" 3
+    "Fuel Processor" 3
+    "Hyperdrive"
+    "Repeater Rifle" 150
+  engine -37 343 .8
+  engine 0 343 .9
+  engine 37 343 .8
+  turret -76 -157 "Banisher"
+  turret 76 -157 "Banisher"
+  turret -59 -135 "Grab-Striker"
+  turret 59 -135 "Grab-Striker"
+  turret -61 -6 "Warder"
+  turret 61 -6 "Warder"
+  turret -66 210 "Banisher"
+  turret 66 210 "Banisher"
+  explode "tiny explosion" 30
+  explode "small explosion" 45
+  explode "medium explosion" 50
+  explode "large explosion" 40
+  explode "huge explosion" 50
+  "final explode" "final explosion large"
+  description "Korath World-Ships are massive nomadic habitats that hold all that is left of their people."
+
+
+ship "World-Ship B" "World-Ship B (Jump)"
+  outfits
+    "Thruster (Stellar Class)"
+    "Steering (Planetary Class)"
+
+    "Grab-Striker" 2
+    "Banisher" 4
+    "Warder" 2
+
+    "Systems Core (Large)"
+    "Triple Plasma Core"
+    "Plasma Core"
+    "Large Heat Shunt" 3
     "Fuel Processor" 3
     "Jump Drive"
     "Repeater Rifle" 150
@@ -268,20 +272,20 @@ ship "World-Ship C"
     hull 39000
     "required crew" 794
     "bunks" 1492
-    "mass" 1735
+    "mass" 1985
     "drag" 21
     "heat dissipation" .4
-    "cargo space" 264
-    "outfit space" 888
-      "engine capacity" 165
-      "weapon capacity" 328
+    "cargo space" 294
+    "outfit space" 999
+    "engine capacity" 173
+    "weapon capacity" 328
     weapon
       "blast radius" 400
       "shield damage" 8000
       "hull damage" 4000
       "hit force" 12000
   outfits
-    "Thruster (Planetary Class)"
+    "Thruster (Stellar Class)"
     "Steering (Planetary Class)"
 
     "Grab-Striker" 2
@@ -290,7 +294,8 @@ ship "World-Ship C"
 
     "Systems Core (Large)"
     "Triple Plasma Core"
-    "Large Heat Shunt" 2
+    "Plasma Core"
+    "Large Heat Shunt" 3
     "Fuel Processor" 3
     "Hyperdrive"
     "Repeater Rifle" 150
@@ -316,7 +321,7 @@ ship "World-Ship C"
 
 ship "World-Ship C" "World-Ship C (Jump)"
   outfits
-    "Thruster (Planetary Class)"
+    "Thruster (Stellar Class)"
     "Steering (Planetary Class)"
 
     "Grab-Striker" 2
@@ -325,7 +330,8 @@ ship "World-Ship C" "World-Ship C (Jump)"
 
     "Systems Core (Large)"
     "Triple Plasma Core"
-    "Large Heat Shunt" 2
+    "Plasma Core"
+    "Large Heat Shunt" 3
     "Fuel Processor" 3
     "Jump Drive"
     "Repeater Rifle" 150

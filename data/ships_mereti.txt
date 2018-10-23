@@ -23,8 +23,9 @@ ship "Model 8"
     "heat dissipation" 1.4
     "cargo space" 29
     "outfit space" 220
-      "engine capacity" 60
-      "weapon capacity" 59
+    "engine capacity" 60
+    "weapon capacity" 59
+# miscellaneous stats
     "self destruct" .9
     "fuel capacity" 400
     "ramscoop" 4
@@ -35,13 +36,13 @@ ship "Model 8"
       "hit force" 1800
   outfits
     "Thruster (Comet Class)"
-    "Steering (Lunar Class)"
+    "Steering (Comet Class)"
 
     "Slicer"
 
     "Systems Core (Small)"
-    "Generator (Furnace Class)"
-    "Generator (Candle Class)"
+    "Plasma Core"
+    "Small Heat Shunt"
     "Hyperdrive"
     "Reasoning Node"
   engine -11 49
@@ -67,12 +68,13 @@ ship "Model 16"
     "drag" 6.9
     "heat dissipation" 1.3
     "cargo space" 7
-    "outfit space" 426
-      "engine capacity" 107
-      "weapon capacity" 149
-    "self destruct" .9
+    "outfit space" 416
+    "engine capacity" 101
+    "weapon capacity" 149
+# miscellaneous stats
     "fuel capacity" 400
     "ramscoop" 4
+    "self destruct" .9
     weapon
       "blast radius" 200
       "shield damage" 2200
@@ -87,10 +89,9 @@ ship "Model 16"
     "Disruptor"
     "Slicer"
 
-    "Plasma Core"
-    "Generator (Inferno Class)"
     "Systems Core (Small)"
-    "Small Heat Shunt"
+    "Double Plasma Core"
+    "Large Heat Shunt"
     "Hyperdrive"
     "Reasoning Node" 2
   engine -10 99
@@ -120,12 +121,13 @@ ship "Model 32"
     "drag" 9.0
     "heat dissipation" 1.2
     "cargo space" 16
-    "outfit space" 481
-      "engine capacity" 110
-      "weapon capacity" 205
-    "self destruct" .9
+    "outfit space" 506
+    "engine capacity" 109
+    "weapon capacity" 205
+# miscellaneous stats
     "fuel capacity" 400
     "ramscoop" 4
+    "self destruct" .9
     weapon
       "blast radius" 240
       "shield damage" 3200
@@ -134,6 +136,7 @@ ship "Model 32"
   outfits
     "Thruster (Planetary Class)"
     "Steering (Lunar Class)"
+    "Steering (Asteroid Class)"
 
     "Mine" 17
     "Mine Launcher"
@@ -143,7 +146,7 @@ ship "Model 32"
     "Systems Core (Small)"
     "Double Plasma Core"
     "Generator (Candle Class)"
-    "Small Heat Shunt"
+    "Large Heat Shunt"
     "Hyperdrive"
     "Reasoning Node" 3
   engine -10 128
@@ -174,21 +177,22 @@ ship "Model 64"
     "drag" 11.1
     "heat dissipation" 1.1
     "cargo space" 34
-    "outfit space" 567
-      "engine capacity" 114
-      "weapon capacity" 263
-    "self destruct" .9
+    "outfit space" 587
+    "engine capacity" 119
+    "weapon capacity" 263
+# miscellaneous stats
     "fuel capacity" 400
     "ramscoop" 4
+    "self destruct" .9
     weapon
       "blast radius" 280
       "shield damage" 4000
       "hull damage" 2000
       "hit force" 6000
   outfits
-    "Thruster (Lunar Class)"
-    "Thruster (Asteroid Class)"
-    "Steering (Planetary Class)"
+    "Thruster (Planetary Class)"
+    "Steering (Lunar Class)"
+    "Steering (Comet Class)"
 
     "Mine" 17
     "Mine Launcher"
@@ -198,6 +202,7 @@ ship "Model 64"
     "Systems Core (Medium)"
     "Double Plasma Core"
     "Generator (Furnace Class)"
+    "Large Heat Shunt"
     "Hyperdrive"
     "Reasoning Node" 4
   engine -19 159
@@ -220,7 +225,7 @@ ship "Model 128"
   sprite "ship/model 128"
   thumbnail "thumbnail/model 128"
   attributes
-    category "Frigate"
+    category "Destroyer"
     "cost" 24073000
     "shields" 57000
     "hull" 23100
@@ -230,11 +235,12 @@ ship "Model 128"
     "heat dissipation" 1.0
     "cargo space" 53
     "outfit space" 716
-      "engine capacity" 132
-      "weapon capacity" 344
-    "self destruct" .9
+    "engine capacity" 131
+    "weapon capacity" 344
+# miscellaneous stats
     "fuel capacity" 400
     "ramscoop" 4
+    "self destruct" .9
     weapon
       "blast radius" 320
       "shield damage" 4600
@@ -243,7 +249,6 @@ ship "Model 128"
   outfits
     "Thruster (Planetary Class)"
     "Steering (Planetary Class)"
-    "Steering (Asteroid Class)"
 
     "Mine" 34
     "Mine Launcher" 2
@@ -252,7 +257,9 @@ ship "Model 128"
 
     "Systems Core (Medium)"
     "Double Plasma Core"
-    "Generator (Inferno Class)"
+    "Plasma Core"
+    "Large Heat Shunt"
+#    "Small Heat Shunt" 2
     "Hyperdrive"
     "Reasoning Node" 5
   engine -14 178
@@ -287,11 +294,12 @@ ship "Model 256"
     "heat dissipation" .9
     "cargo space" 78
     "outfit space" 857
-      "engine capacity" 145
-      "weapon capacity" 393
-    "self destruct" .9
+    "engine capacity" 145
+    "weapon capacity" 393
+# miscellaneous stats
     "fuel capacity" 400
     "ramscoop" 4
+    "self destruct" .9
     weapon
       "blast radius" 340
       "shield damage" 5200
@@ -309,7 +317,7 @@ ship "Model 256"
 
     "Systems Core (Large)"
     "Triple Plasma Core"
-    "Large Heat Shunt"
+    "Large Heat Shunt" 2
     "Hyperdrive"
     "Reasoning Node" 6
   engine -60 147
@@ -345,11 +353,12 @@ ship "Model 512"
     "heat dissipation" .8
     "cargo space" 107
     "outfit space" 994
-      "engine capacity" 161
-      "weapon capacity" 440
-    "self destruct" .9
+    "engine capacity" 161
+    "weapon capacity" 440
+# miscellaneous stats
     "fuel capacity" 400
     "ramscoop" 4
+    "self destruct" .9
     weapon
       "blast radius" 380
       "shield damage" 5600
@@ -367,8 +376,8 @@ ship "Model 512"
     "Systems Core (Large)"
     "Triple Plasma Core"
     "Plasma Core"
-    "Large Heat Shunt"
-    "Small Heat Shunt" 2
+    "Large Heat Shunt" 2
+    "Small Heat Shunt"
     "Hyperdrive"
     "Reasoning Node" 7
   engine -145 97

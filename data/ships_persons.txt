@@ -8,7 +8,7 @@ person "Michael Zahniser"
   ship "Kestrel" "Kestrel"
     "never disabled"
     attributes
-      category "Heavy Warship"
+      category "Battleship"
       "cost" 50000000
       "shields" 40000
       "hull" 40000
@@ -19,8 +19,8 @@ person "Michael Zahniser"
       "heat dissipation" 0.45
       "cargo space" 200
       "outfit space" 2400
-        "engine capacity" 400
-        "weapon capacity" 900
+      "engine capacity" 400
+      "weapon capacity" 900
     outfits
       "A860 Atomic Thruster"
       "A865 Atomic Steering" 2
@@ -168,8 +168,8 @@ ship "Marauder Fury"
     "heat dissipation" .85
     "cargo space" 15
     "outfit space" 280
-      "engine capacity" 100
-      "weapon capacity" 80
+    "engine capacity" 100
+    "weapon capacity" 80
     "ramscoop" 2
     weapon
       "blast radius" 36
@@ -270,7 +270,7 @@ person "Captain Nate"
     sprite "ship/pointedstick_vanguard"
     "never disabled"
     attributes
-      category "Heavy Warship"
+      category "Destroyer"
       "cost" 7200000
       "shields" 20000
       "hull" 8000
@@ -281,8 +281,8 @@ person "Captain Nate"
       "heat dissipation" .6
       "cargo space" 50
       "outfit space" 1000
-        "engine capacity" 330
-        "weapon capacity" 450
+      "engine capacity" 330
+      "weapon capacity" 450
       weapon
         "blast radius" 160
         "shield damage" 1600
@@ -365,7 +365,7 @@ person "Tranquility"
 ship "Lampyrid-Class Transport"
   sprite "ship/lampyrid"
   attributes
-    category "Heavy Freighter"
+    category "Corvette"
     cost 2760000
     "shields" 5400
     "hull" 4400
@@ -376,7 +376,7 @@ ship "Lampyrid-Class Transport"
     "heat dissipation" .7
     "cargo space" 160
     "outfit space" 330
-      "engine capacity" 105
+    "engine capacity" 105
     weapon
       "blast radius" 100
       "shield damage" 1000
@@ -501,7 +501,7 @@ ship "Modified Osprey"
   "never disabled"
   swizzle 3
   attributes
-    category "Heavy Warship"
+    category "Cruiser"
     "cost" 44000000
     "shields" 41000
     "shield generation" 10
@@ -514,8 +514,8 @@ ship "Modified Osprey"
     "heat dissipation" .6
     "cargo space" 80
     "outfit space" 2222
-      "engine capacity" 499
-      "weapon capacity" 850
+    "engine capacity" 499
+    "weapon capacity" 850
     "afterburner fuel" -.678
     "afterburner heat" -30
     weapon

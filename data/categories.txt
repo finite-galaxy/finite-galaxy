@@ -19,17 +19,16 @@ categories "outfit"
 
 
 categories "ship"
-  "Freighter" # cargo space > (hull mass + outfit space) / 2
-# proper warships, with x = hull mass + outfit space
-  "Battleship" # x > 2500
-  "Cruiser" # x > 2000 
-  "Destroyer" # x > 1500
-  "Frigate" # x > 1000
-  "Corvette" # x > 500
-# lesser vessels
+# proper warships, with total mass = base mass + outfit space + cargo space
+  "Battleship"  # >= 2500
+  "Cruiser"     # >= 2000 
+  "Destroyer"   # >= 1500
+  "Frigate"     # >= 1000
+  "Corvette"    # >=  500
+# lesser vessels, with total mass under 500
   "Interceptor" # capable of independent hyperspace travel
-  "Fighter" # carried in fighter bays
-  "Drone" # carried in drone bays
+  "Fighter"     # carried in fighter bays
+  "Drone"       # carried in drone bays
 # grandfathering deprecated categories
   "Transport"
   "Heavy Freighter"
