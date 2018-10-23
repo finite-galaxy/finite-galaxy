@@ -55,12 +55,12 @@ string Format::Credits(int64_t value)
   result.reserve(8);
   
   // Handle numbers bigger than a million.
-  static const vector<char> SUFFIX = {' T', ' B', ' M'};
+  static const vector<char> SUFFIX = {'T', 'B', 'M'};
   static const vector<int64_t> THRESHOLD = {1000000000000ll, 1000000000ll, 1000000ll};
   for(size_t i = 0; i < SUFFIX.size(); ++i)
     if(absolute > THRESHOLD[i])
     {
-      result += SUFFIX[i];
+      result += SUFFIX[i] + static_cast<char>(' ');
       int decimals = (absolute / (THRESHOLD[i] / 1000)) % 1000;
       for(int d = 0; d < 3; ++d)
       {
