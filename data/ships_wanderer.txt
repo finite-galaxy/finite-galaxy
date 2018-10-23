@@ -9,7 +9,7 @@ shipyard "Wanderer Variants"
   "Deep River 2"
   "Deep River 3"
   "Deep River 4"
-  "Deep River (Jump, Unarmed)"
+  "Deep River (Jump)"
   "Deep River Transport"
   "Derecho"
   "Derecho (Tough)"
@@ -92,6 +92,7 @@ ship "Autumn Leaf" "Autumn Leaf (Heavy)"
     "Fuel Pod" 10
     "Hyperdrive"
     "Wanderer Ramscoop"
+    "Outfits Expansion"
 
 
 
@@ -151,6 +152,7 @@ ship "Cool Breeze" "Cool Breeze (Sunbeam)"
     "Red Sun Reactor"
     "Fuel Pod" 4
     "Hyperdrive"
+    "Wanderer Ramscoop"
 
 
 
@@ -170,7 +172,7 @@ ship "Deep River"
     "drag" 9.4
     "heat dissipation" .6
     "cargo space" 1140
-    "outfit space" 203
+    "outfit space" 253
     "engine capacity" 83
     weapon
       "blast radius" 280
@@ -179,7 +181,7 @@ ship "Deep River"
       "hit force" 4200
   outfits
     "Type 2 Radiant Thruster"
-    "Type 3 Radiant Steering"
+    "Type 4 Radiant Steering"
 
     "Bright Cloud Shielding"
     "Large Biochemical Cell"
@@ -237,30 +239,31 @@ ship "Deep River" "Deep River 4"
     "cargo space" -228
 
 
-ship "Deep River" "Deep River (Jump, Unarmed)"
+ship "Deep River" "Deep River (Jump)"
   outfits
     "Type 2 Radiant Thruster"
     "Type 4 Radiant Steering"
 
-    "Dark Storm Shielding" 3
+    "Dark Storm Shielding"
     "White Sun Reactor"
-    "Fuel Pod" 6
+    "Fuel Pod" 8
     "Jump Drive"
     "Wanderer Ramscoop"
+    "Outfits Expansion" 10
 
 
 ship "Deep River" "Deep River Transport"
   outfits
-    "Type 2 Radiant Thruster"
-    "Type 4 Radiant Steering"
+    "Type 3 Radiant Thruster"
+    "Type 3 Radiant Steering"
 
     "Dark Storm Shielding"
     "Yellow Sun Reactor"
     "Fuel Pod" 5
     "Hyperdrive"
     "Wanderer Ramscoop"
-    "Bunk Room" 124
-    "Cargo Expansion" 13
+    "Bunk Room" 111
+    "Outfits Expansion" 2
 
 
 
@@ -377,12 +380,12 @@ ship "Earth Shaper"
     "cost" 500000
     "hull" 3300
     "automaton" 1
-    "mass" 30
+    "mass" 40
     "drag" .9
     "heat dissipation" .9
     "cargo space" 27
-    "outfit space" 83
-    "engine capacity" 26
+    "outfit space" 89
+    "engine capacity" 21
     "atmosphere scan" 100
     weapon
       "blast radius" 10
@@ -416,12 +419,12 @@ ship "Flycatcher"
     "cost" 830000
     "hull" 4700
     "automaton" 1
-    "mass" 40
+    "mass" 30
     "drag" .6
     "heat dissipation" .9
-    "outfit space" 86
-    "engine capacity" 26
-    "weapon capacity" 28
+    "outfit space" 79
+    "engine capacity" 21
+    "weapon capacity" 24
     weapon
       "blast radius" 10
       "shield damage" 100
@@ -459,7 +462,7 @@ ship "Hurricane"
     "drag" 11.9
     "heat dissipation" 0.55
     "cargo space" 98
-    "outfit space" 1000
+    "outfit space" 997
     "engine capacity" 140
     "weapon capacity" 428
     weapon
@@ -523,7 +526,7 @@ ship "Hurricane" "Hurricane (Tough)"
     "Fuel Pod" 5
     "Hyperdrive"
     "Wanderer Ramscoop"
-    "Outfits Expansion" 2
+    "Outfits Expansion" 4
   gun "Sunbeam"
   gun "Sunbeam"
   gun "Thunderhead Launcher"
@@ -551,7 +554,7 @@ ship "Hurricane" "Hurricane (Turret)"
     "Fuel Pod" 5
     "Hyperdrive"
     "Wanderer Ramscoop"
-    "Outfits Expansion" 2
+    "Outfits Expansion" 3
 
 
 
@@ -571,7 +574,7 @@ ship "Strong Wind"
     "drag" 4.7
     "heat dissipation" .7
     "cargo space" 68
-    "outfit space" 525
+    "outfit space" 528
     "engine capacity" 114
     "weapon capacity" 198
     weapon
@@ -580,7 +583,7 @@ ship "Strong Wind"
       "hull damage" 1000
       "hit force" 3000
   outfits
-    "Type 3 Radiant Thruster"
+    "Type 4 Radiant Thruster"
     "Type 4 Radiant Steering"
 
     "Thunderhead Missile" 80
@@ -727,7 +730,7 @@ ship "Tempest" "Tempest (Heavy)"
     "Fuel Pod" 6
     "Hyperdrive"
     "Wanderer Ramscoop"
-    "Outfits Expansion"
+    "Outfits Expansion" 2
   turret "Dual Sunbeam Turret"
   turret "Wanderer Anti-Missile"
   turret "Wanderer Anti-Missile"
@@ -779,9 +782,8 @@ ship "Winter Gale"
       "hull damage" 600
       "hit force" 1800
   outfits
-    "Type 3 Radiant Thruster"
+    "Type 4 Radiant Thruster"
     "Type 4 Radiant Steering"
-    "Type 3 Radiant Steering"
 
     "Moonbeam" 4
     "Sunbeam" 2
@@ -811,9 +813,8 @@ ship "Winter Gale"
 ship "Winter Gale" "Winter Gale (Heavy)"
   outfits
     "Type 3 Radiant Thruster"
-    "Type 1 Radiant Thruster"
+    "Type 2 Radiant Thruster"
     "Type 4 Radiant Steering"
-    "Type 1 Radiant Steering"
 
     "Sunbeam" 4
     "Moonbeam Turret"
@@ -823,21 +824,14 @@ ship "Winter Gale" "Winter Gale (Heavy)"
     "Fuel Pod" 6
     "Hyperdrive"
     "Wanderer Ramscoop"
-  engine -13 94
-  engine 13 94
-  gun "Sunbeam"
-  gun "Sunbeam"
-  gun "Sunbeam"
-  gun "Sunbeam"
-  gun
-  gun
-  turret "Moonbeam Turret"
+    "Outfits Expansion"
 
 
 ship "Winter Gale" "Winter Gale (Missile)"
   outfits
-    "Type 4 Radiant Thruster"
+    "Type 3 Radiant Thruster"
     "Type 4 Radiant Steering"
+    "Type 3 Radiant Steering"
 
     "Thunderhead Missile" 160
     "Thunderhead Launcher" 4
@@ -849,13 +843,5 @@ ship "Winter Gale" "Winter Gale (Missile)"
     "Fuel Pod" 6
     "Hyperdrive"
     "Wanderer Ramscoop"
-  engine -13 94
-  engine 13 94
-  gun "Thunderhead Launcher"
-  gun "Thunderhead Launcher"
-  gun "Thunderhead Launcher"
-  gun "Thunderhead Launcher"
-  gun "Moonbeam"
-  gun "Moonbeam"
-  turret "Wanderer Anti-Missile"
+    "Outfits Expansion"
 
