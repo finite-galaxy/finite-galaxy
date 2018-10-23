@@ -60,7 +60,8 @@ string Format::Credits(int64_t value)
   for(size_t i = 0; i < SUFFIX.size(); ++i)
     if(absolute > THRESHOLD[i])
     {
-      result += SUFFIX[i] + static_cast<char>(' ');
+      result += SUFFIX[i];
+      result += <char>(' ');
       int decimals = (absolute / (THRESHOLD[i] / 1000)) % 1000;
       for(int d = 0; d < 3; ++d)
       {
