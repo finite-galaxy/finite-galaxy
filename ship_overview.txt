@@ -1,0 +1,87 @@
+# Ships are sorted according to size, which determines their categories
+# total mass = base mass + outfit space + cargo space;
+# also listed their required crew / bunks for comparison
+
+
+
+# Battleships have a total mass of at least 3000
+  "World-Ship C":      3278 = 1985 +  999 +  294 ; (  794 / 1492 ) 
+  "World-Ship B":      3148 = 1885 +  999 +  264 ; (  804 / 1482 ) 
+  "World-Ship A":      3018 = 1785 +  999 +  234 ; (  814 / 1472 ) 
+# Cruisers have a total mass of at least 2000
+  "Kar Ik Vot 349":    2491 = 1350 + 1084 +   57 ; (    0 /    0 )
+  "Deep River":        2293 =  750 +  403 + 1140 ; (   13 /   22 )
+  "Model 512":         2251 = 1150 +  994 +  107 ; (    0 /    0 )
+  "Archon":            2000 = 1200 +  800 +    0 ; (    1 /    1 )
+# Destroyers have a total mass of at least 1500
+  "Solifuge":          1946 =  925 +  879 +  142 ; (   62 /  118 )
+  "Model 256":         1905 =  970 +  857 +   78 ; (    0 /    0 )
+  "Hurricane":         1868 =  770 + 1000 +   98 ; (   76 /  117 )
+  "Punisher":          1817 =  780 +  933 +   94 ; (   96 /  145 )
+  "Raider":            1672 =  720 +  777 +  175 ; (  145 /  245 )
+  "Hulk":              1671 =  670 +  560 +  541 ; (    8 /   14 )
+  "Shield Beetle":     1641 =  650 +  864 +  127 ; (   47 /   95 )
+  "Model 128":         1549 =  780 +  716 +   53 ; (    0 /    0 )
+  "Sojourner":         1532 =  640 +  632 +  260 ; (   17 /   84 )
+  "Maboro":            1520 =  940 +  610 +   70 ; (   54 /   87 )
+  "Skylark":           1510 =  460 +  850 +  200 ; (  120 /  210 )
+# Frigates have a total mass of at least 1000
+  "Arfecta":           1474 =  670 +  740 +   64 ; (   36 /   46 )
+  "Twilight":          1446 =  610 +  712 +  124 ; (   44 /   75 )
+  "Derecho":           1432 =  540 +  836 +   56 ; (   53 /   82 )
+  "Tek Far 78 - Osk":  1364 =  690 +  631 +   43 ; (    0 /    0 )
+  "Wardragon":         1260 =  360 +  850 +   50 ; (  160 /  180 )
+  "Interdictor":       1207 =  520 +  608 +   79 ; (   42 /   70 )
+  "Model 64":          1201 =  580 +  587 +   34 ; (    0 /    0 )
+  "Spire":             1187 =  570 +  553 +   64 ; (   19 /  197 )
+  "Tek Far 71 - Lek":  1179 =  610 +  533 +   36 ; (    0 /    0 )
+  "Spindle":           1094 =  340 +  474 +  280 ; (    4 /   14 )
+  "Wagon":             1079 =  380 +  389 +  310 ; (    3 /   10 )
+  "Tek Far 109":       1072 =  540 +  501 +   31 ; (    0 /    0 )
+  "Met Par Tek 53":    1056 =  420 +  610 +   26 ; (    0 /    0 )
+  "Tempest":           1012 =  320 +  655 +   47 ; (   38 /   53 )
+  "Traveller":         1001 =  350 +  514 +  137 ; (   10 /   45 )
+# Corvettes have a total mass of at least 500
+  "Model 32":           892 =  370 +  506 +   16 ; (    0 /    0 )
+  "Water Bug":          883 =  270 +  416 +  197 ; (    5 /   29 )
+  "Enfolta":            858 =  410 +  410 +   40 ; (   19 /   27 )
+  "Neutralizer":        853 =  270 +  447 +   36 ; (   17 /   24 )
+  "Strong Wind":        843 =  260 +  525 +   68 ; (   17 /   39 )
+  "Winter Gale":        794 =  240 +  526 +   28 ; (   14 /   23 )
+  "Transport":          783 =  280 +  313 +  190 ; (    2 /    5 )
+  "Thistle":            776 =  270 +  377 +   29 ; (    7 /   52 )
+  "Visitor":            720 =  270 +  352 +   98 ; (    5 /   29 )
+  "Shadow":             690 =  270 +  384 +   36 ; (    6 /   15 )
+  "Model 16":           673 =  250 +  416 +    7 ; (    0 /    0 )
+  "Lightning Bug":      628 =  190 +  365 +   73 ; (    4 /   10 )
+  "Autumn Leaf":        616 =  130 +  441 +   45 ; (    8 /   16 )
+  "Pond Strider":       575 =  132 +  372 +   71 ; (    9 /   18 )
+  "Summer Leaf":        535 =  110 +  384 +   41 ; (    6 /   15 )
+  "Briar":              502 =  180 +  301 +   21 ; (    3 /   25 )
+# Interceptors, fighters, and drones all have a total mass under 500
+  "Aphid":              368 =  100 +  217 +   51 ; (    1 /    5 )
+  "Model 8":            359 =  110 +  220 +   29 ; (    0 /    0 )
+  "Courier":            350 =  100 +  172 +   78 ; (    1 /    1 )
+  "Runabout":           348 =  104 +  204 +   42 ; (    2 /   13 )
+  "Cool Breeze":        288 =   50 +  224 +   14 ; (    1 /    3 )
+  "Thorn":              233 =   80 +  141 +   12 ; (    1 /    7 )
+  "Gascraft":           232 =   80 +  144 +    8 ; (    1 /    1 )
+  "Earth Shaper":       140 =   30 +   83 +   27 ; (    0 /    0 )
+  "Far Osk 27":         134 =   34 +  100 +    0 ; (    0 /    0 )
+  "Chaser":             132 =   40 +   92 +    0 ; (    1 /    1 )
+  "Flycatcher":         126 =   40 +   86 +    0 ; (    0 /    0 )
+  "Violin Spider":      125 =   31 +   94 +    0 ; (    1 /    1 )
+  "Far Lek 14":          92 =   26 +   66 +    0 ; (    0 /    0 )
+  "Flea":                81 =   21 +   60 +    0 ; (    0 /    0 )
+
+  "Marauder Argosy":
+  "Marauder Arrow":
+  "Marauder Bounder":
+  "Marauder Falcon":
+  "Marauder Firebird":
+  "Marauder Leviathan":
+  "Marauder Manta":
+  "Marauder Quicksilver":
+  "Marauder Raven":
+  "Marauder Splinter":
+

@@ -1,4 +1,4 @@
-## Overview of finite-galaxy changes up to and including the first 100 commits
+## Overview of finite-galaxy changes since forking endless-sky
 ## See also https://github.com/finite-galaxy/finite-galaxy/commits/master
 
 * code:
@@ -37,6 +37,7 @@
       * "8X Blaster Turret"
       * "Armour Plating"
       * "Fuel Barrel"
+      * "Hyperspace Tank"
       * "Modified Blaster Quad Turret" (@Pointedstick)
       * "Neutrino Cooling"
       * "Particle Turret"
@@ -56,7 +57,6 @@
       * fuel processor is larger, has double capacity, and halved ramscoop
       * numerous tweaks to stats of many outfits
   * ships:
-    * now have 0 fuel capacity; equipped them with fuel barrels and pods; outfit space increased accordingly
     * renamed:
       * "Albatross" to "Twilight"
       * "Arach Freighter" to "Wagon"
@@ -69,17 +69,92 @@
       * "Rainmaker" to "Mercury"
       * "Starling" to "Shadow"
       * removed species from ship names
+    * changed outfits of nearly all ships and variants
     * reduced the number of gun ports on some ships, usually because there were two at the same location:
       * Argosy, Bastion, Falcon, and Venus from 4 to 2
       * Bactrian from 4 to 3
-      * Bulk Freighter from 2 to 0
+      * Bulk Freighter and Model 8 from 2 to 0
       * Jupiter from 8 to 4
       * Manta and Saturn from 6 to 4
       * Mule from 2 to 1
-    * differentiated A, B, and C World Ships
-    * Hai ships approximately +100% hull, +35% base cost
-    * reduced the number of gun ports from some ships
-    * numerous tweaks to stats and outfits of many ships
+      * Tek Far 71 - Lek from 3 to 2
+    * changed the number of turret mounts on some ships:
+      * Model 8 from 0 to 1
+    * now have 0 fuel capacity; equipped them with fuel barrels and pods; outfit space increased accordingly
+    * stat tweaks:
+      * Aphid: unchanged
+      * Archon: cost from 1000m to 1234.567890m; +200 mass
+      * Arfecta: +4 outfit space, +0.20 fuel generation; removed cloaking fuel; +12 scan interference
+      * Autumn Leaf: unchanged
+      * Briar: unchanged
+      * Chaser: unchanged
+      * Cool Breeze: unchanged
+      * Courier: unchanged
+      * Deep River: unchanged
+      * Derecho: unchanged
+      * Earth Shaper: unchanged
+      * Enfolta: +2 outfit space, +0.10 fuel generation; +6 scan interference
+      * Far Lek 14: +1 outfit space; self destruct from 0.60 to 0.9
+      * Far Osk 27: +1 outfit space; self destruct from 0.60 to 0.9
+      * Flea: unchanged
+      * Flycatcher: unchanged
+      * Gascraft: −0.1 heat dissipation, −2 outfit space, +250 energy capacity, +1 scan interference
+      * Hulk: unchanged
+      * Hurricane: unchanged
+      * Interdictor: unchanged
+      * Kar Ik Vot 349: –30 cargo space, +30 outfit space, –8 engine capacity; self destruct from 0.80 to 0.9
+      * Lightning Bug: –30 mass, +49 outfit space, −6 engine capacity, +6 weapon capacity
+      * Maboro: +2 outfit space, +0.15 fuel generation; +9 scan interference
+      * Marauder Argosy: unchanged
+      * Marauder Arrow: unchanged
+      * Marauder Bounder: unchanged
+      * Marauder Falcon: unchanged
+      * Marauder Firebird: unchanged
+      * Marauder Leviathan: unchanged
+      * Marauder Manta: unchanged
+      * Marauder Quicksilver: unchanged
+      * Marauder Raven: unchanged
+      * Marauder Splinter: unchanged
+      * Met Par Tek 53; self destruct from 0.65 to 0.9
+      * Model 8: +10 weapon capacity; +200 fuel capacity, +1 ramscoop, self destruct from 0.60 to 0.9
+      * Model 16: −10 outfit space, −6 engine capacity; +1 ramscoop, self destruct from 0.65 to 0.9
+      * Model 32: +0.1 heat dissipation, −25 outfit space, −1 engine capacity; +1 ramscoop, self destruct from 0.70 to 0.9
+      * Model 64: +20 outfit space, +5 engine capacity; +1 ramscoop, self destruct from 0.74 to 0.9
+      * Model 128: +3 outfit space, −1 engine capacity; +1 ramscoop, self destruct from 0.77 to 0.9
+      * Model 256: +1 ramscoop, self destruct from 0.79 to 0.9
+      * Model 512: +1 ramscoop, self destruct from 0.80 to 0.9
+      * Neutralizer: unchanged
+      * Punisher: unchanged
+      * Raider: +10 outfit space
+      * Runabout: unchanged
+      * Shadow: +2 scan interference
+      * Shield Beetle: −15 cargo space, +26 outfit space
+      * Skylark: +190 outfit space; removed energy generation, hull energy, and hull repair rate; +100 asteroid scan power
+      * Sojourner: unchanged
+      * Solifuge: −0.02 heat dissipation, +3 outfit space
+      * Spindle: unchanged
+      * Spire: unchanged
+      * Strong Wind: unchanged
+      * Summer Leaf: unchanged
+      * Tek Far 71 - Lek: self destruct from 0.70 to 0.9
+      * Tek Far 78 - Osk: +20 outfit space; self destruct from 0.70 to 0.9
+      * Tek Far 109: +10 outfit space; self destruct from 0.70 to 0.9
+      * Tempest: unchanged
+      * Thistle: unchanged
+      * Thorn: unchanged
+      * Transport: unchanged
+      * Traveller: unchanged
+      * Twilight: +6 outfit space, +4 scan interference
+      * Violin Spider: +2 outfit space
+      * Visitor: unchanged
+      * Wagon: unchanged
+      * Water Bug: unchanged
+      * Wardragon: −5 bunks, +202 outfit space; removed energy generation, hull energy, and hull repair rate; +100 tactical scan power
+      * Winter Gale: unchanged
+      * World-Ship A: cost from 27.69m to 47.69m; +5000 shields, −5000 hull, +50 mass, −30 cargo space, +145 outfit space, +8 engine capacity, +14 weapon capacity
+      * World-Ship B: cost from 27.69m to 47.69m; +150 mass, +145 outfit space, +8 engine capacity, +14 weapon capacity
+      * World-Ship C: cost from 27.69m to 47.69m; −5000 shields, +5000 hull, +250 mass, +30 cargo space, +145 outfit space, +8 engine capacity, +14 weapon capacity
+      * Zibruka: +2 outfit space, +0.05 fuel generation; +3 scan interference
 * icons:
   * replaced icons with scaled Andromeda
 * images:
