@@ -11,6 +11,7 @@ shipyard "Lionheart Variants"
   "Dagger"
   "Flivver"
   "Flivver (Hai)"
+  "Flivver (Miner)"
   "Flivver (Racing)"
   "Headhunter"
   "Headhunter (Hai)"
@@ -21,6 +22,7 @@ shipyard "Lionheart Variants"
   "Mule (Hai Weapons)"
   "Mule (Heavy)"
   "Scout"
+  "Scout (Miner)"
   "Scout (Speedy)"
 
 
@@ -443,6 +445,21 @@ ship "Flivver" "Flivver (Hai)"
     "Hyperdrive"
 
 
+ship "Flivver" "Flivver (Miner)"
+  outfits
+    "A120 Atomic Thruster"
+    "A125 Atomic Steering"
+
+    "Laser Cannon" 2
+
+    "D14-RN Shield Generator"
+    "nGVF-BB Fuel Cell"
+    "LP036a Battery Pack"
+    "Asteroid Scanner"
+    "Fuel Barrel" 50
+    "Hyperdrive"
+
+
 ship "Flivver" "Flivver (Racing)"
   outfits
     "A120 Atomic Thruster"
@@ -766,6 +783,24 @@ ship "Scout"
   leak "flame" 60 80
   "final explode" "final explosion small"
   description "The Lionheart Scoutship was designed back in the days when the galaxy was more sparsely populated, and ships prospecting for habitable worlds or worlds rich in resources would often travel far away from any habitable ports where they would be able to refuel. Although the galaxy has now been much more thoroughly explored, the Scout remains a popular ship for long-distance travel."
+
+
+ship "Scout" "Scout (Miner)"
+  outfits
+    "A250 Atomic Thruster"
+    "A255 Atomic Steering"
+
+    "Laser Cannon" 2
+    "Laser Turret"
+
+    "D14-RN Shield Generator"
+    "nGVF-CC Fuel Cell"
+    "LP036a Battery Pack"
+    "Asteroid Scanner"
+    "Fuel Barrel" 80
+    "Hyperdrive"
+    "Ramscoop"
+    "Small Radar Jammer"
 
 
 ship "Scout" "Scout (Speedy)"

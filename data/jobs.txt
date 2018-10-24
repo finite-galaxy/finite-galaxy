@@ -345,7 +345,7 @@ mission "Escort (Large, Northern, Dangerous Destination)"
     government Pirate
     personality nemesis harvests plunders
     system destination
-    fleet "Pirates Northern Large"
+    fleet "Pirates North Large"
   npc
     government Pirate
     personality nemesis entering harvests plunders
@@ -355,7 +355,7 @@ mission "Escort (Large, Northern, Dangerous Destination)"
     government Pirate
     personality nemesis staying harvests plunders
     system destination
-    fleet "Pirates Northern Large"
+    fleet "Pirates North Large"
   
   npc accompany save
     government Merchant
@@ -389,13 +389,13 @@ mission "Escort (Large, Northern, Dangerous Origin)"
   npc
     government Pirate
     personality nemesis harvests plunders
-    fleet "Pirates Northern Large"
+    fleet "Pirates North Large"
   npc
     government Pirate
     personality nemesis harvests plunders
     system
       distance 1
-    fleet "Pirates Northern Large"
+    fleet "Pirates North Large"
   npc
     government Pirate
     personality nemesis harvests plunders
@@ -437,18 +437,18 @@ mission "Escort (Extra Large, Northern, Dangerous Destination)"
     personality nemesis harvests plunders
     system destination
     fleet "Pirates North Small"
-    fleet "Pirates Northern Large"
+    fleet "Pirates North Large"
   npc
     government Pirate
     personality nemesis entering harvests plunders
     system destination
-    fleet "Pirates Northern Large"
+    fleet "Pirates North Large"
   npc
     government Pirate
     personality nemesis staying harvests plunders
     system destination
     fleet "Pirates North Small"
-    fleet "Pirates Northern Large"
+    fleet "Pirates North Large"
   
   npc accompany save
     government Merchant
@@ -483,7 +483,7 @@ mission "Escort (Extra Large, Northern, Dangerous Origin)"
     government Pirate
     personality nemesis harvests plunders
     fleet "Pirates North Small"
-    fleet "Pirates Northern Large"
+    fleet "Pirates North Large"
   npc
     government Pirate
     personality nemesis harvests plunders
@@ -495,12 +495,12 @@ mission "Escort (Extra Large, Northern, Dangerous Origin)"
     personality nemesis harvests plunders
     system
       distance 1 1
-    fleet "Pirates Northern Large"
+    fleet "Pirates North Large"
   npc
     government Pirate
     personality nemesis harvests plunders
     system destination
-    fleet "Pirates Northern Large"
+    fleet "Pirates North Large"
   
   npc accompany save
     government Merchant
@@ -1192,12 +1192,12 @@ mission "Escort (Large, Southern, Dangerous Origin or Destination)"
   npc
     government Pirate
     personality nemesis harvests plunders
-    fleet "Pirates Southern Large"
+    fleet "Pirates South Large"
   npc
     government Pirate
     personality nemesis staying harvests plunders
     system destination
-    fleet "Pirates Southern Large"
+    fleet "Pirates South Large"
   
   npc accompany save
     government Merchant
@@ -1231,13 +1231,13 @@ mission "Escort (Extra Large, Southern, Dangerous Origin or Destination)"
   npc
     government Pirate
     personality nemesis harvests plunders
-    fleet "Pirates Southern Large"
+    fleet "Pirates South Large"
     fleet "Pirates South Small"
   npc
     government Pirate
     personality nemesis staying harvests plunders
     system destination
-    fleet "Pirates Southern Large"
+    fleet "Pirates South Large"
     fleet "Pirates South Small"
   
   npc accompany save
@@ -1384,7 +1384,7 @@ mission "Southern Pirate Attack"
     government Pirate
     personality heroic staying target harvests plunders
     fleet "Pirates South Small"
-    fleet "Pirates Southern Large" 2
+    fleet "Pirates South Large" 2
   npc
     government Militia
     personality heroic staying
@@ -1417,7 +1417,7 @@ mission "Northern Pirate Attack"
     government Pirate
     personality heroic staying target harvests plunders
     fleet "Pirates North Small"
-    fleet "Pirates Northern Large" 2
+    fleet "Pirates North Large" 2
   npc
     government Republic
     personality heroic staying

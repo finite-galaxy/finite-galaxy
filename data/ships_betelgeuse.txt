@@ -6,6 +6,7 @@ shipyard "Betelgeuse Variants"
   "Behemoth (Speedy)"
   "Berserker"
   "Berserker (Afterburner)"
+  "Berserker (Miner)"
   "Firebird"
   "Firebird (Hai Shields)"
   "Firebird (Hai Weapons)"
@@ -25,6 +26,7 @@ shipyard "Betelgeuse Variants"
   "Leviathan (Heavy)"
   "Leviathan (Laser)"
   "Light Shuttle"
+  "Light Shuttle (Miner)"
 
 
 
@@ -249,6 +251,21 @@ ship "Berserker" "Berserker (Afterburner)"
     "Fuel Barrel" 40
     "Hyperdrive"
     "Ramscoop"
+
+
+ship "Berserker" "Berserker (Miner)"
+  outfits
+    "X2700 Ion Thruster"
+    "X3200 Ion Steering"
+
+    "Laser Cannon" 4
+
+    "D23-QP Shield Generator"
+    "nGVF-CC Fuel Cell"
+    "LP036a Battery Pack"
+    "Asteroid Scanner"
+    "Fuel Barrel" 40
+    "Hyperdrive"
 
 
 
@@ -861,4 +878,19 @@ ship "Light Shuttle"
   explode "small explosion" 5
   description "Although Betelgeuse Shipyards produces other ship models as well, the majority of their profits come from sales of the Light Shuttle. This versatile ship serves equally well as a passenger transport or a cargo courier. It also happens to be the cheapest ship you can buy which is capable of hyperspace travel."
   description `  Shuttles are not designed to withstand combat of any sort, but they are fast and maneuverable enough to get out of harm's way if attacked by a larger, slower ship. Although they are typically unarmed, they have enough space for one weapon, which is the origin of the popular phrase, "as useless as a blaster cannon on a shuttlecraft."`
+
+
+ship "Light Shuttle" "Light Shuttle (Miner)"
+  outfits
+    "X2700 Ion Thruster"
+    "X2200 Ion Steering"
+
+    "Laser Cannon"
+
+    "D14-RN Shield Generator"
+    "nGVF-AA Fuel Cell"
+    "LP036a Battery Pack"
+    "Asteroid Scanner"
+    "Fuel Barrel" 40
+    "Hyperdrive"
 

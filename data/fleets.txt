@@ -48,7 +48,10 @@
 #   "Merchants Paradise"
 #   "Merchants South Large"
 #   "Merchants South Small"
-#   "Human Miners"
+#   "Miners Core"
+#   "Miners Deep"
+#   "Miners North"
+#   "Miners South"
 # Militia:
 #   "Militia Large"
 #   "Militia Small"
@@ -2064,27 +2067,53 @@ fleet "Merchants South Small"
     "Berserker"
 
 
-fleet "Human Miners"
+fleet "Miners Core"
   government "Merchant"
   names "civilian"
   cargo 0
   personality
     confusion 20
     timid frugal mining harvests
-  variant 5
-    "Sparrow"
-  variant 1
-    "Fury"
   variant 2
-    "Fury (Laser)"
-  variant 3
-    "Hawk"
+    "Star Barge (Miner)"
   variant 1
-    "Hawk (Speedy)"
+    "Wasp (Miner)"
+
+fleet "Miners Deep"
+  government "Merchant"
+  names "civilian"
+  cargo 0
+  personality
+    confusion 20
+    timid frugal mining harvests
   variant 2
-    "Headhunter"
+    "Flivver (Miner)"
   variant 1
-    "Headhunter (Particle)"
+    "Scout (Miner)"
+
+fleet "Miners North"
+  government "Merchant"
+  names "civilian"
+  cargo 0
+  personality
+    confusion 20
+    timid frugal mining harvests
+  variant 2
+    "Light Shuttle (Miner)"
+  variant 1
+    "Berserker (Miner)"
+
+fleet "Miners South"
+  government "Merchant"
+  names "civilian"
+  cargo 0
+  personality
+    confusion 20
+    timid frugal mining harvests
+  variant 2
+    "Sparrow (Miner)"
+  variant 1
+    "Fury (Miner)"
 
 
 

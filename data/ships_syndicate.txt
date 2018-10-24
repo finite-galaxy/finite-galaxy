@@ -5,12 +5,14 @@ shipyard "Syndicate Variants"
   "Bulk Freighter (Hai)"
   "Bulk Freighter (Heavy)"
   "Bulk Freighter (Proton)"
+  "Bulk Freighter Carrier"
   "Class C Freighter"
   "Protector"
   "Protector (Laser)"
   "Protector (Proton)"
   "Star Barge"
   "Star Barge (Armed)"
+  "Star Barge (Miner)"
   "Star Freighter"
   "Star Freighter (Fancy)"
   "Star Freighter (Hai)"
@@ -21,6 +23,7 @@ shipyard "Syndicate Variants"
   "Vanguard"
   "Vanguard (Particle)"
   "Wasp"
+  "Wasp (Miner)"
   "Wasp (Proton)"
 
 
@@ -239,140 +242,7 @@ ship "Bulk Freighter" "Class C Freighter"
   description `The Class C "Star Freighter" is a stealth warship designed by the Syndicate for baiting pirates with the offer of a seemingly helpless, ordinary bulk freighter. Inside, its cargo space has all been converted into drone bays, allowing it to carry a dozen combat drones.`
 
 
-
-ship "Star Freighter"
-  sprite "ship/freighter"
-  thumbnail "thumbnail/freighter"
-  attributes
-    category "Corvette"
-    licences
-      Pilot
-    "cost" 730000
-    "shields" 2000
-    "hull" 2000
-    "required crew" 2
-    "bunks" 7
-    "mass" 240
-    "drag" 5.6
-    "heat dissipation" .6
-    "cargo space" 160
-    "outfit space" 310
-    "engine capacity" 70
-    "weapon capacity" 80
-    weapon
-      "blast radius" 40
-      "shield damage" 400
-      "hull damage" 200
-      "hit force" 600
-  outfits
-    "X2700 Ion Thruster"
-    "X2200 Ion Steering"
-    "XR1700 Ion Reverse"
-
-    "4X Blaster Turret"
-    "Light Anti-Missile Turret" 2
-
-    "D14-RN Shield Generator"
-    "nGVF-EE Fuel Cell"
-    "LP036a Battery Pack"
-    "Fuel Barrel" 60
-    "Hyperdrive"
-  engine -9 97
-  engine 9 97
-  turret 0 -52 "Light Anti-Missile Turret"
-  turret 0 6 "4X Blaster Turret"
-  turret 0 65 "Light Anti-Missile Turret"
-  leak "leak" 60 50
-  leak "flame" 50 80
-  explode "tiny explosion" 10
-  explode "small explosion" 30
-  explode "medium explosion" 20
-  "final explode" "final explosion small"
-  description "The Freighter is designed by the Syndicate to be an efficient means of carrying cargo from system to system, but is so slow and difficult to land that most pilots hate flying them."
-  description "  Freighters are an obvious target for pirates, but turn much too slowly to be able to bring any forward-facing guns to bear on an approaching enemy. As a result, the latest model of freighter is equipped only with turrets, including an anti-missile turret to prevent attackers from simply bombarding them into submission from a safe distance."
-
-
-ship "Star Freighter" "Star Freighter (Fancy)"
-  outfits
-    "X2700 Ion Thruster"
-    "X2200 Ion Steering"
-    "XR1700 Ion Reverse"
-
-    "Laser Turret" 2
-    "Heavy Anti-Missile Turret"
-
-    "D14-RN Shield Generator"
-    "NT-200 Nucleovoltaic"
-    "Supercapacitor"
-    "Fuel Barrel" 60
-    "Hyperdrive"
-    "Ramscoop"
-    "Outfits Expansion"
-  turret "Laser Turret"
-  turret "Heavy Anti-Missile Turret"
-  turret "Laser Turret"
-
-
-ship "Star Freighter" "Star Freighter (Hai)"
-  outfits
-    "X2700 Ion Thruster"
-    "X2200 Ion Steering"
-    "XR1700 Ion Reverse"
-
-    "Pulse Turret" 2
-    "Chameleon Anti-Missile"
-
-    "Corundum Regenerator"
-    "Geode Reactor"
-    "Chasm Batteries"
-    "Fuel Barrel" 60
-    "Hyperdrive"
-    "Ramscoop"
-    "Outfits Expansion"
-  turret "Pulse Turret"
-  turret "Chameleon Anti-Missile"
-  turret "Pulse Turret"
-
-
-ship "Star Freighter" "Star Freighter (Proton)"
-  outfits
-    "X2700 Ion Thruster"
-    "X2200 Ion Steering"
-    "XR1700 Ion Reverse"
-
-    "Proton Turret"
-    "Light Anti-Missile Turret"
-
-    "D14-RN Shield Generator"
-    "NT-200 Nucleovoltaic"
-    "Supercapacitor"
-    "Fuel Barrel" 60
-    "Hyperdrive"
-    "Ramscoop"
-    "Outfits Expansion"
-  turret "Light Anti-Missile Turret"
-  turret "Proton Turret"
-  turret
-
-
-ship "Star Freighter" "Star Freighter (Secret Cargo)"
-  outfits
-    "X2700 Ion Thruster"
-    "X2200 Ion Steering"
-    "XR1700 Ion Reverse"
-
-    "4X Blaster Turret"
-    "Light Anti-Missile Turret" 2
-
-    "nGVF-EE Fuel Cell"
-    "LP036a Battery Pack"
-    "D14-RN Shield Generator"
-    "Fuel Barrel" 60
-    "Hyperdrive"
-    "Secret Cargo"
-  turret "Light Anti-Missile Turret"
-  turret "4X Blaster Turret"
-  turret "Light Anti-Missile Turret"
+ship "Class C Freighter" "Bulk Freighter Carrier"
 
 
 
@@ -525,6 +395,157 @@ ship "Star Barge" "Star Barge (Armed)"
     "LP036a Battery Pack"
     "Fuel Barrel" 30
     "Hyperdrive"
+
+
+ship "Star Barge" "Star Barge (Miner)"
+  outfits
+    "X1700 Ion Thruster"
+    "X1200 Ion Steering"
+
+    "Laser Turret"
+
+    "D14-RN Shield Generator"
+    "nGVF-BB Fuel Cell"
+    "LP036a Battery Pack"
+    "Asteroid Scanner"
+    "Fuel Barrel" 30
+    "Hyperdrive"
+
+
+
+ship "Star Freighter"
+  sprite "ship/freighter"
+  thumbnail "thumbnail/freighter"
+  attributes
+    category "Corvette"
+    licences
+      Pilot
+    "cost" 730000
+    "shields" 2000
+    "hull" 2000
+    "required crew" 2
+    "bunks" 7
+    "mass" 240
+    "drag" 5.6
+    "heat dissipation" .6
+    "cargo space" 160
+    "outfit space" 310
+    "engine capacity" 70
+    "weapon capacity" 80
+    weapon
+      "blast radius" 40
+      "shield damage" 400
+      "hull damage" 200
+      "hit force" 600
+  outfits
+    "X2700 Ion Thruster"
+    "X2200 Ion Steering"
+    "XR1700 Ion Reverse"
+
+    "4X Blaster Turret"
+    "Light Anti-Missile Turret" 2
+
+    "D14-RN Shield Generator"
+    "nGVF-EE Fuel Cell"
+    "LP036a Battery Pack"
+    "Fuel Barrel" 60
+    "Hyperdrive"
+  engine -9 97
+  engine 9 97
+  turret 0 -52 "Light Anti-Missile Turret"
+  turret 0 6 "4X Blaster Turret"
+  turret 0 65 "Light Anti-Missile Turret"
+  leak "leak" 60 50
+  leak "flame" 50 80
+  explode "tiny explosion" 10
+  explode "small explosion" 30
+  explode "medium explosion" 20
+  "final explode" "final explosion small"
+  description "The Freighter is designed by the Syndicate to be an efficient means of carrying cargo from system to system, but is so slow and difficult to land that most pilots hate flying them."
+  description "  Freighters are an obvious target for pirates, but turn much too slowly to be able to bring any forward-facing guns to bear on an approaching enemy. As a result, the latest model of freighter is equipped only with turrets, including an anti-missile turret to prevent attackers from simply bombarding them into submission from a safe distance."
+
+
+ship "Star Freighter" "Star Freighter (Fancy)"
+  outfits
+    "X2700 Ion Thruster"
+    "X2200 Ion Steering"
+    "XR1700 Ion Reverse"
+
+    "Laser Turret" 2
+    "Heavy Anti-Missile Turret"
+
+    "D14-RN Shield Generator"
+    "NT-200 Nucleovoltaic"
+    "Supercapacitor"
+    "Fuel Barrel" 60
+    "Hyperdrive"
+    "Ramscoop"
+    "Outfits Expansion"
+  turret "Laser Turret"
+  turret "Heavy Anti-Missile Turret"
+  turret "Laser Turret"
+
+
+ship "Star Freighter" "Star Freighter (Hai)"
+  outfits
+    "X2700 Ion Thruster"
+    "X2200 Ion Steering"
+    "XR1700 Ion Reverse"
+
+    "Pulse Turret" 2
+    "Chameleon Anti-Missile"
+
+    "Corundum Regenerator"
+    "Geode Reactor"
+    "Chasm Batteries"
+    "Fuel Barrel" 60
+    "Hyperdrive"
+    "Ramscoop"
+    "Outfits Expansion"
+  turret "Pulse Turret"
+  turret "Chameleon Anti-Missile"
+  turret "Pulse Turret"
+
+
+ship "Star Freighter" "Star Freighter (Proton)"
+  outfits
+    "X2700 Ion Thruster"
+    "X2200 Ion Steering"
+    "XR1700 Ion Reverse"
+
+    "Proton Turret"
+    "Light Anti-Missile Turret"
+
+    "D14-RN Shield Generator"
+    "NT-200 Nucleovoltaic"
+    "Supercapacitor"
+    "Fuel Barrel" 60
+    "Hyperdrive"
+    "Ramscoop"
+    "Outfits Expansion"
+  turret "Light Anti-Missile Turret"
+  turret "Proton Turret"
+  turret
+
+
+ship "Star Freighter" "Star Freighter (Secret Cargo)"
+  outfits
+    "X2700 Ion Thruster"
+    "X2200 Ion Steering"
+    "XR1700 Ion Reverse"
+
+    "4X Blaster Turret"
+    "Light Anti-Missile Turret" 2
+
+    "nGVF-EE Fuel Cell"
+    "LP036a Battery Pack"
+    "D14-RN Shield Generator"
+    "Fuel Barrel" 60
+    "Hyperdrive"
+    "Secret Cargo"
+  turret "Light Anti-Missile Turret"
+  turret "4X Blaster Turret"
+  turret "Light Anti-Missile Turret"
 
 
 
@@ -718,6 +739,21 @@ ship "Wasp"
   explode "tiny explosion" 20
   explode "small explosion" 10
   description "The Wasp is a medium-strength interceptor, designed by Syndicated Shipyards to serve as an escort for cargo vessels. Like most Syndicate ships, it is not particularly pretty, but it at least serves the purpose it was made for."
+
+
+ship "Wasp" "Wasp (Miner)"
+  outfits
+    "X2700 Ion Thruster"
+    "X2200 Ion Steering"
+
+    "Laser Cannon" 3
+
+    "D14-RN Shield Generator"
+    "nGVF-BB Fuel Cell"
+    "LP036a Battery Pack"
+    "Asteroid Scanner"
+    "Fuel Barrel" 40
+    "Hyperdrive"
 
 
 ship "Wasp" "Wasp (Proton)"
