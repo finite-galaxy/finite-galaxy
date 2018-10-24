@@ -253,7 +253,7 @@ mission "Visit Wanderers Again"
   
   on accept
     set "language: Wanderer"
-    set "licence: Wanderer Outfits"
+    set "licence: Wanderer"
     event "wanderer technology available"
 
 event "wanderer technology available" #Name unchanged for compatibility
@@ -271,7 +271,7 @@ mission "Wanderer Hail Patch"
   to offer
     has "event: wanderer technology available"
   on offer
-    set "licence: Wanderer Outfits"
+    set "licence: Wanderer"
     event "wanderer technology available"
     fail
 
@@ -283,7 +283,7 @@ mission "Wanderers Conversation"
   to offer
     has "Visit Wanderers Again: done"
   on offer
-    log "Spoke with a Wanderer ambassador named Iktat Rek, using the translation device. Received permission to purchase some of their technology, but not their ships."
+    log "Spoke with a Wanderer ambassador named Iktat Rek, using the translation device. Received permission to purchase some of their technology, but not their warships."
     log "Factions" "Wanderers" `The Wanderers believe that their purpose in the universe is to "repair" planets whose biospheres have been ravaged by other species either through mismanagement or as a result of war. They came to their current territory through a wormhole that they call "the Eye," and they say that once their work here is done the Eye will open and lead them to a new territory and new worlds for them to care for.`
       `It is possible that the worlds they currently inhabit were formerly part of Hai territory. That might explain why the Unfettered believe they have a right to take that territory back.`
     log "People" "Iktat Rek" `Rek is a Wanderer ambassador, a new and unusual profession among a species that until recently has had no contact with aliens except for the occasional Unfettered Hai raid. His job is to help the Wanderers develop a deeper relationship with humans.`
@@ -581,10 +581,10 @@ mission "Wanderers: Unfettered Diplomacy 1C"
         accept
   on complete
     "reputation: Wanderer" >?= 20
-    set "licence: Wanderer"
-    log "Managed to broker a temporary ceasefire between the Unfettered Hai and the Wanderers. Was granted access to purchase the non-military Wanderer ships, as a reward."
+    set "licence: Deep River"
+    log "Managed to broker a temporary ceasefire between the Unfettered Hai and the Wanderers. Was granted access to purchase the non-military Deep River ship, as a reward."
     conversation
-      `When you return to <planet>, Iktat Rek meets with Ambassador Sayari and a few of the Wanderer elders. The elders thank you for the role that you played in negotiating a temporary peace, and Rek says, "We will [reward, honor] you by allowing you to purchase our ships, all but the [ship of war, battleship]."`
+      `When you return to <planet>, Iktat Rek meets with Ambassador Sayari and a few of the Wanderer elders. The elders thank you for the role that you played in negotiating a temporary peace, and Rek says, "We will [reward, honour] you by allowing you to purchase our largest ship, the Deep River, but not our [ships of war, battleships]."`
       `  The elders seem to agree that this is only a temporary solution. The Unfettered cannot be granted a base in Wanderer territory: they would use their few jump drives to move a few warships at a time to that base until they had a fleet too strong for the Wanderers to defeat. Sooner or later, the Unfettered will grow tired of demanding such a base and will return to open warfare.`
       `  In the meantime, the only way to defuse the situation would be to get all the jump drives out of the hands of the Unfettered - and that means discovering and stopping whoever is supplying those drives to them.`
 
@@ -1799,10 +1799,10 @@ mission "Wanderers Solifuge Recon 2"
       has "Wanderers Solifuge Recon 1: done"
       has "Wanderers Pond Strider Recon 1: done"
   on offer
-    log "Received permission to purchase warships from the Wanderers, including a new one called the Tempest."
+    log "Received permission to purchase weapons and warships from the Wanderers, including a new one called the Tempest."
     set "licence: Wanderer Military"
     conversation
-      `Sobari Tele'ek, the military commander whom you met earlier, greets you when you land. "The human who enjoys taking part in fights!" he says. "I am glad you have come. We have two [pieces, items] of good news for you. The first is that we have decided it is [permissible? prudent?] to allow you to purchase our warships. That will include the new [ugly, brutish] one, the Tempest."`
+      `Sobari Tele'ek, the military commander whom you met earlier, greets you when you land. "The human who enjoys taking part in fights!" he says. "I am glad you have come. We have two [pieces, items] of good news for you. The first is that we have decided it is [permissible? prudent?] to allow you to purchase our weapons and warships. That will include the new [ugly, brutish] one, the Tempest."`
       `  "Thank you," you say.`
       `  "The other news is even better!" he says. "We have [saved, set aside] a fight for you. Unfettered ships of unknown design have been [spotted, discovered] in the Prakacha'a system. I ask you to destroy all these ships, then report to me what their [capabilities, strengths] are."`
       `  You tell him that you will do your best. Now that you are able to purchase Wanderer warships, you should be able to match anything the Unfettered throw at you.`

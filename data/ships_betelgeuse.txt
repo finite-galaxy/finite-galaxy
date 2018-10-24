@@ -24,7 +24,7 @@ shipyard "Betelgeuse Variants"
   "Leviathan (Hai Weapons)"
   "Leviathan (Heavy)"
   "Leviathan (Laser)"
-  "Shuttle"
+  "Light Shuttle"
 
 
 
@@ -33,6 +33,8 @@ ship "Behemoth"
   thumbnail "thumbnail/behemoth"
   attributes
     category "Frigate"
+    licences
+      Pilot
     "cost" 10800000
     "shields" 7600
     "hull" 6300
@@ -185,6 +187,8 @@ ship "Berserker"
   thumbnail "thumbnail/berserker"
   attributes
     category "Interceptor"
+    licences
+      Pilot
     "cost" 520000
     "shields" 2200
     "hull" 500
@@ -253,6 +257,8 @@ ship "Firebird"
   thumbnail "thumbnail/firebird"
   attributes
     category "Corvette"
+    licences
+      Pilot
     "cost" 3700000
     "shields" 6400
     "hull" 2800
@@ -381,6 +387,8 @@ ship "Hauler I"
   thumbnail "thumbnail/hauler i"
   attributes
     category "Corvette"
+    licences
+      Pilot
     "cost" 1430000
     "shields" 2500
     "hull" 3700
@@ -460,6 +468,8 @@ ship "Hauler II"
   thumbnail "thumbnail/hauler ii"
   attributes
     category "Frigate"
+    licences
+      Pilot
     "cost" 2340000
     "shields" 2900
     "hull" 5200
@@ -539,6 +549,8 @@ ship "Hauler III"
   thumbnail "thumbnail/hauler iii"
   attributes
     category "Frigate"
+    licences
+      Pilot
     "cost" 3260000
     "shields" 3300
     "hull" 6700
@@ -618,6 +630,8 @@ ship "Heavy Shuttle"
   thumbnail "thumbnail/heavy shuttle"
   attributes
     category "Interceptor"
+    licences
+      Pilot
     "cost" 320000
     "shields" 700
     "hull" 700
@@ -674,6 +688,8 @@ ship "Leviathan"
   thumbnail "thumbnail/leviathan"
   attributes
     category "Frigate"
+    licences
+      Pilot
     "cost" 9800000
     "shields" 14400
     "hull" 5000
@@ -801,7 +817,7 @@ ship "Leviathan" "Leviathan (Laser)"
 
 
 
-ship "Shuttle"
+ship "Light Shuttle"
   sprite "ship/shuttle"
     "frame time" 4
     "delay" 14
@@ -809,6 +825,8 @@ ship "Shuttle"
   thumbnail "thumbnail/shuttle"
   attributes
     category "Interceptor"
+    licences
+      Pilot
     "cost" 180000
     "shields" 500
     "hull" 600
@@ -841,6 +859,6 @@ ship "Shuttle"
   leak "leak" 60 50
   explode "tiny explosion" 10
   explode "small explosion" 5
-  description "Although Betelgeuse Shipyards produces other ship models as well, the majority of their profits come from sales of the Shuttle. This versatile ship serves equally well as a passenger transport or a cargo courier. It also happens to be the cheapest ship you can buy which is capable of hyperspace travel."
+  description "Although Betelgeuse Shipyards produces other ship models as well, the majority of their profits come from sales of the Light Shuttle. This versatile ship serves equally well as a passenger transport or a cargo courier. It also happens to be the cheapest ship you can buy which is capable of hyperspace travel."
   description `  Shuttles are not designed to withstand combat of any sort, but they are fast and maneuverable enough to get out of harm's way if attacked by a larger, slower ship. Although they are typically unarmed, they have enough space for one weapon, which is the origin of the popular phrase, "as useless as a blaster cannon on a shuttlecraft."`
 

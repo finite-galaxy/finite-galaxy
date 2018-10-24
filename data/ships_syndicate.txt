@@ -6,16 +6,16 @@ shipyard "Syndicate Variants"
   "Bulk Freighter (Heavy)"
   "Bulk Freighter (Proton)"
   "Class C Freighter"
-  "Freighter"
-  "Freighter (Fancy)"
-  "Freighter (Hai)"
-  "Freighter (Proton)"
-  "Freighter (Secret Cargo)"
   "Protector"
   "Protector (Laser)"
   "Protector (Proton)"
   "Star Barge"
   "Star Barge (Armed)"
+  "Star Freighter"
+  "Star Freighter (Fancy)"
+  "Star Freighter (Hai)"
+  "Star Freighter (Proton)"
+  "Star Freighter (Secret Cargo)"
   "Star Queen"
   "Star Queen (Hai)"
   "Vanguard"
@@ -30,6 +30,8 @@ ship "Boxwing"
   thumbnail "thumbnail/boxwing"
   attributes
     category "Fighter"
+    licences
+      Pilot
     cost 369000
     "shields" 400
     "hull" 800
@@ -68,6 +70,8 @@ ship "Bulk Freighter"
   thumbnail "thumbnail/bulk freighter"
   attributes
     category "Destroyer"
+    licences
+      Pilot
     "cost" 9400000
     "shields" 4000
     "hull" 7600
@@ -232,15 +236,17 @@ ship "Bulk Freighter" "Class C Freighter"
   drone 66 35 right
   drone 66 85 right
   drone 66 135 right
-  description `The Class C "Freighter" is a stealth warship designed by the Syndicate for baiting pirates with the offer of a seemingly helpless, ordinary bulk freighter. Inside, its cargo space has all been converted into drone bays, allowing it to carry a dozen combat drones.`
+  description `The Class C "Star Freighter" is a stealth warship designed by the Syndicate for baiting pirates with the offer of a seemingly helpless, ordinary bulk freighter. Inside, its cargo space has all been converted into drone bays, allowing it to carry a dozen combat drones.`
 
 
 
-ship "Freighter"
+ship "Star Freighter"
   sprite "ship/freighter"
   thumbnail "thumbnail/freighter"
   attributes
     category "Corvette"
+    licences
+      Pilot
     "cost" 730000
     "shields" 2000
     "hull" 2000
@@ -286,7 +292,7 @@ ship "Freighter"
   description "  Freighters are an obvious target for pirates, but turn much too slowly to be able to bring any forward-facing guns to bear on an approaching enemy. As a result, the latest model of freighter is equipped only with turrets, including an anti-missile turret to prevent attackers from simply bombarding them into submission from a safe distance."
 
 
-ship "Freighter" "Freighter (Fancy)"
+ship "Star Freighter" "Star Freighter (Fancy)"
   outfits
     "X2700 Ion Thruster"
     "X2200 Ion Steering"
@@ -307,7 +313,7 @@ ship "Freighter" "Freighter (Fancy)"
   turret "Laser Turret"
 
 
-ship "Freighter" "Freighter (Hai)"
+ship "Star Freighter" "Star Freighter (Hai)"
   outfits
     "X2700 Ion Thruster"
     "X2200 Ion Steering"
@@ -328,7 +334,7 @@ ship "Freighter" "Freighter (Hai)"
   turret "Pulse Turret"
 
 
-ship "Freighter" "Freighter (Proton)"
+ship "Star Freighter" "Star Freighter (Proton)"
   outfits
     "X2700 Ion Thruster"
     "X2200 Ion Steering"
@@ -349,7 +355,7 @@ ship "Freighter" "Freighter (Proton)"
   turret
 
 
-ship "Freighter" "Freighter (Secret Cargo)"
+ship "Star Freighter" "Star Freighter (Secret Cargo)"
   outfits
     "X2700 Ion Thruster"
     "X2200 Ion Steering"
@@ -375,6 +381,8 @@ ship "Protector"
   thumbnail "thumbnail/protector"
   attributes
     category "Frigate"
+    licences
+      Pilot
     "cost" 5500000
     "shields" 9500
     "hull" 6500
@@ -465,6 +473,8 @@ ship "Star Barge"
   thumbnail "thumbnail/star barge"
   attributes
     category "Interceptor"
+    licences
+      Pilot
     "cost" 210000
     "shields" 600
     "hull" 1000
@@ -523,6 +533,8 @@ ship "Star Queen"
   thumbnail "thumbnail/star queen"
   attributes
     category "Corvette"
+    licences
+      Pilot
     "cost" 5500000
     "shields" 4100
     "hull" 2200
@@ -594,6 +606,8 @@ ship "Vanguard"
   thumbnail "thumbnail/vanguard"
   attributes
     category "Frigate"
+    licences
+      Pilot
     "cost" 7200000
     "shields" 9800
     "hull" 6000
@@ -665,6 +679,8 @@ ship "Wasp"
   thumbnail "thumbnail/wasp"
   attributes
     category "Interceptor"
+    licences
+      Pilot
     "cost" 400000
     "shields" 1500
     "hull" 500

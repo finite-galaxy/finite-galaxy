@@ -47,6 +47,7 @@ mission "Kestrel Testing"
   
   on complete
     payment 2000000
+    set "licence: Kestrel"
     conversation
       `Atinoda meets up with you soon after you land. "I see that you survived," he says. "Was it a difficult fight?"`
       choice

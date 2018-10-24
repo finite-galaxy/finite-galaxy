@@ -8,7 +8,6 @@ shipyard "Lionheart Variants"
   "Bactrian (Hired Gun)"
   "Barb"
   "Barb (Proton)"
-  "Chariot"
   "Dagger"
   "Flivver"
   "Flivver (Hai)"
@@ -16,6 +15,7 @@ shipyard "Lionheart Variants"
   "Headhunter"
   "Headhunter (Hai)"
   "Headhunter (Particle)"
+  "Lance"
   "Mule"
   "Mule (Hai Engines)"
   "Mule (Hai Weapons)"
@@ -30,6 +30,8 @@ ship "Aerie"
   thumbnail "thumbnail/aerie"
   attributes
     category "Corvette"
+    licences
+      Pilot
     "cost" 3500000
     "shields" 5700
     "hull" 1900
@@ -87,6 +89,8 @@ ship "Arrow"
   thumbnail "thumbnail/arrow"
   attributes
     category "Interceptor"
+    licences
+      Pilot
     "cost" 1200000
     "shields" 2000
     "hull" 400
@@ -152,6 +156,8 @@ ship "Bactrian"
   thumbnail "thumbnail/bactrian"
   attributes
     category "Destroyer"
+    licences
+      Bactrian
     "cost" 17600000
     "shields" 17500
     "hull" 8600
@@ -285,6 +291,8 @@ ship "Barb"
   thumbnail "thumbnail/barb"
   attributes
     category "Bomber"
+    licences
+      Pilot
     "cost" 50000
     "shields" 800
     "hull" 200
@@ -336,67 +344,13 @@ ship "Barb" "Barb (Proton)"
 
 
 
-ship "Chariot"
-  sprite "ship/corvette"
-  thumbnail "thumbnail/corvette"
-  attributes
-    category "Corvette"
-    "cost" 4400000
-    "shields" 6100
-    "hull" 1200
-    "required crew" 8
-    "bunks" 32
-    "mass" 150
-    "drag" 3.5
-    "heat dissipation" .7
-    "cargo space" 40
-    "outfit space" 470
-    "engine capacity" 100
-    "weapon capacity" 170
-    weapon
-      "blast radius" 80
-      "shield damage" 800
-      "hull damage" 400
-      "hit force" 1200
-  outfits
-    "A370 Atomic Thruster"
-    "A375 Atomic Steering"
-
-    "Electron Cannon" 4
-    "Electron Turret"
-    "Heavy Anti-Missile Turret"
-
-    "D67-TM Shield Generator"
-    "Fusion Reactor"
-    "LP036a Battery Pack"
-    "Liquid Nitrogen Cooler"
-    "Fuel Barrel" 50
-    "Hyperdrive"
-  engine -11 118
-  engine 11 118
-  gun -12 -68 "Electron Cannon"
-  gun 12 -68 "Electron Cannon"
-  gun -14 -60 "Electron Cannon"
-  gun 14 -60 "Electron Cannon"
-  turret 0 -11 "Electron Turret"
-  turret 0 74 "Heavy Anti-Missile Turret"
-  leak "leak" 40 50
-  leak "flame" 50 80
-  leak "big leak" 90 30
-  explode "tiny explosion" 18
-  explode "small explosion" 36
-  explode "medium explosion" 24
-  explode "large explosion" 8
-  "final explode" "final explosion medium"
-  description "Incorporating new, experimental lightweight materials, the Lionheart Chariot combines the speed and agility of a fighter with the armament of a heavy warship. Its weak hull is more than compensated for by its advanced shielding matrix."
-
-
-
 ship "Dagger"
   sprite "ship/dagger"
   thumbnail "thumbnail/dagger"
   attributes
     category "Fighter"
+    licences
+      Pilot
     "cost" 129000
     "shields" 1000
     "hull" 300
@@ -437,6 +391,8 @@ ship "Flivver"
   thumbnail "thumbnail/flivver"
   attributes
     category "Interceptor"
+    licences
+      Pilot
     "cost" 180000
     "shields" 1400
     "hull" 200
@@ -505,6 +461,8 @@ ship "Headhunter"
   thumbnail "thumbnail/headhunter"
   attributes
     category "Interceptor"
+    licences
+      Pilot
     "cost" 1850000
     "shields" 3800
     "hull" 700
@@ -578,11 +536,71 @@ ship "Headhunter" "Headhunter (Particle)"
 
 
 
+ship "Lance"
+  sprite "ship/corvette"
+  thumbnail "thumbnail/corvette"
+  attributes
+    category "Corvette"
+    licences
+      Pilot
+    "cost" 4400000
+    "shields" 6100
+    "hull" 1200
+    "required crew" 8
+    "bunks" 32
+    "mass" 150
+    "drag" 3.5
+    "heat dissipation" .7
+    "cargo space" 40
+    "outfit space" 470
+    "engine capacity" 100
+    "weapon capacity" 170
+    weapon
+      "blast radius" 80
+      "shield damage" 800
+      "hull damage" 400
+      "hit force" 1200
+  outfits
+    "A370 Atomic Thruster"
+    "A375 Atomic Steering"
+
+    "Electron Cannon" 4
+    "Electron Turret"
+    "Heavy Anti-Missile Turret"
+
+    "D67-TM Shield Generator"
+    "Fusion Reactor"
+    "LP036a Battery Pack"
+    "Liquid Nitrogen Cooler"
+    "Fuel Barrel" 50
+    "Hyperdrive"
+  engine -11 118
+  engine 11 118
+  gun -12 -68 "Electron Cannon"
+  gun 12 -68 "Electron Cannon"
+  gun -14 -60 "Electron Cannon"
+  gun 14 -60 "Electron Cannon"
+  turret 0 -11 "Electron Turret"
+  turret 0 74 "Heavy Anti-Missile Turret"
+  leak "leak" 40 50
+  leak "flame" 50 80
+  leak "big leak" 90 30
+  explode "tiny explosion" 18
+  explode "small explosion" 36
+  explode "medium explosion" 24
+  explode "large explosion" 8
+  "final explode" "final explosion medium"
+  description "Incorporating new, experimental lightweight materials, the Lionheart Lance combines the speed and agility of a fighter with the armament of a heavy warship. Its weak hull is more than compensated for by its advanced shielding matrix."
+
+
+
 ship "Mule"
   sprite "ship/mule"
   thumbnail "thumbnail/mule"
   attributes
     category "Corvette"
+    licences
+      Pilot
     "cost" 4580000
     "shields" 5400
     "hull" 4400
@@ -703,6 +721,8 @@ ship "Scout"
   thumbnail "thumbnail/scout"
   attributes
     category "Interceptor"
+    licences
+      Pilot
     "cost" 850000
     "shields" 1200
     "hull" 400

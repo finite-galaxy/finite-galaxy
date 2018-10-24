@@ -1,10 +1,10 @@
 shipyard "Navy Variants"
   "Combat Drone"
+  "Combat Fighter"
   "Jupiter"
   "Jupiter (Alpha)"
   "Jupiter (Jump)"
   "Jupiter (Mark II)"
-  "Lance"
   "Mars"
   "Mars (Mark II)"
   "Mercury"
@@ -56,13 +56,59 @@ ship "Combat Drone"
 
 
 
+ship "Combat Fighter"
+  sprite "ship/lance"
+  thumbnail "thumbnail/lance"
+  attributes
+    category "Fighter"
+    licences
+      Navy
+    "cost" 93000
+    "shields" 800
+    "hull" 400
+    "required crew" 1
+    "bunks" 1
+    "mass" 30
+    "drag" .7
+    "heat dissipation" .8
+    "outfit space" 100
+    "engine capacity" 30
+    "weapon capacity" 20
+    weapon
+      "blast radius" 12
+      "shield damage" 120
+      "hull damage" 60
+      "hit force" 180
+  outfits
+    "X1700 Ion Thruster"
+    "X1200 Ion Steering"
+
+    "Gatling Round" 3000
+    "Gatling Gun" 2
+
+    "D14-RN Shield Generator"
+    "nGVF-AA Fuel Cell"
+    "LP036a Battery Pack"
+    "Small Radar Jammer"
+    "Tactical Scanner"
+    "Laser Rifle"
+  engine -15 30
+  engine 15 30
+  gun -14 -10 "Gatling Gun"
+  gun 14 -10 "Gatling Gun"
+  explode "tiny explosion" 15
+  explode "small explosion" 5
+  description "The Combat Fighter is the primary fighter used by the Republic Navy. As with all fighters, it is weak by itself but very effective as part of a larger squadron."
+
+
+
 ship "Jupiter"
   sprite "ship/carrier"
   thumbnail "thumbnail/carrier"
   attributes
     category "Destroyer"
     licences
-      Navy
+      Jupiter
     "cost" 15200000
     "shields" 21400
     "hull" 8300
@@ -213,59 +259,13 @@ ship "Jupiter" "Jupiter (Mark II)"
 
 
 
-ship "Lance"
-  sprite "ship/lance"
-  thumbnail "thumbnail/lance"
-  attributes
-    category "Fighter"
-    licences
-      Navy
-    "cost" 93000
-    "shields" 800
-    "hull" 400
-    "required crew" 1
-    "bunks" 1
-    "mass" 30
-    "drag" .7
-    "heat dissipation" .8
-    "outfit space" 100
-    "engine capacity" 30
-    "weapon capacity" 20
-    weapon
-      "blast radius" 12
-      "shield damage" 120
-      "hull damage" 60
-      "hit force" 180
-  outfits
-    "X1700 Ion Thruster"
-    "X1200 Ion Steering"
-
-    "Gatling Round" 3000
-    "Gatling Gun" 2
-
-    "D14-RN Shield Generator"
-    "nGVF-AA Fuel Cell"
-    "LP036a Battery Pack"
-    "Small Radar Jammer"
-    "Tactical Scanner"
-    "Laser Rifle"
-  engine -15 30
-  engine 15 30
-  gun -14 -10 "Gatling Gun"
-  gun 14 -10 "Gatling Gun"
-  explode "tiny explosion" 15
-  explode "small explosion" 5
-  description "The Lance is the primary fighter used by the Republic Navy. As with all fighters, it is weak by itself but very effective as part of a larger squadron."
-
-
-
 ship "Mars"
   sprite "ship/gunboat"
   thumbnail "thumbnail/gunboat"
   attributes
     category "Corvette"
     licences
-      Navy
+      Mars
     "cost" 3200000
     "shields" 5800
     "hull" 1400
@@ -345,7 +345,7 @@ ship "Mercury"
   attributes
     category "Interceptor"
     licences
-      Navy
+      Mercury
     "cost" 1580000
     "shields" 3500
     "hull" 1200
@@ -429,7 +429,7 @@ ship "Saturn"
   attributes
     category "Frigate"
     licences
-      Navy
+      Saturn
     "cost" 11200000
     "shields" 19600
     "hull" 6400
@@ -578,7 +578,7 @@ ship "Venus"
   attributes
     category "Corvette"
     licences
-      Navy
+      Venus
     "cost" 5200000
     "shields" 8000
     "hull" 2500

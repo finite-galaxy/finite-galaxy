@@ -398,7 +398,7 @@ mission "FW Southern Battle 2"
       fighters "republic fighter"
       variant
         "Jupiter (Mark II)"
-        "Lance" 4
+        "Combat Fighter" 4
         "Combat Drone" 6
     fleet 3
       names "republic capital"
@@ -860,6 +860,7 @@ mission "FW Northern 3"
   
   on complete
     log "Agreed to become a member of the Free Worlds council, taking Tomek's spot."
+    set "licence: Dreadnought"
     "salary: Free Worlds" = 2500
     conversation
       `As you are landing on <planet>, Freya says, "I miss Katya. It's hard being the only woman on the Council."`
@@ -1756,7 +1757,7 @@ mission "FW Rand 1"
       fighters "republic fighter"
       variant
         "Jupiter (Mark II)"
-        "Lance" 4
+        "Combat Fighter" 4
         "Combat Drone" 6
         "Mars (Mark II)"
   
@@ -2096,7 +2097,7 @@ mission "FW Liberate Delta Sagittarii"
       fighters "republic fighter"
       variant
         "Jupiter (Mark II)"
-        "Lance" 4
+        "Combat Fighter" 4
         "Combat Drone" 6
         "Mars (Mark II)" 4
     fleet
