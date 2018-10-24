@@ -367,6 +367,15 @@ ship "Kestrel" "Kestrel (More Weapons)"
     "weapon capacity" 40
 
 
+ship "Kestrel" "Kestrel (More Engines)"
+
+
+ship "Kestrel" "Unknown Ship Type"
+
+
+ship "Unknown Ship Type" "Kestrel Prototype"
+
+
 
 ship "Osprey"
   sprite "ship/osprey"
@@ -638,59 +647,4 @@ ship "Sparrow" "Sparrow (Patrol)"
     "Outfit Scanner"
     "Fuel Barrel" 30
     "Hyperdrive"
-
-
-
-ship "Unknown Ship Type"
-  sprite "ship/kestrel"
-  attributes
-    category "Destroyer"
-    "cost" 14700000
-    "shields" 17400
-    "hull" 6200
-    "required crew" 64
-    "bunks" 128
-    "mass" 740
-    "drag" 9.8
-    "heat dissipation" .6
-    "cargo space" 120
-    "outfit space" 870
-    "engine capacity" 210
-    "weapon capacity" 390
-    weapon
-      "blast radius" 260
-      "shield damage" 2600
-      "hull damage" 1300
-      "hit force" 3900
-  outfits
-    "Orca Plasma Thruster"
-    "Orca Plasma Steering"
-
-    "Torpedo" 180
-    "Torpedo Launcher" 6
-    "Heavy Laser Turret" 4
-
-    "D94-YV Shield Generator"
-    "Fusion Reactor"
-    "LP144a Battery Pack"
-    "Liquid Nitrogen Cooler"
-    "Fuel Barrel" 50
-    "Hyperdrive"
-  engine -14 177
-  engine 14 177
-  gun -31 66 "Torpedo Launcher"
-  gun 31 66 "Torpedo Launcher"
-  gun -53 61 "Torpedo Launcher"
-  gun 53 61 "Torpedo Launcher"
-  gun -75 57 "Torpedo Launcher"
-  gun 75 57 "Torpedo Launcher"
-  turret -7 -4 "Heavy Laser Turret"
-  turret 7 -4 "Heavy Laser Turret"
-  turret -23 14 "Heavy Laser Turret"
-  turret 23 14 "Heavy Laser Turret"
-  explode "small explosion" 25
-  explode "medium explosion" 35
-  explode "large explosion" 45
-  explode "huge explosion" 30
-  "final explode" "final explosion large"
 

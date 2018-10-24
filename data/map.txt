@@ -24500,6 +24500,7 @@ planet Darkcloak
   spaceport `  It is likely that most of the goods available for trade here were stolen from one of the nearby Hai systems.`
   shipyard "Hai Basics"
   outfitter "Hai Basics"
+  outfitter "Hai Unfettered"
 
 planet Darkmetal
   attributes hai mining "hai tourism"
@@ -24715,6 +24716,7 @@ planet "Esek Stovar"
   landscape land/space4
   description `This Kor Mereti outpost is far enough from the front in their war with the Kor Sestor that it has fallen somewhat into disuse. The largest docking bays are still kept open for refueling and repairs, but the sections of the station that used to be living quarters have been sealed off.`
   spaceport `Because this station is only in use now by autonomous vehicles, there is no atmosphere, and no need for airlocks or containment fields. The hangar bay doors have all been left wide open, so ships can come and go as they please.`
+  shipyard "Kor Mereti Basics"
   "required reputation" 1
   bribe 0
   security 0
@@ -24777,6 +24779,7 @@ planet "Fara Skaeruti"
   landscape land/space4
   description `This station serves both as a deuterium refinery and as a factory. A large number of small spires protrude from the hull of the station, each carrying fuel pipes, so that ships can simply dock with one of the spires to refuel instead of having to navigate inside a hangar.`
   spaceport `A swarm of robotic spacecraft flows around this station. The traffic pattern is chaotic, yet efficient, adapting from moment to moment depending on which ships are coming or going. The robots never crash into each other, even though they sometimes pass each other with less than a meter in between, while traveling at high speeds.`
+  shipyard "Kor Mereti Basics"
   "required reputation" 1
   bribe 0
   security 0
@@ -25659,6 +25662,7 @@ planet "Merask Fortuno"
   landscape land/space4
   description `This station was built primarily for harvesting hyperspace fuel. Even when the Korath were still here, the harvesting was almost entirely automated, so the station only has living quarters for a handful of people.`
   spaceport `Despite their masters being gone, the machines and robots of this station carry out their work just as diligently as before, harvesting fuel that will now be used only by other automata.`
+  shipyard "Kor Mereti Basics"
   "required reputation" 1
   bribe 0
   security 0
@@ -25679,6 +25683,7 @@ planet "Mereti Station"
   landscape land/space7
   description `This large station serves as the "mission control" for the robotic ships of the Kor Mereti faction. Warships of every shape and design are clustered in its docking bays or flying patrol outside.`
   spaceport `The central core of this station is entirely sealed off, running on its own power generators serviced by self-maintaining repair robots. Inside the core are the advanced computers that direct the Kor Mereti war effort.`
+  shipyard "Kor Mereti Intermediate"
   "required reputation" 1
   bribe 0
   security 0
@@ -26224,6 +26229,7 @@ planet "Rekat Moraski"
   landscape land/space4
   description `This station is a refinery where ore from asteroids is processed into metal. Larger asteroids are processed where they are; smaller ones are brought into the refinery itself to be mined.`
   spaceport `This station has several bays large enough that a small asteroid can be steered inside. Tiny harvester robots then work their way into seams of metal in the asteroid, digging deeper and deeper until the asteroid is honeycombed with small tunnels and all the metal-rich veins have been extracted.`
+  shipyard "Kor Mereti Basics"
   "required reputation" 1
   bribe 0
   security 0
@@ -26360,7 +26366,8 @@ planet "Sapira Mereti"
   attributes korath
   landscape land/lava6
   description `This was the seat of government and last military stronghold of the Kor Mereti faction during the Korath civil war. Here they built the factories and shipyards that churned out autonomous warships to prosecute their war against the Kor Sestor. The machines now rule this world alone, and have made it entirely uninhabitable for living creatures as they delve ever deeper into the planet's crust to harvest metal and fuel, and construct more and more factories to build new generations of robotic warships.`
-  spaceport `With no living creatures in sight, the only noises in this refuelling depot are the roaring engines as robot ships land and take off, communicating silently with each other via radio. The autonomous ships land and take off with perfect precision in a steady, unbroken stream. Many of them have been damaged by weapons fire, and as soon as they land they are covered by a swarm of welding and repair robots that attach new layers of hull armor and replace weapons and engines that have been destroyed.`
+  spaceport `With no living creatures in sight, the only noises in this refuelling depot are the roaring engines as robot ships land and take off, communicating silently with each other via radio. The autonomous ships land and take off with perfect precision in a steady, unbroken stream. Many of them have been damaged by weapons fire, and as soon as they land they are covered by a swarm of welding and repair robots that attach new layers of hull armour and replace weapons and engines that have been destroyed.`
+  shipyard "Kor Mereti Advanced"
   "required reputation" 1
   bribe 0
   security 0
@@ -26392,6 +26399,7 @@ planet "Sebra Skira"
   landscape land/space4
   description `This is one of the primary war platforms for the Kor Sestor. Some sections of the station are much newer than others, and the scars are still visible in places where weapons fire has annihilated part of the station. The robots have rebuilt the damaged parts in a seemingly random pattern, like burls of bark growing over damaged parts of a tree.`
   spaceport `There is no atmosphere inside this station, and indeed it is unlikely the station could hold air even if it were ever recaptured by living beings. In places, the stars shine through small cracks in the hull.`
+  shipyard "Kor Sestor Intermediate"
   "required reputation" 1
   bribe 0
   security 0
@@ -26491,6 +26499,7 @@ planet "Sestor Ikfar"
   description `This dry, hot world is home to almost no native life, but is ideal for the Korath automata because of its abundant solar energy. In the places where the Korath cities once were, the Kor Sestor have built massive factories with buildings sometimes close to a kilometer in height. In other places the land remains undeveloped, but the factories are constantly expanding outward.`
   spaceport `In place of streets, massive tunnels and shafts run through the factory cities, wide enough for two capital ships to pass each other traveling in opposite directions without the risk of collision. The tunnels branch out into smaller and smaller passageways like capillaries branching out from an artery.`
   "required reputation" 1
+  shipyard "Kor Sestor Advanced"
   bribe 0
   security 0
 
@@ -26682,6 +26691,7 @@ planet "Sopi Lefarkata"
   landscape land/mountain24-spfld
   description `This is a cold and mountainous world, and most of its oceans are covered in ice. A handful of giant craters gouged out from the sides of mountains are the only sign that there were once Korath settlements here. But, the Kor Sestor robots have begun building settlements of their own, in caverns deep under the mountains where they are safe from orbital bombardment. Where recent Kor Mereti attacks have collapsed one of the access tunnels, swarms of robots have gathered to dig them out like ants when their hill has been stepped on.`
   spaceport `The caverns of the Kor Sestor are hidden deep under the mountains, but there are also a handful of refueling stations on the surface. Each one is guarded by towering weapon platforms and swarms of autonomous fighter drones.`
+  shipyard "Kor Sestor Basics"
   "required reputation" 1
   bribe 0
   security 0

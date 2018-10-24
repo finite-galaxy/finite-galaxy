@@ -6,6 +6,8 @@ shipyard "Lionheart Variants"
   "Bactrian (Hai Engines)"
   "Bactrian (Hai Weapons)"
   "Bactrian (Hired Gun)"
+  "Barb"
+  "Barb (Proton)"
   "Chariot"
   "Dagger"
   "Flivver"
@@ -108,7 +110,7 @@ ship "Arrow"
 
     "Sidewinder Missile" 100
     "Sidewinder Missile Launcher" 2
-    "Anti-Missile Turret"
+    "Light Anti-Missile Turret"
 
     "Dwarf Core"
     "Supercapacitor"
@@ -120,7 +122,7 @@ ship "Arrow"
   engine 10 60
   gun -8 -34 "Sidewinder Missile Launcher"
   gun 8 -34 "Sidewinder Missile Launcher"
-  turret 0 16 "Anti-Missile Turret"
+  turret 0 16 "Light Anti-Missile Turret"
   leak "leak" 80 50
   explode "tiny explosion" 12
   explode "small explosion" 18
@@ -275,6 +277,62 @@ ship "Bactrian" "Bactrian (Hired Gun)"
     "Hyperdrive"
     "Large Radar Jammer"
     "Outfits Expansion" 2
+
+
+
+ship "Barb"
+  sprite "ship/barb"
+  thumbnail "thumbnail/barb"
+  attributes
+    category "Bomber"
+    "cost" 50000
+    "shields" 800
+    "hull" 200
+    "required crew" 1
+    "bunks" 2
+    "mass" 25
+    "drag" .8
+    "heat dissipation" .78
+    "outfit space" 85
+    "engine capacity" 20
+    "weapon capacity" 24
+    weapon
+      "blast radius" 12
+      "shield damage" 120
+      "hull damage" 60
+      "hit force" 180
+  outfits
+    "XC900 Ion Engines"
+
+    "1X Blaster Cannon"
+    "2X Blaster Turret"
+
+    "D14-RN Shield Generator"
+    "nGVF-AA Fuel Cell"
+    "LP036a Battery Pack"
+  engine -10 28
+  engine 9 28
+  gun -9 -29 "1X Blaster Cannon"
+  turret 8 6 "2X Blaster Turret"
+  leak "leak" 60 50
+  explode "tiny explosion" 15
+  explode "small explosion" 5
+  description `Though the Syndicate doesn't build fighter carriers, it is testing the waters with the Barb, a cheap and flexible carrier-launched craft featuring newly-developed miniaturized ion engines. The design philosophy of the Barb seems to have been "uglier than the Protector," and as you look at the cockpit nestled between the massive gun port and turret mount, you wonder where the power systems are supposed to go. Though an awkward-looking ship, it seems flexible enough to become a dangerous addition to any fleet with carriers.`
+
+
+ship "Barb" "Barb (Proton)"
+  sprite "ship/barbp"
+  thumbnail "thumbnail/barbp"
+  add attributes
+    "weapon capacity" 4
+  outfits
+    "XC900 Ion Engines"
+
+    "Proton Cannon"
+
+    "D14-RN Shield Generator"
+    "nGVF-AA Fuel Cell"
+    "Supercapacitor"
 
 
 
@@ -699,7 +757,7 @@ ship "Scout" "Scout (Speedy)"
     "Sidewinder Missile" 50
     "Meteor Missile Launcher"
     "Sidewinder Missile Launcher"
-    "Anti-Missile Turret"
+    "Light Anti-Missile Turret"
 
     "D23-QP Shield Generator"
     "NT-200 Nucleovoltaic"

@@ -553,8 +553,6 @@ event "southern carriers 2"
 event "southern carriers 3"
   shipyard "Southbound Advanced"
     "Skein"
-  shipyard "Syndicate Advanced"
-    "Barb"
   fleet "Large Free Worlds"
     fighters "free worlds fighters"
     add variant 2
@@ -585,8 +583,6 @@ event "southern carriers 4"
   shipyard "Southbound Advanced"
     "Finch"
     "Sparrow"
-  shipyard "Syndicate Intermediate"
-    "Barb"
   fleet "Large Northern Merchants"
     fighters "free worlds fighter"
     add variant 4
@@ -2563,14 +2559,10 @@ event "fwc link restoration 3"
 
 event "syndicate tech available"
   outfitter "Syndicate Advanced"
-    "Ionic Afterburner"
     "S-270 Regenerator"
     "S-970 Regenerator"
   outfitter "Syndicate Intermediate"
-    "Ionic Afterburner"
     "S-270 Regenerator"
-  outfitter "Syndicate Basics"
-    "Ionic Afterburner"
 
 
 
@@ -2684,6 +2676,8 @@ event "wanderers: unfettered invasion starts"
     spaceport `The Unfettered are using the few jump drives they have to ferry more and more of their people into Wanderer space. When each wave of ships arrives here in the spaceport, technicians carefully remove the jump drives from all but a few of them. A few well guarded jump-capable ships then carry those spare jump drives back to Unfettered space, where they are used to bring more ships and people.`
     shipyard clear
     outfitter clear
+    shipyard "Hai Unfettered"
+    outfitter "Hai Unfettered"
 
 event "wanderers: tempest mass production"
   fleet "Wanderer Defence"

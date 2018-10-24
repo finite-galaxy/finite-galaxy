@@ -1,11 +1,15 @@
 shipyard "Korath Variants"
   "Chaser"
   "Raider"
+  "Raider (Improved)"
   "World-Ship A"
+  "World-Ship A (Improved)"
   "World-Ship A (Jump)"
   "World-Ship B"
+  "World-Ship B (Improved)"
   "World-Ship B (Jump)"
   "World-Ship C"
+  "World-Ship C (Improved)"
   "World-Ship C (Jump)"
 
 
@@ -107,6 +111,25 @@ ship "Raider"
   description "The Korath Raider is their warship of choice for plundering neighboring species."
 
 
+ship "Raider" "Raider (Improved)"
+  outfits
+    "Thruster (Planetary Class)"
+    "Steering (Planetary Class)"
+
+    "Disruptor" 2
+    "Slicer" 2
+    "Banisher"
+    "Warder"
+
+    "Systems Core (Medium)"
+    "Triple Plasma Core"
+    "Generator (Candle Class)"
+    "Large Heat Shunt" 3
+    "Fuel Processor" 2
+    "Jump Drive"
+    "Repeater Rifle" 200
+
+
 
 ship "World-Ship A"
   sprite "ship/world-ship a"
@@ -145,7 +168,7 @@ ship "World-Ship A"
     "Large Heat Shunt" 3
     "Fuel Processor" 3
     "Hyperdrive"
-    "Repeater Rifle" 150
+    "Repeater Rifle" 1000
   engine -37 343 .8
   engine 0 343 .9
   engine 37 343 .8
@@ -166,6 +189,33 @@ ship "World-Ship A"
   description "Korath World-Ships are massive nomadic habitats that hold all that is left of their people."
 
 
+ship "World-Ship A" "World-Ship A (Improved)"
+  outfits
+    "Thruster (Stellar Class)"
+    "Steering (Planetary Class)"
+
+    "Disruptor" 2
+    "Slicer" 2
+    "Repeater Turret" 2
+    "Warder" 2
+
+    "Systems Core (Large)"
+    "Triple Plasma Core"
+    "Plasma Core"
+    "Large Heat Shunt" 4
+    "Fuel Processor" 3
+    "Hyperdrive"
+    "Repeater Rifle" 1000
+  turret "Disruptor"
+  turret "Slicer"
+  turret "Repeater Turret"
+  turret "Repeater Turret"
+  turret "Warder"
+  turret "Disruptor"
+  turret "Slicer"
+  turret "Warder"
+
+
 ship "World-Ship A" "World-Ship A (Jump)"
   outfits
     "Thruster (Stellar Class)"
@@ -181,7 +231,8 @@ ship "World-Ship A" "World-Ship A (Jump)"
     "Large Heat Shunt" 3
     "Fuel Processor" 3
     "Jump Drive"
-    "Repeater Rifle" 150
+    "Repeater Rifle" 1000
+
 
 
 ship "World-Ship B"
@@ -222,7 +273,7 @@ ship "World-Ship B"
     "Large Heat Shunt" 3
     "Fuel Processor" 3
     "Hyperdrive"
-    "Repeater Rifle" 150
+    "Repeater Rifle" 1000
   engine -37 343 .8
   engine 0 343 .9
   engine 37 343 .8
@@ -243,6 +294,33 @@ ship "World-Ship B"
   description "Korath World-Ships are massive nomadic habitats that hold all that is left of their people."
 
 
+ship "World-Ship B" "World-Ship B (Improved)"
+  outfits
+    "Thruster (Stellar Class)"
+    "Steering (Planetary Class)"
+
+    "Disruptor" 2
+    "Slicer" 2
+    "Repeater Turret" 2
+    "Warder" 2
+
+    "Systems Core (Large)"
+    "Triple Plasma Core"
+    "Plasma Core"
+    "Large Heat Shunt" 4
+    "Fuel Processor" 3
+    "Hyperdrive"
+    "Repeater Rifle" 1000
+  turret "Slicer"
+  turret "Disruptor"
+  turret "Warder"
+  turret "Repeater Turret"
+  turret "Repeater Turret"
+  turret "Warder"
+  turret "Disruptor"
+  turret "Slicer"
+
+
 ship "World-Ship B" "World-Ship B (Jump)"
   outfits
     "Thruster (Stellar Class)"
@@ -258,7 +336,16 @@ ship "World-Ship B" "World-Ship B (Jump)"
     "Large Heat Shunt" 3
     "Fuel Processor" 3
     "Jump Drive"
-    "Repeater Rifle" 150
+    "Repeater Rifle" 1000
+  turret "Banisher"
+  turret "Banisher"
+  turret "Grab-Striker"
+  turret "Grab-Striker"
+  turret "Warder"
+  turret "Warder"
+  turret "Banisher"
+  turret "Banisher"
+
 
 
 ship "World-Ship C"
@@ -298,7 +385,7 @@ ship "World-Ship C"
     "Large Heat Shunt" 3
     "Fuel Processor" 3
     "Hyperdrive"
-    "Repeater Rifle" 150
+    "Repeater Rifle" 1000
   engine -37 343 .8
   engine 0 343 .9
   engine 37 343 .8
@@ -319,6 +406,34 @@ ship "World-Ship C"
   description "Korath World-Ships are massive nomadic habitats that hold all that is left of their people."
 
 
+ship "World-Ship C" "World-Ship C (Improved)"
+  outfits
+    "Thruster (Stellar Class)"
+    "Steering (Planetary Class)"
+
+    "Disruptor" 2
+    "Slicer" 2
+    "Repeater Turret" 2
+    "Warder" 2
+
+    "Systems Core (Large)"
+    "Triple Plasma Core"
+    "Plasma Core"
+    "Large Heat Shunt" 4
+    "Fuel Processor" 3
+    "Hyperdrive"
+    "Repeater Rifle" 1000
+  turret "Disruptor"
+  turret "Slicer"
+  turret "Repeater Turret"
+  turret "Warder"
+  turret "Warder"
+  turret "Repeater Turret"
+  turret "Slicer"
+  turret "Disruptor"
+
+
+
 ship "World-Ship C" "World-Ship C (Jump)"
   outfits
     "Thruster (Stellar Class)"
@@ -334,5 +449,13 @@ ship "World-Ship C" "World-Ship C (Jump)"
     "Large Heat Shunt" 3
     "Fuel Processor" 3
     "Jump Drive"
-    "Repeater Rifle" 150
+    "Repeater Rifle" 1000
+  turret "Banisher"
+  turret "Banisher"
+  turret "Grab-Striker"
+  turret "Grab-Striker"
+  turret "Warder"
+  turret "Warder"
+  turret "Banisher"
+  turret "Banisher"
 

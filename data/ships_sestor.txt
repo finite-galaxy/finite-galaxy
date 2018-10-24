@@ -2,8 +2,8 @@ shipyard "Sestor Variants"
   "Far Lek 14"
   "Far Osk 27"
   "Kar Ik Vot 349"
-  "Kar Ik Vot 349 (Defensive)"
-  "Kar Ik Vot 349 (Offensive)"
+  "Kar Ik Vot 349 (Attacker)"
+  "Kar Ik Vot 349 (Defender)"
   "Kar Ik Vot 349 (Trapper)"
   "Met Par Tek 53"
   "Met Par Tek 53 (Sniper)"
@@ -161,7 +161,36 @@ ship "Kar Ik Vot 349"
   description "The largest and deadliest of the Kor Sestor robotic warships, a single one of these battlecruisers can hold its own against an entire fleet of lesser ships."
 
 
-ship "Kar Ik Vot 349" "Kar Ik Vot 349 (Defensive)"
+ship "Kar Ik Vot 349" "Kar Ik Vot 349 (Attacker)"
+  outfits
+    "Thruster (Planetary Class)"
+    "Steering (Stellar Class)"
+
+    "Piercer" 248
+    "Piercer Rack" 4
+    "Piercer Launcher" 4
+    "Repeater Turret" 6
+    "Grab-Striker" 2
+
+    "Systems Core (Large)"
+    "Systems Core (Medium)"
+    "Triple Plasma Core"
+    "Plasma Core"
+    "Large Heat Shunt" 5
+    "Control Transceiver"
+    "Hyperdrive"
+    "Outfits Expansion" 3
+  turret "Repeater Turret"
+  turret "Repeater Turret"
+  turret "Repeater Turret"
+  turret "Repeater Turret"
+  turret "Repeater Turret"
+  turret "Repeater Turret"
+  turret "Grab-Striker"
+  turret "Grab-Striker"
+
+
+ship "Kar Ik Vot 349" "Kar Ik Vot 349 (Defender)"
   outfits
     "Thruster (Planetary Class)"
     "Steering (Stellar Class)"
@@ -190,35 +219,6 @@ ship "Kar Ik Vot 349" "Kar Ik Vot 349 (Defensive)"
   turret "Repeater Turret"
   turret "Warder"
   turret "Warder"
-
-
-ship "Kar Ik Vot 349" "Kar Ik Vot 349 (Offensive)"
-  outfits
-    "Thruster (Planetary Class)"
-    "Steering (Stellar Class)"
-
-    "Piercer" 248
-    "Piercer Rack" 4
-    "Piercer Launcher" 4
-    "Repeater Turret" 6
-    "Grab-Striker" 2
-
-    "Systems Core (Large)"
-    "Systems Core (Medium)"
-    "Triple Plasma Core"
-    "Plasma Core"
-    "Large Heat Shunt" 5
-    "Control Transceiver"
-    "Hyperdrive"
-    "Outfits Expansion" 3
-  turret "Repeater Turret"
-  turret "Repeater Turret"
-  turret "Repeater Turret"
-  turret "Repeater Turret"
-  turret "Repeater Turret"
-  turret "Repeater Turret"
-  turret "Grab-Striker"
-  turret "Grab-Striker"
 
 
 ship "Kar Ik Vot 349" "Kar Ik Vot 349 (Trapper)"

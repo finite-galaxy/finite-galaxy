@@ -1,6 +1,4 @@
 shipyard "Syndicate Variants"
-  "Barb"
-  "Barb (Proton)"
   "Boxwing"
   "Bulk Freighter"
   "Bulk Freighter (Blaster)"
@@ -24,62 +22,6 @@ shipyard "Syndicate Variants"
   "Vanguard (Particle)"
   "Wasp"
   "Wasp (Proton)"
-
-
-
-ship "Barb"
-  sprite "ship/barb"
-  thumbnail "thumbnail/barb"
-  attributes
-    category "Fighter"
-    "cost" 50000
-    "shields" 800
-    "hull" 200
-    "required crew" 1
-    "bunks" 2
-    "mass" 25
-    "drag" .8
-    "heat dissipation" .78
-    "outfit space" 85
-    "engine capacity" 20
-    "weapon capacity" 24
-    weapon
-      "blast radius" 12
-      "shield damage" 120
-      "hull damage" 60
-      "hit force" 180
-  outfits
-    "XC900 Ion Engines"
-
-    "1X Blaster Cannon"
-    "2X Blaster Turret"
-
-    "D14-RN Shield Generator"
-    "nGVF-AA Fuel Cell"
-    "LP036a Battery Pack"
-  engine -10 28
-  engine 9 28
-  gun -9 -29 "1X Blaster Cannon"
-  turret 8 6 "2X Blaster Turret"
-  leak "leak" 60 50
-  explode "tiny explosion" 15
-  explode "small explosion" 5
-  description `Though the Syndicate doesn't build fighter carriers, it is testing the waters with the Barb, a cheap and flexible carrier-launched craft featuring newly-developed miniaturized ion engines. The design philosophy of the Barb seems to have been "uglier than the Protector," and as you look at the cockpit nestled between the massive gun port and turret mount, you wonder where the power systems are supposed to go. Though an awkward-looking ship, it seems flexible enough to become a dangerous addition to any fleet with carriers.`
-
-
-ship "Barb" "Barb (Proton)"
-  sprite "ship/barbp"
-  thumbnail "thumbnail/barbp"
-  add attributes
-    "weapon capacity" 4
-  outfits
-    "XC900 Ion Engines"
-
-    "Proton Cannon"
-
-    "D14-RN Shield Generator"
-    "nGVF-AA Fuel Cell"
-    "Supercapacitor"
 
 
 
@@ -149,7 +91,7 @@ ship "Bulk Freighter"
     "XR3700 Ion Reverse"
 
     "8X Blaster Turret"
-    "Anti-Missile Turret" 4
+    "Light Anti-Missile Turret" 4
 
     "D23-QP Shield Generator"
     "RT-I Radiothermal"
@@ -158,11 +100,11 @@ ship "Bulk Freighter"
     "Scram Drive"
   engine -22 198
   engine 22 198
-  turret -12 -155 "Anti-Missile Turret"
-  turret 12 -155 "Anti-Missile Turret"
+  turret -12 -155 "Light Anti-Missile Turret"
+  turret 12 -155 "Light Anti-Missile Turret"
   turret 0 5 "8X Blaster Turret"
-  turret -30 175 "Anti-Missile Turret"
-  turret 30 175 "Anti-Missile Turret"
+  turret -30 175 "Light Anti-Missile Turret"
+  turret 30 175 "Light Anti-Missile Turret"
   leak "leak" 40 50
   leak "flame" 30 80
   leak "big leak" 50 30
@@ -223,7 +165,7 @@ ship "Bulk Freighter" "Bulk Freighter (Heavy)"
     "A375 Atomic Steering"
 
     "Heavy Laser Turret" 4
-    "Anti-Missile Turret"
+    "Light Anti-Missile Turret"
 
     "D94-YV Shield Generator"
     "Fission Reactor"
@@ -233,7 +175,7 @@ ship "Bulk Freighter" "Bulk Freighter (Heavy)"
     "Outfits Expansion"
   turret "Heavy Laser Turret"
   turret "Heavy Laser Turret"
-  turret "Anti-Missile Turret"
+  turret "Light Anti-Missile Turret"
   turret "Heavy Laser Turret"
   turret "Heavy Laser Turret"
 
@@ -322,7 +264,7 @@ ship "Freighter"
     "XR1700 Ion Reverse"
 
     "4X Blaster Turret"
-    "Anti-Missile Turret" 2
+    "Light Anti-Missile Turret" 2
 
     "D14-RN Shield Generator"
     "nGVF-EE Fuel Cell"
@@ -331,9 +273,9 @@ ship "Freighter"
     "Hyperdrive"
   engine -9 97
   engine 9 97
-  turret 0 -52 "Anti-Missile Turret"
+  turret 0 -52 "Light Anti-Missile Turret"
   turret 0 6 "4X Blaster Turret"
-  turret 0 65 "Anti-Missile Turret"
+  turret 0 65 "Light Anti-Missile Turret"
   leak "leak" 60 50
   leak "flame" 50 80
   explode "tiny explosion" 10
@@ -393,7 +335,7 @@ ship "Freighter" "Freighter (Proton)"
     "XR1700 Ion Reverse"
 
     "Proton Turret"
-    "Anti-Missile Turret"
+    "Light Anti-Missile Turret"
 
     "D14-RN Shield Generator"
     "NT-200 Nucleovoltaic"
@@ -402,7 +344,7 @@ ship "Freighter" "Freighter (Proton)"
     "Hyperdrive"
     "Ramscoop"
     "Outfits Expansion"
-  turret "Anti-Missile Turret"
+  turret "Light Anti-Missile Turret"
   turret "Proton Turret"
   turret
 
@@ -414,7 +356,7 @@ ship "Freighter" "Freighter (Secret Cargo)"
     "XR1700 Ion Reverse"
 
     "4X Blaster Turret"
-    "Anti-Missile Turret" 2
+    "Light Anti-Missile Turret" 2
 
     "nGVF-EE Fuel Cell"
     "LP036a Battery Pack"
@@ -422,9 +364,9 @@ ship "Freighter" "Freighter (Secret Cargo)"
     "Fuel Barrel" 60
     "Hyperdrive"
     "Secret Cargo"
-  turret "Anti-Missile Turret"
+  turret "Light Anti-Missile Turret"
   turret "4X Blaster Turret"
-  turret "Anti-Missile Turret"
+  turret "Light Anti-Missile Turret"
 
 
 
@@ -534,7 +476,7 @@ ship "Star Barge"
     "cargo space" 40
     "outfit space" 160
     "engine capacity" 40
-    "weapon capacity" 20
+    "weapon capacity" 30
     weapon
       "blast radius" 16
       "shield damage" 160
@@ -544,6 +486,8 @@ ship "Star Barge"
     "X1700 Ion Thruster"
     "X1200 Ion Steering"
 
+    "Heavy Anti-Missile Turret"
+
     "D14-RN Shield Generator"
     "nGVF-BB Fuel Cell"
     "LP036a Battery Pack"
@@ -551,7 +495,7 @@ ship "Star Barge"
     "Hyperdrive"
   engine -9 38
   engine 9 38
-  turret 0 -8
+  turret 0 -8 "Heavy Anti-Missile Turret"
   leak "leak" 60 50
   explode "tiny explosion" 10
   explode "small explosion" 10
@@ -672,7 +616,7 @@ ship "Vanguard"
     "X4200 Ion Steering"
 
     "Proton Cannon" 7
-    "Anti-Missile Turret"
+    "Light Anti-Missile Turret"
 
     "D67-TM Shield Generator"
     "Fusion Reactor"
@@ -689,7 +633,7 @@ ship "Vanguard"
   gun 21 -45 "Proton Cannon"
   gun -31 -45 "Proton Cannon"
   gun 31 -45 "Proton Cannon"
-  turret 0 42 "Anti-Missile Turret"
+  turret 0 42 "Light Anti-Missile Turret"
   leak "leak" 60 50
   leak "flame" 30 80
   explode "tiny explosion" 18

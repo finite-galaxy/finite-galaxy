@@ -1115,6 +1115,24 @@ outfit "Quarg Skylance"
 
 
 # deprecated to allow for more consistent names
+outfit "Anti-Missile Turret"
+  category "Deprecated"
+  thumbnail "outfit/unknown"
+  cost 60000
+  "mass" 16
+  "outfit space" -16
+  "weapon capacity" -16
+  "turret mounts" -1
+  weapon
+    "hardpoint offset" 4.
+    "hit effect" "small anti-missile"
+    "anti-missile" 5
+    "velocity" 150
+    "lifetime" 1
+    "reload" 8
+    "firing energy" 5
+    "firing heat" 3
+
 outfit "Blaster Turret"
   category "Deprecated"
   thumbnail "outfit/unknown"

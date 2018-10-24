@@ -1,0 +1,76 @@
+outfit "Modified Blaster Cannon"
+  category "Cannons"
+  thumbnail "outfit/modified_blaster_cannon"
+  cost 21000
+  "mass" 6
+  "outfit space" -6
+  "weapon capacity" -6
+  "gun ports" -1
+  weapon
+    sprite "projectile/mod blaster"
+    sound "mod blaster"
+    "hit effect" "blaster impact"
+    "inaccuracy" 4
+    "velocity" 21
+    "lifetime" 30
+    "reload" 16
+    "firing energy" 15
+    "firing heat" 45
+    "shield damage" 15
+    "hull damage" 10
+  description "This is an energy blaster the design of which has been modified, to increase its power signifantly, at the cost of reduced fire rate. Effectively Modified Blasters are rather similar to ordinary blasters, only slightly better."
+
+outfit "Modified Blaster Turret"
+  category "Turrets"
+  thumbnail "outfit/modified_blaster_turret"
+  cost 140000
+  "mass" 18
+  "drag" .18
+  "outfit space" -18
+  "weapon capacity" -18
+  "turret mounts" -1
+  "required crew" 1
+  weapon
+    sprite "projectile/mod blaster"
+    "hardpoint sprite" "hardpoint/modified_blaster_turret"
+    "hardpoint offset" 9.
+    sound "mod blaster"
+    "hit effect" "blaster impact"
+    "inaccuracy" 4
+    "turret turn" 3.33
+    "velocity" 21
+    "lifetime" 30
+    "reload" 8
+    "firing energy" 15
+    "firing heat" 45
+    "shield damage" 15
+    "hull damage" 10
+  description "This is a turreted version of the Modified Blaster Cannon. These turrets are popular with pirates and others who are trying to cram as much firepower into their ships as possible."
+
+outfit "Modified Blaster Quad Turret"
+  category "Turrets"
+  thumbnail "outfit/modified_blaster_quad_turret"
+  cost 300000
+  "mass" 31
+  "drag" .31
+  "outfit space" -31
+  "weapon capacity" -31
+  "turret mounts" -1
+  "required crew" 1
+  weapon
+    sprite "projectile/mod blaster"
+    "hardpoint sprite" "hardpoint/modified_blaster_quad_turret"
+    "hardpoint offset" 9.
+    sound "mod blaster"
+    "hit effect" "blaster impact"
+    "inaccuracy" 4
+    "turret turn" 1.94
+    "velocity" 21
+    "lifetime" 30
+    "reload" 4
+    "firing energy" 15
+    "firing heat" 45
+    "shield damage" 15
+    "hull damage" 10
+  description "This jury-rigged weapon is a turbocharged version of the Modified Blaster Turret, mounting double the number of guns and fed with an even higher energy input. The crystals glow and crackle with power, and from 20 feet away you can feel the heat they're giving off. Each of these formidable turrets would likely require a dedicated cooling system to prevent its ship from going into thermal shutdown."
+

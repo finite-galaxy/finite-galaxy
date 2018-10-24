@@ -25,17 +25,17 @@ categories "ship"
   "Destroyer"   # >= 1500
   "Frigate"     # >= 1000
   "Corvette"    # >=  500
-# lesser vessels, with total mass under 500
-  "Interceptor" # capable of independent hyperspace travel
-  "Fighter"     # carried in fighter bays
-  "Drone"       # carried in drone bays
+  "Interceptor" #  <  500
+  "Bomber"      # <=  200 ; carried in bomber bays
+  "Fighter"     # <=  150 ; carried in fighter bays
+  "Drone"       # <=  100 ; carried in drone bays
 # grandfathering deprecated categories
-  "Transport"
-  "Heavy Freighter"
-  "Light Freighter"
   "Heavy Warship"
+  "Heavy Freighter"
   "Medium Warship"
+  "Light Freighter"
   "Light Warship"
+  "Transport"
 
 
 

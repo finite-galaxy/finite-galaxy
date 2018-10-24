@@ -1129,7 +1129,7 @@ mission "Wanderers: Alpha Surveillance G"
     fleet
       names "kor sestor"
       variant
-        "Kar Ik Vot 349 (Offensive)"
+        "Kar Ik Vot 349"
         "Met Par Tek 53 (Sniper)" 2
   
   on visit
@@ -1502,6 +1502,7 @@ event "capture of ik'kara'ka"
     spaceport `The Unfettered seem to be quite at home in the tree house dwellings that the Wanderers left behind, and the Unfettered youth living here scramble up trunks and leap from tree to tree with reckless abandon, exulting in this new world they have captured and trying to outdo each other with their daredevil escapades.`
     shipyard clear
     outfitter clear
+    outfitter "Hai Unfettered"
 
 mission "Wanderers Invaded 3"
   landing
