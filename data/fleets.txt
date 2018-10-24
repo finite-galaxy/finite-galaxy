@@ -11,9 +11,11 @@
 #   "Saryd Large"
 #   "Saryd Small"
 # Deep Security:
+#   "Deep Security Home"
 #   "Deep Security Large"
 #   "Deep Security Small"
 # Free Worlds:
+#   "Free Worlds Home"
 #   "Free Worlds Large"
 #   "Free Worlds Small"
 # Hai:
@@ -53,6 +55,7 @@
 #   "Miners North"
 #   "Miners South"
 # Militia:
+#   "Militia Home"
 #   "Militia Large"
 #   "Militia Small"
 # Navy (Oathkeeper):
@@ -90,6 +93,7 @@
 #   "Republic Small"
 #   "Navy Surveillance"
 # Syndicate:
+#   "Syndicate Home"
 #   "Syndicate Large"
 #   "Syndicate Small"
 # Syndicate Extremists:
@@ -396,6 +400,25 @@ fleet "Saryd Small"
 
 
 # Deep Security
+fleet "Deep Security Home"
+  government "Deep Security"
+  names "deep"
+  fighters "deep fighter"
+  cargo 0
+  personality
+    heroic
+  variant 1
+    "Bactrian"
+    "Mule" 2
+    "Aerie" 3
+    "Lance" 4
+    "Headhunter" 5
+    "Scout" 6
+    "Arrow" 7
+    "Flivver" 8
+    "Dagger" 11
+
+
 fleet "Deep Security Large"
   government "Deep Security"
   names "deep"
@@ -447,6 +470,23 @@ fleet "Deep Security Small"
 
 
 # Free Worlds
+fleet "Free Worlds Home"
+  government "Free Worlds"
+  names "free worlds capital"
+  cargo 1
+  personality
+    heroic disables frugal opportunistic
+  variant 1
+    "Dreadnought"
+    "Skein" 2 
+    "Roost" 3
+    "Nest" 4
+    "Bastion" 5
+    "Argosy" 6
+    "Clipper" 7
+    "Fury" 8
+    "Finch" 32
+   
 fleet "Free Worlds Large"
   government "Free Worlds"
   names "free worlds capital"
@@ -2118,6 +2158,22 @@ fleet "Miners South"
 
 
 # Militia
+fleet "Militia Home"
+  government "Militia"
+  names "militia"
+  cargo 1
+  personality
+    heroic frugal
+    confusion 20
+  variant 1
+    "Kestrel"
+    "Falcon" 2
+    "Osprey" 3
+    "Blackbird" 4
+    "Raven" 5
+    "Hawk" 6
+    "Sparrow" 7
+
 fleet "Militia Large"
   government "Militia"
   names "militia"
@@ -2232,6 +2288,7 @@ fleet "Militia Small"
   variant 2
     "Hawk (Speedy)"
     "Sparrow" 2
+    
 
 
 
@@ -3392,6 +3449,23 @@ fleet "Navy Surveillance"
 
 
 # Syndicate
+fleet "Syndicate Home"
+  government "Syndicate"
+  names "syndicate capital"
+  fighters "syndicate fighter"
+  cargo 2
+  personality
+    heroic
+  variant 3
+    "Bulk Freighter Carrier"
+    "Protector" 2
+    "Vanguard" 3
+    "Splinter (Proton)" 4
+    "Manta (Proton)" 5
+    "Quicksilver (Proton)" 6
+    "Wasp (Proton)" 7
+    "Combat Drone" 12
+
 fleet "Syndicate Large"
   government "Syndicate"
   names "syndicate capital"

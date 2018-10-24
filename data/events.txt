@@ -157,8 +157,7 @@ event "initial deployment 1"
     fleet "Merchants South Large" 800
     fleet "Miners South" 5000
     fleet "Free Worlds Small" 700
-    fleet "Free Worlds Large" 1100
-  
+    fleet "Free Worlds Large" 1100  
   system "Tania Australis"
     fleet "Merchants North Small" 1400
     fleet "Merchants North Large" 2900
@@ -482,10 +481,6 @@ event "initial deployment 3"
 
 event "trade embargo 1"
   date 1 9 3019
-  planet Glaze
-    remove shipyard "Basic Ships"
-  planet Rust
-    remove shipyard "Basic Ships"
   planet Zug
     remove shipyard "Betelgeuse Intermediate"
 
@@ -508,17 +503,53 @@ event "southern carriers 1"
     "Nest"
   shipyard "Tarazed Advanced"
     "Finch"
+
   fleet "Free Worlds Small"
     fighters "free worlds fighters"
     add variant 1
       "Nest"
       "Finch" 2
 
+
 event "southern carriers 2"
   shipyard "Southbound Advanced"
     "Roost"
   shipyard "Tarazed Intermediate"
     "Finch"
+
+  fleet "Free Worlds Large"
+    fighters "free worlds fighters"
+    add variant 2
+      "Roost"
+      "Finch" 4
+    add variant 1
+      "Roost" 2
+      "Finch" 8
+
+  fleet "Independent Small"
+    fighters "free worlds fighter"
+    add variant 1
+      "Nest"
+      "Finch" 2
+
+  fleet "Militia Small"
+    fighters "free worlds fighter"
+    add variant 1
+      "Nest"
+      "Finch" 2
+
+  fleet "Pirates South Small"
+    add variant 1
+      "Nest"
+      "Finch" 2
+
+
+event "southern carriers 3"
+  shipyard "Southbound Advanced"
+    "Skein"
+  shipyard "Tarazed Basics"
+    "Finch"
+
   fleet "Merchants South Large"
     fighters "free worlds fighter"
     add variant 15
@@ -530,37 +561,9 @@ event "southern carriers 2"
       "Hauler II"
       "Nest"
       "Finch" 2
-    add variant 5
-      "Hauler III" 3
-      "Roost"
-      "Finch" 4
-    add variant 5
-      "Roost" 3
-      "Finch" 6
-      "Boxwing" 6
 
-  fleet "Independent Small"
-    fighters "free worlds fighter"
-    add variant 1
-      "Nest"
-      "Finch" 2
-
-  fleet "Pirates South Small"
-    add variant 1
-      "Nest"
-      "Finch" 2
-
-event "southern carriers 3"
-  shipyard "Southbound Advanced"
-    "Skein"
   fleet "Free Worlds Large"
     fighters "free worlds fighters"
-    add variant 2
-      "Roost"
-      "Finch" 4
-    add variant 1
-      "Roost" 2
-      "Finch" 8
     add variant 2
       "Skein"
       "Finch" 6
@@ -574,31 +577,43 @@ event "southern carriers 3"
       "Nest" 2
       "Finch" 4
 
+  fleet "Militia Large"
+    fighters "free worlds fighter"
+    add variant 2
+      "Nest" 2
+      "Finch" 4
+
   fleet "Pirates South Large"
     add variant 1
       "Nest" 2
       "Finch" 4
 
+
 event "southern carriers 4"
-  shipyard "Southbound Advanced"
-    "Finch"
-    "Sparrow"
-  fleet "Merchants North Large"
+  fleet "Merchants South Large"
     fighters "free worlds fighter"
-    add variant 4
-      "Hauler III"
-      "Hauler II"
-      "Roost (Sidewinder)"
-      "Combat Fighter" 2
-      "Dagger" 2
+    add variant 6
+      "Argosy" 3
+      "Roost"
       "Boxwing" 2
+      "Finch" 2
     add variant 4
-      "Roost" 3
-      "Combat Fighter" 4
-      "Dagger" 4
+      "Bastion"
+      "Roost" 2
+      "Finch" 4
       "Boxwing" 4
+    add variant 2
+      "Roost" 3
+      "Finch" 6
+      "Boxwing" 6
 
   fleet "Independent Large"
+    fighters "free worlds fighter"
+    add variant 2
+      "Roost"
+      "Finch" 4
+
+  fleet "Militia Large"
     fighters "free worlds fighter"
     add variant 2
       "Roost"
