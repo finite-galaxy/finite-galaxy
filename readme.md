@@ -1,9 +1,18 @@
-# finite-galaxy
-A derivative of https://github.com/endless-sky/endless-sky, a free and open source space exploration, trading, and combat game created by Michael Zahniser.
+# Finite Galaxy
+**Finite Galaxy** is a derivative of [Endless Sky](https://github.com/endless-sky/endless-sky), a free and open source space exploration, trading, and combat game created by Michael Zahniser.
 Both games can be installed alongside and played independently of each other.
 
+## Table of contents
+* https://github.com/finite-galaxy/finite-galaxy#contributing
+* https://github.com/finite-galaxy/finite-galaxy#posting-issues
+* https://github.com/finite-galaxy/finite-galaxy#posting-pull-requests
+* https://github.com/finite-galaxy/finite-galaxy#changes
+* https://github.com/finite-galaxy/finite-galaxy#major-changes
+* https://github.com/finite-galaxy/finite-galaxy#minor-changes
+* https://github.com/finite-galaxy/finite-galaxy#not-yet-implemented-ideas
 
-## Contributions
+
+## Contributing
 Contributions are welcome; anyone can contribute; feel free to open issues or make pull requests.
 
 ### Posting issues
@@ -29,3 +38,26 @@ If you are posting a pull request, please:
 * Use Oxford spelling (the variant of English used by many scientific journals and international organizations such as the United Nations), instead of American, British, Canadian, or other national varieties.
 
 If proposing a major pull request, start by posting an issue and discussing the best way to implement it. Often the first strategy that occurs to you will not be the cleanest or most effective way to implement a new feature.
+
+
+## Changes
+
+### Major changes
+* Installed outfits can no longer be plundered by default; outfits in cargo still can
+* Minimum depreciation value raised to 50%, time lowered to one year
+* Ship info display shows more stats
+* Categories moved to data files; new ship categories based on total mass
+* More regional specialization of outfitters and shipyards
+
+### Minor changes
+See `changelog.txt`, `ship_overview.txt`, and https://github.com/finite-galaxy/finite-galaxy/commits/master
+
+### Not yet implemented ideas
+* Add support for Unicode and different writing directions
+* Add "Licences" tab in player info panel
+* Add "Tribute" tab in player info panel
+* Separate fleet overview column in outfitter and shipyard from ship info display
+* Increase fleet overview column width from four to five ship icons
+* Make hyperjump fuel proportional to ship's total mass
+* Make ship explosion 'weapon' proportional to mass (base, empty, or total mass)
+
