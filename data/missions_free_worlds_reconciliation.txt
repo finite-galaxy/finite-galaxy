@@ -82,13 +82,13 @@ mission "FW Reconciliation 1"
 
 event "fw empty gienah"
   system Gienah
-    fleet "Small Core Pirates" 5000
+    fleet "Pirates Core Small" 5000
 
 event "fw restore gienah"
   system Gienah
-    fleet "Small Core Pirates" 500
-    fleet "Large Core Pirates" 800
-    fleet "Large Syndicate" 5000
+    fleet "Pirates Core Small" 500
+    fleet "Pirates Core Large" 800
+    fleet "Syndicate Large" 5000
 
 mission "FW Reconciliation 1B"
   name "Travel to <planet>"
@@ -177,23 +177,23 @@ mission "FW Reconciliation 1C"
   npc
     personality heroic nemesis waiting
     government Syndicate
-    fleet "Small Syndicate"
+    fleet "Syndicate Small"
   
   npc
     personality heroic nemesis entering
     government Syndicate
-    fleet "Small Syndicate"
+    fleet "Syndicate Small"
   
   npc
     personality heroic nemesis waiting
     government Syndicate
-    fleet "Large Syndicate"
+    fleet "Syndicate Large"
     system Markab
   
   npc
     personality heroic nemesis waiting
     government Syndicate
-    fleet "Large Syndicate"
+    fleet "Syndicate Large"
     system Alnair
 
 
@@ -1014,8 +1014,8 @@ mission "FW Pug 2"
     system "Sol"
     personality heroic uninterested staying
     government "Republic"
-    fleet "Large Republic" 5
-    fleet "Small Republic" 5
+    fleet "Republic Large" 5
+    fleet "Republic Small" 5
 
 
 
@@ -1071,8 +1071,8 @@ mission "FW Pug 2A"
     system "Sol"
     personality heroic uninterested staying
     government "Republic"
-    fleet "Large Republic" 5
-    fleet "Small Republic" 5
+    fleet "Republic Large" 5
+    fleet "Republic Small" 5
 
 
 

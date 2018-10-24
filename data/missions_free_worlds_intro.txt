@@ -135,8 +135,8 @@ mission "Pact Recon 3"
     government "Pirate"
     personality staying plunders disables
     system "Naper"
-    fleet "Small Southern Pirates" 3
-    fleet "Large Northern Pirates"
+    fleet "Pirates South Small" 3
+    fleet "Pirates North Large"
   
   on complete
     set "licence: Nest"
@@ -599,7 +599,7 @@ mission "FW Katya 1C"
   npc kill
     personality nemesis
     government "Republic"
-    fleet "Small Republic" 2
+    fleet "Republic Small" 2
   
   on offer
     conversation
@@ -744,7 +744,7 @@ mission "FW Katya 2B"
   npc
     government Pirate
     personality nemesis plunders waiting
-    fleet "Small Core Pirates" 2
+    fleet "Pirates Core Small" 2
   to offer
     has "FW Katya 2: done"
   to fail
@@ -1282,21 +1282,21 @@ mission "FW Escort 1"
   npc
     personality plunders entering
     government Pirate
-    fleet "Large Southern Pirates"
+    fleet "Pirates South Large"
   npc
     personality plunders staying
     government Pirate
-    fleet "Large Southern Pirates"
+    fleet "Pirates South Large"
     system "Alpha Arae"
   npc
     personality plunders staying
     government Pirate
-    fleet "Large Southern Pirates"
+    fleet "Pirates South Large"
     system "Lesath"
   npc
     personality plunders waiting
     government Pirate
-    fleet "Large Southern Pirates" 2
+    fleet "Pirates South Large" 2
     system "Tarazed"
   
   on offer
@@ -1354,21 +1354,21 @@ mission "FW Escort 1B"
   npc
     personality plunders entering
     government Pirate
-    fleet "Large Southern Pirates"
+    fleet "Pirates South Large"
   npc
     personality plunders staying
     government Pirate
-    fleet "Large Southern Pirates"
+    fleet "Pirates South Large"
     system "Alpha Arae"
   npc
     personality plunders staying
     government Pirate
-    fleet "Large Southern Pirates"
+    fleet "Pirates South Large"
     system "Lesath"
   npc
     personality plunders waiting
     government Pirate
-    fleet "Large Southern Pirates" 2
+    fleet "Pirates South Large" 2
     system "Sabik"
   
   on offer
@@ -1420,17 +1420,17 @@ mission "FW Escort 2"
   npc
     personality plunders staying
     government Pirate
-    fleet "Large Southern Pirates"
+    fleet "Pirates South Large"
     system "Alpha Arae"
   npc
     personality plunders staying
     government Pirate
-    fleet "Large Southern Pirates"
+    fleet "Pirates South Large"
     system "Lesath"
   npc
     personality plunders waiting
     government Pirate
-    fleet "Large Southern Pirates" 3
+    fleet "Pirates South Large" 3
     system "Tarazed"
   
   on offer
@@ -1484,20 +1484,20 @@ mission "FW Escort 2B"
   npc
     personality plunders staying
     government Pirate
-    fleet "Large Southern Pirates" 2
-    fleet "Small Southern Pirates" 2
+    fleet "Pirates South Large" 2
+    fleet "Pirates South Small" 2
     system "Alpha Arae"
   npc
     personality plunders staying
     government Pirate
-    fleet "Large Southern Pirates" 2
-    fleet "Small Southern Pirates" 2
+    fleet "Pirates South Large" 2
+    fleet "Pirates South Small" 2
     system "Lesath"
   npc
     personality plunders waiting
     government Pirate
-    fleet "Large Southern Pirates"
-    fleet "Small Southern Pirates" 2
+    fleet "Pirates South Large"
+    fleet "Pirates South Small" 2
     system "Sabik"
   
   on offer

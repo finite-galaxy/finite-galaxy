@@ -76,8 +76,8 @@ mission "FW Conservatory 2"
     government Pirate
     personality plunders
     system Tarazed
-    fleet "Small Southern Pirates"
-    fleet "Large Southern Pirates"
+    fleet "Pirates South Small"
+    fleet "Pirates South Large"
 
 
 
@@ -110,15 +110,15 @@ mission "FW Conservatory 2B"
     government Pirate
     personality plunders
     system "Yed Prior"
-    fleet "Small Southern Pirates" 2
-    fleet "Large Southern Pirates" 2
+    fleet "Pirates South Small" 2
+    fleet "Pirates South Large" 2
   
   npc
     government Pirate
     personality plunders
     system "Pherkad"
-    fleet "Small Southern Pirates" 2
-    fleet "Large Southern Pirates" 2
+    fleet "Pirates South Small" 2
+    fleet "Pirates South Large" 2
   
   on complete
     payment 300000
@@ -317,20 +317,20 @@ event "wolf pack 3 ready"
 
 event "wolf pack gacrux start"
   system "Gacrux"
-    fleet "Small Southern Merchants" 2000
-    fleet "Large Southern Merchants" 5000
-    fleet "Small Southern Pirates" 2000
-    fleet "Large Southern Pirates" 4000
-    fleet "Small Republic" 8000
+    fleet "Merchants South Small" 2000
+    fleet "Merchants South Large" 5000
+    fleet "Pirates South Small" 2000
+    fleet "Pirates South Large" 4000
+    fleet "Republic Small" 8000
 
 event "wolf pack gacrux end"
   system "Gacrux"
-    fleet "Small Southern Merchants" 2000
-    fleet "Large Southern Merchants" 5000
-    fleet "Small Southern Pirates" 2000
-    fleet "Large Southern Pirates" 4000
-    fleet "Small Republic" 2000
-    fleet "Large Republic" 3000
+    fleet "Merchants South Small" 2000
+    fleet "Merchants South Large" 5000
+    fleet "Pirates South Small" 2000
+    fleet "Pirates South Large" 4000
+    fleet "Republic Small" 2000
+    fleet "Republic Large" 3000
     fleet "Navy Surveillance" 1600
 
 
@@ -391,18 +391,18 @@ event "wolf pack 4 ready"
 
 event "wolf pack mizar start"
   system "Mizar"
-    fleet "Small Southern Merchants" 1400
-    fleet "Large Southern Merchants" 4500
-    fleet "Small Republic" 5000
-    fleet "Small Southern Pirates" 9000
+    fleet "Merchants South Small" 1400
+    fleet "Merchants South Large" 4500
+    fleet "Republic Small" 5000
+    fleet "Pirates South Small" 9000
 
 event "wolf pack mizar end"
   system "Mizar"
-    fleet "Small Southern Merchants" 1400
-    fleet "Large Southern Merchants" 4500
-    fleet "Small Republic" 1000
-    fleet "Large Republic" 1400
-    fleet "Small Southern Pirates" 9000
+    fleet "Merchants South Small" 1400
+    fleet "Merchants South Large" 4500
+    fleet "Republic Small" 1000
+    fleet "Republic Large" 1400
+    fleet "Pirates South Small" 9000
     fleet "Navy Surveillance" 2000
 
 

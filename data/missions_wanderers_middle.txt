@@ -219,9 +219,9 @@ event "wanderers: kaliptari battle begins"
 
 event "wanderers: kaliptari battle ends"
   system Kaliptari
-    add fleet "Large Quarg" 2000
-    add fleet "Small Kor Mereti" 8000
-    add fleet "Large Kor Mereti" 3600
+    add fleet "Quarg Large" 2000
+    add fleet "Kor Mereti Small" 8000
+    add fleet "Kor Mereti Large" 3600
     add fleet "Wanderer Defence" 1000
     add fleet "Wanderer Drones" 500
 
@@ -670,8 +670,8 @@ event "wanderers: kashikt battle begins"
 
 event "wanderers: kashikt battle ends"
   system "Kashikt"
-    fleet "Small Quarg" 1000
-    fleet "Large Quarg" 2000
+    fleet "Quarg Small" 1000
+    fleet "Quarg Large" 2000
     fleet "Kor Efret Home" 1000
 
 mission "Wanderers: Kor Efret 3"
@@ -1081,8 +1081,8 @@ mission "Wanderers: Mind 6"
 
 event "wanderers: kor mereti transformation"
   system Chimitarp
-    add fleet "Small Kor Mereti" 250
-    add fleet "Large Kor Mereti" 450
+    add fleet "Kor Mereti Small" 250
+    add fleet "Kor Mereti Large" 450
   planet "Korbatri Eska"
     add description `  Far from the ruined cities, the Kor Mereti have begun building a sort of village of their own: a sprawling complex of greenhouses containing a wide variety of plant samples.`
 
@@ -1419,7 +1419,7 @@ mission "Wanderers: Tour 5"
     system "Ap'arak"
     government "Hai (Unfettered)"
     personality staying heroic
-    fleet "Large Unfettered" 2
+    fleet "Unfettered Large" 2
 
 
 
@@ -1514,7 +1514,7 @@ event "wanderers: battle in solifar begins"
 
 event "wanderers: battle in solifar ends"
   system Solifar
-    fleet "Large Quarg" 3000
+    fleet "Quarg Large" 3000
     fleet "Wanderer Defence" 1800
     fleet "Wanderer Drones" 700
     fleet "Wanderer Flycatchers" 800
@@ -1635,27 +1635,27 @@ mission "Wanderers: Sestor Attack"
 
 
 event "wanderers: kor sestor are aimless"
-  fleet "Small Kor Sestor"
+  fleet "Kor Sestor Small"
     personality
       timid
       coward
-  fleet "Large Kor Sestor"
+  fleet "Kor Sestor Large"
     personality
       timid
       coward
   system "Mesuket"
-    fleet "Large Kor Mereti" 900
-    fleet "Large Kor Sestor" 5000
+    fleet "Kor Mereti Large" 900
+    fleet "Kor Sestor Large" 5000
   system Eshkoshtar
-    remove fleet "Large Kor Sestor"
+    remove fleet "Kor Sestor Large"
   system Salipastart
-    remove fleet "Large Kor Sestor"
+    remove fleet "Kor Sestor Large"
   system Mekislepti
-    remove fleet "Large Kor Sestor"
+    remove fleet "Kor Sestor Large"
   system Similisti
-    remove fleet "Large Kor Sestor"
+    remove fleet "Kor Sestor Large"
   system Faronektu
-    remove fleet "Large Kor Sestor"
+    remove fleet "Kor Sestor Large"
   planet "Varu K'prai"
     landscape land/beach1
     add description `  There used to be a thriving spaceport here, but it has been razed to the ground by the Kor Sestor fleet.`
@@ -1702,7 +1702,7 @@ mission "Wanderers: Sestor Search"
     system "Aya'k'k"
     government "Kor Sestor"
     personality derelict uninterested
-    fleet "Large Kor Sestor"
+    fleet "Kor Sestor Large"
   on enter "Alnilam"
     set "wanderers: found the sestor fleet"
     dialog
@@ -2038,7 +2038,7 @@ mission "Wanderers: Sestor: Quarg Help 2"
     government "Kor Sestor"
     personality heroic staying
     system "Alnitak"
-    fleet "Large Kor Sestor" 2
+    fleet "Kor Sestor Large" 2
 
 
 
@@ -2845,7 +2845,7 @@ mission "Wanderers: Sestor: Scan Drones"
     system "Asikafarnut"
     government "Kor Sestor"
     personality heroic staying
-    fleet "Large Kor Sestor"
+    fleet "Kor Sestor Large"
     ship "Kar Ik Vot 349 (Trapper)" "07-321.8"
     ship "Kar Ik Vot 349 (Attacker)" "07-546.2"
     ship "Kar Ik Vot 349 (Defender)" "07-963.4"
@@ -3042,7 +3042,7 @@ mission "Wanderers: Sestor: Factory Escorts"
 
 event "wanderers: asikafarnut battle"
   system "Asikafarnut"
-    fleet "Large Kor Mereti" 10000
+    fleet "Kor Mereti Large" 10000
 
 mission "Wanderers: Sestor: Factory 2"
   landing
@@ -3095,33 +3095,33 @@ mission "Wanderers: Sestor: Factory 2"
 
 event "wanderers: sestor shutdown"
   system "Celeborim"
-    fleet "Small Kor Sestor" 2400
-    fleet "Large Kor Sestor" 10000
+    fleet "Kor Sestor Small" 2400
+    fleet "Kor Sestor Large" 10000
   system "Makferuti"
-    fleet "Small Kor Sestor" 2400
-    fleet "Large Kor Sestor" 10000
+    fleet "Kor Sestor Small" 2400
+    fleet "Kor Sestor Large" 10000
   system "Asikafarnut"
-    fleet "Large Kor Mereti" 3600
-    fleet "Small Kor Sestor" 1200
-    fleet "Large Kor Sestor" 6000
+    fleet "Kor Mereti Large" 3600
+    fleet "Kor Sestor Small" 1200
+    fleet "Kor Sestor Large" 6000
   system "Sobarati"
-    fleet "Small Kor Sestor" 1600
-    fleet "Large Kor Sestor" 8000
+    fleet "Kor Sestor Small" 1600
+    fleet "Kor Sestor Large" 8000
   system "Silikatakfar"
-    fleet "Large Kor Mereti" 1600
-    fleet "Small Kor Sestor" 3200
-    fleet "Large Kor Sestor" 4800
+    fleet "Kor Mereti Large" 1600
+    fleet "Kor Sestor Small" 3200
+    fleet "Kor Sestor Large" 4800
   system "Ferukistek"
-    fleet "Large Kor Mereti" 2400
-    fleet "Small Kor Sestor" 8000
-    fleet "Large Kor Sestor" 10000
+    fleet "Kor Mereti Large" 2400
+    fleet "Kor Sestor Small" 8000
+    fleet "Kor Sestor Large" 10000
   system "Eneremprukt"
-    fleet "Large Kor Mereti" 2000
-    fleet "Small Kor Sestor" 3200
-    fleet "Large Kor Sestor" 4800
+    fleet "Kor Mereti Large" 2000
+    fleet "Kor Sestor Small" 3200
+    fleet "Kor Sestor Large" 4800
   system "Mesuket"
-    remove fleet "Large Kor Sestor"
-    add fleet "Large Kor Sestor" 10000
+    remove fleet "Kor Sestor Large"
+    add fleet "Kor Sestor Large" 10000
 
 mission "Wanderers: Sestor: Factory 3"
   landing
@@ -3223,32 +3223,32 @@ event "wanderers: exiles have drones"
 event "wanderers: sestor eliminated"
   system "Celeborim"
     government "Uninhabited"
-    fleet "Small Kor Mereti" 10000
+    fleet "Kor Mereti Small" 10000
   system "Makferuti"
     government "Uninhabited"
-    fleet "Small Kor Mereti" 10000
+    fleet "Kor Mereti Small" 10000
   system "Asikafarnut"
     government "Uninhabited"
-    fleet "Large Kor Mereti" 3600
+    fleet "Kor Mereti Large" 3600
   system "Sobarati"
     government "Uninhabited"
-    fleet "Small Kor Mereti" 10000
+    fleet "Kor Mereti Small" 10000
   system "Silikatakfar"
     government "Uninhabited"
-    fleet "Large Kor Mereti" 1600
+    fleet "Kor Mereti Large" 1600
   system "Ferukistek"
     government "Uninhabited"
-    fleet "Large Kor Mereti" 2400
+    fleet "Kor Mereti Large" 2400
   system "Eneremprukt"
     government "Uninhabited"
-    fleet "Large Kor Mereti" 2000
+    fleet "Kor Mereti Large" 2000
   system "Mesuket"
-    remove fleet "Large Kor Sestor"
+    remove fleet "Kor Sestor Large"
 
 event "wanderers: sabira eseskrai colony"
   system "Skeruto"
     government "Wanderer"
-    fleet "Large Quarg" 1000
+    fleet "Quarg Large" 1000
     fleet "Wanderer Defence" 1200
     fleet "Wanderer Drones" 800
     fleet "Kor Efret Home" 800

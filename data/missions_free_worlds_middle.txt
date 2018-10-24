@@ -302,17 +302,17 @@ mission "FW Southern Battle 1B"
 event "battle for Rastaban"
   "reputation: Republic" = -1000
   system Rastaban
-    fleet "Small Free Worlds" 10000
+    fleet "Free Worlds Small" 10000
   system Lesath
-    fleet "Small Southern Merchants" 800
-    fleet "Large Southern Merchants" 1600
-    fleet "Small Free Worlds" 800
-    fleet "Large Free Worlds" 1100
+    fleet "Merchants South Small" 800
+    fleet "Merchants South Large" 1600
+    fleet "Free Worlds Small" 800
+    fleet "Free Worlds Large" 1100
   system Sargas
-    fleet "Small Southern Merchants" 600
-    fleet "Large Southern Merchants" 2500
-    fleet "Small Free Worlds" 1000
-    fleet "Large Free Worlds" 1500
+    fleet "Merchants South Small" 600
+    fleet "Merchants South Large" 2500
+    fleet "Free Worlds Small" 1000
+    fleet "Free Worlds Large" 1500
 
 mission "FW Southern Battle 2"
   name "Attack Rastaban"
@@ -462,17 +462,17 @@ mission "FW Southern Battle 3"
     government "Republic"
     personality fleeing uninterested
     system "Delta Sagittarii"
-    fleet "Large Republic" 2
+    fleet "Republic Large" 2
   npc
     government "Republic"
     personality fleeing uninterested
     system "Girtab"
-    fleet "Large Republic" 2
+    fleet "Republic Large" 2
   npc
     government "Republic"
     personality fleeing uninterested
     system "Albaldah"
-    fleet "Large Republic" 2
+    fleet "Republic Large" 2
   
   on complete
     dialog `You've finished patrolling the nearby systems. Now you can meet up with Freya in the spaceport, and hopefully she will have good news about Katya.`
@@ -524,7 +524,7 @@ mission "FW Southern Prisoners - Release"
     government Republic
     personality staying uninterested
     system "Kaus Borealis"
-    fleet "Large Republic" 4
+    fleet "Republic Large" 4
   
   on visit
     dialog "You have reached <planet>, but you left part of your convoy behind! Better depart and wait for them to arrive in this star system."
@@ -588,7 +588,7 @@ mission "FW Southern Prisoners - Released"
     government Republic
     personality staying uninterested
     system "Kaus Borealis"
-    fleet "Large Republic" 4
+    fleet "Republic Large" 4
   
   on visit
     dialog "You have reached <planet>, but you left part of your convoy behind! Better depart and wait for them to arrive in this star system."
@@ -681,22 +681,22 @@ mission "FW Northern 1"
   npc
     government "Free Worlds"
     personality heroic escort
-    fleet "Large Free Worlds" 3
+    fleet "Free Worlds Large" 3
   npc
     government "Republic"
     personality fleeing uninterested
     system "Wei"
-    fleet "Large Republic" 2
+    fleet "Republic Large" 2
   npc
     government "Republic"
     personality fleeing uninterested
     system "Seginus"
-    fleet "Large Republic" 2
+    fleet "Republic Large" 2
   npc
     government "Republic"
     personality fleeing uninterested
     system "Alphecca"
-    fleet "Large Republic" 2
+    fleet "Republic Large" 2
   
   on complete
     event "fw northern expansion"
@@ -1021,7 +1021,7 @@ mission "FW Northern 4.2A"
     government Republic
     personality heroic
     system Sarin
-    fleet "Small Republic"
+    fleet "Republic Small"
   
   on visit
     dialog "You have reached <planet>, but you left part of the convoy behind! Better depart and wait for them to arrive in this star system."
@@ -1612,7 +1612,7 @@ mission "FW Albatross 2"
     system Nunki
     government Pirate
     personality staying disables plunders
-    fleet "Small Southern Pirates" 2
+    fleet "Pirates South Small" 2
 
 
 
@@ -1659,7 +1659,7 @@ mission "FW Albatross 2A"
     personality staying plunders disables
     system Orvala
     government Pirate
-    fleet "Small Southern Pirates" 3
+    fleet "Pirates South Small" 3
 
 
 
@@ -1690,7 +1690,7 @@ mission "FW Albatross 2B"
 event "battle for zeta aquilae"
   "reputation: Republic" = -1000
   system "Zeta Aquilae"
-    fleet "Small Southern Merchants" 5000
+    fleet "Merchants South Small" 5000
 
 mission "FW Rand 1"
   landing
@@ -1824,44 +1824,44 @@ mission "FW Rand 1B"
 
 event "battle of alioth"
   system Rutilicus
-    fleet "Small Southern Merchants" 600
-    fleet "Large Southern Merchants" 2000
-    fleet "Small Southern Pirates" 8000
-    fleet "Small Republic" 1000
+    fleet "Merchants South Small" 600
+    fleet "Merchants South Large" 2000
+    fleet "Pirates South Small" 8000
+    fleet "Republic Small" 1000
   system Cebalrai
-    fleet "Small Southern Merchants" 600
-    fleet "Large Southern Merchants" 2000
-    fleet "Small Southern Pirates" 4000
-    fleet "Small Republic" 1000
+    fleet "Merchants South Small" 600
+    fleet "Merchants South Large" 2000
+    fleet "Pirates South Small" 4000
+    fleet "Republic Small" 1000
   system Alioth
-    fleet "Small Southern Merchants" 400
-    fleet "Large Northern Merchants" 600
-    fleet "Small Southern Pirates" 1200
-    fleet "Large Southern Pirates" 2400
-    fleet "Small Republic" 3000
+    fleet "Merchants South Small" 400
+    fleet "Merchants North Large" 600
+    fleet "Pirates South Small" 1200
+    fleet "Pirates South Large" 2400
+    fleet "Republic Small" 3000
       
 event "end battle of alioth"
   system Rutilicus
-    fleet "Small Southern Merchants" 600
-    fleet "Large Southern Merchants" 2000
-    fleet "Small Southern Pirates" 8000
-    fleet "Small Republic" 1000
-    fleet "Large Republic" 2000
+    fleet "Merchants South Small" 600
+    fleet "Merchants South Large" 2000
+    fleet "Pirates South Small" 8000
+    fleet "Republic Small" 1000
+    fleet "Republic Large" 2000
     fleet "Navy Surveillance" 1600
   system Cebalrai
-    fleet "Small Southern Merchants" 600
-    fleet "Large Southern Merchants" 2000
-    fleet "Small Southern Pirates" 4000
-    fleet "Small Republic" 1000
-    fleet "Large Republic" 2000
+    fleet "Merchants South Small" 600
+    fleet "Merchants South Large" 2000
+    fleet "Pirates South Small" 4000
+    fleet "Republic Small" 1000
+    fleet "Republic Large" 2000
     fleet "Navy Surveillance" 1600
   system Alioth
-    fleet "Small Southern Merchants" 400
-    fleet "Large Northern Merchants" 600
-    fleet "Small Southern Pirates" 1200
-    fleet "Large Southern Pirates" 2400
-    fleet "Small Republic" 3000
-    fleet "Large Republic" 4000
+    fleet "Merchants South Small" 400
+    fleet "Merchants North Large" 600
+    fleet "Pirates South Small" 1200
+    fleet "Pirates South Large" 2400
+    fleet "Republic Small" 3000
+    fleet "Republic Large" 4000
     fleet "Navy Surveillance" 1600
 
 
@@ -2129,14 +2129,14 @@ mission "FW Liberate Delta Sagittarii"
     personality staying heroic
     system "Rastaban"
     government "Free Worlds"
-    fleet "Large Free Worlds" 4
+    fleet "Free Worlds Large" 4
   npc
     personality staying derelict
     system "Rastaban"
     government "Republic"
-    fleet "Large Republic" 2
+    fleet "Republic Large" 2
   npc
     personality staying heroic
     system "Rastaban"
     government "Republic"
-    fleet "Large Republic" 2
+    fleet "Republic Large" 2

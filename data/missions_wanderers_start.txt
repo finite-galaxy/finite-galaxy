@@ -1494,8 +1494,8 @@ event "capture of ik'kara'ka"
   system "Ik'kara'ka"
     government "Hai (Unfettered)"
     fleet "Wanderer Defence" 1000
-    fleet "Small Unfettered" 600
-    fleet "Large Unfettered" 400
+    fleet "Unfettered Small" 600
+    fleet "Unfettered Large" 400
   planet "Varu Mer'ek"
     attributes "unfettered" "factory"
     description `This Wanderer factory world was recently captured by the Unfettered Hai, who are now busy trying to repurpose the Wanderer factories and equipment that were left behind, to build more ships for their war fleets. The Wanderers did not have time to demolish any of their equipment or to carry it off-world before the planet was lost. As a result, they have given the Unfettered a significant technological advantage here.`
@@ -1728,7 +1728,7 @@ mission "Wanderers Hai Assistance Fleet"
     government "Hai"
     personality heroic staying uninterested frugal
     system "Wah Ki"
-    fleet "Large Hai" 6
+    fleet "Hai Large" 6
 
 
 
@@ -1854,7 +1854,7 @@ mission "Wanderers Evacuation 1"
   npc
     government "Hai (Unfettered)"
     personality heroic staying
-    fleet "Large Unfettered" 2
+    fleet "Unfettered Large" 2
   on visit
     dialog
       `You have reached <planet>, but the Wanderer transports have not all arrived yet. You should take off and wait for them to catch up with you.`
@@ -1885,7 +1885,7 @@ mission "Wanderers Evacuation 1B"
     government "Hai (Unfettered)"
     personality heroic staying
     system "Sich'ka'ara"
-    fleet "Large Unfettered" 3
+    fleet "Unfettered Large" 3
 
 
 
@@ -1921,7 +1921,7 @@ mission "Wanderers Evacuation 1C"
     government "Hai (Unfettered)"
     personality heroic staying
     system "Sich'ka'ara"
-    fleet "Large Unfettered" 4
+    fleet "Unfettered Large" 4
 
 
 
@@ -1997,21 +1997,21 @@ event "battle for sich'ka'ara ends"
   system "Sich'ka'ara"
     add fleet "Wanderer Freight" 900
     add fleet "Wanderer Defence" 400
-    add fleet "Large Unfettered" 400
+    add fleet "Unfettered Large" 400
   system "Chirr'ay'akai"
     government "Hai (Unfettered)"
     fleet "Wanderer Defence" 800
-    fleet "Large Unfettered" 400
-    fleet "Small Unfettered" 400
+    fleet "Unfettered Large" 400
+    fleet "Unfettered Small" 400
   system "Prakacha'a"
     government "Hai (Unfettered)"
     fleet "Wanderer Defence" 2000
-    fleet "Large Unfettered" 600
-    fleet "Small Unfettered" 600
+    fleet "Unfettered Large" 600
+    fleet "Unfettered Small" 600
   planet "Kort Vek'kri"
     attributes "unfettered"
     spaceport `The Unfettered clearly do not know quite what to make of the Wanderer research station here that they have recently captured. Animals that were once part of various experiments are now wandering loose, and the Unfettered are making only sporadic efforts to keep them well-fed. Every once in a while one of them, driven by sheer hunger, tries to smash its way into one of the crates of military rations that the Unfettered have stacked up in the shade near the main landing pad.`
-  fleet "Large Unfettered"
+  fleet "Unfettered Large"
     add variant 3
       "Solifuge"
       "Violin Spider" 3
@@ -2304,7 +2304,7 @@ event "battle for ap'arak ends"
     add fleet "Wanderer Freight" 2000
     add fleet "Wanderer Drones" 4000
     add fleet "Wanderer Defence" 600
-    add fleet "Large Unfettered" 700
+    add fleet "Unfettered Large" 700
 
 mission "Wanderers Ap'arak 2"
   landing

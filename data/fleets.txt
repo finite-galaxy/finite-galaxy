@@ -4,57 +4,57 @@
 #   "Bounty Hunters"
 #   "Hired Guns"
 # Coalition:
-#   "Large Arach"
-#   "Small Arach"
-#   "Large Kimek"
-#   "Small Kimek"
-#   "Large Saryd"
-#   "Small Saryd"
+#   "Arach Large"
+#   "Arach Small"
+#   "Kimek Large"
+#   "Kimek Small"
+#   "Saryd Large"
+#   "Saryd Small"
 # Deep Security:
-#   "Large Deep Security"
-#   "Small Deep Security"
+#   "Deep Security Large"
+#   "Deep Security Small"
 # Free Worlds:
-#   "Large Free Worlds"
-#   "Small Free Worlds"
+#   "Free Worlds Large"
+#   "Free Worlds Small"
 # Hai:
-#   "Large Hai"
-#   "Small Hai"
+#   "Hai Large"
+#   "Hai Small"
 # Heliarch:
 #   "Heliarch"
 # Independent:
-#   "Large Independent"
-#   "Small Independent"
+#   "Independent Large"
+#   "Independent Small"
 # Korath:
 #   "Korath Home"
 #   "Korath Raid"
 # Kor Efret:
 #   "Kor Efret Home"
 # Kor Mereti:
-#   "Large Kor Mereti"
-#   "Small Kor Mereti"
+#   "Kor Mereti Large"
+#   "Kor Mereti Small"
 #   "Kor Mereti Miners"
 # Kor Sestor:
-#   "Large Kor Sestor"
-#   "Small Kor Sestor"
+#   "Kor Sestor Large"
+#   "Kor Sestor Small"
 # Merchant:
-#   "Large Core Merchants"
-#   "Small Core Merchants"
-#   "Large Deep Merchants"
-#   "Small Deep Merchants"
-#   "Large Human Merchants (Hai)"
-#   "Small Human Merchants (Hai)"
-#   "Large Northern Merchants"
-#   "Small Northern Merchants"
-#   "Paradise Merchants"
-#   "Large Southern Merchants"
-#   "Small Southern Merchants"
+#   "Merchants Core Large"
+#   "Merchants Core Small"
+#   "Merchants Deep Large"
+#   "Merchants Deep Small"
+#   "Merchants Hai Large"
+#   "Merchants Hai Small"
+#   "Merchants North Large"
+#   "Merchants North Small"
+#   "Merchants Paradise"
+#   "Merchants South Large"
+#   "Merchants South Small"
 #   "Human Miners"
 # Militia:
-#   "Large Militia"
-#   "Small Militia"
+#   "Militia Large"
+#   "Militia Small"
 # Navy (Oathkeeper):
-#   "Large Oathkeeper"
-#   "Small Oathkeeper"
+#   "Oathkeeper Large"
+#   "Oathkeeper Small"
 # Pirate:
 #   "Marauder fleet I"
 #   "Marauder fleet II"
@@ -66,34 +66,34 @@
 #   "Marauder fleet VIII"
 #   "Marauder fleet IX"
 #   "Marauder fleet X"
-#   "Large Core Pirates"
-#   "Small Core Pirates"
-#   "Large Northern Pirates"
-#   "Small Northern Pirates"
-#   "Large Southern Pirates"
-#   "Small Southern Pirates"
+#   "Pirates Core Large"
+#   "Pirates Core Small"
+#   "Pirates North Large"
+#   "Pirates North Small"
+#   "Pirates South Large"
+#   "Pirates South Small"
 #   "pirate raid"
 # Pug:
-#   "Large Pug"
-#   "Small Pug"
+#   "Pug Large"
+#   "Pug Small"
 # Quarg:
-#   "Large Quarg"
-#   "Small Quarg"
+#   "Quarg Large"
+#   "Quarg Small"
 # Remnant:
-#   "Large Remnant"
-#   "Small Remnant"
+#   "Remnant Large"
+#   "Remnant Small"
 # Republic:
-#   "Large Republic"
-#   "Small Republic"
+#   "Republic Large"
+#   "Republic Small"
 #   "Navy Surveillance"
 # Syndicate:
-#   "Large Syndicate"
-#   "Small Syndicate"
+#   "Syndicate Large"
+#   "Syndicate Small"
 # Syndicate Extremists:
 #   "Syndicate Extremists"
 # Unfettered:
-#   "Large Unfettered"
-#   "Small Unfettered"
+#   "Unfettered Large"
+#   "Unfettered Small"
 #   "Unfettered Raid"
 # Wanderer:
 #   "Wanderer Defence"
@@ -212,7 +212,7 @@ fleet "Hired Guns"
 
 
 # Coalition
-fleet "Large Arach"
+fleet "Arach Large"
   government "Coalition"
   names "arach"
   cargo 3
@@ -241,7 +241,7 @@ fleet "Large Arach"
     "Briar"
     "Visitor"
 
-fleet "Small Arach"
+fleet "Arach Small"
   government "Coalition"
   names "arach"
   cargo 3
@@ -270,7 +270,7 @@ fleet "Small Arach"
     "Runabout"
 
 
-fleet "Large Kimek"
+fleet "Kimek Large"
   government "Coalition"
   names "kimek"
   cargo 3
@@ -302,7 +302,7 @@ fleet "Large Kimek"
     "Thorn" 2
     "Visitor"
 
-fleet "Small Kimek"
+fleet "Kimek Small"
   government "Coalition"
   names "kimek"
   cargo 3
@@ -332,7 +332,7 @@ fleet "Small Kimek"
     "Courier"
 
 
-fleet "Large Saryd"
+fleet "Saryd Large"
   government "Coalition"
   names "saryd"
   cargo 3
@@ -365,7 +365,7 @@ fleet "Large Saryd"
     "Courier" 2
     "Briar"
 
-fleet "Small Saryd"
+fleet "Saryd Small"
   government "Coalition"
   names "saryd"
   cargo 3
@@ -393,7 +393,7 @@ fleet "Small Saryd"
 
 
 # Deep Security
-fleet "Large Deep Security"
+fleet "Deep Security Large"
   government "Deep Security"
   names "deep"
   fighters "deep fighter"
@@ -426,7 +426,7 @@ fleet "Large Deep Security"
   variant 2
     "Lance" 2
 
-fleet "Small Deep Security"
+fleet "Deep Security Small"
   government "Deep Security"
   names "deep"
   fighters "deep fighter"
@@ -444,7 +444,7 @@ fleet "Small Deep Security"
 
 
 # Free Worlds
-fleet "Large Free Worlds"
+fleet "Free Worlds Large"
   government "Free Worlds"
   names "free worlds capital"
   cargo 1
@@ -524,7 +524,7 @@ fleet "Large Free Worlds"
     "Bastion (Laser)"
     "Hawk (Speedy)"
 
-fleet "Small Free Worlds"
+fleet "Free Worlds Small"
   government "Free Worlds"
   names "free worlds small"
   cargo 1
@@ -572,7 +572,7 @@ fleet "Small Free Worlds"
 
 
 # Hai
-fleet "Large Hai"
+fleet "Hai Large"
   government "Hai"
   names "hai"
   cargo 3
@@ -626,7 +626,7 @@ fleet "Large Hai"
     "Shield Beetle (Tracker)"
     "Lightning Bug" 2
 
-fleet "Small Hai"
+fleet "Hai Small"
   government "Hai"
   names "hai"
   cargo 3
@@ -701,7 +701,7 @@ fleet "Heliarch"
 
 
 # Independent
-fleet "Large Independent"
+fleet "Independent Large"
   government "Independent"
   names "pirate"
   cargo 1
@@ -762,7 +762,7 @@ fleet "Large Independent"
   variant 1
     "Falcon (Laser)"
 
-fleet "Small Independent"
+fleet "Independent Small"
   government "Independent"
   names "pirate"
   cargo 1
@@ -867,7 +867,7 @@ fleet "Kor Efret Home"
 
 
 # Kor Mereti
-fleet "Large Kor Mereti"
+fleet "Kor Mereti Large"
   government "Kor Mereti"
   names "kor mereti"
   fighters "kor mereti"
@@ -970,7 +970,7 @@ fleet "Large Kor Mereti"
   variant 5
     "Model 128" 2
 
-fleet "Small Kor Mereti"
+fleet "Kor Mereti Small"
   government "Kor Mereti"
   names "kor mereti"
   fighters "kor mereti"
@@ -1038,7 +1038,7 @@ fleet "Kor Mereti Miners"
 
 
 # Kor Sestor
-fleet "Large Kor Sestor"
+fleet "Kor Sestor Large"
   government "Kor Sestor"
   names "kor sestor"
   fighters "kor sestor fighter"
@@ -1144,7 +1144,7 @@ fleet "Large Kor Sestor"
     "Far Osk 27" 13
     "Met Par Tek 53" 2
 
-fleet "Small Kor Sestor"
+fleet "Kor Sestor Small"
   government "Kor Sestor"
   names "kor sestor"
   fighters "kor sestor fighter"
@@ -1205,7 +1205,7 @@ fleet "Small Kor Sestor"
 
 
 # Merchant
-fleet "Large Core Merchants"
+fleet "Merchants Core Large"
   government "Merchant"
   names "civilian"
   cargo 4
@@ -1307,7 +1307,7 @@ fleet "Large Core Merchants"
   variant 2
     "Arrow"
 
-fleet "Small Core Merchants"
+fleet "Merchants Core Small"
   government "Merchant"
   names "civilian"
   cargo 3
@@ -1370,7 +1370,7 @@ fleet "Small Core Merchants"
     "Flivver (Racing)"
 
 
-fleet "Large Deep Merchants"
+fleet "Merchants Deep Large"
   government "Merchant"
   names "deep"
   fighters "deep fighter"
@@ -1428,7 +1428,7 @@ fleet "Large Deep Merchants"
     "Star Queen"
     "Raven (Afterburner)" 2
 
-fleet "Small Deep Merchants"
+fleet "Merchants Deep Small"
   government "Merchant"
   names "deep"
   fighters "deep fighter"
@@ -1460,7 +1460,7 @@ fleet "Small Deep Merchants"
     "Flivver (Racing)"
 
 
-fleet "Large Human Merchants (Hai)"
+fleet "Merchants Hai Large"
   government "Merchant"
   names "civilian"
   cargo 4
@@ -1602,7 +1602,7 @@ fleet "Large Human Merchants (Hai)"
   variant 1
     "Shield Beetle"
 
-fleet "Small Human Merchants (Hai)"
+fleet "Merchants Hai Small"
   government "Merchant"
   names "civilian"
   cargo 3
@@ -1662,7 +1662,7 @@ fleet "Small Human Merchants (Hai)"
     "Aphid"
 
 
-fleet "Large Northern Merchants"
+fleet "Merchants North Large"
   government "Merchant"
   names "civilian"
   cargo 4
@@ -1806,7 +1806,7 @@ fleet "Large Northern Merchants"
     "Hauler II"
     "Headhunter" 3
 
-fleet "Small Northern Merchants"
+fleet "Merchants North Small"
   government "Merchant"
   names "civilian"
   cargo 3
@@ -1863,7 +1863,7 @@ fleet "Small Northern Merchants"
     "Hauler I"
 
 
-fleet "Paradise Merchants"
+fleet "Merchants Paradise"
   government "Merchant"
   names "civilian"
   cargo 2
@@ -1917,7 +1917,7 @@ fleet "Paradise Merchants"
     "Berserker" 2
 
 
-fleet "Large Southern Merchants"
+fleet "Merchants South Large"
   government "Merchant"
   names "civilian"
   cargo 4
@@ -2002,7 +2002,7 @@ fleet "Large Southern Merchants"
     "Hauler III"
     "Berserker" 2
 
-fleet "Small Southern Merchants"
+fleet "Merchants South Small"
   government "Merchant"
   names "civilian"
   cargo 3
@@ -2089,7 +2089,7 @@ fleet "Human Miners"
 
 
 # Militia
-fleet "Large Militia"
+fleet "Militia Large"
   government "Militia"
   names "militia"
   cargo 1
@@ -2158,7 +2158,7 @@ fleet "Large Militia"
     "Hawk" 2
     "Sparrow" 3
 
-fleet "Small Militia"
+fleet "Militia Small"
   government "Militia"
   names "militia"
   cargo 1
@@ -2207,7 +2207,7 @@ fleet "Small Militia"
 
 
 # Navy (Oathkeeper)
-fleet "Large Oathkeeper"
+fleet "Oathkeeper Large"
   government "Navy (Oathkeeper)"
   names "republic capital"
   fighters "republic fighter"
@@ -2248,7 +2248,7 @@ fleet "Large Oathkeeper"
     "Mars"
     "Mercury" 2
 
-fleet "Small Oathkeeper"
+fleet "Oathkeeper Small"
   government "Navy (Oathkeeper)"
   names "republic small"
   cargo 0
@@ -2692,7 +2692,7 @@ fleet "Marauder fleet X"
     "Marauder Bounder"
 
 
-fleet "Large Core Pirates"
+fleet "Pirates Core Large"
   government "Pirate"
   names "pirate"
   cargo 1
@@ -2734,7 +2734,7 @@ fleet "Large Core Pirates"
   variant 1
     "Firebird (Missile)"
 
-fleet "Small Core Pirates"
+fleet "Pirates Core Small"
   government "Pirate"
   names "pirate"
   cargo 1
@@ -2765,7 +2765,7 @@ fleet "Small Core Pirates"
     "Quicksilver" 2
 
 
-fleet "Large Northern Pirates"
+fleet "Pirates North Large"
   government "Pirate"
   names "pirate"
   cargo 1
@@ -2842,7 +2842,7 @@ fleet "Large Northern Pirates"
     "Bactrian"
     "Dagger" 3
 
-fleet "Small Northern Pirates"
+fleet "Pirates North Small"
   government "Pirate"
   names "pirate"
   cargo 1
@@ -2877,7 +2877,7 @@ fleet "Small Northern Pirates"
     "Raven (Heavy)"
 
 
-fleet "Large Southern Pirates"
+fleet "Pirates South Large"
   government "Pirate"
   names "pirate"
   cargo 1
@@ -2959,7 +2959,7 @@ fleet "Large Southern Pirates"
   variant 1
     "Falcon (Laser)"
 
-fleet "Small Southern Pirates"
+fleet "Pirates South Small"
   government "Pirate"
   names "pirate"
   cargo 1
@@ -3141,7 +3141,7 @@ fleet "pirate raid"
 
 
 # Pug
-fleet "Large Pug"
+fleet "Pug Large"
   government "Pug"
   names "pug"
   cargo 1
@@ -3169,7 +3169,7 @@ fleet "Large Pug"
     "Enfolta"
     "Zibruka" 2
 
-fleet "Small Pug"
+fleet "Pug Small"
   government "Pug"
   names "pug"
   cargo 1
@@ -3188,7 +3188,7 @@ fleet "Small Pug"
 
 
 # Quarg
-fleet "Large Quarg"
+fleet "Quarg Large"
   government "Quarg"
   names "quarg"
   cargo 1
@@ -3210,7 +3210,7 @@ fleet "Large Quarg"
     "Skylark" 3
     "Wardragon"
 
-fleet "Small Quarg"
+fleet "Quarg Small"
   government "Quarg"
   names "quarg"
   cargo 3
@@ -3224,7 +3224,7 @@ fleet "Small Quarg"
 
 
 # Remnant
-fleet "Large Remnant"
+fleet "Remnant Large"
   government "Remnant"
   names "remnant"
   cargo 2
@@ -3255,7 +3255,7 @@ fleet "Large Remnant"
     "Twilight (Heavy)"
     "Twilight (Turret)"
 
-fleet "Small Remnant"
+fleet "Remnant Small"
   government "Remnant"
   names "remnant"
   cargo 2
@@ -3285,7 +3285,7 @@ fleet "Small Remnant"
 
 
 # Republic
-fleet "Large Republic"
+fleet "Republic Large"
   government "Republic"
   names "republic capital"
   fighters "republic fighter"
@@ -3326,7 +3326,7 @@ fleet "Large Republic"
     "Mercury" 2
     "Mars"
 
-fleet "Small Republic"
+fleet "Republic Small"
   government "Republic"
   names "republic small"
   cargo 0
@@ -3363,7 +3363,7 @@ fleet "Navy Surveillance"
 
 
 # Syndicate
-fleet "Large Syndicate"
+fleet "Syndicate Large"
   government "Syndicate"
   names "syndicate capital"
   fighters "syndicate fighter"
@@ -3432,7 +3432,7 @@ fleet "Large Syndicate"
     "Vanguard"
     "Quicksilver (Proton)" 2
 
-fleet "Small Syndicate"
+fleet "Syndicate Small"
   government "Syndicate"
   names "syndicate small"
   cargo 2
@@ -3491,7 +3491,7 @@ fleet "Syndicate Extremists"
 
 
 # Unfettered
-fleet "Large Unfettered"
+fleet "Unfettered Large"
   government "Hai (Unfettered)"
   names "hai"
   cargo 1
@@ -3537,7 +3537,7 @@ fleet "Large Unfettered"
     "Shield Beetle (Tracker)"
     "Lightning Bug" 2
 
-fleet "Small Unfettered"
+fleet "Unfettered Small"
   government "Hai (Unfettered)"
   names "hai"
   cargo 1

@@ -151,7 +151,7 @@ mission "Liberate Kornephoros"
 
 event "prepare for battle of Kornephoros"
   system "Kornephoros"
-    fleet "Small Free Worlds" 10000
+    fleet "Free Worlds Small" 10000
 
 
 
@@ -330,7 +330,7 @@ mission "FW Syndicate Diplomacy 1B"
     personality heroic
     government Republic
     system Sol
-    fleet "Small Republic" 3
+    fleet "Republic Small" 3
   
   on offer
     log "Visited the Syndicate and worked out a deal where they promised to stay neutral. They are expecting to profit from selling weapons to both sides in this war. Also discovered that Katya is in the Republic's custody and is accused of terrorist activity."
@@ -396,7 +396,7 @@ mission "FW Syndicate Diplomacy 1C"
     personality heroic
     government Republic
     system Rutilicus
-    fleet "Small Republic" 3
+    fleet "Republic Small" 3
   
   on offer
     conversation
@@ -631,7 +631,7 @@ mission "FW Hope Recon 1D"
     system Wei
     personality staying
     government Republic
-    fleet "Large Republic"
+    fleet "Republic Large"
   
   on complete
     log "Destroyed some Navy sensor installations on Hope, but it will likely be only a matter of days before they replace them."
@@ -847,7 +847,7 @@ mission "FW Supply Convoy 1"
     government "Pirate"
     personality plunders staying
     system "Sabik"
-    fleet "Small Southern Pirates" 2
+    fleet "Pirates South Small" 2
   
   on complete
     dialog
@@ -1185,8 +1185,8 @@ mission "FW Pirates 2"
   npc
     personality heroic escort
     government "Free Worlds"
-    fleet "Small Free Worlds" 2
-    fleet "Large Free Worlds"
+    fleet "Free Worlds Small" 2
+    fleet "Free Worlds Large"
   
   on complete
     dialog "Your patrol fleet is still busy finding landing spots, but your work is done. Time to head to the spaceport bar and see if Tomek is there."
@@ -1236,18 +1236,18 @@ mission "FW Pirates 3.1"
     personality heroic staying
     government "Free Worlds"
     system Antares
-    fleet "Small Free Worlds"
-    fleet "Large Free Worlds" 2
+    fleet "Free Worlds Small"
+    fleet "Free Worlds Large" 2
   
   npc kill
     personality plunders staying
     government "Pirate"
     system Antares
-    fleet "Small Southern Pirates" 2
-    fleet "Small Northern Pirates"
-    fleet "Large Southern Pirates" 2
-    fleet "Large Core Pirates"
-    fleet "Large Northern Pirates"
+    fleet "Pirates South Small" 2
+    fleet "Pirates North Small"
+    fleet "Pirates South Large" 2
+    fleet "Pirates Core Large"
+    fleet "Pirates North Large"
   
   on offer
     conversation
@@ -1357,19 +1357,19 @@ mission "FW Pirates 3.2A"
   npc
     personality heroic escort
     government "Free Worlds"
-    fleet "Small Free Worlds" 3
-    fleet "Large Free Worlds" 3
+    fleet "Free Worlds Small" 3
+    fleet "Free Worlds Large" 3
   
   npc kill
     personality plunders staying
     government "Pirate"
     system Shaula
-    fleet "Small Southern Pirates" 3
-    fleet "Large Southern Pirates" 3
-    fleet "Small Core Pirates" 2
-    fleet "Large Core Pirates" 3
-    fleet "Small Northern Pirates"
-    fleet "Large Northern Pirates" 4
+    fleet "Pirates South Small" 3
+    fleet "Pirates South Large" 3
+    fleet "Pirates Core Small" 2
+    fleet "Pirates Core Large" 3
+    fleet "Pirates North Small"
+    fleet "Pirates North Large" 4
   
   on complete
     event "fw suppressed Greenrock"
@@ -1446,15 +1446,15 @@ mission "FW Pirates 4"
     personality heroic
     government "Free Worlds"
     system Pherkad
-    fleet "Small Free Worlds"
-    fleet "Large Free Worlds"
+    fleet "Free Worlds Small"
+    fleet "Free Worlds Large"
   
   npc
     personality heroic
     government "Free Worlds"
     system Alniyat
-    fleet "Small Free Worlds" 2
-    fleet "Large Free Worlds" 4
+    fleet "Free Worlds Small" 2
+    fleet "Free Worlds Large" 4
   
   npc
     personality heroic
@@ -1482,7 +1482,7 @@ mission "FW Pirates 4"
 
 event "battle for Thule"
   system Men
-    fleet "Small Southern Pirates" 10000
+    fleet "Pirates South Small" 10000
 
 
 
