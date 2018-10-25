@@ -1744,7 +1744,7 @@ mission "FWC Pug 4"
 mission "FWC Pug 4A"
   landing
   name "Equipment from <planet>"
-  description "Travel with Freya to pick up the alien equipment that you installed on <planet> and bring it to Arabia to reopen another of the hyperspace links."
+  description "Travel with Freya to pick up the alien equipment that you installed on <planet> and bring it to Alapia to reopen another of the hyperspace links."
   autosave
   source Oblivion
   destination Tundra
@@ -1798,7 +1798,7 @@ mission "FWC Pug 4B"
   name "Equipment to <planet>"
   description "Travel with Freya to <planet> to set up the alien equipment and see if you can reopen another one of the disrupted hyperspace links."
   source Tundra
-  destination Arabia
+  destination Alapia
   to offer
     has "FWC Pug 4A: done"
   cargo "graviton reflector" 10
@@ -1818,7 +1818,7 @@ mission "FWC Pug 4B"
       `  "From whom?" you ask.`
       `  "The Quarg," she says. "We're just a few jumps away from their space, and they claim to know what's going on throughout the galaxy. And when this crisis started and we asked them for a jump drive, they said they didn't want to meddle in the affairs of other species, which means maybe they knew another species was involved here."`
       choice
-        `  "Our mission is urgent. We should just continue to Arabia."`
+        `  "Our mission is urgent. We should just continue to Alapia."`
         `  "Okay, let's take a detour to talk with the Quarg."`
           goto detour
       
@@ -1891,7 +1891,7 @@ mission "FWC Pug 4C"
   name "Liberate <planet>"
   description "Travel to the <system> system to assist the Navy in driving out the Pug and reestablishing a direct hyperspace link to the Ascella system."
   autosave
-  source Arabia
+  source Alapia
   destination Rand
   clearance
   to offer

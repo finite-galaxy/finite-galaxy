@@ -4499,7 +4499,7 @@ system Ascella
     sprite star/k5
     distance 43.5
     period 12.8307
-  object Arabia
+  object Alapia
     sprite planet/ocean7
     distance 439.46
     period 145.663
@@ -23946,6 +23946,18 @@ planet Ada
     threshold 8000
     fleet "Republic Large" 16
 
+planet Alapia
+  attributes "dirt belt" oil
+  landscape land/nasa0
+  description `Alapia is an uncomfortably hot and humid world of deserts, savanna, and a few small and scattered rainforests. Large herds of bison-like animals roam the plains, providing the locals with a steady source of food. Occasional stampedes, involving tens of thousands of these animals, have been known to level entire towns here.`
+  description `  Aside from hunting, most of the industry takes the form of harvesting and refining petrochemicals to make plastics, polymers, and oils. In some parts of Alapia, the pumpjacks outnumber the people a hundred to one.`
+  spaceport `The spaceport consists mostly of a wide, open field paved in asphalt, the cheapest material available here. The pavement shimmers with heat, and is pockmarked with divots where ships' landing gear has sunk several centimeters in to the surface.`
+  spaceport `  At the center of the pavement is a small cluster of refrigerated sheds and stacks of crates carrying various goods for trade; a few armed guards patrol around them to prevent theft. A food truck is parked nearby, serving burgers and tacos to the port workers and to the crews of the few starships that are parked here at the moment.`
+  security 0.1
+  tribute 600
+    threshold 2500
+    fleet "Militia Small" 45
+
 planet Ahr
   attributes arach factory tourism shipping urban
   landscape land/forest4
@@ -24036,18 +24048,6 @@ planet Antipode
   tribute 600
     threshold 2500
     fleet "Syndicate Small" 7
-
-planet Arabia
-  attributes "dirt belt" oil
-  landscape land/nasa0
-  description `Arabia is an uncomfortably hot and humid world of deserts, savanna, and a few small and scattered rainforests. Large herds of bison-like animals roam the plains, providing the locals with a steady source of food. Occasional stampedes, involving tens of thousands of these animals, have been known to level entire towns here.`
-  description `  Aside from hunting, most of the industry takes the form of harvesting and refining petrochemicals to make plastics, polymers, and oils. In some parts of Arabia, the pumpjacks outnumber the people a hundred to one.`
-  spaceport `The spaceport consists mostly of a wide, open field paved in asphalt, the cheapest material available here. The pavement shimmers with heat, and is pockmarked with divots where ships' landing gear has sunk several centimeters in to the surface.`
-  spaceport `  At the center of the pavement is a small cluster of refrigerated sheds and stacks of crates carrying various goods for trade; a few armed guards patrol around them to prevent theft. A food truck is parked nearby, serving burgers and tacos to the port workers and to the crews of the few starships that are parked here at the moment.`
-  security 0.1
-  tribute 600
-    threshold 2500
-    fleet "Militia Small" 45
 
 planet "Arachne Station"
   attributes south station
@@ -27185,7 +27185,6 @@ planet Wayfarer
   shipyard "Tarazed Advanced"
   outfitter "Common Outfits"
   outfitter "Delta V Intermediate"
-  outfitter "Kraz Intermediate"
   outfitter "Scram Drive"
   outfitter "Tarazed Advanced"
   bribe 0.07
