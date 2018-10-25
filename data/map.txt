@@ -15421,7 +15421,7 @@ system Merak
     sprite planet/lava0
     distance 789.024
     period 269.686
-  object "New China"
+  object "Little Garden"
     sprite planet/forest4-b
     distance 1107.51
     period 448.483
@@ -19072,7 +19072,7 @@ system Rutilicus
     sprite planet/rock6
     distance 158.61
     period 31.9607
-  object "New Boston"
+  object "Endless Sky"
     sprite planet/cloud6
     distance 513.86
     period 186.375
@@ -24359,7 +24359,7 @@ planet Chiron
   outfitter "Common Outfits"
   outfitter "Lovelace Basics"
   outfitter "Scram Drive"
-  outfitter "Sinensis Intermediate"
+  outfitter "Sisensis Intermediate"
   outfitter "Syndicate Basics"
   bribe 0.02
   security 0.3
@@ -24389,7 +24389,7 @@ planet Clark
   spaceport `  In the central building, dozens of workers fill a large cafeteria with several stations serving different types of food. The mood here feels boisterous and energetic, very different from most of the Dirt Belt worlds you have visited.`
   shipyard "Basic Ships"
   outfitter "Basic Outfits"
-  outfitter "Sinensis Basics"
+  outfitter "Sisensis Basics"
   security 0.1
   tribute 400
     threshold 2500
@@ -24667,7 +24667,7 @@ planet Earth
   outfitter "Common Outfits"
   outfitter "Lovelace Intermediate"
   outfitter "Scram Drive"
-  outfitter "Sinensis Intermediate"
+  outfitter "Sisensis Intermediate"
   outfitter "Syndicate Intermediate"
   "required reputation" 2
   bribe 0.03
@@ -24701,6 +24701,19 @@ planet "Ember Threshold"
 
 planet "Ember Wormhole"
   description ""
+
+planet "Endless Sky"
+  attributes "dirt belt" textiles farming
+  landscape land/water2
+  description `Endless Sky is a completely unremarkable world... except, of course, for the fact that you happen to have been born here. Most of the land is wet and marshy, and the coastal regions are prone to flooding. Some food crops are grown here, but most of the farmers instead plant flax and jute, which grow well in wet soil and are used to make linen and burlap cloth. The textile mills are hot and poorly ventilated, but they offer higher and more reliable income than farming.`
+  spaceport `Some day Endless Sky may be a prosperous enough planet to afford a better spaceport, but not yet. Many of the concrete landing pads have sunk into the muddy soil over the years since they were poured, and are now tilted and uneven. The market where ship captains buy and sell cargo is a large tent rather than a permanent building, but it is sturdy enough to keep off the rain, and high enough for loads to be brought in and out by trucks and the occasional hovercraft. And, some enterprising local mechanics have set up not only a repair shop and outfitter, but also a shipyard with several small, refurbished ships for sale.`
+  shipyard "Basic Ships"
+  outfitter "Basic Outfits"
+  outfitter "Sisensis Basics"
+  security 0.05
+  tribute 300
+    threshold 2500
+    fleet "Militia Small" 23
 
 planet "Esayaku Fen"
   attributes korath
@@ -24887,7 +24900,7 @@ planet Follower
   outfitter "Common Outfits"
   outfitter "Deep Sky Basics"
   outfitter "Lovelace Basics"
-  outfitter "Sinensis Intermediate"
+  outfitter "Sisensis Intermediate"
   bribe 0.03
   security 0.4
   tribute 2400
@@ -24976,7 +24989,7 @@ planet Geminus
   outfitter "Common Outfits"
   outfitter "Lovelace Intermediate"
   outfitter "Syndicate Basics"
-  outfitter "Sinensis Intermediate"
+  outfitter "Sisensis Intermediate"
   bribe 0.1
   security 0.9
   tribute 4800
@@ -25009,7 +25022,7 @@ planet Geyser
   spaceport `This spaceport was built seven or eight centuries ago, and its once-grand architecture has now fallen into decay. A ring of hangars with arched cement ceilings surrounds a central complex of warehouse towers, whose upper stories once held food courts and luxury hotel rooms. But now, many of the hangars have collapsed, and the ones that remain have rugged plastic netting bolted to the ceilings to protect ships from falling fragments of cement. Only one of the food courts remains active, and although a few of the hotel rooms are still used, the marble fixtures and tile floors that were once so polished and clean are now chipped and cracked and worn down.`
   outfitter "Basic Outfits"
   outfitter "Lovelace Basics"
-  outfitter "Sinensis Basics"
+  outfitter "Sisensis Basics"
   outfitter "Syndicate Basics"
   security 0.3
   tribute 1300
@@ -25087,7 +25100,7 @@ planet Greenrock
   outfitter "Delta V Intermediate"
   outfitter "Kraz Basics"
   outfitter "Pirate Outfits"
-  outfitter "Sinensis Basics"
+  outfitter "Sisensis Basics"
   outfitter "Tarazed Intermediate"
   bribe 0.05
   security 0
@@ -25179,7 +25192,7 @@ planet Heartland
   description `Heartland is a pleasant world, with a geography mostly consisting of low hills, plains, and oceans. The farms here produce bountiful crops, and as a result it has drawn tens of millions of settlers. Many of them now work in factories or assembly lines, in which most of the farm equipment used here and in the surrounding systems is built. Tractors from Heartland are trusted to be well-built and sturdy, and easy to repair; some are still in use that were built over a century ago.`
   spaceport `The spaceport is a cluster of low buildings. At the center of the port is a special, taller building with glass walls on all sides. It houses the tractor showroom. The farmers visiting the showroom look about as excited as you do when touring a large and well-appointed shipyard. There are tractors with rubber wheels, spiked wheels, and tracks; with plows, combines, balers, and chaser bins; tractors barely big enough to sit on and tractors the size of a small freighter. It's somewhat overwhelming.`
   outfitter "Basic Outfits"
-  outfitter "Sinensis Basics"
+  outfitter "Sisensis Basics"
   security 0.2
   tribute 900
     threshold 3500
@@ -25215,7 +25228,7 @@ planet Hephaestus
   outfitter "Common Outfits"
   outfitter "Lovelace Basics"
   outfitter "Scram Drive"
-  outfitter "Sinensis Basics"
+  outfitter "Sisensis Basics"
   outfitter "Syndicate Advanced"
   bribe 0.1
   security 0.7
@@ -25245,7 +25258,7 @@ planet Hestia
   spaceport `Hestia has two separate spaceports. The port where rich residents and their visitors arrive and depart is private, owned by a local company. Here in the public spaceport, no attempt has been made at impressive architecture: everything is spare and utilitarian, with floors of bare cement. There are a few trucks and forklifts carrying cargo, but the streets that connect the landing pads are mostly full of people on foot, walking toward the customs building.`
   outfitter "Common Outfits"
   outfitter "Lovelace Basics"
-  outfitter "Sinensis Basics"
+  outfitter "Sisensis Basics"
   bribe 0.04
   security 0.5
   tribute 4900
@@ -25344,7 +25357,7 @@ planet Ingot
   spaceport `In this spaceport, ships dock inside a hangar whose ceiling protects them from meteorite impacts. The hangar is not pressurized, so there are also landing tubes that connect to each of the visiting ships. Many of the people inside are carrying emergency oxygen masks in case a sudden impact ruptures the building.`
   spaceport `  In addition to being the spaceport, this complex is also the repair and control center for the mining robots. There are a handful of buildings elsewhere on Ingot, but not many. You cannot imagine spending so much time with so little space or change of scenery.`
   outfitter "Basic Outfits"
-  outfitter "Sinensis Basics"
+  outfitter "Sisensis Basics"
   security 0.1
   tribute 200
     threshold 1500
@@ -25500,6 +25513,20 @@ planet Lichen
     threshold 3000
     fleet "Militia Large" 8
 
+planet "Little Garden"
+  attributes "near earth" urban
+  landscape land/city12
+  description `In the very early days of hyperspace travel, most settlers chose to put down roots within a few jumps of Earth, because until more fuel depots were built, colonies farther out would seldom be visited by cargo ships. As a result, a lot of effort was put into terraforming and developing worlds that would have been passed over by most colonists today. Little Garden is one such world, and it is now overpopulated, and poor enough that maintaining the terraforming equipment and climate requires almost a third of the planetary government's tax income.`
+  description `  Little Garden is also home to Sisensis Systems, manufacturer of the Javelin and other crude but effective outfits, popular with marauders, merchants, and militia alike.`
+  spaceport `The "new port" here was built several centuries ago, when the grand but impractical spaceport built by the original settlers had deteriorated to the point where it was no longer usable. This port is much simpler by comparison: just a ring of landing pads of various sizes around a large central building with ten levels of warehouse space accessible by freight elevator.`
+  spaceport `  There are always locals hanging around the port, some of them mere children, who are trying to find a cheap ride off-planet.`
+  outfitter "Common Outfits"
+  outfitter "Sisensis Advanced"
+  security 0.1
+  tribute 1400
+    threshold 4000
+    fleet "Republic Small" 50
+
 planet Lodestone
   attributes core volcanic mining
   landscape land/lava5
@@ -25519,7 +25546,7 @@ planet Longjump
   outfitter "Basic Outfits"
   outfitter "Delta V Basics"
   outfitter "Kraz Basics"
-  outfitter "Sinensis Basics"
+  outfitter "Sisensis Basics"
   security 0.1
   tribute 600
     threshold 3000
@@ -25575,7 +25602,7 @@ planet Maker
   spaceport `The spaceport on Maker is enormous, but laid out very efficiently. In one sector, a steady stream of passengers, most of them young and dressed somewhat shabbily, are disembarking. They are funneled straight to a labor and immigration center, from which they will be assigned to different factories. Meanwhile, a smaller stream of older, tired-looking but better dressed workers flows in the other direction; people who have finished their terms of service and are boarding ships for other worlds.`
   spaceport `  In the commercial sector of the port, robotic cargo trucks rumble through the streets at frightening speeds, while pedestrians walk from building to building along skyways several stories up.`
   outfitter "Basic Outfits"
-  outfitter "Sinensis Basics"
+  outfitter "Sisensis Basics"
   outfitter "Syndicate Basics"
   security 0.4
   tribute 1700
@@ -25719,7 +25746,7 @@ planet Millrace
   description `  The Syndicate is a fair employer: living conditions here may be squalid, but most workers are earning a living wage and some are able to save up for a new life on a more pleasant planet. The Syndicate trusts there will never be a shortage of new immigrants to replace them.`
   spaceport `The spaceport is ugly. As the population of Millrace has grown, the spaceport has been expanded to support the increase immigration; you can recognize the different sections because in the newer ones, the bare cement walls are lighter and have accumulated less soot and grime. Most of the restaurants are of the greasy spoon variety.`
   outfitter "Basic Outfits"
-  outfitter "Sinensis Basics"
+  outfitter "Sisensis Basics"
   outfitter "Syndicate Basics"
   security 0.2
   tribute 1400
@@ -25801,7 +25828,7 @@ planet "New Argentina"
   description `  Cattle handlers here do their work on horseback, because they believe modern vehicles are more likely to spook the animals.`
   spaceport `The spaceport is on the outskirts of one of New Argentina's largest towns... which has a population of barely ten thousand people. Many of the dock workers are teenagers or barely past their teens, children of ranchers who are not drawn to the solitary sort of life that their parents enjoy. Aside from the church and the hospital, the largest building in town is "The Grange," a function hall with a sign out front advertising square dances and line dances three nights a week.`
   outfitter "Basic Outfits"
-  outfitter "Sinensis Basics"
+  outfitter "Sisensis Basics"
   security 0.05
   tribute 1000
     threshold 3500
@@ -25817,19 +25844,6 @@ planet "New Austria"
     threshold 3000
     fleet "Militia Large" 5
 
-planet "New Boston"
-  attributes "dirt belt" textiles farming
-  landscape land/water2
-  description `New Boston is a completely unremarkable world... except, of course, for the fact that you happen to have been born here. Most of the land is wet and marshy, and the coastal regions are prone to flooding. Some food crops are grown here, but most of the farmers instead plant flax and jute, which grow well in wet soil and are used to make linen and burlap cloth. The textile mills are hot and poorly ventilated, but they offer higher and more reliable income than farming.`
-  spaceport `Some day New Boston may be a prosperous enough planet to afford a better spaceport, but not yet. Many of the concrete landing pads have sunk into the muddy soil over the years since they were poured, and are now tilted and uneven. The market where ship captains buy and sell cargo is a large tent rather than a permanent building, but it is sturdy enough to keep off the rain, and high enough for loads to be brought in and out by trucks and the occasional hovercraft. And, some enterprising local mechanics have set up not only a repair shop and outfitter, but also a shipyard with several small, refurbished ships for sale.`
-  shipyard "Basic Ships"
-  outfitter "Basic Outfits"
-  outfitter "Sinensis Basics"
-  security 0.05
-  tribute 300
-    threshold 2500
-    fleet "Militia Small" 23
-
 planet "New Britain"
   attributes "dirt belt" farming factory urban
   landscape land/city6
@@ -25843,20 +25857,6 @@ planet "New Britain"
   tribute 1300
     threshold 4500
     fleet "Militia Large" 20
-
-planet "New China"
-  attributes "near earth" urban
-  landscape land/city12
-  description `In the very early days of hyperspace travel, most settlers chose to put down roots within a few jumps of Earth, because until more fuel depots were built, colonies farther out would seldom be visited by cargo ships. As a result, a lot of effort was put into terraforming and developing worlds that would have been passed over by most colonists today. New China is one such world, and it is now overpopulated, and poor enough that maintaining the terraforming equipment and climate requires almost a third of the planetary government's tax income.`
-  description `  New China is also home to Sinensis Systems, manufacturer of the Javelin and other crude but effective outfits, popular with marauders, merchants, and militia alike.`
-  spaceport `The "new port" here was built several centuries ago, when the grand but impractical spaceport built by the original settlers had deteriorated to the point where it was no longer usable. This port is much simpler by comparison: just a ring of landing pads of various sizes around a large central building with ten levels of warehouse space accessible by freight elevator.`
-  spaceport `  There are always locals hanging around the port, some of them mere children, who are trying to find a cheap ride off-planet.`
-  outfitter "Common Outfits"
-  outfitter "Sinensis Advanced"
-  security 0.1
-  tribute 1400
-    threshold 4000
-    fleet "Republic Small" 50
 
 planet "New Finding"
   attributes saryd research
@@ -25885,7 +25885,7 @@ planet "New Holland"
   description `  As the population has boomed, and as the farms have been consolidated and become more mechanized, large cities have grown to house factories and workers.`
   spaceport `The spaceport is on the fringes of one of the factory towns. In the distance are row after row of identical brick buildings; in the opposite direction, a safe distance from the city, are the cooling towers of several nuclear power plants. The port itself is laid out for maximum efficiency in loading and unloading cargo regardless of the weather or time of day: a row of hangars, open at one side to ships coming in and departing, and on the other to a road carrying a steady stream of trucks.`
   outfitter "Basic Outfits"
-  outfitter "Sinensis Basics"
+  outfitter "Sisensis Basics"
   security 0.1
   tribute 700
     threshold 3000
@@ -25976,7 +25976,7 @@ planet "New Wales"
   description `New Wales is home to a few mining outposts which extract and refine rare earth minerals and heavy metals. It is dangerous work: the mines are deep underground and prone to noxious gases and cave-ins, and the refineries work with molten radioactive materials and caustic chemicals. Due to the somewhat dim light of the star Algorel, and the cloudiness of the atmosphere, this is not a good world for farming, and the population remains quite small.`
   spaceport `The warehouses at the spaceport are kept under continuous guard due to the high value of the refined metals they contain. There are several missile silos and laser turrets as well; New Wales has survived several pirate attacks in the last decade. Within the spaceport cafeteria, however, the locals are quite friendly and excited to connect with visitors and hear news of the outside world. The cafeteria is cooking lamb stew, and the smell of it pervades the whole building.`
   outfitter "Basic Outfits"
-  outfitter "Sinensis Basics"
+  outfitter "Sisensis Basics"
   security 0.2
   tribute 400
     threshold 3000
@@ -26070,7 +26070,7 @@ planet Oblivion
   description `The atmosphere here is a toxic mix of ammonia, sulfur, and methane. Although breathable by human beings if necessary, the locals use masks to reduce the risk of chronic respiratory problems. Even so, the life expectancy here is short, but that is partly because the two best-paying industries are oil drilling and mining for radioactive elements.`
   spaceport `The spaceport is a long landing strip paved in asphalt, with warehouses on either side of it constructed from stone and mortar. Inside are stacked lead-lined crates of radioactive materials for sale. Unlike many Dirt Belt worlds, you see few curious children watching ships land or playing among the buildings; this is not the sort of world where many people choose to put down roots and build a family.`
   outfitter "Basic Outfits"
-  outfitter "Sinensis Basics"
+  outfitter "Sisensis Basics"
   security 0.05
   tribute 500
     threshold 3000
@@ -26235,7 +26235,7 @@ planet Relic
   spaceport `The spaceport on Relic consists of one low building surrounded by open-air concrete slabs for ships to land on. If rain were more common here, you would worry about your ship rusting, but in this environment the only threat to it is the infrequent sand storms.`
   outfitter "Basic Outfits"
   outfitter "Lovelace Basics"
-  outfitter "Sinensis Basics"
+  outfitter "Sisensis Basics"
   security 0.2
   tribute 700
     threshold 3000
@@ -26264,7 +26264,7 @@ planet Reunion
   shipyard "Megaparsec Basics"
   outfitter "Common Outfits"
   outfitter "Lovelace Basics"
-  outfitter "Sinensis Basics"
+  outfitter "Sisensis Basics"
   outfitter "Syndicate Basics"
   security 0.3
   tribute 2900
@@ -26812,7 +26812,7 @@ planet Thrall
   spaceport `The spaceport consists of a vast asphalt-paved field for landing ships, and some wooden buildings a few stories tall. Most of the materials for export are stored in sheds or stacked under plastic tarps, with a few police officers clustered around them to make sure no ship picks up cargo that has not been paid for. Inside the buildings, two restaurants with different names serve an identical selection of fried foods.`
   outfitter "Basic Outfits"
   outfitter "Lovelace Basics"
-  outfitter "Sinensis Basics"
+  outfitter "Sisensis Basics"
   bribe 0.04
   security 0.5
   tribute 2000
@@ -26865,7 +26865,7 @@ planet Tinker
   shipyard "Syndicate Intermediate"
   outfitter "Common Outfits"
   outfitter "Lovelace Basics"
-  outfitter "Sinensis Basics"
+  outfitter "Sisensis Basics"
   outfitter "Syndicate Basics"
   bribe 0.04
   security 0.4
@@ -26917,7 +26917,7 @@ planet Tundra
   description `  The first settlers came here to drill for the oil trapped deep under the surface, a relic of Tundra's former, more lively days. Instead of refining the oil into plastic, which sells relatively cheap in this region, they have developed an industry in synthetic fabrics and clothing.`
   spaceport `The spaceport village consists of several large domes, which keep out the wind and driving snow; ships enter and exit the largest of the domes through a hatch that closes as soon as they have come through. Every decade or so, enough snow piles up on top of one of the domes that it is in danger of collapsing under its own weight; the locals simply move out of that dome and build another one higher up on the snowpack.`
   outfitter "Basic Outfits"
-  outfitter "Sinensis Basics"
+  outfitter "Sisensis Basics"
   security 0.1
   tribute 400
     threshold 3000
@@ -27267,7 +27267,7 @@ planet Zug
   outfitter "Common Outfits"
   outfitter "Delta V Intermediate"
   outfitter "Kraz Intermediate"
-  outfitter "Sinensis Intermediate"
+  outfitter "Sisensis Intermediate"
   outfitter "Tarazed Intermediate"
   bribe 0.03
   security 0.5
