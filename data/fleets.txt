@@ -2800,29 +2800,6 @@ fleet "Pirates Core Large"
   cargo 1
   personality
     plunders harvests
-  variant 5
-    "Quicksilver (Proton)" 3
-  variant 2
-    "Quicksilver" 3
-  variant 3
-    "Splinter"
-    "Quicksilver (Proton)"
-  variant 3
-    "Splinter (Laser)"
-    "Quicksilver"
-  variant 3
-    "Splinter (Proton)"
-    "Quicksilver"
-  variant 4
-    "Manta (Proton)"
-  variant 2
-    "Manta"
-  variant 2
-    "Splinter" 2
-  variant 1
-    "Splinter (Laser)" 2
-  variant 1
-    "Splinter (Proton)" 2
   variant 2
     "Falcon"
   variant 1
@@ -2835,6 +2812,15 @@ fleet "Pirates Core Large"
     "Firebird (Plasma)"
   variant 1
     "Firebird (Missile)"
+  variant 6
+    "Manta"
+  variant 4
+    "Splinter" 2
+  variant 9
+    "Splinter"
+    "Quicksilver"
+  variant 7
+    "Quicksilver" 3
 
 fleet "Pirates Core Small"
   government "Pirate"
@@ -2844,27 +2830,31 @@ fleet "Pirates Core Small"
     plunders harvests
     confusion 20
   variant 4
-    "Quicksilver (Proton)"
+    "Quicksilver"
   variant 2
-    "Sparrow"
-  variant 3
+    "Quicksilver" 2
+  variant 2
     "Hawk"
   variant 2
     "Hawk (Rocket)"
   variant 2
     "Hawk (Speedy)"
-  variant 4
-    "Fury"
+  variant 6
+    "Berserker"
+  variant 3
+    "Wasp (Gatling)"
   variant 2
-    "Fury (Laser)"
+    "Wasp (Gatling)" 2
   variant 1
-    "Fury (Missile)"
-  variant 1
-    "Headhunter"
-  variant 1
-    "Headhunter (Particle)"
+    "Wasp (Gatling)" 3
   variant 2
-    "Quicksilver" 2
+    "Sparrow"
+  variant 2
+    "Sparrow (Gatling)"
+  variant 1
+    "Sparrow" 2
+  variant 1
+    "Sparrow (Gatling)" 2
 
 
 fleet "Pirates North Large"
@@ -3490,66 +3480,32 @@ fleet "Syndicate Large"
   personality
     heroic
   variant 3
-    "Splinter"
-    "Quicksilver" 3
+    "Protector"
   variant 2
-    "Splinter (Laser)"
+    "Protector"
+    "Quicksilver (Proton)" 2
+  variant 3
+    "Vanguard"
   variant 2
-    "Splinter (Proton)"
-    "Quicksilver" 3
-  variant 1
-    "Splinter" 2
-  variant 1
-    "Splinter"
-    "Splinter (Laser)"
-  variant 1
-    "Splinter"
-    "Splinter (Proton)"
-  variant 1
-    "Splinter" 3
-  variant 1
-    "Splinter"
-    "Splinter (Laser)" 2
-  variant 1
-    "Splinter"
+    "Vanguard"
+    "Quicksilver (Proton)" 2
+  variant 2
     "Splinter (Proton)" 2
+  variant 1
+    "Splinter (Proton)" 3
+  variant 1
+    "Splinter (Proton)"
+    "Quicksilver (Proton)" 3
   variant 2
-    "Manta" 2
+    "Manta (Proton)" 2
   variant 1
     "Manta (Proton)" 2
-  variant 3
-    "Manta"
-    "Quicksilver" 2
+    "Quicksilver (Proton)"
   variant 1
     "Manta (Proton)"
-    "Quicksilver" 2
+    "Quicksilver (Proton)" 2
   variant 2
-    "Quicksilver" 5
-  variant 1
     "Quicksilver (Proton)" 5
-  variant 1
-    "Protector"
-  variant 1
-    "Vanguard"
-  variant 1
-    "Protector (Laser)"
-  variant 1
-    "Protector (Proton)"
-  variant 1
-    "Protector"
-    "Quicksilver" 2
-  variant 1
-    "Protector (Laser)"
-    "Quicksilver (Proton)" 2
-  variant 1
-    "Protector (Proton)"
-    "Quicksilver (Proton)" 2
-  variant 1
-    "Vanguard (Particle)"
-    "Quicksilver" 2
-  variant 1
-    "Vanguard"
-    "Quicksilver (Proton)" 2
 
 fleet "Syndicate Small"
   government "Syndicate"
@@ -3557,22 +3513,20 @@ fleet "Syndicate Small"
   cargo 2
   personality
     heroic
-  variant 3
-    "Quicksilver" 3
-  variant 3
-    "Quicksilver (Proton)" 3
-  variant 1
-    "Splinter"
-    "Quicksilver" 2
-  variant 1
-    "Splinter (Laser)"
+  variant 2
+    "Splinter (Proton)"
   variant 1
     "Splinter (Proton)"
     "Quicksilver (Proton)" 2
-  variant 1
-    "Manta"
+  variant 2
+    "Manta (Proton)"
   variant 1
     "Manta (Proton)"
+    "Wasp (Proton)" 2
+  variant 8
+    "Quicksilver (Proton)" 3
+  variant 6
+    "Wasp (Proton)" 5
 
 
 

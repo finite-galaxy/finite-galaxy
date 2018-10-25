@@ -23,6 +23,7 @@ shipyard "Syndicate Variants"
   "Vanguard"
   "Vanguard (Particle)"
   "Wasp"
+  "Wasp (Gatling)"
   "Wasp (Miner)"
   "Wasp (Proton)"
 
@@ -274,9 +275,9 @@ ship "Protector"
     "X3700 Ion Thruster"
     "X3200 Ion Steering"
 
-    "Torpedo" 60
-    "Torpedo Launcher" 2
-    "4X Blaster Turret" 6
+    "Meteor Missile" 60
+    "Meteor Missile Launcher" 2
+    "6X Blaster Turret" 6
 
     "D67-TM Shield Generator"
     "Fusion Reactor"
@@ -284,17 +285,17 @@ ship "Protector"
     "Liquid Nitrogen Cooler"
     "Fuel Barrel" 40
     "Hyperdrive"
-    "Small Radar Jammer" 3
+    "Large Radar Jammer"
   engine -11 125
   engine 11 125
-  gun -15 -100 "Torpedo Launcher"
-  gun 15 -100 "Torpedo Launcher"
-  turret -54 -54 "4X Blaster Turret"
-  turret 54 -54 "4X Blaster Turret"
-  turret -73 0 "4X Blaster Turret"
-  turret 73 0 "4X Blaster Turret"
-  turret -54 54 "4X Blaster Turret"
-  turret 54 54 "4X Blaster Turret"
+  gun -15 -100 "Meteor Missile Launcher"
+  gun 15 -100 "Meteor Missile Launcher"
+  turret -54 -54 "6X Blaster Turret"
+  turret 54 -54 "6X Blaster Turret"
+  turret -73 0 "6X Blaster Turret"
+  turret 73 0 "6X Blaster Turret"
+  turret -54 54 "6X Blaster Turret"
+  turret 54 54 "6X Blaster Turret"
   leak "leak" 60 50
   leak "flame" 20 80
   explode "tiny explosion" 18
@@ -354,7 +355,7 @@ ship "Star Barge"
     "drag" 2.4
     "heat dissipation" .8
     "cargo space" 40
-    "outfit space" 160
+    "outfit space" 170
     "engine capacity" 40
     "weapon capacity" 30
     weapon
@@ -559,7 +560,7 @@ ship "Star Queen"
     "cost" 5500000
     "shields" 4100
     "hull" 2200
-    "required crew" 43
+    "required crew" 34
     "bunks" 112
     "mass" 230
     "drag" 5.5
@@ -713,7 +714,7 @@ ship "Wasp"
     "cargo space" 10
     "outfit space" 190
     "engine capacity" 60
-    "weapon capacity" 28
+    "weapon capacity" 30
     weapon
       "blast radius" 20
       "shield damage" 200
@@ -741,6 +742,22 @@ ship "Wasp"
   description "The Wasp is a medium-strength interceptor, designed by Syndicated Shipyards to serve as an escort for cargo vessels. Like most Syndicate ships, it is not particularly pretty, but it at least serves the purpose it was made for."
 
 
+ship "Wasp" "Wasp (Gatling)"
+  outfits
+    "X2700 Ion Thruster"
+    "X2200 Ion Steering"
+
+    "Gatling Round" 9000
+    "Gatling Bullet Boxes" 3
+    "Gatling Gun" 3
+
+    "D14-RN Shield Generator"
+    "nGVF-BB Fuel Cell"
+    "LP036a Battery Pack"
+    "Fuel Barrel" 40
+    "Hyperdrive"
+
+
 ship "Wasp" "Wasp (Miner)"
   outfits
     "X2700 Ion Thruster"
@@ -766,6 +783,9 @@ ship "Wasp" "Wasp (Proton)"
     "D14-RN Shield Generator"
     "nGVF-BB Fuel Cell"
     "LP036a Battery Pack"
+    "Cargo Scanner" 3
     "Fuel Barrel" 40
     "Hyperdrive"
+    "Outfit Scanner"
+
 

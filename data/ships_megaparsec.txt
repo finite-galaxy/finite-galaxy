@@ -8,7 +8,6 @@ shipyard "Megaparsec Variants"
   "Quicksilver"
   "Quicksilver (Mark II)"
   "Quicksilver (Proton)"
-  "Quicksilver (Scanner)"
   "Splinter"
   "Splinter (Laser)"
   "Splinter (Mark II)"
@@ -182,8 +181,10 @@ ship "Manta" "Manta (Proton)"
     "RT-I Radiothermal"
     "LP144a Battery Pack"
     "Water Coolant System"
+    "Cargo Scanner" 3
     "Fuel Barrel" 40
     "Hyperdrive"
+    "Outfit Scanner"
 
 
 
@@ -260,22 +261,7 @@ ship "Quicksilver" "Quicksilver (Proton)"
     "RT-I Radiothermal"
     "LP036a Battery Pack"
     "Water Coolant System"
-    "Fuel Barrel" 40
-    "Hyperdrive"
-
-
-ship "Quicksilver" "Quicksilver (Scanner)"
-  outfits
-    "X3700 Ion Thruster"
-    "X3200 Ion Steering"
-
-    "Particle Cannon" 2
-
-    "D23-QP Shield Generator"
-    "RT-I Radiothermal"
-    "LP036a Battery Pack"
-    "Water Coolant System"
-    "Cargo Scanner"
+    "Cargo Scanner" 3
     "Fuel Barrel" 40
     "Hyperdrive"
     "Outfit Scanner"
@@ -389,8 +375,10 @@ ship "Splinter" "Splinter (Proton)"
     "RT-I Radiothermal"
     "LP144a Battery Pack"
     "Water Coolant System"
+    "Cargo Scanner" 3
     "Fuel Barrel" 60
     "Hyperdrive"
+    "Outfit Scanner"
   turret "4X Blaster Turret"
   turret "Heavy Anti-Missile Turret"
   turret "4X Blaster Turret"
