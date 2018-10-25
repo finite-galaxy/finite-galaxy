@@ -10,6 +10,7 @@
   "World-Ship A":         3018 = 1785 +  999 +  234 ; (  814 / 1472 ) 
 # Cruisers have a total mass of at least 2000
   "Kar Ik Vot 349":       2491 = 1350 + 1084 +   57 ; (    0 /    0 )
+  "Bactrian":             2280 =  940 +  810 +  530 ; (   70 /  245 )
   "Model 512":            2251 = 1150 +  994 +  107 ; (    0 /    0 )
   "Deep River":           2143 =  750 +  253 + 1140 ; (   13 /   22 )
   "Archon":               2000 = 1200 +  800 +    0 ; (    1 /    1 )
@@ -20,9 +21,12 @@
   "Model 256":            1905 =  970 +  857 +   78 ; (    0 /    0 )
   "Hurricane":            1865 =  770 +  997 +   98 ; (   76 /  117 )
   "Punisher":             1817 =  780 +  933 +   94 ; (   96 /  145 )
+  "Kestrel":              1720 =  740 +  860 +  120 ; (   64 /  128 )
   "Raider":               1672 =  720 +  777 +  175 ; (  145 /  245 )
   "Hulk":                 1671 =  670 +  560 +  541 ; (    8 /   14 )
   "Shield Beetle":        1641 =  650 +  864 +  127 ; (   47 /   95 )
+  "Behemoth":             1600 =  540 +  570 +  490 ; (   12 /   30 )
+  "Dreadnought":          1580 =  630 +  850 +  100 ; (   84 /  147 )
   "Model 128":            1549 =  780 +  716 +   53 ; (    0 /    0 )
   "Sojourner":            1532 =  640 +  632 +  260 ; (   17 /   84 )
   "Maboro":               1520 =  940 +  610 +   70 ; (   54 /   87 )
@@ -32,18 +36,22 @@
   "Arfecta":              1474 =  670 +  740 +   64 ; (   36 /   46 )
   "Twilight":             1446 =  610 +  712 +  124 ; (   44 /   75 )
   "Derecho":              1432 =  540 +  836 +   56 ; (   53 /   82 )
-  "Marauder Leviathan":   1410 =  640 +  730 +   40 ; (   48 /   69 )
+  "Marauder Leviathan":   1410 =  640 +  730 +   40 ; (   48 /   80 )
   "Tek Far 78 - Osk":     1364 =  690 +  631 +   43 ; (    0 /    0 )
   "Hauler III":           1280 =  470 +  390 +  420 ; (    4 /   12 )
   "Wardragon":            1260 =  360 +  850 +   50 ; (  160 /  180 )
-  "Marauder Falcon":      1260 =  560 +  680 +   20 ; (   43 /   80 )
+  "Marauder Falcon":      1260 =  560 +  680 +   20 ; (   43 /   69 )
+  "Leviathan":            1250 =  480 +  670 +  100 ; (   50 /   75 )
+  "Bastion":              1210 =  580 +  520 +  110 ; (   17 /   40 )
   "Interdictor":          1207 =  520 +  608 +   79 ; (   42 /   70 )
   "Model 64":             1201 =  580 +  587 +   34 ; (    0 /    0 )
+  "Falcon":               1190 =  510 +  600 +   80 ; (   32 /   64 )
   "Spire":                1187 =  570 +  553 +   64 ; (   19 /  197 )
   "Tek Far 71 - Lek":     1179 =  610 +  533 +   36 ; (    0 /    0 )
   "Skein":                1160 =  470 +  600 +   90 ; (   10 /   18 )
   "Protector":            1160 =  500 +  610 +   50 ; (   30 /   69 )
   "Vanguard":             1150 =  500 +  600 +   50 ; (   23 /   45 )
+  "Mule":                 1100 =  320 +  510 +  270 ; (    6 /   43 )
   "Spindle":              1094 =  340 +  474 +  280 ; (    4 /   14 )
   "Wagon":                1079 =  380 +  389 +  310 ; (    3 /   10 )
   "Tek Far 109":          1072 =  540 +  501 +   31 ; (    0 /    0 )
@@ -61,45 +69,64 @@
   "Neutralizer":           853 =  270 +  447 +   36 ; (   17 /   28 )
   "Strong Wind":           846 =  260 +  528 +   68 ; (   17 /   39 )
   "Marauder Splinter":     825 =  275 +  510 +   40 ; (   14 /   22 )
+  "Osprey":                820 =  270 +  510 +   40 ; (   16 /   32 )
   "Winter Gale":           794 =  240 +  526 +   28 ; (   14 /   23 )
   "Splinter":              790 =  250 +  460 +   80 ; (    7 /   21 )
   "Transport":             783 =  280 +  313 +  190 ; (    2 /    5 )
   "Hauler I":              780 =  250 +  390 +  140 ; (    4 /   12 )
+  "Firebird":              780 =  290 +  440 +   50 ; (    7 /   22 )
   "Thistle":               776 =  270 +  377 +   29 ; (    7 /   52 )
+  "Argosy":                760 =  330 +  310 +  120 ; (    4 /   14 )
   "Nest":                  740 =  250 +  460 +   30 ; (    6 /   14 )
   "Lampyrid":              730 =  240 +  330 +  160 ; (    5 /   14 )
   "Visitor":               720 =  270 +  352 +   98 ; (    5 /   29 )
   "Star Freighter":        710 =  240 +  310 +  160 ; (    2 /    7 )
+  "Blackbird":             700 =  220 +  420 +   60 ; (    3 /   28 )
   "Star Queen":            700 =  230 +  410 +   60 ; (   34 /  112 )
   "Shadow":                690 =  270 +  384 +   36 ; (    6 /   15 )
   "Marauder Argosy":       690 =  250 +  380 +   60 ; (    5 /   12 )
   "Model 16":              673 =  250 +  416 +    7 ; (    0 /    0 )
+  "Lance":                 660 =  150 +  470 +   40 ; (    8 /   32 )
   "Marauder Manta":        635 =  195 +  430 +   10 ; (    7 /   11 )
   "Lightning Bug":         628 =  190 +  365 +   73 ; (    4 /   10 )
+  "Aerie":                 620 =  130 +  440 +   50 ; (   10 /   28 )
   "Autumn Leaf":           616 =  130 +  441 +   45 ; (    8 /   16 )
   "Manta":                 580 =  170 +  390 +   20 ; (    6 /   10 )
   "Pond Strider":          575 =  132 +  372 +   71 ; (    9 /   18 )
   "Mars":                  555 =  150 +  380 +   25 ; (    7 /   12 )
   "Summer Leaf":           535 =  110 +  384 +   41 ; (    6 /   15 )
+  "Clipper":               530 =  150 +  310 +   70 ; (    3 /    9 )
   "Marauder Raven":        520 =  145 +  375 +   10 ; (    7 /   14 )
   "Briar":                 502 =  180 +  301 +   21 ; (    3 /   25 )
 # Interceptors have a total mass under 500, but are capable of independent space travel
   "Marauder Bounder":      495 =  145 +  340 +   10 ; (    2 /   18 )
-  "Bounder":               480 =  130 +  310 +   40 ; (    1 /   17 )
+  "Raven":                 490 =  130 +  330 +   30 ; (    4 /    8 )
+  "Bounder":               480 =  130 +  310 +   40 ; (    2 /   17 )
   "Mercury":               470 =  180 +  280 +   10 ; (    7 /   14 )
+  "Scout":                 465 =  110 +  300 +   55 ; (    2 /   12 )
+  "Headhunter":            450 =  120 +  290 +   40 ; (    2 /    4 )
   "Marauder Quicksilver":  450 =  140 +  305 +    5 ; (    4 /    7 )
   "Quicksilver":           420 =  120 +  290 +   10 ; (    3 /    6 )
   "Marauder Arrow":        400 =  145 +  250 +    5 ; (    2 /    5 )
+  "Hawk":                  400 =  150 +  230 +   20 ; (    2 /    4 )
   "Aphid":                 368 =  100 +  217 +   51 ; (    1 /    5 )
+  "Arrow":                 360 =  130 +  220 +   10 ; (    1 /    5 )
+  "Berserker":             360 =  110 +  240 +   10 ; (    1 /    2 )
   "Model 8":               359 =  110 +  220 +   29 ; (    0 /    0 )
   "Courier":               350 =  100 +  172 +   78 ; (    1 /    1 )
   "Runabout":              348 =  104 +  204 +   42 ; (    2 /   13 )
+  "Heavy Shuttle":         310 =  110 +  170 +   30 ; (    1 /    8 )
+  "Fury":                  305 =   70 +  220 +   15 ; (    1 /    3 )
   "Cool Breeze":           288 =   50 +  224 +   14 ; (    1 /    3 )
   "Star Barge":            280 =   70 +  170 +   40 ; (    1 /    3 )
   "Wasp":                  260 =   60 +  190 +   10 ; (    1 /    2 )
+  "Light Shuttle":         250 =   70 +  160 +   20 ; (    1 /    6 )
   "Thorn":                 233 =   80 +  141 +   12 ; (    1 /    7 )
   "Gascraft":              232 =   80 +  144 +    8 ; (    1 /    1 )
+  "Flivver":               225 =   40 +  180 +    5 ; (    1 /    3 )
+  "Sparrow":               220 =   50 +  160 +   10 ; (    1 /    2 )
   "Earth Shaper":          156 =   40 +   89 +   27 ; (    0 /    0 )
+# Bombers have to be carried in bomber bays
 # Fighters have to be carried in fighter bays
   "Finch":                 150 =   40 +  110 +    0 ; (    1 /    1 )
   "Boxwing":               145 =   40 +   45 +   60 ; (    1 /    1 )
@@ -109,41 +136,10 @@
   "Violin Spider":         125 =   31 +   94 +    0 ; (    1 /    1 )
   "Dagger":                110 =   20 +   90 +    0 ; (    1 /    1 )
   "Barb":                  110 =   25 +   85 +    0 ; (    1 /    2 )
-# Drones have to be carried in drone bays
   "Flycatcher":            109 =   30 +   79 +    0 ; (    0 /    0 )
+# Drones have to be carried in drone bays
   "Far Lek 14":             92 =   26 +   66 +    0 ; (    0 /    0 )
   "Flea":                   81 =   21 +   60 +    0 ; (    0 /    0 )
   "Combat Drone":           78 =   20 +   58 +    0 ; (    0 /    0 )
   "Surveillance Drone":     75 =   15 +   60 +    0 ; (    0 /    0 )
-
-
-  "Behemoth":
-  "Berserker":
-  "Firebird":
-  "Heavy Shuttle":
-  "Leviathan":
-  "Light Shuttle":
-
-  "Aerie":
-  "Arrow":
-  "Bactrian":
-  "Flivver":
-  "Headhunter":
-  "Lance":
-  "Mule":
-  "Scout":
-
-  "Argosy":
-  "Bastion":
-  "Clipper":
-  "Dreadnought":
-  "Fury":
-
-  "Blackbird":
-  "Falcon":
-  "Hawk":
-  "Kestrel":
-  "Osprey":
-  "Raven":
-  "Sparrow":
 

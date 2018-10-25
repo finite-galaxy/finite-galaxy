@@ -59,6 +59,8 @@ See `changelog.txt`, `ship_overview.txt`, and https://github.com/finite-galaxy/f
 * Add "Tribute" tab in player info panel
 * Separate fleet overview column in outfitter and shipyard from ship info display
 * Increase fleet overview column width from four to five ship icons
+* Sort outfits and ships by size or mass instead of alphabetically
+* Add "Manufacturer" to ships
 * Make hyperjump fuel proportional to ship's total mass
 * Make ship explosion 'weapon' proportional to mass (base, empty, or total mass)
 * Rename "New {Country}" planets to less culturally biased names

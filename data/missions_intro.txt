@@ -336,7 +336,7 @@ mission "Intro [1 Interceptor]"
       `The captain of the Horn of Plenty hands you <payment> and thanks you for your escort services. From the expression on his face, you'd guess that he's feeling lucky to still be alive after entrusting the safety of his fleet to a rookie pilot like yourself.`
       `  After he is gone, James turns to you and says, "Not too bad for your first escort mission. If you've still got a hankering for some dangerous missions, come and find me in the spaceport before you leave." He picks up his suitcase and heads outside.`
       ``
-      `  (As before, click the "Spaceport" button to continue this mission. The next mission will involve carrying cargo, so it will only show up if you have all 15 tons of space free.)`
+      `  (As before, click the "Spaceport" button to continue this mission. The next mission will involve carrying cargo, so it will only show up if you have all 10 tons of space free.)`
 
 
 
@@ -346,7 +346,7 @@ mission "Intro [2 Interceptor]"
   description "Deliver <commodity> to <destination>, while avoiding pirate attacks."
   blocked `When you meet up with James in the spaceport, he says, "Hi there, <first>! I found you another mission, but it looks like you'll need <capacity> in order to take it on. So, you'll either have to cancel another mission, or come back here later to continue this one. Sorry!"`
   passengers 1
-  cargo gemstones 15
+  cargo gemstones 10
   source "Gemstone"
   destination "Ingot"
   to offer
