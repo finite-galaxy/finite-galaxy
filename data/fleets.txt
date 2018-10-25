@@ -23,6 +23,7 @@
 #   "Hai Small"
 # Heliarch:
 #   "Heliarch"
+#   "Heliarch Convoy"
 # Independent:
 #   "Independent Large"
 #   "Independent Small"
@@ -740,6 +741,21 @@ fleet "Heliarch"
     "Punisher (Missile)"
   variant 1
     "Punisher (Scrappy)"
+
+
+fleet "Heliarch Convoy"
+  government "Heliarch"
+  names "heliarch"
+  names "saryd"
+  cargo 3
+  personality
+    timid opportunistic
+  variant 1
+    "Hulk" 3
+    "Sojourner" 3
+    "Spire" 3
+    "Interdictor" 3
+    "Neutralizer" 6
 
 
 
