@@ -410,14 +410,15 @@ fleet "Deep Security Home"
     heroic
   variant 1
     "Bactrian"
-    "Mule" 2
-    "Aerie" 3
-    "Lance" 4
+    "Mule (Heavy)" 2
+    "Lance" 3
+    "Aerie" 4
     "Headhunter" 5
     "Scout" 6
     "Arrow" 7
     "Flivver" 8
-    "Dagger" 11
+    "Barb" 9
+    "Dagger" 13
 
 
 fleet "Deep Security Large"
@@ -427,6 +428,51 @@ fleet "Deep Security Large"
   cargo 0
   personality
     heroic
+  variant 4
+    "Mule (Heavy)"
+    "Dagger"
+  variant 2
+    "Mule (Heavy)"
+    "Dagger"
+    "Headhunter"
+  variant 2
+    "Mule (Heavy)"
+    "Dagger"
+    "Headhunter" 2
+  variant 3
+    "Lance"
+  variant 3
+    "Lance (Torpedo)"
+  variant 1
+    "Lance" 2
+  variant 1
+    "Lance"
+    "Lance (Torpedo)"
+  variant 1
+    "Lance (Torpedo)" 2
+  variant 2
+    "Lance"
+    "Aerie"
+    "Dagger" 2
+  variant 2
+    "Lance (Torpedo)"
+    "Aerie"
+    "Dagger" 2
+  variant 1
+    "Lance"
+    "Headhunter"
+  variant 1
+    "Lance"
+    "Headhunter" 2
+  variant 1
+    "Lance (Torpedo)"
+    "Headhunter"
+  variant 1
+    "Lance (Torpedo)"
+    "Headhunter" 2
+  variant 3
+    "Aerie" 2
+    "Dagger" 4
   variant 6
     "Aerie"
     "Dagger" 2
@@ -439,19 +485,6 @@ fleet "Deep Security Large"
     "Aerie"
     "Dagger" 2
     "Headhunter" 3
-  variant 3
-    "Aerie" 2
-    "Dagger" 4
-  variant 6
-    "Lance"
-  variant 2
-    "Lance"
-    "Headhunter"
-  variant 2
-    "Lance"
-    "Headhunter" 2
-  variant 2
-    "Lance" 2
 
 fleet "Deep Security Small"
   government "Deep Security"
@@ -461,8 +494,12 @@ fleet "Deep Security Small"
   personality
     heroic
   variant 1
+    "Lance"
+  variant 1
     "Aerie"
     "Dagger" 2
+  variant 1
+    "Headhunter" 
   variant 1
     "Headhunter" 2
   variant 1
@@ -474,6 +511,7 @@ fleet "Deep Security Small"
 fleet "Free Worlds Home"
   government "Free Worlds"
   names "free worlds capital"
+  fighters "free worlds fighter"
   cargo 1
   personality
     heroic disables frugal opportunistic
@@ -1315,6 +1353,8 @@ fleet "Merchants Core Large"
     "Bulk Freighter (Proton)"
     "Quicksilver" 1
     "Splinter (Proton)" 1
+  variant 3
+    "Star Queen"
   variant 10
     "Star Freighter" 4
     "Quicksilver" 2
@@ -1354,12 +1394,6 @@ fleet "Merchants Core Large"
   variant 20
     "Bounder"
     "Quicksilver" 2
-  variant 1
-    "Bactrian"
-    "Dagger" 3
-  variant 1
-    "Bactrian"
-    "Combat Fighter" 3
   variant 5
     "Arrow"
     "Wasp (Proton)" 2
@@ -1426,7 +1460,7 @@ fleet "Merchants Core Small"
   variant 1
     "Flivver"
   variant 1
-    "Flivver (Racing)"
+    "Flivver"
 
 
 fleet "Merchants Deep Large"
@@ -1450,27 +1484,27 @@ fleet "Merchants Deep Large"
     "Aerie" 2
     "Dagger" 4
   variant 8
-    "Bactrian"
+    "Mule" 3
     "Dagger" 3
   variant 2
-    "Bactrian"
+    "Mule" 3
     "Dagger" 3
     "Raven"
     "Aerie"
     "Dagger" 2
   variant 2
-    "Bactrian"
+    "Mule" 3
     "Dagger" 3
     "Raven (Heavy)"
     "Aerie"
     "Dagger" 2
   variant 5
-    "Bactrian"
+    "Mule" 3
     "Dagger" 3
     "Mule" 2
     "Dagger" 2
   variant 2
-    "Bactrian"
+    "Mule" 3
     "Dagger" 3
     "Mule (Heavy)" 2
     "Dagger" 2
@@ -1513,10 +1547,14 @@ fleet "Merchants Deep Small"
     "Raven (Heavy)"
   variant 3
     "Headhunter"
-  variant 3
+  variant 5
     "Flivver"
-  variant 2
-    "Flivver (Racing)"
+  variant 5
+    "Scout"
+  variant 5
+    "Scout (Speedy)"
+  variant 5
+    "Arrow"
 
 
 fleet "Merchants Hai Large"
@@ -1604,12 +1642,6 @@ fleet "Merchants Hai Large"
     "Sparrow" 2
     "Firebird (Plasma)" 1
   variant 2
-    "Bactrian (Hai Weapons)"
-    "Dagger" 3
-  variant 2
-    "Bactrian (Hai Engines)"
-    "Combat Fighter" 3
-  variant 2
     "Arrow (Hai)"
   variant 1
     "Star Queen (Hai)"
@@ -1693,10 +1725,9 @@ fleet "Merchants Hai Small"
     "Star Freighter" 3
     "Sparrow" 1
   variant 3
-    "Mule (Hai Engines)"
-    "Dagger"
+    "Mule (Hai)"
   variant 3
-    "Mule (Hai Weapons)"
+    "Mule (Hai)"
     "Dagger"
   variant 2
     "Bounder"
@@ -1706,6 +1737,10 @@ fleet "Merchants Hai Small"
     "Flivver"
   variant 2
     "Flivver (Hai)"
+  variant 3
+    "Scout"
+  variant 2
+    "Scout (Hai)"
   variant 4
     "Hauler II (Hai)"
   variant 3
@@ -1824,12 +1859,6 @@ fleet "Merchants North Large"
     "Sparrow" 2
     "Firebird" 1
   variant 2
-    "Bactrian"
-    "Dagger" 3
-  variant 2
-    "Bactrian"
-    "Combat Fighter" 3
-  variant 2
     "Arrow"
   variant 1
     "Star Queen"
@@ -1912,7 +1941,7 @@ fleet "Merchants North Small"
   variant 3
     "Flivver"
   variant 2
-    "Flivver (Racing)"
+    "Flivver"
   variant 4
     "Hauler II"
   variant 3
@@ -1963,11 +1992,11 @@ fleet "Merchants Paradise"
   variant 10
     "Flivver" 3
   variant 20
-    "Flivver (Racing)"
+    "Flivver"
   variant 2
-    "Flivver (Racing)" 3
+    "Flivver" 3
   variant 2
-    "Flivver (Racing)" 6
+    "Flivver" 6
   variant 3
     "Blackbird"
     "Sparrow" 2
@@ -2047,9 +2076,6 @@ fleet "Merchants South Large"
   variant 10
     "Blackbird"
     "Sparrow" 2
-  variant 2
-    "Bactrian"
-    "Dagger" 3
   variant 12
     "Hauler III"
     "Hauler II"
@@ -2142,8 +2168,6 @@ fleet "Miners Deep"
   personality
     confusion 20
     timid frugal mining harvests
-  variant 2
-    "Flivver (Miner)"
   variant 1
     "Scout (Miner)"
 
@@ -2182,7 +2206,7 @@ fleet "Militia Home"
     heroic frugal
     confusion 20
   variant 1
-    "Kestrel"
+    "Kestrel (More Shields)"
     "Falcon" 2
     "Osprey" 3
     "Blackbird" 4
@@ -2930,9 +2954,6 @@ fleet "Pirates North Large"
     "Berserker" 2
   variant 2
     "Berserker (Afterburner)" 2
-  variant 1
-    "Bactrian"
-    "Dagger" 3
 
 fleet "Pirates North Small"
   government "Pirate"
@@ -2941,32 +2962,22 @@ fleet "Pirates North Small"
   personality
     plunders harvests
     confusion 20
-  variant 5
-    "Sparrow"
-  variant 3
-    "Fury"
-  variant 1
-    "Fury (Missile)"
-  variant 1
-    "Fury (Laser)"
   variant 2
-    "Berserker"
-  variant 2
-    "Berserker (Afterburner)"
-  variant 2
-    "Hawk"
-  variant 1
-    "Hawk (Rocket)"
-  variant 1
-    "Hawk (Speedy)"
-  variant 3
     "Headhunter"
+  variant 2
+    "Headhunter (Afterburner)"
   variant 2
     "Headhunter (Particle)"
   variant 2
-    "Raven (Afterburner)"
-  variant 1
-    "Raven (Heavy)"
+    "Scout"
+  variant 2
+    "Scout (Afterburner)"
+  variant 2
+    "Scout (Javelin)"
+  variant 4
+    "Berserker"
+  variant 4
+    "Berserker (Afterburner)"
 
 
 fleet "Pirates South Large"

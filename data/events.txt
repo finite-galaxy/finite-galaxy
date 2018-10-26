@@ -539,6 +539,7 @@ event "southern carriers 2"
       "Finch" 2
 
   fleet "Pirates South Small"
+    fighters "free worlds fighters"
     add variant 1
       "Nest"
       "Finch" 2
@@ -584,12 +585,15 @@ event "southern carriers 3"
       "Finch" 4
 
   fleet "Pirates South Large"
+    fighters "free worlds fighters"
     add variant 1
       "Nest" 2
       "Finch" 4
 
 
 event "southern carriers 4"
+  shipyard "Lionheart Advanced"
+    "Barb"
   shipyard "Southbound Advanced"
     "Sparrow"
     "Finch"
@@ -624,6 +628,7 @@ event "southern carriers 4"
       "Finch" 4
 
   fleet "Pirates South Large"
+    fighters "free worlds fighters"
     add variant 1
       "Roost"
       "Finch" 4
@@ -1539,10 +1544,14 @@ event "deep sky tech available"
     "Catalytic Ramscoop"
     "Typhoon Storage Tube"
     "Typhoon Torpedo"
-  shipyard "Lionheart Advanced"
-    "Lance"
-  shipyard "Lionheart Intermediate"
-    "Lance"
+  fleet "Deep Security Large"
+    add variant 2
+      "Lance (Electron)"
+    add variant 1
+      "Lance (Electron)" 2
+    add variant 1
+      "Lance (Electron)"
+      "Lance"
 
 
 

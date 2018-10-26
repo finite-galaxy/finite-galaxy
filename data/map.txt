@@ -24074,6 +24074,7 @@ planet Asgard
   description `  This is also the home of Deep Sky, a manufacturing firm that produces a wide variety of expensive and useful starship equipment.`
   spaceport `As with many of the worlds here in the Deep, walking around this spaceport feels like making a visit to the future. Everything is immaculately clean. The port is a single building reminiscent of a sand castle or termite mound: a jumble of spires, each a slightly different shape, all piled on top of each other. Docking bays open on various sides of the spires in a haphazard arrangement. It feels like this building is an organic thing, rather than the work of human hands.`
   spaceport `  The locals hurry by, seemingly oblivious to your presence; the only people who meet your gaze are your fellow wide-eyed visitors.`
+  shipyard "Fly Deep Intermediate"
   shipyard "Lionheart Intermediate"
   outfitter "Common Outfits"
   outfitter "Deep Sky Advanced"
@@ -24896,7 +24897,7 @@ planet Follower
   description `  As one of the few planets still actively engaged in terraforming, Follower has been the location of several experiments with new technology, trying to leapfrog the centuries-slow process that other worlds have gone through. Unfortunately most of these experiments have failed, sometimes spectacularly.`
   spaceport `The spaceport is a single skyscraper, fifty floors tall and as wide as it is high, with the floors twisting around each other in a helical patterns so that on each level, the landing bays are approached from a slightly different angle. The whole structure is built of steel and gleaming glass. Inside, the soaring ceilings give you more of a sense of opulence than of comfort.`
   shipyard "Betelgeuse Intermediate"
-  shipyard "Lionheart Basics"
+  shipyard "Fly Deep Basics"
   outfitter "Common Outfits"
   outfitter "Deep Sky Basics"
   outfitter "Lovelace Basics"
@@ -24984,7 +24985,7 @@ planet Geminus
   spaceport `Like everything else on Geminus, the spaceport is not terribly pretty, but is functional and efficient. Each of the wide hallways is marked out like a road, with space in the center for electric carts carrying cargo, while pedestrians are relegated to the edges.`
   spaceport `  The hub of the spaceport is a food court with a ring of shops in the center and seating on the outside, where you can look out of plate glass windows at the lava fields and caldera outside. By night, you can see the volcanic glow all around the horizon.`
   shipyard "Betelgeuse Basics"
-  shipyard "Lionheart Basics"
+  shipyard "Fly Deep Basics"
   shipyard "Navy Advanced"
   outfitter "Common Outfits"
   outfitter "Lovelace Intermediate"
@@ -25179,6 +25180,7 @@ planet Haze
   spaceport `The spaceport is constructed purely for efficiency and functionality. It is a long building, stretching in a straight line across more than a kilometer. Through the center, on tracks elevated at various levels, run monorail trams for carrying passengers and cargo. Along the sides of the building are docking bays alternating with storage rooms. The wide corridors are packed both with people and with robotic freight carts.`
   spaceport `  As the planet's economy grows and the spaceport becomes too cramped, the port authority simply clears more land and extends the building, the tramways, and the docks out farther along the same line.`
   shipyard "Lionheart Basics"
+  shipyard "Fly Deep Basics"
   outfitter "Basic Outfits"
   outfitter "Deep Sky Intermediate"
   security 0.6
@@ -25721,7 +25723,9 @@ planet Midgard
   landscape land/city5
   description `Midgard is a world with as much geographic diversity as Earth itself: mountains, tundra, desert, oceans, marshes, plains. It was the second world in the Deep to be settled, seven centuries ago. It is now home to dozens of major metropolitan areas and a population of over four billion. Although a select few live outside the cities and work in farming or ranching, the vast majority of people here have jobs in manufacturing.`
   description `  Food, fashion, and entertainment here all strike you as out of pace with broader galactic culture. The deep independent history of the planet makes it less likely to simply follow the latest Earth trends as the more recent colonies do.`
+  description `  The planet is also home to Fly Deep, a relatively new shipyard, specializing in fast interceptors.`
   spaceport `The spaceport is located in the center of the city of New Reykjavik, a bustling metropolis which is also Midgard's center of government. The port was built five hundred years ago, and its architecture is much more conservative than other ports in the Deep: instead of domes and rounded, wavy surfaces, it is a collection of tall, square granite towers, connected by bridges at various levels. Most of the hotels and restaurants are in a central tower, slightly higher than the others. There is no central marketplace; instead, you can just buy or sell cargo from a computer terminal and a robotic forklift will arrive at your docking bay to carry it.`
+  shipyard "Fly Deep Advanced"
   shipyard "Lionheart Intermediate"
   outfitter "Common Outfits"
   outfitter "Deep Sky Intermediate"
@@ -26967,8 +26971,9 @@ planet Valhalla
   attributes deep farming fishing urban factory
   landscape land/mfield3
   description `Valhalla was the first world to be settled in this region of space, which is known as the Deep. It is rich in natural resources, but all its vast farms and fisheries are insufficient to feed its population of nearly five billion.`
-  description `  The shipyards of Lionheart Industries are located here. Centuries ago, warships built here turned the tide of the Alpha War, and today the ships designed and built in the Deep continue to be some of the most technologically advanced ships in human space - and the most expensive.`
+  description `  The shipyards of Lionheart Industries are located here. Centuries ago, warships built here turned the tide of the Alpha War, and today the ships designed and built in the Deep continue to be some of the most technologically advanced ships in human space - and the most expensive. Lionheart actually consists of two different branches, one producing powerful multi-purpose ships such as the Mule, the other offering a wide range of lightweight ships, both for civilian and military purposes.`
   spaceport `Surrounding the spaceport is a metropolis of skyscrapers and factories that spreads all the way to the horizon in every direction. The spaceport itself is an imposing building, composed of three towers rising over a hundred stories into the air and connected at various levels by bridges. The docking bays are on the higher levels, with warehouse space lower down and loading platforms for trucks at ground level. Massive cargo elevators run up and down in the center of each building, and the hallways are all wide enough to allow small robotic carts and forklifts in addition to foot traffic.`
+  shipyard "Fly Deep Intermediate"
   shipyard "Lionheart Advanced"
   outfitter "Common Outfits"
   outfitter "Deep Sky Intermediate"
@@ -27180,7 +27185,7 @@ planet Wayfarer
   attributes south factory
   landscape land/nasa1
   description `Wayfarer was initially settled by a team of scientists and diplomats seeking to build a relationship with the Quarg worlds to the galactic southeast of here. Partly through the aid of the Quarg and partly through a desire to emulate them, it has grown into a very technologically advanced world.`
-  description `  Tarazed corporation, a maker of alien-inspired ships and outfits, is one of the largest industries on Wayfarer, and they draw raw materials from throughout this region of space.`
+  description `  Tarazed Corporation, a maker of alien-inspired ships and outfits, is one of the largest industries on Wayfarer, and they draw raw materials from throughout this region of space.`
   spaceport `The spaceport is clearly the artifact of an architect who was as familiar with alien architecture as with human. Instead of square angles it has many curved walls and domes. The landing pads jut out from the building at various heights. Some of the landing pads are designed with docking tubes specifically for Quarg visitors, and the ceilings are unusually high to accommodate the Quarg, several of whom are walking around and mingling with the humans here.`
   shipyard "Tarazed Advanced"
   outfitter "Common Outfits"
