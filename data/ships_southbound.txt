@@ -60,20 +60,20 @@ ship "Argosy"
     "Greyhound Plasma Thruster"
     "Greyhound Plasma Steering"
 
-    "1X Blaster Cannon" 2
-    "2X Blaster Turret" 2
+    "Plasma Cannon" 2
+    "Modified Blaster Turret" 2
 
-    "D23-QP Shield Generator"
+    "D41-HY Shield Generator"
     "RT-I Radiothermal"
     "LP072a Battery Pack"
     "Fuel Barrel" 40
     "Hyperdrive"
   engine -20 91
   engine 20 91
-  gun -22 -37 "1X Blaster Cannon"
-  gun 22 -37 "1X Blaster Cannon"
-  turret 0 -12 "2X Blaster Turret"
-  turret 0 8 "2X Blaster Turret"
+  gun -22 -37 "Plasma Cannon"
+  gun 22 -37 "Plasma Cannon"
+  turret 0 -12 "Modified Blaster Turret"
+  turret 0 8 "Modified Blaster Turret"
   leak "leak" 60 50
   leak "flame" 60 80
   explode "tiny explosion" 10
@@ -195,9 +195,8 @@ ship "Bastion"
     "Impala Plasma Thruster"
     "Impala Plasma Steering"
 
-    "Heavy Rocket" 40
-    "Heavy Rocket Launcher" 2
-    "2X Blaster Turret" 3
+    "Plasma Cannon" 2
+    "Modified Blaster Quad Turret" 3
 
     "D67-TM Shield Generator"
     "S3 Thermionic"
@@ -208,11 +207,11 @@ ship "Bastion"
     "Hyperdrive"
   engine -28 85
   engine 28 85
-  gun -54 -14 "Heavy Rocket Launcher"
-  gun 54 -14 "Heavy Rocket Launcher"
-  turret 0 0 "2X Blaster Turret"
-  turret -30 14 "2X Blaster Turret"
-  turret 30 14 "2X Blaster Turret"
+  gun -54 -14 "Plasma Cannon"
+  gun 54 -14 "Plasma Cannon"
+  turret 0 0 "Modified Blaster Quad Turret"
+  turret -30 14 "Modified Blaster Quad Turret"
+  turret 30 14 "Modified Blaster Quad Turret"
   leak "leak" 40 50
   leak "flame" 40 80
   leak "big leak" 70 30
@@ -427,8 +426,9 @@ ship "Dreadnought"
     "Orca Plasma Thruster"
     "Orca Plasma Steering"
 
-    "Meteor Missile" 140
-    "Meteor Missile Launcher" 4
+    "Heavy Rocket" 80
+    "Heavy Rocket Rack" 4
+    "Heavy Rocket Launcher" 4
     "Plasma Turret" 5
 
     "D41-HY Shield Generator"
@@ -440,10 +440,10 @@ ship "Dreadnought"
     "Small Radar Jammer"
   engine -25 172
   engine 25 172
-  gun -10 -167 "Meteor Missile Launcher"
-  gun 10 -167 "Meteor Missile Launcher"
-  gun -20 -151 "Meteor Missile Launcher"
-  gun 20 -151 "Meteor Missile Launcher"
+  gun -10 -167 "Heavy Rocket Launcher"
+  gun 10 -167 "Heavy Rocket Launcher"
+  gun -20 -151 "Heavy Rocket Launcher"
+  gun 20 -151 "Heavy Rocket Launcher"
   turret 0 -94 "Plasma Turret"
   turret -38 -56 "Plasma Turret"
   turret 38 -56 "Plasma Turret"
@@ -509,7 +509,7 @@ ship "Fury"
     "X2700 Ion Thruster"
     "X2200 Ion Steering"
 
-    "1X Blaster Cannon" 4
+    "Modified Blaster Cannon" 4
 
     "D14-RN Shield Generator"
     "nGVF-CC Fuel Cell"
@@ -518,14 +518,14 @@ ship "Fury"
     "Hyperdrive"
   engine -17 35
   engine 17 35
-  gun -10 -26
-  gun 10 -26
-  gun -16 -20
-  gun 16 -20
+  gun -10 -26 "Modified Blaster Cannon"
+  gun 10 -26 "Modified Blaster Cannon"
+  gun -16 -20 "Modified Blaster Cannon"
+  gun 16 -20 "Modified Blaster Cannon"
   leak "flame" 50 80
   explode "tiny explosion" 10
   explode "small explosion" 20
-  description "The Fury is Southbound Shipyard's most popular design of escort ship. They have greater firepower than any other interceptor-class vessel, meaning that any pirate flying solo will think twice before attacking a convoy that is accompanied by a Fury. However, Furies are also much less maneuverable than other small ships."
+  description "The Fury is Southbound Shipyard's most popular design of escort ship. They have greater firepower than most other interceptor-class vessel, meaning that any pirate flying solo will think twice before attacking a convoy that is accompanied by a Fury. However, Furies are also much less manoeuvrable than other small ships."
 
 
 ship "Fury" "Fury (Flamethrower)"

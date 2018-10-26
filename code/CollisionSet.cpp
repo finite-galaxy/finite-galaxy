@@ -279,13 +279,13 @@ Body *CollisionSet::Line(const Point &from, const Point &to, double *closestHit,
 
 
 // Get all objects within the given range of the given point.
-const vector<Body *> &CollisionSet::Circle(const Point &center, double radius) const
+const vector<Body *> &CollisionSet::Circle(const Point &centre, double radius) const
 {
   // Calculate the range of (x, y) grid coordinates this circle covers.
-  int minX = static_cast<int>(center.X() - radius) >> SHIFT;
-  int minY = static_cast<int>(center.Y() - radius) >> SHIFT;
-  int maxX = static_cast<int>(center.X() + radius) >> SHIFT;
-  int maxY = static_cast<int>(center.Y() + radius) >> SHIFT;
+  int minX = static_cast<int>(centre.X() - radius) >> SHIFT;
+  int minY = static_cast<int>(centre.Y() - radius) >> SHIFT;
+  int maxX = static_cast<int>(centre.X() + radius) >> SHIFT;
+  int maxY = static_cast<int>(centre.Y() + radius) >> SHIFT;
   
   // Keep track of which objects we've already considered.
   set<const Body *> seen;
@@ -312,7 +312,7 @@ const vector<Body *> &CollisionSet::Circle(const Point &center, double radius) c
         seen.insert(it->body);
         
         const Mask &mask = it->body->GetMask(step);
-        Point offset = center - it->body->Position();
+        Point offset = centre - it->body->Position();
         if(offset.Length() <= radius || mask.WithinRange(offset, it->body->Facing(), radius))
           result.push_back(it->body);
       }

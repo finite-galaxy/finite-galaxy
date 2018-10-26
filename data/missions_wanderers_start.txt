@@ -6,7 +6,7 @@ mission "First Contact: Wanderer (Before Hai)"
     not "First Contact: Hai: offered"
   on offer
     conversation
-      `All the other worlds belonging to this species have appeared unwilling to let you land, but here you find a slightly warmer welcome. A cloud of small, highly maneuverable patrol ships takes off from the planet as you approach and herds you onto one particular landing pad where, after a few minutes, several of the aliens approach your ship.`
+      `All the other worlds belonging to this species have appeared unwilling to let you land, but here you find a slightly warmer welcome. A cloud of small, highly manoeuvrable patrol ships takes off from the planet as you approach and herds you onto one particular landing pad where, after a few minutes, several of the aliens approach your ship.`
       `  This species is birdlike, but with bodies nearly as large as yours, and with wings that tower above you. They come swooping down from the sky, circle your ship to inspect it, and then land near the hatch and wait for you to open it. They do not appear to be armed, but their talons are three or four inches long.`
       `  Hesitantly, you open your hatch and greet them. One of the aliens speaks to you: a chirping, clicking noise. You have no idea what it is saying.`
       choice
@@ -34,7 +34,7 @@ mission "First Contact: Wanderer"
     conversation
       branch revisit
         has "First Contact: Wanderer (Before Hai): offered"
-      `All the other worlds belonging to this species have appeared unwilling to let you land, but here you find a slightly warmer welcome. A cloud of small, highly maneuverable patrol ships takes off from the planet as you approach and herds you onto one particular landing pad where, after a few minutes, several of the aliens approach your ship.`
+      `All the other worlds belonging to this species have appeared unwilling to let you land, but here you find a slightly warmer welcome. A cloud of small, highly manoeuvrable patrol ships takes off from the planet as you approach and herds you onto one particular landing pad where, after a few minutes, several of the aliens approach your ship.`
       `  This species is birdlike, but with bodies nearly as large as yours, and with wings that tower above you. They come swooping down from the sky, circle your ship to inspect it, and then land near the hatch and wait for you to open it. They do not appear to be armed, but their talons are three or four inches long.`
       `  Hesitantly, you open your hatch and greet them. One of the aliens speaks to you: a chirping, clicking noise. You have no idea what it is saying.`
       choice
@@ -740,7 +740,7 @@ mission "Wanderers: Alpha Surveillance A"
   
   on offer
     conversation
-      `When you meet Iktat Rek, he hands you a small box containing several small, charcoal black cubes, about two centimeters wide. "These are the [eyes, sensors] of our [communications? surveillance? information?] network," he says. "Until they receive the [request, query] command they generate no [signal, electromagnetic radiation] and almost no heat. But they watch, and [record, remember]. [Sow, scatter, deploy] several of these in each Unfettered system. Then you should visit the Hai [center, homeworld] and see if they know anything of the [activities, presence] of the Alphas."`
+      `When you meet Iktat Rek, he hands you a small box containing several small, charcoal black cubes, about two centimeters wide. "These are the [eyes, sensors] of our [communications? surveillance? information?] network," he says. "Until they receive the [request, query] command they generate no [signal, electromagnetic radiation] and almost no heat. But they watch, and [record, remember]. [Sow, scatter, deploy] several of these in each Unfettered system. Then you should visit the Hai [centre, homeworld] and see if they know anything of the [activities, presence] of the Alphas."`
       `  You bring the surveillance devices back to your ship. It looks like Rek gave you extra, presumably so that you can deploy enough in each system to have redundancy if some of them fail. It probably wouldn't make a difference to the success of the mission if you kept one for yourself, and based on what Rek said this technology might be very valuable.`
       choice
         `  (Use all of them for the mission, as instructed.)`
@@ -758,7 +758,7 @@ mission "Wanderers: Alpha Surveillance A"
     log "Planted some surveillance devices, designed by the Wanderers, in Unfettered Hai space. A month from now, they will be done collecting data on ship movements in the area, and may provide a hint of where the Alphas who are selling jump drives to the Unfettered are coming from."
     event "wanderers: alpha surveillance done" 30
     conversation
-      `The surveillance cubes have all been deployed. While you wait for them to collect their recordings of the ship traffic in the Unfettered systems, you stop by the Hai center of government and ask for the human ambassador. When they realize that you are the one who made contact with the Wanderers, they quickly give you an appointment.`
+      `The surveillance cubes have all been deployed. While you wait for them to collect their recordings of the ship traffic in the Unfettered systems, you stop by the Hai centre of government and ask for the human ambassador. When they realize that you are the one who made contact with the Wanderers, they quickly give you an appointment.`
       `  The ambassador is an old, male Hai named Hiyamaharu. "Honored human," he says, "It is a pleasure to meet you. If I may assist you in any way, I shall do so."`
       choice
         `  "Thank you." (Explain about the Alphas.)`

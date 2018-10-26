@@ -38,7 +38,7 @@ namespace {
         alignment.X() = 1.;
       else if(node.Token(i) == "bottom")
         alignment.Y() = 1.;
-      else if(node.Token(i) != "center")
+      else if(node.Token(i) != "centre")
         node.PrintTrace("Unrecognized interface element alignment:");
     }
     return alignment;
@@ -134,14 +134,14 @@ bool Interface::HasPoint(const string &name) const
 
 
 
-// Get the center of the named point.
+// Get the centre of the named point.
 Point Interface::GetPoint(const string &name) const
 {
   auto it = points.find(name);
   if(it == points.end())
     return Point();
   
-  return it->second.Bounds().Center();
+  return it->second.Bounds().Centre();
 }
 
 
@@ -191,8 +191,8 @@ void Interface::AnchoredPoint::Set(const Point &position, const Point &anchor)
 void Interface::Element::Load(const DataNode &node, const Point &globalAnchor)
 {
   // A location can be specified as:
-  // center (+ dimensions):
-  bool hasCenter = false;
+  // centre (+ dimensions):
+  bool hasCentre = false;
   Point dimensions;
   
   // from (+ dimensions):
@@ -216,15 +216,15 @@ void Interface::Element::Load(const DataNode &node, const Point &globalAnchor)
       dimensions.X() = child.Value(1);
     else if(key == "height" && child.Size() >= 2)
       dimensions.Y() = child.Value(1);
-    else if(key == "center" && child.Size() >= 3)
+    else if(key == "centre" && child.Size() >= 3)
     {
       if(child.Size() > 3)
         fromAnchor = toAnchor = ParseAlignment(child, 3);
       
-      // The "center" key implies "align center."
+      // The "centre" key implies "align centre."
       alignment = Point();
       fromPoint = toPoint = Point(child.Value(1), child.Value(2));
-      hasCenter = true;
+      hasCentre = true;
     }
     else if(key == "from" && child.Size() >= 6 && child.Token(3) == "to")
     {
@@ -264,9 +264,9 @@ void Interface::Element::Load(const DataNode &node, const Point &globalAnchor)
   
   // The "standard" way to specify a region is from + to. If it was specified
   // in a different way, convert it to that format:
-  if(hasCenter)
+  if(hasCentre)
   {
-    // Center alone or center + dimensions.
+    // Centre alone or centre + dimensions.
     fromPoint -= .5 * dimensions;
     toPoint += .5 * dimensions;
   }
@@ -303,7 +303,7 @@ void Interface::Element::Draw(const Information &info, Panel *panel) const
   // Figure out how the element should be aligned within its bounding box.
   Point nativeDimensions = NativeDimensions(info, state);
   Point slack = .5 * (box.Dimensions() - nativeDimensions) - padding;
-  Rectangle rect(box.Center() + alignment * slack, nativeDimensions);
+  Rectangle rect(box.Centre() + alignment * slack, nativeDimensions);
   
   Draw(rect, info, state);
 }
@@ -445,10 +445,10 @@ void Interface::ImageElement::Draw(const Rectangle &rect, const Information &inf
   {
     Color color = (isColored ? info.GetOutlineColor() : Color(1., 1.));
     Point unit = info.GetSpriteUnit(name);
-    OutlineShader::Draw(sprite, rect.Center(), rect.Dimensions(), color, unit, frame);
+    OutlineShader::Draw(sprite, rect.Centre(), rect.Dimensions(), color, unit, frame);
   }
   else
-    SpriteShader::Draw(sprite, rect.Center(), rect.Width() / sprite->Width(), 0, frame);
+    SpriteShader::Draw(sprite, rect.Centre(), rect.Width() / sprite->Width(), 0, frame);
 }
 
 
@@ -622,7 +622,7 @@ void Interface::BarElement::Draw(const Rectangle &rect, const Information &info,
     if(!rect.Width() || !rect.Height())
       return;
     
-    RingShader::Draw(rect.Center(), .5 * rect.Width(), width, value, *color, segments > 1. ? segments : 0.);
+    RingShader::Draw(rect.Centre(), .5 * rect.Width(), width, value, *color, segments > 1. ? segments : 0.);
   }
   else
   {

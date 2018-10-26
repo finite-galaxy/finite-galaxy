@@ -117,20 +117,20 @@ void ConversationPanel::Draw()
     // This conversation node is prompting the player to enter their name.
     for(int side = 0; side < 2; ++side)
     {
-      Point center = point + Point(side ? 420 : 190, 7);
+      Point centre = point + Point(side ? 420 : 190, 7);
       Point size(150, 20);
       // Handle mouse clicks in whatever field is not selected.
       if(side != choice)
       {
-        AddZone(Rectangle(center, size), [this, side](){ this->ClickName(side); });
+        AddZone(Rectangle(centre, size), [this, side](){ this->ClickName(side); });
         continue;
       }
       
       // Fill in whichever entry box is active right now.
-      FillShader::Fill(center, size, selectionColor);
+      FillShader::Fill(centre, size, selectionColor);
       // Draw the text cursor.
-      center.X() += font.Width(choice ? lastName : firstName) - 67;
-      FillShader::Fill(center, Point(1., 16.), dim);
+      centre.X() += font.Width(choice ? lastName : firstName) - 67;
+      FillShader::Fill(centre, Point(1., 16.), dim);
     }
     
     font.Draw("First name:", point + Point(40, 0), dim);
@@ -157,11 +157,11 @@ void ConversationPanel::Draw()
     {
       ++label[0];
     
-      Point center = point + it.Center();
+      Point centre = point + it.Centre();
       Point size(WIDTH, it.Height());
     
       if(index == choice)
-        FillShader::Fill(center + Point(-5, 0), size + Point(30, 0), selectionColor);
+        FillShader::Fill(centre + Point(-5, 0), size + Point(30, 0), selectionColor);
       AddZone(Rectangle::FromCorner(point, size), [this, index](){ this->ClickChoice(index); });
       ++index;
     
@@ -402,8 +402,8 @@ int ConversationPanel::Paragraph::Height() const
 
 
 
-// Get the center point of this paragraph.
-Point ConversationPanel::Paragraph::Center() const
+// Get the centre point of this paragraph.
+Point ConversationPanel::Paragraph::Centre() const
 {
   return Point(.5 * WIDTH, .5 * (Height() - wrap.ParagraphBreak()));
 }

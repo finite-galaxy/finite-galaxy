@@ -188,7 +188,7 @@ void ItemInfoDisplay::CheckHover(const Table &table, const string &label) const
   if(!hasHover)
     return;
   
-  Point distance = hoverPoint - table.GetCenterPoint();
+  Point distance = hoverPoint - table.GetCentrePoint();
   Point radius = .5 * table.GetRowSize();
   if(abs(distance.X()) < radius.X() && abs(distance.Y()) < radius.Y())
   {

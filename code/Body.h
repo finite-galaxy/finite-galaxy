@@ -33,7 +33,7 @@ public:
   // Get the dimensions of the sprite.
   double Width() const;
   double Height() const;
-  // Get the farthest a part of this sprite can be from its center.
+  // Get the farthest a part of this sprite can be from its centre.
   double Radius() const;
   // Which color swizzle should be applied to the sprite?
   int GetSwizzle() const;

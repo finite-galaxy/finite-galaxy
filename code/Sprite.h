@@ -41,9 +41,9 @@ public:
   // ensured that they have the same number of frames.
   int Frames() const;
   
-  // Get the offset of the center from the top left corner; this is for easy
-  // shifting of corner to center coordinates.
-  Point Center() const;
+  // Get the offset of the centre from the top left corner; this is for easy
+  // shifting of corner to centre coordinates.
+  Point Centre() const;
   
   // Get the texture index, either looking it up based on the Screen's HighDPI
   // setting or specifying it manually.

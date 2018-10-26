@@ -90,7 +90,7 @@ namespace {
   map<string, string> loadQueue;
   thread loadThread;
   
-  // The current position of the "listener," i.e. the center of the screen.
+  // The current position of the "listener," i.e. the centre of the screen.
   Point listener;
   
   // MP3 streaming:

@@ -193,7 +193,7 @@ int OutfitterPanel::DetailWidth() const
 
 
 
-int OutfitterPanel::DrawDetails(const Point &center)
+int OutfitterPanel::DrawDetails(const Point &centre)
 {
   if(!selectedOutfit)
     return 0;
@@ -201,9 +201,9 @@ int OutfitterPanel::DrawDetails(const Point &center)
   outfitInfo.Update(*selectedOutfit, player, CanSell());
   Point offset(outfitInfo.PanelWidth(), 0.);
   
-  outfitInfo.DrawDescription(center - offset * 1.5 - Point(0., 10.));
-  outfitInfo.DrawRequirements(center - offset * .5 - Point(0., 10.));
-  outfitInfo.DrawAttributes(center + offset * .5 - Point(0., 10.));
+  outfitInfo.DrawDescription(centre - offset * 1.5 - Point(0., 10.));
+  outfitInfo.DrawRequirements(centre - offset * .5 - Point(0., 10.));
+  outfitInfo.DrawAttributes(centre + offset * .5 - Point(0., 10.));
   
   return outfitInfo.MaximumHeight();
 }
@@ -695,19 +695,19 @@ bool OutfitterPanel::ShipCanSell(const Ship *ship, const Outfit *outfit)
 
 
 
-void OutfitterPanel::DrawOutfit(const Outfit &outfit, const Point &center, bool isSelected, bool isOwned)
+void OutfitterPanel::DrawOutfit(const Outfit &outfit, const Point &centre, bool isSelected, bool isOwned)
 {
   const Sprite *thumbnail = outfit.Thumbnail();
   const Sprite *back = SpriteSet::Get(
     isSelected ? "ui/outfitter selected" : "ui/outfitter unselected");
-  SpriteShader::Draw(back, center);
-  SpriteShader::Draw(thumbnail, center);
+  SpriteShader::Draw(back, centre);
+  SpriteShader::Draw(thumbnail, centre);
   
   // Draw the outfit name.
   const string &name = outfit.Name();
   const Font &font = FontSet::Get(14);
   Point offset(-.5f * font.Width(name), -.5f * OUTFIT_SIZE + 10.f);
-  font.Draw(name, center + offset, Color((isSelected | isOwned) ? .8 : .5, 0.));
+  font.Draw(name, centre + offset, Color((isSelected | isOwned) ? .8 : .5, 0.));
 }
 
 

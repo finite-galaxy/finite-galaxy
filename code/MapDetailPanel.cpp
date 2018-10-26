@@ -564,7 +564,7 @@ void MapDetailPanel::DrawOrbits()
 {
   const Sprite *orbitSprite = SpriteSet::Get("ui/orbits and key");
   SpriteShader::Draw(orbitSprite, Screen::TopRight() + .5 * Point(-orbitSprite->Width(), orbitSprite->Height()));
-  Point orbitCenter = Screen::TopRight() + Point(-120., 160.);
+  Point orbitCentre = Screen::TopRight() + Point(-120., 160.);
   
   if(!selectedSystem || !player.HasVisited(selectedSystem))
     return;
@@ -609,7 +609,7 @@ void MapDetailPanel::DrawOrbits()
     }
     
     double radius = object.Distance() * scale;
-    RingShader::Draw(orbitCenter + parentPos * scale,
+    RingShader::Draw(orbitCentre + parentPos * scale,
       radius + .7, radius - .7,
       habitColor[habit]);
   }
@@ -621,7 +621,7 @@ void MapDetailPanel::DrawOrbits()
     if(object.Radius() <= 0.)
       continue;
     
-    Point pos = orbitCenter + object.Position() * scale;
+    Point pos = orbitCentre + object.Position() * scale;
     if(object.GetPlanet() && object.GetPlanet()->IsAccessible(player.Flagship()))
       planets[object.GetPlanet()] = pos;
     
@@ -634,7 +634,7 @@ void MapDetailPanel::DrawOrbits()
   // Draw the selection ring on top of everything else.
   for(const StellarObject &object : selectedSystem->Objects())
     if(selectedPlanet && object.GetPlanet() == selectedPlanet)
-      RingShader::Draw(orbitCenter + object.Position() * scale,
+      RingShader::Draw(orbitCentre + object.Position() * scale,
         object.Radius() * scale + 5., object.Radius() * scale + 4.,
         habitColor[6]);
   

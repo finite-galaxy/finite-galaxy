@@ -14,7 +14,7 @@ using namespace std;
 namespace {
   Shader shader;
   GLint scaleI;
-  GLint centerI;
+  GLint centreI;
   GLint angleI;
   GLint sizeI;
   GLint offsetI;
@@ -30,7 +30,7 @@ void PointerShader::Init()
 {
   static const char *vertexCode =
     "uniform vec2 scale;\n"
-    "uniform vec2 center;\n"
+    "uniform vec2 centre;\n"
     "uniform vec2 angle;\n"
     "uniform vec2 size;\n"
     "uniform float offset;\n"
@@ -40,7 +40,7 @@ void PointerShader::Init()
     
     "void main() {\n"
     "  coord = vert * size.x;\n"
-    "  vec2 base = center + angle * (offset - size.y * (vert.x + vert.y));\n"
+    "  vec2 base = centre + angle * (offset - size.y * (vert.x + vert.y));\n"
     "  vec2 wing = vec2(angle.y, -angle.x) * (size.x * .5 * (vert.x - vert.y));\n"
     "  gl_Position = vec4((base + wing) * scale, 0, 1);\n"
     "}\n";
@@ -63,7 +63,7 @@ void PointerShader::Init()
   
   shader = Shader(vertexCode, fragmentCode);
   scaleI = shader.Uniform("scale");
-  centerI = shader.Uniform("center");
+  centreI = shader.Uniform("centre");
   angleI = shader.Uniform("angle");
   sizeI = shader.Uniform("size");
   offsetI = shader.Uniform("offset");
@@ -93,11 +93,11 @@ void PointerShader::Init()
 
 
 
-void PointerShader::Draw(const Point &center, const Point &angle, float width, float height, float offset, const Color &color)
+void PointerShader::Draw(const Point &centre, const Point &angle, float width, float height, float offset, const Color &color)
 {
   Bind();
   
-  Add(center, angle, width, height, offset, color);
+  Add(centre, angle, width, height, offset, color);
   
   Unbind();
 }
@@ -118,10 +118,10 @@ void PointerShader::Bind()
 
 
 
-void PointerShader::Add(const Point &center, const Point &angle, float width, float height, float offset, const Color &color)
+void PointerShader::Add(const Point &centre, const Point &angle, float width, float height, float offset, const Color &color)
 {
-  GLfloat c[2] = {static_cast<float>(center.X()), static_cast<float>(center.Y())};
-  glUniform2fv(centerI, 1, c);
+  GLfloat c[2] = {static_cast<float>(centre.X()), static_cast<float>(centre.Y())};
+  glUniform2fv(centreI, 1, c);
   
   GLfloat a[2] = {static_cast<float>(angle.X()), static_cast<float>(angle.Y())};
   glUniform2fv(angleI, 1, a);

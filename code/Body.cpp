@@ -68,7 +68,7 @@ double Body::Height() const
 
 
 
-// Get the farthest a part of this sprite can be from its center.
+// Get the farthest a part of this sprite can be from its centre.
 double Body::Radius() const
 {
   return .5 * Point(Width(), Height()).Length();
@@ -109,7 +109,7 @@ const Mask &Body::GetMask(int step) const
 
 
 
-// Position, in world coordinates (zero is the system center).
+// Position, in world coordinates (zero is the system centre).
 const Point &Body::Position() const
 {
   return position;

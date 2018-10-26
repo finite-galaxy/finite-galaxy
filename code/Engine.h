@@ -101,7 +101,7 @@ private:
 private:
   class Target {
   public:
-    Point center;
+    Point centre;
     Angle angle;
     double radius;
     int type;
@@ -153,8 +153,8 @@ private:
   BatchDrawList batchDraw[2];
   Radar radar[2];
   // Viewport position and velocity.
-  Point center;
-  Point centerVelocity;
+  Point centre;
+  Point centreVelocity;
   // Other information to display.
   Information info;
   std::vector<Target> targets;

@@ -32,9 +32,9 @@ void Radar::Clear()
 
 
 
-void Radar::SetCenter(const Point &center)
+void Radar::SetCentre(const Point &centre)
 {
-  this->center = center;
+  this->centre = centre;
 }
 
 
@@ -43,7 +43,7 @@ void Radar::SetCenter(const Point &center)
 // given position should be in world units (not shrunk to radar units).
 void Radar::Add(int type, Point position, double outer, double inner)
 {
-  objects.emplace_back(GetColor(type).Opaque(), position - center, outer, inner);
+  objects.emplace_back(GetColor(type).Opaque(), position - centre, outer, inner);
 }
 
 
@@ -71,7 +71,7 @@ void Radar::AddViewportBoundary(const Point &vertex)
 
 
 // Draw the radar display at the given coordinates.
-void Radar::Draw(const Point &center, double scale, double radius, double pointerRadius) const
+void Radar::Draw(const Point &centre, double scale, double radius, double pointerRadius) const
 {
   // Draw any desired line vectors.
   for(const Line &line : lines)
@@ -94,7 +94,7 @@ void Radar::Draw(const Point &center, double scale, double radius, double pointe
     else if(endExcess > 0)
       v -= endExcess * v.Unit();
     
-    LineShader::Draw(start + center, start + v + center, 1., line.color);
+    LineShader::Draw(start + centre, start + v + centre, 1., line.color);
   }
   
   // Draw StellarObjects and ships.
@@ -105,7 +105,7 @@ void Radar::Draw(const Point &center, double scale, double radius, double pointe
     double length = position.Length();
     if(length > radius)
       position *= radius / length;
-    position += center;
+    position += centre;
     
     RingShader::Add(position, object.outer, object.inner, object.color);
   }
@@ -114,7 +114,7 @@ void Radar::Draw(const Point &center, double scale, double radius, double pointe
   // Draw neighboring system indicators.
   PointerShader::Bind();
   for(const Pointer &pointer : pointers)
-    PointerShader::Add(center, pointer.unit, 10., 10., pointerRadius, pointer.color);
+    PointerShader::Add(centre, pointer.unit, 10., 10., pointerRadius, pointer.color);
   PointerShader::Unbind();
 }
 

@@ -30,7 +30,7 @@ public:
   
   // Check if this mask intersects the given line segment (from sA to vA). If
   // it does, return the fraction of the way along the segment where the
-  // intersection occurs. The sA should be relative to this object's center.
+  // intersection occurs. The sA should be relative to this object's centre.
   // If this object contains the given point, the return value is 0. If there
   // is no collision, the return value is 1.
   double Collide(Point sA, Point vA, Angle facing) const;
@@ -44,7 +44,7 @@ public:
   
   // Find out how close the given point is to the mask.
   double Range(Point point, Angle facing) const;
-  // Get the maximum distance from the center of this mask.
+  // Get the maximum distance from the centre of this mask.
   double Radius() const;
   
   // Get the list of points in the outline.

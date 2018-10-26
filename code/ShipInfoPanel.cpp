@@ -402,8 +402,8 @@ void ShipInfoPanel::DrawWeapons(const Rectangle &bounds)
     scale = min(scale, (LABEL_DX - LABEL_PAD) / (2. * maxX));
   
   // Draw the ship, using the black silhouette swizzle.
-  SpriteShader::Draw(sprite, bounds.Center(), scale, 8);
-  OutlineShader::Draw(sprite, bounds.Center(), scale * Point(sprite->Width(), sprite->Height()), Color(.5));
+  SpriteShader::Draw(sprite, bounds.Centre(), scale, 8);
+  OutlineShader::Draw(sprite, bounds.Centre(), scale * Point(sprite->Width(), sprite->Height()), Color(.5));
   
   // Figure out how tall each part of the weapon listing will be.
   int gunRows = max(count[0][0], count[1][0]);
@@ -418,8 +418,8 @@ void ShipInfoPanel::DrawWeapons(const Rectangle &bounds)
     {gunY + 20. * (gunRows - count[1][0]), turretY + 20. * (turretRows - count[1][1])}};
   
   int index = 0;
-  const double centerX = bounds.Center().X();
-  const double labelCenter[2] = {-.5 * LABEL_WIDTH - LABEL_DX, LABEL_DX + .5 * LABEL_WIDTH};
+  const double centreX = bounds.Centre().X();
+  const double labelCentre[2] = {-.5 * LABEL_WIDTH - LABEL_DX, LABEL_DX + .5 * LABEL_WIDTH};
   const double fromX[2] = {-LABEL_DX + LABEL_PAD, LABEL_DX - LABEL_PAD};
   static const double LINE_HEIGHT = 20.;
   static const double TEXT_OFF = .5 * (LINE_HEIGHT - font.Height());
@@ -438,11 +438,11 @@ void ShipInfoPanel::DrawWeapons(const Rectangle &bounds)
     bool isTurret = hardpoint.IsTurret();
     
     double &y = nextY[isRight][isTurret];
-    double x = centerX + (isRight ? LABEL_DX : (-LABEL_DX - font.Width(name)));
+    double x = centreX + (isRight ? LABEL_DX : (-LABEL_DX - font.Width(name)));
     bool isHover = (index == hoverIndex);
     font.Draw(name, Point(x, y + TEXT_OFF), isHover ? bright : dim);
-    Point zoneCenter(labelCenter[isRight], y + .5 * LINE_HEIGHT);
-    zones.emplace_back(zoneCenter, LINE_SIZE, index);
+    Point zoneCentre(labelCentre[isRight], y + .5 * LINE_HEIGHT);
+    zones.emplace_back(zoneCentre, LINE_SIZE, index);
     
     // Determine what color to use for the line.
     double high = (index == hoverIndex ? .8 : .5);
@@ -451,8 +451,8 @@ void ShipInfoPanel::DrawWeapons(const Rectangle &bounds)
       color = Color(0., .75 * high, high, 1.);
     
     // Draw the line.
-    Point from(fromX[isRight], zoneCenter.Y());
-    Point to = bounds.Center() + (2. * scale) * hardpoint.GetPoint();
+    Point from(fromX[isRight], zoneCentre.Y());
+    Point to = bounds.Centre() + (2. * scale) * hardpoint.GetPoint();
     DrawLine(from, to, color);
     if(isHover)
     {
@@ -512,7 +512,7 @@ void ShipInfoPanel::DrawCargo(const Rectangle &bounds)
       if(!it.second)
         continue;
       
-      commodityZones.emplace_back(table.GetCenterPoint(), table.GetRowSize(), it.first);
+      commodityZones.emplace_back(table.GetCentrePoint(), table.GetRowSize(), it.first);
       if(it.first == selectedCommodity)
         table.DrawHighlight(backColor);
       
@@ -535,7 +535,7 @@ void ShipInfoPanel::DrawCargo(const Rectangle &bounds)
       if(!it.second)
         continue;
       
-      plunderZones.emplace_back(table.GetCenterPoint(), table.GetRowSize(), it.first);
+      plunderZones.emplace_back(table.GetCentrePoint(), table.GetRowSize(), it.first);
       if(it.first == selectedPlunder)
         table.DrawHighlight(backColor);
       

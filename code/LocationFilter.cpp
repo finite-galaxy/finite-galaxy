@@ -37,23 +37,23 @@ namespace {
     return false;
   }
   
-  // Check if the given system is within the given distance of the center.
-  int Distance(const System *center, const System *system, int maximum)
+  // Check if the given system is within the given distance of the centre.
+  int Distance(const System *centre, const System *system, int maximum)
   {
     // This function should only ever be called from the main thread, but
     // just to be sure, use mutex protection on the static locals.
     static mutex distanceMutex;
     lock_guard<mutex> lock(distanceMutex);
     
-    static const System *previousCenter = center;
-    static DistanceMap distance(center, -1, maximum);
+    static const System *previousCentre = centre;
+    static DistanceMap distance(centre, -1, maximum);
     static int previousMaximum = maximum;
     
-    if(center != previousCenter || maximum > previousMaximum)
+    if(centre != previousCentre || maximum > previousMaximum)
     {
-      previousCenter = center;
+      previousCentre = centre;
       previousMaximum = maximum;
-      distance = DistanceMap(center, -1, maximum);
+      distance = DistanceMap(centre, -1, maximum);
     }
     // If the distance is greater than the maximum, this is not a match.
     int d = distance.Days(system);
@@ -168,8 +168,8 @@ void LocationFilter::Save(DataWriter &out) const
       }
       out.EndChild();
     }
-    if(center)
-      out.Write("near", center->Name(), centerMinDistance, centerMaxDistance);
+    if(centre)
+      out.Write("near", centre->Name(), centreMinDistance, centreMaxDistance);
   }
   out.EndChild();
 }
@@ -180,7 +180,7 @@ void LocationFilter::Save(DataWriter &out) const
 bool LocationFilter::IsEmpty() const
 {
   return planets.empty() && attributes.empty() && systems.empty() && governments.empty()
-    && !center && originMaxDistance < 0 && notFilters.empty() && neighborFilters.empty();
+    && !centre && originMaxDistance < 0 && notFilters.empty() && neighborFilters.empty();
 }
 
 
@@ -233,7 +233,7 @@ bool LocationFilter::Matches(const Ship &ship) const
   
   // Check if this ship's current system meets a "near <system>" criterion.
   // (Ships only offer missions, so no "distance" criteria need to be checked.)
-  if(center && Distance(center, origin, centerMaxDistance) < centerMinDistance)
+  if(centre && Distance(centre, origin, centreMaxDistance) < centreMinDistance)
     return false;
   
   return true;
@@ -250,15 +250,15 @@ LocationFilter LocationFilter::SetOrigin(const System *origin) const
   
   // If the system is invalid, or a "near <system>" filter already
   // exists, do not convert "distance" to "near".
-  if(!origin || center)
+  if(!origin || centre)
     return *this;
   
   // Copy all parts of this instantiated filter into the result.
   LocationFilter result = *this;
   // Perform the conversion.
-  result.center = origin;
-  result.centerMinDistance = originMinDistance;
-  result.centerMaxDistance = originMaxDistance;
+  result.centre = origin;
+  result.centreMinDistance = originMinDistance;
+  result.centreMaxDistance = originMaxDistance;
   // Revert "distance" parameters to their default.
   result.originMinDistance = 0;
   result.originMaxDistance = -1;
@@ -354,13 +354,13 @@ void LocationFilter::LoadChild(const DataNode &child)
   }
   else if(key == "near" && child.Size() >= 1 + valueIndex)
   {
-    center = GameData::Systems().Get(child.Token(valueIndex));
+    centre = GameData::Systems().Get(child.Token(valueIndex));
     if(child.Size() == 2 + valueIndex)
-      centerMaxDistance = child.Value(1 + valueIndex);
+      centreMaxDistance = child.Value(1 + valueIndex);
     else if(child.Size() == 3 + valueIndex)
     {
-      centerMinDistance = child.Value(1 + valueIndex);
-      centerMaxDistance = child.Value(2 + valueIndex);
+      centreMinDistance = child.Value(1 + valueIndex);
+      centreMaxDistance = child.Value(2 + valueIndex);
     }
   }
   else if(key == "distance" && child.Size() >= 1 + valueIndex)
@@ -419,7 +419,7 @@ bool LocationFilter::Matches(const System *system, const System *origin, bool di
     return false;
   
   // Check this system's distance from the desired reference system.
-  if(center && Distance(center, system, centerMaxDistance) < centerMinDistance)
+  if(centre && Distance(centre, system, centreMaxDistance) < centreMinDistance)
     return false;
   if(origin && originMaxDistance >= 0
       && Distance(origin, system, originMaxDistance) < originMinDistance)

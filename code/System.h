@@ -96,7 +96,7 @@ public:
   const std::vector<StellarObject> &Objects() const;
   // Get the stellar object (if any) for the given planet.
   const StellarObject *FindStellar(const Planet *planet) const;
-  // Get the habitable zone's center.
+  // Get the habitable zone's centre.
   double HabitableZone() const;
   // Get the radius of the asteroid belt.
   double AsteroidBelt() const;

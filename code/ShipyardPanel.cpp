@@ -126,14 +126,14 @@ int ShipyardPanel::DetailWidth() const
 
 
 
-int ShipyardPanel::DrawDetails(const Point &center)
+int ShipyardPanel::DrawDetails(const Point &centre)
 {
   shipInfo.Update(*selectedShip, player.StockDepreciation(), player.GetDate().DaysSinceEpoch());
   Point offset(shipInfo.PanelWidth(), 0.);
   
-  shipInfo.DrawDescription(center - offset * 1.5);
-  shipInfo.DrawAttributes(center - offset * .5);
-  shipInfo.DrawOutfits(center + offset * .5);
+  shipInfo.DrawDescription(centre - offset * 1.5);
+  shipInfo.DrawAttributes(centre - offset * .5);
+  shipInfo.DrawOutfits(centre + offset * .5);
   
   return shipInfo.MaximumHeight();
 }

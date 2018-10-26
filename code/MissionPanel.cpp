@@ -86,8 +86,8 @@ MissionPanel::MissionPanel(PlayerInfo &player)
   else if(acceptedIt != accepted.end())
     selectedSystem = acceptedIt->Destination()->GetSystem();
   
-  // Center on the selected system.
-  CenterOnSystem(selectedSystem, true);
+  // Centre on the selected system.
+  CentreOnSystem(selectedSystem, true);
 }
 
 
@@ -143,8 +143,8 @@ void MissionPanel::Draw()
   {
     const System *next = distance.Route(system);
     
-    Point from = Zoom() * (next->Position() + center);
-    Point to = Zoom() * (system->Position() + center);
+    Point from = Zoom() * (next->Position() + centre);
+    Point to = Zoom() * (system->Position() + centre);
     Point unit = (from - to).Unit() * 7.;
     from -= unit;
     to += unit;
@@ -255,7 +255,7 @@ bool MissionPanel::KeyDown(SDL_Keycode key, Uint16 mod, const Command &command)
   else if(acceptedIt != accepted.end())
     selectedSystem = acceptedIt->Destination()->GetSystem();
   if(selectedSystem)
-    CenterOnSystem(selectedSystem);
+    CentreOnSystem(selectedSystem);
   
   return true;
 }
@@ -280,7 +280,7 @@ bool MissionPanel::Click(int x, int y, int clicks)
       acceptedIt = accepted.end();
       dragSide = -1;
       selectedSystem = availableIt->Destination()->GetSystem();
-      CenterOnSystem(selectedSystem);
+      CentreOnSystem(selectedSystem);
       return true;
     }
   }
@@ -298,13 +298,13 @@ bool MissionPanel::Click(int x, int y, int clicks)
       availableIt = available.end();
       dragSide = 1;
       selectedSystem = acceptedIt->Destination()->GetSystem();
-      CenterOnSystem(selectedSystem);
+      CentreOnSystem(selectedSystem);
       return true;
     }
   }
   
   // Figure out if a system was clicked on.
-  Point click = Point(x, y) / Zoom() - center;
+  Point click = Point(x, y) / Zoom() - centre;
   const System *system = nullptr;
   for(const auto &it : GameData::Systems())
     if(click.Distance(it.second.Position()) < 10.
@@ -510,20 +510,20 @@ void MissionPanel::DrawMissionSystem(const Mission &mission, const Color &color)
   
   double zoom = Zoom();
   // Draw a colored ring around the destination system.
-  Point pos = zoom * (mission.Destination()->GetSystem()->Position() + center);
+  Point pos = zoom * (mission.Destination()->GetSystem()->Position() + centre);
   RingShader::Draw(pos, 22., 20.5, color);
   
   // Draw bright rings around systems that still need to be visited.
   for(const System *system : mission.Waypoints())
-    RingShader::Draw(zoom * (system->Position() + center), 22., 20.5, waypoint);
+    RingShader::Draw(zoom * (system->Position() + centre), 22., 20.5, waypoint);
   for(const Planet *planet : mission.Stopovers())
-    RingShader::Draw(zoom * (planet->GetSystem()->Position() + center), 22., 20.5, waypoint);
+    RingShader::Draw(zoom * (planet->GetSystem()->Position() + centre), 22., 20.5, waypoint);
   
   // Draw faint rings around systems already visited for this mission.
   for(const System *system : mission.VisitedWaypoints())
-    RingShader::Draw(zoom * (system->Position() + center), 22., 20.5, visited);
+    RingShader::Draw(zoom * (system->Position() + centre), 22., 20.5, visited);
   for(const Planet *planet : mission.VisitedStopovers())
-    RingShader::Draw(zoom * (planet->GetSystem()->Position() + center), 22., 20.5, visited);
+    RingShader::Draw(zoom * (planet->GetSystem()->Position() + centre), 22., 20.5, visited);
 }
 
 

@@ -26,10 +26,10 @@ void DrawList::Clear(int step, double zoom)
 
 
 
-void DrawList::SetCenter(const Point &center, const Point &centerVelocity)
+void DrawList::SetCentre(const Point &centre, const Point &centreVelocity)
 {
-  this->center = center;
-  this->centerVelocity = centerVelocity;
+  this->centre = centre;
+  this->centreVelocity = centreVelocity;
 }
 
 
@@ -37,8 +37,8 @@ void DrawList::SetCenter(const Point &center, const Point &centerVelocity)
 // Add an object based on the Body class.
 bool DrawList::Add(const Body &body, double cloak)
 {
-  Point position = body.Position() - center;
-  Point blur = body.Velocity() - centerVelocity;
+  Point position = body.Position() - centre;
+  Point blur = body.Velocity() - centreVelocity;
   if(Cull(body, position, blur) || cloak >= 1.)
     return false;
   
@@ -50,8 +50,8 @@ bool DrawList::Add(const Body &body, double cloak)
 
 bool DrawList::Add(const Body &body, Point position)
 {
-  position -= center;
-  Point blur = body.Velocity() - centerVelocity;
+  position -= centre;
+  Point blur = body.Velocity() - centreVelocity;
   if(Cull(body, position, blur))
     return false;
   
@@ -63,7 +63,7 @@ bool DrawList::Add(const Body &body, Point position)
 
 bool DrawList::AddUnblurred(const Body &body)
 {
-  Point position = body.Position() - center;
+  Point position = body.Position() - centre;
   Point blur;
   if(Cull(body, position, blur))
     return false;
@@ -76,8 +76,8 @@ bool DrawList::AddUnblurred(const Body &body)
 
 bool DrawList::AddProjectile(const Body &body, const Point &adjustedVelocity, double clip)
 {
-  Point position = body.Position() + .5 * body.Velocity() - center;
-  Point blur = adjustedVelocity - centerVelocity;
+  Point position = body.Position() + .5 * body.Velocity() - centre;
+  Point blur = adjustedVelocity - centreVelocity;
   if(Cull(body, position, blur) || clip <= 0.)
     return false;
   
@@ -89,8 +89,8 @@ bool DrawList::AddProjectile(const Body &body, const Point &adjustedVelocity, do
 
 bool DrawList::AddSwizzled(const Body &body, int swizzle)
 {
-  Point position = body.Position() - center;
-  Point blur = body.Velocity() - centerVelocity;
+  Point position = body.Position() - centre;
+  Point blur = body.Velocity() - centreVelocity;
   if(Cull(body, position, blur))
     return false;
   

@@ -14,7 +14,7 @@ using namespace std;
 namespace {
   Shader shader;
   GLint scaleI;
-  GLint centerI;
+  GLint centreI;
   GLint sizeI;
   GLint colorI;
   
@@ -28,13 +28,13 @@ void FillShader::Init()
 {
   static const char *vertexCode =
     "uniform vec2 scale;\n"
-    "uniform vec2 center;\n"
+    "uniform vec2 centre;\n"
     "uniform vec2 size;\n"
     
     "in vec2 vert;\n"
     
     "void main() {\n"
-    "  gl_Position = vec4((center + vert * size) * scale, 0, 1);\n"
+    "  gl_Position = vec4((centre + vert * size) * scale, 0, 1);\n"
     "}\n";
 
   static const char *fragmentCode =
@@ -48,7 +48,7 @@ void FillShader::Init()
   
   shader = Shader(vertexCode, fragmentCode);
   scaleI = shader.Uniform("scale");
-  centerI = shader.Uniform("center");
+  centreI = shader.Uniform("centre");
   sizeI = shader.Uniform("size");
   colorI = shader.Uniform("color");
   
@@ -77,7 +77,7 @@ void FillShader::Init()
 
 
 
-void FillShader::Fill(const Point &center, const Point &size, const Color &color)
+void FillShader::Fill(const Point &centre, const Point &size, const Color &color)
 {
   if(!shader.Object())
     throw runtime_error("FillShader: Draw() called before Init().");
@@ -88,8 +88,8 @@ void FillShader::Fill(const Point &center, const Point &size, const Color &color
   GLfloat scale[2] = {2.f / Screen::Width(), -2.f / Screen::Height()};
   glUniform2fv(scaleI, 1, scale);
   
-  GLfloat centerV[2] = {static_cast<float>(center.X()), static_cast<float>(center.Y())};
-  glUniform2fv(centerI, 1, centerV);
+  GLfloat centreV[2] = {static_cast<float>(centre.X()), static_cast<float>(centre.Y())};
+  glUniform2fv(centreI, 1, centreV);
   
   GLfloat sizeV[2] = {static_cast<float>(size.X()), static_cast<float>(size.Y())};
   glUniform2fv(sizeI, 1, sizeV);

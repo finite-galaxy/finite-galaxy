@@ -15,7 +15,7 @@ class Rectangle;
 
 
 // Helper class for drawing text formatted in a table, where each column of the
-// table is aligned left, right, or centered. This also handles spacing in
+// table is aligned left, right, or centred. This also handles spacing in
 // between table rows, underlines, selection highlights, etc.
 class Table {
 public:
@@ -76,9 +76,9 @@ public:
   // the given location.
   Point GetPoint();
   
-  // Get the center and size of the current row. This can be used to define
+  // Get the centre and size of the current row. This can be used to define
   // what screen region constitutes a mouse click on this particular row.
-  Point GetCenterPoint() const;
+  Point GetCentrePoint() const;
   Point GetRowSize() const;
   Rectangle GetRowBounds() const;
   
@@ -104,7 +104,7 @@ private:
   
   const Font *font;
   Point rowSize;
-  Point center;
+  Point centre;
   Point lineSize;
   Point lineOff;
   

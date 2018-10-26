@@ -43,7 +43,7 @@ namespace {
   double previousTop = 0.;
   int previousColumns = 0;
   int previousRows = 0;
-  Point previousCenter;
+  Point previousCentre;
 }
 
 
@@ -115,13 +115,13 @@ void FogShader::Redraw()
 
 
 
-void FogShader::Draw(const Point &center, double zoom, const PlayerInfo &player)
+void FogShader::Draw(const Point &centre, double zoom, const PlayerInfo &player)
 {
   // Generate a scaled-down mask image that represents the entire screen plus
   // enough pixels beyond the screen to include any systems that may be off
   // screen but close enough to "illuminate" part of the on-screen map.
-  double left = Screen::Left() - GRID * PAD * zoom + fmod(center.X(), GRID) * zoom;
-  double top = Screen::Top() - GRID * PAD * zoom + fmod(center.Y(), GRID) * zoom;
+  double left = Screen::Left() - GRID * PAD * zoom + fmod(centre.X(), GRID) * zoom;
+  double top = Screen::Top() - GRID * PAD * zoom + fmod(centre.Y(), GRID) * zoom;
   int columns = ceil(Screen::Width() / (GRID * zoom)) + 1 + 2 * PAD;
   int rows = ceil(Screen::Height() / (GRID * zoom)) + 1 + 2 * PAD;
   // Round up to a multiple of 4 so the rows will be 32-bit aligned.
@@ -132,7 +132,7 @@ void FogShader::Draw(const Point &center, double zoom, const PlayerInfo &player)
   // come back to the original, and view the map again without viewing it in
   // between. But, that's an unlikely situation.
   bool shouldRegenerate = (
-    zoom != previousZoom || center.X() != previousCenter.X() || center.Y() != previousCenter.Y() ||
+    zoom != previousZoom || centre.X() != previousCentre.X() || centre.Y() != previousCentre.Y() ||
     left != previousLeft || top != previousTop || columns != previousColumns || rows != previousRows);
   if(shouldRegenerate)
   {
@@ -140,7 +140,7 @@ void FogShader::Draw(const Point &center, double zoom, const PlayerInfo &player)
     
     // Remember the current viewport attributes.
     previousZoom = zoom;
-    previousCenter = center;
+    previousCentre = centre;
     previousLeft = left;
     previousTop = top;
     previousColumns = columns;
@@ -156,7 +156,7 @@ void FogShader::Draw(const Point &center, double zoom, const PlayerInfo &player)
       const System &system = it.second;
       if(system.Name().empty() || !player.HasVisited(&system))
         continue;
-      Point pos = zoom * (system.Position() + center);
+      Point pos = zoom * (system.Position() + centre);
     
       int x = round((pos.X() - left) / (GRID * zoom));
       int y = round((pos.Y() - top) / (GRID * zoom));

@@ -221,7 +221,7 @@ namespace {
     ship.SetTargetStellar(nullptr);
   }
   
-  const double MAX_DISTANCE_FROM_CENTER = 10000.;
+  const double MAX_DISTANCE_FROM_CENTRE = 10000.;
   // Constants for the invisible fence timer.
   const int FENCE_DECAY = 4;
   const int FENCE_MAX = 600;
@@ -433,7 +433,7 @@ void AI::Step(const PlayerInfo &player)
       ++it;
   }
   for(const auto &it : ships)
-    if(it->Position().Length() >= MAX_DISTANCE_FROM_CENTER)
+    if(it->Position().Length() >= MAX_DISTANCE_FROM_CENTRE)
     {
       int &value = fenceCount[&*it];
       value = min(FENCE_MAX, value + FENCE_DECAY + 1);
@@ -1230,7 +1230,7 @@ void AI::MoveIndependent(Ship &ship, Command &command) const
     if(target)
     {
       Point extrapolated = target->Position() + 120. * (target->Velocity() - ship.Velocity());
-      if(extrapolated.Length() >= MAX_DISTANCE_FROM_CENTER)
+      if(extrapolated.Length() >= MAX_DISTANCE_FROM_CENTRE)
       {
         MoveTo(ship, command, Point(), Point(), 40., .8);
         if(ship.Velocity().Dot(ship.Position()) > 0.)
@@ -1238,7 +1238,7 @@ void AI::MoveIndependent(Ship &ship, Command &command) const
         return;
       }
     }
-    else if(ship.Position().Length() >= MAX_DISTANCE_FROM_CENTER)
+    else if(ship.Position().Length() >= MAX_DISTANCE_FROM_CENTRE)
     {
       // This ship should not be beyond the fence.
       MoveTo(ship, command, Point(), Point(), 40, .8);
@@ -1452,7 +1452,7 @@ void AI::MoveEscort(Ship &ship, Command &command) const
       // Refuel so that when the parent returns, this ship is ready to rendezvous with it.
       Refuel(ship, command);
     else
-      // This ship has no route to the parent's system, so park at the system's center.
+      // This ship has no route to the parent's system, so park at the system's centre.
       MoveTo(ship, command, Point(), Point(), 40., 0.1);
   }
   else if(parent.Commands().Has(Command::LAND) && parentIsHere && planetIsHere && parentPlanet->CanLand(ship))
@@ -2119,7 +2119,7 @@ void AI::DoSurveillance(Ship &ship, Command &command, shared_ptr<Ship> &target) 
     if(!total)
     {
       // If there is nothing for this ship to scan, have it hold still
-      // instead of drifting away from the system center.
+      // instead of drifting away from the system centre.
       Stop(ship, command);
       return;
     }
@@ -2310,7 +2310,7 @@ bool AI::DoCloak(Ship &ship, Command &command)
       {
         Point safety;
         // TODO: This could use an "Avoid" method, to account for other in-system hazards.
-        // Simple approximation: move equally away from both the system center and the
+        // Simple approximation: move equally away from both the system centre and the
         // nearest enemy, until the constrainment boundary is reached.
         if(ship.GetPersonality().IsUnconstrained() || !fenceCount.count(&ship))
           safety = 2 * ship.Position().Unit() - nearestEnemy->Position().Unit();
@@ -2506,7 +2506,7 @@ void AI::AimTurrets(const Ship &ship, Command &command, bool opportunistic) cons
     enemies.push_back(ship.GetTargetAsteroid().get());
   
   // If there are no enemies to aim at, opportunistic turrets should sweep
-  // back and forth at random, with the sweep centered on the "outward-facing"
+  // back and forth at random, with the sweep centred on the "outward-facing"
   // angle. Focused turrets should just point forward.
   if(enemies.empty() && !opportunistic)
   {
@@ -2533,8 +2533,8 @@ void AI::AimTurrets(const Ship &ship, Command &command, bool opportunistic) cons
         if(!previous && (Random::Int(60)))
           continue;
         
-        Angle centerAngle = Angle(hardpoint.GetPoint());
-        double bias = (centerAngle - hardpoint.GetAngle()).Degrees() / 180.;
+        Angle centreAngle = Angle(hardpoint.GetPoint());
+        double bias = (centreAngle - hardpoint.GetAngle()).Degrees() / 180.;
         double acceleration = Random::Real() - Random::Real() + bias;
         command.SetAim(index, previous + .1 * acceleration);
       }
@@ -3500,7 +3500,7 @@ void AI::IssueOrders(const PlayerInfo &player, const Orders &newOrders, const st
   if(ships.empty())
     return;
   
-  Point centerOfGravity;
+  Point centreOfGravity;
   bool isMoveOrder = (newOrders.type == Orders::MOVE_TO);
   int squadCount = 0;
   if(isMoveOrder)
@@ -3508,11 +3508,11 @@ void AI::IssueOrders(const PlayerInfo &player, const Orders &newOrders, const st
     for(const Ship *ship : ships)
       if(ship->GetSystem() && !ship->IsDisabled())
       {
-        centerOfGravity += ship->Position();
+        centreOfGravity += ship->Position();
         ++squadCount;
       }
     if(squadCount > 1)
-      centerOfGravity /= squadCount;
+      centreOfGravity /= squadCount;
   }
   // If this is a move command, make sure the fleet is bunched together
   // enough that each ship takes up no more than about 30,000 square pixels.
@@ -3545,9 +3545,9 @@ void AI::IssueOrders(const PlayerInfo &player, const Orders &newOrders, const st
     if(isMoveOrder)
     {
       // In a move order, rather than commanding every ship to move to the
-      // same point, they move as a mass so their center of gravity is
+      // same point, they move as a mass so their centre of gravity is
       // that point but their relative positions are unchanged.
-      Point offset = ship->Position() - centerOfGravity;
+      Point offset = ship->Position() - centreOfGravity;
       if(offset.Length() > maxSquadOffset)
         offset = offset.Unit() * maxSquadOffset;
       existing.point += offset;

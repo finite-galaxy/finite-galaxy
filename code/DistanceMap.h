@@ -15,7 +15,7 @@ class System;
 
 
 // This is a map of how many hyperspace jumps it takes to get to other systems
-// from the given "center" system. Ships with a hyperdrive travel using the
+// from the given "centre" system. Ships with a hyperdrive travel using the
 // "links" between systems. Ships with jump drives can make use of those links,
 // but can also travel to any of a system's "neighbors." A distance map can also
 // be used to calculate the shortest route between two systems.
@@ -23,11 +23,11 @@ class DistanceMap {
 public:
   // Find paths to the given system. The optional arguments put a limit on how
   // many systems will be returned and how far away they are allowed to be.
-  explicit DistanceMap(const System *center, int maxCount = -1, int maxDistance = -1);
+  explicit DistanceMap(const System *centre, int maxCount = -1, int maxDistance = -1);
   // If a player is given, the map will only use hyperspace paths known to the
   // player; that is, one end of the path has been visited. Also, if the
   // player's flagship has a jump drive, the jumps will be make use of it.
-  explicit DistanceMap(const PlayerInfo &player, const System *center = nullptr);
+  explicit DistanceMap(const PlayerInfo &player, const System *centre = nullptr);
   // Calculate the path for the given ship to get to the given system. The
   // ship will use a jump drive or hyperdrive depending on what it has. The
   // pathfinding will stop once a path to the destination is found.
@@ -92,7 +92,7 @@ private:
   std::priority_queue<Edge> edges;
   const PlayerInfo *player = nullptr;
   const System *source = nullptr;
-  const System *center = nullptr;
+  const System *centre = nullptr;
   int maxCount = -1;
   int maxDistance = -1;
   // How much fuel is used for travel. If either value is zero, it means that

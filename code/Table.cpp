@@ -27,7 +27,7 @@ void Table::Clear()
   
   font = &FontSet::Get(14);
   rowSize = Point(0., 20.);
-  center = Point(0., font->Height() / 2);
+  centre = Point(0., font->Height() / 2);
   lineSize = Point(0., 1.);
   lineOff = Point(0., font->Height() + 1);
   
@@ -53,7 +53,7 @@ void Table::SetFontSize(int size)
 {
   font = &FontSet::Get(size);
   lineOff.Y() = font->Height() + 1;
-  center.Y() = font->Height() / 2;
+  centre.Y() = font->Height() / 2;
 }
 
 
@@ -71,12 +71,12 @@ void Table::SetRowHeight(int height)
 void Table::SetHighlight(int startX, int endX)
 {
   rowSize.X() = endX - startX;
-  center.X() = (endX + startX) / 2;
+  centre.X() = (endX + startX) / 2;
   
   if(!lineSize.X())
   {
     lineSize.X() = rowSize.X();
-    lineOff.X() = center.X();
+    lineOff.X() = centre.X();
   }
 }
 
@@ -92,7 +92,7 @@ void Table::SetUnderline(int startX, int endX)
   if(!rowSize.X())
   {
     rowSize.X() = lineSize.X();
-    center.X() = lineOff.X();
+    centre.X() = lineOff.X();
   }
 }
 
@@ -196,7 +196,7 @@ void Table::DrawHighlight() const
 
 void Table::DrawHighlight(const Color &color) const
 {
-  FillShader::Fill(GetCenterPoint(), GetRowSize(), color);
+  FillShader::Fill(GetCentrePoint(), GetRowSize(), color);
 }
 
 
@@ -219,11 +219,11 @@ Point Table::GetPoint()
 
 
 
-// Get the center and size of the current row. This can be used to define
+// Get the centre and size of the current row. This can be used to define
 // what screen region constitutes a mouse click on this particular row.
-Point Table::GetCenterPoint() const
+Point Table::GetCentrePoint() const
 {
-  return point + center;
+  return point + centre;
 }
 
 
@@ -237,7 +237,7 @@ Point Table::GetRowSize() const
 
 Rectangle Table::GetRowBounds() const
 {
-  return Rectangle(GetCenterPoint(), GetRowSize());
+  return Rectangle(GetCentrePoint(), GetRowSize());
 }
 
 

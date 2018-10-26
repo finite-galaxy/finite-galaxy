@@ -368,7 +368,7 @@ void PreferencesPanel::DrawControls()
       if(isHovering)
         table.DrawHighlight(back);
       
-      zones.emplace_back(table.GetCenterPoint(), table.GetRowSize(), command);
+      zones.emplace_back(table.GetCentrePoint(), table.GetRowSize(), command);
       
       table.Draw(command.Description(), medium);
       table.Draw(command.KeyName(), isEditing ? bright : medium);
@@ -462,7 +462,7 @@ void PreferencesPanel::DrawSettings()
     }
     
     // Record where this setting is displayed, so the user can click on it.
-    prefZones.emplace_back(table.GetCenterPoint(), table.GetRowSize(), setting);
+    prefZones.emplace_back(table.GetCentrePoint(), table.GetRowSize(), setting);
     
     // Get the "on / off" text for this setting.
     bool isOn = Preferences::Has(setting);
@@ -552,7 +552,7 @@ void PreferencesPanel::DrawPlugins()
   const Font &font = FontSet::Get(14);
   for(const pair<string, string> &plugin : GameData::PluginAboutText())
   {
-    pluginZones.emplace_back(table.GetCenterPoint(), table.GetRowSize(), plugin.first);
+    pluginZones.emplace_back(table.GetCentrePoint(), table.GetRowSize(), plugin.first);
     
     bool isSelected = (plugin.first == selectedPlugin);
     if(isSelected || plugin.first == hoverPlugin)
@@ -565,8 +565,8 @@ void PreferencesPanel::DrawPlugins()
       Point top(15., firstY);
       if(sprite)
       {
-        Point center(130., top.Y() + .5 * sprite->Height());
-        SpriteShader::Draw(sprite, center);
+        Point centre(130., top.Y() + .5 * sprite->Height());
+        SpriteShader::Draw(sprite, centre);
         top.Y() += sprite->Height() + 10.;
       }
       

@@ -86,7 +86,7 @@ namespace {
   }
   
   
-  void SmoothAndCenter(vector<Point> *raw, Point size)
+  void SmoothAndCentre(vector<Point> *raw, Point size)
   {
     // Smooth out the outline by averaging neighboring points.
     Point prev = raw->back();
@@ -162,7 +162,7 @@ namespace {
     result->clear();
     
     // Out of all the top-most and bottom-most pixels, find the ones that
-    // are closest to the center of the image.
+    // are closest to the centre of the image.
     int top = -1;
     int bottom = -1;
     for(int i = 0; static_cast<unsigned>(i) < raw.size(); ++i)
@@ -215,7 +215,7 @@ void Mask::Create(const ImageBuffer &image, int frame)
   vector<Point> raw;
   Trace(image, frame, &raw);
   
-  SmoothAndCenter(&raw, Point(image.Width(), image.Height()));
+  SmoothAndCentre(&raw, Point(image.Width(), image.Height()));
   
   Simplify(raw, &outline);
   
@@ -234,7 +234,7 @@ bool Mask::IsLoaded() const
 
 // Check if this mask intersects the given line segment (from sA to vA). If
 // it does, return the fraction of the way along the segment where the
-// intersection occurs. The sA should be relative to this object's center.
+// intersection occurs. The sA should be relative to this object's centre.
 // If this object contains the given point, the return value is 0. If there
 // is no collision, the return value is 1.
 double Mask::Collide(Point sA, Point vA, Angle facing) const

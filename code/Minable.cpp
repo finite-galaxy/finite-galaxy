@@ -66,7 +66,7 @@ void Minable::Place(double energy, double beltRadius)
   // of time, so either I need to use Newton's method to get high precision
   // (which, for a game would be overkill) or something will drift over time.
   // If that drift caused the orbit to decay, that would be a problem, which
-  // rules out just applying gravity as a force from the system center.
+  // rules out just applying gravity as a force from the system centre.
   
   // Instead, each orbit is defined by an ellipse equation:
   // 1 / radius = constant * (1 + eccentricity * cos(theta)).

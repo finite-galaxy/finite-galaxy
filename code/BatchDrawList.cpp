@@ -35,9 +35,9 @@ void BatchDrawList::Clear(int step, double zoom)
 
 
 
-void BatchDrawList::SetCenter(const Point &center)
+void BatchDrawList::SetCentre(const Point &centre)
 {
-  this->center = center;
+  this->centre = centre;
 }
 
 
@@ -45,7 +45,7 @@ void BatchDrawList::SetCenter(const Point &center)
 // Add an object based on the Body class.
 bool BatchDrawList::Add(const Body &body, double clip)
 {
-  Point position = (body.Position() + .5 * body.Velocity() - center) * zoom;
+  Point position = (body.Position() + .5 * body.Velocity() - centre) * zoom;
   if(Cull(body, position))
     return false;
   

@@ -15,8 +15,8 @@ using namespace std;
 // Find paths to the given system. If the given maximum count is above zero,
 // it is a limit on how many systems should be returned. If it is below zero
 // it specifies the maximum distance away that paths should be found.
-DistanceMap::DistanceMap(const System *center, int maxCount, int maxDistance)
-  : center(center), maxCount(maxCount), maxDistance(maxDistance), useWormholes(false)
+DistanceMap::DistanceMap(const System *centre, int maxCount, int maxDistance)
+  : centre(centre), maxCount(maxCount), maxDistance(maxDistance), useWormholes(false)
 {
   Init();
 }
@@ -26,23 +26,23 @@ DistanceMap::DistanceMap(const System *center, int maxCount, int maxDistance)
 // If a player is given, the map will only use hyperspace paths known to the
 // player; that is, one end of the path has been visited. Also, if the
 // player's flagship has a jump drive, the jumps will be make use of it.
-DistanceMap::DistanceMap(const PlayerInfo &player, const System *center)
+DistanceMap::DistanceMap(const PlayerInfo &player, const System *centre)
   : player(&player)
 {
   if(!player.Flagship())
     return;
   
-  if(!center)
+  if(!centre)
   {
     if(player.Flagship()->IsEnteringHyperspace())
-      center = player.Flagship()->GetTargetSystem();
+      centre = player.Flagship()->GetTargetSystem();
     else
-      center = player.Flagship()->GetSystem();
+      centre = player.Flagship()->GetSystem();
   }
-  if(!center)
+  if(!centre)
     return;
   else
-    this->center = center;
+    this->centre = centre;
   
   Init(player.Flagship());
 }
@@ -53,7 +53,7 @@ DistanceMap::DistanceMap(const PlayerInfo &player, const System *center)
 // ship will use a jump drive or hyperdrive depending on what it has. The
 // pathfinding will stop once a path to the destination is found.
 DistanceMap::DistanceMap(const Ship &ship, const System *destination)
-  : source(ship.GetSystem()), center(destination)
+  : source(ship.GetSystem()), centre(destination)
 {
   if(!source || !destination)
     return;
@@ -100,10 +100,10 @@ set<const System *> DistanceMap::Systems() const
 
 
 
-// Return the destination system - the 'center' system.
+// Return the destination system - the 'centre' system.
 const System *DistanceMap::End() const
 {
-  return center;
+  return centre;
 }
 
 
@@ -147,10 +147,10 @@ bool DistanceMap::Edge::operator<(const Edge &other) const
 // source system or the maximum count is reached.
 void DistanceMap::Init(const Ship *ship)
 {
-  if(!center)
+  if(!centre)
     return;
   
-  route[center] = Edge();
+  route[centre] = Edge();
   if(!maxDistance)
     return;
   
@@ -186,7 +186,7 @@ void DistanceMap::Init(const Ship *ship)
   // choose the one with the fewest jumps (i.e. using jump drive rather than
   // hyperdrive). If multiple routes have the same fuel and the same number of
   // jumps, break the tie by using how "dangerous" the route is.
-  edges.emplace(center);
+  edges.emplace(centre);
   while(maxCount && !edges.empty())
   {
     Edge top = edges.top();

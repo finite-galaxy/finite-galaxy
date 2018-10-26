@@ -44,7 +44,7 @@ const Outfit *Hardpoint::GetOutfit() const
 
 
 
-// Get the location, relative to the center of the ship, from which
+// Get the location, relative to the centre of the ship, from which
 // projectiles of this weapon should originate.
 const Point &Hardpoint::GetPoint() const
 {
@@ -254,7 +254,7 @@ void Hardpoint::Install(const Outfit *outfit)
     
     // For fixed weapons, apply "gun harmonization," pointing them slightly
     // inward so the projectiles will converge. For turrets, start them out
-    // pointing outward from the center of the ship.
+    // pointing outward from the centre of the ship.
     if(!isTurret)
       angle = HarmonizedAngle();
     else

@@ -115,7 +115,7 @@ void LoadPanel::Draw()
     
     double alpha = min(1., max(0., min(.1 * (113. - point.Y()), .1 * (point.Y() - -167.))));
     if(it.first == selectedPilot)
-      FillShader::Fill(zone.Center(), zone.Dimensions(), Color(.1 * alpha, 0.));
+      FillShader::Fill(zone.Centre(), zone.Dimensions(), Color(.1 * alpha, 0.));
     string name = font.Truncate(it.first, 220);
     font.Draw(name, point, Color((isHighlighted ? .7 : .5) * alpha, 0.));
     point += Point(0., 20.);
@@ -128,7 +128,7 @@ void LoadPanel::Draw()
   
   if(!selectedPilot.empty() && files.count(selectedPilot))
   {
-    point = Point(-110., -157. - centerScroll);
+    point = Point(-110., -157. - centreScroll);
     for(const auto &it : files.find(selectedPilot)->second)
     {
       const string &file = it.first;
@@ -144,7 +144,7 @@ void LoadPanel::Draw()
       }
       
       if(file == selectedFile)
-        FillShader::Fill(zone.Center(), zone.Dimensions(), Color(.1 * alpha, 0.));
+        FillShader::Fill(zone.Centre(), zone.Dimensions(), Color(.1 * alpha, 0.));
       size_t pos = file.find('~') + 1;
       string name = font.Truncate(file.substr(pos, file.size() - 4 - pos), 220);
       font.Draw(name, point, Color((isHighlighted ? .7 : .5) * alpha, 0.));
@@ -290,7 +290,7 @@ bool LoadPanel::Click(int x, int y, int clicks)
   }
   else if(x >= -110 && x < 110)
   {
-    int selected = (y + centerScroll - -160) / 20;
+    int selected = (y + centreScroll - -160) / 20;
     int i = 0;
     auto filesIt = files.find(selectedPilot);
     if(filesIt == files.end())
@@ -341,7 +341,7 @@ bool LoadPanel::Drag(double dx, double dy)
   if(sideHasFocus)
     sideScroll = max(0., min(20. * files.size() - 280., sideScroll - dy));
   else if(!selectedPilot.empty() && it != files.end())
-    centerScroll = max(0., min(20. * it->second.size() - 280., centerScroll - dy));
+    centreScroll = max(0., min(20. * it->second.size() - 280., centreScroll - dy));
   return true;
 }
 

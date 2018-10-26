@@ -40,7 +40,7 @@ protected:
   virtual void DrawItem(const std::string &name, const Point &point, int scrollY) override;
   virtual int DividerOffset() const override;
   virtual int DetailWidth() const override;
-  virtual int DrawDetails(const Point &center) override;
+  virtual int DrawDetails(const Point &centre) override;
   virtual bool CanBuy() const override;
   virtual void Buy(bool fromCargo = false) override;
   virtual void FailBuy() const override;
@@ -56,7 +56,7 @@ protected:
 private:
   static bool ShipCanBuy(const Ship *ship, const Outfit *outfit);
   static bool ShipCanSell(const Ship *ship, const Outfit *outfit);
-  static void DrawOutfit(const Outfit &outfit, const Point &center, bool isSelected, bool isOwned);
+  static void DrawOutfit(const Outfit &outfit, const Point &centre, bool isSelected, bool isOwned);
   bool HasMapped(int mapSize) const;
   bool IsLicence(const std::string &name) const;
   bool HasLicence(const std::string &name) const;

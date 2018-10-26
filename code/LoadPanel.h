@@ -66,7 +66,7 @@ private:
   bool hasHover = false;
   bool sideHasFocus = false;
   double sideScroll = 0;
-  double centerScroll = 0;
+  double centreScroll = 0;
 };
 
 

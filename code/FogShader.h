@@ -13,7 +13,7 @@ class FogShader {
 public:
   static void Init();
   static void Redraw();
-  static void Draw(const Point &center, double zoom, const PlayerInfo &player);
+  static void Draw(const Point &centre, double zoom, const PlayerInfo &player);
 };
 
 

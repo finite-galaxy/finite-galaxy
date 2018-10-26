@@ -121,7 +121,7 @@ void BoardingPanel::Draw()
   int endY = 60;
   
   const Font &font = FontSet::Get(14);
-  // Y offset to center the text in a 20-pixel high row.
+  // Y offset to centre the text in a 20-pixel high row.
   double fontOff = .5 * (20 - font.Height());
   for( ; y < endY && static_cast<unsigned>(index) < plunder.size(); y += 20, ++index)
   {

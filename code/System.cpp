@@ -481,7 +481,7 @@ const StellarObject *System::FindStellar(const Planet *planet) const
 
 
 
-// Get the habitable zone's center.
+// Get the habitable zone's centre.
 double System::HabitableZone() const
 {
   return habitable;

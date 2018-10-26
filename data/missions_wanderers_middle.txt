@@ -200,15 +200,15 @@ mission "Wanderers: Sestor Controller"
   to offer
     has "Wanderers: Surveying 1: done"
   on complete
-    log `The "Kor Sestor" drones turn out to all be controlled remotely, presumably by either an artificial intelligence or by Korath leaders in hiding on one of their worlds. If the control center could be found, it would be possible to gain control of the entire Kor Sestor fleet.`
+    log `The "Kor Sestor" drones turn out to all be controlled remotely, presumably by either an artificial intelligence or by Korath leaders in hiding on one of their worlds. If the control centre could be found, it would be possible to gain control of the entire Kor Sestor fleet.`
     outfit "Control Transceiver" -1
     conversation
       `A team of Wanderer scientists examines the Control Transceiver that you salvaged from a Kor Sestor drone. "It is a remote control," they tell you. "Very little [computing power? autonomy?]. The ship receives [commands, directives] from some other source and sends back information on its own [status, observations]."`
       choice
         `  "Is there any way we could track the source of the commands?"`
         `  "Could we disrupt their communications somehow? Render them helpless?"`
-      `  "No," says the scientist, "it uses an [entangled particle?]. Untraceable, impossible to [interrupt, interfere with], and it could [operate, communicate] over any distance. But if we could locate the [control center?], we would be able to [take over, hijack] all the drones simultaneously."`
-      `  "What would the control center look like?" you ask.`
+      `  "No," says the scientist, "it uses an [entangled particle?]. Untraceable, impossible to [interrupt, interfere with], and it could [operate, communicate] over any distance. But if we could locate the [control centre?], we would be able to [take over, hijack] all the drones simultaneously."`
+      `  "What would the control centre look like?" you ask.`
       `  "It could be anything," says the scientist. "Maybe a massive computer. Maybe an artificial mind. Maybe an underground [bunker, habitation] where aging [war captains, generals] hide out in order to direct their [pointless, futile] war. But whatever it is, it is a single [point, focus] of vulnerability, which we may use to our advantage."`
 
 
@@ -368,7 +368,7 @@ mission "Wanderers: Quarg Assistance 1"
     conversation
       `Soon after you and Ektasi Rek land in the Kor Efret spaceport, a small group of Korath gathers around you. No doubt they realize that Rek is one of the new aliens settling in their former territory. But when Rek begins trying to communicate with them, their desire to be understood overcomes whatever hostility they might be feeling.`
       `  Within a few minutes Rek is playing a sort of game with them where she points at different objects, trying to learn their names, and then uses those names in sentences: This is a table. Rek is on the table. Rek stands on the table. The table is under Rek. The color of the table is black. The color of the table is the same as the color of Rek.`
-      `  The Korath wave their hands approvingly when Rek says something they agree with, and hiss when she makes a grammatical mistake. The new words and new parts of speech are coming too fast for you to catch more than the general gist of what is going on, but Rek is drinking it all in. She looks so happy and full of life that it's hard to believe that she is the same person you said goodbye to in the medical center months ago.`
+      `  The Korath wave their hands approvingly when Rek says something they agree with, and hiss when she makes a grammatical mistake. The new words and new parts of speech are coming too fast for you to catch more than the general gist of what is going on, but Rek is drinking it all in. She looks so happy and full of life that it's hard to believe that she is the same person you said goodbye to in the medical centre months ago.`
       `  After about an hour Rek says something to the group of Korath, and then walks over to you.`
       choice
         `  "You look like you're making amazing progress!"`
@@ -695,7 +695,7 @@ mission "Wanderers: Kor Efret 3"
         goto end
 
       label sestor
-      `  Rek asks the Korath a question, and translates the response. "They say that none of them know what is controlling the Kor Sestor, but that wherever the control center is, it is certainly tightly guarded. They have not been willing to risk their own lives to explore Sestor space, but you are free to do so if you think it would be beneficial."`
+      `  Rek asks the Korath a question, and translates the response. "They say that none of them know what is controlling the Kor Sestor, but that wherever the control centre is, it is certainly tightly guarded. They have not been willing to risk their own lives to explore Sestor space, but you are free to do so if you think it would be beneficial."`
 
       label end
       `  The conversation is interrupted as alarm sirens begin to sound throughout the spaceport. One of the Korath says something to Rek, and they all begin running toward the landing pads. Rek says, "Another Kor Mereti attack. They have become more frequent, lately. You should join the defenders; fighting alongside them will help to gain their trust." You hurry back to your ship and take off...`
@@ -1472,7 +1472,7 @@ mission "Wanderers: Tour 7"
 mission "Wanderers: Sestor Scanning"
   landing
   name "Scan Sestor Planets"
-  description "Scan all the habitable planets in Sestor space to attempt to find where the control center for the automata is located."
+  description "Scan all the habitable planets in Sestor space to attempt to find where the control centre for the automata is located."
   autosave
   source "Desi Seledrak"
   to offer
@@ -1499,7 +1499,7 @@ mission "Wanderers: Sestor Scanning"
       `  "With great [destruction, loss] of life," says Tema'a Iriket. "That is not [acceptable, moral]. We should seek a more [subtle, elegant] solution."`
 
       label next
-      `  After some discussion, the Wanderers agree that the best way to deal with the Sestor drones is to try to figure out where their control center is. "Their communications are [untraceable, undetectable]," says Tele'ek, "but surely the [control center, communications hub] will be well defended. So by [hunting, searching] for a well defended [site, installation] we may find it."`
+      `  After some discussion, the Wanderers agree that the best way to deal with the Sestor drones is to try to figure out where their control centre is. "Their communications are [untraceable, undetectable]," says Tele'ek, "but surely the [control centre, communications hub] will be well defended. So by [hunting, searching] for a well defended [site, installation] we may find it."`
       `  Iriket says, "I can supply Captain <last> with [surveying?] scanners and [ground-penetrating radar?] from the terraforming team. Such a [facility, installation] might well be deep underground."`
       `  The Wanderers begin loading the scanning equipment onto your ship, and ask you to land on each of the planets in Kor Sestor space to collect measurements. "Bring the [data, results] back to us to be analysed," says Iriket.`
         accept
@@ -1528,7 +1528,7 @@ mission "Wanderers: Sestor Attack"
     has "Wanderers: Sestor Scanning: done"
   on offer
     conversation
-      `A few hours after you present the scanning data to the scientists, you are called into a meeting with the Wanderer leaders. "We may have found the [facility, center]," says, Tele'ek, "but we are not [certain, confident]. There is indeed an underground [bunker, fortress] on one of the planets, but it must have been [damaged, overrun] in the course of their war." He calls up a holographic display of the facility, showing that one section of it has been breached, and a tunnel leads from there to the surface.`
+      `A few hours after you present the scanning data to the scientists, you are called into a meeting with the Wanderer leaders. "We may have found the [facility, centre]," says, Tele'ek, "but we are not [certain, confident]. There is indeed an underground [bunker, fortress] on one of the planets, but it must have been [damaged, overrun] in the course of their war." He calls up a holographic display of the facility, showing that one section of it has been breached, and a tunnel leads from there to the surface.`
       choice
         `  "You're probably right that they wouldn't have kept using the facility once it was been breached."`
         `  "Is there any sign that they tried to rebuild it after the damage? Or that it's still in use?"`
@@ -1681,7 +1681,7 @@ mission "Wanderers: Sestor Search"
     never
   destination "Vara K'chrai"
   on offer
-    log "Someone else seems to have located the Kor Sestor command center before the Wanderers did, and has taken control of the Kor Sestor fleet. Most of the Kor Sestor drones flew through the Eye into the old Wanderer territory, where the Wanderers will probably not be prepared to fight them."
+    log "Someone else seems to have located the Kor Sestor command centre before the Wanderers did, and has taken control of the Kor Sestor fleet. Most of the Kor Sestor drones flew through the Eye into the old Wanderer territory, where the Wanderers will probably not be prepared to fight them."
     event "wanderers: kor sestor are aimless"
     conversation
       `You return to the planet expecting the Wanderers to be celebrating their victory, but the leaders have grim news. "The drones we fought were only the [rearguard? remnant?] of the fleet," says Tele'ek. "Dozens of [capital ships?] passed through this system and continued on. With this [heading, destination]." On the holographic projector, he brings up a star map, and points to the system where the Eye is. The wormhole leading back to Wanderer space.`
@@ -3059,7 +3059,7 @@ mission "Wanderers: Sestor: Factory 2"
   on offer
     event "wanderers: asikafarnut battle"
     conversation
-      `The drones stop firing on the Korath world-ships the moment they enter the atmosphere, which is a good sign - it probably means that their command codes worked. While they begin scouting out the manufacturing center, the exiles tell you (through Rek) that they need you to return to orbit and keep the remaining drones from attacking them until they can be sure the factory is shut down for good; it might take them a while to accomplish that.`
+      `The drones stop firing on the Korath world-ships the moment they enter the atmosphere, which is a good sign - it probably means that their command codes worked. While they begin scouting out the manufacturing centre, the exiles tell you (through Rek) that they need you to return to orbit and keep the remaining drones from attacking them until they can be sure the factory is shut down for good; it might take them a while to accomplish that.`
       `  You fire up your engines and blast off for one last battle against the Kor Sestor...`
         launch
   npc evade

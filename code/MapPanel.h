@@ -96,21 +96,21 @@ protected:
   // A system associated with a dialog or conversation.
   const System *specialSystem;
   
-  Point center;
-  Point recenterVector;
-  int recentering = 0;
+  Point centre;
+  Point recentreVector;
+  int recentring = 0;
   int commodity;
   int step = 0;
   std::string buttonCondition;
   
-  // Distance from the screen center to the nearest owned system,
+  // Distance from the screen centre to the nearest owned system,
   // for use in determining which governments are in the legend.
   std::map<const Government *, double> closeGovernments;
   // Systems in which your escorts are located.
   std::map<const System *, std::pair<int, int>> escortSystems;
-  // Center the view on the given system (may actually be slightly offset
+  // Centre the view on the given system (may actually be slightly offset
   // to account for panels on the screen).
-  void CenterOnSystem(const System *system, bool immediate = false);
+  void CentreOnSystem(const System *system, bool immediate = false);
   
   // Cache the map layout, so it doesn't have to be re-calculated every frame.
   // The cache must be updated when the coloring mode changes.

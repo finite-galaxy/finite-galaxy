@@ -19,7 +19,7 @@ class BatchDrawList {
 public:
   // Clear the list, also setting the global time step for animation.
   void Clear(int step = 0, double zoom = 1.);
-  void SetCenter(const Point &center);
+  void SetCentre(const Point &centre);
   
   // Add an object based on the Body class.
   bool Add(const Body &body, double clip = 1.);
@@ -36,7 +36,7 @@ private:
   int step = 0;
   double zoom = 1.;
   bool isHighDPI = false;
-  Point center;
+  Point centre;
   
   // Each sprite consists of six vertices (four vertices to form a quad and
   // two dummy vertices to mark the break in between them). Each of those

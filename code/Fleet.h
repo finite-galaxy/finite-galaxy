@@ -60,7 +60,7 @@ private:
   
 private:
   const Variant &ChooseVariant() const;
-  static Point ChooseCenter(const System &system);
+  static Point ChooseCentre(const System &system);
   std::vector<std::shared_ptr<Ship>> Instantiate(const Variant &variant) const;
   bool PlaceFighter(std::shared_ptr<Ship> fighter, std::vector<std::shared_ptr<Ship>> &placed) const;
   void SetCargo(Ship *ship) const;

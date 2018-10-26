@@ -24,7 +24,7 @@ public:
   
   // Get the weapon installed in this hardpoint (or null if there is none).
   const Outfit *GetOutfit() const;
-  // Get the location, relative to the center of the ship, from which
+  // Get the location, relative to the centre of the ship, from which
   // projectiles of this weapon should originate. This point must be
   // rotated to take the ship's current facing direction into account.
   const Point &GetPoint() const;
@@ -74,7 +74,7 @@ private:
 private:
   // The weapon installed in this hardpoint.
   const Outfit *outfit = nullptr;
-  // Hardpoint location, in world coordinates relative to the ship's center.
+  // Hardpoint location, in world coordinates relative to the ship's centre.
   Point point;
   // Angle adjustment for convergence.
   Angle angle;

@@ -16,15 +16,15 @@ mission "FW Conservatory 1"
         not "FW Katya 1: done"
  
       label "met andersons"
-      `When you meet Ijs in the spaceport, he has Lynn and Henry Anderson with him, the friends of Katya who you transported from Glory months ago. Ijs is beaming - his meeting must have gone really well. "Guess what, Captain?" he says. "We've got a location for the Conservatory! The government of Winter has offered a community center for our use."`
+      `When you meet Ijs in the spaceport, he has Lynn and Henry Anderson with him, the friends of Katya who you transported from Glory months ago. Ijs is beaming - his meeting must have gone really well. "Guess what, Captain?" he says. "We've got a location for the Conservatory! The government of Winter has offered a community centre for our use."`
         goto continue
 
       label "not met andersons"
-      `When you meet Ijs in the spaceport, he has a man and a woman with him which he introduces as Lynn and Henry Anderson. Ijs is beaming - his meeting must have gone really well. "Guess what, Captain?" he says. "We've got a location for the Conservatory! The government of Winter has offered a community center for our use."`
+      `When you meet Ijs in the spaceport, he has a man and a woman with him which he introduces as Lynn and Henry Anderson. Ijs is beaming - his meeting must have gone really well. "Guess what, Captain?" he says. "We've got a location for the Conservatory! The government of Winter has offered a community centre for our use."`
         goto continue
 
       label continue
-      `  "A somewhat run-down community center," adds Henry.`
+      `  "A somewhat run-down community centre," adds Henry.`
       `  Ijs laughs. "True. Anyway, we were hoping you could give us a lift over there, and maybe help out with securing some equipment, too."`
       choice
         `  "Sure, I'd definitely like to help make this a reality!"`
@@ -137,7 +137,7 @@ mission "FW Conservatory 2B"
       `  "Is there anything else you need me to do?" you ask.`
       `  "Not at the moment," he says. "I'll send you a message when we do. Thanks for your help, and if you hear any more news about Katya, please let me know."`
     event "fw conservatory founded" 30
-    log "Helped to transport some items for building a public university and terraforming research center on Winter. Ijs Springborn will be one of the professors."
+    log "Helped to transport some items for building a public university and terraforming research centre on Winter. Ijs Springborn will be one of the professors."
 
 
 
@@ -543,5 +543,5 @@ mission "FW Stack Core 1C"
   
   on offer
     conversation
-      `You receive a message from Freya: "Hello again, Captain! Thanks for your help escorting the materials to Solace. Ever since we developed the Dreadnoughts people have been talking about how badly we need a generator that can meet their energy needs, and that's what Delta V Corporation has been working on. So, take a look next time you're on Solace or one of our other major manufacturing centers. Sorry for the mystery surrounding the cargo, but we didn't exactly want to advertise that a huge shipment of fissionable material was headed for Free Worlds space."`
+      `You receive a message from Freya: "Hello again, Captain! Thanks for your help escorting the materials to Solace. Ever since we developed the Dreadnoughts people have been talking about how badly we need a generator that can meet their energy needs, and that's what Delta V Corporation has been working on. So, take a look next time you're on Solace or one of our other major manufacturing centres. Sorry for the mystery surrounding the cargo, but we didn't exactly want to advertise that a huge shipment of fissionable material was headed for Free Worlds space."`
         decline

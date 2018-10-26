@@ -38,7 +38,7 @@ public:
     const Government *pGov = nullptr, const Body *target = nullptr) const;
   
   // Get all objects within the given range of the given point.
-  const std::vector<Body *> &Circle(const Point &center, double radius) const;
+  const std::vector<Body *> &Circle(const Point &centre, double radius) const;
   
   
 private:

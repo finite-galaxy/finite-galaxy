@@ -28,7 +28,7 @@ public:
   
 public:
   void Clear();
-  void SetCenter(const Point &center);
+  void SetCentre(const Point &centre);
   
   // Add an object. If "inner" is 0 it is a dot; otherwise, it is a ring. The
   // given position should be in world units (not shrunk to radar units).
@@ -39,7 +39,7 @@ public:
   void AddViewportBoundary(const Point &vertex);
   
   // Draw the radar display at the given coordinates.
-  void Draw(const Point &center, double scale, double radius, double pointerRadius) const;
+  void Draw(const Point &centre, double scale, double radius, double pointerRadius) const;
   
   // Get the color for the given status.
   static const Color &GetColor(int type);
@@ -74,7 +74,7 @@ private:
   };
   
 private:
-  Point center;
+  Point centre;
   std::vector<Object> objects;
   std::vector<Pointer> pointers;
   std::vector<Line> lines;

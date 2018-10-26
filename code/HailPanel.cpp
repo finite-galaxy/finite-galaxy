@@ -183,14 +183,14 @@ void HailPanel::Draw()
   
   // Draw the sprite, rotated, scaled, and swizzled as necessary.
   double zoom = min(2., 400. / max(sprite->Width(), sprite->Height()));
-  Point center(-170., -10.);
+  Point centre(-170., -10.);
   
   DrawList draw;
   // If this is a ship, copy its swizzle, animation settings, etc.
   if(ship)
-    draw.Add(Body(*ship, center, Point(), facing, zoom));
+    draw.Add(Body(*ship, centre, Point(), facing, zoom));
   else
-    draw.Add(Body(sprite, center, Point(), facing, zoom));
+    draw.Add(Body(sprite, centre, Point(), facing, zoom));
   
   // If hailing a ship, draw its turret sprites.
   if(ship)
@@ -199,7 +199,7 @@ void HailPanel::Draw()
       {
         Body body(
           hardpoint.GetOutfit()->HardpointSprite(),
-          center + zoom * facing.Rotate(hardpoint.GetPoint()),
+          centre + zoom * facing.Rotate(hardpoint.GetPoint()),
           Point(),
           facing + hardpoint.GetAngle(),
           zoom);

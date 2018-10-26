@@ -23,7 +23,7 @@ class DrawList {
 public:
   // Clear the list, also setting the global time step for animation.
   void Clear(int step = 0, double zoom = 1.);
-  void SetCenter(const Point &center, const Point &centerVelocity = Point());
+  void SetCentre(const Point &centre, const Point &centreVelocity = Point());
   
   // Add an object based on the Body class.
   bool Add(const Body &body, double cloak = 0.);
@@ -48,8 +48,8 @@ private:
   bool isHighDPI = false;
   std::vector<SpriteShader::Item> items;
   
-  Point center;
-  Point centerVelocity;
+  Point centre;
+  Point centreVelocity;
 };
 
 

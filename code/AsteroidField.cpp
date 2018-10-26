@@ -97,11 +97,11 @@ void AsteroidField::Step(vector<Visual> &visuals, list<shared_ptr<Flotsam>> &flo
 
 
 
-// Draw the asteroids, centered on the given location.
-void AsteroidField::Draw(DrawList &draw, const Point &center, double zoom) const
+// Draw the asteroids, centred on the given location.
+void AsteroidField::Draw(DrawList &draw, const Point &centre, double zoom) const
 {
   for(const Asteroid &asteroid : asteroids)
-    asteroid.Draw(draw, center, zoom);
+    asteroid.Draw(draw, centre, zoom);
   for(const shared_ptr<Minable> &minable : minables)
     draw.Add(*minable);
 }
@@ -211,11 +211,11 @@ void AsteroidField::Asteroid::Step()
 
 
 // Draw any instances of this asteroid that are on screen.
-void AsteroidField::Asteroid::Draw(DrawList &draw, const Point &center, double zoom) const
+void AsteroidField::Asteroid::Draw(DrawList &draw, const Point &centre, double zoom) const
 {
   // Any object within this range must be drawn.
-  Point topLeft = center + (Screen::TopLeft() - size) / zoom;
-  Point bottomRight = center + (Screen::BottomRight() + size) / zoom;
+  Point topLeft = centre + (Screen::TopLeft() - size) / zoom;
+  Point bottomRight = centre + (Screen::BottomRight() + size) / zoom;
   
   // Figure out the position of the first instance of this asteroid that is to
   // the right of and below the top left corner of the screen.

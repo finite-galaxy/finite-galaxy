@@ -477,7 +477,7 @@ void Ship::FinishLoading(bool isNewInstance)
   equipped.clear();
   armament.FinishLoading();
   
-  // Figure out how far from center the farthest hardpoint is.
+  // Figure out how far from centre the farthest hardpoint is.
   weaponRadius = 0.;
   for(const Hardpoint &hardpoint : armament.Get())
     weaponRadius = max(weaponRadius, hardpoint.GetPoint().Length());
@@ -1192,7 +1192,7 @@ void Ship::Move(vector<Visual> &visuals, list<shared_ptr<Flotsam>> &flotsam)
     // just slowly refuel.
     if(landingPlanet && zoom)
     {
-      // Move the ship toward the center of the planet while landing.
+      // Move the ship toward the centre of the planet while landing.
       if(GetTargetStellar())
         position = .97 * position + .03 * GetTargetStellar()->Position();
       zoom -= .02;
@@ -1571,7 +1571,7 @@ void Ship::DoGeneration()
     PauseAnimation();
   else
   {
-    // Ramscoops work much better when close to the system center. Even if a
+    // Ramscoops work much better when close to the system centre. Even if a
     // ship has no ramscoop, it can harvest a tiny bit of fuel by flying
     // close to the star. Carried fighters can't collect fuel or energy this way.
     if(currentSystem)

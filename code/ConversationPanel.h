@@ -67,9 +67,9 @@ private:
     
     // Get the height of this paragraph.
     int Height() const;
-    // Get the "center point" of this paragraph. This is for drawing a
+    // Get the "centre point" of this paragraph. This is for drawing a
     // highlight under paragraphcs that represent choices.
-    Point Center() const;
+    Point Centre() const;
     // Draw this paragraph at the given point, and return the point that the
     // next paragraph below this one should be drawn at.
     Point Draw(Point point, const Color &color) const;

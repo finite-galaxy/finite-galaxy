@@ -137,7 +137,7 @@ void StarField::Draw(const Point &pos, const Point &vel, double zoom) const
   
   DrawList drawList;
   drawList.Clear(0, zoom);
-  drawList.SetCenter(pos);
+  drawList.SetCentre(pos);
   
   // Any object within this range must be drawn. Some haze sprites may repeat
   // more than once if the view covers a very large area.

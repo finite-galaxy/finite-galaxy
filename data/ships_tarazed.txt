@@ -14,7 +14,7 @@ shipyard "Tarazed Variants"
   "Kestrel (More Weapons)"
   "Kestrel Prototype"
   "Osprey"
-  "Osprey (Alien Weapons)"
+  "Osprey (Hai)"
   "Osprey (Laser)"
   "Osprey (Missile)"
   "Raven"
@@ -56,7 +56,7 @@ ship "Blackbird"
     "Impala Plasma Thruster"
     "Impala Plasma Steering"
 
-    "Heavy Anti-Missile Turret" 2
+    "Modified Blaster Quad Turret" 2
 
     "D23-QP Shield Generator"
     "S3 Thermionic"
@@ -66,8 +66,8 @@ ship "Blackbird"
     "Small Radar Jammer"
   engine -40 55
   engine 40 55
-  turret -18 0 "Heavy Anti-Missile Turret"
-  turret 18 0 "Heavy Anti-Missile Turret"
+  turret -18 0 "Modified Blaster Quad Turret"
+  turret 18 0 "Modified Blaster Quad Turret"
   leak "leak" 50 50
   leak "flame" 70 80
   explode "tiny explosion" 15
@@ -104,11 +104,11 @@ ship "Falcon"
       "hull damage" 800
       "hit force" 2400
   outfits
-    "Impala Plasma Thruster"
+    "Orca Plasma Thruster"
     "Impala Plasma Steering"
 
     "Plasma Cannon" 2
-    "4X Blaster Turret" 4
+    "Modified Blaster Quad Turret" 4
 
     "D41-HY Shield Generator"
     "Breeder Reactor"
@@ -121,10 +121,10 @@ ship "Falcon"
   engine 17 143
   gun -17 -88 "Plasma Cannon"
   gun 17 -88 "Plasma Cannon"
-  turret -16 -24 "4X Blaster Turret"
-  turret 16 -24 "4X Blaster Turret"
-  turret -57 40 "4X Blaster Turret"
-  turret 57 40 "4X Blaster Turret"
+  turret -16 -24 "Modified Blaster Quad Turret"
+  turret 16 -24 "Modified Blaster Quad Turret"
+  turret -57 40 "Modified Blaster Quad Turret"
+  turret 57 40 "Modified Blaster Quad Turret"
   leak "leak" 30 50
   leak "flame" 50 80
   leak "big leak" 60 30
@@ -133,7 +133,7 @@ ship "Falcon"
   explode "medium explosion" 60
   explode "large explosion" 40
   "final explode" "final explosion medium"
-  description "The Tarazed Falcon is one of the most powerful warships that civilians can buy, a sleeker and more maneuverable alternative to the venerable and somewhat outdated Leviathan."
+  description "The Tarazed Falcon is one of the most powerful warships that civilians can buy, a sleeker and more manoeuvrable alternative to the venerable and somewhat outdated Leviathan."
 
 
 ship "Falcon" "Falcon (Heavy)"
@@ -213,15 +213,15 @@ ship "Finch"
     "Chipmunk Plasma Thruster"
     "Chipmunk Plasma Steering"
 
-    "Laser Cannon" 2
+    "Modified Blaster Cannon" 2
 
     "D14-RN Shield Generator"
     "nGVF-BB Fuel Cell"
     "LP036a Battery Pack"
   engine -5 32
   engine 5 32
-  gun -7 -14 "Laser Cannon"
-  gun 7 -14 "Laser Cannon"
+  gun -7 -14 "Modified Blaster Cannon"
+  gun 7 -14 "Modified Blaster Cannon"
   leak "flame" 60 80
   explode "tiny explosion" 15
   explode "small explosion" 5
@@ -257,7 +257,7 @@ ship "Hawk"
     "Greyhound Plasma Thruster"
     "Greyhound Plasma Steering"
 
-    "Heavy Laser Cannon" 2
+    "Plasma Cannon" 2
 
     "D23-QP Shield Generator"
     "nGVF-CC Fuel Cell"
@@ -266,8 +266,8 @@ ship "Hawk"
     "Hyperdrive"
   engine -24 41
   engine 24 41
-  gun -9 -17
-  gun 9 -17
+  gun -9 -17 "Plasma Cannon"
+  gun 9 -17 "Plasma Cannon"
   leak "leak" 60 50
   explode "tiny explosion" 15
   explode "small explosion" 5
@@ -281,11 +281,12 @@ ship "Hawk" "Hawk (Rocket)"
     "Greyhound Plasma Steering"
 
     "Heavy Rocket" 40
+    "Heavy Rocket Rack" 2
     "Heavy Rocket Launcher" 2
 
-    "D41-HY Shield Generator"
-    "RT-I Radiothermal"
-    "Supercapacitor" 2
+    "D23-QP Shield Generator"
+    "nGVF-CC Fuel Cell"
+    "LP036a Battery Pack"
     "Fuel Barrel" 30
     "Hyperdrive"
 
@@ -334,28 +335,27 @@ ship "Kestrel"
     "Orca Plasma Steering"
     "Ionic Afterburner"
 
-    "Torpedo" 180
-    "Torpedo Launcher" 6
-    "Heavy Laser Turret" 4
+    "Plasma Cannon" 6
+    "Modified Blaster Turret" 4
 
-    "D94-YV Shield Generator"
-    "Fusion Reactor"
+    "D94-YV Shield Generator" 2
+    "Breeder Reactor" 2
     "LP144a Battery Pack"
-    "Liquid Nitrogen Cooler"
+    "Liquid Helium Cooler"
     "Fuel Barrel" 50
     "Hyperdrive"
   engine -14 177
   engine 14 177
-  gun -31 66 "Torpedo Launcher"
-  gun 31 66 "Torpedo Launcher"
-  gun -53 61 "Torpedo Launcher"
-  gun 53 61 "Torpedo Launcher"
-  gun -75 57 "Torpedo Launcher"
-  gun 75 57 "Torpedo Launcher"
-  turret -7 -4 "Heavy Laser Turret"
-  turret 7 -4 "Heavy Laser Turret"
-  turret -23 14 "Heavy Laser Turret"
-  turret 23 14 "Heavy Laser Turret"
+  gun -31 66 "Plasma Cannon"
+  gun 31 66 "Plasma Cannon"
+  gun -53 61 "Plasma Cannon"
+  gun 53 61 "Plasma Cannon"
+  gun -75 57 "Plasma Cannon"
+  gun 75 57 "Plasma Cannon"
+  turret -7 -4 "Modified Blaster Turret"
+  turret 7 -4 "Modified Blaster Turret"
+  turret -23 14 "Modified Blaster Turret"
+  turret 23 14 "Modified Blaster Turret"
   explode "small explosion" 25
   explode "medium explosion" 35
   explode "large explosion" 45
@@ -419,7 +419,7 @@ ship "Osprey"
     "Impala Plasma Steering"
 
     "Plasma Cannon" 4
-    "4X Blaster Turret" 2
+    "Modified Blaster Turret" 2
 
     "D41-HY Shield Generator"
     "Breeder Reactor"
@@ -434,8 +434,8 @@ ship "Osprey"
   gun 8 -100 "Plasma Cannon"
   gun -26 -53 "Plasma Cannon"
   gun 26 -53 "Plasma Cannon"
-  turret -16 -16 "4X Blaster Turret"
-  turret 16 -16 "4X Blaster Turret"
+  turret -16 -16 "Modified Blaster Turret"
+  turret 16 -16 "Modified Blaster Turret"
   leak "leak" 40 50
   leak "flame" 80 80
   leak "big leak" 80 30
@@ -447,17 +447,15 @@ ship "Osprey"
   description "After the Blackbird gained surprising popularity as an agile light warship despite its original design as a transport, Tarazed decided to produce a new design specifically intended as a warship. The Osprey was the result. Although it is considered overpriced by most savvy pilots, it is nevertheless a perennial favorite among those who have the extra cash to spend on it."
 
 
-ship "Osprey" "Osprey (Alien Weapons)"
+ship "Osprey" "Osprey (Hai)"
   outfits
     `"Bondir" Atomic Thruster`
     `"Bondir" Atomic Steering`
 
     "Ion Cannon" 2
-    "Pulse Cannon" 2
-    "Pulse Turret"
-    "Chameleon Anti-Missile"
+    "Chameleon Anti-Missile" 2
 
-    "Corundum Regenerator"
+    "Diamond Regenerator"
     "Boulder Reactor"
     "Fissure Batteries"
     "Liquid Nitrogen Cooler"
@@ -519,7 +517,7 @@ ship "Raven"
     "heat dissipation" .8
     "cargo space" 30
     "outfit space" 330
-    "engine capacity" 100
+    "engine capacity" 90
     "weapon capacity" 90
     weapon
       "blast radius" 60
@@ -527,22 +525,25 @@ ship "Raven"
       "hull damage" 300
       "hit force" 900
   outfits
-    "X3700 Ion Thruster"
-    "X3200 Ion Steering"
+    "Greyhound Plasma Thruster"
+    "Impala Plasma Steering"
 
-    "Heavy Laser Cannon" 4
+    "Heavy Rocket" 40
+    "Heavy Rocket Rack" 2
+    "Heavy Rocket Launcher" 2
+    "Plasma Cannon" 2
 
     "D41-HY Shield Generator"
-    "RT-I Radiothermal"
-    "LP072a Battery Pack"
+    "S3 Thermionic"
+    "LP036a Battery Pack"
     "Fuel Barrel" 50
     "Hyperdrive"
   engine -12 43
   engine 12 43
-  gun -10 -33 "Heavy Laser Cannon"
-  gun 10 -33 "Heavy Laser Cannon"
-  gun -16 -28 "Heavy Laser Cannon"
-  gun 16 -28 "Heavy Laser Cannon"
+  gun -10 -33 "Plasma Cannon"
+  gun 10 -33 "Plasma Cannon"
+  gun -16 -28 "Heavy Rocket Launcher"
+  gun 16 -28 "Heavy Rocket Launcher"
   leak "leak" 60 50
   leak "flame" 50 80
   explode "medium explosion" 24
@@ -555,8 +556,8 @@ ship "Raven"
 
 ship "Raven" "Raven (Afterburner)"
   outfits
-    "X3700 Ion Thruster"
-    "X3200 Ion Steering"
+    "Impala Plasma Thruster"
+    "Impala Plasma Steering"
     "Afterburner"
 
     "Heavy Laser Cannon" 4
@@ -618,7 +619,7 @@ ship "Sparrow"
     "Chipmunk Plasma Thruster"
     "Chipmunk Plasma Steering"
 
-    "Laser Cannon" 2
+    "Modified Blaster Cannon" 2
 
     "D14-RN Shield Generator"
     "nGVF-BB Fuel Cell"
@@ -642,7 +643,7 @@ ship "Sparrow" "Sparrow (Gatling)"
     "Chipmunk Plasma Steering"
 
     "Gatling Round" 6000
-    "Gatling Bullet Boxes"
+    "Gatling Bullet Boxes" 2
     "Gatling Gun" 2
 
     "D14-RN Shield Generator"

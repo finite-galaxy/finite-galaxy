@@ -23,7 +23,7 @@ class Visual;
 
 
 // Class representing an asteroid or other minable object that orbits in an
-// ellipse around the system center.
+// ellipse around the system centre.
 class Minable : public Body {
 public:
   /* Inherited from Body:

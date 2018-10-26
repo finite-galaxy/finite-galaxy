@@ -268,7 +268,7 @@ void Fleet::Place(const System &system, list<shared_ptr<Ship>> &ships, bool carr
     return;
   
   // Determine where the fleet is going to or coming from.
-  Point center = ChooseCenter(system);
+  Point centre = ChooseCentre(system);
   
   // Place all the ships in the chosen fleet variant.
   shared_ptr<Ship> flagship;
@@ -280,7 +280,7 @@ void Fleet::Place(const System &system, list<shared_ptr<Ship>> &ships, bool carr
       continue;
     
     Angle angle = Angle::Random();
-    Point pos = center + Angle::Random().Unit() * Random::Real() * 400.;
+    Point pos = centre + Angle::Random().Unit() * Random::Real() * 400.;
     double velocity = Random::Real() * ship->MaxVelocity();
     
     ships.push_front(ship);
@@ -332,7 +332,7 @@ const System *Fleet::Enter(const System &system, Ship &ship, const System *sourc
 void Fleet::Place(const System &system, Ship &ship)
 {
   // Move out a random distance from that object, facing toward it or away.
-  Point pos = ChooseCenter(system) + Angle::Random().Unit() * Random::Real() * 400.;
+  Point pos = ChooseCentre(system) + Angle::Random().Unit() * Random::Real() * 400.;
   
   double velocity = Random::Real() * ship.MaxVelocity();
   
@@ -389,16 +389,16 @@ const Fleet::Variant &Fleet::ChooseVariant() const
 
 
 
-Point Fleet::ChooseCenter(const System &system)
+Point Fleet::ChooseCentre(const System &system)
 {
-  vector<Point> centers;
+  vector<Point> centres;
   for(const StellarObject &object : system.Objects())
     if(object.GetPlanet() && object.GetPlanet()->HasSpaceport())
-      centers.push_back(object.Position());
+      centres.push_back(object.Position());
   
-  if(centers.empty())
+  if(centres.empty())
     return Point();
-  return centers[Random::Int(centers.size())];
+  return centres[Random::Int(centres.size())];
 }
 
 

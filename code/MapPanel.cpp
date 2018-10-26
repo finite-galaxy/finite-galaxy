@@ -70,7 +70,7 @@ namespace {
   
   // Hovering an escort pip for this many frames activates the tooltip.
   const int HOVER_TIME = 60;
-  // Length in frames of the recentering animation.
+  // Length in frames of the recentring animation.
   const int RECENTER_TIME = 20;
 }
 
@@ -101,26 +101,26 @@ MapPanel::MapPanel(PlayerInfo &player, int commodity, const System *special)
   if(Preferences::Has("Show escort systems on map"))
     TallyEscorts(player.Ships(), escortSystems);
   
-  // Initialize a centered tooltip.
+  // Initialize a centred tooltip.
   hoverText.SetFont(FontSet::Get(14));
   hoverText.SetWrapWidth(150);
   hoverText.SetAlignment(WrappedText::LEFT);
   
   if(selectedSystem)
-    CenterOnSystem(selectedSystem, true);
+    CentreOnSystem(selectedSystem, true);
 }
 
 
 
 void MapPanel::Step()
 {
-  if(recentering > 0)
+  if(recentring > 0)
   {
-    double step = (recentering - .5) / RECENTER_TIME;
+    double step = (recentring - .5) / RECENTER_TIME;
     // Interpolate with the smoothstep function, 3x^2 - 2x^3. Its derivative
     // gives the fraction of the distance to move at each time step:
-    center += recenterVector * (step * (1. - step) * (6. / RECENTER_TIME));
-    --recentering;
+    centre += recentreVector * (step * (1. - step) * (6. / RECENTER_TIME));
+    --recentring;
   }
 }
 
@@ -131,17 +131,17 @@ void MapPanel::Draw()
   glClear(GL_COLOR_BUFFER_BIT);
   
   for(const auto &it : GameData::Galaxies())
-    SpriteShader::Draw(it.second.GetSprite(), Zoom() * (center + it.second.Position()), Zoom());
+    SpriteShader::Draw(it.second.GetSprite(), Zoom() * (centre + it.second.Position()), Zoom());
   
   if(Preferences::Has("Hide unexplored map regions"))
-    FogShader::Draw(center, Zoom(), player);
+    FogShader::Draw(centre, Zoom(), player);
   
   // Draw the "visible range" circle around your current location.
   Color dimColor(.1, 0.);
-  RingShader::Draw(Zoom() * (playerSystem ? playerSystem->Position() + center : center),
+  RingShader::Draw(Zoom() * (playerSystem ? playerSystem->Position() + centre : centre),
     (System::NEIGHBOR_DISTANCE + .5) * Zoom(), (System::NEIGHBOR_DISTANCE - .5) * Zoom(), dimColor);
   Color brightColor(.4, 0.);
-  RingShader::Draw(Zoom() * (selectedSystem ? selectedSystem->Position() + center : center),
+  RingShader::Draw(Zoom() * (selectedSystem ? selectedSystem->Position() + centre : centre),
     11., 9., brightColor);
   
   // Advance a "blink" timer.
@@ -195,7 +195,7 @@ void MapPanel::DrawMiniMap(const PlayerInfo &player, double alpha, const System 
 {
   const Font &font = FontSet::Get(14);
   Color lineColor(alpha, 0.);
-  Point center = .5 * (jump[0]->Position() + jump[1]->Position());
+  Point centre = .5 * (jump[0]->Position() + jump[1]->Position());
   const Point &drawPos = GameData::Interfaces().Get("hud")->GetPoint("mini-map");
   set<const System *> drawnSystems = { jump[0], jump[1] };
   bool isLink = jump[0]->Links().count(jump[1]);
@@ -211,7 +211,7 @@ void MapPanel::DrawMiniMap(const PlayerInfo &player, double alpha, const System 
     static const string UNKNOWN_SYSTEM = "Unexplored System";
     const System *system = jump[i];
     const Government *gov = system->GetGovernment();
-    Point from = system->Position() - center + drawPos;
+    Point from = system->Position() - centre + drawPos;
     const string &name = player.KnowsName(system) ? system->Name() : UNKNOWN_SYSTEM;
     font.Draw(name, from + Point(OUTER, -.5 * font.Height()), lineColor);
     
@@ -233,7 +233,7 @@ void MapPanel::DrawMiniMap(const PlayerInfo &player, double alpha, const System 
       
       // Draw the system link. This will double-draw the jump
       // path if it is via hyperlink, to increase brightness.
-      Point to = link->Position() - center + drawPos;
+      Point to = link->Position() - centre + drawPos;
       Point unit = (from - to).Unit() * LINK_OFFSET;
       LineShader::Draw(from - unit, to + unit, LINK_WIDTH, lineColor);
       
@@ -284,8 +284,8 @@ void MapPanel::DrawMiniMap(const PlayerInfo &player, double alpha, const System 
   
   // Draw the rest of the directional arrow. If this is a normal jump,
   // the stem was already drawn above.
-  Point from = jump[0]->Position() - center + drawPos;
-  Point to = jump[1]->Position() - center + drawPos;
+  Point from = jump[0]->Position() - centre + drawPos;
+  Point to = jump[1]->Position() - centre + drawPos;
   Point unit = (to - from).Unit();
   from += LINK_OFFSET * unit;
   to -= LINK_OFFSET * unit;
@@ -353,7 +353,7 @@ bool MapPanel::KeyDown(SDL_Keycode key, Uint16 mod, const Command &command)
 bool MapPanel::Click(int x, int y, int clicks)
 {
   // Figure out if a system was clicked on.
-  Point click = Point(x, y) / Zoom() - center;
+  Point click = Point(x, y) / Zoom() - centre;
   for(const auto &it : GameData::Systems())
     if(click.Distance(it.second.Position()) < 10.
         && (player.HasSeen(&it.second) || &it.second == specialSystem))
@@ -374,7 +374,7 @@ bool MapPanel::Hover(int x, int y)
     return true;
   
   // Map from screen coordinates into game coordinates.
-  Point pos = Point(x, y) / Zoom() - center;
+  Point pos = Point(x, y) / Zoom() - centre;
   double maxDistance = 2 * OUTER / Zoom();
   
   // Were we already hovering near an escort's system?
@@ -407,8 +407,8 @@ bool MapPanel::Hover(int x, int y)
 
 bool MapPanel::Drag(double dx, double dy)
 {
-  center += Point(dx, dy) / Zoom();
-  recentering = 0;
+  centre += Point(dx, dy) / Zoom();
+  recentring = 0;
   
   return true;
 }
@@ -419,7 +419,7 @@ bool MapPanel::Scroll(double dx, double dy)
 {
   // The mouse should be pointing to the same map position before and after zooming.
   Point mouse = UI::GetMouse();
-  Point anchor = mouse / Zoom() - center;
+  Point anchor = mouse / Zoom() - centre;
   if(dy > 0.)
     player.SetMapZoom(min(2, player.MapZoom() + 1));
   else if(dy < 0.)
@@ -427,7 +427,7 @@ bool MapPanel::Scroll(double dx, double dy)
   
   // Now, Zoom() has changed (unless at one of the limits). But, we still want
   // anchor to be the same, so:
-  center = mouse / Zoom() - anchor;
+  centre = mouse / Zoom() - anchor;
   return true;
 }
 
@@ -579,7 +579,7 @@ void MapPanel::Find(const string &name)
       {
         bestIndex = index;
         selectedSystem = &it.second;
-        CenterOnSystem(selectedSystem);
+        CentreOnSystem(selectedSystem);
         if(!index)
         {
           selectedPlanet = nullptr;
@@ -595,7 +595,7 @@ void MapPanel::Find(const string &name)
       {
         bestIndex = index;
         selectedSystem = it.second.GetSystem();
-        CenterOnSystem(selectedSystem);
+        CentreOnSystem(selectedSystem);
         if(!index)
         {
           selectedPlanet = &it.second;
@@ -639,14 +639,14 @@ int MapPanel::Search(const string &str, const string &sub)
 
 
 
-void MapPanel::CenterOnSystem(const System *system, bool immediate)
+void MapPanel::CentreOnSystem(const System *system, bool immediate)
 {
   if(immediate)
-    center = -system->Position();
+    centre = -system->Position();
   else
   {
-    recenterVector = -system->Position() - center;
-    recentering = RECENTER_TIME;
+    recentreVector = -system->Position() - centre;
+    recentring = RECENTER_TIME;
   }
 }
 
@@ -874,8 +874,8 @@ void MapPanel::DrawTravelPlan()
     else if(fuel[flagship] >= 0.)
       drawColor = defaultColor;
     
-    Point from = Zoom() * (next->Position() + center);
-    Point to = Zoom() * (previous->Position() + center);
+    Point from = Zoom() * (next->Position() + centre);
+    Point to = Zoom() * (previous->Position() + centre);
     Point unit = (from - to).Unit() * LINK_OFFSET;
     LineShader::Draw(from - unit, to + unit, 3., drawColor);
     
@@ -891,7 +891,7 @@ void MapPanel::DrawEscorts()
   if(escortSystems.empty())
     return;
   
-  // Fill in the center of any system containing the player's ships, if the
+  // Fill in the centre of any system containing the player's ships, if the
   // player knows about that system (since escorts may use unknown routes).
   const Color &active = *GameData::Colors().Get("map link");
   const Color &parked = *GameData::Colors().Get("dim");
@@ -899,7 +899,7 @@ void MapPanel::DrawEscorts()
   for(const auto &squad : escortSystems)
     if(player.HasSeen(squad.first) || squad.first == specialSystem)
     {
-      Point pos = zoom * (squad.first->Position() + center);
+      Point pos = zoom * (squad.first->Position() + centre);
       RingShader::Draw(pos, INNER - 1., 0., squad.second.first ? active : parked);
     }
 }
@@ -941,8 +941,8 @@ void MapPanel::DrawWormholes()
   for(const pair<const System *, const System *> &link : arrowsToDraw)
   {
     // Compute the start and end positions of the wormhole link.
-    Point from = zoom * (link.first->Position() + center);
-    Point to = zoom * (link.second->Position() + center);
+    Point from = zoom * (link.first->Position() + centre);
+    Point to = zoom * (link.second->Position() + centre);
     Point offset = (from - to).Unit() * LINK_OFFSET;
     from -= offset;
     to += offset;
@@ -972,8 +972,8 @@ void MapPanel::DrawLinks()
   double zoom = Zoom();
   for(const Link &link : links)
   {
-    Point from = zoom * (link.start + center);
-    Point to = zoom * (link.end + center);
+    Point from = zoom * (link.start + centre);
+    Point to = zoom * (link.end + centre);
     Point unit = (from - to).Unit() * LINK_OFFSET;
     from -= unit;
     to += unit;
@@ -990,7 +990,7 @@ void MapPanel::DrawSystems()
     UpdateCache();
   
   // If coloring by government, we need to keep track of which ones are the
-  // closest to the center of the window because those will be the ones that
+  // closest to the centre of the window because those will be the ones that
   // are shown in the map key.
   if(commodity == SHOW_GOVERNMENT)
     closeGovernments.clear();
@@ -999,13 +999,13 @@ void MapPanel::DrawSystems()
   double zoom = Zoom();
   for(const Node &node : nodes)
   {
-    Point pos = zoom * (node.position + center);
+    Point pos = zoom * (node.position + centre);
     RingShader::Draw(pos, OUTER, INNER, node.color);
     
     if(commodity == SHOW_GOVERNMENT && node.government && node.government->GetName() != "Uninhabited")
     {
       // For every government that is drawn, keep track of how close it
-      // is to the center of the view. The four closest governments
+      // is to the centre of the view. The four closest governments
       // will be displayed in the key.
       double distance = pos.Length();
       auto it = closeGovernments.find(node.government);
@@ -1031,7 +1031,7 @@ void MapPanel::DrawNames()
   const Font &font = FontSet::Get(useBigFont ? 18 : 14);
   Point offset(useBigFont ? 8. : 6., -.5 * font.Height());
   for(const Node &node : nodes)
-    font.Draw(node.name, zoom * (node.position + center) + offset, node.nameColor);
+    font.Draw(node.name, zoom * (node.position + centre) + offset, node.nameColor);
 }
 
 
@@ -1078,7 +1078,7 @@ void MapPanel::DrawMissions()
   {
     // The special system pointer is larger than the others.
     Angle a = (angle[specialSystem] += Angle(30.));
-    Point pos = Zoom() * (specialSystem->Position() + center);
+    Point pos = Zoom() * (specialSystem->Position() + centre);
     PointerShader::Draw(pos, a.Unit(), 20., 27., -4., black);
     PointerShader::Draw(pos, a.Unit(), 11.5, 21.5, -6., specialColor);
   }
@@ -1119,7 +1119,7 @@ void MapPanel::DrawTooltips()
     // Add 10px margin to all sides of the text.
     Point size(hoverText.WrapWidth(), hoverText.Height() - hoverText.ParagraphBreak());
     size += Point(20., 20.);
-    Point topLeft = (hoverSystem->Position() + center) * Zoom();
+    Point topLeft = (hoverSystem->Position() + centre) * Zoom();
     // Do not overflow the screen dimensions.
     if(topLeft.X() + size.X() > Screen::Right())
       topLeft.X() -= size.X();
@@ -1135,7 +1135,7 @@ void MapPanel::DrawTooltips()
 
 void MapPanel::DrawPointer(const System *system, Angle &angle, const Color &color, bool bigger)
 {
-  DrawPointer(Zoom() * (system->Position() + center), angle, color, true, bigger);
+  DrawPointer(Zoom() * (system->Position() + centre), angle, color, true, bigger);
 }
 
 

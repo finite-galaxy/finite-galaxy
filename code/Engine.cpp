@@ -172,12 +172,12 @@ Engine::Engine(PlayerInfo &player)
   // Figure out what planet the player is landed on, if any.
   const StellarObject *object = player.GetStellarObject();
   if(object)
-    center = object->Position();
+    centre = object->Position();
   
   // Now we know the player's current position. Draw the planets.
   draw[calcTickTock].Clear(step, zoom);
-  draw[calcTickTock].SetCenter(center);
-  radar[calcTickTock].SetCenter(center);
+  draw[calcTickTock].SetCentre(centre);
+  radar[calcTickTock].SetCentre(centre);
   const Ship *flagship = player.Flagship();
   for(const StellarObject &object : player.GetSystem()->Objects())
     if(object.HasSprite())
@@ -365,13 +365,13 @@ void Engine::Step(bool isActive)
   const StellarObject *object = player.GetStellarObject();
   if(object)
   {
-    center = object->Position();
-    centerVelocity = Point();
+    centre = object->Position();
+    centreVelocity = Point();
   }
   else if(flagship)
   {
-    center = flagship->Position();
-    centerVelocity = flagship->Velocity();
+    centre = flagship->Position();
+    centreVelocity = flagship->Velocity();
     if(doEnter && flagship->Zoom() == 1. && !flagship->IsHyperspacing())
     {
       doEnter = false;
@@ -395,7 +395,7 @@ void Engine::Step(bool isActive)
   ai.UpdateEvents(events);
   ai.UpdateKeys(player, clickCommands, isActive && wasActive);
   wasActive = isActive;
-  Audio::Update(center);
+  Audio::Update(centre);
   
   // Smoothly zoom in and out.
   if(isActive)
@@ -501,7 +501,7 @@ void Engine::Step(bool isActive)
       if(isEnemy || it->IsYours() || it->GetPersonality().IsEscort())
       {
         double width = min(it->Width(), it->Height());
-        statuses.emplace_back(it->Position() - center, it->Shields(), it->Hull(),
+        statuses.emplace_back(it->Position() - centre, it->Shields(), it->Hull(),
           max(20., width * .5), isEnemy);
       }
     }
@@ -515,7 +515,7 @@ void Engine::Step(bool isActive)
       if(!object.GetPlanet() || !object.GetPlanet()->IsAccessible(flagship.get()))
         continue;
       
-      Point pos = object.Position() - center;
+      Point pos = object.Position() - centre;
       if(pos.Length() - object.Radius() < 600. / zoom)
         labels.emplace_back(pos, object, currentSystem, zoom);
     }
@@ -568,7 +568,7 @@ void Engine::Step(bool isActive)
     info.SetString("destination", name);
     
     targets.push_back({
-      object->Position() - center,
+      object->Position() - centre,
       object->Facing(),
       object->Radius(),
       object->GetPlanet()->CanLand() ? Radar::FRIENDLY : Radar::HOSTILE,
@@ -613,7 +613,7 @@ void Engine::Step(bool isActive)
       targetAsteroid->GetFrame(step));
     info.SetString("target name", Format::Capitalize(targetAsteroid->Name()) + " Asteroid");
     
-    targetVector = targetAsteroid->Position() - center;
+    targetVector = targetAsteroid->Position() - centre;
     
     if(flagship->Attributes().Get("tactical scan power"))
     {
@@ -649,13 +649,13 @@ void Engine::Step(bool isActive)
       // of the width and the height of the sprite.
       double size = (target->Width() + target->Height()) * .35;
       targets.push_back({
-        target->Position() - center,
+        target->Position() - centre,
         Angle(45.) + target->Facing(),
         size,
         targetType,
         4});
       
-      targetVector = target->Position() - center;
+      targetVector = target->Position() - centre;
       
       // Check if the target is close enough to show tactical information.
       double tacticalRange = 100. * sqrt(flagship->Attributes().Get("tactical scan power"));
@@ -685,7 +685,7 @@ void Engine::Step(bool isActive)
     && (flagship->CargoScanFraction() || flagship->OutfitScanFraction()))
   {
     double width = max(target->Width(), target->Height());
-    Point pos = target->Position() - center;
+    Point pos = target->Position() - centre;
     statuses.emplace_back(pos, flagship->OutfitScanFraction(), flagship->CargoScanFraction(),
       10. + max(20., width * .5), 2, Angle(pos).Degrees() + 180.);
   }
@@ -731,7 +731,7 @@ void Engine::Step(bool isActive)
     {
       double size = (ship->Width() + ship->Height()) * .35;
       targets.push_back({
-        ship->Position() - center,
+        ship->Position() - centre,
         Angle(45.) + ship->Facing(),
         size,
         Radar::PLAYER,
@@ -744,7 +744,7 @@ void Engine::Step(bool isActive)
   if(flagship && scanRange && !flagship->IsHyperspacing())
     for(const shared_ptr<Minable> &minable : asteroids.Minables())
     {
-      Point offset = minable->Position() - center;
+      Point offset = minable->Position() - centre;
       if(offset.Length() > scanRange)
         continue;
       
@@ -784,7 +784,7 @@ list<ShipEvent> &Engine::Events()
 // Draw a frame.
 void Engine::Draw() const
 {
-  GameData::Background().Draw(center, centerVelocity, zoom);
+  GameData::Background().Draw(centre, centreVelocity, zoom);
   static const Set<Color> &colors = GameData::Colors();
   const Interface *interface = GameData::Interfaces().Get("hud");
   
@@ -819,7 +819,7 @@ void Engine::Draw() const
   {
     Point size(highlightSprite->Width(), highlightSprite->Height());
     const Color &color = *colors.Get("flagship highlight");
-    // The flagship is always in the dead center of the screen.
+    // The flagship is always in the dead centre of the screen.
     OutlineShader::Draw(highlightSprite, Point(), size, color, highlightUnit, highlightFrame);
   }
   
@@ -854,7 +854,7 @@ void Engine::Draw() const
     
     for(int i = 0; i < target.count; ++i)
     {
-      PointerShader::Draw(target.center * zoom, a.Unit(), 12., 14., -target.radius * zoom,
+      PointerShader::Draw(target.centre * zoom, a.Unit(), 12., 14., -target.radius * zoom,
         Radar::GetColor(target.type));
       a += da;
     }
@@ -872,22 +872,22 @@ void Engine::Draw() const
   }
   if(interface->HasPoint("target") && targetVector.Length() > 20.)
   {
-    Point center = interface->GetPoint("target");
+    Point centre = interface->GetPoint("target");
     double radius = interface->GetValue("target radius");
-    PointerShader::Draw(center, targetVector.Unit(), 10., 10., radius, Color(1.));
+    PointerShader::Draw(centre, targetVector.Unit(), 10., 10., radius, Color(1.));
   }
   
   // Draw the faction markers.
   if(targetSwizzle >= 0 && interface->HasPoint("faction markers"))
   {
     int width = font.Width(info.GetString("target government"));
-    Point center = interface->GetPoint("faction markers");
+    Point centre = interface->GetPoint("faction markers");
     
     const Sprite *mark[2] = {SpriteSet::Get("ui/faction left"), SpriteSet::Get("ui/faction right")};
     // Round the x offsets to whole numbers so the icons are sharp.
     double dx[2] = {(width + mark[0]->Width() + 1) / -2, (width + mark[1]->Width() + 1) / 2};
     for(int i = 0; i < 2; ++i)
-      SpriteShader::Draw(mark[i], center + Point(dx[i], 0.), 1., targetSwizzle);
+      SpriteShader::Draw(mark[i], centre + Point(dx[i], 0.), 1., targetSwizzle);
   }
   if(jumpCount && Preferences::Has("Show mini-map"))
     MapPanel::DrawMiniMap(player, .5 * min(1., jumpCount / 30.), jumpInProgress, step);
@@ -958,20 +958,20 @@ void Engine::Click(const Point &from, const Point &to, bool hasShift)
   
   // Determine if the left-click was within the radar display.
   const Interface *interface = GameData::Interfaces().Get("hud");
-  Point radarCenter = interface->GetPoint("radar");
+  Point radarCentre = interface->GetPoint("radar");
   double radarRadius = interface->GetValue("radar radius");
-  if(Preferences::Has("Clickable radar display") && (from - radarCenter).Length() <= radarRadius)
+  if(Preferences::Has("Clickable radar display") && (from - radarCentre).Length() <= radarRadius)
     isRadarClick = true;
   else
     isRadarClick = false;
   
-  clickPoint = isRadarClick ? from - radarCenter : from;
+  clickPoint = isRadarClick ? from - radarCentre : from;
   if(isRadarClick)
     clickBox = Rectangle::WithCorners(
-      (from - radarCenter) / RADAR_SCALE + center,
-      (to - radarCenter) / RADAR_SCALE  + center);
+      (from - radarCentre) / RADAR_SCALE + centre,
+      (to - radarCentre) / RADAR_SCALE  + centre);
   else
-    clickBox = Rectangle::WithCorners(from / zoom + center, to / zoom + center);
+    clickBox = Rectangle::WithCorners(from / zoom + centre, to / zoom + centre);
 }
 
 
@@ -984,10 +984,10 @@ void Engine::RClick(const Point &point)
   
   // Determine if the right-click was within the radar display, and if so, rescale.
   const Interface *interface = GameData::Interfaces().Get("hud");
-  Point radarCenter = interface->GetPoint("radar");
+  Point radarCentre = interface->GetPoint("radar");
   double radarRadius = interface->GetValue("radar radius");
-  if(Preferences::Has("Clickable radar display") && (point - radarCenter).Length() <= radarRadius)
-    clickPoint = (point - radarCenter) / RADAR_SCALE;
+  if(Preferences::Has("Clickable radar display") && (point - radarCentre).Length() <= radarRadius)
+    clickPoint = (point - radarCentre) / RADAR_SCALE;
   else
     clickPoint = point / zoom;
 }
@@ -1049,7 +1049,7 @@ void Engine::EnterSystem()
   
   if(usedWormhole)
   {
-    // If ships use a wormhole, they are emitted from its center in
+    // If ships use a wormhole, they are emitted from its centre in
     // its destination system. Player travel causes a date change,
     // thus the wormhole's new position should be used.
     flagship->SetPosition(usedWormhole->Position());
@@ -1254,17 +1254,17 @@ void Engine::CalculateStep()
   for(const shared_ptr<Ship> &it : ships)
     DoScanning(it);
   
-  // Draw the objects. Start by figuring out where the view should be centered:
-  Point newCenter = center;
-  Point newCenterVelocity;
+  // Draw the objects. Start by figuring out where the view should be centred:
+  Point newCentre = centre;
+  Point newCentreVelocity;
   if(flagship)
   {
-    newCenter = flagship->Position();
-    newCenterVelocity = flagship->Velocity();
+    newCentre = flagship->Position();
+    newCentreVelocity = flagship->Velocity();
   }
-  draw[calcTickTock].SetCenter(newCenter, newCenterVelocity);
-  batchDraw[calcTickTock].SetCenter(newCenter);
-  radar[calcTickTock].SetCenter(newCenter);
+  draw[calcTickTock].SetCentre(newCentre, newCentreVelocity);
+  batchDraw[calcTickTock].SetCentre(newCentre);
+  radar[calcTickTock].SetCentre(newCentre);
   
   // Populate the radar.
   FillRadar();
@@ -1280,7 +1280,7 @@ void Engine::CalculateStep()
         draw[calcTickTock].Add(object);
     }
   // Draw the asteroids and minables.
-  asteroids.Draw(draw[calcTickTock], newCenter, zoom);
+  asteroids.Draw(draw[calcTickTock], newCentre, zoom);
   // Draw the flotsam.
   for(const shared_ptr<Flotsam> &it : flotsam)
     draw[calcTickTock].Add(*it);
@@ -1531,7 +1531,7 @@ void Engine::HandleMouseClicks()
       {
         // If the player clicked to land on a planet,
         // do so unless already landing elsewhere.
-        Point position = object.Position() - center;
+        Point position = object.Position() - centre;
         const Planet *planet = object.GetPlanet();
         if(planet->IsAccessible(flagship) && (clickPoint - position).Length() < object.Radius())
         {
@@ -1589,7 +1589,7 @@ void Engine::HandleMouseClicks()
     }
   }
   else if(isRightClick)
-    ai.IssueMoveTarget(player, clickPoint + center, playerSystem);
+    ai.IssueMoveTarget(player, clickPoint + centre, playerSystem);
   else if(flagship->Attributes().Get("asteroid scan power"))
   {
     // If the click was not on any ship, check if it was on a minable.
