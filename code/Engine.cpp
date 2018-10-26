@@ -638,7 +638,7 @@ void Engine::Step(bool isActive)
     info.SetString("mission target", target->GetPersonality().IsTarget() ? "(mission target)" : "");
     
     int targetType = RadarType(*target, step);
-    info.SetOutlineColor(Radar::GetColor(targetType));
+    info.SetOutlineColour(Radar::GetColour(targetType));
     if(target->GetSystem() == player.GetSystem() && target->IsTargetable())
     {
       info.SetBar("target shields", target->Shields());
@@ -785,7 +785,7 @@ list<ShipEvent> &Engine::Events()
 void Engine::Draw() const
 {
   GameData::Background().Draw(centre, centreVelocity, zoom);
-  static const Set<Color> &colors = GameData::Colors();
+  static const Set<Colour> &colours = GameData::Colours();
   const Interface *interface = GameData::Interfaces().Get("hud");
   
   // Draw any active planet labels.
@@ -797,34 +797,34 @@ void Engine::Draw() const
   
   for(const auto &it : statuses)
   {
-    static const Color color[6] = {
-      *colors.Get("overlay friendly shields"),
-      *colors.Get("overlay hostile shields"),
-      *colors.Get("overlay outfit scan"),
-      *colors.Get("overlay friendly hull"),
-      *colors.Get("overlay hostile hull"),
-      *colors.Get("overlay cargo scan")
+    static const Colour colour[6] = {
+      *colours.Get("overlay friendly shields"),
+      *colours.Get("overlay hostile shields"),
+      *colours.Get("overlay outfit scan"),
+      *colours.Get("overlay friendly hull"),
+      *colours.Get("overlay hostile hull"),
+      *colours.Get("overlay cargo scan")
     };
     Point pos = it.position * zoom;
     double radius = it.radius * zoom;
     if(it.outer > 0.)
-      RingShader::Draw(pos, radius + 3., 1.5, it.outer, color[it.type], 0., it.angle);
+      RingShader::Draw(pos, radius + 3., 1.5, it.outer, colour[it.type], 0., it.angle);
     double dashes = (it.type >= 2) ? 0. : 20. * min(1., zoom);
     if(it.inner > 0.)
-      RingShader::Draw(pos, radius, 1.5, it.inner, color[3 + it.type], dashes, it.angle);
+      RingShader::Draw(pos, radius, 1.5, it.inner, colour[3 + it.type], dashes, it.angle);
   }
   
   // Draw the flagship highlight, if any.
   if(highlightSprite)
   {
     Point size(highlightSprite->Width(), highlightSprite->Height());
-    const Color &color = *colors.Get("flagship highlight");
+    const Colour &colour = *colours.Get("flagship highlight");
     // The flagship is always in the dead centre of the screen.
-    OutlineShader::Draw(highlightSprite, Point(), size, color, highlightUnit, highlightFrame);
+    OutlineShader::Draw(highlightSprite, Point(), size, colour, highlightUnit, highlightFrame);
   }
   
   if(flash)
-    FillShader::Fill(Point(), Point(Screen::Width(), Screen::Height()), Color(flash, flash));
+    FillShader::Fill(Point(), Point(Screen::Width(), Screen::Height()), Colour(flash, flash));
   
   // Draw messages. Draw the most recent messages first, as some messages
   // may be wrapped onto multiple lines.
@@ -842,8 +842,8 @@ void Engine::Draw() const
     if(messagePoint.Y() < messageBox.Top())
       break;
     float alpha = (it->step + 1000 - step) * .001f;
-    Color color(alpha, 0.);
-    messageLine.Draw(messagePoint, color);
+    Colour colour(alpha, 0.);
+    messageLine.Draw(messagePoint, colour);
   }
   
   // Draw crosshairs around anything that is targeted.
@@ -855,7 +855,7 @@ void Engine::Draw() const
     for(int i = 0; i < target.count; ++i)
     {
       PointerShader::Draw(target.centre * zoom, a.Unit(), 12., 14., -target.radius * zoom,
-        Radar::GetColor(target.type));
+        Radar::GetColour(target.type));
       a += da;
     }
   }
@@ -874,7 +874,7 @@ void Engine::Draw() const
   {
     Point centre = interface->GetPoint("target");
     double radius = interface->GetValue("target radius");
-    PointerShader::Draw(centre, targetVector.Unit(), 10., 10., radius, Color(1.));
+    PointerShader::Draw(centre, targetVector.Unit(), 10., 10., radius, Colour(1.));
   }
   
   // Draw the faction markers.
@@ -900,8 +900,8 @@ void Engine::Draw() const
   double ammoPad = .5 * (ammoBox.Width() - AMMO_WIDTH);
   const Sprite *selectedSprite = SpriteSet::Get("ui/ammo selected");
   const Sprite *unselectedSprite = SpriteSet::Get("ui/ammo unselected");
-  Color selectedColor = *colors.Get("bright");
-  Color unselectedColor = *colors.Get("dim");
+  Colour selectedColour = *colours.Get("bright");
+  Colour unselectedColour = *colours.Get("dim");
   
   // This is the top left corner of the ammo display.
   Point pos(ammoBox.Left() + ammoPad, ammoBox.Bottom() - ammoPad);
@@ -927,7 +927,7 @@ void Engine::Draw() const
     
     string amount = to_string(it.second);
     Point textPos = pos + textOff + Point(-font.Width(amount), 0.);
-    font.Draw(amount, textPos, isSelected ? selectedColor : unselectedColor);
+    font.Draw(amount, textPos, isSelected ? selectedColour : unselectedColour);
   }
   
   // Draw escort status.
@@ -940,9 +940,9 @@ void Engine::Draw() const
   if(Preferences::Has("Show CPU / GPU load"))
   {
     string loadString = to_string(lround(load * 100.)) + "% CPU";
-    Color color = *colors.Get("medium");
+    Colour colour = *colours.Get("medium");
     font.Draw(loadString,
-      Point(-10 - font.Width(loadString), Screen::Height() * -.5 + 5.), color);
+      Point(-10 - font.Width(loadString), Screen::Height() * -.5 + 5.), colour);
   }
 }
 
@@ -1858,7 +1858,7 @@ void Engine::FillRadar()
       if(ship->Cloaking() >= 1. && !isYours)
         continue;
       
-      // Figure out what radar color should be used for this ship.
+      // Figure out what radar colour should be used for this ship.
       bool isYourTarget = (flagship && ship == flagship->GetTargetShip());
       int type = isYourTarget ? Radar::SPECIAL : RadarType(*ship, step);
       // Calculate how big the radar dot should be.

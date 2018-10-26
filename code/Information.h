@@ -3,7 +3,7 @@
 #ifndef INFORMATION_H_
 #define INFORMATION_H_
 
-#include "Color.h"
+#include "Colour.h"
 #include "Point.h"
 
 #include <map>
@@ -33,8 +33,8 @@ public:
   void SetCondition(const std::string &condition);
   bool HasCondition(const std::string &condition) const;
   
-  void SetOutlineColor(const Color &color);
-  const Color &GetOutlineColor() const;
+  void SetOutlineColour(const Colour &colour);
+  const Colour &GetOutlineColour() const;
   
   
 private:
@@ -47,7 +47,7 @@ private:
   
   std::set<std::string> conditions;
   
-  Color outlineColor;
+  Colour outlineColour;
 };
 
 

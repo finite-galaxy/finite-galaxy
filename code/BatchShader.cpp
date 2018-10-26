@@ -44,13 +44,13 @@ void BatchShader::Init()
     
     "in vec3 fragTexCoord;\n"
     
-    "out vec4 finalColor;\n"
+    "out vec4 finalColour;\n"
     
     "void main() {\n"
     "  float first = floor(fragTexCoord.z);\n"
     "  float second = mod(ceil(fragTexCoord.z), frameCount);\n"
     "  float fade = fragTexCoord.z - first;\n"
-    "  finalColor = mix(\n"
+    "  finalColour = mix(\n"
     "    texture(tex, vec3(fragTexCoord.xy, first)),\n"
     "    texture(tex, vec3(fragTexCoord.xy, second)), fade);\n"
     "}\n";

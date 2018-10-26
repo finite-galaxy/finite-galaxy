@@ -210,8 +210,8 @@ int main(int argc, char *argv[])
 #endif
       menuPanels.Push(new Dialog(
         "Note: your computer does not support the \"texture swizzling\" OpenGL feature, "
-        "which Finite Galaxy uses to draw ships in different colors depending on which "
-        "government they belong to. So, all human ships will be the same color, which "
+        "which Finite Galaxy uses to draw ships in different colours depending on which "
+        "government they belong to. So, all human ships will be the same colour, which "
         "may be confusing. Consider upgrading your graphics driver (or your OS)."));
     
     bool showCursor = true;

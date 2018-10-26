@@ -218,9 +218,9 @@ public:
   void Harvest(const Outfit *type);
   const std::set<std::pair<const System *, const Outfit *>> &Harvested() const;
   
-  // Get or set what coloring is currently selected in the map.
-  int MapColoring() const;
-  void SetMapColoring(int index);
+  // Get or set what colouring is currently selected in the map.
+  int MapColouring() const;
+  void SetMapColouring(int index);
   // Get or set the map zoom level.
   int MapZoom() const;
   void SetMapZoom(int level);
@@ -310,8 +310,8 @@ private:
   // Events that are going to happen some time in the future:
   std::list<GameEvent> gameEvents;
   
-  // Currently selected coloring, in the map panel (defaults to reputation):
-  int mapColoring = -6;
+  // Currently selected colouring, in the map panel (defaults to reputation):
+  int mapColouring = -6;
   int mapZoom = 0;
   // Currently collapsed categories for various panels.
   std::map<std::string, std::set<std::string>> collapsed;

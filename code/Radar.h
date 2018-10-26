@@ -3,7 +3,7 @@
 #ifndef RADAR_H_
 #define RADAR_H_
 
-#include "Color.h"
+#include "Colour.h"
 #include "Point.h"
 
 #include <vector>
@@ -11,7 +11,7 @@
 
 
 // Class representing all objects which should show up on radar. Each object is
-// either a ring (planets) or a dot (ships) and has a color representing its status
+// either a ring (planets) or a dot (ships) and has a colour representing its status
 // (owned by player, friendly, unfriendly, hostile, inactive, or special).
 class Radar {
 public:
@@ -41,16 +41,16 @@ public:
   // Draw the radar display at the given coordinates.
   void Draw(const Point &centre, double scale, double radius, double pointerRadius) const;
   
-  // Get the color for the given status.
-  static const Color &GetColor(int type);
+  // Get the colour for the given status.
+  static const Colour &GetColour(int type);
   
   
 private:
   class Object {
   public:
-    Object(const Color &color, const Point &pos, double out, double in);
+    Object(const Colour &colour, const Point &pos, double out, double in);
     
-    Color color;
+    Colour colour;
     Point position;
     double outer;
     double inner;
@@ -58,17 +58,17 @@ private:
   
   class Pointer {
   public:
-    Pointer(const Color &color, const Point &unit);
+    Pointer(const Colour &colour, const Point &unit);
     
-    Color color;
+    Colour colour;
     Point unit;
   };
   
   class Line {
   public:
-    Line(const Color &color, const Point &base, const Point &vector);
+    Line(const Colour &colour, const Point &base, const Point &vector);
     
-    Color color;
+    Colour colour;
     Point base;
     Point vector;
   };

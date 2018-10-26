@@ -2,7 +2,7 @@
 
 #include "OutlineShader.h"
 
-#include "Color.h"
+#include "Colour.h"
 #include "Point.h"
 #include "Screen.h"
 #include "Shader.h"
@@ -18,7 +18,7 @@ namespace {
   GLint positionI;
   GLint frameI;
   GLint frameCountI;
-  GLint colorI;
+  GLint colourI;
   
   GLuint vao;
   GLuint vbo;
@@ -57,13 +57,13 @@ void OutlineShader::Init()
     "uniform sampler2DArray tex;\n"
     "uniform float frame = 0;\n"
     "uniform float frameCount = 0;\n"
-    "uniform vec4 color = vec4(1, 1, 1, 1);\n"
+    "uniform vec4 colour = vec4(1, 1, 1, 1);\n"
     "uniform vec2 off;\n"
     "const vec4 weight = vec4(.4, .4, .4, 1.);\n"
     
     "in vec2 fragTexCoord;\n"
     
-    "out vec4 finalColor;\n"
+    "out vec4 finalColour;\n"
     
     "float Sobel(float layer) {\n"
     "  float sum = 0;\n"
@@ -93,7 +93,7 @@ void OutlineShader::Init()
     "  float second = mod(ceil(frame), frameCount);\n"
     "  float fade = frame - first;\n"
     "  float sum = mix(Sobel(first), Sobel(second), fade);\n"
-    "  finalColor = color * sqrt(sum / 180);\n"
+    "  finalColour = colour * sqrt(sum / 180);\n"
     "}\n";
   
   shader = Shader(vertexCode, fragmentCode);
@@ -103,7 +103,7 @@ void OutlineShader::Init()
   positionI = shader.Uniform("position");
   frameI = shader.Uniform("frame");
   frameCountI = shader.Uniform("frameCount");
-  colorI = shader.Uniform("color");
+  colourI = shader.Uniform("colour");
   
   glUseProgram(shader.Object());
   glUniform1i(shader.Uniform("tex"), 0);
@@ -138,7 +138,7 @@ void OutlineShader::Init()
 
 
 
-void OutlineShader::Draw(const Sprite *sprite, const Point &pos, const Point &size, const Color &color, const Point &unit, float frame)
+void OutlineShader::Draw(const Sprite *sprite, const Point &pos, const Point &size, const Colour &colour, const Point &unit, float frame)
 {
   glUseProgram(shader.Object());
   glBindVertexArray(vao);
@@ -168,7 +168,7 @@ void OutlineShader::Draw(const Sprite *sprite, const Point &pos, const Point &si
     static_cast<float>(pos.X()), static_cast<float>(pos.Y())};
   glUniform2fv(positionI, 1, position);
   
-  glUniform4fv(colorI, 1, color.Get());
+  glUniform4fv(colourI, 1, colour.Get());
   
   glBindTexture(GL_TEXTURE_2D_ARRAY, sprite->Texture(unit.Length() * Screen::Zoom() > 50.));
   

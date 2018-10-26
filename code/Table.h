@@ -3,7 +3,7 @@
 #ifndef TABLE_H_
 #define TABLE_H_
 
-#include "Color.h"
+#include "Colour.h"
 #include "Point.h"
 
 #include <string>
@@ -19,7 +19,7 @@ class Rectangle;
 // between table rows, underlines, selection highlights, etc.
 class Table {
 public:
-  enum Align {LEFT = 0, CENTER = 1, RIGHT = 2};
+  enum Align {LEFT = 0, CENTRE = 1, RIGHT = 2};
   
   
 public:
@@ -46,27 +46,27 @@ public:
   // increased based on the row height, and a new row begins.
   void DrawAt(const Point &point) const;
   
-  // Set the color for drawing text and underlines.
-  void SetColor(const Color &color) const;
+  // Set the colour for drawing text and underlines.
+  void SetColour(const Colour &colour) const;
   
   // Advance to the next field without drawing anything.
   void Advance(int fields = 1) const;
   
   // Draw a single text field, and move on to the next one.
   void Draw(const std::string &text) const;
-  // If a color is given, this field is drawn using that color, but the
-  // previously set color will be used for future fields.
-  void Draw(const std::string &text, const Color &color) const;
+  // If a colour is given, this field is drawn using that colour, but the
+  // previously set colour will be used for future fields.
+  void Draw(const std::string &text, const Colour &colour) const;
   void Draw(double value) const;
-  void Draw(double value, const Color &color) const;
+  void Draw(double value, const Colour &colour) const;
   
   // Draw an underline under the text for the current row.
   void DrawUnderline() const;
-  void DrawUnderline(const Color &color) const;
+  void DrawUnderline(const Colour &colour) const;
   
   // Highlight the current row.
   void DrawHighlight() const;
-  void DrawHighlight(const Color &color) const;
+  void DrawHighlight(const Colour &colour) const;
   
   // Shift the draw position down by the given amount. This usually should not
   // be called in the middle of a row, or the fields will not line up.
@@ -100,7 +100,7 @@ private:
 private:
   mutable Point point;
   mutable std::vector<Column>::const_iterator it;
-  mutable Color color;
+  mutable Colour colour;
   
   const Font *font;
   Point rowSize;

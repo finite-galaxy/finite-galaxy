@@ -70,39 +70,39 @@ void SpriteShader::Init()
     
     "in vec2 fragTexCoord;\n"
     
-    "out vec4 finalColor;\n"
+    "out vec4 finalColour;\n"
     
     "void main() {\n"
     "  float first = floor(frame);\n"
     "  float second = mod(ceil(frame), frameCount);\n"
     "  float fade = frame - first;\n"
-    "  vec4 color;\n"
+    "  vec4 colour;\n"
     "  if(blur.x == 0 && blur.y == 0)\n"
     "  {\n"
     "    if(fade != 0)\n"
-    "      color = mix(\n"
+    "      colour = mix(\n"
     "        texture(tex, vec3(fragTexCoord, first)),\n"
     "        texture(tex, vec3(fragTexCoord, second)), fade);\n"
     "    else\n"
-    "      color = texture(tex, vec3(fragTexCoord, first));\n"
+    "      colour = texture(tex, vec3(fragTexCoord, first));\n"
     "  }\n"
     "  else\n"
     "  {\n"
-    "    color = vec4(0., 0., 0., 0.);\n"
+    "    colour = vec4(0., 0., 0., 0.);\n"
     "    const float divisor = range * (range + 2) + 1;\n"
     "    for(int i = -range; i <= range; ++i)\n"
     "    {\n"
     "      float scale = (range + 1 - abs(i)) / divisor;\n"
     "      vec2 coord = fragTexCoord + (blur * i) / range;\n"
     "      if(fade != 0)\n"
-    "        color += scale * mix(\n"
+    "        colour += scale * mix(\n"
     "          texture(tex, vec3(coord, first)),\n"
     "          texture(tex, vec3(coord, second)), fade);\n"
     "      else\n"
-    "        color += scale * texture(tex, vec3(coord, first));\n"
+    "        colour += scale * texture(tex, vec3(coord, first));\n"
     "    }\n"
     "  }\n"
-    "  finalColor = color * alpha;\n"
+    "  finalColour = colour * alpha;\n"
     "}\n";
   
   shader = Shader(vertexCode, fragmentCode);
@@ -197,7 +197,7 @@ void SpriteShader::Add(const Item &item, bool withBlur)
   
   // Bounds check for the swizzle value:
   int swizzle = (static_cast<size_t>(item.swizzle) >= SWIZZLE.size() ? 0 : item.swizzle);
-  // Set the color swizzle.
+  // Set the colour swizzle.
   glTexParameteriv(GL_TEXTURE_2D_ARRAY, GL_TEXTURE_SWIZZLE_RGBA, SWIZZLE[swizzle].data());
   
   glDrawArrays(GL_TRIANGLE_STRIP, 0, 4);

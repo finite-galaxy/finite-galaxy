@@ -2,7 +2,7 @@
 
 #include "OutfitterPanel.h"
 
-#include "Color.h"
+#include "Colour.h"
 #include "Dialog.h"
 #include "DistanceMap.h"
 #include "FillShader.h"
@@ -123,7 +123,7 @@ void OutfitterPanel::DrawItem(const string &name, const Point &point, int scroll
   int mapSize = outfit->Get("map");
   
   const Font &font = FontSet::Get(14);
-  const Color &bright = *GameData::Colors().Get("bright");
+  const Colour &bright = *GameData::Colours().Get("bright");
   if(playerShip || isLicence || mapSize)
   {
     int minCount = numeric_limits<int>::max();
@@ -614,19 +614,19 @@ void OutfitterPanel::DrawKey()
   SpriteShader::Draw(back, Screen::BottomLeft() + .5 * Point(back->Width(), -back->Height()));
   
   Font font = FontSet::Get(14);
-  Color color[2] = {*GameData::Colors().Get("medium"), *GameData::Colors().Get("bright")};
+  Colour colour[2] = {*GameData::Colours().Get("medium"), *GameData::Colours().Get("bright")};
   const Sprite *box[2] = {SpriteSet::Get("ui/unchecked"), SpriteSet::Get("ui/checked")};
   
   Point pos = Screen::BottomLeft() + Point(10., -30.);
   Point off = Point(10., -.5 * font.Height());
   SpriteShader::Draw(box[showForSale], pos);
-  font.Draw("Show outfits for sale", pos + off, color[showForSale]);
+  font.Draw("Show outfits for sale", pos + off, colour[showForSale]);
   AddZone(Rectangle(pos + Point(80., 0.), Point(180., 20.)), [this](){ ToggleForSale(); });
   
   bool showCargo = !playerShip;
   pos.Y() += 20.;
   SpriteShader::Draw(box[showCargo], pos);
-  font.Draw("Show outfits in cargo", pos + off, color[showCargo]);
+  font.Draw("Show outfits in cargo", pos + off, colour[showCargo]);
   AddZone(Rectangle(pos + Point(80., 0.), Point(180., 20.)), [this](){ ToggleCargo(); });
 }
 
@@ -707,7 +707,7 @@ void OutfitterPanel::DrawOutfit(const Outfit &outfit, const Point &centre, bool 
   const string &name = outfit.Name();
   const Font &font = FontSet::Get(14);
   Point offset(-.5f * font.Width(name), -.5f * OUTFIT_SIZE + 10.f);
-  font.Draw(name, centre + offset, Color((isSelected | isOwned) ? .8 : .5, 0.));
+  font.Draw(name, centre + offset, Colour((isSelected | isOwned) ? .8 : .5, 0.));
 }
 
 

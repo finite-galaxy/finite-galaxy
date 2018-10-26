@@ -3,7 +3,7 @@
 #ifndef INTERFACE_H_
 #define INTERFACE_H_
 
-#include "Color.h"
+#include "Colour.h"
 #include "Point.h"
 #include "Rectangle.h"
 
@@ -127,8 +127,8 @@ private:
     const Sprite *sprite[3] = {nullptr, nullptr, nullptr};
     // If this flag is set, draw the sprite as an outline:
     bool isOutline = false;
-    // Store whether the outline should be colored.
-    bool isColored = false;
+    // Store whether the outline should be coloured.
+    bool isColoured = false;
   };
   
   // This class handles "label", "string", and "button" elements.
@@ -154,8 +154,8 @@ private:
   private:
     // The string may either be a name of a dynamic string, or static text.
     std::string str;
-    // Color for inactive, active, and hover states.
-    const Color *color[3] = {nullptr, nullptr, nullptr};
+    // Colour for inactive, active, and hover states.
+    const Colour *colour[3] = {nullptr, nullptr, nullptr};
     int fontSize = 14;
     char buttonKey = '\0';
     bool isDynamic = false;
@@ -175,7 +175,7 @@ private:
     
   private:
     std::string name;
-    const Color *color = nullptr;
+    const Colour *colour = nullptr;
     float width = 2.f;
     bool isRing = false;
   };

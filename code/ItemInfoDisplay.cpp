@@ -2,7 +2,7 @@
 
 #include "ItemInfoDisplay.h"
 
-#include "Color.h"
+#include "Colour.h"
 #include "FillShader.h"
 #include "FontSet.h"
 #include "GameData.h"
@@ -66,7 +66,7 @@ int ItemInfoDisplay::AttributesHeight() const
 // Draw each of the panels.
 void ItemInfoDisplay::DrawDescription(const Point &topLeft) const
 {
-  description.Draw(topLeft + Point(10., 12.), *GameData::Colors().Get("medium"));
+  description.Draw(topLeft + Point(10., 12.), *GameData::Colours().Get("medium"));
 }
 
 
@@ -92,8 +92,8 @@ void ItemInfoDisplay::DrawTooltips() const
   if(topLeft.Y() + boxSize.Y() > Screen::Bottom())
     topLeft.Y() -= boxSize.Y();
   
-  FillShader::Fill(topLeft + .5 * boxSize, boxSize, *GameData::Colors().Get("tooltip background"));
-  hoverText.Draw(topLeft + Point(10., 10.), *GameData::Colors().Get("medium"));
+  FillShader::Fill(topLeft + .5 * boxSize, boxSize, *GameData::Colours().Get("tooltip background"));
+  hoverText.Draw(topLeft + Point(10., 10.), *GameData::Colours().Get("medium"));
 }
 
 
@@ -155,9 +155,9 @@ Point ItemInfoDisplay::Draw(Point point, const vector<string> &labels, const vec
   // Add ten pixels of padding at the top.
   point.Y() += 10.;
   
-  // Get standard colors to draw with.
-  const Color &labelColor = *GameData::Colors().Get("medium");
-  const Color &valueColor = *GameData::Colors().Get("bright");
+  // Get standard colours to draw with.
+  const Colour &labelColour = *GameData::Colours().Get("medium");
+  const Colour &valueColour = *GameData::Colours().Get("bright");
   
   Table table;
   // Use 10-pixel margins on both sides.
@@ -175,8 +175,8 @@ Point ItemInfoDisplay::Draw(Point point, const vector<string> &labels, const vec
     }
     
     CheckHover(table, labels[i]);
-    table.Draw(labels[i], values[i].empty() ? valueColor : labelColor);
-    table.Draw(values[i], valueColor);
+    table.Draw(labels[i], values[i].empty() ? valueColour : labelColour);
+    table.Draw(values[i], valueColour);
   }
   return table.GetPoint();
 }

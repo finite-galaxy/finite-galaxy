@@ -2,7 +2,7 @@
 
 #include "Dialog.h"
 
-#include "Color.h"
+#include "Colour.h"
 #include "Command.h"
 #include "Conversation.h"
 #include "FillShader.h"
@@ -126,9 +126,9 @@ void Dialog::Draw()
   pos.Y() += bottom->Height() * .5 - 25.;
   
   // Draw the buttons, including optionally the cancel button.
-  const Color &bright = *GameData::Colors().Get("bright");
-  const Color &dim = *GameData::Colors().Get("medium");
-  const Color &back = *GameData::Colors().Get("faint");
+  const Colour &bright = *GameData::Colours().Get("bright");
+  const Colour &dim = *GameData::Colours().Get("medium");
+  const Colour &back = *GameData::Colours().Get("faint");
   if(canCancel)
   {
     string cancelText = isMission ? "Decline" : "Cancel";

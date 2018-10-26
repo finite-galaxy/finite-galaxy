@@ -11,7 +11,7 @@
 #include <string>
 #include <vector>
 
-class Color;
+class Colour;
 class Conversation;
 class DataNode;
 class DataWriter;
@@ -80,7 +80,7 @@ public:
   // Mark all persons in the given list as dead.
   static void DestroyPersons(std::vector<std::string> &names);
   
-  static const Set<Color> &Colors();
+  static const Set<Colour> &Colours();
   static const Set<Conversation> &Conversations();
   static const Set<Effect> &Effects();
   static const Set<GameEvent> &Events();

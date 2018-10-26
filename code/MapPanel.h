@@ -5,7 +5,7 @@
 
 #include "Panel.h"
 
-#include "Color.h"
+#include "Colour.h"
 #include "DistanceMap.h"
 #include "Point.h"
 #include "WrappedText.h"
@@ -25,12 +25,12 @@ class System;
 
 
 // This class provides the base class for both the "map details" panel and the
-// missions panel, and handles drawing of the underlying starmap and coloring
+// missions panel, and handles drawing of the underlying starmap and colouring
 // the systems based on a selected criterion. It also handles finding and
 // drawing routes in between systems.
 class MapPanel : public Panel {
 public:
-  // Enumeration for how the systems should be colored:
+  // Enumeration for how the systems should be coloured:
   static const int SHOW_SHIPYARD = -1;
   static const int SHOW_OUTFITTER = -2;
   static const int SHOW_VISITED = -3;
@@ -62,12 +62,12 @@ protected:
   virtual bool Drag(double dx, double dy) override;
   virtual bool Scroll(double dx, double dy) override;
   
-  // Get the color mapping for various system attributes.
-  static Color MapColor(double value);
-  static Color ReputationColor(double reputation, bool canLand, bool hasDominated);
-  static Color GovernmentColor(const Government *government);
-  static Color UninhabitedColor();
-  static Color UnexploredColor();
+  // Get the colour mapping for various system attributes.
+  static Colour MapColour(double value);
+  static Colour ReputationColour(double reputation, bool canLand, bool hasDominated);
+  static Colour GovernmentColour(const Government *government);
+  static Colour UninhabitedColour();
+  static Colour UnexploredColour();
   
   virtual double SystemValue(const System *system) const;
   
@@ -113,7 +113,7 @@ protected:
   void CentreOnSystem(const System *system, bool immediate = false);
   
   // Cache the map layout, so it doesn't have to be re-calculated every frame.
-  // The cache must be updated when the coloring mode changes.
+  // The cache must be updated when the colouring mode changes.
   void UpdateCache();
   
   // For tooltips:
@@ -129,40 +129,40 @@ private:
   void DrawEscorts();
   void DrawWormholes();
   void DrawLinks();
-  // Draw systems in accordance to the set commodity color scheme.
+  // Draw systems in accordance to the set commodity colour scheme.
   void DrawSystems();
   void DrawNames();
   void DrawMissions();
   void DrawTooltips();
-  void DrawPointer(const System *system, Angle &angle, const Color &color, bool bigger = false);
-  static void DrawPointer(Point position, Angle &angle, const Color &color, bool drawBack = true, bool bigger = false);
+  void DrawPointer(const System *system, Angle &angle, const Colour &colour, bool bigger = false);
+  static void DrawPointer(Point position, Angle &angle, const Colour &colour, bool drawBack = true, bool bigger = false);
   
   
 private:
-  // This is the coloring mode currently used in the cache.
+  // This is the colouring mode currently used in the cache.
   int cachedCommodity = -10;
   
   class Node {
   public:
-    Node(const Point &position, const Color &color, const std::string &name, const Color &nameColor, const Government *government)
-      : position(position), color(color), name(name), nameColor(nameColor), government(government) {}
+    Node(const Point &position, const Colour &colour, const std::string &name, const Colour &nameColour, const Government *government)
+      : position(position), colour(colour), name(name), nameColour(nameColour), government(government) {}
     
     Point position;
-    Color color;
+    Colour colour;
     std::string name;
-    Color nameColor;
+    Colour nameColour;
     const Government *government;
   };
   std::vector<Node> nodes;
   
   class Link {
   public:
-    Link(const Point &start, const Point &end, const Color &color)
-      : start(start), end(end), color(color) {}
+    Link(const Point &start, const Point &end, const Colour &colour)
+      : start(start), end(end), colour(colour) {}
     
     Point start;
     Point end;
-    Color color;
+    Colour colour;
   };
   std::vector<Link> links;
 };

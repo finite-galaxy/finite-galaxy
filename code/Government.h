@@ -3,7 +3,7 @@
 #ifndef GOVERNMENT_H_
 #define GOVERNMENT_H_
 
-#include "Color.h"
+#include "Colour.h"
 
 #include <map>
 #include <string>
@@ -22,7 +22,7 @@ class Ship;
 // attacking that ship will provoke its ally governments and reduce your
 // reputation with them, but increase your reputation with that ship's enemies.
 // The ships for each government are identified by drawing them with a different
-// color "swizzle." Some government's ships can also be easier or harder to
+// colour "swizzle." Some government's ships can also be easier or harder to
 // bribe than others.
 class Government {
 public:
@@ -34,10 +34,10 @@ public:
   
   // Get the name of this government.
   const std::string &GetName() const;
-  // Get the color swizzle to use for ships of this government.
+  // Get the colour swizzle to use for ships of this government.
   int GetSwizzle() const;
-  // Get the color to use for displaying this government on the map.
-  const Color &GetColor() const;
+  // Get the colour to use for displaying this government on the map.
+  const Colour &GetColour() const;
   
   // Get the government's initial disposition toward other governments or
   // toward the player.
@@ -101,7 +101,7 @@ private:
   unsigned id;
   std::string name;
   int swizzle = 0;
-  Color color;
+  Colour colour;
   
   std::vector<double> attitudeToward;
   double initialPlayerReputation = 0.;

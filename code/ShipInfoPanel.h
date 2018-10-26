@@ -15,7 +15,7 @@
 #include <string>
 #include <vector>
 
-class Color;
+class Colour;
 class Outfit;
 class PlayerInfo;
 class Rectangle;
@@ -52,7 +52,7 @@ private:
   void DrawCargo(const Rectangle &bounds);
   
   // Helper functions.
-  void DrawLine(const Point &from, const Point &to, const Color &color) const;
+  void DrawLine(const Point &from, const Point &to, const Colour &colour) const;
   bool Hover(const Point &point);
   void Rename(const std::string &name);
   bool CanDump() const;

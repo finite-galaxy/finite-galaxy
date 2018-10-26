@@ -3,7 +3,7 @@
 #ifndef LINE_SHADER_H_
 #define LINE_SHADER_H_
 
-class Color;
+class Colour;
 class Point;
 
 
@@ -14,7 +14,7 @@ class LineShader {
 public:
   static void Init();
   
-  static void Draw(const Point &from, const Point &to, float width, const Color &color);
+  static void Draw(const Point &from, const Point &to, float width, const Colour &colour);
 };
 
 

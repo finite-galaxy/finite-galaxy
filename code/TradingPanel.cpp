@@ -2,7 +2,7 @@
 
 #include "TradingPanel.h"
 
-#include "Color.h"
+#include "Colour.h"
 #include "Command.h"
 #include "FillShader.h"
 #include "Font.h"
@@ -82,14 +82,14 @@ void TradingPanel::Step()
 
 void TradingPanel::Draw()
 {
-  const Color &back = *GameData::Colors().Get("faint");
-  int selectedRow = player.MapColoring();
+  const Colour &back = *GameData::Colours().Get("faint");
+  int selectedRow = player.MapColouring();
   if(selectedRow >= 0 && selectedRow < COMMODITY_COUNT)
     FillShader::Fill(Point(-60., FIRST_Y + 20 * selectedRow + 33), Point(480., 20.), back);
   
   const Font &font = FontSet::Get(14);
-  const Color &unselected = *GameData::Colors().Get("medium");
-  const Color &selected = *GameData::Colors().Get("bright");
+  const Colour &unselected = *GameData::Colours().Get("medium");
+  const Colour &selected = *GameData::Colours().Get("bright");
   
   int y = FIRST_Y;
   FillShader::Fill(Point(-60., y + 15.), Point(480., 1.), unselected);
@@ -150,19 +150,19 @@ void TradingPanel::Draw()
     int hold = player.Cargo().Get(commodity.name);
     
     bool isSelected = (i++ == selectedRow);
-    const Color &color = (isSelected ? selected : unselected);
-    font.Draw(commodity.name, Point(NAME_X, y), color);
+    const Colour &colour = (isSelected ? selected : unselected);
+    font.Draw(commodity.name, Point(NAME_X, y), colour);
     
     if(price)
     {
       canBuy |= isSelected;
-      font.Draw(to_string(price), Point(PRICE_X, y), color);
+      font.Draw(to_string(price), Point(PRICE_X, y), colour);
     
       int basis = player.GetBasis(commodity.name);
       if(basis && basis != price && hold)
       {
         string profit = "(profit: " + to_string(price - basis) + ")";
-        font.Draw(profit, Point(LEVEL_X, y), color);
+        font.Draw(profit, Point(LEVEL_X, y), colour);
       }
       else
       {
@@ -173,16 +173,16 @@ void TradingPanel::Draw()
           level = 4;
         else
           level = (5 * level) / (commodity.high - commodity.low);
-        font.Draw(TRADE_LEVEL[level], Point(LEVEL_X, y), color);
+        font.Draw(TRADE_LEVEL[level], Point(LEVEL_X, y), colour);
       }
     
-      font.Draw("[buy]", Point(BUY_X, y), color);
-      font.Draw("[sell]", Point(SELL_X, y), color);
+      font.Draw("[buy]", Point(BUY_X, y), colour);
+      font.Draw("[sell]", Point(SELL_X, y), colour);
     }
     else
     {
-      font.Draw("----", Point(PRICE_X, y), color);
-      font.Draw("(not for sale)", Point(LEVEL_X, y), color);
+      font.Draw("----", Point(PRICE_X, y), colour);
+      font.Draw("(not for sale)", Point(LEVEL_X, y), colour);
     }
     
     if(hold)
@@ -210,9 +210,9 @@ void TradingPanel::Draw()
 bool TradingPanel::KeyDown(SDL_Keycode key, Uint16 mod, const Command &command)
 {
   if(key == SDLK_UP)
-    player.SetMapColoring(max(0, player.MapColoring() - 1));
+    player.SetMapColouring(max(0, player.MapColouring() - 1));
   else if(key == SDLK_DOWN)
-    player.SetMapColoring(max(0, min(COMMODITY_COUNT - 1, player.MapColoring() + 1)));
+    player.SetMapColouring(max(0, min(COMMODITY_COUNT - 1, player.MapColouring() + 1)));
   else if(key == '=' || key == SDLK_RETURN || key == SDLK_SPACE)
     Buy(1);
   else if(key == '-' || key == SDLK_BACKSPACE || key == SDLK_DELETE)
@@ -267,7 +267,7 @@ bool TradingPanel::Click(int x, int y, int clicks)
   int maxY = FIRST_Y + 25 + 20 * COMMODITY_COUNT;
   if(x >= MIN_X && x <= MAX_X && y >= FIRST_Y + 25 && y < maxY)
   {
-    player.SetMapColoring((y - FIRST_Y - 25) / 20);
+    player.SetMapColouring((y - FIRST_Y - 25) / 20);
     if(x >= BUY_X && x < SELL_X)
       Buy(1);
     else if(x >= SELL_X && x < HOLD_X)
@@ -283,7 +283,7 @@ bool TradingPanel::Click(int x, int y, int clicks)
 
 void TradingPanel::Buy(int64_t amount)
 {
-  int selectedRow = player.MapColoring();
+  int selectedRow = player.MapColouring();
   if(selectedRow < 0 || selectedRow >= COMMODITY_COUNT)
     return;
   

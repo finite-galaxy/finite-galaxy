@@ -35,7 +35,7 @@ public:
   double Height() const;
   // Get the farthest a part of this sprite can be from its centre.
   double Radius() const;
-  // Which color swizzle should be applied to the sprite?
+  // Which colour swizzle should be applied to the sprite?
   int GetSwizzle() const;
   // Get the sprite and mask for the given time step.
   float GetFrame(int step = -1) const;
@@ -60,7 +60,7 @@ public:
   void SaveSprite(DataWriter &out, const std::string &tag = "sprite") const;
   // Set the sprite.
   void SetSprite(const Sprite *sprite);
-  // Set the color swizzle.
+  // Set the colour swizzle.
   void SetSwizzle(int swizzle);
   
   

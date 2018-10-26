@@ -36,7 +36,7 @@ void HiringPanel::Draw()
   const Ship &flagship = *player.Flagship();
   
   // Draw a line in the same place as the trading and bank panels.
-  FillShader::Fill(Point(-60., 95.), Point(480., 1.), *GameData::Colors().Get("medium"));
+  FillShader::Fill(Point(-60., 95.), Point(480., 1.), *GameData::Colours().Get("medium"));
   
   const Interface *interface = GameData::Interfaces().Get("hiring");
   Information info;

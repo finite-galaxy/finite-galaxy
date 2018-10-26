@@ -9,7 +9,7 @@
 
 #include <list>
 
-class Color;
+class Colour;
 class Mission;
 class PlayerInfo;
 
@@ -43,7 +43,7 @@ private:
   // Display the name of and distance to the selected system.
   void DrawSelectedSystem() const;
   // Draw rings around systems that need to be visited for the given mission.
-  void DrawMissionSystem(const Mission &mission, const Color &color) const;
+  void DrawMissionSystem(const Mission &mission, const Colour &colour) const;
   // Draw the backgrounds for the "available jobs" and accepted missions/jobs lists.
   Point DrawPanel(Point pos, const std::string &label, int entries) const;
   Point DrawList(const std::list<Mission> &list, Point pos) const;

@@ -9,7 +9,7 @@
 
 #include <string>
 
-class Color;
+class Colour;
 class ImageBuffer;
 class Point;
 
@@ -26,8 +26,8 @@ public:
   
   void Load(const std::string &imagePath);
   
-  void Draw(const std::string &str, const Point &point, const Color &color) const;
-  void DrawAliased(const std::string &str, double x, double y, const Color &color) const;
+  void Draw(const std::string &str, const Point &point, const Colour &colour) const;
+  void DrawAliased(const std::string &str, double x, double y, const Colour &colour) const;
   
   int Width(const std::string &str, char after = ' ') const;
   int Width(const char *str, char after = ' ') const;
@@ -55,7 +55,7 @@ private:
   GLuint vao;
   GLuint vbo;
   
-  GLint colorI;
+  GLint colourI;
   GLint scaleI;
   GLint glyphI;
   GLint aspectI;

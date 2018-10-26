@@ -2,7 +2,7 @@
 
 #include "ShipyardPanel.h"
 
-#include "Color.h"
+#include "Colour.h"
 #include "Dialog.h"
 #include "Font.h"
 #include "FontSet.h"
@@ -40,7 +40,7 @@ namespace {
       const Font &font = FontSet::Get(14);
       static const string label = "Random";
       Point labelPos = randomPos - .5 * Point(font.Width(label), font.Height());
-      font.Draw(label, labelPos, *GameData::Colors().Get("medium"));
+      font.Draw(label, labelPos, *GameData::Colours().Get("medium"));
     }
     
   protected:

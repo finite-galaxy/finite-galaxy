@@ -8,7 +8,7 @@
 #include <string>
 #include <vector>
 
-class Color;
+class Colour;
 class Font;
 
 
@@ -21,7 +21,7 @@ public:
   explicit WrappedText(const Font &font);
   
   // Set the alignment mode.
-  enum Align {LEFT, CENTER, RIGHT, JUSTIFIED};
+  enum Align {LEFT, CENTRE, RIGHT, JUSTIFIED};
   Align Alignment() const;
   void SetAlignment(Align align);
   
@@ -54,7 +54,7 @@ public:
   int Height() const;
   
   // Draw the text.
-  void Draw(const Point &topLeft, const Color &color) const;
+  void Draw(const Point &topLeft, const Colour &colour) const;
   
   
 private:

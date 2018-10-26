@@ -596,7 +596,7 @@ bool Mission::CanComplete(const PlayerInfo &player) const
 
 
 // This function dictates whether missions on the player's map are shown in
-// bright or dim text colors.
+// bright or dim text colours.
 bool Mission::IsSatisfied(const PlayerInfo &player) const
 {
   if(!waypoints.empty() || !stopovers.empty())

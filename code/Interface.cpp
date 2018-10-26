@@ -397,13 +397,13 @@ Interface::ImageElement::ImageElement(const DataNode &node, const Point &globalA
 bool Interface::ImageElement::ParseLine(const DataNode &node)
 {
   // The "inactive" and "hover" sprite only applies to non-dynamic images.
-  // The "colored" tag only applies to outlines.
+  // The "coloured" tag only applies to outlines.
   if(node.Token(0) == "inactive" && node.Size() >= 2 && name.empty())
     sprite[Element::INACTIVE] = SpriteSet::Get(node.Token(1));
   else if(node.Token(0) == "hover" && node.Size() >= 2 && name.empty())
     sprite[Element::HOVER] = SpriteSet::Get(node.Token(1));
-  else if(isOutline && node.Token(0) == "colored")
-    isColored = true;
+  else if(isOutline && node.Token(0) == "coloured")
+    isColoured = true;
   else
     return false;
   
@@ -443,9 +443,9 @@ void Interface::ImageElement::Draw(const Rectangle &rect, const Information &inf
   float frame = info.GetSpriteFrame(name);
   if(isOutline)
   {
-    Color color = (isColored ? info.GetOutlineColor() : Color(1., 1.));
+    Colour colour = (isColoured ? info.GetOutlineColour() : Colour(1., 1.));
     Point unit = info.GetSpriteUnit(name);
-    OutlineShader::Draw(sprite, rect.Centre(), rect.Dimensions(), color, unit, frame);
+    OutlineShader::Draw(sprite, rect.Centre(), rect.Dimensions(), colour, unit, frame);
   }
   else
     SpriteShader::Draw(sprite, rect.Centre(), rect.Width() / sprite->Width(), 0, frame);
@@ -481,27 +481,27 @@ Interface::TextElement::TextElement(const DataNode &node, const Point &globalAnc
   // This function will call ParseLine() for any line it does not recognize.
   Load(node, globalAnchor);
   
-  // Fill in any undefined state colors. By default labels are "medium", strings
+  // Fill in any undefined state colours. By default labels are "medium", strings
   // are "bright", and button brightness depends on its activation state.
-  if(!color[Element::ACTIVE] && !buttonKey)
-    color[Element::ACTIVE] = GameData::Colors().Get(isDynamic ? "bright" : "medium");
+  if(!colour[Element::ACTIVE] && !buttonKey)
+    colour[Element::ACTIVE] = GameData::Colours().Get(isDynamic ? "bright" : "medium");
   
-  if(!color[Element::ACTIVE])
+  if(!colour[Element::ACTIVE])
   {
-    // If no color is specified and this is a button, use the default colors.
-    color[Element::ACTIVE] = GameData::Colors().Get("active");
-    if(!color[Element::INACTIVE])
-      color[Element::INACTIVE] = GameData::Colors().Get("inactive");
-    if(!color[Element::HOVER])
-      color[Element::HOVER] = GameData::Colors().Get("hover");
+    // If no colour is specified and this is a button, use the default colours.
+    colour[Element::ACTIVE] = GameData::Colours().Get("active");
+    if(!colour[Element::INACTIVE])
+      colour[Element::INACTIVE] = GameData::Colours().Get("inactive");
+    if(!colour[Element::HOVER])
+      colour[Element::HOVER] = GameData::Colours().Get("hover");
   }
   else
   {
-    // If a base color was specified, also use it for any unspecified states.
-    if(!color[Element::INACTIVE])
-      color[Element::INACTIVE] = color[Element::ACTIVE];
-    if(!color[Element::HOVER])
-      color[Element::HOVER] = color[Element::ACTIVE];
+    // If a base colour was specified, also use it for any unspecified states.
+    if(!colour[Element::INACTIVE])
+      colour[Element::INACTIVE] = colour[Element::ACTIVE];
+    if(!colour[Element::HOVER])
+      colour[Element::HOVER] = colour[Element::ACTIVE];
   }
 }
 
@@ -513,12 +513,12 @@ bool Interface::TextElement::ParseLine(const DataNode &node)
 {
   if(node.Token(0) == "size" && node.Size() >= 2)
     fontSize = node.Value(1);
-  else if(node.Token(0) == "color" && node.Size() >= 2)
-    color[Element::ACTIVE] = GameData::Colors().Get(node.Token(1));
+  else if(node.Token(0) == "colour" && node.Size() >= 2)
+    colour[Element::ACTIVE] = GameData::Colours().Get(node.Token(1));
   else if(node.Token(0) == "inactive" && node.Size() >= 2)
-    color[Element::INACTIVE] = GameData::Colors().Get(node.Token(1));
+    colour[Element::INACTIVE] = GameData::Colours().Get(node.Token(1));
   else if(node.Token(0) == "hover" && node.Size() >= 2)
-    color[Element::HOVER] = GameData::Colors().Get(node.Token(1));
+    colour[Element::HOVER] = GameData::Colours().Get(node.Token(1));
   else
     return false;
   
@@ -541,10 +541,10 @@ Point Interface::TextElement::NativeDimensions(const Information &info, int stat
 void Interface::TextElement::Draw(const Rectangle &rect, const Information &info, int state) const
 {
   // Avoid crashes for malformed interface elements that are not fully loaded.
-  if(!color[state])
+  if(!colour[state])
     return;
   
-  FontSet::Get(fontSize).Draw(GetString(info), rect.TopLeft(), *color[state]);
+  FontSet::Get(fontSize).Draw(GetString(info), rect.TopLeft(), *colour[state]);
 }
 
 
@@ -581,9 +581,9 @@ Interface::BarElement::BarElement(const DataNode &node, const Point &globalAncho
   // This function will call ParseLine() for any line it does not recognize.
   Load(node, globalAnchor);
   
-  // Fill in a default color if none is specified.
-  if(!color)
-    color = GameData::Colors().Get("active");
+  // Fill in a default colour if none is specified.
+  if(!colour)
+    colour = GameData::Colours().Get("active");
 }
 
 
@@ -592,8 +592,8 @@ Interface::BarElement::BarElement(const DataNode &node, const Point &globalAncho
 // itself. This returns false if it does not recognize the line, either.
 bool Interface::BarElement::ParseLine(const DataNode &node)
 {
-  if(node.Token(0) == "color" && node.Size() >= 2)
-    color = GameData::Colors().Get(node.Token(1));
+  if(node.Token(0) == "colour" && node.Size() >= 2)
+    colour = GameData::Colours().Get(node.Token(1));
   else if(node.Token(0) == "size" && node.Size() >= 2)
     width = node.Value(1);
   else
@@ -614,7 +614,7 @@ void Interface::BarElement::Draw(const Rectangle &rect, const Information &info,
     segments = 0.;
   
   // Avoid crashes for malformed interface elements that are not fully loaded.
-  if(!color || !width || !value)
+  if(!colour || !width || !value)
     return;
   
   if(isRing)
@@ -622,7 +622,7 @@ void Interface::BarElement::Draw(const Rectangle &rect, const Information &info,
     if(!rect.Width() || !rect.Height())
       return;
     
-    RingShader::Draw(rect.Centre(), .5 * rect.Width(), width, value, *color, segments > 1. ? segments : 0.);
+    RingShader::Draw(rect.Centre(), .5 * rect.Width(), width, value, *colour, segments > 1. ? segments : 0.);
   }
   else
   {
@@ -645,7 +645,7 @@ void Interface::BarElement::Draw(const Rectangle &rect, const Information &info,
       Point to = start + min(v, value) * dimensions;
       v += empty;
       
-      LineShader::Draw(from, to, width, *color);
+      LineShader::Draw(from, to, width, *colour);
     }
   }
 }

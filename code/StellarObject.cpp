@@ -77,7 +77,7 @@ const string &StellarObject::LandingMessage() const
 
 
 
-// Get the color to be used for displaying this object.
+// Get the colour to be used for displaying this object.
 int StellarObject::RadarType(const Ship *ship) const
 {
   if(IsStar())

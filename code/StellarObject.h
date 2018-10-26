@@ -42,7 +42,7 @@ public:
   // explaining why (e.g. too hot, too cold, etc.).
   const std::string &LandingMessage() const;
   
-  // Get the radar color to be used for displaying this object.
+  // Get the radar colour to be used for displaying this object.
   int RadarType(const Ship *ship) const;
   // Check if this is a star.
   bool IsStar() const;

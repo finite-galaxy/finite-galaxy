@@ -76,7 +76,7 @@ double Body::Radius() const
 
 
 
-// Which color swizzle should be applied to the sprite?
+// Which colour swizzle should be applied to the sprite?
 int Body::GetSwizzle() const
 {
   return swizzle;
@@ -241,7 +241,7 @@ void Body::SetSprite(const Sprite *sprite)
 
 
 
-// Set the color swizzle.
+// Set the colour swizzle.
 void Body::SetSwizzle(int swizzle)
 {
   this->swizzle = swizzle;

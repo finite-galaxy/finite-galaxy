@@ -33,7 +33,7 @@ void Table::Clear()
   
   point = Point();
   it = columns.begin();
-  color = Color(1., 0.);
+  colour = Colour(1., 0.);
 }
 
 
@@ -109,10 +109,10 @@ void Table::DrawAt(const Point &point) const
 
 
 
-// Set the color for drawing text and underlines.
-void Table::SetColor(const Color &color) const
+// Set the colour for drawing text and underlines.
+void Table::SetColour(const Colour &colour) const
 {
-  this->color = color;
+  this->colour = colour;
 }
 
 
@@ -135,21 +135,21 @@ void Table::Advance(int fields) const
 // Draw a single text field, and move on to the next one.
 void Table::Draw(const string &text) const
 {
-  Draw(text, color);
+  Draw(text, colour);
 }
 
 
 
-// If a color is given, this field is drawn using that color, but the
-// previously set color will be used for future fields.
-void Table::Draw(const string &text, const Color &color) const
+// If a colour is given, this field is drawn using that colour, but the
+// previously set colour will be used for future fields.
+void Table::Draw(const string &text, const Colour &colour) const
 {
   if(font)
   {
     Point pos = point;
     if(it != columns.end())
       pos += Point(it->offset + it->align * font->Width(text), 0.);
-    font->Draw(text, pos, color);
+    font->Draw(text, pos, colour);
   }
   
   Advance();
@@ -159,14 +159,14 @@ void Table::Draw(const string &text, const Color &color) const
 
 void Table::Draw(double value) const
 {
-  Draw(value, color);
+  Draw(value, colour);
 }
 
 
 
-void Table::Draw(double value, const Color &color) const
+void Table::Draw(double value, const Colour &colour) const
 {
-  Draw(Format::Number(value), color);
+  Draw(Format::Number(value), colour);
 }
 
 
@@ -174,14 +174,14 @@ void Table::Draw(double value, const Color &color) const
 // Draw an underline under the text for the current row.
 void Table::DrawUnderline() const
 {
-  DrawUnderline(color);
+  DrawUnderline(colour);
 }
 
 
 
-void Table::DrawUnderline(const Color &color) const
+void Table::DrawUnderline(const Colour &colour) const
 {
-  FillShader::Fill(point + lineOff - Point(0., 2.), lineSize, color);
+  FillShader::Fill(point + lineOff - Point(0., 2.), lineSize, colour);
 }
 
 
@@ -189,14 +189,14 @@ void Table::DrawUnderline(const Color &color) const
 // Highlight the current row.
 void Table::DrawHighlight() const
 {
-  DrawHighlight(color);
+  DrawHighlight(colour);
 }
 
 
 
-void Table::DrawHighlight(const Color &color) const
+void Table::DrawHighlight(const Colour &colour) const
 {
-  FillShader::Fill(GetCentrePoint(), GetRowSize(), color);
+  FillShader::Fill(GetCentrePoint(), GetRowSize(), colour);
 }
 
 

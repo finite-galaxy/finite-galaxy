@@ -2,7 +2,7 @@
 
 #include "BankPanel.h"
 
-#include "Color.h"
+#include "Colour.h"
 #include "Dialog.h"
 #include "Format.h"
 #include "GameData.h"
@@ -68,14 +68,14 @@ void BankPanel::Draw()
   table.SetHighlight(MIN_X + 10, MAX_X - 10);
   table.DrawAt(Point(0., FIRST_Y));
   
-  // Use stock colors from the game data.
-  const Color &back = *GameData::Colors().Get("faint");
-  const Color &unselected = *GameData::Colors().Get("medium");
-  const Color &selected = *GameData::Colors().Get("bright");
+  // Use stock colours from the game data.
+  const Colour &back = *GameData::Colours().Get("faint");
+  const Colour &unselected = *GameData::Colours().Get("medium");
+  const Colour &selected = *GameData::Colours().Get("bright");
   
   // Draw the heading of the table.
   table.DrawUnderline(unselected);
-  table.SetColor(selected);
+  table.SetColour(selected);
   for(const string &heading : HEADING)
     table.Draw(heading);
   table.DrawGap(5);
@@ -113,14 +113,14 @@ void BankPanel::Draw()
   int row = 0;
   for(const Mortgage &mortgage : player.Accounts().Mortgages())
   {
-    // Color this row depending on whether it is selected or not.
+    // Colour this row depending on whether it is selected or not.
     if(row == selectedRow)
     {
       table.DrawHighlight(back);
-      table.SetColor(selected);
+      table.SetColour(selected);
     }
     else
-      table.SetColor(unselected);
+      table.SetColour(unselected);
     
     // Check if this is the last row we have space to draw. If so, check if
     // it must include a combination of multiple mortgages.
@@ -154,7 +154,7 @@ void BankPanel::Draw()
     if(isLastRow)
       break;
   }
-  table.SetColor(unselected);
+  table.SetColour(unselected);
   // Draw the salaries, if necessary.
   if(salaries)
   {

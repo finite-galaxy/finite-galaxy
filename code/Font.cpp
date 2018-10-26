@@ -2,7 +2,7 @@
 
 #include "Font.h"
 
-#include "Color.h"
+#include "Colour.h"
 #include "ImageBuffer.h"
 #include "Point.h"
 #include "Screen.h"
@@ -41,19 +41,19 @@ namespace {
     "}\n";
   
   const char *fragmentCode =
-    // The user must supply a texture and a color (white by default).
+    // The user must supply a texture and a colour (white by default).
     "uniform sampler2D tex;\n"
-    "uniform vec4 color = vec4(1, 1, 1, 1);\n"
+    "uniform vec4 colour = vec4(1, 1, 1, 1);\n"
     
     // This comes from the vertex shader.
     "in vec2 texCoord;\n"
     
-    // Output color.
-    "out vec4 finalColor;\n"
+    // Output colour.
+    "out vec4 finalColour;\n"
     
-    // Multiply the texture by the user-specified color (including alpha).
+    // Multiply the texture by the user-specified colour (including alpha).
     "void main() {\n"
-    "  finalColor = texture(tex, texCoord).a * color;\n"
+    "  finalColour = texture(tex, texCoord).a * colour;\n"
     "}\n";
   
   const int KERN = 2;
@@ -62,7 +62,7 @@ namespace {
 
 
 Font::Font()
-  : texture(0), vao(0), vbo(0), colorI(0), scaleI(0), glyphI(0), aspectI(0),
+  : texture(0), vao(0), vbo(0), colourI(0), scaleI(0), glyphI(0), aspectI(0),
     positionI(0), height(0), space(0), screenWidth(0), screenHeight(0)
 {
 }
@@ -91,20 +91,20 @@ void Font::Load(const string &imagePath)
 
 
 
-void Font::Draw(const string &str, const Point &point, const Color &color) const
+void Font::Draw(const string &str, const Point &point, const Colour &colour) const
 {
-  DrawAliased(str, round(point.X()), round(point.Y()), color);
+  DrawAliased(str, round(point.X()), round(point.Y()), colour);
 }
 
 
 
-void Font::DrawAliased(const string &str, double x, double y, const Color &color) const
+void Font::DrawAliased(const string &str, double x, double y, const Colour &colour) const
 {
   glUseProgram(shader.Object());
   glBindTexture(GL_TEXTURE_2D, texture);
   glBindVertexArray(vao);
   
-  glUniform4fv(colorI, 1, color.Get());
+  glUniform4fv(colourI, 1, colour.Get());
   
   // Update the scale, only if the screen size has changed.
   if(Screen::Width() != screenWidth || Screen::Height() != screenHeight)
@@ -465,7 +465,7 @@ void Font::SetUpShader(float glyphW, float glyphH)
   screenWidth = 0;
   screenHeight = 0;
   
-  colorI = shader.Uniform("color");
+  colourI = shader.Uniform("colour");
   scaleI = shader.Uniform("scale");
   glyphI = shader.Uniform("glyph");
   aspectI = shader.Uniform("aspect");

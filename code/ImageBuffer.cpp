@@ -216,18 +216,18 @@ namespace {
     }
     
     // Adjust settings to make sure the result will be a BGRA file.
-    int colorType = png_get_color_type(png, info);
+    int colourType = png_get_color_type(png, info);
     int bitDepth = png_get_bit_depth(png, info);
     
     png_set_strip_16(png);
     png_set_packing(png);
-    if(colorType == PNG_COLOR_TYPE_PALETTE)
+    if(colourType == PNG_COLOR_TYPE_PALETTE)
       png_set_palette_to_rgb(png);
-    if(colorType == PNG_COLOR_TYPE_GRAY && bitDepth < 8)
+    if(colourType == PNG_COLOR_TYPE_GRAY && bitDepth < 8)
       png_set_expand_gray_1_2_4_to_8(png);
-    if(colorType == PNG_COLOR_TYPE_GRAY || colorType == PNG_COLOR_TYPE_GRAY_ALPHA)
+    if(colourType == PNG_COLOR_TYPE_GRAY || colourType == PNG_COLOR_TYPE_GRAY_ALPHA)
       png_set_gray_to_rgb(png);
-    if(colorType & PNG_COLOR_MASK_COLOR)
+    if(colourType & PNG_COLOR_MASK_COLOR)
       png_set_bgr(png);
     png_read_update_info(png, info);
     

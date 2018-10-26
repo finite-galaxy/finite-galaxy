@@ -4,7 +4,7 @@
 
 #include "Audio.h"
 #include "BatchShader.h"
-#include "Color.h"
+#include "Colour.h"
 #include "Command.h"
 #include "Conversation.h"
 #include "DataFile.h"
@@ -57,7 +57,7 @@ class Sprite;
 using namespace std;
 
 namespace {
-  Set<Color> colors;
+  Set<Colour> colours;
   Set<Conversation> conversations;
   Set<Effect> effects;
   Set<GameEvent> events;
@@ -557,9 +557,9 @@ void GameData::DestroyPersons(vector<string> &names)
 
 
 
-const Set<Color> &GameData::Colors()
+const Set<Colour> &GameData::Colours()
 {
-  return colors;
+  return colours;
 }
 
 
@@ -891,8 +891,8 @@ void GameData::LoadFile(const string &path, bool debugMode)
   for(const DataNode &node : data)
   {
     const string &key = node.Token(0);
-    if(key == "color" && node.Size() >= 6)
-      colors.Get(node.Token(1))->Load(
+    if(key == "colour" && node.Size() >= 6)
+      colours.Get(node.Token(1))->Load(
         node.Value(2), node.Value(3), node.Value(4), node.Value(5));
     else if(key == "conversation" && node.Size() >= 2)
       conversations.Get(node.Token(1))->Load(node);

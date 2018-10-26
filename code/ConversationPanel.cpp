@@ -3,7 +3,7 @@
 #include "ConversationPanel.h"
 
 #include "BoardingPanel.h"
-#include "Color.h"
+#include "Colour.h"
 #include "Command.h"
 #include "Conversation.h"
 #include "FillShader.h"
@@ -65,7 +65,7 @@ void ConversationPanel::Draw()
   // Draw the panel itself, stretching from top to bottom of the screen on
   // the left side. The edge sprite contains 10 pixels of the margin; the rest
   // of the margin is included in the filled rectangle drawn here:
-  const Color &back = *GameData::Colors().Get("conversation background");
+  const Colour &back = *GameData::Colours().Get("conversation background");
   double boxWidth = WIDTH + 2. * MARGIN - 10.;
   FillShader::Fill(
     Point(Screen::Left() + .5 * boxWidth, 0.),
@@ -84,12 +84,12 @@ void ConversationPanel::Draw()
       SpriteShader::Draw(edgeSprite, pos);
   }
   
-  // Get the font and colors we'll need for drawing everything.
+  // Get the font and colours we'll need for drawing everything.
   const Font &font = FontSet::Get(14);
-  const Color &selectionColor = *GameData::Colors().Get("faint");
-  const Color &dim = *GameData::Colors().Get("dim");
-  const Color &grey = *GameData::Colors().Get("medium");
-  const Color &bright = *GameData::Colors().Get("bright");
+  const Colour &selectionColour = *GameData::Colours().Get("faint");
+  const Colour &dim = *GameData::Colours().Get("dim");
+  const Colour &grey = *GameData::Colours().Get("medium");
+  const Colour &bright = *GameData::Colours().Get("bright");
   
   // Figure out where we should start drawing.
   Point point(
@@ -127,7 +127,7 @@ void ConversationPanel::Draw()
       }
       
       // Fill in whichever entry box is active right now.
-      FillShader::Fill(centre, size, selectionColor);
+      FillShader::Fill(centre, size, selectionColour);
       // Draw the text cursor.
       centre.X() += font.Width(choice ? lastName : firstName) - 67;
       FillShader::Fill(centre, Point(1., 16.), dim);
@@ -161,7 +161,7 @@ void ConversationPanel::Draw()
       Point size(WIDTH, it.Height());
     
       if(index == choice)
-        FillShader::Fill(centre + Point(-5, 0), size + Point(30, 0), selectionColor);
+        FillShader::Fill(centre + Point(-5, 0), size + Point(30, 0), selectionColour);
       AddZone(Rectangle::FromCorner(point, size), [this, index](){ this->ClickChoice(index); });
       ++index;
     
@@ -412,7 +412,7 @@ Point ConversationPanel::Paragraph::Centre() const
 
 // Draw this paragraph, and return the point that the next paragraph below it
 // should be drawn at.
-Point ConversationPanel::Paragraph::Draw(Point point, const Color &color) const
+Point ConversationPanel::Paragraph::Draw(Point point, const Colour &colour) const
 {
   if(scene)
   {
@@ -420,7 +420,7 @@ Point ConversationPanel::Paragraph::Draw(Point point, const Color &color) const
     SpriteShader::Draw(scene, point + offset);
     point.Y() += 20 * !isFirst + scene->Height() + 20;
   }
-  wrap.Draw(point, color);
+  wrap.Draw(point, colour);
   point.Y() += wrap.Height();
   return point;
 }

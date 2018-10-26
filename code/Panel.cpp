@@ -2,7 +2,7 @@
 
 #include "Panel.h"
 
-#include "Color.h"
+#include "Colour.h"
 #include "Command.h"
 #include "Dialog.h"
 #include "FillShader.h"
@@ -185,7 +185,7 @@ void Panel::DrawBackdrop() const
     return;
   
   // Darken everything but the dialog.
-  const Color &back = *GameData::Colors().Get("dialog backdrop");
+  const Colour &back = *GameData::Colours().Get("dialog backdrop");
   FillShader::Fill(Point(), Point(Screen::Width(), Screen::Height()), back);
 }
 

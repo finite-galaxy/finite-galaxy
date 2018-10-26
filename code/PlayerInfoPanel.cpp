@@ -66,10 +66,10 @@ namespace {
       }
     }
     
-    const Color &dim = *GameData::Colors().Get("medium");
+    const Colour &dim = *GameData::Colours().Get("medium");
     table.DrawGap(10);
     table.DrawUnderline(dim);
-    table.Draw(title, *GameData::Colors().Get("bright"));
+    table.Draw(title, *GameData::Colours().Get("bright"));
     table.Advance();
     table.DrawGap(5);
     
@@ -454,9 +454,9 @@ void PlayerInfoPanel::DrawPlayer(const Rectangle &bounds)
   if(bounds.Width() < 250.)
     return;
   
-  // Colors to draw with.
-  Color dim = *GameData::Colors().Get("medium");
-  Color bright = *GameData::Colors().Get("bright");
+  // Colours to draw with.
+  Colour dim = *GameData::Colours().Get("medium");
+  Colour bright = *GameData::Colours().Get("bright");
   
   // Table attributes.
   Table table;
@@ -533,12 +533,12 @@ void PlayerInfoPanel::DrawFleet(const Rectangle &bounds)
   if(bounds.Width() < 750.)
     return;
   
-  // Colors to draw with.
-  Color back = *GameData::Colors().Get("faint");
-  Color dim = *GameData::Colors().Get("medium");
-  Color bright = *GameData::Colors().Get("bright");
-  Color elsewhere = *GameData::Colors().Get("dim");
-  Color dead(.4, 0., 0., 0.);
+  // Colours to draw with.
+  Colour back = *GameData::Colours().Get("faint");
+  Colour dim = *GameData::Colours().Get("medium");
+  Colour bright = *GameData::Colours().Get("bright");
+  Colour elsewhere = *GameData::Colours().Get("dim");
+  Colour dead(.4, 0., 0., 0.);
   
   // Table attributes.
   Table table;
@@ -556,7 +556,7 @@ void PlayerInfoPanel::DrawFleet(const Rectangle &bounds)
   
   // Header row.
   table.DrawUnderline(dim);
-  table.SetColor(bright);
+  table.SetColour(bright);
   table.Draw("ship");
   table.Draw("model");
   table.Draw("system");
@@ -587,7 +587,7 @@ void PlayerInfoPanel::DrawFleet(const Rectangle &bounds)
     isElsewhere |= (ship.CanBeCarried() && player.GetPlanet());
     bool isDead = ship.IsDestroyed() || ship.IsDisabled();
     bool isHovered = (index == hoverIndex);
-    table.SetColor(isDead ? dead : isElsewhere ? elsewhere : isHovered ? bright : dim);
+    table.SetColour(isDead ? dead : isElsewhere ? elsewhere : isHovered ? bright : dim);
     
     // Store this row's position, to handle hovering.
     zones.emplace_back(table.GetCentrePoint(), table.GetRowSize(), index);
@@ -633,7 +633,7 @@ void PlayerInfoPanel::DrawFleet(const Rectangle &bounds)
     for(int i : allSelected)
     {
       const string &name = player.Ships()[i]->Name();
-      font.Draw(name, pos + Point(1., 1.), Color(0., 1.));
+      font.Draw(name, pos + Point(1., 1.), Colour(0., 1.));
       font.Draw(name, pos, bright);
       pos.Y() += 20.;
     }

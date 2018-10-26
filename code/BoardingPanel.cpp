@@ -109,11 +109,11 @@ void BoardingPanel::Draw()
   DrawBackdrop();
   
   // Draw the list of plunder.
-  const Color &opaque = *GameData::Colors().Get("panel background");
-  const Color &back = *GameData::Colors().Get("faint");
-  const Color &dim = *GameData::Colors().Get("dim");
-  const Color &medium = *GameData::Colors().Get("medium");
-  const Color &bright = *GameData::Colors().Get("bright");
+  const Colour &opaque = *GameData::Colours().Get("panel background");
+  const Colour &back = *GameData::Colours().Get("faint");
+  const Colour &dim = *GameData::Colours().Get("dim");
+  const Colour &medium = *GameData::Colours().Get("medium");
+  const Colour &bright = *GameData::Colours().Get("bright");
   FillShader::Fill(Point(-155., -60.), Point(360., 250.), opaque);
   
   int index = (scroll - 10) / 20;
@@ -132,16 +132,16 @@ void BoardingPanel::Draw()
     if(isSelected)
       FillShader::Fill(Point(-155., y + 10.), Point(360., 20.), back);
     
-    // Color the item based on whether you have space for it.
-    const Color &color = item.CanTake(*you) ? isSelected ? bright : medium : dim;
+    // Colour the item based on whether you have space for it.
+    const Colour &colour = item.CanTake(*you) ? isSelected ? bright : medium : dim;
     Point pos(-320., y + fontOff);
-    font.Draw(item.Name(), pos, color);
+    font.Draw(item.Name(), pos, colour);
     
     Point valuePos(pos.X() + 260. - font.Width(item.Value()), pos.Y());
-    font.Draw(item.Value(), valuePos, color);
+    font.Draw(item.Value(), valuePos, colour);
     
     Point sizePos(pos.X() + 330. - font.Width(item.Size()), pos.Y());
-    font.Draw(item.Size(), sizePos, color);
+    font.Draw(item.Size(), sizePos, colour);
   }
   
   // Set which buttons are active.

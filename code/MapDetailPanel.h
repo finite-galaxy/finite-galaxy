@@ -15,7 +15,7 @@ class System;
 
 
 
-// A panel that displays the galaxy star map, with options for color-coding the
+// A panel that displays the galaxy star map, with options for colour-coding the
 // stars based on attitude towards the player, government, or commodity price.
 // This panel also lets you view what planets are in each system, and you can
 // click on a planet to view its description.
@@ -39,7 +39,7 @@ private:
   void DrawInfo();
   void DrawOrbits();
   
-  // Set the commodity coloring, and update the player info as well.
+  // Set the commodity colouring, and update the player info as well.
   void SetCommodity(int index);
   
   

@@ -2,7 +2,7 @@
 
 #include "ShipInfoDisplay.h"
 
-#include "Color.h"
+#include "Colour.h"
 #include "Depreciation.h"
 #include "FillShader.h"
 #include "Format.h"
@@ -58,9 +58,9 @@ void ShipInfoDisplay::DrawAttributes(const Point &topLeft) const
 {
   Point point = Draw(topLeft, attributeLabels, attributeValues);
   
-  // Get standard colors to draw with.
-  const Color &labelColor = *GameData::Colors().Get("medium");
-  const Color &valueColor = *GameData::Colors().Get("bright");
+  // Get standard colours to draw with.
+  const Colour &labelColour = *GameData::Colours().Get("medium");
+  const Colour &valueColour = *GameData::Colours().Get("bright");
   
   Table table;
   table.AddColumn(10, Table::LEFT);
@@ -72,17 +72,17 @@ void ShipInfoDisplay::DrawAttributes(const Point &topLeft) const
   table.DrawGap(10.);
   
   table.Advance();
-  table.Draw("fuel", labelColor);
-  table.Draw("energy", labelColor);
-  table.Draw("heat", labelColor);
+  table.Draw("fuel", labelColour);
+  table.Draw("energy", labelColour);
+  table.Draw("heat", labelColour);
   
   for(unsigned i = 0; i < tableLabels.size(); ++i)
   {
     CheckHover(table, tableLabels[i]);
-    table.Draw(tableLabels[i], labelColor);
-    table.Draw(fuelTable[i], valueColor);
-    table.Draw(energyTable[i], valueColor);
-    table.Draw(heatTable[i], valueColor);
+    table.Draw(tableLabels[i], labelColour);
+    table.Draw(fuelTable[i], valueColour);
+    table.Draw(energyTable[i], valueColour);
+    table.Draw(heatTable[i], valueColour);
   }
 }
 
@@ -99,8 +99,8 @@ void ShipInfoDisplay::DrawSale(const Point &topLeft) const
 {
   Draw(topLeft, saleLabels, saleValues);
   
-  const Color &color = *GameData::Colors().Get("medium");
-  FillShader::Fill(topLeft + Point(.5 * WIDTH, saleHeight + 8.), Point(WIDTH - 20., 1.), color);
+  const Colour &colour = *GameData::Colours().Get("medium");
+  FillShader::Fill(topLeft + Point(.5 * WIDTH, saleHeight + 8.), Point(WIDTH - 20., 1.), colour);
 }
 
 

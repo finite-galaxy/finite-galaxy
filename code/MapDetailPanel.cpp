@@ -2,7 +2,7 @@
 
 #include "MapDetailPanel.h"
 
-#include "Color.h"
+#include "Colour.h"
 #include "Command.h"
 #include "Font.h"
 #include "FontSet.h"
@@ -66,7 +66,7 @@ namespace {
 
 
 MapDetailPanel::MapDetailPanel(PlayerInfo &player, const System *system)
-  : MapPanel(player, system ? MapPanel::SHOW_REPUTATION : player.MapColoring(), system)
+  : MapPanel(player, system ? MapPanel::SHOW_REPUTATION : player.MapColouring(), system)
 {
 }
 
@@ -75,8 +75,8 @@ MapDetailPanel::MapDetailPanel(PlayerInfo &player, const System *system)
 MapDetailPanel::MapDetailPanel(const MapPanel &panel)
   : MapPanel(panel)
 {
-  // Use whatever map coloring is specified in the PlayerInfo.
-  commodity = player.MapColoring();
+  // Use whatever map colouring is specified in the PlayerInfo.
+  commodity = player.MapColouring();
 }
 
 
@@ -271,12 +271,12 @@ bool MapDetailPanel::Click(int x, int y, int clicks)
 
 
 
-// Draw the legend, correlating between a system's color and the value of the
+// Draw the legend, correlating between a system's colour and the value of the
 // selected "commodity," which may be reputation level, outfitter size, etc.
 void MapDetailPanel::DrawKey()
 {
-  const Color &dim = *GameData::Colors().Get("dim");
-  const Color &medium = *GameData::Colors().Get("medium");
+  const Colour &dim = *GameData::Colours().Get("dim");
+  const Colour &medium = *GameData::Colours().Get("medium");
   const Font &font = FontSet::Get(14);
   
   Point pos = Screen::TopRight() + Point(-110., 310.);
@@ -298,8 +298,8 @@ void MapDetailPanel::DrawKey()
   
   if(commodity >= 0)
   {
-    // Each system is colored by the selected commodity's price. Draw
-    // four distinct colors and the price each color represents.
+    // Each system is coloured by the selected commodity's price. Draw
+    // four distinct colours and the price each colour represents.
     const vector<Trade::Commodity> &commodities = GameData::Commodities();
     const auto &range = commodities[commodity];
     if(static_cast<unsigned>(commodity) >= commodities.size())
@@ -307,7 +307,7 @@ void MapDetailPanel::DrawKey()
     
     for(int i = 0; i <= 3; ++i)
     {
-      RingShader::Draw(pos, OUTER, INNER, MapColor(i * (2. / 3.) - 1.));
+      RingShader::Draw(pos, OUTER, INNER, MapColour(i * (2. / 3.) - 1.));
       int price = range.low + ((range.high - range.low) * i) / 3;
       font.Draw(to_string(price), pos + textOff, dim);
       pos.Y() += 20.;
@@ -315,7 +315,7 @@ void MapDetailPanel::DrawKey()
   }
   else if(commodity >= SHOW_OUTFITTER)
   {
-    // Each system is colored by the number of outfits for sale.
+    // Each system is coloured by the number of outfits for sale.
     static const string LABEL[2][4] = {
       {"None", "1", "5", "10+"},
       {"None", "1", "30", "60+"}};
@@ -323,7 +323,7 @@ void MapDetailPanel::DrawKey()
     
     for(int i = 0; i < 4; ++i)
     {
-      RingShader::Draw(pos, OUTER, INNER, MapColor(VALUE[i]));
+      RingShader::Draw(pos, OUTER, INNER, MapColour(VALUE[i]));
       font.Draw(LABEL[commodity == SHOW_OUTFITTER][i], pos + textOff, dim);
       pos.Y() += 20.;
     }
@@ -337,14 +337,14 @@ void MapDetailPanel::DrawKey()
     };
     for(int i = 0; i < 3; ++i)
     {
-      RingShader::Draw(pos, OUTER, INNER, MapColor(1 - i));
+      RingShader::Draw(pos, OUTER, INNER, MapColour(1 - i));
       font.Draw(LABEL[i], pos + textOff, dim);
       pos.Y() += 20.;
     }
   }
   else if(commodity == SHOW_GOVERNMENT)
   {
-    // Each system is colored by the government of the system. Only the
+    // Each system is coloured by the government of the system. Only the
     // four largest visible governments are labeled in the legend.
     vector<pair<double, const Government *>> distances;
     for(const auto &it : closeGovernments)
@@ -352,42 +352,42 @@ void MapDetailPanel::DrawKey()
     sort(distances.begin(), distances.end());
     for(unsigned i = 0; i < 4 && i < distances.size(); ++i)
     {
-      RingShader::Draw(pos, OUTER, INNER, GovernmentColor(distances[i].second));
+      RingShader::Draw(pos, OUTER, INNER, GovernmentColour(distances[i].second));
       font.Draw(distances[i].second->GetName(), pos + textOff, dim);
       pos.Y() += 20.;
     }
   }
   else if(commodity == SHOW_REPUTATION)
   {
-    // Each system is colored in accordance with the player's reputation
-    // with its owning government. The specific colors associated with a
+    // Each system is coloured in accordance with the player's reputation
+    // with its owning government. The specific colours associated with a
     // given reputation (0.1, 100, and 10000) are shown for each sign.
-    RingShader::Draw(pos, OUTER, INNER, ReputationColor(1e-1, true, false));
-    RingShader::Draw(pos + Point(12., 0.), OUTER, INNER, ReputationColor(1e2, true, false));
-    RingShader::Draw(pos + Point(24., 0.), OUTER, INNER, ReputationColor(1e4, true, false));
+    RingShader::Draw(pos, OUTER, INNER, ReputationColour(1e-1, true, false));
+    RingShader::Draw(pos + Point(12., 0.), OUTER, INNER, ReputationColour(1e2, true, false));
+    RingShader::Draw(pos + Point(24., 0.), OUTER, INNER, ReputationColour(1e4, true, false));
     font.Draw("Friendly", pos + textOff + Point(24., 0.), dim);
     pos.Y() += 20.;
     
-    RingShader::Draw(pos, OUTER, INNER, ReputationColor(-1e-1, false, false));
-    RingShader::Draw(pos + Point(12., 0.), OUTER, INNER, ReputationColor(-1e2, false, false));
-    RingShader::Draw(pos + Point(24., 0.), OUTER, INNER, ReputationColor(-1e4, false, false));
+    RingShader::Draw(pos, OUTER, INNER, ReputationColour(-1e-1, false, false));
+    RingShader::Draw(pos + Point(12., 0.), OUTER, INNER, ReputationColour(-1e2, false, false));
+    RingShader::Draw(pos + Point(24., 0.), OUTER, INNER, ReputationColour(-1e4, false, false));
     font.Draw("Hostile", pos + textOff + Point(24., 0.), dim);
     pos.Y() += 20.;
     
-    RingShader::Draw(pos, OUTER, INNER, ReputationColor(0., false, false));
+    RingShader::Draw(pos, OUTER, INNER, ReputationColour(0., false, false));
     font.Draw("Restricted", pos + textOff, dim);
     pos.Y() += 20.;
     
-    RingShader::Draw(pos, OUTER, INNER, ReputationColor(0., false, true));
+    RingShader::Draw(pos, OUTER, INNER, ReputationColour(0., false, true));
     font.Draw("Dominated", pos + textOff, dim);
     pos.Y() += 20.;
   }
   
-  RingShader::Draw(pos, OUTER, INNER, UninhabitedColor());
+  RingShader::Draw(pos, OUTER, INNER, UninhabitedColour());
   font.Draw("Uninhabited", pos + textOff, dim);
   pos.Y() += 20.;
   
-  RingShader::Draw(pos, OUTER, INNER, UnexploredColor());
+  RingShader::Draw(pos, OUTER, INNER, UnexploredColour());
   font.Draw("Unexplored", pos + textOff, dim);
 }
 
@@ -397,9 +397,9 @@ void MapDetailPanel::DrawKey()
 // details, trade prices, and details about the selected object.
 void MapDetailPanel::DrawInfo()
 {
-  const Color &faint = *GameData::Colors().Get("faint");
-  const Color &dim = *GameData::Colors().Get("dim");
-  const Color &medium = *GameData::Colors().Get("medium");
+  const Colour &faint = *GameData::Colours().Get("faint");
+  const Colour &dim = *GameData::Colours().Get("dim");
+  const Colour &medium = *GameData::Colours().Get("medium");
   
   Point uiPoint(Screen::Left() + 100., Screen::Top() + 45.);
   
@@ -497,9 +497,9 @@ void MapDetailPanel::DrawInfo()
     bool isSelected = false;
     if(static_cast<unsigned>(this->commodity) < GameData::Commodities().size())
       isSelected = (&commodity == &GameData::Commodities()[this->commodity]);
-    const Color &color = isSelected ? medium : dim;
+    const Colour &colour = isSelected ? medium : dim;
     
-    font.Draw(commodity.name, uiPoint, color);
+    font.Draw(commodity.name, uiPoint, colour);
     
     string price;
     
@@ -529,10 +529,10 @@ void MapDetailPanel::DrawInfo()
       price = (hasVisited ? "n/a" : "?");
     
     Point pos = uiPoint + Point(140. - font.Width(price), 0.);
-    font.Draw(price, pos, color);
+    font.Draw(price, pos, colour);
     
     if(isSelected)
-      PointerShader::Draw(uiPoint + Point(0., 7.), Point(1., 0.), 10., 10., 0., color);
+      PointerShader::Draw(uiPoint + Point(0., 7.), Point(1., 0.), 10., 10., 0., colour);
     
     uiPoint.Y() += 20.;
   }
@@ -584,14 +584,14 @@ void MapDetailPanel::DrawOrbits()
     scale *= 115. / maxDistance;
   
   // Draw the orbits.
-  static const Color habitColor[7] = {
-    Color(.4, .2, .2, 1.),
-    Color(.3, .3, 0., 1.),
-    Color(0., .4, 0., 1.),
-    Color(0., .3, .4, 1.),
-    Color(.1, .2, .5, 1.),
-    Color(.2, .2, .2, 1.),
-    Color(1., 1., 1., 1.)
+  static const Colour habitColour[7] = {
+    Colour(.4, .2, .2, 1.),
+    Colour(.3, .3, 0., 1.),
+    Colour(0., .4, 0., 1.),
+    Colour(0., .3, .4, 1.),
+    Colour(.1, .2, .5, 1.),
+    Colour(.2, .2, .2, 1.),
+    Colour(1., 1., 1., 1.)
   };
   for(const StellarObject &object : selectedSystem->Objects())
   {
@@ -611,7 +611,7 @@ void MapDetailPanel::DrawOrbits()
     double radius = object.Distance() * scale;
     RingShader::Draw(orbitCentre + parentPos * scale,
       radius + .7, radius - .7,
-      habitColor[habit]);
+      habitColour[habit]);
   }
   
   // Draw the planets themselves.
@@ -625,10 +625,10 @@ void MapDetailPanel::DrawOrbits()
     if(object.GetPlanet() && object.GetPlanet()->IsAccessible(player.Flagship()))
       planets[object.GetPlanet()] = pos;
     
-    const float *rgb = Radar::GetColor(object.RadarType(player.Flagship())).Get();
-    // Darken and saturate the color, and make it opaque.
-    Color color(max(0., rgb[0] * 1.2 - .2), max(0., rgb[1] * 1.2 - .2), max(0., rgb[2] * 1.2 - .2), 1.);
-    RingShader::Draw(pos, object.Radius() * scale + 1., 0., color);
+    const float *rgb = Radar::GetColour(object.RadarType(player.Flagship())).Get();
+    // Darken and saturate the colour, and make it opaque.
+    Colour colour(max(0., rgb[0] * 1.2 - .2), max(0., rgb[1] * 1.2 - .2), max(0., rgb[2] * 1.2 - .2), 1.);
+    RingShader::Draw(pos, object.Radius() * scale + 1., 0., colour);
   }
   
   // Draw the selection ring on top of everything else.
@@ -636,19 +636,19 @@ void MapDetailPanel::DrawOrbits()
     if(selectedPlanet && object.GetPlanet() == selectedPlanet)
       RingShader::Draw(orbitCentre + object.Position() * scale,
         object.Radius() * scale + 5., object.Radius() * scale + 4.,
-        habitColor[6]);
+        habitColour[6]);
   
   // Draw the name of the selected planet.
   const string &name = selectedPlanet ? selectedPlanet->Name() : selectedSystem->Name();
   Point namePos(Screen::Right() - .5 * font.Width(name) - 100., Screen::Top() + 7.);
-  font.Draw(name, namePos, *GameData::Colors().Get("medium"));
+  font.Draw(name, namePos, *GameData::Colours().Get("medium"));
 }
 
 
 
-// Set the commodity coloring, and update the player info as well.
+// Set the commodity colouring, and update the player info as well.
 void MapDetailPanel::SetCommodity(int index)
 {
   commodity = index;
-  player.SetMapColoring(commodity);
+  player.SetMapColouring(commodity);
 }

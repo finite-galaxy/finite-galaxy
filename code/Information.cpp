@@ -108,14 +108,14 @@ bool Information::HasCondition(const string &condition) const
 
 
   
-void Information::SetOutlineColor(const Color &color)
+void Information::SetOutlineColour(const Colour &colour)
 {
-  outlineColor = color;
+  outlineColour = colour;
 }
 
 
 
-const Color &Information::GetOutlineColor() const
+const Colour &Information::GetOutlineColour() const
 {
-  return outlineColor;
+  return outlineColour;
 }

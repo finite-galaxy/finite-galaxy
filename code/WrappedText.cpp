@@ -145,10 +145,10 @@ int WrappedText::Height() const
 
 
 // Draw the text.
-void WrappedText::Draw(const Point &topLeft, const Color &color) const
+void WrappedText::Draw(const Point &topLeft, const Colour &colour) const
 {
   for(const Word &w : words)
-    font->Draw(text.c_str() + w.Index(), w.Pos() + topLeft, color);
+    font->Draw(text.c_str() + w.Index(), w.Pos() + topLeft, colour);
 }
 
 
@@ -300,9 +300,9 @@ void WrappedText::AdjustLine(unsigned &lineBegin, int &lineWidth, bool isEnd)
     for(int i = 0; i < wordCount; ++i)
       words[lineBegin + i].x += extraSpace * i / (wordCount - 1);
   }
-  else if(alignment == CENTER || alignment == RIGHT)
+  else if(alignment == CENTRE || alignment == RIGHT)
   {
-    int shift = (alignment == CENTER) ? extraSpace / 2 : extraSpace;
+    int shift = (alignment == CENTRE) ? extraSpace / 2 : extraSpace;
     for(int i = 0; i < wordCount; ++i)
       words[lineBegin + i].x += shift;
   }

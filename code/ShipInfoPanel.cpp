@@ -270,9 +270,9 @@ void ShipInfoPanel::DrawShipStats(const Rectangle &bounds)
   if(bounds.Width() < WIDTH)
     return;
   
-  // Colors to draw with.
-  Color dim = *GameData::Colors().Get("medium");
-  Color bright = *GameData::Colors().Get("bright");
+  // Colours to draw with.
+  Colour dim = *GameData::Colours().Get("medium");
+  Colour bright = *GameData::Colours().Get("bright");
   const Ship &ship = **shipIt;
   const Font &font = FontSet::Get(14);
   
@@ -301,9 +301,9 @@ void ShipInfoPanel::DrawOutfits(const Rectangle &bounds, Rectangle &cargoBounds)
   if(bounds.Width() < WIDTH)
     return;
   
-  // Colors to draw with.
-  Color dim = *GameData::Colors().Get("medium");
-  Color bright = *GameData::Colors().Get("bright");
+  // Colours to draw with.
+  Colour dim = *GameData::Colours().Get("medium");
+  Colour bright = *GameData::Colours().Get("bright");
   const Ship &ship = **shipIt;
   
   // Table attributes.
@@ -370,9 +370,9 @@ void ShipInfoPanel::DrawOutfits(const Rectangle &bounds, Rectangle &cargoBounds)
 
 void ShipInfoPanel::DrawWeapons(const Rectangle &bounds)
 {
-  // Colors to draw with.
-  Color dim = *GameData::Colors().Get("medium");
-  Color bright = *GameData::Colors().Get("bright");
+  // Colours to draw with.
+  Colour dim = *GameData::Colours().Get("medium");
+  Colour bright = *GameData::Colours().Get("bright");
   const Font &font = FontSet::Get(14);
   const Ship &ship = **shipIt;
   
@@ -403,7 +403,7 @@ void ShipInfoPanel::DrawWeapons(const Rectangle &bounds)
   
   // Draw the ship, using the black silhouette swizzle.
   SpriteShader::Draw(sprite, bounds.Centre(), scale, 8);
-  OutlineShader::Draw(sprite, bounds.Centre(), scale * Point(sprite->Width(), sprite->Height()), Color(.5));
+  OutlineShader::Draw(sprite, bounds.Centre(), scale * Point(sprite->Width(), sprite->Height()), Colour(.5));
   
   // Figure out how tall each part of the weapon listing will be.
   int gunRows = max(count[0][0], count[1][0]);
@@ -426,7 +426,7 @@ void ShipInfoPanel::DrawWeapons(const Rectangle &bounds)
   static const Point LINE_SIZE(LABEL_WIDTH, LINE_HEIGHT);
   Point topFrom;
   Point topTo;
-  Color topColor;
+  Colour topColour;
   bool hasTop = false;
   for(const Hardpoint &hardpoint : ship.Weapons())
   {
@@ -444,21 +444,21 @@ void ShipInfoPanel::DrawWeapons(const Rectangle &bounds)
     Point zoneCentre(labelCentre[isRight], y + .5 * LINE_HEIGHT);
     zones.emplace_back(zoneCentre, LINE_SIZE, index);
     
-    // Determine what color to use for the line.
+    // Determine what colour to use for the line.
     double high = (index == hoverIndex ? .8 : .5);
-    Color color(high, .75 * high, 0., 1.);
+    Colour colour(high, .75 * high, 0., 1.);
     if(isTurret)
-      color = Color(0., .75 * high, high, 1.);
+      colour = Colour(0., .75 * high, high, 1.);
     
     // Draw the line.
     Point from(fromX[isRight], zoneCentre.Y());
     Point to = bounds.Centre() + (2. * scale) * hardpoint.GetPoint();
-    DrawLine(from, to, color);
+    DrawLine(from, to, colour);
     if(isHover)
     {
       topFrom = from;
       topTo = to;
-      topColor = color;
+      topColour = colour;
       hasTop = true;
     }
     
@@ -467,7 +467,7 @@ void ShipInfoPanel::DrawWeapons(const Rectangle &bounds)
   }
   // Make sure the line for whatever hardpoint we're hovering is always on top.
   if(hasTop)
-    DrawLine(topFrom, topTo, topColor);
+    DrawLine(topFrom, topTo, topColour);
   
   // Re-positioning weapons.
   if(draggingIndex >= 0)
@@ -475,7 +475,7 @@ void ShipInfoPanel::DrawWeapons(const Rectangle &bounds)
     const Outfit *outfit = ship.Weapons()[draggingIndex].GetOutfit();
     string name = outfit ? outfit->Name() : "[empty]";
     Point pos(hoverPoint.X() - .5 * font.Width(name), hoverPoint.Y());
-    font.Draw(name, pos + Point(1., 1.), Color(0., 1.));
+    font.Draw(name, pos + Point(1., 1.), Colour(0., 1.));
     font.Draw(name, pos, bright);
   }
 }
@@ -484,9 +484,9 @@ void ShipInfoPanel::DrawWeapons(const Rectangle &bounds)
 
 void ShipInfoPanel::DrawCargo(const Rectangle &bounds)
 {
-  Color dim = *GameData::Colors().Get("medium");
-  Color bright = *GameData::Colors().Get("bright");
-  Color backColor = *GameData::Colors().Get("faint");
+  Colour dim = *GameData::Colours().Get("medium");
+  Colour bright = *GameData::Colours().Get("bright");
+  Colour backColour = *GameData::Colours().Get("faint");
   const Ship &ship = **shipIt;
 
   // Cargo list.
@@ -514,7 +514,7 @@ void ShipInfoPanel::DrawCargo(const Rectangle &bounds)
       
       commodityZones.emplace_back(table.GetCentrePoint(), table.GetRowSize(), it.first);
       if(it.first == selectedCommodity)
-        table.DrawHighlight(backColor);
+        table.DrawHighlight(backColour);
       
       table.Draw(it.first, dim);
       table.Draw(to_string(it.second), bright);
@@ -537,7 +537,7 @@ void ShipInfoPanel::DrawCargo(const Rectangle &bounds)
       
       plunderZones.emplace_back(table.GetCentrePoint(), table.GetRowSize(), it.first);
       if(it.first == selectedPlunder)
-        table.DrawHighlight(backColor);
+        table.DrawHighlight(backColour);
       
       // For outfits, show how many of them you have and their total mass.
       bool isSingular = (it.second == 1 || it.first->Get("installable") < 0.);
@@ -582,15 +582,15 @@ void ShipInfoPanel::DrawCargo(const Rectangle &bounds)
 
 
 
-void ShipInfoPanel::DrawLine(const Point &from, const Point &to, const Color &color) const
+void ShipInfoPanel::DrawLine(const Point &from, const Point &to, const Colour &colour) const
 {
-  Color black(0., 1.);
+  Colour black(0., 1.);
   Point mid(to.X(), from.Y());
   
   LineShader::Draw(from, mid, 3.5, black);
   LineShader::Draw(mid, to, 3.5, black);
-  LineShader::Draw(from, mid, 1.5, color);
-  LineShader::Draw(mid, to, 1.5, color);
+  LineShader::Draw(from, mid, 1.5, colour);
+  LineShader::Draw(mid, to, 1.5, colour);
 }
 
 

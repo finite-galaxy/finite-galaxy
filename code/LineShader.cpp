@@ -2,7 +2,7 @@
 
 #include "LineShader.h"
 
-#include "Color.h"
+#include "Colour.h"
 #include "Point.h"
 #include "Screen.h"
 #include "Shader.h"
@@ -17,7 +17,7 @@ namespace {
   GLint startI;
   GLint lengthI;
   GLint widthI;
-  GLint colorI;
+  GLint colourI;
   
   GLuint vao;
   GLuint vbo;
@@ -44,15 +44,15 @@ void LineShader::Init()
     "}\n";
 
   static const char *fragmentCode =
-    "uniform vec4 color = vec4(1, 1, 1, 1);\n"
+    "uniform vec4 colour = vec4(1, 1, 1, 1);\n"
     
     "in vec2 tpos;\n"
     "in float tscale;\n"
-    "out vec4 finalColor;\n"
+    "out vec4 finalColour;\n"
     
     "void main() {\n"
     "  float alpha = min(tscale - abs(tpos.x * (2 * tscale) - tscale), 1 - abs(tpos.y));\n"
-    "  finalColor = color * alpha;\n"
+    "  finalColour = colour * alpha;\n"
     "}\n";
   
   shader = Shader(vertexCode, fragmentCode);
@@ -60,7 +60,7 @@ void LineShader::Init()
   startI = shader.Uniform("start");
   lengthI = shader.Uniform("len");
   widthI = shader.Uniform("width");
-  colorI = shader.Uniform("color");
+  colourI = shader.Uniform("colour");
   
   // Generate the vertex data for drawing sprites.
   glGenVertexArrays(1, &vao);
@@ -87,7 +87,7 @@ void LineShader::Init()
 
 
 
-void LineShader::Draw(const Point &from, const Point &to, float width, const Color &color)
+void LineShader::Draw(const Point &from, const Point &to, float width, const Colour &colour)
 {
   if(!shader.Object())
     throw runtime_error("LineShader: Draw() called before Init().");
@@ -109,7 +109,7 @@ void LineShader::Draw(const Point &from, const Point &to, float width, const Col
   GLfloat w[2] = {static_cast<float>(u.Y()), static_cast<float>(-u.X())};
   glUniform2fv(widthI, 1, w);
   
-  glUniform4fv(colorI, 1, color.Get());
+  glUniform4fv(colourI, 1, colour.Get());
   
   glDrawArrays(GL_TRIANGLE_STRIP, 0, 4);
   

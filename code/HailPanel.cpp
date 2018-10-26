@@ -213,7 +213,7 @@ void HailPanel::Draw()
   wrap.SetWrapWidth(330);
   wrap.SetFont(FontSet::Get(14));
   wrap.Wrap(message);
-  wrap.Draw(Point(-50., -50.), *GameData::Colors().Get("medium"));
+  wrap.Draw(Point(-50., -50.), *GameData::Colours().Get("medium"));
 }
 
 

@@ -2,7 +2,7 @@
 
 #include "SpaceportPanel.h"
 
-#include "Color.h"
+#include "Colour.h"
 #include "FontSet.h"
 #include "GameData.h"
 #include "Interface.h"
@@ -75,12 +75,12 @@ void SpaceportPanel::Draw()
   if(player.IsDead())
     return;
   
-  text.Draw(Point(-300., 80.), *GameData::Colors().Get("bright"));
+  text.Draw(Point(-300., 80.), *GameData::Colours().Get("bright"));
   
   if(hasNews)
   {
     const Interface *interface = GameData::Interfaces().Get("news");
     interface->Draw(newsInfo);
-    newsMessage.Draw(interface->GetBox("message").TopLeft(), *GameData::Colors().Get("medium"));
+    newsMessage.Draw(interface->GetBox("message").TopLeft(), *GameData::Colours().Get("medium"));
   }
 }

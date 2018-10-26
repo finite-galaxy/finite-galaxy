@@ -2,7 +2,7 @@
 
 #include "LogbookPanel.h"
 
-#include "Color.h"
+#include "Colour.h"
 #include "FillShader.h"
 #include "Font.h"
 #include "FontSet.h"
@@ -55,21 +55,21 @@ void LogbookPanel::Draw()
   DrawBackdrop();
   
   // Draw the panel. The sidebar should be slightly darker than the rest.
-  const Color &sideColor = *GameData::Colors().Get("logbook sidebar");
+  const Colour &sideColour = *GameData::Colours().Get("logbook sidebar");
   FillShader::Fill(
     Point(Screen::Left() + .5 * SIDEBAR_WIDTH, 0.),
     Point(SIDEBAR_WIDTH, Screen::Height()),
-    sideColor);
-  const Color &backColor = *GameData::Colors().Get("logbook background");
+    sideColour);
+  const Colour &backColour = *GameData::Colours().Get("logbook background");
   FillShader::Fill(
     Point(Screen::Left() + SIDEBAR_WIDTH + .5 * TEXT_WIDTH, 0.),
     Point(TEXT_WIDTH, Screen::Height()),
-    backColor);
-  const Color &lineColor = *GameData::Colors().Get("logbook line");
+    backColour);
+  const Colour &lineColour = *GameData::Colours().Get("logbook line");
   FillShader::Fill(
     Point(Screen::Left() + SIDEBAR_WIDTH - .5, 0.),
     Point(1., Screen::Height()),
-    lineColor);
+    lineColour);
   
   const Sprite *edgeSprite = SpriteSet::Get("ui/right edge");
   if(edgeSprite->Height())
@@ -83,11 +83,11 @@ void LogbookPanel::Draw()
       SpriteShader::Draw(edgeSprite, pos);
   }
   
-  // Colors to be used for drawing the log.
+  // Colours to be used for drawing the log.
   const Font &font = FontSet::Get(14);
-  const Color &dim = *GameData::Colors().Get("dim");
-  const Color &medium = *GameData::Colors().Get("medium");
-  const Color &bright = *GameData::Colors().Get("bright");
+  const Colour &dim = *GameData::Colours().Get("dim");
+  const Colour &medium = *GameData::Colours().Get("medium");
+  const Colour &bright = *GameData::Colours().Get("bright");
   
   // Draw the sidebar.
   // The currently selected sidebar item should be highlighted. This is how
@@ -101,8 +101,8 @@ void LogbookPanel::Draw()
   {
     if(selectedDate ? dates[i].Month() == selectedDate.Month() : selectedName == contents[i])
     {
-      FillShader::Fill(pos + highlightOffset - Point(1., 0.), highlightSize + Point(0., 2.), lineColor);
-      FillShader::Fill(pos + highlightOffset, highlightSize, backColor);
+      FillShader::Fill(pos + highlightOffset - Point(1., 0.), highlightSize + Point(0., 2.), lineColour);
+      FillShader::Fill(pos + highlightOffset, highlightSize, backColour);
     }
     font.Draw(contents[i], pos + textOffset, dates[i].Month() ? medium : bright);
     pos.Y() += LINE_HEIGHT;

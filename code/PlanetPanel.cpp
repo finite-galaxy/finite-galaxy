@@ -114,7 +114,7 @@ void PlanetPanel::Draw()
   ui.Draw(info, this);
   
   if(!selectedPanel)
-    text.Draw(Point(-300., 80.), *GameData::Colors().Get("bright"));
+    text.Draw(Point(-300., 80.), *GameData::Colours().Get("bright"));
 }
 
 

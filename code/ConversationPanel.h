@@ -14,7 +14,7 @@
 #include <string>
 #include <vector>
 
-class Color;
+class Colour;
 class Conversation;
 class PlayerInfo;
 class Point;
@@ -72,7 +72,7 @@ private:
     Point Centre() const;
     // Draw this paragraph at the given point, and return the point that the
     // next paragraph below this one should be drawn at.
-    Point Draw(Point point, const Color &color) const;
+    Point Draw(Point point, const Colour &colour) const;
     
   private:
     const Sprite *scene = nullptr;

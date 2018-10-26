@@ -3,7 +3,7 @@
 #include "PreferencesPanel.h"
 
 #include "Audio.h"
-#include "Color.h"
+#include "Colour.h"
 #include "Dialog.h"
 #include "Files.h"
 #include "Font.h"
@@ -269,13 +269,13 @@ void PreferencesPanel::EndEditing()
 
 void PreferencesPanel::DrawControls()
 {
-  const Color &back = *GameData::Colors().Get("faint");
-  const Color &dim = *GameData::Colors().Get("dim");
-  const Color &medium = *GameData::Colors().Get("medium");
-  const Color &bright = *GameData::Colors().Get("bright");
+  const Colour &back = *GameData::Colours().Get("faint");
+  const Colour &dim = *GameData::Colours().Get("dim");
+  const Colour &medium = *GameData::Colours().Get("medium");
+  const Colour &bright = *GameData::Colours().Get("bright");
   
   // Check for conflicts.
-  Color red(.3, 0., 0., .3);
+  Colour red(.3, 0., 0., .3);
   
   Table table;
   table.AddColumn(-115, Table::LEFT);
@@ -393,10 +393,10 @@ void PreferencesPanel::DrawControls()
 
 void PreferencesPanel::DrawSettings()
 {
-  const Color &back = *GameData::Colors().Get("faint");
-  const Color &dim = *GameData::Colors().Get("dim");
-  const Color &medium = *GameData::Colors().Get("medium");
-  const Color &bright = *GameData::Colors().Get("bright");
+  const Colour &back = *GameData::Colours().Get("faint");
+  const Colour &dim = *GameData::Colours().Get("dim");
+  const Colour &medium = *GameData::Colours().Get("medium");
+  const Colour &bright = *GameData::Colours().Get("bright");
   
   Table table;
   table.AddColumn(-115, Table::LEFT);
@@ -534,9 +534,9 @@ void PreferencesPanel::DrawSettings()
 
 void PreferencesPanel::DrawPlugins()
 {
-  const Color &back = *GameData::Colors().Get("faint");
-  const Color &medium = *GameData::Colors().Get("medium");
-  const Color &bright = *GameData::Colors().Get("bright");
+  const Colour &back = *GameData::Colours().Get("faint");
+  const Colour &medium = *GameData::Colours().Get("medium");
+  const Colour &bright = *GameData::Colours().Get("bright");
   
   Table table;
   table.AddColumn(-115, Table::LEFT);

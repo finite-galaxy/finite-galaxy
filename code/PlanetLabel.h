@@ -3,7 +3,7 @@
 #ifndef PLANET_LABEL_H_
 #define PLANET_LABEL_H_
 
-#include "Color.h"
+#include "Colour.h"
 #include "Point.h"
 
 #include <string>
@@ -25,7 +25,7 @@ private:
   double radius = 0.;
   std::string name;
   std::string government;
-  Color color;
+  Colour colour;
   int hostility = 0;
   int direction = 0;
 };

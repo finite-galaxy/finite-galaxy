@@ -35,22 +35,22 @@ PlanetLabel::PlanetLabel(const Point &position, const StellarObject &object, con
   const Planet &planet = *object.GetPlanet();
   name = planet.Name();
   if(planet.IsWormhole())
-    color = Color(.8, .3, 1., 1.);
+    colour = Colour(.8, .3, 1., 1.);
   else if(planet.GetGovernment())
   {
     government = "(" + planet.GetGovernment()->GetName() + ")";
-    color = planet.GetGovernment()->GetColor();
-    color = Color(color.Get()[0] * .5 + .3, color.Get()[1] * .5 + .3, color.Get()[2] * .5 + .3);
+    colour = planet.GetGovernment()->GetColour();
+    colour = Colour(colour.Get()[0] * .5 + .3, colour.Get()[1] * .5 + .3, colour.Get()[2] * .5 + .3);
     if(!planet.CanLand())
       hostility = 3 + 2 * planet.GetGovernment()->IsEnemy();
   }
   else
   {
-    color = Color(.3, .3, .3, 1.);
+    colour = Colour(.3, .3, .3, 1.);
     government = "(No government)";
   }
   double alpha = min(.5, max(0., .6 - (position.Length() - radius) * .001 * zoom));
-  color = Color(color.Get()[0] * alpha, color.Get()[1] * alpha, color.Get()[2] * alpha, 0.);
+  colour = Colour(colour.Get()[0] * alpha, colour.Get()[1] * alpha, colour.Get()[2] * alpha, 0.);
   
   if(!system)
     return;
@@ -106,25 +106,25 @@ void PlanetLabel::Draw() const
   double innerAngle = LINE_ANGLE[direction];
   double outerAngle = innerAngle - 360. * GAP / (2. * PI * radius);
   Point unit = Angle(innerAngle).Unit();
-  RingShader::Draw(position, radius + INNER_SPACE, 2.3, .9, color, 0., innerAngle);
-  RingShader::Draw(position, radius + INNER_SPACE + GAP, 1.3, .6, color, 0., outerAngle);
+  RingShader::Draw(position, radius + INNER_SPACE, 2.3, .9, colour, 0., innerAngle);
+  RingShader::Draw(position, radius + INNER_SPACE + GAP, 1.3, .6, colour, 0., outerAngle);
   
   if(!name.empty())
   {
     Point from = position + (radius + INNER_SPACE + LINE_GAP) * unit;
     Point to = from + LINE_LENGTH * unit;
-    LineShader::Draw(from, to, 1.3, color);
+    LineShader::Draw(from, to, 1.3, colour);
     
     double nameX = to.X() + (direction < 2 ? 2. : -bigFont.Width(name) - 2.);
-    bigFont.DrawAliased(name, nameX, to.Y() - .5 * bigFont.Height(), color);
+    bigFont.DrawAliased(name, nameX, to.Y() - .5 * bigFont.Height(), colour);
     
     double governmentX = to.X() + (direction < 2 ? 4. : -font.Width(government) - 4.);
-    font.DrawAliased(government, governmentX, to.Y() + .5 * bigFont.Height() + 1., color);
+    font.DrawAliased(government, governmentX, to.Y() + .5 * bigFont.Height() + 1., colour);
   }
   Angle barbAngle(innerAngle + 36.);
   for(int i = 0; i < hostility; ++i)
   {
     barbAngle += Angle(800. / (radius + 25.));
-    PointerShader::Draw(position, barbAngle.Unit(), 15., 15., radius + 25., color);
+    PointerShader::Draw(position, barbAngle.Unit(), 15., 15., radius + 25., colour);
   }
 }

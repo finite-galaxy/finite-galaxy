@@ -100,7 +100,7 @@ MissionPanel::MissionPanel(const MapPanel &panel)
   acceptedIt(player.AvailableJobs().empty() ? accepted.begin() : accepted.end()),
   availableScroll(0), acceptedScroll(0), dragSide(0)
 {
-  // In this view, always color systems based on player reputation.
+  // In this view, always colour systems based on player reputation.
   commodity = SHOW_REPUTATION;
   
   while(acceptedIt != accepted.end() && !acceptedIt->IsVisible())
@@ -137,7 +137,7 @@ void MissionPanel::Draw()
 {
   MapPanel::Draw();
   
-  Color routeColor(.2, .1, 0., 0.);
+  Colour routeColour(.2, .1, 0., 0.);
   const System *system = selectedSystem;
   while(distance.Days(system) > 0)
   {
@@ -149,7 +149,7 @@ void MissionPanel::Draw()
     from -= unit;
     to += unit;
     
-    LineShader::Draw(from, to, 5., routeColor);
+    LineShader::Draw(from, to, 5., routeColour);
     
     system = next;
   }
@@ -170,15 +170,15 @@ void MissionPanel::Draw()
   
   DrawMissionInfo();
   
-  const Set<Color> &colors = GameData::Colors();
-  const Color &availableColor = *colors.Get("available back");
-  const Color &unavailableColor = *colors.Get("unavailable back");
-  const Color &currentColor = *colors.Get("active back");
-  const Color &blockedColor = *colors.Get("blocked back");
+  const Set<Colour> &colours = GameData::Colours();
+  const Colour &availableColour = *colours.Get("available back");
+  const Colour &unavailableColour = *colours.Get("unavailable back");
+  const Colour &currentColour = *colours.Get("active back");
+  const Colour &blockedColour = *colours.Get("blocked back");
   if(availableIt != available.end() && availableIt->Destination())
-    DrawMissionSystem(*availableIt, CanAccept() ? availableColor : unavailableColor);
+    DrawMissionSystem(*availableIt, CanAccept() ? availableColour : unavailableColour);
   if(acceptedIt != accepted.end() && acceptedIt->Destination())
-    DrawMissionSystem(*acceptedIt, IsSatisfied(*acceptedIt) ? currentColor : blockedColor);
+    DrawMissionSystem(*acceptedIt, IsSatisfied(*acceptedIt) ? currentColour : blockedColour);
   
   DrawButtons("is missions");
 }
@@ -434,15 +434,15 @@ void MissionPanel::DrawKey() const
   Point pointerOff(5., 5.);
   Point textOff(8., -.5 * font.Height());
 
-  const Set<Color> &colors = GameData::Colors();
-  const Color &bright = *colors.Get("bright");
-  const Color &dim = *colors.Get("dim");
-  const Color COLOR[ROWS] = {
-    *colors.Get("available job"),
-    *colors.Get("unavailable job"),
-    *colors.Get("active mission"),
-    *colors.Get("blocked mission"),
-    *colors.Get("waypoint")
+  const Set<Colour> &colours = GameData::Colours();
+  const Colour &bright = *colours.Get("bright");
+  const Colour &dim = *colours.Get("dim");
+  const Colour COLOUR[ROWS] = {
+    *colours.Get("available job"),
+    *colours.Get("unavailable job"),
+    *colours.Get("active mission"),
+    *colours.Get("blocked mission"),
+    *colours.Get("waypoint")
   };
   static const string LABEL[ROWS] = {
     "Available job; can accept",
@@ -459,7 +459,7 @@ void MissionPanel::DrawKey() const
   
   for(int i = 0; i < ROWS; ++i)
   {
-    PointerShader::Draw(pos + pointerOff, angle, 10., 18., 0., COLOR[i]);
+    PointerShader::Draw(pos + pointerOff, angle, 10., 18., 0., COLOUR[i]);
     font.Draw(LABEL[i], pos + textOff, i == selected ? bright : dim);
     pos.Y() += 20.;
   }
@@ -496,22 +496,22 @@ void MissionPanel::DrawSelectedSystem() const
   
   const Font &font = FontSet::Get(14);
   Point pos(-.5 * font.Width(text), Screen::Top() + .5 * (30. - font.Height()));
-  font.Draw(text, pos, *GameData::Colors().Get("bright"));
+  font.Draw(text, pos, *GameData::Colours().Get("bright"));
 }
 
 
 
 // Highlight the systems associated with the given mission (i.e. destination and
-// waypoints) by drawing colored rings around them.
-void MissionPanel::DrawMissionSystem(const Mission &mission, const Color &color) const
+// waypoints) by drawing coloured rings around them.
+void MissionPanel::DrawMissionSystem(const Mission &mission, const Colour &colour) const
 {
-  const Color &waypoint = *GameData::Colors().Get("waypoint back");
-  const Color &visited = *GameData::Colors().Get("faint");
+  const Colour &waypoint = *GameData::Colours().Get("waypoint back");
+  const Colour &visited = *GameData::Colours().Get("faint");
   
   double zoom = Zoom();
-  // Draw a colored ring around the destination system.
+  // Draw a coloured ring around the destination system.
   Point pos = zoom * (mission.Destination()->GetSystem()->Position() + centre);
-  RingShader::Draw(pos, 22., 20.5, color);
+  RingShader::Draw(pos, 22., 20.5, colour);
   
   // Draw bright rings around systems that still need to be visited.
   for(const System *system : mission.Waypoints())
@@ -531,9 +531,9 @@ void MissionPanel::DrawMissionSystem(const Mission &mission, const Color &color)
 // Draw the background for the lists of available and accepted missions (based on pos).
 Point MissionPanel::DrawPanel(Point pos, const string &label, int entries) const
 {
-  const Color &back = *GameData::Colors().Get("map side panel background");
-  const Color &unselected = *GameData::Colors().Get("medium");
-  const Color &selected = *GameData::Colors().Get("bright");
+  const Colour &back = *GameData::Colours().Get("map side panel background");
+  const Colour &unselected = *GameData::Colours().Get("medium");
+  const Colour &selected = *GameData::Colours().Get("bright");
   
   // Draw the panel.
   Point size(SIDE_WIDTH, 20 * entries + 40);
@@ -575,10 +575,10 @@ Point MissionPanel::DrawPanel(Point pos, const string &label, int entries) const
 Point MissionPanel::DrawList(const list<Mission> &list, Point pos) const
 {
   const Font &font = FontSet::Get(14);
-  const Color &highlight = *GameData::Colors().Get("faint");
-  const Color &unselected = *GameData::Colors().Get("medium");
-  const Color &selected = *GameData::Colors().Get("bright");
-  const Color &dim = *GameData::Colors().Get("dim");
+  const Colour &highlight = *GameData::Colours().Get("faint");
+  const Colour &unselected = *GameData::Colours().Get("medium");
+  const Colour &selected = *GameData::Colours().Get("bright");
+  const Colour &dim = *GameData::Colours().Get("dim");
   
   for(auto it = list.begin(); it != list.end(); ++it)
   {
@@ -630,7 +630,7 @@ void MissionPanel::DrawMissionInfo()
     wrap.Wrap(acceptedIt->Description());
   else
     return;
-  wrap.Draw(Point(-190., Screen::Bottom() - 213.), *GameData::Colors().Get("bright"));
+  wrap.Draw(Point(-190., Screen::Bottom() - 213.), *GameData::Colours().Get("bright"));
 }
 
 

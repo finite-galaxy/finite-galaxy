@@ -186,8 +186,8 @@ void MapSalesPanel::DrawKey() const
   const Sprite *back = SpriteSet::Get("ui/sales key");
   SpriteShader::Draw(back, Screen::TopLeft() + Point(WIDTH + 10, 0) + .5 * Point(back->Width(), back->Height()));
   
-  Color bright(.6, .6);
-  Color dim(.3, .3);
+  Colour bright(.6, .6);
+  Colour dim(.3, .3);
   const Font &font = FontSet::Get(14);
   
   Point pos(Screen::Left() + 50. + WIDTH, Screen::Top() + 12.);
@@ -203,7 +203,7 @@ void MapSalesPanel::DrawKey() const
   for(int i = 0; i < 3; ++i)
   {
     bool isSelected = (VALUE[i] == selectedValue);
-    RingShader::Draw(pos, OUTER, INNER, MapColor(VALUE[i]));
+    RingShader::Draw(pos, OUTER, INNER, MapColour(VALUE[i]));
     font.Draw(KeyLabel(i), pos + textOff, isSelected ? bright : dim);
     if(onlyShowSoldHere && i == 2)
     {
@@ -218,7 +218,7 @@ void MapSalesPanel::DrawKey() const
 
 void MapSalesPanel::DrawPanel() const
 {
-  const Color &back = *GameData::Colors().Get("map side panel background");
+  const Colour &back = *GameData::Colours().Get("map side panel background");
   FillShader::Fill(
     Point(Screen::Width() * -.5 + WIDTH * .5, 0.),
     Point(WIDTH, Screen::Height()), 
@@ -258,7 +258,7 @@ void MapSalesPanel::DrawInfo() const
       width += box->Width() + compareInfo.PanelWidth();
     }
     
-    const Color &back = *GameData::Colors().Get("map side panel background");
+    const Colour &back = *GameData::Colours().Get("map side panel background");
     Point size(width, height);
     Point topLeft(Screen::Right() - size.X(), Screen::Top());
     FillShader::Fill(topLeft + .5 * size, size, back);
@@ -304,9 +304,9 @@ bool MapSalesPanel::DrawHeader(Point &corner, const string &category)
   const Sprite *arrow = SpriteSet::Get(hide ? "ui/collapsed" : "ui/expanded");
   SpriteShader::Draw(arrow, corner + Point(15., 25.));
   
-  const Color &textColor = *GameData::Colors().Get(hide ? "medium" : "bright");
+  const Colour &textColour = *GameData::Colours().Get(hide ? "medium" : "bright");
   const Font &bigFont = FontSet::Get(18);
-  bigFont.Draw(category, corner + Point(30., 15.), textColor);
+  bigFont.Draw(category, corner + Point(30., 15.), textColour);
   AddZone(Rectangle::FromCorner(corner, Point(WIDTH, 40.)), [this, category](){ ClickCategory(category); });
   corner.Y() += 40.;
   
@@ -331,7 +331,7 @@ void MapSalesPanel::Draw(Point &corner, const Sprite *sprite, bool isForSale, bo
     const string &name, const string &price, const string &info)
 {
   const Font &font = FontSet::Get(14);
-  Color selectionColor(0., .3);
+  Colour selectionColour(0., .3);
   
   Point nameOffset(ICON_HEIGHT, .5 * ICON_HEIGHT - PAD - 1.5 * font.Height());
   Point priceOffset(ICON_HEIGHT, nameOffset.Y() + font.Height() + PAD);
@@ -341,14 +341,14 @@ void MapSalesPanel::Draw(Point &corner, const Sprite *sprite, bool isForSale, bo
   if(corner.Y() < Screen::Bottom() && corner.Y() + ICON_HEIGHT >= Screen::Top())
   {
     if(isSelected)
-      FillShader::Fill(corner + .5 * blockSize, blockSize, selectionColor);
+      FillShader::Fill(corner + .5 * blockSize, blockSize, selectionColour);
     
     DrawSprite(corner, sprite);
     
-    const Color &textColor = *GameData::Colors().Get(isForSale ? "medium" : "dim");
-    font.Draw(name, corner + nameOffset, textColor);
-    font.Draw(price, corner + priceOffset, textColor);
-    font.Draw(info, corner + infoOffset, textColor);
+    const Colour &textColour = *GameData::Colours().Get(isForSale ? "medium" : "dim");
+    font.Draw(name, corner + nameOffset, textColour);
+    font.Draw(price, corner + priceOffset, textColour);
+    font.Draw(info, corner + infoOffset, textColour);
   }
   zones.emplace_back(corner + .5 * blockSize, blockSize, zones.size());
   corner.Y() += ICON_HEIGHT;

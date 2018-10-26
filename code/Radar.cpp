@@ -43,7 +43,7 @@ void Radar::SetCentre(const Point &centre)
 // given position should be in world units (not shrunk to radar units).
 void Radar::Add(int type, Point position, double outer, double inner)
 {
-  objects.emplace_back(GetColor(type).Opaque(), position - centre, outer, inner);
+  objects.emplace_back(GetColour(type).Opaque(), position - centre, outer, inner);
 }
 
 
@@ -51,7 +51,7 @@ void Radar::Add(int type, Point position, double outer, double inner)
 // Add a pointer, pointing in the direction of the given vector.
 void Radar::AddPointer(int type, const Point &position)
 {
-  pointers.emplace_back(GetColor(type), position.Unit());
+  pointers.emplace_back(GetColour(type), position.Unit());
 }
 
 
@@ -63,9 +63,9 @@ void Radar::AddViewportBoundary(const Point &vertex)
   Point end(vertex.X(), vertex.Y() - copysign(200., vertex.Y()));
   
   // Add the horizontal leg, pointing from start to vertex.
-  lines.emplace_back(GetColor(VIEWPORT), start, vertex - start);
+  lines.emplace_back(GetColour(VIEWPORT), start, vertex - start);
   // Add the vertical leg, pointing from end to vertex.
-  lines.emplace_back(GetColor(VIEWPORT), end, vertex - end);
+  lines.emplace_back(GetColour(VIEWPORT), end, vertex - end);
 }
 
 
@@ -94,7 +94,7 @@ void Radar::Draw(const Point &centre, double scale, double radius, double pointe
     else if(endExcess > 0)
       v -= endExcess * v.Unit();
     
-    LineShader::Draw(start + centre, start + v + centre, 1., line.color);
+    LineShader::Draw(start + centre, start + v + centre, 1., line.colour);
   }
   
   // Draw StellarObjects and ships.
@@ -107,57 +107,57 @@ void Radar::Draw(const Point &centre, double scale, double radius, double pointe
       position *= radius / length;
     position += centre;
     
-    RingShader::Add(position, object.outer, object.inner, object.color);
+    RingShader::Add(position, object.outer, object.inner, object.colour);
   }
   RingShader::Unbind();
   
   // Draw neighboring system indicators.
   PointerShader::Bind();
   for(const Pointer &pointer : pointers)
-    PointerShader::Add(centre, pointer.unit, 10., 10., pointerRadius, pointer.color);
+    PointerShader::Add(centre, pointer.unit, 10., 10., pointerRadius, pointer.colour);
   PointerShader::Unbind();
 }
 
 
 
-const Color &Radar::GetColor(int type)
+const Colour &Radar::GetColour(int type)
 {
-  static const vector<Color> color = {
-    *GameData::Colors().Get("radar player"),
-    *GameData::Colors().Get("radar friendly"),
-    *GameData::Colors().Get("radar unfriendly"),
-    *GameData::Colors().Get("radar hostile"),
-    *GameData::Colors().Get("radar inactive"),
-    *GameData::Colors().Get("radar special"),
-    *GameData::Colors().Get("radar anomalous"),
-    *GameData::Colors().Get("radar blink"),
-    *GameData::Colors().Get("radar viewport")
+  static const vector<Colour> colour = {
+    *GameData::Colours().Get("radar player"),
+    *GameData::Colours().Get("radar friendly"),
+    *GameData::Colours().Get("radar unfriendly"),
+    *GameData::Colours().Get("radar hostile"),
+    *GameData::Colours().Get("radar inactive"),
+    *GameData::Colours().Get("radar special"),
+    *GameData::Colours().Get("radar anomalous"),
+    *GameData::Colours().Get("radar blink"),
+    *GameData::Colours().Get("radar viewport")
   };
   
-  if(static_cast<size_t>(type) >= color.size())
+  if(static_cast<size_t>(type) >= colour.size())
     type = INACTIVE;
   
-  return color[type];
+  return colour[type];
 }
 
 
 
-Radar::Object::Object(const Color &color, const Point &pos, double out, double in)
-  : color(color), position(pos), outer(out), inner(in)
+Radar::Object::Object(const Colour &colour, const Point &pos, double out, double in)
+  : colour(colour), position(pos), outer(out), inner(in)
 {
 }
 
 
 
-Radar::Pointer::Pointer(const Color &color, const Point &unit)
-  : color(color), unit(unit)
+Radar::Pointer::Pointer(const Colour &colour, const Point &unit)
+  : colour(colour), unit(unit)
 {
 }
 
 
 
 // Create a line starting from "base" with length and angle described by "vector."
-Radar::Line::Line(const Color &color, const Point &base, const Point &vector)
-  : color(color), base(base), vector(vector)
+Radar::Line::Line(const Colour &colour, const Point &base, const Point &vector)
+  : colour(colour), base(base), vector(vector)
 {
 }

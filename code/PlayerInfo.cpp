@@ -136,8 +136,8 @@ void PlayerInfo::Load(const string &path)
     }
     else if(child.Token(0) == "travel destination" && child.Size() >= 2)
       travelDestination = GameData::Planets().Find(child.Token(1));
-    else if(child.Token(0) == "map coloring" && child.Size() >= 2)
-      mapColoring = child.Value(1);
+    else if(child.Token(0) == "map colouring" && child.Size() >= 2)
+      mapColouring = child.Value(1);
     else if(child.Token(0) == "map zoom" && child.Size() >= 2)
       mapZoom = child.Value(1);
     else if(child.Token(0) == "collapsed" && child.Size() >= 2)
@@ -2063,18 +2063,18 @@ const set<pair<const System *, const Outfit *>> &PlayerInfo::Harvested() const
 
 
 
-// Get what coloring is currently selected in the map.
-int PlayerInfo::MapColoring() const
+// Get what colouring is currently selected in the map.
+int PlayerInfo::MapColouring() const
 {
-  return mapColoring;
+  return mapColouring;
 }
 
 
 
-// Set what the map is being colored by.
-void PlayerInfo::SetMapColoring(int index)
+// Set what the map is being coloured by.
+void PlayerInfo::SetMapColouring(int index)
 {
-  mapColoring = index;
+  mapColouring = index;
 }
 
 
@@ -2387,8 +2387,8 @@ void PlayerInfo::Save(const string &path) const
   if(travelDestination)
     out.Write("travel destination", travelDestination->TrueName());
   
-  // Save the current setting for the map coloring;
-  out.Write("map coloring", mapColoring);
+  // Save the current setting for the map colouring;
+  out.Write("map colouring", mapColouring);
   out.Write("map zoom", mapZoom);
   // Remember what categories are collapsed.
   for(const auto &it : collapsed)

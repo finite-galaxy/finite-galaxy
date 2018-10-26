@@ -66,10 +66,10 @@ void FogShader::Init()
     "uniform sampler2D tex;\n"
     
     "in vec2 fragTexCoord;\n"
-    "out vec4 finalColor;\n"
+    "out vec4 finalColour;\n"
     
     "void main() {\n"
-    "  finalColor = vec4(0, 0, 0, texture(tex, fragTexCoord).r);\n"
+    "  finalColour = vec4(0, 0, 0, texture(tex, fragTexCoord).r);\n"
     "}\n";
   
   // Compile the shader and store indices to its variables.

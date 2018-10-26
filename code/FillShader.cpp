@@ -2,7 +2,7 @@
 
 #include "FillShader.h"
 
-#include "Color.h"
+#include "Colour.h"
 #include "Point.h"
 #include "Screen.h"
 #include "Shader.h"
@@ -16,7 +16,7 @@ namespace {
   GLint scaleI;
   GLint centreI;
   GLint sizeI;
-  GLint colorI;
+  GLint colourI;
   
   GLuint vao;
   GLuint vbo;
@@ -38,19 +38,19 @@ void FillShader::Init()
     "}\n";
 
   static const char *fragmentCode =
-    "uniform vec4 color = vec4(1, 1, 1, 1);\n"
+    "uniform vec4 colour = vec4(1, 1, 1, 1);\n"
     
-    "out vec4 finalColor;\n"
+    "out vec4 finalColour;\n"
     
     "void main() {\n"
-    "  finalColor = color;\n"
+    "  finalColour = colour;\n"
     "}\n";
   
   shader = Shader(vertexCode, fragmentCode);
   scaleI = shader.Uniform("scale");
   centreI = shader.Uniform("centre");
   sizeI = shader.Uniform("size");
-  colorI = shader.Uniform("color");
+  colourI = shader.Uniform("colour");
   
   // Generate the vertex data for drawing sprites.
   glGenVertexArrays(1, &vao);
@@ -77,7 +77,7 @@ void FillShader::Init()
 
 
 
-void FillShader::Fill(const Point &centre, const Point &size, const Color &color)
+void FillShader::Fill(const Point &centre, const Point &size, const Colour &colour)
 {
   if(!shader.Object())
     throw runtime_error("FillShader: Draw() called before Init().");
@@ -94,7 +94,7 @@ void FillShader::Fill(const Point &centre, const Point &size, const Color &color
   GLfloat sizeV[2] = {static_cast<float>(size.X()), static_cast<float>(size.Y())};
   glUniform2fv(sizeI, 1, sizeV);
   
-  glUniform4fv(colorI, 1, color.Get());
+  glUniform4fv(colourI, 1, colour.Get());
   
   glDrawArrays(GL_TRIANGLE_STRIP, 0, 4);
   

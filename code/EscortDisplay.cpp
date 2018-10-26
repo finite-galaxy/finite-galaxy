@@ -2,7 +2,7 @@
 
 #include "EscortDisplay.h"
 
-#include "Color.h"
+#include "Colour.h"
 #include "Font.h"
 #include "FontSet.h"
 #include "GameData.h"
@@ -55,18 +55,18 @@ void EscortDisplay::Draw(const Rectangle &bounds) const
   icons.sort();
   stacks.clear();
   zones.clear();
-  static const Set<Color> &colors = GameData::Colors();
+  static const Set<Colour> &colours = GameData::Colours();
   
   // Draw escort status.
   const Font &font = FontSet::Get(14);
   // Top left corner of the current escort icon.
   Point corner = Point(bounds.Left(), bounds.Bottom());
-  const Color &elsewhereColor = *colors.Get("escort elsewhere");
-  const Color &cannotJumpColor = *colors.Get("escort blocked");
-  const Color &notReadyToJumpColor = *colors.Get("escort not ready");
-  const Color &selectedColor = *colors.Get("escort selected");
-  const Color &hereColor = *colors.Get("escort present");
-  const Color &hostileColor = *colors.Get("escort hostile");
+  const Colour &elsewhereColour = *colours.Get("escort elsewhere");
+  const Colour &cannotJumpColour = *colours.Get("escort blocked");
+  const Colour &notReadyToJumpColour = *colours.Get("escort not ready");
+  const Colour &selectedColour = *colours.Get("escort selected");
+  const Colour &hereColour = *colours.Get("escort present");
+  const Colour &hostileColour = *colours.Get("escort hostile");
   for(const Icon &escort : icons)
   {
     if(!escort.sprite)
@@ -85,26 +85,26 @@ void EscortDisplay::Draw(const Rectangle &bounds) const
     
     // Draw the system name for any escort not in the current system.
     if(!escort.system.empty())
-      font.Draw(escort.system, pos + Point(-10., 10.), elsewhereColor);
+      font.Draw(escort.system, pos + Point(-10., 10.), elsewhereColour);
 
-    Color color;
+    Colour colour;
     if(escort.isHostile)
-      color = hostileColor;
+      colour = hostileColour;
     else if(!escort.isHere)
-      color = elsewhereColor;
+      colour = elsewhereColour;
     else if(escort.cannotJump)
-      color = cannotJumpColor;
+      colour = cannotJumpColour;
     else if(escort.notReadyToJump)
-      color = notReadyToJumpColor;
+      colour = notReadyToJumpColour;
     else if(escort.isSelected)
-      color = selectedColor;
+      colour = selectedColour;
     else
-      color = hereColor;
+      colour = hereColour;
     
     // Figure out what scale should be applied to the ship sprite.
     double scale = min(ICON_SIZE / escort.sprite->Width(), ICON_SIZE / escort.sprite->Height());
     Point size(escort.sprite->Width() * scale, escort.sprite->Height() * scale);
-    OutlineShader::Draw(escort.sprite, pos, size, color);
+    OutlineShader::Draw(escort.sprite, pos, size, colour);
     zones.push_back(pos);
     stacks.push_back(escort.ships);
     // Draw the number of ships in this stack.
@@ -116,18 +116,18 @@ void EscortDisplay::Draw(const Rectangle &bounds) const
       Point numberPos = pos;
       numberPos.X() += 15. + width - font.Width(number);
       numberPos.Y() -= .5 * font.Height();
-      font.Draw(number, numberPos, elsewhereColor);
+      font.Draw(number, numberPos, elsewhereColour);
       width -= 20.;
     }
     
     // Draw the status bars.
-    static const Color fullColor[5] = {
-      colors.Get("shields")->Additive(1.), colors.Get("hull")->Additive(1.),
-      colors.Get("fuel")->Additive(1.), colors.Get("energy")->Additive(1.), colors.Get("heat")->Additive(1.)
+    static const Colour fullColour[5] = {
+      colours.Get("shields")->Additive(1.), colours.Get("hull")->Additive(1.),
+      colours.Get("fuel")->Additive(1.), colours.Get("energy")->Additive(1.), colours.Get("heat")->Additive(1.)
     };
-    static const Color halfColor[5] = {
-      fullColor[0].Additive(.5), fullColor[1].Additive(.5),
-      fullColor[2].Additive(.5), fullColor[3].Additive(.5), fullColor[4].Additive(.5),
+    static const Colour halfColour[5] = {
+      fullColour[0].Additive(.5), fullColour[1].Additive(.5),
+      fullColour[2].Additive(.5), fullColour[3].Additive(.5), fullColour[4].Additive(.5),
     };
     Point from(pos.X() + .5 * ICON_SIZE + BAR_PAD, pos.Y() - 8.5);
     for(int i = 0; i < 5; ++i)
@@ -137,15 +137,15 @@ void EscortDisplay::Draw(const Rectangle &bounds) const
       if(escort.high[i] > 0.)
       {
         bool isSplit = (escort.low[i] != escort.high[i]);
-        const Color &color = (isSplit ? halfColor : fullColor)[i];
+        const Colour &colour = (isSplit ? halfColour : fullColour)[i];
         
         Point to = from + Point(width * min(1., escort.high[i]), 0.);
-        LineShader::Draw(from, to, 1.5, color);
+        LineShader::Draw(from, to, 1.5, colour);
         
         if(isSplit)
         {
           Point to = from + Point(width * max(0., escort.low[i]), 0.);
-          LineShader::Draw(from, to, 1.5, color);
+          LineShader::Draw(from, to, 1.5, colour);
         }
       }
       from.Y() += 4.;

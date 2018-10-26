@@ -2,7 +2,7 @@
 
 #include "PointerShader.h"
 
-#include "Color.h"
+#include "Colour.h"
 #include "Point.h"
 #include "Screen.h"
 #include "Shader.h"
@@ -18,7 +18,7 @@ namespace {
   GLint angleI;
   GLint sizeI;
   GLint offsetI;
-  GLint colorI;
+  GLint colourI;
   
   GLuint vao;
   GLuint vbo;
@@ -46,11 +46,11 @@ void PointerShader::Init()
     "}\n";
 
   static const char *fragmentCode =
-    "uniform vec4 color = vec4(1, 1, 1, 1);\n"
+    "uniform vec4 colour = vec4(1, 1, 1, 1);\n"
     "uniform vec2 size;\n"
     
     "in vec2 coord;\n"
-    "out vec4 finalColor;\n"
+    "out vec4 finalColour;\n"
     
     "void main() {\n"
     "  float height = (coord.x + coord.y) / size.x;\n"
@@ -58,7 +58,7 @@ void PointerShader::Init()
     "  taper *= taper * .5 * size.x;\n"
     "  float alpha = clamp(.8 * min(coord.x, coord.y) - taper, 0, 1);\n"
     "  alpha *= clamp(1.8 * (1. - height), 0, 1);\n"
-    "  finalColor = color * alpha;\n"
+    "  finalColour = colour * alpha;\n"
     "}\n";
   
   shader = Shader(vertexCode, fragmentCode);
@@ -67,7 +67,7 @@ void PointerShader::Init()
   angleI = shader.Uniform("angle");
   sizeI = shader.Uniform("size");
   offsetI = shader.Uniform("offset");
-  colorI = shader.Uniform("color");
+  colourI = shader.Uniform("colour");
   
   // Generate the vertex data for drawing sprites.
   glGenVertexArrays(1, &vao);
@@ -93,11 +93,11 @@ void PointerShader::Init()
 
 
 
-void PointerShader::Draw(const Point &centre, const Point &angle, float width, float height, float offset, const Color &color)
+void PointerShader::Draw(const Point &centre, const Point &angle, float width, float height, float offset, const Colour &colour)
 {
   Bind();
   
-  Add(centre, angle, width, height, offset, color);
+  Add(centre, angle, width, height, offset, colour);
   
   Unbind();
 }
@@ -118,7 +118,7 @@ void PointerShader::Bind()
 
 
 
-void PointerShader::Add(const Point &centre, const Point &angle, float width, float height, float offset, const Color &color)
+void PointerShader::Add(const Point &centre, const Point &angle, float width, float height, float offset, const Colour &colour)
 {
   GLfloat c[2] = {static_cast<float>(centre.X()), static_cast<float>(centre.Y())};
   glUniform2fv(centreI, 1, c);
@@ -131,7 +131,7 @@ void PointerShader::Add(const Point &centre, const Point &angle, float width, fl
   
   glUniform1f(offsetI, offset);
   
-  glUniform4fv(colorI, 1, color.Get());
+  glUniform4fv(colourI, 1, colour.Get());
   
   glDrawArrays(GL_TRIANGLES, 0, 3);
 }

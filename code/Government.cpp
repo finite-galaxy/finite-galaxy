@@ -46,8 +46,8 @@ void Government::Load(const DataNode &node)
   {
     if(child.Token(0) == "swizzle" && child.Size() >= 2)
       swizzle = child.Value(1);
-    else if(child.Token(0) == "color" && child.Size() >= 4)
-      color = Color(child.Value(1), child.Value(2), child.Value(3));
+    else if(child.Token(0) == "colour" && child.Size() >= 4)
+      colour = Colour(child.Value(1), child.Value(2), child.Value(3));
     else if(child.Token(0) == "player reputation" && child.Size() >= 2)
       initialPlayerReputation = child.Value(1);
     else if(child.Token(0) == "crew attack" && child.Size() >= 2)
@@ -128,7 +128,7 @@ const string &Government::GetName() const
 
 
 
-// Get the color swizzle to use for ships of this government.
+// Get the colour swizzle to use for ships of this government.
 int Government::GetSwizzle() const
 {
   return swizzle;
@@ -136,10 +136,10 @@ int Government::GetSwizzle() const
 
 
 
-// Get the color to use for displaying this government on the map.
-const Color &Government::GetColor() const
+// Get the colour to use for displaying this government on the map.
+const Colour &Government::GetColour() const
 {
-  return color;
+  return colour;
 }
 
 

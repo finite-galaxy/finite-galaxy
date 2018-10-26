@@ -188,11 +188,11 @@ void StarField::SetUpGraphics()
   static const char *fragmentCode =
     "in float fragmentAlpha;\n"
     "in vec2 coord;\n"
-    "out vec4 finalColor;\n"
+    "out vec4 finalColour;\n"
     
     "void main() {\n"
     "  float alpha = fragmentAlpha * (1. - abs(coord.x) - abs(coord.y));\n"
-    "  finalColor = vec4(1, 1, 1, 1) * alpha;\n"
+    "  finalColour = vec4(1, 1, 1, 1) * alpha;\n"
     "}\n";
   
   shader = Shader(vertexCode, fragmentCode);
