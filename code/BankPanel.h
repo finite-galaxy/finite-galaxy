@@ -29,7 +29,7 @@ protected:
   
   
 private:
-  // Callback for the dialogs asking you to enter an amount to pay extra on an
+  // Callback for the dialogues asking you to enter an amount to pay extra on an
   // existing loan or the total amount for a new loan.
   void PayExtra(const std::string &str);
   void NewMortgage(const std::string &str);

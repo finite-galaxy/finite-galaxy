@@ -13,10 +13,10 @@ mission "Deep Mystery Cube [0]"
     distance 7 16
     government Republic "Free Worlds" Syndicate Neutral Hai Quarg
   on accept
-    dialog "You pick up the mystery package in an unmarked and uninhabited warehouse. It is a small black cube about two centimeters to a side, surprisingly heavy for its size, with no markings of any kind. Odd."
+    dialogue "You pick up the mystery package in an unmarked and uninhabited warehouse. It is a small black cube about two centimeters to a side, surprisingly heavy for its size, with no markings of any kind. Odd."
   on complete
     payment 5000 1000
-    dialog `As instructed, you leave the mystery cube by the side of the road a few miles away from the spaceport. "This has to be legal, or they couldn't post it to the job board," you remind yourself as you collect the payment of <payment>.`
+    dialogue `As instructed, you leave the mystery cube by the side of the road a few miles away from the spaceport. "This has to be legal, or they couldn't post it to the job board," you remind yourself as you collect the payment of <payment>.`
   npc
     government "Bounty Hunter"
     personality nemesis disables waiting
@@ -40,10 +40,10 @@ mission "Deep Mystery Cube [1]"
     distance 9 20
     government Republic "Free Worlds" Syndicate Neutral Hai Quarg
   on accept
-    dialog "You pick up the mystery package in an unmarked and uninhabited warehouse. It is a small black cube about two centimeters to a side, surprisingly heavy for its size, with no markings of any kind. Odd."
+    dialogue "You pick up the mystery package in an unmarked and uninhabited warehouse. It is a small black cube about two centimeters to a side, surprisingly heavy for its size, with no markings of any kind. Odd."
   on complete
     payment 5000 1000
-    dialog `As instructed, you leave the mystery cube behind a rickety-looking wooden tower. "This has to be legal, or they couldn't post it to the job board," you remind yourself as you collect the payment of <payment>.`
+    dialogue `As instructed, you leave the mystery cube behind a rickety-looking wooden tower. "This has to be legal, or they couldn't post it to the job board," you remind yourself as you collect the payment of <payment>.`
   npc
     government "Bounty Hunter"
     personality nemesis disables waiting
@@ -67,10 +67,10 @@ mission "Deep Mystery Cube [2]"
     distance 9 20
     government Republic "Free Worlds" Syndicate Neutral Hai Quarg
   on accept
-    dialog "You pick up the mystery package in an unmarked and uninhabited warehouse. It is a small black cube about two centimeters to a side, surprisingly heavy for its size, with no markings of any kind. Odd."
+    dialogue "You pick up the mystery package in an unmarked and uninhabited warehouse. It is a small black cube about two centimeters to a side, surprisingly heavy for its size, with no markings of any kind. Odd."
   on complete
     payment 5000 1000
-    dialog `As instructed, you bury the cube out in the middle of nowhere before landing in the spaceport. "This has to be legal, or they couldn't post it to the job board," you remind yourself as you collect the payment of <payment>.`
+    dialogue `As instructed, you bury the cube out in the middle of nowhere before landing in the spaceport. "This has to be legal, or they couldn't post it to the job board," you remind yourself as you collect the payment of <payment>.`
   npc
     government "Bounty Hunter"
     personality nemesis disables waiting
@@ -94,10 +94,10 @@ mission "Deep Mystery Cube [3]"
     distance 9 20
     government Republic "Free Worlds" Syndicate Neutral Hai Quarg
   on accept
-    dialog "You pick up the mystery package in an unmarked and uninhabited warehouse. It is a small black cube about two centimeters to a side, surprisingly heavy for its size, with no markings of any kind. Odd."
+    dialogue "You pick up the mystery package in an unmarked and uninhabited warehouse. It is a small black cube about two centimeters to a side, surprisingly heavy for its size, with no markings of any kind. Odd."
   on complete
     payment 5000 1000
-    dialog `As instructed, you hand the cube to the first beggar woman you see planetside. She accepts it without a word. "This has to be legal, or they couldn't post it to the job board," you remind yourself as you collect the payment of <payment>.`
+    dialogue `As instructed, you hand the cube to the first beggar woman you see planetside. She accepts it without a word. "This has to be legal, or they couldn't post it to the job board," you remind yourself as you collect the payment of <payment>.`
   npc
     government "Bounty Hunter"
     personality nemesis disables waiting
@@ -120,10 +120,10 @@ mission "Mystery retrieval"
     distance 9 20
     government Republic "Free Worlds" Syndicate Neutral Hai Quarg
   on stopover
-    dialog "As instructed, you open a storage locker near your landing site and pick up the mystery package: a small black cube about two centimeters to a side, surprisingly heavy for its size, with no markings of any kind. Odd."
+    dialogue "As instructed, you open a storage locker near your landing site and pick up the mystery package: a small black cube about two centimeters to a side, surprisingly heavy for its size, with no markings of any kind. Odd."
   on complete
     payment 5000 1000
-    dialog `You drop off the cube at a warehouse, as instructed. Nobody comes around to collect it, but nonetheless your bank account immediately notifies you that the agreed-upon payment of <payment> has been deposited. You wonder how they knew.`
+    dialogue `You drop off the cube at a warehouse, as instructed. Nobody comes around to collect it, but nonetheless your bank account immediately notifies you that the agreed-upon payment of <payment> has been deposited. You wonder how they knew.`
   npc
     government "Bounty Hunter"
     personality nemesis disables waiting
@@ -146,9 +146,9 @@ mission "Transport scientists"
     attributes research
     distance 2 50
   on stopover
-    dialog "The scientists have been giddily discussing the results of their research during the entire trip. You're happy for a bit of peace and quiet as they make tracks for a prominent research lab to have the results analysed. You prepare for the return journey to <planet>."
+    dialogue "The scientists have been giddily discussing the results of their research during the entire trip. You're happy for a bit of peace and quiet as they make tracks for a prominent research lab to have the results analysed. You prepare for the return journey to <planet>."
   on complete
-    dialog "You bid goodbye to the scientists and accept your payment of <payment>."
+    dialogue "You bid goodbye to the scientists and accept your payment of <payment>."
     payment
     payment 30000
 
@@ -184,11 +184,11 @@ mission "Escort science vessel"
       variant
         "Star Queen"
   on stopover
-    dialog "The <npc> lands alongside you and teams of scientists wearing crisp white lab coats and serious-looking boots and gloves descend on the test site with all manner of exotic equipment. As they take their measurements, you prepare for the return journey to <planet>."
+    dialogue "The <npc> lands alongside you and teams of scientists wearing crisp white lab coats and serious-looking boots and gloves descend on the test site with all manner of exotic equipment. As they take their measurements, you prepare for the return journey to <planet>."
   on visit
-    dialog "You have reached <planet>, but you can't complete this mission until the <npc> has visited <stopovers> with you and then joined you here."
+    dialogue "You have reached <planet>, but you can't complete this mission until the <npc> has visited <stopovers> with you and then joined you here."
   on complete
-    dialog "You bid goodbye to the captain of the <npc> and accept your payment of <payment>."
+    dialogue "You bid goodbye to the captain of the <npc> and accept your payment of <payment>."
     payment
     payment 60000
 
@@ -206,5 +206,5 @@ mission "Record academic conference"
     attributes research quarg rich paradise
     distance 4 10
   on complete
-    dialog "You touch down and make your way to the conference hall at a grand university. The provided credentials gain you access and you set up the recording equipment at the back of the room. The panelists are electrifying, speaking eloquently on a variety of cutting-edge topics in the sciences and humanities. The experience leaves you feeling remarkably optimistic about the future of humanity here in the stars. You transmit the video to your contact on <origin> and receive your payment of <payment>."
+    dialogue "You touch down and make your way to the conference hall at a grand university. The provided credentials gain you access and you set up the recording equipment at the back of the room. The panelists are electrifying, speaking eloquently on a variety of cutting-edge topics in the sciences and humanities. The experience leaves you feeling remarkably optimistic about the future of humanity here in the stars. You transmit the video to your contact on <origin> and receive your payment of <payment>."
     payment 5000 1000

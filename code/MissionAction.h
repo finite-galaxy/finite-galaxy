@@ -26,7 +26,7 @@ class UI;
 
 // A MissionAction represents what happens when a mission reaches a certain
 // milestone: offered, accepted, declined, completed or failed. Actions might
-// include showing a dialog or conversation, giving the player payment or a
+// include showing a dialogue or conversation, giving the player payment or a
 // special item, modifying condition flags, or queueing an event to occur.
 class MissionAction {
 public:
@@ -62,7 +62,7 @@ private:
   std::string logText;
   std::map<std::string, std::map<std::string, std::string>> specialLogText;
   
-  std::string dialogText;
+  std::string dialogueText;
   
   const Conversation *stockConversation = nullptr;
   Conversation conversation;

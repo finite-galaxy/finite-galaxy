@@ -44,7 +44,7 @@ private:
   
   
 private:
-  std::map<std::string, std::vector<const Outfit *>> catalog;
+  std::map<std::string, std::vector<const Outfit *>> catalogue;
   std::vector<const Outfit *> list;
   
   const Outfit *selected = nullptr;

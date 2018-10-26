@@ -151,8 +151,8 @@ void MapShipyardPanel::DrawItems()
   Point corner = Screen::TopLeft() + Point(0, scroll);
   for(const string &category : categories)
   {
-    auto it = catalog.find(category);
-    if(it == catalog.end())
+    auto it = catalogue.find(category);
+    if(it == catalogue.end())
       continue;
     
     // Draw the header. If this category is collapsed, skip drawing the items.
@@ -194,18 +194,18 @@ void MapShipyardPanel::DrawItems()
 
 void MapShipyardPanel::Init()
 {
-  catalog.clear();
+  catalogue.clear();
   set<const Ship *> seen;
   for(const auto &it : GameData::Planets())
     if(player.HasVisited(it.second.GetSystem()))
       for(const Ship *ship : it.second.Shipyard())
         if(!seen.count(ship))
         {
-          catalog[ship->Attributes().Category()].push_back(ship);
+          catalogue[ship->Attributes().Category()].push_back(ship);
           seen.insert(ship);
         }
   
-  for(auto &it : catalog)
+  for(auto &it : catalogue)
     sort(it.second.begin(), it.second.end(),
       [](const Ship *a, const Ship *b) {return a->ModelName() < b->ModelName();});
 }

@@ -161,7 +161,7 @@ bool GameData::BeginLoad(const char * const *argv)
       spriteQueue.Add(it.second);
   }
   
-  // Generate a catalog of music files.
+  // Generate a catalogue of music files.
   Music::Init(sources);
   
   for(const string &source : sources)

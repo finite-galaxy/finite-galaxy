@@ -41,7 +41,7 @@ protected:
   
   
 private:
-  void ShowScanDialog(const ShipEvent &event);
+  void ShowScanDialogue(const ShipEvent &event);
   bool ShowHailPanel();
   void StepEvents(bool &isActive);
   

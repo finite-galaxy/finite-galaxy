@@ -1,4 +1,4 @@
-// Dialog.h
+// Dialogue.h
 
 #ifndef DIALOG_H_
 #define DIALOG_H_
@@ -16,33 +16,33 @@ class System;
 
 
 
-// A dialog box displays a given message to the player. The box will expand to
+// A dialogue box displays a given message to the player. The box will expand to
 // fit the message, and may also include a text input field. The box may have
-// only an "ok" button, or may also have a "cancel" button. If this dialog is
+// only an "ok" button, or may also have a "cancel" button. If this dialogue is
 // introducing a mission, the buttons are instead "accept" and "decline". A
 // callback function can be given to receive the player's response.
-class Dialog : public Panel {
+class Dialogue : public Panel {
 public:
-  // Dialog that has no callback (information only). In this form, there is
+  // Dialogue that has no callback (information only). In this form, there is
   // only an "ok" button, not a "cancel" button.
-  explicit Dialog(const std::string &text);
-  // Mission accept / decline dialog.
-  Dialog(const std::string &text, PlayerInfo &player, const System *system = nullptr);
-  virtual ~Dialog() = default;
+  explicit Dialogue(const std::string &text);
+  // Mission accept / decline dialogue.
+  Dialogue(const std::string &text, PlayerInfo &player, const System *system = nullptr);
+  virtual ~Dialogue() = default;
   
-  // Three different kinds of dialogs can be constructed: requesting numerical
+  // Three different kinds of dialogues can be constructed: requesting numerical
   // input, requesting text input, or not requesting any input at all. In any
   // case, the callback is called only if the user selects "ok", not "cancel."
 template <class T>
-  Dialog(T *t, void (T::*fun)(int), const std::string &text);
+  Dialogue(T *t, void (T::*fun)(int), const std::string &text);
 template <class T>
-  Dialog(T *t, void (T::*fun)(int), const std::string &text, int initialValue);
+  Dialogue(T *t, void (T::*fun)(int), const std::string &text, int initialValue);
   
 template <class T>
-  Dialog(T *t, void (T::*fun)(const std::string &), const std::string &text);
+  Dialogue(T *t, void (T::*fun)(const std::string &), const std::string &text);
   
 template <class T>
-  Dialog(T *t, void (T::*fun)(), const std::string &text);
+  Dialogue(T *t, void (T::*fun)(), const std::string &text);
   
   // Draw this panel.
   virtual void Draw() override;
@@ -85,7 +85,7 @@ protected:
 
 
 template <class T>
-Dialog::Dialog(T *t, void (T::*fun)(int), const std::string &text)
+Dialogue::Dialogue(T *t, void (T::*fun)(int), const std::string &text)
   : intFun(std::bind(fun, t, std::placeholders::_1))
 {
   Init(text);
@@ -94,7 +94,7 @@ Dialog::Dialog(T *t, void (T::*fun)(int), const std::string &text)
 
 
 template <class T>
-Dialog::Dialog(T *t, void (T::*fun)(int), const std::string &text, int initialValue)
+Dialogue::Dialogue(T *t, void (T::*fun)(int), const std::string &text, int initialValue)
   : intFun(std::bind(fun, t, std::placeholders::_1))
 {
   Init(text);
@@ -104,7 +104,7 @@ Dialog::Dialog(T *t, void (T::*fun)(int), const std::string &text, int initialVa
 
 
 template <class T>
-Dialog::Dialog(T *t, void (T::*fun)(const std::string &), const std::string &text)
+Dialogue::Dialogue(T *t, void (T::*fun)(const std::string &), const std::string &text)
   : stringFun(std::bind(fun, t, std::placeholders::_1))
 {
   Init(text);
@@ -113,7 +113,7 @@ Dialog::Dialog(T *t, void (T::*fun)(const std::string &), const std::string &tex
 
 
 template <class T>
-Dialog::Dialog(T *t, void (T::*fun)(), const std::string &text)
+Dialogue::Dialogue(T *t, void (T::*fun)(), const std::string &text)
   : voidFun(std::bind(fun, t))
 {
   Init(text);

@@ -342,8 +342,8 @@ void ShopPanel::DrawMain()
   int scrollY = 0;
   for(const string &category : categories)
   {
-    map<string, set<string>>::const_iterator it = catalog.find(category);
-    if(it == catalog.end())
+    map<string, set<string>>::const_iterator it = catalogue.find(category);
+    if(it == catalogue.end())
       continue;
     
     // This should never happen, but bail out if we don't know what planet

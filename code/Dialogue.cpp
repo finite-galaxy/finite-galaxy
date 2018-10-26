@@ -1,6 +1,6 @@
-// Dialog.cpp
+// Dialogue.cpp
 
-#include "Dialog.h"
+#include "Dialogue.h"
 
 #include "Colour.h"
 #include "Command.h"
@@ -72,17 +72,17 @@ namespace {
 
 
 
-// Dialog that has no callback (information only). In this form, there is
+// Dialogue that has no callback (information only). In this form, there is
 // only an "ok" button, not a "cancel" button.
-Dialog::Dialog(const string &text)
+Dialogue::Dialogue(const string &text)
 {
   Init(text, false);
 }
 
 
 
-// Mission accept / decline dialog.
-Dialog::Dialog(const string &text, PlayerInfo &player, const System *system)
+// Mission accept / decline dialogue.
+Dialogue::Dialogue(const string &text, PlayerInfo &player, const System *system)
   : intFun(bind(&PlayerInfo::MissionCallback, &player, placeholders::_1)),
   system(system), player(&player)
 {
@@ -92,21 +92,21 @@ Dialog::Dialog(const string &text, PlayerInfo &player, const System *system)
 
 
 // Draw this panel.
-void Dialog::Draw()
+void Dialogue::Draw()
 {
   DrawBackdrop();
   
-  const Sprite *top = SpriteSet::Get("ui/dialog top");
-  const Sprite *middle = SpriteSet::Get("ui/dialog middle");
-  const Sprite *bottom = SpriteSet::Get("ui/dialog bottom");
-  const Sprite *cancel = SpriteSet::Get("ui/dialog cancel");
+  const Sprite *top = SpriteSet::Get("ui/dialogue top");
+  const Sprite *middle = SpriteSet::Get("ui/dialogue middle");
+  const Sprite *bottom = SpriteSet::Get("ui/dialogue bottom");
+  const Sprite *cancel = SpriteSet::Get("ui/dialogue cancel");
   
-  // Get the position of the top of this dialog, and of the text and input.
+  // Get the position of the top of this dialogue, and of the text and input.
   Point pos(0., (top->Height() + height * middle->Height() + bottom->Height()) * -.5);
   Point textPos(WIDTH * -.5 + 10., pos.Y() + 20.);
   Point inputPos = Point(0., -70.) - pos;
   
-  // Draw the top section of the dialog box.
+  // Draw the top section of the dialogue box.
   pos.Y() += top->Height() * .5;
   SpriteShader::Draw(top, pos);
   pos.Y() += top->Height() * .5;
@@ -167,7 +167,7 @@ void Dialog::Draw()
 
 
 
-bool Dialog::KeyDown(SDL_Keycode key, Uint16 mod, const Command &command)
+bool Dialogue::KeyDown(SDL_Keycode key, Uint16 mod, const Command &command)
 {
   auto it = KEY_MAP.find(key);
   bool isCloseRequest = key == SDLK_ESCAPE || (key == 'w' && (mod & (KMOD_CTRL | KMOD_GUI)));
@@ -218,7 +218,7 @@ bool Dialog::KeyDown(SDL_Keycode key, Uint16 mod, const Command &command)
 
 
 
-bool Dialog::Click(int x, int y, int clicks)
+bool Dialogue::Click(int x, int y, int clicks)
 {
   Point clickPos(x, y);
   
@@ -245,7 +245,7 @@ bool Dialog::Click(int x, int y, int clicks)
 
 
 // Common code from all three constructors:
-void Dialog::Init(const string &message, bool canCancel, bool isMission)
+void Dialogue::Init(const string &message, bool canCancel, bool isMission)
 {
   this->isMission = isMission;
   this->canCancel = canCancel;
@@ -257,7 +257,7 @@ void Dialog::Init(const string &message, bool canCancel, bool isMission)
   
   text.Wrap(message);
   
-  // The dialog with no extenders is 80 pixels tall. 10 pixels at the top and
+  // The dialogue with no extenders is 80 pixels tall. 10 pixels at the top and
   // bottom are "padding," but text.Height() over-reports the height by about
   // 5 pixels because it includes its own padding at the bottom. If there is a
   // text input, we need another 20 pixels for it and 10 pixels padding.
@@ -271,7 +271,7 @@ void Dialog::Init(const string &message, bool canCancel, bool isMission)
 
 
 
-void Dialog::DoCallback() const
+void Dialogue::DoCallback() const
 {
   if(isMission)
   {

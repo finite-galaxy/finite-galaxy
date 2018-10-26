@@ -79,7 +79,7 @@ public:
   bool CheckDeadline(const Date &today);
   // Check if you have special clearance to land on your destination.
   bool HasClearance(const Planet *planet) const;
-  // Get the string to be shown in the destination planet's hailing dialog. If
+  // Get the string to be shown in the destination planet's hailing dialogue. If
   // this is "auto", you don't have to hail them to get landing permission.
   const std::string &ClearanceMessage() const;
   // Check whether we have full clearance to land and use the planet's

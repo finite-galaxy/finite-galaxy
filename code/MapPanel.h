@@ -81,7 +81,7 @@ protected:
   bool IsSatisfied(const Mission &mission) const;
   static bool IsSatisfied(const PlayerInfo &player, const Mission &mission);
   
-  // Function for the "find" dialogs:
+  // Function for the "find" dialogues:
   static int Search(const std::string &str, const std::string &sub);
   
   
@@ -93,7 +93,7 @@ protected:
   const System *playerSystem;
   const System *selectedSystem;
   const Planet *selectedPlanet = nullptr;
-  // A system associated with a dialog or conversation.
+  // A system associated with a dialogue or conversation.
   const System *specialSystem;
   
   Point centre;

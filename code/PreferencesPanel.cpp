@@ -4,7 +4,7 @@
 
 #include "Audio.h"
 #include "Colour.h"
-#include "Dialog.h"
+#include "Dialogue.h"
 #include "Files.h"
 #include "Font.h"
 #include "FontSet.h"
@@ -139,9 +139,9 @@ bool PreferencesPanel::Click(int x, int y, int clicks)
         {
           // Notify the user why setting the zoom any higher isn't permitted.
           // Only show this if it's not possible to zoom the view at all, as
-          // otherwise the dialog will show every time, which is annoying.
+          // otherwise the dialogue will show every time, which is annoying.
           if(newZoom == ZOOM_FACTOR_MIN + ZOOM_FACTOR_INCREMENT)
-            GetUI()->Push(new Dialog(
+            GetUI()->Push(new Dialogue(
               "Your screen resolution is too low to support a zoom level above 100%."));
           Screen::SetZoom(ZOOM_FACTOR_MIN);
         }

@@ -4,7 +4,7 @@
 
 #include "Colour.h"
 #include "Command.h"
-#include "Dialog.h"
+#include "Dialogue.h"
 #include "FillShader.h"
 #include "GameData.h"
 #include "Point.h"
@@ -184,8 +184,8 @@ void Panel::DrawBackdrop() const
   if(!GetUI()->IsTop(this))
     return;
   
-  // Darken everything but the dialog.
-  const Colour &back = *GameData::Colours().Get("dialog backdrop");
+  // Darken everything but the dialogue.
+  const Colour &back = *GameData::Colours().Get("dialogue backdrop");
   FillShader::Fill(Point(), Point(Screen::Width(), Screen::Height()), back);
 }
 
@@ -241,7 +241,7 @@ bool Panel::DoHelp(const string &name) const
     return false;
   
   Preferences::Set(preference);
-  ui->Push(new Dialog(message));
+  ui->Push(new Dialogue(message));
   
   return true;
 }

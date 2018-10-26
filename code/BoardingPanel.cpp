@@ -4,7 +4,7 @@
 
 #include "CargoHold.h"
 #include "Depreciation.h"
-#include "Dialog.h"
+#include "Dialogue.h"
 #include "FillShader.h"
 #include "Font.h"
 #include "FontSet.h"

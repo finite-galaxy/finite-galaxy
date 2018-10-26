@@ -6,7 +6,7 @@
 #include "Command.h"
 #include "ConversationPanel.h"
 #include "DataFile.h"
-#include "Dialog.h"
+#include "Dialogue.h"
 #include "Files.h"
 #include "FillShader.h"
 #include "Font.h"
@@ -175,7 +175,7 @@ bool LoadPanel::KeyDown(SDL_Keycode key, Uint16 mod, const Command &command)
   }
   else if(key == 'D' && !selectedPilot.empty())
   {
-    GetUI()->Push(new Dialog(this, &LoadPanel::DeletePilot,
+    GetUI()->Push(new Dialogue(this, &LoadPanel::DeletePilot,
       "Are you sure you want to delete the selected pilot, \""
         + selectedPilot + "\", and all their saved games?"));
   }
@@ -186,14 +186,14 @@ bool LoadPanel::KeyDown(SDL_Keycode key, Uint16 mod, const Command &command)
     if(it == files.end() || it->second.empty() || it->second.front().first.size() < 4)
       return false;
     
-    GetUI()->Push(new Dialog(this, &LoadPanel::SnapshotCallback,
+    GetUI()->Push(new Dialogue(this, &LoadPanel::SnapshotCallback,
       "Enter a name for this snapshot, or leave the name empty to use the current date:"));
   }
   else if(key == 'R' && !selectedFile.empty())
   {
     string fileName = selectedFile.substr(selectedFile.rfind('/') + 1);
     if(!(fileName == selectedPilot + ".txt"))
-      GetUI()->Push(new Dialog(this, &LoadPanel::DeleteSave,
+      GetUI()->Push(new Dialogue(this, &LoadPanel::DeleteSave,
         "Are you sure you want to delete the selected saved game file, \""
           + selectedFile + "\"?"));
   }
@@ -204,7 +204,7 @@ bool LoadPanel::KeyDown(SDL_Keycode key, Uint16 mod, const Command &command)
     if(fileName == selectedPilot + ".txt")
       LoadCallback();
     else
-      GetUI()->Push(new Dialog(this, &LoadPanel::LoadCallback,
+      GetUI()->Push(new Dialogue(this, &LoadPanel::LoadCallback,
         "If you load this snapshot, it will overwrite your current game. "
         "Any progress will be lost, unless you have saved other snapshots. "
         "Are you sure you want to do that?"));
@@ -458,7 +458,7 @@ void LoadPanel::SnapshotCallback(const string &name)
     loadedInfo.Load(Files::Saves() + selectedFile);
   }
   else
-    GetUI()->Push(new Dialog("Error: unable to create the file \"" + to + "\"."));
+    GetUI()->Push(new Dialogue("Error: unable to create the file \"" + to + "\"."));
 }
 
 
@@ -500,7 +500,7 @@ void LoadPanel::DeletePilot()
     failed |= Files::Exists(path);
   }
   if(failed)
-    GetUI()->Push(new Dialog("Deleting pilot files failed."));
+    GetUI()->Push(new Dialogue("Deleting pilot files failed."));
   
   sideHasFocus = true;
   selectedPilot.clear();
@@ -517,7 +517,7 @@ void LoadPanel::DeleteSave()
   string path = Files::Saves() + selectedFile;
   Files::Delete(path);
   if(Files::Exists(path))
-    GetUI()->Push(new Dialog("Deleting snapshot file failed."));
+    GetUI()->Push(new Dialogue("Deleting snapshot file failed."));
   
   sideHasFocus = true;
   selectedPilot.clear();

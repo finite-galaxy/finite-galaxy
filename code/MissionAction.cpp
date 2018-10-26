@@ -5,7 +5,7 @@
 #include "ConversationPanel.h"
 #include "DataNode.h"
 #include "DataWriter.h"
-#include "Dialog.h"
+#include "Dialogue.h"
 #include "Format.h"
 #include "GameData.h"
 #include "GameEvent.h"
@@ -83,7 +83,7 @@ namespace {
         special += " put in your cargo hold because there is not enough space to install ";
         special += (isSingle ? "it" : "them");
         special += " in your ship.";
-        ui->Push(new Dialog(special));
+        ui->Push(new Dialogue(special));
       }
     }
     if(didCargo && didShip)
@@ -118,10 +118,10 @@ void MissionAction::Load(const DataNode &node, const string &missionName)
     const string &key = child.Token(0);
     bool hasValue = (child.Size() >= 2);
     
-    if(key == "log" || key == "dialog")
+    if(key == "log" || key == "dialogue")
     {
       bool isSpecial = (key == "log" && child.Size() >= 3);
-      string &text = (key == "dialog" ? dialogText :
+      string &text = (key == "dialogue" ? dialogueText :
         isSpecial ? specialLogText[child.Token(1)][child.Token(2)] : logText);
       for(int i = isSpecial ? 3 : 1; i < child.Size(); ++i)
       {
@@ -228,13 +228,13 @@ void MissionAction::Save(DataWriter &out) const
         }
         out.EndChild();
       }
-    if(!dialogText.empty())
+    if(!dialogueText.empty())
     {
-      out.Write("dialog");
+      out.Write("dialogue");
       out.BeginChild();
       {
         // Break the text up into paragraphs.
-        for(const string &line : Format::Split(dialogText, "\n\t"))
+        for(const string &line : Format::Split(dialogueText, "\n\t"))
           out.Write(line);
       }
       out.EndChild();
@@ -346,19 +346,19 @@ void MissionAction::Do(PlayerInfo &player, UI *ui, const System *destination, co
       panel->SetCallback(&player, &PlayerInfo::BasicCallback);
     ui->Push(panel);
   }
-  else if(!dialogText.empty() && ui)
+  else if(!dialogueText.empty() && ui)
   {
     map<string, string> subs;
     subs["<first>"] = player.FirstName();
     subs["<last>"] = player.LastName();
     if(player.Flagship())
       subs["<ship>"] = player.Flagship()->Name();
-    string text = Format::Replace(dialogText, subs);
+    string text = Format::Replace(dialogueText, subs);
     
     if(isOffer)
-      ui->Push(new Dialog(text, player, destination));
+      ui->Push(new Dialogue(text, player, destination));
     else
-      ui->Push(new Dialog(text));
+      ui->Push(new Dialogue(text));
   }
   else if(isOffer && ui)
     player.MissionCallback(Conversation::ACCEPT);
@@ -432,8 +432,8 @@ MissionAction MissionAction::Instantiate(map<string, string> &subs, const System
     for(const auto &eit : it.second)
       result.specialLogText[it.first][eit.first] = Format::Replace(eit.second, subs);
   
-  if(!dialogText.empty())
-    result.dialogText = Format::Replace(dialogText, subs);
+  if(!dialogueText.empty())
+    result.dialogueText = Format::Replace(dialogueText, subs);
   
   if(stockConversation)
     result.conversation = stockConversation->Substitute(subs);

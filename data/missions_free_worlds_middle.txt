@@ -8,7 +8,7 @@ mission "FW Diplomacy 1"
   to offer
     has "event: navy occupying the south"
   on fail
-    dialog `You have failed an essential Free Worlds mission. If you want to complete the story line, revert to the autosave or another earlier snapshot of the game.`
+    dialogue `You have failed an essential Free Worlds mission. If you want to complete the story line, revert to the autosave or another earlier snapshot of the game.`
   
   on offer
     conversation
@@ -20,7 +20,7 @@ mission "FW Diplomacy 1"
     event "catalytic ramscoop available"
   
   on complete
-    dialog `As you are landing, Alondo contacts you and asks you to meet him in the spaceport as soon as you have a bunk prepared for him.`
+    dialogue `As you are landing, Alondo contacts you and asks you to meet him in the spaceport as soon as you have a bunk prepared for him.`
 
 
 
@@ -36,7 +36,7 @@ mission "FW Diplomacy 1B"
   passengers 1
   blocked "You do not have a bunk free for Alondo. Return here when you do."
   on fail
-    dialog `You have failed an essential Free Worlds mission. If you want to complete the story line, revert to the autosave or another earlier snapshot of the game.`
+    dialogue `You have failed an essential Free Worlds mission. If you want to complete the story line, revert to the autosave or another earlier snapshot of the game.`
   
   on offer
     conversation
@@ -87,7 +87,7 @@ mission "FW Diplomacy 1C"
     has "FW Diplomacy 1B: done"
   passengers 1
   on fail
-    dialog `You have failed an essential Free Worlds mission. If you want to complete the story line, revert to the autosave or another earlier snapshot of the game.`
+    dialogue `You have failed an essential Free Worlds mission. If you want to complete the story line, revert to the autosave or another earlier snapshot of the game.`
   
   on offer
     log "Stopped on Earth with Alondo to talk to Parliament and try to head off another bloody battle. But, they were not willing to negotiate."
@@ -125,7 +125,7 @@ mission "FW Diplomacy 1D"
     has "FW Diplomacy 1C: done"
   passengers 1
   on fail
-    dialog `You have failed an essential Free Worlds mission. If you want to complete the story line, revert to the autosave or another earlier snapshot of the game.`
+    dialogue `You have failed an essential Free Worlds mission. If you want to complete the story line, revert to the autosave or another earlier snapshot of the game.`
   
   on offer
     conversation
@@ -136,7 +136,7 @@ mission "FW Diplomacy 1D"
         accept
   
   on complete
-    dialog `You are still finding it hard to believe that you made it to Earth and back in one piece. Alondo thanks you for transporting him and says, "Now I just have to break the bad news to the Senate. JJ and I will meet you in the spaceport bar in a few hours, once we've decided what our next steps will be."`
+    dialogue `You are still finding it hard to believe that you made it to Earth and back in one piece. Alondo thanks you for transporting him and says, "Now I just have to break the bad news to the Senate. JJ and I will meet you in the spaceport bar in a few hours, once we've decided what our next steps will be."`
     event "navy using mark ii ships"
 
 
@@ -153,7 +153,7 @@ mission "FW Southern Recon 1"
   to offer
     has "FW Diplomacy 1D: done"
   on fail
-    dialog `You have failed an essential Free Worlds mission. If you want to complete the story line, revert to the autosave or another earlier snapshot of the game.`
+    dialogue `You have failed an essential Free Worlds mission. If you want to complete the story line, revert to the autosave or another earlier snapshot of the game.`
   
   on offer
     event "fw safe passage ends"
@@ -199,7 +199,7 @@ mission "FW Southern Recon 1B"
   on complete
     fail "FW Southern Recon 1B (Turret)"
     outfit "Electron Cannon" -1
-    dialog `You hand off the Electron Cannon to Freya's science team. They tell you that she's waiting for you in a cafe in the spaceport.`
+    dialogue `You hand off the Electron Cannon to Freya's science team. They tell you that she's waiting for you in a cafe in the spaceport.`
 
 
 
@@ -217,7 +217,7 @@ mission "FW Southern Recon 1B (Turret)"
   on complete
     fail "FW Southern Recon 1B"
     outfit "Electron Turret" -1
-    dialog `You hand off the Electron Turret to Freya's science team. They tell you that she's waiting for you in a cafe in the spaceport.`
+    dialogue `You hand off the Electron Turret to Freya's science team. They tell you that she's waiting for you in a cafe in the spaceport.`
 
 
 
@@ -231,7 +231,7 @@ mission "FW Southern Battle 1"
       has "FW Southern Recon 1B: done"
       has "FW Southern Recon 1B (Turret): done"
   on fail
-    dialog `You have failed an essential Free Worlds mission. If you want to complete the story line, revert to the autosave or another earlier snapshot of the game.`
+    dialogue `You have failed an essential Free Worlds mission. If you want to complete the story line, revert to the autosave or another earlier snapshot of the game.`
   
   on offer
     event "normal in Alnasl"
@@ -269,7 +269,7 @@ mission "FW Southern Battle 1B"
   to offer
     has "FW Southern Battle 1: done"
   on fail
-    dialog `You have failed an essential Free Worlds mission. If you want to complete the story line, revert to the autosave or another earlier snapshot of the game.`
+    dialogue `You have failed an essential Free Worlds mission. If you want to complete the story line, revert to the autosave or another earlier snapshot of the game.`
   
   on offer
     conversation
@@ -292,10 +292,10 @@ mission "FW Southern Battle 1B"
     ship "Fury (Flamethrower)" "F.S. Clarisse"
   
   on visit
-    dialog "You have reached <planet>, but you left part of your convoy behind! Better depart and wait for them to arrive in this star system."
+    dialogue "You have reached <planet>, but you left part of your convoy behind! Better depart and wait for them to arrive in this star system."
   
   on complete
-    dialog `You land on <planet> with the battle fleet. Time to meet up with Freya in the spaceport.`
+    dialogue `You land on <planet> with the battle fleet. Time to meet up with Freya in the spaceport.`
 
 
 
@@ -324,7 +324,7 @@ mission "FW Southern Battle 2"
     has "FW Southern Battle 1B: done"
   deadline 3
   on fail
-    dialog `You have failed an essential Free Worlds mission. If you want to complete the story line, revert to the autosave or another earlier snapshot of the game.`
+    dialogue `You have failed an essential Free Worlds mission. If you want to complete the story line, revert to the autosave or another earlier snapshot of the game.`
   
   on offer
     log "Preparing for another major battle with the Navy, this time in the Rastaban system, which just recently expressed an interest in joining the Free Worlds but has not been able to do so due to the Navy presence. The Free Worlds will be using a new model of warship, the Dreadnought, in this battle."
@@ -436,7 +436,7 @@ mission "FW Southern Battle 3"
   waypoint Albaldah
   waypoint "Delta Sagittarii"
   on fail
-    dialog `You have failed an essential Free Worlds mission. If you want to complete the story line, revert to the autosave or another earlier snapshot of the game.`
+    dialogue `You have failed an essential Free Worlds mission. If you want to complete the story line, revert to the autosave or another earlier snapshot of the game.`
   
   on offer
     log "The Navy has been driven out of the Rastaban system. That will allow the people on Dancer, New Portland, and New India to join the Free Worlds."
@@ -475,7 +475,7 @@ mission "FW Southern Battle 3"
     fleet "Republic Large" 2
   
   on complete
-    dialog `You've finished patrolling the nearby systems. Now you can meet up with Freya in the spaceport, and hopefully she will have good news about Katya.`
+    dialogue `You've finished patrolling the nearby systems. Now you can meet up with Freya in the spaceport, and hopefully she will have good news about Katya.`
 
 
 
@@ -527,7 +527,7 @@ mission "FW Southern Prisoners - Release"
     fleet "Republic Large" 4
   
   on visit
-    dialog "You have reached <planet>, but you left part of your convoy behind! Better depart and wait for them to arrive in this star system."
+    dialogue "You have reached <planet>, but you left part of your convoy behind! Better depart and wait for them to arrive in this star system."
   
   on complete
     karma ++
@@ -563,7 +563,7 @@ mission "FW Southern Prisoners - Released"
   to offer
     has "FW Southern Prisoners - Release: done"
   on fail
-    dialog `You have failed an essential Free Worlds mission. If you want to complete the story line, revert to the autosave or another earlier snapshot of the game.`
+    dialogue `You have failed an essential Free Worlds mission. If you want to complete the story line, revert to the autosave or another earlier snapshot of the game.`
   
   on offer
     conversation
@@ -591,7 +591,7 @@ mission "FW Southern Prisoners - Released"
     fleet "Republic Large" 4
   
   on visit
-    dialog "You have reached <planet>, but you left part of your convoy behind! Better depart and wait for them to arrive in this star system."
+    dialogue "You have reached <planet>, but you left part of your convoy behind! Better depart and wait for them to arrive in this star system."
 
 
 
@@ -604,7 +604,7 @@ mission "FW Southern Prisoners - Kept"
   to offer
     has "FW Southern Prisoners - Keep: done"
   on fail
-    dialog `You have failed an essential Free Worlds mission. If you want to complete the story line, revert to the autosave or another earlier snapshot of the game.`
+    dialogue `You have failed an essential Free Worlds mission. If you want to complete the story line, revert to the autosave or another earlier snapshot of the game.`
   
   on offer
     conversation
@@ -668,7 +668,7 @@ mission "FW Northern 1"
   passengers 1
   blocked `You receive a message from Freya: "Captain, please meet up with us as soon as you have a bunk free for Alondo." You have no bunks free, so you should return here once you have made one available.`
   on fail
-    dialog `You have failed an essential Free Worlds mission. If you want to complete the story line, revert to the autosave or another earlier snapshot of the game.`
+    dialogue `You have failed an essential Free Worlds mission. If you want to complete the story line, revert to the autosave or another earlier snapshot of the game.`
   
   on offer
     log "Three more planets have decided to defect to the Free Worlds: Clark, New Tibet, and New Holland."
@@ -700,7 +700,7 @@ mission "FW Northern 1"
   
   on complete
     event "fw northern expansion"
-    dialog
+    dialogue
       `As soon as you land, Alondo rushes out of your ship to meet with the governor of <planet> and "get these papers signed before they change their minds." He tells you to meet him back in the spaceport in an hour.`
 
 
@@ -713,7 +713,7 @@ mission "FW Northern 2"
   to offer
     has "FW Northern 1: done"
   on fail
-    dialog `You have failed an essential Free Worlds mission. If you want to complete the story line, revert to the autosave or another earlier snapshot of the game.`
+    dialogue `You have failed an essential Free Worlds mission. If you want to complete the story line, revert to the autosave or another earlier snapshot of the game.`
   
   on offer
     conversation
@@ -746,7 +746,7 @@ mission "FW Northern 2A"
   passengers 1
   blocked "To continue this mission, you need a bunk free for Freya. Return here when you have made one available."
   on fail
-    dialog `You have failed an essential Free Worlds mission. If you want to complete the story line, revert to the autosave or another earlier snapshot of the game.`
+    dialogue `You have failed an essential Free Worlds mission. If you want to complete the story line, revert to the autosave or another earlier snapshot of the game.`
   
   on offer
     conversation
@@ -765,7 +765,7 @@ mission "FW Northern 2B"
     has "FW Northern 2A: done"
   passengers 1
   on fail
-    dialog `You have failed an essential Free Worlds mission. If you want to complete the story line, revert to the autosave or another earlier snapshot of the game.`
+    dialogue `You have failed an essential Free Worlds mission. If you want to complete the story line, revert to the autosave or another earlier snapshot of the game.`
   
   on offer
     conversation
@@ -785,7 +785,7 @@ mission "FW Northern 2C"
     has "FW Northern 2B: done"
   passengers 1
   on fail
-    dialog `You have failed an essential Free Worlds mission. If you want to complete the story line, revert to the autosave or another earlier snapshot of the game.`
+    dialogue `You have failed an essential Free Worlds mission. If you want to complete the story line, revert to the autosave or another earlier snapshot of the game.`
   
   on offer
     conversation
@@ -816,7 +816,7 @@ mission "FW Northern 2D"
     has "FW Northern 2C: done"
   passengers 1
   on fail
-    dialog `You have failed an essential Free Worlds mission. If you want to complete the story line, revert to the autosave or another earlier snapshot of the game.`
+    dialogue `You have failed an essential Free Worlds mission. If you want to complete the story line, revert to the autosave or another earlier snapshot of the game.`
   
   on offer
     conversation
@@ -835,7 +835,7 @@ mission "FW Northern 3"
     has "FW Northern 2D: done"
   passengers 1
   on fail
-    dialog `You have failed an essential Free Worlds mission. If you want to complete the story line, revert to the autosave or another earlier snapshot of the game.`
+    dialogue `You have failed an essential Free Worlds mission. If you want to complete the story line, revert to the autosave or another earlier snapshot of the game.`
   
   on offer
     log "The shipyard on Zug is still trying to ramp up Dreadnought production. So far only a few ships have been built, but Freya will be helping to speed up the process."
@@ -886,7 +886,7 @@ mission "FW Northern 3B"
   to offer
     has "FW Northern 3: done"
   on fail
-    dialog `You have failed an essential Free Worlds mission. If you want to complete the story line, revert to the autosave or another earlier snapshot of the game.`
+    dialogue `You have failed an essential Free Worlds mission. If you want to complete the story line, revert to the autosave or another earlier snapshot of the game.`
   
   on offer
     conversation
@@ -924,7 +924,7 @@ mission "FW Northern 3B"
     ship Dreadnought "F.S. Magnolia"
   
   on visit
-    dialog "You have reached <planet>, but without both the Dreadnoughts you were assigned to escort! Better depart and wait for them to arrive in this star system."
+    dialogue "You have reached <planet>, but without both the Dreadnoughts you were assigned to escort! Better depart and wait for them to arrive in this star system."
 
 
 
@@ -939,7 +939,7 @@ mission "FW Northern 4"
     has "FW Northern 3B: done"
   clearance
   on fail
-    dialog `You have failed an essential Free Worlds mission. If you want to complete the story line, revert to the autosave or another earlier snapshot of the game.`
+    dialogue `You have failed an essential Free Worlds mission. If you want to complete the story line, revert to the autosave or another earlier snapshot of the game.`
   
   on offer
     conversation
@@ -961,7 +961,7 @@ mission "FW Northern 4.1A"
     karma >= 2
     "reputation: Navy (Oathkeeper)" >= 0
   on fail
-    dialog `You have failed an essential Free Worlds mission. If you want to complete the story line, revert to the autosave or another earlier snapshot of the game.`
+    dialogue `You have failed an essential Free Worlds mission. If you want to complete the story line, revert to the autosave or another earlier snapshot of the game.`
   
   on offer
     conversation
@@ -978,7 +978,7 @@ mission "FW Northern 4.1A"
         "Star Freighter" 4
   
   on visit
-    dialog "You have reached <planet>, but you left part of your convoy behind! Better depart and wait for them to arrive in this star system."
+    dialogue "You have reached <planet>, but you left part of your convoy behind! Better depart and wait for them to arrive in this star system."
   
   npc save
     government "Navy (Oathkeeper)"
@@ -1002,7 +1002,7 @@ mission "FW Northern 4.2A"
       karma < 2
       "reputation: Navy (Oathkeeper)" < 0
   on fail
-    dialog `You have failed an essential Free Worlds mission. If you want to complete the story line, revert to the autosave or another earlier snapshot of the game.`
+    dialogue `You have failed an essential Free Worlds mission. If you want to complete the story line, revert to the autosave or another earlier snapshot of the game.`
   
   on offer
     conversation
@@ -1024,7 +1024,7 @@ mission "FW Northern 4.2A"
     fleet "Republic Small"
   
   on visit
-    dialog "You have reached <planet>, but you left part of the convoy behind! Better depart and wait for them to arrive in this star system."
+    dialogue "You have reached <planet>, but you left part of the convoy behind! Better depart and wait for them to arrive in this star system."
 
 
 
@@ -1039,7 +1039,7 @@ mission "FW Alphas 1.1"
   to offer
     has "FW Northern 4.1A: done"
   on fail
-    dialog `You have failed an essential Free Worlds mission. If you want to complete the story line, revert to the autosave or another earlier snapshot of the game.`
+    dialogue `You have failed an essential Free Worlds mission. If you want to complete the story line, revert to the autosave or another earlier snapshot of the game.`
   
   on offer
     log "The Republic world of Poisonwood in the south has apparently been taken over by Alpha warlords. It is such a dire threat that despite the war, the Navy Oathkeepers have agreed to fight alongside the Free Worlds to liberate the planet."
@@ -1092,7 +1092,7 @@ mission "FW Alphas 1.1"
     ship "Firebird" "Draugbreath"
   
   on visit
-    dialog "You have reached <planet>, but the battle is not over - you've either failed to kill one of the pirates, or left one of your ships behind in a different system."
+    dialogue "You have reached <planet>, but the battle is not over - you've either failed to kill one of the pirates, or left one of your ships behind in a different system."
 
   on complete
     event "liberation of Poisonwood"
@@ -1140,7 +1140,7 @@ mission "FW Alphas 1.2"
   to offer
     has "FW Northern 4.2A: done"
   on fail
-    dialog `You have failed an essential Free Worlds mission. If you want to complete the story line, revert to the autosave or another earlier snapshot of the game.`
+    dialogue `You have failed an essential Free Worlds mission. If you want to complete the story line, revert to the autosave or another earlier snapshot of the game.`
   
   on offer
     log "The Republic world of Poisonwood in the south has apparently been taken over by Alpha warlords. Hopefully the Free Worlds will be able to liberate the planet and capture or kill the Alpha leaders."
@@ -1183,7 +1183,7 @@ mission "FW Alphas 1.2"
     ship "Firebird" "Draugbreath"
   
   on visit
-    dialog "You have reached <planet>, but the battle is not over - you've either failed to kill one of the pirates, or left one of your ships behind in a different system."
+    dialogue "You have reached <planet>, but the battle is not over - you've either failed to kill one of the pirates, or left one of your ships behind in a different system."
 
 
 
@@ -1196,7 +1196,7 @@ mission "FW Alphas 1.1A"
   to offer
     has "FW Alphas 1.1: done"
   on fail
-    dialog `You have failed an essential Free Worlds mission. If you want to complete the story line, revert to the autosave or another earlier snapshot of the game.`
+    dialogue `You have failed an essential Free Worlds mission. If you want to complete the story line, revert to the autosave or another earlier snapshot of the game.`
   
   npc accompany save
     government "Navy (Oathkeeper)"
@@ -1204,7 +1204,7 @@ mission "FW Alphas 1.1A"
     ship "Saturn (Mark II)" "N.S. Peacemaker"
   
   on visit
-    dialog "You have reached <planet>, but you left the <npc> behind! Better depart and wait for them to arrive in this star system."
+    dialogue "You have reached <planet>, but you left the <npc> behind! Better depart and wait for them to arrive in this star system."
   
   on offer
     log "With the help of the Oathkeepers, liberated Poisonwood from the Alpha invaders."
@@ -1266,7 +1266,7 @@ mission "FW Alphas 1.2A"
   to offer
     has "FW Alphas 1.2: done"
   on fail
-    dialog `You have failed an essential Free Worlds mission. If you want to complete the story line, revert to the autosave or another earlier snapshot of the game.`
+    dialogue `You have failed an essential Free Worlds mission. If you want to complete the story line, revert to the autosave or another earlier snapshot of the game.`
   
   on offer
     log "Liberated Poisonwood from the Alpha invaders. Had to bombard them from orbit, and many civilians were killed in the process, but at least the planet is free again."
@@ -1295,7 +1295,7 @@ mission "FW Bloodsea 1"
   passengers 1
   blocked `Alondo contacts you and asks, "Do you have a bunk ready for me?" You do not, so you will need to free one up to continue this mission.`
   on fail
-    dialog `You have failed an essential Free Worlds mission. If you want to complete the story line, revert to the autosave or another earlier snapshot of the game.`
+    dialogue `You have failed an essential Free Worlds mission. If you want to complete the story line, revert to the autosave or another earlier snapshot of the game.`
   
   on offer
     conversation
@@ -1366,7 +1366,7 @@ mission "FW Bloodsea 1.1A"
     has "FW Bloodsea 1.1: done"
   passengers 1
   on fail
-    dialog `You have failed an essential Free Worlds mission. If you want to complete the story line, revert to the autosave or another earlier snapshot of the game.`
+    dialogue `You have failed an essential Free Worlds mission. If you want to complete the story line, revert to the autosave or another earlier snapshot of the game.`
   
   on offer
     conversation
@@ -1382,7 +1382,7 @@ mission "FW Bloodsea 1.1A"
     ship "Behemoth (Free Worlds)" "F.S. Humble"
   
   on visit
-    dialog "You have reached <planet>, but you left the freighters behind! Better depart and wait for them to arrive in this star system."
+    dialogue "You have reached <planet>, but you left the freighters behind! Better depart and wait for them to arrive in this star system."
 
 
 
@@ -1398,7 +1398,7 @@ mission "FW Bloodsea 1.1B"
     has "FW Bloodsea 1.1A: done"
   passengers 1
   on fail
-    dialog `You have failed an essential Free Worlds mission. If you want to complete the story line, revert to the autosave or another earlier snapshot of the game.`
+    dialogue `You have failed an essential Free Worlds mission. If you want to complete the story line, revert to the autosave or another earlier snapshot of the game.`
   
   on offer
     conversation
@@ -1412,7 +1412,7 @@ mission "FW Bloodsea 1.1B"
     ship "Behemoth (Free Worlds)" "F.S. Humble"
   
   on visit
-    dialog "You have reached <planet>, but you left the freighters behind! Better depart and wait for them to arrive in this star system."
+    dialogue "You have reached <planet>, but you left the freighters behind! Better depart and wait for them to arrive in this star system."
   
   npc
     government Pirate
@@ -1479,7 +1479,7 @@ mission "FW Bloodsea 1.2A"
   to offer
     has "FW Bloodsea 1.2: done"
   on fail
-    dialog `You have failed an essential Free Worlds mission. If you want to complete the story line, revert to the autosave or another earlier snapshot of the game.`
+    dialogue `You have failed an essential Free Worlds mission. If you want to complete the story line, revert to the autosave or another earlier snapshot of the game.`
   
   on offer
     event "battle for bloodsea"
@@ -1538,7 +1538,7 @@ mission "FW Dreadnoughts Ready"
   to offer
     has "fw bloodsea done"
   on fail
-    dialog `You have failed an essential Free Worlds mission. If you want to complete the story line, revert to the autosave or another earlier snapshot of the game.`
+    dialogue `You have failed an essential Free Worlds mission. If you want to complete the story line, revert to the autosave or another earlier snapshot of the game.`
   on offer
     log "Freya has announced that Dreadnoughts are now for sale on Zug. Finally the Free Worlds have a warship that can stand up to Navy capital ships."
 
@@ -1555,7 +1555,7 @@ mission "FW Albatross 1"
     has "FW Dreadnoughts Ready: done"
   passengers 1
   on fail
-    dialog `You have failed an essential Free Worlds mission. If you want to complete the story line, revert to the autosave or another earlier snapshot of the game.`
+    dialogue `You have failed an essential Free Worlds mission. If you want to complete the story line, revert to the autosave or another earlier snapshot of the game.`
   
   on offer
     conversation
@@ -1599,7 +1599,7 @@ mission "FW Albatross 2"
     has "FW Albatross 1: done"
   passengers 1
   on fail
-    dialog `You have failed an essential Free Worlds mission. If you want to complete the story line, revert to the autosave or another earlier snapshot of the game.`
+    dialogue `You have failed an essential Free Worlds mission. If you want to complete the story line, revert to the autosave or another earlier snapshot of the game.`
   
   on offer
     conversation
@@ -1628,7 +1628,7 @@ mission "FW Albatross 2A"
     has "FW Albatross 2: done"
   passengers 1
   on fail
-    dialog `You have failed an essential Free Worlds mission. If you want to complete the story line, revert to the autosave or another earlier snapshot of the game.`
+    dialogue `You have failed an essential Free Worlds mission. If you want to complete the story line, revert to the autosave or another earlier snapshot of the game.`
   
   on offer
     conversation
@@ -1653,7 +1653,7 @@ mission "FW Albatross 2A"
     system Orvala
     government Pirate
     ship "Bastion (Heavy)" "Dread"
-    dialog "You have destroyed Ryk Bartlett's ship. Hopefully now the elders on Albatross will be more inclined to bargain with the Free Worlds."
+    dialogue "You have destroyed Ryk Bartlett's ship. Hopefully now the elders on Albatross will be more inclined to bargain with the Free Worlds."
   
   npc
     personality staying plunders disables
@@ -1675,7 +1675,7 @@ mission "FW Albatross 2B"
     has "FW Albatross 2A: done"
   passengers 1
   on fail
-    dialog `You have failed an essential Free Worlds mission. If you want to complete the story line, revert to the autosave or another earlier snapshot of the game.`
+    dialogue `You have failed an essential Free Worlds mission. If you want to complete the story line, revert to the autosave or another earlier snapshot of the game.`
   
   on offer
     log "The people of Albatross, another anarchist world, have agreed to join the Free Worlds in gratitude for having been liberated from Ryk Bartlett, a warlord who was extorting them for protection money."
@@ -1705,7 +1705,7 @@ mission "FW Rand 1"
   to offer
     has "FW Albatross 2B: done"
   on fail
-    dialog `You have failed an essential Free Worlds mission. If you want to complete the story line, revert to the autosave or another earlier snapshot of the game.`
+    dialogue `You have failed an essential Free Worlds mission. If you want to complete the story line, revert to the autosave or another earlier snapshot of the game.`
   
   on offer
     log "Another two planets, Rand and Oblivion, have expressed an interest in joining the Free Worlds. They are rather far from the rest of Free Worlds territory, however, so JJ is worried that it would create an indefensible tactical position."
@@ -1777,7 +1777,7 @@ mission "FW Rand 1B"
   to offer
     has "FW Rand 1: done"
   on fail
-    dialog `You have failed an essential Free Worlds mission. If you want to complete the story line, revert to the autosave or another earlier snapshot of the game.`
+    dialogue `You have failed an essential Free Worlds mission. If you want to complete the story line, revert to the autosave or another earlier snapshot of the game.`
   
   on offer
     log "The Navy has invaded Rastaban and Delta Sagittarii, effectively slicing through Free Worlds territory and splitting up the Free Worlds fleet."

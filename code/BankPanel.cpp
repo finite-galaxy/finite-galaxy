@@ -3,7 +3,7 @@
 #include "BankPanel.h"
 
 #include "Colour.h"
-#include "Dialog.h"
+#include "Dialogue.h"
 #include "Format.h"
 #include "GameData.h"
 #include "Information.h"
@@ -233,11 +233,11 @@ bool BankPanel::KeyDown(SDL_Keycode key, Uint16 mod, const Command &command)
   else if(key == SDLK_DOWN && selectedRow < mortgageRows)
     ++selectedRow;
   else if(key == SDLK_RETURN && selectedRow < mortgageRows)
-    GetUI()->Push(new Dialog(this, &BankPanel::PayExtra,
+    GetUI()->Push(new Dialogue(this, &BankPanel::PayExtra,
       "Paying off part of this debt will reduce your daily payments and the "
       "interest that it costs you. How many extra credits will you pay?"));
   else if(key == SDLK_RETURN && qualify)
-    GetUI()->Push(new Dialog(this, &BankPanel::NewMortgage,
+    GetUI()->Push(new Dialogue(this, &BankPanel::NewMortgage,
       "Borrow how many credits?"));
   else if(key == 'a')
   {
@@ -291,7 +291,7 @@ bool BankPanel::Click(int x, int y, int clicks)
 
 
 
-// Apply an extra payment to a debt. (This is a dialog callback.)
+// Apply an extra payment to a debt. (This is a dialogue callback.)
 void BankPanel::PayExtra(const string &str)
 {
   int64_t amount = static_cast<int64_t>(Format::Parse(str));
@@ -319,7 +319,7 @@ void BankPanel::PayExtra(const string &str)
 
 
 
-// Apply for a new mortgage. (This is a dialog callback.)
+// Apply for a new mortgage. (This is a dialogue callback.)
 void BankPanel::NewMortgage(const string &str)
 {
   int64_t amount = static_cast<int64_t>(Format::Parse(str));

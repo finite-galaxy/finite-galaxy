@@ -7,7 +7,7 @@
 #include "BankPanel.h"
 #include "Command.h"
 #include "ConversationPanel.h"
-#include "Dialog.h"
+#include "Dialogue.h"
 #include "GameData.h"
 #include "FontSet.h"
 #include "HiringPanel.h"
@@ -201,7 +201,7 @@ bool PlanetPanel::KeyDown(SDL_Keycode key, Uint16 mod, const Command &command)
 
 void PlanetPanel::TakeOffIfReady()
 {
-  // If we're currently showing a conversation or dialog, wait for it to close.
+  // If we're currently showing a conversation or dialogue, wait for it to close.
   if(!GetUI()->IsTop(this) && !GetUI()->IsTop(trading.get()) && !GetUI()->IsTop(bank.get())
       && !GetUI()->IsTop(spaceport.get()) && !GetUI()->IsTop(hiring.get()))
     return;
@@ -311,7 +311,7 @@ void PlanetPanel::TakeOffIfReady()
       out << " that you do not have space for.";
     }
     out << " Are you sure you want to continue?";
-    GetUI()->Push(new Dialog(this, &PlanetPanel::TakeOff, out.str()));
+    GetUI()->Push(new Dialogue(this, &PlanetPanel::TakeOff, out.str()));
     return;
   }
   

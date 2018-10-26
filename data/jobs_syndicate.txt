@@ -14,7 +14,7 @@ mission "Transport executive to <planet>"
     attributes paradise rich core "near earth"
   on complete
     payment 1000 170
-    dialog "The executive rushes off your ship without even a goodbye, fancy briefcase in hand. You collect your payment of <payment>."
+    dialogue "The executive rushes off your ship without even a goodbye, fancy briefcase in hand. You collect your payment of <payment>."
 
 
 mission "Corporate retreat from <origin>"
@@ -32,10 +32,10 @@ mission "Corporate retreat from <origin>"
     distance 3 12
     government Republic "Free Worlds" Syndicate Neutral Quarg
   on stopover
-    dialog "For days your ship has played host to endless discussions about load calculations, tensile strengths, and thermodynamic limits. You're grateful for some peace and quiet as the team of engineers tromps out of the hatch and heads for their exotic corporate retreat. You prepare for the return journey to <origin>."
+    dialogue "For days your ship has played host to endless discussions about load calculations, tensile strengths, and thermodynamic limits. You're grateful for some peace and quiet as the team of engineers tromps out of the hatch and heads for their exotic corporate retreat. You prepare for the return journey to <origin>."
   on complete
     payment 1000 90
-    dialog "The team's boss thanks you for a smooth trip and authorizes a payment of <payment>."
+    dialogue "The team's boss thanks you for a smooth trip and authorizes a payment of <payment>."
 
 
 mission "Corporate espionage"
@@ -59,9 +59,9 @@ mission "Corporate espionage"
         "Scout"
       variant
         "Bounder"
-    dialog "You manage to make the requested scans of the <npc>'s cargo. Time to head to <planet>."
+    dialogue "You manage to make the requested scans of the <npc>'s cargo. Time to head to <planet>."
   on complete
-    dialog `You transmit your scans and receive a hearty congratulations, as well as <payment>. "This will save us months!" you hear someone say in the background as you close the audio link.`
+    dialogue `You transmit your scans and receive a hearty congratulations, as well as <payment>. "This will save us months!" you hear someone say in the background as you close the audio link.`
     payment 50000
 
 
@@ -80,7 +80,7 @@ mission "Document delivery to <planet>"
     attributes factory mining "dirt belt"
   on complete
     payment 5000 170
-    dialog "Almost as soon as you open the cargo hatch, several silent and surprisingly well-dressed men feed the crates of documents onto a conveyor belt right next to your landing site that you hadn't noticed, where to your surprise they soon disappear into the flames of an industrial incinerator. You collect your payment of <payment>."
+    dialogue "Almost as soon as you open the cargo hatch, several silent and surprisingly well-dressed men feed the crates of documents onto a conveyor belt right next to your landing site that you hadn't noticed, where to your surprise they soon disappear into the flames of an industrial incinerator. You collect your payment of <payment>."
 
 
 mission "Waste recycling on <planet>"
@@ -98,7 +98,7 @@ mission "Waste recycling on <planet>"
   on complete
     payment
     payment 2000
-    dialog "You land on <planet> and drop off the exceptionally smelly shipment of <commodity> at a nondescript building, as instructed. Just as you take off, your rear camera catches sight of a burly Syndicate employee running out of the building shaking his fist. You notice that your payment of <payment> came from your contact on <origin>, not from anywhere on <planet>."
+    dialogue "You land on <planet> and drop off the exceptionally smelly shipment of <commodity> at a nondescript building, as instructed. Just as you take off, your rear camera catches sight of a burly Syndicate employee running out of the building shaking his fist. You notice that your payment of <payment> came from your contact on <origin>, not from anywhere on <planet>."
 
 
 mission "Rush fuel Delivery"
@@ -119,7 +119,7 @@ mission "Rush fuel Delivery"
   on complete
     payment
     payment 20000
-    dialog "You drop off your cargo of <commodity> at the loading bay of a towering nuclear complex and collect your payment of <payment>."
+    dialogue "You drop off your cargo of <commodity> at the loading bay of a towering nuclear complex and collect your payment of <payment>."
 
 
 mission "Rush equipment Delivery"
@@ -139,7 +139,7 @@ mission "Rush equipment Delivery"
   on complete
     payment
     payment 9000
-    dialog "You drop off your cargo of <commodity> at the loading bay of a towering nuclear complex and collect your payment of <payment>."
+    dialogue "You drop off your cargo of <commodity> at the loading bay of a towering nuclear complex and collect your payment of <payment>."
 
 
 mission "Syndicate target practice [0]"
@@ -162,17 +162,17 @@ mission "Syndicate target practice [0]"
     personality staying heroic target
     system destination
     ship "Berserker Test Dummy" "Syndicate Test Vessel"
-    dialog "You scan the disabled craft and take careful measurements of the battle damage. Time to deliver the results on <planet>."
+    dialogue "You scan the disabled craft and take careful measurements of the battle damage. Time to deliver the results on <planet>."
   on visit
-    dialog "You forgot to either disable or scan the target dummy ship in <system>! You'll need to head back there and do that before you can return here for payment."
+    dialogue "You forgot to either disable or scan the target dummy ship in <system>! You'll need to head back there and do that before you can return here for payment."
   on fail
-    dialog "The robotic target ship has been destroyed. You are hailed by an angry Syndicate official who fines you <payment> and warns you that further mistakes of this nature may remove you from eligibility for these jobs."
+    dialogue "The robotic target ship has been destroyed. You are hailed by an angry Syndicate official who fines you <payment> and warns you that further mistakes of this nature may remove you from eligibility for these jobs."
     "destroyed Syndicate target ship" ++
     "reputation: Syndicate" --
     payment -40000
   on complete
     payment 20000
-    dialog "You transmit the scan results to a team of eager engineers and collect your payment of <payment>."
+    dialogue "You transmit the scan results to a team of eager engineers and collect your payment of <payment>."
 
 
 mission "Syndicate target practice [1]"
@@ -195,17 +195,17 @@ mission "Syndicate target practice [1]"
     personality staying heroic target
     system destination
     ship "Quicksilver Test Dummy" "Syndicate Test Vessel"
-    dialog "You scan the disabled craft and take careful measurements of the battle damage. Time to deliver the results on <planet>."
+    dialogue "You scan the disabled craft and take careful measurements of the battle damage. Time to deliver the results on <planet>."
   on visit
-    dialog "You forgot to either disable or scan the target dummy ship in <system>! You'll need to head back there and do that before you can return here for payment."
+    dialogue "You forgot to either disable or scan the target dummy ship in <system>! You'll need to head back there and do that before you can return here for payment."
   on fail
-    dialog "The robotic target ship has been destroyed. You are hailed by an angry Syndicate official who fines you <payment> and warns you that further mistakes of this nature may remove you from eligibility for these jobs."
+    dialogue "The robotic target ship has been destroyed. You are hailed by an angry Syndicate official who fines you <payment> and warns you that further mistakes of this nature may remove you from eligibility for these jobs."
     "destroyed Syndicate target ship" ++
     "reputation: Syndicate" --
     payment -80000
   on complete
     payment 40000
-    dialog "You transmit the scan results to a team of eager engineers and collect your payment of <payment>."
+    dialogue "You transmit the scan results to a team of eager engineers and collect your payment of <payment>."
 
 
 mission "Syndicate target practice [2]"
@@ -228,17 +228,17 @@ mission "Syndicate target practice [2]"
     personality staying heroic target
     system destination
     ship "Splinter Test Dummy" "Syndicate Test Vessel"
-    dialog "You scan the disabled craft and take careful measurements of the battle damage. Time to deliver the results on <planet>."
+    dialogue "You scan the disabled craft and take careful measurements of the battle damage. Time to deliver the results on <planet>."
   on visit
-    dialog "You forgot to either disable or scan the target dummy ship in <system>! You'll need to head back there and do that before you can return here for payment."
+    dialogue "You forgot to either disable or scan the target dummy ship in <system>! You'll need to head back there and do that before you can return here for payment."
   on fail
-    dialog "The robotic target ship has been destroyed. You are hailed by an angry Syndicate official who fines you <payment> and warns you that further mistakes of this nature may remove you from eligibility for these jobs."
+    dialogue "The robotic target ship has been destroyed. You are hailed by an angry Syndicate official who fines you <payment> and warns you that further mistakes of this nature may remove you from eligibility for these jobs."
     "destroyed Syndicate target ship" ++
     "reputation: Syndicate" --
     payment -120000
   on complete
     payment 60000
-    dialog "You transmit the scan results to a team of eager engineers and collect your payment of <payment>."
+    dialogue "You transmit the scan results to a team of eager engineers and collect your payment of <payment>."
 
 
 mission "Syndicate target practice [3]"
@@ -260,17 +260,17 @@ mission "Syndicate target practice [3]"
     personality staying heroic target
     system destination
     ship "Vanguard Test Dummy" "Syndicate Test Vessel"
-    dialog "You scan the disabled craft and take careful measurements of the battle damage. Time to deliver the results on <planet>."
+    dialogue "You scan the disabled craft and take careful measurements of the battle damage. Time to deliver the results on <planet>."
   on visit
-    dialog "You forgot to either disable or scan the target dummy ship in <system>! You'll need to head back there and do that before you can return here for payment."
+    dialogue "You forgot to either disable or scan the target dummy ship in <system>! You'll need to head back there and do that before you can return here for payment."
   on fail
-    dialog "The robotic target ship has been destroyed. You are hailed by an angry Syndicate official who fines you <payment> and warns you that further mistakes of this nature may remove you from eligibility for these jobs."
+    dialogue "The robotic target ship has been destroyed. You are hailed by an angry Syndicate official who fines you <payment> and warns you that further mistakes of this nature may remove you from eligibility for these jobs."
     "destroyed Syndicate target ship" ++
     "reputation: Syndicate" --
     payment -200000
   on complete
     payment 100000
-    dialog "You transmit the scan results to a team of eager engineers and collect your payment of <payment>."
+    dialogue "You transmit the scan results to a team of eager engineers and collect your payment of <payment>."
 
 ship "Berserker" "Berserker Test Dummy"
   add attributes

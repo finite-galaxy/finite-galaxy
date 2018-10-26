@@ -3,7 +3,7 @@
 #include "MapSalesPanel.h"
 
 #include "Command.h"
-#include "Dialog.h"
+#include "Dialogue.h"
 #include "FillShader.h"
 #include "Font.h"
 #include "FontSet.h"
@@ -100,7 +100,7 @@ bool MapSalesPanel::KeyDown(SDL_Keycode key, Uint16 mod, const Command &command)
     ScrollTo(selected);
   }
   else if(key == 'f')
-    GetUI()->Push(new Dialog(
+    GetUI()->Push(new Dialogue(
       this, &MapSalesPanel::DoFind, "Search for:"));
   else
     return MapPanel::KeyDown(key, mod, command);

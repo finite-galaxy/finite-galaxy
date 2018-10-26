@@ -6,7 +6,7 @@
 #include "ConversationPanel.h"
 #include "DataFile.h"
 #include "DataNode.h"
-#include "Dialog.h"
+#include "Dialogue.h"
 #include "Files.h"
 #include "Font.h"
 #include "FrameTimer.h"
@@ -208,7 +208,7 @@ int main(int argc, char *argv[])
     }
     if(!hasSwizzle)
 #endif
-      menuPanels.Push(new Dialog(
+      menuPanels.Push(new Dialogue(
         "Note: your computer does not support the \"texture swizzling\" OpenGL feature, "
         "which Finite Galaxy uses to draw ships in different colours depending on which "
         "government they belong to. So, all human ships will be the same colour, which "

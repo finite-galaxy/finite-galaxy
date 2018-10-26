@@ -3,7 +3,7 @@
 #include "ShipyardPanel.h"
 
 #include "Colour.h"
-#include "Dialog.h"
+#include "Dialogue.h"
 #include "Font.h"
 #include "FontSet.h"
 #include "Format.h"
@@ -23,19 +23,19 @@ class System;
 using namespace std;
 
 namespace {
-  // The name entry dialog should include a "Random" button to choose a random
+  // The name entry dialogue should include a "Random" button to choose a random
   // name using the civilian ship name generator.
-  class NameDialog : public Dialog {
+  class NameDialogue : public Dialogue {
   public:
-    NameDialog(ShipyardPanel *panel, void (ShipyardPanel::*fun)(const string &), const string &message)
-      : Dialog(panel, fun, message) {}
+    NameDialogue(ShipyardPanel *panel, void (ShipyardPanel::*fun)(const string &), const string &message)
+      : Dialogue(panel, fun, message) {}
     
     virtual void Draw() override
     {
-      Dialog::Draw();
+      Dialogue::Draw();
       
       randomPos = cancelPos - Point(80., 0.);
-      SpriteShader::Draw(SpriteSet::Get("ui/dialog cancel"), randomPos);
+      SpriteShader::Draw(SpriteSet::Get("ui/dialogue cancel"), randomPos);
 
       const Font &font = FontSet::Get(14);
       static const string label = "Random";
@@ -52,7 +52,7 @@ namespace {
         input = GameData::Phrases().Get("civilian")->Get();
         return true;
       }
-      return Dialog::Click(x, y, clicks);
+      return Dialogue::Click(x, y, clicks);
     }
     
   private:
@@ -66,7 +66,7 @@ ShipyardPanel::ShipyardPanel(PlayerInfo &player)
   : ShopPanel(player, false), modifier(0)
 {
   for(const auto &it : GameData::Ships())
-    catalog[it.second.Attributes().Category()].insert(it.first);
+    catalogue[it.second.Attributes().Category()].insert(it.first);
   
   if(player.GetPlanet())
     shipyard = player.GetPlanet()->Shipyard();
@@ -178,7 +178,7 @@ void ShipyardPanel::Buy(bool fromCargo)
   else
     message += selectedShip->PluralModelName() + "! (Or leave it blank to use randomly chosen names.)";
   
-  GetUI()->Push(new NameDialog(this, &ShipyardPanel::BuyShip, message));
+  GetUI()->Push(new NameDialogue(this, &ShipyardPanel::BuyShip, message));
 }
 
 
@@ -194,7 +194,7 @@ void ShipyardPanel::FailBuy() const
   int64_t licenceCost = LicenceCost(&selectedShip->Attributes());
   if(licenceCost < 0)
   {
-    GetUI()->Push(new Dialog("Buying this ship requires a special licence. "
+    GetUI()->Push(new Dialogue("Buying this ship requires a special licence. "
       "You will probably need to complete some sort of mission to get one."));
     return;
   }
@@ -205,12 +205,12 @@ void ShipyardPanel::FailBuy() const
     for(const auto &it : player.Ships())
       cost -= player.FleetDepreciation().Value(*it, day);
     if(player.Accounts().Credits() < cost)
-      GetUI()->Push(new Dialog("You do not have enough credits to buy this ship. "
+      GetUI()->Push(new Dialogue("You do not have enough credits to buy this ship. "
         "Consider checking if the bank will offer you a loan."));
     else
     {
       string ship = (player.Ships().size() == 1) ? "your current ship" : "one of your ships";
-      GetUI()->Push(new Dialog("You do not have enough credits to buy this ship. "
+      GetUI()->Push(new Dialogue("You do not have enough credits to buy this ship. "
         "If you want to buy it, you must sell " + ship + " first."));
     }
     return;
@@ -270,7 +270,7 @@ void ShipyardPanel::Sell(bool toCargo)
   int64_t total = player.FleetDepreciation().Value(toSell, day);
   
   message += ((initialCount > 2) ? "\nfor " : " for ") + Format::Credits(total) + " credits?";
-  GetUI()->Push(new Dialog(this, &ShipyardPanel::SellShip, message));
+  GetUI()->Push(new Dialogue(this, &ShipyardPanel::SellShip, message));
 }
 
 

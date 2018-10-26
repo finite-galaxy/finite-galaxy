@@ -93,7 +93,7 @@ mission "Remnant: Defence 1"
     personality heroic plunders harvests target
     fleet "Korath Raid" 6
   on visit
-    dialog "There are still Korath raiders circling overhead. You should take off and help the Remnant ships to fight them."
+    dialogue "There are still Korath raiders circling overhead. You should take off and help the Remnant ships to fight them."
   on complete
     payment 200000
 
@@ -144,10 +144,10 @@ mission "Remnant: Defence 2"
       cargo 3
       variant
         "World-Ship B"
-    dialog "You have destroyed the Korath ship that was left over from the raid on <planet>. You can now return there to collect your payment."
+    dialogue "You have destroyed the Korath ship that was left over from the raid on <planet>. You can now return there to collect your payment."
   on complete
     payment 250000
-    dialog `The same woman meets you when you land on <planet>. "Again, thank you," she says. "I will suggest to others that they might offer you similar bounty hunting jobs in the future." She pays you <payment>.`
+    dialogue `The same woman meets you when you land on <planet>. "Again, thank you," she says. "I will suggest to others that they might offer you similar bounty hunting jobs in the future." She pays you <payment>.`
     log "Factions" "Remnant" `Recently, Korath ships have begun raiding Remnant worlds. The Remnant have decided not to try to discourage these raids, because they are a perfect opportunity to steal jump drives and other valuable alien technology from the Korath.`
 
 
@@ -172,10 +172,10 @@ mission "Remnant: Bounty"
       cargo 3
       variant
         "Raider"
-    dialog "You have destroyed the Korath ship. You can now return to <planet> to collect your payment."
+    dialogue "You have destroyed the Korath ship. You can now return to <planet> to collect your payment."
   on complete
     payment 200000
-    dialog "A Remnant military leader thanks you for hunting down the Korath ship <npc>, and gives you the agreed-upon payment of <payment>."
+    dialogue "A Remnant military leader thanks you for hunting down the Korath ship <npc>, and gives you the agreed-upon payment of <payment>."
 
 
 
@@ -207,7 +207,7 @@ mission "Remnant: Defence 3"
     personality heroic nemesis staying
     system "Parca"
     fleet "Korath Raid" 2
-    dialog "Now that you are alone, you are able to deploy the Remnant surveillance satellite unobserved. Time to report back to <planet>."
+    dialogue "Now that you are alone, you are able to deploy the Remnant surveillance satellite unobserved. Time to report back to <planet>."
   on complete
     event "remnant: surveillance end"
     payment 400000
@@ -328,7 +328,7 @@ mission "Remnant: Void Sprites 1"
         "Void Sprite"
         "Void Sprite (Infant)" 3
   on enter "Nenia"
-    dialog `There are indeed some strange space-faring life forms in this system. You collect measurements with the special sensors, and then prepare to return to <planet>.`
+    dialogue `There are indeed some strange space-faring life forms in this system. You collect measurements with the special sensors, and then prepare to return to <planet>.`
 
 
 

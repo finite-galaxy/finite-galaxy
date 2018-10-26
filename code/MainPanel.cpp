@@ -3,7 +3,7 @@
 #include "MainPanel.h"
 
 #include "BoardingPanel.h"
-#include "Dialog.h"
+#include "Dialogue.h"
 #include "Font.h"
 #include "FontSet.h"
 #include "Format.h"
@@ -107,7 +107,7 @@ void MainPanel::Step()
         message.back() += lostCount;
         ++lostCount;
         
-        GetUI()->Push(new Dialog(GameData::HelpMessage(message)));
+        GetUI()->Push(new Dialogue(GameData::HelpMessage(message)));
       }
     }
   }
@@ -280,7 +280,7 @@ bool MainPanel::Scroll(double dx, double dy)
 
 
 
-void MainPanel::ShowScanDialog(const ShipEvent &event)
+void MainPanel::ShowScanDialogue(const ShipEvent &event)
 {
   shared_ptr<Ship> target = event.Target();
   
@@ -357,7 +357,7 @@ void MainPanel::ShowScanDialog(const ShipEvent &event)
           out << "\t" << it.second << " " << it.first << "\n";
     }
   }
-  GetUI()->Push(new Dialog(out.str()));
+  GetUI()->Push(new Dialogue(out.str()));
 }
 
 
@@ -429,7 +429,7 @@ void MainPanel::StepEvents(bool &isActive)
     const Government *actor = event.ActorGovernment();
     
     // Pass this event to the player, to update conditions and make
-    // any new UI elements (e.g. an "on enter" dialog) from their
+    // any new UI elements (e.g. an "on enter" dialogue) from their
     // active missions.
     if(!handledFront)
       player.HandleEvent(event, GetUI());
@@ -438,7 +438,7 @@ void MainPanel::StepEvents(bool &isActive)
     
     // If we can't safely display a new UI element (i.e. an active
     // mission created a UI element), then stop processing events
-    // until the current Conversation or Dialog is resolved. This
+    // until the current Conversation or Dialogue is resolved. This
     // will keep the current event in the queue, so we can still
     // check it for various special cases involving the player.
     if(!isActive)
@@ -465,7 +465,7 @@ void MainPanel::StepEvents(bool &isActive)
       else if(mission)
         player.HandleBlockedMissions((event.Type() & ShipEvent::BOARD)
             ? Mission::BOARDING : Mission::ASSISTING, GetUI());
-      // Determine if a Dialog or ConversationPanel is being drawn next frame.
+      // Determine if a Dialogue or ConversationPanel is being drawn next frame.
       isActive = (GetUI()->Top().get() == this);
       
       // Confirm that this event's target is not destroyed and still an
@@ -490,7 +490,7 @@ void MainPanel::StepEvents(bool &isActive)
     {
       if(actor->IsPlayer())
       {
-        ShowScanDialog(event);
+        ShowScanDialogue(event);
         isActive = false;
       }
       else if(event.TargetGovernment()->IsPlayer())
@@ -498,7 +498,7 @@ void MainPanel::StepEvents(bool &isActive)
         string message = actor->Fine(player, event.Type(), &*event.Target());
         if(!message.empty())
         {
-          GetUI()->Push(new Dialog(message));
+          GetUI()->Push(new Dialogue(message));
           isActive = false;
         }
       }

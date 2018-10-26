@@ -5,7 +5,7 @@
 #include "ConversationPanel.h"
 #include "DataNode.h"
 #include "DataWriter.h"
-#include "Dialog.h"
+#include "Dialogue.h"
 #include "Format.h"
 #include "GameData.h"
 #include "Government.h"
@@ -86,20 +86,20 @@ void NPC::Load(const DataNode &node)
       government = GameData::Governments().Get(child.Token(1));
     else if(child.Token(0) == "personality")
       personality.Load(child);
-    else if(child.Token(0) == "dialog")
+    else if(child.Token(0) == "dialogue")
     {
       for(int i = 1; i < child.Size(); ++i)
       {
-        if(!dialogText.empty())
-          dialogText += "\n\t";
-        dialogText += child.Token(i);
+        if(!dialogueText.empty())
+          dialogueText += "\n\t";
+        dialogueText += child.Token(i);
       }
       for(const DataNode &grand : child)
         for(int i = 0; i < grand.Size(); ++i)
         {
-          if(!dialogText.empty())
-            dialogText += "\n\t";
-          dialogText += grand.Token(i);
+          if(!dialogueText.empty())
+            dialogueText += "\n\t";
+          dialogueText += grand.Token(i);
         }
     }
     else if(child.Token(0) == "conversation" && child.HasChildren())
@@ -187,13 +187,13 @@ void NPC::Save(DataWriter &out) const
       out.Write("government", government->GetName());
     personality.Save(out);
     
-    if(!dialogText.empty())
+    if(!dialogueText.empty())
     {
-      out.Write("dialog");
+      out.Write("dialogue");
       out.BeginChild();
       {
         // Break the text up into paragraphs.
-        for(const string &line : Format::Split(dialogText, "\n\t"))
+        for(const string &line : Format::Split(dialogueText, "\n\t"))
           out.Write(line);
       }
       out.EndChild();
@@ -290,8 +290,8 @@ void NPC::Do(const ShipEvent &event, PlayerInfo &player, UI *ui, bool isVisible)
     // it, to allow the completing event's target to be destroyed.
     if(!conversation.IsEmpty())
       ui->Push(new ConversationPanel(player, conversation, nullptr, ship));
-    else if(!dialogText.empty())
-      ui->Push(new Dialog(dialogText));
+    else if(!dialogueText.empty())
+      ui->Push(new Dialogue(dialogueText));
   }
 }
 
@@ -436,9 +436,9 @@ NPC NPC::Instantiate(map<string, string> &subs, const System *origin, const Syst
   if(!result.ships.empty())
     subs["<npc>"] = result.ships.front()->Name();
   
-  // Do string replacement on any dialog or conversation.
-  if(!dialogText.empty())
-    result.dialogText = Format::Replace(dialogText, subs);
+  // Do string replacement on any dialogue or conversation.
+  if(!dialogueText.empty())
+    result.dialogueText = Format::Replace(dialogueText, subs);
   
   if(stockConversation)
     result.conversation = stockConversation->Substitute(subs);

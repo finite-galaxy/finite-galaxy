@@ -64,8 +64,8 @@ private:
   const System *system = nullptr;
   bool isAtDestination = false;
   
-  // Dialog or conversation to show when all requirements for this NPC are met:
-  std::string dialogText;
+  // Dialogue or conversation to show when all requirements for this NPC are met:
+  std::string dialogueText;
   Conversation conversation;
   const Conversation *stockConversation = nullptr;
   

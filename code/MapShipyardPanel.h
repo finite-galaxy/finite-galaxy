@@ -44,7 +44,7 @@ private:
   
   
 private:
-  std::map<std::string, std::vector<const Ship *>> catalog;
+  std::map<std::string, std::vector<const Ship *>> catalogue;
   std::vector<const Ship *> list;
   
   const Ship *selected = nullptr;

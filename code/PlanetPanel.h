@@ -18,9 +18,9 @@ class System;
 
 
 
-// Dialog that pops up when you land on a planet. The shipyard and outfitter are
+// Dialogue that pops up when you land on a planet. The shipyard and outfitter are
 // shown in full-screen panels that pop up above this one, but the remaining views
-// (trading, jobs, bank, port, and crew) are displayed within this dialog.
+// (trading, jobs, bank, port, and crew) are displayed within this dialogue.
 class PlanetPanel : public Panel {
 public:
   PlanetPanel(PlayerInfo &player, std::function<void()> callback);

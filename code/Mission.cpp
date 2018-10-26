@@ -4,7 +4,7 @@
 
 #include "DataNode.h"
 #include "DataWriter.h"
-#include "Dialog.h"
+#include "Dialogue.h"
 #include "DistanceMap.h"
 #include "Format.h"
 #include "GameData.h"
@@ -503,7 +503,7 @@ bool Mission::HasClearance(const Planet *planet) const
 
 
 
-// Get the string to be shown in the destination planet's hailing dialog. If
+// Get the string to be shown in the destination planet's hailing dialogue. If
 // this is "auto", you don't have to hail them to get landing permission.
 const string &Mission::ClearanceMessage() const
 {
@@ -721,7 +721,7 @@ bool Mission::Do(Trigger trigger, PlayerInfo &player, UI *ui, const shared_ptr<S
     for(const NPC &npc : npcs)
       if(npc.IsLeftBehind(player.GetSystem()))
       {
-        ui->Push(new Dialog("This is a stop for one of your missions, but you have left a ship behind."));
+        ui->Push(new Dialogue("This is a stop for one of your missions, but you have left a ship behind."));
         return false;
       }
     
@@ -750,7 +750,7 @@ bool Mission::Do(Trigger trigger, PlayerInfo &player, UI *ui, const shared_ptr<S
     ++player.Conditions()[name + ": done"];
   }
   
-  // "Jobs" should never show dialogs when offered, nor should they call the
+  // "Jobs" should never show dialogues when offered, nor should they call the
   // player's mission callback.
   if(trigger == OFFER && location == JOB)
     ui = nullptr;

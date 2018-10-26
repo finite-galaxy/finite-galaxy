@@ -37,7 +37,7 @@ protected:
   
   
 private:
-  // You can't exit this dialog if you are in the middle of combat.
+  // You can't exit this dialogue if you are in the middle of combat.
   bool CanExit() const;
   // Check if you can take the outfit at the given position in the list.
   bool CanTake() const;

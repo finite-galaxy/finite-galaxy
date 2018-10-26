@@ -12,7 +12,7 @@ mission "Immigrant Workers"
   on complete
     payment
     payment 10000
-    dialog "The young couple from <origin> pays you and thanks you profusely as they gather up their goods and depart. You wish them the best of luck in their new life on <planet>."
+    dialogue "The young couple from <origin> pays you and thanks you profusely as they gather up their goods and depart. You wish them the best of luck in their new life on <planet>."
   on offer
     conversation
       "As you leave your ship and walk toward the cafeteria at the centre of the spaceport, you notice a young couple standing near the edge of the landing area next to a cart loaded high with a jumble of boxes and furniture. Like many of the locals, they are both wearing dust masks over their mouths, and the woman is also wearing goggles."
@@ -88,7 +88,7 @@ mission "Pookie, Part 2"
         accept
   on complete
     payment 80000
-    dialog "In the past few days, Pookie has barked incessantly and thrown up several times despite being fed perfectly on schedule, and the room you've been keeping her in will likely smell like dog urine for months. You are all too happy to return her to her owner, who pays you <payment>."
+    dialogue "In the past few days, Pookie has barked incessantly and thrown up several times despite being fed perfectly on schedule, and the room you've been keeping her in will likely smell like dog urine for months. You are all too happy to return her to her owner, who pays you <payment>."
 
 
 
@@ -293,7 +293,7 @@ mission "Expedition to Hope 2"
   
   on complete
     payment 40000
-    dialog `You drop the team of scientists off on <planet>. They thank you for helping them out, and pay you <payment>.`
+    dialogue `You drop the team of scientists off on <planet>. They thank you for helping them out, and pay you <payment>.`
 
 
 
@@ -312,12 +312,12 @@ mission "Transport Workers A"
   cargo "household goods" 2
   
   on offer
-    dialog `In one of the corners of the spaceport, you meet a family with two kids, and a pile of trunks and boxes spread out next to them. They tell you that they are trying to book passage to <planet>. "Work has gotten way too hard to come by here," explains the father. "I've had seven different jobs in the past year, and none of them lasted more than a month. So we thought we'd try our luck on a Syndicate world."`
+    dialogue `In one of the corners of the spaceport, you meet a family with two kids, and a pile of trunks and boxes spread out next to them. They tell you that they are trying to book passage to <planet>. "Work has gotten way too hard to come by here," explains the father. "I've had seven different jobs in the past year, and none of them lasted more than a month. So we thought we'd try our luck on a Syndicate world."`
   
   on complete
     payment
     payment 20000
-    dialog `You drop off the family from <origin>, and wish them the best of luck on <planet>. They seem optimistic, and their kids are still quite excited about having taken their first ever space journey. You're sure that they will be remembering this trip for years to come. Their parents thank you, and pay you <payment>.`
+    dialogue `You drop off the family from <origin>, and wish them the best of luck on <planet>. They seem optimistic, and their kids are still quite excited about having taken their first ever space journey. You're sure that they will be remembering this trip for years to come. Their parents thank you, and pay you <payment>.`
 
 
 
@@ -369,7 +369,7 @@ mission "Transport Workers B"
   on complete
     payment
     payment 10000
-    dialog `You drop off the young man from <origin> who is hoping to find work and save enough money for his girlfriend to join him. "Good luck," you say. "Be wise. Don't let yourself get into debt." He thanks you, and pays you <payment>.`
+    dialogue `You drop off the young man from <origin> who is hoping to find work and save enough money for his girlfriend to join him. "Good luck," you say. "Be wise. Don't let yourself get into debt." He thanks you, and pays you <payment>.`
 
 
 
@@ -405,7 +405,7 @@ mission "Transport Workers C"
   on complete
     payment
     payment 10000
-    dialog `You drop off the Pattersons, the farm family from <origin>, and help them to unload their wagon and cattle from your cargo hold. They thank you, and Jim pays you <payment>.`
+    dialogue `You drop off the Pattersons, the farm family from <origin>, and help them to unload their wagon and cattle from your cargo hold. They thank you, and Jim pays you <payment>.`
 
 
 
@@ -423,11 +423,11 @@ mission "WR Star 1"
   cargo "sensors" 2
   
   on offer
-    dialog `A group of scientists approaches you and asks if you will be headed to the Rim any time soon. "We're doing research on Wolf-Rayet stars," they explain, "and we're hoping to find a captain who can do a fly-by of <waypoints>." Scientific research in the Deep is notoriously well-funded, so they will probably pay you quite well.`
+    dialogue `A group of scientists approaches you and asks if you will be headed to the Rim any time soon. "We're doing research on Wolf-Rayet stars," they explain, "and we're hoping to find a captain who can do a fly-by of <waypoints>." Scientific research in the Deep is notoriously well-funded, so they will probably pay you quite well.`
   
   on complete
     payment 250000
-    dialog `The team of scientists thanks you for bringing them to <waypoints> and back, and pays you <payment>. They seem eager to get back to their lab and start analysing their measurements.`
+    dialogue `The team of scientists thanks you for bringing them to <waypoints> and back, and pays you <payment>. They seem eager to get back to their lab and start analysing their measurements.`
 
 
 
@@ -1073,7 +1073,7 @@ mission "Rim Archaeology 3B"
     ship "Marauder Falcon (Engines)" "Oxyrhynchus"
   
   on visit
-    dialog
+    dialogue
       `As you are approaching Zug, you notice on your radar that the ship Foster warned you about has been following you: the Oxyrhynchus. You land in the main spaceport to avoid leading her to the dig site. You will need to shake her pursuit before delivering the equipment.`
   
   on complete
@@ -1164,7 +1164,7 @@ mission "Rim Archaeology 5A"
     ship "Marauder Manta (Weapons)" "Athribis"
     ship "Marauder Quicksilver (Weapons)" "Philae"
     ship "Marauder Raven (Weapons)" "Esna"
-    dialog `The last of the pirate raiders have been driven off. Time to land and check if any damage was done to the dig.`
+    dialogue `The last of the pirate raiders have been driven off. Time to land and check if any damage was done to the dig.`
   
   npc
     government Quarg
@@ -1173,7 +1173,7 @@ mission "Rim Archaeology 5A"
     ship "Wardragon" "Gloref Esa Kurayi"
   
   on visit
-    dialog
+    dialogue
       `You try to land near the dig, but pirate ships are still circling nearby. Better deal with them before returning to check in on Foster.`
   
   on complete
@@ -1243,7 +1243,7 @@ mission "Drug Running 1"
     "said no to drugs" < 4
   
   on offer
-    dialog `As you are walking through the spaceport, a man pulls you aside and asks if you would like to help transport some "recreational pharmaceuticals" to <planet>. (This sounds like an illegal mission, so you'll need to avoid getting scanned or landing on planets with high security.)`
+    dialogue `As you are walking through the spaceport, a man pulls you aside and asks if you would like to help transport some "recreational pharmaceuticals" to <planet>. (This sounds like an illegal mission, so you'll need to avoid getting scanned or landing on planets with high security.)`
   
   on accept
     "said no to drugs" --
@@ -1253,7 +1253,7 @@ mission "Drug Running 1"
   on complete
     payment
     payment 80000
-    dialog `Some disreputable-looking locals unload the illegal drugs from your cargo bay, and hand you your payment of <payment>.`
+    dialogue `Some disreputable-looking locals unload the illegal drugs from your cargo bay, and hand you your payment of <payment>.`
 
 
 
@@ -1275,12 +1275,12 @@ mission "Drug Running 2"
     has "Drug Running 1: done"
   
   on offer
-    dialog `When you walk into the local bar, a man sitting in the corner waves you over and says in a hushed voice, "Captain, we've got a shipment of the good stuff that needs to get to <planet>. I promise you this will be a very lucrative operation. What do you say?"`
+    dialogue `When you walk into the local bar, a man sitting in the corner waves you over and says in a hushed voice, "Captain, we've got a shipment of the good stuff that needs to get to <planet>. I promise you this will be a very lucrative operation. What do you say?"`
   
   on complete
     payment
     payment 100000
-    dialog `Immediately after you land, some workers show up to unload the "stuff." They give you <payment>.`
+    dialogue `Immediately after you land, some workers show up to unload the "stuff." They give you <payment>.`
 
 
 
@@ -1302,12 +1302,12 @@ mission "Drug Running 3"
     has "Drug Running 2: done"
   
   on offer
-    dialog `A well-dressed woman approaches you as you are walking through the spaceport and asks quietly if you would be willing to help facilitate the transport of some "naughty substances" to a certain individual on <planet>.`
+    dialogue `A well-dressed woman approaches you as you are walking through the spaceport and asks quietly if you would be willing to help facilitate the transport of some "naughty substances" to a certain individual on <planet>.`
   
   on complete
     payment
     payment 120000
-    dialog `You hand off the illegal "substances" to your contact on <planet>, who pays you <payment>.`
+    dialogue `You hand off the illegal "substances" to your contact on <planet>, who pays you <payment>.`
 
 
 
@@ -1358,7 +1358,7 @@ mission "Rescue Miners 1"
     random < 60
   
   on offer
-    dialog `You've just sat down in the spaceport bar and ordered a drink when someone in uniform runs into the room and shouts, "There's been a mine explosion on <planet>! We need all available ships to carry relief workers and supplies and to evacuate the injured to a world where there are better medical facilities." Do you volunteer?`
+    dialogue `You've just sat down in the spaceport bar and ordered a drink when someone in uniform runs into the room and shouts, "There's been a mine explosion on <planet>! We need all available ships to carry relief workers and supplies and to evacuate the injured to a world where there are better medical facilities." Do you volunteer?`
 
 
 
@@ -1376,11 +1376,11 @@ mission "Rescue Miners 2"
     has "Rescue Miners 1: done"
   
   on offer
-    dialog `You drop off the medical personnel on <origin>. There are nearly a hundred injured miners waiting for medical evacuation to <planet>. Do you volunteer to carry some of them?`
+    dialogue `You drop off the medical personnel on <origin>. There are nearly a hundred injured miners waiting for medical evacuation to <planet>. Do you volunteer to carry some of them?`
   
   on complete
     payment 80000
-    dialog `You drop off the injured miners at one of the medical facilities on <planet> that has agreed to care for the survivors. It's a somewhat chaotic process, but eventually someone thanks you for your help and pays you <payment>.`
+    dialogue `You drop off the injured miners at one of the medical facilities on <planet> that has agreed to care for the survivors. It's a somewhat chaotic process, but eventually someone thanks you for your help and pays you <payment>.`
 
 
 
@@ -1399,11 +1399,11 @@ mission "Courier 1"
     distance 4 10
     government "Republic" "Free Worlds" "Syndicate" "Quarg" "Neutral"
   on offer
-    dialog `As you are walking through the spaceport, a man approaches you and says, "Excuse me, Captain. I took on a rush delivery to <planet>, but my ship needs repairs and there's no way I can make it there before <day>. Can you take this job for me?"`
+    dialogue `As you are walking through the spaceport, a man approaches you and says, "Excuse me, Captain. I took on a rush delivery to <planet>, but my ship needs repairs and there's no way I can make it there before <day>. Can you take this job for me?"`
   on complete
     payment
     payment 30000
-    dialog "You drop off your cargo of <commodity> and collect your payment of <payment>."
+    dialogue "You drop off your cargo of <commodity> and collect your payment of <payment>."
 
 
 
@@ -1422,11 +1422,11 @@ mission "Courier 2"
     distance 7 14
     government "Republic" "Free Worlds" "Syndicate" "Quarg" "Neutral"
   on offer
-    dialog `A woman in the spaceport flags you down and asks, "Excuse me, Captain. I have small package that needs to get to <planet> by <day>. Can you carry it for me?"`
+    dialogue `A woman in the spaceport flags you down and asks, "Excuse me, Captain. I have small package that needs to get to <planet> by <day>. Can you carry it for me?"`
   on complete
     payment
     payment 50000
-    dialog "You drop off the package and collect your payment of <payment>."
+    dialogue "You drop off the package and collect your payment of <payment>."
 
 
 
@@ -1444,10 +1444,10 @@ mission "Courier 3"
     distance 7 14
     government "Republic" "Free Worlds" "Syndicate" "Quarg" "Neutral"
   on offer
-    dialog `A woman in a suit walks up to you and says, "Pardon me, Captain. I represent a recently deceased client here on <origin> whose legal papers need to be delivered to his next of kin on <destination>. Would you be willing to do some courier work? The papers must be delivered by <day>."`
+    dialogue `A woman in a suit walks up to you and says, "Pardon me, Captain. I represent a recently deceased client here on <origin> whose legal papers need to be delivered to his next of kin on <destination>. Would you be willing to do some courier work? The papers must be delivered by <day>."`
   on complete
     payment 100000
-    dialog "You drop off the legal papers and collect your payment of <payment>."
+    dialogue "You drop off the legal papers and collect your payment of <payment>."
 
 
 
@@ -1483,7 +1483,7 @@ mission "Courier 4"
   on complete
     payment
     payment 100000
-    dialog `Somehow, you have managed to bring the large lizard to <planet> without it breaking loose and eating you. You unload it and wait for its new owner to come. When he does, he pays you <payment>.`
+    dialogue `Somehow, you have managed to bring the large lizard to <planet> without it breaking loose and eating you. You unload it and wait for its new owner to come. When he does, he pays you <payment>.`
 
 
 
@@ -1517,7 +1517,7 @@ mission "Migrant Workers 1"
   on complete
     payment
     payment 20000
-    dialog `The migrant workers thank you for transporting them, and hand you <payment>. You hope that they will be able to find better work here than they had on <origin>.`
+    dialogue `The migrant workers thank you for transporting them, and hand you <payment>. You hope that they will be able to find better work here than they had on <origin>.`
 
 
 
@@ -1554,7 +1554,7 @@ mission "Humanitarian 1"
   on complete
     payment
     payment 50000
-    dialog
+    dialogue
        `After several shady characters have offered to buy the vaccines off you, or threatened to rob you, "Raven Hunter" finally shows up and collects them. He thanks you, and pays you <payment>.`
 
 
@@ -1592,7 +1592,7 @@ mission "Humanitarian 2"
   on complete
     payment
     payment 50000
-    dialog
+    dialogue
        `It takes a while to figure out who exactly is in charge here. You sell off parts of your shipment of food to a few different local leaders, receiving <payment> in exchange.`
 
 
@@ -1657,7 +1657,7 @@ mission "Terraforming 2"
   
   on complete
     payment 140000
-    dialog `On the entire return journey, Eric and Alaric have been busy showing Amy geological survey maps of Rand and asking her for ideas. The moment you land, they hurry out of the ship. "I'm going to show Amy around," says Eric, "but meet us in the spaceport bar later if you want to help out with whatever we do next." Alaric hands you <payment> as payment for your services, and then follows after them.`
+    dialogue `On the entire return journey, Eric and Alaric have been busy showing Amy geological survey maps of Rand and asking her for ideas. The moment you land, they hurry out of the ship. "I'm going to show Amy around," says Eric, "but meet us in the spaceport bar later if you want to help out with whatever we do next." Alaric hands you <payment> as payment for your services, and then follows after them.`
 
 
 
@@ -1728,7 +1728,7 @@ mission "Terraforming 3"
   on complete
     payment 20000
     log `Agreed with Amy's idea to steer an asteroid into Rand's polar ice cap in order to change the planet's climate. Hopefully this ends well.`
-    dialog
+    dialogue
       `When you land, the sky already seems noticeably darker than before. Eric runs up to your ship. "You did it!" he says, excited. "A perfect hit. Now we just have to wait and see what the results are. Meet us in the spaceport bar again in a few hours, and Amy will have her initial measurements ready." He hands you a credit chip for <payment>.`
 
 
@@ -1754,7 +1754,7 @@ mission "Terraforming 4"
           decline
   
   on complete
-    dialog `As soon as you land, Amy heads off to meet with some local biologists who she contacted during the trip over here. "We'll be back in the spaceport in two hours," she says. "Be sure to have ten tons of cargo space free."`
+    dialogue `As soon as you land, Amy heads off to meet with some local biologists who she contacted during the trip over here. "We'll be back in the spaceport in two hours," she says. "Be sure to have ten tons of cargo space free."`
 
 
 
@@ -1816,16 +1816,16 @@ mission "A wolf, a goat, and a cabbage"
   
   on enter
   on enter
-    dialog
+    dialogue
       `You hear a strange crunching sound coming from your cargo hold.`
   on enter
-    dialog
+    dialogue
       `The worrisome munching sound in your ship's hold is followed by a horrific shrieking bleating noise and then an equally horrific silence. Turning on your cargo hold's security camera, you discover that there is nothing left of the goat and the cabbage that you were transporting except a few scraps of cabbage, some bones, and a lot of blood.`
       `  Meanwhile, the wolf is calmly gnawing on what you suspect is the goat's femur, with a rather self-satisfied look in its eyes. Apparently the goat ate the cabbage, and shortly after that the wolf ate the goat.`
   
   on complete
     payment 33000
-    dialog
+    dialogue
       `The man who collects the wolf from you on the landing pad is furious. "I told the shipping company not to put the goat in the same ship as the wolf or the cabbage," he says, "but I guess they tried to save money by subcontracting it all to the same captain."`
       `  Because you only delivered a third of the cargo safely, he only pays you 33,000 credits.`
 
@@ -1860,7 +1860,7 @@ mission "Terminus exploration"
     government "Uninhabited"
     personality derelict target
     ship "Science Drone" "Beagle"
-    dialog `You board the science drone and discover that the pirates have stripped just about everything of value from it: the engines, the sensors, and the fuel cell that powered it. But the computer system is either too deeply integrated into the drone, or too specialized, to be of any value to the pirates. You transfer enough power to the drone's batteries to reactivate it, and are able to retrieve the data that the scientist was looking for. But it's clear that this drone, or what's left of it, is not going anywhere. You'll have to leave it behind.`
+    dialogue `You board the science drone and discover that the pirates have stripped just about everything of value from it: the engines, the sensors, and the fuel cell that powered it. But the computer system is either too deeply integrated into the drone, or too specialized, to be of any value to the pirates. You transfer enough power to the drone's batteries to reactivate it, and are able to retrieve the data that the scientist was looking for. But it's clear that this drone, or what's left of it, is not going anywhere. You'll have to leave it behind.`
   npc
     system "Terminus"
     government "Pirate"

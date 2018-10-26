@@ -3,7 +3,7 @@
 #include "MissionPanel.h"
 
 #include "Command.h"
-#include "Dialog.h"
+#include "Dialogue.h"
 #include "FillShader.h"
 #include "Font.h"
 #include "FontSet.h"
@@ -196,7 +196,7 @@ bool MissionPanel::KeyDown(SDL_Keycode key, Uint16 mod, const Command &command)
   else if(key == 'A' || (key == 'a' && (mod & KMOD_SHIFT)))
   {
     if(acceptedIt != accepted.end() && acceptedIt->IsVisible())
-      GetUI()->Push(new Dialog(this, &MissionPanel::AbortMission,
+      GetUI()->Push(new Dialogue(this, &MissionPanel::AbortMission,
         "Abort mission \"" + acceptedIt->Name() + "\"?"));
     return true;
   }
@@ -666,7 +666,7 @@ void MissionPanel::Accept()
     else
       out << "You must sell " << cargoToSell
         << " tons of ordinary commodities to make room for this mission. Continue?";
-    GetUI()->Push(new Dialog(this, &MissionPanel::MakeSpaceAndAccept, out.str()));
+    GetUI()->Push(new Dialogue(this, &MissionPanel::MakeSpaceAndAccept, out.str()));
     return;
   }
   

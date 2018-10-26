@@ -3,7 +3,7 @@
 #include "MapPanel.h"
 
 #include "Angle.h"
-#include "Dialog.h"
+#include "Dialogue.h"
 #include "FillShader.h"
 #include "FogShader.h"
 #include "Font.h"
@@ -334,7 +334,7 @@ bool MapPanel::KeyDown(SDL_Keycode key, Uint16 mod, const Command &command)
   }
   else if(key == 'f')
   {
-    GetUI()->Push(new Dialog(
+    GetUI()->Push(new Dialogue(
       this, &MapPanel::Find, "Search for:"));
     return true;
   }

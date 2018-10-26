@@ -12,7 +12,7 @@ class Ship;
 
 // A ShipEvent is anything of significance that one ship does to another. These
 // events might change one government's attitude toward the player, or may
-// result in a certain message or dialog being displayed.
+// result in a certain message or dialogue being displayed.
 class ShipEvent {
 public:
   enum {

@@ -12,7 +12,7 @@ colour "faint" .1 .1 .1 0.
 # Colours used for certain UI elements. These elements generally have a variable
 # size (e.g. they may fit to the current screen dimensions).
 colour "panel background" .1 .1 .1 1.
-colour "dialog backdrop" 0. 0. 0. .7
+colour "dialogue backdrop" 0. 0. 0. .7
 colour "conversation background" .125 .125 .125 1.
 colour "map side panel background" .125 .125 .125 1.
 colour "shop side panel background" .2 .2 .2 1.
@@ -460,14 +460,14 @@ interface "hud"
 interface "planet"
   image "land"
     centre -60 -140
-  sprite "ui/planet dialog"
+  sprite "ui/planet dialogue"
     centre -60 0
   button l
     centre -60 -140
     dimensions 720 360
   
   visible if "has shipyard"
-  sprite "ui/planet dialog button"
+  sprite "ui/planet dialogue button"
     centre 280 90
   button s "_Shipyard"
     centre 280 90
@@ -477,7 +477,7 @@ interface "planet"
     pad 10 0
   
   visible if "has outfitter"
-  sprite "ui/planet dialog button"
+  sprite "ui/planet dialogue button"
     centre 280 150
   button o "_Outfitter"
     centre 280 150
@@ -487,7 +487,7 @@ interface "planet"
     pad 10 0
   
   visible if "is inhabited"
-  sprite "ui/planet dialog button"
+  sprite "ui/planet dialogue button"
     centre -400 150
   button j "_Job Board"
     centre -400 150
@@ -495,7 +495,7 @@ interface "planet"
     size 18
     align left
     pad 10 0
-  sprite "ui/planet dialog button"
+  sprite "ui/planet dialogue button"
     centre 280 210
   button h "_Hire Crew"
     centre 280 210
@@ -505,7 +505,7 @@ interface "planet"
     pad 10 0
   
   visible if "has trade"
-  sprite "ui/planet dialog button"
+  sprite "ui/planet dialogue button"
     centre -400 90
   button t "_Trading"
     centre -400 90
@@ -515,7 +515,7 @@ interface "planet"
     pad 10 0
   
   visible if "has bank"
-  sprite "ui/planet dialog button"
+  sprite "ui/planet dialogue button"
     centre -400 210
   button b "_Bank"
     centre -400 210
@@ -525,7 +525,7 @@ interface "planet"
     pad 10 0
   
   visible if "has spaceport"
-  sprite "ui/planet dialog button"
+  sprite "ui/planet dialogue button"
     centre -400 270
   button p "Space_port"
     centre -400 270
@@ -535,7 +535,7 @@ interface "planet"
     pad 10 0
   
   visible if "has ship"
-  sprite "ui/planet dialog button"
+  sprite "ui/planet dialogue button"
     centre 280 270
   button d "_Depart"
     centre 280 270
@@ -562,7 +562,7 @@ interface "news"
 
 
 interface "boarding"
-  sprite "ui/boarding dialog"
+  sprite "ui/boarding dialogue"
   
   label "item"
     from -320 -189
@@ -670,7 +670,7 @@ interface "boarding"
 
 
 
-# The top of the text panel is the planet dialog is at +70, and it is 500 x 260.
+# The top of the text panel is the planet dialogue is at +70, and it is 500 x 260.
 interface "hiring"
   label "flagship"
     centre -70 85
@@ -719,14 +719,14 @@ interface "hiring"
     align right
   
   active if "can hire"
-  sprite "ui/dialog cancel"
+  sprite "ui/dialogue cancel"
     centre 140 355
   button h "_Hire"
     centre 140 355
     dimensions 80 40
   
   active if "can fire"
-  sprite "ui/dialog cancel"
+  sprite "ui/dialogue cancel"
     centre 60 355
   button f "_Fire"
     centre 60 355
@@ -764,7 +764,7 @@ interface "hiring"
 
 interface "trade"
   active if "can buy"
-  sprite "ui/dialog cancel"
+  sprite "ui/dialogue cancel"
     centre 40 355
   button B "Buy All"
     centre 40 355
@@ -789,7 +789,7 @@ interface "trade"
 
 interface "bank"
   active if "can pay"
-  sprite "ui/dialog cancel"
+  sprite "ui/dialogue cancel"
     centre 140 355
   button a "Pay _All"
     centre 140 355
@@ -829,7 +829,7 @@ interface "mission" bottom
 
 
 interface "map buttons" bottom right
-  sprite "ui/dialog cancel"
+  sprite "ui/dialogue cancel"
     from -450 -50 to -360 0
   button d "_Done"
     from -450 -50 to -360 0
@@ -847,13 +847,13 @@ interface "map buttons" bottom right
     from -270 -50 to -160 0
   
   active if "!is missions"
-  sprite "ui/dialog cancel"
+  sprite "ui/dialogue cancel"
     from -170 -50 to -80 0
   button i "M_issions"
     from -170 -50 to -80 0
   
   active if "!is ports"
-  sprite "ui/dialog cancel"
+  sprite "ui/dialogue cancel"
     from -90 -50 to 0 0
   button p "_Ports"
     from -90 -50 to 0 0
@@ -945,7 +945,7 @@ interface "info panel"
   
   visible if "show park"
   active if "can park"
-  sprite "ui/dialog cancel"
+  sprite "ui/dialogue cancel"
     centre -55 305
   button P "Park"
     centre -55 305
@@ -953,14 +953,14 @@ interface "info panel"
   active
   
   visible if "show unpark"
-  sprite "ui/dialog cancel"
+  sprite "ui/dialogue cancel"
     centre -55 305
   button P "Unpark"
     centre -55 305
     dimensions 70 30
   
   visible if "show disown"
-  sprite "ui/dialog cancel"
+  sprite "ui/dialogue cancel"
     centre -150 305
   button D "Disown"
     centre -150 305

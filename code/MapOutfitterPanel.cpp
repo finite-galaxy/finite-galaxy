@@ -164,8 +164,8 @@ void MapOutfitterPanel::DrawItems()
   Point corner = Screen::TopLeft() + Point(0, scroll);
   for(const string &category : categories)
   {
-    auto it = catalog.find(category);
-    if(it == catalog.end())
+    auto it = catalogue.find(category);
+    if(it == catalogue.end())
       continue;
     
     // Draw the header. If this category is collapsed, skip drawing the items.
@@ -217,24 +217,24 @@ void MapOutfitterPanel::DrawItems()
 
 void MapOutfitterPanel::Init()
 {
-  catalog.clear();
+  catalogue.clear();
   set<const Outfit *> seen;
   for(const auto &it : GameData::Planets())
     if(player.HasVisited(it.second.GetSystem()))
       for(const Outfit *outfit : it.second.Outfitter())
         if(!seen.count(outfit))
         {
-          catalog[outfit->Category()].push_back(outfit);
+          catalogue[outfit->Category()].push_back(outfit);
           seen.insert(outfit);
         }
   for(const auto &it : player.Harvested())
     if(!seen.count(it.second))
     {
-      catalog[it.second->Category()].push_back(it.second);
+      catalogue[it.second->Category()].push_back(it.second);
       seen.insert(it.second);
     }
   
-  for(auto &it : catalog)
+  for(auto &it : catalogue)
     sort(it.second.begin(), it.second.end(),
       [](const Outfit *a, const Outfit *b) {return a->Name() < b->Name();});
 }

@@ -52,7 +52,7 @@ mission "Pact Recon 0"
   
   on complete
     payment 25000
-    dialog
+    dialogue
       `A different female militia officer approaches you when you land on <planet>, and gives you <payment> in exchange for your scanner logs of the southern systems. "My name is Freya Winters," she says. "I'll be in touch when we've got a new assignment for you."`
 
 
@@ -74,12 +74,12 @@ mission "Pact Recon 1"
     has "Pact Recon 0: done"
   
   on offer
-    dialog
+    dialogue
       `You receive a message from Freya, the militia officer in charge of tracking pirate activity. "We need some more eyes on the empty systems in the middle of the Dirt Belt," she says. "Pay would be a bit better than last time. Interested?"`
   
   on complete
     payment 35000
-    dialog
+    dialogue
       `You transfer your sensor logs to Officer Winters. She thanks you for your work, and pays you <payment>. She says, "I'll let you know when we need your services again."`
 
 
@@ -101,12 +101,12 @@ mission "Pact Recon 2"
     has "Pact Recon 1: done"
   
   on offer
-    dialog
+    dialogue
       `You receive another message from Freya: "Hello Captain! I've got a more challenging and lucrative mission for you. We need someone to do a flyby of all four pirate systems here in the south, to gauge their strength. Again, no fighting is required. What do you say?"`
   
   on complete
     payment 60000
-    dialog
+    dialogue
       `Freya Winters meets up with you in person soon after you land. "I hope you didn't have much trouble," she says, as she hands you a credit chip for <payment>. "You've been a great help to us. I'll be sure to contact you next time we need a scout."`
 
 
@@ -128,7 +128,7 @@ mission "Pact Recon 3"
     has "Pact Recon 2: done"
   
   on offer
-    dialog
+    dialogue
       `Once again, you receive a message from Freya Winters. "We have another mission for you," she says, "this one a bit more dangerous. We've heard rumors of a pirate fleet massing in one of the seldom-visited systems in the Dirt Belt, and we need to know where they are. Interested in helping to track them down? As before, you don't need to fight them, just observe them."`
   
   npc
@@ -141,7 +141,7 @@ mission "Pact Recon 3"
   on complete
     set "licence: Nest"
     payment 80000
-    dialog
+    dialogue
       `You report to Freya that you found a sizable pirate fleet in the Naper system, as well as spotting some pirates elsewhere. She thanks you, and pays you <payment>. "Thank you for your assistance,  Captain <last>. And here is something extra," she says, handing over a sealed envelope. "It contains a licence. Southbound Shipyards recently started producing militia carriers. The smallest model, the Nest, is for sale to registered merchants, so I figure you might be interested in it as well." You thank her for her kindness. "Not at all," she says, "the pleasure is mine. Now I have to go, another appointment. Again, I'll be in touch if we need you."`
 
 
@@ -267,7 +267,7 @@ mission "FW Recon 0"
   
   on complete
     payment
-    dialog
+    dialogue
       `The militia officer thanks you for the ride and pays you <payment>. As he is leaving, he says, "If you're interested in doing more work for us, head to the spaceport bar and find my commander. I'll tell him to keep an eye out for you."`
 
 
@@ -325,7 +325,7 @@ mission "FW Recon 1"
       `  You cut the comlink and breathe a sigh of relief that the conversation is over.`
   
   on complete
-    dialog `Soon after you land, the militia officer comes to your ship and pays you <payment> in exchange for your sensor logs regarding <npc>. He says, "If you would be interested in continuing to work for us, meet me in the spaceport bar in an hour."`
+    dialogue `Soon after you land, the militia officer comes to your ship and pays you <payment> in exchange for your sensor logs regarding <npc>. He says, "If you would be interested in continuing to work for us, meet me in the spaceport bar in an hour."`
     payment 10000
 
 
@@ -361,10 +361,10 @@ mission "FW Recon 2"
       fighters "republic fighter"
       variant
         "Saturn" 4
-    dialog "You've scanned all the ships you can find here that seem to be upgraded for combat. Time to return to <planet> to collect your payment."
+    dialogue "You've scanned all the ships you can find here that seem to be upgraded for combat. Time to return to <planet> to collect your payment."
   
   on complete
-    dialog `JJ meets you as soon as you land, and you hand over the scanner data. "Thank you again," he says. "If you're willing to take on one more recon mission, meet me in the bar." He hands you <payment>.`
+    dialogue `JJ meets you as soon as you land, and you hand over the scanner data. "Thank you again," he says. "If you're willing to take on one more recon mission, meet me in the bar." He hands you <payment>.`
     payment 50000
 
 
@@ -442,11 +442,11 @@ mission "FW Recon 3B"
         "Mars"
   
   on visit
-    dialog `A minute after you land, a Republic gunboat, <npc>, lands directly next to you. JJ does not approach you. You notice from your ship's logs that this gunboat has been following you ever since you left <origin>; before you can hand over the information, you will need to escape its pursuit.`
+    dialogue `A minute after you land, a Republic gunboat, <npc>, lands directly next to you. JJ does not approach you. You notice from your ship's logs that this gunboat has been following you ever since you left <origin>; before you can hand over the information, you will need to escape its pursuit.`
   
   on complete
     "assisted free worlds" ++
-    dialog `JJ meets you as soon as you land, and you pass off your information and photos to him. He pays you <payment> and says, "I'll be sure to let the Free Worlds council know how helpful you have been."`
+    dialogue `JJ meets you as soon as you land, and you pass off your information and photos to him. He pays you <payment> and says, "I'll be sure to let the Free Worlds council know how helpful you have been."`
     payment 80000
     log "Gave the Free Worlds some photos and information on the Navy base on New Wales. Jean-Jacques, the militia contact, was very grateful for the help."
 
@@ -1317,7 +1317,7 @@ mission "FW Escort 1"
     set "fw intro escort failed"
   
   on visit
-    dialog "You have reached <planet>, but you left part of the convoy behind! Better depart and wait for them to arrive in this star system."
+    dialogue "You have reached <planet>, but you left part of the convoy behind! Better depart and wait for them to arrive in this star system."
 
 
 
@@ -1385,7 +1385,7 @@ mission "FW Escort 1B"
     set "fw intro escort failed"
   
   on visit
-    dialog "You have reached <planet>, but you left part of the convoy behind! Better depart and wait for them to arrive in this star system."
+    dialogue "You have reached <planet>, but you left part of the convoy behind! Better depart and wait for them to arrive in this star system."
 
 
 
@@ -1448,7 +1448,7 @@ mission "FW Escort 2"
     set "fw intro escort failed"
   
   on visit
-    dialog "You have reached <planet>, but you left part of the convoy behind! Better depart and wait for them to arrive in this star system."
+    dialogue "You have reached <planet>, but you left part of the convoy behind! Better depart and wait for them to arrive in this star system."
 
 
 
@@ -1514,7 +1514,7 @@ mission "FW Escort 2B"
     set "fw intro escort failed"
   
   on visit
-    dialog "You have reached <planet>, but you left part of the convoy behind! Better depart and wait for them to arrive in this star system."
+    dialogue "You have reached <planet>, but you left part of the convoy behind! Better depart and wait for them to arrive in this star system."
 
 
 
@@ -1548,7 +1548,7 @@ mission "FW Escort 3"
   
   on complete
     payment 200000
-    dialog
+    dialogue
       `  Voigt is immensely relieved to see the <npc> returned safely home. "You have done us a great service today, Captain," he says, as he hands you credit chips for <payment>. "I'll be sure to let the Council know how helpful you have been."`
     "assisted free worlds" ++
     log "Helped rescue a Free Worlds freighter that had been disabled by pirates. Earned the gratitude of Tomek Voigt, the council member in charge of the supply convoys."
@@ -1557,7 +1557,7 @@ mission "FW Escort 3"
     set "fw intro escort failed"
   
   on visit
-    dialog `Tomek Voigt messages you and says, "Please escort the <npc> back here as soon as possible! Their crew is counting on you."`
+    dialogue `Tomek Voigt messages you and says, "Please escort the <npc> back here as soon as possible! Their crew is counting on you."`
 
 
 
@@ -1659,11 +1659,11 @@ mission "FW Bounty 1"
     ship "Wasp (Proton)" "Vixen"
     ship "Fury (Laser)" "Stoat"
     ship "Sparrow" "Rat"
-    dialog `The "Rat Pack" has been eliminated. You can claim the bounty payment by returning to <destination>.`
+    dialogue `The "Rat Pack" has been eliminated. You can claim the bounty payment by returning to <destination>.`
   
   on complete
     payment 200000
-    dialog `The militia officer who asked you to hunt down the "Rat Pack" arrives at your ship soon after you land and thanks you profusely. "Now we won't have to worry about them bothering ships in this sector anymore." She pays you <payment> and says she'll tell other militia leaders how helpful you were.`
+    dialogue `The militia officer who asked you to hunt down the "Rat Pack" arrives at your ship soon after you land and thanks you profusely. "Now we won't have to worry about them bothering ships in this sector anymore." She pays you <payment> and says she'll tell other militia leaders how helpful you were.`
 
 
 
@@ -1704,11 +1704,11 @@ mission "FW Bounty 2"
     system
       near "Delta Sagittarii" 1 2
     ship "Behemoth (Speedy)" "Moonless Night"
-    dialog `The <npc> has been eliminated. You can claim the bounty payment by returning to <destination>.`
+    dialogue `The <npc> has been eliminated. You can claim the bounty payment by returning to <destination>.`
   
   on complete
     payment 200000
-    dialog `The militia officer who asked you to hunt down the <npc> meets you in the spaceport and pays you <payment>. "Once again, thank you for assisting us," he says.`
+    dialogue `The militia officer who asked you to hunt down the <npc> meets you in the spaceport and pays you <payment>. "Once again, thank you for assisting us," he says.`
 
 
 
@@ -1748,12 +1748,12 @@ mission "FW Bounty 3"
     government Bounty
     system "Shaula"
     ship "Osprey (Hai)" "Silverhawk"
-    dialog `The <npc> has been eliminated. You can claim the bounty payment by returning to <destination>.`
+    dialogue `The <npc> has been eliminated. You can claim the bounty payment by returning to <destination>.`
   
   on complete
     "assisted free worlds" ++
     payment 300000
-    dialog `The militia officer who asked you to hunt down the <npc> contacts you soon after you land. "You've done us a great service," he says. "I'll be telling the Council how helpful you were." He hands you a payment of <payment>.`
+    dialogue `The militia officer who asked you to hunt down the <npc> contacts you soon after you land. "You've done us a great service," he says. "I'll be telling the Council how helpful you were." He hands you a payment of <payment>.`
     log "Earned a good reputation with the Free Worlds militia by taking on missions to hunt down some dangerous pirates."
 
 
@@ -1803,7 +1803,7 @@ mission "Rescue Katya 1"
     has "FW Commitment: offered"
     not "chosen sides"
   on fail
-    dialog `You have failed an essential Free Worlds mission. If you want to complete the story line, revert to the autosave or another earlier snapshot of the game.`
+    dialogue `You have failed an essential Free Worlds mission. If you want to complete the story line, revert to the autosave or another earlier snapshot of the game.`
   
   on offer
     conversation
@@ -1855,7 +1855,7 @@ mission "Rescue Katya 2"
   to offer
     has "Rescue Katya 1: done"
   on fail
-    dialog `You have failed an essential Free Worlds mission. If you want to complete the story line, revert to the autosave or another earlier snapshot of the game.`
+    dialogue `You have failed an essential Free Worlds mission. If you want to complete the story line, revert to the autosave or another earlier snapshot of the game.`
   
   on offer
     conversation
@@ -1910,7 +1910,7 @@ mission "Defend Sabik"
   to offer
     has "Rescue Katya 2: done"
   on fail
-    dialog `You have failed an essential Free Worlds mission. If you want to complete the story line, revert to the autosave or another earlier snapshot of the game.`
+    dialogue `You have failed an essential Free Worlds mission. If you want to complete the story line, revert to the autosave or another earlier snapshot of the game.`
   
   on offer
     conversation
@@ -2030,5 +2030,5 @@ mission "Defend Sabik"
         "Sparrow" 1
   
   on complete
-    dialog `The Navy has been driven off, but at a great cost. You should probably visit the spaceport and see if Tomek is there, or someone else who can tell you what to do next.`
+    dialogue `The Navy has been driven off, but at a great cost. You should probably visit the spaceport and see if Tomek is there, or someone else who can tell you what to do next.`
 

@@ -6,7 +6,7 @@
 #include "ConversationPanel.h"
 #include "DataFile.h"
 #include "DataWriter.h"
-#include "Dialog.h"
+#include "Dialogue.h"
 #include "Files.h"
 #include "Format.h"
 #include "GameData.h"
@@ -1457,7 +1457,7 @@ void PlayerInfo::HandleBlockedMissions(Mission::Location location, UI *ui)
       string message = it->BlockedMessage(*this);
       if(!message.empty())
       {
-        ui->Push(new Dialog(message));
+        ui->Push(new Dialogue(message));
         return;
       }
     }
@@ -1528,7 +1528,7 @@ void PlayerInfo::RemoveMission(Mission::Trigger trigger, const Mission &mission,
   for(auto it = missions.begin(); it != missions.end(); ++it)
     if(&*it == &mission)
     {
-      // Don't delete the mission yet, because the conversation or dialog
+      // Don't delete the mission yet, because the conversation or dialogue
       // panel may still be showing. Instead, just mark it as done. Doing
       // this first avoids the possibility of an infinite loop, e.g. if a
       // mission's "on fail" fails the mission itself.
@@ -2599,13 +2599,13 @@ void PlayerInfo::Fine(UI *ui)
           + ", we detect highly illegal material on your ship.\""
           "\n\tYou are sentenced to lifetime imprisonment on a penal colony."
           " Your days of traveling the stars have come to an end.";
-        ui->Push(new Dialog(message));
+        ui->Push(new Dialogue(message));
       }
       // All ships belonging to the player should be removed.
       Die();
     }
     else
-      ui->Push(new Dialog(message));
+      ui->Push(new Dialogue(message));
   }
 }
 

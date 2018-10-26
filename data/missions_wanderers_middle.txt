@@ -125,15 +125,15 @@ mission "Wanderers: Nova Remnants"
   source "Spera Anatrusk"
   waypoint "Peresedersi"
   on enter "Peresedersi"
-    dialog
+    dialogue
       "You fire up your ship's sensors and collect the data that the Wanderers asked for on this system's sun."
   waypoint "Kasikfar"
   on enter "Kasikfar"
-    dialog
+    dialogue
       "You fire up your ship's sensors and collect the data that the Wanderers asked for on this system's sun."
   waypoint "Fasitopfar"
   on enter "Fasitopfar"
-    dialog
+    dialogue
       "You fire up your ship's sensors and collect the data that the Wanderers asked for on this system's sun."
   to offer
     has "Wanderers: Surveying 1: done"
@@ -242,7 +242,7 @@ mission "Wanderers: First Mereti Attack"
       `  You return as quickly as possible to your ship and prepare to join the other defenders...`
         launch
   on visit
-    dialog
+    dialogue
       `There are still Kor Mereti drones circling overhead. You should help the Wanderers to drive them off.`
   npc evade
     government "Kor Mereti"
@@ -257,7 +257,7 @@ mission "Wanderers: First Mereti Attack"
         "Model 64" 3
         "Model 32" 4
         "Model 16" 6
-    dialog `As the last of the Kor Mereti raiding party is destroyed, you receive a message from Sobari Tele'ek. "Please join us at the [base, settlement] as soon as you are able to," he says. "We will need to [agree, decide] on a strategy to deal with these [robots, drones] in case their attacks grow worse."`
+    dialogue `As the last of the Kor Mereti raiding party is destroyed, you receive a message from Sobari Tele'ek. "Please join us at the [base, settlement] as soon as you are able to," he says. "We will need to [agree, decide] on a strategy to deal with these [robots, drones] in case their attacks grow worse."`
   npc
     government "Wanderer"
     system Kaliptari
@@ -579,7 +579,7 @@ mission "Wanderers: Mereti Observation"
       `  The scientists begin working to install the new equipment on your ship. As they do so, Tele'ek tells you, "We also hope to collect further [information, intelligence] on the combat capabilities and [tactics, decision making] of the drones. If their [network, communications] are not vulnerable, we must instead find a way to defeat them in battle." You agree to stay in the target system for long enough to observe some of the drones fighting each other.`
         accept
   on enter "Mesuket"
-    dialog `You enter the target system and begin recording the communications of the Kor Mereti drones. It may take a while to collect all the data that the Wanderers need, but they have set up their equipment to notify you when it is done collecting.`
+    dialogue `You enter the target system and begin recording the communications of the Kor Mereti drones. It may take a while to collect all the data that the Wanderers need, but they have set up their equipment to notify you when it is done collecting.`
   npc disable
     government "Kor Sestor"
     system "Mesuket"
@@ -588,7 +588,7 @@ mission "Wanderers: Mereti Observation"
       names "kor sestor"
       variant
         "Met Par Tek 53"
-    dialog `The Wanderer recording device chirps at you to let you know that it has collected enough data. Time to return to <planet>.`
+    dialogue `The Wanderer recording device chirps at you to let you know that it has collected enough data. Time to return to <planet>.`
   npc
     government "Kor Sestor"
     system "Mesuket"
@@ -711,7 +711,7 @@ mission "Wanderers: Kor Efret 3"
         "Model 512" 2
         "Model 256" 4
         "Model 128" 7
-    dialog `The Kor Mereti drones have been neutralized. You should land on the planet and reconnect with Rek and the Korath engineers.`
+    dialogue `The Kor Mereti drones have been neutralized. You should land on the planet and reconnect with Rek and the Korath engineers.`
   npc
     government "Kor Efret"
     personality staying heroic
@@ -839,7 +839,7 @@ mission "Wanderers: Kor Mereti Hacking"
       `  You aren't sure what you can say that would be helpful to him, so you return to your ship and prepare to travel to the Mekislepti system to test out the Kor Mereti hacking program.`
         accept
   on enter "Mekislepti"
-    dialog
+    dialogue
       `When you enter the Mekislepti system, an entire fleet of drones moves to intercept you. Hardly daring to hope, you press the button that activates the Wanderer program. For a fraction of a second, the drones' engines stop firing and they drift as if out of control. Then, with renewed purpose, they move to attack you.`
       `  Oh well. It was worth a shot.`
   npc
@@ -1051,7 +1051,7 @@ mission "Wanderers: Mind 6"
       `  Soon the engineers are done, and you return to your ship to take off. As soon as you depart, the bay doors, which seemed inactive when you first entered, slam shut, and your ship's sensors detect Korath hull repair drones swarming over the doors, welding them in place and piling new layers of hull material on top of them. There is no longer any possibility of returning to the bay to retrieve the Mind. And meanwhile, it is time to rejoin the battle...`
         launch
   on enter
-    dialog `This star system is in utter chaos. A vast number of Mereti drones are here. Some are attacking each other. Others are attacking the Wanderers. And still others, sadly, seem intent on attacking you. You'll have to hold them off as long as you can, while trying to stay on the good side of the drones that now seem to be defending you.`
+    dialogue `This star system is in utter chaos. A vast number of Mereti drones are here. Some are attacking each other. Others are attacking the Wanderers. And still others, sadly, seem intent on attacking you. You'll have to hold them off as long as you can, while trying to stay on the good side of the drones that now seem to be defending you.`
   npc disable
     government " Kor Mereti "
     personality staying heroic
@@ -1064,7 +1064,7 @@ mission "Wanderers: Mind 6"
         "Model 64" 6
         "Model 32" 8
         "Model 16" 12
-    dialog `The last of the hostile Kor Mereti drones are destroyed; the remaining drones are not attacking the Wanderers. It is not entirely clear what has happened, but hopefully the Wanderers back on <planet> will have gained some information through the backdoor connection to their AI.`
+    dialogue `The last of the hostile Kor Mereti drones are destroyed; the remaining drones are not attacking the Wanderers. It is not entirely clear what has happened, but hopefully the Wanderers back on <planet> will have gained some information through the backdoor connection to their AI.`
   npc
     government "Kor Mereti"
     personality staying heroic
@@ -1330,7 +1330,7 @@ mission "Wanderers: Tour 2"
       `  Rek talks with them for a while, then explains to you, "They want to be in control of their own journey, rather than being no more than 'living cargo' aboard an alien ship. It sounds like this is a matter of honor." Since it seems like the only option, you agree to let them follow you to <planet> in their own ship.`
         accept
   on visit
-    dialog "You've reached your destination, but the Korath ship is not here yet."
+    dialogue "You've reached your destination, but the Korath ship is not here yet."
   npc accompany save
     government "Kor Efret"
     personality escort
@@ -1359,7 +1359,7 @@ mission "Wanderers: Tour 3"
       `  You agree to escort the Kor Efret ship on a journey through the wormhole to <planet>.`
         accept
   on visit
-    dialog "You've reached your destination, but the Korath ship is not here yet."
+    dialogue "You've reached your destination, but the Korath ship is not here yet."
   npc accompany save
     government "Kor Efret"
     personality escort
@@ -1381,7 +1381,7 @@ mission "Wanderers: Tour 4"
       `  The Korath are eager to see more places of natural beauty like this one, and the Wanderer leaders suggest that they travel to <planet> next, to see how the Wanderers have built farms that will produce rich crops year after year without depleting the soil.`
         accept
   on visit
-    dialog "You've reached your destination, but the Korath ship is not here yet."
+    dialogue "You've reached your destination, but the Korath ship is not here yet."
   npc accompany save
     government "Kor Efret"
     personality escort
@@ -1410,7 +1410,7 @@ mission "Wanderers: Tour 5"
       `  You agree to escort the Korath ship to <planet>. Hopefully they won't be blown to bits by an Unfettered fleet; that would be quite a diplomatic disaster.`
         accept
   on visit
-    dialog "You've reached your destination, but the Korath ship is not here yet."
+    dialogue "You've reached your destination, but the Korath ship is not here yet."
   npc accompany save
     government "Kor Efret"
     personality escort
@@ -1439,7 +1439,7 @@ mission "Wanderers: Tour 6"
       `  Rek tries to assure them that in their own territory, they will be working and living side by side with the Wanderers, in joint control of their worlds. It's not clear if they believe her. "We have seen enough," says the same Korath. "We will return to our world now." You agree to escort them back through the Eye and to make sure they reach <planet> safely.`
         accept
   on visit
-    dialog "You've reached your destination, but the Korath ship is not here yet."
+    dialogue "You've reached your destination, but the Korath ship is not here yet."
   npc accompany save
     government "Kor Efret"
     personality escort
@@ -1504,7 +1504,7 @@ mission "Wanderers: Sestor Scanning"
       `  The Wanderers begin loading the scanning equipment onto your ship, and ask you to land on each of the planets in Kor Sestor space to collect measurements. "Bring the [data, results] back to us to be analysed," says Iriket.`
         accept
   on stopover
-    dialog `That was the last of the Kor Sestor planets that the Wanderers asked you to scan. Time to return to <planet> with the data.`
+    dialogue `That was the last of the Kor Sestor planets that the Wanderers asked you to scan. Time to return to <planet> with the data.`
 
 
 
@@ -1542,9 +1542,9 @@ mission "Wanderers: Sestor Attack"
       `  You return to your ship and quickly fire up the engines...`
         launch
   on enter
-    dialog `There is indeed a Kor Sestor fleet here, but it is nowhere near as large as the messenger indicated. Either the messenger was exaggerating, or some of the fleet has already fled.`
+    dialogue `There is indeed a Kor Sestor fleet here, but it is nowhere near as large as the messenger indicated. Either the messenger was exaggerating, or some of the fleet has already fled.`
   on visit
-    dialog `There are still Kor Sestor ships overhead. You should take off and rejoin the battle.`
+    dialogue `There are still Kor Sestor ships overhead. You should take off and rejoin the battle.`
   on accept
     event "wanderers: battle in solifar begins"
   on complete
@@ -1690,7 +1690,7 @@ mission "Wanderers: Sestor Search"
   to fail
     has "wanderers: found the sestor fleet"
   on enter "Aya'k'k"
-    dialog
+    dialogue
       `A major battle was fought here. The burned-out hulks of several Wanderer ships are floating around in space, along with a handful of disabled Kor Sestor ships. Meanwhile, Wanderer ships are engaged in some sort of rescue or evacuation process on the surface of Varu K'prai. But there is no sign of the bulk of the Kor Sestor fleet.`
   npc
     system "Aya'k'k"
@@ -1705,7 +1705,7 @@ mission "Wanderers: Sestor Search"
     fleet "Kor Sestor Large"
   on enter "Alnilam"
     set "wanderers: found the sestor fleet"
-    dialog
+    dialogue
       `Quite a few Kor Sestor ships are in orbit around the anarchist world of Zenith, and you detect many more on the surface. Strangely, the Kor Sestor ships are not attacking the local pirate and anarchist fleets.`
       `  That is probably not a good sign.`
 
@@ -1935,7 +1935,7 @@ mission "Wanderers: Sestor: Farpoint Attack 1"
       variant
         "Kar Ik Vot 349 (Defender)"
         "Kar Ik Vot 349 (Trapper)"
-    dialog `The Kor Sestor fleet has been driven off. Time to land and see what Danforth thinks you should do next.`
+    dialogue `The Kor Sestor fleet has been driven off. Time to land and see what Danforth thinks you should do next.`
   npc
     government "Navy (Oathkeeper)"
     personality heroic
@@ -2097,7 +2097,7 @@ mission "Wanderers: Sestor: Bomb Zenith 1"
       `  Alarm sirens begin to sound. "Don't wait here to defend us," says Danforth. "Go straight to <planet> and deploy the device. It may be the only way you can save us."`
         launch
   on enter
-    dialog
+    dialogue
       `Danforth wasn't joking when he said that the device may be your only chance. There are almost a dozen Sestor capital ships in the system, and countless smaller craft tearing the Navy to shreds.`
       `Even the Quarg warships are having trouble with an opposing fleet this size. Perhaps a more powerful fleet could defeat the automata, but it would be a difficult battle.`
   on complete
@@ -2270,7 +2270,7 @@ mission "Wanderers: Sestor: Farpoint Attack 2"
         "Far Lek 14" 17
         "Far Osk 27" 13
         "Met Par Tek 53" 2
-    dialog `Against all odds, all the Kor Sestor ships attacking the Oathkeepers have been destroyed. Maybe you won't have to use Danforth's bomb after all.`
+    dialogue `Against all odds, all the Kor Sestor ships attacking the Oathkeepers have been destroyed. Maybe you won't have to use Danforth's bomb after all.`
 
 
 
@@ -2293,7 +2293,7 @@ mission "Wanderers: Sestor: Scattered Remnant"
         "Tek Far 71 - Lek"
         "Far Lek 14" 10
         "Met Par Tek 53" 2
-    dialog `All of the Kor Sestor ships in this system have been eliminated.`
+    dialogue `All of the Kor Sestor ships in this system have been eliminated.`
   npc kill
     system "Canopus"
     government "Kor Sestor"
@@ -2306,7 +2306,7 @@ mission "Wanderers: Sestor: Scattered Remnant"
         "Tek Far 71 - Lek (Close Quarters)"
         "Far Lek 14" 8
         "Met Par Tek 53 (Sniper)" 2
-    dialog `All of the Kor Sestor ships in this system have been eliminated.`
+    dialogue `All of the Kor Sestor ships in this system have been eliminated.`
   npc kill
     system "Betelgeuse"
     government "Kor Sestor"
@@ -2327,7 +2327,7 @@ mission "Wanderers: Sestor: Scattered Remnant"
         "Tek Far 78 - Osk (Close Quarters)"
         "Far Osk 27" 6
         "Met Par Tek 53 (Sniper)"
-    dialog `All of the Kor Sestor ships in this system have been eliminated.`
+    dialogue `All of the Kor Sestor ships in this system have been eliminated.`
   npc kill
     system "Capella"
     government "Kor Sestor"
@@ -2341,7 +2341,7 @@ mission "Wanderers: Sestor: Scattered Remnant"
         "Far Lek 14" 8
         "Tek Far 78 - Osk"
         "Far Osk 27" 8
-    dialog `All of the Kor Sestor ships in this system have been eliminated.`
+    dialogue `All of the Kor Sestor ships in this system have been eliminated.`
   npc kill
     system "Mebsuta"
     government "Kor Sestor"
@@ -2355,7 +2355,7 @@ mission "Wanderers: Sestor: Scattered Remnant"
         "Far Lek 14" 9
         "Tek Far 78 - Osk (Close Quarters)"
         "Far Osk 27" 7
-    dialog `All of the Kor Sestor ships in this system have been eliminated.`
+    dialogue `All of the Kor Sestor ships in this system have been eliminated.`
   npc kill
     system "Rigel"
     government "Kor Sestor"
@@ -2369,7 +2369,7 @@ mission "Wanderers: Sestor: Scattered Remnant"
         "Far Lek 14" 7
         "Tek Far 78 - Osk (Close Quarters)"
         "Far Osk 27" 6
-    dialog `All of the Kor Sestor ships in this system have been eliminated.`
+    dialogue `All of the Kor Sestor ships in this system have been eliminated.`
   npc kill
     system "Castor"
     government "Kor Sestor"
@@ -2381,7 +2381,7 @@ mission "Wanderers: Sestor: Scattered Remnant"
         "Kar Ik Vot 349 (Defender)"
         "Met Par Tek 53" 2
         "Met Par Tek 53 (Sniper)"
-    dialog `All of the Kor Sestor ships in this system have been eliminated.`
+    dialogue `All of the Kor Sestor ships in this system have been eliminated.`
   npc kill
     system "Wazn"
     government "Kor Sestor"
@@ -2393,7 +2393,7 @@ mission "Wanderers: Sestor: Scattered Remnant"
         "Kar Ik Vot 349 (Attacker)"
         "Met Par Tek 53"
         "Met Par Tek 53 (Sniper)" 2
-    dialog `All of the Kor Sestor ships in this system have been eliminated.`
+    dialogue `All of the Kor Sestor ships in this system have been eliminated.`
   npc kill
     system "Miaplacidus"
     government "Kor Sestor"
@@ -2404,7 +2404,7 @@ mission "Wanderers: Sestor: Scattered Remnant"
       variant
         "Kar Ik Vot 349 (Trapper)"
         "Met Par Tek 53 (Sniper)" 3
-    dialog `All of the Kor Sestor ships in this system have been eliminated.`
+    dialogue `All of the Kor Sestor ships in this system have been eliminated.`
   npc kill
     system "Kursa"
     government "Kor Sestor"
@@ -2419,7 +2419,7 @@ mission "Wanderers: Sestor: Scattered Remnant"
         "Far Lek 14" 17
         "Far Osk 27" 13
         "Met Par Tek 53 (Sniper)" 2
-    dialog `All of the Kor Sestor ships in this system have been eliminated.`
+    dialogue `All of the Kor Sestor ships in this system have been eliminated.`
   npc kill
     system "Saiph"
     government "Kor Sestor"
@@ -2434,7 +2434,7 @@ mission "Wanderers: Sestor: Scattered Remnant"
         "Far Lek 14" 17
         "Far Osk 27" 13
         "Met Par Tek 53" 2
-    dialog `All of the Kor Sestor ships in this system have been eliminated.`
+    dialogue `All of the Kor Sestor ships in this system have been eliminated.`
     
 
 
@@ -2806,10 +2806,10 @@ mission "Wanderers: Sestor: Scan Drones"
       has "Wanderers: Sestor Alt: Return to Wanderers: done"
   waypoint "Silikatakfar"
   on enter "Silikatakfar"
-    dialog `You fire up your ship's sensors and log the identification numbers and markings of the Kor Sestor ships in this system.`
+    dialogue `You fire up your ship's sensors and log the identification numbers and markings of the Kor Sestor ships in this system.`
   waypoint "Asikafarnut"
   on enter "Asikafarnut"
-    dialog `You fire up your ship's sensors and log the identification numbers and markings of the Kor Sestor ships in this system.`
+    dialogue `You fire up your ship's sensors and log the identification numbers and markings of the Kor Sestor ships in this system.`
   on offer
     conversation
       `You are pleased to discover that the Wanderer colony here has grown into a small city; about a hundred thousand Wanderers have already come through the Eye to settle here. Sobari Tele'ek meets you in the airport. He has lost half of his feathers - his whole face is bare and scaly - but rather than wasting away like Rek he has gained considerable weight, and now towers over you.`
@@ -3055,7 +3055,7 @@ mission "Wanderers: Sestor: Factory 2"
   to offer
     has "Wanderers: Sestor: Factory 1: done"
   on visit
-    dialog `There are still Kor Sestor drones overhead. You should go fight them off so the Korath exiles are not attacked while trying to disable the factories.`
+    dialogue `There are still Kor Sestor drones overhead. You should go fight them off so the Korath exiles are not attacked while trying to disable the factories.`
   on offer
     event "wanderers: asikafarnut battle"
     conversation
@@ -3269,7 +3269,7 @@ mission "Wanderers: Sestor: Final"
     has "Wanderers: Sestor: Factory 3: done"
   waypoint "Kor Fel'tar"
   on enter "Kor Fel'tar"
-    dialog `There are several Kor Mereti and Kor Sestor drones in this system, and they don't look friendly. You should report to the Wanderers that the exiles have begun manufacturing drones of their own.`
+    dialogue `There are several Kor Mereti and Kor Sestor drones in this system, and they don't look friendly. You should report to the Wanderers that the exiles have begun manufacturing drones of their own.`
   on offer
     event "wanderers: exiles hostile" 4
     conversation

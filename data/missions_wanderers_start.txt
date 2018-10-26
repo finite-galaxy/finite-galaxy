@@ -211,7 +211,7 @@ mission "Human Cultural Archives"
       `  Your question seems to utterly confuse him. "Information," he says. "It is what you call a non-rival good, is it not? When I give information, I do not lose it. Sharing it costs me nothing. The librarians, surely they will understand this. Have no fear."`
         accept
   on visit
-    dialog
+    dialogue
       `The station has a small museum gift shop that sells a copy of the entire archive on a data card. It only costs 40 credits, but because you have done a horrible job at managing your finances you do not have even that much cash on hand right now.`
       `  Go earn some money, then return here.`
   on complete
@@ -660,7 +660,7 @@ mission "Wanderers: Jump Drive Source"
   to complete
     has "Unfettered: Jump Drive Source: offered"
   on visit
-    dialog `You have not yet tried to sell the Unfettered Hai a Jump Drive. Return here after doing so.`
+    dialogue `You have not yet tried to sell the Unfettered Hai a Jump Drive. Return here after doing so.`
   on complete
     conversation
       `You report to Iktat Rek. "Most [intriguing, disturbing]," he says. "If what you say of these Alpha humans is [correct, unbiased], they are a dangerous foe. And in exchange for so many jump drives, no doubt the Unfettered have [supplied, furnished] them with many weapons." He pauses to think for a minute, then says, "You must track them. There is a Wanderer [device, technology] that can help you. But I must ask our [elders, government] for permission before giving you access to it. I will meet you back in the spaceport soon."`
@@ -730,13 +730,13 @@ mission "Wanderers: Alpha Surveillance A"
   
   waypoint "Ehma Ti"
   on enter "Ehma Ti"
-    dialog "You cycle the airlock and dump a handful of the tiny Wanderer surveillance cubes into space. By the time they've drifted a few meters away, your ship's sensors are unable to detect them."
+    dialogue "You cycle the airlock and dump a handful of the tiny Wanderer surveillance cubes into space. By the time they've drifted a few meters away, your ship's sensors are unable to detect them."
   waypoint "Wah Yoot"
   on enter "Wah Yoot"
-    dialog "You cycle the airlock and dump a handful of the tiny Wanderer surveillance cubes into space. By the time they've drifted a few meters away, your ship's sensors are unable to detect them."
+    dialogue "You cycle the airlock and dump a handful of the tiny Wanderer surveillance cubes into space. By the time they've drifted a few meters away, your ship's sensors are unable to detect them."
   waypoint "Hi Yahr"
   on enter "Hi Yahr"
-    dialog "You cycle the airlock and dump a handful of the tiny Wanderer surveillance cubes into space. By the time they've drifted a few meters away, your ship's sensors are unable to detect them."
+    dialogue "You cycle the airlock and dump a handful of the tiny Wanderer surveillance cubes into space. By the time they've drifted a few meters away, your ship's sensors are unable to detect them."
   
   on offer
     conversation
@@ -787,15 +787,15 @@ mission "Wanderers: Alpha Surveillance B"
   
   waypoint "Ehma Ti"
   on enter "Ehma Ti"
-    dialog "Using the transmitter that came with the surveillance cubes, you send out the signal and receive back the encrypted fleet activity recordings."
+    dialogue "Using the transmitter that came with the surveillance cubes, you send out the signal and receive back the encrypted fleet activity recordings."
     "reputation: Hai (Unfettered)" <?= -1
   waypoint "Wah Yoot"
   on enter "Wah Yoot"
-    dialog "Using the transmitter that came with the surveillance cubes, you send out the signal and receive back the encrypted fleet activity recordings."
+    dialogue "Using the transmitter that came with the surveillance cubes, you send out the signal and receive back the encrypted fleet activity recordings."
     "reputation: Hai (Unfettered)" <?= -1
   waypoint "Hi Yahr"
   on enter "Hi Yahr"
-    dialog "Using the transmitter that came with the surveillance cubes, you send out the signal and receive back the encrypted fleet activity recordings."
+    dialogue "Using the transmitter that came with the surveillance cubes, you send out the signal and receive back the encrypted fleet activity recordings."
     "reputation: Hai (Unfettered)" <?= -1
   
   on offer
@@ -964,19 +964,19 @@ mission "Wanderers: Alpha Surveillance D"
         accept
   
   on enter "Hi Yahr"
-    dialog `As you enter the system, Elias checks his tracker device. "Yup, I'm picking up signs of a jump-enabled Jupiter," he says. "The path goes east, beyond the edge of Hai space."`
+    dialogue `As you enter the system, Elias checks his tracker device. "Yup, I'm picking up signs of a jump-enabled Jupiter," he says. "The path goes east, beyond the edge of Hai space."`
   on enter "Celeborim"
-    dialog `Elias checks the tracker again. "Southeast, from here," he says. Meanwhile, your ship's warning sirens begin going off; there are alien ships here, and they don't seem friendly.`
+    dialogue `Elias checks the tracker again. "Southeast, from here," he says. Meanwhile, your ship's warning sirens begin going off; there are alien ships here, and they don't seem friendly.`
   on enter "Asikafarnut"
-    dialog `Elias checks the tracker. "Still due southeast," he says. "And I hope those Korath ships aren't on the same side as the Alphas."`
+    dialogue `Elias checks the tracker. "Still due southeast," he says. "And I hope those Korath ships aren't on the same side as the Alphas."`
   on enter "Sobarati"
-    dialog `Elias fiddles with his tracking device for a while, and then gives up. "Sorry, I'm not reading any signals here. Maybe they jumped right over this system?"`
+    dialogue `Elias fiddles with his tracking device for a while, and then gives up. "Sorry, I'm not reading any signals here. Maybe they jumped right over this system?"`
   on enter "Ferukistek"
-    dialog `Elias says, "Found their trail. They've turned and headed east again, and maybe a little bit north."`
+    dialogue `Elias says, "Found their trail. They've turned and headed east again, and maybe a little bit north."`
   on enter "Makferuti"
-    dialog `Elias frowns as he looks at the tracker's readout. "I think we've taken a wrong turn. No sign of jump drives being used in this system," he says.`
+    dialogue `Elias frowns as he looks at the tracker's readout. "I think we've taken a wrong turn. No sign of jump drives being used in this system," he says.`
   on enter "Host"
-    dialog `When you enter this system, your sensors pick up a Navy Jupiter in orbit around an Earth-like planet. It appears that you have found the Alpha base. "That's them," says Hanover. "I hope you're strong enough to destroy them." The Jupiter starts to launch fighters: Korath ones, not human ships. This might be a difficult fight...`
+    dialogue `When you enter this system, your sensors pick up a Navy Jupiter in orbit around an Earth-like planet. It appears that you have found the Alpha base. "That's them," says Hanover. "I hope you're strong enough to destroy them." The Jupiter starts to launch fighters: Korath ones, not human ships. This might be a difficult fight...`
   
   npc
     government "Kor Sestor"
@@ -993,7 +993,7 @@ mission "Wanderers: Alpha Surveillance D"
     system "Host"
     personality heroic nemesis staying vindictive target
     ship "Jupiter (Alpha)" "Giftbringer"
-    dialog "The Alpha Jupiter has been destroyed. You can now return to the Quarg ringworld and plan your next steps."
+    dialogue "The Alpha Jupiter has been destroyed. You can now return to the Quarg ringworld and plan your next steps."
   npc
     government "Alpha"
     system "Host"
@@ -1088,7 +1088,7 @@ mission "Wanderers: Alpha Surveillance F"
         accept
   
   on visit
-    dialog "You have reached <planet>, but you left Danforth's ship behind. Wait for him to arrive (or go back and refuel him, if necessary) and then return here."
+    dialogue "You have reached <planet>, but you left Danforth's ship behind. Wait for him to arrive (or go back and refuel him, if necessary) and then return here."
   
   npc accompany save
     government "Navy (Oathkeeper)"
@@ -1133,7 +1133,7 @@ mission "Wanderers: Alpha Surveillance G"
         "Met Par Tek 53 (Sniper)" 2
   
   on visit
-    dialog "You have reached <planet>, but you left Danforth's ship behind. Wait for him to arrive (or go back and refuel him, if necessary) and then return here."
+    dialogue "You have reached <planet>, but you left Danforth's ship behind. Wait for him to arrive (or go back and refuel him, if necessary) and then return here."
   
   on complete
     conversation
@@ -1360,7 +1360,7 @@ mission "Wanderers Invaded 1"
     ship "Deep River Transport" "Tok'tobar'tek La'a"
     ship "Deep River Transport" "Eka'ta Turuk'ta"
   on visit
-    dialog
+    dialogue
       `You have reached <planet>, but the Wanderer transports have not all arrived yet. You should take off and wait for them to catch up with you.`
 
 
@@ -1406,7 +1406,7 @@ mission "Wanderers Invaded 1B"
     ship "Deep River Transport" "Tok'tobar'tek La'a"
     ship "Deep River Transport" "Eka'ta Turuk'ta"
   on visit
-    dialog
+    dialogue
       `You have reached <planet>, but the Wanderer transports have not all arrived yet. You should take off and wait for them to catch up with you.`
   on complete
     log "Helped to evacuate some Wanderers from one of their worlds that is closest to Unfettered space."
@@ -1445,7 +1445,7 @@ mission "Wanderers Invaded 2"
   on accept
     event "battle for ik'kara'ka"
   on visit
-    dialog "There are still Unfettered warships overhead. You should take off again and assist in the fight."
+    dialogue "There are still Unfettered warships overhead. You should take off again and assist in the fight."
   npc evade
     personality staying
     system "Ik'kara'ka"
@@ -1544,7 +1544,7 @@ mission "Wanderers Invaded 3"
     ship "Deep River Transport" "Tok'tobar'tek La'a"
     ship "Deep River Transport" "Eka'ta Turuk'ta"
   on visit
-    dialog
+    dialogue
       `You have reached <planet>, but the Wanderer transports have not all arrived yet. You should take off and wait for them to catch up with you.`
 
 
@@ -1601,7 +1601,7 @@ mission "Wanderers Invaded 3C"
   on accept
     "reputation: Pug" >?= 1
   on complete
-    dialog
+    dialogue
       `You have collected some useful information on the nature of the "Eye." You should probably head to the spaceport and meet up with Iktat Rek.`
 
 
@@ -1819,7 +1819,7 @@ mission "Wanderers Solifuge Recon 2"
         "Solifuge (Tracker)"
         "Violin Spider" 6
         "Violin Spider (Tracker)" 6
-    dialog "That was the last of the new Unfettered ships. You can now report back to Tele'ek on <planet>."
+    dialogue "That was the last of the new Unfettered ships. You can now report back to Tele'ek on <planet>."
   on complete
     conversation
       `Tele'ek listens carefully as you outline the strengths and weaknesses of the new Unfettered carriers. "I am not greatly [concerned, frightened] by tiny fighters," he says. "The weapon that has done us most harm is their ion cannons, which no ship so small can [wield, carry]. But thank you for your assistance. Alas, we have no other [fights, brawls] for you to take part in right now, but if you visit the spaceport, you will find another evacuation fleet that needs an [escort, protector]."`
@@ -1856,7 +1856,7 @@ mission "Wanderers Evacuation 1"
     personality heroic staying
     fleet "Unfettered Large" 2
   on visit
-    dialog
+    dialogue
       `You have reached <planet>, but the Wanderer transports have not all arrived yet. You should take off and wait for them to catch up with you.`
 
 
@@ -1944,7 +1944,7 @@ mission "Wanderers Defend Sich'ka'ara"
       `  You agree to help them, and begin preparing your ship for takeoff...`
         launch
   on visit
-    dialog "There are still Unfettered warships overhead. You should take off again and assist in the fight."
+    dialogue "There are still Unfettered warships overhead. You should take off again and assist in the fight."
   npc evade
     personality staying coward
     government "Hai (Unfettered)"
@@ -2093,7 +2093,7 @@ mission "Wanderers Rescue 1"
       variant
         "Shield Beetle (Tracker)" 5
   on visit
-    dialog
+    dialogue
       "You have reached <planet>, but you will need to take off again and wait for both the Wanderer warships to be in-system as well."
 
 
@@ -2124,7 +2124,7 @@ mission "Wanderers Rescue 1B"
       variant
         "Lightning Bug" 12
   on visit
-    dialog
+    dialogue
       "You have reached <planet>, but you will need to take off again and wait for both the Wanderer warships to be in-system as well."
 
 
@@ -2203,7 +2203,7 @@ mission "Wanderers Rek 1"
       `  Eventually you are left alone with him. For a while he seems to just be gazing off into the distance, his eyes unfocused. Then he seems to realize that you are here and his eyes take on a new depth and alertness as he turns to look at you. Again speaking in your own language, he says, "Go visit the Sko'karak system and tell me what you find there." Then he shuts his eyes and falls asleep.`
         accept
   on enter "Sko'karak"
-    dialog
+    dialogue
       `You enter this system with high hopes that Rek, despite his weakened state, has sensed something significant happening here and sent you to discover it. But, your sensors pick up nothing out of the ordinary.`
 
 
@@ -2228,7 +2228,7 @@ mission "Wanderers Rek 2"
       `  He sighs. "If the Eye would only open, it would not matter. I do not understand why the keepers of the portal will not open it and let us flee from this war into a place of safety. Go again to Sko'karak, and look."`
         accept
   on enter "Sko'karak"
-    dialog
+    dialogue
       `You enter the system again, and do an even more detailed sensor sweep in case you missed something the first time. You find nothing.`
 
 
@@ -2255,7 +2255,7 @@ mission "Wanderers Rek 3"
       `  "No," she says, "go back one more time and look. If there is still nothing, we will [decide, consider] what to do next."`
         accept
   on enter "Sko'karak"
-    dialog
+    dialogue
       `This time when you enter the system, your sensors pick up some strange astronomical phenomenon out beyond the orbit of the farthest planet, a wisp of light like a gathering raincloud. It's not a wormhole, but it is a change. Perhaps it will be enough to give Rek hope.`
 
 
@@ -2323,7 +2323,7 @@ mission "Wanderers Ap'arak 2"
   on complete
     event "battle for ap'arak ends"
   on visit
-    dialog "There are still Unfettered warships overhead. You should take off again and assist in the fight."
+    dialogue "There are still Unfettered warships overhead. You should take off again and assist in the fight."
   npc evade
     personality staying heroic
     government "Hai (Unfettered)"

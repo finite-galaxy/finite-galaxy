@@ -7,7 +7,7 @@ mission "Liberate Kornephoros"
   to offer
     has "Defend Sabik: done"
   on fail
-    dialog `You have failed an essential Free Worlds mission. If you want to complete the story line, revert to the autosave or another earlier snapshot of the game.`
+    dialogue `You have failed an essential Free Worlds mission. If you want to complete the story line, revert to the autosave or another earlier snapshot of the game.`
   
   on offer
     conversation
@@ -115,7 +115,7 @@ mission "Liberate Kornephoros"
         "Mercury" 2
   
   on visit
-    dialog "There are still Navy ships patrolling overhead. Staying on <planet> while your allies are dying in orbit would be a very bad idea."
+    dialogue "There are still Navy ships patrolling overhead. Staying on <planet> while your allies are dying in orbit would be a very bad idea."
   
   on complete
     log "The Free Worlds have retaken the Kornephoros system, with heavy losses on both sides. And unfortunately, there is no sign of Katya; she may have been taken prisoner by the Navy."
@@ -164,7 +164,7 @@ mission "FW Prisoner Parole"
   to offer
     has "Liberate Kornephoros: done"
   on fail
-    dialog `You have failed an essential Free Worlds mission. If you want to complete the story line, revert to the autosave or another earlier snapshot of the game.`
+    dialogue `You have failed an essential Free Worlds mission. If you want to complete the story line, revert to the autosave or another earlier snapshot of the game.`
   
   npc accompany save
     government "Free Worlds"
@@ -174,7 +174,7 @@ mission "FW Prisoner Parole"
     ship "Blackbird" "Southern Luxury"
   
   on visit
-    dialog "You have reached <planet>, but you left part of your convoy behind! Better depart and wait for them to arrive in this star system."
+    dialogue "You have reached <planet>, but you left part of your convoy behind! Better depart and wait for them to arrive in this star system."
   
   on offer
     conversation
@@ -191,7 +191,7 @@ mission "FW Prisoner Parole"
     event "start of hostilities" 8
   
   on complete
-    dialog `You drop off the Navy prisoners on <planet>. Now, it's time to get back to Deep with your fleet before the ceasefire ends.`
+    dialogue `You drop off the Navy prisoners on <planet>. Now, it's time to get back to Deep with your fleet before the ceasefire ends.`
 
 
 
@@ -204,7 +204,7 @@ mission "FW Prisoner Parole 2"
   to offer
     has "FW Prisoner Parole: done"
   on fail
-    dialog `You have failed an essential Free Worlds mission. If you want to complete the story line, revert to the autosave or another earlier snapshot of the game.`
+    dialogue `You have failed an essential Free Worlds mission. If you want to complete the story line, revert to the autosave or another earlier snapshot of the game.`
   
   npc accompany save
     government "Free Worlds"
@@ -214,7 +214,7 @@ mission "FW Prisoner Parole 2"
     ship "Blackbird" "Southern Luxury"
   
   on visit
-    dialog "You have reached <planet>, but you left part of your convoy behind! Better depart and wait for them to arrive in this star system."
+    dialogue "You have reached <planet>, but you left part of your convoy behind! Better depart and wait for them to arrive in this star system."
   
   on complete
     log "Returned some Navy prisoners of war, after they gave their parole and promised not to take part in any future battles against the Free Worlds."
@@ -268,7 +268,7 @@ mission "FW Syndicate Diplomacy 1"
   passengers 1
   blocked `Alondo contacts you and says, "Captain, you're going to need a bunk free for me. Do you have space?" You do not, so you should complete or abort another mission to make room for him, then return here.`
   on fail
-    dialog `You have failed an essential Free Worlds mission. If you want to complete the story line, revert to the autosave or another earlier snapshot of the game.`
+    dialogue `You have failed an essential Free Worlds mission. If you want to complete the story line, revert to the autosave or another earlier snapshot of the game.`
   
   on offer
     conversation
@@ -324,7 +324,7 @@ mission "FW Syndicate Diplomacy 1B"
     attributes "dirt belt"
   passengers 1
   on fail
-    dialog `You have failed an essential Free Worlds mission. If you want to complete the story line, revert to the autosave or another earlier snapshot of the game.`
+    dialogue `You have failed an essential Free Worlds mission. If you want to complete the story line, revert to the autosave or another earlier snapshot of the game.`
   
   npc
     personality heroic
@@ -390,7 +390,7 @@ mission "FW Syndicate Diplomacy 1C"
     attributes "dirt belt" "south"
   passengers 1
   on fail
-    dialog `You have failed an essential Free Worlds mission. If you want to complete the story line, revert to the autosave or another earlier snapshot of the game.`
+    dialogue `You have failed an essential Free Worlds mission. If you want to complete the story line, revert to the autosave or another earlier snapshot of the game.`
 
   npc
     personality heroic
@@ -421,7 +421,7 @@ mission "FW Syndicate Diplomacy 1D"
     has "FW Syndicate Diplomacy 1C: done"
   passengers 1
   on fail
-    dialog `You have failed an essential Free Worlds mission. If you want to complete the story line, revert to the autosave or another earlier snapshot of the game.`
+    dialogue `You have failed an essential Free Worlds mission. If you want to complete the story line, revert to the autosave or another earlier snapshot of the game.`
   
   on offer
     log "Tried to convince Poisonwood, a world adjacent to Free Worlds territory, to switch sides. But, they are fiercely loyal to the Republic because the Navy freed them from being dominated by Alpha warlords decades ago."
@@ -507,7 +507,7 @@ mission "FW Hope Recon 1"
   cargo sensors 10
   blocked `Freya contacts you and says, "<first>, you're going to need ten tons of cargo space for this next mission." You should return here after freeing up <capacity>.`
   on fail
-    dialog `You have failed an essential Free Worlds mission. If you want to complete the story line, revert to the autosave or another earlier snapshot of the game.`
+    dialogue `You have failed an essential Free Worlds mission. If you want to complete the story line, revert to the autosave or another earlier snapshot of the game.`
   
   on offer
     conversation
@@ -529,7 +529,7 @@ mission "FW Hope Recon 1B"
   to offer
     has "FW Hope Recon 1: done"
   on fail
-    dialog `You have failed an essential Free Worlds mission. If you want to complete the story line, revert to the autosave or another earlier snapshot of the game.`
+    dialogue `You have failed an essential Free Worlds mission. If you want to complete the story line, revert to the autosave or another earlier snapshot of the game.`
 
 
 
@@ -649,7 +649,7 @@ mission "FW Plasma Testing 1"
   to offer
     has "FW Hope Recon 1B: done"
   on fail
-    dialog `You have failed an essential Free Worlds mission. If you want to complete the story line, revert to the autosave or another earlier snapshot of the game.`
+    dialogue `You have failed an essential Free Worlds mission. If you want to complete the story line, revert to the autosave or another earlier snapshot of the game.`
 
 
 
@@ -663,7 +663,7 @@ mission "FW Plasma Testing 1B"
     has "FW Plasma Testing 1: done"
   waypoint "Ildaria"
   on fail
-    dialog `You have failed an essential Free Worlds mission. If you want to complete the story line, revert to the autosave or another earlier snapshot of the game.`
+    dialogue `You have failed an essential Free Worlds mission. If you want to complete the story line, revert to the autosave or another earlier snapshot of the game.`
   
   npc accompany save
     government "Free Worlds"
@@ -674,10 +674,10 @@ mission "FW Plasma Testing 1B"
     personality plunders staying target
     system "Ildaria"
     ship "Leviathan (Heavy)" "Red Nile"
-    dialog `The <npc> has been eliminated. Time to return to <destination> and report to Barmy Edward.`
+    dialogue `The <npc> has been eliminated. Time to return to <destination> and report to Barmy Edward.`
   
   on visit
-    dialog "You have reached <planet>, but your mission is not complete - either the Red Nile is not destroyed, or you have left the Walloping Window-Blind behind."
+    dialogue "You have reached <planet>, but your mission is not complete - either the Red Nile is not destroyed, or you have left the Walloping Window-Blind behind."
   
   on offer
     log "People" "Edward Tivrusky" `Barmy Edward is the Chief Offensive Engineer at Kraz Cybernetics, known for his inventive and sometimes impractical weapon designs. Supposedly, his engineers gave him the "Barmy" sobriquet after an incident where an experimental epoxy cannon he was working on exploded and glued him to the ceiling.`
@@ -806,7 +806,7 @@ mission "FW Supply Convoy 1"
   to offer
     has "FW Plasma Testing 1B: done"
   on fail
-    dialog `You have failed an essential Free Worlds mission. If you want to complete the story line, revert to the autosave or another earlier snapshot of the game.`
+    dialogue `You have failed an essential Free Worlds mission. If you want to complete the story line, revert to the autosave or another earlier snapshot of the game.`
   
   on offer
     conversation
@@ -841,7 +841,7 @@ mission "FW Supply Convoy 1"
         "Star Barge (Armed)" 10
   
   on visit
-    dialog "You have reached <planet>, but you left part of your convoy behind! Better depart and wait for them to arrive in this star system."
+    dialogue "You have reached <planet>, but you left part of your convoy behind! Better depart and wait for them to arrive in this star system."
   
   npc
     government "Pirate"
@@ -850,7 +850,7 @@ mission "FW Supply Convoy 1"
     fleet "Pirates South Small" 2
   
   on complete
-    dialog
+    dialogue
       `You make sure that all ten Star Barges have landed safely, then report to the quartermaster. He thanks you for your work, and mentions that Tomek has asked to see you in the spaceport bar.`
 
 
@@ -866,7 +866,7 @@ mission "FW Pirates 1"
   to offer
     has "FW Supply Convoy 1: done"
   on fail
-    dialog `You have failed an essential Free Worlds mission. If you want to complete the story line, revert to the autosave or another earlier snapshot of the game.`
+    dialogue `You have failed an essential Free Worlds mission. If you want to complete the story line, revert to the autosave or another earlier snapshot of the game.`
   
   on offer
     log "Tomek, from the Free Worlds council, is trying to decide how to best deal with the threat of the pirates to the south of Free Worlds space."
@@ -892,7 +892,7 @@ mission "FW Pirates 1"
     "salary: Free Worlds" = 800
   
   on complete
-    dialog
+    dialogue
       `You have scouted out all four pirate systems that Tomek asked you to visit. Time to head back to the spaceport bar and see if he is waiting for you.`
 
 
@@ -957,7 +957,7 @@ mission "FW Senate 1"
   to offer
     has "FW Pirates 1: done"
   on fail
-    dialog `You have failed an essential Free Worlds mission. If you want to complete the story line, revert to the autosave or another earlier snapshot of the game.`
+    dialogue `You have failed an essential Free Worlds mission. If you want to complete the story line, revert to the autosave or another earlier snapshot of the game.`
   
   on offer
     log "The Free Worlds have finally elected a Senate, which will be convening for the first time soon on Bourne."
@@ -978,7 +978,7 @@ mission "FW Senate 1B"
   passengers 1
   blocked "You have reached <origin>, but you do not have a bunk free for Senator Huygens. You should return here after freeing up a bunk."
   on fail
-    dialog `You have failed an essential Free Worlds mission. If you want to complete the story line, revert to the autosave or another earlier snapshot of the game.`
+    dialogue `You have failed an essential Free Worlds mission. If you want to complete the story line, revert to the autosave or another earlier snapshot of the game.`
   
   on offer
     log "People" "Ijs Springborn" `Ijs is now working to found the Conservatory, a publicly funded Free Worlds university that will have a particular focus on terraforming technology. Their goal is to make terraforming methods efficient enough that even Dirt Belt worlds will be able to afford them.`
@@ -1134,7 +1134,7 @@ mission "FW Pirates 2"
   to offer
     has "FW Senate 1B: done"
   on fail
-    dialog `You have failed an essential Free Worlds mission. If you want to complete the story line, revert to the autosave or another earlier snapshot of the game.`
+    dialogue `You have failed an essential Free Worlds mission. If you want to complete the story line, revert to the autosave or another earlier snapshot of the game.`
   
   on offer
     conversation
@@ -1189,7 +1189,7 @@ mission "FW Pirates 2"
     fleet "Free Worlds Large"
   
   on complete
-    dialog "Your patrol fleet is still busy finding landing spots, but your work is done. Time to head to the spaceport bar and see if Tomek is there."
+    dialogue "Your patrol fleet is still busy finding landing spots, but your work is done. Time to head to the spaceport bar and see if Tomek is there."
 
 
 
@@ -1213,7 +1213,7 @@ mission "FW Pirates 3"
     log "Given orders by the Free Worlds Senate to escort a diplomatic mission to the anarchist planet Thule. Tomek is not happy about bargaining with the pirates instead of fighting them."
   
   on visit
-    dialog "You have reached <planet>, but you left the <npc> behind! Better depart and wait for them to arrive in this star system."
+    dialogue "You have reached <planet>, but you left the <npc> behind! Better depart and wait for them to arrive in this star system."
   
   on complete
     karma ++
@@ -1386,7 +1386,7 @@ mission "FW Pirates 3.1B"
   to offer
     has "FW Pirates 3.1: done"
   on fail
-    dialog `You have failed an essential Free Worlds mission. If you want to complete the story line, revert to the autosave or another earlier snapshot of the game.`
+    dialogue `You have failed an essential Free Worlds mission. If you want to complete the story line, revert to the autosave or another earlier snapshot of the game.`
   
   on offer
     log "Disobeyed the Free Worlds Senate by helping to launch an attack on the pirates in the Antares system, rather than pursuing diplomatic relations with the anarchist worlds. It is unclear how long the Free Worlds can afford to maintain control of the system, however."
@@ -1407,7 +1407,7 @@ mission "FW Pirates 3.2B"
   to offer
     has "FW Pirates 3.2A: done"
   on fail
-    dialog `You have failed an essential Free Worlds mission. If you want to complete the story line, revert to the autosave or another earlier snapshot of the game.`
+    dialogue `You have failed an essential Free Worlds mission. If you want to complete the story line, revert to the autosave or another earlier snapshot of the game.`
   
   on offer
     log "Disobeyed the Free Worlds Senate by helping to launch an attack on the pirate home world of Greenrock. Captured the planet after a massive battle, but it is unclear how long the Free Worlds can afford to keep them subdued by force."
@@ -1429,7 +1429,7 @@ mission "FW Pirates 4"
   to offer
     has "FW Pirates 3: done"
   on fail
-    dialog `You have failed an essential Free Worlds mission. If you want to complete the story line, revert to the autosave or another earlier snapshot of the game.`
+    dialogue `You have failed an essential Free Worlds mission. If you want to complete the story line, revert to the autosave or another earlier snapshot of the game.`
   
   npc evade
     personality plunders
@@ -1496,7 +1496,7 @@ mission "FW Pirates 4B"
   to offer
     has "FW Pirates 4: done"
   on fail
-    dialog `You have failed an essential Free Worlds mission. If you want to complete the story line, revert to the autosave or another earlier snapshot of the game.`
+    dialogue `You have failed an essential Free Worlds mission. If you want to complete the story line, revert to the autosave or another earlier snapshot of the game.`
   
   npc accompany save
     personality timid escort
@@ -1504,7 +1504,7 @@ mission "FW Pirates 4B"
     ship "Falcon" "F.S. Terebinth"
   
   on visit
-    dialog "You have reached <planet>, but you left the <npc> behind! Better depart and wait for them to arrive in this star system."
+    dialogue "You have reached <planet>, but you left the <npc> behind! Better depart and wait for them to arrive in this star system."
   
   on offer
     log "The elders on Thule do not want to join the Free Worlds, but they have agreed to crack down on pirate activity in their system and to welcome Free Worlds visitors to their planet."
@@ -1537,7 +1537,7 @@ mission "FW Pirates 4.1"
   to offer
     has "fw pirates: victory"
   on fail
-    dialog `You have failed an essential Free Worlds mission. If you want to complete the story line, revert to the autosave or another earlier snapshot of the game.`
+    dialogue `You have failed an essential Free Worlds mission. If you want to complete the story line, revert to the autosave or another earlier snapshot of the game.`
   
   on offer
     log "People" "Tomek Voigt" `Tomek was removed from the Council and placed under house arrest by the Senate after he disobeyed their orders and tried to launch an attack to capture the Pirate world of Greenrock rather than pursuing the diplomatic solution that the Senate preferred.`
@@ -1624,7 +1624,7 @@ mission "FW Refinery 1"
   to offer
     has "FW Pirates 4B: done"
   on fail
-    dialog `You have failed an essential Free Worlds mission. If you want to complete the story line, revert to the autosave or another earlier snapshot of the game.`
+    dialogue `You have failed an essential Free Worlds mission. If you want to complete the story line, revert to the autosave or another earlier snapshot of the game.`
   
   on offer
     log "People" "Tomek Voigt" `Tomek was removed from the Council and placed under house arrest by the Senate after he disobeyed their orders and tried to launch an attack to capture the Pirate world of Greenrock rather than pursuing the diplomatic solution that the Senate preferred.`
@@ -1682,7 +1682,7 @@ mission "FW Refinery 1A"
   cargo "refinery equipment" 10
   blocked "You have reached <origin>, but you do not have ten tons of cargo space free for the equipment. Return here when you have made more space available."
   on fail
-    dialog `You have failed an essential Free Worlds mission. If you want to complete the story line, revert to the autosave or another earlier snapshot of the game.`
+    dialogue `You have failed an essential Free Worlds mission. If you want to complete the story line, revert to the autosave or another earlier snapshot of the game.`
   
   on offer
     conversation
@@ -1691,7 +1691,7 @@ mission "FW Refinery 1A"
   
   on complete
     log "Brought supplies to Smuggler's Den to help upgrade the station into a working deuterium refinery. No further orders from the Free Worlds, so this might be a good time to find ways to earn more money on the side."
-    dialog
+    dialogue
       `After unloading the supplies, you send Freya and JJ a message letting them know that you arrived safely. You're a bit surprised when they don't immediately send you a message back. Something else must be going on that is occupying their attention. After months of just traveling around following other people's orders, it feels odd to be left to your own devices for a change.`
     set "fw first chapter done"
     event "navy occupying the south" 8
