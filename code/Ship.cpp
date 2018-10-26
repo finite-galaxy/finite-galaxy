@@ -1577,7 +1577,7 @@ void Ship::DoGeneration()
     if(currentSystem)
     {
       double scale = .2 + 1.8 / (.001 * position.Length() + 1);
-      fuel += currentSystem->SolarWind() * .03 * scale * (sqrt(attributes.Get("ramscoop")) + .05 * scale);
+      fuel += currentSystem->SolarWind() * .3 * scale * (sqrt(attributes.Get("ramscoop")) + .5 * scale);
       energy += currentSystem->SolarPower() * scale * attributes.Get("solar collection");
     }
     

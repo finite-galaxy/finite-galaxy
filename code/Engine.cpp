@@ -540,7 +540,7 @@ void Engine::Step(bool isActive)
   if(flagship)
   {
     info.SetBar("fuel", flagship->Fuel(),
-      flagship->Attributes().Get("fuel capacity") * .01);
+      flagship->Attributes().Get("fuel capacity") * .001);
     info.SetBar("energy", flagship->Energy());
     double heat = flagship->Heat();
     info.SetBar("heat", min(1., heat));
