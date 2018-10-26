@@ -13,7 +13,7 @@ mission "FW Reconciliation 1"
   npc accompany save
     personality escort timid
     government "Navy Intelligence"
-    ship "Mars (Mark II)" "Eye of Horus"
+    ship "Mars (Anti-Missile)" "Eye of Horus"
   
   on visit
     dialog "You have reached <planet>, but you left Raven's ship behind! Better depart and wait for them to arrive in this star system."
@@ -125,7 +125,7 @@ mission "FW Reconciliation 1B"
   npc accompany save
     personality escort timid
     government "Navy Intelligence"
-    ship "Mars (Mark II)" "Eye of Horus"
+    ship "Mars (Anti-Missile)" "Eye of Horus"
   
   on visit
     dialog "You have reached <planet>, but you've either left Raven's ship behind, or failed to destroy some of the Syndicate ships watching you."
@@ -169,7 +169,7 @@ mission "FW Reconciliation 1C"
   npc accompany save
     personality escort timid
     government "Navy Intelligence"
-    ship "Mars (Mark II)" "Eye of Horus"
+    ship "Mars (Anti-Missile)" "Eye of Horus"
   
   on visit
     dialog "You have reached <planet>, but you left Raven's ship behind! Better depart and wait for them to arrive in this star system."
@@ -214,7 +214,7 @@ mission "FW Reconciliation 2"
   npc accompany save
     personality escort timid
     government "Navy Intelligence"
-    ship "Mars (Mark II)" "Eye of Horus"
+    ship "Mars (Anti-Missile)" "Eye of Horus"
   
   on visit
     dialog "You have reached <planet>, but you left Raven's ship behind! Better depart and wait for them to arrive in this star system."
@@ -305,7 +305,7 @@ mission "FW Reconciliation 2A"
   npc accompany save
     personality escort timid
     government "Navy Intelligence"
-    ship "Mars (Mark II)" "Eye of Horus"
+    ship "Mars (Anti-Missile)" "Eye of Horus"
   
   on visit
     dialog "You have reached <planet>, but you left Raven's ship behind! Better depart and wait for them to arrive in this star system."
@@ -419,7 +419,7 @@ mission "FW Defend Farpoint"
       names "pirate"
       variant
         "Leviathan (Heavy)"
-        "Firebird (Plasma)" 2
+        "Firebird (Laser)" 2
         "Hawk (Rocket)" 2
     fleet
       names "pirate"
@@ -617,7 +617,7 @@ mission "FW Embassy 1C"
       names "pirate"
       variant
         "Leviathan (Heavy)"
-        "Firebird (Plasma)" 2
+        "Firebird (Laser)" 2
     fleet
       names "pirate"
       variant

@@ -1087,8 +1087,8 @@ mission "FW Alphas 1.1"
     system Graffias
     ship "Leviathan (Heavy)" "Dread Lord"
     ship "Leviathan" "Dominator"
-    ship "Firebird (Plasma)" "Vengeance"
-    ship "Firebird (Missile)" "Revenant"
+    ship "Firebird (Laser)" "Vengeance"
+    ship "Firebird (Torpedo)" "Revenant"
     ship "Firebird" "Draugbreath"
   
   on visit
@@ -1178,8 +1178,8 @@ mission "FW Alphas 1.2"
     system Graffias
     ship "Leviathan (Heavy)" "Dread Lord"
     ship "Leviathan" "Dominator"
-    ship "Firebird (Plasma)" "Vengeance"
-    ship "Firebird (Missile)" "Revenant"
+    ship "Firebird (Laser)" "Vengeance"
+    ship "Firebird (Torpedo)" "Revenant"
     ship "Firebird" "Draugbreath"
   
   on visit
@@ -1378,8 +1378,8 @@ mission "FW Bloodsea 1.1A"
   npc accompany save
     government Merchant
     personality escort heroic
-    ship "Behemoth (Heavy)" "F.S. Bungles"
-    ship "Behemoth (Heavy)" "F.S. Humble"
+    ship "Behemoth (Free Worlds)" "F.S. Bungles"
+    ship "Behemoth (Free Worlds)" "F.S. Humble"
   
   on visit
     dialog "You have reached <planet>, but you left the freighters behind! Better depart and wait for them to arrive in this star system."
@@ -1408,8 +1408,8 @@ mission "FW Bloodsea 1.1B"
   npc accompany save
     government Merchant
     personality escort heroic
-    ship "Behemoth (Heavy)" "F.S. Bungles"
-    ship "Behemoth (Heavy)" "F.S. Humble"
+    ship "Behemoth (Free Worlds)" "F.S. Bungles"
+    ship "Behemoth (Free Worlds)" "F.S. Humble"
   
   on visit
     dialog "You have reached <planet>, but you left the freighters behind! Better depart and wait for them to arrive in this star system."
@@ -1506,7 +1506,7 @@ mission "FW Bloodsea 1.2A"
     fleet
       names pirate
       variant
-        "Firebird (Plasma)"
+        "Firebird (Laser)"
         "Raven (Afterburner)" 2
         "Hawk (Rocket)" 2
         "Fury (Flamethrower)" 3

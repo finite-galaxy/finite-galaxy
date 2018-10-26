@@ -6,6 +6,7 @@ shipyard "Navy Variants"
   "Jupiter (Jump)"
   "Jupiter (Mark II)"
   "Mars"
+  "Mars (Anti-Missile)"
   "Mars (Mark II)"
   "Mercury"
   "Mercury (Mark II)"
@@ -314,6 +315,28 @@ ship "Mars"
   explode "medium explosion" 15
   "final explode" "final explosion small"
   description "The Navy Mars is designed for engaging targets at short range, and also serves as the Navy's mobile sensor platform, scanning ships for illegal equipment or cargo."
+
+
+ship "Mars" "Mars (Anti-Missile)"
+  outfits
+    "A250 Atomic Thruster"
+    "A375 Atomic Steering"
+
+    "Particle Cannon" 2
+    "Heavy Anti-Missile Turret"
+
+    "D23-QP Shield Generator"
+    "NT-200 Nucleovoltaic"
+    "LP072a Battery Pack"
+    "Cooling Ducts"
+    "Cargo Scanner" 3
+    "Fuel Barrel" 60
+    "Hyperdrive"
+    "Outfit Scanner"
+    "Small Radar Jammer" 2
+    "Tactical Scanner"
+    "Fragmentation Grenades" 5
+    "Laser Rifle" 10
 
 
 ship "Mars" "Mars (Mark II)"

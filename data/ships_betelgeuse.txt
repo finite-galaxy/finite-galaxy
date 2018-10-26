@@ -1,28 +1,23 @@
 shipyard "Betelgeuse Variants"
   "Behemoth"
+  "Behemoth (Free Worlds)"
   "Behemoth (Hai)"
-  "Behemoth (Heavy)"
+  "Behemoth (Laser)"
+  "Behemoth (Particle)"
+  "Behemoth (Plasma)"
   "Behemoth (Proton)"
   "Behemoth (Speedy)"
   "Berserker"
   "Berserker (Afterburner)"
   "Berserker (Miner)"
   "Firebird"
-  "Firebird (Hai Shields)"
-  "Firebird (Hai Weapons)"
-  "Firebird (Missile)"
-  "Firebird (Plasma)"
-  "Hauler I"
-  "Hauler I (Hai)"
-  "Hauler II"
-  "Hauler II (Hai)"
-  "Hauler III"
-  "Hauler III (Hai)"
+  "Firebird (Hai)"
+  "Firebird (Laser)"
+  "Firebird (Torpedo)"
   "Heavy Shuttle"
   "Heavy Shuttle (Armed)"
   "Leviathan"
-  "Leviathan (Hai Engines)"
-  "Leviathan (Hai Weapons)"
+  "Leviathan (Hai)"
   "Leviathan (Heavy)"
   "Leviathan (Laser)"
   "Light Shuttle"
@@ -58,25 +53,28 @@ ship "Behemoth"
     "X3700 Ion Thruster"
     "X3200 Ion Steering"
 
-    "Heavy Laser Turret" 4
+    "Sidewinder Missile" 100
+    "Sidewinder Missile Rack" 2
+    "Sidewinder Missile Launcher" 2
+    "6X Blaster Turret" 4
     "Heavy Anti-Missile Turret" 2
 
     "D41-HY Shield Generator"
-    "NT-200 Nucleovoltaic"
+    "Fission Reactor"
     "LP144a Battery Pack"
+    "Liquid Nitrogen Cooler"
     "Fuel Barrel" 60
-    "Scram Drive"
-    "Small Radar Jammer"
+    "Hyperdrive"
   engine -34 154
   engine 34 154
   gun -27 -83
   gun 27 -83
-  turret -34 -64 "Heavy Laser Turret"
+  turret -34 -64 "6X Blaster Turret"
   turret 34 -64 "Heavy Anti-Missile Turret"
-  turret -58 11 "Heavy Laser Turret"
-  turret 58 11 "Heavy Laser Turret"
+  turret -58 11 "6X Blaster Turret"
+  turret 58 11 "6X Blaster Turret"
   turret -24 78 "Heavy Anti-Missile Turret"
-  turret 24 78 "Heavy Laser Turret"
+  turret 24 78 "6X Blaster Turret"
   leak "leak" 30 50
   leak "flame" 30 80
   leak "big leak" 50 30
@@ -88,63 +86,15 @@ ship "Behemoth"
   description "The Behemoth is a recent ship design from Betelgeuse Shipyards, designed as an alternative to the Syndicate Bulk Freighter. Although its cargo capacity is somewhat lower, it is also more manoeuvrable, and packs a heavier armament by default."
 
 
-ship "Behemoth" "Behemoth (Hai)"
-  outfits
-    `"Benga" Atomic Thruster`
-    `"Biroo" Atomic Steering`
-    `"Benga" Atomic Steering`
-
-    "Sidewinder Missile" 100
-    "Sidewinder Missile Launcher" 2
-    "Pulse Turret" 6
-
-    "Diamond Regenerator"
-    "Boulder Reactor"
-    "Ravine Batteries"
-    "Liquid Nitrogen Cooler"
-    "Fuel Pod" 6
-    "Hyperdrive"
-    "Large Radar Jammer"
-    "Outfits Expansion" 6
-
-
-ship "Behemoth" "Behemoth (Heavy)"
+ship "Behemoth" "Behemoth (Free Worlds)"
   outfits
     "Greyhound Plasma Thruster"
     "Impala Plasma Steering"
 
-    "Torpedo" 60
-    "Torpedo Launcher" 2
-    "4X Blaster Turret" 2
-    "Plasma Turret" 2
-    "Heavy Anti-Missile Turret" 2
-
-    "D94-YV Shield Generator"
-    "Fusion Reactor"
-    "Supercapacitor"
-    "Liquid Helium Cooler"
-    "Liquid Nitrogen Cooler"
-    "Fuel Barrel" 60
-    "Hyperdrive"
-    "Outfits Expansion" 6
-    "Laser Rifle" 16
-  turret "4X Blaster Turret"
-  turret "4X Blaster Turret"
-  turret "Plasma Turret"
-  turret "Plasma Turret"
-  turret "Heavy Anti-Missile Turret"
-  turret "Heavy Anti-Missile Turret"
-
-
-ship "Behemoth" "Behemoth (Proton)"
-  outfits
-    "A250 Atomic Thruster"
-    "A125 Atomic Steering"
-    "A375 Atomic Steering"
-
-    "Sidewinder Missile" 100
-    "Sidewinder Missile Launcher" 2
-    "Proton Turret" 4
+    "Heavy Rocket" 40
+    "Heavy Rocket Rack" 2
+    "Heavy Rocket Launcher" 2
+    "Modified Blaster Quad Turret" 4
     "Heavy Anti-Missile Turret" 2
 
     "D94-YV Shield Generator"
@@ -152,15 +102,101 @@ ship "Behemoth" "Behemoth (Proton)"
     "LP144a Battery Pack"
     "Liquid Nitrogen Cooler"
     "Fuel Barrel" 60
-    "Scram Drive"
-    "Large Radar Jammer"
+    "Hyperdrive"
+    "Small Radar Jammer"
+    "Outfits Expansion" 4
+    "Fragmentation Grenades" 10
+    "Laser Rifle" 20
+
+
+ship "Behemoth" "Behemoth (Hai)"
+  outfits
+    `"Benga" Atomic Thruster`
+    `"Biroo" Atomic Steering`
+    `"Benga" Atomic Steering`
+
+    "Tracker" 112
+    "Tracker Storage Pod" 2
+    "Tracker Launcher" 2
+    "Pulse Turret" 4
+    "Chameleon Anti-Missile" 2
+
+    "Diamond Regenerator"
+    "Boulder Reactor"
+    "Ravine Batteries"
+    "Williwaw Cooling" 4
+    "Fuel Pod" 6
+    "Hyperdrive"
     "Outfits Expansion" 6
-  turret "Proton Turret"
-  turret "Proton Turret"
-  turret "Proton Turret"
-  turret "Proton Turret"
-  turret "Heavy Anti-Missile Turret"
-  turret "Heavy Anti-Missile Turret"
+
+
+ship "Behemoth" "Behemoth (Laser)"
+  outfits
+    "X3700 Ion Thruster"
+    "X3200 Ion Steering"
+
+    "Sidewinder Missile" 100
+    "Sidewinder Missile Rack" 2
+    "Sidewinder Missile Launcher" 2
+    "Heavy Laser Turret" 4
+    "Heavy Anti-Missile Turret" 2
+
+    "D41-HY Shield Generator"
+    "Fission Reactor"
+    "LP144a Battery Pack"
+    "Liquid Nitrogen Cooler"
+    "Fuel Barrel" 60
+    "Hyperdrive"
+
+
+ship "Behemoth" "Behemoth (Particle)"
+  outfits
+    "X3700 Ion Thruster"
+    "X3200 Ion Steering"
+
+    "Particle Turret" 4
+
+    "D41-HY Shield Generator"
+    "Fission Reactor"
+    "LP144a Battery Pack"
+    "Liquid Nitrogen Cooler"
+    "Fuel Barrel" 60
+    "Hyperdrive"
+    "Large Radar Jammer"
+    "Outfits Expansion" 5
+
+
+ship "Behemoth" "Behemoth (Plasma)"
+  outfits
+    "X3700 Ion Thruster"
+    "X3200 Ion Steering"
+
+    "Plasma Turret" 4
+
+    "D41-HY Shield Generator"
+    "Fission Reactor"
+    "LP144a Battery Pack"
+    "Liquid Nitrogen Cooler"
+    "Fuel Barrel" 60
+    "Hyperdrive"
+    "Large Radar Jammer"
+
+
+ship "Behemoth" "Behemoth (Proton)"
+  outfits
+    "X3700 Ion Thruster"
+    "X3200 Ion Steering"
+
+    "Proton Turret" 4
+
+    "D41-HY Shield Generator"
+    "Fission Reactor"
+    "LP144a Battery Pack"
+    "Liquid Nitrogen Cooler"
+    "Fuel Barrel" 60
+    "Hyperdrive"
+    "Large Radar Jammer"
+    "Outfits Expansion" 3
 
 
 ship "Behemoth" "Behemoth (Speedy)"
@@ -170,17 +206,18 @@ ship "Behemoth" "Behemoth (Speedy)"
     "A125 Atomic Steering"
 
     "Sidewinder Missile" 100
+    "Sidewinder Missile Rack" 2
     "Sidewinder Missile Launcher" 2
-    "Heavy Laser Turret" 6
+    "6X Blaster Turret" 4
+    "Heavy Anti-Missile Turret" 2
 
-    "D94-YV Shield Generator"
-    "Breeder Reactor"
+    "D41-HY Shield Generator"
+    "Fission Reactor"
     "LP144a Battery Pack"
     "Liquid Nitrogen Cooler"
     "Fuel Barrel" 60
-    "Scram Drive"
-    "Large Radar Jammer"
-    "Outfits Expansion" 6
+    "Hyperdrive"
+    "Outfits Expansion"
 
 
 
@@ -218,7 +255,8 @@ ship "Berserker"
 
     "D23-QP Shield Generator"
     "nGVF-CC Fuel Cell"
-    "LP036a Battery Pack"
+    "Supercapacitor"
+    "Small Radar Jammer"
     "Fuel Barrel" 40
     "Hyperdrive"
   engine -10 45
@@ -232,13 +270,13 @@ ship "Berserker"
   explode "tiny explosion" 10
   explode "small explosion" 15
   "final explode" "final explosion small"
-  description "Once one of the most popular interceptor-class ships, the Berserker's popularity is now waning in favor of more modern and versatile ships like the Hawk. Although limited numbers are still produced by Betelgeuse Shipyards, most Berserkers that are in service today are more than half a century old."
+  description "Once one of the most popular interceptor-class ships, the Berserker's popularity is now waning in favour of more modern and versatile ships like the Hawk. Although limited numbers are still produced by Betelgeuse Shipyards, most Berserkers that are in service today are more than half a century old."
 
 
 ship "Berserker" "Berserker (Afterburner)"
   outfits
-    "Chipmunk Plasma Thruster"
-    "Greyhound Plasma Steering"
+    "X2700 Ion Thruster"
+    "X2200 Ion Steering"
     "Afterburner"
 
     "Gatling Round" 12000
@@ -247,10 +285,10 @@ ship "Berserker" "Berserker (Afterburner)"
 
     "D23-QP Shield Generator"
     "nGVF-CC Fuel Cell"
-    "LP036a Battery Pack"
+    "Supercapacitor"
+    "Small Radar Jammer"
     "Fuel Barrel" 40
     "Hyperdrive"
-    "Ramscoop"
 
 
 ship "Berserker" "Berserker (Miner)"
@@ -266,6 +304,7 @@ ship "Berserker" "Berserker (Miner)"
     "Asteroid Scanner"
     "Fuel Barrel" 40
     "Hyperdrive"
+    "Small Radar Jammer"
 
 
 
@@ -296,24 +335,26 @@ ship "Firebird"
   outfits
     "X3700 Ion Thruster"
     "X3200 Ion Steering"
+    "Afterburner"
 
-    "Heavy Laser Cannon" 4
-    "Heavy Laser Turret" 2
+    "Particle Cannon" 4
+    "2X Blaster Turret" 2
 
     "D41-HY Shield Generator"
     "RT-I Radiothermal"
-    "nGVF-AA Fuel Cell"
     "LP144a Battery Pack"
+    "Liquid Water Cooler"
     "Fuel Barrel" 40
     "Hyperdrive"
+    "Small Radar Jammer" 2
   engine -33 65
   engine 33 65
-  gun -28 -27 "Heavy Laser Cannon"
-  gun 28 -27 "Heavy Laser Cannon"
-  gun -39 -13 "Heavy Laser Cannon"
-  gun 39 -13 "Heavy Laser Cannon"
-  turret -5 3 "Heavy Laser Turret"
-  turret 5 3 "Heavy Laser Turret"
+  gun -28 -27 "Particle Cannon"
+  gun 28 -27 "Particle Cannon"
+  gun -39 -13 "Particle Cannon"
+  gun 39 -13 "Particle Cannon"
+  turret -5 3 "2X Blaster Turret"
+  turret 5 3 "2X Blaster Turret"
   leak "leak" 50 50
   leak "flame" 30 80
   explode "tiny explosion" 18
@@ -324,321 +365,59 @@ ship "Firebird"
   description "The Betelgeuse Shipyards Firebird is a warship with a long and storied past; Firebirds fought on both sides of the Alpha Wars over half a millennium ago, and although the equipment and systems have been upgraded continuously since then, the basic design remains almost the same. The Firebird is also a very rugged ship and easy to repair; supposedly a few of the Firebirds that fought in those wars are still in service today."
 
 
-ship "Firebird" "Firebird (Hai Shields)"
+ship "Firebird" "Firebird (Hai)"
   outfits
-    "X3700 Ion Thruster"
-    "A375 Atomic Steering"
+    `"Biroo" Atomic Thruster`
+    `"Biroo" Atomic Steering`
 
-    "Plasma Cannon" 4
-    "Bullfrog Anti-Missile" 2
+    "Pulse Cannon" 4
+    "Pulse Turret" 2
 
     "Diamond Regenerator"
-    "Corundum Regenerator" 2
-    "Breeder Reactor"
-    "Fissure Batteries"
-    "Liquid Nitrogen Cooler"
-    "Williwaw Cooling"
-    "Fuel Pod" 4
-    "Hyperdrive"
-    "Outfits Expansion" 2
-
-
-ship "Firebird" "Firebird (Hai Weapons)"
-  outfits
-    "X3700 Ion Thruster"
-    "X3200 Ion Steering"
-
-    "Pulse Cannon" 2
-    "Ion Cannon" 2
-    "Chameleon Anti-Missile"
-    "Bullfrog Anti-Missile"
-
-    "D41-HY Shield Generator"
     "Geode Reactor"
     "Gorge Batteries"
     "Williwaw Cooling" 2
     "Fuel Pod" 4
     "Hyperdrive"
+    "Small Radar Jammer" 2
 
 
-ship "Firebird" "Firebird (Missile)"
-  outfits
-    "Impala Plasma Thruster"
-    "A375 Atomic Steering"
-
-    "Meteor Missile" 70
-    "Torpedo" 60
-    "Meteor Missile Launcher" 2
-    "Torpedo Launcher" 2
-    "Heavy Laser Turret" 2
-
-    "D94-YV Shield Generator"
-    "Fission Reactor"
-    "LP072a Battery Pack"
-    "Fuel Barrel" 40
-    "Hyperdrive"
-    "Outfits Expansion"
-
-
-ship "Firebird" "Firebird (Plasma)"
+ship "Firebird" "Firebird (Laser)"
   outfits
     "X3700 Ion Thruster"
-    "A375 Atomic Steering"
+    "X3200 Ion Steering"
+    "Afterburner"
 
-    "Plasma Cannon" 4
-    "4X Blaster Turret" 2
+    "Heavy Laser Cannon" 4
+    "Heavy Laser Turret" 2
 
     "D41-HY Shield Generator"
-    "Breeder Reactor"
-    "LP072a Battery Pack"
-    "LP036a Battery Pack"
-    "Liquid Nitrogen Cooler"
+    "RT-I Radiothermal"
+    "LP144a Battery Pack"
+    "Liquid Water Cooler"
     "Fuel Barrel" 40
     "Hyperdrive"
-    "Outfits Expansion"
+    "Small Radar Jammer" 2
 
 
-
-ship "Hauler I"
-  sprite "ship/hauler i"
-  thumbnail "thumbnail/hauler i"
-  attributes
-    category "Corvette"
-    licences
-      Pilot
-    "cost" 1430000
-    "shields" 2500
-    "hull" 3700
-    "required crew" 4
-    "bunks" 10
-    "mass" 250
-    "drag" 10.5
-    "heat dissipation" .6
-    "cargo space" 140
-    "outfit space" 390
-    "engine capacity" 80
-    "weapon capacity" 140
-    weapon
-      "blast radius" 60
-      "shield damage" 600
-      "hull damage" 300
-      "hit force" 900
+ship "Firebird" "Firebird (Torpedo)"
   outfits
-    "Greyhound Plasma Thruster"
-    "Impala Plasma Steering"
+    "X3700 Ion Thruster"
+    "X3200 Ion Steering"
+    "Afterburner"
 
-    "Meteor Missile" 80
-    "Meteor Missile Box" 2
-    "Meteor Missile Launcher" 2
-    "4X Blaster Turret" 2
-    "Heavy Anti-Missile Turret" 2
+    "Torpedo" 120
+    "Torpedo Storage Rack" 4
+    "Torpedo Launcher" 4
+    "2X Blaster Turret" 2
 
-    "D23-QP Shield Generator"
-    "S3 Thermionic"
+    "D41-HY Shield Generator"
+    "RT-I Radiothermal"
     "LP072a Battery Pack"
+    "Liquid Water Cooler"
     "Fuel Barrel" 40
     "Hyperdrive"
-    "Small Radar Jammer"
-  engine -45 122
-  engine 45 122
-  gun -15 -91
-  gun 15 -91
-  turret -26 -49 "4X Blaster Turret"
-  turret 26 -49 "4X Blaster Turret"
-  turret -19 77 "Heavy Anti-Missile Turret"
-  turret 19 77 "Heavy Anti-Missile Turret"
-  leak "leak" 60 50
-  leak "flame" 50 80
-  leak "big leak" 90 30
-  explode "tiny explosion" 20
-  explode "small explosion" 35
-  explode "medium explosion" 20
-  explode "large explosion" 5
-  "final explode" "final explosion medium"
-  description "Several centuries ago, in the early days of the Republic, the sudden increase in commerce and space travel led to high demand for cargo ships. Haulers were first created simply by bolting a cockpit and engine block onto a cargo container, and the basic design has not changed much since then."
-
-
-ship "Hauler I" "Hauler I (Hai)"
-  outfits
-    `"Biroo" Atomic Thruster`
-    `"Biroo" Atomic Steering`
-
-    "Tracker" 112
-    "Tracker Storage Pod" 2
-    "Tracker Launcher" 2
-    "4X Blaster Turret" 2
-    "Chameleon Anti-Missile" 2
-
-    "Corundum Regenerator"
-    "Geode Reactor"
-    "Gorge Batteries"
-    "Williwaw Cooling"
-    "Fuel Pod" 4
-    "Hyperdrive"
-    "Small Radar Jammer"
-    "Outfits Expansion"
-
-
-
-ship "Hauler II"
-  sprite "ship/hauler ii"
-  thumbnail "thumbnail/hauler ii"
-  attributes
-    category "Frigate"
-    licences
-      Pilot
-    "cost" 2340000
-    "shields" 2900
-    "hull" 5200
-    "required crew" 4
-    "bunks" 10
-    "mass" 360
-    "drag" 11.5
-    "heat dissipation" .6
-    "cargo space" 280
-    "outfit space" 390
-    "engine capacity" 80
-    "weapon capacity" 140
-    weapon
-      "blast radius" 80
-      "shield damage" 800
-      "hull damage" 400
-      "hit force" 1200
-  outfits
-    "Greyhound Plasma Thruster"
-    "Impala Plasma Steering"
-
-    "Meteor Missile" 80
-    "Meteor Missile Box" 2
-    "Meteor Missile Launcher" 2
-    "4X Blaster Turret" 2
-    "Heavy Anti-Missile Turret" 2
-
-    "D23-QP Shield Generator"
-    "S3 Thermionic"
-    "LP072a Battery Pack"
-    "Fuel Barrel" 40
-    "Hyperdrive"
-    "Small Radar Jammer"
-  engine -45 160
-  engine 45 160
-  gun -15 -128
-  gun 15 -128
-  turret -26 -85 "4X Blaster Turret"
-  turret 26 -85 "4X Blaster Turret"
-  turret -19 115 "Heavy Anti-Missile Turret"
-  turret 19 115 "Heavy Anti-Missile Turret"
-  leak "leak" 60 50
-  leak "flame" 40 80
-  leak "big leak" 80 30
-  explode "tiny explosion" 10
-  explode "small explosion" 25
-  explode "medium explosion" 30
-  explode "large explosion" 15
-  "final explode" "final explosion medium"
-  description "This is a mid-sized freighter, designed for a balance between cargo capacity and defensive capability. Centuries ago, various Hauler models made up nearly half of the merchant vessels in service, but today the design is considered somewhat outdated."
-
-
-ship "Hauler II" "Hauler II (Hai)"
-  outfits
-    `"Biroo" Atomic Thruster`
-    `"Biroo" Atomic Steering`
-
-    "Tracker" 112
-    "Tracker Storage Pod" 2
-    "Tracker Launcher" 2
-    "4X Blaster Turret" 2
-    "Chameleon Anti-Missile" 2
-
-    "Corundum Regenerator"
-    "Geode Reactor"
-    "Gorge Batteries"
-    "Williwaw Cooling"
-    "Fuel Pod" 4
-    "Hyperdrive"
-    "Small Radar Jammer"
-    "Outfits Expansion"
-
-
-
-ship "Hauler III"
-  sprite "ship/hauler iii"
-  thumbnail "thumbnail/hauler iii"
-  attributes
-    category "Frigate"
-    licences
-      Pilot
-    "cost" 3260000
-    "shields" 3300
-    "hull" 6700
-    "required crew" 4
-    "bunks" 10
-    "mass" 470
-    "drag" 12.5
-    "heat dissipation" .6
-    "cargo space" 420
-    "outfit space" 390
-    "engine capacity" 80
-    "weapon capacity" 140
-    weapon
-      "blast radius" 100
-      "shield damage" 1000
-      "hull damage" 500
-      "hit force" 1500
-  outfits
-    "Greyhound Plasma Thruster"
-    "Impala Plasma Steering"
-
-    "Meteor Missile" 80
-    "Meteor Missile Box" 2
-    "Meteor Missile Launcher" 2
-    "4X Blaster Turret" 2
-    "Heavy Anti-Missile Turret" 2
-
-    "D23-QP Shield Generator"
-    "S3 Thermionic"
-    "LP072a Battery Pack"
-    "Fuel Barrel" 40
-    "Hyperdrive"
-    "Small Radar Jammer"
-  engine -45 196
-  engine 45 196
-  gun -15 -165
-  gun 15 -165
-  turret -26 -122 "4X Blaster Turret"
-  turret 26 -122 "4X Blaster Turret"
-  turret -19 151 "Heavy Anti-Missile Turret"
-  turret 19 151 "Heavy Anti-Missile Turret"
-  leak "leak" 50 50
-  leak "flame" 40 80
-  leak "big leak" 80 30
-  explode "small explosion" 15
-  explode "medium explosion" 30
-  explode "large explosion" 20
-  explode "huge explosion" 5
-  "final explode" "final explosion large"
-  description "Considered by many to be outdated, there are nonetheless many Haulers still in service due to their combination of comparatively low price and simple construction. This large version of the Hauler provides the best tradeoff between price and cargo space."
-
-
-ship "Hauler III" "Hauler III (Hai)"
-  outfits
-    `"Biroo" Atomic Thruster`
-    `"Biroo" Atomic Steering`
-
-    "Tracker" 112
-    "Tracker Storage Pod" 2
-    "Tracker Launcher" 2
-    "4X Blaster Turret" 2
-    "Chameleon Anti-Missile" 2
-
-    "Corundum Regenerator"
-    "Geode Reactor"
-    "Gorge Batteries"
-    "Williwaw Cooling"
-    "Fuel Pod" 4
-    "Hyperdrive"
-    "Small Radar Jammer"
-    "Outfits Expansion"
+    "Small Radar Jammer" 2
 
 
 
@@ -687,8 +466,8 @@ ship "Heavy Shuttle"
 
 ship "Heavy Shuttle" "Heavy Shuttle (Armed)"
   outfits
-    "Chipmunk Plasma Thruster"
-    "Chipmunk Plasma Steering"
+    "X2700 Ion Thruster"
+    "X2200 Ion Steering"
 
     "1X Blaster Cannon" 2
 
@@ -697,6 +476,7 @@ ship "Heavy Shuttle" "Heavy Shuttle (Armed)"
     "LP036a Battery Pack"
     "Fuel Barrel" 50
     "Hyperdrive"
+    "Outfits Expansion" 2
 
 
 
@@ -737,6 +517,7 @@ ship "Leviathan"
     "Liquid Helium Cooler"
     "Fuel Barrel" 50
     "Hyperdrive"
+    "Large Radar Jammer"
   engine -25 125
   engine 25 125
   gun -39 -33 "Particle Cannon"
@@ -758,61 +539,41 @@ ship "Leviathan"
   description "The Betelgeuse Shipyards Leviathan has been in service since long before the Republic existed. Although considered today to be an outdated and clunky model, it is still a force to be reckoned with."
 
 
-ship "Leviathan" "Leviathan (Hai Engines)"
+ship "Leviathan" "Leviathan (Hai)"
   outfits
     `"Bondir" Atomic Thruster`
     `"Bondir" Atomic Steering`
 
-    "Particle Cannon" 4
-    "4X Blaster Turret" 2
+    "Ion Cannon" 4
     "Chameleon Anti-Missile" 2
 
-    "D67-TM Shield Generator"
+    "Diamond Regenerator" 2
     "Boulder Reactor"
     "Ravine Batteries"
-    "Liquid Helium Cooler"
+    "Williwaw Cooling" 4
     "Fuel Pod" 5
     "Hyperdrive"
-
-
-ship "Leviathan" "Leviathan (Hai Weapons)"
-  outfits
-    "Impala Plasma Thruster"
-    "A375 Atomic Steering"
-    "Afterburner"
-
-    "Tracker" 224
-    "Tracker Launcher" 4
-    "Heavy Laser Turret" 4
-
-    "Diamond Regenerator"
-    "Boulder Reactor"
-    "Ravine Batteries"
-    "Liquid Nitrogen Cooler"
-    "Fuel Pod" 5
-    "Scram Drive"
-    "Ramscoop"
+    "Outfits Expansion" 2
 
 
 ship "Leviathan" "Leviathan (Heavy)"
   outfits
-    "Impala Plasma Thruster"
-    "A375 Atomic Steering"
-    "Afterburner"
+    "A370 Atomic Thruster"
+    "A525 Atomic Steering"
 
-    "Meteor Missile" 70
-    "Torpedo" 60
-    "Meteor Missile Launcher" 2
-    "Torpedo Launcher" 2
-    "Heavy Laser Turret" 4
+    "Torpedo" 120
+    "Torpedo Storage Rack" 4
+    "Torpedo Launcher" 4
+    "Particle Turret" 2
 
     "D94-YV Shield Generator" 2
-    "Breeder Reactor"
+    "Fusion Reactor"
     "LP036a Battery Pack"
     "Liquid Nitrogen Cooler"
     "Fuel Barrel" 50
-    "Scram Drive"
-    "Ramscoop"
+    "Hyperdrive"
+    "Large Radar Jammer"
+    "Outfits Expansion" 7
 
 
 ship "Leviathan" "Leviathan (Laser)"
@@ -824,13 +585,11 @@ ship "Leviathan" "Leviathan (Laser)"
     "Heavy Laser Turret" 4
 
     "D94-YV Shield Generator"
-    "Armageddon Core"
-    "LP036a Battery Pack"
-    "Supercapacitor"
+    "Fusion Reactor"
+    "LP072a Battery Pack"
     "Liquid Helium Cooler"
     "Fuel Barrel" 50
     "Hyperdrive"
-    "Ramscoop"
 
 
 
@@ -893,4 +652,5 @@ ship "Light Shuttle" "Light Shuttle (Miner)"
     "Asteroid Scanner"
     "Fuel Barrel" 40
     "Hyperdrive"
+    "Outfits Expansion"
 
