@@ -24,8 +24,10 @@ ship "Combat Drone"
   thumbnail "thumbnail/combat drone"
   attributes
     category "Drone"
+#    manufacturer "Navy"
     licences
       Navy
+    "carried" 1
     "cost" 83000
     "hull" 700
     "automaton" 1
@@ -62,8 +64,10 @@ ship "Combat Fighter"
   thumbnail "thumbnail/lance"
   attributes
     category "Fighter"
+#    manufacturer "Navy"
     licences
       Navy
+    "carried" 2
     "cost" 93000
     "shields" 800
     "hull" 400
@@ -108,6 +112,7 @@ ship "Jupiter"
   thumbnail "thumbnail/carrier"
   attributes
     category "Destroyer"
+#    manufacturer "Navy"
     licences
       Jupiter
     "cost" 15200000
@@ -265,6 +270,7 @@ ship "Mars"
   thumbnail "thumbnail/gunboat"
   attributes
     category "Corvette"
+#    manufacturer "Navy"
     licences
       Mars
     "cost" 3200000
@@ -367,6 +373,7 @@ ship "Mercury"
   thumbnail "thumbnail/rainmaker"
   attributes
     category "Interceptor"
+#    manufacturer "Navy"
     licences
       Mercury
     "cost" 1580000
@@ -443,6 +450,7 @@ ship "Saturn"
   thumbnail "thumbnail/cruiser"
   attributes
     category "Frigate"
+#    manufacturer "Navy"
     licences
       Saturn
     "cost" 11200000
@@ -559,8 +567,10 @@ ship "Surveillance Drone"
   thumbnail "thumbnail/surveillance drone"
   attributes
     category "Drone"
+#    manufacturer "Navy"
     licences
       Navy
+    "carried" 1
     "cost" 50000
     "hull" 300
     "automaton" 1
@@ -592,6 +602,7 @@ ship "Venus"
   thumbnail "thumbnail/frigate"
   attributes
     category "Corvette"
+#    manufacturer "Navy"
     licences
       Venus
     "cost" 5200000
