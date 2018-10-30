@@ -29,8 +29,8 @@
 using namespace std;
 
 namespace {
-  const int ICON_TILE = 62;
-  const int ICON_COLS = 4;
+  const int ICON_TILE = 48;
+  const int ICON_COLS = 5;
   const double ICON_SIZE = ICON_TILE - 8;
 }
 
@@ -60,7 +60,7 @@ void ShopPanel::Step()
   if(scrollDetailsIntoView && mainDetailHeight > 0)
   {
     int mainTopY = Screen::Top();
-    int mainBottomY = Screen::Bottom() - 40;
+    int mainBottomY = Screen::Bottom() - 32;
     double selectedBottomY = selectedTopY + TileSize() + mainDetailHeight;
     // Scroll up until the bottoms match.
     if(selectedBottomY > mainBottomY)
@@ -169,8 +169,8 @@ void ShopPanel::DrawSidebar()
   int shipsHere = 0;
   for(const shared_ptr<Ship> &ship : player.Ships())
     shipsHere += !(ship->GetSystem() != player.GetSystem() || ship->IsDisabled());
-  if(shipsHere < 4)
-    point.X() += .5 * ICON_TILE * (4 - shipsHere);
+  if(shipsHere < 5)
+    point.X() += .5 * ICON_TILE * (5 - shipsHere);
   
   // Check whether flight check tooltips should be shown.
   Point mouse = GetUI()->GetMouse();
@@ -277,7 +277,7 @@ void ShopPanel::DrawButtons()
   point.X() += (SIDE_WIDTH - 20) - font.Width(credits);
   font.Draw(credits, point, bright);
   
-  const Font &bigFont = FontSet::Get(18);
+  const Font &bigFont = FontSet::Get(20);
   const Colour &hover = *GameData::Colours().Get("hover");
   const Colour &active = *GameData::Colours().Get("active");
   const Colour &inactive = *GameData::Colours().Get("inactive");
@@ -318,7 +318,7 @@ void ShopPanel::DrawButtons()
 
 void ShopPanel::DrawMain()
 {
-  const Font &bigFont = FontSet::Get(18);
+  const Font &bigFont = FontSet::Get(20);
   const Colour &dim = *GameData::Colours().Get("medium");
   const Colour &bright = *GameData::Colours().Get("bright");
   mainDetailHeight = 0;
@@ -568,7 +568,7 @@ bool ShopPanel::KeyDown(SDL_Keycode key, Uint16 mod, const Command &command)
     if(dragMain)
       MainUp();
     else
-      SideSelect(-4);
+      SideSelect(-5);
     return true;
   }
   else if(key == SDLK_DOWN)
@@ -576,7 +576,7 @@ bool ShopPanel::KeyDown(SDL_Keycode key, Uint16 mod, const Command &command)
     if(dragMain)
       MainDown();
     else
-      SideSelect(4);
+      SideSelect(5);
     return true;
   }
   else if(key == SDLK_PAGEUP)
