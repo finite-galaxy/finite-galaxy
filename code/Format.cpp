@@ -16,7 +16,7 @@ namespace {
   {
     int places = 0;
     do {
-      if(places && !(places % 3))
+      if(places && !(places % 3) && (value >= 10))
         result += ',';
       ++places;
       
@@ -80,8 +80,8 @@ string Format::Credits(int64_t value)
 
 
 
-// Convert the given number to a string, with at most one decimal place.
-// This is primarily for displaying ship and outfit attributes.
+// Convert the given number to a string, with at most three decimal places.
+// This is primarily for displaying outfit attributes.
 string Format::Number(double value)
 {
   if(!value)
@@ -90,26 +90,49 @@ string Format::Number(double value)
   string result;
   bool isNegative = (value < 0.);
   value = fabs(value);
-  
-  // Check if this is a whole number.
+  // Convert the integer part of the number to a string, adding commas if needed.
+  FormatInteger(floor(value), isNegative, result);
+ 
+  // Check if this is a whole number, then display up to three decimals.
   double decimal = modf(value, &value);
   if(decimal)
   {
-    if(decimal >= .95)
-    {
-      result += '0';
-      ++value;
+    int part = round(decimal * 1000);
+    part = part % 1000;
+    if(part) {
+      result += '.';
+      result += static_cast<char>('0' + static_cast<int>(floor(part/100)));
+      part = part % 100;
+      if(part) {
+        result += static_cast<char>('0' + static_cast<int>(floor(part/10))); 
+        part = part % 10;
+        if(part)
+          result += static_cast<char>('0' + static_cast<int>(part)); 
+      }
     }
-    else
-      result += static_cast<char>('0' + static_cast<int>(round(decimal * 10.)));
-    
-    result += '.';
   }
-  
-  // Convert the number to a string, adding commas if needed.
+  return result;
+}
+
+
+
+
+// Display a decimal number rounded to the nearest integer.
+// This is primarily for displaying ship info table attributes.
+string Format::Round(double value)
+{
+  if(!value)
+    return "0";
+
+  value = round(value);
+  string result;
+  bool isNegative = (value < 0.);
+  value = fabs(value);
+  // Convert the integer part of the number to a string, adding commas if needed.
   FormatInteger(value, isNegative, result);
   return result;
 }
+
 
 
 

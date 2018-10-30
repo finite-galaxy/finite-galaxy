@@ -16,9 +16,12 @@ public:
   // "M" for million, "B" for billion, or "T" for trillion. Any number
   // above 1 quadrillion is instead shown in scientific notation.
   static std::string Credits(int64_t value);
-  // Convert the given number to a string, with at most one decimal place.
-  // This is primarily for displaying ship and outfit attributes.
+  // Convert the given number to a string, with at most three decimal places.
+  // This is primarily for displaying outfit attributes.
   static std::string Number(double value);
+  // Display a decimal number rounded to the nearest integer.
+  // This is primarily for displaying ship info table attributes.
+  static std::string Round(double value);
   // Format the given value as a number with exactly the given number of
   // decimal places (even if they are all 0).
   static std::string Decimal(double value, int places);

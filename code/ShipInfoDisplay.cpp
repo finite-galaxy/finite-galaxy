@@ -234,25 +234,25 @@ void ShipInfoDisplay::UpdateAttributes(const Ship &ship, const Depreciation &dep
     if(attributes.Get("asteroid scan power"))
     {
       attributeLabels.push_back("asteroid scan range:");
-      attributeValues.push_back(Format::Number(100. * sqrt(attributes.Get("asteroid scan power"))));
+      attributeValues.push_back(Format::Round(100. * sqrt(attributes.Get("asteroid scan power"))));
       attributesHeight += 20;
     }
     if(attributes.Get("cargo scan power"))
     {
       attributeLabels.push_back("cargo scan range:");
-      attributeValues.push_back(Format::Number(100. * sqrt(attributes.Get("cargo scan power"))));
+      attributeValues.push_back(Format::Round(100. * sqrt(attributes.Get("cargo scan power"))));
       attributesHeight += 20;
     }
     if(attributes.Get("outfit scan power"))
     {
       attributeLabels.push_back("outfit scan range:");
-      attributeValues.push_back(Format::Number(100. * sqrt(attributes.Get("outfit scan power"))));
+      attributeValues.push_back(Format::Round(100. * sqrt(attributes.Get("outfit scan power"))));
       attributesHeight += 20;
     }
     if(attributes.Get("tactical scan power"))
     {
       attributeLabels.push_back("tactical scan range:");
-      attributeValues.push_back(Format::Number(100. * sqrt(attributes.Get("tactical scan power"))));
+      attributeValues.push_back(Format::Round(100. * sqrt(attributes.Get("tactical scan power"))));
       attributesHeight += 20;
     }
   }
@@ -278,38 +278,38 @@ void ShipInfoDisplay::UpdateAttributes(const Ship &ship, const Depreciation &dep
   {
     attributeLabels.push_back("    jump fuel:");
     if(!isGeneric)
-      attributeValues.push_back(Format::Number(hyperjumpfuel * fullMass * 0.001));
+      attributeValues.push_back(Format::Round(hyperjumpfuel * fullMass * 0.001));
     else
-      attributeValues.push_back(Format::Number(hyperjumpfuel * fullMass * 0.001)
-        + " / " + Format::Number(hyperjumpfuel * emptyMass * 0.001));
+      attributeValues.push_back(Format::Round(hyperjumpfuel * fullMass * 0.001)
+        + " / " + Format::Round(hyperjumpfuel * emptyMass * 0.001));
     attributesHeight += 20;
   }
   */
 
   attributeLabels.push_back("    maximum velocity:");
   if(afterburner)
-    attributeValues.push_back(Format::Number(60. * forwardThrust / attributes.Get("drag")) 
-      + " + " + Format::Number(60. * afterburner / attributes.Get("drag")));
+    attributeValues.push_back(Format::Round(60. * forwardThrust / attributes.Get("drag")) 
+      + " + " + Format::Round(60. * afterburner / attributes.Get("drag")));
   else
-    attributeValues.push_back(Format::Number(60. * forwardThrust / attributes.Get("drag")));
+    attributeValues.push_back(Format::Round(60. * forwardThrust / attributes.Get("drag")));
   attributesHeight += 20;  
 
   attributeLabels.push_back("    acceleration:");
   if(!isGeneric)
-    attributeValues.push_back(Format::Number(3600. * thruster / fullMass));
+    attributeValues.push_back(Format::Round(3600. * thruster / fullMass));
   else
-    attributeValues.push_back(Format::Number(3600. * thruster / fullMass)
-      + " / " + Format::Number(3600. * thruster / emptyMass));
+    attributeValues.push_back(Format::Round(3600. * thruster / fullMass)
+      + " / " + Format::Round(3600. * thruster / emptyMass));
   attributesHeight += 20;
 
   if(afterburner)
   {
     attributeLabels.push_back("    afterburner:");
     if(!isGeneric)
-      attributeValues.push_back(Format::Number(3600. * afterburner / fullMass));
+      attributeValues.push_back(Format::Round(3600. * afterburner / fullMass));
     else
-      attributeValues.push_back(Format::Number(3600. * afterburner / fullMass)
-        + " / " + Format::Number(3600. * afterburner / emptyMass));
+      attributeValues.push_back(Format::Round(3600. * afterburner / fullMass)
+        + " / " + Format::Round(3600. * afterburner / emptyMass));
     attributesHeight += 20;
   }
 
@@ -317,19 +317,19 @@ void ShipInfoDisplay::UpdateAttributes(const Ship &ship, const Depreciation &dep
   {
     attributeLabels.push_back("    reverse:");
     if(!isGeneric)
-      attributeValues.push_back(Format::Number(3600. * reverse / fullMass));
+      attributeValues.push_back(Format::Round(3600. * reverse / fullMass));
     else
-      attributeValues.push_back(Format::Number(3600. * reverse / fullMass)
-        + " / " + Format::Number(3600. * reverse / emptyMass));
+      attributeValues.push_back(Format::Round(3600. * reverse / fullMass)
+        + " / " + Format::Round(3600. * reverse / emptyMass));
     attributesHeight += 20;
   }
 
   attributeLabels.push_back("    turning:");
   if(!isGeneric)
-    attributeValues.push_back(Format::Number(60. * turning / fullMass));
+    attributeValues.push_back(Format::Round(60. * turning / fullMass));
   else
-    attributeValues.push_back(Format::Number(60. * turning / fullMass)
-      + " / " + Format::Number(60. * turning / emptyMass));
+    attributeValues.push_back(Format::Round(60. * turning / fullMass)
+      + " / " + Format::Round(60. * turning / emptyMass));
   attributesHeight += 20;
   
   // fuel/energy/heat table
@@ -341,17 +341,17 @@ void ShipInfoDisplay::UpdateAttributes(const Ship &ship, const Depreciation &dep
   attributesHeight += 30;
   
   tableLabels.push_back("idle:");
-  fuelTable.push_back(Format::Number(
+  fuelTable.push_back(Format::Round(
     60. * (attributes.Get("fuel generation")
       - attributes.Get("fuel consumption"))));
-  energyTable.push_back(Format::Number(
+  energyTable.push_back(Format::Round(
     60. * (attributes.Get("energy generation")
       + attributes.Get("solar collection")
       + attributes.Get("fuel energy")
       - attributes.Get("energy consumption")
       - (attributes.Get("bunks") / 60.))));
   double efficiency = ship.CoolingEfficiency();
-  heatTable.push_back(Format::Number(
+  heatTable.push_back(Format::Round(
     60. * (attributes.Get("heat generation")
       + attributes.Get("fuel heat")
       - efficiency * attributes.Get("cooling"))));
@@ -360,9 +360,9 @@ void ShipInfoDisplay::UpdateAttributes(const Ship &ship, const Depreciation &dep
   if(attributes.Get("cloak"))
   {
     tableLabels.push_back("cloaking:");
-    fuelTable.push_back(Format::Number(-60. * attributes.Get("cloaking fuel")));
-    energyTable.push_back(Format::Number(-60. * attributes.Get("cloaking energy")));
-    heatTable.push_back(Format::Number(60. * attributes.Get("cloaking heat")));
+    fuelTable.push_back(Format::Round(-60. * attributes.Get("cloaking fuel")));
+    energyTable.push_back(Format::Round(-60. * attributes.Get("cloaking energy")));
+    heatTable.push_back(Format::Round(60. * attributes.Get("cloaking heat")));
     attributesHeight += 20;
   }
   
@@ -377,44 +377,44 @@ void ShipInfoDisplay::UpdateAttributes(const Ship &ship, const Depreciation &dep
       firingHeat += it.second * it.first->FiringHeat() / it.first->Reload();
     }
   tableLabels.push_back("firing:");
-  fuelTable.push_back(Format::Number(60. * firingFuel));
-  energyTable.push_back(Format::Number(-60. * firingEnergy));
-  heatTable.push_back(Format::Number(60. * firingHeat));
+  fuelTable.push_back(Format::Round(60. * firingFuel));
+  energyTable.push_back(Format::Round(-60. * firingEnergy));
+  heatTable.push_back(Format::Round(60. * firingHeat));
   attributesHeight += 20;
   
   tableLabels.push_back("moving:");
-  fuelTable.push_back(Format::Number(
+  fuelTable.push_back(Format::Round(
     -60. * (max(attributes.Get("thrusting fuel"), attributes.Get("reverse thrusting fuel"))
       + attributes.Get("turning fuel")
       + attributes.Get("afterburner fuel"))));
-  energyTable.push_back(Format::Number(
+  energyTable.push_back(Format::Round(
     -60. * (max(attributes.Get("thrusting energy"), attributes.Get("reverse thrusting energy"))
       + attributes.Get("turning energy")
       + attributes.Get("afterburner energy"))));
-  heatTable.push_back(Format::Number(
+  heatTable.push_back(Format::Round(
     60. * (max(attributes.Get("thrusting heat"), attributes.Get("reverse thrusting heat"))
       + attributes.Get("turning heat")
       + attributes.Get("afterburner heat"))));
   attributesHeight += 20;  
   
   tableLabels.push_back("recovering:");
-  fuelTable.push_back(Format::Number(
+  fuelTable.push_back(Format::Round(
     -60. * (attributes.Get("shield fuel")
       + attributes.Get("hull fuel"))));
-  energyTable.push_back(Format::Number(
+  energyTable.push_back(Format::Round(
     -60. * (attributes.Get("shield energy")
       + attributes.Get("hull energy")
       + attributes.Get("cooling energy"))));
-  heatTable.push_back(Format::Number(
+  heatTable.push_back(Format::Round(
     60. * (attributes.Get("shield heat")
       + attributes.Get("hull heat")
       - ship.CoolingEfficiency() * attributes.Get("active cooling"))));
   attributesHeight += 20;  
   
   tableLabels.push_back("capacity:");
-  fuelTable.push_back(Format::Number(attributes.Get("fuel capacity")));
-  energyTable.push_back(Format::Number(attributes.Get("energy capacity")));
-  heatTable.push_back(Format::Number(60. * ship.HeatDissipation() * ship.MaximumHeat()));
+  fuelTable.push_back(Format::Round(attributes.Get("fuel capacity")));
+  energyTable.push_back(Format::Round(attributes.Get("energy capacity")));
+  heatTable.push_back(Format::Round(60. * ship.HeatDissipation() * ship.MaximumHeat()));
   // Pad by 10 pixels on the top and bottom.
   attributesHeight += 30;
 }
