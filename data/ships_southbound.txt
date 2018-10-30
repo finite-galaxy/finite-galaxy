@@ -21,7 +21,7 @@ shipyard "Southbound Variants"
   "Fury (Gatling)"
   "Fury (Laser)"
   "Fury (Miner)"
-  "Fury (Missile)"
+  "Fury (Rocket)"
   "Nest"
   "Nest (Sidewinder)"
   "Roost"
@@ -227,8 +227,8 @@ ship "Bastion"
 
 ship "Bastion" "Bastion (Heavy)"
   outfits
-    "X3700 Ion Thruster"
-    "Orca Plasma Steering"
+    "Impala Plasma Thruster"
+    "Impala Plasma Steering"
 
     "Plasma Cannon" 2
     "4X Blaster Turret" 3
@@ -244,8 +244,8 @@ ship "Bastion" "Bastion (Heavy)"
 
 ship "Bastion" "Bastion (Laser)"
   outfits
-    "A370 Atomic Thruster"
-    "A525 Atomic Steering"
+    "Impala Plasma Thruster"
+    "Impala Plasma Steering"
 
     "Heavy Laser Cannon" 2
     "Heavy Laser Turret" 2
@@ -430,9 +430,9 @@ ship "Dreadnought"
     "Orca Plasma Thruster"
     "Orca Plasma Steering"
 
-    "Heavy Rocket" 80
-    "Heavy Rocket Rack" 4
-    "Heavy Rocket Launcher" 4
+    "Javelin" 800
+    "Javelin Storage Crate" 4
+    "Javelin Pod" 4
     "Plasma Turret" 5
 
     "D41-HY Shield Generator"
@@ -441,13 +441,13 @@ ship "Dreadnought"
     "Liquid Helium Cooler"
     "Fuel Barrel" 60
     "Hyperdrive"
-    "Small Radar Jammer"
+    "Large Radar Jammer"
   engine -25 172
   engine 25 172
-  gun -10 -167 "Heavy Rocket Launcher"
-  gun 10 -167 "Heavy Rocket Launcher"
-  gun -20 -151 "Heavy Rocket Launcher"
-  gun 20 -151 "Heavy Rocket Launcher"
+  gun -10 -167 "Javelin Pod"
+  gun 10 -167 "Javelin Pod"
+  gun -20 -151 "Javelin Pod"
+  gun 20 -151 "Javelin Pod"
   turret 0 -94 "Plasma Turret"
   turret -38 -56 "Plasma Turret"
   turret 38 -56 "Plasma Turret"
@@ -470,8 +470,9 @@ ship "Dreadnought" "Dreadnought (Jump)"
     "Orca Plasma Thruster"
     "Orca Plasma Steering"
 
-    "Meteor Missile" 140
-    "Meteor Missile Launcher" 4
+    "Javelin" 800
+    "Javelin Storage Crate" 4
+    "Javelin Pod" 4
     "Plasma Turret" 5
 
     "D41-HY Shield Generator"
@@ -480,7 +481,7 @@ ship "Dreadnought" "Dreadnought (Jump)"
     "Liquid Helium Cooler"
     "Fuel Barrel" 60
     "Jump Drive"
-    "Small Radar Jammer"
+    "Large Radar Jammer"
 
 
 
@@ -511,8 +512,8 @@ ship "Fury"
       "hull damage" 120
       "hit force" 360
   outfits
-    "X2700 Ion Thruster"
-    "X2200 Ion Steering"
+    "Greyhound Plasma Thruster"
+    "Greyhound Plasma Steering"
 
     "Modified Blaster Cannon" 4
 
@@ -535,8 +536,8 @@ ship "Fury"
 
 ship "Fury" "Fury (Flamethrower)"
   outfits
-    "X2700 Ion Thruster"
-    "X2200 Ion Steering"
+    "Greyhound Plasma Thruster"
+    "Greyhound Plasma Steering"
 
     "Flamethrower" 4
 
@@ -550,8 +551,8 @@ ship "Fury" "Fury (Flamethrower)"
 
 ship "Fury" "Fury (Gatling)"
   outfits
-    "X2700 Ion Thruster"
-    "A125 Atomic Steering"
+    "Greyhound Plasma Thruster"
+    "Greyhound Plasma Steering"
 
     "Gatling Round" 12000
     "Gatling Bullet Boxes" 4
@@ -566,8 +567,8 @@ ship "Fury" "Fury (Gatling)"
 
 ship "Fury" "Fury (Laser)"
   outfits
-    "Chipmunk Plasma Thruster"
-    "A125 Atomic Steering"
+    "Greyhound Plasma Thruster"
+    "Greyhound Plasma Steering"
 
     "Heavy Laser Cannon" 2
 
@@ -581,8 +582,8 @@ ship "Fury" "Fury (Laser)"
 
 ship "Fury" "Fury (Miner)"
   outfits
-    "X2700 Ion Thruster"
-    "X2200 Ion Steering"
+    "Greyhound Plasma Thruster"
+    "Greyhound Plasma Steering"
 
     "Laser Cannon" 4
 
@@ -594,13 +595,14 @@ ship "Fury" "Fury (Miner)"
     "Hyperdrive"
 
 
-ship "Fury" "Fury (Missile)"
+ship "Fury" "Fury (Rocket)"
   outfits
     "Greyhound Plasma Thruster"
-    "Chipmunk Plasma Steering"
+    "Greyhound Plasma Steering"
 
-    "Meteor Missile" 140
-    "Meteor Missile Launcher" 4
+    "Heavy Rocket" 40
+    "Heavy Rocket Rack" 2
+    "Heavy Rocket Launcher" 2
 
     "D14-RN Shield Generator"
     "nGVF-BB Fuel Cell"
