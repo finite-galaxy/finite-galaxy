@@ -107,9 +107,9 @@ interface "main menu"
     centre 0 0
   sprite "_menu/title"
     centre 0 -170
-  sprite "_menu/side panel"
+  sprite "_menu/side_panel"
     centre -360 0
-  sprite "_menu/side panel"
+  sprite "_menu/side_panel"
     centre 360 0
   
   visible if "pilot loaded"
@@ -180,11 +180,11 @@ interface "menu player info"
 
 
 interface "load menu"
-  sprite "_menu/side panel"
+  sprite "_menu/side_panel"
     centre -360 0
-  sprite "_menu/side panel"
+  sprite "_menu/side_panel"
     centre 0 0
-  sprite "_menu/side panel"
+  sprite "_menu/side_panel"
     centre 360 0
   
   button n "_New Pilot"
@@ -670,7 +670,7 @@ interface "boarding"
 
 
 
-# The top of the text panel is the planet dialogue is at +70, and it is 500 x 260.
+# The top of the text panel is the planet dialogue is at +70, and it is 500 × 260.
 interface "hiring"
   label "flagship"
     centre -70 85

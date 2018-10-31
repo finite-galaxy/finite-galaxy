@@ -36,7 +36,7 @@ namespace {
     
     // Pick the proper glyph out of the texture.
     "void main() {\n"
-    "  texCoord = vec2((glyph + corner.x) / 98.f, corner.y);\n"
+    "  texCoord = vec2((glyph + corner.x) / 110.f, corner.y);\n"
     "  gl_Position = vec4((aspect * vert.x + position.x) * scale.x, (vert.y + position.y) * scale.y, 0, 1);\n"
     "}\n";
   
@@ -336,11 +336,29 @@ void Font::ShowUnderlines(bool show)
 
 int Font::Glyph(char c, bool isAfterSpace)
 {
-  // Curly quotes.
-  if(c == '\'' && isAfterSpace)
+/*
+  // Interpunct
+  if(c == '·')
     return 96;
-  if(c == '"' && isAfterSpace)
+
+  // Degrees, minutes, seconds
+  if(c == '°')
     return 97;
+  if(c == '′')
+    return 98;
+  if(c == '″')
+    return 99;
+*/
+
+  // Curly quotes
+  if(c == '"' && isAfterSpace)
+    return 102;
+  if(c == '"' && !isAfterSpace)
+    return 104;
+  if(c == '\'' && isAfterSpace)
+    return 103;
+  if(c == '\'' && !isAfterSpace)
+    return 105;
   
   return max(0, min(GLYPHS - 3, c - 32));
 }

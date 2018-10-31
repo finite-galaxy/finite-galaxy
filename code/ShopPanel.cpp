@@ -277,7 +277,7 @@ void ShopPanel::DrawButtons()
   point.X() += (SIDE_WIDTH - 20) - font.Width(credits);
   font.Draw(credits, point, bright);
   
-  const Font &bigFont = FontSet::Get(20);
+  const Font &bigFont = FontSet::Get(18);
   const Colour &hover = *GameData::Colours().Get("hover");
   const Colour &active = *GameData::Colours().Get("active");
   const Colour &inactive = *GameData::Colours().Get("inactive");
@@ -318,7 +318,7 @@ void ShopPanel::DrawButtons()
 
 void ShopPanel::DrawMain()
 {
-  const Font &bigFont = FontSet::Get(20);
+  const Font &bigFont = FontSet::Get(18);
   const Colour &dim = *GameData::Colours().Get("medium");
   const Colour &bright = *GameData::Colours().Get("bright");
   mainDetailHeight = 0;

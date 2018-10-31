@@ -30,8 +30,8 @@
 using namespace std;
 
 const double MapSalesPanel::ICON_HEIGHT = 90.;
-const double MapSalesPanel::PAD = 8.;
-const int MapSalesPanel::WIDTH = 270;
+const double MapSalesPanel::PAD = 1.;
+const int MapSalesPanel::WIDTH = 300;
 
 
 
@@ -302,11 +302,11 @@ bool MapSalesPanel::DrawHeader(Point &corner, const string &category)
   hidPrevious = hide;
   
   const Sprite *arrow = SpriteSet::Get(hide ? "ui/collapsed" : "ui/expanded");
-  SpriteShader::Draw(arrow, corner + Point(15., 25.));
+  SpriteShader::Draw(arrow, corner + Point(15., 20.));
   
   const Colour &textColour = *GameData::Colours().Get(hide ? "medium" : "bright");
   const Font &bigFont = FontSet::Get(18);
-  bigFont.Draw(category, corner + Point(30., 15.), textColour);
+  bigFont.Draw(category, corner + Point(30., 10.), textColour);
   AddZone(Rectangle::FromCorner(corner, Point(WIDTH, 40.)), [this, category](){ ClickCategory(category); });
   corner.Y() += 40.;
   

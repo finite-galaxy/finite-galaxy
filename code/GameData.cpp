@@ -265,9 +265,13 @@ void GameData::CheckReferences()
 
 void GameData::LoadShaders()
 {
-  FontSet::Add(Files::Images() + "font/ubuntu14r.png", 14);
-  FontSet::Add(Files::Images() + "font/ubuntu18r.png", 18);
-  
+  FontSet::Add(Files::Images() + "font/LinuxLibertineDisplay10.png", 10);
+  FontSet::Add(Files::Images() + "font/LinuxLibertineDisplay12.png", 12);
+  FontSet::Add(Files::Images() + "font/LinuxLibertineDisplay14.png", 14);
+  FontSet::Add(Files::Images() + "font/LinuxLibertineDisplay16.png", 16);
+  FontSet::Add(Files::Images() + "font/LinuxLibertineDisplay18.png", 18);
+  FontSet::Add(Files::Images() + "font/LinuxLibertineDisplay20.png", 20);
+
   // Load the key settings.
   Command::LoadSettings(Files::Resources() + "keys.txt");
   Command::LoadSettings(Files::Config() + "keys.txt");

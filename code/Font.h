@@ -66,7 +66,7 @@ private:
   mutable int screenWidth;
   mutable int screenHeight;
   
-  static const int GLYPHS = 98;
+  static const int GLYPHS = 110;
   int advance[GLYPHS * GLYPHS];
 };
 

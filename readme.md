@@ -42,6 +42,32 @@ If proposing a major pull request, start by posting an issue and discussing the 
 
 
 ## Changes
+<!--
+   ! " # $ % & ' ( )
+ * + , − . / 0 1 2 3
+ 4 5 6 7 8 9 : ; < =
+ > ? @ A B C D E F G
+ H I J K L M N O P Q
+ R S T U V W X Y Z [
+ \ ] ^ _ ` a b c d e
+ f g h i j k l m n o
+ p q r s t u v w x y
+ z { | } ~ ⌷ · ° ′ ″
+ „ ‚ “ ‘ ” ’ « ‹ » ›
+-->
+<!--
+   0,   28,   56,   84,  112,  140,  168,  196,  224,  252, 
+ 280,  308,  336,  364,  392,  420,  448,  476,  504,  532, 
+ 560,  588,  616,  644,  672,  700,  728,  756,  784,  812, 
+ 840,  868,  896,  924,  952,  980, 1008, 1036, 1064, 1092, 
+1120, 1148, 1176, 1204, 1232, 1260, 1288, 1316, 1344, 1372, 
+1400, 1428, 1456, 1484, 1512, 1540, 1568, 1596, 1624, 1652, 
+1680, 1708, 1736, 1764, 1792, 1820, 1848, 1876, 1904, 1932, 
+1960, 1988, 2016, 2044, 2072, 2100, 2128, 2156, 2184, 2212, 
+2240, 2268, 2296, 2324, 2352, 2380, 2408, 2436, 2464, 2492, 
+2520, 2548, 2576, 2604, 2632, 2660, 2688, 2716, 2744, 2772, 
+2800, 2828, 2856, 2884, 2912, 2940, 2968, 2996, 3024, 3052
+-->
 
 ### Major changes
 * Installed outfits can no longer be plundered by default; outfits in cargo still can
@@ -58,9 +84,9 @@ See `changelog.txt`, `ship_overview.txt`, and https://github.com/finite-galaxy/f
 * Add "Licences" tab in player info panel
 * Add "Tribute" tab in player info panel
 * Separate fleet overview column in outfitter and shipyard from ship info display
-* Increase fleet overview column width from four to five ship icons
 * Sort outfits and ships by size or mass instead of alphabetically
 * Add "Manufacturer" to ships
+* Add quotation mark preference
 * Make hyperjump fuel proportional to ship's total mass
 * Make ship explosion 'weapon' proportional to mass (base, empty, or total mass)
 * Rename "New {Country}" planets to less culturally biased names
