@@ -3,15 +3,13 @@ shipyard "Syndicate Variants"
   "Bulk Freighter"
   "Bulk Freighter (Blaster)"
   "Bulk Freighter (Hai)"
-  "Bulk Freighter (Heavy)"
+  "Bulk Freighter (Laser)"
   "Bulk Freighter (Proton)"
   "Bulk Freighter Carrier"
   "Class C Freighter"
   "Protector"
   "Protector (Laser)"
-  "Protector (Proton)"
   "Star Barge"
-  "Star Barge (Armed)"
   "Star Barge (Miner)"
   "Star Freighter"
   "Star Freighter (Fancy)"
@@ -104,7 +102,7 @@ ship "Bulk Freighter"
     "8X Blaster Turret"
     "Light Anti-Missile Turret" 4
 
-    "D23-QP Shield Generator"
+    "D41-HY Shield Generator"
     "RT-I Radiothermal"
     "LP144a Battery Pack"
     "Fuel Barrel" 60
@@ -135,13 +133,13 @@ ship "Bulk Freighter" "Bulk Freighter (Blaster)"
     "6X Blaster Turret" 4
     "Heavy Anti-Missile Turret"
 
-    "D94-YV Shield Generator"
+    "D41-HY Shield Generator"
     "Fusion Reactor"
     "LP072a Battery Pack"
-    "Liquid Water Cooler"
+    "Liquid Nitrogen Cooler"
     "Fuel Barrel" 60
     "Scram Drive"
-    "Outfits Expansion" 2
+    "Outfits Expansion" 6
   turret "6X Blaster Turret"
   turret "6X Blaster Turret"
   turret "Heavy Anti-Missile Turret"
@@ -151,15 +149,14 @@ ship "Bulk Freighter" "Bulk Freighter (Blaster)"
 
 ship "Bulk Freighter" "Bulk Freighter (Hai)"
   outfits
-    "X3700 Ion Thruster"
-    `"Benga" Atomic Steering`
-    `"Basrem" Atomic Steering`
+    `"Benga" Atomic Thruster`
+    `"Bondir" Atomic Steering`
 
     "Pulse Turret" 4
     "Chameleon Anti-Missile"
 
     "Corundum Regenerator"
-    "RT-I Radiothermal"
+    "Geode Reactor"
     "Ravine Batteries"
     "Fuel Pod" 6
     "Scram Drive"
@@ -170,17 +167,17 @@ ship "Bulk Freighter" "Bulk Freighter (Hai)"
   turret "Pulse Turret"
 
 
-ship "Bulk Freighter" "Bulk Freighter (Heavy)"
+ship "Bulk Freighter" "Bulk Freighter (Laser)"
   outfits
-    "A250 Atomic Thruster"
-    "A375 Atomic Steering"
+    "X3700 Ion Thruster"
+    "X3200 Ion Steering"
 
     "Heavy Laser Turret" 4
     "Light Anti-Missile Turret"
 
-    "D94-YV Shield Generator"
+    "D41-HY Shield Generator"
     "Fission Reactor"
-    "LP072a Battery Pack"
+    "LP144a Battery Pack"
     "Fuel Barrel" 60
     "Scram Drive"
     "Outfits Expansion"
@@ -193,18 +190,17 @@ ship "Bulk Freighter" "Bulk Freighter (Heavy)"
 
 ship "Bulk Freighter" "Bulk Freighter (Proton)"
   outfits
-    "A250 Atomic Thruster"
-    "A375 Atomic Steering"
+    "X3700 Ion Thruster"
+    "X3200 Ion Steering"
 
     "Proton Turret" 2
     "Heavy Anti-Missile Turret"
 
-    "D94-YV Shield Generator"
+    "D41-HY Shield Generator"
     "Fission Reactor"
-    "LP072a Battery Pack"
+    "LP144a Battery Pack"
     "Fuel Barrel" 60
     "Scram Drive"
-    "Outfits Expansion"
 
 
 ship "Bulk Freighter" "Class C Freighter"
@@ -213,23 +209,26 @@ ship "Bulk Freighter" "Class C Freighter"
     "shields" 10000
     "required crew" 12
     "cargo space" -480
+    "outfit space" 30
   outfits
     "X3700 Ion Thruster"
     "X3200 Ion Steering"
 
-    "Heavy Laser Turret" 2
+    "8X Blaster Turret" 2
     "Heavy Anti-Missile Turret" 2
 
     "D94-YV Shield Generator"
     "Fission Reactor"
-    "LP072a Battery Pack"
+    "LP144a Battery Pack"
     "Fuel Barrel" 60
     "Scram Drive"
     "Bunk Room" 15
-  turret "Heavy Laser Turret"
+    "Fragmentation Grenades" 20
+    "Laser Rifle" 40
+  turret "8X Blaster Turret"
   turret "Heavy Anti-Missile Turret"
   turret
-  turret "Heavy Laser Turret"
+  turret "8X Blaster Turret"
   turret "Heavy Anti-Missile Turret"
   drone -66 -115 left
   drone -66 -65 left
@@ -269,7 +268,7 @@ ship "Protector"
     "cargo space" 50
     "outfit space" 610
     "engine capacity" 100
-    "weapon capacity" 220
+    "weapon capacity" 230
     weapon
       "blast radius" 160
       "shield damage" 1600
@@ -279,8 +278,6 @@ ship "Protector"
     "X3700 Ion Thruster"
     "X3200 Ion Steering"
 
-    "Meteor Missile" 60
-    "Meteor Missile Launcher" 2
     "6X Blaster Turret" 6
 
     "D67-TM Shield Generator"
@@ -289,11 +286,10 @@ ship "Protector"
     "Liquid Nitrogen Cooler"
     "Fuel Barrel" 40
     "Hyperdrive"
-    "Large Radar Jammer"
   engine -11 125
   engine 11 125
-  gun -15 -100 "Meteor Missile Launcher"
-  gun 15 -100 "Meteor Missile Launcher"
+  gun -15 -100
+  gun 15 -100
   turret -54 -54 "6X Blaster Turret"
   turret 54 -54 "6X Blaster Turret"
   turret -73 0 "6X Blaster Turret"
@@ -312,32 +308,15 @@ ship "Protector"
 
 ship "Protector" "Protector (Laser)"
   outfits
-    "A370 Atomic Thruster"
-    "A375 Atomic Steering"
+    "X3700 Ion Thruster"
+    "X3200 Ion Steering"
 
     "Heavy Laser Turret" 6
 
-    "D94-YV Shield Generator" 2
+    "D67-TM Shield Generator"
     "Fusion Reactor"
     "LP036a Battery Pack"
-    "Supercapacitor" 3
-    "Liquid Water Cooler"
-    "Fuel Barrel" 40
-    "Hyperdrive"
-
-
-ship "Protector" "Protector (Proton)"
-  outfits
-    "A370 Atomic Thruster"
-    "A375 Atomic Steering"
-
-    "Proton Turret" 6
-
-    "D94-YV Shield Generator" 2
-    "Fusion Reactor"
-    "LP036a Battery Pack"
-    "Supercapacitor" 3
-    "Liquid Water Cooler"
+    "Liquid Nitrogen Cooler"
     "Fuel Barrel" 40
     "Hyperdrive"
 
@@ -372,7 +351,7 @@ ship "Star Barge"
     "X1700 Ion Thruster"
     "X1200 Ion Steering"
 
-    "Heavy Anti-Missile Turret"
+    "Light Anti-Missile Turret"
 
     "D14-RN Shield Generator"
     "nGVF-BB Fuel Cell"
@@ -381,26 +360,12 @@ ship "Star Barge"
     "Hyperdrive"
   engine -9 38
   engine 9 38
-  turret 0 -8 "Heavy Anti-Missile Turret"
+  turret 0 -8 "Light Anti-Missile Turret"
   leak "leak" 60 50
   explode "tiny explosion" 10
   explode "small explosion" 10
   description "The Syndicate CT-50 Star Barge is little more than a cluster of cargo containers with an engine at one end and a cockpit on the other. It is a slow and ugly ship, but it can carry enough cargo to earn its captain a steady income even in parts of the galaxy where it is hard to find passengers to carry or courier missions."
   description "  Because they often carry valuable cargo, and because they are too slow to evade any attackers, Star Barges are a common target of pirates."
-
-
-ship "Star Barge" "Star Barge (Armed)"
-  outfits
-    "X1700 Ion Thruster"
-    "X1200 Ion Steering"
-
-    "2X Blaster Turret"
-
-    "D14-RN Shield Generator"
-    "nGVF-BB Fuel Cell"
-    "LP036a Battery Pack"
-    "Fuel Barrel" 30
-    "Hyperdrive"
 
 
 ship "Star Barge" "Star Barge (Miner)"
@@ -452,9 +417,9 @@ ship "Star Freighter"
     "4X Blaster Turret"
     "Light Anti-Missile Turret" 2
 
-    "D14-RN Shield Generator"
-    "nGVF-EE Fuel Cell"
-    "LP036a Battery Pack"
+    "D23-QP Shield Generator"
+    "RT-I Radiothermal"
+    "LP072a Battery Pack"
     "Fuel Barrel" 60
     "Hyperdrive"
   engine -9 97
@@ -476,14 +441,14 @@ ship "Star Freighter" "Star Freighter (Fancy)"
   outfits
     "X2700 Ion Thruster"
     "X2200 Ion Steering"
-    "XR1700 Ion Reverse"
+    "Afterburner"
 
     "Laser Turret" 2
     "Heavy Anti-Missile Turret"
 
-    "D14-RN Shield Generator"
-    "NT-200 Nucleovoltaic"
-    "Supercapacitor"
+    "D23-QP Shield Generator"
+    "RT-I Radiothermal"
+    "LP072a Battery Pack"
     "Fuel Barrel" 60
     "Hyperdrive"
     "Ramscoop"
@@ -495,12 +460,11 @@ ship "Star Freighter" "Star Freighter (Fancy)"
 
 ship "Star Freighter" "Star Freighter (Hai)"
   outfits
-    "X2700 Ion Thruster"
-    "X2200 Ion Steering"
-    "XR1700 Ion Reverse"
+    `"Benga" Atomic Steering`
+    `"Benga" Atomic Thruster`
 
-    "Pulse Turret" 2
-    "Chameleon Anti-Missile"
+    "Pulse Turret"
+    "Chameleon Anti-Missile" 2
 
     "Corundum Regenerator"
     "Geode Reactor"
@@ -508,28 +472,24 @@ ship "Star Freighter" "Star Freighter (Hai)"
     "Fuel Pod" 6
     "Hyperdrive"
     "Ramscoop"
-  turret "Pulse Turret"
   turret "Chameleon Anti-Missile"
   turret "Pulse Turret"
+  turret "Chameleon Anti-Missile"
 
 
 ship "Star Freighter" "Star Freighter (Proton)"
   outfits
     "X2700 Ion Thruster"
     "X2200 Ion Steering"
-    "XR1700 Ion Reverse"
 
     "Proton Turret"
-    "Light Anti-Missile Turret"
 
-    "D14-RN Shield Generator"
-    "NT-200 Nucleovoltaic"
-    "Supercapacitor"
+    "D23-QP Shield Generator"
+    "RT-I Radiothermal"
+    "LP072a Battery Pack"
     "Fuel Barrel" 60
     "Hyperdrive"
-    "Ramscoop"
-    "Outfits Expansion"
-  turret "Light Anti-Missile Turret"
+  turret
   turret "Proton Turret"
   turret
 
@@ -543,9 +503,9 @@ ship "Star Freighter" "Star Freighter (Secret Cargo)"
     "4X Blaster Turret"
     "Light Anti-Missile Turret" 2
 
-    "nGVF-EE Fuel Cell"
-    "LP036a Battery Pack"
-    "D14-RN Shield Generator"
+    "D23-QP Shield Generator"
+    "RT-I Radiothermal"
+    "LP072a Battery Pack"
     "Fuel Barrel" 60
     "Hyperdrive"
     "Secret Cargo"
@@ -584,21 +544,21 @@ ship "Star Queen"
     "X3700 Ion Thruster"
     "X3200 Ion Steering"
 
-    "Sidewinder Missile" 150
-    "Sidewinder Missile Launcher" 3
+    "Meteor Missile" 120
+    "Meteor Missile Box" 3
+    "Meteor Missile Launcher" 3
     "Heavy Anti-Missile Turret" 2
 
     "D94-YV Shield Generator"
-    "NT-200 Nucleovoltaic"
+    "Fission Reactor"
     "LP072a Battery Pack"
     "Fuel Barrel" 50
     "Hyperdrive"
-    "Large Radar Jammer"
   engine -18 116
   engine 18 116
-  gun 0 -116 "Sidewinder Missile Launcher"
-  gun -22 -80 "Sidewinder Missile Launcher"
-  gun 22 -80 "Sidewinder Missile Launcher"
+  gun 0 -116 "Meteor Missile Launcher"
+  gun -22 -80 "Meteor Missile Launcher"
+  gun 22 -80 "Meteor Missile Launcher"
   turret -28 -9 "Heavy Anti-Missile Turret"
   turret 28 -9 "Heavy Anti-Missile Turret"
   leak "leak" 50 50
@@ -613,19 +573,19 @@ ship "Star Queen"
 
 ship "Star Queen" "Star Queen (Hai)"
   outfits
-    "X3700 Ion Thruster"
-    "A375 Atomic Steering"
+    `"Biroo" Atomic Steering`
+    `"Biroo" Atomic Thruster`
 
     "Tracker" 168
+    "Tracker Storage Pod" 3
     "Tracker Launcher" 3
     "Chameleon Anti-Missile" 2
 
-    "D94-YV Shield Generator"
-    "NT-200 Nucleovoltaic"
-    "Fissure Batteries"
+    "Diamond Regenerator"
+    "Geode Reactor"
+    "Gorge Batteries"
     "Fuel Pod" 5
     "Hyperdrive"
-    "Small Radar Jammer"
 
 
 
@@ -647,7 +607,7 @@ ship "Vanguard"
     "heat dissipation" .6
     "cargo space" 50
     "outfit space" 600
-    "weapon capacity" 220
+    "weapon capacity" 230
     "engine capacity" 120
     weapon
       "blast radius" 160
@@ -659,7 +619,7 @@ ship "Vanguard"
     "X4200 Ion Steering"
 
     "Proton Cannon" 7
-    "Light Anti-Missile Turret"
+    "Heavy Anti-Missile Turret"
 
     "D67-TM Shield Generator"
     "Fusion Reactor"
@@ -676,7 +636,7 @@ ship "Vanguard"
   gun 21 -45 "Proton Cannon"
   gun -31 -45 "Proton Cannon"
   gun 31 -45 "Proton Cannon"
-  turret 0 42 "Light Anti-Missile Turret"
+  turret 0 42 "Heavy Anti-Missile Turret"
   leak "leak" 60 50
   leak "flame" 30 80
   explode "tiny explosion" 18
@@ -693,6 +653,7 @@ ship "Vanguard" "Vanguard (Particle)"
     "X4200 Ion Steering"
 
     "Particle Cannon" 7
+    "Light Anti-Missile Turret"
 
     "D67-TM Shield Generator"
     "Fusion Reactor"
@@ -775,7 +736,7 @@ ship "Wasp" "Wasp (Miner)"
 
     "D14-RN Shield Generator"
     "nGVF-BB Fuel Cell"
-    "LP036a Battery Pack"
+    "Supercapacitor" 4
     "Asteroid Scanner"
     "Fuel Barrel" 40
     "Hyperdrive"
@@ -795,5 +756,6 @@ ship "Wasp" "Wasp (Proton)"
     "Fuel Barrel" 40
     "Hyperdrive"
     "Outfit Scanner"
+    "Outfits Expansion"
 
 
