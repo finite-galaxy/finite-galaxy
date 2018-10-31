@@ -56,9 +56,18 @@ namespace {
     
     int otherCount = list.size() - maxCount;
     
-    if(otherCount > 0 && maxCount > 0)
+    if(otherCount > 0 && maxCount > 1)
     {
       list[maxCount - 1].second = "(" + to_string(otherCount + 1) + " Others)";
+      while(otherCount--)
+      {
+        list[maxCount - 1].first += list.back().first;
+        list.pop_back();
+      }
+    }
+    else if(maxCount == 1)
+    {
+      list[maxCount - 1].second = "(Total of " + to_string(otherCount + 1) + ")";
       while(otherCount--)
       {
         list[maxCount - 1].first += list.back().first;
@@ -514,11 +523,11 @@ void PlayerInfoPanel::DrawPlayer(const Rectangle &bounds)
   // Other special information:
   auto salary = Match(player, "salary: ", "");
   sort(salary.begin(), salary.end());
-  DrawList(salary, table, "salary:", 4);
+  DrawList(salary, table, "salary:", 5);
   
   auto tribute = Match(player, "tribute: ", "");
   sort(tribute.begin(), tribute.end());
-  DrawList(tribute, table, "tribute:", 4);
+  DrawList(tribute, table, "tribute:", 1);
   
   int maxRows = static_cast<int>(250. - 30. - table.GetPoint().Y()) / 20;
   auto licences = Match(player, "licence: ", " Licence");
