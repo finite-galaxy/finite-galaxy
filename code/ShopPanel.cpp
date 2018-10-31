@@ -140,7 +140,6 @@ void ShopPanel::Draw()
 void ShopPanel::DrawSidebar()
 {
   const Font &font = FontSet::Get(14);
-  const Colour &medium = *GameData::Colours().Get("medium");
   const Colour &bright = *GameData::Colours().Get("bright");
   sideDetailHeight = 0;
   
@@ -154,17 +153,31 @@ void ShopPanel::DrawSidebar()
     Point(1, Screen::Height()),
     *GameData::Colours().Get("shop side panel background"));
   
+  Point point(
+    Screen::Right() - SIDE_WIDTH / 2,
+    Screen::Top());
+  
+  if(playerShip)
+  {
+    point.Y() += SHIP_SIZE / 2 + 10 - sideScroll;
+    point.X() = Screen::Right() - SIDE_WIDTH / 2;
+    DrawShip(*playerShip, point, true);
+    
+    Point offset(SIDE_WIDTH / -2, SHIP_SIZE / 2);
+    sideDetailHeight = DrawPlayerShipInfo(point + offset);
+    point.Y() += sideDetailHeight + SHIP_SIZE / 2 + sideScroll;
+  }
+  
   // Draw this string, centred in the side panel:
   static const string YOURS = "Your Ships:";
   Point yoursPoint(
-    Screen::Right() - SIDE_WIDTH / 2 - font.Width(YOURS) / 2,
-    Screen::Top() + 10 - sideScroll);
+    Screen::Right() - SIDE_WIDTH / 2 - font.Width(YOURS) / 2, 
+    point.Y() + 10 - sideScroll);
   font.Draw(YOURS, yoursPoint, bright);
   
   // Start below the "Your Ships" label, and draw them.
-  Point point(
-    Screen::Right() - SIDE_WIDTH / 2 - 93,
-    Screen::Top() + SIDE_WIDTH / 2 - sideScroll + 40 - 93);
+  point.X() = Screen::Right() - SIDE_WIDTH / 2 - 93;
+  point.Y() += SIDE_WIDTH / 2 - sideScroll + 40 - 93;
   
   int shipsHere = 0;
   for(const shared_ptr<Ship> &ship : player.Ships())
@@ -223,28 +236,8 @@ void ShopPanel::DrawSidebar()
     point.X() += ICON_TILE;
   }
   point.Y() += ICON_TILE;
-  
-  if(playerShip)
-  {
-    point.Y() += SHIP_SIZE / 2;
-    point.X() = Screen::Right() - SIDE_WIDTH / 2;
-    DrawShip(*playerShip, point, true);
-    
-    Point offset(SIDE_WIDTH / -2, SHIP_SIZE / 2);
-    sideDetailHeight = DrawPlayerShipInfo(point + offset);
-    point.Y() += sideDetailHeight + SHIP_SIZE / 2;
-  }
-  else if(player.Cargo().Size())
-  {
-    point.X() = Screen::Right() - SIDE_WIDTH + 10;
-    font.Draw("cargo space:", point, medium);
-    
-    string space = Format::Number(player.Cargo().Free()) + " / " + Format::Number(player.Cargo().Size());
-    Point right(Screen::Right() - font.Width(space) - 10, point.Y());
-    font.Draw(space, right, bright);
-    point.Y() += 20.;
-  }
-  maxSideScroll = max(0., point.Y() + sideScroll - Screen::Bottom() + BUTTON_HEIGHT);
+
+  maxSideScroll = max(0., point.Y() - 10 + sideScroll - Screen::Bottom() + BUTTON_HEIGHT);
   
   PointerShader::Draw(Point(Screen::Right() - 10, Screen::Top() + 10),
     Point(0., -1.), 10., 10., 5., Colour(sideScroll > 0 ? .8 : .2, 0.));
@@ -256,7 +249,7 @@ void ShopPanel::DrawSidebar()
 
 void ShopPanel::DrawButtons()
 {
-  // The last 70 pixels on the end of the side panel are for the buttons:
+  // The last 90 pixels on the end of the side panel are for the buttons:
   Point buttonSize(SIDE_WIDTH, BUTTON_HEIGHT);
   FillShader::Fill(Screen::BottomRight() - .5 * buttonSize, buttonSize, *GameData::Colours().Get("shop side panel background"));
   FillShader::Fill(
@@ -270,12 +263,23 @@ void ShopPanel::DrawButtons()
   
   Point point(
     Screen::Right() - SIDE_WIDTH + 10,
-    Screen::Bottom() - 65);
-  font.Draw("You have:", point, dim);
+    Screen::Bottom() - 85);
+  font.Draw("Credits:", point, dim);
   
-  string credits = Format::Credits(player.Accounts().Credits()) + " credits";
+  string credits = Format::Credits(player.Accounts().Credits());
   point.X() += (SIDE_WIDTH - 20) - font.Width(credits);
   font.Draw(credits, point, bright);
+  point.Y() += 20.;
+
+  if(player.Cargo().Size())
+  {
+    point.X() = Screen::Right() - SIDE_WIDTH + 10;
+    font.Draw("Fleet cargo space free:", point, dim);
+    
+    string space = Format::Number(player.Cargo().Free()) + " / " + Format::Number(player.Cargo().Size());
+    Point right(Screen::Right() - font.Width(space) - 10, point.Y());
+    font.Draw(space, right, bright);
+  }
   
   const Font &bigFont = FontSet::Get(18);
   const Colour &hover = *GameData::Colours().Get("hover");

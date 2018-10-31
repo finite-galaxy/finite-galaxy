@@ -81,6 +81,7 @@ See `changelog.txt`, `ship_overview.txt`, and https://github.com/finite-galaxy/f
 
 ### Not yet implemented ideas
 * Add support for Unicode and different writing directions
+* Add ligatures
 * Add "Licences" tab in player info panel
 * Add "Tribute" tab in player info panel
 * Separate fleet overview column in outfitter and shipyard from ship info display
