@@ -271,3 +271,34 @@ outfit "Proton Turret"
     "firing heat" 60
   description "The Syndicate Proton Turret is a relatively new product designed to compete with Deep Sky's perennially popular laser turrets in the anti-fighter defence market. Though cruder than its competition, the Proton Turret maintains a loyal following among captains dissatisfied with laser weapons' short range."
 
+
+
+outfit "Light Anti-Missile Turret"
+  category "Anti-Missile"
+  thumbnail "outfit/anti-missile_light"
+  cost 90000
+  "mass" 16
+  "drag" .16
+  "outfit space" -16
+  "weapon capacity" -16
+  "turret mounts" -1
+  weapon
+    "hardpoint sprite" "hardpoint/anti-missile_light"
+    "hardpoint offset" 4.
+    "hit effect" "small anti-missile"
+    "anti-missile" 5
+    "velocity" 150
+    "lifetime" 1
+    "reload" 8
+    "firing energy" 5
+    "firing heat" 3
+  description "The Syndicate Light Anti-Missile Turret is clearly inferior to the Lovelace Heavy Anti-Missile Turret, but it has one advantage: it is only about half the size and less than a third in price."
+
+effect "small anti-missile"
+  sprite "effect/small anti missile"
+    "no repeat"
+    "frame rate" 3
+  sound "anti-missile"
+  "lifetime" 21
+  "velocity scale" 1
+

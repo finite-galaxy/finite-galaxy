@@ -2,8 +2,7 @@ shipyard "Southbound Variants"
   "Argosy"
   "Argosy (Blaster)"
   "Argosy (Laser)"
-  "Argosy (Missile)"
-  "Argosy (Proton)"
+  "Argosy (Rocket)"
   "Argosy (Turret)"
   "Bastion"
   "Bastion (Heavy)"
@@ -11,7 +10,7 @@ shipyard "Southbound Variants"
   "Bastion (Plasma)"
   "Bastion (Scanner)"
   "Clipper"
-  "Clipper (Heavy)"
+  "Clipper (Javelin)"
   "Clipper (Nuclear)"
   "Clipper (Speedy)"
   "Dreadnought"
@@ -48,8 +47,8 @@ ship "Argosy"
     "mass" 330
     "drag" 5.9
     "heat dissipation" .7
-    "cargo space" 120
-    "outfit space" 310
+    "cargo space" 100
+    "outfit space" 330
     "engine capacity" 80
     "weapon capacity" 90
     weapon
@@ -65,7 +64,7 @@ ship "Argosy"
     "Modified Blaster Turret" 2
 
     "D41-HY Shield Generator"
-    "RT-I Radiothermal"
+    "S3 Thermionic"
     "LP072a Battery Pack"
     "Fuel Barrel" 40
     "Hyperdrive"
@@ -89,71 +88,53 @@ ship "Argosy"
 ship "Argosy" "Argosy (Blaster)"
   outfits
     "Greyhound Plasma Thruster"
-    "Impala Plasma Steering"
+    "Greyhound Plasma Steering"
 
-    "1X Blaster Cannon" 2
-    "4X Blaster Turret" 2
+    "Modified Blaster Cannon" 2
+    "Modified Blaster Quad Turret" 2
 
     "D41-HY Shield Generator"
-    "Fission Reactor"
+    "S3 Thermionic"
     "LP072a Battery Pack"
     "Fuel Barrel" 40
     "Hyperdrive"
-    "Outfits Expansion"
 
 
 ship "Argosy" "Argosy (Laser)"
   outfits
     "Greyhound Plasma Thruster"
-    "Impala Plasma Steering"
+    "Greyhound Plasma Steering"
 
-    "Heavy Laser Cannon" 2
+    "Laser Cannon" 2
     "Laser Turret" 2
 
-    "D67-TM Shield Generator"
-    "NT-200 Nucleovoltaic"
-    "Supercapacitor"
-    "Fuel Barrel" 40
-    "Hyperdrive"
-    "Outfits Expansion" 2
-
-
-ship "Argosy" "Argosy (Missile)"
-  outfits
-    "A370 Atomic Thruster"
-    "A255 Atomic Steering"
-
-    "Meteor Missile" 70
-    "Meteor Missile Launcher" 2
-    "Light Anti-Missile Turret" 2
-
     "D41-HY Shield Generator"
-    "Fission Reactor"
-    "Supercapacitor"
+    "S3 Thermionic"
+    "LP072a Battery Pack"
     "Fuel Barrel" 40
     "Hyperdrive"
-    "Outfits Expansion"
 
 
-ship "Argosy" "Argosy (Proton)"
+ship "Argosy" "Argosy (Rocket)"
   outfits
     "Greyhound Plasma Thruster"
-    "Impala Plasma Steering"
+    "Greyhound Plasma Steering"
 
-    "Proton Cannon" 2
-    "Proton Turret"
+    "Heavy Rocket" 40
+    "Heavy Rocket Rack" 2
+    "Heavy Rocket Launcher" 2
+    "Modified Blaster Turret" 2
 
-    "D67-TM Shield Generator"
-    "NT-200 Nucleovoltaic"
-    "Supercapacitor"
+    "D41-HY Shield Generator"
+    "S3 Thermionic"
+    "LP036a Battery Pack"
     "Fuel Barrel" 40
     "Hyperdrive"
-    "Outfits Expansion" 2
 
 
 ship "Argosy" "Argosy (Turret)"
   outfits
-    "X3700 Ion Thruster"
+    "Greyhound Plasma Thruster"
     "Greyhound Plasma Steering"
 
     "Heavy Laser Turret" 2
@@ -163,8 +144,6 @@ ship "Argosy" "Argosy (Turret)"
     "LP072a Battery Pack"
     "Fuel Barrel" 40
     "Hyperdrive"
-    "Small Radar Jammer"
-    "Outfits Expansion"
 
 
 
@@ -200,10 +179,9 @@ ship "Bastion"
     "Plasma Cannon" 2
     "Modified Blaster Quad Turret" 3
 
-    "D67-TM Shield Generator"
-    "S3 Thermionic"
+    "D41-HY Shield Generator"
+    "S3 Thermionic" 2
     "LP144a Battery Pack"
-    "nGVF-BB Fuel Cell"
     "Liquid Water Cooler"
     "Fuel Barrel" 50
     "Hyperdrive"
@@ -229,17 +207,19 @@ ship "Bastion" "Bastion (Heavy)"
   outfits
     "Impala Plasma Thruster"
     "Impala Plasma Steering"
+    "Afterburner"
 
     "Plasma Cannon" 2
-    "4X Blaster Turret" 3
+    "Modified Blaster Quad Turret" 3
 
-    "D67-TM Shield Generator"
-    "Fusion Reactor"
+    "D94-YV Shield Generator"
+    "Breeder Reactor"
     "LP072a Battery Pack"
     "Liquid Nitrogen Cooler"
     "Fuel Barrel" 50
     "Hyperdrive"
-    "Outfits Expansion" 2
+    "Large Radar Jammer"
+    "Outfits Expansion"
 
 
 ship "Bastion" "Bastion (Laser)"
@@ -248,20 +228,14 @@ ship "Bastion" "Bastion (Laser)"
     "Impala Plasma Steering"
 
     "Heavy Laser Cannon" 2
-    "Heavy Laser Turret" 2
-    "Heavy Anti-Missile Turret"
+    "Heavy Laser Turret" 3
 
-    "D94-YV Shield Generator"
-    "Fusion Reactor"
-    "Supercapacitor" 4
+    "D41-HY Shield Generator"
+    "S3 Thermionic" 2
+    "LP144a Battery Pack"
     "Liquid Water Cooler"
     "Fuel Barrel" 50
     "Hyperdrive"
-    "Small Radar Jammer"
-    "Outfits Expansion"
-  turret "Heavy Anti-Missile Turret"
-  turret "Heavy Laser Turret"
-  turret "Heavy Laser Turret"
 
 
 ship "Bastion" "Bastion (Plasma)"
@@ -271,12 +245,13 @@ ship "Bastion" "Bastion (Plasma)"
 
     "Plasma Turret" 3
 
-    "D67-TM Shield Generator"
-    "Fusion Reactor"
-    "LP072a Battery Pack"
-    "Liquid Helium Cooler"
+    "D41-HY Shield Generator"
+    "S3 Thermionic" 2
+    "LP144a Battery Pack"
+    "Liquid Water Cooler"
     "Fuel Barrel" 50
     "Hyperdrive"
+    "Outfits Expansion" 3
 
 
 ship "Bastion" "Bastion (Scanner)"
@@ -284,18 +259,18 @@ ship "Bastion" "Bastion (Scanner)"
     "Impala Plasma Thruster"
     "Impala Plasma Steering"
 
-    "Heavy Rocket" 40
-    "Heavy Rocket Launcher" 2
-    "2X Blaster Turret" 3
+    "Plasma Cannon" 2
+    "Modified Blaster Quad Turret" 3
 
-    "D67-TM Shield Generator"
-    "S3 Thermionic"
+    "D41-HY Shield Generator"
+    "S3 Thermionic" 2
     "LP144a Battery Pack"
-    "nGVF-BB Fuel Cell"
     "Liquid Water Cooler"
-    "Cargo Scanner"
+    "Cargo Scanner" 3
     "Fuel Barrel" 50
     "Hyperdrive"
+    "Outfit Scanner"
+    "Tactical Scanner"
 
 
 
@@ -328,21 +303,19 @@ ship "Clipper"
     "Greyhound Plasma Thruster"
     "Greyhound Plasma Steering"
 
-    "Javelin" 800
-    "Javelin Storage Crate" 4
-    "Javelin Pod" 4
+    "Plasma Cannon" 2
 
-    "D23-QP Shield Generator"
-    "nGVF-DD Fuel Cell"
-    "LP072a Battery Pack"
+    "D41-HY Shield Generator"
+    "S3 Thermionic"
+    "LP036a Battery Pack"
     "Fuel Barrel" 50
     "Hyperdrive"
   engine -20 45
   engine 20 45
-  gun -23 -19 "Javelin Pod"
-  gun 23 -19 "Javelin Pod"
-  gun -12 -7 "Javelin Pod"
-  gun 12 -7 "Javelin Pod"
+  gun -23 -19 "Plasma Cannon"
+  gun 23 -19 "Plasma Cannon"
+  gun -12 -7
+  gun 12 -7
   leak "leak" 60 50
   leak "flame" 50 80
   explode "tiny explosion" 15
@@ -352,21 +325,20 @@ ship "Clipper"
   description "The Clipper is the smaller sister ship to the popular Southbound Shipyards Argosy. Although not able to carry as much cargo, Clippers are versatile ships that can be used as passenger transports, couriers, or even warships in a pinch, and they come with enough free space to be customized based on an individual captain's needs."
 
 
-ship "Clipper" "Clipper (Heavy)"
+ship "Clipper" "Clipper (Javelin)"
   outfits
     "Greyhound Plasma Thruster"
     "Impala Plasma Steering"
 
-    "Meteor Missile" 70
-    "Heavy Rocket" 40
-    "Meteor Missile Launcher" 2
-    "Heavy Rocket Launcher" 2
+    "Javelin" 800
+    "Javelin Storage Crate" 4
+    "Javelin Pod" 4
 
-    "D67-TM Shield Generator"
-    "RT-I Radiothermal"
+    "D41-HY Shield Generator"
+    "S3 Thermionic"
     "Supercapacitor"
     "Fuel Barrel" 50
-    "Scram Drive"
+    "Hyperdrive"
 
 
 ship "Clipper" "Clipper (Nuclear)"
@@ -430,10 +402,8 @@ ship "Dreadnought"
     "Orca Plasma Thruster"
     "Orca Plasma Steering"
 
-    "Javelin" 800
-    "Javelin Storage Crate" 4
-    "Javelin Pod" 4
-    "Plasma Turret" 5
+    "Plasma Cannon" 4
+    "Plasma Turret" 4
 
     "D41-HY Shield Generator"
     "Stack Core"
@@ -441,14 +411,16 @@ ship "Dreadnought"
     "Liquid Helium Cooler"
     "Fuel Barrel" 60
     "Hyperdrive"
-    "Large Radar Jammer"
+    "Tactical Scanner"
+    "Fragmentation Grenades" 50
+    "Laser Rifle" 100
   engine -25 172
   engine 25 172
-  gun -10 -167 "Javelin Pod"
-  gun 10 -167 "Javelin Pod"
-  gun -20 -151 "Javelin Pod"
-  gun 20 -151 "Javelin Pod"
-  turret 0 -94 "Plasma Turret"
+  gun -10 -167 "Plasma Cannon"
+  gun 10 -167 "Plasma Cannon"
+  gun -20 -151 "Plasma Cannon"
+  gun 20 -151 "Plasma Cannon"
+  turret 0 -94
   turret -38 -56 "Plasma Turret"
   turret 38 -56 "Plasma Turret"
   turret -44 118 "Plasma Turret"
@@ -470,18 +442,20 @@ ship "Dreadnought" "Dreadnought (Jump)"
     "Orca Plasma Thruster"
     "Orca Plasma Steering"
 
-    "Javelin" 800
-    "Javelin Storage Crate" 4
-    "Javelin Pod" 4
-    "Plasma Turret" 5
+    "Plasma Cannon" 4
+    "Plasma Turret" 4
+#    "Heavy Anti-Missile Turret"
 
     "D41-HY Shield Generator"
     "Stack Core"
     "LP144a Battery Pack"
     "Liquid Helium Cooler"
-    "Fuel Barrel" 60
+    "Fuel Barrel" 80
     "Jump Drive"
-    "Large Radar Jammer"
+    "Tactical Scanner"
+    "Outfits Expansion" 2
+    "Fragmentation Grenades" 50
+    "Laser Rifle" 100
 
 
 
@@ -503,7 +477,7 @@ ship "Fury"
     "drag" 1.6
     "heat dissipation" .9
     "cargo space" 15
-    "outfit space" 220
+    "outfit space" 230
     "engine capacity" 60
     "weapon capacity" 40
     weapon
@@ -512,12 +486,12 @@ ship "Fury"
       "hull damage" 120
       "hit force" 360
   outfits
-    "Greyhound Plasma Thruster"
+    "Chipmunk Plasma Thruster"
     "Greyhound Plasma Steering"
 
     "Modified Blaster Cannon" 4
 
-    "D14-RN Shield Generator"
+    "D23-QP Shield Generator"
     "nGVF-CC Fuel Cell"
     "LP036a Battery Pack"
     "Fuel Barrel" 60
@@ -536,12 +510,12 @@ ship "Fury"
 
 ship "Fury" "Fury (Flamethrower)"
   outfits
-    "Greyhound Plasma Thruster"
+    "Chipmunk Plasma Thruster"
     "Greyhound Plasma Steering"
 
     "Flamethrower" 4
 
-    "D14-RN Shield Generator"
+    "D23-QP Shield Generator"
     "nGVF-BB Fuel Cell"
     "Supercapacitor"
     "Fuel Barrel" 60
@@ -551,7 +525,7 @@ ship "Fury" "Fury (Flamethrower)"
 
 ship "Fury" "Fury (Gatling)"
   outfits
-    "Greyhound Plasma Thruster"
+    "Chipmunk Plasma Thruster"
     "Greyhound Plasma Steering"
 
     "Gatling Round" 12000
@@ -559,7 +533,7 @@ ship "Fury" "Fury (Gatling)"
     "Gatling Gun" 4
 
     "D23-QP Shield Generator"
-    "nGVF-CC Fuel Cell"
+    "nGVF-BB Fuel Cell"
     "Supercapacitor"
     "Fuel Barrel" 60
     "Hyperdrive"
@@ -567,28 +541,27 @@ ship "Fury" "Fury (Gatling)"
 
 ship "Fury" "Fury (Laser)"
   outfits
-    "Greyhound Plasma Thruster"
+    "Chipmunk Plasma Thruster"
     "Greyhound Plasma Steering"
 
     "Heavy Laser Cannon" 2
 
     "D23-QP Shield Generator"
-    "RT-I Radiothermal"
-    "Supercapacitor"
-    "Cooling Ducts"
+    "nGVF-CC Fuel Cell"
+    "LP036a Battery Pack"
     "Fuel Barrel" 60
     "Hyperdrive"
 
 
 ship "Fury" "Fury (Miner)"
   outfits
-    "Greyhound Plasma Thruster"
+    "Chipmunk Plasma Thruster"
     "Greyhound Plasma Steering"
 
     "Laser Cannon" 4
 
-    "D14-RN Shield Generator"
-    "nGVF-CC Fuel Cell"
+    "D23-QP Shield Generator"
+    "nGVF-BB Fuel Cell"
     "LP036a Battery Pack"
     "Asteroid Scanner"
     "Fuel Barrel" 60
@@ -597,18 +570,19 @@ ship "Fury" "Fury (Miner)"
 
 ship "Fury" "Fury (Rocket)"
   outfits
-    "Greyhound Plasma Thruster"
+    "Chipmunk Plasma Thruster"
     "Greyhound Plasma Steering"
 
     "Heavy Rocket" 40
     "Heavy Rocket Rack" 2
     "Heavy Rocket Launcher" 2
 
-    "D14-RN Shield Generator"
+    "D23-QP Shield Generator"
     "nGVF-BB Fuel Cell"
-    "Supercapacitor" 3
+    "Supercapacitor"
     "Fuel Barrel" 60
     "Hyperdrive"
+    "Outfits Expansion"
 
 
 
@@ -641,26 +615,23 @@ ship "Nest"
     "Greyhound Plasma Thruster"
     "Impala Plasma Steering"
 
-    "Meteor Missile" 80
-    "Meteor Missile Box" 2
-    "Meteor Missile Launcher" 2
-    "4X Blaster Turret" 2
-    "Heavy Anti-Missile Turret" 2
+    "Modified Blaster Quad Turret" 4
 
     "D41-HY Shield Generator" 2
     "S3 Thermionic"
     "LP144a Battery Pack"
+    "Liquid Water Cooler"
     "Fuel Barrel" 50
     "Hyperdrive"
-    "Small Radar Jammer"
+    "Large Radar Jammer"
   engine -45 122
   engine 45 122
   gun -15 -91
   gun 15 -91
-  turret -26 -50 "4X Blaster Turret"
-  turret 26 -50 "4X Blaster Turret"
-  turret -18 75 "Heavy Anti-Missile Turret"
-  turret 18 75 "Heavy Anti-Missile Turret"
+  turret -26 -50 "Modified Blaster Quad Turret"
+  turret 26 -50 "Modified Blaster Quad Turret"
+  turret -18 75 "Modified Blaster Quad Turret"
+  turret 18 75 "Modified Blaster Quad Turret"
   fighter -47 12 under
   fighter 47 12 under
   leak "leak" 60 50
@@ -723,26 +694,23 @@ ship "Roost"
     "Greyhound Plasma Thruster"
     "Impala Plasma Steering"
 
-    "Meteor Missile" 80
-    "Meteor Missile Box" 2
-    "Meteor Missile Launcher" 2
-    "4X Blaster Turret" 2
-    "Heavy Anti-Missile Turret" 2
+    "Modified Blaster Quad Turret" 4
 
     "D41-HY Shield Generator" 4
     "S3 Thermionic"
     "LP144a Battery Pack"
+    "Liquid Water Cooler"
     "Fuel Barrel" 60
     "Hyperdrive"
-    "Small Radar Jammer"
+    "Large Radar Jammer"
   engine -45 159
   engine 45 159
   gun -15 -128
   gun 15 -128
-  turret -26 -85 "4X Blaster Turret"
-  turret 26 -85 "4X Blaster Turret"
-  turret -18 114 "Heavy Anti-Missile Turret"
-  turret 18 114 "Heavy Anti-Missile Turret"
+  turret -26 -85 "Modified Blaster Quad Turret"
+  turret 26 -85 "Modified Blaster Quad Turret"
+  turret -18 114 "Modified Blaster Quad Turret"
+  turret 18 114 "Modified Blaster Quad Turret"
   fighter -47 -24 under
   fighter 47 -24 under
   fighter -47 50 under
@@ -807,26 +775,23 @@ ship "Skein"
     "Greyhound Plasma Thruster"
     "Impala Plasma Steering"
 
-    "Meteor Missile" 80
-    "Meteor Missile Box" 2
-    "Meteor Missile Launcher" 2
-    "4X Blaster Turret" 2
-    "Heavy Anti-Missile Turret" 2
+    "Modified Blaster Quad Turret" 4
 
     "D41-HY Shield Generator" 6
     "S3 Thermionic"
     "LP144a Battery Pack"
+    "Liquid Water Cooler"
     "Fuel Barrel" 70
     "Hyperdrive"
-    "Small Radar Jammer"
+    "Large Radar Jammer"
   engine -45 197
   engine 45 197
   gun -15 -165
   gun 15 -165
-  turret -26 -123 "4X Blaster Turret"
-  turret 26 -123 "4X Blaster Turret"
-  turret -18.5 154 "Heavy Anti-Missile Turret"
-  turret 18.5 154 "Heavy Anti-Missile Turret"
+  turret -26 -123 "Modified Blaster Quad Turret"
+  turret 26 -123 "Modified Blaster Quad Turret"
+  turret -18.5 154 "Modified Blaster Quad Turret"
+  turret 18.5 154 "Modified Blaster Quad Turret"
   fighter -47 -61 under
   fighter 47 -61 under
   fighter -47 14 under
