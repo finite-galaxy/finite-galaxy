@@ -417,7 +417,7 @@ void MapDetailPanel::DrawInfo()
     selectedSystem->GetGovernment()->GetName() : "Unknown Government";
   font.Draw(gov, uiPoint + Point(-90., 13.), (commodity == SHOW_GOVERNMENT) ? medium : dim);
   if(commodity == SHOW_GOVERNMENT)
-    PointerShader::Draw(uiPoint + Point(-90., 20.), Point(1., 0.),
+    PointerShader::Draw(uiPoint + Point(-90., 23.), Point(1., 0.),
       10., 10., 0., medium);
   
   uiPoint.Y() += 115.;
@@ -442,7 +442,7 @@ void MapDetailPanel::DrawInfo()
         planetY[planet] = uiPoint.Y() - 60;
       
         font.Draw(object.Name(),
-          uiPoint + Point(-70., -52.),
+          uiPoint + Point(-70., -55.),
           planet == selectedPlanet ? medium : dim);
         
         bool hasSpaceport = planet->HasSpaceport();
@@ -451,21 +451,21 @@ void MapDetailPanel::DrawInfo()
           planet->GetGovernment()->IsEnemy() ? "Hostile" :
           planet->CanLand() ? "Friendly" : "Restricted";
         font.Draw(reputationLabel,
-          uiPoint + Point(-60., -32.),
+          uiPoint + Point(-60., -35.),
           hasSpaceport ? medium : faint);
         if(commodity == SHOW_REPUTATION)
           PointerShader::Draw(uiPoint + Point(-60., -25.), Point(1., 0.),
             10., 10., 0., medium);
         
         font.Draw("Shipyard",
-          uiPoint + Point(-60., -12.),
+          uiPoint + Point(-60., -15.),
           planet->HasShipyard() ? medium : faint);
         if(commodity == SHOW_SHIPYARD)
           PointerShader::Draw(uiPoint + Point(-60., -5.), Point(1., 0.),
             10., 10., 0., medium);
         
         font.Draw("Outfitter",
-          uiPoint + Point(-60., 8.),
+          uiPoint + Point(-60., 5.),
           planet->HasOutfitter() ? medium : faint);
         if(commodity == SHOW_OUTFITTER)
           PointerShader::Draw(uiPoint + Point(-60., 15.), Point(1., 0.),
@@ -473,7 +473,7 @@ void MapDetailPanel::DrawInfo()
         
         bool hasVisited = player.HasVisited(planet);
         font.Draw(hasVisited ? "(has been visited)" : "(not yet visited)",
-          uiPoint + Point(-70., 28.),
+          uiPoint + Point(-70., 25.),
           dim);
         if(commodity == SHOW_VISITED)
           PointerShader::Draw(uiPoint + Point(-70., 35.), Point(1., 0.),
@@ -532,7 +532,7 @@ void MapDetailPanel::DrawInfo()
     font.Draw(price, pos, colour);
     
     if(isSelected)
-      PointerShader::Draw(uiPoint + Point(0., 7.), Point(1., 0.), 10., 10., 0., colour);
+      PointerShader::Draw(uiPoint + Point(0., 10.), Point(1., 0.), 10., 10., 0., colour);
     
     uiPoint.Y() += 20.;
   }
