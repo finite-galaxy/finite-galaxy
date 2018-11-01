@@ -471,7 +471,7 @@ mission "Wanderers: Pug Assistance 1"
         goto next
 
       label displace
-      `  "I hope that Rek will be able to [allay, assuage] that fear," says Tele'ek. "Surely if we are able to [communicate, connect] with the Korath survivors, they will soon come to see that our intentions are [peaceful, honorable, benevolent]."`
+      `  "I hope that Rek will be able to [allay, assuage] that fear," says Tele'ek. "Surely if we are able to [communicate, connect] with the Korath survivors, they will soon come to see that our intentions are [peaceful, honourable, benevolent]."`
         goto next
 
       label pug
@@ -691,7 +691,7 @@ mission "Wanderers: Kor Efret 3"
         `  "What about the Kor Sestor? Do they have any hope of taking over those drones?"`
           goto sestor
 
-      `  She says, "I'm sorry, <first>, but I'm not going to translate that. It would be an insult to the Korath, and they are very prickly when it comes to their honor. I wish you the best of luck, though."`
+      `  She says, "I'm sorry, <first>, but I'm not going to translate that. It would be an insult to the Korath, and they are very prickly when it comes to their honour. I wish you the best of luck, though."`
         goto end
 
       label sestor
@@ -1327,7 +1327,7 @@ mission "Wanderers: Tour 2"
         `  (Agree to escort their ship to <planet>.)`
           accept
         `  "I think you might be safer if you travel aboard my ship."`
-      `  Rek talks with them for a while, then explains to you, "They want to be in control of their own journey, rather than being no more than 'living cargo' aboard an alien ship. It sounds like this is a matter of honor." Since it seems like the only option, you agree to let them follow you to <planet> in their own ship.`
+      `  Rek talks with them for a while, then explains to you, "They want to be in control of their own journey, rather than being no more than 'living cargo' aboard an alien ship. It sounds like this is a matter of honour." Since it seems like the only option, you agree to let them follow you to <planet> in their own ship.`
         accept
   on visit
     dialogue "You've reached your destination, but the Korath ship is not here yet."

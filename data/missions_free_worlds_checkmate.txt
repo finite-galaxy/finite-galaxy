@@ -2290,12 +2290,12 @@ mission "FWC End"
       `  Freya says, "What should we do now?"`
       `  "I've contacted New Austria and told them that Councilor Reynolds is free to leave," he says. "She told me that your Senate has agreed to the Free Worlds being a semi-autonomous district of the Republic, similar to the Syndicate systems. She also asked that you and Captain <last> meet up with her and Alondo Gruyere on Earth, where they will be meeting with Parliament. I sent a report to Earth that places a very heavy emphasis on the role that the Free Worlds played in this victory, so Parliament ought to be quite willing to negotiate with you."`
       choice
-        `  "Thank you. It's been an honor to fight alongside you."`
-          goto honor
+        `  "Thank you. It's been an honour to fight alongside you."`
+          goto honour
         `  "Last time we visited Parliament, they violated our safe passage agreement and put us on trial."`
           goto trial
-      label honor
-      `  "No, the honor has been mine," he says. "Feel free to drop by and visit me on Farpoint any time you're in the area."`
+      label honour
+      `  "No, the honour has been mine," he says. "Feel free to drop by and visit me on Farpoint any time you're in the area."`
         accept
       label trial
       `  "Trust me," he says, "you won't need to worry about that this time around. Having an alien attack so close to Earth be thwarted through the assistance of the Free Worlds has put Parliament in a very... receptive mood. Good luck, Captain <last>, and I hope our paths will cross again."`
