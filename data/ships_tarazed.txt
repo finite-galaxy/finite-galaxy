@@ -16,10 +16,10 @@ shipyard "Tarazed Variants"
   "Osprey"
   "Osprey (Hai)"
   "Osprey (Laser)"
-  "Osprey (Missile)"
+  "Osprey (Rocket)"
   "Raven"
   "Raven (Afterburner)"
-  "Raven (Heavy)"
+  "Raven (Rocket)"
   "Sparrow"
   "Sparrow (Gatling)"
   "Sparrow (Miner)"
@@ -36,7 +36,7 @@ ship "Blackbird"
     licences
       Pilot
     "cost" 2230000
-    "shields" 4400
+    "shields" 4500
     "hull" 900
     "required crew" 3
     "bunks" 28
@@ -58,12 +58,12 @@ ship "Blackbird"
 
     "Modified Blaster Quad Turret" 2
 
-    "D23-QP Shield Generator"
+    "D41-HY Shield Generator"
     "S3 Thermionic"
-    "LP072a Battery Pack"
+    "LP144a Battery Pack"
+    "Liquid Water Cooler"
     "Fuel Barrel" 70
     "Hyperdrive"
-    "Small Radar Jammer"
   engine -40 55
   engine 40 55
   turret -18 0 "Modified Blaster Quad Turret"
@@ -89,14 +89,14 @@ ship "Falcon"
       Pilot
     "cost" 9800000
     "shields" 12800
-    "hull" 3700
+    "hull" 3600
     "required crew" 32
     "bunks" 64
-    "mass" 510
+    "mass" 480
     "drag" 6.7
     "heat dissipation" .7
     "cargo space" 80
-    "outfit space" 600
+    "outfit space" 610
     "engine capacity" 150
     "weapon capacity" 240
     weapon
@@ -108,20 +108,21 @@ ship "Falcon"
     "Orca Plasma Thruster"
     "Impala Plasma Steering"
 
-    "Plasma Cannon" 2
+    "Heavy Rocket" 40
+    "Heavy Rocket Rack" 2
+    "Heavy Rocket Launcher" 2
     "Modified Blaster Quad Turret" 4
 
-    "D41-HY Shield Generator"
+    "D94-YV Shield Generator"
     "Breeder Reactor"
     "LP144a Battery Pack"
     "Liquid Nitrogen Cooler"
     "Fuel Barrel" 60
     "Hyperdrive"
-    "Large Radar Jammer"
   engine -17 143
   engine 17 143
-  gun -17 -88 "Plasma Cannon"
-  gun 17 -88 "Plasma Cannon"
+  gun -17 -88 "Heavy Rocket Launcher"
+  gun 17 -88 "Heavy Rocket Launcher"
   turret -16 -24 "Modified Blaster Quad Turret"
   turret 16 -24 "Modified Blaster Quad Turret"
   turret -57 40 "Modified Blaster Quad Turret"
@@ -139,34 +140,37 @@ ship "Falcon"
 
 ship "Falcon" "Falcon (Heavy)"
   outfits
-    "Orca Plasma Thruster"
-    "A375 Atomic Steering"
+    "A520 Atomic Thruster"
+    "A525 Atomic Steering"
 
     "Torpedo" 60
+    "Torpedo Storage Rack" 2
     "Torpedo Launcher" 2
     "Heavy Laser Turret" 4
 
-    "D67-TM Shield Generator"
+    "D94-YV Shield Generator"
     "Fusion Reactor"
+    "LP036a Battery Pack"
+    "Liquid Nitrogen Cooler"
     "Fuel Barrel" 60
     "Hyperdrive"
-    "Large Radar Jammer"
+    "Outfits Expansion" 3
 
 
 ship "Falcon" "Falcon (Laser)"
   outfits
-    "Impala Plasma Thruster"
-    "Orca Plasma Steering"
+    "Orca Plasma Thruster"
+    "Impala Plasma Steering"
 
     "Heavy Laser Cannon" 2
     "Heavy Laser Turret" 4
 
     "D94-YV Shield Generator"
     "Breeder Reactor"
-    "LP072a Battery Pack"
+    "LP144a Battery Pack"
+    "Liquid Nitrogen Cooler"
     "Fuel Barrel" 60
     "Hyperdrive"
-    "Small Radar Jammer"
 
 
 ship "Falcon" "Falcon (Plasma)"
@@ -176,13 +180,13 @@ ship "Falcon" "Falcon (Plasma)"
 
     "Plasma Turret" 4
 
-    "D41-HY Shield Generator"
+    "D94-YV Shield Generator"
     "Breeder Reactor"
     "LP144a Battery Pack"
     "Liquid Nitrogen Cooler"
     "Fuel Barrel" 60
     "Hyperdrive"
-    "Small Radar Jammer"
+    "Outfits Expansion" 2
 
 
 
@@ -241,15 +245,15 @@ ship "Hawk"
     licences
       Pilot
     "cost" 670000
-    "shields" 2500
-    "hull" 500
+    "shields" 2400
+    "hull" 600
     "required crew" 2
     "bunks" 4
     "mass" 150
     "drag" 2.1
     "heat dissipation" .8
     "cargo space" 20
-    "outfit space" 230
+    "outfit space" 240
     "engine capacity" 70
     "weapon capacity" 50
     weapon
@@ -276,7 +280,7 @@ ship "Hawk"
   explode "tiny explosion" 15
   explode "small explosion" 5
   "final explode" "final explosion small"
-  description "The Tarazed Hawk is an interceptor-class warship often used as an escort for freighters or in a planetary militia's patrol squadron. Hawks are fast enough to chase down most smaller ships, while also being much more heavily armed and armored. They are also, of course, a favorite ship of pirate captains who have earned enough money to afford one."
+  description "The Tarazed Hawk is an interceptor-class warship often used as an escort for freighters or in a planetary militia's patrol squadron. Hawks are fast enough to chase down most smaller ships, while also being much more heavily armed and armoured. They are also, of course, a favorite ship of pirate captains who have earned enough money to afford one."
 
 
 ship "Hawk" "Hawk (Rocket)"
@@ -304,7 +308,7 @@ ship "Hawk" "Hawk (Speedy)"
 
     "D41-HY Shield Generator"
     "S3 Thermionic"
-    "Supercapacitor" 3
+    "LP036a Battery Pack"
     "Fuel Barrel" 30
     "Hyperdrive"
 
@@ -319,8 +323,8 @@ ship "Kestrel"
     licences
       Kestrel
     "cost" 14700000
-    "shields" 17400
-    "hull" 6200
+    "shields" 18000
+    "hull" 6000
     "required crew" 64
     "bunks" 128
     "mass" 740
@@ -376,8 +380,8 @@ ship "Kestrel" "Kestrel (More Engines)"
 
 ship "Kestrel" "Kestrel (More Shields)"
   add attributes
-    "shields" 2700
-    "hull" 1300
+    "shields" 3000
+    "hull" 1000
 
 
 ship "Kestrel" "Kestrel (More Weapons)"
@@ -405,7 +409,7 @@ ship "Osprey"
       Pilot
     "cost" 4900000
     "shields" 7200
-    "hull" 1600
+    "hull" 1800
     "required crew" 16
     "bunks" 32
     "mass" 270
@@ -427,13 +431,12 @@ ship "Osprey"
     "Plasma Cannon" 4
     "Modified Blaster Turret" 2
 
-    "D41-HY Shield Generator"
+    "D67-TM Shield Generator"
     "Breeder Reactor"
     "LP072a Battery Pack"
-    "Liquid Helium Cooler"
+    "Liquid Nitrogen Cooler"
     "Fuel Barrel" 60
     "Hyperdrive"
-    "Small Radar Jammer" 2
   engine -40 67
   engine 40 67
   gun -8 -100 "Plasma Cannon"
@@ -459,6 +462,7 @@ ship "Osprey" "Osprey (Hai)"
     `"Bondir" Atomic Steering`
 
     "Ion Cannon" 2
+    "Pulse Cannon" 2
     "Chameleon Anti-Missile" 2
 
     "Diamond Regenerator"
@@ -467,40 +471,39 @@ ship "Osprey" "Osprey (Hai)"
     "Liquid Nitrogen Cooler"
     "Fuel Barrel" 60
     "Hyperdrive"
+    "Outfits Expansion" 3
 
 
 ship "Osprey" "Osprey (Laser)"
   outfits
     "Impala Plasma Thruster"
-    "X4200 Ion Steering"
+    "Impala Plasma Steering"
 
     "Heavy Laser Cannon" 4
     "Heavy Laser Turret" 2
 
-    "D94-YV Shield Generator"
+    "D67-TM Shield Generator"
     "Breeder Reactor"
-    "LP036a Battery Pack"
-    "Supercapacitor" 4
-    "Liquid Water Cooler"
+    "LP072a Battery Pack"
+    "Liquid Nitrogen Cooler"
     "Fuel Barrel" 60
     "Hyperdrive"
 
 
-ship "Osprey" "Osprey (Missile)"
+ship "Osprey" "Osprey (Rocket)"
   outfits
-    "A520 Atomic Thruster"
-    "A375 Atomic Steering"
-    "Torpedo Launcher" 2
-    "Torpedo" 60
-    "Heavy Rocket Launcher" 2
-    "Heavy Rocket" 40
-    "Heavy Laser Turret" 2
+    "Impala Plasma Thruster"
+    "Impala Plasma Steering"
 
-    "D41-HY Shield Generator"
+    "Heavy Rocket" 80
+    "Heavy Rocket Rack" 4
+    "Heavy Rocket Launcher" 4
+    "Modified Blaster Turret" 2
+
+    "D67-TM Shield Generator"
     "Breeder Reactor"
-    "LP036a Battery Pack"
-    "Supercapacitor" 3
-    "Liquid Water Cooler"
+    "LP072a Battery Pack"
+    "Liquid Nitrogen Cooler"
     "Fuel Barrel" 60
     "Hyperdrive"
 
@@ -515,8 +518,8 @@ ship "Raven"
     licences
       Pilot
     "cost" 1800000
-    "shields" 4700
-    "hull" 1400
+    "shields" 4800
+    "hull" 1200
     "required crew" 4
     "bunks" 8
     "mass" 130
@@ -525,7 +528,7 @@ ship "Raven"
     "cargo space" 30
     "outfit space" 330
     "engine capacity" 90
-    "weapon capacity" 90
+    "weapon capacity" 100
     weapon
       "blast radius" 60
       "shield damage" 600
@@ -533,12 +536,9 @@ ship "Raven"
       "hit force" 900
   outfits
     "Greyhound Plasma Thruster"
-    "Impala Plasma Steering"
+    "Greyhound Plasma Steering"
 
-    "Heavy Rocket" 40
-    "Heavy Rocket Rack" 2
-    "Heavy Rocket Launcher" 2
-    "Plasma Cannon" 2
+    "Plasma Cannon" 4
 
     "D41-HY Shield Generator"
     "S3 Thermionic"
@@ -549,8 +549,8 @@ ship "Raven"
   engine 12 43
   gun -10 -33 "Plasma Cannon"
   gun 10 -33 "Plasma Cannon"
-  gun -16 -28 "Heavy Rocket Launcher"
-  gun 16 -28 "Heavy Rocket Launcher"
+  gun -16 -28 "Plasma Cannon"
+  gun 16 -28 "Plasma Cannon"
   leak "leak" 60 50
   leak "flame" 50 80
   explode "medium explosion" 24
@@ -563,38 +563,35 @@ ship "Raven"
 
 ship "Raven" "Raven (Afterburner)"
   outfits
-    "Impala Plasma Thruster"
-    "Impala Plasma Steering"
+    "Greyhound Plasma Thruster"
+    "Greyhound Plasma Steering"
     "Afterburner"
 
-    "Heavy Laser Cannon" 4
+    "Plasma Cannon" 4
 
     "D41-HY Shield Generator"
-    "NT-200 Nucleovoltaic"
+    "S3 Thermionic"
+    "LP036a Battery Pack"
     "Fuel Barrel" 50
     "Hyperdrive"
+    "Outfits Expansion" 2
 
 
-ship "Raven" "Raven (Heavy)"
+ship "Raven" "Raven (Rocket)"
   outfits
-    "A250 Atomic Thruster"
-    "A375 Atomic Steering"
+    "Greyhound Plasma Thruster"
+    "Greyhound Plasma Steering"
 
-    "Meteor Missile" 70
-    "Meteor Missile Launcher" 2
-    "Particle Cannon" 2
+    "Heavy Rocket" 80
+    "Heavy Rocket Rack" 4
+    "Heavy Rocket Launcher" 4
 
-    "D23-QP Shield Generator"
-    "Fission Reactor"
-    "Supercapacitor" 3
-    "Liquid Water Cooler"
-    "Cooling Ducts"
+    "D41-HY Shield Generator"
+    "S3 Thermionic"
+    "LP036a Battery Pack"
     "Fuel Barrel" 50
     "Hyperdrive"
-  gun "Particle Cannon"
-  gun "Particle Cannon"
-  gun "Meteor Missile Launcher"
-  gun "Meteor Missile Launcher"
+    "Outfits Expansion"
 
 
 
@@ -670,7 +667,7 @@ ship "Sparrow" "Sparrow (Miner)"
 
     "D14-RN Shield Generator"
     "nGVF-BB Fuel Cell"
-    "LP036a Battery Pack"
+    "Supercapacitor" 4
     "Asteroid Scanner"
     "Fuel Barrel" 30
     "Hyperdrive"
