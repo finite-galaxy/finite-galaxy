@@ -26,15 +26,168 @@ namespace {
   GLuint vbo;
 
   const vector<vector<GLint>> SWIZZLE = {
-    {GL_RED, GL_GREEN, GL_BLUE, GL_ALPHA}, // red + yellow markings (republic)
-    {GL_RED, GL_BLUE, GL_GREEN, GL_ALPHA}, // red + magenta markings
-    {GL_GREEN, GL_RED, GL_BLUE, GL_ALPHA}, // green + yellow (freeholders)
-    {GL_BLUE, GL_RED, GL_GREEN, GL_ALPHA}, // green + cyan
-    {GL_GREEN, GL_BLUE, GL_RED, GL_ALPHA}, // blue + magenta (syndicate)
-    {GL_BLUE, GL_GREEN, GL_RED, GL_ALPHA}, // blue + cyan (merchant)
-    {GL_GREEN, GL_BLUE, GL_BLUE, GL_ALPHA}, // red and black (pirate)
-    {GL_BLUE, GL_ZERO, GL_ZERO, GL_ALPHA},  // red only (cloaked)
-    {GL_ZERO, GL_ZERO, GL_ZERO, GL_ALPHA}  // black only (outline)
+    // three different colours
+    {GL_RED,   GL_GREEN, GL_BLUE,  GL_ALPHA}, //  0: red + yellow markings (republic)
+    {GL_RED,   GL_BLUE,  GL_GREEN, GL_ALPHA}, //  1: red + magenta markings
+    {GL_GREEN, GL_RED,   GL_BLUE,  GL_ALPHA}, //  2: green + yellow (free worlds)
+    {GL_BLUE,  GL_RED,   GL_GREEN, GL_ALPHA}, //  3: green + cyan
+    {GL_GREEN, GL_BLUE,  GL_RED,   GL_ALPHA}, //  4: blue + magenta (syndicate)
+    {GL_BLUE,  GL_GREEN, GL_RED,   GL_ALPHA}, //  5: blue + cyan (merchant)
+    // two red
+    {GL_RED,   GL_RED,   GL_GREEN, GL_ALPHA}, //  6:
+    {GL_RED,   GL_RED,   GL_BLUE,  GL_ALPHA}, //  7:
+    {GL_RED,   GL_GREEN, GL_RED,   GL_ALPHA}, //  8:
+    {GL_RED,   GL_BLUE,  GL_RED,   GL_ALPHA}, //  9:
+    {GL_GREEN, GL_RED,   GL_RED,   GL_ALPHA}, // 10:
+    {GL_BLUE,  GL_RED,   GL_RED,   GL_ALPHA}, // 11:
+    // two green
+    {GL_GREEN, GL_GREEN, GL_RED,   GL_ALPHA}, // 12:
+    {GL_GREEN, GL_GREEN, GL_BLUE,  GL_ALPHA}, // 13:
+    {GL_GREEN, GL_RED,   GL_GREEN, GL_ALPHA}, // 14:
+    {GL_GREEN, GL_BLUE,  GL_GREEN, GL_ALPHA}, // 15:
+    {GL_RED,   GL_GREEN, GL_GREEN, GL_ALPHA}, // 16:
+    {GL_BLUE,  GL_GREEN, GL_GREEN, GL_ALPHA}, // 17:
+    // two blue
+    {GL_BLUE,  GL_BLUE,  GL_RED,   GL_ALPHA}, // 18:
+    {GL_BLUE,  GL_BLUE,  GL_GREEN, GL_ALPHA}, // 19:
+    {GL_BLUE,  GL_RED,   GL_BLUE,  GL_ALPHA}, // 20:
+    {GL_RED,   GL_BLUE,  GL_BLUE,  GL_ALPHA}, // 21:
+    {GL_BLUE,  GL_GREEN, GL_BLUE,  GL_ALPHA}, // 22:
+    {GL_GREEN, GL_BLUE,  GL_BLUE,  GL_ALPHA}, // 23: red and black (pirate)
+    // three identical
+    {GL_RED,   GL_RED,   GL_RED,   GL_ALPHA}, // 24:
+    {GL_GREEN, GL_GREEN, GL_GREEN, GL_ALPHA}, // 25:
+    {GL_BLUE,  GL_BLUE,  GL_BLUE,  GL_ALPHA}, // 26:
+
+    // third is zero
+    {GL_RED,   GL_RED,   GL_ZERO,  GL_ALPHA}, // 27:
+    {GL_RED,   GL_GREEN, GL_ZERO,  GL_ALPHA}, // 28:
+    {GL_RED,   GL_BLUE,  GL_ZERO,  GL_ALPHA}, // 29:
+    {GL_GREEN, GL_RED,   GL_ZERO,  GL_ALPHA}, // 30:
+    {GL_GREEN, GL_GREEN, GL_ZERO,  GL_ALPHA}, // 31:
+    {GL_GREEN, GL_BLUE,  GL_ZERO,  GL_ALPHA}, // 32:
+    {GL_BLUE,  GL_RED,   GL_ZERO,  GL_ALPHA}, // 33:
+    {GL_BLUE,  GL_GREEN, GL_ZERO,  GL_ALPHA}, // 34:
+    {GL_BLUE,  GL_BLUE,  GL_ZERO,  GL_ALPHA}, // 35:
+    // second is zero
+    {GL_RED,   GL_ZERO,  GL_RED,   GL_ALPHA}, // 36:
+    {GL_RED,   GL_ZERO,  GL_GREEN, GL_ALPHA}, // 37:
+    {GL_RED,   GL_ZERO,  GL_BLUE,  GL_ALPHA}, // 38:
+    {GL_GREEN, GL_ZERO,  GL_RED,   GL_ALPHA}, // 39:
+    {GL_GREEN, GL_ZERO,  GL_GREEN, GL_ALPHA}, // 40:
+    {GL_GREEN, GL_ZERO,  GL_BLUE,  GL_ALPHA}, // 41:
+    {GL_BLUE,  GL_ZERO,  GL_RED,   GL_ALPHA}, // 42:
+    {GL_BLUE,  GL_ZERO,  GL_GREEN, GL_ALPHA}, // 43:
+    {GL_BLUE,  GL_ZERO,  GL_BLUE,  GL_ALPHA}, // 44:
+    // third is zero
+    {GL_ZERO,  GL_RED,   GL_RED,   GL_ALPHA}, // 45:
+    {GL_ZERO,  GL_RED,   GL_GREEN, GL_ALPHA}, // 46:
+    {GL_ZERO,  GL_RED,   GL_BLUE,  GL_ALPHA}, // 47:
+    {GL_ZERO,  GL_GREEN, GL_RED,   GL_ALPHA}, // 48:
+    {GL_ZERO,  GL_GREEN, GL_GREEN, GL_ALPHA}, // 49:
+    {GL_ZERO,  GL_GREEN, GL_BLUE,  GL_ALPHA}, // 50:
+    {GL_ZERO,  GL_BLUE,  GL_RED,   GL_ALPHA}, // 51:
+    {GL_ZERO,  GL_BLUE,  GL_GREEN, GL_ALPHA}, // 52:
+    {GL_ZERO,  GL_BLUE,  GL_BLUE,  GL_ALPHA}, // 53:
+
+    // two zero
+    {GL_RED,   GL_ZERO,  GL_ZERO,  GL_ALPHA}, // 54:
+    {GL_GREEN, GL_ZERO,  GL_ZERO,  GL_ALPHA}, // 55:
+    {GL_BLUE,  GL_ZERO,  GL_ZERO,  GL_ALPHA}, // 56: red only (cloaked)
+    {GL_ZERO,  GL_RED,   GL_ZERO,  GL_ALPHA}, // 57:
+    {GL_ZERO,  GL_BLUE,  GL_ZERO,  GL_ALPHA}, // 58:
+    {GL_ZERO,  GL_GREEN, GL_ZERO,  GL_ALPHA}, // 59:
+    {GL_ZERO,  GL_ZERO,  GL_RED,   GL_ALPHA}, // 60:
+    {GL_ZERO,  GL_ZERO,  GL_GREEN, GL_ALPHA}, // 61:
+    {GL_ZERO,  GL_ZERO,  GL_BLUE,  GL_ALPHA}, // 62:
+
+    // three zero
+    {GL_ZERO,  GL_ZERO,  GL_ZERO,  GL_ALPHA}  // 63: black only (outline)
+
+/*
+    {GL_ZERO,  GL_ZERO,  GL_ZERO,  GL_ALPHA}, //  0: black only (outline)
+    {GL_ZERO,  GL_ZERO,  GL_RED,   GL_ALPHA}, //  1:
+    {GL_ZERO,  GL_ZERO,  GL_GREEN, GL_ALPHA}, //  2:
+    {GL_ZERO,  GL_ZERO,  GL_BLUE,  GL_ALPHA}, //  3:
+
+    {GL_ZERO,  GL_RED,   GL_ZERO,  GL_ALPHA}, //  4:
+    {GL_ZERO,  GL_RED,   GL_RED,   GL_ALPHA}, //  5:
+    {GL_ZERO,  GL_RED,   GL_GREEN, GL_ALPHA}, //  6:
+    {GL_ZERO,  GL_RED,   GL_BLUE,  GL_ALPHA}, //  7:
+
+    {GL_ZERO,  GL_GREEN, GL_ZERO,  GL_ALPHA}, //  8:
+    {GL_ZERO,  GL_GREEN, GL_RED,   GL_ALPHA}, //  9:
+    {GL_ZERO,  GL_GREEN, GL_GREEN, GL_ALPHA}, // 10:
+    {GL_ZERO,  GL_GREEN, GL_BLUE,  GL_ALPHA}, // 11:
+
+    {GL_ZERO,  GL_BLUE,  GL_ZERO,  GL_ALPHA}, // 12:
+    {GL_ZERO,  GL_BLUE,  GL_RED,   GL_ALPHA}, // 13:
+    {GL_ZERO,  GL_BLUE,  GL_GREEN, GL_ALPHA}, // 14:
+    {GL_ZERO,  GL_BLUE,  GL_BLUE,  GL_ALPHA}, // 15:
+
+
+    {GL_RED,   GL_ZERO,  GL_ZERO,  GL_ALPHA}, // 16:
+    {GL_RED,   GL_ZERO,  GL_RED,   GL_ALPHA}, // 17:
+    {GL_RED,   GL_ZERO,  GL_GREEN, GL_ALPHA}, // 18:
+    {GL_RED,   GL_ZERO,  GL_BLUE,  GL_ALPHA}, // 19:
+
+    {GL_RED,   GL_RED,   GL_ZERO,  GL_ALPHA}, // 20:
+    {GL_RED,   GL_RED,   GL_RED,   GL_ALPHA}, // 21:
+    {GL_RED,   GL_RED,   GL_GREEN, GL_ALPHA}, // 22:
+    {GL_RED,   GL_RED,   GL_BLUE,  GL_ALPHA}, // 23:
+
+    {GL_RED,   GL_GREEN, GL_ZERO,  GL_ALPHA}, // 24:
+    {GL_RED,   GL_GREEN, GL_RED,   GL_ALPHA}, // 25:
+    {GL_RED,   GL_GREEN, GL_GREEN, GL_ALPHA}, // 26:
+    {GL_RED,   GL_GREEN, GL_BLUE,  GL_ALPHA}, // 27: red + yellow markings (republic)
+
+    {GL_RED,   GL_BLUE,  GL_ZERO,  GL_ALPHA}, // 28:
+    {GL_RED,   GL_BLUE,  GL_RED,   GL_ALPHA}, // 29:
+    {GL_RED,   GL_BLUE,  GL_GREEN, GL_ALPHA}, // 30: red + magenta markings
+    {GL_RED,   GL_BLUE,  GL_BLUE,  GL_ALPHA}, // 31:
+
+
+    {GL_GREEN, GL_ZERO,  GL_ZERO,  GL_ALPHA}, // 32:
+    {GL_GREEN, GL_ZERO,  GL_RED,   GL_ALPHA}, // 33:
+    {GL_GREEN, GL_ZERO,  GL_GREEN, GL_ALPHA}, // 34:
+    {GL_GREEN, GL_ZERO,  GL_BLUE,  GL_ALPHA}, // 35:
+
+    {GL_GREEN, GL_RED,   GL_ZERO,  GL_ALPHA}, // 36:
+    {GL_GREEN, GL_RED,   GL_RED,   GL_ALPHA}, // 37:
+    {GL_GREEN, GL_RED,   GL_GREEN, GL_ALPHA}, // 38:
+    {GL_GREEN, GL_RED,   GL_BLUE,  GL_ALPHA}, // 39: green + yellow (free worlds)
+
+    {GL_GREEN, GL_GREEN, GL_ZERO,  GL_ALPHA}, // 40:
+    {GL_GREEN, GL_GREEN, GL_RED,   GL_ALPHA}, // 41:
+    {GL_GREEN, GL_GREEN, GL_GREEN, GL_ALPHA}, // 42:
+    {GL_GREEN, GL_GREEN, GL_BLUE,  GL_ALPHA}, // 43:
+
+    {GL_GREEN, GL_BLUE,  GL_ZERO,  GL_ALPHA}, // 44:
+    {GL_GREEN, GL_BLUE,  GL_RED,   GL_ALPHA}, // 45: blue + magenta (syndicate)
+    {GL_GREEN, GL_BLUE,  GL_GREEN, GL_ALPHA}, // 46:
+    {GL_GREEN, GL_BLUE,  GL_BLUE,  GL_ALPHA}, // 47: red and black (pirate)
+
+
+    {GL_BLUE,  GL_ZERO,  GL_ZERO,  GL_ALPHA}, // 48: red only (cloaked)
+    {GL_BLUE,  GL_ZERO,  GL_RED,   GL_ALPHA}, // 49:
+    {GL_BLUE,  GL_ZERO,  GL_GREEN, GL_ALPHA}, // 50:
+    {GL_BLUE,  GL_ZERO,  GL_BLUE,  GL_ALPHA}, // 51:
+
+    {GL_BLUE,  GL_RED,   GL_ZERO,  GL_ALPHA}, // 52:
+    {GL_BLUE,  GL_RED,   GL_RED,   GL_ALPHA}, // 53:
+    {GL_BLUE,  GL_RED,   GL_GREEN, GL_ALPHA}, // 54: green + cyan
+    {GL_BLUE,  GL_RED,   GL_BLUE,  GL_ALPHA}, // 55:
+
+    {GL_BLUE,  GL_GREEN, GL_ZERO,  GL_ALPHA}, // 56:
+    {GL_BLUE,  GL_GREEN, GL_RED,   GL_ALPHA}, // 57: blue + cyan (merchant)
+    {GL_BLUE,  GL_GREEN, GL_GREEN, GL_ALPHA}, // 58:
+    {GL_BLUE,  GL_GREEN, GL_BLUE,  GL_ALPHA}, // 59:
+
+    {GL_BLUE,  GL_BLUE,  GL_ZERO,  GL_ALPHA}, // 60:
+    {GL_BLUE,  GL_BLUE,  GL_RED,   GL_ALPHA}, // 61:
+    {GL_BLUE,  GL_BLUE,  GL_GREEN, GL_ALPHA}, // 62:
+    {GL_BLUE,  GL_BLUE,  GL_BLUE,  GL_ALPHA}  // 63:
+*/
   };
 }
 

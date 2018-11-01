@@ -1912,7 +1912,7 @@ void Engine::AddSprites(const Ship &ship)
       if(bay.side == Ship::Bay::UNDER && bay.ship)
       {
         if(drawCloaked)
-          draw[calcTickTock].AddSwizzled(*bay.ship, 7);
+          draw[calcTickTock].AddSwizzled(*bay.ship, 56);
         draw[calcTickTock].Add(*bay.ship, cloak);
       }
   
@@ -1931,7 +1931,7 @@ void Engine::AddSprites(const Ship &ship)
     }
   
   if(drawCloaked)
-    draw[calcTickTock].AddSwizzled(ship, 7);
+    draw[calcTickTock].AddSwizzled(ship, 56);
   draw[calcTickTock].Add(ship, cloak);
   for(const Hardpoint &hardpoint : ship.Weapons())
     if(hardpoint.GetOutfit() && hardpoint.GetOutfit()->HardpointSprite().HasSprite())

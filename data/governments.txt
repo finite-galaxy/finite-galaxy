@@ -12,13 +12,13 @@ government "Bad Trip"
   "player reputation" -1000
 
 government "Bounty"
-  swizzle 6
+  swizzle 23
   "player reputation" -1000
   "fine" 0
   "hostile hail" "hostile bounty"
 
 government "Bounty Hunter"
-  swizzle 6
+  swizzle 23
   colour .78 0 0
   "player reputation" -1000
   "bribe" .2
@@ -249,7 +249,7 @@ government "Parrot"
   "bribe" 0
 
 government "Pirate"
-  swizzle 6
+  swizzle 23
   colour .78 0 0  
   "player reputation" -10
   "attitude toward"
@@ -333,6 +333,18 @@ government "Syndicate (Extremist)"
     "Free Worlds" -.01
   "bribe" 0
   "hostile hail" "hostile syndicate"
+
+government "Team Red"
+  swizzle 0
+  "player reputation" -1000
+  "attitude toward"
+    "Team Blue" -.1
+
+government "Team Blue"
+  swizzle 5
+  "player reputation" -1000
+  "attitude toward"
+    "Team Red" -.1
 
 government "Test Dummy"
   swizzle 3
