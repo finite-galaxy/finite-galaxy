@@ -264,22 +264,18 @@ void ShopPanel::DrawButtons()
   Point point(
     Screen::Right() - SIDE_WIDTH + 10,
     Screen::Bottom() - 85);
-  font.Draw("Credits:", point, dim);
-  
-  string credits = Format::Credits(player.Accounts().Credits());
-  point.X() += (SIDE_WIDTH - 20) - font.Width(credits);
-  font.Draw(credits, point, bright);
-  point.Y() += 20.;
 
-  if(player.Cargo().Size())
-  {
-    point.X() = Screen::Right() - SIDE_WIDTH + 10;
-    font.Draw("Fleet cargo space free:", point, dim);
-    
-    string space = Format::Number(player.Cargo().Free()) + " / " + Format::Number(player.Cargo().Size());
-    Point right(Screen::Right() - font.Width(space) - 10, point.Y());
-    font.Draw(space, right, bright);
-  }
+  font.Draw("Credits:", point, dim);
+  string credits = Format::Credits(player.Accounts().Credits());
+  point.X() += SIDE_WIDTH - 20 - font.Width(credits);
+  font.Draw(credits, point, bright);
+
+  point.Y() += 20.;
+  point.X() = Screen::Right() - SIDE_WIDTH + 10;
+  font.Draw("Fleet cargo space free:", point, dim);
+  string space = Format::Number(player.Cargo().Free()) + " / " + Format::Number(player.Cargo().Size());
+  Point right(Screen::Right() - font.Width(space) - 10, point.Y());
+  font.Draw(space, right, bright);
   
   const Font &bigFont = FontSet::Get(18);
   const Colour &hover = *GameData::Colours().Get("hover");
