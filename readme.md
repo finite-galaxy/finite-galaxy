@@ -4,9 +4,9 @@ Both games can be installed alongside and played independently of each other.
 
 ## Table of contents
 * https://github.com/finite-galaxy/finite-galaxy#installation
-* https://github.com/finite-galaxy/finite-galaxy#gnu/linux
-* https://github.com/finite-galaxy/finite-galaxy#microsoft/windows
-* https://github.com/finite-galaxy/finite-galaxy#apple/mac-os-x
+* https://github.com/finite-galaxy/finite-galaxy#gnu-linux
+* https://github.com/finite-galaxy/finite-galaxy#microsoft-windows
+* https://github.com/finite-galaxy/finite-galaxy#apple-mac-os-x
 * https://github.com/finite-galaxy/finite-galaxy#gnu-linux
 * https://github.com/finite-galaxy/finite-galaxy#contributing
 * https://github.com/finite-galaxy/finite-galaxy#posting-issues
@@ -21,7 +21,7 @@ Both games can be installed alongside and played independently of each other.
 
 ## Installation
 
-### GNU/Linux
+### GNU Linux
 Dependencies (version numbers may vary depending on your distribution):
 
 DEB-based distros:
@@ -55,7 +55,7 @@ Open your terminal and enter:
 
 For more help, consult the man page (the finite-galaxy.6 file).
 
-### Microsoft/Windows
+### Microsoft Windows
 
 The Windows build has been tested on 64-bit Windows 7, only. You will need the Code::Blocks IDE and g++ 4.8 or higher. Code::Blocks is available here:
 
@@ -81,7 +81,7 @@ You will probably need to adjust the paths to your compiler binaries, and you sh
 
 You will also need libmingw32.a and libopengl32.a. Those should be included in the MinGW g++ install. If they are not in C:\Program Files\mingw64\x86_64-w64-mingw32\lib\ you will have to adjust the paths in the Code::Blocks file.
 
-### Apple/Mac OS X
+### Apple Mac OS X
 
 To build Finite Galaxy, you will first need to download Xcode from the App Store.
 
