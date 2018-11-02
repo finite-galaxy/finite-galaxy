@@ -55,6 +55,8 @@ Open your terminal and enter:
 
 For more help, consult the man page (the finite-galaxy.6 file).
 
+[(return to top)](https://github.com/finite-galaxy/finite-galaxy#finite-galaxy)
+
 ### Microsoft Windows
 
 The Windows build has been tested on 64-bit Windows 7, only. You will need the Code::Blocks IDE and g++ 4.8 or higher. Code::Blocks is available here:
@@ -80,6 +82,8 @@ If you are using 32-bit Windows, a full set of development libraries are availab
 You will probably need to adjust the paths to your compiler binaries, and you should also switch to the "Win32" build instead of the "Debug" or "Release" build.
 
 You will also need libmingw32.a and libopengl32.a. Those should be included in the MinGW g++ install. If they are not in C:\Program Files\mingw64\x86_64-w64-mingw32\lib\ you will have to adjust the paths in the Code::Blocks file.
+
+[(return to top)](https://github.com/finite-galaxy/finite-galaxy#finite-galaxy)
 
 ### Apple Mac OS X
 
@@ -109,6 +113,8 @@ sudo install_name_tool -id "@rpath/libturbojpeg.0.dylib" /usr/local/opt/libjpeg-
 sudo install_name_tool -id "@rpath/libSDL2-2.0.0.dylib" /usr/local/lib/libSDL2-2.0.0.dylib
 ```
 
+[(return to top)](https://github.com/finite-galaxy/finite-galaxy#finite-galaxy)
+
 
 
 ## Contributing
@@ -126,6 +132,8 @@ If requesting a new feature, first ask yourself: will this make the game more fu
 
 If you believe your issue has been resolved, you can close the issue yourself.
 
+[(return to top)](https://github.com/finite-galaxy/finite-galaxy#finite-galaxy)
+
 ### Posting pull requests
 
 If you are posting a pull request, please:
@@ -137,6 +145,8 @@ If you are posting a pull request, please:
 * Use Oxford spelling (the variant of English used by many scientific journals and international organizations such as the United Nations), instead of American, British, Canadian, or other national varieties.
 
 If proposing a major pull request, start by posting an issue and discussing the best way to implement it. Often the first strategy that occurs to you will not be the cleanest or most effective way to implement a new feature.
+
+[(return to top)](https://github.com/finite-galaxy/finite-galaxy#finite-galaxy)
 
 
 
@@ -175,8 +185,12 @@ If proposing a major pull request, start by posting an issue and discussing the 
 * Categories moved to data files; new ship categories based on total mass
 * More regional specialization of outfitters and shipyards
 
+[(return to top)](https://github.com/finite-galaxy/finite-galaxy#finite-galaxy)
+
 ### Minor changes
 See `changelog.txt`, `ship_overview.txt`, and https://github.com/finite-galaxy/finite-galaxy/commits/master
+
+[(return to top)](https://github.com/finite-galaxy/finite-galaxy#finite-galaxy)
 
 ### Not yet implemented ideas
 * Add support for Unicode and different writing directions
@@ -191,6 +205,8 @@ See `changelog.txt`, `ship_overview.txt`, and https://github.com/finite-galaxy/f
 * Make ship explosion 'weapon' proportional to mass (base, empty, or total mass)
 * Rename "New {Country}" planets to less culturally biased names
 
+[(return to top)](https://github.com/finite-galaxy/finite-galaxy#finite-galaxy)
+
 #### Heliarch Invasion
 Another idea is to introduce a new Heliarch Invasion story-line. It starts when you land on Ring of Power after finishing the Free Worlds storyline and doing at least a hundred Coalition jobs. The Heliarch then ask you to bring them twelve jump drives and offer 50 million in return. Afterwards they enter human space and start constructing a Coalition base on Poisonwood (Graffias). Every day twelve ships jump in, land, and send three ships back with the other jump drives in cargo. The Heliarch fleet steadily grows and starts patrolling nearby systems. When you go back to Ring of Friendship to ask politely what's going on, they answer that Coalition space is ruled by the Heliarchs, therefore there is peace and order, whereas human space is controlled by the Quarg, therefore there is chaos and violence. You reply that most humans are peaceful, they answer some of their ships were attacked nonetheless, by "Quarg minions" (pirates, you guess). The Heliarchs have hope humans might become the fourth species to join the Coalition in the distant future, but right now they believe humanity is not yet ready. A few months later the Heliarchs "liberate" (conquer) the Greenrock (Shaula), "pacify" (destroy) the pirate facilities there, and "evacuates" (deports) its population to Solace (Pherkad). They start constructing a Heliarch naval base there and Coalition convoys between Graffias and Solace are now a regular phenomenon. You get increasingly worried. Still later the Heliarch attack and destroy the Quarg station in Tarazed, but are repulsed in Enif. You travel to Pug Iyik to ask the Pug for help. They answer the Pug are no friends of the Quarg and have no contact with the Heliarchs, therefore they are not inclined to intervene. You reply half-heartedly that you don't object to the Heliarch and Quarg fighting each other, but that humanity is caught in between. The Pug seem to chuckle but say nothing more. You leave, seemingly empty-handed, and decide to visit the Quarg ringworld on Hevru Hai, to explain the situation to them. The Quarg say they know what you've done; if anything, the Quarg seems amused rather than annoyed. You don't understand and go back to human space. Later you discover a wormhole has been opened, possibly by the Pug, connecting the Heliarch ringworlds with the Quarg systems near Tarazed. The Heliarchs perceive it as some Quarg trick and now faced with a Quarg invasion of Coalition space, they signal they are willing to negotiate with the Quarg, in secret. You travel to Lagrange to pick up a Quarg delegation in Lagrange (Enif), which turns out to be a single individual, and bring him secretly to the new Heliarch base on Greenrock (Shaula). There you are allowed to stay during the negotiations as a neutral witness. The Heliarchs say they hope the Quarg won't use the new wormhole and offer to do likewise; furthermore, they state that they intend to maintain their presence on Poisonwood (Graffias) to allow humans to get used to the Coalition; keep possession of Shaula to be able to protect humanity from there; but promise not to move beyond Lesath, Wei, and Zubenelgenubi; after all, the Heliarch only intend to help humanity, not to conquer new territory for themselves. The Quarg does little more than merely nodding. It seems they've somehow reached an agreement, although the talks seem rather alien to ordinary humans. You bring back the Quarg to Lagrange and the Heliarchs inform you they'll reward you by allowing you to purchase some Heliarch technology on Poisonwood, but not weapons or warships. Meanwhile human governments fail to understand what's going on but are afraid both of the Heliarchs and of the Quarg. As a consequence of the brief conflict the Free Worlds are practically partitioned into:
 * A Bourne-based neutral core in the northern Rim; Free Worlds Dreadnoughts permanently present in Zubeneschamali. 
@@ -198,4 +214,6 @@ Another idea is to introduce a new Heliarch Invasion story-line. It starts when 
 * A Wayfarer-based pro-Quarg faction in south-east; Quarg Wardragons permanently present in Nunki, Girtab, Rastaban, and Delta Sagittarii.
 * Some other Dirt Belt systems feel left out and decide to rejoin the Republic; Navy Jupiters permanently present in Alioth, Seginus, and Kaus Borealis.
 Furthermore, there is still that wormhole with a large Quarg fleet on one end and a large Heliarch fleet on the other, but no-one travelling through it. Although there is no official peace treaty, the ceasefire appears to hold.
+
+[(return to top)](https://github.com/finite-galaxy/finite-galaxy#finite-galaxy)
 
