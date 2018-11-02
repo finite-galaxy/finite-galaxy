@@ -24,7 +24,7 @@ Both games can be installed alongside and played independently of each other.
 ### GNU Linux
 Dependencies (version numbers may vary depending on your distribution):
 
-DEB-based distros:
+DEB-based distros: \
    g++ \
    scons \
    libsdl2-dev \
@@ -35,7 +35,7 @@ DEB-based distros:
    libopenal-dev \
    libmad0-dev
 
-RPM-based distros:
+RPM-based distros: \
    gcc-c++ \
    scons \
    SDL2-devel \
