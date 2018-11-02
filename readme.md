@@ -4,9 +4,9 @@ Both games can be installed alongside and played independently of each other.
 
 ## Table of contents
 * https://github.com/finite-galaxy/finite-galaxy#installation
-* https://github.com/finite-galaxy/finite-galaxy#gnu?linux
-* https://github.com/finite-galaxy/finite-galaxy#microsoft?windows
-* https://github.com/finite-galaxy/finite-galaxy#apple?mac-os-x
+* https://github.com/finite-galaxy/finite-galaxy#gnu/linux
+* https://github.com/finite-galaxy/finite-galaxy#microsoft/windows
+* https://github.com/finite-galaxy/finite-galaxy#apple/mac-os-x
 * https://github.com/finite-galaxy/finite-galaxy#gnu-linux
 * https://github.com/finite-galaxy/finite-galaxy#contributing
 * https://github.com/finite-galaxy/finite-galaxy#posting-issues
