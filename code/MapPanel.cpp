@@ -181,9 +181,9 @@ void MapPanel::DrawButtons(const string &condition)
   // Draw the buttons to switch to other map modes.
   Information info;
   info.SetCondition(condition);
-  if(player.MapZoom() == 6)
+  if(player.MapZoom() == 8)
     info.SetCondition("max zoom");
-  if(player.MapZoom() == -3)
+  if(player.MapZoom() == -4)
     info.SetCondition("min zoom");
   const Interface *interface = GameData::Interfaces().Get("map buttons");
   interface->Draw(info, this);
@@ -339,9 +339,9 @@ bool MapPanel::KeyDown(SDL_Keycode key, Uint16 mod, const Command &command)
     return true;
   }
   else if(key == '+' || key == '=')
-    player.SetMapZoom(min(6, player.MapZoom() + 1));
+    player.SetMapZoom(min(8, player.MapZoom() + 1));
   else if(key == '-')
-    player.SetMapZoom(max(-3, player.MapZoom() - 1));
+    player.SetMapZoom(max(-4, player.MapZoom() - 1));
   else
     return false;
   
@@ -421,9 +421,9 @@ bool MapPanel::Scroll(double dx, double dy)
   Point mouse = UI::GetMouse();
   Point anchor = mouse / Zoom() - centre;
   if(dy > 0.)
-    player.SetMapZoom(min(6, player.MapZoom() + 1));
+    player.SetMapZoom(min(8, player.MapZoom() + 1));
   else if(dy < 0.)
-    player.SetMapZoom(max(-3, player.MapZoom() - 1));
+    player.SetMapZoom(max(-4, player.MapZoom() - 1));
   
   // Now, Zoom() has changed (unless at one of the limits). But, we still want
   // anchor to be the same, so:
@@ -609,7 +609,7 @@ void MapPanel::Find(const string &name)
 
 double MapPanel::Zoom() const
 {
-  return pow(1.5, player.MapZoom());
+  return pow(1.41, player.MapZoom());
 }
 
 
