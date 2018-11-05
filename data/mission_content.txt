@@ -1,6 +1,7 @@
 # Miscellanious content:
 #   Hallucination
 #   Nanobots
+#   Science Drone
 #   Timer Ship
 #   Void Sprite
 
@@ -119,9 +120,23 @@ fleet "Nanobots"
   variant
     "Nanobot" 10
 
+  
+
+# Science Drone
+ship "Science Drone"
+  sprite "ship/science drone"
+  attributes
+    category "Drone"
+    hull 200
+    mass 30
+    drag 2
+    "heat dissipation" 1
+  explode "tiny explosion" 5
+  explode "small explosion" 2
 
 
-# Timer
+
+# Timer Ship
 ship "Timer Ship"
   attributes
     "hull" 3
