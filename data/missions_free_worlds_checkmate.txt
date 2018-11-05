@@ -11,7 +11,7 @@ mission "FWC Scouting 1"
     dialogue `You have failed an essential Free Worlds mission. If you want to complete the story line, revert to the autosave or another earlier snapshot of the game.`
   
   on offer
-    log `Drove the Navy out of Delta Sagittarii with the help of the "Wolf Pack," a militia group in favor of more extreme measures who launched a preemptive strike before the main Free Worlds force arrived. The Free Worlds are now committed to fighting the Republic to a standstill rather than proving their innocence; the defector has been recaptured by the Syndicate and whatever information he had to share is now lost.`
+    log `Drove the Navy out of Delta Sagittarii with the help of the "Wolf Pack," a militia group in favour of more extreme measures who launched a preemptive strike before the main Free Worlds force arrived. The Free Worlds are now committed to fighting the Republic to a standstill rather than proving their innocence; the defector has been recaptured by the Syndicate and whatever information he had to share is now lost.`
     conversation
       `It was a close battle, and could have gone very differently if it were not for the Wolf Pack strike that happened before you arrived and that disabled or destroyed the majority of the Navy fleet. You can't help but wonder how the Wolf Pack managed to assemble a large enough fleet to do that sort of damage.`
       `  "Well," says JJ, "the die is cast. It's too late now to wonder what that business with the Syndicate was about; now we're in a fight to the finish with the Republic. And that means we must strike soon, before they have time to bring in more reinforcements. Captain <last>, I'd like you to perform a scouting mission while I'm working on gathering a new fleet. Our next target has to be the Navy base on New Iceland. If we can drive them out of that system, our position will be much better. So, I'd like you to fly through Kaus Borealis and return here to report on their fleet strength. Understood?"`
@@ -21,7 +21,7 @@ mission "FWC Scouting 1"
         `  "Sure, but first, can you tell me how the Wolf Pack was able to do so much damage to the Navy?"`
       `  "As I said," says JJ, "they've gathered a surprising number of bounty hunters and others who operate on the fringes of society, and who are sympathetic to our cause."`
       label freya
-      `  "One more thing," says Freya, "while you're traveling up North, I wonder if you could help to escort a convoy from the Rand system. There's no huge rush, but they're carrying supplies we need for a new reactor core for the Dreadnoughts, so the sooner you can meet up with them, the sooner the new reactors will be available."`
+      `  "One more thing," says Freya, "while you're travelling up North, I wonder if you could help to escort a convoy from the Rand system. There's no huge rush, but they're carrying supplies we need for a new reactor core for the Dreadnoughts, so the sooner you can meet up with them, the sooner the new reactors will be available."`
         accept
   
   npc
@@ -55,10 +55,10 @@ mission "FWC Attack Kaus Borealis"
         `  "Well, the fact that they all returned to fight is a good sign."`
           goto fight
       label desert
-      `  "Yes," says JJ, "some of them already have. Think of it from the perspective of a militia member: you signed up to defend one planet against occasional pirates, not to spend years traveling from system to system battling the Navy. Some people have just had enough. This war needs to end, and end soon."`
+      `  "Yes," says JJ, "some of them already have. Think of it from the perspective of a militia member: you signed up to defend one planet against occasional pirates, not to spend years travelling from system to system battling the Navy. Some people have just had enough. This war needs to end, and end soon."`
         goto battle
       label fight
-      `  "Well," says JJ, "at least some of them returned to fight. But many of them didn't. Think of it from the perspective of a militia member: you signed up to defend one planet against occasional pirates, not to spend years traveling from system to system battling the Navy. Some people have just had enough. This war needs to end, and end soon."`
+      `  "Well," says JJ, "at least some of them returned to fight. But many of them didn't. Think of it from the perspective of a militia member: you signed up to defend one planet against occasional pirates, not to spend years travelling from system to system battling the Navy. Some people have just had enough. This war needs to end, and end soon."`
         goto battle
       label battle
       choice
@@ -433,7 +433,7 @@ mission "FWC Diplomacy 1"
       `  He laughs. "I'm afraid that's not possible. Unlike most missile systems, we haven't yet developed any sort of feed system that would let you fire multiple missiles from the same gun port. So, it's a weapon you can only fire once from a given port. But on the plus side, two of them are enough to bring down the shields on even the largest Navy vessel."`
         goto next
       label no
-      `  "That's understandable," he says. "And also foolish and shortsighted. But, I can understand why some people want to cling to the belief that war is some sort of noble endeavor rather than a no holds barred struggle for survival."`
+      `  "That's understandable," he says. "And also foolish and shortsighted. But, I can understand why some people want to cling to the belief that war is some sort of noble endeavour rather than a no holds barred struggle for survival."`
         goto next
       label fifi
       `  "Yes," he says, "Fifi is the leader of the Wolf Pack. And she is an absolutely ferocious individual. I assure you that you do not want to be responsible for crossing her. Not that you'll ever have to, of course, because we're all on the same side here." He grins.`
@@ -460,8 +460,8 @@ mission "FWC Diplomacy 1B"
     dialogue `You have failed an essential Free Worlds mission. If you want to complete the story line, revert to the autosave or another earlier snapshot of the game.`
   
   on offer
-    event "fw safe passage starts"
-    event "fw safe passage ends" 7
+    event "fw safe passage begin"
+    event "fw safe passage end" 7
     conversation
       `When you meet up with Alondo, he seems excited and optimistic. "The Republic has agreed to one week of safe passage," he says, "just enough time to get us to Earth and back. And what's more, I told them that one of our terms would be a mutual release of all prisoners of war, including Katya, and they agreed."`
       choice
@@ -507,7 +507,7 @@ mission "FWC Diplomacy 1C"
   on offer
     log "Visited Earth with Alondo to try to pressure Parliament into agreeing to a peace deal. The negotiations failed. Only escaped the planet safely because a Free Worlds ship in orbit threatened to bombard the Parliament building."
     log "Rescued Katya from the Republic's custody. She is not happy about the extreme measures the Free Worlds are taking to win this war."
-    event "fw safe passage ends" 1
+    event "fw safe passage end" 1
     conversation
       `When you land on Earth, the Big Brother flies down to the spaceport with you to see that you arrive safely, then takes off immediately. You and Alondo are escorted to the House of Parliament. As you wait to be called in to speak to Parliament, Alondo seems very nervous, pacing back and forth and fiddling with his watch every few minutes.`
       `  Finally you are invited into the Parliament chambers, and Douglas Xao, the Speaker, says, "Representatives of the Free Worlds, we are prepared to hear your demands."`
@@ -523,7 +523,7 @@ mission "FWC Diplomacy 1C"
         `  "You will regret this! If you arrest us, the Free Worlds will retaliate against you."`
       `  As you try to protest, Alondo speaks up. He is not shouting, but his voice carries over the murmur of other voices. "We have a ship in orbit. If we do not return--"`
       `  Xao cuts him off. "Your ship is no threat to us. We have already verified that it carries no nuclear weapons, and this building's shielding and anti-missile systems are quite sufficient to defend against conventional weapons. And there is nothing in its cargo hold but ordinary, non-radioactive metals."`
-      `  Alondo says, "That's right. Tungsten, to be exact. Aerodynamic tungsten rods, each the size of a tree trunk, with a simple guidance system on one end. Our ship is in low earth orbit, traveling at a velocity of roughly eight kilometers per second." As he speaks, the Parliament chamber gradually grows very quiet. "So we will be returning to our ship," says Alondo, "with Miss Reynolds. If the ship in orbit does not hear from me every two minutes, it will jettison its cargo, and there will be nothing left of this building but a crater." He points to the watch he is wearing, and you realize that it must be some sort of communicator.`
+      `  Alondo says, "That's right. Tungsten, to be exact. Aerodynamic tungsten rods, each the size of a tree trunk, with a simple guidance system on one end. Our ship is in low earth orbit, travelling at a velocity of roughly eight kilometers per second." As he speaks, the Parliament chamber gradually grows very quiet. "So we will be returning to our ship," says Alondo, "with Miss Reynolds. If the ship in orbit does not hear from me every two minutes, it will jettison its cargo, and there will be nothing left of this building but a crater." He points to the watch he is wearing, and you realize that it must be some sort of communicator.`
       `  After a brief whispered consultation with a few of the other members of Parliament, Xao says, "You will lose this war, and you will pay dearly for it. Guards, let them return to their ship." You hurry back to your ship and take off immediately, aware that as soon as you are out of range of Earth, the Navy will probably be more than willing to attack you.`
         launch
   
@@ -746,7 +746,7 @@ mission "FWC Checkmate 1"
   on complete
     log "Defended Tundra against a major Navy counter-offensive. From here, the only recourse available to the Free Worlds seems to be to push deep into Republic territory and capture the Sol system, forcing the Navy to surrender. Nuclear weapons are now for sale on Solace to aid in the final assault."
     event "fwc defended cebalrai"
-    event "fwc solace has nukes"
+    event "nuclear missiles available"
     "salary: Free Worlds" = 6000
     conversation
       `Tomek and Alondo meet you when you land. Tomek says, "Good work aiding in the defence. Now we need to move before the Navy has time to regroup. And the Senate has decided that you will be in charge of the fleet that makes our counterattack."`
@@ -1978,7 +1978,7 @@ mission "FWC Pug 5"
       `You find Admiral Danforth supervising the repairs of the damaged Navy ships. "Glad you survived that battle!" he says. "These alien ships are much more advanced than ours, but we outnumber them, so now that we've established a strong beachhead I think we actually have a chance at defeating them. The only problem is, the majority of our fleet is still up north. With the Vega system cut off, our supply lines are having to go all the way around through the dirt belt. So I'd like to propose liberating Vega next."`
       choice
         `  "That does sound like a good strategic choice."`
-        `  "How will your fleet get to Vega without traveling through the Pug home system? That system is swarming with their ships."`
+        `  "How will your fleet get to Vega without travelling through the Pug home system? That system is swarming with their ships."`
       `  Danforth says, "During the battle, we managed to salvage jump drives from a few of the Pug ships. We've installed them in three of our Jupiters. Hopefully, with your help, that will be enough to overcome any resistance in the Vega system. Then Miss Winters can work her magic with the hyperlinks again, and we'll be able to bring a massive reinforcement fleet from Sol."`
       `  "Sounds good to me," says Freya. "I wish more of our own ships had jump drives, so we could assist you."`
       `  "Indeed," says Danforth. "That's why it's so important for Captain <last>'s ship to be part of this battle. When it's all over, I want to be able to tell Parliament that this war was won by the Free Worlds and the Navy fighting side by side every step of the way. And I hope you will be able to tell your Senate the same thing, so that they will be more amenable to a compromise between us."`
@@ -2215,7 +2215,7 @@ mission "FWC Pug 6"
         "Argosy (Turret)"
   
   on complete
-    log `The Pug have fled, apparently traveling through an artificial wormhole back to whatever galaxy they came from. And, it turns out that many of their cities on "Pugglemug" were only for show: buildings with no inhabitants, and with holograms creating the appearance of a heavily populated world. They left no advanced technology behind, and no sign of what their true intentions were, but it turns out that the fake cities here were designed for human habitation. They must have been planning this departure for a very long time.`
+    log `The Pug have fled, apparently travelling through an artificial wormhole back to whatever galaxy they came from. And, it turns out that many of their cities on "Pugglemug" were only for show: buildings with no inhabitants, and with holograms creating the appearance of a heavily populated world. They left no advanced technology behind, and no sign of what their true intentions were, but it turns out that the fake cities here were designed for human habitation. They must have been planning this departure for a very long time.`
     log `Now that the Pug are gone, the Navy will be able to use the "graviton reflectors" to repair the broken hyperspace links and to reconnect all of human space.`
     log "Factions" "Pug" `The Pug disappeared from human space, and left behind more questions than answers. It is possible that the true purpose of their attack was to give human beings a common enemy that would force them to band together and forget their internal struggles.`
     event "fwc pug defeated"
@@ -2303,13 +2303,16 @@ mission "FWC End"
   
   on complete
     event "deep sky tech available"
+    event "navy arsenals available"
+    event "particle turret available"
     event "syndicate tech available"
-    set "main plot completed"
+    event "tarazed joins the free worlds"
     set "free worlds plot completed"
+    set "main plot completed"
     conversation
       `You arrive in the Parliament building just as Alondo and Katya have finished meeting with them. "Good news," says Katya. "We're all officially pardoned. And you, Captain <last>, have become something of a hero."`
-      `  "Better yet," says Alondo, "the war with the Republic is over. We agreed to limiting our territory to its current size, and to a very minor tax to cover the cost of Navy protection if the aliens attack again or some other major catastrophe strikes. In return, the Free Worlds have been granted autonomy from the Republic."`
-      `  "Also," says Katya, "as their own expression of gratitude, the Syndicate members of Parliament have offered to make some of their new technology, developed during the war, available to us at an affordable price."`
+      `  "Better yet," says Alondo, "the war with the Republic is over. We agreed to limiting our territory in the Dirt Belt to its current size, and to a very minor tax to cover the cost of Navy protection if the aliens attack again or some other major catastrophe strikes. In return, the Free Worlds have been granted autonomy from the Republic, and Tarazed and adjacent systems have been given permission to join the Free Worlds."`
+      `  "Furthermore," says Katya, "you've been given permission to use the Navy arsenals and to purchase Deep Sky's newest weapons. Also, as their own expression of gratitude, the Syndicate members of Parliament have offered to make some of their new technology, developed during the war, available to all of us at an affordable price."`
       choice
         `  "That's very generous of them."`
         `  "I wonder if that's their way of buying our support and keeping us quiet about the supposed defector."`
@@ -2319,3 +2322,4 @@ mission "FWC End"
         `  "See if folks in the fringe worlds need any help against the pirates."`
         `  "Use my jump drive to explore beyond human space."`
       `  "Well, we all wish you the best of luck," says Freya. "We would never have won this war without you. Be sure to stay in touch." You hug each of them goodbye, and return to your ship. What you do next is up to you...`
+

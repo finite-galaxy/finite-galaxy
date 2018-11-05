@@ -40,7 +40,7 @@ mission "First Contact: Remnant"
 
       `  Several of them burst into song, singing together in harmony, "We are the hidden ones. We are the Remnant. In time of great chaos to this place we came, lest all true-born humans be killed or enslaved, by those who evolved not, but unwisely were made."`
       `  As they continue to sing, you begin to piece together their story. They are the descendants of people who fled to this region of space through an unstable wormhole at the peak of the first Alpha War, which means they have been here for more than half a millennium. That doesn't explain why their culture is so radically different, though.`
-      `  Eventually they invite you to a dinner. Their food has strange and complex flavors, not all of them pleasant, but you do your best to be polite and pretend to enjoy it all. After the meal, they entertain you by singing songs, some of which you recognize as classical Earth music. It appears that people in this culture use sign language for day to day communication, and use their voices only for making music.`
+      `  Eventually they invite you to a dinner. Their food has strange and complex flavours, not all of them pleasant, but you do your best to be polite and pretend to enjoy it all. After the meal, they entertain you by singing songs, some of which you recognize as classical Earth music. It appears that people in this culture use sign language for day to day communication, and use their voices only for making music.`
       `  When you return to your ship, you do a search on videos of historical dialects of human sign language. None of them bear even a passing resemblance to the language of these people who call themselves the Remnant.`
         decline
   on accept
@@ -49,7 +49,7 @@ mission "First Contact: Remnant"
     log "Factions" "Remnant" `The Remnant are a group of unusual-looking humans that live in a secluded section of the galaxy. It is unclear how long they have lived apart from the rest of humanity, but they have been free of human influences for long enough that their culture is wildly different from any found in human record. Their buildings seem to be alien in origin, and they communicate amongst each other primarily with sign language. When they do use their voices they sing or chant, rather than speak.`
   
   on decline
-    event "ember waste label"
+    event "label ember waste"
     log "Discovered a strange, isolated human community in an otherwise uninhabited region of space south of the Core. They call themselves the Remnant."
     log "Factions" "Remnant" `Half a millennium ago, during the Alpha Wars, a group of humans fleeing the conflict and looking for a safer place to live discovered a wormhole into a region of space known as the Ember Waste. They built settlements there, and chose to call themselves the Remnant. Although they no longer fear the Alphas as much as they once did, they still have not rejoined human society.`
       `Since their colonies were first formed, the Remnant's culture has changed drastically. They communicate in sign language, using their voices only for singing. Their food and architecture and much of their technology is strange, and much of it has been borrowed or stolen from nearby alien species.`
@@ -58,10 +58,6 @@ mission "First Contact: Remnant"
     government "Remnant"
     personality heroic coward disables plunders
     fleet "Remnant Large" 2
-
-event "ember waste label"
-  galaxy "label waste"
-    sprite label/waste
 
 
 
@@ -96,9 +92,6 @@ mission "Remnant: Defence 1"
     dialogue "There are still Korath raiders circling overhead. You should take off and help the Remnant ships to fight them."
   on complete
     payment 200000
-
-event "remnant defence timer"
-  clear "Remnant defence delay"
 
 
 
@@ -220,14 +213,6 @@ mission "Remnant: Defence 3"
 
       `  He grins, very slightly. "That is not my decision alone to make," he says, "but I will put in a word for you and see what I can do."`
 
-event "remnant: surveillance begin"
-  system "Parca"
-    remove fleet "Korath Raid"
-
-event "remnant: surveillance end"
-  system "Parca"
-    add fleet "Korath Raid" 10000
-
 
 
 mission "Remnant: Keystones"
@@ -245,11 +230,11 @@ mission "Remnant: Keystones"
           goto hai
         `  "Yes, but I would prefer not to tell you where."`
 
-      `  "That is understandable," he says. "I am a businessman and I understand how valuable certain trade secrets can be. But perhaps I can interest you in a mutually profitable endeavor?"`
+      `  "That is understandable," he says. "I am a businessman and I understand how valuable certain trade secrets can be. But perhaps I can interest you in a mutually profitable endeavour?"`
         goto more
 
       label hai
-      `  "Intriguing," he sings. "Are they aware of how valuable these stones are?" You tell him about the Hai, that they are an old species and that to them the Key Stones are just good luck charms. "Perhaps they have forgotten the true use of the Stones," says the man. "This may give us an opportunity for a mutually profitable endeavor."`
+      `  "Intriguing," he sings. "Are they aware of how valuable these stones are?" You tell him about the Hai, that they are an old species and that to them the Key Stones are just good luck charms. "Perhaps they have forgotten the true use of the Stones," says the man. "This may give us an opportunity for a mutually profitable endeavour."`
 
       label more
       `  "Tell me more," you say.`
@@ -374,14 +359,6 @@ mission "Remnant: Void Sprites 2"
   on complete
     event "remnant: nenia restored"
 
-event "remnant: nenia empty"
-  system "Nenia"
-    remove fleet "Void Sprites"
-
-event "remnant: nenia restored"
-  system "Nenia"
-    add fleet "Void Sprites" 500
-
 
 
 mission "Remnant: Void Sprites 3"
@@ -453,15 +430,6 @@ mission "Remnant: Void Sprites 3"
       `  He says, "As long as you did not harm any of the void sprites, I doubt they will bear you a permanent grudge. The Archons are thinking creatures, after all; they cannot blame you for your curiosity."`
       `  You thank him for the information and tell him that you will look forward to reading the results of his study (and, getting paid for your help) once it is complete.`
 
-event "remnant: gascraft"
-  planet "Viminal"
-    add shipyard "Remnant Gascraft"
-
-government " Drak "
-  "player reputation" -1000
-
-event "remnant: void sprite research"
-
 
 
 mission "Remnant: Technology Available"
@@ -488,3 +456,4 @@ mission "Remnant: Technology Available"
         `  "Is there anything else I can do to assist your people?"`
       `  "Not that I am aware of right now," he says, "but we will call on you if a need ever arises."`
         decline
+

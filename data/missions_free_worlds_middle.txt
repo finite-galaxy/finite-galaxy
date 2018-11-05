@@ -16,6 +16,8 @@ mission "FW Diplomacy 1"
       `  Captain <last>, sorry that we have been out of contact. We need your help once again, to assist in a diplomatic mission. Please meet up with Alondo on <planet> as soon as possible. He will give you more information.`
       `      Sincerely,`
       `        Jean-Jacques and Freya`
+      `  `
+      `  PS Tarazed Corporation has informed us their new Catalytic Ramscoop is now for sale on Wayfarer.`
         accept
     event "catalytic ramscoop available"
   
@@ -71,8 +73,8 @@ mission "FW Diplomacy 1B"
         accept
   
   on accept
-    event "fw safe passage starts"
-    event "fw safe passage ends" 24
+    event "fw safe passage begin"
+    event "fw safe passage end" 24
 
 
 
@@ -156,7 +158,7 @@ mission "FW Southern Recon 1"
     dialogue `You have failed an essential Free Worlds mission. If you want to complete the story line, revert to the autosave or another earlier snapshot of the game.`
   
   on offer
-    event "fw safe passage ends"
+    event "fw safe passage end"
     conversation
       `Alondo and JJ are in a somber mood when you meet up with them in the bar. You can't help remembering that Tomek always used to be a part of these gatherings, before he turned against the Senate. And now it looks like your next major battle will be fought without Tomek's expert guidance.`
       `  JJ says, "We've done all we can. Sooner or later we will have to fight the Navy for those star systems. So to start with, <first>, we'd like you to scout them out and report back to us on the Navy's presence there. Freya is on Trinket, gathering a fleet. Report to her there when you're done."`
@@ -167,7 +169,7 @@ mission "FW Southern Recon 1"
 mission "FW Southern Recon 1B"
   landing
   name "Electron Cannon"
-  description "Steal an Electron Cannon from a Navy gunboat and return it to <planet> for Freya to look at. She thought your best bet for finding a lone Mars might be the Wei or Alnasl systems."
+  description "Steal an Electron Cannon from a Navy warship and return it to <planet> for Freya to look at. She thought your best bet for finding a lone Mars might be the Wei or Alnasl systems."
   autosave
   source "Trinket"
   destination "Trinket"
@@ -186,7 +188,8 @@ mission "FW Southern Recon 1B"
       `  "Well," she says, "the plasma turrets weren't the only ace up our sleeve, but still, it's frustrating that the Navy still has such an advantage over us technologically."`
       `  "What should we do?" you ask.`
       label attack
-      `  "We're going to have to fight them eventually, but first we need as much information as we can get on their new weapon systems. I'd like you to find one of their gunboats that has the new electron beam cannons installed, steal one of them, and bring it back here. I imagine one of them can't be much bigger than twenty or thirty tons, so you ought to be able to find space for it. Think you can do that?"`
+      `  "We're going to have to fight them eventually, but first we need as much information as we can get on their new weapon systems. I'd like you to find one of their ships that has the new electron beam cannons installed, capture it, and bring it back here. Think you can do that?"`
+# I imagine one of them can't be much bigger than twenty or thirty tons, so you ought to be able to find space for it.
       choice
         `  "How can I find a Mars that's all by itself? They're usually a part of a bigger fleet."`
       `  She thinks about that for a moment, then says, "The Navy has shifted most of their capital ships to the defecting systems in the south. That means that some of the systems up north will have lighter defences. You might try Wei or Alnasl. Good luck, Captain."`
@@ -243,7 +246,7 @@ mission "FW Southern Battle 1"
         `  "Is there any chance we can reverse engineer it and build our own?"`
           goto reverse
       label advice
-      `  "Well," she says, "its range is very slightly shorter than our plasma turrets. You might be able to use that to your advantage if you can position your ship just right so that you can hit an enemy target but they can't hit you. You may find that useful in the upcoming battle."`
+      `  "Well," she says, "its range is slightly shorter than our plasma turrets. You might be able to use that to your advantage if you can position your ship just right so that you can hit an enemy target but they can't hit you. You may find that useful in the upcoming battle."`
         goto battle
       label reverse
       `  "Maybe, although we haven't even mastered the art of building heavy lasers yet," she says. "We certainly won't have time before the upcoming battle."`
@@ -273,7 +276,7 @@ mission "FW Southern Battle 1B"
   
   on offer
     conversation
-      `When you land on <origin>, a Southbound Shipyards executive leads you to a hangar. The hangar is huge, but it clearly was not meant to hold a ship as large as the one it now contains. There is barely enough space for the cranes and catwalks being used by the construction crews. He says, "The Dreadnought is a new design, the largest ship we've ever built. Only three of them have been completed so far." You can't help but be impressed at the size of the Dreadnought: as bulky as a Saturn, it looks like a cross between a Bastion and an Argosy freighter.`
+      `When you land on <origin>, a Southbound Shipyards executive leads you to a hangar. The hangar is huge, but it clearly was not meant to hold a ship as large as the one it now contains. There is barely enough space for the cranes and catwalks being used by the construction crews. He says, "The Dreadnought is a new design, the largest ship we've ever built. Only three of them have been completed so far." You can't help but be impressed at the size of the Dreadnought: as bulky as a Saturn, it looks like a cross between a Bastion and an Argosy.`
       `  He then leads you out to a section of the spaceport where three Dreadnoughts are parked. Next to them, and looking tiny by comparison, are five Furies. You ask, "Are those Furies part of the battle fleet, too?"`
       `  "Yes," he says, "equipped with some fancy new weapons from Barmy Edward up at Kraz Cybernetics. I haven't seen them in action yet, but he's convinced they'll be useful against the Navy."`
       `  You thank him for his time, and meet up with the captains of the battle fleet, arranging for them to follow you back to Trinket.`
@@ -299,21 +302,6 @@ mission "FW Southern Battle 1B"
 
 
 
-event "battle for Rastaban"
-  "reputation: Republic" = -1000
-  system Rastaban
-    fleet "Free Worlds Small" 10000
-  system Lesath
-    fleet "Merchants South Small" 800
-    fleet "Merchants South Large" 1600
-    fleet "Free Worlds Small" 800
-    fleet "Free Worlds Large" 1100
-  system Sargas
-    fleet "Merchants South Small" 600
-    fleet "Merchants South Large" 2500
-    fleet "Free Worlds Small" 1000
-    fleet "Free Worlds Large" 1500
-
 mission "FW Southern Battle 2"
   name "Attack Rastaban"
   description "Travel directly to the <system> system, so that you will arrive on <day> and join the battle against the Navy. Disable or destroy all Navy ships in system."
@@ -336,7 +324,7 @@ mission "FW Southern Battle 2"
         `  "Yes, their sense of honour can be inspiring at times, but right now it's annoying."`
       `  "Indeed," she says. "Although, based on what Alondo said, the Navy hinted that if we made such a show of force that there was no way they could win the battle, they could honourably choose to retreat. So, if they start trying to retreat, let them go. But I suspect it will be a difficult battle to win."`
       `  "What's the battle plan?" you ask.`
-      `  "The fleet from Southbound Shipyards will be traveling with you," she says. "Other fleets with other commanders will be converging on Rastaban separately, at approximately the same time. So, you have no time to lose. You must travel directly to Rastaban from here, or else you will arrive too late to join in the fight. Good luck, captain."`
+      `  "The fleet from Southbound Shipyards will be travelling with you," she says. "Other fleets with other commanders will be converging on Rastaban separately, at approximately the same time. So, you have no time to lose. You must travel directly to Rastaban from here, or else you will arrive too late to join in the fight. Good luck, captain."`
         accept
   
   npc
@@ -441,7 +429,7 @@ mission "FW Southern Battle 3"
   on offer
     log "The Navy has been driven out of the Rastaban system. That will allow the people on Dancer, New Portland, and New India to join the Free Worlds."
     conversation
-      `As soon as you land on <origin>, you contact Freya and let her know that the system is yours. "That's great news," she says. "Now we need to make sure they've pulled back from the neighboring systems, too. Take a few ships and sweep through Delta Sagittarii and Albaldah and make sure they're clear. Leave the rest of the fleet on Dancer to handle the prisoners and repairs."`
+      `As soon as you land on <origin>, you contact Freya and let her know that the system is yours. "That's great news," she says. "Now we need to make sure they've pulled back from the neighbouring systems, too. Take a few ships and sweep through Delta Sagittarii and Albaldah and make sure they're clear. Leave the rest of the fleet on Dancer to handle the prisoners and repairs."`
       choice
         `  "What should I do if I encounter Navy ships on my patrol?"`
           goto patrol
@@ -509,8 +497,8 @@ mission "FW Southern Prisoners - Release"
         accept
   
   on accept
-    event "fw safe passage starts"
-    event "fw safe passage ends" 7
+    event "fw safe passage begin"
+    event "fw safe passage end" 7
   
   npc accompany save
     government "Escort"
@@ -793,7 +781,7 @@ mission "FW Northern 2C"
       choice
         `  "Are you worried that it might be guarded?"`
           goto guard
-        `  "Okay, I'll grab my favorite guns and explosives!"`
+        `  "Okay, I'll grab my favourite guns and explosives!"`
           goto guns
       label guard
       `  "A little worried," she says. "We should be armed, just in case. But I'm not picking up any human heat signatures from the building, and it wouldn't be like the Navy to leave some of their own behind for us to capture."`
@@ -890,7 +878,7 @@ mission "FW Northern 3B"
   
   on offer
     conversation
-      `Freya turns out to be a whiskey drinker, like Tomek. By the time she has finished her first drink, she is chattering quite passionately about starship design: load balancing, stress lines, shield matrices, shipboard computers. Rather than dulling her intelligence, alcohol just seems to reduce her ability to explain things in ways a non-specialist can understand. You try to steer the conversation towards something less technical...`
+      `Freya turns out to be a whisky drinker, like Tomek. By the time she has finished her first drink, she is chattering quite passionately about starship design: load balancing, stress lines, shield matrices, shipboard computers. Rather than dulling her intelligence, alcohol just seems to reduce her ability to explain things in ways a non-specialist can understand. You try to steer the conversation towards something less technical...`
       choice
         `  "So, why did you join the Council, initially?"`
           goto council
@@ -1428,31 +1416,14 @@ mission "FW Bloodsea 1.1B"
   
   on complete
     set "fw bloodsea done"
-    event "dreadnoughts for sale"
-    event "dreadnought deployment" 40
     event "bloodsea joins free worlds"
     event "bloodsea spaceport completed" 100
+    event "dreadnought deployment" 40
     log "Brought the construction supplies that the people of Bloodsea requested, and they have agreed to join the Free Worlds."
     conversation
-      `A few of the locals on Bloodsea appear surprised that you actually brought the supplies for a new spaceport, and that you arrived with all the supplies intact. But after meeting up with Alondo, they agree to hold their side of the bargain: from now on, Bloodsea will be a part of the Free Worlds, with all the rights and responsibilities that implies. And that means that they will refuse to knowingly harbor any pirate fleets or other known criminals.`
+      `A few of the locals on Bloodsea appear surprised that you actually brought the supplies for a new spaceport, and that you arrived with all the supplies intact. But after meeting up with Alondo, they agree to hold their side of the bargain: from now on, Bloodsea will be a part of the Free Worlds, with all the rights and responsibilities that implies. And that means that they will refuse to knowingly harbour any pirate fleets or other known criminals.`
       `  Alondo tells you that he will catch a ride back with the freighters when they return. "But, you'll probably want to head out sooner," he says, "because I've got some good news for you. Freya just contacted me, to say that they're now ready to start selling Dreadnoughts to certain select members of the Free Worlds, including you. That also means she's done with her work on Zug, so she'll need you to give her a lift from there."`
         accept
-
-
-
-mission "Ijs catches another ride"
-  landing
-  to offer
-    has "fw bloodsea done"
-    has "FW Conservatory 1: active"
-  on offer
-    payment 10000
-    event "fw conservatory founded" 30
-    conversation
-      `Ijs approaches you with his duffel as you're stepping off the <ship>.`
-      `  "Thanks for getting me this close, but I really need to get to Winter as soon as possible. I hope you don't take offence that I've booked passage on another transport. Here's <payment> for getting me this far, anyway. I hope to see you again soon, Captain <last>."`
-        decline
-    fail "FW Conservatory 1"
 
 
 
@@ -1518,9 +1489,8 @@ mission "FW Bloodsea 1.2A"
   on complete
     log "Conquered Bloodsea in the name of the Free Worlds. With enough militia ships patrolling their star system, they ought to think twice before returning to piracy."
     set "fw bloodsea done"
-    event "dreadnoughts for sale"
-    event "dreadnought deployment" 40
     event "bloodsea independent"
+    event "dreadnought deployment" 40
     conversation
       `You land at the main spaceport on Bloodsea with Free Worlds ships circling overhead, ready to bombard the locals if they show any sign of resistance. It is a tense atmosphere, and the leaders sullenly agree to give the Free Worlds access to their planet and to avoid knowingly supporting piracy or other criminal activity. You have won this world, but you have clearly not won the hearts of the locals.`
       `  A while later, you receive new orders from Alondo. "I've got some good news for you," he says. "Freya just contacted me, to say that they're now ready to start selling Dreadnoughts to certain select members of the Free Worlds, including you. That also means she's done with her work on Zug, so she'll need you to give her a lift from there."`
@@ -1605,7 +1575,7 @@ mission "FW Albatross 2"
     conversation
       `When you meet up with JJ, he looks exhausted. "Our scouts are reporting that the Navy is building a massive base on New Iceland," he says, "just a few jumps away from here. So every day I look up at the sky and wonder if today is the day when they will invade."`
       `  You talk for a while and agree that despite the threat from the Navy, dealing with the pirates is important. JJ explains that Albatross started out as a sort of farming commune: independent, but not associated with any illegal activity. But they were dominated by pirates, and since then, one pirate overlord after another has held sway over the planet. So in principle at least, the locals ought to welcome the idea of Free Worlds protection.`
-      `  While you are traveling with JJ, Freya agrees to stay here and work on a better surveillance network, to give Dancer advance warning if the Navy decides to invade.`
+      `  While you are travelling with JJ, Freya agrees to stay here and work on a better surveillance network, to give Dancer advance warning if the Navy decides to invade.`
         accept
   
   npc
@@ -1686,11 +1656,6 @@ mission "FW Albatross 2B"
         accept
 
 
-
-event "battle for zeta aquilae"
-  "reputation: Republic" = -1000
-  system "Zeta Aquilae"
-    fleet "Merchants South Small" 5000
 
 mission "FW Rand 1"
   landing
@@ -1822,50 +1787,6 @@ mission "FW Rand 1B"
 
 
 
-event "battle of alioth"
-  system Rutilicus
-    fleet "Merchants South Small" 600
-    fleet "Merchants South Large" 2000
-    fleet "Pirates South Small" 8000
-    fleet "Republic Small" 1000
-  system Cebalrai
-    fleet "Merchants South Small" 600
-    fleet "Merchants South Large" 2000
-    fleet "Pirates South Small" 4000
-    fleet "Republic Small" 1000
-  system Alioth
-    fleet "Merchants South Small" 400
-    fleet "Merchants North Large" 600
-    fleet "Pirates South Small" 1200
-    fleet "Pirates South Large" 2400
-    fleet "Republic Small" 3000
-      
-event "end battle of alioth"
-  system Rutilicus
-    fleet "Merchants South Small" 600
-    fleet "Merchants South Large" 2000
-    fleet "Pirates South Small" 8000
-    fleet "Republic Small" 1000
-    fleet "Republic Large" 2000
-    fleet "Navy Surveillance" 1600
-  system Cebalrai
-    fleet "Merchants South Small" 600
-    fleet "Merchants South Large" 2000
-    fleet "Pirates South Small" 4000
-    fleet "Republic Small" 1000
-    fleet "Republic Large" 2000
-    fleet "Navy Surveillance" 1600
-  system Alioth
-    fleet "Merchants South Small" 400
-    fleet "Merchants North Large" 600
-    fleet "Pirates South Small" 1200
-    fleet "Pirates South Large" 2400
-    fleet "Republic Small" 3000
-    fleet "Republic Large" 4000
-    fleet "Navy Surveillance" 1600
-
-
-
 mission "FW Defend New Tibet"
   landing
   name "Defend New Tibet"
@@ -1892,7 +1813,7 @@ mission "FW Defend New Tibet"
       `  "That's insane," says Freya.`
       `  "But not completely implausible," says JJ.`
       label evidence
-      `  The monk says, "He brought a great deal of evidence. Plans for a nuclear device. Data from underground testing. A manufactured bomb casing. Samples of fissile material. And he named the planet where the development was done: Mutiny, in the Gienah system. We hid his ship in a cave. A day later, a Syndicate fleet appeared in orbit. They do not know where the defector landed, but they say they will destroy whatever settlement is harboring him unless he is returned to them immediately."`
+      `  The monk says, "He brought a great deal of evidence. Plans for a nuclear device. Data from underground testing. A manufactured bomb casing. Samples of fissile material. And he named the planet where the development was done: Mutiny, in the Gienah system. We hid his ship in a cave. A day later, a Syndicate fleet appeared in orbit. They do not know where the defector landed, but they say they will destroy whatever settlement is harbouring him unless he is returned to them immediately."`
       `  After a moment, JJ says, "If these allegations are true, if we can prove that the Free Worlds was innocent of any involvement in those attacks, the Republic might make peace with us, or at least agree to a ceasefire. I vote that we try to shelter this defector and hear his story."`
       `  "And if it's a lie," says Freya, "and we refuse the Syndicate's demands, we lose our only ally. And many civilians will be killed, as well. I care about justice, but trading a definite ally for a slim possibility of peace: that is an unwise investment. I vote that we hand this man over to the Syndicate."`
       `  The monk says, "We want to see justice done, and peace prevail. If you ask us to, we will flee to the mountains and take refuge until help arrives."`
@@ -1928,9 +1849,9 @@ mission "FW Defend New Tibet"
         accept
   
   on accept
-    "reputation: Syndicate" = -1000
-    event "fw at war with Syndicate"
     event "battle of alioth"
+    event "fw at war with Syndicate"
+    "reputation: Syndicate" = -1000
   
   npc evade
     government Syndicate
@@ -1964,9 +1885,9 @@ mission "FW Defend New Tibet"
     ship "Argosy" "F.S. Nightingale"
   
   on complete
-    "reputation: Republic" = 1
-    event "fw armistice"
     event "end battle of alioth"
+    event "fw armistice"
+    "reputation: Republic" = 1
     conversation
       `It doesn't take long to find the monastery that contacted you earlier, but nothing is left of it but burnt-out shells of buildings. You land and look around for survivors. You find several corpses dressed in maroon robes, some of them badly burnt, but no sign of the defector or the monk you spoke with earlier.`
       choice
@@ -2018,6 +1939,20 @@ mission "FW Defend New Tibet"
 
 
 
+mission "FW Clink Prison Closes"
+  landing
+  invisible
+  to offer
+    has "event: fw prison on Clink"
+    or
+      has "event: fw armistice"
+      has "event: fwc peace with the navy"
+  on offer
+    event "fw prison on Clink closes"
+    fail
+
+
+
 mission "FW Liberate Delta Sagittarii"
   name "Liberate Delta Sagittarii"
   description "Lead a Free Worlds fleet to drive the Navy out of Delta Sagittarii. Another fleet ought to be arriving from the Rim at about the same time."
@@ -2049,10 +1984,10 @@ mission "FW Liberate Delta Sagittarii"
         goto plan
       label know
       choice
-        `  "Yes, I helped them get access to some better ramscoop technology from the Deep."`
+        `  "Yes, I helped them get access to some technology from the Deep."`
           goto yes
         `  "No, I haven't had any dealings with them."`
-      `  "That's odd," says JJ, "I thought they said you helped them to get their hands on the catalytic ramscoop. But anyway, they've agreed to make an initial strike and fade attack on the Navy fleet to soften them up, before our own fleet gets there."`
+      `  "That's odd," says JJ, "I thought they said you helped them to get their hands on Deep Sky designs. But anyway, they've agreed to make an initial strike and fade attack on the Navy fleet to soften them up, before our own fleet gets there."`
         goto plan
       label yes
       `  "Ah yes," says JJ, "an excellent piece of corporate espionage. A little shady and underhanded, of course, which is why we let the Wolf Pack handle things like that rather than doing it through official channels. But anyway, they've agreed to make an initial strike and fade attack on the Navy fleet to soften them up, before our own fleet gets there."`
@@ -2140,3 +2075,4 @@ mission "FW Liberate Delta Sagittarii"
     system "Rastaban"
     government "Republic"
     fleet "Republic Large" 2
+

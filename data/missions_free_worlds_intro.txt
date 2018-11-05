@@ -1,3 +1,55 @@
+mission "remembrance day"
+  landing
+  source
+    government "Republic"
+  to offer
+    has "event: remembrance day"
+  on offer
+    log "Factions" "Alphas" `The Alphas were designed hundreds of years ago as genetically engineered super-soldiers, with no compassion or empathy. They escaped from their masters, enslaved entire planets, and commanded massive fleets of ships. Eventually they were defeated, and were either killed or went into hiding. They can be recognized by their green, photosynthetic skin.`
+      `Alphas can live for centuries, and it is likely that many of them have survived, hiding out on anarchist worlds or somewhere beyond human space. Fortunately, they reproduce much more slowly than ordinary humans do.`
+    conversation
+      `Today, throughout human space, is Remembrance Day, the anniversary of the beginning of the Alpha Wars more than five centuries ago. The Alphas were genetically engineered soldiers, with superhuman agility and intelligence, and a complete lack of compassion or empathy. At the height of the War, dozens of planets had been enslaved by the Alphas.`
+      `  Remembrance Day commemorates the beginning of the war, rather than its end, as a perpetual reminder that the war is not over: although the Alphas were defeated, some of them escaped and remained in hiding, and they and their offspring are presumed to still be present in the galaxy today.`
+      `  Since the Alpha War, genetic resequencing technology has been very tightly controlled. Because the Alphas were the product of experimental genetic manipulation rather than natural evolution, it is believed that their genes are less robust than true human beings, and they are almost unable to have viable offspring without access to special technology. Therefore, most Alpha enclaves that have been discovered since the War have had very small populations, no more than a few dozen.`
+      `  In these days when the Navy ensures peace throughout much of the galaxy, on many worlds the Alphas are treated as nothing more than a bogeyman story to frighten children. Because the most striking physical feature of the Alphas was their photosynthetic skin, on some worlds kids even run around wearing green face paint on Remembrance Day, trying to frighten people. But on other worlds, especially on the fringes of space where the Navy seldom patrols, the Alphas are still spoken of with fear.`
+
+
+
+mission "event: war begins"
+  landing
+  source
+    government "Free Worlds" "Republic" "Syndicate"
+  to offer
+    has "event: war begins"
+  on offer
+    log "Factions" "Free Worlds" `The Free Worlds is a collection of local governments in the southern galactic arm who have declared independence from the Republic after Parliament refused to address issues they raised about trade tariffs, taxation, and representation. They may be linked to the recent terrorist attacks on the Navy Yard and the galactic stock exchange, although they deny responsibility.`
+    conversation
+      `The moment you step off your ship you realize something is very wrong. The spaceport is eerily quiet, and a large crowd of people is gathered around a video screen in the local bar.`
+      `  You ask what is happening, and someone explains. Recently, a collection of local governments in the southern galactic arm sent the Republic Parliament what amounted to an ultimatum: a refusal to pay taxes until certain reforms were made in trade tariffs, ship licensing, and election of planetary representatives. The coalition calls themselves the "Free Worlds." Parliament outright refused to consider their demands.`
+      `  Then, in the early morning, nuclear explosions on Geminus and Martini destroyed the Republic Navy Yard and the Galactic Stock Exchange, crippling the military and economic centre of the Republic. The "Free Worlds" disclaim any responsibility for the attacks, despite the timing and the fact that the attacks serve their purposes very well.`
+      `  Unless the terrorists can be found or turn themselves in, civil war is imminent. It has been less than a year since you bought your ship, and already the galaxy is falling apart on you.`
+        decline
+
+
+
+mission "Southern Carriers Trigger"
+  landing
+  invisible
+  to offer
+    has "event: initial deployment 3"
+  on offer
+    event "southern carriers 1" 90
+    event "southern carriers 2" 180
+    event "southern carriers 3" 270
+    event "southern carriers 4" 360
+    fail
+
+
+
+
+
+
+
 mission "Pact Recon 0"
   name "Pirate Reconnaissance"
   description "Fly through the <waypoints> systems, then report to <destination> so the Southern Defence Pact can analyse your logs of pirate activity (if any)."
@@ -129,7 +181,7 @@ mission "Pact Recon 3"
   
   on offer
     dialogue
-      `Once again, you receive a message from Freya Winters. "We have another mission for you," she says, "this one a bit more dangerous. We've heard rumors of a pirate fleet massing in one of the seldom-visited systems in the Dirt Belt, and we need to know where they are. Interested in helping to track them down? As before, you don't need to fight them, just observe them."`
+      `Once again, you receive a message from Freya Winters. "We have another mission for you," she says, "this one a bit more dangerous. We've heard rumours of a pirate fleet massing in one of the seldom-visited systems in the Dirt Belt, and we need to know where they are. Interested in helping to track them down? As before, you don't need to fight them, just observe them."`
   
   npc
     government "Pirate"
@@ -521,7 +573,7 @@ mission "FW Katya 1"
         decline
   
       label `details`
-      `  "Great," she says, grinning even more broadly. "My name's Katya Reynolds, by the way. Glad we'll be working together." She starts to walk away, then seems to remember something. "One last thing - some friends of mine on <planet>, tourists, need a lift off that rock, and I owe them a favor. Would you mind saving two bunks for them?"`
+      `  "Great," she says, grinning even more broadly. "My name's Katya Reynolds, by the way. Glad we'll be working together." She starts to walk away, then seems to remember something. "One last thing - some friends of mine on <planet>, tourists, need a lift off that rock, and I owe them a favour. Would you mind saving two bunks for them?"`
       choice
         `  "Sure, no problem."`
   
@@ -666,7 +718,6 @@ mission "FW Katya 1C"
 
 
 
-event "FW Katya Alt 2: ready"
 
 mission "FW Katya Alt 2"
   name "Transport Mr. Eyes"
@@ -1030,7 +1081,7 @@ mission "FW Katya 5B"
       
       label prayer
       `  "Evening prayer" turns out to be a lengthy church service that apparently begins with the monks listing every bad thing they can possibly imagine and praying that it would not happen: "From lightning and tempest; from earthquake, fire, and flood; from plague, pestilence, and famine, good Lord, deliver us. From all oppression, conspiracy, and rebellion; from violence, battle, and murder; and from dying suddenly and unprepared, good Lord, deliver us..." It's very monotonous.`
-      `  At some point, they switch to praying for different people: for the Parliament of the Republic, and everyone in authority; for the governor of <origin>, their world; for the Quarg and all sentient species; for prisoners, for the homeless and poor, for orphans, for pregnant women and young children, for travelers, for starship crews and captains, for miners and oil crews, for mill and factory workers; for the abused; for the mentally ill; for pirates and street gangs; for all creatures and planets vulnerable to exploitation or ecological destruction. (Eyes, who is sitting next to you, responds to that last petition with a fervent "Amen!") The litany is so detailed and specific that you find it both exhausting and fascinating.`
+      `  At some point, they switch to praying for different people: for the Parliament of the Republic, and everyone in authority; for the governor of <origin>, their world; for the Quarg and all sentient species; for prisoners, for the homeless and poor, for orphans, for pregnant women and young children, for travellers, for starship crews and captains, for miners and oil crews, for mill and factory workers; for the abused; for the mentally ill; for pirates and street gangs; for all creatures and planets vulnerable to exploitation or ecological destruction. (Eyes, who is sitting next to you, responds to that last petition with a fervent "Amen!") The litany is so detailed and specific that you find it both exhausting and fascinating.`
       `  When the service ends, the monks depart for their rooms in silence, and Eyes, with a brief nod to you, does the same.`
       
       label morning
@@ -1301,7 +1352,7 @@ mission "FW Escort 1"
   
   on offer
     conversation
-      `As you are walking through the spaceport, a man in a militia uniform approaches you. "Captain <last>?" he asks. You nod. "I'm the Free Worlds quartermaster here on <origin>," he says. "We're looking for ships to help escort a supply convoy that is traveling to <planet> and back. Our last few convoys have been attacked by pirates, and we suspect this one will be as well. Are you interested?"`
+      `As you are walking through the spaceport, a man in a militia uniform approaches you. "Captain <last>?" he asks. You nod. "I'm the Free Worlds quartermaster here on <origin>," he says. "We're looking for ships to help escort a supply convoy that is travelling to <planet> and back. Our last few convoys have been attacked by pirates, and we suspect this one will be as well. Are you interested?"`
       choice
         `  "Sure, I'd be glad to assist."`
         `  "Sorry, I'm busy with another mission at this moment."`
@@ -1933,8 +1984,8 @@ mission "Defend Sabik"
     
     set "licence: Roost"
     "salary: Free Worlds" = 300
-    event "start of hostilities"
     event "joined the free worlds"
+    event "start of hostilities"
   
   on accept
     log "Officially joined the Free Worlds. Helping to defend Sabik, which is now under attack by the Navy. This Free Worlds work may mean getting involved in a lot more battles like this one."

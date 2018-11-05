@@ -42,10 +42,6 @@ mission "Discovered Hai Space"
     event "label hai space"
     fail
 
-event "label hai space"
-  galaxy "label hai"
-    sprite "label/hai"
-
 
 
 mission "First Contact: Unfettered"
@@ -227,7 +223,7 @@ mission "Unfettered Jump Drive 1"
           goto refuse
       
       label end
-      `  The Unfettered engineers quickly and carefully remove your jump drive and replace it with an ordinary hyperdrive. You sincerely hope that you are not making a mistake by giving them this new technology. "Remember," one of them says as it hands you your payment, "when you acquire more jump drives, return here with them and we will give you further rewards. Until then, may fortune favor you, human friend."`
+      `  The Unfettered engineers quickly and carefully remove your jump drive and replace it with an ordinary hyperdrive. You sincerely hope that you are not making a mistake by giving them this new technology. "Remember," one of them says as it hands you your payment, "when you acquire more jump drives, return here with them and we will give you further rewards. Until then, may fortune favour you, human friend."`
         accept
   
   on accept

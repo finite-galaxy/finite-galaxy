@@ -55,6 +55,13 @@ galaxy "label arachi"
 galaxy "label waste"
   pos 80 315
 
+galaxy "pug empty galaxy"
+  pos 10000 7000
+  sprite ui/pleiades
+
+
+
+
 system "1 Axis"
   pos -1274.63 267.214
   government Coalition
@@ -16960,6 +16967,37 @@ system Ossipago
       distance 221
       period 17.2936
 
+system "Over the Rainbow"
+  pos 9904 7176
+  government Uninhabited
+  link "Terra Incognita"
+  habitable 1215
+  asteroids "small rock" 1 3.3098
+  asteroids "medium rock" 8 3.3345
+  asteroids "large rock" 2 2.1242
+  asteroids "small metal" 5 2.9887
+  asteroids "medium metal" 11 3.6556
+  asteroids "large metal" 7 2.0007
+  object "Pug Wormhole"
+    sprite planet/wormhole
+  object
+    sprite star/k5
+    distance 1455.1
+    period 875.481048
+    offset 180
+    object
+      sprite star/m4
+      distance 75
+      period 12.179969
+  object
+    sprite star/g0
+    distance 544.9
+    period 875.481048
+    object
+      sprite star/m4
+      distance 107
+      period 12.701281
+
 system Pantica
   pos 303.87 445.242
   government Remnant
@@ -22148,6 +22186,49 @@ system Terminus
     distance 2077.64
     period 1835.49
 
+system "Terra Incognita"
+  pos 9921.5 7086.5
+  government Uninhabited
+  link "Over the Rainbow"
+  habitable 455.625
+  asteroids "small rock" 8 1.8432
+  asteroids "medium rock" 1 1.8144
+  asteroids "large rock" 31 3.2544
+  asteroids "small metal" 1 4.1472
+  asteroids "medium metal" 24 3.9744
+  asteroids "large metal" 11 4.2624
+  object
+    sprite star/k0
+    period 10
+  object
+    sprite planet/lava4
+    distance 174.59
+    period 43.230003
+  object Ruin
+    sprite planet/ocean9
+    distance 461.84
+    period 185.99169
+  object
+    sprite planet/cloud8
+    distance 862.65
+    period 474.79721
+  object
+    sprite planet/gas2
+    distance 2203.49
+    period 1938.3083
+    object
+      sprite planet/ganymede
+      distance 280
+      period 12.134831
+    object
+      sprite planet/dust5
+      distance 439
+      period 23.822836
+    object
+      sprite planet/oberon
+      distance 543
+      period 32.771508
+
 system Torbab
   pos -949.587 490.051
   government Coalition
@@ -23349,6 +23430,64 @@ system Wezen
       distance 496
       period 38.9601
 
+system "World's End"
+  pos 9966.5 7017.5
+  government Uninhabited
+  habitable 700
+  object
+    sprite star/g5
+    period 10
+  object
+    sprite "planet/ringworld right"
+    distance 812
+    period 360
+    offset 0
+  object
+    sprite "planet/ringworld left"
+    distance 812
+    period 360
+    offset 20
+  object
+    sprite "planet/ringworld right"
+    distance 812
+    period 360
+    offset 50
+  object
+    sprite "planet/ringworld left"
+    distance 812
+    period 360
+    offset 70
+  object
+    sprite "planet/ringworld right"
+    distance 812
+    period 360
+    offset 140
+  object
+    sprite "planet/ringworld left"
+    distance 812
+    period 360
+    offset 160
+  object
+    sprite "planet/ringworld right"
+    distance 812
+    period 360
+    offset 180
+  object
+    sprite "planet/ringworld left"
+    distance 812
+    period 360
+    offset 200
+  object
+    sprite "planet/ringworld right"
+    distance 812
+    period 360
+    offset 270
+  object
+    sprite "planet/ringworld left"
+    distance 812
+    period 360
+    offset 290
+
 system "Ya Hai"
   pos -24.9453 -505.571
   government Hai
@@ -23922,6 +24061,8 @@ system Zubeneschamali
     distance 2218.25
     period 1182.01
 
+
+
 planet "Ablub's Invention"
   attributes arach factory
   landscape land/sky3
@@ -23965,7 +24106,7 @@ planet Ahr
   attributes arach factory tourism shipping urban
   landscape land/forest4
   description `The homeworld of the Arach people, Ahr is a metropolitan world with nearly nine billion inhabitants, enough that they cannot all be fed by what this world produces. The government maintains a storehouse with a month's supply of food in each major metropolitan centre, as well as a collection of bioreactors, built according to Kimek designs, that can produce a tasteless but nutritious paste as emergency rations in the unlikely event that shipments of food from off-world are somehow disrupted for a prolonged period of time.`
-  spaceport `A constant line of cargo barges and trucks streams through this spaceport city, collecting goods to be distributed to the outlying suburbs and neighboring cities. Inside the main terminal, members of all three Coalition species mix freely, but the Heliarch agents and interpreters here are all Arach.`
+  spaceport `A constant line of cargo barges and trucks streams through this spaceport city, collecting goods to be distributed to the outlying suburbs and neighbouring cities. Inside the main terminal, members of all three Coalition species mix freely, but the Heliarch agents and interpreters here are all Arach.`
   spaceport `  Carts carrying passengers and cargo whiz past at frightening speeds, expertly navigating to dodge the pedestrians.`
   shipyard "Coalition Basics"
   shipyard Arach
@@ -23991,7 +24132,7 @@ planet Alexandria
   attributes deep station
   landscape land/space7
   description `At the height of the Alpha War, the government of the Deep constructed Alexandria as the galaxy's largest storehouse of human literature, scientific writing, and technology. It also houses a vast museum of cultural artifacts dating back to long before the start of the space age. Today the station is mostly populated by visitors looking for particularly arcane writings or information, and librarians who have devoted their lives to keeping the archives well-indexed and up to date.`
-  description `  Entire sections of the station are off limits to ordinary visitors. There are many rumors about what those restricted areas contain.`
+  description `  Entire sections of the station are off limits to ordinary visitors. There are many rumours about what those restricted areas contain.`
   spaceport `The station's cavernous visitor centre is by far the quietest spaceport you have ever been in. Many people are bustling back and forth, wheeling carts of old books or carrying data pads, but they are entirely silent except for the occasional startled outburst when a scholar, walking deep in thought or immersed in reading, accidentally collides with someone.`
   spaceport `  From here, passageways lead off into the wings of the library in a veritable labyrinth of hallways, stairs, and library stacks. A few particularly heavy doors require key cards to enter, and others have no opening controls of any sort that you can see.`
   "required reputation" 100
@@ -24026,7 +24167,7 @@ planet "Alta Hai"
   landscape land/station2
   description `This is a complete Quarg ringworld, the product of millennia of construction effort which has consumed every other stellar object in this system in order to provide the raw materials. The inner edge of the ring is filled with solar panels, hydroponic gardens, living quarters, and sunlit common spaces. The outer edge contains hangars and docks for ships, and storage facilities for cargo.`
   description `  Massive station-keeping thrusters on the ring's exterior keep its orbit from becoming unstable.`
-  spaceport `If this section of the ring is any indication, there must be trillions of Quarg here. Since the construction work on the ring has long since ended, many of them seem to spend their time with creative or scientific endeavors instead. The spaceport is decorated with artwork of every imaginable kind: sculptures, mobiles, paintings, music, and even one hallway that cycles through various artificial odors, some of them intensely unpleasant to your human senses.`
+  spaceport `If this section of the ring is any indication, there must be trillions of Quarg here. Since the construction work on the ring has long since ended, many of them seem to spend their time with creative or scientific endeavours instead. The spaceport is decorated with artwork of every imaginable kind: sculptures, mobiles, paintings, music, and even one hallway that cycles through various artificial odors, some of them intensely unpleasant to your human senses.`
   bribe 0
   security 0.9
 
@@ -24112,7 +24253,7 @@ planet Aventine
 planet "Bank of Blugtad"
   attributes arach wealthy urban
   landscape land/valley14-harro
-  description `This idyllic planet is home to almost as many Arachi as their homeworld in the neighboring system. It is also home to House Plumtab, the Arach guild in charge of banks and finance. Because pretty much every other sector of the Arach economy depends on loans from House Plumtab and trades stock on their equity exchanges, this House is quite influential throughout Arach space.`
+  description `This idyllic planet is home to almost as many Arachi as their homeworld in the neighbouring system. It is also home to House Plumtab, the Arach guild in charge of banks and finance. Because pretty much every other sector of the Arach economy depends on loans from House Plumtab and trades stock on their equity exchanges, this House is quite influential throughout Arach space.`
   spaceport `The central concourse of the spaceport is reminiscent of a major stock exchange on a human world, with video screens everywhere displaying constantly fluctuating line graphs and lists of numbers and symbols. The only difference is that the graphs run top to bottom, rather than left to right.`
   spaceport `  Every once in a while, one of the Arachi will cause a minor pedestrian traffic jam by abruptly stopping to look at one of the displays.`
   shipyard "Coalition Basics"
@@ -24145,7 +24286,7 @@ planet Bivrost
   spaceport `The spaceport is within sight of the capital city, Rainbridge, but far enough away that the sound of ships taking off and landing will not be too disturbing to the locals. The warehouse space here is underground, level after level of tunnels and caverns stocked with lead-lined trunks filled with uranium and plastic crates of manufactured goods. Above ground, the spaceport is entirely enclosed within a dome of glass and plastic composite.`
   spaceport `  A video screen plays a looping advertisement from the local chamber of commerce. A prosperous-looking man is saying, "I knew there was a fortune to be made in uranium - but I was afraid my children would start glowing in the dark."`
   outfitter "Basic Outfits"
-  outfitter "Deep Sky Intermediate"
+  outfitter "Deep Sky Basics"
   security 0.8
   tribute 3600
     threshold 7000
@@ -24326,7 +24467,7 @@ planet "Celestial Third"
   attributes kimek farming factory urban
   landscape land/fields4
   description `Celestial Third is the breadbasket of Kimek space. Most of its land mass is used for farming, augmented by seaweed farms and fisheries in the oceans and factories near the equator producing yeast and bacterial cultures as nutritional supplements. The first settlers came here more than thirteen thousand years ago, at a time when their home world had run out of arable land for farming and food was desperately needed.`
-  spaceport `The constant stream of freighters passing through this spaceport is a testament to how much food is needed to feed the densely populated Kimek worlds, in particular their homeworld in the neighboring star system. The city that hosts the spaceport has also become something of a tourist destination for those with adventurous culinary tastes; restaurants here serve recipes native to each of the Coalition species, along with some dishes that blend their three cuisines in unique and sometimes surprising ways.`
+  spaceport `The constant stream of freighters passing through this spaceport is a testament to how much food is needed to feed the densely populated Kimek worlds, in particular their homeworld in the neighbouring star system. The city that hosts the spaceport has also become something of a tourist destination for those with adventurous culinary tastes; restaurants here serve recipes native to each of the Coalition species, along with some dishes that blend their three cuisines in unique and sometimes surprising ways.`
 
 planet "Charon Station"
   attributes south station
@@ -24344,7 +24485,7 @@ planet "Charybdis Station"
   attributes core station
   landscape land/sivael8
   music ambient/machinery
-  description `Charybdis Station is privately owned by the Syndicate. It is a massive deuterium refinery, with harvester drones constantly flying in and out to scoop hydrogen gas out of the upper atmosphere of the planet below. If you need to repair or refuel in this system, you will need to visit the neighboring world of Delve, instead of this station.`
+  description `Charybdis Station is privately owned by the Syndicate. It is a massive deuterium refinery, with harvester drones constantly flying in and out to scoop hydrogen gas out of the upper atmosphere of the planet below. If you need to repair or refuel in this system, you will need to visit the neighbouring world of Delve, instead of this station.`
   "required reputation" 20
   bribe 0.05
   security 0.6
@@ -24375,7 +24516,7 @@ planet Chiron
 planet "Chosen Nexus"
   attributes saryd shipping urban
   landscape land/mountain23-spfld
-  description `The Saryds established a trading colony here in the early days of their era of space exploration, when they first made contact with the Quarg. When the Quarg gave them the gift of a small number of jump drives, in order to build relationships with the neighboring species, Chosen Nexus grew into a far larger and more important trading hub.`
+  description `The Saryds established a trading colony here in the early days of their era of space exploration, when they first made contact with the Quarg. When the Quarg gave them the gift of a small number of jump drives, in order to build relationships with the neighbouring species, Chosen Nexus grew into a far larger and more important trading hub.`
   description `  It has now been many millennia since the Quarg were driven out and free travel began between the members of the Coalition, and Chosen Nexus now has nearly as many Arach and Kimek inhabitants as native Saryds.`
   spaceport `This is a truly cosmopolitan spaceport, a city where the distinctive architectures of the Coalition's species are blended together and where the food or lodgings unique to each of them can easily be found. Cargo drones hover over the landing pads, constantly loading and unloading the merchant ships that are parked here as their captains arrange to buy or sell cargo.`
   spaceport `  Mingling among the crowds, Heliarch representatives wearing golden bands as a mark of their authority serve both as translators and as peacekeepers.`
@@ -24388,7 +24529,7 @@ planet "Chosen Nexus"
 planet Clark
   attributes "dirt belt" forest factory
   landscape land/valley3
-  description `Clark is a recently settled world, and most of its surface remains covered in dense forests and uninhabited mountains. Because clearing new land is so difficult, agriculture here has not grown far beyond the level of subsistence farming. But the temperate climate has drawn several million settlers, most of whom work in factories that have been planted here by off-world corporations to take advantage of the cheap labor.`
+  description `Clark is a recently settled world, and most of its surface remains covered in dense forests and uninhabited mountains. Because clearing new land is so difficult, agriculture here has not grown far beyond the level of subsistence farming. But the temperate climate has drawn several million settlers, most of whom work in factories that have been planted here by off-world corporations to take advantage of the cheap labour.`
   description `  The low cost of living and virtually zero unemployment rate make poverty and crime relatively rare occurrences. Instead there is a pioneering spirit, a startup-world attitude that anything is attainable with a bit of hard work and frugality.`
   spaceport `The spaceport is at the heart of one of Clark's largest cities, surrounded by smokestacks and factories. There are a few hangars owned by different corporations where their cargo ships can load and unload, but you are relegated to a set of concrete landing pads farther from the main buildings. Large trucks rumble by carrying carts loaded down with cargo crates.`
   spaceport `  In the central building, dozens of workers fill a large cafeteria with several stations serving different types of food. The mood here feels boisterous and energetic, very different from most of the Dirt Belt worlds you have visited.`
@@ -24428,13 +24569,13 @@ planet "Cold Horizon"
 planet "Cool Forest"
   attributes saryd shipping urban
   landscape land/myrabella0
-  description `Much of Cool Forest's land mass is covered by the sort of temperate woodlands that the Saryds prefer to build their residential neighborhoods in. The total population is over a billion, but living in small settlements so well integrated with the surrounding forest that from space only a few major cities are visible.`
+  description `Much of Cool Forest's land mass is covered by the sort of temperate woodlands that the Saryds prefer to build their residential neighbourhoods in. The total population is over a billion, but living in small settlements so well integrated with the surrounding forest that from space only a few major cities are visible.`
   spaceport `The spaceport here is a major city, with a continuous stream of cargo transports bringing goods manufactured on Cool Forest's sister planet, Diligent Hand. Here, some final assembly, testing, and repackaging is performed before those goods are shipped out to the rest of Saryd space and beyond.`
 
 planet Cornucopia
   attributes south farming research frontier
   landscape land/fields0
-  description `Cornucopia is a mostly agrarian world, and like several of its neighbors it has been inhabited since the early days of interstellar travel, when settlers seeking to get as far as possible from old Earth and its troubles landed here. Through careful stewardship and attention to the rhythms and balances of nature, generation after generation of farmers have transformed this world into one of the most fertile in human space. The Cornucopia College of Agriculture is famous, and justly so.`
+  description `Cornucopia is a mostly agrarian world, and like several of its neighbours it has been inhabited since the early days of interstellar travel, when settlers seeking to get as far as possible from old Earth and its troubles landed here. Through careful stewardship and attention to the rhythms and balances of nature, generation after generation of farmers have transformed this world into one of the most fertile in human space. The Cornucopia College of Agriculture is famous, and justly so.`
   description `  From orbit, most of the landmass seems covered with a bizarre pixelated pattern. On approach, this resolves into a vast patchwork of fields and irrigation circles.`
   spaceport `The spaceport on Cornucopia is a set of massive hangars in the centre of a wide-open plain. Before leaving your ship you had to sign several documents regarding the use and disposal of various chemicals used in ship operations, and the department of agriculture requires that any luggage you bring on or off world be submitted to a scan for biological material.`
   spaceport `  When you leave your hangar, you find yourself in an immense farmers' market, with hundreds of fruits and grains that you do not even know words for. The smell of this world is rich and earthy - you feel like you could almost receive all the nourishment your body needs just by breathing this air.`
@@ -24455,7 +24596,7 @@ planet "Corral of Meblumem"
 planet Covert
   attributes pirate mining "core pirate"
   landscape land/badlands2
-  description `Covert is home to a powerful mining cartel, operating outside the control of Republic law or any other external authority. It is rumored to be one of the few planets in human space where weapons-grade uranium and plutonium is mined and enriched. Any goods for sale here were most likely produced by slave labor, often by survivors of ships that have been captured by pirates. A massive pirate fleet is docked on the outskirts of the spaceport, a warning to any private pilot who might think of cheating or opposing the cartel.`
+  description `Covert is home to a powerful mining cartel, operating outside the control of Republic law or any other external authority. It is rumoured to be one of the few planets in human space where weapons-grade uranium and plutonium is mined and enriched. Any goods for sale here were most likely produced by slave labour, often by survivors of ships that have been captured by pirates. A massive pirate fleet is docked on the outskirts of the spaceport, a warning to any private pilot who might think of cheating or opposing the cartel.`
   spaceport `From the moment you landed, you have been followed by a pair of security guards with earpieces and laser guns. The spaceport is one enormous building, with square, straight hallways and featureless walls, and nearly every door you pass is locked. Cameras at each hallway intersection pivot to watch as you approach. This is simultaneously one of the most secure spaceports you have visited, and one of the most dangerous, although if you do not do anything to provoke the animosity of the cartel, you will probably be able to leave in peace.`
   shipyard "Pirates East"
   shipyard "Syndicate Basics"
@@ -24498,7 +24639,7 @@ planet Darkcloak
   attributes unfettered
   landscape land/water6
   description `Darkcloak is a world that is almost always obscured by a thick layer of clouds, making it difficult to produce food here.`
-  description `  Although the Hai tend to be an easygoing and nonviolent species, there are always a few in each generation that yearn for excitement, warfare, and conquest. These "Unfettered" Hai have built a major military base here, and they launch raids from here on convoys traveling through the nearby systems.`
+  description `  Although the Hai tend to be an easygoing and nonviolent species, there are always a few in each generation that yearn for excitement, warfare, and conquest. These "Unfettered" Hai have built a major military base here, and they launch raids from here on convoys travelling through the nearby systems.`
   spaceport `The occupants of this spaceport are not visibly different from the Hai you have encountered elsewhere, but they seem much more tense, angry, and hostile. As the only human here, you are being watched very closely, but no one threatens you directly.`
   spaceport `  It is likely that most of the goods available for trade here were stolen from one of the nearby Hai systems.`
   shipyard "Hai Basics"
@@ -24514,7 +24655,7 @@ planet Darkmetal
 planet Darkstone
   attributes south farming frontier
   landscape land/valley8
-  description `Darkstone is a rainy, mountainous planet. The major continents are spidered with rivers and green valleys. A few enterprising settlers have built farming communities here, but the population remains low because of the threat of piracy from neighboring systems.`
+  description `Darkstone is a rainy, mountainous planet. The major continents are spidered with rivers and green valleys. A few enterprising settlers have built farming communities here, but the population remains low because of the threat of piracy from neighbouring systems.`
   description `  Among the farmers who choose to stay, the attitude seems to be that piracy can't last forever, but good land will always be good land. Despite some low-level cynicism and bitterness, there is surprisingly little outright anger at either the pirates themselves or any government that might have been expected to control them.`
   spaceport `Once every few months, one pirate band or another will land here demanding tribute in the form of food. The locals respond by just keeping a big enough supply on hand to satisfy them; any sort of planetary defences would cost far more than the price of the amount of food that an average fleet of warships can carry. But once they recognize that you are here to trade and not to steal, they greet you quite enthusiastically.`
   outfitter "Basic Outfits"
@@ -24547,7 +24688,7 @@ planet Deep
   landscape land/sea3
   description `Deep is a sparsely populated world of small island archipelagos surrounded by vast expanses of empty ocean. There is not enough land for any large cities or serious industry to emerge, so most of the inhabitants live in small fishing villages. The climate is temperate and Earth-like, but the sunlight is somewhat dimmer than you are used to.`
   description `  The fishing settlements are actually the second colonization attempt on this planet. In the early days of hyperdrive the Kingsburg Corporation sent out what was then one of the largest and most technologically advanced colonization fleets, penetrating deep into the then-unexplored southern galactic rim. After two centuries of sporadic and guarded contact, the colony fell silent, and when human expansion finally reached this area again, no trace of the original colony was found.`
-  spaceport `The spaceport is built on a large island, a now-extinct volcano with an elevation of several kilometers at its centre. Most of the large-scale fishing here is done by a single company, Poseidon Industries, who also built and maintain the spaceport. Steep winding roads and sturdy cement homes and warehouses line the mountain slopes, and below you in the harbor several massive trawling vessels are moored. On the outskirts of the spaceport are the ramshackle houses and open-air marketplace used by the smaller, independent fishing families.`
+  spaceport `The spaceport is built on a large island, a now-extinct volcano with an elevation of several kilometers at its centre. Most of the large-scale fishing here is done by a single company, Poseidon Industries, who also built and maintain the spaceport. Steep winding roads and sturdy cement homes and warehouses line the mountain slopes, and below you in the harbour several massive trawling vessels are moored. On the outskirts of the spaceport are the ramshackle houses and open-air marketplace used by the smaller, independent fishing families.`
   security 0.1
   tribute 500
     threshold 3000
@@ -24787,7 +24928,7 @@ planet "Far Monad"
 planet "Far'en Lai"
   attributes uninhabited
   landscape land/dune3
-  description `When the Korath were banished to the Core, they were left with only one living world, a planet they call "Far'en Lai," meaning, "the last candle-flame." Afraid that this planet's biosphere will turn to dust in their hands like all the other worlds they once controlled, the Korath have left Far'en Lai entirely unsettled and unexploited. It is rumored that the terms of their exile dictate that if Far'en Lai withers and dies, the remaining Korath exiles will be exterminated, but that if they can learn to make the planet flourish, their place in the galaxy will be restored.`
+  description `When the Korath were banished to the Core, they were left with only one living world, a planet they call "Far'en Lai," meaning, "the last candle-flame." Afraid that this planet's biosphere will turn to dust in their hands like all the other worlds they once controlled, the Korath have left Far'en Lai entirely unsettled and unexploited. It is rumoured that the terms of their exile dictate that if Far'en Lai withers and dies, the remaining Korath exiles will be exterminated, but that if they can learn to make the planet flourish, their place in the galaxy will be restored.`
   government Uninhabited
   security 0
 
@@ -24795,7 +24936,7 @@ planet "Fara Skaeruti"
   attributes korath station
   landscape land/space4
   description `This station serves both as a deuterium refinery and as a factory. A large number of small spires protrude from the hull of the station, each carrying fuel pipes, so that ships can simply dock with one of the spires to refuel instead of having to navigate inside a hangar.`
-  spaceport `A swarm of robotic spacecraft flows around this station. The traffic pattern is chaotic, yet efficient, adapting from moment to moment depending on which ships are coming or going. The robots never crash into each other, even though they sometimes pass each other with less than a meter in between, while traveling at high speeds.`
+  spaceport `A swarm of robotic spacecraft flows around this station. The traffic pattern is chaotic, yet efficient, adapting from moment to moment depending on which ships are coming or going. The robots never crash into each other, even though they sometimes pass each other with less than a meter in between, while travelling at high speeds.`
   shipyard "Kor Mereti Basics"
   "required reputation" 1
   bribe 0
@@ -24837,7 +24978,7 @@ planet Farwater
 planet Featherweight
   attributes north research frontier
   landscape land/sky6
-  description `Featherweight is a small world, with lighter than normal gravity. Centuries ago, because of its remoteness, this world was the site of some illegal genetic experiments, and rumors say that the current inhabitants are the result of those experiments. Because they are so well adapted to low gravity, few of them choose to leave, and very few outsiders choose to settle here, so this world's culture remains quite insular and detached from the rest of the galaxy.`
+  description `Featherweight is a small world, with lighter than normal gravity. Centuries ago, because of its remoteness, this world was the site of some illegal genetic experiments, and rumours say that the current inhabitants are the result of those experiments. Because they are so well adapted to low gravity, few of them choose to leave, and very few outsiders choose to settle here, so this world's culture remains quite insular and detached from the rest of the galaxy.`
   spaceport `Although this is a human planet, as you walk through this spaceport you feel as if you are on an alien world. The ceilings and doorways are all a bit higher than you are used to, and the locals tower over you. Aside from a few food carts in the marketplace, there are no shops or restaurants in the spaceport, and the nearest village is several kilometers away. It is as if the entire port was designed in order to limit interactions with outsiders to the bare minimum that is necessary.`
   security 0.5
   tribute 800
@@ -24942,7 +25083,7 @@ planet "Fourth Shadow"
   attributes kimek factory urban
   landscape land/mountain13-sfiera
   description `In all of Coalition space, this is the one planet that comes closest to deserving being called a slum world. More than ten billion Kimek live here, mostly in densely packed and run-down apartment buildings on the outskirts of the cities. Unlike more prosperous Coalition worlds, the city centres here are reserved for factories rather than for parks or government buildings or civic centres.`
-  spaceport `The spaceport is crowded with travelers, about equally divided between those who are freshly arriving, drawn by the promise of plentiful work and a cheap cost of living, and those who are preparing to leave and attempt to build a better life somewhere else. Most Kimek choose to specialize as workers rather than raising families, so the vast majority of the travelers are alone or traveling only with a loosely knit group of friends.`
+  spaceport `The spaceport is crowded with travellers, about equally divided between those who are freshly arriving, drawn by the promise of plentiful work and a cheap cost of living, and those who are preparing to leave and attempt to build a better life somewhere else. Most Kimek choose to specialize as workers rather than raising families, so the vast majority of the travellers are alone or travelling only with a loosely knit group of friends.`
 
 planet Freedom
   attributes pirate farming "north pirate"
@@ -24950,7 +25091,7 @@ planet Freedom
   description `Freedom is home to the oldest and largest anarchist colonies in human history. The original settlers arrived in the first century after the invention of the hyperdrive, coming with the goal of simply getting as far away from civilization as possible. The colony has reinvented itself countless times since then as different leaders have taken control, and in fact at present it is split into two separate towns, East Mesa and West Mesa.`
   description `  The environment is a mix of deserts and brackish oceans, with a fair amount of native wildlife and good potential for farming. Anywhere else in human space, this planet would have become densely settled, but out here it has remained mostly empty.`
   spaceport `Apparently anarchists are not opposed to commerce as long as no one is regulating it. Half of the landing pads in the spaceport are available for ships; the other half have been taken over by farmers busy selling their produce, or merchants buying from incoming ships and piling crates into large trucks.`
-  spaceport `  A sign above the entrance to the spaceport bar reads, "Fine home-brewed whiskey! Get smashed without getting taxed!" Further down the street, a sign over what appears to be a real estate office reads, "Why not settle where The Man can't reach you?"`
+  spaceport `  A sign above the entrance to the spaceport bar reads, "Fine home-brewed whisky! Get smashed without getting taxed!" Further down the street, a sign over what appears to be a real estate office reads, "Why not settle where The Man can't reach you?"`
   spaceport `  Inexplicably, the only advertising on the seafood restaurant across the street is an enormous banner proclaiming, "We have brown rice."`
   shipyard "Betelgeuse Intermediate"
   shipyard "Pirates North"
@@ -25046,7 +25187,7 @@ planet Giverstone
 planet Glaze
   attributes south tourism
   landscape land/canyon8
-  description `Glaze is a varied world with everything from sunny beaches to frozen tundra, but it is perhaps best known for its sandstone canyons and deserts. This world's wildlife has never been studied in great detail. Local rumors tell about an alien species of "canyon people" who live in caves in some of the deepest canyons, leading to a constant stream of visiting xenobiologists. The scientific consensus, however, is that these sightings have only been of a reclusive ape-like species that lives in the canyons, and is not known to dig caves or show any other sign of civilization.`
+  description `Glaze is a varied world with everything from sunny beaches to frozen tundra, but it is perhaps best known for its sandstone canyons and deserts. This world's wildlife has never been studied in great detail. Local rumours tell about an alien species of "canyon people" who live in caves in some of the deepest canyons, leading to a constant stream of visiting xenobiologists. The scientific consensus, however, is that these sightings have only been of a reclusive ape-like species that lives in the canyons, and is not known to dig caves or show any other sign of civilization.`
   spaceport `The spaceport is a tower of glass and steel perched on top of a mesa, overlooking the canyonlands: spires of red and pale yellow stone, with a sprinkling of trees at the lower elevations. A wide highway winds down the side of the mesa, through several tunnels, and the off to the horizon. The port itself is not terribly busy.`
   spaceport `  You notice quite a few families with children sitting by the windows on the upper stories of the tower, watching starships landing and taking off. Many of them have brought folding chairs or blankets to sit on. That must be what passes for entertainment on this world.`
   shipyard "Southbound Basics"
@@ -25082,7 +25223,7 @@ planet Glory
 planet Grakhord
   attributes quarg moon
   landscape land/badlands6
-  description `Although human beings who do not mind living in low gravity are welcome to settle here, Grakhord is part of Quarg territory, and has been terraformed to meet their environmental needs rather than those of human beings. The full extent of the Quarg mining operations here are not known, but rumors say that they have tunnels reaching down almost halfway to the moon's core, and Quarg ships can also sometimes be seen harvesting hydrogen gas from the upper atmosphere of the gas giant that Grakhord orbits.`
+  description `Although human beings who do not mind living in low gravity are welcome to settle here, Grakhord is part of Quarg territory, and has been terraformed to meet their environmental needs rather than those of human beings. The full extent of the Quarg mining operations here are not known, but rumours say that they have tunnels reaching down almost halfway to the moon's core, and Quarg ships can also sometimes be seen harvesting hydrogen gas from the upper atmosphere of the gas giant that Grakhord orbits.`
   spaceport `Here, you feel like a young child lost among a crowd of tall, indifferent adults. The average adult Quarg is over three meters tall, and although they move slowly and gracefully, on their long legs they easily speed by you. Worse, the counters for the merchant exchange, bank, and job board are high enough that you can barely see over them. But, the Quargs have helpfully provided stepping stools stashed under the counters so that shorter humans can carry out business without having to constantly crane their necks upwards.`
   bribe 0
   security 0.9
@@ -25125,7 +25266,7 @@ planet "Gresku Fodar"
   attributes korath station
   landscape land/space4
   description `Situated an ideal distance from this system's twin suns, this station holds greenhouses where the Korath grow a highly nutritious bacterial sludge that serves the exiles as their main food source. A few of the greenhouses are also growing more traditional crops, but these are clearly a luxury that the Korath cannot afford to waste more of their resources on.`
-  spaceport `The bacterial soup that is being served in the food court has a texture like wet silt and an unpardonably bland flavor. Someone who could supply the Korath with a steady stream of the right sorts of spices could make a killing in trade here.`
+  spaceport `The bacterial soup that is being served in the food court has a texture like wet silt and an unpardonably bland flavour. Someone who could supply the Korath with a steady stream of the right sorts of spices could make a killing in trade here.`
   shipyard "Korath"
   outfitter "Korath Outfits"
   security 0
@@ -25245,7 +25386,7 @@ planet Hephaestus
 planet Hermes
   attributes paradise research medical
   landscape land/myrabella3
-  description `No one is permitted to settle on Hermes without a government permit. It is a sparsely populated world, mostly used for medical research and development - including some research that, if the rumors are true, are carried out here in isolation so that if something goes wrong, entire districts can be quarantined or even "sterilized" by orbital bombardment.`
+  description `No one is permitted to settle on Hermes without a government permit. It is a sparsely populated world, mostly used for medical research and development - including some research that, if the rumours are true, are carried out here in isolation so that if something goes wrong, entire districts can be quarantined or even "sterilized" by orbital bombardment.`
   description `  The landscape is nondescript, mostly rolling plains and forests. The oceans are relatively small, and as a result it is a somewhat dry planet.`
   spaceport `The spaceport is far removed from any of this world's cities. It consists of a single, ring-shaped building; the docking bays open onto the central atrium, which visiting ships fly through to reach them. Industrial strength ultraviolet lasers are mounted on turrets throughout the atrium, and fire automatically at entering and departing ships to sterilize them. Once you land, the docking bay is hermetically sealed. Based on the precautions they are taking, you find yourself wanting to spend as little time as possible breathing the air here.`
   outfitter "Basic Outfits"
@@ -25393,7 +25534,7 @@ planet "Karek Fornati"
 planet "Kasichara Fet"
   attributes korath
   landscape land/sky8
-  description `This planet appears to have suffered irradiation when the neighboring star of Peresedersi went nova. The local flora and fauna are alive but still struggling to recover from the loss. Several large Korath cities remain. It seems that they were not able, or not willing, to evacuate the entire population in time to escape the nova's gamma radiation; sun-bleached bones are scattered in the streets of the largest cities.`
+  description `This planet appears to have suffered irradiation when the neighbouring star of Peresedersi went nova. The local flora and fauna are alive but still struggling to recover from the loss. Several large Korath cities remain. It seems that they were not able, or not willing, to evacuate the entire population in time to escape the nova's gamma radiation; sun-bleached bones are scattered in the streets of the largest cities.`
   security 0
 
 planet "Keneska Fek"
@@ -25578,7 +25719,7 @@ planet Maelstrom
   attributes north mining frontier
   landscape land/mountain21-harro
   description `Maelstrom is a stormy, geologically young world with towering mountains and frequent earthquakes. Most of the large cities are near the centre of the planet's main continent, where the iron beds from an ancient ocean are exposed. Maelstrom is one of the chief exporters of iron, copper, gold, titanium, and other metals to Ada, where Lovelace Labs and the associated industries have a continuous need for raw materials.`
-  description `  Extreme rock climbing is a hugely popular sport among the mining workers here, who have a tendency to be young, male, and reckless. The mountains are dramatic enough to even attract off-world climbers as tourists, though more than once a favorite climbing face has been sloughed off its mountain in an earthquake.`
+  description `  Extreme rock climbing is a hugely popular sport among the mining workers here, who have a tendency to be young, male, and reckless. The mountains are dramatic enough to even attract off-world climbers as tourists, though more than once a favourite climbing face has been sloughed off its mountain in an earthquake.`
   spaceport `The spaceport is a single massive complex of buildings, with hangars large enough for even a bulk freighter or a Navy flagship. A railroad runs through several of the nearby mining towns and straight into the spaceport building itself, allowing ore and processed metal to be loaded directly from the mine cars into the waiting freighters.`
   outfitter "Common Outfits"
   outfitter "Lovelace Basics"
@@ -25606,7 +25747,7 @@ planet Maker
   attributes core factory mining
   landscape land/bwerner3
   description `When families or young adults on Earth find themselves stifled by the crowded conditions on humanity's home world, Maker is where many of them end up. The Syndicate offers free transportation and housing in exchange for anyone willing to sign a five years contract to the mines or factories on Maker. The living conditions are often unpleasant, with young men and women packed into dormitories, and with those who are most in need of income taking dangerous jobs in the mines. Five or ten years of work will earn you enough to set up a homestead on any of the frontier worlds, and to many, those years are worth it.`
-  spaceport `The spaceport on Maker is enormous, but laid out very efficiently. In one sector, a steady stream of passengers, most of them young and dressed somewhat shabbily, are disembarking. They are funneled straight to a labor and immigration centre, from which they will be assigned to different factories. Meanwhile, a smaller stream of older, tired-looking but better dressed workers flows in the other direction; people who have finished their terms of service and are boarding ships for other worlds.`
+  spaceport `The spaceport on Maker is enormous, but laid out very efficiently. In one sector, a steady stream of passengers, most of them young and dressed somewhat shabbily, are disembarking. They are funneled straight to a labour and immigration centre, from which they will be assigned to different factories. Meanwhile, a smaller stream of older, tired-looking but better dressed workers flows in the other direction; people who have finished their terms of service and are boarding ships for other worlds.`
   spaceport `  In the commercial sector of the port, robotic cargo trucks rumble through the streets at frightening speeds, while pedestrians walk from building to building along skyways several stories up.`
   outfitter "Basic Outfits"
   outfitter "Sisensis Basics"
@@ -25833,7 +25974,7 @@ planet "Nearby Jade"
 planet "New Argentina"
   attributes "dirt belt" farming
   landscape land/fields1
-  description `New Argentina is a world that is ideal for ranching but suitable for little else. Ranchers live as individual families or small communities surrounded by hectares of grazing land for cattle. As a result, the population is still quite low here, and the locals live isolated lives, with most families living many kilometers away from the nearest school or hospital or even from their nearest neighbor.`
+  description `New Argentina is a world that is ideal for ranching but suitable for little else. Ranchers live as individual families or small communities surrounded by hectares of grazing land for cattle. As a result, the population is still quite low here, and the locals live isolated lives, with most families living many kilometers away from the nearest school or hospital or even from their nearest neighbour.`
   description `  Cattle handlers here do their work on horseback, because they believe modern vehicles are more likely to spook the animals.`
   spaceport `The spaceport is on the outskirts of one of New Argentina's largest towns... which has a population of barely ten thousand people. Many of the dock workers are teenagers or barely past their teens, children of ranchers who are not drawn to the solitary sort of life that their parents enjoy. Aside from the church and the hospital, the largest building in town is "The Grange," a function hall with a sign out front advertising square dances and line dances three nights a week.`
   outfitter "Basic Outfits"
@@ -25915,7 +26056,7 @@ planet "New Iceland"
 planet "New India"
   attributes "dirt belt" farming textiles frontier
   landscape land/forest0
-  description `New India was first settled less than a century ago, and the settlers are still struggling to establish themselves. It is a hospitable climate, but the amount of labor needed to clear forests and to plow rocky fields has meant that the towns here can only grow very slowly. The farms grow both food crops and cotton, and very recently they have begun manufacturing their own textiles instead of just shipping the raw cotton off-world for processing.`
+  description `New India was first settled less than a century ago, and the settlers are still struggling to establish themselves. It is a hospitable climate, but the amount of labour needed to clear forests and to plow rocky fields has meant that the towns here can only grow very slowly. The farms grow both food crops and cotton, and very recently they have begun manufacturing their own textiles instead of just shipping the raw cotton off-world for processing.`
   spaceport `New India's spaceport is a ring of low wooden buildings around a wide landing area paved with concrete slabs. Around the perimeter carts of trade goods are driven, some being pulled by tractors and others, by horses or oxen. You even think you see a few carts being pulled by water buffalo.`
   spaceport `  Most of the buildings are for storage, but from somewhere nearby you can smell fresh-baked bread.`
   outfitter "Basic Outfits"
@@ -25929,7 +26070,7 @@ planet "New Kansas"
   attributes "dirt belt" textiles
   landscape land/fields6
   description `Wool clothing is considered a luxury in most of human space, because enough oil is mined on most planets to make synthetic clothing much cheaper than raising and shearing sheep. However, here on New Kansas, wool is the primary industry.`
-  description `  The land is mostly rolling green hills and shallow streams, ideal for grazing. However, unwary travelers hiking through the idyllic countryside have been known to be attacked by savage packs of feral sheep, so this world is not without unique dangers of its own.`
+  description `  The land is mostly rolling green hills and shallow streams, ideal for grazing. However, unwary travellers hiking through the idyllic countryside have been known to be attacked by savage packs of feral sheep, so this world is not without unique dangers of its own.`
   spaceport `The spaceport includes several stores selling wool garments, each worth easily ten times as much as the clothes you are wearing. A few of the visitors milling around seem genuinely interested in the clothing, but most of them, like you, are just ship captains who see wool clothing as nothing more than a pricey luxury good that can be sold elsewhere for a good profit.`
   spaceport `  The port authority employs several people on horseback whose sole job is to keep the landing pads clear of wild sheep.`
   security 0.05
@@ -26113,7 +26254,7 @@ planet Pilot
   attributes north research
   landscape land/bwerner2
   description `Pilot is used as a research and testing station for Lovelace Labs. The research buildings are not open to non-employees. From a distance it looks almost like a small war is going on, with missiles being fired from a silo toward a hilltop where an anti-missile turret is picking them off one by one.`
-  description `  Rumors say that the Sidewinder Missile engineering team and the Missile Defence team are in fierce competition with each other, and whichever team is currently losing to the other must buy them lunch every Friday.`
+  description `  Rumours say that the Sidewinder Missile engineering team and the Missile Defence team are in fierce competition with each other, and whichever team is currently losing to the other must buy them lunch every Friday.`
   spaceport `The workers grudgingly refuel your ship, but it is quite clear that you are out of place here. Nearly everyone in the spaceport is wearing a lab coat or a uniform, and several groups of people halt their conversations as soon as you pass within earshot.`
   "required reputation" 100
   bribe 0.1
@@ -26198,6 +26339,8 @@ planet Pugglequat
   "required reputation" 2
   security 1
 
+planet "Pug Wormhole"
+
 planet Quicksilver
   attributes core volcanic mining
   landscape land/snow0
@@ -26214,7 +26357,7 @@ planet Rand
   attributes "dirt belt" mining
   landscape land/valley7
   description `Rand is a desert world, too dry for much farming and with gravity low enough to be uncomfortable for most human beings. It is, however, the best source of heavy metals in the galactic south. Aside from the managers of the mining companies, nearly all the people here are migrant workers from elsewhere in the Dirt Belt, who have come to spend a season working for the relatively high wages that uranium mining offers, either to send money off-world or to save it up in order to build a better life for themselves.`
-  spaceport `The landing pads here are poured concrete, raised up slightly above the level of the desert to keep them from being buried in sand. A few workers are constantly driving brush sweepers across the unoccupied pads. The air is filled with sand particles and dust. Aside from the storage sheds, there are only two buildings, each with a large sign out front: "Labor" and "Trade."`
+  spaceport `The landing pads here are poured concrete, raised up slightly above the level of the desert to keep them from being buried in sand. A few workers are constantly driving brush sweepers across the unoccupied pads. The air is filled with sand particles and dust. Aside from the storage sheds, there are only two buildings, each with a large sign out front: "Labour" and "Trade."`
   security 0.05
   tribute 500
     threshold 3000
@@ -26240,7 +26383,7 @@ planet "Rekat Moraski"
 planet Relic
   attributes "near earth"
   landscape land/valley4
-  description `As a borderline-habitable planet in one of the systems neighboring Sol, Relic was colonized hundreds of years ago in the early years of the space race. Because of its low gravity and limited natural resources, only a few minor settlements are left.`
+  description `As a borderline-habitable planet in one of the systems neighbouring Sol, Relic was colonized hundreds of years ago in the early years of the space race. Because of its low gravity and limited natural resources, only a few minor settlements are left.`
   spaceport `The spaceport on Relic consists of one low building surrounded by open-air concrete slabs for ships to land on. If rain were more common here, you would worry about your ship rusting, but in this environment the only threat to it is the infrequent sand storms.`
   outfitter "Basic Outfits"
   outfitter "Lovelace Basics"
@@ -26266,7 +26409,7 @@ planet "Remote Blue"
 planet Reunion
   attributes "near earth" urban factory
   landscape land/mfield4
-  description `Reunion is one of the most Earth-like planets found by the early settlers, all the way down to its moon and tides. It has grown into a mostly urban world, which supplies manufactured goods of all sorts to the neighboring systems.`
+  description `Reunion is one of the most Earth-like planets found by the early settlers, all the way down to its moon and tides. It has grown into a mostly urban world, which supplies manufactured goods of all sorts to the neighbouring systems.`
   description `  Local politics are unusually lively for a Republic world, to the point where a seat in the local legislature is often more hotly contested than one in the Republic Parliament. Topics of debate include trade and taxation, of course, but also seemingly fringe issues like biodiversity regulations for city green space. It may be that a world with no terraforming needs is focusing instead on tweaking society itself.`
   spaceport `The spaceport, although designed as a clean and modern building, is a place of barely controlled chaos: vendors selling food on the sides of the hallways, tourist families with young children, and even a few farmers driving cattle. People of every age and race and occupation rub shoulders here, but there is no sign of the extreme sort of poverty that you have seen on some other worlds.`
   shipyard "Basic Ships"
@@ -26314,6 +26457,15 @@ planet "Ring of Wisdom"
   "required reputation" 25
   bribe 0
 
+planet Ruin
+  attributes uninhabited
+  landscape land/hills3
+  description `This is a stormy, cloud-covered planet, where fog banks flow through the valleys like dark, cold, slow-moving rivers, and the sun is seldom visible. Aside from some dull blue-grey moss and lichen, there are few living things here. The ground is warmer than the air above it, due to an abundance of radioactive elements in the planet's crust.`
+  description `  Most of the surface is ocean, but atop one of the higher mountains is an odd, abandoned spaceport.`
+  spaceport `Perhaps the oddest thing about this planet is this spaceport: a ring of landing pads surrounding a collection of fuel tanks. The landing pads are not cement or any other material humans customarily use, but monolithic slabs of basalt. One of the fuel tanks has a human-style connector on it, but there are a dozen other connectors branching off from it as well.`
+  spaceport `  A few insectoid robots scuttle slowly across the tanks and landing pads, removing ice and rust and lichen and polishing the surfaces of the tanks. No living creatures are present.`
+  security 0
+
 planet Rust
   attributes rim farming factory
   landscape land/fields8
@@ -26358,7 +26510,7 @@ planet "Safaresk Enlai"
 planet "Sandy Two"
   attributes kimek factory farming urban
   landscape land/badlands1
-  description `This world is relatively hot and dry by human standards, but nearly ideal for the Kimek, and more than fifteen billion of them live here in cities where the skyscrapers are so densely packed that many of the streets never receive direct sunlight. The residential areas tend to be spread out along the banks of rivers, so the cities are linear, with factories and other industry on their fringes. Access to limitless skilled labor makes it cheap to manufacture almost anything here.`
+  description `This world is relatively hot and dry by human standards, but nearly ideal for the Kimek, and more than fifteen billion of them live here in cities where the skyscrapers are so densely packed that many of the streets never receive direct sunlight. The residential areas tend to be spread out along the banks of rivers, so the cities are linear, with factories and other industry on their fringes. Access to limitless skilled labour makes it cheap to manufacture almost anything here.`
   spaceport `The spaceport facility is on an island in the centre of a river, surrounded by a city so large that the rows of skyscrapers stretch all the way to the horizon. Civilian aircraft, boats, and cargo trucks swarm around the spaceport, bringing goods and people to and from the residences and the outlying factories.`
   outfitter "Coalition Basics"
 
@@ -26497,7 +26649,7 @@ planet "Sestor Ikfar"
   attributes korath
   landscape land/hills1
   description `This dry, hot world is home to almost no native life, but is ideal for the Korath automata because of its abundant solar energy. In the places where the Korath cities once were, the Kor Sestor have built massive factories with buildings sometimes close to a kilometer in height. In other places the land remains undeveloped, but the factories are constantly expanding outward.`
-  spaceport `In place of streets, massive tunnels and shafts run through the factory cities, wide enough for two capital ships to pass each other traveling in opposite directions without the risk of collision. The tunnels branch out into smaller and smaller passageways like capillaries branching out from an artery.`
+  spaceport `In place of streets, massive tunnels and shafts run through the factory cities, wide enough for two capital ships to pass each other travelling in opposite directions without the risk of collision. The tunnels branch out into smaller and smaller passageways like capillaries branching out from an artery.`
   "required reputation" 1
   shipyard "Kor Sestor Advanced"
   bribe 0
@@ -26529,7 +26681,7 @@ planet Shangri-La
   attributes core rich urban frontier
   landscape land/sea6
   description `Named after a mythical paradise, Shangri-La is an almost ideal planet, with a mixture of advanced, developed cities and uninhabited mountains. It is a rich and prosperous world, and nearly self-sufficient, but the cost of living here is prohibitively high for anyone from off-world. Because Polaris is on the very fringe of human space, and because of the wealth of its economy, piracy is a constant threat. Although recently the Syndicate has provided good protection, in past centuries it was not unheard of for raiding parties of starships to attack major port cities here, carrying off valuable cargo and sometimes also human slaves.`
-  spaceport `The spaceport is state-of-the-art. So are the laser turrets and missile silos spaced out along its periphery. But somehow, instead of making you feel more secure, the defences only serve to remind you of how far on the fringes of civilization you are, and of how rich this planet is compared to some of its neighbors. Everyone walking through the port is moving at a brisk, purposeful pace; loitering and sightseeing are not encouraged here.`
+  spaceport `The spaceport is state-of-the-art. So are the laser turrets and missile silos spaced out along its periphery. But somehow, instead of making you feel more secure, the defences only serve to remind you of how far on the fringes of civilization you are, and of how rich this planet is compared to some of its neighbours. Everyone walking through the port is moving at a brisk, purposeful pace; loitering and sightseeing are not encouraged here.`
   shipyard "Syndicate Intermediate"
   shipyard "Megaparsec Basics"
   outfitter "Common Outfits"
@@ -26749,7 +26901,7 @@ planet Stormhold
 planet "Stronghold of Flugbu"
   attributes arach factory
   landscape land/mountain11-sfiera
-  description `The Stronghold of Flugbu was used as a military base during the War of Independence. Now it is a manufacturing world, specializing not in large machines but small, intricate components. It is also home to House Bebliss, the secretive guild that specializes in communication, translation, and encryption. House Bebliss is essential to the Coalition economy because they maintain the hyperspace communication network, but there are also rumors that they may have ties to the Resistance.`
+  description `The Stronghold of Flugbu was used as a military base during the War of Independence. Now it is a manufacturing world, specializing not in large machines but small, intricate components. It is also home to House Bebliss, the secretive guild that specializes in communication, translation, and encryption. House Bebliss is essential to the Coalition economy because they maintain the hyperspace communication network, but there are also rumours that they may have ties to the Resistance.`
   spaceport `The spaceport here is a single massive compound, a relic of its military past, with hangars of all different sizes along its periphery and gun emplacements that may still be operational even though there has been little need for them in thousands of years. A fleet of Heliarch military ships is stationed here, as well, but their role is mostly ceremonial.`
   spaceport `  The hallways of the compound are packed with members of all three Coalition species, most of whom walk quietly and purposefully without stopping to speak with each other.`
   outfitter "Coalition Intermediate"
@@ -26806,6 +26958,10 @@ planet "Tefkar Ret"
   landscape land/station0
   description `This station is run down and completely abandoned, emptied of atmosphere so that air pressure will not put ongoing stress on the station's structure. Each section is sealed off from the others by heavy blast doors, leaving most of the station inaccessible.`
 
+planet "The Eye"
+  description ""
+  spaceport ""
+
 planet "Third Umber"
   attributes kimek factory research
   landscape land/bwerner6
@@ -26817,7 +26973,7 @@ planet "Third Umber"
 planet Thrall
   attributes paradise textiles
   landscape land/fields5
-  description `Thrall has a warm, moderate climate and a geography of mostly gently rolling hills. Most of the industry here takes the form of agriculture, especially growing cotton. There are also three major cities where the cotton is spun into thread and woven into textiles for export off world. It is one of the few places in the galaxy where cotton is picked by hand, because labor here is cheaper than the cost of buying and maintaining machinery.`
+  description `Thrall has a warm, moderate climate and a geography of mostly gently rolling hills. Most of the industry here takes the form of agriculture, especially growing cotton. There are also three major cities where the cotton is spun into thread and woven into textiles for export off world. It is one of the few places in the galaxy where cotton is picked by hand, because labour here is cheaper than the cost of buying and maintaining machinery.`
   description `  The locals are prevented from seeking more lucrative employment elsewhere partly by the crushingly low wages, which make the cost of space transport prohibitively high for most, and partly by the educational system, which is among the worst in the galaxy.`
   spaceport `The spaceport consists of a vast asphalt-paved field for landing ships, and some wooden buildings a few stories tall. Most of the materials for export are stored in sheds or stacked under plastic tarps, with a few police officers clustered around them to make sure no ship picks up cargo that has not been paid for. Inside the buildings, two restaurants with different names serve an identical selection of fried foods.`
   outfitter "Basic Outfits"
@@ -26938,7 +27094,7 @@ planet "Turquoise Four"
   attributes kimek farming
   landscape land/beach1
   description `The offshore kelp farms on Turquoise Four produce not only nutritional food, but also an ultra-strong fiber that is used for creating durable textiles. Farther from shore, the Kimek operate fish farms as well. Viewed from above, the ocean surface is divided into patches of deep blue or green or rusty brown depending on what sort of product is being farmed in each patch.`
-  spaceport `The boats docked in this spaceport city are more numerous than the space ships, and some of them are considerably larger, as well. Almost half of the city is built on piers that extend out into the harbor with broad canals between them, but the largest and fanciest dwellings are on land, built along a ridge of hills that overlook the ocean. The air is full of the cries of gulls and the smell of fish and salt and drying seaweed.`
+  spaceport `The boats docked in this spaceport city are more numerous than the space ships, and some of them are considerably larger, as well. Almost half of the city is built on piers that extend out into the harbour with broad canals between them, but the largest and fanciest dwellings are on land, built along a ridge of hills that overlook the ocean. The air is full of the cries of gulls and the smell of fish and salt and drying seaweed.`
   "required reputation" 15
 
 planet Twinstar
@@ -27034,7 +27190,7 @@ planet "Vara Ke'sok"
   attributes wanderer fishing
   landscape land/beach6
   description `The surface of this world is almost entirely ocean, and the Wanderers who inhabit it live on massive floating algae mats, some of them the size of a small city. Engines are attached to some of these floating villages, allowing them to be slowly propelled from one part of the planet's surface to another, and the only native industries are fishing and seaweed farming.`
-  spaceport `The raft of algae that supports the spaceport is probably at least a dozen meters thick, but flexible enough that it bends as the ocean swells pass underneath, causing individual buildings to rise up or tilt slightly relative to their neighbors. The effect is subtle, but disconcerting, and you cannot help but stumble drunkenly at times as you explore the island.`
+  spaceport `The raft of algae that supports the spaceport is probably at least a dozen meters thick, but flexible enough that it bends as the ocean swells pass underneath, causing individual buildings to rise up or tilt slightly relative to their neighbours. The effect is subtle, but disconcerting, and you cannot help but stumble drunkenly at times as you explore the island.`
   "required reputation" 5
   bribe 0
 
@@ -27218,7 +27374,7 @@ planet Windblain
   landscape land/bwerner0
   description `Nearly three quarters of the surface of Windblain is ocean. Most of the industry here centres around petrochemicals: deep sea oil drilling, refining, and manufacture of plastic composites and synthetic fabrics for clothing. There are a few large cities on the continents, but also plenty of wilderness spaces as yet untouched by human activity.`
   description `  The local climate and economy are neither good enough to attract immigration, nor bad enough to drive people to leave. There seems to be almost no interest in the affairs of the wider galaxy.`
-  spaceport `The spaceport is in one of the main cities, and is built partly on land and partly on piers that stretch out into the harbor, so that cargo can be brought to the port by truck or by barge. There are even a few runways for aircraft, in addition to the landing pads for starships. In the wharf area, fresh cooked fish and sushi are sold from a small cluster of wooden huts. Farther inland, cargo crates are stacked under the immense tents that serve as warehouses. There is a constant flow of people and cargo in between the harbor and the city.`
+  spaceport `The spaceport is in one of the main cities, and is built partly on land and partly on piers that stretch out into the harbour, so that cargo can be brought to the port by truck or by barge. There are even a few runways for aircraft, in addition to the landing pads for starships. In the wharf area, fresh cooked fish and sushi are sold from a small cluster of wooden huts. Farther inland, cargo crates are stacked under the immense tents that serve as warehouses. There is a constant flow of people and cargo in between the harbour and the city.`
   outfitter "Basic Outfits"
   outfitter "Deep Sky Basics"
   security 0.6
@@ -27247,7 +27403,7 @@ planet "Wyvern Station"
   attributes rim station
   landscape land/sivael7
   music ambient/machinery
-  description `Wyvern Station was once one of the end destinations for the merchant caravans traveling along the Rim, back in the days before the Republic existed when most systems were not policed and the only way to avoid being plundered by pirates was for ships to travel in large convoys. It has also been a continuously operating hyperspace fuel refinery for more than three centuries.`
+  description `Wyvern Station was once one of the end destinations for the merchant caravans travelling along the Rim, back in the days before the Republic existed when most systems were not policed and the only way to avoid being plundered by pirates was for ships to travel in large convoys. It has also been a continuously operating hyperspace fuel refinery for more than three centuries.`
   spaceport `This station is old, and some parts are dirty and in need of repair, but it is at least structurally sound, and the workers here seem optimistic and energetic. The cafeteria is loud and raucous, and the repair shop is more than willing to work on starships as a break from the tedium of repairing the harvester drones that dip into the planet's atmosphere to bring back pressurized tanks full of hydrogen gas.`
   security 0.4
   tribute 400
@@ -27259,7 +27415,7 @@ planet Zenith
   landscape land/water4
   description `Zenith is a cold and unpleasant world, where the fog seldom lifts and the sun is rarely seen, where much of the lowlands are flooded each day by the tide, and storms are unpredictable and fierce. It has, however, one major advantage as a place to settle: it is far enough away that the Republic makes no attempt to control it.`
   description `  Several villages have been founded near the equator, and in addition there are an unknown number of private holdings, ranging from underground bunkers to enormous cement fortresses. Because the land is owned by no government and anyone can build a dwelling without permission or paperwork as long as they are willing to fight off any other claimants, the total population of Zenith is unknown.`
-  spaceport `To create a spaceport for Zenith, one enterprising privateer a few centuries ago used a mixture of explosives and heavy machinery to shift the top of one of the tallest mountains down into the neighboring valleys, creating a high plateau that is (usually) above the fog line. There are landing pads both for starships like yours and for airships that carry cargo to and from the settlements elsewhere on the planet. The port is nearly deserted, however; it is clear that they do not do much business here.`
+  spaceport `To create a spaceport for Zenith, one enterprising privateer a few centuries ago used a mixture of explosives and heavy machinery to shift the top of one of the tallest mountains down into the neighbouring valleys, creating a high plateau that is (usually) above the fog line. There are landing pads both for starships like yours and for airships that carry cargo to and from the settlements elsewhere on the planet. The port is nearly deserted, however; it is clear that they do not do much business here.`
   outfitter "Basic Outfits"
   bribe 0.04
   security 0

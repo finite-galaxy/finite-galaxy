@@ -21,7 +21,7 @@ mission "FW Reconciliation 1"
   on offer
     log "Decided to rescue the Syndicate defector rather than turning him over to the Syndicate. A Questioner who works with Navy Intelligence has confirmed that he is telling the truth, and a ceasefire has been declared. Also, the Navy has agreed to release Katya now that there is evidence proving her innocence."
     log "People" "Raven" `Raven, whose full name is unknown, is a Questioner who works for Navy Intelligence. Through some combination of training and natural ability, she is able to reliably detect whether or not someone is telling the truth.`
-    log "Factions" "Navy Intelligence" `It is unclear why the Navy needs their own intelligence force, since the Republic already has a Department of Intelligence that is incredibly powerful and well-funded. Rumors say that one of the main purposes of Navy Intelligence is to watch for human rights abuses being committed by the Republic itself and for other questionable activities that the Department of Intelligence might turn a blind eye toward or even collude with.`
+    log "Factions" "Navy Intelligence" `It is unclear why the Navy needs their own intelligence force, since the Republic already has a Department of Intelligence that is incredibly powerful and well-funded. Rumours say that one of the main purposes of Navy Intelligence is to watch for human rights abuses being committed by the Republic itself and for other questionable activities that the Department of Intelligence might turn a blind eye toward or even collude with.`
     event "fw conservatory founded"
     conversation
       `On your way to the spaceport, you fill Katya in on the state of the war. She says that Intelligence has been keeping her in a relatively comfortable but totally isolated cell; she's not even sure what world it was on. From the fact that her questioners seemed to be growing increasingly frustrated about the Free Worlds, she knew that you were still managing to resist the Navy, but they did not share any details with her.`
@@ -74,21 +74,11 @@ mission "FW Reconciliation 1"
       `  Katya asks, "What do we do now? Will Sawyer's evidence be enough to end this war?"`
       `  Raven says, "Possibly. Especially because the Syndicate incriminated themselves by chasing after him. But the Syndicate has so much power in Parliament that the more evidence we can collect, the better. And that means we should visit the world where he said the development was done, and look for more evidence there."`
       `  Katya says, "Captain <last>, is Ijs Springborn still working for the Free Worlds?"`
-      `  You tell her that the last you heard, Ijs was helping to found a new university on <planet>. She says, "We should bring him with us. Raven, will you be traveling with us too?"`
+      `  You tell her that the last you heard, Ijs was helping to found a new university on <planet>. She says, "We should bring him with us. Raven, will you be travelling with us too?"`
       `  "Yes," she says. "I'll tell my ship and crew to get ready."`
         accept
 
 
-
-event "fw empty gienah"
-  system Gienah
-    fleet "Pirates Core Small" 5000
-
-event "fw restore gienah"
-  system Gienah
-    fleet "Pirates Core Small" 500
-    fleet "Pirates Core Large" 800
-    fleet "Syndicate Large" 5000
 
 mission "FW Reconciliation 1B"
   name "Travel to <planet>"
@@ -222,7 +212,6 @@ mission "FW Reconciliation 2"
   on offer
     "reputation: Deep Security" >?= 1
     log "Parliament still refuses to believe that the Syndicate could have been behind the attacks; the Syndicate has far too much power and influence in the government of the Republic. But, the people of the Deep might be more open to the defector's story."
-    event "deep sky tech available"
     conversation
       `As you came fleeing out of Syndicate space with their ships in hot pursuit, you couldn't help noticing that no Republic ships moved to help you or attack your pursuers. Apparently, they are not ready to strike the Syndicate until Parliament has made a decision. As you are waiting for Parliament to hear your evidence, Katya asks you quietly, "So, how are you feeling about our chances here?"`
       choice
@@ -278,17 +267,19 @@ mission "FW Reconciliation 2A"
     dialogue `You have failed an essential Free Worlds mission. If you want to complete the story line, revert to the autosave or another earlier snapshot of the game.`
   
   on offer
+    log "People" "Edricka Flint" `Edricka Flint is the governor of Valhalla, the most important planet of the Deep, and therefore authorized to request Deep Security starships for "police actions". She feels the Deep has a responsibility to safeguard and preserve civilization and justice in human space, is sympathetic to the Free Worlds, and believes the Syndicate is responsible for masterminding the recent war.`
     log `The governor of Valhalla, in the Deep, has proposed a "police action" to arrest one or more of the Syndicate leaders and bring them to justice. It will be a secret joint operation between the Free Worlds, the Deep, and the Oathkeepers.`
+    event "deep sky tech available"
     conversation
-      `When you land on Valhalla, a man shows up at your ship and introduces himself as Edrick Flint, the governor of Valhalla. He invites all of you to join him for dinner at his home, which turns out to be an apartment on the twenty-third floor of one of the downtown skyscrapers. There, he introduces you to several other regional governors and authorities.`
-      `  "You may be aware," Edrick says, "that the Deep was self-governing before the formation of the Republic. Indeed, during some of the darkest centuries of the space age, the Deep stood out as a beacon of civilization, a place where piracy was not tolerated and all travelers were safe. When we joined the Republic, we retained the authority to police our own territory, and that authority includes the right to track down fugitives who have fled beyond our usual jurisdiction."`
+      `When you land on Valhalla, a woman shows up at your ship and introduces herself as Edricka Flint, the governor of Valhalla. She invites all of you to join her for dinner at her home, which turns out to be an apartment on the twenty-third floor of one of the downtown skyscrapers. There, she introduces you to several other regional governors and authorities.`
+      `  "You may be aware," Edricka says, "that the Deep was self-governing before the formation of the Republic. Indeed, during some of the darkest centuries of the space age, the Deep stood out as a beacon of civilization, a place where piracy was not tolerated and all travellers were safe. When we joined the Republic, we retained the authority to govern and police our own territory, and that authority includes the right to track down fugitives who have fled beyond our usual jurisdiction."`
       choice
         `  "You're suggesting a 'police action' against the Syndicate?"`
           goto police
         `  "Wait, before we talk details, are you saying that you believe Sawyer's testimony against the Syndicate?"`
       `  "Everyone believes him," says one of the other governors, "throughout human space, and in Parliament too. We can all see that the evidence is undeniable. What people don't agree on is how to respond to that evidence."`
       label police
-      `  "We want to see justice done," says Edrick. "Our proposal is that a fleet under our jurisdiction, but joined by Free Worlds and Oathkeeper vessels, will travel into the Core and arrest at least one of the Syndicate masterminds behind the terrorist attacks. Such an action would satisfy the technical requirements of legality provided that immediately prior to the arrest, one of our courts hears Sawyer's testimony and pronounces that Syndicate individual guilty."`
+      `  "We want to see justice done," says Edricka. "Our proposal is that a fleet under our jurisdiction, but joined by Free Worlds and Oathkeeper vessels, will travel into the Core and arrest at least one of the Syndicate masterminds behind the terrorist attacks. Such an action would satisfy the technical requirements of legality provided that immediately prior to the arrest, one of our courts hears Sawyer's testimony and pronounces that Syndicate individual guilty."`
       choice
         `  "'Technically legal' sounds to me like a euphemism for 'something we know full well is going to get us into trouble.'"`
         `  "How exactly is a fleet of warships going to travel through Syndicate space without a massive battle?"`
@@ -296,10 +287,10 @@ mission "FW Reconciliation 2A"
       
       `  Ijs laughs at that. "Relax, Captain. I've been doing 'technically legal' stuff for years. It only occasionally goes disastrously wrong. But governor, if the Syndicate sees you coming, you'll need a full-scale war fleet, not just a handful of ships."`
       label travel
-      `  "That's why the fleet will be composed of ships from three different organizations," says Edrick. "You will find a reason to travel to Earth with perhaps one of your fancy new Dreadnoughts as an escort. When you arrive, there will just happen to be an Oathkeeper patrol passing through the same system. And a merchant convoy from the Deep. With its own set of escorts, of course."`
+      `  "That's why the fleet will be composed of ships from three different organizations," says Edricka. "You will find a reason to travel to Earth with perhaps one of your fancy new Dreadnoughts as an escort. When you arrive, there will just happen to be an Oathkeeper patrol passing through the same system. And a merchant convoy from the Deep. With its own set of escorts, of course."`
       `  "We'd need to know exactly where and on what planet our target lives, prior to entering Syndicate space," says Katya. "And, if you want to have a court trial immediately prior to the arrest, it sounds like Sawyer will need to stay here."`
-      `  "Indeed," says Edrick, "but I assure you, he is safer from the Syndicate here than anywhere else in human space, your own territory included. As for locating a target, that's why the Oathkeepers have requested that you visit them on Farpoint."`
-      `  The rest of the evening is a more casual time for conversation, with plenty of good food and wine. At one point, Edrick pulls you aside and says, "I've requested that you be granted access to some of the new technology that was developed here during the course of the war. In particular, please find space on your ship for a ramscoop; you will need it for your next mission. And also, here." He hands you a data card. "This is a copy of Sawyer's evidence, in case something happens here. Keep it very, very safe."`
+      `  "Indeed," says Edricka, "but I assure you, he is safer from the Syndicate here than anywhere else in human space, your own territory included. As for locating a target, that's why the Oathkeepers have requested that you visit them on Farpoint."`
+      `  The rest of the evening is a more casual time for conversation, with plenty of good food and wine. At one point, Edricka pulls you aside and says, "I've requested that you be granted access to some of the new technology that was developed here during the course of the war. And also, here." She hands you a data card. "This is a copy of Sawyer's evidence, in case something happens here. Keep it very, very safe."`
         accept
   
   npc accompany save
@@ -337,7 +328,7 @@ mission "FW Reconciliation 2B"
       label introductions
       `  Ijs and Katya introduce themselves to Danforth, and Katya says, "Sir, I was a child on Hope when the colony was evacuated. Your ship carried my family to safety, and I've never forgotten how every night during our journey, you would walk through the cargo bay where we were staying and check to make sure all our needs were met. I've never had a chance before now to thank you in person."`
       `  Danforth is surprised. "Councilor Reynolds," he says, "thank you. I followed your career in Parliament with some interest, but it is a shame that we never met in person until now. But I am glad we have this chance to work together at last."`
-      `  Raven says, "Governor Edrick mentioned a plan for tracking down the Syndicate executives who were behind the attacks in the Castor and Pollux systems."`
+      `  Raven says, "Governor Edricka mentioned a plan for tracking down the Syndicate executives who were behind the attacks in the Castor and Pollux systems."`
       `  "Indeed," says Danforth. "Southeast of here is a region of uninhabited star systems, a sort of back entrance into Syndicate space. Few ships travel through there, because there is nowhere to refuel, but with a ramscoop or enough fuel capacity, travel is possible. One of the first inhabited worlds on the other side is the lawless world of Stormhold. There, you can surely find a contact who knows enough about the inner workings of the Syndicate to tell you the home of at least a few of our targets... for a price." He hands Katya a large stack of credit chips.`
       `  Raven says, "I'm going to stay here with the Oathkeepers. Captain <last>, it's been a pleasure working with you. We're counting on you to fetch us this information and return here as quickly as possible."`
         accept
@@ -468,7 +459,7 @@ mission "FW Embassy 1"
       `  "That's purely for you as a private captain, to compensate you for your assistance," he says. "I wouldn't want you to think that I am in any way giving financial support to the Free Worlds, since that would be illegal."`
       `  "Of course not, sir," you say. "Thank you."`
       label next
-      `  "Don't mention it," he says, with a wink. "And now, I think it's best that you head to Earth and pick up those ambassadors. From what I hear, now that Raven is not traveling with you, people are beginning to ask questions about what this Free Worlds captain is doing flying all around Republic space unescorted."`
+      `  "Don't mention it," he says, with a wink. "And now, I think it's best that you head to Earth and pick up those ambassadors. From what I hear, now that Raven is not travelling with you, people are beginning to ask questions about what this Free Worlds captain is doing flying all around Republic space unescorted."`
         accept
 
 
@@ -488,7 +479,7 @@ mission "FW Embassy 1B"
   
   on offer
     conversation
-      `Unfortunately, the Republic ambassadors turn out to match all your worst stereotypes of Republic diplomats: dressed in gaudy, impractical clothing, and carrying an absurd amount of luggage. At first you are worried about whether you have enough space for them, but one of them explains that they would not dream of traveling in your dirty old ship; they will be traveling in style, in a Star Queen luxury liner, and your only duty is to ensure their safety. You have little choice but to acquiesce, even though you think they would be far safer on your own ship.`
+      `Unfortunately, the Republic ambassadors turn out to match all your worst stereotypes of Republic diplomats: dressed in gaudy, impractical clothing, and carrying an absurd amount of luggage. At first you are worried about whether you have enough space for them, but one of them explains that they would not dream of travelling in your dirty old ship; they will be travelling in style, in a Star Queen luxury liner, and your only duty is to ensure their safety. You have little choice but to acquiesce, even though you think they would be far safer on your own ship.`
         accept
   
   npc accompany save
@@ -500,8 +491,6 @@ mission "FW Embassy 1B"
     dialogue "You have reached <planet>, but you left the <npc> behind! Better depart and wait for them to arrive in this star system."
 
 
-
-event "fw reconciliation break"
 
 mission "FW Reconciliation Break"
   name "Katya and Ijs to <planet>"
@@ -516,7 +505,7 @@ mission "FW Reconciliation Break"
   
   on offer
     event "fw reconciliation break" 30
-    log "Dropped off a team of Republic diplomats on Bourne. It seems like for now, the ceasefire is holding, and public opinion is slowly turning to favor the Free Worlds rather than the Syndicate. But the Syndicate leaders must still be brought to justice. The Council will be in touch when they are ready to help launch an attack on the Syndicate."
+    log "Dropped off a team of Republic diplomats on Bourne. It seems like for now, the ceasefire is holding, and public opinion is slowly turning to favour the Free Worlds rather than the Syndicate. But the Syndicate leaders must still be brought to justice. The Council will be in touch when they are ready to help launch an attack on the Syndicate."
     conversation
       `From the way Alondo's eyes light up when he sees Katya, you can tell that all he wants to do right now is to get caught up with her and celebrate her freedom. But he plays the part of a good diplomat, escorting the Republic ambassadors to their new quarters. Along the way he makes pleasant small talk with them, complimenting their style and sophistication. Knowing him as well as you do, you can tell he is saving up his more scathing comments about them until they are out of earshot.`
       `  The moment they are dealt with he gives Katya a hug and says, "Katya! So good to have you back with us. The Council has five members once more. I assume you've been told about Tomek's... departure, and <first>'s promotion?" She nods.`
@@ -654,7 +643,7 @@ mission "FW Syndicate Capture 1"
   on offer
     log "Preparing to invade Syndicate space with a joint strike force made up of Free Worlds, Deep security, and Oathkeeper ships. The plan is to capture one of the Syndicate executives and bring him to trial."
     conversation
-      `You land on Earth and make a show of being very busy ensuring that the Free Worlds ambassadors are comfortable and well cared for, until finally you receive a secure message from Edrick. He tells you that the convoy from the Deep is landing on Mars right now, and an Oathkeeper Saturn is visiting the shipyard on Luna. As soon as you are ready, you can take off, and travel together into the heart of Syndicate space.`
+      `You land on Earth and make a show of being very busy ensuring that the Free Worlds ambassadors are comfortable and well cared for, until finally you receive a secure message from Edricka. She tells you that the convoy from the Deep is landing on Mars right now, and an Oathkeeper Saturn is visiting the shipyard on Luna. As soon as you are ready, you can take off, and travel together into the heart of Syndicate space.`
       `  You make an excuse to depart, and return to your ship. "Well," says Ijs, "this is it. If we're lucky, they won't see us coming, but no matter what, getting back out of Syndicate space will be a nightmare. Good luck, all."`
         accept
   
@@ -676,19 +665,6 @@ mission "FW Syndicate Capture 1"
 
 
 
-event "fw begin syndicate capture"
-  "reputation: Syndicate" <?= -100
-  government "Syndicate"
-    "attitude toward"
-      "Deep Security" -.01
-      "Navy (Oathkeeper)" -.01
-
-event "fw end syndicate capture"
-  government "Syndicate"
-    "attitude toward"
-      "Deep Security" 0
-      "Navy (Oathkeeper)" 0
-
 mission "FW Syndicate Capture 1B"
   landing
   name "Escape to <planet>"
@@ -702,15 +678,15 @@ mission "FW Syndicate Capture 1B"
     dialogue `You have failed an essential Free Worlds mission. If you want to complete the story line, revert to the autosave or another earlier snapshot of the game.`
   
   on offer
-    event "fw begin syndicate capture"
+    event "fw syndicate capture begin"
     conversation
       `As you approach the planet, your ships spread out and begin scanning the ocean surface for a yacht matching the description you were given. After a few tense moments of wondering if Soylent is off-world at the moment, you find the ship.`
-      `  With neither deflector shields nor any weaponry that you can see, the yacht clearly poses no threat to an armed starship. The Aerie that Edrick sent launches its two fighters; when they land on the yacht's deck, armed police officers emerge. Meanwhile your fleet is ready to open fire at the first sign of resistance.`
+      `  With neither deflector shields nor any weaponry that you can see, the yacht clearly poses no threat to an armed starship. The Aerie that Edricka sent launches its two fighters; when they land on the yacht's deck, armed police officers emerge. Meanwhile your fleet is ready to open fire at the first sign of resistance.`
       `  The officers soon radio you that they have found Soylent, and they bring him aboard your ship. Amid all the confusion, you notice a figure in diving gear who jumps off the rear of the yacht and disappears beneath the waves - one of Soylent's men, trying to escape. But since his leader is now in your custody, and your mission is accomplished, you see no reason to chase after him.`
       `  The Oathkeeper captain sends you a brief message: "Your first priority is to reach the Deep with the prisoner. Our crew is prepared to serve as a rearguard, staying behind if necessary to ensure that you survive. Good luck, Captain."`
         accept
   on complete
-    event "fw end syndicate capture"
+    event "fw syndicate capture end"
   
   npc
     personality escort heroic
@@ -860,8 +836,8 @@ mission "FW Syndicate Capture 1C"
     log `Succeeded in capturing a Syndicate executive named Alexander Soylent, but the Syndicate has responded by sending a massive fleet to Sol, supposedly to "protect" Earth but more likely to put pressure on Parliament and the people of Earth to side with the Syndicate.`
     event "syndicate occupies sol"
     conversation
-      `Edrick meets you soon after you land, and oversees the transfer of your captive to a local, well-defended jail. You tell him about your narrow escape from Syndicate space, and the fact that the Syndicate used nuclear weapons against your fleet, in violation of the rules of war that humankind has abided by for centuries.`
-      `  "Unfortunately," says Edrick, "all the other witnesses to that event were allied with the Syndicate, so people will believe whatever they want to believe. Already the Syndicate is spreading stories about a renegade fleet of rebels and extremists that attacked one of their worlds in an assassination attempt on one of their leaders. Worse, they've taken this as an excuse to send a massive Syndicate fleet to the Sol system - to defend Earth from attack, they say."`
+      `Edricka meets you soon after you land, and oversees the transfer of your captive to a local, well-defended jail. You tell her about your narrow escape from Syndicate space, and the fact that the Syndicate used nuclear weapons against your fleet, in violation of the rules of war that humankind has abided by for centuries.`
+      `  "Unfortunately," says Edricka, "all the other witnesses to that event were allied with the Syndicate, so people will believe whatever they want to believe. Already the Syndicate is spreading stories about a renegade fleet of rebels and extremists that attacked one of their worlds in an assassination attempt on one of their leaders. Worse, they've taken this as an excuse to send a massive Syndicate fleet to the Sol system - to defend Earth from attack, they say."`
       choice
         `  "Sounds more like the goal is to intimidate Parliament into siding with the Syndicate."`
           goto intimidate
@@ -871,13 +847,13 @@ mission "FW Syndicate Capture 1C"
           goto attack
       
       label intimidate
-      `  "Indeed," he says.`
+      `  "Indeed," she says.`
         goto katya
       label peace
-      `  "Apparently no one is shooting at anyone else," says Edrick, "but that could change at any minute. You may be aware that there is very little love for the Syndicate among Navy admirals. The only thing keeping the Navy from attacking the Syndicate now is the Navy's devotion to order and obedience; they won't start a new war without Parliament's approval, and of course that approval is unlikely with Syndicate warships circling overhead."`
+      `  "Apparently no one is shooting at anyone else," says Edricka, "but that could change at any minute. You may be aware that there is very little love for the Syndicate among Navy admirals. The only thing keeping the Navy from attacking the Syndicate now is the Navy's devotion to order and obedience; they won't start a new war without Parliament's approval, and of course that approval is unlikely with Syndicate warships circling overhead."`
         goto katya
       label attack
-      `  "That would be a terrible idea," he says. "First, it would play right into their narrative. And second, humanity is on the very brink now of shattering into half a dozen different splinters: the Deep, the Free Worlds, the Navy, the Syndicate each on their own against the rest. I don't want to be the one who gives the order that causes that to happen."`
+      `  "That would be a terrible idea," she says. "First, it would play right into their narrative. And second, humanity is on the very brink now of shattering into half a dozen different splinters: the Deep, the Free Worlds, the Navy, the Syndicate each on their own against the rest. I don't want to be the one who gives the order that causes that to happen."`
         goto katya
       
       label katya
@@ -889,7 +865,7 @@ mission "FW Syndicate Capture 1C"
 mission "FW Pug 1"
   landing
   name "What happened to Rand?"
-  description "Try to determine why communications with the Rand system were cut off. If you cannot reach Rand, at least look for anything odd in the neighboring systems."
+  description "Try to determine why communications with the Rand system were cut off. If you cannot reach Rand, at least look for anything odd in the neighbouring systems."
   autosave
   source "New Tibet"
   waypoint "Cebalrai"
@@ -929,7 +905,7 @@ mission "FW Pug 1 Tundra"
     has "FW Pug 1: active"
   
   on offer
-    log "No one on Tundra, which is one of Rand's neighbors, has any idea how the hyperspace link was cut off. They wonder if this might have something to do with a star system near Rand that was inaccessible by hyperdrive."
+    log "No one on Tundra, which is one of Rand's neighbours, has any idea how the hyperspace link was cut off. They wonder if this might have something to do with a star system near Rand that was inaccessible by hyperdrive."
     conversation
       `You land on Tundra and ask around to see if anyone knows why the hyperspace link to Rasalhague is gone. Everyone is talking about it, but no one seems to have a believable theory. "Maybe that odd star out past Rasalhague, the one you can't jump to, went nova," suggests one captain.`
       `  You also talk with several people who mention that the northern lights have been spectacular the last few days, unlike anything they had ever seen before.`
@@ -944,7 +920,7 @@ mission "FW Pug 1 Alapia"
     has "FW Pug 1: active"
   
   on offer
-    log "No one on Alapia knows what has caused hyperspace links in this region of space to suddenly disappear. There are stories of graviton surges and an alien ship, but they may all just be rumors."
+    log "No one on Alapia knows what has caused hyperspace links in this region of space to suddenly disappear. There are stories of graviton surges and an alien ship, but they may all just be rumours."
     conversation
       `You land on Alapia and try to find someone who knows what is going on, but everyone seems just as confused as you are. The spaceport authorities say that their sensors picked up a massive graviton surge when the hyperlinks collapsed, but they are not sure whether the surge caused the collapse, or was a result of it.`
       `  One merchant captain claims that he was in orbit at the time, and he saw a ship unlike anything he'd ever seen before, that appeared and then disappeared in a flash "just like those Quarg ships do." You aren't sure whether or not to believe him.`
@@ -1036,7 +1012,7 @@ mission "FW Pug 2A"
   on offer
     log "Agreed to travel to Syndicate space through the one remaining hyperspace path that is still open, through the uninhabited star systems to the north."
     conversation
-      `A palpable sense of fear and near-panic hangs over the spaceport on Earth. At any minute, this system that serves as the very hub of human government could disappear into the same unknown abyss that has swallowed up its neighbors.`
+      `A palpable sense of fear and near-panic hangs over the spaceport on Earth. At any minute, this system that serves as the very hub of human government could disappear into the same unknown abyss that has swallowed up its neighbours.`
       `  Parliament is eager now to meet with you and to receive whatever assistance you may be able to offer. As Alondo stands in front of the chamber asking the members of Parliament for more information, they answer him with respect and deference, far different from how you have been treated here in the past. You learn that although one link remains open to Syndicate space, no one has dared to travel through it. Given the pace at which the other links were cut, they fear that the one remaining link will disappear any day now.`
       `  As the conversation continues, it eventually becomes clear why you have been called here: the Republic wants you to take on the risk none of them is willing to face, and travel through to Syndicate space to reason with their leaders.`
       choice
@@ -1046,7 +1022,7 @@ mission "FW Pug 2A"
           goto no
         `  "Did the Syndicate communicate anything to you before the links were cut, that might help us guess at their intentions?"`
       
-      `  One of the members of Parliament says, "It's all terribly confusing. Our sources in Syndicate space were reporting massive fleet movements just before it happened. We also heard rumors of Syndicate fleets fighting each other, some sort of internal power struggle."`
+      `  One of the members of Parliament says, "It's all terribly confusing. Our sources in Syndicate space were reporting massive fleet movements just before it happened. We also heard rumours of Syndicate fleets fighting each other, some sort of internal power struggle."`
       `  Another man speaks up and adds, "We had also been aware for some time that the Syndicate had gained access to alien technology, through encounters with a nomadic alien species currently inhabiting the galactic core. They may have found a way to use that technology to alter the links." From the surprised expressions on the faces of many of the other members of Parliament, it's clear that this information is new to them.`
       choice
         `  "Very well, we will accept this mission."`
@@ -1131,9 +1107,9 @@ mission "FW Pug 2B"
       `  "<first>, enough," says Alondo. "We'll sort out the reparations later. For now, we need to know who is severing the hyperspace links."`
       
       label who
-      `  "They are called the Pug," says Alastair, "an irrational alien species that previously inhabited a single star system in between Syndicate and Republic space. They have since expanded their territory to include all the human systems neighboring their own star, and have essentially made those human worlds into their slaves."`
+      `  "They are called the Pug," says Alastair, "an irrational alien species that previously inhabited a single star system in between Syndicate and Republic space. They have since expanded their territory to include all the human systems neighbouring their own star, and have essentially made those human worlds into their slaves."`
       `  "How do you know this?" asks Alondo.`
-      `  Alastair pauses for a minute as if trying to figure out the best way to explain himself, then says, "One of our ships traveled to the occupied systems, using a jump drive that we... acquired... from another alien species." He seems to realize how unlikely that sounds, and backpedals. "For years we've been dealing with occasional raids from a species called the Korath. As best we can tell, they're nomadic scavengers and pirates who currently inhabit the galactic core. Over the years we have disabled several of their ships and stolen their jump drives."`
+      `  Alastair pauses for a minute as if trying to figure out the best way to explain himself, then says, "One of our ships travelled to the occupied systems, using a jump drive that we... acquired... from another alien species." He seems to realize how unlikely that sounds, and backpedals. "For years we've been dealing with occasional raids from a species called the Korath. As best we can tell, they're nomadic scavengers and pirates who currently inhabit the galactic core. Over the years we have disabled several of their ships and stolen their jump drives."`
       choice
         `  "Did it not occur to you that attacking the Korath might anger other alien species?"`
           goto anger
@@ -1309,7 +1285,7 @@ mission "FW Pug 2C: Side"
     
       label end
       `  "Where did they come from originally?" asks Alondo.`
-      `  "From a star system that was always a neighbor of ours, but wasn't linked to us or to any other part of human space. We always just assumed it was an uninhabited system, but it turns out they were there all along, biding their time, waiting for a good opportunity to attack us."`
+      `  "From a star system that was always a neighbour of ours, but wasn't linked to us or to any other part of human space. We always just assumed it was an uninhabited system, but it turns out they were there all along, biding their time, waiting for a good opportunity to attack us."`
       `  "Well," says Alondo, "they didn't attack us when we jumped in to this system. Perhaps we should go to their home system and see what they have to say for themselves."`
         decline
 
@@ -1344,7 +1320,7 @@ mission "FW Pug 3"
     dialogue `You have failed an essential Free Worlds mission. If you want to complete the story line, revert to the autosave or another earlier snapshot of the game.`
   
   on offer
-    log "Located the Pug homeworld, and met with some of them. They say that they have annexed the neighboring systems into the Pug Protectorate in order to stop the human civil war. However, their idea of bringing peace seems to involve conquering human space and replacing the Republic with their own government."
+    log "Located the Pug homeworld, and met with some of them. They say that they have annexed the neighbouring systems into the Pug Protectorate in order to stop the human civil war. However, their idea of bringing peace seems to involve conquering human space and replacing the Republic with their own government."
     log "Factions" "Pug" `The Pug are aliens with barrel-shaped bodies, spindly legs, and milky blue blood. They claim to have intervened in the human civil war purely for the sake of preventing more bloodshed and helping humans to live together in peace.`
     conversation
       `This is an entirely alien world. The buildings have strangely flowing, tapered shapes not unlike the Pug starships, and from orbit you count dozens of large cities covering a large portion of the land mass. If this were a human world, you would estimate its population at over a billion. You follow one of the Pug ships that is landing, and discover a large spaceport where a surprising number of human merchant ships are parked, in addition to the aliens.`
@@ -1377,7 +1353,7 @@ mission "FW Pug 3"
 mission "FW Pug 3: Deep"
   landing
   name "Visit the Deep (optional)"
-  description "The Pug hinted that they have helped the people of the Deep in the past. Talk to Edrick, the governor of Valhalla, to see what he knows about the Pug. (This mission is optional.)"
+  description "The Pug hinted that they have helped the people of the Deep in the past. Talk to Edricka, the governor of Valhalla, to see what she knows about the Pug. (This mission is optional.)"
   source Earth
   destination Valhalla
   to offer
@@ -1386,27 +1362,27 @@ mission "FW Pug 3: Deep"
     has "FW Pug 3A: done"
   
   on complete
-    log "The governor of Valhalla, in the Deep, says that the Pug secretly assisted the people of the Deep to fight against the Alphas centuries ago, during the Alpha Wars. He thinks that the Pug have humanity's best interests at heart, but agrees that they can't be allowed to overthrow the Republic."
+    log "The governor of Valhalla, in the Deep, says that the Pug secretly assisted the people of the Deep to fight against the Alphas centuries ago, during the Alpha Wars. She thinks that the Pug have humanity's best interests at heart, but agrees that they can't be allowed to overthrow the Republic."
     log "Factions" "Pug" `It is possible that the Pug secretly assisted the humans of the Deep centuries ago by providing them with weapons that helped to turn the tide of the Alpha Wars.`
     conversation
-      `As you are coming in for a landing, you contact Edrick Flint and see if he's available to talk. A few minutes later, you and Alondo are sitting with him in his office in the government centre. "I assume you've heard about the alien invasion?" says Alondo. Edrick nods. "The aliens claimed that they had had dealings with the Deep in the past. Do you know anything about that?"`
-      `  Edrick says, "Can you describe what these aliens look like?"`
+      `As you are coming in for a landing, you contact Edricka Flint and see if she's available to talk. A few minutes later, you and Alondo are sitting with her in her office in the government centre. "I assume you've heard about the alien invasion?" says Alondo. Edricka nods. "The aliens claimed that they had had dealings with the Deep in the past. Do you know anything about that?"`
+      `  Edricka says, "Can you describe what these aliens look like?"`
       `  "Pale skin, delicate physique, most of them a little under two meters tall," says Alondo. "Long legs, short torsos. And they probably have blue blood."`
-      `  Edrick pauses for several seconds, then says, "Yes, we had contact with a species that matches that description, back during the Alpha Wars. Some of the folk traditions about 'elves' that still persist here in the Deep are a result of those encounters."`
+      `  Edricka pauses for several seconds, then says, "Yes, we had contact with a species that matches that description, back during the Alpha Wars. Some of the folk traditions about 'elves' that still persist here in the Deep are a result of those encounters."`
       choice
         `  "Do you know what they wanted from humanity, back then?"`
         `  "What strengths and weaknesses do their ships have?"`
           goto strengths
       
-      `  "If the stories are true, all they wanted was to help us win the war against the Alphas," says Edrick. "They never asked for any payment, except that they borrowed some of our ships, packed them full of alien technology, and fought alongside our ships, masquerading as human ships. They also gave us beam weapon technology; five centuries later, we've only just reached the point where we understand that technology well enough to improve on it."`
+      `  "If the stories are true, all they wanted was to help us win the war against the Alphas," says Edricka. "They never asked for any payment, except that they borrowed some of our ships, packed them full of alien technology, and fought alongside our ships, masquerading as human ships. They also gave us beam weapon technology; five centuries later, we've only just reached the point where we understand that technology well enough to improve on it."`
       `  "What do you know about their warships?" asks Alondo.`
       
       label strengths
-      `  "I know that they had a technology that allowed their shields to recharge very quickly," says Edrick. "So to destroy one of their ships would require a considerable amount of concentrated firepower. But are you sure we need to fight them? My people have believed for generations that the 'elven folk' were a friendly species, not a hostile one."`
+      `  "I know that they had a technology that allowed their shields to recharge very quickly," says Edricka. "So to destroy one of their ships would require a considerable amount of concentrated firepower. But are you sure we need to fight them? My people have believed for generations that the 'elven folk' were a friendly species, not a hostile one."`
       choice
         `  "They seem intent on taking over all of human space and forcing us to submit to their authority. So we must fight them."`
         `  "It's possible that they think they are helping us right now, by interrupting our civil war, but all the same we must fight back."`
-      `  Edrick looks disappointed at that. "I understand. I believe that they honestly think they are doing what is best for us, but clearly we cannot tolerate this invasion. Good luck, Captain." He dismisses you.`
+      `  Edricka looks disappointed at that. "I understand. I believe that they honestly think they are doing what is best for us, but clearly we cannot tolerate this invasion. Good luck, Captain." She dismisses you.`
 
 
 
@@ -1846,7 +1822,7 @@ mission "FW Pug 4C"
     event "reconnected delta capricorni"
     conversation
       `Freya sent detailed instructions with the reflector for where it should be set up and how it should be adjusted to interface with the transmitter back in Pug space. You hand it over to a team of Syndicate engineers, who seem quite capable and confident that they can make it work; you suspect that these are the same engineers who have been playing with equipment stolen from the Korath, so they are no strangers to alien technology.`
-      `  You also meet with Marco Bugati, the Syndicate executive who oversaw the installation of your jump drives, and tell him that you may soon be able to reopen one of the connections to Republic space, as well. You ask if he can send a courier ship to Earth to inform them of the new situation, to have them begin massing a fleet there. He agrees. He also tells you that a few of the Syndicate ships that met you in orbit have been designated as additions to your attack fleet, so they will be traveling back to Maker with you if the reflector succeeds in reopening the link.`
+      `  You also meet with Marco Bugati, the Syndicate executive who oversaw the installation of your jump drives, and tell him that you may soon be able to reopen one of the connections to Republic space, as well. You ask if he can send a courier ship to Earth to inform them of the new situation, to have them begin massing a fleet there. He agrees. He also tells you that a few of the Syndicate ships that met you in orbit have been designated as additions to your attack fleet, so they will be travelling back to Maker with you if the reflector succeeds in reopening the link.`
       `  A few hours later, the engineers tell you that they think the link is beginning to reopen. Bugati says, "You should take off and return as soon as possible, in case Maker has been attacked in your absence."`
         accept
 
@@ -2101,7 +2077,7 @@ mission "FW Pug 6"
         "Protector" 2
   
   on complete
-    log `The Pug have fled, apparently traveling through an artificial wormhole back to whatever galaxy they came from. And, it turns out that many of their cities on "Pugglemug" were only for show: buildings with no inhabitants, and with holograms creating the appearance of a heavily populated world. They left no advanced technology behind, and no sign of what their true intentions were, but it turns out that the fake cities here were designed for human habitation. They must have been planning this departure for a very long time.`
+    log `The Pug have fled, apparently travelling through an artificial wormhole back to whatever galaxy they came from. And, it turns out that many of their cities on "Pugglemug" were only for show: buildings with no inhabitants, and with holograms creating the appearance of a heavily populated world. They left no advanced technology behind, and no sign of what their true intentions were, but it turns out that the fake cities here were designed for human habitation. They must have been planning this departure for a very long time.`
     log `Now that the Pug are gone, the Navy will be able to use the "graviton reflectors" to repair the broken hyperspace links and to reconnect all of human space.`
     log "Factions" "Pug" `The Pug disappeared from human space, and left behind more questions than answers. It is possible that the true purpose of their attack was to give human beings a common enemy that would force them to band together and forget their internal struggles.`
     event "pug territory liberated"
@@ -2210,7 +2186,7 @@ mission "FW Syndicate Extremists 1A"
     log "With the Pug defeated, it is finally time to deal with the Syndicate extremists and the Alphas that they allied with. The extremists are armed with nuclear missiles, but the Syndicate CEO has agreed to provide a cloaking device that will make it possible to dodge the missiles."
     conversation
       `The presence of a Navy Saturn in orbit seldom goes unnoticed, especially a Saturn captained by someone as famous as William Danforth. As soon as you land, a Syndicate employee meets you and escorts you, Freya, and Danforth to the office of Alastair Korban, the CEO. He does not seem very happy to see you. "I only just got word that the aliens were defeated a few days ago," he says. "I'm surprised you're back here already."`
-      `  Danforth says, "I've got a whole Navy fleet just a few jumps away from here who are itching to destroy something. So here's the deal. You name me some targets: the men who were responsible for the terrorist attack. Then I will do you a favor and take them off your hands. Fair enough?"`
+      `  Danforth says, "I've got a whole Navy fleet just a few jumps away from here who are itching to destroy something. So here's the deal. You name me some targets: the men who were responsible for the terrorist attack. Then I will do you a favour and take them off your hands. Fair enough?"`
       `  Korban sighs, and then opens his desk and pulls out a sheet of paper. "This is my resignation letter," he says. "I've been working on it since my first meeting with Captain <last>. I've failed in my leadership of this company. But you have no idea how deep that failure goes."`
       choice
         `  "What do you mean?"`
@@ -2378,10 +2354,13 @@ mission "FW Syndicate Extremists 1C"
   on complete
     log "Received an official commendation from Parliament and a promise that the war with the Free Worlds is officially over. Humanity is at peace once more, but new challenges may await in the star systems out beyond human space that are accessible only by jump drive."
     payment 5000000
-    set "main plot completed"
+    event "navy arsenals available"
+    event "particle turret available"
     set "free worlds plot completed"
+    set "main plot completed"
     conversation
       `On Earth, you return to something of a hero's welcome, far different from the first time you were here on a diplomatic mission. A crowd of locals gathers in the spaceport to watch your ship land. With the Free Worlds having been instrumental in defeating the aliens, and absolved of any guilt in the terrorist attacks, it seems that most people here are ready to see you as a hero rather than a criminal.`
       `  You discover that Parliament has made a treaty with the Free Worlds, agreeing that the Free Worlds will be allowed autonomy in the region they currently control as long as they do not seek to expand their territory further. As of now, your war against the Republic is officially over.`
-      `  Your meeting with Parliament is long and grueling, as they press you and Freya for every detail you can give them about the enigmatic Pug and their apparent motivation in invading human space. The questions about the Syndicate are equally hard to answer. But at the end of the session, one of the members of Parliament informs you that they have authorized an official commendation for you, along with a reward of five million credits "to cover any of your expenses from fighting the aliens, and to help you integrate back into civilian life."`
+      `  Your meeting with Parliament is long and grueling, as they press you and Freya for every detail you can give them about the enigmatic Pug and their apparent motivation in invading human space. The questions about the Syndicate are equally hard to answer. But at the end of the session, one of the members of Parliament informs you that they have authorized an official commendation for you, giving you permission to use Navy arsenals, and with it a reward of five million credits "to cover any of your expenses from fighting the aliens, and to help you integrate back into civilian life."`
       `  The war is over; your work for the Free Worlds is at an end. What you do next is up to you...`
+

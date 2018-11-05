@@ -268,10 +268,10 @@ mission "Estate assets to <planet>"
     dialogue "As you watch the dockworkers unload crate after crate, you can't help but wonder what would drive someone to collect such a huge quantity of <commodity>. You collect your payment of <payment>."
 
 
-mission "Contract laborers to <planet>"
+mission "Contract labourers to <planet>"
   job
   repeat
-  description "Return to <destination> after picking up <bunks> contract laborers located on <stopovers> who are eager to experience the luxury of the paradise worlds. Payment is <payment>."
+  description "Return to <destination> after picking up <bunks> contract labourers located on <stopovers> who are eager to experience the luxury of the paradise worlds. Payment is <payment>."
   passengers 13 30
   to offer
     random < 10
@@ -285,7 +285,7 @@ mission "Contract laborers to <planet>"
     dialogue "The shabbily-dressed young men and women in the group don't look nearly as happy to be boarding your ship as you expected, given the new opportunity that awaits them. They shuffle wearily up the ramp for the return trip to <planet>."
   on complete
     payment 10000 50
-    dialogue "The bedraggled contract laborers kept to themselves and didn't say a word to you throughout the entire trip. The scruffy foreman who receives you on <origin> seems pleased, however. He hands you your payment of <payment>."
+    dialogue "The bedraggled contract labourers kept to themselves and didn't say a word to you throughout the entire trip. The scruffy foreman who receives you on <origin> seems pleased, however. He hands you your payment of <payment>."
 
 
 mission "Waste disposal on <planet>"

@@ -92,6 +92,7 @@
 # Republic:
 #   "Republic Large"
 #   "Republic Small"
+#   "Gunboat Only"
 #   "Navy Surveillance"
 # Syndicate:
 #   "Syndicate Home"
@@ -516,7 +517,7 @@ fleet "Free Worlds Home"
   personality
     heroic disables frugal opportunistic
   variant 1
-    "Dreadnought"
+    "Dreadnought (Rocket)"
     "Skein" 2 
     "Roost" 3
     "Nest" 4
@@ -1315,7 +1316,7 @@ fleet "Merchants Core Large"
   variant 10
     "Star Freighter (Fancy)" 2
   variant 10
-    "Star Freighter (Proton)" 2
+    "Star Freighter" 2
     "Quicksilver" 2
   variant 50
     "Bulk Freighter"
@@ -1327,7 +1328,7 @@ fleet "Merchants Core Large"
     "Bulk Freighter (Laser)"
     "Wasp (Proton)" 2
   variant 10
-    "Bulk Freighter (Proton)"
+    "Bulk Freighter"
     "Wasp (Proton)" 2
   variant 20
     "Bulk Freighter"
@@ -1336,7 +1337,8 @@ fleet "Merchants Core Large"
   variant 5
     "Bulk Freighter (Laser)"
   variant 5
-    "Bulk Freighter (Proton)"
+    "Bulk Freighter"
+    "Star Freighter"
   variant 20
     "Star Barge" 3
   variant 10
@@ -1349,8 +1351,8 @@ fleet "Merchants Core Large"
     "Quicksilver"
     "Splinter (Laser)"
   variant 4
+    "Bulk Freighter"
     "Bulk Freighter (Blaster)"
-    "Bulk Freighter (Proton)"
     "Quicksilver"
     "Splinter (Proton)"
   variant 3
@@ -1383,9 +1385,6 @@ fleet "Merchants Core Large"
     "Bulk Freighter (Laser)" 2
     "Protector (Laser)"
   variant 1
-    "Bulk Freighter (Proton)" 2
-    "Protector"
-  variant 1
     "Bulk Freighter (Laser)" 2
     "Vanguard (Particle)"
   variant 20
@@ -1413,7 +1412,7 @@ fleet "Merchants Core Small"
   variant 10
     "Star Freighter (Fancy)"
   variant 10
-    "Star Freighter (Proton)"
+    "Star Freighter" 2
   variant 10
     "Star Freighter"
     "Wasp"
@@ -1802,12 +1801,6 @@ fleet "Merchants North Large"
   variant 10
     "Behemoth (Laser)"
   variant 10
-    "Behemoth (Particle)"
-  variant 10
-    "Behemoth (Plasma)"
-  variant 10
-    "Behemoth (Proton)"
-  variant 10
     "Behemoth (Speedy)"
   variant 10
     "Behemoth" 2
@@ -1852,7 +1845,7 @@ fleet "Merchants North Large"
     "Sparrow" 2
     "Firebird (Laser)" 1
   variant 3
-    "Star Freighter (Proton)" 4
+    "Star Freighter" 4
     "Sparrow" 2
     "Firebird (Laser)" 1
   variant 1
@@ -1912,10 +1905,10 @@ fleet "Merchants North Small"
   variant 10
     "Star Freighter (Fancy)"
   variant 10
-    "Star Freighter (Proton)"
+    "Star Freighter" 2
   variant 20
     "Star Freighter"
-    "Light Shuttle" 4
+    "Heavy Shuttle" 3
   variant 6
     "Star Freighter"
     "Berserker"
@@ -1926,7 +1919,7 @@ fleet "Merchants North Small"
     "Star Freighter (Fancy)"
     "Light Shuttle" 4
   variant 5
-    "Star Freighter (Proton)"
+    "Star Freighter"
     "Light Shuttle" 4
   variant 10
     "Star Freighter" 3
@@ -3435,6 +3428,16 @@ fleet "Republic Small"
     "Mercury" 3
   variant 6
     "Mars"
+
+
+fleet "Gunboat Only"
+  government "Republic"
+  names "republic small"
+  cargo 0
+  personality
+    heroic
+  variant
+    "Mars (Mark II)"
 
 
 fleet "Navy Surveillance"

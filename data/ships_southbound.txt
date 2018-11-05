@@ -15,6 +15,7 @@ shipyard "Southbound Variants"
   "Clipper (Speedy)"
   "Dreadnought"
   "Dreadnought (Jump)"
+  "Dreadnought (Rocket)"
   "Fury"
   "Fury (Flamethrower)"
   "Fury (Gatling)"
@@ -402,8 +403,8 @@ ship "Dreadnought"
     "Orca Plasma Thruster"
     "Orca Plasma Steering"
 
-    "Plasma Cannon" 4
-    "Plasma Turret" 4
+    "Flamethrower" 4
+    "Plasma Turret" 5
 
     "D41-HY Shield Generator"
     "Stack Core"
@@ -416,11 +417,11 @@ ship "Dreadnought"
     "Laser Rifle" 100
   engine -25 172
   engine 25 172
-  gun -10 -167 "Plasma Cannon"
-  gun 10 -167 "Plasma Cannon"
-  gun -20 -151 "Plasma Cannon"
-  gun 20 -151 "Plasma Cannon"
-  turret 0 -94
+  gun -10 -167 "Flamethrower"
+  gun 10 -167 "Flamethrower"
+  gun -20 -151 "Flamethrower"
+  gun 20 -151 "Flamethrower"
+  turret 0 -94 "Plasma Turret"
   turret -38 -56 "Plasma Turret"
   turret 38 -56 "Plasma Turret"
   turret -44 118 "Plasma Turret"
@@ -442,9 +443,8 @@ ship "Dreadnought" "Dreadnought (Jump)"
     "Orca Plasma Thruster"
     "Orca Plasma Steering"
 
-    "Plasma Cannon" 4
-    "Plasma Turret" 4
-#    "Heavy Anti-Missile Turret"
+    "Flamethrower" 4
+    "Plasma Turret" 5
 
     "D41-HY Shield Generator"
     "Stack Core"
@@ -454,6 +454,29 @@ ship "Dreadnought" "Dreadnought (Jump)"
     "Jump Drive"
     "Tactical Scanner"
     "Outfits Expansion" 2
+    "Fragmentation Grenades" 50
+    "Laser Rifle" 100
+
+
+ship "Dreadnought" "Dreadnought (Rocket)"
+  outfits
+    "Orca Plasma Thruster"
+    "Orca Plasma Steering"
+
+    "Heavy Rocket" 80
+    "Heavy Rocket Rack" 4
+    "Heavy Rocket Launcher" 4
+    "Plasma Turret" 4
+    "Heavy Anti-Missile Turret"
+
+    "D41-HY Shield Generator"
+    "Stack Core"
+    "LP144a Battery Pack"
+    "Liquid Helium Cooler"
+    "Fuel Barrel" 60
+    "Hyperdrive"
+    "Tactical Scanner"
+    "Outfits Expansion" 5
     "Fragmentation Grenades" 50
     "Laser Rifle" 100
 

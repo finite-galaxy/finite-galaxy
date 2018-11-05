@@ -213,18 +213,6 @@ mission "Wanderers: Sestor Controller"
 
 
 
-event "wanderers: kaliptari battle begins"
-  system Kaliptari
-    fleet "Wanderer Flycatchers" 500
-
-event "wanderers: kaliptari battle ends"
-  system Kaliptari
-    add fleet "Quarg Large" 2000
-    add fleet "Kor Mereti Small" 8000
-    add fleet "Kor Mereti Large" 3600
-    add fleet "Wanderer Defence" 1000
-    add fleet "Wanderer Drones" 500
-
 mission "Wanderers: First Mereti Attack"
   landing
   name "Defend <planet>"
@@ -236,7 +224,7 @@ mission "Wanderers: First Mereti Attack"
     has "Wanderers: Mereti Controller: done"
     has "Wanderers: Sestor Controller: done"
   on offer
-    event "wanderers: kaliptari battle begins"
+    event "wanderers: kaliptari battle begin"
     conversation
       `While you are still walking back to your ship from your latest meeting, alarm sirens begin to sound, and you see many Wanderers leaping into the air and flying quickly toward the spaceport, where ships are quickly beginning to take off. (Interestingly, a Wanderer alarm siren sounds more like a quacking duck than like the shrieking or droning sounds commonly used as alarms by humans.) It would appear that the base is under attack.`
       `  You return as quickly as possible to your ship and prepare to join the other defenders...`
@@ -281,7 +269,7 @@ mission "Wanderers: First Mereti Attack"
         "Autumn Leaf" 2
         "Summer Leaf" 3
   on complete
-    event "wanderers: kaliptari battle ends"
+    event "wanderers: kaliptari battle end"
 
 
 
@@ -664,16 +652,6 @@ mission "Wanderers: Kor Efret 2"
 
 
 
-event "wanderers: kashikt battle begins"
-  system "Kashikt"
-    fleet "Kor Efret Home" 6000
-
-event "wanderers: kashikt battle ends"
-  system "Kashikt"
-    fleet "Quarg Small" 1000
-    fleet "Quarg Large" 2000
-    fleet "Kor Efret Home" 1000
-
 mission "Wanderers: Kor Efret 3"
   landing
   name "Defend <planet>"
@@ -682,7 +660,7 @@ mission "Wanderers: Kor Efret 3"
   to offer
     has "Wanderers: Kor Efret 2: done"
   on offer
-    event "wanderers: kashikt battle begins"
+    event "wanderers: kashikt battle begin"
     conversation
       `With Rek's help, you make contact with the team of Korath engineers, and Rek explains the Wanderer plan to hack into the Kor Mereti network. Her speech is slower than before, and she has to keep asking questions; clearly the conversation involves technical jargon that she is not yet familiar with. When she is done explaining, the Korath are silent for a minute, then one of them answers quite loudly, almost shouting, gesturing in your direction as if pushing you away.`
       `  Rek says, "He said, 'Do you think we are idiots? Do you think we have not attempted that?'" The Korath leader follows up with another long statement that Rek hesitantly translates. "The Mereti... consciousness? It is impossible to subvert. It has a sort of... immune system? Like a living creature. Any foreign influence that impinges on its network is sequestered and analysed. It does not become part of the... gestalt? ...unless it is proven to be beneficial."`
@@ -701,7 +679,7 @@ mission "Wanderers: Kor Efret 3"
       `  The conversation is interrupted as alarm sirens begin to sound throughout the spaceport. One of the Korath says something to Rek, and they all begin running toward the landing pads. Rek says, "Another Kor Mereti attack. They have become more frequent, lately. You should join the defenders; fighting alongside them will help to gain their trust." You hurry back to your ship and take off...`
         launch
   on complete
-    event "wanderers: kashikt battle ends"
+    event "wanderers: kashikt battle end"
   npc evade
     government "Kor Mereti"
     personality staying heroic
@@ -1014,28 +992,6 @@ mission "Wanderers: Mind 5"
 
 
 
-government " Kor Mereti "
-  swizzle 5
-  "attitude toward"
-    "Wanderer" -.01
-    "Kor Mereti" -.01
-  "player reputation" -1000
-
-event "wanderers: kor mereti friendly"
-  government "Kor Mereti"
-    "attitude toward"
-      "Wanderer" 1
-  government "Quarg"
-    "attitude toward"
-      "Kor Mereti" 0
-  government "Kor Efret"
-    "attitude toward"
-      "Kor Mereti" 0
-  "reputation: Kor Mereti" >?= 1
-  "reputation:  Kor Mereti " = -1000
-  planet "Rekat Moraski"
-    "required reputation" 1000
-
 mission "Wanderers: Mind 6"
   landing
   name "Defend the Mind"
@@ -1078,13 +1034,6 @@ mission "Wanderers: Mind 6"
         "Model 16" 8
 
 
-
-event "wanderers: kor mereti transformation"
-  system Chimitarp
-    add fleet "Kor Mereti Small" 250
-    add fleet "Kor Mereti Large" 450
-  planet "Korbatri Eska"
-    add description `  Far from the ruined cities, the Kor Mereti have begun building a sort of village of their own: a sprawling complex of greenhouses containing a wide variety of plant samples.`
 
 mission "Wanderers: Mind 7"
   landing
@@ -1434,7 +1383,7 @@ mission "Wanderers: Tour 6"
   on offer
     conversation
       `The Korath ship lands safely on <origin>. Rek explains to the Korath that the entire Wanderer territory was once controlled by the Hai, but that the Hai ruined these worlds and abandoned them. She tells them that now that the Wanderers have completed their work of healing these worlds, they are returning them to the Hai.`
-      `  It's a somewhat slanted story, and the Korath are dubious. "If you have done them this great favor," one of them asks, "why are they attacking you?"`
+      `  It's a somewhat slanted story, and the Korath are dubious. "If you have done them this great favour," one of them asks, "why are they attacking you?"`
       `  Rek explains that the Hai wanted these worlds back before the Wanderers were ready to give them back, and the same Korath says, "So, if we allow you to spread to our worlds, you will return them to us not when we ask you to, but when you decide you are done?"`
       `  Rek tries to assure them that in their own territory, they will be working and living side by side with the Wanderers, in joint control of their worlds. It's not clear if they believe her. "We have seen enough," says the same Korath. "We will return to our world now." You agree to escort them back through the Eye and to make sure they reach <planet> safely.`
         accept
@@ -1508,17 +1457,6 @@ mission "Wanderers: Sestor Scanning"
 
 
 
-event "wanderers: battle in solifar begins"
-  system Solifar
-    fleet "Wanderer Flycatchers" 400
-
-event "wanderers: battle in solifar ends"
-  system Solifar
-    fleet "Quarg Large" 3000
-    fleet "Wanderer Defence" 1800
-    fleet "Wanderer Drones" 700
-    fleet "Wanderer Flycatchers" 800
-
 mission "Wanderers: Sestor Attack"
   landing
   name "Defend <planet>"
@@ -1546,9 +1484,9 @@ mission "Wanderers: Sestor Attack"
   on visit
     dialogue `There are still Kor Sestor ships overhead. You should take off and rejoin the battle.`
   on accept
-    event "wanderers: battle in solifar begins"
+    event "wanderers: battle in solifar begin"
   on complete
-    event "wanderers: battle in solifar ends"
+    event "wanderers: battle in solifar end"
   npc evade
     government "Kor Sestor"
     personality staying heroic
@@ -1633,41 +1571,6 @@ mission "Wanderers: Sestor Attack"
         "Tempest (Missile)" 2
 
 
-
-event "wanderers: kor sestor are aimless"
-  fleet "Kor Sestor Small"
-    personality
-      timid
-      coward
-  fleet "Kor Sestor Large"
-    personality
-      timid
-      coward
-  system "Mesuket"
-    fleet "Kor Mereti Large" 900
-    fleet "Kor Sestor Large" 5000
-  system Eshkoshtar
-    remove fleet "Kor Sestor Large"
-  system Salipastart
-    remove fleet "Kor Sestor Large"
-  system Mekislepti
-    remove fleet "Kor Sestor Large"
-  system Similisti
-    remove fleet "Kor Sestor Large"
-  system Faronektu
-    remove fleet "Kor Sestor Large"
-  planet "Varu K'prai"
-    landscape land/beach1
-    add description `  There used to be a thriving spaceport here, but it has been razed to the ground by the Kor Sestor fleet.`
-    remove spaceport
-    remove outfitter
-    remove "required reputation"
-    remove tribute
-  planet Zenith
-    bribe 0
-    "required reputation" 1000
-  "reputation: Pirate" <?= -1
-  "unvisit planet" "Varu K'prai"
 
 mission "Wanderers: Sestor Search"
   landing
@@ -1811,7 +1714,7 @@ mission "Wanderers: Sestor Search: Human Spaceport"
           goto thanks
           
       label where
-      `  "Well," the pilot says, "we were doing a large cargo run to Farpoint in the Alnitak system, when two of these hostile ships jumped in from the northwest, the direction of all the anarchist colonies in this area. I had to jump the ship in atmosphere to stop us from getting shredded by their strange melting weaponry. I immediately reported the attack to a desk clerk at the Navy base in the neighboring system Saiph, but their servers show no logs of any unidentified ships beyond Farpoint, so I guess they turned around after scouting out the Alnitak system."`
+      `  "Well," the pilot says, "we were doing a large cargo run to Farpoint in the Alnitak system, when two of these hostile ships jumped in from the northwest, the direction of all the anarchist colonies in this area. I had to jump the ship in atmosphere to stop us from getting shredded by their strange melting weaponry. I immediately reported the attack to a desk clerk at the Navy base in the neighbouring system Saiph, but their servers show no logs of any unidentified ships beyond Farpoint, so I guess they turned around after scouting out the Alnitak system."`
       choice
         `  "You're lucky as hell to be here today."`
           goto glad
@@ -1819,7 +1722,7 @@ mission "Wanderers: Sestor Search: Human Spaceport"
           goto thanks
       
       label glad1
-      `  "I am! The attacking ships weren't big, but they were tough: our four heavy laser turrets couldn't even produce a dent in their shields," the captain says. "We even hired a beefy Leviathan to protect us from the pirate raids as we traveled to Farpoint, but when these hostile ships jumped in from the northwest, they made short work of our escort and nearly disabled our ship, too. I had to jump out of the system while in atmosphere to save the ship, but now I'm in debt to all my crew because I didn't meet a rush delivery deadline."`
+      `  "I am! The attacking ships weren't big, but they were tough: our four heavy laser turrets couldn't even produce a dent in their shields," the captain says. "We even hired a beefy Leviathan to protect us from the pirate raids as we travelled to Farpoint, but when these hostile ships jumped in from the northwest, they made short work of our escort and nearly disabled our ship, too. I had to jump out of the system while in atmosphere to save the ship, but now I'm in debt to all my crew because I didn't meet a rush delivery deadline."`
       choice
         `  "You really are lucky as hell to be here today."`
           goto glad
@@ -2438,114 +2341,6 @@ mission "Wanderers: Sestor: Scattered Remnant"
     
 
 
-event "bombed zenith"
-  government "Kor Sestor"
-    "attitude toward"
-      "Pirate" -.01
-  planet "Zenith"
-    description `Zenith is a cold and unpleasant world, where the fog seldom lifts and the sun is rarely seen, where much of the lowlands are flooded each day by the tide, and storms are unpredictable and fierce. It has, however, one major advantage as a place to settle: it is far enough away that the Republic makes no attempt to control it.`
-    description `  The settlements here were never more than tenuous villages operating on the brink of starvation as they sought to make a living in this icy wilderness. Now, many of them have collapsed due to massive earthquakes that came after the Oathkeepers had the planet bombed to destroy an Alpha base.`
-    bribe .04
-    "required reputation" 0
-  system "Alnilam"
-    object
-      sprite star/f5
-      period 10
-    object
-      sprite planet/desert1
-      distance 224.69
-      period 32.5315
-    object
-      sprite planet/gas7
-      distance 966.7
-      period 290.312
-      object
-        sprite planet/miranda
-        distance 220
-        period 10.5884
-      object
-        sprite planet/luna
-        distance 305
-        period 17.2841
-    object "Zenith"
-      sprite "planet/zenith hot"
-      distance 1776.59
-      period 723.284
-      object
-        sprite planet/ice8
-        distance 136
-        period 16.5247
-    object
-      sprite planet/gas2
-      distance 2758.68
-      period 1399.52
-      object
-        sprite planet/dust1
-        distance 200
-        period 12.5708
-      object
-        sprite planet/lava0
-        distance 330
-        period 26.6433
-      object
-        sprite planet/dust7
-        distance 440
-        period 41.0201
-      object
-        sprite planet/desert4
-        distance 575
-        period 61.2801
-
-event "zenith cooling"
-  system "Alnilam"
-    object
-      sprite star/f5
-      period 10
-    object
-      sprite planet/desert1
-      distance 224.69
-      period 32.5315
-    object
-      sprite planet/gas7
-      distance 966.7
-      period 290.312
-      object
-        sprite planet/miranda
-        distance 220
-        period 10.5884
-      object
-        sprite planet/luna
-        distance 305
-        period 17.2841
-    object "Zenith"
-      sprite "planet/zenith cold"
-      distance 1776.59
-      period 723.284
-      object
-        sprite planet/ice8
-        distance 136
-        period 16.5247
-    object
-      sprite planet/gas2
-      distance 2758.68
-      period 1399.52
-      object
-        sprite planet/dust1
-        distance 200
-        period 12.5708
-      object
-        sprite planet/lava0
-        distance 330
-        period 26.6433
-      object
-        sprite planet/dust7
-        distance 440
-        period 41.0201
-      object
-        sprite planet/desert4
-        distance 575
-        period 61.2801
-
 mission "Wanderers: Sestor: Bomb Zenith 2"
   landing
   name "Return to <planet>"
@@ -2564,7 +2359,7 @@ mission "Wanderers: Sestor: Bomb Zenith 2"
   on enter
     conversation
       `The way Danforth talked about the device he gave you made you assume that it was a nuclear bomb, but the explosion that rocks <origin> a few seconds after you depart is far too powerful for that. The light of the explosion is many times brighter than this system's sun. And unless your sensors are lying to you, there is now a crater near <origin>'s south pole that goes all the way down to the mantle. Lava is filling the hole, and the entire planet's crust is shifting and shivering in response.`
-      `  You are glad that no human settlements were near the explosion, but your sensors are picking up compression waves traveling along the whole planet's surface, bouncing across it again and again as the planet rings like a bell. Anyone who lived anywhere on <origin> just got hit by an earthquake of deadly proportions.`
+      `  You are glad that no human settlements were near the explosion, but your sensors are picking up compression waves travelling along the whole planet's surface, bouncing across it again and again as the planet rings like a bell. Anyone who lived anywhere on <origin> just got hit by an earthquake of deadly proportions.`
       `  You can only hope that it was worth it, and that the control station has indeed been destroyed.`
 
 
@@ -2947,9 +2742,6 @@ mission "Wanderers: Sestor: Exiles 2"
 
 
 
-event "wanderers: exiles peaceful"
-  "reputation: Korath" >?= 1
-
 mission "Wanderers: Sestor: Exiles 3"
   landing
   name "Diplomacy with the exiles"
@@ -2977,7 +2769,7 @@ mission "Wanderers: Sestor: Exiles 3"
         `  "What are they asking for in return?"`
       `  Rek says, "They request a meeting with our leaders, to work out terms of trade for our mutual benefit. It is something we would certainly agree to with no difficulty."`
       label end
-      `  Rek speaks with the Korath again, and then tells you, "They say that three of their 'world-ships' will travel with us to meet with the Wanderer leaders. If they are able to work out favorable terms, and are convinced that the Wanderers have peaceful intentions, they will go with us to the Sestor factory world and shut it down."`
+      `  Rek speaks with the Korath again, and then tells you, "They say that three of their 'world-ships' will travel with us to meet with the Wanderer leaders. If they are able to work out favourable terms, and are convinced that the Wanderers have peaceful intentions, they will go with us to the Sestor factory world and shut it down."`
         accept
   npc accompany save
     government "Korath"
@@ -3040,10 +2832,6 @@ mission "Wanderers: Sestor: Factory Escorts"
 
 
 
-event "wanderers: asikafarnut battle"
-  system "Asikafarnut"
-    fleet "Kor Mereti Large" 10000
-
 mission "Wanderers: Sestor: Factory 2"
   landing
   name "Defend <planet>"
@@ -3093,36 +2881,6 @@ mission "Wanderers: Sestor: Factory 2"
 
 
 
-event "wanderers: sestor shutdown"
-  system "Celeborim"
-    fleet "Kor Sestor Small" 2400
-    fleet "Kor Sestor Large" 10000
-  system "Makferuti"
-    fleet "Kor Sestor Small" 2400
-    fleet "Kor Sestor Large" 10000
-  system "Asikafarnut"
-    fleet "Kor Mereti Large" 3600
-    fleet "Kor Sestor Small" 1200
-    fleet "Kor Sestor Large" 6000
-  system "Sobarati"
-    fleet "Kor Sestor Small" 1600
-    fleet "Kor Sestor Large" 8000
-  system "Silikatakfar"
-    fleet "Kor Mereti Large" 1600
-    fleet "Kor Sestor Small" 3200
-    fleet "Kor Sestor Large" 4800
-  system "Ferukistek"
-    fleet "Kor Mereti Large" 2400
-    fleet "Kor Sestor Small" 8000
-    fleet "Kor Sestor Large" 10000
-  system "Eneremprukt"
-    fleet "Kor Mereti Large" 2000
-    fleet "Kor Sestor Small" 3200
-    fleet "Kor Sestor Large" 4800
-  system "Mesuket"
-    remove fleet "Kor Sestor Large"
-    add fleet "Kor Sestor Large" 10000
-
 mission "Wanderers: Sestor: Factory 3"
   landing
   name "Return to <planet>"
@@ -3149,116 +2907,6 @@ mission "Wanderers: Sestor: Factory 3"
       `  With nothing else to do here, you get ready to return to <planet> and report to the Wanderer leaders.`
         accept
 
-
-
-event "wanderers: exiles hostile"
-  "reputation: Korath" = -1000
-
-event "wanderers: exiles have drones"
-  fleet "Korath Home"
-    add variant 1
-      "Kar Ik Vot 349"
-    add variant 1
-      "Kar Ik Vot 349 (Attacker)"
-    add variant 1
-      "Kar Ik Vot 349 (Defender)"
-    add variant 1
-      "Kar Ik Vot 349 (Trapper)"
-    add variant 3
-      "Met Par Tek 53" 3
-    add variant 3
-      "Met Par Tek 53" 2
-      "Met Par Tek 53 (Sniper)"
-    add variant 3
-      "Met Par Tek 53"
-      "Met Par Tek 53 (Sniper)" 2
-    add variant 3
-      "Met Par Tek 53 (Sniper)" 3
-    add variant 2
-      "Tek Far 71 - Lek"
-      "Far Lek 14" 10
-    add variant 2
-      "Tek Far 71 - Lek (Close Quarters)"
-      "Far Lek 14" 10
-    add variant 2
-      "Tek Far 78 - Osk"
-      "Far Osk 27" 9
-    add variant 2
-      "Tek Far 78 - Osk (Close Quarters)"
-      "Far Osk 27" 9
-    add variant 4
-      "Tek Far 109"
-      "Far Lek 14" 9
-      "Far Osk 27" 7
-    add variant 4
-      "World-Ship A (Improved)"
-    add variant 4
-      "World-Ship B (Improved)"
-    add variant 4
-      "World-Ship C (Improved)"
-  fleet "Korath Raid"
-    add variant 1
-      "Raider (Improved)"
-      "Chaser" 2
-  planet "Gresku Fodar"
-    outfitter "Korath Weapons"
-    shipyard "Kor Sestor Advanced"
-  planet "Kessel Sepret"
-    outfitter "Korath Weapons"
-    shipyard "Kor Sestor Advanced"
-  planet "Safaresk Enlai"
-    outfitter "Korath Weapons"
-    shipyard "Kor Sestor Advanced"
-  planet "Separa Tiklar"
-    outfitter "Korath Weapons"
-    shipyard "Kor Sestor Advanced"
-  planet "Septar Lorku"
-    outfitter "Korath Weapons"
-    shipyard "Kor Sestor Advanced"
-  planet "Sessiliki Far"
-    outfitter "Korath Weapons"
-    shipyard "Kor Sestor Advanced"
-
-
-event "wanderers: sestor eliminated"
-  system "Celeborim"
-    government "Uninhabited"
-    fleet "Kor Mereti Small" 10000
-  system "Makferuti"
-    government "Uninhabited"
-    fleet "Kor Mereti Small" 10000
-  system "Asikafarnut"
-    government "Uninhabited"
-    fleet "Kor Mereti Large" 3600
-  system "Sobarati"
-    government "Uninhabited"
-    fleet "Kor Mereti Small" 10000
-  system "Silikatakfar"
-    government "Uninhabited"
-    fleet "Kor Mereti Large" 1600
-  system "Ferukistek"
-    government "Uninhabited"
-    fleet "Kor Mereti Large" 2400
-  system "Eneremprukt"
-    government "Uninhabited"
-    fleet "Kor Mereti Large" 2000
-  system "Mesuket"
-    remove fleet "Kor Sestor Large"
-
-event "wanderers: sabira eseskrai colony"
-  system "Skeruto"
-    government "Wanderer"
-    fleet "Quarg Large" 1000
-    fleet "Wanderer Defence" 1200
-    fleet "Wanderer Drones" 800
-    fleet "Kor Efret Home" 800
-  system "Furmeliki"
-    add fleet "Kor Efret Home" 800
-  planet "Sabira Eseskrai"
-    add attributes "wanderer"
-    description `Long ago, this planet was home to several Korath oil mining settlements, but now all that remains visible are the tops of a few dozen of the tallest buildings. Everything else has been buried by sandstorms.`
-    description `  Due to a recent shift in climate the deserts have begun shrinking once more, with local vegetation growing to cover more and more land each year. The Wanderers, working together with the Kor Efreti, have founded a settlement here and begun working to accelerate the process of rejuvenating the wastelands.`
-    spaceport `This small settlement is populated by a roughly equal number of Korath and Wanderer settlers. Since most of them do not speak each other's language, the two groups do not mingle much, and communicate mostly via gestures and drawings. It's not much, but it's at least a start for the two species to begin learning from each other.`
 
 mission "Wanderers: Sestor: Final"
   landing
@@ -3310,36 +2958,4 @@ mission "Wanderers: Sestor: Patch"
   on offer
     event "wanderers: sestor planets unrestricted"
     fail
-
-event "wanderers: sestor planets unrestricted"
-  planet "Devru Kaska"
-    "required reputation" 0
-		outfitter clear
-		shipyard clear
-    spaceport clear
-  planet "Drekag Firask"
-    "required reputation" 0
-		outfitter clear
-		shipyard clear
-    spaceport clear
-  planet "Keneska Fek"
-    "required reputation" 0
-		outfitter clear
-		shipyard clear
-    spaceport clear
-  planet "Sebra Skira"
-    "required reputation" 0
-		outfitter clear
-		shipyard clear
-    spaceport clear
-  planet "Sestor Ikfar"
-    "required reputation" 0
-		outfitter clear
-		shipyard clear
-    spaceport clear
-  planet "Sopi Lefarkata"
-    "required reputation" 0
-		outfitter clear
-		shipyard clear
-    spaceport clear
 

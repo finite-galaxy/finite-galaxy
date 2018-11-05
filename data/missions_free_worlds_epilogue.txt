@@ -1,3 +1,29 @@
+mission "Geminus Rebuilt"
+  landing
+  invisible
+  to offer
+    has "main plot completed"
+  on offer
+    event "geminus rebuilt" 90
+    fail
+
+
+
+mission "Proton Turret Available"
+  landing
+  source
+    near "Markab" 100
+  to offer
+    has "free worlds plot completed"
+  destination "Hephaestus"  
+  on offer
+    event "proton turret available"
+    conversation
+      `After you've landed, your ship is targetted by advertisements, informing you that the Syndicate's newest weapon, the Proton Turret, is now for sale on Hephaestus. Apparently it has been developed as an answer to the Delta V's Plasma Turret.`
+        decline
+
+
+
 mission "FW Epilogue: Ijs and Katya"
   landing
   source "Winter"
@@ -56,7 +82,7 @@ mission "FW Epilogue: Alondo"
         `  "Sorry, I'm busy right now."`
           defer
       `  You meet up with Alondo at a local pub. He tells you that his life has continued to be quite full since the war ended and the Council was dissolved: he's been placed in charge of the Free Worlds diplomatic corps, whose main job appears to be to make sure all the individual worlds within the coalition feel like their concerns are being listened to. "It means lots of travel," he says, "and lots of fine meals with important people. And they're always interested to hear my stories from the war times."`
-      `  You tell Alondo a bit about what you've been doing since the war ended. "Of course," he says, "you're traveling the galaxy. I knew from the start you weren't the kind who would quickly put down roots on a single planet."`
+      `  You tell Alondo a bit about what you've been doing since the war ended. "Of course," he says, "you're travelling the galaxy. I knew from the start you weren't the kind who would quickly put down roots on a single planet."`
       `  Alondo goes on to describe some of the inner workings of the Free Worlds Senate, and the mutual defence arrangement that forms the backbone of the coalition. "For a while there," he says, "it felt like there was so much bureaucracy that we couldn't get anything done, but now it's finally starting to function in the way all of us imagined. Quite an honour to have had a hand in the birth of a new government."`
       choice
         `  "Spoken like a true bureaucrat."`
@@ -166,3 +192,4 @@ mission "FW Epilogue: Danforth"
       `  Then he leans forward and says, more quietly, "Of course, you and I both know the pirates aren't the main threat. Raven is off infiltrating Syndicate worlds even as we speak, and several of my other best intelligence officers, too. The Syndicate wants us to believe that they've weeded out all the rotten apples from their ranks, but we're keeping an eye on them, all the same."`
       `  After you talk for a while longer, Danforth wishes you luck and sends you on your way. "I'll be in touch if we ever need your assistance in the future," he says.`
         decline
+
