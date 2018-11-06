@@ -1514,7 +1514,7 @@ event "end battle of alioth"
 
 
 event "fw at war with Syndicate"
-  government Syndicate
+  government "Syndicate"
     "attitude toward"
       "Free Worlds" -.3
       "Pirate" -.4
@@ -1532,7 +1532,7 @@ event "fw at war with Syndicate"
 
 
 event "fw armistice"
-  government Republic
+  government "Republic"
     "attitude toward"
       "Free Worlds" 0
       "Merchant" .25
@@ -1811,19 +1811,19 @@ event "pug invasion"
   unvisit Ascella
   unvisit Peacock
   system "Zeta Aquilae"
-    government Pug
+    government "Pug"
     fleet "Merchants South Small" 1000
     fleet "Merchants South Large" 3000
     fleet "Pug Small" 1000
     fleet "Pug Large" 2000
   system "Rasalhague"
-    government Pug
+    government "Pug"
     fleet "Merchants South Small" 1500
     fleet "Merchants South Large" 2000
     fleet "Pug Small" 800
     fleet "Pug Large" 2000
   system "Orvala"
-    government Pug
+    government "Pug"
     fleet "Merchants South Small" 3000
     fleet "Merchants South Large" 6000
     fleet "Pug Small" 5000
@@ -1847,13 +1847,13 @@ event "pug invasion 2"
   unvisit Fomalhaut
   unvisit Markab
   system "Vega"
-    government Pug
+    government "Pug"
     fleet "Merchants North Small" 800
     fleet "Merchants North Large" 3000
     fleet "Pug Small" 800
     fleet "Pug Large" 1200
   system "Altair"
-    government Pug
+    government "Pug"
     fleet "Merchants Core Small" 400
     fleet "Merchants Core Large" 600
     fleet "Merchants North Small" 1000
@@ -1861,13 +1861,13 @@ event "pug invasion 2"
     fleet "Pug Small" 700
     fleet "Pug Large" 900
   system "Fomalhaut"
-    government Pug
+    government "Pug"
     fleet "Merchants Core Small" 1000
     fleet "Merchants Core Large" 1200
     fleet "Pug Small" 1400
     fleet "Pug Large" 2000
   system "Nocte"
-    government Pug
+    government "Pug"
     fleet "Merchants North Small" 1500
     fleet "Merchants North Large" 5000
     fleet "Miners North" 1600
@@ -1892,13 +1892,13 @@ event "pug invasion 3"
   unvisit Scheat
   unvisit Alnair
   system "Delta Capricorni"
-    government Pug
+    government "Pug"
     fleet "Merchants Core Small" 700
     fleet "Merchants Core Large" 800
     fleet "Pug Small" 800
     fleet "Pug Large" 1100
   system "Alderamin"
-    government Pug
+    government "Pug"
     fleet "Merchants Core Small" 2000
     fleet "Merchants Core Large" 3200
     fleet "Pug Small" 1200
@@ -1926,13 +1926,13 @@ event "pug invasion 4"
     fleet "Merchants Core Small" 1000
     fleet "Merchants Core Large" 2000
   system "Diphda"
-    government Pug
+    government "Pug"
     fleet "Merchants Core Small" 2000
     fleet "Merchants Core Large" 600
     fleet "Pug Small" 1000
     fleet "Pug Large" 1500
   system "Caph"
-    government Pug
+    government "Pug"
     fleet "Merchants Core Small" 500
     fleet "Merchants Core Large" 600
     fleet "Miners Core" 2000
@@ -1960,7 +1960,7 @@ event "fw syndicate welcoming"
 
 event "at war with the pug"
   "reputation: Pug" <?= -1000
-  government Pug
+  government "Pug"
     "attitude toward"
       "Free Worlds" -.01
       "Republic" -.01
@@ -1972,7 +1972,7 @@ event "at war with the pug"
 
 event "battle for delta capricorni"
   system "Delta Capricorni"
-    government Syndicate
+    government "Syndicate"
 
 
 event "reconnected delta capricorni"
@@ -2002,7 +2002,7 @@ event "liberation of altair"
 event "reconnected altair"
   link Altair Sol
   system "Altair"
-    government Republic
+    government "Republic"
     fleet "Merchants Core Small" 800
     fleet "Merchants Core Large" 1200
 
@@ -2106,27 +2106,27 @@ event "pug territory liberated"
   system "Orvala"
     government "Free Worlds"
   system "Nocte"
-    government Republic
+    government "Republic"
   system "Zeta Aquilae"
     government "Free Worlds"
   system "Rasalhague"
     government "Free Worlds"
   system "Vega"
-    government Republic
+    government "Republic"
   system "Altair"
-    government Republic
+    government "Republic"
   system "Fomalhaut"
-    government Syndicate
+    government "Syndicate"
   system "Delta Capricorni"
-    government Syndicate
+    government "Syndicate"
   system "Alderamin"
-    government Syndicate
+    government "Syndicate"
   system "Diphda"
-    government Syndicate
+    government "Syndicate"
   system "Caph"
-    government Republic
+    government "Republic"
   system "Deneb"
-    government Neutral
+    government "Neutral"
     fleet "Merchants Core Small" 400
     fleet "Merchants Core Large" 600
     fleet "Merchants North Small" 1000
@@ -2180,7 +2180,7 @@ event "pug link restoration 4"
 
 
 event "battle of algenib"
-  government Republic
+  government "Republic"
     "attitude toward"
       "Syndicate (Extremist)" -.1
   government "Navy (Oathkeeper)"
@@ -2193,12 +2193,12 @@ event "battle of algenib"
 
 event "navy occupies algenib"
   system "Algenib"
-    government Republic
+    government "Republic"
     fleet "Republic Small" 500
     fleet "Republic Large" 800
     fleet "Syndicate Large" 800
   system "Gienah"
-    government Republic
+    government "Republic"
     fleet "Republic Small" 800
     fleet "Republic Large" 1200
     fleet "Syndicate Large" 1000
@@ -2206,13 +2206,13 @@ event "navy occupies algenib"
 
 event "navy done with algenib"
   system "Algenib"
-    government Pirate
+    government "Pirate"
     fleet "Pirates Core Small" 300
     fleet "Pirates Core Large" 500
     fleet "Syndicate Large" 800
     fleet "Merchants Core Small" 600
   system "Gienah"
-    government Pirate
+    government "Pirate"
     fleet "Pirates Core Small" 500
     fleet "Pirates Core Large" 800
     fleet "Syndicate Large" 5000
@@ -2390,29 +2390,29 @@ event "fwc pug invasion"
   link "Zeta Aquilae" Deneb
   link Rasalhague Deneb
   "reputation: Pug" <?= -1000
-  government Pug
+  government "Pug"
     "attitude toward"
       "Free Worlds" -.01
   system "Zeta Aquilae"
-    government Pug
+    government "Pug"
     fleet "Merchants South Small" 1000
     fleet "Merchants South Large" 3000
     fleet "Pug Small" 1000
     fleet "Pug Large" 2000
   system "Rasalhague"
-    government Pug
+    government "Pug"
     fleet "Merchants South Small" 1500
     fleet "Merchants South Large" 2000
     fleet "Pug Small" 800
     fleet "Pug Large" 2000
   system "Orvala"
-    government Pug
+    government "Pug"
     fleet "Merchants South Small" 3000
     fleet "Merchants South Large" 6000
     fleet "Pug Small" 5000
     fleet "Pug Large" 9000
   system "Altair"
-    government Pug
+    government "Pug"
     fleet "Merchants Core Small" 400
     fleet "Merchants Core Large" 600
     fleet "Merchants North Small" 1000
@@ -2422,19 +2422,19 @@ event "fwc pug invasion"
   system "Vega"
     government "Free Worlds"
   system "Delta Capricorni"
-    government Pug
+    government "Pug"
     fleet "Merchants Core Small" 700
     fleet "Merchants Core Large" 800
     fleet "Pug Small" 800
     fleet "Pug Large" 1100
   system "Alderamin"
-    government Pug
+    government "Pug"
     fleet "Merchants Core Small" 2000
     fleet "Merchants Core Large" 3200
     fleet "Pug Small" 1200
     fleet "Pug Large" 2500
   system "Nocte"
-    government Pug
+    government "Pug"
     fleet "Merchants North Small" 1500
     fleet "Merchants North Large" 5000
     fleet "Miners North" 1600
@@ -2462,7 +2462,7 @@ event "fwc pug invasion"
 
 event "fwc pug peaceful"
   "reputation: Pug" = 1
-  government Pug
+  government "Pug"
     "attitude toward"
       "Free Worlds" 0
 
@@ -2527,7 +2527,7 @@ event "fwc peace with the navy"
   planet "Mainsail"
     "required reputation" 40
   system "Vega"
-    government Pug
+    government "Pug"
     fleet "Merchants North Small" 800
     fleet "Merchants North Large" 3000
     fleet "Miners North" 5000
@@ -2612,13 +2612,13 @@ event "fwc reconnect vega"
 
 event "fwc pug defeated"
   system "Altair"
-    government Republic
+    government "Republic"
   system "Delta Capricorni"
-    government Syndicate
+    government "Syndicate"
   system "Alderamin"
-    government Syndicate
+    government "Syndicate"
   system "Deneb"
-    government Neutral
+    government "Neutral"
     fleet "Merchants Core Small" 400
     fleet "Merchants Core Large" 600
     fleet "Merchants North Small" 1000
@@ -2628,7 +2628,7 @@ event "fwc pug defeated"
     fleet "Syndicate Small" 1200
     fleet "Syndicate Large" 2000
   system "Nocte"
-    government Republic
+    government "Republic"
   planet "Rand"
     security 0.05
   planet "Oblivion"
