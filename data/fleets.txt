@@ -73,6 +73,7 @@
 #   "Marauder fleet VIII"
 #   "Marauder fleet IX"
 #   "Marauder fleet X"
+#   "Pirate Miners"
 #   "Pirates Core Large"
 #   "Pirates Core Small"
 #   "Pirates North Large"
@@ -2136,10 +2137,12 @@ fleet "Miners Core"
   personality
     confusion 20
     timid frugal mining harvests
-  variant 2
-    "Star Barge (Miner)"
   variant 1
+    "Star Freighter (Miner)"
+  variant 2
     "Wasp (Miner)"
+  variant 3
+    "Star Barge (Miner)"
 
 fleet "Miners Deep"
   government "Merchant"
@@ -2158,10 +2161,16 @@ fleet "Miners North"
   personality
     confusion 20
     timid frugal mining harvests
-  variant 2
-    "Light Shuttle (Miner)"
   variant 1
+    "Hauler I (Miner)"
+  variant 2
+    "Hauler II (Miner)"
+  variant 3
+    "Hauler III (Miner)"
+  variant 12
     "Berserker (Miner)"
+  variant 18
+    "Light Shuttle (Miner)"
 
 fleet "Miners South"
   government "Merchant"
@@ -2170,10 +2179,12 @@ fleet "Miners South"
   personality
     confusion 20
     timid frugal mining harvests
-  variant 2
-    "Sparrow (Miner)"
   variant 1
+    "Argosy (Miner)"
+  variant 2
     "Fury (Miner)"
+  variant 3
+    "Sparrow (Miner)"
 
 
 
@@ -2796,6 +2807,21 @@ fleet "Marauder fleet X"
     "Marauder Quicksilver"
     "Marauder Arrow"
     "Marauder Bounder"
+
+
+fleet "Pirate Miners"
+  government "Pirate"
+  names "pirate"
+  cargo 0
+  personality
+    confusion 20
+    frugal mining harvests
+  variant 1
+    "Hauler I (Miner)"
+  variant 2
+    "Berserker (Miner)"
+  variant 3
+    "Sparrow (Miner)"
 
 
 fleet "Pirates Core Large"
