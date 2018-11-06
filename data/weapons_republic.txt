@@ -2,7 +2,7 @@ outfit "Gatling Round"
   category "Ammunition"
   thumbnail "outfit/bullet"
   cost 2
-  "mass" .002
+  "mass" .001
   "plunderable" 1
   "gatling round capacity" -1
   description "This simple cartridge is the ammunition for the Gatling Gun, with a projectile of depleted nuclear fuel or an illuminated tracer round. Since this ammunition is primarily manufactured on pirate worlds by slave children in poor working conditions, muzzle velocity can vary by up to 30%, and tracer distribution is seldom uniform."
@@ -12,8 +12,8 @@ outfit "Gatling Bullet Boxes"
   category "Ammunition Storage"
   thumbnail "outfit/bullet_storage"
   cost 3000
-  "mass" 1
-  "outfit space" -4
+  "mass" .5
+  "outfit space" -2
   "gatling round capacity" 1500
   ammo "Gatling Round"
   description "Bullet Boxes are used to store extra ammunition for Gatling Guns."
@@ -23,10 +23,10 @@ outfit "Gatling Gun"
   thumbnail "outfit/bullet_launcher"
   cost 10000
   "mass" 5
-  "outfit space" -8
-  "weapon capacity" -8
+  "outfit space" -7
+  "weapon capacity" -7
   "gun ports" -1
-  "gatling round capacity" 1500
+  "gatling round capacity" 0
   weapon
     sprite "projectile/tinyflare"
       "random start frame"
