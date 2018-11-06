@@ -1416,7 +1416,7 @@ mission "FWC Pug 3A"
         goto introductions
       label introductions
       `  Standing next to Danforth is someone you think might be his bodyguard: a dark-skinned woman dressed entirely in black. Even the whites of her eyes are black: when she gets closer, you can see that it is actually a scleric tattoo, an intricate Celtic knotwork pattern inked into the whites of her eyes. Surprisingly, Katya recognizes her. "Raven!" says Katya. You aren't sure if Katya sounds happy to see her, or scared.`
-      `  "Hello Councilor," says the woman.`
+      `  "Hello Councillor," says the woman.`
       `  Danforth says, "We hear you have come from the disconnected territory, and that you bring word of a potential alien invasion. Come with us, please." He ushers you into one of the Navy warships that are parked nearby, and into a room you assume is his private office; the guards check you and Katya for weapons and then leave you alone with Danforth and Raven. "Now," says Danforth, "you will answer our questions."`
       `  He gestures to Raven, who walks up to you and holds out her hands. "Take my hands, please, Captain," she says.`
       choice
@@ -1438,13 +1438,13 @@ mission "FWC Pug 3A"
       
       label reopen
       `  "No," says Freya, "but I at least discovered it might be possible. The links aren't severed completely, you see. There's some sort of distortion signal, actively interfering with them. If we can eliminate the interference, the links might come back. But the interference is coming from the other end."`
-      `  Danforth says, "Captain <last>, we will release Miss Winters to travel with you, provided that Councilor Reynolds remains here in her place. If you succeed in restoring a hyperspace link to the disconnected systems, we will release both of them. Is that an acceptable deal?"`
+      `  Danforth says, "Captain <last>, we will release Miss Winters to travel with you, provided that Councillor Reynolds remains here in her place. If you succeed in restoring a hyperspace link to the disconnected systems, we will release both of them. Is that an acceptable deal?"`
       choice
         `  "Okay, we will agree to that."`
           goto end
         `  "What if Freya can't restore the link?"`
       
-      `  "Then Councilor Reynolds will remain here as our prisoner," he says.`
+      `  "Then Councillor Reynolds will remain here as our prisoner," he says.`
       `  "Go, <first>," says Katya. "It's our best chance."`
       label end
       `  You return to your ship with Freya, who is carrying a large collection of sensors and equipment. "Let's try <planet> first," she says, "and see if there's any alien technology there that we can use. I hope you still have some ships left in your battle fleet to help defend us."`
@@ -2288,7 +2288,7 @@ mission "FWC End"
     conversation
       `You find Admiral Danforth inspecting the Pug spaceport. "This is all very odd," he says. "I'm glad the aliens appear to have left, but I wish we knew where they came from and whether they're likely to return."`
       `  Freya says, "What should we do now?"`
-      `  "I've contacted New Austria and told them that Councilor Reynolds is free to leave," he says. "She told me that your Senate has agreed to the Free Worlds being a semi-autonomous district of the Republic, similar to the Syndicate systems. She also asked that you and Captain <last> meet up with her and Alondo Gruyere on Earth, where they will be meeting with Parliament. I sent a report to Earth that places a very heavy emphasis on the role that the Free Worlds played in this victory, so Parliament ought to be quite willing to negotiate with you."`
+      `  "I've contacted New Austria and told them that Councillor Reynolds is free to leave," he says. "She told me that your Senate has agreed to the Free Worlds being a semi-autonomous district of the Republic, similar to the Syndicate systems. She also asked that you and Captain <last> meet up with her and Alondo Gruyere on Earth, where they will be meeting with Parliament. I sent a report to Earth that places a very heavy emphasis on the role that the Free Worlds played in this victory, so Parliament ought to be quite willing to negotiate with you."`
       choice
         `  "Thank you. It's been an honour to fight alongside you."`
           goto honour

@@ -327,7 +327,7 @@ mission "FW Reconciliation 2B"
       `On Farpoint, you are met by Admiral Danforth, the leader of the Oathkeepers who previously assisted you to drive the Alphas and their mercenary fleet away from Poisonwood. He is glad to see you again, and you express your sympathy over the loss of Commander Nguyen; Danforth tells you that his killer was never found.`
       label introductions
       `  Ijs and Katya introduce themselves to Danforth, and Katya says, "Sir, I was a child on Hope when the colony was evacuated. Your ship carried my family to safety, and I've never forgotten how every night during our journey, you would walk through the cargo bay where we were staying and check to make sure all our needs were met. I've never had a chance before now to thank you in person."`
-      `  Danforth is surprised. "Councilor Reynolds," he says, "thank you. I followed your career in Parliament with some interest, but it is a shame that we never met in person until now. But I am glad we have this chance to work together at last."`
+      `  Danforth is surprised. "Councillor Reynolds," he says, "thank you. I followed your career in Parliament with some interest, but it is a shame that we never met in person until now. But I am glad we have this chance to work together at last."`
       `  Raven says, "Governor Edricka mentioned a plan for tracking down the Syndicate executives who were behind the attacks in the Castor and Pollux systems."`
       `  "Indeed," says Danforth. "Southeast of here is a region of uninhabited star systems, a sort of back entrance into Syndicate space. Few ships travel through there, because there is nowhere to refuel, but with a ramscoop or enough fuel capacity, travel is possible. One of the first inhabited worlds on the other side is the lawless world of Stormhold. There, you can surely find a contact who knows enough about the inner workings of the Syndicate to tell you the home of at least a few of our targets... for a price." He hands Katya a large stack of credit chips.`
       `  Raven says, "I'm going to stay here with the Oathkeepers. Captain <last>, it's been a pleasure working with you. We're counting on you to fetch us this information and return here as quickly as possible."`
@@ -530,7 +530,7 @@ mission "FW Reconciliation Break"
       label wait
       `  Alondo says, "We should use this time of peace well, to prepare for another battle ahead. Those Syndicate ships on New Tibet had equipment I've never seen before, and who knows what else the Syndicate has up their sleeves - especially if they've begun producing nuclear weapons. Captain <last>, you should take this time to make sure your ship is as well armed as possible for our next strike. Ijs and Katya, what will you do with this time?"`
       `  Katya glances at Ijs and then says, "I would certainly welcome a small sabbatical, and a chance to spend time together and catch up on all we've missed. Professor Springborn, do you think the Conservatory would extend your leave of absence long enough for us to make a trip to <planet>?"`
-      `  Ijs laughs. "That sounds wonderful, Councilor," he says. "<first>, do you think you could bring us there on your way to wherever you go next?"`
+      `  Ijs laughs. "That sounds wonderful, Councillor," he says. "<first>, do you think you could bring us there on your way to wherever you go next?"`
       `  You tell him you would be glad to, and you all get ready for yet another journey together.`
         accept
   
@@ -936,7 +936,7 @@ mission "FW Pug 1 Return"
   
   on offer
     conversation
-      `You receive an urgent message from JJ: "Captain <last>, return to New Tibet at once! We've received word that the Syndicate is somehow severing their hyperspace connections to the rest of human space. We're calling an emergency council meeting, to convene as soon as you arrive here."`
+      `You receive an urgent message from JJ: "Captain <last>, return to New Tibet at once! We've received word that the Syndicate is somehow severing their hyperspace connections to the rest of human space. We're calling an emergency Council meeting, to convene as soon as you arrive here."`
         decline
 
 
@@ -1463,7 +1463,7 @@ mission "FW Pug 3A"
     conversation
       `Your ship caused quite a stir when it entered the Sol system via jump drive. Fortunately Parliament allowed you to land in one of their private hangars, but even so a few press drones managed to follow your ship into the hangar and have cameras pointed at you from the moment you and Alondo disembark.`
       `  You report to Parliament that the hyperspace links are being cut not by the Syndicate, but by an alien species, and that the Syndicate has offered to supply jump drives for an attack fleet if the Republic and the Free Worlds will supply the ships. You also report that the aliens' intention is to spread out to occupy more of human space and to demand a fraction of the resource production of all human planets, supposedly in the name of bringing "peace."`
-      `  One of the Senators asks, "Do you think we have any chance of defeating the aliens?"`
+      `  One of the senators asks, "Do you think we have any chance of defeating the aliens?"`
       choice
         `  "It's possible. They all live in a single star system, so we outnumber them."`
           goto questions
