@@ -11,7 +11,7 @@ mission "Deep Mystery Cube [0]"
     attributes deep
   destination
     distance 7 16
-    government Republic "Free Worlds" Syndicate Neutral Hai Quarg
+    government "Deep" "Free Worlds" "Hai" "Neutral" "Quarg" "Republic" "Syndicate"
   on accept
     dialogue "You pick up the mystery package in an unmarked and uninhabited warehouse. It is a small black cube about two centimeters to a side, surprisingly heavy for its size, with no markings of any kind. Odd."
   on complete
@@ -38,7 +38,7 @@ mission "Deep Mystery Cube [1]"
     attributes deep
   destination
     distance 9 20
-    government Republic "Free Worlds" Syndicate Neutral Hai Quarg
+    government "Deep" "Free Worlds" "Hai" "Neutral" "Quarg" "Republic" "Syndicate"
   on accept
     dialogue "You pick up the mystery package in an unmarked and uninhabited warehouse. It is a small black cube about two centimeters to a side, surprisingly heavy for its size, with no markings of any kind. Odd."
   on complete
@@ -65,7 +65,7 @@ mission "Deep Mystery Cube [2]"
     attributes deep
   destination
     distance 9 20
-    government Republic "Free Worlds" Syndicate Neutral Hai Quarg
+    government "Deep" "Free Worlds" "Hai" "Neutral" "Quarg" "Republic" "Syndicate"
   on accept
     dialogue "You pick up the mystery package in an unmarked and uninhabited warehouse. It is a small black cube about two centimeters to a side, surprisingly heavy for its size, with no markings of any kind. Odd."
   on complete
@@ -92,7 +92,7 @@ mission "Deep Mystery Cube [3]"
     attributes deep
   destination
     distance 9 20
-    government Republic "Free Worlds" Syndicate Neutral Hai Quarg
+    government "Deep" "Free Worlds" "Hai" "Neutral" "Quarg" "Republic" "Syndicate"
   on accept
     dialogue "You pick up the mystery package in an unmarked and uninhabited warehouse. It is a small black cube about two centimeters to a side, surprisingly heavy for its size, with no markings of any kind. Odd."
   on complete
@@ -118,7 +118,7 @@ mission "Mystery retrieval"
     attributes deep
   stopover
     distance 9 20
-    government Republic "Free Worlds" Syndicate Neutral Hai Quarg
+    government "Deep" "Free Worlds" "Hai" "Neutral" "Quarg" "Republic" "Syndicate"
   on stopover
     dialogue "As instructed, you open a storage locker near your landing site and pick up the mystery package: a small black cube about two centimeters to a side, surprisingly heavy for its size, with no markings of any kind. Odd."
   on complete
@@ -166,14 +166,14 @@ mission "Escort science vessel"
     attributes quarg pirate volcanic frontier "dirt belt" north south
     distance 6 50
   npc
-    government Pirate
+    government "Pirate"
     personality nemesis waiting plunders
     system
       distance 2 3
     fleet "Pirates North Large"
   
   npc accompany save
-    government Merchant
+    government "Merchant"
     personality escort timid
     fleet
       names "deep"
