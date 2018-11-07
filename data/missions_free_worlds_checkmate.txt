@@ -2306,12 +2306,11 @@ mission "FWC End"
     event "navy arsenals available"
     event "particle turret available"
     event "syndicate tech available"
-    event "tarazed joins the free worlds"
     set "free worlds plot completed"
     set "main plot completed"
     conversation
       `You arrive in the Parliament building just as Alondo and Katya have finished meeting with them. "Good news," says Katya. "We're all officially pardoned. And you, Captain <last>, have become something of a hero."`
-      `  "Better yet," says Alondo, "the war with the Republic is over. We agreed to limiting our territory in the Dirt Belt to its current size, and to a very minor tax to cover the cost of Navy protection if the aliens attack again or some other major catastrophe strikes. In return, the Free Worlds have been granted autonomy from the Republic, and Tarazed and adjacent systems have been given permission to join the Free Worlds."`
+      `  "Better yet," says Alondo, "the war with the Republic is over. We agreed to limiting our territory to its current size, and to a very minor tax to cover the cost of Navy protection if the aliens attack again or some other major catastrophe strikes. In return, the Free Worlds have been granted autonomy from the Republic."`
       `  "Furthermore," says Katya, "you've been given permission to use the Navy arsenals and to purchase Deep Sky's newest weapons. Also, as their own expression of gratitude, the Syndicate members of Parliament have offered to make some of their new technology, developed during the war, available to all of us at an affordable price."`
       choice
         `  "That's very generous of them."`

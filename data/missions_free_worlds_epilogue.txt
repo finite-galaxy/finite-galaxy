@@ -2,7 +2,7 @@ mission "Geminus Rebuilt"
   landing
   invisible
   to offer
-    has "main plot completed"
+    has "free worlds plot completed"
   on offer
     event "geminus rebuilt" 90
     fail
@@ -21,6 +21,31 @@ mission "Proton Turret Available"
     conversation
       `After you've landed, your ship is targetted by advertisements, informing you that the Syndicate's newest weapon, the Proton Turret, is now for sale on Hephaestus. Apparently it has been developed as an answer to the Delta V's Plasma Turret.`
         decline
+
+
+
+mission "Tarazed Referendum"
+  landing
+  invisible
+  to offer
+    has "free worlds plot completed"
+  on offer
+    event "tarazed referendum" 180
+    fail
+
+
+
+mission "Tarazed joins the Free Worlds"
+  landing
+  source
+    government "Free Worlds" "Neutral" "Republic"
+  to offer
+    has "event: tarazed referendum"
+  on offer
+    event "tarazed joins the free worlds"
+    log "Tarazed and nearby systems have decided to join the Free Worlds, as a result of a referendum on Wayfarer."
+    conversation
+      `Yesterday, about six months since the war ended, Wayfarer organized a referendum on its future. The results are now in: a clear majority voted in favour of joining the Free Worlds. Nearby systems have decided they follow Tarazed's lead. Although disappointed with the outcome, Parliament on Earth announced they will respect the referendum. Meanwhile the Senate on Bourne declared today a public holiday to celebrate the accession of the new systems.`
 
 
 
