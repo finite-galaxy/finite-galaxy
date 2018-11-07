@@ -468,9 +468,9 @@ interface "planet"
   
   visible if "has shipyard"
   sprite "ui/planet dialogue button"
-    centre 280 90
+    centre 280 150
   button s "_Shipyard"
-    centre 280 90
+    centre 280 150
     dimensions 140 40
     size 18
     align right
@@ -478,9 +478,9 @@ interface "planet"
   
   visible if "has outfitter"
   sprite "ui/planet dialogue button"
-    centre 280 150
+    centre 280 210
   button o "_Outfitter"
-    centre 280 150
+    centre 280 210
     dimensions 140 40
     size 18
     align right
@@ -496,12 +496,12 @@ interface "planet"
     align left
     pad 10 0
   sprite "ui/planet dialogue button"
-    centre 280 210
+    centre -400 210
   button h "_Hire Crew"
-    centre 280 210
+    centre -400 210
     dimensions 140 40
     size 18
-    align right
+    align left
     pad 10 0
   
   visible if "has trade"
@@ -516,9 +516,9 @@ interface "planet"
   
   visible if "has bank"
   sprite "ui/planet dialogue button"
-    centre -400 210
+    centre -400 270
   button b "_Bank"
-    centre -400 210
+    centre -400 270
     dimensions 140 40
     size 18
     align left
@@ -526,12 +526,12 @@ interface "planet"
   
   visible if "has spaceport"
   sprite "ui/planet dialogue button"
-    centre -400 270
+    centre 280 90
   button p "Space_port"
-    centre -400 270
+    centre 280 90
     dimensions 140 40
     size 18
-    align left
+    align right
     pad 10 0
   
   visible if "has ship"
