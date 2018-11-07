@@ -16828,7 +16828,7 @@ system "Orbona"
     sprite planet/ice1
     distance 1210.49
     period 315.035
-    object
+    object "Obscurity"
       sprite planet/rock3-b
       distance 175
       period 19.7858
@@ -26229,6 +26229,18 @@ planet "Oblivion"
   tribute 500
     threshold 3000
     fleet "Militia Large" 8
+
+planet "Obscurity"
+  attributes pirate moon
+  landscape land/canyon03
+  description `Although generally believed to be uninhabited, it turns out this rocky moon has a hidden pirate base, called "Obscurity". Because it has no atmosphere, the surface temperature fluctuates from very hot to exremely cold, depending on whether this moon is on the sun side or on the opposite side of its planet, which is also why all human activity takes place underground.`
+  description `   Nothing grows here and there are no valuable materials on Obscurity, therefore everything has to be imported, and there is a lively trade in commodities, without anyone asking where it comes from, obviously.`
+  spaceport `The spaceport is located underground in what looks like an abandoned mining operation. You have to park your ship at some distance and walk towards it in your spacesuit. Because it's so small, it's always hot and lively inside, even if there are only a few people around. You can order drinks, refuel your ship, sell harvested materials, and trade in commodities, often in the same corner.`
+  government "Pirate"
+  security 0
+  tribute 100
+    threshold 500
+    fleet "Pirates North Large" 3
 
 planet "Pearl"
   attributes paradise tourism
