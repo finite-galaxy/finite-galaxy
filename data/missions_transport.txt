@@ -29,10 +29,10 @@ mission "Courier 1"
   to offer
     random < 5
   source
-    government "Republic" "Free Worlds" "Syndicate" "Quarg" "Neutral"
+    government "Deep" "Free Worlds" "Neutral" "Quarg" "Republic" "Syndicate"
   destination
     distance 4 10
-    government "Republic" "Free Worlds" "Syndicate" "Quarg" "Neutral"
+    government "Deep" "Free Worlds" "Neutral" "Quarg" "Republic" "Syndicate"
   on offer
     dialogue `As you are walking through the spaceport, a man approaches you and says, "Excuse me, Captain. I took on a rush delivery to <planet>, but my ship needs repairs and there's no way I can make it there before <day>. Can you take this job for me?"`
   on complete
@@ -52,10 +52,10 @@ mission "Courier 2"
   to offer
     random < 5
   source
-    government "Republic" "Free Worlds" "Syndicate" "Quarg" "Neutral"
+    government "Deep" "Free Worlds" "Neutral" "Quarg" "Republic" "Syndicate"
   destination
     distance 7 14
-    government "Republic" "Free Worlds" "Syndicate" "Quarg" "Neutral"
+    government "Deep" "Free Worlds" "Neutral" "Quarg" "Republic" "Syndicate"
   on offer
     dialogue `A woman in the spaceport flags you down and asks, "Excuse me, Captain. I have small package that needs to get to <planet> by <day>. Can you carry it for me?"`
   on complete
@@ -74,10 +74,10 @@ mission "Courier 3"
   to offer
     random < 5
   source
-    government "Republic" "Free Worlds" "Syndicate" "Quarg" "Neutral"
+    government "Deep" "Free Worlds" "Neutral" "Quarg" "Republic" "Syndicate"
   destination
     distance 7 14
-    government "Republic" "Free Worlds" "Syndicate" "Quarg" "Neutral"
+    government "Deep" "Free Worlds" "Neutral" "Quarg" "Republic" "Syndicate"
   on offer
     dialogue `A woman in a suit walks up to you and says, "Pardon me, Captain. I represent a recently deceased client here on <origin> whose legal papers need to be delivered to his next of kin on <destination>. Would you be willing to do some courier work? The papers must be delivered by <day>."`
   on complete
@@ -95,10 +95,10 @@ mission "Courier 4"
   to offer
     random < 5
   source
-    government "Republic" "Free Worlds" "Syndicate" "Quarg" "Neutral"
+    government "Deep" "Free Worlds" "Neutral" "Quarg" "Republic" "Syndicate"
   destination
     distance 7 14
-    government "Republic" "Free Worlds" "Syndicate" "Quarg" "Neutral"
+    government "Deep" "Free Worlds" "Neutral" "Quarg" "Republic" "Syndicate"
     attributes "rich"
   on offer
     conversation
@@ -530,7 +530,7 @@ mission "Humanitarian 1"
     random < 5
     "combat rating" > 0
   source
-    government "Republic" "Free Worlds" "Syndicate" "Quarg" "Neutral"
+    government "Deep" "Free Worlds" "Neutral" "Quarg" "Republic" "Syndicate"
   destination
     government "Pirate"
     distance 2 10
@@ -568,7 +568,7 @@ mission "Humanitarian 2"
     random < 5
     "combat rating" > 0
   source
-    government "Republic" "Free Worlds" "Syndicate" "Quarg" "Neutral"
+    government "Deep" "Free Worlds" "Neutral" "Quarg" "Republic" "Syndicate"
   destination
     government "Pirate"
     distance 2 10
@@ -1164,7 +1164,7 @@ mission "Smuggler's Den, Part 2"
 mission "Smuggler's Den: Payment"
   landing
   source
-    government "Republic" "Free Worlds" "Syndicate" "Quarg" "Neutral"
+    government "Deep" "Free Worlds" "Neutral" "Quarg" "Republic" "Syndicate"
     near Sol 100
   to offer
     has "event: smuggler's den: payment"
@@ -1849,10 +1849,10 @@ mission "A wolf, a goat, and a cabbage"
     "day" == 1
     "month" == 4
   source
-    government "Republic" "Free Worlds" "Syndicate" "Neutral"
+    government "Deep" "Free Worlds" "Neutral" "Republic" "Syndicate"
   destination
     distance 3 5
-    government "Republic" "Free Worlds" "Syndicate" "Neutral"
+    government "Deep" "Free Worlds" "Neutral" "Republic" "Syndicate"
   cargo "wolf" 1
   
   on enter

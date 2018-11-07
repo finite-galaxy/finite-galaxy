@@ -187,10 +187,9 @@ mission "Pact Recon 3"
     fleet "Pirates North Large"
   
   on complete
-    set "licence: Nest"
     payment 80000
     dialogue
-      `You report to Freya that you found a sizable pirate fleet in the Naper system, as well as spotting some pirates elsewhere. She thanks you, and pays you <payment>. "Thank you for your assistance,  Captain <last>. And here is something extra," she says, handing over a sealed envelope. "It contains a licence. Southbound Shipyards recently started producing militia carriers. The smallest model, the Nest, is for sale to registered merchants, so I figure you might be interested in it as well." You thank her for her kindness. "Not at all," she says, "the pleasure is mine. Now I have to go, another appointment. Again, I'll be in touch if we need you."`
+      `You report to Freya that you found a sizable pirate fleet in the Naper system, as well as spotting some pirates elsewhere. She thanks you, and pays you <payment>. "Thank you for your assistance," she says. "Again, I'll be in touch if we need you."`
 
 
 
@@ -348,7 +347,7 @@ mission "FW Recon 1"
     log "Volunteered to do some recon work for the Free Worlds, as long as there is nothing illegal involved."
   
   npc "scan outfits"
-    government Republic
+    government "Republic"
     personality staying uninterested
     fleet
       names "republic capital"
@@ -1827,7 +1826,7 @@ mission "FW Commitment"
       `Soon after you land, a courier arrives at your ship and hands you a formal looking letter. It reads:`
       ``
       `Dear Captain <last>,`
-      `  The Free Worlds Council would like to thank you for the invaluable assistance you have rendered to us recently. We are prepared to offer you a position as an officer in our militia, remaining in command of your own ship. Your starting salary will be 300 credits per diem. You will also be given a licence to purchase our medium militia carrier, the Roost. If you want to join us, please report to our headquarters on Bourne at your earliest convenience.`
+      `  The Free Worlds Council would like to thank you for the invaluable assistance you have rendered to us recently. We are prepared to offer you a position as an officer in our militia, remaining in command of your own ship. Your starting salary will be 300 credits per diem. You will also be given a licence to purchase our small militia carrier, the Nest. If you want to join us, please report to our headquarters on Bourne at your earliest convenience.`
       `  Sincerely,`
       `        Tomek Voigt`
       `        Jean-Jacques Soleau`
@@ -1978,7 +1977,7 @@ mission "Defend Sabik"
       `  Tomek says, "We can't let them take this system, or they'll have us completely bottled up. This is where it begins. We need to fight. Get to your ships, quickly! But if you can, disable their ships instead of destroying them. These are Navy ships after all, and most of them don't want war any more than we do." You hurry to join all the other ships taking off to defend the system.`
         launch
     
-    set "licence: Roost"
+    set "licence: Nest"
     "salary: Free Worlds" = 300
     event "joined the free worlds"
     event "start of hostilities"

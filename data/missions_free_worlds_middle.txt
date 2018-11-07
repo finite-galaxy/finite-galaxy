@@ -848,7 +848,7 @@ mission "FW Northern 3"
   
   on complete
     log "Agreed to become a member of the Free Worlds Council, taking Tomek's spot."
-    set "licence: Dreadnought"
+    set "licence: Skein"
     "salary: Free Worlds" = 2500
     conversation
       `As you are landing on <planet>, Freya says, "I miss Katya. It's hard being the only woman on the Council."`
@@ -858,7 +858,7 @@ mission "FW Northern 3"
       `  "I don't know," she says. "I hope the Navy will keep their promise. But in the meantime, three people on Council is too few. We didn't want to say anything to you until the Senate cleared it, but we've nominated you to take Tomek's spot on the Council. What do you say?"`
       choice
         `  "I'd be honoured. Thank you."`
-      `  She grins. "Don't mention it. You've been with us since the beginning, and we've all come to trust what you have to say. I wish we could throw you a big dinner or something to celebrate, but... well, we're all busy with the war right now. But Alondo and JJ both said to tell you they're glad to have you on board. And you'll get a salary increase, of course. Which you ought to celebrate by buying us both a few drinks in the spaceport bar before you leave. Okay?"`
+      `  She grins. "Don't mention it. You've been with us since the beginning, and we've all come to trust what you have to say. I wish we could throw you a big dinner or something to celebrate, but... well, we're all busy with the war right now. But Alondo and JJ both said to tell you they're glad to have you on board. You'll get a licence to purchase the Skein and, of course, a salary increase. Which you ought to celebrate by buying us both a few drinks in the spaceport bar before you leave. Okay?"`
       choice
         `  "Okay, I'll meet you back at the spaceport in a few hours."`
       `  "Great," she says, smiling. "See you then." She picks up her suitcase, and hurries over to the shipyard.`
@@ -1528,8 +1528,9 @@ mission "FW Albatross 1"
     dialogue `You have failed an essential Free Worlds mission. If you want to complete the story line, revert to the autosave or another earlier snapshot of the game.`
   
   on offer
+    set "licence: Dreadnought"
     conversation
-      `Freya comes to your ship soon after you land. She is beaming, and looks more relaxed than you have seen her in months. "Southbound Shipyards is churning out Dreadnoughts now!" she says. "Still only at a rate of one a week or so, but for a ship this big that's quite impressive. And it means you can now buy one of your own, if you've got enough savings. Seriously, even if you can't afford one yet, be sure to stop by the shipyard and check them out." She is clearly very proud.`
+      `Freya comes to your ship soon after you land. She is beaming, and looks more relaxed than you have seen her in months. "Southbound Shipyards is churning out Dreadnoughts now!" she says. "Still only at a rate of one a week or so, but for a ship this big that's quite impressive. And it means you can now buy one of your own, if you've got enough savings; here's your licence. Seriously, even if you can't afford one yet, be sure to stop by the shipyard and check them out." She is clearly very proud.`
       choice
         `  "Great job, Freya! I'm really glad to have a talented engineer on the Council to help get things done."`
         `  "Glad to hear it. Now, what is our next action against the pirates?"`
