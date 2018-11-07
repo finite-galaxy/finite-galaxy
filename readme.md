@@ -201,6 +201,11 @@ See `changelog.txt`, `ship_overview.txt`, and https://github.com/finite-galaxy/f
 * Sort outfits and ships by size or mass instead of alphabetically
 * Add “Manufacturer” to ships
 * Add quotation mark preference
+* Add support for landing fees
+* Add fuel cost, one credit per fuel at spaceports, twice that when hailing ships in space
+* Separate bank from spaceport
+* De-hardcode jump radius
+* Increase jump radius if you have multiple jump drives installed, perhaps 100*(jump drive)^0.5
 * Make hyperjump fuel proportional to ship's total mass
 * Make ship explosion ‘weapon’ proportional to mass (base, empty, or total mass)
 * Rename “New {Country}” planets to less culturally biased names
