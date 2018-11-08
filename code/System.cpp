@@ -443,7 +443,7 @@ void System::SetDate(const Date &date)
     // "offset" is used to allow binary orbits; the second object is offset
     // by 180 degrees.
     object.angle = Angle(now * object.speed + object.offset);
-    object.position = object.angle.Unit() * object.distance;
+    object.position = object.angle.Unit() * object.distance * 3;
     
     // Because of the order of the vector, the parent's position has always
     // been updated before this loop reaches any of its children, so:
