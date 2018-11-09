@@ -130,7 +130,7 @@ mission "Deep Archaeology 1"
   source
     attributes "paradise" "north" "near earth"
     near Miaplacidus 1 20
-  destination Vinci
+  destination "Vinci"
   to offer
     random < 15
     "combat rating" > 15
@@ -175,8 +175,8 @@ mission "Deep Archaeology 2"
   landing
   name "Deep Archaeology"
   description "Travel to <destination> and take wood fiber samples from an ancient church and from the trees that grow nearby."
-  source Vinci
-  destination Midgard
+  source "Vinci"
+  destination "Midgard"
   to offer
     has "Deep Archaeology 1: done"
   
@@ -191,8 +191,8 @@ mission "Deep Archaeology 3"
   landing
   name "Deep Archaeology"
   description "Return to <destination> with the wood samples that you retrieved from the church on <origin>."
-  source Midgard
-  destination Vinci
+  source "Midgard"
+  destination "Vinci"
   to offer
     has "Deep Archaeology 2: done"
   
@@ -219,19 +219,19 @@ mission "Deep Archaeology 3"
   
   npc
     personality waiting
-    government Republic
+    government "Republic"
     ship "Raven (Afterburner)" "D.P.S. Wyrd"
   
   npc
     personality waiting
     system Aspidiske
-    government Republic
+    government "Republic"
     ship "Raven (Afterburner)" "D.P.S. Skuld"
   
   npc
     personality waiting
-    system Gomeisa
-    government Republic
+    system "Gomeisa"
+    government "Republic"
     ship "Raven (Afterburner)" "D.P.S. Verthandi"
   
   on complete
@@ -254,8 +254,8 @@ mission "Deep Archaeology 3"
 mission "Deep Archaeology 4"
   name "Deep Archaeology"
   description "Return to <destination> with some specialized equipment for subterranean mapping."
-  source Vinci
-  destination Midgard
+  source "Vinci"
+  destination "Midgard"
   to offer
     has "Deep Archaeology 3: done"
   cargo "mapping equipment" 4
@@ -279,8 +279,8 @@ mission "Deep Archaeology 5"
   landing
   name "Deep Archaeology"
   description "Evade the ships that are chasing you and return to <destination>."
-  source Midgard
-  destination Vinci
+  source "Midgard"
+  destination "Vinci"
   to offer
     has "Deep Archaeology 4: done"
   cargo "mapping equipment" 4
@@ -309,7 +309,7 @@ mission "Deep Archaeology 5"
   
   npc
     personality heroic
-    government Deep
+    government "Deep"
     ship "Raven (Afterburner)" "D.P.S. Wyrd"
     ship "Raven (Afterburner)" "D.P.S. Skuld"
     ship "Raven (Afterburner)" "D.P.S. Verthandi"
@@ -466,7 +466,7 @@ mission "Expedition to Hope 1"
   source
     near Wei 2 8
     attributes "dirt belt"
-  destination Hope
+  destination "Hope"
   to offer
     random < 40
   cargo "scientific equipment" 4
@@ -500,10 +500,10 @@ mission "Expedition to Hope 2"
   landing
   name "Expedition to Hope"
   description "Transport the team of scientists home to <destination>."
-  source Hope
+  source "Hope"
   destination
     distance 2 5
-    government Republic "Free Worlds" Neutral
+    government "Free Worlds" "Neutral" "Republic"
   to offer
     has "Expedition to Hope 1: done"
   passengers 4
@@ -640,7 +640,7 @@ mission "Migrant Workers 1"
     attributes "dirt belt"
     attributes "farming"
     near "Zeta Aquilae" 1 100
-  destination Rand
+  destination "Rand"
   to offer
     random < 5
   
@@ -908,7 +908,7 @@ mission "Rim Archaeology 3B"
         accept
   
   npc evade
-    government Independent
+    government "Independent"
     personality waiting
     ship "Marauder Falcon (Engines)" "Oxyrhynchus"
   
@@ -962,9 +962,9 @@ mission "Rim Archaeology 4B"
         accept
   
   npc
-    government Merchant
+    government "Merchant"
     personality waiting
-    system Dabih
+    system "Dabih"
     ship "Marauder Arrow (Engines)" "Naukratis"
   
   on complete
@@ -995,7 +995,7 @@ mission "Rim Archaeology 5A"
         launch
   
   npc evade
-    government Pirate
+    government "Pirate"
     personality heroic waiting
     ship "Marauder Falcon (Weapons)" "Akhetaten"
     ship "Marauder Splinter (Weapons)" "Itjtawy"
@@ -1007,7 +1007,7 @@ mission "Rim Archaeology 5A"
     dialogue `The last of the pirate raiders have been driven off. Time to land and check if any damage was done to the dig.`
   
   npc
-    government Quarg
+    government "Quarg"
     system "Gamma Corvi"
     personality heroic
     ship "Wardragon" "Gloref Esa Kurayi"
@@ -1028,11 +1028,11 @@ mission "Rim Archaeology 5A"
 mission "Rim Archaeology 5B"
   landing
   invisible
-  source Zug
+  source "Zug"
   to offer
     has "Rim Archaeology 5A: done"
   npc kill
-    government Quarg
+    government "Quarg"
     personality heroic staying uninterested
     ship "Wardragon" "Gloref Esa Kurayi"
 
@@ -1041,7 +1041,7 @@ mission "Rim Archaeology 5B"
 mission "Rim Archaeology 6"
   landing
   source
-    government "Republic" "Free Worlds" "Syndicate" "Independent" "Neutral"
+    government "Deep" "Free Worlds" "Independent" "Neutral" "Republic" "Syndicate"
     near "Sol" 100
     attributes spaceport
   to offer
@@ -1180,7 +1180,7 @@ mission "Smuggler's Den: Payment"
 mission "Smuggler's Den: Follow Up"
   invisible
   landing
-  source Millrace
+  source "Millrace"
   to offer
     has "Smuggler's Den: Payment: offered"
   
@@ -1256,8 +1256,8 @@ mission "Terraforming 1"
   name "Terraforming Rand"
   description "Bring a delegation from Rand to the Academy of Planetary Sciences on Glory."
   minor
-  source Rand
-  destination Glory
+  source "Rand"
+  destination "Glory"
   passengers 2
   
   to offer
@@ -1286,8 +1286,8 @@ mission "Terraforming 2"
   landing
   name "Terraforming Rand"
   description "Return to Rand with a student who thinks she can terraform the planet cheaply."
-  source Glory
-  destination Rand
+  source "Glory"
+  destination "Rand"
   passengers 2
   to offer
     has "Terraforming 1: done"
@@ -1321,7 +1321,7 @@ mission "Terraforming 3"
   description "Plant a thruster on an asteroid to guide it into a collision with the northern pole of Rand."
   blocked "You'll need more cargo space in order to take the next mission from Eric and Alaric. Return here when you have <capacity>."
   cargo "thruster equipment" 10
-  source Rand
+  source "Rand"
   to offer
     has "Terraforming 2: done"
   
@@ -1354,31 +1354,9 @@ mission "Terraforming 3"
         accept
   
   npc assist
-    government Uninhabited
+    government "Uninhabited"
     personality derelict fleeing uninterested waiting pacifist mute
-    ship Asteroid
-      name "Target Asteroid"
-      sprite "asteroid/medium rock/spin"
-        "frame rate" 10
-      attributes
-        "fuel capacity" 1
-        "hull" 10000
-        "mass" 1000
-        "drag" 10
-        "heat dissipation" .1
-        "required crew" 0
-        "automaton" 1
-        "bunks" 0
-        "thrust" 10
-        "turn" 100
-        "thrusting energy" 1
-        "turning energy" 1
-        "energy generation" 3
-        "inscrutable" 1
-      explode "small explosion" 25
-      explode "medium explosion" 35
-      explode "large explosion" 45
-      explode "huge explosion" 30
+    ship "Asteroid" "Target Asteroid"
   
   on complete
     payment 20000
@@ -1391,7 +1369,7 @@ mission "Terraforming 3"
 mission "Terraforming 4"
   name "Terraforming Rand"
   description "Collect some hardy plants that can grow in a low-light environment from <destination>."
-  source Rand
+  source "Rand"
   destination "New Portland"
   to offer
     has "Terraforming 3: done"
@@ -1417,7 +1395,7 @@ mission "Terraforming 5"
   name "Terraforming Rand"
   description "Bring some hardy plants that can grow in a low-light environment back to <destination>."
   source "New Portland"
-  destination Rand
+  destination "Rand"
   to offer
     has "Terraforming 4: done"
   passengers 1
@@ -1463,7 +1441,7 @@ mission "There Might Be Riots 1"
   minor
   source
     near Tarazed 5 10
-    government "Republic" "Free Worlds" "Neutral"
+    government "Free Worlds" "Neutral" "Republic"
   destination "Wayfarer"
   cargo "musical equipment" 4
   passengers 8
@@ -1508,7 +1486,7 @@ mission "There Might Be Riots part 2"
   description `Give the band "There Might Be Riots" a ride to <destination>.`
   minor
   source
-    government Syndicate
+    government "Syndicate"
   destination "Prime"
   cargo "musical equipment" 4
   passengers 8
