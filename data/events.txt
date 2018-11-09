@@ -119,6 +119,9 @@ event "syndicate tech available"
 
 
 # ships available events
+event "dreadnought available"
+  shipyard "Southbound Advanced"
+    "Dreadnought"
 
 event "kestrel available: more engines"
   set "kestrel available"
@@ -1372,8 +1375,6 @@ event "dreadnought deployment"
       "Dreadnought"
       "Argosy"
       "Fury"
-  shipyard "Southbound Advanced"
-    "Dreadnought"
 
 
 event "battle for bloodsea"

@@ -1528,6 +1528,7 @@ mission "FW Albatross 1"
     dialogue `You have failed an essential Free Worlds mission. If you want to complete the story line, revert to the autosave or another earlier snapshot of the game.`
   
   on offer
+    event "dreadnought available"
     set "licence: Dreadnought"
     conversation
       `Freya comes to your ship soon after you land. She is beaming, and looks more relaxed than you have seen her in months. "Southbound Shipyards is churning out Dreadnoughts now!" she says. "Still only at a rate of one a week or so, but for a ship this big that's quite impressive. And it means you can now buy one of your own, if you've got enough savings; here's your licence. Seriously, even if you can't afford one yet, be sure to stop by the shipyard and check them out." She is clearly very proud.`
