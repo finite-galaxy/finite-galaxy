@@ -516,7 +516,7 @@ fleet "Free Worlds Home"
   fighters "free worlds fighter"
   cargo 1
   personality
-    heroic disables frugal opportunistic
+    heroic disables opportunistic
   variant 1
     "Dreadnought (Rocket)"
     "Skein" 2 
@@ -533,7 +533,7 @@ fleet "Free Worlds Large"
   names "free worlds capital"
   cargo 1
   personality
-    heroic disables frugal opportunistic
+    heroic disables opportunistic
   variant 10
     "Bastion"
   variant 5
@@ -613,7 +613,7 @@ fleet "Free Worlds Small"
   names "free worlds small"
   cargo 1
   personality
-    heroic disables frugal opportunistic
+    heroic disables opportunistic
   variant 8
     "Hawk"
     "Sparrow"
@@ -970,7 +970,7 @@ fleet "Kor Mereti Large"
   government "Kor Mereti"
   names "kor mereti"
   fighters "kor mereti"
-  commodities Plastic Equipment Industrial Electronics "Heavy Metals"
+  commodities "Electronics" "Equipment" "Heavy Metals" "Industrial" "Plastic"
   personality
     opportunistic
   variant 5
@@ -1073,7 +1073,7 @@ fleet "Kor Mereti Small"
   government "Kor Mereti"
   names "kor mereti"
   fighters "kor mereti"
-  commodities Plastic Equipment Industrial Electronics "Heavy Metals"
+  commodities "Electronics" "Equipment" "Heavy Metals" "Industrial" "Plastic"
   personality
     opportunistic
   variant 1
@@ -1141,7 +1141,7 @@ fleet "Kor Sestor Large"
   government "Kor Sestor"
   names "kor sestor"
   fighters "kor sestor fighter"
-  commodities Plastic Equipment Industrial Electronics "Heavy Metals"
+  commodities "Electronics" "Equipment" "Heavy Metals" "Industrial" "Plastic"
   variant 8
     "Kar Ik Vot 349"
     "Tek Far 71 - Lek"
@@ -1247,7 +1247,7 @@ fleet "Kor Sestor Small"
   government "Kor Sestor"
   names "kor sestor"
   fighters "kor sestor fighter"
-  commodities Plastic Equipment Industrial Electronics "Heavy Metals"
+  commodities "Electronics" "Equipment" "Heavy Metals" "Industrial" "Plastic"
   variant 5
     "Met Par Tek 53" 3
   variant 5
