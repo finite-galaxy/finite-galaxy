@@ -4,14 +4,19 @@ shipyard "Sestor Variants"
   "Kar Ik Vot 349"
   "Kar Ik Vot 349 (Attacker)"
   "Kar Ik Vot 349 (Defender)"
+  "Kar Ik Vot 349 (Jump)"
   "Kar Ik Vot 349 (Trapper)"
   "Met Par Tek 53"
+  "Met Par Tek 53 (Jump)"
   "Met Par Tek 53 (Sniper)"
   "Tek Far 71 - Lek"
   "Tek Far 71 - Lek (Close Quarters)"
+  "Tek Far 71 - Lek (Jump)"
   "Tek Far 78 - Osk"
   "Tek Far 78 - Osk (Close Quarters)"
+  "Tek Far 78 - Osk (Jump)"
   "Tek Far 109"
+  "Tek Far 109 (Jump)"
 
 
 
@@ -232,6 +237,26 @@ ship "Kar Ik Vot 349" "Kar Ik Vot 349 (Defender)"
   turret "Warder"
 
 
+ship "Kar Ik Vot 349" "Kar Ik Vot 349 (Jump)"
+  outfits
+    "Thruster (Planetary Class)"
+    "Steering (Stellar Class)"
+
+    "Piercer" 124
+    "Piercer Rack" 2
+    "Piercer Launcher" 2
+    "Detainer" 2
+    "Repeater Turret" 6
+    "Warder" 2
+
+    "Systems Core (Large)"
+    "Triple Plasma Core"
+    "Plasma Core"
+    "Large Heat Shunt" 5
+    "Control Transceiver"
+    "Jump Drive"
+
+
 ship "Kar Ik Vot 349" "Kar Ik Vot 349 (Trapper)"
   outfits
     "Thruster (Planetary Class)"
@@ -320,6 +345,24 @@ ship "Met Par Tek 53"
   explode "huge explosion" 6
   "final explode" "final explosion medium"
   description "Although this is the smallest Kor Sestor ship other than their fighters, it is larger than most human capital ships and considerably more powerful."
+
+
+ship "Met Par Tek 53" "Met Par Tek 53 (Jump)"
+  outfits
+    "Thruster (Lunar Class)"
+    "Steering (Planetary Class)"
+
+    "Piercer" 62
+    "Piercer Rack"
+    "Piercer Launcher"
+    "Repeater Turret" 6
+
+    "Systems Core (Medium)"
+    "Double Plasma Core"
+    "Plasma Core"
+    "Large Heat Shunt" 3
+    "Control Transceiver"
+    "Jump Drive"
 
 
 ship "Met Par Tek 53" "Met Par Tek 53 (Sniper)"
@@ -414,6 +457,31 @@ ship "Tek Far 71 - Lek"
   explode "huge explosion" 10
   "final explode" "final explosion large"
   description "The Kor Sestor war fleets rely heavily on small, powerful fighters and drones. This ship can carry up to ten of their drones, clamped to the exterior of its hull."
+
+
+ship "Tek Far 71 - Lek" "Tek Far 71 - Lek (Jump)"
+  outfits
+    "Thruster (Lunar Class)"
+    "Steering (Planetary Class)"
+
+    "Piercer" 62
+    "Piercer Rack"
+    "Piercer Launcher"
+    "Detainer"
+    "Warder" 2
+
+    "Systems Core (Medium)"
+    "Double Plasma Core"
+    "Generator (Furnace Class)"
+    "Large Heat Shunt"
+    "Control Transceiver"
+    "Jump Drive"
+  gun "Detainer"
+  gun "Piercer Launcher"
+  turret "Warder"
+  turret
+  turret
+  turret "Warder"
 
 
 ship "Tek Far 71 - Lek" "Tek Far 71 - Lek (Close Quarters)"
@@ -512,6 +580,34 @@ ship "Tek Far 78 - Osk"
   description "This carrier is equipped with docking clamps for up to nine fighters. When loaded with a full complement of the powerful Kor Sestor robotic fighters, it is a formidable opponent."
 
 
+ship "Tek Far 78 - Osk" "Tek Far 78 - Osk (Jump)"
+  outfits
+    "Thruster (Lunar Class)"
+    "Steering (Planetary Class)"
+
+    "Piercer" 124
+    "Piercer Rack" 2
+    "Piercer Launcher" 2
+    "Detainer" 2
+    "Warder" 2
+
+    "Systems Core (Medium)"
+    "Double Plasma Core"
+    "Plasma Core"
+    "Large Heat Shunt"
+    "Control Transceiver"
+    "Jump Drive"
+  gun "Detainer"
+  gun "Piercer Launcher"
+  gun "Detainer"
+  gun "Piercer Launcher"
+  turret "Warder"
+  turret
+  turret
+  turret
+  turret "Warder"
+
+
 ship "Tek Far 78 - Osk" "Tek Far 78 - Osk (Close Quarters)"
   outfits
     "Thruster (Lunar Class)"
@@ -607,4 +703,25 @@ ship "Tek Far 109"
   explode "huge explosion" 8
   "final explode" "final explosion medium"
   description "The TF109 is designed almost solely for the purpose of carrying a fleet of Kor Sestor fighters and drones. Without them to serve as a protective screen, the ship itself is relatively helpless."
+
+
+ship "Tek Far 109" "Tek Far 109 (Jump)"
+  outfits
+    "Thruster (Lunar Class)"
+    "Steering (Planetary Class)"
+
+    "Piercer" 124
+    "Piercer Rack" 2
+    "Piercer Launcher" 2
+    "Detainer"
+    "Warder" 2
+
+    "Systems Core (Medium)"
+    "Double Plasma Core"
+    "Large Heat Shunt"
+    "Control Transceiver"
+    "Jump Drive"
+  gun "Detainer"
+  gun "Piercer Launcher"
+  gun "Piercer Launcher"
 

@@ -37,6 +37,7 @@
 #   "Kor Mereti Small"
 #   "Kor Mereti Miners"
 # Kor Sestor:
+#   "Kor Sestor Jump"
 #   "Kor Sestor Large"
 #   "Kor Sestor Small"
 # Merchant:
@@ -1137,6 +1138,21 @@ fleet "Kor Mereti Miners"
 
 
 # Kor Sestor
+fleet "Kor Sestor Jump"
+  government "Kor Sestor"
+  names "kor sestor"
+  fighters "kor sestor fighter"
+  variant 1
+    "Kar Ik Vot 349 (Jump)"
+    "Tek Far 71 - Lek (Jump)"
+    "Far Lek 14" 10
+    "Tek Far 78 - Osk (Jump)"
+    "Far Osk 27" 9
+    "Tek Far 109 (Jump)"
+    "Far Lek 14" 9
+    "Far Osk 27" 7
+    "Met Par Tek 53 (Jump)" 3
+
 fleet "Kor Sestor Large"
   government "Kor Sestor"
   names "kor sestor"
