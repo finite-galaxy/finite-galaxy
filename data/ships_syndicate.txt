@@ -8,6 +8,7 @@ shipyard "Syndicate Variants"
   "Class C Freighter"
   "Protector"
   "Protector (Laser)"
+  "Protector (Mark II)"
   "Star Barge"
   "Star Barge (Miner)"
   "Star Freighter"
@@ -18,6 +19,7 @@ shipyard "Syndicate Variants"
   "Star Queen"
   "Star Queen (Hai)"
   "Vanguard"
+  "Vanguard (Mark II)"
   "Vanguard (Particle)"
   "Wasp"
   "Wasp (Gatling)"
@@ -290,6 +292,21 @@ ship "Protector"
   description `Voted the "ugliest ship in the sky" by Stars and Starships Magazine, the Protector is a typical example of brutally efficient Syndicate engineering. It is basically nothing more than six blaster turrets attached to a set of engines and crew's quarters, designed as a defence platform that can accompany merchant convoys.`
 
 
+ship "Protector" "Protector (Mark II)"
+  outfits
+    "A370 Atomic Thruster"
+    "A375 Atomic Steering"
+
+    "6X Blaster Turret" 6
+
+    "S-970 Regenerator"
+    "Fusion Reactor"
+    "LP288a Battery Pack"
+    "Liquid Nitrogen Cooler"
+    "Fuel Barrel" 40
+    "Hyperdrive"
+
+
 ship "Protector" "Protector (Laser)"
   outfits
     "X3700 Ion Thruster"
@@ -299,10 +316,11 @@ ship "Protector" "Protector (Laser)"
 
     "D67-TM Shield Generator"
     "Fusion Reactor"
-    "LP036a Battery Pack"
+    "LP288a Battery Pack"
     "Liquid Nitrogen Cooler"
     "Fuel Barrel" 40
     "Hyperdrive"
+    "Outfits Expansion"
 
 
 
@@ -606,7 +624,7 @@ ship "Vanguard"
 
     "D67-TM Shield Generator"
     "Fusion Reactor"
-    "LP072a Battery Pack"
+    "LP144a Battery Pack"
     "Liquid Nitrogen Cooler"
     "Fuel Barrel" 40
     "Hyperdrive"
@@ -630,6 +648,22 @@ ship "Vanguard"
   description `The Vanguard is Syndicated Systems' newest warship intended for the heavy anti-pirate defence market. Vanguards offer an unusual feature set, focusing on powerful fixed guns and featuring Syndicated Systems' latest automation technologies, resulting in an atypically low crew complement for a ship its size. Few capital ships will endure for long under the withering fusillade of gunfire that it can unleash against those in front of it.`
 
 
+ship "Vanguard" "Vanguard (Mark II)"
+  outfits
+    "A370 Atomic Thruster"
+    "A525 Atomic Steering"
+
+    "Proton Cannon" 7
+    "Heavy Anti-Missile Turret"
+
+    "S-970 Regenerator"
+    "Fusion Reactor"
+    "LP144a Battery Pack"
+    "Liquid Nitrogen Cooler"
+    "Fuel Barrel" 40
+    "Hyperdrive"
+
+
 ship "Vanguard" "Vanguard (Particle)"
   outfits
     "X3700 Ion Thruster"
@@ -640,7 +674,7 @@ ship "Vanguard" "Vanguard (Particle)"
 
     "D67-TM Shield Generator"
     "Fusion Reactor"
-    "LP072a Battery Pack"
+    "LP144a Battery Pack"
     "Liquid Nitrogen Cooler"
     "Fuel Barrel" 40
     "Hyperdrive"
