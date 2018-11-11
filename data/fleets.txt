@@ -92,6 +92,7 @@
 #   "Remnant Large"
 #   "Remnant Small"
 # Republic:
+#   "Republic Home"
 #   "Republic Large"
 #   "Republic Small"
 #   "Gunboat Only"
@@ -3444,6 +3445,22 @@ fleet "Remnant Small"
 
 
 # Republic
+fleet "Republic Home"
+  government "Republic"
+  names "republic capital"
+  fighters "republic fighter"
+  cargo 0
+  personality
+    heroic opportunistic
+  variant 1
+    "Jupiter"
+    "Saturn" 2
+    "Venus" 3
+    "Mars" 4
+    "Mercury" 5
+    "Combat Fighter" 4
+    "Combat Drone" 14
+
 fleet "Republic Large"
   government "Republic"
   names "republic capital"
