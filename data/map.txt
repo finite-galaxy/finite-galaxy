@@ -24242,6 +24242,16 @@ planet "Arachne Station"
     threshold 3000
     fleet "Militia Large" 14
 
+planet "Arahas"
+  attributes "dirt belt" factory
+  landscape land/water1
+  description `Arahas is mostly desert and savanna, with very little precipitation. A century ago, some entrepreneurs settled here and built a factory complex that is entirely powered by wind and solar energy, because there are so few cloudy days here and the wind and sunshine are so reliable. The factory is mostly autonomous, with only a few thousand people living here to perform maintenance or to grow crops in irrigated fields.`
+  spaceport `The spaceport consists of a few large concrete slabs, each big enough for a dozen small ships or a pair of bulk freighters to land on. Farther away are fields of solar panels and the factories that they power. The spaceport buildings themselves, however, are underground, where less energy is needed to keep the air cool. Light pipes bring sunlight down from the surface to illuminate the subterranean storage caverns and living quarters, while keeping the searing heat of the sunlight out.`
+  security 0.05
+  tribute 400
+    threshold 3000
+    fleet "Militia Large" 6
+
 planet "Aresepru Nat"
   attributes korath
   landscape land/sea0
@@ -26124,16 +26134,6 @@ planet "New Portland"
   tribute 200
     threshold 2000
     fleet "Militia Small" 12
-
-planet "Arahas"
-  attributes "dirt belt" factory
-  landscape land/water1
-  description `Arahas is mostly desert and savanna, with very little precipitation. A century ago, some entrepreneurs settled here and built a factory complex that is entirely powered by wind and solar energy, because there are so few cloudy days here and the wind and sunshine are so reliable. The factory is mostly autonomous, with only a few thousand people living here to perform maintenance or to grow crops in irrigated fields.`
-  spaceport `The spaceport consists of a few large concrete slabs, each big enough for a dozen small ships or a pair of bulk freighters to land on. Farther away are fields of solar panels and the factories that they power. The spaceport buildings themselves, however, are underground, where less energy is needed to keep the air cool. Light pipes bring sunlight down from the surface to illuminate the subterranean storage caverns and living quarters, while keeping the searing heat of the sunlight out.`
-  security 0.05
-  tribute 400
-    threshold 3000
-    fleet "Militia Small" 30
 
 planet "New Switzerland"
   attributes "near earth" tourism mining
