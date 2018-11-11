@@ -137,7 +137,7 @@ void BoardingPanel::Draw()
     Point pos(-320., y + fontOff);
     font.Draw(item.Name(), pos, colour);
     
-    Point valuePos(pos.X() + 260. - font.Width(item.Value()), pos.Y());
+    Point valuePos(pos.X() + 230. - font.Width(item.Value()), pos.Y());
     font.Draw(item.Value(), valuePos, colour);
     
     Point sizePos(pos.X() + 330. - font.Width(item.Size()), pos.Y());
