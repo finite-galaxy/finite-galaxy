@@ -615,7 +615,7 @@ void Engine::Step(bool isActive)
     
     targetVector = targetAsteroid->Position() - centre;
     
-    if(flagship->Attributes().Get("tactical scan power"))
+//    if(flagship->Attributes().Get("tactical scan power"))
     {
       info.SetCondition("range display");
       int targetRange = round(targetAsteroid->Position().Distance(flagship->Position()));
@@ -660,7 +660,7 @@ void Engine::Step(bool isActive)
       // Check if the target is close enough to show tactical information.
       double tacticalRange = 100. * sqrt(flagship->Attributes().Get("tactical scan power"));
       double targetRange = target->Position().Distance(flagship->Position());
-      if(tacticalRange)
+//      if(tacticalRange)
       {
         info.SetCondition("range display");
         info.SetString("target range", to_string(static_cast<int>(round(targetRange))));
