@@ -1577,12 +1577,12 @@ void Ship::DoGeneration()
     if(currentSystem)
     {
       double scale = .2 + 1.8 / (.001 * position.Length() + 1);
-      fuel += currentSystem->SolarWind() * .3 * scale * (sqrt(attributes.Get("ramscoop")) + .5 * scale);
+      fuel += currentSystem->SolarWind() * .3 * scale * (sqrt(attributes.Get("ramscoop")) + .05 * scale);
       energy += currentSystem->SolarPower() * scale * attributes.Get("solar collection");
     }
     
     double coolingEfficiency = CoolingEfficiency();
-     fuel += attributes.Get("fuel generation"); 
+    fuel += attributes.Get("fuel generation"); 
     energy += attributes.Get("energy generation") - attributes.Get("energy consumption") - (attributes.Get("bunks") / 60.);
     energy -= ionization;
     heat += attributes.Get("heat generation");
