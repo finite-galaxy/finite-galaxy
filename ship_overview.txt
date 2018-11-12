@@ -101,6 +101,7 @@
 # Interceptors have a total mass under 500, but are capable of independent space travel
   "Marauder Bounder":      495 =  145 +  340 +   10 ; (    2 /   18 )
   "Raven":                 490 =  130 +  330 +   30 ; (    4 /    8 )
+  "Zibruka":               490 =  240 +  230 +   20 ; (    4 /    6 )
   "Bounder":               480 =  130 +  310 +   40 ; (    2 /   17 )
   "Mercury":               470 =  180 +  280 +   10 ; (    7 /   14 )
   "Scout":                 465 =  110 +  300 +   55 ; (    2 /   12 )
@@ -126,6 +127,8 @@
   "Flivver":               225 =   40 +  180 +    5 ; (    1 /    3 )
   "Sparrow":               220 =   50 +  160 +   10 ; (    1 /    2 )
   "Earth Shaper":          156 =   40 +   89 +   27 ; (    0 /    0 )
+# Bombers have to be carried in bomber bays
+  "Barb":                  120 =   25 +   95 +    0 ; (    1 /    2 )
 # Fighters have to be carried in fighter bays
   "Finch":                 150 =   40 +  110 +    0 ; (    1 /    1 )
   "Boxwing":               145 =   40 +   45 +   60 ; (    1 /    1 )
@@ -133,7 +136,6 @@
   "Chaser":                132 =   40 +   92 +    0 ; (    1 /    1 )
   "Combat Fighter":        130 =   30 +  100 +    0 ; (    1 /    1 )
   "Violin Spider":         125 =   31 +   94 +    0 ; (    1 /    1 )
-  "Barb":                  120 =   25 +   95 +    0 ; (    1 /    2 )
   "Dagger":                110 =   20 +   90 +    0 ; (    1 /    1 )
   "Flycatcher":            109 =   30 +   79 +    0 ; (    0 /    0 )
 # Drones have to be carried in drone bays
@@ -141,4 +143,142 @@
   "Flea":                   81 =   21 +   60 +    0 ; (    0 /    0 )
   "Combat Drone":           80 =   20 +   60 +    0 ; (    0 /    0 )
   "Surveillance Drone":     75 =   15 +   60 +    0 ; (    0 /    0 )
+
+
+
+# Now, let's sort them by weapon capacity
+# and also display the numbers of gun ports, turret mounts,
+# drone bays, fighter bays, bomber bays, engine capacity, and drag
+
+  "Archon":                600 ;  1 ,  8 ,    ,    ,    ; 200 , 27
+  "Kar Ik Vot 349":        447 ;  4 ,  8 ,    ,    ,    ; 165 , 16.8
+  "Model 512":             440 ;  2 ,  7 ,    ,    ,    ; 161 , 17.4
+  "Hurricane":             428 ;  6 ,  5 ,    ,    ,    ; 140 , 11.9
+  "Model 256":             393 ;  2 ,  6 ,    ,    ,    ; 145 , 15.3
+  "Arfecta":               390 ;    ,  5 ,    ,    ,    ; 220 ,  7.5
+  "Model 128":             344 ;  2 ,  5 ,    ,    ,    ; 131 , 13.2
+  "Solifuge":              342 ;  5 ,  7 ,    ,  6 ,    ; 166 , 15.4
+  "Derecho":               342 ;  4 ,  4 ,    ,    ,    ; 164 ,  8.7
+  "Shield Beetle":         333 ;  8 ,  4 ,    ,    ,    ; 150 ,  8.8
+  "World-Ship C":          328 ;    ,  8 ,    ,    ,    ; 173 , 21
+  "World-Ship B":          328 ;    ,  8 ,    ,    ,    ; 173 , 21
+  "World-Ship A":          328 ;    ,  8 ,    ,    ,    ; 173 , 21
+  "Punisher":              324 ;  6 ,  4 ,    ,    ,    ; 187 , 12.2
+  "Maboro":                309 ;  4 ,  3 ,    ,    ,    ; 148 ,  9.8
+  "Raider":                284 ;    ,  6 ,    ,    ,    ; 159 , 12
+  "Tek Far 78 - Osk":      272 ;  4 ,  5 ,    ,  8 ,    ; 117 , 10.2
+  "Tempest":               271 ;  4 ,  3 ,    ,    ,    ; 122 ,  6.2
+  "Model 64":              263 ;  1 ,  4 ,    ,    ,    ; 119 , 11.1
+  "Spire":                 256 ;  2 ,  4 ,    ,    ,    ; 129 ,  8.4
+  "Twilight":              236 ;  7 ,  5 ,    ,    ,    ; 142 ,  8.6
+  "Tek Far 71 - Lek":      235 ;  2 ,  4 , 10 ,    ,    ; 102 ,  9.6
+  "Tek Far 109":           217 ;  3 ,  2 ,  9 ,  7 ,    ;  98 ,  9.1
+  "Met Par Tek 53":        213 ;  3 ,  6 ,    ,    ,    ; 110 ,  5.7
+  "Hulk":                  208 ;  2 ,  4 ,    ,    ,    ; 148 , 18.9
+  "Model 32":              205 ;  1 ,  3 ,    ,    ,    ; 109 ,  9
+  "Sojourner":             202 ;  2 ,  4 ,    ,    ,    ; 156 , 12.9
+  "Skylark":               200 ;    ,  4 ,    ,    ,    ; 100 , 12.3
+  "Wardragon":             200 ;    ,  4 ,    ,    ,    ; 100 ,  9.3
+  "Strong Wind":           198 ;  6 ,    ,    ,    ,    ; 114 ,  4.7
+  "Enfolta":               184 ;  4 ,  1 ,    ,    ,    ; 106 ,  5.9
+  "Interdictor":           179 ;  2 ,  2 ,    ,    ,    ; 135 ,  7.4
+  "Traveller":             177 ;  4 ,  2 ,    ,    ,    ;  79 ,  5.5
+  "Winter Gale":           171 ;  6 ,  1 ,    ,    ,    ; 120 ,  5.6
+  "Model 16":              149 ;  1 ,  2 ,    ,    ,    ; 101 ,  6.9
+  "Water Bug":             145 ;  2 ,  3 ,    ,    ,    ;  64 ,  5.9
+  "Spindle":               138 ;  2 ,  2 ,    ,    ,    ; 148 , 10.8
+  "Wagon":                 132 ;  2 ,  2 ,    ,    ,    ;  92 , 10.6
+  "Pond Strider":          129 ;  3 ,  3 ,  8 ,    ,    ;  76 ,  3.6
+  "Thistle":               118 ;  2 ,  2 ,    ,    ,    ;  91 ,  5.8
+  "Autumn Leaf":           103 ;  2 ,  3 ,    ,    ,    ; 117 ,  2.9
+  "Transport":              96 ;  2 ,  1 ,    ,    ,    ;  70 ,  7.2
+  "Shadow":                 94 ;  5 ,  1 ,    ,    ,    ;  83 ,  3.8
+  "Lightning Bug":          93 ;  1 ,  2 ,    ,    ,    ;  87 ,  3.8
+  "Visitor":                90 ;  2 ,  1 ,    ,    ,    ;  57 ,  4.4
+  "Briar":                  89 ;  2 ,  1 ,    ,    ,    ;  60 ,  3.8
+  "Summer Leaf":            84 ;  2 ,    ,    ,    ,    ; 103 ,  2.6
+  "Neutralizer":            72 ;  4 ,    ,    ,    ,    ; 102 ,  4.1
+  "Zibruka":                68 ;  2 ,    ,    ,    ,    ;  76 ,  3.1
+  "Model 8":                59 ;    ,  1 ,    ,    ,    ;  59 ,  3.2
+  "Runabout":               44 ;  2 ,    ,    ,    ,    ;  42 ,  2.8
+  "Cool Breeze":            41 ;  2 ,    ,    ,    ,    ;  62 ,  1.8
+  "Thorn":                  40 ;  2 ,    ,    ,    ,    ;  38 ,  1.8
+  "Courier":                39 ;  2 ,    ,    ,    ,    ;  40 ,  2.9
+  "Aphid":                  37 ;    ,  1 ,    ,    ,    ;  48 ,  1.9
+  "Chaser":                 25 ;  1 ,    ,    ,    ,    ;  30 ,   .9
+  "Flycatcher":             24 ;    ,  1 ,    ,    ,    ;  21 ,   .6
+  "Far Osk 27":             22 ;  2 ,    ,    ,    ,    ;  24 ,  1.1
+  "Violin Spider":          19 ;  1 ,    ,    ,    ,    ;  30 ,   .9
+  "Far Lek 14":             11 ;  1 ,    ,    ,    ,    ;  24 ,   .8
+  "Flea":                    9 ;  1 ,    ,    ,    ,    ;  24 ,   .55
+  "Lampyrid":                0 ;    ,    ,    ,    ,    ; 105 ,  8.5
+  "Deep River":              0 ;    ,    ,    ,    ,    ;  83 ,  9.4
+  "Gascraft":                0 ;    ,    ,    ,    ,    ;  34 ,  1.7
+  "Earth Shaper":            0 ;    ,    ,    ,    ,    ;  21 ,   .9
+
+  "Bactrian":             
+  "Bulk Freighter":       
+  "Jupiter":              
+  "Kestrel":              
+  "Behemoth":              
+  "Dreadnought":           
+  "Saturn":                
+  "Marauder Leviathan":    
+  "Hauler III":            
+  "Marauder Falcon":       
+  "Leviathan":             
+  "Bastion":               
+  "Falcon":                
+  "Skein":                 
+  "Protector":             
+  "Vanguard":              
+  "Mule":                  
+  "Hauler II":             
+  "Roost":                 
+  "Venus":                 
+  "Marauder Firebird":     
+  "Marauder Splinter":     
+  "Osprey":                
+  "Splinter":              
+  "Hauler I":              
+  "Firebird":              
+  "Argosy":                
+  "Nest":                  
+  "Star Freighter":        
+  "Blackbird":             
+  "Star Queen":            
+  "Marauder Argosy":       
+  "Lance":                 
+  "Marauder Manta":        
+  "Aerie":                 
+  "Manta":                 
+  "Mars":                  
+  "Clipper":               
+  "Marauder Raven":        
+  "Marauder Bounder":      
+  "Raven":                 
+  "Bounder":               
+  "Mercury":               
+  "Scout":                 
+  "Headhunter":            
+  "Marauder Quicksilver":  
+  "Quicksilver":           
+  "Hawk":                  
+  "Marauder Arrow":        
+  "Arrow":                 
+  "Berserker":             
+  "Fury":                  
+  "Heavy Shuttle":         
+  "Star Barge":            
+  "Wasp":                  
+  "Light Shuttle":         
+  "Flivver":               
+  "Sparrow":               
+  "Barb":                  
+  "Finch":                 
+  "Boxwing":               
+  "Combat Fighter":        
+  "Dagger":                
+  "Combat Drone":          
+  "Surveillance Drone":    
 
