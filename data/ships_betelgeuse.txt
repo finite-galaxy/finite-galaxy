@@ -18,6 +18,7 @@ shipyard "Betelgeuse Variants"
   "Leviathan (Heavy)"
   "Leviathan (Laser)"
   "Light Shuttle"
+  "Light Shuttle (Armed)"
   "Light Shuttle (Miner)"
 
 
@@ -390,7 +391,7 @@ ship "Heavy Shuttle"
     "cargo space" 30
     "outfit space" 170
     "engine capacity" 60
-    "weapon capacity" 10
+    "weapon capacity" 15
     weapon
       "blast radius" 12
       "shield damage" 120
@@ -420,10 +421,12 @@ ship "Heavy Shuttle" "Heavy Shuttle (Armed)"
     "X2700 Ion Thruster"
     "X2200 Ion Steering"
 
-    "1X Blaster Cannon" 2
+    "Gatling Round" 6000
+    "Gatling Bullet Boxes" 4
+    "Gatling Gun" 2
 
     "D14-RN Shield Generator"
-    "nGVF-BB Fuel Cell"
+    "nGVF-AA Fuel Cell"
     "LP036a Battery Pack"
     "Fuel Barrel" 50
     "Hyperdrive"
@@ -591,6 +594,23 @@ ship "Light Shuttle"
   explode "small explosion" 5
   description "Although Betelgeuse Shipyards produces other ship models as well, the majority of their profits come from sales of the Light Shuttle. This versatile ship serves equally well as a passenger transport or a cargo courier. It also happens to be the cheapest ship you can buy which is capable of hyperspace travel."
   description `  Shuttles are not designed to withstand combat of any sort, but they are fast and manoeuvrable enough to get out of harm's way if attacked by a larger, slower ship. Although they are typically unarmed, they have enough space for one weapon, which is the origin of the popular phrase, "as useless as a blaster cannon on a shuttlecraft."`
+
+
+ship "Light Shuttle" "Light Shuttle (Armed)"
+  outfits
+    "X2700 Ion Thruster"
+    "X2200 Ion Steering"
+
+    "Gatling Round" 3000
+    "Gatling Bullet Boxes" 2
+    "Gatling Gun"
+
+    "D14-RN Shield Generator"
+    "nGVF-AA Fuel Cell"
+    "LP036a Battery Pack"
+    "Fuel Barrel" 40
+    "Hyperdrive"
+    "Outfits Expansion"
 
 
 ship "Light Shuttle" "Light Shuttle (Miner)"
