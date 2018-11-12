@@ -448,7 +448,7 @@ void AI::Step(const PlayerInfo &player)
   bool fightersRetreat = Preferences::Has("Damaged fighters retreat");
   for(const auto &it : ships)
   {
-    // Skip any carried fighters or drones that are somehow in the list.
+    // Skip any carried drones, fighters, or bombers that are somehow in the list.
     if(!it->GetSystem())
       continue;
     
@@ -666,7 +666,7 @@ void AI::Step(const PlayerInfo &player)
         it->SetCommands(command);
         continue;
       }
-      // Fighters and drones should assist their parent's mining operation if they cannot
+      // Drones, fighters, and bombers should assist their parent's mining operation if they cannot
       // carry ore, and the asteroid is near enough that the parent can harvest the ore.
       const shared_ptr<Minable> &minable = parent ? parent->GetTargetAsteroid() : nullptr;
       if(it->CanBeCarried() && parent && miningTime[&*parent] < 3601 && minable
@@ -692,7 +692,7 @@ void AI::Step(const PlayerInfo &player)
       if(!hasParent || (!hasSpace && !Random::Int(600)) || parent->IsDestroyed()
           || parent->GetSystem() != it->GetSystem())
       {
-        // Find a parent for orphaned fighters and drones.
+        // Find a parent for orphaned drones, fighters, and bombers.
         parent.reset();
         it->SetParent(parent);
         vector<shared_ptr<Ship>> parentChoices;
@@ -779,8 +779,8 @@ void AI::Step(const PlayerInfo &player)
       UpdateOrders(*it);
     }
     // Hostile "escorts" (i.e. NPCs that are trailing you) only revert to
-    // escort behavior when in a different system from you. Otherwise,
-    // the behavior depends on what the parent is doing, whether there
+    // escort behaviour when in a different system from you. Otherwise,
+    // the behaviour depends on what the parent is doing, whether there
     // are hostile targets nearby, and whether the escort has any
     // immediate needs (like refueling).
     else if(!parent)
@@ -944,7 +944,7 @@ void AI::AskForHelp(Ship &ship, bool &isStranded, const Ship *flagship)
 // Determine if the selected ship is physically able to render assistance.
 bool AI::CanHelp(const Ship &ship, const Ship &helper, const bool needsFuel)
 {
-  // Fighters, drones, and disabled / absent ships can't offer assistance.
+  // Drones, fighters, bombers, and disabled / absent ships can't offer assistance.
   if(helper.CanBeCarried() || helper.GetSystem() != ship.GetSystem()
       || (helper.Cloaking() == 1. && helper.GetGovernment() != ship.GetGovernment())
       || helper.IsDisabled() || helper.IsOverheated() || helper.IsHyperspacing())
@@ -2040,7 +2040,7 @@ void AI::DoSurveillance(Ship &ship, Command &command, shared_ptr<Ship> &target) 
     return;
   }
   
-  // Choose a surveillance behavior.
+  // Choose a surveillance behaviour.
   if(ship.GetTargetSystem())
   {
     // Unload surveillance drones in this system before leaving.

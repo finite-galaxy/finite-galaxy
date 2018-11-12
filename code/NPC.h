@@ -26,7 +26,7 @@ class UI;
 
 // An NPC is a ship associated with a mission. Certain required actions are
 // associated with each NPC, such as boarding it, killing it, or making sure it
-// is not boarded or killed. NPCs also have different "behaviors," such as
+// is not boarded or killed. NPCs also have different "behaviours," such as
 // staying in the system they started in, or attacking only the player's ships.
 class NPC {
 public:

@@ -93,7 +93,7 @@ void Politics::Offend(const Government *gov, int eventType, int count)
     {
       // Weights less than 5% should never cause permanent reputation
       // changes. This is to allow two governments to be hostile or
-      // friendly without the player's behavior toward one of them
+      // friendly without the player's behaviour toward one of them
       // influencing their reputation with the other.
       double penalty = (count * weight) * other->PenaltyFor(eventType);
       if(eventType & ShipEvent::ATROCITY)
