@@ -70,9 +70,9 @@ ship "Autumn Leaf"
     "Wanderer Ramscoop"
   engine -18 64
   engine 18 64
-  gun -25 -22
-  gun 25 -22
-  turret 0 28
+  gun -25 -22 "Sunbeam"
+  gun 25 -22 "Sunbeam"
+  turret 0 28 "Wanderer Anti-Missile"
   explode "tiny explosion" 50
   explode "small explosion" 30
   explode "medium explosion" 20
@@ -446,7 +446,7 @@ ship "Flycatcher"
     "Small Biochemical Cell" 2
   engine -9 28
   engine 9 28
-  turret 0 4
+  turret 0 4 "Wanderer Anti-Missile"
   explode "tiny explosion" 30
   explode "small explosion" 20
   description "Flycatcher drones are used by the Wanderers to keep their star systems safe. Rather than carrying weapons of its own, a stock Flycatcher just carries an anti-missile turret for defending other ships."
@@ -496,12 +496,12 @@ ship "Hurricane"
     "Wanderer Ramscoop"
   engine -23 181
   engine 23 181
-  gun -68 5
-  gun 68 5
-  gun -85 21
-  gun 85 21
-  gun -62 32
-  gun 62 32
+  gun -68 5 "Sunbeam"
+  gun 68 5 "Sunbeam"
+  gun -85 21 "Sunbeam"
+  gun 85 21 "Sunbeam"
+  gun -62 32 "Sunbeam"
+  gun 62 32 "Sunbeam"
   turret -27 -80 "Dual Sunbeam Turret"
   turret 27 -80 "Dual Sunbeam Turret"
   turret 0 -33
@@ -659,8 +659,8 @@ ship "Summer Leaf"
     "Wanderer Ramscoop"
   engine -18 64
   engine 18 64
-  gun -29 -9
-  gun 29 -9
+  gun -29 -9 "Sunbeam"
+  gun 29 -9 "Sunbeam"
   explode "tiny explosion" 40
   explode "small explosion" 20
   explode "medium explosion" 10
