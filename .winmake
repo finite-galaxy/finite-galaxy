@@ -3,9 +3,9 @@
 #     for use by any and all
 
 # Available targets:
-# 'win64'   - a 64-bit optimized (-O2) version of Endless Sky
+# 'win64'   - a 64-bit optimized (-O2) version of Finite Galaxy
 # 'release' - same as 'win64'
-# 'debug'   - a 64-bit version of Endless Sky with debugging symbols (-g)
+# 'debug'   - a 64-bit version of Finite Galaxy with debugging symbols (-g)
 # 'all'     - compiles both targets
 # 'clean'   - removes all compiled object files and .exe files
 
@@ -31,13 +31,13 @@ DIR_MINGW64 = C:\Program\ Files\mingw64\x86_64-w64-mingw32
 
 
 # Path to the output directory (either relative or absolute).
-# e.g.   bin -> (working dir)\bin\Debug\EndlessSky.exe
-#    bin -> (working dir)\bin\win64\EndlessSky.exe
+# e.g.   bin -> (working dir)\bin\Debug\FiniteGalaxy.exe
+#    bin -> (working dir)\bin\win64\FiniteGalaxy.exe
 OUT_DIR = bin
 
 
-# Path to the Endless Sky source files
-SOURCE_DIR = source
+# Path to the Finite Galaxy source files
+SOURCE_DIR = code
 
 
 # General-purpose compiler flags (applied to all builds)
@@ -84,7 +84,7 @@ LIB_DEBUG = $(LIB)
 LDFLAGS_DEBUG = $(LDFLAGS)
 OBJDIR_DEBUG = $(OBJDIR)\Debug
 DEP_DEBUG =
-OUT_DEBUG = $(OUT_DIR)\Debug\EndlessSky.exe
+OUT_DEBUG = $(OUT_DIR)\Debug\FiniteGalaxy.exe
 
 INC_RELEASE = $(INC)
 CFLAGS_RELEASE = $(CFLAGS) -O2
@@ -95,7 +95,7 @@ LIB_RELEASE = $(LIB)
 LDFLAGS_RELEASE = $(LDFLAGS) -s
 OBJDIR_RELEASE = $(OBJDIR)\Win64
 DEP_RELEASE =
-OUT_RELEASE = $(OUT_DIR)\Win64\EndlessSky.exe
+OUT_RELEASE = $(OUT_DIR)\Win64\FiniteGalaxy.exe
 
 
 # Get all .cpp files in the source directory (.rc are built differently)

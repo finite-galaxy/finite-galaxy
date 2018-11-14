@@ -52,6 +52,9 @@ public:
   // Get the lower-most panel.
   std::shared_ptr<Panel> Root() const;
   
+  // If the player enters the game, enable saving the loaded file.
+  void CanSave(bool canSave);
+  bool CanSave() const;
   // Tell the UI to quit.
   void Quit();
   // Check if it is time to quit.
@@ -71,6 +74,7 @@ private:
 private:
   std::vector<std::shared_ptr<Panel>> stack;
   
+   bool canSave = false;
   bool isDone;
   std::vector<std::shared_ptr<Panel>> toPush;
   std::vector<const Panel *> toPop;
