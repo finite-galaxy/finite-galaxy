@@ -601,7 +601,7 @@ void PlayerInfoPanel::DrawFleet(const Rectangle &bounds)
     // Store this row's position, to handle hovering.
     zones.emplace_back(table.GetCentrePoint(), table.GetRowSize(), index);
     
-    // Indent the ship name if it is a fighter or drone.
+    // Indent the ship name if it is a drone, fighter, or bomber.
     table.Draw(font.TruncateMiddle(ship.CanBeCarried() ? "    " + ship.Name() : ship.Name(), 217));
     table.Draw(ship.ModelName());
     

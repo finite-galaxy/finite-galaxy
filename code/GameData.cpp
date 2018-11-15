@@ -209,7 +209,7 @@ void GameData::CheckReferences()
 {
   set<string> knownOutfitCategories(categories["outfit"].begin(), categories["outfit"].end());
   set<string> knownShipCategories(categories["ship"].begin(), categories["ship"].end());
-  for(const string &carried : {"Fighter", "Drone"})
+  for(const string &carried : {"Drone", "Fighter", "Bomber"})
     if(!knownShipCategories.count(carried))
     {
       categories["ship"].push_back(carried);

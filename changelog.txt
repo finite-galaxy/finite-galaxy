@@ -98,6 +98,7 @@
       * Mule from 2 to 1
       * Tek Far 71 - Lek from 3 to 2
     * changed the number of turret mounts on some ships:
+      * Jupiter from 4 to 6
       * Model 8 from 0 to 1
     * now have 0 fuel capacity; equipped them with fuel barrels and pods; outfit space increased accordingly
     * stat tweaks:
@@ -272,6 +273,11 @@
   * add configuration files for CI tools (@tehhowch)
   * fix XCode libraries (@tiennou)
   * enable save-aware data parsing without modifying the save (@tehhowch)
+  * remove compiler warnings issued by clang-902.0.39.2 (@tehhowch)
+  * extend LocationFilter's supported criteria (@tehhowch)
+  * ships cannot have negative outfit counts (@tehhowch)
+  * support launch effects for carried ships when departing from their carrier (@tehhowch)
+  * issue deprecation warnings and simplify some code (@tehhowch)
 
 
 

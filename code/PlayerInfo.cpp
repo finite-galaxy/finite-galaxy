@@ -1157,9 +1157,9 @@ bool PlayerInfo::TakeOff(UI *ui)
     flagship->Cargo().SetBunks(flagship->Attributes().Get("bunks") - flagship->Crew());
   }
   
-  // For each fighter and drone you own, try to find a ship that has a bay to
+  // For each drone, fighter, and bomber you own, try to find a ship that has a bay to
   // carry it in. Any excess ships will need to be sold.
-  int shipsSold[2] = {0, 0};
+  int shipsSold[3] = {0, 0, 0};
   int64_t income = 0;
   int day = date.DaysSinceEpoch();
   for(auto it = ships.begin(); it != ships.end(); )
@@ -1196,12 +1196,13 @@ bool PlayerInfo::TakeOff(UI *ui)
     else
       ++it;
   }
-  if(shipsSold[0] || shipsSold[1])
+  if(shipsSold[0] || shipsSold[1] || shipsSold[2])
   {
-    // If your fleet contains more fighters or drones than you can carry,
+    // If your fleet contains more drones, fighters, or bombers than you can carry,
     // some of them must be sold.
     ostringstream out;
     out << "Because none of your ships can carry them, you sold ";
+/*
     if(shipsSold[1])
       out << shipsSold[1]
         << (shipsSold[1] == 1 ? " fighter" : " fighters");
@@ -1210,6 +1211,27 @@ bool PlayerInfo::TakeOff(UI *ui)
     if(shipsSold[0])
       out << shipsSold[0]
         << (shipsSold[0] == 1 ? " drone" : " drones");
+*/
+    if(shipsSold[0]) {
+      out << shipsSold[0] << (shipsSold[0] == 1 ? " drone" : " drones");
+      if(shipsSold[1] || shipsSold[2]) {
+        if(shipsSold[1] && shipsSold[2])
+          out << ", ";
+        else
+          out << " and ";
+      }
+    }
+    if(shipsSold[1]) {
+      out << shipsSold[1] << (shipsSold[1] == 1 ? " fighter" : " fighters");
+      if(shipsSold[2]) {
+        if(shipsSold[0])
+           out << ", and ";
+        else
+          out << " and ";
+      }
+    }
+    if(shipsSold[2])
+      out << shipsSold[2] << (shipsSold[2] == 1 ? " bomber" : " bombers");
     
     out << ", earning " << Format::Credits(income) << " credits.";
     accounts.AddCredits(income);

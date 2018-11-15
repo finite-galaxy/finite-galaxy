@@ -21,6 +21,7 @@
 
 class DataNode;
 class DataWriter;
+class Effect;
 class Flotsam;
 class Government;
 class Minable;
@@ -37,7 +38,7 @@ class Visual;
 // Class representing a ship (either a model for sale or an instance of it). A
 // ship's information can be saved to a file, so that it can later be read back
 // in exactly the same state. The same class is used for the player's ship as
-// for all other ships, so their capabilities are exactly the same  within the
+// for all other ships, so their capabilities are exactly the same within the
 // limits of what the AI knows how to command them to do.
 class Ship : public Body, public std::enable_shared_from_this<Ship> {
 public:
@@ -45,7 +46,7 @@ public:
   public:
     Bay(double x, double y, bool isFighter) : point(x * .5, y * .5), isFighter(isFighter) {}
     // Copying a bay does not copy the ship inside it.
-    Bay(const Bay &b) : point(b.point), isFighter(b.isFighter), side(b.side), facing(b.facing) {}
+    Bay(const Bay &b) : point(b.point), isFighter(b.isFighter), side(b.side), facing(b.facing), launchEffects(b.launchEffects) {}
     
     Point point;
     std::shared_ptr<Ship> ship;
@@ -61,6 +62,9 @@ public:
     static const uint8_t LEFT = 1;
     static const uint8_t RIGHT = 2;
     static const uint8_t BACK = 3;
+    
+    // The launch effect(s) to be simultaneously played when the bay's ship launches.
+    std::vector<const Effect *> launchEffects;
   };
   
   class EnginePoint : public Point {
@@ -155,7 +159,7 @@ public:
   // Generate energy, heat, etc. (This is called by Move().)
   void DoGeneration();
   // Launch any ships that are ready to launch.
-  void Launch(std::list<std::shared_ptr<Ship>> &ships);
+  void Launch(std::list<std::shared_ptr<Ship>> &ships, std::vector<Visual> &visuals);
   // Check if this ship is boarding another ship. If it is, it either plunders
   // it or, if this is a player ship, returns the ship it is plundering so a
   // plunder dialogue can be displayed.
@@ -282,17 +286,17 @@ public:
   // impact, or from firing a weapon, for example.
   void ApplyForce(const Point &force);
   
-  // Check if this ship has fighter or drone bays.
+  // Check if this ship has (drone, fighter, or bomber) bays.
   bool HasBays() const;
-  // Check how many fighter and drone bays are not occupied at present. This
+  // Check how many drone, fighter, and bomber bays are not occupied at present. This
   // does not check whether one of your escorts plans to use that bay.
   int BaysFree(bool isFighter) const;
   // Check if this ship has a bay free for the given fighter, and the bay is
   // not reserved for one of its existing escorts.
   bool CanCarry(const Ship &ship) const;
-  // Check if this is a ship of a type that can be carried (fighter or drone).
+  // Check if this is a ship of a type that can be carried (drone, fighter, or bomber).
   bool CanBeCarried() const;
-  // Move the given ship into one of the fighter or drone bays, if possible.
+  // Move the given ship into one of the drone, fighter, or bomber bays, if possible.
   bool Carry(const std::shared_ptr<Ship> &ship);
   // Empty the fighter bays. If the fighters are not special ships that are
   // saved in the player data, they will be deleted. Otherwise, they become
@@ -300,8 +304,8 @@ public:
   void UnloadBays();
   // Get a list of any ships this ship is carrying.
   const std::vector<Bay> &Bays() const;
-  // Adjust the positions and velocities of any visible carried fighters or
-  // drones. If any are visible, return true.
+  // Adjust the positions and velocities of any visible carried drones, fighters,
+  // or bombers. If any are visible, return true.
   bool PositionFighters() const;
   
   // Get cargo information.

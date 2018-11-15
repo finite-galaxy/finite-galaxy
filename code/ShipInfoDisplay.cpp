@@ -205,7 +205,14 @@ void ShipInfoDisplay::UpdateAttributes(const Ship &ship, const Depreciation &dep
     attributeValues.push_back(to_string(ship.BaysFree(true)));
     attributesHeight += 20;
   }
-
+/*
+  if(ship.BaysFree(true))
+  {
+    attributeLabels.push_back("bomber bays:");
+    attributeValues.push_back(to_string(ship.BaysFree(true)));
+    attributesHeight += 20;
+  }
+*/
   // Miscellaneous
   if(isGeneric)
   {

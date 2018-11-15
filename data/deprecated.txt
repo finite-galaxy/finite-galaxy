@@ -259,6 +259,7 @@ outfit "Drak Distancer"
   "turret mounts" -1
   weapon
     "fire effect" "distancer flare"
+    "turret turn" 12
     "velocity" 2000
     "lifetime" 1
     "reload" 1
@@ -281,6 +282,7 @@ outfit "Drak Draining Field"
   "weapon capacity" -84
   "turret mounts" -1
   weapon
+    "turret turn" 12
     "velocity" 400
     "lifetime" 1
     "reload" 1
@@ -304,6 +306,7 @@ outfit "Drak Turret"
       "frame rate" 13.318
       "random start frame"
     "hit effect" "drak bolt impact"
+    "turret turn" 12
     "inaccuracy" 1
     "velocity" 36
     "lifetime" 30
@@ -1103,6 +1106,7 @@ outfit "Quarg Skylance"
     sound "skylance"
     "hit effect" "skylance impact"
     "inaccuracy" .4
+    "turret turn" 6
     "velocity" 500
     "lifetime" 1
     "reload" 1

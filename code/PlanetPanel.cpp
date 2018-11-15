@@ -255,15 +255,17 @@ void PlanetPanel::TakeOffIfReady()
   int cargoToSell = -(cargo.Free() + cargo.CommoditiesSize());
   int droneCount = 0;
   int fighterCount = 0;
+  int bomberCount = 0;
   for(const auto &it : player.Ships())
     if(!it->IsParked() && !it->IsDisabled() && it->GetSystem() == player.GetSystem())
     {
       const string &category = it->Attributes().Category();
       droneCount += (category == "Drone") - it->BaysFree(false);
       fighterCount += (category == "Fighter") - it->BaysFree(true);
+      bomberCount += (category == "Bomber") - it->BaysFree(true);
     }
   
-  if(fighterCount > 0 || droneCount > 0 || cargoToSell > 0 || overbooked > 0)
+  if(droneCount > 0 || fighterCount > 0 || bomberCount > 0 || cargoToSell > 0 || overbooked > 0)
   {
     ostringstream out;
     if(missionCargoToSell > 0 || overbooked > 0)
@@ -288,20 +290,27 @@ void PlanetPanel::TakeOffIfReady()
     else
     {
       out << "If you take off now you will have to sell ";
-      bool triple = (fighterCount > 0 && droneCount > 0 && cargoToSell > 0);
-
-      if(fighterCount == 1)
-        out << "a fighter";
-      else if(fighterCount > 0)
-        out << fighterCount << " fighters";
-      if(fighterCount > 0 && (droneCount > 0 || cargoToSell > 0))
-        out << (triple ? ", " : " and ");
+      bool triple = (droneCount > 0 && fighterCount > 0 && bomberCount > 0 && cargoToSell > 0);
     
       if(droneCount == 1)
         out << "a drone";
       else if(droneCount > 0)
         out << droneCount << " drones";
-      if(droneCount > 0 && cargoToSell > 0)
+      if(droneCount > 0 && (fighterCount > 0 || bomberCount > 0 || cargoToSell > 0))
+        out << (triple ? ", " : " and ");
+
+      if(fighterCount == 1)
+        out << "a fighter";
+      else if(fighterCount > 0)
+        out << fighterCount << " fighters";
+      if(fighterCount > 0 && (bomberCount > 0 || cargoToSell > 0))
+        out << (triple ? ", " : " and ");
+    
+      if(bomberCount == 1)
+        out << "a bomber";
+      else if(bomberCount > 0)
+        out << bomberCount << " bombers";
+      if(bomberCount > 0 && cargoToSell > 0)
         out << (triple ? ", and " : " and ");
 
       if(cargoToSell == 1)
