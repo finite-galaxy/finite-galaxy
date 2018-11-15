@@ -27,10 +27,10 @@ namespace {
 
   const vector<vector<GLint>> SWIZZLE = {
     // three different colours
-    {GL_RED,   GL_GREEN, GL_BLUE,  GL_ALPHA}, //  0: red + yellow markings (republic)
-    {GL_RED,   GL_BLUE,  GL_GREEN, GL_ALPHA}, //  1: red + magenta markings (deep)
+    {GL_RED,   GL_GREEN, GL_BLUE,  GL_ALPHA}, //  0: red + yellow (republic)
+    {GL_RED,   GL_BLUE,  GL_GREEN, GL_ALPHA}, //  1: red + magenta (deep)
     {GL_GREEN, GL_RED,   GL_BLUE,  GL_ALPHA}, //  2: green + yellow (free worlds)
-    {GL_BLUE,  GL_RED,   GL_GREEN, GL_ALPHA}, //  3: green + cyan
+    {GL_BLUE,  GL_RED,   GL_GREEN, GL_ALPHA}, //  3: green + cyan (militia)
     {GL_GREEN, GL_BLUE,  GL_RED,   GL_ALPHA}, //  4: blue + magenta (syndicate)
     {GL_BLUE,  GL_GREEN, GL_RED,   GL_ALPHA}, //  5: blue + cyan (merchant)
     // two red

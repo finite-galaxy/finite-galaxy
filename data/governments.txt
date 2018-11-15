@@ -1,3 +1,7 @@
+# swizzle channels: code/SpriteShader.cpp
+
+
+
 government "Alpha"
   swizzle 22
   "player reputation" -1000
@@ -125,7 +129,7 @@ government "Heliarch"
     "Coalition" 1
 
 government "Independent"
-  swizzle 6
+  swizzle 23
   colour .78 .36 .36
   "player reputation" 10
   "bribe" .05
@@ -207,7 +211,7 @@ government "Merchant"
   "hostile hail" "hostile civilian"
 
 government "Militia"
-  swizzle 2
+  swizzle 3
   colour .84 .61 .37
   "player reputation" 0
   "attitude toward"
@@ -239,7 +243,7 @@ government "Navy (Oathkeeper)"
   "hostile hail" "hostile navy"
 
 government "Neutral"
-  swizzle 0
+  swizzle 3
   colour .84 .61 .37  
   "player reputation" 1
   "attitude toward"
@@ -251,7 +255,7 @@ government "Neutral"
   raid "pirate raid"
 
 government "None"
-  colour .6 .6 .6
+  colour .7 .7 .7
 
 government "Parrot"
   swizzle 2
@@ -363,7 +367,7 @@ government "Test Dummy"
   "hostile disabled hail" "disabled test dummy"
 
 government "Uninhabited"
-  colour .4 .4 .4
+  colour .5 .5 .5
 
 government "Wanderer"
   swizzle 2
