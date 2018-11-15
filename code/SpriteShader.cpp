@@ -28,7 +28,7 @@ namespace {
   const vector<vector<GLint>> SWIZZLE = {
     // three different colours
     {GL_RED,   GL_GREEN, GL_BLUE,  GL_ALPHA}, //  0: red + yellow markings (republic)
-    {GL_RED,   GL_BLUE,  GL_GREEN, GL_ALPHA}, //  1: red + magenta markings
+    {GL_RED,   GL_BLUE,  GL_GREEN, GL_ALPHA}, //  1: red + magenta markings (deep)
     {GL_GREEN, GL_RED,   GL_BLUE,  GL_ALPHA}, //  2: green + yellow (free worlds)
     {GL_BLUE,  GL_RED,   GL_GREEN, GL_ALPHA}, //  3: green + cyan
     {GL_GREEN, GL_BLUE,  GL_RED,   GL_ALPHA}, //  4: blue + magenta (syndicate)
@@ -51,8 +51,8 @@ namespace {
     {GL_BLUE,  GL_BLUE,  GL_RED,   GL_ALPHA}, // 18:
     {GL_BLUE,  GL_BLUE,  GL_GREEN, GL_ALPHA}, // 19:
     {GL_BLUE,  GL_RED,   GL_BLUE,  GL_ALPHA}, // 20:
-    {GL_RED,   GL_BLUE,  GL_BLUE,  GL_ALPHA}, // 21:
-    {GL_BLUE,  GL_GREEN, GL_BLUE,  GL_ALPHA}, // 22:
+    {GL_BLUE,  GL_GREEN, GL_BLUE,  GL_ALPHA}, // 21:
+    {GL_RED,   GL_BLUE,  GL_BLUE,  GL_ALPHA}, // 22: (alpha)
     {GL_GREEN, GL_BLUE,  GL_BLUE,  GL_ALPHA}, // 23: red and black (pirate)
     // three identical
     {GL_RED,   GL_RED,   GL_RED,   GL_ALPHA}, // 24:
@@ -79,7 +79,7 @@ namespace {
     {GL_BLUE,  GL_ZERO,  GL_RED,   GL_ALPHA}, // 42:
     {GL_BLUE,  GL_ZERO,  GL_GREEN, GL_ALPHA}, // 43:
     {GL_BLUE,  GL_ZERO,  GL_BLUE,  GL_ALPHA}, // 44:
-    // third is zero
+    // first is zero
     {GL_ZERO,  GL_RED,   GL_RED,   GL_ALPHA}, // 45:
     {GL_ZERO,  GL_RED,   GL_GREEN, GL_ALPHA}, // 46:
     {GL_ZERO,  GL_RED,   GL_BLUE,  GL_ALPHA}, // 47:
@@ -90,18 +90,18 @@ namespace {
     {GL_ZERO,  GL_BLUE,  GL_GREEN, GL_ALPHA}, // 52:
     {GL_ZERO,  GL_BLUE,  GL_BLUE,  GL_ALPHA}, // 53:
 
-    // two zero
+    // two are zero
     {GL_RED,   GL_ZERO,  GL_ZERO,  GL_ALPHA}, // 54:
     {GL_GREEN, GL_ZERO,  GL_ZERO,  GL_ALPHA}, // 55:
     {GL_BLUE,  GL_ZERO,  GL_ZERO,  GL_ALPHA}, // 56: red only (cloaked)
     {GL_ZERO,  GL_RED,   GL_ZERO,  GL_ALPHA}, // 57:
-    {GL_ZERO,  GL_BLUE,  GL_ZERO,  GL_ALPHA}, // 58:
-    {GL_ZERO,  GL_GREEN, GL_ZERO,  GL_ALPHA}, // 59:
+    {GL_ZERO,  GL_GREEN, GL_ZERO,  GL_ALPHA}, // 58:
+    {GL_ZERO,  GL_BLUE,  GL_ZERO,  GL_ALPHA}, // 59:
     {GL_ZERO,  GL_ZERO,  GL_RED,   GL_ALPHA}, // 60:
     {GL_ZERO,  GL_ZERO,  GL_GREEN, GL_ALPHA}, // 61:
     {GL_ZERO,  GL_ZERO,  GL_BLUE,  GL_ALPHA}, // 62:
 
-    // three zero
+    // three are zero
     {GL_ZERO,  GL_ZERO,  GL_ZERO,  GL_ALPHA}  // 63: black only (outline)
 
 /*
