@@ -7,7 +7,7 @@ shipyard "Quarg Variants"
 ship "Skylark"
   sprite "ship/skylark"
   attributes
-    category "Destroyer"
+    category "Frigate"
 #    manufacturer "Quarg"
     licences
       Quarg
@@ -20,11 +20,10 @@ ship "Skylark"
     "drag" 12.3
     "heat dissipation" .7
     "cargo space" 200
-    "outfit space" 850
+    "outfit space" 720
     "engine capacity" 100
     "weapon capacity" 200
 # miscellaneous stats
-    "ramscoop" 10
     "asteroid scan power" 100
     weapon
       "blast radius" 250
@@ -44,6 +43,7 @@ ship "Skylark"
     "Neutrino Cooling"
     "Hyperspace Tank" 5
     "Jump Drive"
+    "Quarg Ramscoop"
     "Intrusion Countermeasures" 120
   engine -15 117
   engine 15 117
@@ -77,11 +77,10 @@ ship "Wardragon"
     "drag" 9.3
     "heat dissipation" .5
     "cargo space" 50
-    "outfit space" 820
+    "outfit space" 710
     "engine capacity" 100
     "weapon capacity" 200
 # miscellaneous stats
-    "ramscoop" 10
     "tactical scan power" 100
     weapon
       "blast radius" 250
@@ -101,7 +100,8 @@ ship "Wardragon"
     "Neutrino Cooling"
     "Hyperspace Tank" 4
     "Jump Drive"
-    "Intrusion Countermeasures" 120
+    "Quarg Ramscoop"
+    "Intrusion Countermeasures" 160
   engine -14 47
   engine 14 47
   turret -29 6 "Skylance"
