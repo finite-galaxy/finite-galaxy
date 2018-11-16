@@ -24116,11 +24116,11 @@ planet "Ada"
   description `Ada is the home planet of Lovelace Labs, one of the most highly respected designers of starship systems and weaponry. Ada was originally settled as a mining planet, and the mines here still produce a steady stream of metal to supply the Labs and the many other industrial companies here.`
   description `  From above, the planet looks almost lifeless and barren. Most of the major cities on Ada are built into the walls of the canyons, where they are protected from the high winds and occasional dust storms that sweep across the surface.`
   spaceport `The spaceport is built into the walls of a canyon which has been blasted out to create trenches that are hundreds of meters wide and deep, a network of flight lanes that are well marked out with lights and beacons. Behind the docking caves is a bustling subterranean city where bare rock and gleaming metal have been woven together in an architecture that is both functional and elegant. The lighting in the caverns varies over the course of the day to match the sunlight outside.`
+  outfitter "Common Outfits"
+  outfitter "Lovelace Advanced"
   shipyard "Betelgeuse Intermediate"
   shipyard "Megaparsec Basics"
   shipyard "Navy Basics"
-  outfitter "Common Outfits"
-  outfitter "Lovelace Advanced"
   "required reputation" 2
   bribe 0.1
   security 0.9
@@ -24146,9 +24146,9 @@ planet "Ahr"
   description `The homeworld of the Arach people, Ahr is a metropolitan world with nearly nine billion inhabitants, enough that they cannot all be fed by what this world produces. The government maintains a storehouse with a month's supply of food in each major metropolitan centre, as well as a collection of bioreactors, built according to Kimek designs, that can produce a tasteless but nutritious paste as emergency rations in the unlikely event that shipments of food from off-world are somehow disrupted for a prolonged period of time.`
   spaceport `A constant line of cargo barges and trucks streams through this spaceport city, collecting goods to be distributed to the outlying suburbs and neighbouring cities. Inside the main terminal, members of all three Coalition species mix freely, but the Heliarch agents and interpreters here are all Arach.`
   spaceport `  Carts carrying passengers and cargo whiz past at frightening speeds, expertly navigating to dodge the pedestrians.`
+  outfitter "Coalition Intermediate"
   shipyard "Arach Advanced"
   shipyard "Coalition Basics"
-  outfitter "Coalition Intermediate"
 
 planet "Albatross"
   attributes pirate "south pirate"
@@ -24266,10 +24266,10 @@ planet "Asgard"
   description `  This is also the home of Deep Sky, a manufacturing firm that produces a wide variety of expensive and useful starship equipment.`
   spaceport `As with many of the worlds here in the Deep, walking around this spaceport feels like making a visit to the future. Everything is immaculately clean. The port is a single building reminiscent of a sand castle or termite mound: a jumble of spires, each a slightly different shape, all piled on top of each other. Docking bays open on various sides of the spires in a haphazard arrangement. It feels like this building is an organic thing, rather than the work of human hands.`
   spaceport `  The locals hurry by, seemingly oblivious to your presence; the only people who meet your gaze are your fellow wide-eyed visitors.`
-  shipyard "Fly Deep Intermediate"
-  shipyard "Lionheart Intermediate"
   outfitter "Common Outfits"
   outfitter "Deep Sky Advanced"
+  shipyard "Fly Deep Intermediate"
+  shipyard "Lionheart Intermediate"
   bribe 0.05
   security 0.7
   tribute 4000
@@ -24295,8 +24295,8 @@ planet "Aventine"
   landscape land/mountain17-harro
   description `This is not a particularly warm world, but it is the best that the first Remnant refugees were able to find when they explored the Ember Waste. It is here that they built their capital, in a deep valley that is almost always shrouded in clouds. In meadows farther up the mountain slopes, a few particularly hardy food crops are grown, but for the most part the Remnant relies on artificial greenhouses or cultured yeast for protein supplements. Remnant cuisine is unlikely to ever become a draw for tourists, even if their isolation here is broken.`
   spaceport `The oldest buildings in the Remnant capital city harken back to classic human architecture, with stone facades and columns reminiscent of ancient Rome. But as you walk outward toward the more recent additions, the buildings become less and less recognizably human, with curved organic shapes and hundreds of overhanging walkways and balconies. It is as if the layers left behind by centuries of habitation are a frozen record of the slow transition of Remnant culture into something bizarre and almost alien.`
-  shipyard Remnant
-  outfitter Remnant
+  outfitter "Remnant"
+  shipyard "Remnant"
 
 planet "Bank of Blugtad"
   attributes arach wealthy urban
@@ -24304,9 +24304,9 @@ planet "Bank of Blugtad"
   description `This idyllic planet is home to almost as many Arachi as their homeworld in the neighbouring system. It is also home to House Plumtab, the Arach guild in charge of banks and finance. Because pretty much every other sector of the Arach economy depends on loans from House Plumtab and trades stock on their equity exchanges, this House is quite influential throughout Arach space.`
   spaceport `The central concourse of the spaceport is reminiscent of a major stock exchange on a human world, with video screens everywhere displaying constantly fluctuating line graphs and lists of numbers and symbols. The only difference is that the graphs run top to bottom, rather than left to right.`
   spaceport `  Every once in a while, one of the Arachi will cause a minor pedestrian traffic jam by abruptly stopping to look at one of the displays.`
+  outfitter "Coalition Intermediate"
   shipyard "Arach Intermediate"
   shipyard "Coalition Basics"
-  outfitter "Coalition Intermediate"
 
 planet "Belug's Plunge"
   attributes arach mining research
@@ -24376,9 +24376,9 @@ planet "Blue Interior"
   landscape land/water10-harro
   description `Blue Interior is a strikingly beautiful earthlike world, covered mostly in oceans but with regions of rainforest, desert, mountains, and frozen tundra. Billions of Kimek live here, and there are also large Saryd and Arach populations in the cities whose climates are most agreeable to them. The Coalition often presents this world as a model of how their three species can benefit from sharing space with each other.`
   spaceport `This is a truly cosmopolitan spaceport, with members of all three Coalition species mixing freely, conversing and doing business with each other. There are also a large number of Heliarch interpreters and mediators mingling with the crowds, helping those interactions to go as smoothly as possible.`
+  outfitter "Coalition Intermediate"
   shipyard "Coalition Basics"
   shipyard "Kimek Intermediate"
-  outfitter "Coalition Intermediate"
 
 planet "Bluestone"
   attributes core oil research frontier
@@ -24410,9 +24410,9 @@ planet "Bourne"
   description `  Bourne is also the seat of government for the newly formed Coalition of Free Worlds.`
   spaceport `The spaceport on Bourne is a collection of granite and steel towers with platforms for ships to land. The tops of the towers are blackened by factory soot and etched by acid rain, but the granite gives them a timeless, classic look very unlike many of the ports you have visited.`
   spaceport `  The port authorities warned you when you landed to be careful of pickpockets, so you are guarding your wallet very closely.`
-  shipyard "Southbound Intermediate"
   outfitter "Common Outfits"
   outfitter "Kraz Intermediate"
+  shipyard "Southbound Intermediate"
   security 0.4
   tribute 2200
     threshold 4500
@@ -24430,9 +24430,9 @@ planet "Bright Echo"
   landscape land/dmottl1
   description `This is the first world that the Saryds colonized outside of their own solar system. Although somewhat colder than their native planet, it developed into a thriving metropolitan world. The original settlers planned out in exacting detail how every part of the planet's land mass should be used, in order to satisfy their aesthetic ideal of blending residential areas with parks and farms. Large areas have also been set aside as undeveloped wilderness.`
   spaceport `The spaceport is in what, by Saryd standards, is a major city, with scattered skyscrapers surrounded by forests and grassy park land along with smaller dwellings and occasional factories or power plants. The city is built on either side of one of this continent's largest rivers, a few kilometers downstream from a dam and hydroelectric plant. Here, the river cuts through a deep gorge, and the graceful bridges that cross the gorge are often shrouded in mist.`
+  outfitter "Coalition Basics"
   shipyard "Coalition Basics"
   shipyard "Saryd Intermediate"
-  outfitter "Coalition Basics"
 
 planet "Buccaneer Bay"
   attributes pirate "core pirate"
@@ -24440,11 +24440,11 @@ planet "Buccaneer Bay"
   description `Pirates who have struck it rich dream of retiring on Buccaneer Bay. It is a warm ocean planet, with many places reminiscent of the islands in the ancient Caribbean where humanity's first pirate fleets sailed.`
   description `  Many of the inhabitants are in fact not pirates, but their descendants, and these children and grand-children of anarchist outlaws have built a system of regional government that oversees hospitals, schools, and other public services, all created without funding from the Republic or taxes paid to it. The planet even sports its own shipyard, although many of the ships built here are, not surprisingly, based on designs pirated from the Syndicate and Republic shipyards.`
   spaceport `This is the sort of spaceport you picture in your head when you think of pirates. Half the storefronts are bars, and rum seems to be on the menu everywhere. It is almost like the stories of ancient Earth, except that the eye patches are cybernetic implants and the peg legs are motorized prosthetics. Swarthy, dangerous-looking women glance at you as you pass by, and scantily clad men crowd around the bars, which is what you seem to remember the stories said it was like on Earth, too, although there it may have been the other way around.`
-  shipyard "Megaparsec Basics"
-  shipyard "Syndicate Basics"
   outfitter "Common Outfits"
   outfitter "Pirate Outfits"
   outfitter "Syndicate Basics"
+  shipyard "Megaparsec Basics"
+  shipyard "Syndicate Basics"
   security 0
   tribute 800
     threshold 3000
@@ -24466,8 +24466,8 @@ planet "Caelian"
   landscape land/sky7
   description `When the first members of the Remnant discovered this region of space, Caelian was the only habitable world they found with enough insolation to be able to operate solar-powered factories and bioreactors. The first settlements were scattered widely, with the houses hidden underground in order to be less visible from space, because they feared that the Alphas would overrun human space and eventually find their way into the Waste. Centuries later, when they learned that the Alpha Wars had ended, they began to expand the factories and settlements more openly.`
   spaceport `Nearly all members of the Remnant are dark-skinned, either from exposure to high levels of ultraviolet radiation or because that is what their first ancestors who came here looked like. So, they walk around this spaceport village without much fear of the scorching desert sun, bringing supplies back and forth to the houses and to the flat clay pavement of the landing zone. Aside from some camels that the settlers brought with them, there are very few animals here.`
-  shipyard Remnant
-  outfitter Remnant
+  outfitter "Remnant"
+  shipyard "Remnant"
 
 planet "Calda"
   attributes paradise tourism rich
@@ -24549,13 +24549,13 @@ planet "Chiron"
   description `  Although Earth still has the most prestigious universities in the galaxy, Chiron has become the de-facto leader of the higher education industry, catering to those who value excellent teaching more highly than an illustrious name. As a result, off-world students form a noticeable fraction of the population.`
   spaceport `There are two spaceports on Chiron. The Old Port was built back when it was first settled, and was placed in a desert region, far from where people would want to live, so that they would not be as affected by the fallout from the nuclear propulsion that was used in the first, pre-hyperspace starships.`
   spaceport `  The New Port, on the other hand, is in the centre of New Sydney, one of Chiron's largest cities. Its soaring architecture and gleaming mirrored glass is intended to make a clear statement, that Chiron is everything Earth is not: clean, modern, prosperous.`
-  shipyard "Basic Ships"
-  shipyard "Hauler Intermediate"
   outfitter "Common Outfits"
   outfitter "Lovelace Basics"
   outfitter "Scram Drive"
   outfitter "Sisensis Intermediate"
   outfitter "Syndicate Basics"
+  shipyard "Basic Ships"
+  shipyard "Hauler Intermediate"
   bribe 0.02
   security 0.3
   tribute 4400
@@ -24569,11 +24569,11 @@ planet "Chosen Nexus"
   description `  It has now been many millennia since the Quarg were driven out and free travel began between the members of the Coalition, and Chosen Nexus now has nearly as many Arach and Kimek inhabitants as native Saryds.`
   spaceport `This is a truly cosmopolitan spaceport, a city where the distinctive architectures of the Coalition's species are blended together and where the food or lodgings unique to each of them can easily be found. Cargo drones hover over the landing pads, constantly loading and unloading the merchant ships that are parked here as their captains arrange to buy or sell cargo.`
   spaceport `  Mingling among the crowds, Heliarch representatives wearing golden bands as a mark of their authority serve both as translators and as peacekeepers.`
-  shipyard "Coalition Basics"
+  outfitter "Coalition Intermediate"
   shipyard "Arach Basics"
+  shipyard "Coalition Basics"
   shipyard "Kimek Basics"
   shipyard "Saryd Basics"
-  outfitter "Coalition Intermediate"
 
 planet "Clark"
   attributes "dirt belt" forest factory
@@ -24582,9 +24582,9 @@ planet "Clark"
   description `  The low cost of living and virtually zero unemployment rate make poverty and crime relatively rare occurrences. Instead there is a pioneering spirit, a startup-world attitude that anything is attainable with a bit of hard work and frugality.`
   spaceport `The spaceport is at the heart of one of Clark's largest cities, surrounded by smokestacks and factories. There are a few hangars owned by different corporations where their cargo ships can load and unload, but you are relegated to a set of concrete landing pads farther from the main buildings. Large trucks rumble by carrying carts loaded down with cargo crates.`
   spaceport `  In the central building, dozens of workers fill a large cafeteria with several stations serving different types of food. The mood here feels boisterous and energetic, very different from most of the Dirt Belt worlds you have visited.`
-  shipyard "Basic Ships"
   outfitter "Basic Outfits"
   outfitter "Sisensis Basics"
+  shipyard "Basic Ships"
   security 0.1
   tribute 400
     threshold 2500
@@ -24604,8 +24604,8 @@ planet "Cloudfire"
   landscape land/sea11-sfiera
   description `Cloudfire's atmosphere is unusually hazy, with almost constant cloud cover, making agriculture unproductive here even though it is a warm and damp environment. There are several major cities here that were abandoned centuries ago, due to conflict with the Unfettered. The one major city that remains is the closest thing the Hai have to a military base, with new supplies of weapons and ammunition constantly pouring in from the rest of Hai space.`
   spaceport `The spaceport has massive hangars and advanced repair facilities designed to accommodate the largest Hai warships. Where a fleet has just returned from a recent battle, the hangars are lit with flashes from robotic welders as damaged hull plates are swapped out for fresh ones and weakened joints are reinforced. The actual process of building these warships, however, takes place on the Hai homeworld, where the facilities will not be vulnerable to attack.`
-  shipyard "Hai Basics"
   outfitter "Hai Intermediate"
+  shipyard "Hai Basics"
 
 planet "Cold Horizon"
   attributes saryd tourism
@@ -24647,10 +24647,10 @@ planet "Covert"
   landscape land/badlands2
   description `Covert is home to a powerful mining cartel, operating outside the control of Republic law or any other external authority. It is rumoured to be one of the few planets in human space where weapons-grade uranium and plutonium is mined and enriched. Any goods for sale here were most likely produced by slave labour, often by survivors of ships that have been captured by pirates. A massive pirate fleet is docked on the outskirts of the spaceport, a warning to any private pilot who might think of cheating or opposing the cartel.`
   spaceport `From the moment you landed, you have been followed by a pair of security guards with earpieces and laser guns. The spaceport is one enormous building, with square, straight hallways and featureless walls, and nearly every door you pass is locked. Cameras at each hallway intersection pivot to watch as you approach. This is simultaneously one of the most secure spaceports you have visited, and one of the most dangerous, although if you do not do anything to provoke the animosity of the cartel, you will probably be able to leave in peace.`
-  shipyard "Megaparsec Basics"
-  shipyard "Syndicate Basics"
   outfitter "Basic Outfits"
   outfitter "Pirate Outfits"
+  shipyard "Megaparsec Basics"
+  shipyard "Syndicate Basics"
   "required reputation" 10
   bribe 0.1
   security 0
@@ -24691,8 +24691,8 @@ planet "Darkcloak"
   description `  Although the Hai tend to be an easygoing and nonviolent species, there are always a few in each generation that yearn for excitement, warfare, and conquest. These "Unfettered" Hai have built a major military base here, and they launch raids from here on convoys travelling through the nearby systems.`
   spaceport `The occupants of this spaceport are not visibly different from the Hai you have encountered elsewhere, but they seem much more tense, angry, and hostile. As the only human here, you are being watched very closely, but no one threatens you directly.`
   spaceport `  It is likely that most of the goods available for trade here were stolen from one of the nearby Hai systems.`
-  shipyard "Hai Advanced"
   outfitter "Hai Advanced"
+  shipyard "Hai Advanced"
 
 planet "Darkmetal"
   attributes hai mining "hai tourism"
@@ -24763,9 +24763,9 @@ planet "Delve"
   landscape land/snow1
   description `Delve is a world of towering mountains and valleys so steep that some slopes never see the light of the sun, where snow and ice remain on the topmost peaks year-round. The Syndicate's mining operations here are among the most extensive in the region, with some shafts descending several kilometers below the surface. Some of the mines are as large as a city, and in fact many of the mining cities are under ground, built in sections of old mines that have long since run out of useful metals. With all the mines and underground cities reliant on mechanical ventilation from the surface, the miners live in constant fear of two things: cave-ins, and power failures.`
   spaceport `The spaceport is an enormous hollow carved out of the side of a mountain, with a network of steel beams and mesh holding the rock in place. Inside the hollow, the landings are caves carved into the rock itself, again with steel beams above to protect the ships within. A tiered set of cog railways transport passengers and cargo between the landings and the large town at the base of the hollow. Beyond the hollow, the mountainside falls off into a steep cliff and a mist-filled valley below. Although the port is well-built and modern, you cannot help an irrational fear that the whole place will slide off the edge of the mountain one day.`
-  shipyard "Syndicate Basics"
   outfitter "Basic Outfits"
   outfitter "Syndicate Intermediate"
+  shipyard "Syndicate Basics"
   security 0.2
   tribute 1600
     threshold 4500
@@ -24901,10 +24901,10 @@ planet "Endless Sky"
   landscape land/water2
   description `Endless Sky is a completely unremarkable world... except, of course, for the fact that you happen to have been born here. Most of the land is wet and marshy, and the coastal regions are prone to flooding. Some food crops are grown here, but most of the farmers instead plant flax and jute, which grow well in wet soil and are used to make linen and burlap cloth. The textile mills are hot and poorly ventilated, but they offer higher and more reliable income than farming.`
   spaceport `Some day Endless Sky may be a prosperous enough planet to afford a better spaceport, but not yet. Many of the concrete landing pads have sunk into the muddy soil over the years since they were poured, and are now tilted and uneven. The market where ship captains buy and sell cargo is a large tent rather than a permanent building, but it is sturdy enough to keep off the rain, and high enough for loads to be brought in and out by trucks and the occasional hovercraft. And, some enterprising local mechanics have set up not only a repair shop and outfitter, but also a shipyard with several small, refurbished ships for sale.`
-  shipyard "Basic Ships"
-  shipyard "Hauler Basics"
   outfitter "Basic Outfits"
   outfitter "Sisensis Basics"
+  shipyard "Basic Ships"
+  shipyard "Hauler Basics"
   security 0.05
   tribute 300
     threshold 2500
@@ -24962,11 +24962,11 @@ planet "Far Home"
   description `  This world is also home to the annual Coalition Games, where athletes from throughout Coalition space compete. The winners become eligible for immediate elevation to Heliarch rank.`
   spaceport `The spaceport is a large city on the edge of a temperate forest. The city's layout, with green space and parks woven throughout it, is clearly a Saryd design, but the architecture borrows equally from all three cultures. As with the other ports where interspecies interactions are frequent, hundreds of Heliarch representatives wander around to mediate conversations and prevent misunderstandings.`
   spaceport `  Once a year, when the Games begin, the spaceport city grows to nearly four times its usual population.`
-  shipyard "Coalition Basics"
+  outfitter "Coalition Intermediate"
   shipyard "Arach Basics"
+  shipyard "Coalition Basics"
   shipyard "Kimek Basics"
   shipyard "Saryd Basics"
-  outfitter "Coalition Intermediate"
 
 planet "Far Monad"
   landscape land/water0
@@ -25090,12 +25090,12 @@ planet "Follower"
   description `Follower is on the edge of the Paradise Planets region of space: not really one of them yet, but aspiring to be. It is prosperous, but from manufacturing rather than law or finance or venture capitalism. A significant fraction of the local taxes collected here are being spent on terraforming, raising global temperatures and reducing seasonal fluctuations. The goods produced here always have a ready market to purchase them, so Follower's job economy is considered very stable.`
   description `  As one of the few planets still actively engaged in terraforming, Follower has been the location of several experiments with new technology, trying to leapfrog the centuries-slow process that other worlds have gone through. Unfortunately most of these experiments have failed, sometimes spectacularly.`
   spaceport `The spaceport is a single skyscraper, fifty floors tall and as wide as it is high, with the floors twisting around each other in a helical patterns so that on each level, the landing bays are approached from a slightly different angle. The whole structure is built of steel and gleaming glass. Inside, the soaring ceilings give you more of a sense of opulence than of comfort.`
-  shipyard "Betelgeuse Intermediate"
-  shipyard "Fly Deep Basics"
   outfitter "Common Outfits"
   outfitter "Deep Sky Basics"
   outfitter "Lovelace Basics"
   outfitter "Sisensis Intermediate"
+  shipyard "Betelgeuse Intermediate"
+  shipyard "Fly Deep Basics"
   bribe 0.03
   security 0.4
   tribute 2400
@@ -25116,11 +25116,11 @@ planet "Foundry"
   landscape land/city1
   description `Foundry is home to the Syndicated Shipyards, where more than half of the commercial freighters in human space are manufactured. Although much of the planet is blanketed in smog from the factories, there are also regions of pristine forests and majestic mountains. The Syndicate has a generous vacation policy on Foundry that allows workers to take as much as a month of vacation time every year, and many choose to take that time to escape from the cities and explore the wilderness. The shipyards claim that this vacation time is partly responsible for the high reliability of the ships built here, because a well-rested and relaxed worker is less likely to make the sort of mistakes that can quickly become disastrous in outer space.`
   spaceport `The spaceport is surrounded by kilometers of hangars and factories where new ships are being assembled. The port itself is a trio of towering buildings, with a skywalk on the top floors to provide a view of the surrounding area. Larger ships land on pads on the ground surrounding the towers, while smaller ships can fly into hangars built into the sides of the towers themselves. Everything is made of gleaming metal, and each tower is slightly tapered and adorned with painted fins that make it resemble an enormous starship.`
-  shipyard "Megaparsec Intermediate"
-  shipyard "Syndicate Advanced"
   outfitter "Common Outfits"
   outfitter "Scram Drive"
   outfitter "Syndicate Intermediate"
+  shipyard "Megaparsec Intermediate"
+  shipyard "Syndicate Advanced"
   bribe 0.1
   security 0.5
   tribute 2900
@@ -25141,8 +25141,8 @@ planet "Freedom"
   spaceport `Apparently anarchists are not opposed to commerce as long as no one is regulating it. Half of the landing pads in the spaceport are available for ships; the other half have been taken over by farmers busy selling their produce, or merchants buying from incoming ships and piling crates into large trucks.`
   spaceport `  A sign above the entrance to the spaceport bar reads, "Fine home-brewed whisky! Get smashed without getting taxed!" Further down the street, a sign over what appears to be a real estate office reads, "Why not settle where The Man can't reach you?"`
   spaceport `  Inexplicably, the only advertising on the seafood restaurant across the street is an enormous banner proclaiming, "We have brown rice."`
-  shipyard "Betelgeuse Intermediate"
   outfitter "Common Outfits"
+  shipyard "Betelgeuse Intermediate"
   "required reputation" -10
   security 0
   tribute 500
@@ -25177,12 +25177,12 @@ planet "Geminus"
   description `  The constant volcanic activity leaves the planet perpetually shrouded in clouds of ash and fog, so that being outside means being in a twilight haze with low visibility. Probably in compensation for this, interior spaces tend to be brightly lit and painted in bold colours.`
   spaceport `Like everything else on Geminus, the spaceport is not terribly pretty, but is functional and efficient. Each of the wide hallways is marked out like a road, with space in the centre for electric carts carrying cargo, while pedestrians are relegated to the edges.`
   spaceport `  The hub of the spaceport is a food court with a ring of shops in the centre and seating on the outside, where you can look out of plate glass windows at the lava fields and caldera outside. By night, you can see the volcanic glow all around the horizon.`
-  shipyard "Betelgeuse Basics"
-  shipyard "Fly Deep Basics"
-  shipyard "Navy Advanced"
   outfitter "Common Outfits"
   outfitter "Lovelace Intermediate"
   outfitter "Sisensis Intermediate"
+  shipyard "Betelgeuse Basics"
+  shipyard "Fly Deep Basics"
+  shipyard "Navy Advanced"
   bribe 0.1
   security 0.9
   tribute 4800
@@ -25227,8 +25227,8 @@ planet "Giverstone"
   landscape land/valley5
   description `On this mining world, the Hai are using boring machines to drill tunnels straight into the hearts of the mountains. Each tunnel twists and turns to intersect the regions of rock with the highest concentrations of valuable ore. Most of the tunnels also join up with other tunnels that have been dug through the same mountains, so that there are multiple exits from any given point in the mines.`
   spaceport `The spaceport is in the centre of one of the large cities that are built high up in the mountains where the air is cooler. It consists mostly of open-air landing pads: enormous slabs of metal embedded into the mountainside at different levels, with winding roads connecting them to the main marketplace and warehouse district. Several old mine entrances, well reinforced with metal struts, have been converted into hangar bays or warehouse space.`
-  shipyard "Hai Intermediate"
   outfitter "Hai Intermediate"
+  shipyard "Hai Intermediate"
 
 planet "Glaze"
   attributes south tourism
@@ -25236,10 +25236,10 @@ planet "Glaze"
   description `Glaze is a varied world with everything from sunny beaches to frozen tundra, but it is perhaps best known for its sandstone canyons and deserts. This world's wildlife has never been studied in great detail. Local rumours tell about an alien species of "canyon people" who live in caves in some of the deepest canyons, leading to a constant stream of visiting xenobiologists. The scientific consensus, however, is that these sightings have only been of a reclusive ape-like species that lives in the canyons, and is not known to dig caves or show any other sign of civilization.`
   spaceport `The spaceport is a tower of glass and steel perched on top of a mesa, overlooking the canyonlands: spires of red and pale yellow stone, with a sprinkling of trees at the lower elevations. A wide highway winds down the side of the mesa, through several tunnels, and the off to the horizon. The port itself is not terribly busy.`
   spaceport `  You notice quite a few families with children sitting by the windows on the upper stories of the tower, watching starships landing and taking off. Many of them have brought folding chairs or blankets to sit on. That must be what passes for entertainment on this world.`
-  shipyard "Southbound Basics"
   outfitter "Common Outfits"
   outfitter "Delta V Basics"
   outfitter "Kraz Basics"
+  shipyard "Southbound Basics"
   security 0.2
   tribute 1700
     threshold 3500
@@ -25286,13 +25286,13 @@ planet "Greenrock"
   description `Greenrock is the closest thing that the pirates in southern human space have to a centre of government, but taking the form of large, powerful corporations rather than elected officials. When rival pirate bands seek to negotiate on neutral territory, this is where they meet. Nearly everything is for sale here: illegal weapons, ships customized for pirating, and even slaves.`
   spaceport `You have heard enough about this port's reputation that you are not surprised to see the slave markets, heavily guarded in case any visitors happen to find themselves in possession of a conscience. Nor are you shocked by the shady establishments catering to all manner of prurient interests. This is, after all, a pirate port, and everything is for sale here.`
   spaceport `  Everything, in fact, including the very bizarre. At the end of one dark alley you see a shop called "Mike's Mustelids," with weasels and ferrets in cages in the window. Beside them, a fully-grown wolverine glares at you from behind the bars of a large and sturdy cage.`
-  shipyard "Southbound Intermediate"
-  shipyard "Tarazed Basics"
   outfitter "Common Outfits"
   outfitter "Delta V Intermediate"
   outfitter "Pirate Outfits"
   outfitter "Sisensis Intermediate"
   outfitter "Tarazed Intermediate"
+  shipyard "Southbound Intermediate"
+  shipyard "Tarazed Basics"
   bribe 0.05
   security 0
   tribute 1800
@@ -25304,16 +25304,16 @@ planet "Greenwater"
   landscape land/myrabella2
   description `Greenwater is one of the few worlds in Hai space that is home to a sizable human population. The temperature on most of the planet's surface is too warm for the Hai, but tolerable for human beings. Close to the equator are scattered human settlements for farming or fishing, which trade with the Hai cities closer to the poles for technology and equipment.`
   spaceport `In this bustling spaceport, deeply tanned human merchants are busy haggling with the Hai natives over the price of loads of fish and produce. The atmosphere is quite friendly and relaxed - even here, well into the planet's temperate zone, it is warm enough that everyone, Hai and human alike, moves at a languid pace.`
-  shipyard "Hai Basics"
   outfitter "Hai Basics"
+  shipyard "Hai Basics"
 
 planet "Gresku Fodar"
   attributes korath station
   landscape land/space4
   description `Situated an ideal distance from this system's twin suns, this station holds greenhouses where the Korath grow a highly nutritious bacterial sludge that serves the exiles as their main food source. A few of the greenhouses are also growing more traditional crops, but these are clearly a luxury that the Korath cannot afford to waste more of their resources on.`
   spaceport `The bacterial soup that is being served in the food court has a texture like wet silt and an unpardonably bland flavour. Someone who could supply the Korath with a steady stream of the right sorts of spices could make a killing in trade here.`
-  shipyard "Korath"
   outfitter "Korath Outfits"
+  shipyard "Korath"
   security 0
 
 planet "Hai-home"
@@ -25321,8 +25321,8 @@ planet "Hai-home"
   landscape land/valley2
   description `This is the home world of the Hai. Well over half the planet's surface is oceans. The land is mostly covered by sprawling cities, except for some mountain ranges too high or too snowy to build on. Despite its population of nearly eight billion, Hai-home is relatively free of pollution or overcrowding.`
   spaceport `The spaceport in the capital city of Haimat is massive, with towers well over a kilometer high and hangars large enough to park an entire fleet of capital ships in. Although the port is bustling, with ships taking off and landing almost every minute, nearly three quarters of the landing pads and hangars are empty, and whole sections of the spaceport appear to be unused. Clearly, this port was designed to handle far more traffic than this.`
-  shipyard "Hai Advanced"
   outfitter "Hai Advanced"
+  shipyard "Hai Advanced"
   "required reputation" 10
 
 planet "Hammer of Debrugt"
@@ -25330,9 +25330,9 @@ planet "Hammer of Debrugt"
   landscape land/myrabella5
   description `House Chamgar claims that their advances in aerospace and weapon technology were instrumental in driving the Quarg out of Coalition space about six millennia ago. Given how much more advanced the Saryds and Kimek were at the time, their claims are likely an exaggeration. But, there is no doubt that in the present day the home of House Chamgar has developed into an industrial world as productive as any in Coalition space, partly because this world is rich enough in natural resources that there is little need to import raw materials from elsewhere.`
   spaceport `The spaceport is a multi-tiered, gravity-defying structure reaching hundreds of meters above the ground, with steel and glass arches, cantilevered platforms, and luxury-class docking bays on its upper levels. On the ground level surrounding the facility are landing pads for heavy cargo ships, along with the associated warehouses and repair shops.`
-  shipyard "Coalition Basics"
-  shipyard "Arach Intermediate"
   outfitter "Coalition Intermediate"
+  shipyard "Arach Intermediate"
+  shipyard "Coalition Basics"
   "required reputation" 25
 
 planet "Harmony"
@@ -25352,9 +25352,9 @@ planet "Haven"
   description `Haven was founded by highly successful "privateers" nearly two centuries ago. Since then, as rival bands of pirates have fought over it, it has changed hands fourteen times, but has never been successfully invaded by the Republic. Numerous small manufacturing shops sell outfits that cannot be bought legally, and there is even a small shipyard where customized ships are sold.`
   description `  Much of the planet is desert, but with enough moisture to grow enough crops to feed the entire population. Strip mining has turned other parts of the planet into barren wastelands, and has polluted many of the rivers.`
   spaceport `The spaceport is old and dingy, with piles of litter in the gutters and graffiti on many of the alley walls. Many of the shops are closed, the windows boarded over or covered with yellowing paper. This is an independent world, and a relatively stable settlement, but the effects of its separation from the rest of the galaxy are evident. A few young people carrying large backpacks eye you with interest, perhaps trying to gauge their chances of getting you to give them a cheap lift off-planet.`
-  shipyard "Betelgeuse Basics"
   outfitter "Basic Outfits"
   outfitter "Pirate Outfits"
+  shipyard "Betelgeuse Basics"
   bribe 0.03
   security 0
   tribute 700
@@ -25368,10 +25368,10 @@ planet "Haze"
   description `  Very few regions of this planet remain untouched by human hands, but a few of the particularly mountainous or marshy areas have been set aside as nature preserves. More than half of the indigenous life forms have gone extinct since human settlement began here four centuries ago.`
   spaceport `The spaceport is constructed purely for efficiency and functionality. It is a long building, stretching in a straight line across more than a kilometer. Through the centre, on tracks elevated at various levels, run monourail trams for carrying passengers and cargo. Along the sides of the building are docking bays alternating with storage rooms. The wide corridors are packed both with people and with robotic freight carts.`
   spaceport `  As the planet's economy grows and the spaceport becomes too cramped, the port authority simply clears more land and extends the building, the tramways, and the docks out farther along the same line.`
-  shipyard "Lionheart Basics"
-  shipyard "Fly Deep Basics"
   outfitter "Basic Outfits"
   outfitter "Deep Sky Intermediate"
+  shipyard "Fly Deep Basics"
+  shipyard "Lionheart Basics"
   security 0.6
   tribute 2600
     threshold 5500
@@ -25394,8 +25394,8 @@ planet "Heartvalley"
   landscape land/fog0
   description `An extreme amount of tectonic activity in its distant past has left Heartvalley with mountain ranges five to ten kilometers high in some places. Most of the Hai settlements here are in the valleys closer to sea level, where the air is dense enough for them to breathe comfortably. The tectonic activity has left many ancient sea-beds exposed, providing access to bountiful supplies of oil. To the Hai, oil is too precious a resource to be used for fuel; instead they process it into plastic and use the byproducts in other chemical processes.`
   spaceport `The spaceport is built halfway up the slope of one of the most heavily settled valleys. Farther down the valley, the tallest buildings of the city seem tiny compared to the mountains that surround them. On the outskirts of the city sit strange engines the size of a spacecraft, with pipes snaking out from them in all directions and sinking deep into the ground.`
-  shipyard "Hai Basics"
   outfitter "Hai Basics"
+  shipyard "Hai Basics"
 
 planet "Helheim"
   attributes deep mining volcanic
@@ -25414,13 +25414,13 @@ planet "Hephaestus"
   description `Hephaestus is home to Syndicated Systems, which manufactures parts used in shipyards throughout human space. Although not always the highest quality or most technologically advanced, ship outfits produced by the Syndicate are quite affordable and sufficient for any ordinary pilot's needs. The executives of many other companies have been known to make a pilgrimage of sorts to this planet, to witness firsthand how the Syndicate has made their production lines here so efficient and dependable.`
   description `  Nearly all the inhabitants of Hephaestus live in a single metropolitan area that has spread to cover almost an eighth of the total land mass. As with many Syndicate worlds, pollution is a growing problem that they are working hard to address.`
   spaceport `The spaceport consists of a double row of hangars of all different sizes, with shops and warehouse space in between. In many of the hangars you pass, mechanics are busy installing new parts or making repairs to old ones. The flash of arc welders and the squeal of bolt drivers and rivet guns is everywhere. Above the hangars is a tier of supply rooms with all different sorts of ship outfits on display, rows and rows of gleaming, identical parts. Robotic gantries swing overhead at frightening speeds, stocking and fetching parts. It serves as both a functional storage space and a massive advertisement for Syndicated equipment.`
-  shipyard "Megaparsec Intermediate"
-  shipyard "Syndicate Intermediate"
   outfitter "Common Outfits"
   outfitter "Lovelace Basics"
   outfitter "Scram Drive"
   outfitter "Sisensis Basics"
   outfitter "Syndicate Advanced"
+  shipyard "Megaparsec Intermediate"
+  shipyard "Syndicate Intermediate"
   bribe 0.1
   security 0.7
   tribute 3400
@@ -25538,8 +25538,8 @@ planet "Icelake"
   landscape land/sky4
   description `Icelake is the second most populous Hai planet. Since its oil and natural gas reserves have long since been depleted, the large cities and factories here rely heavily on geothermal and wind energy. One fortunate side effect of that is that the air here is almost as pristine as on a non-industrial world.`
   spaceport `The largest hangars in the spaceport are built of metal beams more than a meter wide, with thick glass panels between them to let in the sunlight. Even the smaller and newer warehouses on the outskirts of the port seem as solid and permanent as the mountains themselves. Thousands of Hai are walking back and forth between the buildings, and many of them regard you with curiosity; there are very few human visitors here.`
-  shipyard "Hai Intermediate"
   outfitter "Hai Advanced"
+  shipyard "Hai Intermediate"
 
 planet "Ingot"
   attributes "dirt belt" volcanic mining moon
@@ -25595,8 +25595,8 @@ planet "Kessel Sepret"
   landscape land/station1
   description `In this factory station, raw metal harvested in the other Korath systems is shaped into ships and weapons, the war materiel for their raids on Human space. Sections of the ships are assembled and tested in pressurized hangars, but the Korath Raider is a large enough ship that the final assembly must be done in space, outside the station.`
   spaceport `This station is run with military discipline reminiscent of a human Navy base. All the Korath, even the construction workers, are in full uniform with some sort of rank insignia: epaulettes that vary both in shape and colour. The largest ones appear to mark the officers in charge.`
-  shipyard "Korath"
   outfitter "Korath Outfits"
+  shipyard "Korath"
   security 0
 
 planet "Ki Patek Ka"
@@ -25604,9 +25604,9 @@ planet "Ki Patek Ka"
   landscape land/fields10-sfiera
   description `This is the Kimek home world. Before they developed spaceflight, billions of Kimek died either from famine or from civil wars brought on by overpopulation. Today, every major city still has "hunger towers": kilometer-high skyscrapers where yeast and bacterial cultures are grown in massive vats in order to provide a bland but stable source of emergency rations if the crops and the food shipments from off-world should ever fail.`
   spaceport `Nearly all the land mass on Ki Patek Ka is covered in cities; the only undeveloped land is the high mountain peaks and the ice caps near the poles. The spaceport alone is larger than most human cities, stretching from horizon to horizon, with a ship taking off or landing every few seconds. The sheer number of people here - mostly Kimek, but a fair number of Saryds and Arachi as well - is overwhelming.`
+  outfitter "Coalition Intermediate"
   shipyard "Coalition Basics"
   shipyard "Kimek Advanced"
-  outfitter "Coalition Intermediate"
 
 planet "Korati Efreti"
   attributes station efret
@@ -25778,9 +25778,9 @@ planet "Mainsail"
   description `Mainsail is a water world: although there are some settlements on dry land, the largest cities are floating, artificial islands, which travel between hemispheres over the course of the year pursuing the most ideal weather. Other, smaller islands are privately owned by single families or corporations. Mainsail is a prohibitively expensive place to live.`
   description `  Centuries ago Mainsail was home to pirates of the old-fashioned variety, fleets of motor boats or even old-fashioned sailing vessels that would launch raids against the city-ships.`
   spaceport `The spaceport is on its own city-ship floating some distance away from the others, so that the locals need not deal with the noise and uncouth manners of spacefarers. Surrounding the port is a ring of docks where barges are moored; on platforms farther "inland," starships land. Few goods are produced here; most of the people rich enough to live on Mainsail are connected with interplanetary corporations whose physical business takes place elsewhere.`
-  shipyard "Betelgeuse Basics"
   outfitter "Basic Outfits"
   outfitter "Lovelace Basics"
+  shipyard "Betelgeuse Basics"
   bribe 0.06
   security 0.5
   tribute 1600
@@ -25806,8 +25806,8 @@ planet "Makerplace"
   landscape land/lava0
   description `Makerplace has an unusual degree of volcanic activity due to high concentrations of radioactive elements in the planet's mantle. Although it is warm by Hai standards, the abundance of geothermal energy, combined with plentiful solar energy and wind power, has made it an ideal world for manufacturing. Several cities in the temperate regions have populations of over a hundred million Hai, and the factories surrounding the cities spread out for dozens of kilometers in all directions. Near the equator, much of the land is desert or volcanic wasteland.`
   spaceport `A fair number of the Hai walking through this spaceport are wearing no clothing at all, perhaps as a response to the warm temperatures. Given that they seem to attract no notice or disapproval by doing so, it appears that this is perfectly normal behaviour. Others appear to have trimmed their fur shorter than normal as an alternative way to deal with the heat.`
-  shipyard "Hai Intermediate"
   outfitter "Hai Advanced"
+  shipyard "Hai Intermediate"
 
 planet "Mani"
   attributes deep moon
@@ -25826,9 +25826,9 @@ planet "Market of Gupta"
   landscape land/mountain16-striker
   description `This mountain world is the home base of House Mallob, the powerful Arach guild in charge of commerce and shipping. All the Arach starships that are currently in use were designed here, and many of them are manufactured here as well. The motto of House Mallob's shipyards is "strong as the mountains, spacious as the skies," referring to their focus on durable hulls and high cargo capacity.`
   spaceport `This spaceport serves as the primary repair and service centre for the Arach merchant marine. At any given time hundreds of ships may be in dry-dock here to have new equipment installed or their engines or internal systems tuned for better efficiency. Meanwhile, thousands of analysts and software experts work to plan out delivery routes, schedules, and supply chains for the merchant fleets to ensure that goods are always delivered where they will be most needed, and will earn the best profit. House Mallob's finances and organizational structure are legendary for their complexity.`
-  shipyard "Coalition Basics"
-  shipyard "Arach Intermediate"
   outfitter "Coalition Intermediate"
+  shipyard "Arach Intermediate"
+  shipyard "Coalition Basics"
 
 planet "Mars"
   attributes "near earth" tourism farming
@@ -25915,10 +25915,10 @@ planet "Midgard"
 #  description `  Food, fashion, and entertainment here all strike you as out of pace with broader galactic culture. The deep independent history of the planet makes it less likely to simply follow the latest Earth trends as the more recent colonies do.`
   description `  The planet is also home to Fly Deep, a relatively new shipyard, specializing in fast interceptors.`
   spaceport `The spaceport is located in the centre of the city of New Reykjavik, a bustling metropolis which is also Midgard's centre of government. The port was built five hundred years ago, and its architecture is much more conservative than other ports in the Deep: instead of domes and rounded, wavy surfaces, it is a collection of tall, square granite towers, connected by bridges at various levels. Most of the hotels and restaurants are in a central tower, slightly higher than the others. There is no central marketplace; instead, you can just buy or sell cargo from a computer terminal and a robotic forklift will arrive at your docking bay to carry it.`
-  shipyard "Fly Deep Advanced"
-  shipyard "Lionheart Intermediate"
   outfitter "Common Outfits"
   outfitter "Deep Sky Intermediate"
+  shipyard "Fly Deep Advanced"
+  shipyard "Lionheart Intermediate"
   bribe 0.05
   security 0.8
   tribute 3000
@@ -25930,9 +25930,9 @@ planet "Midway Emerald"
   landscape land/forest3
   description `Wealthy Kimek prefer to live as close as possible to the centres of power, and in Coalition space the centre of power is the Heliarch ringworlds. The dwellings here are a bit more luxurious and less densely packed than on other Kimek worlds, and the total population is less than two billion. Outside the cities, this is a hot forest world, without much local industry or natural resources.`
   spaceport `The relative opulence of this spaceport means that the walkways and doorways are big enough to be comfortable not only for the diminutive Kimek, but for the Arachi and even the Saryds as well, and the three species mingle here in roughly even numbers. The spaceport even has a few gardens and parks, as a concession to the Saryd need for quiet and beautiful spaces.`
+  outfitter "Coalition Basics"
   shipyard "Coalition Basics"
   shipyard "Kimek Basics"
-  outfitter "Coalition Basics"
 
 planet "Millrace"
   attributes "near earth" factory urban
@@ -26045,9 +26045,9 @@ planet "New Britain"
   description `New Britain is one of the few worlds in the Dirt Belt region of the galaxy that is relatively prosperous and has a large population. Although the gravity here is slightly low, it is otherwise a nearly ideal Earth-like world, rich enough in natural resources that all the raw materials for the local industry can come from on-planet.`
   description `  Among the native life forms, the most striking are the many species of large and colourful birds, most of which have learned to give the cities and the spaceport a wide berth.`
   spaceport `The spaceport is a granite ziggurat, a step pyramid with landing pads and hangars on each level. On the top levels are the dining areas and meeting rooms for corporate visitors; the lower floors provide warehouse and storage space. Compared to the relatively traditional architecture of the city nearby, the spaceport looks out of place, even absurd. But to the locals, it is meant as a clear display to visitors that even though they are in a region of space known for poor and sparsely populated worlds, this particular world is far more developed.`
-  shipyard "Tarazed Basics"
   outfitter "Common Outfits"
   outfitter "Tarazed Intermediate"
+  shipyard "Tarazed Intermediate"
   security 0.2
   tribute 1300
     threshold 4500
@@ -26217,9 +26217,9 @@ planet "Norn"
   landscape land/beach4
   description `Norn is a water world, with low gravity but an atmosphere dense enough to breathe easily. Large mats of seaweed and algae form natural rafts that drift around with the ocean currents, and a few intrepid settlers have colonized them, people who prefer a life of relative solitude and are willing to trust their fates to wherever the winds might take them. Others have settled the few, low islands, which are prone to frequent flooding. Fish are common here, including a few species of flying fish which travel in large packs and are a considerable nuisance for the land-dwellers.`
   spaceport `The spaceport is on one of the larger islands, a network of small buildings connected by bridges and raised up on enormous stilts about fifty meters high. Cargo winches are used to load and unload cargo from the boats that dock below. Starships dock in individual hangars, to protect them from the wind. The whole complex sways slightly, almost imperceptibly, as if it were a large boat at sea. The walkways all have tall railings, but you still find yourself afraid to venture too near the edge or to look down at the island and the sea below. The locals, however, walk swiftly and gracefully, with no sign of fear.`
-  shipyard "Lionheart Basics"
   outfitter "Basic Outfits"
   outfitter "Deep Sky Basics"
+  shipyard "Lionheart Basics"
   bribe 0.04
   security 0.6
   tribute 500
@@ -26361,10 +26361,10 @@ planet "Prime"
   landscape land/city11
   description `Prime is a very Earth-like ocean world, with a population of over a billion people. It is home to Betelgeuse Shipyards, and much of the industry on the planet is related to ship-building in one way or another, like refining and working metal, or developing exotic new hull and framing materials. Although some mining is done in more remote regions of the planet, Prime is reliant on shipments of metal and other goods to feed its industries.`
   spaceport `The spaceport is a long, multi-storey building designed to look like a capital starship, but much larger. It is built mostly of steel and glass, with the sturdy beams and girders that support the building visible on the inside, giving it the look of a ship still in construction, whose interior has not yet been fully fitted out. In nearby hangars, final assembly is being done on ships, some of which have been completed and are now for sale.`
-  shipyard "Betelgeuse Advanced"
-  shipyard "Navy Intermediate"
   outfitter "Common Outfits"
   outfitter "Lovelace Intermediate"
+  shipyard "Betelgeuse Advanced"
+  shipyard "Navy Intermediate"
   "required reputation" 2
   bribe 0.05
   security 0.6
@@ -26449,8 +26449,8 @@ planet "Remote Blue"
   landscape land/water5
   description `Most Kimek are proud to be members of the Coalition, but those who are either suspicious of the other species or simply want to be as far away from the Heliarch ringworlds as possible when the Quarg return with retribution, choose to live here. As a result, despite its remote location this world supports a population of over eight billion. Many of the cities have defensive gun emplacements on their outskirts, yet another sign of the local paranoia.`
   spaceport `There are almost no non-Kimek in this spaceport, and as an alien visitor from beyond Coalition space you receive a considerable amount of scrutiny. Several of the local restaurants outright refuse to serve any species but the Kimek, claiming that their patrons would lose their appetites if forced to witness the disgusting eating habits of other species. (The Kimek generally eat their food by vomiting digestive fluid onto it, waiting for it to dissolve, and then slurping up the soupy mixture.)`
-  shipyard "Kimek Intermediate"
   outfitter "Coalition Intermediate"
+  shipyard "Kimek Intermediate"
   "required reputation" 15
 
 planet "Reunion"
@@ -26459,13 +26459,13 @@ planet "Reunion"
   description `Reunion is one of the most Earth-like planets found by the early settlers, all the way down to its moon and tides. It has grown into a mostly urban world, which supplies manufactured goods of all sorts to the neighbouring systems.`
   description `  Local politics are unusually lively for a Republic world, to the point where a seat in the local legislature is often more hotly contested than one in the Republic Parliament. Topics of debate include trade and taxation, of course, but also seemingly fringe issues like biodiversity regulations for city green space. It may be that a world with no terraforming needs is focusing instead on tweaking society itself.`
   spaceport `The spaceport, although designed as a clean and modern building, is a place of barely controlled chaos: vendors selling food on the sides of the hallways, tourist families with young children, and even a few farmers driving cattle. People of every age and race and occupation rub shoulders here, but there is no sign of the extreme sort of poverty that you have seen on some other worlds.`
-  shipyard "Basic Ships"
-  shipyard "Hauler Intermediate"
-  shipyard "Syndicate Intermediate"
   outfitter "Common Outfits"
   outfitter "Lovelace Basics"
   outfitter "Sisensis Basics"
   outfitter "Syndicate Basics"
+  shipyard "Basic Ships"
+  shipyard "Hauler Intermediate"
+  shipyard "Syndicate Intermediate"
   security 0.3
   tribute 2900
     threshold 5000
@@ -26519,9 +26519,9 @@ planet "Rust"
   description `Rust is smaller than Earth, but very similar in climate. Much of its surface is suitable for agriculture, with wide open grasslands and dense forests. There are very few mountains, since the planet has low levels of tectonic activity.`
   description `  The chief industry on Rust, however, are the factories and labs for Kraz Cybernetics, a maker of robots, computers, and advanced spaceship systems. The planet's population is not large, but the schools are among the best in the region, and many of the inhabitants - even those who live on the farms - hold at least one advanced degree.`
   spaceport `The spaceport is a gleaming, modern steel structure, with docks extending out from it like spokes from an axle, and magnetic clamps to hold ships of any size. As you walk into the building, you cannot help gawking. Most of the shops are staffed by robots instead of human beings, and the elevators are so smooth and silent that you can hardly tell they are moving at all. Even though you know that all this technology was provided by the marketing department of Kraz Cybernetics as a showcase of their capabilities, you cannot help but be inspired by this vision of what the future of all planets might some day be.`
-  shipyard "Southbound Basics"
   outfitter "Common Outfits"
   outfitter "Kraz Advanced"
+  shipyard "Southbound Basics"
   bribe 0.04
   security 0.5
   tribute 1200
@@ -26534,9 +26534,9 @@ planet "Rusty Second"
   description `The combination of a dry, temperate climate and its prestigious location near the Heliarch ringworlds make Rusty Second a highly desirable home for wealthy Kimek. Nothing is cheap here, and there is very little local industry aside from the banks, shipping conglomerations, and other corporations whose senior management offices are located here.`
   spaceport `Although this is a Kimek world, the spaceport and the surrounding city more closely resembles Saryd architecture. This port was developed in the days when the Kimek had first made contact with the other species of the Coalition, and were still in awe of the technological sophistication of the Saryds.`
   spaceport `  The original architecture also borrowed heavily from the Quarg, but anything reminiscent of them was stripped away after the Coalition's rebellion succeeded.`
+  outfitter "Coalition Basics"
   shipyard "Coalition Basics"
   shipyard "Kimek Basics"
-  outfitter "Coalition Basics"
 
 planet "Sabira Eseskrai"
   attributes korath
@@ -26551,8 +26551,8 @@ planet "Safaresk Enlai"
   description `It is unclear what the primary purpose of this station is. The station contains numerous greenhouses where a wide variety of plants, and even some small animals, are kept. Other parts of the station are closed off to non-Korath visitors.`
   spaceport `This spaceport is relatively unpopulated for a station of this size, and the few Korath who are here are wandering about with the sort of deeply absorbed attitude you would expect from a scientist or an academic.`
   spaceport `  In one corner of the spaceport is a cage housing several large rodents and some small shrubs, lit by a warm sun-lamp. The rodents are quite acrobatic.`
-  shipyard "Korath"
   outfitter "Korath Outfits"
+  shipyard "Korath"
   security 0
 
 planet "Sandy Two"
@@ -26584,9 +26584,9 @@ planet "Saros"
   landscape land/valley12-harro
   description `The homeworld of the Saryds still bears some scars from the adolescence of their species, particularly in its lack of biodiversity. But over thousands of years, they have returned significant portions of the planet to their original wilderness state. The planet's population currently stands at just over two billion, in part due to the fact that Saryds live very long lives and many of them choose to dedicate their lives to serving society in other ways rather than raising children.`
   spaceport `The main spaceport is on the outskirts of a large city near the planet's equator, supposedly not far from the place where the Saryds launched their first rockets to explore their own solar system. It has all the standard accoutrements of a tourist trap, including stall after stall of vendors selling food or articles of clothing, and mobs of wide-eyed visitors wandering about and generally getting in the way of the merchant captains trying to conduct actual business here.`
+  outfitter "Coalition Intermediate"
   shipyard "Coalition Basics"
   shipyard "Saryd Advanced"
-  outfitter "Coalition Intermediate"
 
 planet "Sasirka Gatru"
   attributes korath
@@ -26661,8 +26661,8 @@ planet "Separa Tiklar"
   landscape land/space1
   description `This station manufactures the weapon systems and other equipment that is used in the Korath stations, war vessels, and world-ships.`
   spaceport `From the outside this station appears as run down as their other facilities, but the interior is meticulously clean. Also, everything outside the delivery bay is restricted space, under heavy military guard.`
-  shipyard "Korath"
   outfitter "Korath Outfits"
+  shipyard "Korath"
   security 0
 
 planet "Septar Lorku"
@@ -26670,8 +26670,8 @@ planet "Septar Lorku"
   landscape land/loc0
   description `This system has a high concentration of metallic asteroids, which the Korath are harvesting to provide iron ore for their space ships and fissionable materials for their reactor cores. Smelting metal in a high-temperature blast furnace in the interior of a space station is, of course, an incredibly risky proposition.`
   spaceport `Despite your lack of knowledge of Korath health and anatomy, it is clear that the inhabitants of this station are under-fed and overworked. Also, an alarming number of them are missing fingers, hands, or entire limbs. It is quite possible that the work in the refineries is even more dangerous than the job of the raiders attacking human space.`
-  shipyard "Korath"
   outfitter "Korath Outfits"
+  shipyard "Korath"
   security 0
 
 planet "Serpens"
@@ -26689,8 +26689,8 @@ planet "Sessiliki Far"
   landscape land/loc2
   description `This is a Korath mining station, where ore extracted from asteroids is refined and processed. The Korath seem to have an aversion to harvesting raw materials from actual planets, preferring to work with lifeless asteroids instead.`
   spaceport `A smelter is never a safe place to work, and some of the machinery looks very old, but you get the feeling that the Korath on this station are in relatively good spirits nonetheless. The cafe in the spaceport is bustling, and every few hours a bell rings and about a third of the workers leave the factory floor and are replaced by fresh and rested ones.`
-  shipyard "Korath"
   outfitter "Korath Outfits"
+  shipyard "Korath"
   security 0
 
 planet "Sestor Ikfar"
@@ -26730,10 +26730,10 @@ planet "Shangri-La"
   landscape land/sea6
   description `Named after a mythical paradise, Shangri-La is an almost ideal planet, with a mixture of advanced, developed cities and uninhabited mountains. It is a rich and prosperous world, and nearly self-sufficient, but the cost of living here is prohibitively high for anyone from off-world. Because Polaris is on the very fringe of human space, and because of the wealth of its economy, piracy is a constant threat. Although recently the Syndicate has provided good protection, in past centuries it was not unheard of for raiding parties of starships to attack major port cities here, carrying off valuable cargo and sometimes also human slaves.`
   spaceport `The spaceport is state-of-the-art. So are the laser turrets and missile silos spaced out along its periphery. But somehow, instead of making you feel more secure, the defences only serve to remind you of how far on the fringes of civilization you are, and of how rich this planet is compared to some of its neighbours. Everyone walking through the port is moving at a brisk, purposeful pace; loitering and sightseeing are not encouraged here.`
-  shipyard "Syndicate Intermediate"
-  shipyard "Megaparsec Basics"
   outfitter "Common Outfits"
   outfitter "Syndicate Intermediate"
+  shipyard "Megaparsec Basics"
+  shipyard "Syndicate Intermediate"
   "required reputation" 5
   bribe 0.07
   security 0.7
@@ -26778,9 +26778,9 @@ planet "Shroud"
   description `Shroud is a world of castles in the clouds and slums in the valleys below. High on the mountain peaks, above the clouds, the planet's few elites live in splendid mansions. Below them, the people work mostly in textiles: farming cotton, raising sheep, working at looms and sewing machines in dimly lit factories.`
   description `  The level of intrigue and dalliance between the bored gentry could easily compete with the most lurid and unrealistic of Victorian fiction.`
   spaceport `The spaceport here is a shopping mall. You landed on a plain cement slab near the "cargo entrance," where raw goods are bought and sold. But the other end of the building holds hangars for luxury ships and glass-windowed storefronts where mannequins are dressed in outlandish and horribly impractical outfits. There is a sparse cafeteria for dock workers near your entrance, and fancy steakhouses and seafood places for the more wealthy visitors.`
-  shipyard "Luxury Ships"
   outfitter "Common Outfits"
   outfitter "Lovelace Basics"
+  shipyard "Luxury Ships"
   bribe 0.04
   security 0.8
   tribute 3800
@@ -26846,10 +26846,10 @@ planet "Smuggler's Den"
   landscape land/loc1
   description `Smuggler's Den was formerly known as Grendel Station, back when it was an operating refinery. But, it has since been taken over by pirates, who turned it into a haven for all manner of smugglers and privateers. The repair shops here can make a variety of legal and illegal modifications to your ship, and in the shipyard you can buy refurbished starships... if it does not trouble your conscience to think about the likely fates of their previous owners.`
   spaceport `It is a strange but indisputable fact that pirates smell worse than ordinary human beings. In this day and age, where even the cheapest shuttlecraft at least has a sonic shower, there is no logical explanation for it, except that anarchist tendencies must somehow go hand in hand with a tendency to reject society's norms around hygiene. Here in a space station, with nothing but recycled air to breathe, the effect is overpowering.`
-  shipyard "Southbound Intermediate"
   outfitter "Common Outfits"
   outfitter "Delta V Intermediate"
   outfitter "Pirate Outfits"
+  shipyard "Southbound Intermediate"
   bribe 0.06
   security 0
   tribute 400
@@ -26928,8 +26928,8 @@ planet "Stonebreak"
   description `Stonebreak is home to some of the largest cities in Hai space aside from their homeworld: massive planned communities built in concentric rings, where housing space and community buildings alternate with zones of factories and shipyards. This star system has an unusual number of metallic asteroids, which the Hai harvest for the raw materials for Stonebreak's industries.`
   spaceport `From above, this city has almost perfect radial symmetry, a sure sign that it was planned and built as a single unit rather than expanding at random over time. Every single building in the city is made from the same metal alloy, a dull and slightly irregular grey colour. The corners of each building are slightly beveled instead of meeting at right angles.`
   spaceport `  Even the spaceport is symmetrical: a ring of hangars, facing outwards, at evenly spaced intervals, with warehouses and living quarters inside the ring.`
-  shipyard "Hai Intermediate"
   outfitter "Hai Intermediate"
+  shipyard "Hai Intermediate"
 
 planet "Stormhold"
   attributes pirate "core pirate"
@@ -26981,11 +26981,11 @@ planet "Sunracer"
   description `Sunracer is home of Megaparsec, Inc., a shipyard that specializes in designing fast, lightweight ships. It is a well-settled planet with a population of nearly half a billion, and a diverse economy that includes farming and fishing in addition to the shipyards.`
   description `  Outside the cities, large regions of undeveloped land still remain. Hovercraft racing is a major local sport, and some massive and elaborate courses have been constructed in the wilderness.`
   spaceport `On Sunracer, the spaceport and shipyard are one and the same. As you walk among the landing pads and hangars, it is not immediately clear which ships are visiting starships undergoing minor repairs, and which are new ones under construction. A series of enormous cranes tower over one section of landing pads. From them hang hull fragments, engines, and even a few small ships, each being swung from one location within the shipyard to another. Meanwhile, forklifts and flatbed trucks are weaving between the buildings in every direction.`
-  shipyard "Syndicate Basics"
-  shipyard "Megaparsec Advanced"
   outfitter "Common Outfits"
   outfitter "Lovelace Intermediate"
   outfitter "Syndicate Intermediate"
+  shipyard "Megaparsec Advanced"
+  shipyard "Syndicate Basics"
   bribe 0.06
   security 0.7
   tribute 1700
@@ -27072,13 +27072,13 @@ planet "Tinker"
   description `Tinker is a highly industrialized world, exporting electronics both to the Syndicate and to Earth. The electronic goods manufactured here span the gamut from wires and capacitors to sophisticated microchips, and because many of the jobs here require skilled labour, it is a relatively prosperous planet.`
   description `  Outside the cities, large areas of this world have been set aside for mining and for refineries and smelters, ensuring that the industries here have all the raw materials they need, plus extra to sell.`
   spaceport `The spaceport is nearly five hundred years old. As with many ports from that era, it is constructed as a single large complex, a towering building with hangar bay openings on all levels and a dedicated crew of flight controllers directing incoming starships in order to avoid collisions. Around the spaceport a city has developed.`
-  shipyard "Hauler Basics"
-  shipyard "Megaparsec Basics"
-  shipyard "Syndicate Intermediate"
   outfitter "Common Outfits"
   outfitter "Lovelace Basics"
   outfitter "Sisensis Basics"
   outfitter "Syndicate Basics"
+  shipyard "Hauler Basics"
+  shipyard "Megaparsec Basics"
+  shipyard "Syndicate Intermediate"
   bribe 0.04
   security 0.4
   tribute 1100
@@ -27181,10 +27181,10 @@ planet "Valhalla"
   description `Valhalla was the first world to be settled in this region of space, which is known as the Deep. It is rich in natural resources, but all its vast farms and fisheries are insufficient to feed its population of nearly five billion.`
   description `  The shipyards of Lionheart Industries are located here. Centuries ago, warships built here turned the tide of the Alpha War, and today the ships designed and built in the Deep continue to be some of the most technologically advanced ships in human space - and the most expensive. Lionheart actually consists of two different branches, one producing powerful multi-purpose ships such as the Mule, the other offering a wide range of lightweight ships, both for civilian and military purposes.`
   spaceport `Surrounding the spaceport is a metropolis of skyscrapers and factories that spreads all the way to the horizon in every direction. The spaceport itself is an imposing building, composed of three towers rising over a hundred stories into the air and connected at various levels by bridges. The docking bays are on the higher levels, with warehouse space lower down and loading platforms for trucks at ground level. Massive cargo elevators run up and down in the centre of each building, and the hallways are all wide enough to allow small robotic carts and forklifts in addition to foot traffic.`
-  shipyard "Fly Deep Intermediate"
-  shipyard "Lionheart Advanced"
   outfitter "Common Outfits"
   outfitter "Deep Sky Intermediate"
+  shipyard "Fly Deep Intermediate"
+  shipyard "Lionheart Advanced"
   bribe 0.08
   security 0.8
   tribute 3600
@@ -27197,8 +27197,8 @@ planet "Var' Kar'i'i"
   description `This is a populous Wanderer world, with small farming villages scattered across all the land, and even a few larger population centres that might almost qualify as a city. But from the air, it is not evident at first that the planet is so heavily settled, because the village tree-houses are mostly hidden beneath the forest canopies. The farms, too, are almost indistinguishable from natural land, due to a permaculture system where many varieties of plants are growing side by side.`
   spaceport `Apparently, just as humans use horses to carry loads and draw carts of produce, the Wanderers use a large breed of lizard, nearly eight feet tall and walking on their hind legs. The lizards are meat-eaters: next to the watering troughs are cages full of large rodents, which the Wanderers occasionally feed to their beasts.`
   spaceport `  Many different forms of produce are for sale here in open-air markets, including dozens of different nuts and berries. Aside from the rodents to feed to the lizards, and a few species of fish, the Wanderers do not seem to raise animals for food.`
-  shipyard "Wanderer Basics"
   outfitter "Wanderer Basics"
+  shipyard "Wanderer Basics"
   "required reputation" 5
   bribe 0
 
@@ -27208,8 +27208,8 @@ planet "Var' Kayi"
   description `This is an Earth-like world with one major Wanderer city and countless smaller settlements. The settlements mostly consist of tree-houses built high up in living trees. The architecture of the city skyscrapers is full of cantilevered balconies and arches, mimicking the natural shape of a forest. Here and there a bit of smoke or steam rises from what must be a factory or power plant, but most of the land outside the city is green fields and pristine oceans.`
   spaceport `This spaceport is as busy and chaotic as any major human trade hub, with the added complication that many of the Wanderers are flying from building to building instead of walking. Most of the buildings have balconies on every level, allowing visitors to enter from the air as well as from the streets.`
   spaceport `  The starship landing pads are well outside the city, and ships land and take off along very tightly controlled vectors, probably to avoid midair collisions between the ships and the Wanderers who are flying on their own wings.`
-  shipyard "Wanderer Intermediate"
   outfitter "Wanderer Advanced"
+  shipyard "Wanderer Intermediate"
   "required reputation" 5
   bribe 0
 
@@ -27227,8 +27227,8 @@ planet "Vara K'chrai"
   description `This is the most populous Wanderer world, with dozens of large cities. The tallest buildings branch and cantilever out from their bases like metallic trees. More than half the surface of the planet is ocean, with a few small settlements built on massive living rafts of algae and seaweed, perhaps ten meters thick and up to several kilometers wide. Much of the land is forests, with villages built entirely in the treetops.`
   description `  There are also farms here, but more like gardens or parks than a human farm: each with dozens of species of plants growing side by side, and harvested by autonomous robots.`
   spaceport `The streets in the Wanderer capital city seem to be mostly reserved for cargo vehicles; the Wanderers themselves fly from one building to another instead, and the skyscrapers have balconies dozens of stories above the ground where visitors can land or take off. The air traffic seems utterly chaotic, but somehow they avoid colliding with each other in midair, and certain columns of airspace have been reserved for ships taking off and landing so that flying Wanderers will not get caught in the backwash from the ship engines.`
-  shipyard "Wanderer Advanced"
   outfitter "Wanderer Advanced"
+  shipyard "Wanderer Advanced"
   bribe 0
 
 planet "Vara Ke'sok"
@@ -27264,8 +27264,8 @@ planet "Vara Pug"
   description `  To avoid contact with these marine creatures, when the Pug travel to other parts of the planet they use massive solar-powered airships rather than boats.`
   spaceport `The Pug here all seem to be busy with various tasks, none of which make any sense to you: rushing from building to building on their long, spindly legs; playing a game involving coloured stones on a hexagonal table; constructing what appears to be collaborative holographic artwork.`
   spaceport `  None of them speak to you, but a worker in the spaceport digs around in a closet for a while and comes up with a conversion attachment that allows your fuel tanks to be filled using their style of fuel nozzle.`
-  shipyard "Pug"
   outfitter "Pug"
+  shipyard "Pug"
   bribe 0
   security 0.9
 
@@ -27274,8 +27274,8 @@ planet "Vara Rakak"
   landscape land/forest1
   description `This is one of those rare worlds whose climate is already nearly perfect without the need for terraforming. The Wanderers have made it into a farming planet. The fields follow the natural contours and geology of the land rather than being laid out in rectangular lots like most human farms, and each field contains several different crop species designed to form a symbiotic ecosystem.`
   spaceport `This could be a spaceport on any human farming world, except that the farmers hawking their wares have wings and beaks, and the wagons bringing produce to the market are drawn by massive lizards instead of horses. In several repair shops on the outskirts of town, Wanderer technicians work on massive harvester robots. The robots have four legs to walk on and dozens of dexterous manipulator arms for picking crops, and each arm has a camera eye on it.`
-  shipyard "Wanderer Basics"
   outfitter "Wanderer Intermediate"
+  shipyard "Wanderer Basics"
   "required reputation" 5
   bribe 0
 
@@ -27294,8 +27294,8 @@ planet "Varu K'est"
   landscape land/canyon5
   description `Varu K'est is a spare, ancient planet of arid plateaus and deep, meandering canyons, with too little rainfall to support any but the hardiest of shrubs. The Wanderers have converted nearly all their villages on this planet into military bases in order to oppose the encroaching Hai raiders, and have also been forced to postpone their attempts at improving the local ecology.`
   spaceport `The spaceport is a massive shipyard, with facilities for repairing the few warships that the Wanderers possess as well as creating new ships and weapons. Dozens of battle-scarred ships are parked in the hangars here, a stark contrast to the ports in the more peaceful regions of the Wanderer territory.`
-  shipyard "Wanderer Basics"
   outfitter "Wanderer Intermediate"
+  shipyard "Wanderer Basics"
   "required reputation" 15
   bribe 0
 
@@ -27313,8 +27313,8 @@ planet "Varu Mer'ek"
   landscape land/valley11-harro
   description `This Wanderer factory world is now home to more abandoned villages than populated ones: entire factories rusting and decaying as a result of the recent threat from the Unfettered Hai. Most of the factories that remain active have been repurposed to produce weapons or ammunition for the defence of Wanderer space.`
   spaceport `Very few Wanderer children are present in the spaceport. Most of the inhabitants still live far above the ground in the customary Wanderer tree-houses, but that portion of the village is dwarfed by the more recently constructed factories and warehouses for war supplies. A steady stream of freighters brings in new equipment and raw materials for the factories.`
-  shipyard "Wanderer Intermediate"
   outfitter "Wanderer Advanced"
+  shipyard "Wanderer Intermediate"
   "required reputation" 15
   bribe 0
 
@@ -27349,8 +27349,8 @@ planet "Viminal"
   landscape land/snow3
   description `This cold and dreary world would certainly not be attractive to any modern settlers, but to those who were fleeing the chaos of the Alpha Wars it had the undeniable advantage of being isolated and undiscovered. Today the main reason for the continuing Remnant presence here is that this is the only world they have found where the "key stones" that enable ships to travel through certain wormholes in the Ember Waste can be found.`
   spaceport `The spaceport is an enormous dome, built of the same resilient and semi-organic material as the hulls of Remnant ships. An opening at one end of the dome allows ships to fly in and out. Inside, the air is still cold, but at least you are sheltered from the violent winds that sweep across the rest of the planet's surface. Some of the locals, accustomed to the cold, walk about in their shirtsleeves as if this were a balmy summer day.`
-  shipyard Remnant
-  outfitter Remnant
+  outfitter "Remnant"
+  shipyard "Remnant"
 
 planet "Vinci"
   attributes paradise factory
@@ -27395,11 +27395,11 @@ planet "Wayfarer"
   description `Wayfarer was initially settled by a team of scientists and diplomats seeking to build a relationship with the Quarg worlds to the galactic southeast of here. Partly through the aid of the Quarg and partly through a desire to emulate them, it has grown into a very technologically advanced world.`
   description `  Tarazed Corporation, a maker of alien-inspired ships and outfits, is one of the largest industries on Wayfarer, and they draw raw materials from throughout this region of space.`
   spaceport `The spaceport is clearly the artifact of an architect who was as familiar with alien architecture as with human. Instead of square angles it has many curved walls and domes. The landing pads jut out from the building at various heights. Some of the landing pads are designed with docking tubes specifically for Quarg visitors, and the ceilings are unusually high to accommodate the Quarg, several of whom are walking around and mingling with the humans here.`
-  shipyard "Tarazed Advanced"
   outfitter "Common Outfits"
   outfitter "Delta V Intermediate"
   outfitter "Scram Drive"
   outfitter "Tarazed Advanced"
+  shipyard "Tarazed Advanced"
   bribe 0.07
   security 0.3
   tribute 1700
@@ -27474,11 +27474,11 @@ planet "Zug"
   description `Zug is a pleasant world of rolling hills, fertile fields, and a few small oceans. Hundreds of millions of people live here, with more immigrants arriving every day, almost faster than the construction industry can keep up with them. In addition to the larger cities, many people live in smaller farming villages, making this one of the few worlds in the region that is truly self-sufficient both in industry and in agriculture.`
   description `  The largest industry on Zug is Southbound Shipyards, which focuses on designing well-defended merchant ships to survive the pirates that are so common here.`
   spaceport `The spaceport of Zug has been growing by amalgamation for centuries. At its core is the "Old Port," a set of quaint and rudimentary shops and warehouses. The landing pads for the Old Port were torn up to make room for what the locals call "The Port," a set of buildings that were constructed a century ago, with bolder architecture and more modern design. Some distance away is the "New Port," a towering structure with robotic cargo lifts and large hangars for more expensive ships. Meanwhile, plans are apparently underway for an expansion of the New Port. You can't help but wonder what the new expansion will be named.`
-  shipyard "Hauler Intermediate"
-  shipyard "Southbound Advanced"
   outfitter "Common Outfits"
   outfitter "Delta V Intermediate"
   outfitter "Kraz Intermediate"
+  shipyard "Hauler Intermediate"
+  shipyard "Southbound Advanced"
   bribe 0.03
   security 0.5
   tribute 1200
