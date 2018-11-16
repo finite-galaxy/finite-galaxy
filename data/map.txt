@@ -1778,7 +1778,7 @@ system "Ablub"
 
 system "Acamar"
   pos -284 -3
-  government "Syndicate"
+  government "Republic"
   habitable 1080
   belt 1013
   link Diphda
@@ -2287,9 +2287,8 @@ system "Alcyone"
   government "Pirate"
   habitable 270
   belt 1438
-  link Zaurak
-  link Oblate
   link Durax
+  link Oblate
   asteroids "small rock" 4 1.62
   asteroids "medium rock" 16 1.3176
   asteroids "large rock" 16 1.08
@@ -7154,8 +7153,9 @@ system "Danoa"
   government "Republic"
   habitable 135
   belt 1689
-  link Sumar
   link Hassaleh
+  link Rigel
+  link Sumar
   asteroids "small rock" 26 2.425
   asteroids "medium rock" 274 2.15
   asteroids "large rock" 40 2.275
@@ -10999,6 +10999,8 @@ system "Hamal"
   habitable 1080
   belt 1241
   link Ruchbah
+  link Sheratan
+  link Zaurak
   asteroids "small rock" 3 2.7552
   asteroids "medium rock" 3 3.9648
   asteroids "large rock" 1 3.9312
@@ -11020,8 +11022,9 @@ system "Hamal"
   fleet "Merchants Core Small" 1000
   fleet "Merchants Core Large" 1000
   fleet "Pirates Core Small" 3000
-  fleet "Pirates Core Large" 8000
+  fleet "Pirates Core Large" 6000
   fleet "Syndicate Small" 4000
+  fleet "Syndicate Large" 8000
   object
     sprite star/g0
     period 10
@@ -11109,10 +11112,9 @@ system "Hassaleh"
   government "Republic"
   habitable 670
   belt 1924
-  link Rigel
-  link Sumar
   link Danoa
   link Rajak
+  link Sumar
   asteroids "small rock" 6 1.9305
   asteroids "medium rock" 75 4.4928
   asteroids "large rock" 14 2.8782
@@ -13799,7 +13801,7 @@ system "Kraz"
 
 system "Kugel"
   pos -230 -26
-  government "Syndicate"
+  government "Republic"
   habitable 625
   belt 1051
   link Acamar
@@ -16722,11 +16724,12 @@ system "Nunki"
 
 system "Oblate"
   pos -124 -119
-  government "Pirate"
+  government "Syndicate"
   habitable 12000
   belt 1704
   link Alcyone
   link Moktar
+  link Zaurak
   asteroids "small rock" 2 2.1
   asteroids "medium rock" 7 1.3944
   asteroids "large rock" 2 1.7976
@@ -18941,10 +18944,10 @@ system "Rigel"
   government "Republic"
   habitable 1080
   belt 1782
-  link Saiph
   link Alnitak
   link Betelgeuse
-  link Hassaleh
+  link Danoa
+  link Saiph
   asteroids "small rock" 12 11.076
   asteroids "medium rock" 42 3.9
   asteroids "large rock" 37 10.53
@@ -19018,7 +19021,6 @@ system "Ruchbah"
   belt 1598
   link Ankaa
   link Alpheratz
-  link Sheratan
   link Hamal
   link "Alpha Hydri"
   link Algol
@@ -20270,8 +20272,7 @@ system "Sheratan"
   government "Syndicate"
   habitable 2035
   belt 1183
-  link Ruchbah
-  link Zaurak
+  link Hamal
   asteroids "large rock" 1 1.358
   asteroids "large metal" 2 1.218
   trade "Clothing" 304
@@ -20286,8 +20287,8 @@ system "Sheratan"
   trade "Plastic" 355
   fleet "Merchants Core Small" 1500
   fleet "Merchants Core Large" 1800
-  fleet "Pirates Core Small" 3000
-  fleet "Pirates Core Large" 5000
+  fleet "Pirates Core Small" 4000
+  fleet "Pirates Core Large" 8000
   fleet "Korath Raid" 30000
   object
     sprite star/f5
@@ -23659,9 +23660,9 @@ system "Zaurak"
   government "Syndicate"
   habitable 625
   belt 1130
-  link Sheratan
-  link Alcyone
+  link Hamal
   link Menkar
+  link Oblate
   asteroids "small rock" 30 5.0232
   asteroids "medium rock" 34 5.2052
   asteroids "large rock" 11 1.82
@@ -24409,6 +24410,7 @@ planet "Bourne"
   description `  Bourne is also the seat of government for the newly formed Coalition of Free Worlds.`
   spaceport `The spaceport on Bourne is a collection of granite and steel towers with platforms for ships to land. The tops of the towers are blackened by factory soot and etched by acid rain, but the granite gives them a timeless, classic look very unlike many of the ports you have visited.`
   spaceport `  The port authorities warned you when you landed to be careful of pickpockets, so you are guarding your wallet very closely.`
+  shipyard "Southbound Intermediate"
   outfitter "Common Outfits"
   outfitter "Kraz Intermediate"
   security 0.4
@@ -24438,7 +24440,7 @@ planet "Buccaneer Bay"
   description `Pirates who have struck it rich dream of retiring on Buccaneer Bay. It is a warm ocean planet, with many places reminiscent of the islands in the ancient Caribbean where humanity's first pirate fleets sailed.`
   description `  Many of the inhabitants are in fact not pirates, but their descendants, and these children and grand-children of anarchist outlaws have built a system of regional government that oversees hospitals, schools, and other public services, all created without funding from the Republic or taxes paid to it. The planet even sports its own shipyard, although many of the ships built here are, not surprisingly, based on designs pirated from the Syndicate and Republic shipyards.`
   spaceport `This is the sort of spaceport you picture in your head when you think of pirates. Half the storefronts are bars, and rum seems to be on the menu everywhere. It is almost like the stories of ancient Earth, except that the eye patches are cybernetic implants and the peg legs are motorized prosthetics. Swarthy, dangerous-looking women glance at you as you pass by, and scantily clad men crowd around the bars, which is what you seem to remember the stories said it was like on Earth, too, although there it may have been the other way around.`
-  shipyard "Pirates East"
+  shipyard "Megaparsec Basics"
   shipyard "Syndicate Basics"
   outfitter "Common Outfits"
   outfitter "Pirate Outfits"
@@ -24645,7 +24647,7 @@ planet "Covert"
   landscape land/badlands2
   description `Covert is home to a powerful mining cartel, operating outside the control of Republic law or any other external authority. It is rumoured to be one of the few planets in human space where weapons-grade uranium and plutonium is mined and enriched. Any goods for sale here were most likely produced by slave labour, often by survivors of ships that have been captured by pirates. A massive pirate fleet is docked on the outskirts of the spaceport, a warning to any private pilot who might think of cheating or opposing the cartel.`
   spaceport `From the moment you landed, you have been followed by a pair of security guards with earpieces and laser guns. The spaceport is one enormous building, with square, straight hallways and featureless walls, and nearly every door you pass is locked. Cameras at each hallway intersection pivot to watch as you approach. This is simultaneously one of the most secure spaceports you have visited, and one of the most dangerous, although if you do not do anything to provoke the animosity of the cartel, you will probably be able to leave in peace.`
-  shipyard "Pirates East"
+  shipyard "Megaparsec Basics"
   shipyard "Syndicate Basics"
   outfitter "Basic Outfits"
   outfitter "Pirate Outfits"
@@ -25140,7 +25142,6 @@ planet "Freedom"
   spaceport `  A sign above the entrance to the spaceport bar reads, "Fine home-brewed whisky! Get smashed without getting taxed!" Further down the street, a sign over what appears to be a real estate office reads, "Why not settle where The Man can't reach you?"`
   spaceport `  Inexplicably, the only advertising on the seafood restaurant across the street is an enormous banner proclaiming, "We have brown rice."`
   shipyard "Betelgeuse Intermediate"
-  shipyard "Pirates North"
   outfitter "Common Outfits"
   "required reputation" -10
   security 0
@@ -25285,7 +25286,6 @@ planet "Greenrock"
   description `Greenrock is the closest thing that the pirates in southern human space have to a centre of government, but taking the form of large, powerful corporations rather than elected officials. When rival pirate bands seek to negotiate on neutral territory, this is where they meet. Nearly everything is for sale here: illegal weapons, ships customized for pirating, and even slaves.`
   spaceport `You have heard enough about this port's reputation that you are not surprised to see the slave markets, heavily guarded in case any visitors happen to find themselves in possession of a conscience. Nor are you shocked by the shady establishments catering to all manner of prurient interests. This is, after all, a pirate port, and everything is for sale here.`
   spaceport `  Everything, in fact, including the very bizarre. At the end of one dark alley you see a shop called "Mike's Mustelids," with weasels and ferrets in cages in the window. Beside them, a fully-grown wolverine glares at you from behind the bars of a large and sturdy cage.`
-  shipyard "Pirates South"
   shipyard "Southbound Intermediate"
   shipyard "Tarazed Basics"
   outfitter "Common Outfits"
@@ -25353,7 +25353,6 @@ planet "Haven"
   description `  Much of the planet is desert, but with enough moisture to grow enough crops to feed the entire population. Strip mining has turned other parts of the planet into barren wastelands, and has polluted many of the rivers.`
   spaceport `The spaceport is old and dingy, with piles of litter in the gutters and graffiti on many of the alley walls. Many of the shops are closed, the windows boarded over or covered with yellowing paper. This is an independent world, and a relatively stable settlement, but the effects of its separation from the rest of the galaxy are evident. A few young people carrying large backpacks eye you with interest, perhaps trying to gauge their chances of getting you to give them a cheap lift off-planet.`
   shipyard "Betelgeuse Basics"
-  shipyard "Pirates North"
   outfitter "Basic Outfits"
   outfitter "Pirate Outfits"
   bribe 0.03
@@ -26809,7 +26808,7 @@ planet "Sinter"
 planet "Skillet"
   attributes north mining farming frontier
   landscape land/canyon3
-  description `Skillet is a sparsely populated planet whose red hills and canyonlands are strip mined for placer deposits of iron ore and precious metals, mostly to supply the needs of the shipyards in Betelgeuse. This world is also used for ranching, and even for growing corn in a few less arid regions. The weather is usually quite mild, although hot and dry; the only reasons so few people have settled here are because it is so remote, and because the mining and farming industries need far fewer human workers than machines.`
+  description `Skillet is a sparsely populated planet whose red hills and canyonlands are strip mined for placer deposits of iron ore and precious metals, mostly to supply the needs of the shipyards in Betelgeuse. This world is also used for ranching, and even for growing grain in a few less arid regions. The weather is usually quite mild, although hot and dry; the only reasons so few people have settled here are because it is so remote, and because the mining and farming industries need far fewer human workers than machines.`
   spaceport `The spaceport mostly consists of a row of adobe warehouses, with tin roofs polished to mirror brightness to reflect the heat of the sun. Around the warehouses is a ring of concrete landing pads. Forklift trucks carrying pallets of iron and steel ingots weave their way in between men and women on horseback and others on foot. The air is hot, but too dry to feel oppressive.`
   security 0.3
   tribute 600
@@ -26845,8 +26844,7 @@ planet "Smuggler's Den"
   landscape land/loc1
   description `Smuggler's Den was formerly known as Grendel Station, back when it was an operating refinery. But, it has since been taken over by pirates, who turned it into a haven for all manner of smugglers and privateers. The repair shops here can make a variety of legal and illegal modifications to your ship, and in the shipyard you can buy refurbished starships... if it does not trouble your conscience to think about the likely fates of their previous owners.`
   spaceport `It is a strange but indisputable fact that pirates smell worse than ordinary human beings. In this day and age, where even the cheapest shuttlecraft at least has a sonic shower, there is no logical explanation for it, except that anarchist tendencies must somehow go hand in hand with a tendency to reject society's norms around hygiene. Here in a space station, with nothing but recycled air to breathe, the effect is overpowering.`
-  shipyard "Pirates South"
-  shipyard "Southbound Basics"
+  shipyard "Southbound Intermediate"
   outfitter "Common Outfits"
   outfitter "Delta V Intermediate"
   outfitter "Pirate Outfits"
