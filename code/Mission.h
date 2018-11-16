@@ -19,6 +19,7 @@ class DataNode;
 class DataWriter;
 class Planet;
 class PlayerInfo;
+class Ship;
 class ShipEvent;
 class System;
 class UI;
@@ -92,6 +93,7 @@ public:
   // if the player has enough space.
   bool CanOffer(const PlayerInfo &player, const std::shared_ptr<Ship> &boardingShip = nullptr) const;
   bool HasSpace(const PlayerInfo &player) const;
+  bool HasSpace(const Ship &ship) const;
   bool CanComplete(const PlayerInfo &player) const;
   bool IsSatisfied(const PlayerInfo &player) const;
   bool HasFailed(const PlayerInfo &player) const;

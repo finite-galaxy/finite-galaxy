@@ -11,6 +11,7 @@
 #include "DrawList.h"
 #include "EscortDisplay.h"
 #include "Information.h"
+#include "NPC.h"
 #include "Point.h"
 #include "Radar.h"
 #include "Rectangle.h"
@@ -50,6 +51,8 @@ public:
   
   // Place all the player's ships, and "enter" the system the player is in.
   void Place();
+  // Place NPCs spawned by a mission that offers when the player is not landed.
+  void Place(const std::list<NPC> &npcs, std::shared_ptr<Ship> flagship = nullptr);
   
   // Wait for the previous calculations (if any) to be done.
   void Wait();
