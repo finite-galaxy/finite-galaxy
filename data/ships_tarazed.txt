@@ -343,6 +343,8 @@ ship "Kestrel"
     "Orca Plasma Steering"
     "Ionic Afterburner"
 
+    "Heavy Rocket" 60
+    "Heavy Rocket Launcher" 6
     "Plasma Cannon" 6
 
     "D94-YV Shield Generator" 2
@@ -351,18 +353,19 @@ ship "Kestrel"
     "Liquid Helium Cooler"
     "Fuel Barrel" 60
     "Hyperdrive"
+    "Tactical Scanner" 2
   engine -14 177
   engine 14 177
-  gun -86 55
-  gun 86 55
+  gun -86 55 "Heavy Rocket Launcher"
+  gun 86 55 "Heavy Rocket Launcher"
   gun -75 57 "Plasma Cannon"
   gun 75 57 "Plasma Cannon"
-  gun -64 59
-  gun 64 59
+  gun -64 59 "Heavy Rocket Launcher"
+  gun 64 59 "Heavy Rocket Launcher"
   gun -53 61 "Plasma Cannon"
   gun 53 61 "Plasma Cannon"
-  gun -42 63
-  gun 42 63
+  gun -42 63 "Heavy Rocket Launcher"
+  gun 42 63 "Heavy Rocket Launcher"
   gun -31 65 "Plasma Cannon"
   gun 31 65 "Plasma Cannon"
   turret -7 -4
@@ -699,6 +702,8 @@ ship "Unknown Ship Type"
     "Orca Plasma Steering"
     "Ionic Afterburner"
 
+    "Heavy Rocket" 60
+    "Heavy Rocket Launcher" 6
     "Plasma Cannon" 6
 
     "D94-YV Shield Generator" 2
@@ -707,18 +712,19 @@ ship "Unknown Ship Type"
     "Liquid Helium Cooler"
     "Fuel Barrel" 60
     "Hyperdrive"
+    "Tactical Scanner" 2
   engine -14 177
   engine 14 177
-  gun -86 55
-  gun 86 55
+  gun -86 55 "Heavy Rocket Launcher"
+  gun 86 55 "Heavy Rocket Launcher"
   gun -75 57 "Plasma Cannon"
   gun 75 57 "Plasma Cannon"
-  gun -64 59
-  gun 64 59
+  gun -64 59 "Heavy Rocket Launcher"
+  gun 64 59 "Heavy Rocket Launcher"
   gun -53 61 "Plasma Cannon"
   gun 53 61 "Plasma Cannon"
-  gun -42 63
-  gun 42 63
+  gun -42 63 "Heavy Rocket Launcher"
+  gun 42 63 "Heavy Rocket Launcher"
   gun -31 65 "Plasma Cannon"
   gun 31 65 "Plasma Cannon"
   turret -7 -4
