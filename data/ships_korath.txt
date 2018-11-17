@@ -18,41 +18,42 @@ ship "Chaser"
   sprite "ship/chaser"
   thumbnail "thumbnail/chaser"
   attributes
-    category "Fighter"
+    category "Bomber"
 #    manufacturer "Korath"
     licences
       Korath
-    "carried" 2
+    "carried" 3
     "cost" 671000
-    "shields" 2300
-    "hull" 900
-    "required crew" 1
-    "bunks" 1
-    "mass" 40
+    "shields" 3000
+    "hull" 1500
+    "required crew" 2
+    "bunks" 3
+    "mass" 50
     "drag" .9
     "heat dissipation" .9
-    "outfit space" 92
+    "outfit space" 123
     "engine capacity" 30
     "weapon capacity" 25
     weapon
-      "blast radius" 48
-      "shield damage" 320
-      "hull damage" 160
-      "hit force" 480
+      "blast radius" 60
+      "shield damage" 400
+      "hull damage" 200
+      "hit force" 600
   outfits
     "Thruster (Asteroid Class)"
     "Steering (Asteroid Class)"
 
     "Fire-Lance"
 
+    "Systems Core (Small)"
     "Generator (Furnace Class)"
     "Small Heat Shunt"
-    "Repeater Rifle" 
-  engine -7 23
-  engine 7 23
-  gun 0 -28 "Fire-Lance"
+    "Repeater Rifle" 2
+  engine -16 30
+  engine 16 30
+  gun 0 -37 "Fire-Lance"
   explode "tiny explosion" 20
-  description "The Korath Chaser is a fighter typically deployed in pairs."
+  description "The Korath Chaser is typically deployed in pairs to chase down a target. Although they might look unimpressive, these ships are actually faster and tougher than most human interceptors."
 
 
 
