@@ -228,7 +228,7 @@ mission "FW Southern Battle 1"
   name "Escort Battle Fleet"
   description "Travel to <planet> to gather a fleet of experimental new warships, and escort them back to Trinket."
   source Trinket
-  destination Zug
+  destination Zuq
   to offer
     or
       has "FW Southern Recon 1B: done"
@@ -257,7 +257,7 @@ mission "FW Southern Battle 1"
       choice
         `  "Okay, I'm ready to fight."`
         `  "I wish it hadn't come to this, but if you think it's our only option, I'll join the fight."`
-      `  "Thank you," she says. "But there's one more thing we must do to prepare for battle. I mentioned before that we have an ace up our sleeve. It's a new warship designed by Southbound Shipyards, intended to be a match for a Saturn. They've only finished building three of them. I'd like you to travel to Zug and escort them back here. Once you return, we'll prepare for battle."`
+      `  "Thank you," she says. "But there's one more thing we must do to prepare for battle. I mentioned before that we have an ace up our sleeve. It's a new warship designed by Southbound Shipyards, intended to be a match for a Saturn. They've only finished building three of them. I'd like you to travel to Zuq and escort them back here. Once you return, we'll prepare for battle."`
         accept
 
 
@@ -267,7 +267,7 @@ mission "FW Southern Battle 1B"
   name "Escort Battle Fleet"
   description "Escort a fleet of experimental warships to <destination>."
   autosave
-  source Zug
+  source Zuq
   destination Trinket
   to offer
     has "FW Southern Battle 1: done"
@@ -815,10 +815,10 @@ mission "FW Northern 2D"
 
 mission "FW Northern 3"
   landing
-  name "Freya to Zug"
+  name "Freya to Zuq"
   description "Bring Freya to <destination> to help with ramping up Dreadnought production."
   source "New Tibet"
-  destination "Zug"
+  destination "Zuq"
   to offer
     has "FW Northern 2D: done"
   passengers 1
@@ -826,7 +826,7 @@ mission "FW Northern 3"
     dialogue `You have failed an essential Free Worlds mission. If you want to complete the story line, revert to the autosave or another earlier snapshot of the game.`
   
   on offer
-    log "The shipyard on Zug is still trying to ramp up Dreadnought production. So far only a few ships have been built, but Freya will be helping to speed up the process."
+    log "The shipyard on Zuq is still trying to ramp up Dreadnought production. So far only a few ships have been built, but Freya will be helping to speed up the process."
     conversation
       `As you approach <origin>, Freya quickly locates two Navy surveillance stations and contacts Alondo, asking him to send some Free Worlds personnel to destroy them. Then you land, and Alondo comes aboard your ship to discuss your next steps in person.`
       `  "There's a good chance we've taken care of all the sensors in this sector," says Freya, "so we can start moving our fleets around here without tipping the Navy off. And I just heard from Southbound Shipyards that they've got two more Dreadnoughts ready for service."`
@@ -869,7 +869,7 @@ mission "FW Northern 3B"
   name "Dreadnoughts to <planet>"
   description "Escort two more Dreadnoughts to <destination> to help defend the front against any Navy incursions."
   autosave
-  source "Zug"
+  source "Zuq"
   destination "Clark"
   to offer
     has "FW Northern 3: done"
@@ -1311,7 +1311,7 @@ mission "FW Bloodsea 1.1"
   description "In order to work toward a peace treaty with Bloodsea, meet up with a convoy of heavily armed merchant ships on <planet>."
   autosave
   source Bloodsea
-  destination Zug
+  destination Zuq
   to offer
     has "FW Bloodsea 1: done"
   to fail
@@ -1348,7 +1348,7 @@ mission "FW Bloodsea 1.1A"
   name "Supplies from <planet>"
   description "Stop on <planet> so that the ships you are escorting can pick up more supplies and workers, then bring them to Bloodsea to help build a new spaceport."
   autosave
-  source Zug
+  source Zuq
   destination Deep
   to offer
     has "FW Bloodsea 1.1: done"
@@ -1359,7 +1359,7 @@ mission "FW Bloodsea 1.1A"
   on offer
     conversation
       `Waiting for you in the spaceport on <origin> are two Behemoth heavy freighters, which will be carrying the equipment and workers to Bloodsea. You can't help notice that nearly a third of their cargo space has been converted into extra outfit space, and both ships have a pair of plasma turrets mounted on them, and what looks like torpedo launchers as well.`
-      `  While you are on Zug, you and Alondo meet up with Freya and ask how the Dreadnought production is going. "We're nearly there," she says, "just one or two kinks left to work out. They've produced another two prototypes, but not enough to start selling them yet. I know, you're itching to pilot one of your own. Believe me, we're working as fast as possible."`
+      `  While you are on Zuq, you and Alondo meet up with Freya and ask how the Dreadnought production is going. "We're nearly there," she says, "just one or two kinks left to work out. They've produced another two prototypes, but not enough to start selling them yet. I know, you're itching to pilot one of your own. Believe me, we're working as fast as possible."`
       `  Your next stop is to pick up more workers and construction supplies on <destination>.`
         accept
   
@@ -1422,7 +1422,7 @@ mission "FW Bloodsea 1.1B"
     log "Brought the construction supplies that the people of Bloodsea requested, and they have agreed to join the Free Worlds."
     conversation
       `A few of the locals on Bloodsea appear surprised that you actually brought the supplies for a new spaceport, and that you arrived with all the supplies intact. But after meeting up with Alondo, they agree to hold their side of the bargain: from now on, Bloodsea will be a part of the Free Worlds, with all the rights and responsibilities that implies. And that means that they will refuse to knowingly harbour any pirate fleets or other known criminals.`
-      `  Alondo tells you that he will catch a ride back with the freighters when they return. "But, you'll probably want to head out sooner," he says, "because I've got some good news for you. Freya just contacted me, to say that they're now ready to start selling Dreadnoughts to certain select members of the Free Worlds, including you. That also means she's done with her work on Zug, so she'll need you to give her a lift from there."`
+      `  Alondo tells you that he will catch a ride back with the freighters when they return. "But, you'll probably want to head out sooner," he says, "because I've got some good news for you. Freya just contacted me, to say that they're now ready to start selling Dreadnoughts to certain select members of the Free Worlds, including you. That also means she's done with her work on Zuq, so she'll need you to give her a lift from there."`
         accept
 
 
@@ -1493,7 +1493,7 @@ mission "FW Bloodsea 1.2A"
     event "dreadnought deployment" 40
     conversation
       `You land at the main spaceport on Bloodsea with Free Worlds ships circling overhead, ready to bombard the locals if they show any sign of resistance. It is a tense atmosphere, and the leaders sullenly agree to give the Free Worlds access to their planet and to avoid knowingly supporting piracy or other criminal activity. You have won this world, but you have clearly not won the hearts of the locals.`
-      `  A while later, you receive new orders from Alondo. "I've got some good news for you," he says. "Freya just contacted me, to say that they're now ready to start selling Dreadnoughts to certain select members of the Free Worlds, including you. That also means she's done with her work on Zug, so she'll need you to give her a lift from there."`
+      `  A while later, you receive new orders from Alondo. "I've got some good news for you," he says. "Freya just contacted me, to say that they're now ready to start selling Dreadnoughts to certain select members of the Free Worlds, including you. That also means she's done with her work on Zuq, so she'll need you to give her a lift from there."`
         accept
 
 
@@ -1502,15 +1502,15 @@ mission "FW Bloodsea 1.2A"
 mission "FW Dreadnoughts Ready"
   landing
   name "Meet Freya on <planet>"
-  description "Freya is done overseeing the initial production run of Dreadnoughts in the shipyard on Zug. Meet up with her there, to give her a ride to wherever she is assigned next."
+  description "Freya is done overseeing the initial production run of Dreadnoughts in the shipyard on Zuq. Meet up with her there, to give her a ride to wherever she is assigned next."
   source Bloodsea
-  destination Zug
+  destination Zuq
   to offer
     has "fw bloodsea done"
   on fail
     dialogue `You have failed an essential Free Worlds mission. If you want to complete the story line, revert to the autosave or another earlier snapshot of the game.`
   on offer
-    log "Freya has announced that Dreadnoughts are now for sale on Zug. Finally the Free Worlds have a warship that can stand up to Navy capital ships."
+    log "Freya has announced that Dreadnoughts are now for sale on Zuq. Finally the Free Worlds have a warship that can stand up to Navy capital ships."
 
 
 
@@ -1519,7 +1519,7 @@ mission "FW Albatross 1"
   name "Freya to <planet>"
   description "Bring Freya to <planet>, to meet up with JJ and make plans for convincing Albatross to give up piracy and join the Free Worlds."
   autosave
-  source Zug
+  source Zuq
   destination Dancer
   to offer
     has "FW Dreadnoughts Ready: done"

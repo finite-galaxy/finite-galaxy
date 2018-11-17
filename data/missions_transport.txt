@@ -778,7 +778,7 @@ mission "Rim Archaeology 1"
   name "Archaeology on <planet>"
   description "Bring the famous archaeologist Albert Foster to <destination> to look for signs of an ancient alien civilization."
   source "Vinci"
-  destination "Zug"
+  destination "Zuq"
   passengers 1
   to offer
     has "Sad Archie: done"
@@ -793,13 +793,13 @@ mission "Rim Archaeology 1"
       `Foster seems glad to see you. You do your best to pique his interest without saying anything that will make him think you're crazy, but he's clearly not buying it. "I'm sorry," he says, "but I'm not mounting an expedition just because you have a 'hunch.' So unless you're willing to tell me the source of your information, I'm not interested." He turns his attention back to the data pad that he was reading before you walked into his office.`
       choice
         `  "I'd rather not say."`
-        `  "I had this dream about dragon-people on Zug."`
+        `  "I had this dream about dragon-people on Zuq."`
           goto dream
         `  "I think a telepathic space alien spoke to me."`
           goto telepath
       `  "Then I'd rather not help you," he says, without looking up from the data pad.`
       choice
-        `  "I had this dream about dragon-people on Zug."`
+        `  "I had this dream about dragon-people on Zuq."`
         `  "I think a telepathic space alien spoke to me."`
           goto telepath
       label dream
@@ -814,7 +814,7 @@ mission "Rim Archaeology 1"
         accept
   
   on complete
-    log `Found the archaeologist Albert Foster and told him about the vision of the dragon-people on Zug. Foster suggested that the vision was the doing of an Archon. He discovered a buried city under the lava flows on Zug; perhaps the vision was a real view of the past.`
+    log `Found the archaeologist Albert Foster and told him about the vision of the dragon-people on Zuq. Foster suggested that the vision was the doing of an Archon. He discovered a buried city under the lava flows on Zuq; perhaps the vision was a real view of the past.`
     conversation
       `You land your ship on the lava flow, and Albert Foster fires up his surveying equipment. "This will show me a density profile of different layers of rock beneath us," he says. As he gradually dials the instrument down to deeper and deeper layers, a few irregular white spots appear on the screen.`
       choice
@@ -830,8 +830,8 @@ mission "Rim Archaeology 1"
 
 mission "Rim Archaeology 2A"
   name "Archaeological Equipment"
-  description "Fetch some excavation equipment from <destination>, and return with it to the dig site on Zug."
-  source "Zug"
+  description "Fetch some excavation equipment from <destination>, and return with it to the dig site on Zuq."
+  source "Zuq"
   destination "Crossroads"
   to offer
     has "Rim Archaeology 1: done"
@@ -857,7 +857,7 @@ mission "Rim Archaeology 2B"
   name "Archaeological Equipment"
   description "Deliver this excavation equipment to <destination>."
   source "Crossroads"
-  destination "Zug"
+  destination "Zuq"
   cargo "Excavation equipment" 28
   to offer
     has "Rim Archaeology 2A: done"
@@ -876,15 +876,15 @@ mission "Rim Archaeology 2B"
 mission "Rim Archaeology 3A"
   landing
   name "Archaeological Equipment"
-  description "Fetch some excavation equipment from <destination>, and return with it to the dig site on Zug."
-  source "Zug"
+  description "Fetch some excavation equipment from <destination>, and return with it to the dig site on Zuq."
+  source "Zuq"
   destination "Asgard"
   to offer
     has "Rim Archaeology 2B: done"
   
   on offer
     conversation
-      `You drop off the excavation machines at the dig site on Zug, and receive your payment of three hundred thousand credits. Foster has already marked out lines of where he wants to dig and has completed a much more detailed geological scan. "We'll be starting with a narrow trench," he tells you, "and expanding out from there. It'll need to be wide enough to include a ramp for the vehicles, of course, so we'll still need to move a lot of rock. And when we get within the last five meters or so, I'm worried that the vibration from the grinders may be too destructive. So, I need some laser excavation equipment from <planet>, next."`
+      `You drop off the excavation machines at the dig site on Zuq, and receive your payment of three hundred thousand credits. Foster has already marked out lines of where he wants to dig and has completed a much more detailed geological scan. "We'll be starting with a narrow trench," he tells you, "and expanding out from there. It'll need to be wide enough to include a ramp for the vehicles, of course, so we'll still need to move a lot of rock. And when we get within the last five meters or so, I'm worried that the vibration from the grinders may be too destructive. So, I need some laser excavation equipment from <planet>, next."`
       `  You agree to fetch the equipment, and he begins directing the work crews to get the digging started.`
         accept
 
@@ -895,7 +895,7 @@ mission "Rim Archaeology 3B"
   name "Archaeological Equipment"
   description `Deliver this excavation equipment to <destination>. Be sure that the ship "Oxyrhynchus" is not in the system when you land.`
   source "Asgard"
-  destination "Zug"
+  destination "Zuq"
   cargo "Laser excavation equipment" 17
   to offer
     has "Rim Archaeology 3A: done"
@@ -914,7 +914,7 @@ mission "Rim Archaeology 3B"
   
   on visit
     dialogue
-      `As you are approaching Zug, you notice on your radar that the ship Foster warned you about has been following you: the Oxyrhynchus. You land in the main spaceport to avoid leading her to the dig site. You will need to shake her pursuit before delivering the equipment.`
+      `As you are approaching Zuq, you notice on your radar that the ship Foster warned you about has been following you: the Oxyrhynchus. You land in the main spaceport to avoid leading her to the dig site. You will need to shake her pursuit before delivering the equipment.`
   
   on complete
     payment 300000
@@ -925,7 +925,7 @@ mission "Rim Archaeology 4A"
   landing
   name "Transport a Xenobiologist"
   description "Travel to the Quarg station <destination>, and meet a xenobiologist who will help interpret the findings at Albert Foster's dig site."
-  source "Zug"
+  source "Zuq"
   destination "Lagrange"
   to offer
     has "Rim Archaeology 3B: done"
@@ -941,9 +941,9 @@ mission "Rim Archaeology 4A"
 mission "Rim Archaeology 4B"
   landing
   name "Transport a Xenobiologist"
-  description `Transport the xenobiologist Amelia Lee and her Quarg friend Yarthis to the dig site on Zug.`
+  description `Transport the xenobiologist Amelia Lee and her Quarg friend Yarthis to the dig site on Zuq.`
   source "Lagrange"
-  destination "Zug"
+  destination "Zuq"
   passengers 2
   to offer
     has "Rim Archaeology 4A: done"
@@ -974,9 +974,9 @@ mission "Rim Archaeology 4B"
 
 mission "Rim Archaeology 5A"
   landing
-  name "Defend Zug"
-  description "Drive off the pirates who are attacking Zug, or at least distract them for long enough for reinforcements to arrive."
-  source "Zug"
+  name "Defend Zuq"
+  description "Drive off the pirates who are attacking Zuq, or at least distract them for long enough for reinforcements to arrive."
+  source "Zuq"
   to offer
     has "Rim Archaeology 4B: done"
   
@@ -1028,7 +1028,7 @@ mission "Rim Archaeology 5A"
 mission "Rim Archaeology 5B"
   landing
   invisible
-  source "Zug"
+  source "Zuq"
   to offer
     has "Rim Archaeology 5A: done"
   npc kill
@@ -1047,10 +1047,10 @@ mission "Rim Archaeology 6"
   to offer
     has "event: rim archaeology results"
   on offer
-    log "Factions" "Sheragi" `Recent archaeological discoveries on Zug, a planet in the southern rim of human space, have turned up evidence of a lost alien civilization. The Quarg say that the ruins were left behind by a species called the Sheragi.`
+    log "Factions" "Sheragi" `Recent archaeological discoveries on Zuq, a planet in the southern rim of human space, have turned up evidence of a lost alien civilization. The Quarg say that the ruins were left behind by a species called the Sheragi.`
     conversation
       `When you give your name to the spaceport traffic controller, he says, "Wait, you're Captain <first> <last>? You're all over the news right now!"`
-      `  You land and find that Albert Foster has published an initial report on the dig on Zug. The ruins under the lava flow did indeed turn out to be an alien city. The houses are built on a gargantuan scale, with most of the doorways at least ten meters tall. What's more, some of the buildings have no exterior doors on the street level, just doors facing balconies or inner courtyards, which supports the theory that the inhabitants were capable of flight. Most of the artifacts left behind are just everyday items, and in fact the technology seems less advanced than present human society, but scientists are studying the artifacts eagerly to glean hints about how these aliens lived.`
+      `  You land and find that Albert Foster has published an initial report on the dig on Zuq. The ruins under the lava flow did indeed turn out to be an alien city. The houses are built on a gargantuan scale, with most of the doorways at least ten meters tall. What's more, some of the buildings have no exterior doors on the street level, just doors facing balconies or inner courtyards, which supports the theory that the inhabitants were capable of flight. Most of the artifacts left behind are just everyday items, and in fact the technology seems less advanced than present human society, but scientists are studying the artifacts eagerly to glean hints about how these aliens lived.`
       `  The Quarg, who at other times seem quite willing to share their knowledge with human beings, are being surprisingly reticent with information about this lost civilization. Aside from telling Foster that the aliens were known as the Sheragi, their only comments have been vague warnings that if human beings persist in developing weapons of war, they will end up like the Sheragi. From this, Foster has surmised that the alien civilization was most likely destroyed by a civil war, not by natural disaster or an attack by another species.`
       `  It may not yield any great advances in human technology, but the dig will be providing clues to the history of the galaxy for years to come, and you can be proud to have played a part in that.`
         decline
@@ -1686,7 +1686,7 @@ mission "Sad Archie"
   invisible
   to offer
     has "There Might Be Riots part 3B: done"
-  destination "Zug"
+  destination "Zuq"
   
   npc disable
     government "Test Dummy"
@@ -1695,14 +1695,14 @@ mission "Sad Archie"
     ship "Timer Ship" "Timer"
     conversation
       `As your ship drifts through the cloud of dust that surrounds Ildaria, it occurs to you that this must be the "cloudy star out along the Rim" that Ulrich from There Might Be Riots told you about. Remembering his story, you shut your eyes and attempt to meditate. But instead, you just fall asleep.`
-      `You dream that you leave this star system and return to Zug, but when you land there everything is different: the cities you remember are gone, and in their place are other cities with strange architecture, populated by gargantuan dragon-like creatures.`
+      `You dream that you leave this star system and return to Zuq, but when you land there everything is different: the cities you remember are gone, and in their place are other cities with strange architecture, populated by gargantuan dragon-like creatures.`
       `  Time speeds up, and you watch as the dragon cities grow and spread out. You see one city buried under a massive lava flow, starships buzzing around it like a cloud of flies to carry people and goods to safety. Other cities are destroyed by war, and then abruptly the dragon-people are all gone and their cities lie vacant. Buildings crumble, and the forests reclaim the land.`
       `  Then you wake up and find yourself back in your ship, in the Ildaria system. Weird.`
   
   on complete
-    log `Experienced a strange vision while drifting in the Ildaria system that looked like the fall of a civilization of dragon-people. The terrain on the planet of Zug looks strikingly similar to this vision.`
+    log `Experienced a strange vision while drifting in the Ildaria system that looked like the fall of a civilization of dragon-people. The terrain on the planet of Zuq looks strikingly similar to this vision.`
     conversation
-      `On a whim, as you're landing on Zug you pull up a geological map of the planet and find that the geography you dreamt of while drifting in the Ildaria system was surprisingly close to the real thing. There's even a massive basalt outcropping right where you saw a lava flow burying a city. There's no way your ship's sensors can tell what's underneath it, though.`
+      `On a whim, as you're landing on Zuq you pull up a geological map of the planet and find that the geography you dreamt of while drifting in the Ildaria system was surprisingly close to the real thing. There's even a massive basalt outcropping right where you saw a lava flow burying a city. There's no way your ship's sensors can tell what's underneath it, though.`
 
 
 
