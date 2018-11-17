@@ -12813,7 +12813,7 @@ system "Kaus Borealis"
     sprite planet/rock11-b
     distance 252.453
     period 66.0198
-  object "New Iceland"
+  object "Clear Sky"
     sprite planet/ocean7
     distance 557.093
     period 216.419
@@ -24659,6 +24659,18 @@ planet "Clark"
     threshold 2500
     fleet "Militia Small" 30
 
+planet "Clear Sky"
+  attributes "dirt belt" oil mining volcanic
+  landscape land/valley0
+  description `Clear Sky is a perpetually hazy volcanic world, with a slightly caustic atmosphere but enough reserves of metal and petrochemicals to draw a large number of settlers. Some of those settlers also make a living as farmers, and a few well-developed factory towns produce goods for export to other worlds.`
+  description `  Many of the inhabitants wear dust masks to avoid letting the particulate matter from the volcanoes accumulate in their lungs.`
+  spaceport `Almost as soon as you stepped off your ship, your eyes began to sting. You try to breathe as shallowly as possible.`
+  spaceport `  This port consists of a single large hangar, only big enough for two or three bulk freighters, plus some overflow landing pads and old rusted storage sheds outside. There is a small cafeteria, offering you a choice between two kinds of soup, some pre-made sandwiches, or the hot meal of the day.`
+  security 0.05
+  tribute 300
+    threshold 2000
+    fleet "Militia Small" 24
+
 planet "Clink"
   attributes mining moon
   landscape land/desert3
@@ -26107,7 +26119,7 @@ planet "Nasqueron"
 planet "Nearby Jade"
   attributes kimek farming urban
   landscape land/fields12-sfiera
-  description `Aside from fish, the Kimek diet is mostly vegetarian, but a few centuries ago an Arach entrepreneur decided to start ranching longcows here. It is an ideal world for ranching, with plenty of grassy fields. The ranches have begun a major industry, although generally only the wealthiest of Kimek are willing to spend money on longcow meat.`
+  description `Aside from fish, the Kimek diet is mostly vegetarian, but a few centuries ago an Arach entrepreneur decided to start ranching longcows here. It is an ideal world for ranching, with plenty of grassy fields. The ranches have become a major industry, although generally only the wealthiest of Kimek are willing to spend money on longcow meat.`
   spaceport `The spaceport is at the very centre of a city that is laid out with perfect radial symmetry: six sectors, each with their own markets, schools, and other public services, and clusters of skyscrapers that can each house a million individuals. The spaceport itself is also symmetrical, with a concourse in the centre and smaller and smaller landing pads radiating out from it so that the largest freighters have easiest access.`
 
 planet "New Finding"
@@ -26118,18 +26130,6 @@ planet "New Finding"
   spaceport `The New Finding spaceport is in a canyon, with hangars cut into both the canyon walls and delicate covered bridges linking them together. Attempting to land here without crashing into anything is a harrowing experience.`
   spaceport `  The bottom of the canyon is a bright green ribbon of trees and plants that stands out in sharp contrast against the red and yellow layers of sandstone.`
   "required reputation" 15
-
-planet "New Iceland"
-  attributes "dirt belt" oil mining volcanic
-  landscape land/valley0
-  description `New Iceland is a perpetually hazy volcanic world, with a slightly caustic atmosphere but enough reserves of metal and petrochemicals to draw a large number of settlers. Some of those settlers also make a living as farmers, and a few well-developed factory towns produce goods for export to other worlds.`
-  description `  Many of the inhabitants wear dust masks to avoid letting the particulate matter from the volcanoes accumulate in their lungs.`
-  spaceport `Almost as soon as you stepped off your ship, your eyes began to sting. You try to breathe as shallowly as possible.`
-  spaceport `  This port consists of a single large hangar, only big enough for two or three bulk freighters, plus some overflow landing pads and old rusted storage sheds outside. There is a small cafeteria, offering you a choice between two kinds of soup, some pre-made sandwiches, or the hot meal of the day.`
-  security 0.05
-  tribute 300
-    threshold 2000
-    fleet "Militia Small" 24
 
 planet "Newhome"
   attributes hai textiles

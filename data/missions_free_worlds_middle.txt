@@ -472,7 +472,7 @@ mission "FW Southern Prisoners - Release"
   description "As a goodwill gesture, return the Navy prisoners to <destination> rather than imprisoning them on Clink. Your safe passage ends on <day>."
   source Dancer
   clearance
-  destination "New Iceland"
+  destination "Clear Sky"
   to offer
     has "FW Southern Battle 3: done"
   to fail
@@ -546,7 +546,7 @@ mission "FW Southern Prisoners - Released"
   landing
   name "Report to Dancer"
   description "Report back to Freya and Alondo on Dancer that you chose to release the prisoners."
-  source "New Iceland"
+  source "Clear Sky"
   destination Dancer
   to offer
     has "FW Southern Prisoners - Release: done"
@@ -1575,7 +1575,7 @@ mission "FW Albatross 2"
   
   on offer
     conversation
-      `When you meet up with JJ, he looks exhausted. "Our scouts are reporting that the Navy is building a massive base on New Iceland," he says, "just a few jumps away from here. So every day I look up at the sky and wonder if today is the day when they will invade."`
+      `When you meet up with JJ, he looks exhausted. "Our scouts are reporting that the Navy is building a massive base on Clear Sky," he says, "just a few jumps away from here. So every day I look up at the sky and wonder if today is the day when they will invade."`
       `  You talk for a while and agree that despite the threat from the Navy, dealing with the pirates is important. JJ explains that Albatross started out as a sort of farming commune: independent, but not associated with any illegal activity. But they were dominated by pirates, and since then, one pirate overlord after another has held sway over the planet. So in principle at least, the locals ought to welcome the idea of Free Worlds protection.`
       `  While you are travelling with JJ, Freya agrees to stay here and work on a better surveillance network, to give Dancer advance warning if the Navy decides to invade.`
         accept
@@ -1683,7 +1683,7 @@ mission "FW Rand 1"
       choice
         `  "Are you saying we shouldn't let them join, even though they want to?"`
         `  "Well, I say, if they want to join us, we should let them. Who knows if they'll be this enthusiastic about the Free Worlds later if we let them down now."`
-      `  JJ thinks about that for a moment, then says, "Well, I guess we should let them join. It will mean we may need to launch an assault to drive the Navy off New Iceland. But if we do that, our tactical position shifts from one that's worse than what we have now, to something much better. Freya, did they say if there's any sign that the Navy has gotten word of this?"`
+      `  JJ thinks about that for a moment, then says, "Well, I guess we should let them join. It will mean we may need to launch an assault to drive the Navy off Clear Sky. But if we do that, our tactical position shifts from one that's worse than what we have now, to something much better. Freya, did they say if there's any sign that the Navy has gotten word of this?"`
       `  "A few warships are in orbit around Rand," she says, "so they must suspect something. But the bulk of the Navy fleet is still to the north and east of here."`
       `  JJ says, "Okay Captain, here's what I propose. We'll leave the bulk of our fleet here to defend Dancer and Bundok, but take a few of our best ships to Zeta Aquilae and drive out the Navy. Freya and I will travel with you so that if we need to make any decisions, we'll have most of the Council there in person. How does that sound?"`
       choice

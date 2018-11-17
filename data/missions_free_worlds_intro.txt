@@ -1135,7 +1135,7 @@ mission "FW Katya 6"
         `  "Sorry, I'm through with helping the Free Worlds. I don't think we have a chance of beating the Navy to the punch."`
           decline
       
-      `  "Great!" says Katya. "We'll stop on <planet> first, then swing by Hopper and on to New Iceland. If we still haven't found anything by that point, we'll start working our way up the Rim."`
+      `  "Great!" says Katya. "We'll stop on <planet> first, then swing by Hopper and on to Clear Sky. If we still haven't found anything by that point, we'll start working our way up the Rim."`
         accept
 
 
@@ -1164,7 +1164,7 @@ mission "FW Katya 6C"
   name "The Hunt Continues"
   description "Take Katya and Eyes to <destination>."
   source Hopper
-  destination "New Iceland"
+  destination "Clear Sky"
   passengers 2
   to offer
     has "FW Katya 6B: done"
@@ -1181,7 +1181,7 @@ mission "FW Katya 7"
   landing
   name "The Hunt Continues"
   description "Take Katya and Eyes to <destination> to check for signs of underwater testing."
-  source "New Iceland"
+  source "Clear Sky"
   destination Deep
   passengers 2
   to offer

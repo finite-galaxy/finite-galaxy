@@ -14,7 +14,7 @@ mission "FWC Scouting 1"
     log `Drove the Navy out of Delta Sagittarii with the help of the "Wolf Pack," a militia group in favour of more extreme measures who launched a preemptive strike before the main Free Worlds force arrived. The Free Worlds are now committed to fighting the Republic to a standstill rather than proving their innocence; the defector has been recaptured by the Syndicate and whatever information he had to share is now lost.`
     conversation
       `It was a close battle, and could have gone very differently if it were not for the Wolf Pack strike that happened before you arrived and that disabled or destroyed the majority of the Navy fleet. You can't help but wonder how the Wolf Pack managed to assemble a large enough fleet to do that sort of damage.`
-      `  "Well," says JJ, "the die is cast. It's too late now to wonder what that business with the Syndicate was about; now we're in a fight to the finish with the Republic. And that means we must strike soon, before they have time to bring in more reinforcements. Captain <last>, I'd like you to perform a scouting mission while I'm working on gathering a new fleet. Our next target has to be the Navy base on New Iceland. If we can drive them out of that system, our position will be much better. So, I'd like you to fly through Kaus Borealis and return here to report on their fleet strength. Understood?"`
+      `  "Well," says JJ, "the die is cast. It's too late now to wonder what that business with the Syndicate was about; now we're in a fight to the finish with the Republic. And that means we must strike soon, before they have time to bring in more reinforcements. Captain <last>, I'd like you to perform a scouting mission while I'm working on gathering a new fleet. Our next target has to be the Navy base on Clear Sky. If we can drive them out of that system, our position will be much better. So, I'd like you to fly through Kaus Borealis and return here to report on their fleet strength. Understood?"`
       choice
         `  "No problem."`
           goto freya
@@ -38,7 +38,7 @@ mission "FWC Attack Kaus Borealis"
   description "Destroy the Navy fleet defending Kaus Borealis. The Wolf Pack will attack them first to soften them up."
   autosave
   source "Bundok"
-  destination "New Iceland"
+  destination "Clear Sky"
   clearance
   to offer
     has "FWC Scouting 1: done"
@@ -148,7 +148,7 @@ mission "FWC Cebalrai 1"
   name "Scout out Cebalrai"
   description "Scout out the Navy presence in the <waypoints> system, then report back to Tomek on <planet>."
   autosave
-  source "New Iceland"
+  source "Clear Sky"
   waypoint "Cebalrai"
   to offer
     has "FWC Attack Kaus Borealis: done"
@@ -211,7 +211,7 @@ mission "FWC Cebalrai 1B"
   name "Capture Cebalrai"
   description "Lead an attack on the Cebalrai system and drive out or destroy any Navy ships that you find there."
   autosave
-  source "New Iceland"
+  source "Clear Sky"
   destination "Tundra"
   clearance
   passengers 1
@@ -1303,7 +1303,7 @@ mission "FWC Pug 2D"
   name "Escape Pug Space"
   description "Disable one of the Pug ships, steal its jump drive, and use it to escape from their territory and report to the Free Worlds that an alien invasion is imminent."
   source "Oblivion"
-  destination "New Iceland"
+  destination "Clear Sky"
   clearance "The locals are terrified by the fact that you have decided to fight the Pug, but eventually they agree to let you land."
     planet Oblivion
   to offer
@@ -1335,7 +1335,7 @@ mission "FWC Pug 3"
   landing
   name "Talk to the Navy"
   description "Freya is on <planet>, presumably in Navy custody. Travel there and see if, given the current circumstances, the Navy is willing to talk with you."
-  source "New Iceland"
+  source "Clear Sky"
   destination "Carbuncle"
   clearance
   to offer
