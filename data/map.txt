@@ -3731,7 +3731,7 @@ system "Alphecca"
     sprite planet/gas17-b
     distance 693.404
     period 195.198
-  object "New Holland"
+  object "Blubber"
     sprite planet/cloud3
     distance 1209.16
     period 449.494
@@ -24364,6 +24364,19 @@ planet "Bloptab's Furnace"
   spaceport `  Nearly everyone you see here is an Arach, and they are walking around with an air of purpose that suggests that they are locals hard at work, rather than visitors to this planet.`
   "required reputation" 15
 
+planet "Blubber"
+  attributes "dirt belt" farming
+  landscape land/water7
+  description `Blubber is a world of oceans and low country. It is an old planet, its tectonic activity long since silenced, worn smooth by aeons of weather. For those who live here, flooding is a constant threat, requiring a vast network of dikes and levees. But the floods also refresh the soil, making this one of the most fertile farming worlds in the region.`
+  description `  As the population has boomed, and as the farms have been consolidated and become more mechanized, large cities have grown to house factories and workers.`
+  spaceport `The spaceport is on the fringes of one of the factory towns. In the distance are row after row of identical brick buildings; in the opposite direction, a safe distance from the city, are the cooling towers of several nuclear power plants. The port itself is laid out for maximum efficiency in loading and unloading cargo regardless of the weather or time of day: a row of hangars, open at one side to ships coming in and departing, and on the other to a road carrying a steady stream of trucks.`
+  outfitter "Basic Outfits"
+  outfitter "Sisensis Basics"
+  security 0.1
+  tribute 700
+    threshold 3000
+    fleet "Militia Large" 11
+
 planet "Blubipad's Workshop"
   attributes arach factory tourism urban
   landscape land/forest2
@@ -26094,19 +26107,6 @@ planet "New Greenland"
   tribute 200
     threshold 2000
     fleet "Militia Small" 15
-
-planet "New Holland"
-  attributes "dirt belt" farming
-  landscape land/water7
-  description `Like its namesake on ancient Earth, New Holland is a world of oceans and low country. It is an old planet, its tectonic activity long since silenced, worn smooth by aeons of weather. For those who live here, flooding is a constant threat, requiring a vast network of dikes and levees. But the floods also refresh the soil, making this one of the most fertile farming worlds in the region.`
-  description `  As the population has boomed, and as the farms have been consolidated and become more mechanized, large cities have grown to house factories and workers.`
-  spaceport `The spaceport is on the fringes of one of the factory towns. In the distance are row after row of identical brick buildings; in the opposite direction, a safe distance from the city, are the cooling towers of several nuclear power plants. The port itself is laid out for maximum efficiency in loading and unloading cargo regardless of the weather or time of day: a row of hangars, open at one side to ships coming in and departing, and on the other to a road carrying a steady stream of trucks.`
-  outfitter "Basic Outfits"
-  outfitter "Sisensis Basics"
-  security 0.1
-  tribute 700
-    threshold 3000
-    fleet "Militia Large" 11
 
 planet "New Iceland"
   attributes "dirt belt" oil mining volcanic
