@@ -7444,7 +7444,7 @@ system "Delta Sagittarii"
   object
     sprite star/k5
     period 10
-  object "Blizzard"
+  object "Bundok"
     sprite planet/ocean6
     distance 259.64
     period 93.5497
@@ -24450,6 +24450,17 @@ planet "Buccaneer Bay"
     threshold 3000
     fleet "Pirates Core Large" 9
 
+planet "Bundok"
+  attributes "dirt belt" farming
+  landscape land/sky3
+  description `Bundok is a cloudy planet orbiting a dim star; the only reason it is not completely frozen is because of the heat trapped by its upper atmosphere. There are only a handful of towns here, and nothing big enough to warrant being called a city. Most of the settlers are subsistence farmers who can only dream about life on other worlds. Many houses here do not even have running water or personal computers.`
+  description `  Some of the farms near the spaceport are planted with different crops forming abstract patterns visible from the air. Such a whimsical extravagance seems particularly odd when you consider that the owners will never be able to afford to see their fields from that angle. But perhaps that is precisely the point.`
+  spaceport `The largest town on Bundok has set aside a landing area for ships, but it is barely what could be called a spaceport. Aside from the refueling station and a few sheds, there are no other buildings, just an open field of packed gravel, with grass and weeds peeking up in places where it has avoided the blast from landing spacecraft. A few farmers have parked wagons here and are trading food and other goods with the visiting ships.`
+  security 0.05
+  tribute 200
+    threshold 2000
+    fleet "Militia Small" 12
+
 planet "Burthen"
   attributes core mining
   landscape land/fields9
@@ -24745,7 +24756,7 @@ planet "Deep"
 planet "Deep Treasure"
   attributes saryd oil farming
   landscape land/sea10-sfiera
-  description `Thick layers of kelp and plankton sediment have gathered on the floors of Deep Treasure's oceans over the eons, leaving behind rich deposits of oil that the Saryds harvest to make plastics and other hydrocarbon products. In the shallower seas, shoals of fish swim among some of the most varied and extensive coral reefs found anywhere in Coalition space.`
+  description `Thick layers of kelp and plankton sediment have gathered on the floors of Deep Treasure's oceans over the aeons, leaving behind rich deposits of oil that the Saryds harvest to make plastics and other hydrocarbon products. In the shallower seas, shoals of fish swim among some of the most varied and extensive coral reefs found anywhere in Coalition space.`
   spaceport `The spaceport is built in a ring along the lower slopes of an extinct volcano that rises from the ocean near Deep Treasure's equator. Landing pads and hangars have been cut into the rock, and below them are a system of docks and oil refineries. The residences are on the volcano's upper slopes, where they have a clear view of the glittering water stretching out in every direction.`
   "required reputation" 15
 
@@ -26087,7 +26098,7 @@ planet "New Greenland"
 planet "New Holland"
   attributes "dirt belt" farming
   landscape land/water7
-  description `Like its namesake on ancient Earth, New Holland is a world of oceans and low country. It is an old planet, its tectonic activity long since silenced, worn smooth by eons of weather. For those who live here, flooding is a constant threat, requiring a vast network of dikes and levees. But the floods also refresh the soil, making this one of the most fertile farming worlds in the region.`
+  description `Like its namesake on ancient Earth, New Holland is a world of oceans and low country. It is an old planet, its tectonic activity long since silenced, worn smooth by aeons of weather. For those who live here, flooding is a constant threat, requiring a vast network of dikes and levees. But the floods also refresh the soil, making this one of the most fertile farming worlds in the region.`
   description `  As the population has boomed, and as the farms have been consolidated and become more mechanized, large cities have grown to house factories and workers.`
   spaceport `The spaceport is on the fringes of one of the factory towns. In the distance are row after row of identical brick buildings; in the opposite direction, a safe distance from the city, are the cooling towers of several nuclear power plants. The port itself is laid out for maximum efficiency in loading and unloading cargo regardless of the weather or time of day: a row of hangars, open at one side to ships coming in and departing, and on the other to a road carrying a steady stream of trucks.`
   outfitter "Basic Outfits"
@@ -26120,17 +26131,6 @@ planet "New Kansas"
   tribute 300
     threshold 2500
     fleet "Militia Small" 22
-
-planet "Blizzard"
-  attributes "dirt belt" farming
-  landscape land/sky3
-  description `Blizzard is a cloudy planet orbiting a dim star; the only reason it is not completely frozen is because of the heat trapped by its upper atmosphere. There are only a handful of towns here, and nothing big enough to warrant being called a city. Most of the settlers are subsistence farmers who can only dream about life on other worlds. Many houses here do not even have running water or personal computers.`
-  description `  Some of the farms near the spaceport are planted with different crops forming abstract patterns visible from the air. Such a whimsical extravagance seems particularly odd when you consider that the owners will never be able to afford to see their fields from that angle. But perhaps that is precisely the point.`
-  spaceport `The largest town on Blizzard has set aside a landing area for ships, but it is barely what could be called a spaceport. Aside from the refueling station and a few sheds, there are no other buildings, just an open field of packed gravel, with grass and weeds peeking up in places where it has avoided the blast from landing spacecraft. A few farmers have parked wagons here and are trading food and other goods with the visiting ships.`
-  security 0.05
-  tribute 200
-    threshold 2000
-    fleet "Militia Small" 12
 
 planet "New Switzerland"
   attributes "near earth" tourism mining
