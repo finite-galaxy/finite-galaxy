@@ -17166,7 +17166,7 @@ system "Peacock"
   object
     sprite star/m0
     period 10
-  object "New Washington"
+  object "Duskdawn"
     sprite planet/ocean3
     distance 196.06
     period 74.9992
@@ -24837,6 +24837,16 @@ planet "Dusk Companion"
   spaceport `The spaceport is in a particularly dingy corner of Dusk Companion's largest city. The windows are caked with soot and grime, and the few plants that grow here have a thin layer of volcanic ash on their leaves. The thick clouds overhead cloak the city in a perpetual twilight, and the streetlights remain lit even at midday.`
   "required reputation" 15
 
+planet "Duskdawn"
+  attributes "dirt belt" mining oil
+  landscape land/nasa4
+  description `Duskdawn is a planet huddled close to a dim, red sun in an otherwise frozen system. It orbits so close to the sun that the two are locked together, with one side of Duskdawn continuously facing the sun and the other in perpetual darkness. The only villages are in the twilight region in between, and there the settlers make a living by mining for metal and for oil, a relic of a warmer period when more life flourished here and the planet spun more quickly on its axis.`
+  spaceport `In this narrow ring between the baking sun of Duskdawn's day side, and the endless night beyond, a few native plants and animals still flourish: weirdly coloured trees and grasses, and a few insect-like creatures flying among them. Rats, accidentally introduced by the settlers, also flourish here. A small, nearly deserted cafeteria is selling stew and mashed potatoes. You are almost certain the stew is made with rat meat.`
+  security 0.05
+  tribute 200
+    threshold 2000
+    fleet "Militia Large" 3
+
 planet "Dustmaker"
   attributes hai manufacturing "hai tourism"
   landscape land/badlands0
@@ -26154,16 +26164,6 @@ planet "New Wales"
   tribute 400
     threshold 3000
     fleet "Militia Large" 6
-
-planet "New Washington"
-  attributes "dirt belt" mining oil
-  landscape land/nasa4
-  description `New Washington is a planet huddled close to a dim, red sun in an otherwise frozen system. It orbits so close to the sun that the two are locked together, with one side of New Washington continuously facing the sun and the other in perpetual darkness. The only villages are in the twilight region in between, and there the settlers make a living by mining for metal and for oil, a relic of a warmer period when more life flourished here and the planet spun more quickly on its axis.`
-  spaceport `In this narrow ring between the baking sun of New Washington's day side, and the endless night beyond, a few native plants and animals still flourish: weirdly coloured trees and grasses, and a few insect-like creatures flying among them. Rats, accidentally introduced by the settlers, also flourish here. A small, nearly deserted cafeteria is selling stew and mashed potatoes. You are almost certain the stew is made with rat meat.`
-  security 0.05
-  tribute 200
-    threshold 2000
-    fleet "Militia Large" 3
 
 planet "Newhome"
   attributes hai textiles
