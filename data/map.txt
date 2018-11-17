@@ -22941,7 +22941,7 @@ system "Vindemiatrix"
     sprite planet/rock4
     distance 542.69
     period 153.878
-  object "New Argentina"
+  object "Bos"
     sprite planet/forest0-b
     distance 943.05
     period 352.493
@@ -24414,6 +24414,19 @@ planet "Bluestone"
   tribute 400
     threshold 3000
     fleet "Syndicate Small" 6
+
+planet "Bos"
+  attributes "dirt belt" farming
+  landscape land/fields1
+  description `Bos is a world that is ideal for ranching but suitable for little else. Ranchers live as individual families or small communities surrounded by hectares of grazing land for cattle. As a result, the population is still quite low here, and the locals live isolated lives, with most families living many kilometers away from the nearest school or hospital or even from their nearest neighbour.`
+  description `  Cattle handlers here do their work on horseback, because they believe modern vehicles are more likely to spook the animals.`
+  spaceport `The spaceport is on the outskirts of one of Bos's largest towns... which has a population of barely ten thousand people. Many of the dock workers are teenagers or barely past their teens, children of ranchers who are not drawn to the solitary sort of life that their parents enjoy. Aside from the church and the hospital, the largest building in town is "The Grange," a function hall with a sign out front advertising square dances and line dances three nights a week.`
+  outfitter "Basic Outfits"
+  outfitter "Sisensis Basics"
+  security 0.05
+  tribute 1000
+    threshold 3500
+    fleet "Militia Large" 10
 
 planet "Bounty"
   attributes "dirt belt" farming factory
@@ -26076,19 +26089,6 @@ planet "Nearby Jade"
   description `Aside from fish, the Kimek diet is mostly vegetarian, but a few centuries ago an Arach entrepreneur decided to start ranching longcows here. It is an ideal world for ranching, with plenty of grassy fields. The ranches have begun a major industry, although generally only the wealthiest of Kimek are willing to spend money on longcow meat.`
   spaceport `The spaceport is at the very centre of a city that is laid out with perfect radial symmetry: six sectors, each with their own markets, schools, and other public services, and clusters of skyscrapers that can each house a million individuals. The spaceport itself is also symmetrical, with a concourse in the centre and smaller and smaller landing pads radiating out from it so that the largest freighters have easiest access.`
 
-planet "New Argentina"
-  attributes "dirt belt" farming
-  landscape land/fields1
-  description `New Argentina is a world that is ideal for ranching but suitable for little else. Ranchers live as individual families or small communities surrounded by hectares of grazing land for cattle. As a result, the population is still quite low here, and the locals live isolated lives, with most families living many kilometers away from the nearest school or hospital or even from their nearest neighbour.`
-  description `  Cattle handlers here do their work on horseback, because they believe modern vehicles are more likely to spook the animals.`
-  spaceport `The spaceport is on the outskirts of one of New Argentina's largest towns... which has a population of barely ten thousand people. Many of the dock workers are teenagers or barely past their teens, children of ranchers who are not drawn to the solitary sort of life that their parents enjoy. Aside from the church and the hospital, the largest building in town is "The Grange," a function hall with a sign out front advertising square dances and line dances three nights a week.`
-  outfitter "Basic Outfits"
-  outfitter "Sisensis Basics"
-  security 0.05
-  tribute 1000
-    threshold 3500
-    fleet "Militia Large" 10
-
 planet "New Austria"
   attributes "dirt belt" mining
   landscape land/valley9
@@ -26133,7 +26133,7 @@ planet "New Switzerland"
 planet "New Tibet"
   attributes "dirt belt" religious factory
   landscape land/mountain0
-  description `New Tibet is a world of jagged mountains and deeply shadowed valleys. Although it has been inhabited for centuries, in many places the terrain is so rugged that roads cannot be built, leaving several of the smaller towns almost completely isolated. Taking advantage of this isolation, several orders of Buddhist monks have built monasteries here.`
+  description `New Tibet is a world of jagged mountains and deeply shadowed valleys. Although it has been inhabited for centuries, in many places the terrain is so rugged that roads cannot be built, leaving several of the smaller towns almost completely isolated. Taking advantage of this isolation, several monastic orders have built monasteries here.`
   description `  In the lowlands, large farms support sprawling cities full of factories, a striking contrast to the simplicity and isolation of the mountain villages.`
   spaceport `The spaceport is in a hilly region, just outside of the largest city, with a view of a valley full of farms that stretch for tens of kilometers, all the way down to the ocean. The port is much less modern than the city nearby; it was built by the early settlers and has not been significantly updated since then, because the focus has been on improving life for the locals, not for their occasional visitors.`
   security 0.1
@@ -26145,7 +26145,7 @@ planet "New Wales"
   attributes "dirt belt" mining
   landscape land/mountain7
   description `New Wales is home to a few mining outposts which extract and refine rare earth minerals and heavy metals. It is dangerous work: the mines are deep underground and prone to noxious gases and cave-ins, and the refineries work with molten radioactive materials and caustic chemicals. Due to the somewhat dim light of the star Algorel, and the cloudiness of the atmosphere, this is not a good world for farming, and the population remains quite small.`
-  spaceport `The warehouses at the spaceport are kept under continuous guard due to the high value of the refined metals they contain. There are several missile silos and laser turrets as well; New Wales has survived several pirate attacks in the last decade. Within the spaceport cafeteria, however, the locals are quite friendly and excited to connect with visitors and hear news of the outside world. The cafeteria is cooking lamb stew, and the smell of it pervades the whole building.`
+  spaceport `The warehouses at the spaceport are kept under continuous guard due to the high value of the refined metals they contain. There are several missile silos and laser turrets as well; New Wales has survived several pirate attacks in the last decade. Within the spaceport cafeteria, however, the locals are quite friendly and excited to connect with visitors and hear news of the outside world. The cafeteria is cooking goat stew, and the smell of it pervades the whole building.`
   outfitter "Basic Outfits"
   outfitter "Sisensis Basics"
   security 0.2
