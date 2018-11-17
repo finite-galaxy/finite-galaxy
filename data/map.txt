@@ -18020,7 +18020,7 @@ system "Porrima"
     sprite planet/lava2-b
     distance 723.282
     period 282.237
-  object "New Switzerland"
+  object "Precipitous"
     sprite planet/ocean4
     distance 1128.64
     period 550.158
@@ -26120,16 +26120,6 @@ planet "New Iceland"
     threshold 2000
     fleet "Militia Small" 24
 
-planet "New Switzerland"
-  attributes "near earth" tourism mining
-  landscape land/mountain5
-  description `New Switzerland is a world where tectonic activity has left deeply folded and fractured mountains across much of the planet's surface. In many places, the topsoil is too thin and rocky to support farming, but many people have settled here anyway, drawn to the beauty of the mountains. A few ski resorts operate in the mountains, and in recent years a gemstone mining industry has begun to develop as well.`
-  spaceport `The spaceport is in a valley, surrounded by mountains so high that their tops are often lost in the clouds. From the port town, tourists can ride a cog railway to the tops of several of the tallest mountains nearby. Most of the buildings in town are wood framed, and some are old fashioned half-timber buildings with whitewashed plaster packed in between the beams. It is not a technologically advanced world, but it is a very beautiful place.`
-  security 0.1
-  tribute 300
-    threshold 2000
-    fleet "Republic Small" 11
-
 planet "New Tibet"
   attributes "dirt belt" religious factory
   landscape land/mountain0
@@ -26343,6 +26333,16 @@ planet "Poseidos"
   tribute 400
     threshold 3000
     fleet "Militia Large" 6
+
+planet "Precipitous"
+  attributes "near earth" tourism mining
+  landscape land/mountain5
+  description `Precipitous is a world where tectonic activity has left deeply folded and fractured mountains across much of the planet's surface. In many places, the topsoil is too thin and rocky to support farming, but many people have settled here anyway, drawn to the beauty of the mountains. A few ski resorts operate in the mountains, and in recent years a gemstone mining industry has begun to develop as well.`
+  spaceport `The spaceport is in a valley, surrounded by mountains so high that their tops are often lost in the clouds. From the port town, tourists can ride a cog railway to the tops of several of the tallest mountains nearby. Most of the buildings in town are wood framed, and some are old fashioned half-timber buildings with whitewashed plaster packed in between the beams. It is not a technologically advanced world, but it is a very beautiful place.`
+  security 0.1
+  tribute 300
+    threshold 2000
+    fleet "Republic Small" 11
 
 planet "Prime"
   attributes north urban factory
