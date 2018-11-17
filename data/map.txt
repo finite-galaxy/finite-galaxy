@@ -16230,7 +16230,7 @@ system "Muhlifain"
     sprite planet/fog0-b
     distance 275.86
     period 85.8597
-  object "New Kansas"
+  object "Ovis"
     sprite planet/ocean1
     distance 720.47
     period 362.393
@@ -26120,18 +26120,6 @@ planet "New Iceland"
     threshold 2000
     fleet "Militia Small" 24
 
-planet "New Kansas"
-  attributes "dirt belt" textiles
-  landscape land/fields6
-  description `Wool clothing is considered a luxury in most of human space, because enough oil is mined on most planets to make synthetic clothing much cheaper than raising and shearing sheep. However, here on New Kansas, wool is the primary industry.`
-  description `  The land is mostly rolling green hills and shallow streams, ideal for grazing. However, unwary travellers hiking through the idyllic countryside have been known to be attacked by savage packs of feral sheep, so this world is not without unique dangers of its own.`
-  spaceport `The spaceport includes several stores selling wool garments, each worth easily ten times as much as the clothes you are wearing. A few of the visitors milling around seem genuinely interested in the clothing, but most of them, like you, are just ship captains who see wool clothing as nothing more than a pricey luxury good that can be sold elsewhere for a good profit.`
-  spaceport `  The port authority employs several people on horseback whose sole job is to keep the landing pads clear of wild sheep.`
-  security 0.05
-  tribute 300
-    threshold 2500
-    fleet "Militia Small" 22
-
 planet "New Switzerland"
   attributes "near earth" tourism mining
   landscape land/mountain5
@@ -26260,6 +26248,18 @@ planet "Obscurity"
   tribute 100
     threshold 500
     fleet "Pirates North Large" 3
+
+planet "Ovis"
+  attributes "dirt belt" textiles
+  landscape land/fields6
+  description `Wool clothing is considered a luxury in most of human space, because enough oil is mined on most planets to make synthetic clothing much cheaper than raising and shearing sheep. However, here on Ovis, wool is the primary industry.`
+  description `  The land is mostly rolling green hills and shallow streams, ideal for grazing. However, unwary travellers hiking through the idyllic countryside have been known to be attacked by savage packs of feral sheep, so this world is not without unique dangers of its own.`
+  spaceport `The spaceport includes several stores selling wool garments, each worth easily ten times as much as the clothes you are wearing. A few of the visitors milling around seem genuinely interested in the clothing, but most of them, like you, are just ship captains who see wool clothing as nothing more than a pricey luxury good that can be sold elsewhere for a good profit.`
+  spaceport `  The port authority employs several people on horseback whose sole job is to keep the landing pads clear of wild sheep.`
+  security 0.05
+  tribute 300
+    threshold 2500
+    fleet "Militia Small" 22
 
 planet "Pearl"
   attributes paradise tourism
