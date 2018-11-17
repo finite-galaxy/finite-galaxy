@@ -647,7 +647,7 @@ mission "FW Northern 1"
   description "Take a fleet to <destination> (visiting <waypoints> along the way), securing those systems to allow them to defect to the Free Worlds."
   autosave
   source "Dancer"
-  destination "New Tibet"
+  destination "Bod"
   waypoint "Alphecca"
   waypoint "Seginus"
   clearance
@@ -659,7 +659,7 @@ mission "FW Northern 1"
     dialogue `You have failed an essential Free Worlds mission. If you want to complete the story line, revert to the autosave or another earlier snapshot of the game.`
   
   on offer
-    log "Three more planets have decided to defect to the Free Worlds: Clark, New Tibet, and Blubber."
+    log "Three more planets have decided to defect to the Free Worlds: Clark, Bod, and Blubber."
     conversation
       `When you land on Dancer, the Free Worlds fleet appears to be preparing for another battle: missiles and torpedoes are being loaded onto ships and crew members are running around. You eventually find Freya and Alondo, and ask them what is going on.`
       `  "Another three worlds have secretly told us they are ready to defect," says Alondo, "and this time around we want to get there before the Navy does."`
@@ -696,7 +696,7 @@ mission "FW Northern 1"
 mission "FW Northern 2"
   name "Meet With Freya"
   description "Now that the northern star systems are secured, go back to <planet> to meet with Freya and work with her to remove any surveillance equipment the Navy installed in the Wei system or elsewhere."
-  source "New Tibet"
+  source "Bod"
   destination "Dancer"
   to offer
     has "FW Northern 1: done"
@@ -796,10 +796,10 @@ mission "FW Northern 2C"
 
 mission "FW Northern 2D"
   landing
-  name "Sweep New Tibet"
+  name "Sweep Bod"
   description "Bring Freya to <planet> to check for any Navy surveillance stations."
   source "Blubber"
-  destination "New Tibet"
+  destination "Bod"
   to offer
     has "FW Northern 2C: done"
   passengers 1
@@ -808,7 +808,7 @@ mission "FW Northern 2D"
   
   on offer
     conversation
-      `You spend quite a while flying back and forth above the surface of <origin>, but Freya is unable to locate any Navy signals originating from the surface. Finally she gives up. "It's an out-of-the-way planet," she says. "Any fleet coming here would pass through Alioth or Seginus first. So I guess they didn't bother to put anything here. Time to head to New Tibet and meet up with Alondo!"`
+      `You spend quite a while flying back and forth above the surface of <origin>, but Freya is unable to locate any Navy signals originating from the surface. Finally she gives up. "It's an out-of-the-way planet," she says. "Any fleet coming here would pass through Alioth or Seginus first. So I guess they didn't bother to put anything here. Time to head to Bod and meet up with Alondo!"`
         accept
 
 
@@ -817,7 +817,7 @@ mission "FW Northern 3"
   landing
   name "Freya to Zuq"
   description "Bring Freya to <destination> to help with ramping up Dreadnought production."
-  source "New Tibet"
+  source "Bod"
   destination "Zuq"
   to offer
     has "FW Northern 2D: done"
@@ -931,7 +931,7 @@ mission "FW Northern 4"
   
   on offer
     conversation
-      `Waiting for you on <origin> is a message from Alondo: "Hello Captain! We've got another minor crisis: a merchant fleet was supposed to bring us a shipment of medical supplies from up North, since many of our worlds are running short. But, the Republic is threatening to attack the convoy if they try to cross over into our space, so they're waiting on <planet>, just inside of the Republic's territory. Please go meet up with the fleet and bring it back to New Tibet."`
+      `Waiting for you on <origin> is a message from Alondo: "Hello Captain! We've got another minor crisis: a merchant fleet was supposed to bring us a shipment of medical supplies from up North, since many of our worlds are running short. But, the Republic is threatening to attack the convoy if they try to cross over into our space, so they're waiting on <planet>, just inside of the Republic's territory. Please go meet up with the fleet and bring it back to Bod."`
         accept
 
 
@@ -942,7 +942,7 @@ mission "FW Northern 4.1A"
   description "Escort a convoy carrying medical supplies safely to <planet>. Do not fire on the Navy Oathkeeper ship that is in orbit there."
   autosave
   source "Ovis"
-  destination "New Tibet"
+  destination "Bod"
   to offer
     has "FW Northern 4: done"
     not "FW Northern 4.2A: offered"
@@ -953,7 +953,7 @@ mission "FW Northern 4.1A"
   
   on offer
     conversation
-      `You land on <origin> and meet up with the fleet you will be escorting. A few minutes later, an urgent message comes in from Alondo: "We've got a crazy situation here. Return to New Tibet immediately with the convoy. You will find a Navy Oathkeeper ship in orbit. Do not attack them, just see to it that the convoy lands safely." The Oathkeepers are Navy officers who swore not to fight the Free Worlds, so you can't help wondering what they are doing on <planet>.`
+      `You land on <origin> and meet up with the fleet you will be escorting. A few minutes later, an urgent message comes in from Alondo: "We've got a crazy situation here. Return to Bod immediately with the convoy. You will find a Navy Oathkeeper ship in orbit. Do not attack them, just see to it that the convoy lands safely." The Oathkeepers are Navy officers who swore not to fight the Free Worlds, so you can't help wondering what they are doing on <planet>.`
         accept
   
   npc accompany save
@@ -982,7 +982,7 @@ mission "FW Northern 4.2A"
   description "Escort a convoy carrying medical supplies safely to <planet>."
   autosave
   source "Ovis"
-  destination "New Tibet"
+  destination "Bod"
   to offer
     has "FW Northern 4: done"
     not "FW Northern 4.1A: offered"
@@ -994,7 +994,7 @@ mission "FW Northern 4.2A"
   
   on offer
     conversation
-      `You land on <origin> and meet up with the fleet you will be escorting. A few minutes later, an urgent message comes in from Alondo: "We've got a crazy situation here. Return to New Tibet immediately with the convoy." He provides no further information.`
+      `You land on <origin> and meet up with the fleet you will be escorting. A few minutes later, an urgent message comes in from Alondo: "We've got a crazy situation here. Return to Bod immediately with the convoy." He provides no further information.`
         accept
   
   npc accompany save
@@ -1021,7 +1021,7 @@ mission "FW Alphas 1.1"
   name "Liberate Poisonwood"
   description "Destroy all pirates ships in the <system> system with the help of the Navy Oathkeepers, then land on the planet and let the Navy troops eliminate the Alphas."
   autosave
-  source "New Tibet"
+  source "Bod"
   destination Poisonwood
   clearance
   to offer
@@ -1122,7 +1122,7 @@ mission "FW Alphas 1.2"
   name "Liberate Poisonwood"
   description "Destroy any pirate ships in orbit around <planet>, then land and eliminate the Alphas and their servants who have occupied the city."
   autosave
-  source "New Tibet"
+  source "Bod"
   destination Poisonwood
   clearance
   to offer
@@ -1180,7 +1180,7 @@ mission "FW Alphas 1.1A"
   description "Escort Admiral Danforth's ship to <destination> so that he can leave Free space without being accidentally attacked."
   autosave
   source Poisonwood
-  destination "New Tibet"
+  destination "Bod"
   to offer
     has "FW Alphas 1.1: done"
   on fail
@@ -1223,7 +1223,7 @@ mission "FW Alphas 1.1A"
       choice
         `  "You too. I wish we could bring this war to an end."`
         `  "If the Republic would just leave us alone, we wouldn't need to be enemies."`
-      `  "I know," he says. "But for now, I need to return to my fleet. Which means I'll be needing an escort out of your territory, just to make sure no one attacks me. Maybe you could take us by way of New Tibet? I'm sure Commander Nguyen would appreciate one last visit to the Buddhist monasteries there before that world becomes closed off to us completely." You agree, and he begins preparing his ship for takeoff.`
+      `  "I know," he says. "But for now, I need to return to my fleet. Which means I'll be needing an escort out of your territory, just to make sure no one attacks me. Maybe you could take us by way of Bod? I'm sure Commander Nguyen would appreciate one last visit to the Buddhist monasteries there before that world becomes closed off to us completely." You agree, and he begins preparing his ship for takeoff.`
         accept
   
   on complete
@@ -1250,7 +1250,7 @@ mission "FW Alphas 1.2A"
   name "Return to the Front"
   description "Travel to <destination> to bolster the defences there."
   source Poisonwood
-  destination "New Tibet"
+  destination "Bod"
   to offer
     has "FW Alphas 1.2: done"
   on fail
@@ -1275,7 +1275,7 @@ mission "FW Bloodsea 1"
   landing
   name "Alondo to <planet>"
   description "Bring Alondo to <planet> to try to convince the locals to join the Free Worlds."
-  source "New Tibet"
+  source "Bod"
   destination "Bloodsea"
   clearance `Alondo manages to convince the spaceport to let you land "free of charge."`
   to offer
@@ -1789,12 +1789,12 @@ mission "FW Rand 1B"
 
 
 
-mission "FW Defend New Tibet"
+mission "FW Defend Bod"
   landing
-  name "Defend New Tibet"
-  description "Defend New Tibet from a Syndicate fleet that is attacking them, then land to rescue a Syndicate defector carrying vital evidence and information."
+  name "Defend Bod"
+  description "Defend Bod from a Syndicate fleet that is attacking them, then land to rescue a Syndicate defector carrying vital evidence and information."
   source Wayfarer
-  destination "New Tibet"
+  destination "Bod"
   passengers 2
   to offer
     has "FW Rand 1B: done"
@@ -1802,7 +1802,7 @@ mission "FW Defend New Tibet"
   on offer
     log "As a member of the Council, must make the deciding vote on a difficult decision. A defector from the Syndicate is claiming to have proof that the Syndicate was behind the bombings of Martini and Gemini. If that is true, the Republic may agree to make peace with the Free Worlds. But, refusing to return the defector to the Syndicate would certainly earn their enmity."
     conversation
-      `The fleet in orbit around Wayfarer is pitifully small, surely not enough to take on more than a couple of Navy capital ships. JJ orders one of their communication officers to try to establish a secure link to Bourne or to any Free Worlds post on the other side of the Navy blockade. After about ten minutes, the officer returns and says, "Sir, we're receiving communications from New Tibet. You need to talk to them."`
+      `The fleet in orbit around Wayfarer is pitifully small, surely not enough to take on more than a couple of Navy capital ships. JJ orders one of their communication officers to try to establish a secure link to Bourne or to any Free Worlds post on the other side of the Navy blockade. After about ten minutes, the officer returns and says, "Sir, we're receiving communications from Bod. You need to talk to them."`
       `  "Our fleet is there?" asks JJ.`
       `  "No sir, the Syndicate. They're under attack by the Syndicate."`
       `  "What?" says JJ. He rushes into the communication room, and you and Freya follow. On the video screen is a Buddhist monk in a maroon robe; behind him, you see other monks rushing about with none of the serenity you would usually expect of them. "What's going on there?" asks JJ.`
@@ -1847,7 +1847,7 @@ mission "FW Defend New Tibet"
         decline
       
       label "definitely rescue"
-      `  JJ seems very relieved at your choice. "I think that's the right choice, Captain," he says. "We can take the fleet we have here, sweep up north to avoid the thickest part of the Navy's occupying fleet, and cut over to New Tibet to drive the Syndicate ships away. Let's just hope these monks can stay hidden until then."`
+      `  JJ seems very relieved at your choice. "I think that's the right choice, Captain," he says. "We can take the fleet we have here, sweep up north to avoid the thickest part of the Navy's occupying fleet, and cut over to Bod to drive the Syndicate ships away. Let's just hope these monks can stay hidden until then."`
         accept
   
   on accept
@@ -1964,14 +1964,14 @@ mission "FW Liberate Delta Sagittarii"
   passengers 2
   to offer
     has "FW Rand 1B: done"
-    not "FW Defend New Tibet: done"
+    not "FW Defend Bod: done"
   
   on offer
     event "fwc southern battle"
     conversation
       branch surrender
         has "fw did not rescue defector"
-      `A few of the Free Worlds crew members are still milling around the spaceport in confusion. You help to gather them together and explain that you are headed out on a very important mission to New Tibet.`
+      `A few of the Free Worlds crew members are still milling around the spaceport in confusion. You help to gather them together and explain that you are headed out on a very important mission to Bod.`
         decline
       
       label surrender

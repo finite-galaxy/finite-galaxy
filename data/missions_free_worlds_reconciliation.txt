@@ -2,10 +2,10 @@ mission "FW Reconciliation 1"
   name "Pick up Ijs from <planet>"
   description "Bring Katya and Sawyer to <destination>, along with Raven's ship (the Eye of Horus), and pick up Ijs and his equipment for detecting atomic testing."
   autosave
-  source "New Tibet"
+  source "Bod"
   destination "Winter"
   to offer
-    has "FW Defend New Tibet: done"
+    has "FW Defend Bod: done"
   passengers 2
   on fail
     dialogue `You have failed an essential Free Worlds mission. If you want to complete the story line, revert to the autosave or another earlier snapshot of the game.`
@@ -528,7 +528,7 @@ mission "FW Reconciliation Break"
         goto wait
       
       label wait
-      `  Alondo says, "We should use this time of peace well, to prepare for another battle ahead. Those Syndicate ships on New Tibet had equipment I've never seen before, and who knows what else the Syndicate has up their sleeves - especially if they've begun producing nuclear weapons. Captain <last>, you should take this time to make sure your ship is as well armed as possible for our next strike. Ijs and Katya, what will you do with this time?"`
+      `  Alondo says, "We should use this time of peace well, to prepare for another battle ahead. Those Syndicate ships on Bod had equipment I've never seen before, and who knows what else the Syndicate has up their sleeves - especially if they've begun producing nuclear weapons. Captain <last>, you should take this time to make sure your ship is as well armed as possible for our next strike. Ijs and Katya, what will you do with this time?"`
       `  Katya glances at Ijs and then says, "I would certainly welcome a small sabbatical, and a chance to spend time together and catch up on all we've missed. Professor Springborn, do you think the Conservatory would extend your leave of absence long enough for us to make a trip to <planet>?"`
       `  Ijs laughs. "That sounds wonderful, Councillor," he says. "<first>, do you think you could bring us there on your way to wherever you go next?"`
       `  You tell him you would be glad to, and you all get ready for yet another journey together.`
@@ -825,7 +825,7 @@ mission "FW Syndicate Capture 1C"
   description "The Syndicate is massing a fleet in the Sol system. Return to <planet> to rendezvous with the Free Worlds fleet in order to be ready to defend Earth if it is attacked."
   autosave
   source Valhalla
-  destination "New Tibet"
+  destination "Bod"
   passengers 2
   to offer
     has "FW Syndicate Capture 1B: done"
@@ -867,7 +867,7 @@ mission "FW Pug 1"
   name "What happened to Rand?"
   description "Try to determine why communications with the Rand system were cut off. If you cannot reach Rand, at least look for anything odd in the neighbouring systems."
   autosave
-  source "New Tibet"
+  source "Bod"
   waypoint "Cebalrai"
   waypoint "Ascella"
   to offer
@@ -936,7 +936,7 @@ mission "FW Pug 1 Return"
   
   on offer
     conversation
-      `You receive an urgent message from JJ: "Captain <last>, return to New Tibet at once! We've received word that the Syndicate is somehow severing their hyperspace connections to the rest of human space. We're calling an emergency Council meeting, to convene as soon as you arrive here."`
+      `You receive an urgent message from JJ: "Captain <last>, return to Bod at once! We've received word that the Syndicate is somehow severing their hyperspace connections to the rest of human space. We're calling an emergency Council meeting, to convene as soon as you arrive here."`
         decline
 
 
@@ -946,7 +946,7 @@ mission "FW Pug 2"
   name "Meet with Parliament"
   description "Travel with Alondo to Earth to meet with Parliament. They are now much more willing to meet with you given how real the Syndicate threat seems."
   autosave
-  source "New Tibet"
+  source "Bod"
   destination "Earth"
   clearance
   to offer
@@ -959,7 +959,7 @@ mission "FW Pug 2"
   on offer
     log "The Syndicate may be cutting off the hyperspace links that join their territory to the rest of human space, in order to escape being punished for their crimes. People are worried that they will try to take over even more territory, including Earth itself."
     conversation
-      `By the time you arrive, Alondo and Freya have joined JJ and Katya on New Tibet; the entire Council is present. "Here's the story," says JJ. "A few weeks ago, hyperspace links on the edge of Syndicate space began collapsing. We weren't sure why. Then, more recently, the Syndicate fleet that had been occupying the Sol system retreated to Syndicate space - and the moment the last of their ships left, the hyperspace link disappeared behind them. We think the Syndicate has found a way to alter hyperspace links and is using it to wall themselves in, to escape retribution from the rest of humanity now that their guilt is so conclusively proven."`
+      `By the time you arrive, Alondo and Freya have joined JJ and Katya on Bod; the entire Council is present. "Here's the story," says JJ. "A few weeks ago, hyperspace links on the edge of Syndicate space began collapsing. We weren't sure why. Then, more recently, the Syndicate fleet that had been occupying the Sol system retreated to Syndicate space - and the moment the last of their ships left, the hyperspace link disappeared behind them. We think the Syndicate has found a way to alter hyperspace links and is using it to wall themselves in, to escape retribution from the rest of humanity now that their guilt is so conclusively proven."`
       choice
         `  "Why don't we just let them go, then?"`
           goto go

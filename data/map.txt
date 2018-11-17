@@ -2922,7 +2922,7 @@ system "Alioth"
     sprite planet/fog0
     distance 236.5
     period 68.1558
-  object "New Tibet"
+  object "Bod"
     sprite planet/forest1
     distance 516.34
     period 219.867
@@ -24415,6 +24415,17 @@ planet "Bluestone"
     threshold 3000
     fleet "Syndicate Small" 6
 
+planet "Bod"
+  attributes "dirt belt" religious factory
+  landscape land/mountain0
+  description `Bod is a world of jagged mountains and deeply shadowed valleys. Although it has been inhabited for centuries, in many places the terrain is so rugged that roads cannot be built, leaving several of the smaller towns almost completely isolated. Taking advantage of this isolation, several monastic orders have built monasteries here.`
+  description `  In the lowlands, large farms support sprawling cities full of factories, a striking contrast to the simplicity and isolation of the mountain villages.`
+  spaceport `The spaceport is in a hilly region, just outside of the largest city, with a view of a valley full of farms that stretch for tens of kilometers, all the way down to the ocean. The port is much less modern than the city nearby; it was built by the early settlers and has not been significantly updated since then, because the focus has been on improving life for the locals, not for their occasional visitors.`
+  security 0.1
+  tribute 700
+    threshold 3000
+    fleet "Militia Large" 7
+
 planet "Bos"
   attributes "dirt belt" farming
   landscape land/fields1
@@ -26119,17 +26130,6 @@ planet "New Iceland"
   tribute 300
     threshold 2000
     fleet "Militia Small" 24
-
-planet "New Tibet"
-  attributes "dirt belt" religious factory
-  landscape land/mountain0
-  description `New Tibet is a world of jagged mountains and deeply shadowed valleys. Although it has been inhabited for centuries, in many places the terrain is so rugged that roads cannot be built, leaving several of the smaller towns almost completely isolated. Taking advantage of this isolation, several monastic orders have built monasteries here.`
-  description `  In the lowlands, large farms support sprawling cities full of factories, a striking contrast to the simplicity and isolation of the mountain villages.`
-  spaceport `The spaceport is in a hilly region, just outside of the largest city, with a view of a valley full of farms that stretch for tens of kilometers, all the way down to the ocean. The port is much less modern than the city nearby; it was built by the early settlers and has not been significantly updated since then, because the focus has been on improving life for the locals, not for their occasional visitors.`
-  security 0.1
-  tribute 700
-    threshold 3000
-    fleet "Militia Large" 7
 
 planet "Newhome"
   attributes hai textiles

@@ -154,7 +154,7 @@ mission "FW Prisoner Parole"
   description "Escort a fleet of transports carrying prisoners of war to <planet>. The temporary ceasefire will end on <date>."
   deadline 7
   source "Deep"
-  destination "New Tibet"
+  destination "Bod"
   to offer
     has "Liberate Kornephoros: done"
   on fail
@@ -172,7 +172,7 @@ mission "FW Prisoner Parole"
   
   on offer
     conversation
-      `When you have all gathered in the cafe, Tomek explains the situation to you. "Alondo has arranged for a one-week ceasefire to return the prisoners who have given us their parole," he says. "That gives you just enough time to transport them to New Tibet and return here. If you encounter Republic ships, do not engage them. Just drop off the prisoners and return. Any questions?"`
+      `When you have all gathered in the cafe, Tomek explains the situation to you. "Alondo has arranged for a one-week ceasefire to return the prisoners who have given us their parole," he says. "That gives you just enough time to transport them to Bod and return here. If you encounter Republic ships, do not engage them. Just drop off the prisoners and return. Any questions?"`
       choice
         `  "No, I'm ready to go."`
           accept
@@ -193,7 +193,7 @@ mission "FW Prisoner Parole 2"
   landing
   name "Prisoner Parole"
   description "Return to Deep before the cease-fire ends."
-  source "New Tibet"
+  source "Bod"
   destination "Deep"
   to offer
     has "FW Prisoner Parole: done"
