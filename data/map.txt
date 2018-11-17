@@ -2735,7 +2735,7 @@ system "Algorel"
   object
     sprite star/k5
     period 10
-  object "New Wales"
+  object "Porringer"
     sprite planet/cloud6
     distance 275.25
     period 102.112
@@ -26141,18 +26141,6 @@ planet "New Tibet"
     threshold 3000
     fleet "Militia Large" 7
 
-planet "New Wales"
-  attributes "dirt belt" mining
-  landscape land/mountain7
-  description `New Wales is home to a few mining outposts which extract and refine rare earth minerals and heavy metals. It is dangerous work: the mines are deep underground and prone to noxious gases and cave-ins, and the refineries work with molten radioactive materials and caustic chemicals. Due to the somewhat dim light of the star Algorel, and the cloudiness of the atmosphere, this is not a good world for farming, and the population remains quite small.`
-  spaceport `The warehouses at the spaceport are kept under continuous guard due to the high value of the refined metals they contain. There are several missile silos and laser turrets as well; New Wales has survived several pirate attacks in the last decade. Within the spaceport cafeteria, however, the locals are quite friendly and excited to connect with visitors and hear news of the outside world. The cafeteria is cooking goat stew, and the smell of it pervades the whole building.`
-  outfitter "Basic Outfits"
-  outfitter "Sisensis Basics"
-  security 0.2
-  tribute 400
-    threshold 3000
-    fleet "Militia Large" 6
-
 planet "Newhome"
   attributes hai textiles
   landscape land/myrabella7
@@ -26330,6 +26318,18 @@ planet "Poisonwood"
   tribute 300
     threshold 2000
     fleet "Militia Large" 7
+
+planet "Porringer"
+  attributes "dirt belt" mining
+  landscape land/mountain7
+  description `Porringer is home to a few mining outposts which extract and refine rare earth minerals and heavy metals. It is dangerous work: the mines are deep underground and prone to noxious gases and cave-ins, and the refineries work with molten radioactive materials and caustic chemicals. Due to the somewhat dim light of the star Algorel, and the cloudiness of the atmosphere, this is not a good world for farming, and the population remains quite small.`
+  spaceport `The warehouses at the spaceport are kept under continuous guard due to the high value of the refined metals they contain. There are several missile silos and laser turrets as well; Porringer has survived several pirate attacks in the last decade. Within the spaceport cafeteria, however, the locals are quite friendly and excited to connect with visitors and hear news of the outside world. The cafeteria is cooking goat stew, and the smell of it pervades the whole building.`
+  outfitter "Basic Outfits"
+  outfitter "Sisensis Basics"
+  security 0.2
+  tribute 400
+    threshold 3000
+    fleet "Militia Large" 6
 
 planet "Poseidos"
   attributes rim fishing

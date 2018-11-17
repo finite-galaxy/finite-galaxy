@@ -422,7 +422,7 @@ mission "FW Recon 3"
   source
     planet Glaze
   destination
-    planet "New Wales"
+    planet "Porringer"
   to offer
     has "FW Recon 2: done"
   to fail
@@ -430,7 +430,7 @@ mission "FW Recon 3"
   
   on offer
     conversation
-      `You meet JJ again in the bar. "I have one more reconnaissance mission for you," he says. "The Navy is building a base on New Wales, adjacent to the existing spaceport. From what I understand, they're employing thousands of locals to build it, so one more worker walking around would not seem out of place. I need you to walk around the base, take notes on the number and size of the landing pads and hangars, take pictures if you can, and report back to me. What do you say?"`
+      `You meet JJ again in the bar. "I have one more reconnaissance mission for you," he says. "The Navy is building a base on Porringer, adjacent to the existing spaceport. From what I understand, they're employing thousands of locals to build it, so one more worker walking around would not seem out of place. I need you to walk around the base, take notes on the number and size of the landing pads and hangars, take pictures if you can, and report back to me. What do you say?"`
       choice
         `  "Sure, I can do that."`
           accept
@@ -452,7 +452,7 @@ mission "FW Recon 3B"
   description "Return to <destination> with information on the Navy base on <origin>."
   landing
   source
-    planet "New Wales"
+    planet "Porringer"
   destination
     planet Glaze
   to offer
@@ -495,7 +495,7 @@ mission "FW Recon 3B"
     "assisted free worlds" ++
     dialogue `JJ meets you as soon as you land, and you pass off your information and photos to him. He pays you <payment> and says, "I'll be sure to let the Free Worlds Council know how helpful you have been."`
     payment 80000
-    log "Gave the Free Worlds some photos and information on the Navy base on New Wales. Jean-Jacques, the militia contact, was very grateful for the help."
+    log "Gave the Free Worlds some photos and information on the Navy base on Porringer. Jean-Jacques, the militia contact, was very grateful for the help."
 
 
 
