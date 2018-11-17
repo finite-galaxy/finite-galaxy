@@ -15372,7 +15372,7 @@ system "Menkent"
     sprite planet/dust4-b
     distance 1199.28
     period 343.427
-  object "New Austria"
+  object "Carbuncle"
     sprite planet/ocean2
     distance 1670.69
     period 564.673
@@ -24541,6 +24541,16 @@ planet "Canyon"
     threshold 3000
     fleet "Syndicate Small" 5
 
+planet "Carbuncle"
+  attributes "dirt belt" mining
+  landscape land/valley9
+  description `Carbuncle is a rugged mountain world, full of snow-capped peaks and valleys so deep and so steep that they rarely see sunlight. The few settlements that have been built here were developed for mining sapphires and rubies; the sapphires found in Carbuncle range from blue to yellow to black to clear in colour, and are used both for industrial abrasives and for jewelry. For centuries the locals have been trying to find a deposit of diamonds, which would sell for much higher prices than sapphires, and local folklore revolves around the prosperity that would come to this world if diamonds were ever discovered.`
+  spaceport `The spaceport is nothing but a couple of landing pads built on the outskirts of one of the larger mining villages, high up on a mountain ridge to allow easy access for starships. A few roads lead down from there to the village, where you can trade for local goods or get food from the miners' cafeteria. By the time you have walked to the centre of the town, several people have already tried to sell you large "diamonds" that you strongly suspect are just clear sapphires.`
+  security 0.05
+  tribute 500
+    threshold 3000
+    fleet "Militia Large" 5
+
 planet "Catoblepas Station"
   attributes north station research
   landscape land/sivael4
@@ -26088,16 +26098,6 @@ planet "Nearby Jade"
   landscape land/fields12-sfiera
   description `Aside from fish, the Kimek diet is mostly vegetarian, but a few centuries ago an Arach entrepreneur decided to start ranching longcows here. It is an ideal world for ranching, with plenty of grassy fields. The ranches have begun a major industry, although generally only the wealthiest of Kimek are willing to spend money on longcow meat.`
   spaceport `The spaceport is at the very centre of a city that is laid out with perfect radial symmetry: six sectors, each with their own markets, schools, and other public services, and clusters of skyscrapers that can each house a million individuals. The spaceport itself is also symmetrical, with a concourse in the centre and smaller and smaller landing pads radiating out from it so that the largest freighters have easiest access.`
-
-planet "New Austria"
-  attributes "dirt belt" mining
-  landscape land/valley9
-  description `New Austria is a rugged mountain world, full of snow-capped peaks and valleys so deep and so steep that they rarely see sunlight. The few settlements that have been built here were developed for mining sapphires and rubies; the sapphires found in New Austria range from blue to yellow to black to clear in colour, and are used both for industrial abrasives and for jewelry. For centuries the locals have been trying to find a deposit of diamonds, which would sell for much higher prices than sapphires, and local folklore revolves around the prosperity that would come to this world if diamonds were ever discovered.`
-  spaceport `The spaceport is nothing but a couple of landing pads built on the outskirts of one of the larger mining villages, high up on a mountain ridge to allow easy access for starships. A few roads lead down from there to the village, where you can trade for local goods or get food from the miners' cafeteria. By the time you have walked to the centre of the town, several people have already tried to sell you large "diamonds" that you strongly suspect are just clear sapphires.`
-  security 0.05
-  tribute 500
-    threshold 3000
-    fleet "Militia Large" 5
 
 planet "New Finding"
   attributes saryd research

@@ -788,7 +788,7 @@ mission "FWC Checkmate 1B"
   description "The Wolf Pack has launched an initial attack on the Menkent system. Follow up with your fleet and finish off the Navy defences. Katya will ride with you."
   autosave
   source Tundra
-  destination "New Austria"
+  destination "Carbuncle"
   clearance
   to offer
     has "FWC Checkmate 1: done"
@@ -887,7 +887,7 @@ mission "FWC Checkmate 1C"
   name "Capture <planet>"
   description "Bring a fleet to <destination>, driving off any Republic ships in the system."
   autosave
-  source "New Austria"
+  source "Carbuncle"
   destination "Silver"
   clearance
   to offer
@@ -1336,7 +1336,7 @@ mission "FWC Pug 3"
   name "Talk to the Navy"
   description "Freya is on <planet>, presumably in Navy custody. Travel there and see if, given the current circumstances, the Navy is willing to talk with you."
   source "New Iceland"
-  destination "New Austria"
+  destination "Carbuncle"
   clearance
   to offer
     has "FWC Pug 2D: done"
@@ -1395,7 +1395,7 @@ mission "FWC Pug 3A"
   landing
   name "Bring Freya to <planet>"
   description "Freya thinks that if she can locate the equipment the Pug used to disrupt the hyperspace links, she may be able to restore them. Take her to <planet>, while Katya stays behind in the Navy's custody."
-  source "New Austria"
+  source "Carbuncle"
   destination "Oblivion"
   clearance
   to offer
@@ -1511,7 +1511,7 @@ mission "FWC Pug 3B"
       variant
         "Enfolta"
         "Zibruka" 2
-    dialogue `You receive a message from Freya: "Captain, we need you back down here. I think I discovered a way to restore the link, but we're going to have to go back to New Austria to do it, and quickly before the Pug have time to send more ships to this system. And, I hope you have space in your cargo bay for a bunch of equipment."`
+    dialogue `You receive a message from Freya: "Captain, we need you back down here. I think I discovered a way to restore the link, but we're going to have to go back to Carbuncle to do it, and quickly before the Pug have time to send more ships to this system. And, I hope you have space in your cargo bay for a bunch of equipment."`
 
 
 
@@ -2288,7 +2288,7 @@ mission "FWC End"
     conversation
       `You find Admiral Danforth inspecting the Pug spaceport. "This is all very odd," he says. "I'm glad the aliens appear to have left, but I wish we knew where they came from and whether they're likely to return."`
       `  Freya says, "What should we do now?"`
-      `  "I've contacted New Austria and told them that Councillor Reynolds is free to leave," he says. "She told me that your Senate has agreed to the Free Worlds being a semi-autonomous district of the Republic, similar to the Syndicate systems. She also asked that you and Captain <last> meet up with her and Alondo Gruyere on Earth, where they will be meeting with Parliament. I sent a report to Earth that places a very heavy emphasis on the role that the Free Worlds played in this victory, so Parliament ought to be quite willing to negotiate with you."`
+      `  "I've contacted Carbuncle and told them that Councillor Reynolds is free to leave," he says. "She told me that your Senate has agreed to the Free Worlds being a semi-autonomous district of the Republic, similar to the Syndicate systems. She also asked that you and Captain <last> meet up with her and Alondo Gruyere on Earth, where they will be meeting with Parliament. I sent a report to Earth that places a very heavy emphasis on the role that the Free Worlds played in this victory, so Parliament ought to be quite willing to negotiate with you."`
       choice
         `  "Thank you. It's been an honour to fight alongside you."`
           goto honour
