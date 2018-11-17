@@ -5,7 +5,7 @@ mission "Intro [0]"
   landing
   passengers 1
   source "Endless Sky"
-  destination "New Greenland"
+  destination "Blizzard"
   
   on offer
     log "Finally scraped together enough money for a down payment on a starship. The interest on the mortgage is exorbitant."
@@ -76,7 +76,7 @@ mission "Intro [1 Transport]"
   name "Transport family to <planet>"
   description "Bring your new friend James, along with this large family, to <destination>. Payment will be <payment>."
   blocked `When you meet up with James in the spaceport, he says, "Hi there, <first>! I found you another mission, but it looks like you'll need <capacity> in order to take it on. So, you'll either have to cancel another mission, or come back here later to continue this one. Sorry!"`
-  source "New Greenland"
+  source "Blizzard"
   destination "Little Garden"
   passengers 5
   to offer
@@ -175,7 +175,7 @@ mission "Intro [1 Freighter]"
   blocked `When you meet up with James in the spaceport, he says, "Hi there, <first>! I found you another mission, but it looks like you'll need <capacity> in order to take it on. So, you'll either have to cancel another mission, or come back here later to continue this one. Sorry!"`
   cargo vaccines 48
   passengers 1
-  source "New Greenland"
+  source "Blizzard"
   destination "Heartland"
   to offer
     has "Intro [0]: done"
@@ -303,7 +303,7 @@ mission "Intro [1 Interceptor]"
   description "Escort a merchant convoy to <destination>, along with your new friend James."
   blocked `When you meet up with James in the spaceport, he says, "Hi there, <first>! I found you another mission, but it looks like you'll need <capacity> in order to take it on. So, you'll either have to cancel another mission, or come back here later to continue this one. Sorry!"`
   passengers 1
-  source "New Greenland"
+  source "Blizzard"
   destination "Gemstone"
   to offer
     has "Intro [0]: done"
