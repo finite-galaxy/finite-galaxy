@@ -42,7 +42,7 @@ mission "FW Diplomacy 1B"
   
   on offer
     conversation
-      `You meet up with Alondo, who insists on not telling you anything until you are safely back aboard your own ship. Once you have brought him to his room, he says, "Here's the deal. The Senate has been secretly reaching out to other worlds, and three of them have decided to join us: New Portland, Dancer, and Hamlet."`
+      `You meet up with Alondo, who insists on not telling you anything until you are safely back aboard your own ship. Once you have brought him to his room, he says, "Here's the deal. The Senate has been secretly reaching out to other worlds, and three of them have decided to join us: Blizzard, Dancer, and Hamlet."`
       choice
         `  "That's great news!"`
         `  "Why haven't I heard of this yet?"`
@@ -427,7 +427,7 @@ mission "FW Southern Battle 3"
     dialogue `You have failed an essential Free Worlds mission. If you want to complete the story line, revert to the autosave or another earlier snapshot of the game.`
   
   on offer
-    log "The Navy has been driven out of the Rastaban system. That will allow the people on Dancer, New Portland, and Hamlet to join the Free Worlds."
+    log "The Navy has been driven out of the Rastaban system. That will allow the people on Dancer, Blizzard, and Hamlet to join the Free Worlds."
     conversation
       `As soon as you land on <origin>, you contact Freya and let her know that the system is yours. "That's great news," she says. "Now we need to make sure they've pulled back from the neighbouring systems, too. Take a few ships and sweep through Delta Sagittarii and Albaldah and make sure they're clear. Leave the rest of the fleet on Dancer to handle the prisoners and repairs."`
       choice
@@ -1685,7 +1685,7 @@ mission "FW Rand 1"
         `  "Well, I say, if they want to join us, we should let them. Who knows if they'll be this enthusiastic about the Free Worlds later if we let them down now."`
       `  JJ thinks about that for a moment, then says, "Well, I guess we should let them join. It will mean we may need to launch an assault to drive the Navy off New Iceland. But if we do that, our tactical position shifts from one that's worse than what we have now, to something much better. Freya, did they say if there's any sign that the Navy has gotten word of this?"`
       `  "A few warships are in orbit around Rand," she says, "so they must suspect something. But the bulk of the Navy fleet is still to the north and east of here."`
-      `  JJ says, "Okay Captain, here's what I propose. We'll leave the bulk of our fleet here to defend Dancer and New Portland, but take a few of our best ships to Zeta Aquilae and drive out the Navy. Freya and I will travel with you so that if we need to make any decisions, we'll have most of the Council there in person. How does that sound?"`
+      `  JJ says, "Okay Captain, here's what I propose. We'll leave the bulk of our fleet here to defend Dancer and Blizzard, but take a few of our best ships to Zeta Aquilae and drive out the Navy. Freya and I will travel with you so that if we need to make any decisions, we'll have most of the Council there in person. How does that sound?"`
       choice
         `  "It sounds like a good plan. Let's do it!"`
           accept
@@ -1959,7 +1959,7 @@ mission "FW Liberate Delta Sagittarii"
   name "Liberate Delta Sagittarii"
   description "Lead a Free Worlds fleet to drive the Navy out of Delta Sagittarii. Another fleet ought to be arriving from the Rim at about the same time."
   source Wayfarer
-  destination "New Portland"
+  destination "Blizzard"
   clearance
   passengers 2
   to offer
@@ -1996,7 +1996,7 @@ mission "FW Liberate Delta Sagittarii"
       
       label plan
       `  "That'll need to be one hell of a strike for it to make any difference," says Freya.`
-      `  "Don't worry," says JJ, "it will be. They've been itching to get into the fray for months now. Captain <last>, we'd like you to fly along with the fleet and help to mop up whatever the Wolf Pack leaves behind in the Delta Sagittarii system. Then we'll land on New Portland and figure out what our next steps are. Freya and I will ride on your ship."`
+      `  "Don't worry," says JJ, "it will be. They've been itching to get into the fray for months now. Captain <last>, we'd like you to fly along with the fleet and help to mop up whatever the Wolf Pack leaves behind in the Delta Sagittarii system. Then we'll land on Blizzard and figure out what our next steps are. Freya and I will ride on your ship."`
         accept
   
   on complete
