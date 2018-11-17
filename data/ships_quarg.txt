@@ -14,13 +14,13 @@ ship "Skylark"
     "cost" 5900000
     "shields" 120000
     "hull" 70000
-    "required crew" 120
-    "bunks" 210
+    "required crew" 50
+    "bunks" 200
     "mass" 460
     "drag" 12.3
     "heat dissipation" .7
     "cargo space" 200
-    "outfit space" 720
+    "outfit space" 760
     "engine capacity" 100
     "weapon capacity" 200
 # miscellaneous stats
@@ -44,13 +44,13 @@ ship "Skylark"
     "Hyperspace Tank" 5
     "Jump Drive"
     "Quarg Ramscoop"
-    "Intrusion Countermeasures" 120
+    "Intrusion Countermeasures" 40
   engine -15 117
   engine 15 117
-  turret -12 -80 "Skylance"
-  turret 12 -80 "Skylance"
-  turret -12 -80 "Quarg Anti-Missile"
-  turret 12 -80 "Quarg Anti-Missile"
+  turret -30 -48 "Skylance"
+  turret 30 -48 "Skylance"
+  turret -63 -7 "Quarg Anti-Missile"
+  turret 63 -7 "Quarg Anti-Missile"
   explode "tiny explosion" 12
   explode "small explosion" 16
   explode "medium explosion" 30
@@ -71,13 +71,13 @@ ship "Wardragon"
     "cost" 5900000
     "shields" 160000
     "hull" 50000
-    "required crew" 160
-    "bunks" 180
+    "required crew" 60
+    "bunks" 90
     "mass" 360
     "drag" 9.3
     "heat dissipation" .5
     "cargo space" 50
-    "outfit space" 710
+    "outfit space" 760
     "engine capacity" 100
     "weapon capacity" 200
 # miscellaneous stats
@@ -101,13 +101,13 @@ ship "Wardragon"
     "Hyperspace Tank" 4
     "Jump Drive"
     "Quarg Ramscoop"
-    "Intrusion Countermeasures" 160
+    "Intrusion Countermeasures" 50
   engine -14 47
   engine 14 47
+  turret -8 -14 "Quarg Anti-Missile"
+  turret 8 -14 "Quarg Anti-Missile"
   turret -29 6 "Skylance"
   turret 29 6 "Skylance"
-  turret -29 6 "Quarg Anti-Missile"
-  turret 29 6 "Quarg Anti-Missile"
   explode "tiny explosion" 12
   explode "small explosion" 16
   explode "medium explosion" 30
