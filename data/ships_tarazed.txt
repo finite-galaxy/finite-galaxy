@@ -35,8 +35,8 @@ ship "Blackbird"
     licences
       Pilot
     "cost" 2900000
-    "shields" 6000
-    "hull" 1500
+    "shields" 4800
+    "hull" 1600
     "required crew" 3
     "bunks" 27
     "mass" 220
@@ -87,8 +87,8 @@ ship "Falcon"
     licences
       Pilot
     "cost" 9800000
-    "shields" 14400
-    "hull" 3600
+    "shields" 13500
+    "hull" 4500
     "required crew" 32
     "bunks" 64
     "mass" 480
@@ -200,8 +200,8 @@ ship "Finch"
       Pilot
     "carried" 2
     "cost" 126000
-    "shields" 1000
-    "hull" 250
+    "shields" 900
+    "hull" 300
     "required crew" 1
     "bunks" 1
     "mass" 40
@@ -245,7 +245,7 @@ ship "Hawk"
       Pilot
     "cost" 670000
     "shields" 2400
-    "hull" 600
+    "hull" 800
     "required crew" 2
     "bunks" 4
     "mass" 150
@@ -322,12 +322,12 @@ ship "Kestrel"
     licences
       Kestrel
     "cost" 14700000
-    "shields" 21600
-    "hull" 5400
+    "shields" 21000
+    "hull" 7000
     "required crew" 64
     "bunks" 128
     "mass" 740
-    "drag" 9.8
+    "drag" 11.0
     "heat dissipation" .6
     "cargo space" 120
     "outfit space" 860
@@ -344,10 +344,9 @@ ship "Kestrel"
     "Ionic Afterburner"
 
     "Plasma Cannon" 6
-    "Modified Blaster Turret" 4
 
     "D94-YV Shield Generator" 2
-    "Breeder Reactor" 2
+    "Fusion Reactor"
     "LP144a Battery Pack"
     "Liquid Helium Cooler"
     "Fuel Barrel" 60
@@ -366,10 +365,10 @@ ship "Kestrel"
   gun 42 63
   gun -31 65 "Plasma Cannon"
   gun 31 65 "Plasma Cannon"
-  turret -7 -4 "Modified Blaster Turret"
-  turret 7 -4 "Modified Blaster Turret"
-  turret -23 14 "Modified Blaster Turret"
-  turret 23 14 "Modified Blaster Turret"
+  turret -7 -4
+  turret 7 -4
+  turret -23 14
+  turret 23 14
   explode "small explosion" 25
   explode "medium explosion" 35
   explode "large explosion" 45
@@ -385,8 +384,8 @@ ship "Kestrel" "Kestrel (Engines)"
 
 ship "Kestrel" "Kestrel (Shields)"
   add attributes
-    "shields" 3600
-    "hull" 900
+    "shields" 3000
+    "hull" 1000
 
 
 ship "Kestrel" "Kestrel (Weapons)"
@@ -405,7 +404,7 @@ ship "Osprey"
       Pilot
     "cost" 4900000
     "shields" 7200
-    "hull" 1800
+    "hull" 2400
     "required crew" 16
     "bunks" 32
     "mass" 270
@@ -514,7 +513,7 @@ ship "Raven"
     licences
       Pilot
     "cost" 1800000
-    "shields" 4800
+    "shields" 3600
     "hull" 1200
     "required crew" 4
     "bunks" 8
@@ -601,7 +600,7 @@ ship "Sparrow"
       Pilot
     "cost" 225000
     "shields" 1200
-    "hull" 300
+    "hull" 400
     "required crew" 1
     "bunks" 2
     "mass" 50
@@ -679,12 +678,12 @@ ship "Unknown Ship Type"
     licences
       Kestrel
     "cost" 14700000
-    "shields" 21600
-    "hull" 5400
+    "shields" 21000
+    "hull" 7000
     "required crew" 64
     "bunks" 128
     "mass" 740
-    "drag" 9.8
+    "drag" 11.0
     "heat dissipation" .6
     "cargo space" 120
     "outfit space" 860
@@ -701,10 +700,9 @@ ship "Unknown Ship Type"
     "Ionic Afterburner"
 
     "Plasma Cannon" 6
-    "Modified Blaster Turret" 4
 
     "D94-YV Shield Generator" 2
-    "Breeder Reactor" 2
+    "Fusion Reactor"
     "LP144a Battery Pack"
     "Liquid Helium Cooler"
     "Fuel Barrel" 60
@@ -723,10 +721,10 @@ ship "Unknown Ship Type"
   gun 42 63
   gun -31 65 "Plasma Cannon"
   gun 31 65 "Plasma Cannon"
-  turret -7 -4 "Modified Blaster Turret"
-  turret 7 -4 "Modified Blaster Turret"
-  turret -23 14 "Modified Blaster Turret"
-  turret 23 14 "Modified Blaster Turret"
+  turret -7 -4
+  turret 7 -4
+  turret -23 14
+  turret 23 14
   explode "small explosion" 25
   explode "medium explosion" 35
   explode "large explosion" 45
