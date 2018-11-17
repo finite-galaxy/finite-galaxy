@@ -210,7 +210,6 @@ See `changelog.txt`, `ship_overview.txt`, and https://github.com/finite-galaxy/f
 * Increase jump radius if you have multiple jump drives installed, perhaps 100*(jump drive)^0.5
 * Make hyperjump fuel proportional to ship's total mass
 * Make ship explosion ‘weapon’ proportional to mass (base, empty, or total mass)
-* Rename “New {Country}” planets to less culturally biased names
 
 [(return to top)](https://github.com/finite-galaxy/finite-galaxy#finite-galaxy)
 
