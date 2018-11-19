@@ -49,20 +49,18 @@ ship "Archon"
     "Distancer" 2
     "Anti-Missile Field" 2
 
-    "Hyperdrive"
     "Jump Drive"
-    "Scram Drive"
   engine -17 92
   engine 17 92
   gun 0 -74 "Antimatter Cannon"
+  turret -40 -13 "Bolt Turret"
+  turret 40 -13 "Bolt Turret"
   turret -10 -10 "Anti-Missile Field"
   turret 0 -10 "Draining Field"
   turret 10 -10 "Anti-Missile Field"
-  turret -40 -13 "Bolt Turret"
-  turret 40 -13 "Bolt Turret"
-  turret 0 81 "Bolt Turret"
   turret -55 16 "Distancer"
   turret 55 16 "Distancer"
+  turret 0 81 "Bolt Turret"
   explode "nuke explosion" 3
   "final explode" "final explosion large"
 
@@ -71,4 +69,13 @@ ship "Archon" "Archon (Cloaked)"
   "never disabled"
   add attributes
     "cloak" .04
+  gun "Antimatter Cannon"
+  turret "Bolt Turret"
+  turret "Bolt Turret"
+  turret "Anti-Missile Field"
+  turret "Draining Field"
+  turret "Anti-Missile Field"
+  turret "Distancer"
+  turret "Distancer"
+  turret "Bolt Turret"
 
