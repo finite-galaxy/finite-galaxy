@@ -15,6 +15,7 @@
 #include "Phrase.h"
 #include "Planet.h"
 #include "PlayerInfo.h"
+#include "Preferences.h"
 #include "Projectile.h"
 #include "Random.h"
 #include "ShipEvent.h"
@@ -31,6 +32,7 @@
 using namespace std;
 
 namespace {
+  const string FIGHTER_REPAIR = "Repair fighters in";
   const vector<string> BAY_TYPE = {"drone", "fighter"};
   const vector<string> BAY_SIDE = {"inside", "over", "under"};
   const vector<string> BAY_FACING = {"forward", "left", "right", "back"};
@@ -512,6 +514,33 @@ void Ship::FinishLoading(bool isNewInstance)
   // Figure out if this ship can be carried.
   const string &category = attributes.Category();
   canBeCarried = (category == "Fighter" || category == "Drone");
+  
+  // Issue warnings if this ship has negative outfit, cargo, weapon, or engine capacity.
+  string warning;
+  for(const string &attr : set<string>{"outfit space", "cargo space", "weapon capacity", "engine capacity"})
+  {
+    double val = attributes.Get(attr);
+    if(val < 0)
+      warning += attr + ": " + Format::Number(val) + "\n";
+  }
+  if(!warning.empty())
+  {
+    // This check is mostly useful for variants and stock ships, which have
+    // no names. Instead, print the outfits and attributes to facilitate identification.
+    cerr << (!name.empty() ? "Ship \"" + name + "\" " : "") << "(" + modelName + "):\n"
+        << warning << "outfits:" << endl;
+    for(const auto &it : outfits)
+      cerr << '\t' << it.second << " " + it.first->Name() << endl;
+    cerr << "attributes:" << endl;
+    size_t maxAttr = 0;
+    for(const auto &it : attributes.Attributes())
+      maxAttr = max<size_t>(maxAttr, string(it.first).size());
+    for(const auto &it : attributes.Attributes())
+    {
+      auto attr = string(it.first);
+      cerr << '\t' << attr.append(maxAttr - attr.size(), ' ')  << ": " << it.second << endl;
+    }
+  }
   
   // Ships read from a save file may have non-default shields or hull.
   // Perform a full IsDisabled calculation.
@@ -1523,16 +1552,26 @@ void Ship::DoGeneration()
     if(!bays.empty())
     {
       // If this ship is carrying fighters, determine their repair priority.
-      // Sort the ships in the bays so that the most "healthy" one will
-      // be given repairs first. In combat that is the optimal strategy in
-      // order to get fighters back out into battle as soon as possible.
       vector<pair<double, Ship *>> carried;
       for(const Bay &bay : bays)
         if(bay.ship)
           carried.emplace_back(1. - bay.ship->Health(), bay.ship.get());
+
+      sort(carried.begin(), carried.end(), (isYours && Preferences::Has(FIGHTER_REPAIR))
+        // Players may use a parallel strategy, to launch fighters in waves.
+        ? [] (const pair<double, Ship *> &lhs, const pair<double, Ship *> &rhs)
+        {
+          return lhs.first > rhs.first;
+        }
+        // The default strategy is to prioritize the healthiest ship first, in
+        // order to get fighters back out into the battle as soon as possible.
+        : [] (const pair<double, Ship *> &lhs, const pair<double, Ship *> &rhs)
+        {
+          return lhs.first < rhs.first;
+        }
+      );
       
       // Apply shield and hull repair to carried fighters.
-      sort(carried.begin(), carried.end());
       for(const pair<double, Ship *> &it : carried)
       {
         Ship &ship = *it.second;
