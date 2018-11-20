@@ -16,16 +16,13 @@ ship "Skylark"
     "hull" 70000
     "required crew" 50
     "bunks" 200
-    "mass" 460
+    "mass" 360
     "drag" 12.3
     "heat dissipation" .7
     "cargo space" 200
-    "outfit space" 760
+    "outfit space" 770
     "engine capacity" 100
     "weapon capacity" 200
-# miscellaneous stats
-    "asteroid scan power" 100
-    "tactical scan power" 100
     weapon
       "blast radius" 250
       "shield damage" 1000
@@ -45,6 +42,7 @@ ship "Skylark"
     "Hyperspace Tank" 5
     "Jump Drive"
     "Quarg Ramscoop"
+    "Quarg Scanner"
     "Intrusion Countermeasures" 40
   engine -15 117
   engine 15 117
@@ -74,16 +72,13 @@ ship "Wardragon"
     "hull" 50000
     "required crew" 60
     "bunks" 90
-    "mass" 360
+    "mass" 250
     "drag" 9.3
     "heat dissipation" .5
     "cargo space" 50
-    "outfit space" 760
+    "outfit space" 770
     "engine capacity" 100
     "weapon capacity" 200
-# miscellaneous stats
-    "asteroid scan power" 100
-    "tactical scan power" 100
     weapon
       "blast radius" 250
       "shield damage" 1000
@@ -103,6 +98,7 @@ ship "Wardragon"
     "Hyperspace Tank" 4
     "Jump Drive"
     "Quarg Ramscoop"
+    "Quarg Scanner"
     "Intrusion Countermeasures" 50
   engine -14 47
   engine 14 47
