@@ -39,6 +39,7 @@ ship "Gascraft"
     "hull energy" 0.9
     "energy capacity" 250
     "scan interference" 1
+    "tactical scan power" 1
     "gaslining" 1
   outfits
     "Crucible-Class Thruster"
@@ -85,6 +86,7 @@ ship "Shadow"
     "cloaking energy" 5
     "cloaking fuel" 1
     "scan interference" 2
+    "tactical scan power" 25
     weapon
       "blast radius" 80
       "shield damage" 800
@@ -232,6 +234,7 @@ ship "Twilight"
     "hull repair rate" 1.5
     "hull energy" 1.2
     "scan interference" 4
+    "tactical scan power" 81
     weapon
       "blast radius" 360
       "shield damage" 3600
@@ -248,12 +251,11 @@ ship "Twilight"
     "Aeon Cell"
     "Epoch Cell"
     "Crystal Capacitor"
-    "Thermoelectric Cooler" 2
+    "Thermoelectric Cooler" 3
     "Emergency Ramscoop"
     "Fuel Pod" 6
     "Hyperdrive"
     "Quantum Key Stone"
-    "Remnant Scanner"
   engine -28 155 .8
   engine 28 155 .8
   engine 0 184 .9
@@ -296,7 +298,6 @@ ship "Twilight" "Twilight (Heavy)"
     "Fuel Pod" 6
     "Hyperdrive"
     "Quantum Key Stone"
-    "Remnant Scanner"
     "Outfits Expansion" 6
   gun "Inhibitor Cannon"
   gun "Inhibitor Cannon"
@@ -327,12 +328,11 @@ ship "Twilight" "Twilight (Sniper)"
     "Aeon Cell"
     "Epoch Cell"
     "Crystal Capacitor"
-    "Thermoelectric Cooler" 2
+    "Thermoelectric Cooler" 3
     "Emergency Ramscoop"
     "Fuel Pod" 6
     "Hyperdrive"
     "Quantum Key Stone"
-    "Remnant Scanner"
   gun "Inhibitor Cannon"
   gun "Inhibitor Cannon"
   gun "Inhibitor Cannon"
@@ -359,12 +359,11 @@ ship "Twilight" "Twilight (Turret)"
     "Epoch Cell"
     "Millennium Cell"
     "Crystal Capacitor"
-    "Thermoelectric Cooler" 2
+    "Thermoelectric Cooler" 3
     "Emergency Ramscoop"
     "Fuel Pod" 6
     "Hyperdrive"
     "Quantum Key Stone"
-    "Remnant Scanner"
     "Outfits Expansion" 4
   turret "Thrasher Turret"
   turret "Thrasher Turret"
