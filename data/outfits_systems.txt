@@ -216,23 +216,23 @@ outfit "Asteroid Scanner"
   cost 192000
   "mass" 6
   "outfit space" -6
-  "asteroid scan power" 40
+  "asteroid scan power" 49
   description "This highly specialized scanning system can analyse the mineral composition of nearby asteroids and identify the ones that contain valuable materials."
 
 outfit "Cargo Scanner"
   category "Systems"
   thumbnail "outfit/scanner_cargo"
-  cost 8000
-  "mass" 1
-  "outfit space" -1
-  "cargo scan power" 9
+  cost 96000
+  "mass" 4
+  "outfit space" -4
+  "cargo scan power" 36
   "cargo scan speed" 1
   description "This scanner allows you to scan the cargo holds of the ship you are currently targeting, as long as you are flying close enough to it. Patrol craft use cargo scanners to detect illegal contraband. Installing more than one increases the scan range and speed."
 
 outfit "Outfit Scanner"
   category "Systems"
   thumbnail "outfit/scanner_outfit"
-  cost 24000
+  cost 48000
   "mass" 2
   "outfit space" -2
   "outfit scan power" 25
@@ -245,7 +245,7 @@ outfit "Remnant Scanner"
   cost 500000
   "mass" 5
   "outfit space" -5
-  "tactical scan power" 50
+  "tactical scan power" 60
   description "The Remnant are scavengers. This device helps them determine if a ship is a suitable target."
 
 outfit "Scanning Module"
@@ -266,24 +266,24 @@ outfit "Scanning Module"
 outfit "Surveillance Pod"
   category "Systems"
   thumbnail "outfit/surveillance pod"
-  cost 122500
+  cost 144000
   "mass" 5
   "outfit space" -5
+  "atmosphere scan" 100
+  "cargo scan power" 16
+  "cargo scan speed" 2
   "outfit scan power" 16
   "outfit scan speed" 2
-  "cargo scan power" 4
-  "cargo scan speed" 2
-  "atmosphere scan" 100
-  "tactical scan power" 9
+  "tactical scan power" 16
   "plunderable" 1
   description "This is Navy technology, a collection of scanners designed to fit perfectly inside one of their surveillance drones. Since the outputs are fairly standard, you could connect it to your own ship's systems if you want. Installing more than one increases the scan range and speed."
 
 outfit "Tactical Scanner"
   category "Systems"
   thumbnail "outfit/scanner_tactical"
-  cost 144000
-  "mass" 4
-  "outfit space" -4
-  "tactical scan power" 32
-  description "A tactical scanner allows your ship to determine the fuel, energy, heat, and crew complement of nearby targets. For centuries tactical scanners were only employed by the Navy, but recently Kraz Cybernetics has begun manufacturing them for use by militia ships."
+  cost 24000
+  "mass" 1
+  "outfit space" -1
+  "tactical scan power" 9
+  description "A tactical scanner allows your ship to determine the shields, hull, fuel, energy, heat, and crew complement of nearby targets."
 
