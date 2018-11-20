@@ -206,6 +206,7 @@ See `changelog.txt`, `ship_overview.txt`, and https://github.com/finite-galaxy/f
 * Add fuel cost, one credit per fuel at spaceports, twice that when hailing ships in space
 * Separate bank from spaceport
 * Limit the commodities for sale on specific planets
+* Display flagship speed by default and display target's speed if within tactical scan range
 * De-hardcode jump radius
 * Increase jump radius if you have multiple jump drives installed, perhaps 100*(jump drive)^0.5
 * Make hyperjump fuel proportional to ship's total mass
