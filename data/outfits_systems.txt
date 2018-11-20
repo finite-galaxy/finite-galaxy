@@ -143,19 +143,28 @@ outfit "Large Radar Jammer"
   category "Systems"
   thumbnail "outfit/radar_jammer_large"
   cost 490000
-  "mass" 14
-  "outfit space" -14
+  "mass" 13
+  "outfit space" -13
   "radar jamming" 10
   description "This high-power radar jammer will make it much more difficult for missiles that rely on radar to track you. It will not affect missiles that track you optically or that look for your ship's heat signature."
+
+outfit "Medium Radar Jammer"
+  category "Systems"
+  thumbnail "outfit/radar_jammer_small"
+  cost 90000
+  "mass" 5
+  "outfit space" -5
+  "radar jamming" 3
+  description "This radar jammer is designed to interfere with Sidewinders and any other missiles that rely on radar for tracking their targets. Jamming will occasionally cause missiles to lose their target locks."
 
 outfit "Small Radar Jammer"
   category "Systems"
   thumbnail "outfit/radar_jammer_small"
-  cost 70000
-  "mass" 4
-  "outfit space" -4
-  "radar jamming" 2
-  description "This radar jammer is designed to interfere with Sidewinders and any other missiles that rely on radar for tracking their targets. Jamming will occasionally cause missiles to lose their target locks."
+  cost 40000
+  "mass" 2
+  "outfit space" -2
+  "radar jamming" 1
+  description "This small-size radar jammer is designed to fit even into the tiniest of ships, offering some basic protection against missiles that rely on radar for tracking."
 
 
 # Ramscoops
