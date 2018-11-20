@@ -652,10 +652,6 @@ void Engine::Step(bool isActive)
     info.SetOutlineColour(Radar::GetColour(targetType));
     if(target->GetSystem() == player.GetSystem() && target->IsTargetable())
     {
-      info.SetBar("target shields", target->Shields());
-      info.SetBar("target hull", target->Hull(), 20.);
-      info.SetBar("target disabled hull", min(target->Hull(), target->DisabledHull()), 20.);
-    
       // The target area will be a square, with sides proportional to the average
       // of the width and the height of the sprite.
       double size = (target->Width() + target->Height()) * .35;
@@ -681,6 +677,10 @@ void Engine::Step(bool isActive)
       if((targetRange <= tacticalRange && !target->Attributes().Get("inscrutable"))
           || (tacticalRange && target->IsYours()))
       {
+        info.SetBar("target shields", target->Shields());
+        info.SetBar("target hull", target->Hull(), 20.);
+        info.SetBar("target disabled hull", min(target->Hull(), target->DisabledHull()), 20.);
+
         info.SetCondition("tactical display");
         info.SetString("target crew", to_string(target->Crew()));
         int fuel = round(target->Fuel() * target->Attributes().Get("fuel capacity"));
