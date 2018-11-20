@@ -16544,10 +16544,10 @@ system "Nihal"
   fleet "Merchants North Large" 1200
   fleet "Merchants Paradise" 1800
   fleet "Miners North" 2000
-  fleet "Pirates North Small" 3000
+  fleet "Pirates North Small" 2500
   fleet "Pirates North Large" 5000
-  fleet "Republic Small" 4000
-  fleet "Republic Large" 7000
+  fleet "Republic Small" 3000
+  fleet "Republic Large" 6000
   object
     sprite star/k5
     distance 43.1257
@@ -20954,13 +20954,13 @@ system "Sol"
   trade "Medical" 480
   trade "Metal" 402
   trade "Plastic" 272
+  fleet "Merchants Core Small" 1000
+  fleet "Merchants Core Large" 2000
   fleet "Merchants North Small" 300
   fleet "Merchants North Large" 500
   fleet "Merchants Paradise" 800
   fleet "Republic Small" 600
   fleet "Republic Large" 900
-  fleet "Merchants Core Small" 1000
-  fleet "Merchants Core Large" 2000
   object
     sprite star/g0
     period 25.38
@@ -21929,9 +21929,10 @@ system "Tania Australis"
   trade "Plastic" 390
   fleet "Merchants North Small" 1000
   fleet "Merchants North Large" 2000
-  fleet "Republic Small" 3000
   fleet "Pirates North Small" 4000
   fleet "Pirates North Large" 9000
+  fleet "Republic Small" 3000
+  fleet "Republic Large" 6000
   object
     sprite star/g0-old
     period 10
@@ -25868,7 +25869,8 @@ planet "Maelstrom"
   attributes north mining frontier
   landscape land/mountain21-harro
   description `Maelstrom is a stormy, geologically young world with towering mountains and frequent earthquakes. Most of the large cities are near the centre of the planet's main continent, where the iron beds from an ancient ocean are exposed. Maelstrom is one of the chief exporters of iron, copper, gold, titanium, and other metals to Ada, where Lovelace Labs and the associated industries have a continuous need for raw materials.`
-  description `  Extreme rock climbing is a hugely popular sport among the mining workers here, who have a tendency to be young, male, and reckless. The mountains are dramatic enough to even attract off-world climbers as tourists, though more than once a favourite climbing face has been sloughed off its mountain in an earthquake.`
+#  description `  Extreme rock climbing is a hugely popular sport among the mining workers here, who have a tendency to be young, male, and reckless. The mountains are dramatic enough to even attract off-world climbers as tourists, though more than once a favourite climbing face has been sloughed off its mountain in an earthquake.`
+  description `  The planet is also home to a Navy base with numerous eartquake-proof storehouses. The number of vessels stationed here is much smaller than the number of landing pads available; perhaps those are a leftover from more volatile times.`
   spaceport `The spaceport is a single massive complex of buildings, with hangars large enough for even a bulk freighter or a Navy flagship. A railroad runs through several of the nearby mining towns and straight into the spaceport building itself, allowing ore and processed metal to be loaded directly from the mine cars into the waiting freighters.`
   outfitter "Common Outfits"
   outfitter "Lovelace Basics"
