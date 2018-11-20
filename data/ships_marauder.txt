@@ -58,8 +58,8 @@ ship "Marauder Argosy"
       "hull damage" 400
       "hit force" 1200
   outfits
-    "Greyhound Plasma Thruster"
-    "X3200 Ion Steering"
+    "A250 Atomic Thruster"
+    "A375 Atomic Steering"
 
     "Heavy Laser Cannon" 4
     "Heavy Laser Turret" 2
@@ -69,7 +69,7 @@ ship "Marauder Argosy"
     "LP072a Battery Pack"
     "Fuel Barrel" 40
     "Hyperdrive"
-    "Small Radar Jammer"
+    "Tactical Scanner" 4
     "Laser Rifle" 12
   engine -20 91
   engine 20 91
@@ -91,10 +91,10 @@ ship "Marauder Argosy"
 
 ship "Marauder Argosy" "Marauder Argosy (Blaster)"
   outfits
-    "Greyhound Plasma Thruster"
-    "X3200 Ion Steering"
+    "A250 Atomic Thruster"
+    "A375 Atomic Steering"
 
-    "Modified Blaster" 4
+    "1X Blaster Cannon" 4
     "4X Blaster Turret" 2
 
     "D67-TM Shield Generator"
@@ -103,7 +103,7 @@ ship "Marauder Argosy" "Marauder Argosy (Blaster)"
     "Liquid Nitrogen Cooler"
     "Fuel Barrel" 40
     "Hyperdrive"
-    "Small Radar Jammer"
+    "Tactical Scanner" 4
     "Laser Rifle" 12
 
 
@@ -121,13 +121,14 @@ ship "Marauder Argosy" "Marauder Argosy (Heavy)"
     "Liquid Water Cooler"
     "Fuel Barrel" 40
     "Hyperdrive"
+    "Tactical Scanner" 4
     "Laser Rifle" 12
 
 
 ship "Marauder Argosy" "Marauder Argosy (Missile)"
   outfits
-    "X3700 Ion Thruster"
-    "Greyhound Plasma Steering"
+    "A250 Atomic Thruster"
+    "A375 Atomic Steering"
 
     "Meteor Missile" 70
     "Torpedo" 60
@@ -141,6 +142,7 @@ ship "Marauder Argosy" "Marauder Argosy (Missile)"
     "LP072a Battery Pack"
     "Fuel Barrel" 40
     "Hyperdrive"
+    "Tactical Scanner" 4
     "Laser Rifle" 12
 
 
@@ -159,7 +161,7 @@ ship "Marauder Arrow"
     "drag" 2.7
     "heat dissipation" .85
     "cargo space" 5
-    "outfit space" 250
+    "outfit space" 255
     "engine capacity" 80
     "weapon capacity" 60
     "self destruct" .25
@@ -181,6 +183,7 @@ ship "Marauder Arrow"
     "Cooling Ducts"
     "Fuel Barrel" 40
     "Hyperdrive"
+    "Tactical Scanner" 4
     "Laser Rifle" 5
   engine -8 57
   engine 8 57
@@ -212,6 +215,7 @@ ship "Marauder Arrow" "Marauder Arrow (Engines)"
     "Supercapacitor"
     "Fuel Barrel" 40
     "Hyperdrive"
+    "Tactical Scanner" 4
     "Laser Rifle" 5
   engine -10 57
   engine 10 57
@@ -235,6 +239,7 @@ ship "Marauder Arrow" "Marauder Arrow (Weapons)"
     "Liquid Water Cooler"
     "Fuel Barrel" 40
     "Hyperdrive"
+    "Tactical Scanner" 4
     "Laser Rifle" 5
   gun -6 -36 "Modified Blaster Cannon"
   gun 6 -36 "Modified Blaster Cannon"
@@ -259,7 +264,7 @@ ship "Marauder Bounder"
     "drag" 3.7
     "heat dissipation" .8
     "cargo space" 10
-    "outfit space" 340
+    "outfit space" 345
     "engine capacity" 115
     "weapon capacity" 80
     "self destruct" .25
@@ -282,6 +287,7 @@ ship "Marauder Bounder"
     "Liquid Water Cooler"
     "Fuel Barrel" 90
     "Hyperdrive"
+    "Tactical Scanner" 4
     "Laser Rifle" 18
   engine -12 44
   engine 12 44
@@ -314,6 +320,7 @@ ship "Marauder Bounder" "Marauder Bounder (Engines)"
     "Liquid Water Cooler"
     "Fuel Barrel" 90
     "Hyperdrive"
+    "Tactical Scanner" 4
     "Laser Rifle" 18
   engine -12 58 .7
   engine 0 51
@@ -338,6 +345,7 @@ ship "Marauder Bounder" "Marauder Bounder (Weapons)"
     "Liquid Water Cooler"
     "Fuel Barrel" 90
     "Hyperdrive"
+    "Tactical Scanner" 4
     "Laser Rifle" 18
   engine -15 44
   engine 15 44
@@ -362,8 +370,8 @@ ship "Marauder Falcon"
     "mass" 560
     "drag" 6.7
     "heat dissipation" .8
-    "cargo space" 20
-    "outfit space" 680
+    "cargo space" 30
+    "outfit space" 670
     "engine capacity" 165
     "weapon capacity" 265
     "self destruct" .15
@@ -386,6 +394,7 @@ ship "Marauder Falcon"
     "Fuel Barrel" 60
     "Hyperdrive"
     "Large Radar Jammer"
+    "Tactical Scanner" 4
     "Laser Rifle" 80
   engine -16 143
   engine 16 143
@@ -423,6 +432,7 @@ ship "Marauder Falcon" "Marauder Falcon (Engines)"
     "Fuel Barrel" 60
     "Hyperdrive"
     "Large Radar Jammer"
+    "Tactical Scanner" 4
     "Laser Rifle" 80
   engine -21 138 .7
   engine 0 144
@@ -447,7 +457,7 @@ ship "Marauder Falcon" "Marauder Falcon (Weapons)"
     "A525 Atomic Steering"
 
     "Plasma Cannon" 6
-    "4X Blaster Turret" 4
+    "Modified Blaster Turret" 4
 
     "S-970 Regenerator"
     "Fusion Reactor"
@@ -456,6 +466,7 @@ ship "Marauder Falcon" "Marauder Falcon (Weapons)"
     "Fuel Barrel" 60
     "Hyperdrive"
     "Large Radar Jammer"
+    "Tactical Scanner" 4
     "Laser Rifle" 80
   engine -16 142
   engine 16 142
@@ -465,10 +476,10 @@ ship "Marauder Falcon" "Marauder Falcon (Weapons)"
   gun 18.5 -88 "Plasma Cannon"
   gun -21.5 -77 "Plasma Cannon"
   gun 21.5 -77 "Plasma Cannon"
-  turret -16 -25 "4X Blaster Turret"
-  turret 16 -25 "4X Blaster Turret"
-  turret -57 32.5 "4X Blaster Turret"
-  turret 57 32.5 "4X Blaster Turret"
+  turret -16 -25 "Modified Blaster Turret"
+  turret 16 -25 "Modified Blaster Turret"
+  turret -57 32.5 "Modified Blaster Turret"
+  turret 57 32.5 "Modified Blaster Turret"
   description "Whoever modified this Falcon clearly believed that firepower was everything. Two additional gun ports have been integrated into the hull, and the ship's interior space has been reconfigured to accommodate nearly any set of weapons you can imagine."
 
 
@@ -510,6 +521,7 @@ ship "Marauder Firebird"
     "Liquid Helium Cooler"
     "Fuel Barrel" 40
     "Hyperdrive"
+    "Tactical Scanner" 4
     "Laser Rifle" 25
   engine -32 62
   engine 32 62
@@ -541,10 +553,10 @@ ship "Marauder Firebird" "Marauder Firebird (Engines)"
     "S-970 Regenerator"
     "Fusion Reactor"
     "LP036a Battery Pack"
-    "Supercapacitor"
     "Liquid Helium Cooler"
     "Fuel Barrel" 40
     "Hyperdrive"
+    "Tactical Scanner" 4
     "Laser Rifle" 25
   engine -34 62
   engine 0 74
@@ -566,15 +578,16 @@ ship "Marauder Firebird" "Marauder Firebird (Weapons)"
     "A250 Atomic Thruster"
     "A525 Atomic Steering"
 
-    "Particle Cannon" 4
+    "Plasma Cannon" 4
     "4X Blaster Turret" 2
 
     "S-970 Regenerator"
     "Fusion Reactor"
-    "Supercapacitor"
+    "LP036a Battery Pack"
     "Liquid Helium Cooler"
     "Fuel Barrel" 40
     "Hyperdrive"
+    "Tactical Scanner" 4
     "Laser Rifle" 25
   description "This Medium Warship with one of the heaviest armaments possible just got heavier. With more outfit space, giant gun ports, extra hull plating, and more shield emitters - this blast from the past will make its targets history."
 
@@ -619,6 +632,7 @@ ship "Marauder Leviathan"
     "Fuel Barrel" 50
     "Hyperdrive"
     "Large Radar Jammer"
+    "Tactical Scanner" 4
     "Laser Rifle" 69
   engine -25 120
   engine 25 120
@@ -657,6 +671,7 @@ ship "Marauder Leviathan" "Marauder Leviathan (Engines)"
     "Fuel Barrel" 50
     "Hyperdrive"
     "Large Radar Jammer"
+    "Tactical Scanner" 4
     "Laser Rifle" 69
   engine -25 125
   engine 25 125
@@ -682,6 +697,7 @@ ship "Marauder Leviathan" "Marauder Leviathan (Weapons)"
     "Fuel Barrel" 50
     "Hyperdrive"
     "Large Radar Jammer"
+    "Tactical Scanner" 4
     "Laser Rifle" 69
   gun -38 -55 "Particle Cannon"
   gun 38 -55 "Particle Cannon"
@@ -722,7 +738,7 @@ ship "Marauder Manta"
     "A250 Atomic Thruster"
     "A525 Atomic Steering"
 
-    "Meteor Missile" 70
+    "Meteor Missile" 40
     "Meteor Missile Launcher" 2
     "Proton Cannon" 4
     "4X Blaster Turret"
@@ -733,6 +749,7 @@ ship "Marauder Manta"
     "Liquid Nitrogen Cooler"
     "Fuel Barrel" 40
     "Hyperdrive"
+    "Tactical Scanner" 4
     "Laser Rifle" 11
   engine -33 38
   engine 33 38
@@ -758,9 +775,9 @@ ship "Marauder Manta" "Marauder Manta (Engines)"
     "A370 Atomic Thruster"
     "A525 Atomic Steering"
 
-    "Meteor Missile" 70
-    "Meteor Missile Launcher" 2
-    "Plasma Cannon" 4
+    "Sidewinder Missile" 100
+    "Sidewinder Missile Launcher" 4
+    "Particle Cannon" 2
     "4X Blaster Turret"
 
     "S-270 Regenerator"
@@ -769,16 +786,17 @@ ship "Marauder Manta" "Marauder Manta (Engines)"
     "Liquid Nitrogen Cooler"
     "Fuel Barrel" 40
     "Hyperdrive"
+    "Tactical Scanner" 4
     "Laser Rifle" 11
   engine -33.5 38
   engine 0 76
   engine 33.5 38
-  gun "Meteor Missile Launcher"
-  gun "Meteor Missile Launcher"
-  gun "Plasma Cannon"
-  gun "Plasma Cannon"
-  gun "Plasma Cannon"
-  gun "Plasma Cannon"
+  gun "Particle Cannon"
+  gun "Particle Cannon"
+  gun "Sidewinder Missile Launcher"
+  gun "Sidewinder Missile Launcher"
+  gun "Sidewinder Missile Launcher"
+  gun "Sidewinder Missile Launcher"
   turret "4X Blaster Turret"
   description `A previous owner of this Manta has gone to great lengths to make sure they could bring all six gun ports to bear in a hurry and chase down smaller warships. Style was not lost on that captain, and a forked tail yielded a little more space for shield projectors in an area that would have been destabilized by engine exhaust. It almost makes it to "Heavy Warship," but dry tonnage keeps it in the Medium Warship category.`
 
@@ -791,28 +809,27 @@ ship "Marauder Manta" "Marauder Manta (Weapons)"
     "A250 Atomic Thruster"
     "A375 Atomic Steering"
 
-    "Meteor Missile" 70
-    "Meteor Missile Launcher" 2
-    "Particle Cannon" 4
+    "Torpedo" 30
+    "Torpedo Launcher" 2
+    "Plasma Cannon" 4
     "4X Blaster Turret"
 
     "S-270 Regenerator"
     "Fission Reactor"
     "LP072a Battery Pack"
-    "LP036a Battery Pack"
-    "Supercapacitor"
     "Liquid Nitrogen Cooler"
     "Fuel Barrel" 40
     "Hyperdrive"
+    "Tactical Scanner" 4
     "Laser Rifle" 11
   engine -33.5 38
   engine 33.5 38
-  gun -66 -34 "Meteor Missile Launcher"
-  gun 66 -34 "Meteor Missile Launcher"
-  gun -27 -35 "Particle Cannon"
-  gun 27 -35 "Particle Cannon"
-  gun -20 -35 "Particle Cannon"
-  gun 20 -35 "Particle Cannon"
+  gun -66 -34 "Torpedo Launcher"
+  gun 66 -34 "Torpedo Launcher"
+  gun -27 -35 "Plasma Cannon"
+  gun 27 -35 "Plasma Cannon"
+  gun -20 -35 "Plasma Cannon"
+  gun 20 -35 "Plasma Cannon"
   turret 0 -29 "4X Blaster Turret"
   description `This Manta has undergone extensive modification, featuring extra gun ports, hull plating, and shield emitters. You wonder where the modifier intended the power systems to go, but you're sure you'll find space for them somewhere. It almost makes it to "Heavy Warship," but dry tonnage keeps it in the Medium Warship category.`
 
@@ -854,6 +871,7 @@ ship "Marauder Quicksilver"
     "Liquid Nitrogen Cooler"
     "Fuel Barrel" 40
     "Hyperdrive"
+    "Tactical Scanner" 4
     "Laser Rifle" 7
   engine -16 52
   engine 16 52
@@ -879,10 +897,11 @@ ship "Marauder Quicksilver" "Marauder Quicksilver (Engines)"
 
     "S-270 Regenerator"
     "Fission Reactor"
-    "LP036a Battery Pack"
+    "Supercapacitor" 3
     "Liquid Nitrogen Cooler"
     "Fuel Barrel" 40
     "Hyperdrive"
+    "Tactical Scanner" 4
     "Laser Rifle" 7
   engine -16 52
   engine 0 52
@@ -907,6 +926,7 @@ ship "Marauder Quicksilver" "Marauder Quicksilver (Weapons)"
     "Liquid Nitrogen Cooler"
     "Fuel Barrel" 40
     "Hyperdrive"
+    "Tactical Scanner" 4
     "Laser Rifle" 7
   engine -17 54
   engine 17 54
@@ -928,7 +948,7 @@ ship "Marauder Raven"
     "drag" 3.7
     "heat dissipation" .8
     "cargo space" 10
-    "outfit space" 375
+    "outfit space" 380
     "engine capacity" 110
     "weapon capacity" 105
     "self destruct" .25
@@ -951,6 +971,7 @@ ship "Marauder Raven"
     "Liquid Nitrogen Cooler"
     "Fuel Barrel" 50
     "Hyperdrive"
+    "Tactical Scanner" 4
     "Laser Rifle" 14
   engine -12 45
   engine 12 45
@@ -984,6 +1005,7 @@ ship "Marauder Raven" "Marauder Raven (Engines)"
     "Liquid Nitrogen Cooler"
     "Fuel Barrel" 50
     "Hyperdrive"
+    "Tactical Scanner" 4
     "Laser Rifle" 14
   engine -12 45 .7
   engine 0 43
@@ -1009,6 +1031,7 @@ ship "Marauder Raven" "Marauder Raven (Weapons)"
     "Liquid Nitrogen Cooler"
     "Fuel Barrel" 50
     "Hyperdrive"
+    "Tactical Scanner" 4
     "Laser Rifle" 14
   gun -11 -33 "Plasma Cannon"
   gun 11 -33 "Plasma Cannon"
@@ -1033,7 +1056,7 @@ ship "Marauder Splinter"
     "drag" 4.0
     "heat dissipation" .7
     "cargo space" 40
-    "outfit space" 510
+    "outfit space" 515
     "engine capacity" 110
     "weapon capacity" 165
     "self destruct" .25
@@ -1056,6 +1079,7 @@ ship "Marauder Splinter"
     "Liquid Nitrogen Cooler"
     "Fuel Barrel" 60
     "Hyperdrive"
+    "Tactical Scanner" 4
     "Laser Rifle" 22
   engine -14 112
   engine 14 112
@@ -1091,6 +1115,7 @@ ship "Marauder Splinter" "Marauder Splinter (Engines)"
     "Liquid Water Cooler"
     "Fuel Barrel" 60
     "Hyperdrive"
+    "Tactical Scanner" 4
     "Laser Rifle" 22
   engine -15 114 .7
   engine 0 118
@@ -1119,6 +1144,7 @@ ship "Marauder Splinter" "Marauder Splinter (Weapons)"
     "Liquid Nitrogen Cooler"
     "Fuel Barrel" 60
     "Hyperdrive"
+    "Tactical Scanner" 4
     "Laser Rifle" 22
   gun -7.5 -98 "Plasma Cannon"
   gun 7.5 -98 "Plasma Cannon"

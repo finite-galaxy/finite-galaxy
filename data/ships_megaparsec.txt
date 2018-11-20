@@ -5,13 +5,15 @@ shipyard "Megaparsec Variants"
   "Manta (Mark II)"
   "Manta (Nuclear)"
   "Manta (Proton)"
+  "Manta (Syndicate)"
   "Quicksilver"
   "Quicksilver (Mark II)"
   "Quicksilver (Proton)"
+  "Quicksilver (Syndicate)"
   "Splinter"
   "Splinter (Laser)"
   "Splinter (Mark II)"
-  "Splinter (Proton)"
+  "Splinter (Syndicate)"
 
 
 
@@ -51,6 +53,7 @@ ship "Bounder"
     "LP036a Battery Pack"
     "Fuel Barrel" 90
     "Hyperdrive"
+    "Tactical Scanner"
   engine -12 44
   engine 12 44
   turret -37 4 "Light Anti-Missile Turret"
@@ -77,6 +80,7 @@ ship "Bounder" "Bounder (Hai)"
     "Fuel Pod" 9
     "Hyperdrive"
     "Quantum Keystone"
+    "Tactical Scanner"
 
 
 
@@ -117,6 +121,8 @@ ship "Manta"
     "Liquid Water Cooler"
     "Fuel Barrel" 40
     "Hyperdrive"
+    "Medium Radar Jammer"
+    "Tactical Scanner" 4
   engine -33 38
   engine 33 38
   gun -21 -35 "Particle Cannon"
@@ -145,6 +151,9 @@ ship "Manta" "Manta (Mark II)"
     "Liquid Nitrogen Cooler"
     "Fuel Barrel" 40
     "Hyperdrive"
+    "Medium Radar Jammer"
+    "Tactical Scanner" 4
+    "Outfits Expansion"
 
 
 ship "Manta" "Manta (Nuclear)"
@@ -162,6 +171,7 @@ ship "Manta" "Manta (Nuclear)"
     "Liquid Nitrogen Cooler"
     "Fuel Barrel" 40
     "Hyperdrive"
+    "Tactical Scanner"
     "Outfits Expansion" 2
   gun -21 -35 "Proton Cannon"
   gun 21 -35 "Proton Cannon"
@@ -182,10 +192,28 @@ ship "Manta" "Manta (Proton)"
     "RT-I Radiothermal"
     "LP144a Battery Pack"
     "Liquid Water Cooler"
-    "Cargo Scanner" 3
     "Fuel Barrel" 40
     "Hyperdrive"
-    "Outfit Scanner"
+    "Medium Radar Jammer"
+    "Tactical Scanner" 4
+
+
+ship "Manta" "Manta (Syndicate)"
+  outfits
+    "X3700 Ion Thruster"
+    "X3200 Ion Steering"
+
+    "Proton Cannon" 4
+
+    "D23-QP Shield Generator"
+    "RT-I Radiothermal"
+    "LP144a Battery Pack"
+    "Liquid Water Cooler"
+    "Cargo Scanner"
+    "Fuel Barrel" 40
+    "Hyperdrive"
+    "Medium Radar Jammer"
+    "Tactical Scanner" 4
 
 
 
@@ -226,6 +254,7 @@ ship "Quicksilver"
     "Liquid Water Cooler"
     "Fuel Barrel" 40
     "Hyperdrive"
+    "Tactical Scanner" 3
   engine -17 54
   engine 17 54
   gun -6 -38 "Particle Cannon"
@@ -250,6 +279,7 @@ ship "Quicksilver" "Quicksilver (Mark II)"
     "Liquid Nitrogen Cooler"
     "Fuel Barrel" 40
     "Hyperdrive"
+    "Tactical Scanner" 3
 
 
 ship "Quicksilver" "Quicksilver (Proton)"
@@ -263,10 +293,26 @@ ship "Quicksilver" "Quicksilver (Proton)"
     "RT-I Radiothermal"
     "LP036a Battery Pack"
     "Liquid Water Cooler"
-    "Cargo Scanner" 3
     "Fuel Barrel" 40
     "Hyperdrive"
-    "Outfit Scanner"
+    "Tactical Scanner" 3
+
+
+ship "Quicksilver" "Quicksilver (Syndicate)"
+  outfits
+    "X3700 Ion Thruster"
+    "X3200 Ion Steering"
+
+    "Proton Cannon" 2
+
+    "D23-QP Shield Generator"
+    "RT-I Radiothermal"
+    "LP036a Battery Pack"
+    "Liquid Water Cooler"
+    "Cargo Scanner"
+    "Fuel Barrel" 40
+    "Hyperdrive"
+    "Tactical Scanner" 3
 
 
 
@@ -299,7 +345,9 @@ ship "Splinter"
     "X3700 Ion Thruster"
     "X3200 Ion Steering"
 
-    "Particle Cannon" 2
+    "Sidewinder Missile" 100
+    "Sidewinder Missile Rack" 2
+    "Sidewinder Missile Launcher" 2
     "4X Blaster Turret" 2
     "Heavy Anti-Missile Turret"
 
@@ -309,10 +357,11 @@ ship "Splinter"
     "Liquid Water Cooler"
     "Fuel Barrel" 60
     "Hyperdrive"
+    "Tactical Scanner" 5
   engine -15 115
   engine 15 115
-  gun -15 -80 "Particle Cannon"
-  gun 15 -80 "Particle Cannon"
+  gun -15 -80 "Sidewinder Missile Launcher"
+  gun 15 -80 "Sidewinder Missile Launcher"
   turret -17 -28 "4X Blaster Turret"
   turret 0 -28 "Heavy Anti-Missile Turret"
   turret 17 -28 "4X Blaster Turret"
@@ -342,6 +391,7 @@ ship "Splinter" "Splinter (Laser)"
     "Liquid Water Cooler"
     "Fuel Barrel" 60
     "Hyperdrive"
+    "Tactical Scanner" 5
   turret "Heavy Laser Turret"
   turret "Heavy Anti-Missile Turret"
   turret "Heavy Laser Turret"
@@ -362,15 +412,18 @@ ship "Splinter" "Splinter (Mark II)"
     "Liquid Nitrogen Cooler"
     "Fuel Barrel" 60
     "Hyperdrive"
-    "Outfits Expansion" 2
+    "Tactical Scanner" 5
+    "Outfits Expansion" 3
 
 
-ship "Splinter" "Splinter (Proton)"
+ship "Splinter" "Splinter (Syndicate)"
   outfits
     "X3700 Ion Thruster"
     "X3200 Ion Steering"
 
-    "Proton Cannon" 2
+    "Meteor Missile" 80
+    "Meteor Missile Box" 2
+    "Meteor Missile Launcher" 2
     "4X Blaster Turret" 2
     "Heavy Anti-Missile Turret"
 
@@ -378,10 +431,10 @@ ship "Splinter" "Splinter (Proton)"
     "RT-I Radiothermal"
     "LP144a Battery Pack"
     "Liquid Water Cooler"
-    "Cargo Scanner" 3
+    "Cargo Scanner"
     "Fuel Barrel" 60
     "Hyperdrive"
-    "Outfit Scanner"
+    "Tactical Scanner" 5
   turret "4X Blaster Turret"
   turret "Heavy Anti-Missile Turret"
   turret "4X Blaster Turret"

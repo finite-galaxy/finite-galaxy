@@ -23,7 +23,7 @@ shipyard "Syndicate Variants"
   "Wasp"
   "Wasp (Gatling)"
   "Wasp (Miner)"
-  "Wasp (Proton)"
+  "Wasp (Syndicate)"
 
 
 
@@ -207,6 +207,7 @@ ship "Bulk Freighter" "Class C Freighter"
     "LP144a Battery Pack"
     "Fuel Barrel" 60
     "Scram Drive"
+    "Tactical Scanner" 8
     "Bunk Room" 15
     "Fragmentation Grenades" 20
     "Laser Rifle" 40
@@ -248,7 +249,7 @@ ship "Protector"
     "drag" 10.3
     "heat dissipation" .6
     "cargo space" 50
-    "outfit space" 610
+    "outfit space" 630
     "engine capacity" 100
     "weapon capacity" 230
     weapon
@@ -268,6 +269,8 @@ ship "Protector"
     "Liquid Nitrogen Cooler"
     "Fuel Barrel" 40
     "Hyperdrive"
+    "Large Radar Jammer"
+    "Tactical Scanner" 6
   engine -11 125
   engine 11 125
   gun -15 -100
@@ -288,21 +291,6 @@ ship "Protector"
   description `Voted the "ugliest ship in the sky" by Stars and Starships Magazine, the Protector is a typical example of brutally efficient Syndicate engineering. It is basically nothing more than six blaster turrets attached to a set of engines and crew's quarters, designed as a defence platform that can accompany merchant convoys.`
 
 
-ship "Protector" "Protector (Mark II)"
-  outfits
-    "A370 Atomic Thruster"
-    "A375 Atomic Steering"
-
-    "6X Blaster Turret" 6
-
-    "S-970 Regenerator"
-    "Fusion Reactor"
-    "LP288a Battery Pack"
-    "Liquid Nitrogen Cooler"
-    "Fuel Barrel" 40
-    "Hyperdrive"
-
-
 ship "Protector" "Protector (Laser)"
   outfits
     "X3700 Ion Thruster"
@@ -316,7 +304,26 @@ ship "Protector" "Protector (Laser)"
     "Liquid Nitrogen Cooler"
     "Fuel Barrel" 40
     "Hyperdrive"
+    "Large Radar Jammer"
+    "Tactical Scanner" 6
     "Outfits Expansion"
+
+
+ship "Protector" "Protector (Mark II)"
+  outfits
+    "A370 Atomic Thruster"
+    "A375 Atomic Steering"
+
+    "6X Blaster Turret" 6
+
+    "S-970 Regenerator"
+    "Fusion Reactor"
+    "LP288a Battery Pack"
+    "Liquid Nitrogen Cooler"
+    "Fuel Barrel" 40
+    "Hyperdrive"
+    "Large Radar Jammer"
+    "Tactical Scanner" 6
 
 
 
@@ -624,6 +631,7 @@ ship "Vanguard"
     "Liquid Nitrogen Cooler"
     "Fuel Barrel" 40
     "Hyperdrive"
+    "Tactical Scanner" 4
   engine -15 130
   engine 15 130
   gun 0 -132 "Proton Cannon"
@@ -658,6 +666,7 @@ ship "Vanguard" "Vanguard (Mark II)"
     "Liquid Nitrogen Cooler"
     "Fuel Barrel" 40
     "Hyperdrive"
+    "Tactical Scanner" 4
 
 
 ship "Vanguard" "Vanguard (Particle)"
@@ -674,6 +683,7 @@ ship "Vanguard" "Vanguard (Particle)"
     "Liquid Nitrogen Cooler"
     "Fuel Barrel" 40
     "Hyperdrive"
+    "Tactical Scanner" 4
 
 
 
@@ -713,6 +723,7 @@ ship "Wasp"
     "LP036a Battery Pack"
     "Fuel Barrel" 40
     "Hyperdrive"
+    "Tactical Scanner"
   engine -6 33
   engine 6 33
   gun 0 -38 "1X Blaster Cannon"
@@ -738,6 +749,7 @@ ship "Wasp" "Wasp (Gatling)"
     "Supercapacitor"
     "Fuel Barrel" 40
     "Hyperdrive"
+    "Tactical Scanner"
 
 
 ship "Wasp" "Wasp (Miner)"
@@ -749,13 +761,14 @@ ship "Wasp" "Wasp (Miner)"
 
     "D14-RN Shield Generator"
     "nGVF-BB Fuel Cell"
-    "Supercapacitor" 4
+    "Supercapacitor" 2
     "Asteroid Scanner"
     "Fuel Barrel" 40
     "Hyperdrive"
+    "Tactical Scanner"
 
 
-ship "Wasp" "Wasp (Proton)"
+ship "Wasp" "Wasp (Syndicate)"
   outfits
     "X2700 Ion Thruster"
     "X2200 Ion Steering"
@@ -765,9 +778,9 @@ ship "Wasp" "Wasp (Proton)"
     "D14-RN Shield Generator"
     "nGVF-BB Fuel Cell"
     "LP036a Battery Pack"
-    "Cargo Scanner" 3
+    "Cargo Scanner"
     "Fuel Barrel" 40
     "Hyperdrive"
-    "Outfit Scanner"
+    "Tactical Scanner" 3
     "Outfits Expansion"
 
