@@ -49,17 +49,18 @@ ship "Aphid"
       "hull damage" 150
       "hit force" 450
   outfits
+    "Corundum Regenerator"
+    "Pebble Core"
+    "Hyperdrive"
+
     `"Basrem" Atomic Thruster`
     `"Basrem" Atomic Steering`
 
     "Chameleon Anti-Missile"
 
-    "Corundum Regenerator"
-    "Pebble Core"
     "Fissure Batteries"
     "Williwaw Cooling"
     "Fuel Pod" 4
-    "Hyperdrive"
     "Quantum Keystone"
     "Yoloy Scanner"
   engine -8 40
@@ -98,12 +99,13 @@ ship "Flea"
       "hull damage" 30
       "hit force" 80
   outfits
+    "Sand Cell"
+
     `"Baellie" Atomic Engines`
 
     "Railgun Slug" 150
     "Railgun"
 
-    "Sand Cell"
     "Chasm Batteries"
   engine 0 27
   gun 0 -27 "Railgun"
@@ -137,18 +139,19 @@ ship "Lightning Bug"
       "hull damage" 420
       "hit force" 1260
   outfits
+    "Corundum Regenerator" 2
+    "Geode Reactor"
+    "Hyperdrive"
+
     `"Biroo" Atomic Thruster`
     `"Biroo" Atomic Steering`
 
     "Ion Cannon"
     "Chameleon Anti-Missile" 2
 
-    "Corundum Regenerator" 2
-    "Geode Reactor"
     "Gorge Batteries"
     "Williwaw Cooling"
     "Fuel Pod" 6
-    "Hyperdrive"
     "Quantum Keystone"
     "Yoloy Scanner"
   engine -40 22
@@ -166,6 +169,10 @@ ship "Lightning Bug"
 
 ship "Lightning Bug" "Lightning Bug (Pulse)"
   outfits
+    "Corundum Regenerator" 2
+    "Geode Reactor"
+    "Hyperdrive"
+
     `"Biroo" Atomic Thruster`
     `"Biroo" Atomic Steering`
 
@@ -174,11 +181,8 @@ ship "Lightning Bug" "Lightning Bug (Pulse)"
     "Tracker Launcher"
     "Pulse Turret" 2
 
-    "Corundum Regenerator" 2
-    "Geode Reactor"
     "Gorge Batteries"
     "Fuel Pod" 6
-    "Hyperdrive"
     "Yoloy Scanner"
 
 
@@ -210,6 +214,10 @@ ship "Pond Strider"
       "hull damage" 750
       "hit force" 1750
   outfits
+    "Diamond Regenerator"
+    "Geode Reactor"
+    "Hyperdrive"
+
     `"Benga" Atomic Thruster`
     `"Biroo" Atomic Steering`
 
@@ -218,12 +226,9 @@ ship "Pond Strider"
     "Pulse Turret" 2
     "Chameleon Anti-Missile" 
 
-    "Diamond Regenerator"
-    "Geode Reactor"
     "Gorge Batteries"
     "Williwaw Cooling" 2
     "Fuel Pod" 3
-    "Hyperdrive"
     "Quantum Keystone"
     "Yoloy Scanner"
   engine -23 80
@@ -252,6 +257,10 @@ ship "Pond Strider"
 
 ship "Pond Strider" "Pond Strider (Jump)"
   outfits
+    "Diamond Regenerator"
+    "Geode Reactor"
+    "Jump Drive"
+
     `"Benga" Atomic Thruster`
     `"Biroo" Atomic Steering`
 
@@ -260,12 +269,9 @@ ship "Pond Strider" "Pond Strider (Jump)"
     "Pulse Turret" 2
     "Chameleon Anti-Missile" 
 
-    "Diamond Regenerator"
-    "Geode Reactor"
     "Gorge Batteries"
     "Williwaw Cooling" 2
     "Fuel Pod" 8
-    "Jump Drive"
     "Quantum Keystone"
     "Yoloy Scanner"
     "Outfit Space Expansion" 5
@@ -299,6 +305,10 @@ ship "Shield Beetle"
       "hull damage" 2000
       "hit force" 3000
   outfits
+    "Diamond Regenerator" 2
+    "Boulder Reactor" 2
+    "Hyperdrive"
+
     `"Bondir" Atomic Thruster`
     `"Bufaer" Atomic Steering`
 
@@ -308,12 +318,9 @@ ship "Shield Beetle"
     "Ion Cannon" 4
     "Chameleon Anti-Missile" 2
 
-    "Diamond Regenerator" 2
-    "Boulder Reactor" 2
     "Chasm Batteries"
     "Williwaw Cooling" 4
     "Fuel Pod" 5
-    "Hyperdrive"
     "Quantum Keystone"
     "Yoloy Scanner"
   engine -44 133
@@ -341,6 +348,10 @@ ship "Shield Beetle"
 
 ship "Shield Beetle" "Shield Beetle (Jump)"
   outfits
+    "Diamond Regenerator" 2
+    "Boulder Reactor" 2
+    "Jump Drive"
+
     `"Bondir" Atomic Thruster`
     `"Bufaer" Atomic Steering`
 
@@ -350,12 +361,9 @@ ship "Shield Beetle" "Shield Beetle (Jump)"
     "Ion Cannon" 4
     "Chameleon Anti-Missile" 2
 
-    "Diamond Regenerator" 2
-    "Boulder Reactor" 2
     "Chasm Batteries"
     "Williwaw Cooling" 4
     "Fuel Pod" 8
-    "Jump Drive"
     "Quantum Keystone"
     "Yoloy Scanner"
     "Outfit Space Expansion" 3
@@ -375,41 +383,47 @@ ship "Shield Beetle" "Shield Beetle (Jump)"
 
 ship "Shield Beetle" "Shield Beetle (Pulse)"
   outfits
+    "Diamond Regenerator" 2
+    "Boulder Reactor" 2
+    "Hyperdrive"
+
     `"Bondir" Atomic Thruster`
     `"Bufaer" Atomic Steering`
 
     "Pulse Cannon" 8
     "Pulse Turret" 4
 
-    "Diamond Regenerator" 2
-    "Boulder Reactor" 2
     "Ravine Batteries"
     "Williwaw Cooling" 8
     "Fuel Pod" 5
-    "Hyperdrive"
     "Yoloy Scanner"
 
 
 ship "Shield Beetle" "Shield Beetle (Pulse, Jump)"
   outfits
+    "Diamond Regenerator" 2
+    "Boulder Reactor" 2
+    "Jump Drive"
+
     `"Bondir" Atomic Thruster`
     `"Bufaer" Atomic Steering`
 
     "Pulse Cannon" 8
     "Pulse Turret" 4
 
-    "Diamond Regenerator" 2
-    "Boulder Reactor" 2
     "Ravine Batteries"
     "Williwaw Cooling" 8
     "Fuel Pod" 8
-    "Jump Drive"
     "Yoloy Scanner"
     "Outfit Space Expansion" 3
 
 
 ship "Shield Beetle" "Shield Beetle (Tracker)"
   outfits
+    "Diamond Regenerator" 2
+    "Boulder Reactor" 2
+    "Hyperdrive"
+
     `"Bondir" Atomic Thruster`
     `"Bufaer" Atomic Steering`
 
@@ -419,17 +433,18 @@ ship "Shield Beetle" "Shield Beetle (Tracker)"
     "Pulse Turret" 2
     "Chameleon Anti-Missile" 2
 
-    "Diamond Regenerator" 2
-    "Boulder Reactor" 2
     "Chasm Batteries"
     "Williwaw Cooling" 4
     "Fuel Pod" 5
-    "Hyperdrive"
     "Yoloy Scanner"
 
 
 ship "Shield Beetle" "Shield Beetle (Tracker, Jump)"
   outfits
+    "Diamond Regenerator" 2
+    "Boulder Reactor" 2
+    "Jump Drive"
+
     `"Bondir" Atomic Thruster`
     `"Bufaer" Atomic Steering`
 
@@ -439,12 +454,9 @@ ship "Shield Beetle" "Shield Beetle (Tracker, Jump)"
     "Pulse Turret" 2
     "Chameleon Anti-Missile" 2
 
-    "Diamond Regenerator" 2
-    "Boulder Reactor" 2
     "Chasm Batteries"
     "Williwaw Cooling" 4
     "Fuel Pod" 8
-    "Jump Drive"
     "Yoloy Scanner"
     "Outfit Space Expansion" 3
 
@@ -477,18 +489,19 @@ ship "Solifuge"
       "hull damage" 2250
       "hit force" 3500
   outfits
+    "Diamond Regenerator" 2
+    "Boulder Reactor" 2
+    "Hyperdrive"
+
     `"Bufaer" Atomic Thruster`
     `"Bondir" Atomic Steering`
 
     "Ion Cannon" 5
     "Bullfrog Anti-Missile" 7
 
-    "Diamond Regenerator" 2
-    "Boulder Reactor" 2
     "Fissure Batteries"
     "Williwaw Cooling" 6
     "Fuel Pod" 6
-    "Hyperdrive"
     "Quantum Keystone"
     "Yoloy Scanner"
   engine -28 135.5
@@ -522,18 +535,19 @@ ship "Solifuge"
 
 ship "Solifuge" "Solifuge (Jump)"
   outfits
+    "Diamond Regenerator" 2
+    "Boulder Reactor" 2
+    "Jump Drive"
+
     `"Bufaer" Atomic Thruster`
     `"Bondir" Atomic Steering`
 
     "Ion Cannon" 5
     "Bullfrog Anti-Missile" 7
 
-    "Diamond Regenerator" 2
-    "Boulder Reactor" 2
     "Fissure Batteries"
     "Williwaw Cooling" 6
     "Fuel Pod" 8
-    "Jump Drive"
     "Quantum Keystone"
     "Yoloy Scanner"
     "Outfit Space Expansion" 2
@@ -541,6 +555,10 @@ ship "Solifuge" "Solifuge (Jump)"
 
 ship "Solifuge" "Solifuge (Tracker)"
   outfits
+    "Diamond Regenerator"
+    "Boulder Reactor" 2
+    "Hyperdrive"
+
     `"Bufaer" Atomic Thruster`
     `"Bondir" Atomic Steering`
 
@@ -550,12 +568,9 @@ ship "Solifuge" "Solifuge (Tracker)"
     "Pulse Turret" 5
     "Chameleon Anti-Missile" 2
 
-    "Diamond Regenerator"
-    "Boulder Reactor" 2
     "Fissure Batteries"
     "Williwaw Cooling" 6
     "Fuel Pod" 6
-    "Hyperdrive"
     "Yoloy Scanner"
     "Outfit Space Expansion"
   turret "Pulse Turret"
@@ -569,6 +584,10 @@ ship "Solifuge" "Solifuge (Tracker)"
 
 ship "Solifuge" "Solifuge (Tracker, Jump)"
   outfits
+    "Diamond Regenerator"
+    "Boulder Reactor" 2
+    "Jump Drive"
+
     `"Bufaer" Atomic Thruster`
     `"Bondir" Atomic Steering`
 
@@ -578,12 +597,9 @@ ship "Solifuge" "Solifuge (Tracker, Jump)"
     "Pulse Turret" 5
     "Chameleon Anti-Missile" 2
 
-    "Diamond Regenerator"
-    "Boulder Reactor" 2
     "Fissure Batteries"
     "Williwaw Cooling" 6
     "Fuel Pod" 8
-    "Jump Drive"
     "Yoloy Scanner"
     "Outfit Space Expansion" 3
   turret "Pulse Turret"
@@ -623,12 +639,13 @@ ship "Violin Spider"
       "hull damage" 60
       "hit force" 180
   outfits
+    "Pebble Core"
+
     `"Basrem" Atomic Steering`
     `"Basrem" Atomic Thruster`
 
     "Pulse Cannon"
 
-    "Pebble Core"
     "Chasm Batteries"
     "Williwaw Cooling"
   engine -15 30
@@ -641,13 +658,14 @@ ship "Violin Spider"
 
 ship "Violin Spider" "Violin Spider (Tracker)"
   outfits
+    "Pebble Core"
+
     `"Basrem" Atomic Steering`
     `"Basrem" Atomic Thruster`
 
     "Tracker" 28
     "Tracker Launcher"
 
-    "Pebble Core"
     "Chasm Batteries"
     "Williwaw Cooling"
 
@@ -678,6 +696,10 @@ ship "Water Bug"
       "hull damage" 620
       "hit force" 1860
   outfits
+    "Diamond Regenerator"
+    "Geode Reactor"
+    "Hyperdrive"
+
     `"Benga" Atomic Thruster`
     `"Benga" Atomic Steering`
 
@@ -687,13 +709,10 @@ ship "Water Bug"
     "Pulse Turret"
     "Chameleon Anti-Missile" 2
 
-    "Diamond Regenerator"
-    "Geode Reactor"
     "Gorge Batteries"
     "Chasm Batteries"
     "Williwaw Cooling"
     "Fuel Pod" 6
-    "Hyperdrive"
     "Quantum Keystone"
     "Yoloy Scanner"
   engine -50 33
@@ -713,6 +732,10 @@ ship "Water Bug"
 
 ship "Water Bug" "Water Bug (Jump)"
   outfits
+    "Diamond Regenerator"
+    "Geode Reactor"
+    "Jump Drive"
+
     `"Benga" Atomic Thruster`
     `"Benga" Atomic Steering`
 
@@ -722,13 +745,10 @@ ship "Water Bug" "Water Bug (Jump)"
     "Pulse Turret"
     "Chameleon Anti-Missile" 2
 
-    "Diamond Regenerator"
-    "Geode Reactor"
     "Gorge Batteries"
     "Chasm Batteries"
     "Williwaw Cooling"
     "Fuel Pod" 8
-    "Jump Drive"
     "Quantum Keystone"
     "Yoloy Scanner"
     "Outfit Space Expansion" 2
@@ -736,38 +756,40 @@ ship "Water Bug" "Water Bug (Jump)"
 
 ship "Water Bug" "Water Bug (Pulse)"
   outfits
+    "Diamond Regenerator"
+    "Geode Reactor"
+    "Pebble Core"
+    "Hyperdrive"
+
     `"Benga" Atomic Thruster`
     `"Benga" Atomic Steering`
 
     "Pulse Cannon" 2
     "Pulse Turret" 3
 
-    "Diamond Regenerator"
-    "Geode Reactor"
-    "Pebble Core"
     "Fissure Batteries"
     "Williwaw Cooling" 2
     "Fuel Pod" 6
     "Yoloy Scanner"
-    "Hyperdrive"
     "Outfit Space Expansion"
 
 
 ship "Water Bug" "Water Bug (Pulse, Jump)"
   outfits
+    "Diamond Regenerator"
+    "Geode Reactor"
+    "Pebble Core"
+    "Jump Drive"
+
     `"Benga" Atomic Thruster`
     `"Benga" Atomic Steering`
 
     "Pulse Cannon" 2
     "Pulse Turret" 3
 
-    "Diamond Regenerator"
-    "Geode Reactor"
-    "Pebble Core"
     "Fissure Batteries"
     "Williwaw Cooling" 2
     "Fuel Pod" 8
-    "Jump Drive"
     "Yoloy Scanner"
     "Outfit Space Expansion" 3
 

@@ -39,16 +39,17 @@ ship "Model 8"
       "hull damage" 600
       "hit force" 1800
   outfits
+    "Reasoning Node"
+    "Systems Core (Small)"
+    "Plasma Core"
+    "Hyperdrive"
+
     "Thruster (Comet Class)"
     "Steering (Comet Class)"
 
     "Slicer"
 
-    "Systems Core (Small)"
-    "Plasma Core"
     "Small Heat Shunt"
-    "Hyperdrive"
-    "Reasoning Node"
   engine -11 49
   engine 11 49
   turret -25 16 "Slicer"
@@ -89,6 +90,11 @@ ship "Model 16"
       "hull damage" 1100
       "hit force" 3300
   outfits
+    "Reasoning Node" 2
+    "Systems Core (Small)"
+    "Double Plasma Core"
+    "Hyperdrive"
+
     "Thruster (Planetary Class)"
     "Steering (Lunar Class)"
 
@@ -97,11 +103,7 @@ ship "Model 16"
     "Disruptor"
     "Slicer"
 
-    "Systems Core (Small)"
-    "Double Plasma Core"
     "Large Heat Shunt"
-    "Hyperdrive"
-    "Reasoning Node" 2
   engine -10 99
   engine 10 99
   gun 0 -99 "Mine Launcher"
@@ -146,6 +148,12 @@ ship "Model 32"
       "hull damage" 1600
       "hit force" 4800
   outfits
+    "Reasoning Node" 3
+    "Systems Core (Small)"
+    "Double Plasma Core"
+    "Generator (Candle Class)"
+    "Hyperdrive"
+
     "Thruster (Planetary Class)"
     "Steering (Lunar Class)"
     "Steering (Asteroid Class)"
@@ -155,12 +163,7 @@ ship "Model 32"
     "Disruptor"
     "Slicer" 2
 
-    "Systems Core (Small)"
-    "Double Plasma Core"
-    "Generator (Candle Class)"
     "Large Heat Shunt"
-    "Hyperdrive"
-    "Reasoning Node" 3
   engine -10 128
   engine 10 128
   gun 0 -129 "Mine Launcher"
@@ -206,6 +209,12 @@ ship "Model 64"
       "hull damage" 2000
       "hit force" 6000
   outfits
+    "Reasoning Node" 4
+    "Systems Core (Medium)"
+    "Double Plasma Core"
+    "Generator (Furnace Class)"
+    "Hyperdrive"
+
     "Thruster (Planetary Class)"
     "Steering (Lunar Class)"
     "Steering (Comet Class)"
@@ -215,12 +224,7 @@ ship "Model 64"
     "Disruptor" 2
     "Slicer" 2
 
-    "Systems Core (Medium)"
-    "Double Plasma Core"
-    "Generator (Furnace Class)"
     "Large Heat Shunt"
-    "Hyperdrive"
-    "Reasoning Node" 4
   engine -19 159
   engine 19 159
   gun 0 -159 "Mine Launcher"
@@ -267,6 +271,12 @@ ship "Model 128"
       "hull damage" 2300
       "hit force" 6900
   outfits
+    "Reasoning Node" 5
+    "Systems Core (Medium)"
+    "Double Plasma Core"
+    "Plasma Core"
+    "Hyperdrive"
+
     "Thruster (Planetary Class)"
     "Steering (Planetary Class)"
 
@@ -275,13 +285,7 @@ ship "Model 128"
     "Disruptor" 2
     "Slicer" 3
 
-    "Systems Core (Medium)"
-    "Double Plasma Core"
-    "Plasma Core"
     "Large Heat Shunt"
-#    "Small Heat Shunt" 2
-    "Hyperdrive"
-    "Reasoning Node" 5
   engine -14 178
   engine 14 178
   gun -11 -166 "Mine Launcher"
@@ -330,6 +334,11 @@ ship "Model 256"
       "hull damage" 2600
       "hit force" 7800
   outfits
+    "Reasoning Node" 6
+    "Systems Core (Large)"
+    "Triple Plasma Core"
+    "Hyperdrive"
+
     "Thruster (Planetary Class)"
     "Steering (Planetary Class)"
     "Steering (Comet Class)"
@@ -339,11 +348,7 @@ ship "Model 256"
     "Disruptor" 3
     "Slicer" 3
 
-    "Systems Core (Large)"
-    "Triple Plasma Core"
     "Large Heat Shunt" 2
-    "Hyperdrive"
-    "Reasoning Node" 6
   engine -60 147
   engine 60 147
   gun -22 -148 "Mine Launcher"
@@ -393,6 +398,12 @@ ship "Model 512"
       "hull damage" 2800
       "hit force" 8400
   outfits
+    "Reasoning Node" 7
+    "Systems Core (Large)"
+    "Triple Plasma Core"
+    "Plasma Core"
+    "Hyperdrive"
+
     "Thruster (Planetary Class)"
     "Steering (Stellar Class)"
 
@@ -401,13 +412,8 @@ ship "Model 512"
     "Disruptor" 3
     "Slicer" 4
 
-    "Systems Core (Large)"
-    "Triple Plasma Core"
-    "Plasma Core"
     "Large Heat Shunt" 2
     "Small Heat Shunt"
-    "Hyperdrive"
-    "Reasoning Node" 7
   engine -145 97
   engine 145 97
   gun -22 -143 "Mine Launcher"

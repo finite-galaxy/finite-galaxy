@@ -43,13 +43,14 @@ ship "Gascraft"
     "tactical scan power" 1
     "gaslining" 1
   outfits
+    "Millennium Cell"
+    "Hyperdrive"
+
     "Crucible-Class Thruster"
     "Crucible-Class Steering"
 
-    "Millennium Cell"
     "Emergency Ramscoop"
     "Fuel Pod" 7
-    "Hyperdrive"
     "Quantum Key Stone"
   engine 0 30
   explode "tiny explosion" 8
@@ -95,17 +96,18 @@ ship "Shadow"
       "hull damage" 400
       "hit force" 1200
   outfits
+    "Epoch Cell"
+    "Hyperdrive"
+
     "Forge-Class Thruster"
     "Forge-Class Steering"
 
     "Inhibitor Cannon" 3
     "Point Defence"
 
-    "Epoch Cell"
     "Crystal Capacitor"
     "Emergency Ramscoop"
     "Fuel Pod" 9
-    "Hyperdrive"
     "Quantum Key Stone"
   engine -16 82 0.7
   engine 16 82 0.7
@@ -126,36 +128,38 @@ ship "Shadow"
 
 ship "Shadow" "Shadow (Heavy)"
   outfits
+    "Epoch Cell"
+    "Millennium Cell"
+    "Hyperdrive"
+
     "Forge-Class Thruster"
     "Forge-Class Steering"
 
     "Thrasher Cannon" 5
     "Point Defence"
 
-    "Epoch Cell"
-    "Millennium Cell"
     "Crystal Capacitor"
     "Emergency Ramscoop"
     "Fuel Pod" 9
-    "Hyperdrive"
     "Quantum Key Stone"
     "Outfit Space Expansion"
 
 
 ship "Shadow" "Shadow (Hunter)"
   outfits
+    "Epoch Cell"
+    "Millennium Cell"
+    "Hyperdrive"
+
     "Forge-Class Thruster"
     "Forge-Class Steering"
 
     "Inhibitor Cannon" 2
     "Thrasher Turret"
 
-    "Epoch Cell"
-    "Millennium Cell"
     "Crystal Capacitor"
     "Emergency Ramscoop"
     "Fuel Pod" 9
-    "Hyperdrive"
     "Quantum Key Stone"
   gun
   gun "Inhibitor Cannon"
@@ -166,6 +170,9 @@ ship "Shadow" "Shadow (Hunter)"
 
 ship "Shadow" "Shadow (Sniper)"
   outfits
+    "Epoch Cell"
+    "Hyperdrive"
+
     "Forge-Class Thruster"
     "Smelter-Class Steering"
 
@@ -173,11 +180,9 @@ ship "Shadow" "Shadow (Sniper)"
     "EMP Torpedo Bay"
     "Inhibitor Cannon" 4
 
-    "Epoch Cell"
     "Crystal Capacitor"
     "Emergency Ramscoop"
     "Fuel Pod" 9
-    "Hyperdrive"
     "Quantum Key Stone"
   gun "EMP Torpedo Bay"
   gun "Inhibitor Cannon"
@@ -188,18 +193,19 @@ ship "Shadow" "Shadow (Sniper)"
 
 ship "Shadow" "Shadow (Thrasher)"
   outfits
+    "Epoch Cell"
+    "Millennium Cell"
+    "Hyperdrive"
+
     "Forge-Class Thruster"
     "Forge-Class Steering"
 
     "Thrasher Cannon" 3
     "Thrasher Turret"
 
-    "Epoch Cell"
-    "Millennium Cell"
     "Crystal Capacitor"
     "Emergency Ramscoop"
     "Fuel Pod" 9
-    "Hyperdrive"
     "Quantum Key Stone"
   gun "Thrasher Cannon"
   gun "Thrasher Cannon"
@@ -244,6 +250,10 @@ ship "Twilight"
       "hull damage" 1800
       "hit force" 5400
   outfits
+    "Aeon Cell"
+    "Epoch Cell"
+    "Hyperdrive"
+
     "Smelter-Class Thruster"
     "Smelter-Class Steering"
 
@@ -251,13 +261,10 @@ ship "Twilight"
     "Thrasher Turret" 2
     "Point Defence"
 
-    "Aeon Cell"
-    "Epoch Cell"
     "Crystal Capacitor"
     "Thermoelectric Cooler" 3
     "Emergency Ramscoop"
     "Fuel Pod" 6
-    "Hyperdrive"
     "Quantum Key Stone"
   engine -28 155 .8
   engine 28 155 .8
@@ -284,6 +291,11 @@ ship "Twilight"
 
 ship "Twilight" "Twilight (Heavy)"
   outfits
+    "Aeon Cell"
+    "Epoch Cell"
+    "Millennium Cell"
+    "Hyperdrive"
+
     "Forge-Class Thruster"
     "Smelter-Class Steering"
     "Forge-Class Steering"
@@ -292,14 +304,10 @@ ship "Twilight" "Twilight (Heavy)"
     "Inhibitor Cannon" 3
     "Thrasher Turret" 3
 
-    "Aeon Cell"
-    "Epoch Cell"
-    "Millennium Cell"
     "Crystal Capacitor" 2
     "Thermoelectric Cooler" 4
     "Emergency Ramscoop"
     "Fuel Pod" 6
-    "Hyperdrive"
     "Quantum Key Stone"
     "Outfit Space Expansion" 6
   gun "Inhibitor Cannon"
@@ -318,6 +326,10 @@ ship "Twilight" "Twilight (Heavy)"
 
 ship "Twilight" "Twilight (Sniper)"
   outfits
+    "Aeon Cell"
+    "Epoch Cell"
+    "Hyperdrive"
+
     "Forge-Class Thruster"
     "Crucible-Class Thruster"
     "Smelter-Class Steering"
@@ -328,13 +340,10 @@ ship "Twilight" "Twilight (Sniper)"
     "Inhibitor Cannon" 5
     "Point Defence" 3
 
-    "Aeon Cell"
-    "Epoch Cell"
     "Crystal Capacitor"
     "Thermoelectric Cooler" 3
     "Emergency Ramscoop"
     "Fuel Pod" 6
-    "Hyperdrive"
     "Quantum Key Stone"
   gun "Inhibitor Cannon"
   gun "Inhibitor Cannon"
@@ -352,20 +361,21 @@ ship "Twilight" "Twilight (Sniper)"
 
 ship "Twilight" "Twilight (Turret)"
   outfits
+    "Aeon Cell"
+    "Epoch Cell"
+    "Millennium Cell"
+    "Hyperdrive"
+
     "Smelter-Class Thruster"
     "Smelter-Class Steering"
 
     "Thrasher Turret" 4
     "Point Defence"
 
-    "Aeon Cell"
-    "Epoch Cell"
-    "Millennium Cell"
     "Crystal Capacitor"
     "Thermoelectric Cooler" 3
     "Emergency Ramscoop"
     "Fuel Pod" 6
-    "Hyperdrive"
     "Quantum Key Stone"
     "Outfit Space Expansion" 4
   turret "Thrasher Turret"

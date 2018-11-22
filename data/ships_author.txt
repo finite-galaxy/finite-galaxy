@@ -37,6 +37,10 @@ ship "Modified Kestrel"
     "engine capacity" 400
     "weapon capacity" 900
   outfits
+    "S-970 Regenerator" 6
+    "Armageddon Core" 4
+    "Scram Drive"
+
     "A860 Atomic Thruster"
     "A865 Atomic Steering" 2
     "Ionic Afterburner" 3
@@ -45,13 +49,10 @@ ship "Modified Kestrel"
     "Electron Turret" 4
     "Heavy Anti-Missile Turret" 4
 
-    "S-970 Regenerator" 6
-    "Armageddon Core" 4
     "Supercapacitor"
     "Liquid Helium Cooler" 5
     "Catalytic Ramscoop"
     "Fuel Pod" 12
-    "Scram Drive"
   engine -14 177
   engine 14 177
   gun -86 55 "Ion Cannon"
@@ -92,21 +93,22 @@ person "Cap'n Pester"
   ship "Wardragon" "Wardragon"
     "never disabled"
     outfits
+      "Quantum Shield Generator"
+      "Quantum Hull Repair"
+      "Antimatter Core"
+      "Scram Drive"
+
       "Graviton Engines"
 
       "Skylance" 2
       "Quarg Anti-Missile" 2
 
-      "Quantum Shield Generator"
-      "Quantum Hull Repair"
-      "Antimatter Core"
       "Nanotech Battery"
       "Neutrino Cooling"
       "Cargo Scanner"
       "Hyperspace Tank" 4
       "Outfit Scanner"
       "Quarg Ramscoop"
-      "Scram Drive"
 
 
 
@@ -194,6 +196,10 @@ ship "Modified Fury"
       "hull damage" 180
       "hit force" 520
   outfits
+    "Corundum Regenerator"
+    "Pebble Core"
+    "Hyperdrive"
+
     `"Biroo" Atomic Thruster`
     `"Biroo" Atomic Steering`
 
@@ -202,12 +208,9 @@ ship "Modified Fury"
     "Meteor Missile Launcher" 4
     "Tracker Launcher" 2
 
-    "Corundum Regenerator"
-    "Pebble Core"
     "Small Biochemical Cell"
     "Williwaw Cooling"
     "Fuel Pod" 5
-    "Hyperdrive"
     "Intrusion Countermeasures" 3
   engine -21 42
   engine 0 48
@@ -310,6 +313,10 @@ ship "Modified Vanguard"
       "hull damage" 800
       "hit force" 2400
   outfits
+    "D67-TM Shield Generator" 2
+    "Armageddon Core" 2
+    "Hyperdrive"
+
     "A860 Atomic Thruster"
     "A865 Atomic Steering"
     "Ionic Afterburner"
@@ -319,13 +326,10 @@ ship "Modified Vanguard"
     "Proton Cannon" 9
     "Heavy Anti-Missile Turret"
 
-    "D67-TM Shield Generator" 2
-    "Armageddon Core" 2
     "KP-6 Photovoltaic Array" 3
     "LP072a Battery Pack"
     "Liquid Helium Cooler" 2
     "Fuel Pod" 4
-    "Hyperdrive"
     "Ramscoop"
   engine 0 130
   engine -31 128 .7
@@ -459,14 +463,14 @@ ship "Modified Osprey"
     "hull repair rate" 10
     "required crew" 189
     "bunks" 240
-    "mass" 220
+    "mass" 200
     "drag" 15.1
     "heat dissipation" .6
-    "cargo space" 80
-    "outfit space" 2222
-    "core capacity" 873
-    "engine capacity" 499
-    "weapon capacity" 850
+    "cargo space" 100
+    "outfit space" 2200
+    "core capacity" 900
+    "engine capacity" 500
+    "weapon capacity" 800
     weapon
       "blast radius" 750
       "shield damage" 7000
@@ -476,6 +480,12 @@ ship "Modified Osprey"
       "disruption damage" 1200
       "hit force" 30000
   outfits
+    "Dark Storm Shielding" 4
+    "Large Repair Module" 4
+    "Blue Sun Reactor" 4
+    "Hyperdrive"
+    "Jump Drive"
+
     "Type 4 Radiant Thruster" 2
     "Type 4 Radiant Steering" 4
     "Ionic Afterburner" 6
@@ -490,17 +500,12 @@ ship "Modified Osprey"
     "Repulsor" 2
     "Point Defence" 3
 
-    "Dark Storm Shielding" 4
-    "Large Repair Module" 4
-    "Blue Sun Reactor" 4
     "Large Heat Shunt" 2
     "Asteroid Scanner"
     "Large Radar Jammer" 2
     "Tactical Scanner"
     "Wanderer Ramscoop" 3
     "Fuel Pod" 6
-    "Hyperdrive"
-    "Jump Drive"
   engine -46 67
   engine 46 67
   engine -17 105.5 .0
@@ -582,14 +587,15 @@ ship "Lampyrid"
       "hull damage" 500
       "hit force" 1500
   outfits
+    "S3 Thermionic"
+    "Hyperdrive"
+
     "Impala Plasma Thruster"
     "Impala Plasma Steering"
     "D67-TM Shield Generator"
 
-    "S3 Thermionic"
     "LP036a Battery Pack"
     "Fuel Pod" 7
-    "Hyperdrive"
     "Large Radar Jammer"
     "Ramscoop"
   engine -64 28 0.7
