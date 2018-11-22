@@ -1,3 +1,51 @@
+# Solar collection
+## Coalition
+outfit "Small Collector Module"
+  category "Energy Generation"
+  thumbnail "outfit/small collector module"
+  licences
+    Coalition
+  cost 60000
+  "mass" 8
+  "outfit space" -8
+  "solar collection" .8
+  "heat generation" .4
+  description "Solar power is the mainstay of the Coalition's merchant marine. The design of these panels has been refined over the millennia, growing ever more efficient."
+
+outfit "Large Collector Module"
+  category "Energy Generation"
+  thumbnail "outfit/large collector module"
+  licences
+    Coalition
+  cost 300000
+  "mass" 28
+  "outfit space" -28
+  "solar collection" 3.3
+  "heat generation" 1.5
+  description "One of these solar panels is enough to meet the energy needs of a medium-sized Coalition civilian ship, especially given the energy efficiency of their engines and the fact that under their laws only Heliarch ships are allowed to have weapons."
+
+
+## Human
+outfit "KP-6 Photovoltaic Panel"
+  category "Energy Generation"
+  thumbnail "outfit/photovoltaic_tiny"
+  cost 10000
+  "mass" 3
+  "outfit space" -3
+  "solar collection" .1
+  description "This early commercial photovoltaic system was the driving force behind humanity's first interplanetary trade network. Rugged and modular, it can be bolted to the hull of any ship and has seen even the most remote parts of human space."
+
+outfit "KP-6 Photovoltaic Array"
+  category "Energy Generation"
+  thumbnail "outfit/photovoltaic_small"
+  cost 90000
+  "mass" 24
+  "outfit space" -24
+  "solar collection" 1.1
+  description "The compact modularity of the KP-6 lent itself well to the creation of larger solar collection arrays. This original Korunak Photovoltaics model is equipped with a solar tracker, allowing it to make better use of available light."
+
+
+
 # Energy Capacitors
 ## Coalition
 outfit "Small Battery Module"
@@ -155,481 +203,4 @@ outfit "Crystal Capacitor"
   "energy consumption" .4
   description "These crystals, mined on the Remnant planet Viminal, can store a surprising amount of power in a compact form. Crystals pure enough to be used in such a manner are hard to find, however."
   description "  Also, the capacitors tend to leak small amounts of energy."
-
-
-
-# Solar collection
-## Coalition
-outfit "Small Collector Module"
-  category "Energy Generation"
-  thumbnail "outfit/small collector module"
-  licences
-    Coalition
-  cost 60000
-  "mass" 8
-  "outfit space" -8
-  "solar collection" .8
-  "heat generation" .4
-  description "Solar power is the mainstay of the Coalition's merchant marine. The design of these panels has been refined over the millennia, growing ever more efficient."
-
-outfit "Large Collector Module"
-  category "Energy Generation"
-  thumbnail "outfit/large collector module"
-  licences
-    Coalition
-  cost 300000
-  "mass" 28
-  "outfit space" -28
-  "solar collection" 3.3
-  "heat generation" 1.5
-  description "One of these solar panels is enough to meet the energy needs of a medium-sized Coalition civilian ship, especially given the energy efficiency of their engines and the fact that under their laws only Heliarch ships are allowed to have weapons."
-
-
-## Human
-outfit "KP-6 Photovoltaic Panel"
-  category "Energy Generation"
-  thumbnail "outfit/photovoltaic_tiny"
-  cost 10000
-  "mass" 3
-  "outfit space" -3
-  "solar collection" .1
-  description "This early commercial photovoltaic system was the driving force behind humanity's first interplanetary trade network. Rugged and modular, it can be bolted to the hull of any ship and has seen even the most remote parts of human space."
-
-outfit "KP-6 Photovoltaic Array"
-  category "Energy Generation"
-  thumbnail "outfit/photovoltaic_small"
-  cost 90000
-  "mass" 24
-  "outfit space" -24
-  "solar collection" 1.1
-  description "The compact modularity of the KP-6 lent itself well to the creation of larger solar collection arrays. This original Korunak Photovoltaics model is equipped with a solar tracker, allowing it to make better use of available light."
-
-
-
-# Fuel cells
-## Human
-outfit "nGVF-AA Fuel Cell"
-  category "Energy Generation"
-  thumbnail "outfit/fuel_cell_tiny"
-  cost 40000
-  "mass" 20
-  "outfit space" -20
-#  "fuel consumption" 0.10
-  "fuel energy" 1.2
-  "fuel heat" 1.9
-  description "Fuel cells have been the cheapest and most common starship power sources since the dawn of the space era. This model produces only enough power for very small or slow ships."
-
-outfit "nGVF-BB Fuel Cell"
-  category "Energy Generation"
-  thumbnail "outfit/fuel_cell_small"
-  cost 47000
-  "mass" 30
-  "outfit space" -30
-#  "fuel consumption" 0.15
-  "fuel energy" 1.9
-  "fuel heat" 2.9
-  description "This is a step up from the smallest fuel cells, providing enough energy to power a few small guns in addition to your engines."
-
-outfit "nGVF-CC Fuel Cell"
-  category "Energy Generation"
-  thumbnail "outfit/fuel_cell_medium"
-  cost 72000
-  "mass" 40
-  "outfit space" -40
-#  "fuel consumption" 0.20
-  "fuel energy" 2.6
-  "fuel heat" 3.8
-  description "This is a medium-sized fuel cell, designed to be sufficient for larger civilian ships and small warships while still being more affordable than the more sophisticated generator options."
-
-outfit "nGVF-DD Fuel Cell"
-  category "Energy Generation"
-  thumbnail "outfit/fuel_cell_large"
-  cost 118000
-  "mass" 60
-  "outfit space" -60
-#  "fuel consumption" 0.30
-  "fuel energy" 4.1
-  "fuel heat" 5.7
-  description "This is a relatively large fuel cell. Other generators are available that produce more energy and fit into a smaller space, but they are much more expensive. As a result, large civilian ships that will not be frequently in combat often come equipped with these fuel cells."
-
-outfit "nGVF-EE Fuel Cell"
-  category "Energy Generation"
-  thumbnail "outfit/fuel_cell_huge"
-  cost 177000
-  "mass" 80
-  "outfit space" -80
-#  "fuel consumption" 0.40
-  "fuel energy" 5.9
-  "fuel heat" 7.8
-  description "This is the largest fuel cell available, larger than some nuclear reactors but much, much more affordable. Many captains on a tight budget are willing to put up with one of these until they can raise the money for something more efficient."
-
-
-
-# Energy generators
-## Coalition
-outfit "Small Reactor Module"
-  category "Energy Generation"
-  thumbnail "outfit/small reactor module"
-  licences
-    Heliarch
-  cost 5497000
-  "mass" 42
-  "outfit space" -42
-  "energy generation" 8.8
-  "heat generation" 19
-  description "Solar power is sufficient for commerce, but excessive thriftiness is seldom a winning strategy in warfare. So for ships that must have a reliable energy source to power weapons, the Heliarchs use nuclear reactors."
-
-outfit "Large Reactor Module"
-  category "Energy Generation"
-  thumbnail "outfit/large reactor module"
-  licences
-    Heliarch
-  cost 17754000
-  "mass" 98
-  "outfit space" -98
-  "energy generation" 22.3
-  "heat generation" 45
-  description "This reactor was designed for the most powerful Heliarch warships. Its design has not changed significantly in the millennia since the first battle with the Quarg, but each generation of reactors is made slightly more efficient than the previous ones."
-
-
-## Hai
-outfit "Sand Cell"
-  category "Energy Generation"
-  thumbnail "outfit/fuel_cell_hai"
-  licences
-    Unfettered
-  cost 45000
-  "mass" 24
-  "outfit space" -24
-  "energy generation" 1.55
-  "heat generation" 2.4
-  description "The Sand Cell is the smallest Hai generator. It was designed to fit their drones, and it clearly resembles human fuel cells."
-
-outfit "Pebble Core"
-  category "Energy Generation"
-  thumbnail "outfit/dwarf core hai"
-  cost 1050000
-  "mass" 32
-  "outfit space" -32
-  "energy generation" 4.5
-  "heat generation" 11.9
-  description "A Pebble Core is a miniaturized nuclear reactor, small enough to be installed in any ship larger than a fighter. The Hai developed this model for their smaller ships."
-
-outfit "Geode Reactor"
-  category "Energy Generation"
-  thumbnail "outfit/fission hai"
-  cost 1750000
-  "mass" 58
-  "outfit space" -58
-  "energy generation" 8.9
-  "heat generation" 21.2
-  description "Fission reactors are considered a rudimentary technology among interstellar species. Nonetheless, it remains a proven and safe technology that even the Hai use fairly regularly."
-
-outfit "Boulder Reactor"
-  category "Energy Generation"
-  thumbnail "outfit/fusion hai"
-  cost 5750000
-  "mass" 90
-  "outfit space" -90
-  "energy generation" 17.3
-  "heat generation" 34
-  description "The Hai designed these miniaturized fusion generators back when their territory was being raided by the Korath. In these relatively peaceful times, they have seen no need to update the design."
-
-
-## Human
-outfit "RT-I Radiothermal"
-  category "Energy Generation"
-  thumbnail "outfit/small radiothermal"
-  cost 300000
-  "mass" 45
-  "outfit space" -45
-  "energy generation" 4.4
-  "heat generation" 18
-  description "Radiothermal generators harvest heat from radioactive isotopes and convert it into electricity. They are more powerful than fuel cells, but also produce a relatively high amount of heat."
-
-outfit "S3 Thermionic"
-  category "Energy Generation"
-  thumbnail "outfit/small thermionic"
-  cost 360000
-  "mass" 55
-  "outfit space" -55
-  "energy generation" 5.0
-  "heat generation" 12
-  description "Thermionic radioisotopic generators were designed as a cooler-running alternative to radiothermal generators."
-
-outfit "NT-200 Nucleovoltaic"
-  category "Energy Generation"
-  thumbnail "outfit/small nucleovoltaic"
-  cost 570000
-  "mass" 65
-  "outfit space" -65
-  "energy generation" 7.2
-  "heat generation" 15
-  description "Nucleovoltaic generators are a relatively recent generator technology that harvests energy from the decay of a radioisotope source and converts it directly into electricity. They are the most powerful generator that relies on nuclear decay instead of an active nuclear chain reaction."
-
-outfit "Dwarf Core"
-  category "Energy Generation"
-  thumbnail "outfit/dwarf core"
-  cost 800000
-  "mass" 36
-  "outfit space" -36
-  "energy generation" 4.8
-  "heat generation" 14
-  description "A Dwarf Core is a miniaturized nuclear reactor, small enough to be installed in any ship larger than a fighter. It was designed by Deep Sky to be paired with their power-hungry atomic engines."
-
-outfit "Fission Reactor"
-  category "Energy Generation"
-  thumbnail "outfit/fission"
-  cost 1500000
-  "mass" 65
-  "outfit space" -65
-  "energy generation" 9.4
-  "heat generation" 25
-  description "Fission reactors have been a mainstay of large military vessels since even before the dawn of the space era. Today's models are very safe and efficient, but some pilots still find them disconcerting."
-
-outfit "Breeder Reactor"
-  category "Energy Generation"
-  cost 2500000
-  thumbnail "outfit/breeder"
-  "mass" 80
-  "outfit space" -80
-  "energy generation" 12.8
-  "heat generation" 35
-  description "A breeder reactor is a more efficient fission reactor that captures some of the neutron radiation produced by the reactor and uses it to enrich more fuel. They are also, of course, bigger and more expensive as a result."
-
-outfit "Fusion Reactor"
-  category "Energy Generation"
-  thumbnail "outfit/fusion"
-  cost 5000000
-  "mass" 100
-  "outfit space" -100
-  "energy generation" 18.2
-  "heat generation" 40
-  description "The invention of practical fusion power near the end of the twenty-first century spurred a new era of prosperity and plenty. Centuries later, the generators have been reduced in size, but are still generally only used in capital warships."
-
-outfit "Armageddon Core"
-  category "Energy Generation"
-  thumbnail "outfit/core"
-  cost 9000000
-  "mass" 130
-  "outfit space" -130
-  "energy generation" 24.2
-  "heat generation" 75
-  description "The Armageddon Core was designed to meet the extreme power needs of the largest warships of the Republic Navy. One of these generators costs more than an entire fleet of smaller ships."
-
-outfit "Stack Core"
-  category "Energy Generation"
-  thumbnail "outfit/stack core"
-  cost 4500000
-  "mass" 140
-  "outfit space" -140
-  "energy generation" 22.9
-  "heat generation" 55
-  description "The Stack Core was created by the Free Worlds primarily as a power source for their Dreadnoughts. It is a fission reactor, and therefore less efficient than the Navy's fusion technology, but it is also significantly cheaper to produce."
-
-
-## Korath
-outfit "Generator (Candle Class)"
-  plural "Generators (Candle Class)"
-  category "Energy Generation"
-  thumbnail "outfit/generator_korath_small"
-  licences
-    Korath
-  cost 493000
-  "mass" 23
-  "outfit space" -23
-  "energy generation" 3.1
-  "heat generation" 7.0
-  description "This tiny generator produces a significant amount of energy using the heat produced by the radioactive decay of some particularly unstable nuclear isotopes."
-
-outfit "Generator (Furnace Class)"
-  plural "Generators (Furnace Class)"
-  category "Energy Generation"
-  thumbnail "outfit/generator_korath_medium"
-  licences
-    Korath
-  cost 925000
-  "mass" 39
-  "outfit space" -39
-  "energy generation" 5.5
-  "heat generation" 13.0
-  description "Because Korath equipment is so power-hungry, they use radiothermal generators even in their fighters and interceptors, rather than relying on fuel cells or other comparable technology."
-
-outfit "Generator (Inferno Class)"
-  plural "Generators (Inferno Class)"
-  category "Energy Generation"
-  thumbnail "outfit/generator_korath_large"
-  licences
-    Korath
-  cost 1877000
-  "mass" 71
-  "outfit space" -71
-  "energy generation" 10.4
-  "heat generation" 27.0
-  description "With their typical disregard for the environmental impacts of their technology, the Korath put some rather alarming isotopes into this radiothermal generator. Its considerable energy output is offset by the heat it produces."
-
-outfit "Plasma Core"
-  category "Energy Generation"
-  thumbnail "outfit/plasma core"
-  licences
-    Korath
-  cost 4188000
-  "mass" 54
-  "outfit space" -54
-  "energy generation" 11.9
-  "heat generation" 36.0
-  description "This compact fusion reactor is an ancient Korath design, and served as the mainstay of their war fleets until larger ships and more powerful weapons created a need for bigger and more powerful generators."
-
-outfit "Double Plasma Core"
-  category "Energy Generation"
-  thumbnail "outfit/double plasma core"
-  licences
-    Korath
-  cost 9321000
-  "mass" 93
-  "outfit space" -93
-  "energy generation" 22.0
-  "heat generation" 72.0
-  description "This reactor core combines a pair of the ancient and robust Korath plasma cores into a single package."
-
-outfit "Triple Plasma Core"
-  category "Energy Generation"
-  thumbnail "outfit/triple plasma core"
-  licences
-    Korath
-  cost 20460000
-  "mass" 169
-  "outfit space" -169
-  "energy generation" 43.6
-  "heat generation" 154.0
-  description "For the largest of their capital ships, the Korath designed a fusion reactor far more powerful than any comparable human technology."
-
-
-## Quarg
-outfit "Antimatter Core"
-  category "Energy Generation"
-  thumbnail "outfit/unknown"
-  cost 100000000
-  "mass" 80
-  "outfit space" -80
-  "energy generation" 80
-  "heat generation" 80
-
-
-## Remnant
-outfit "Millennium Cell"
-  category "Energy Generation"
-  thumbnail "outfit/millennium cell"
-  licences
-    Remnant
-  cost 553000
-  "mass" 29
-  "outfit space" -29
-  "energy generation" 3.6
-  "heat generation" 6.0
-  description "This quite compact radiothermal generator uses isotopes so radioactive, and so tightly packed together, that it could almost be classified as a nuclear reactor."
-
-outfit "Epoch Cell"
-  category "Energy Generation"
-  thumbnail "outfit/epoch cell"
-  licences
-    Remnant
-  cost 2123000
-  "mass" 98
-  "outfit space" -98
-  "energy generation" 12.7
-  "heat generation" 19.8
-  description "Efficient Remnant technology ensures that nearly all the heat produced by this generator's radioisotopes is converted into electricity instead of becoming waste heat."
-
-outfit "Aeon Cell"
-  category "Energy Generation"
-  thumbnail "outfit/aeon cell"
-  licences
-    Remnant
-  cost 4384000
-  "mass" 160
-  "outfit space" -160
-  "energy generation" 21.9
-  "heat generation" 31.5
-  description "The early Remnant engineers did not trust the finicky and unpredictable nuclear reactors that were then in use in human space, so they instead focused on perfecting the art of radioisotope thermoelectric power."
-
-
-## Wanderer
-outfit "Small Biochemical Cell"
-  category "Energy Generation"
-  thumbnail "outfit/small biochemical"
-  licences
-    Wanderer
-  cost 230000
-  "mass" 17
-  "outfit space" -17
-  "energy generation" 1.6
-  "heat generation" 1.4
-  "energy capacity" 300
-  description "This tiny generator draws energy from the metabolic byproducts of a collection of microorganisms that have been engineered by the Wanderers specifically for this purpose."
-
-outfit "Large Biochemical Cell"
-  category "Energy Generation"
-  thumbnail "outfit/large biochemical"
-  licences
-    Wanderer
-  cost 940000
-  "mass" 63
-  "outfit space" -63
-  "energy generation" 6.2
-  "heat generation" 4.9
-  "energy capacity" 700
-  description "The Wanderers are masters of unusual and efficient technology. This bioreactor is fueled by a culture of microorganisms that produce a small electric charge."
-
-outfit "Red Sun Reactor"
-  category "Energy Generation"
-  thumbnail "outfit/red sun"
-  licences
-    Wanderer
-  cost 3800000
-  "mass" 47
-  "outfit space" -47
-  "energy generation" 8.3
-  "heat generation" 13
-  "energy capacity" 1100
-  description "The Wanderers have recently begun producing this tiny reactor as a way to squeeze a bit more energy production into their warships."
-
-outfit "Yellow Sun Reactor"
-  category "Energy Generation"
-  thumbnail "outfit/yellow sun"
-  licences
-    Wanderer
-  cost 7500000
-  "mass" 82
-  "outfit space" -82
-  "energy generation" 15.2
-  "heat generation" 21
-  "energy capacity" 2600
-  description "This is a compact nuclear reactor designed by the Wanderers. In addition to generating power, it is able to store a small amount of energy."
-
-outfit "White Sun Reactor"
-  category "Energy Generation"
-  thumbnail "outfit/white sun"
-  licences
-    Wanderer
-  cost 13900000
-  "mass" 127
-  "outfit space" -127
-  "energy generation" 24.8
-  "heat generation" 32
-  "energy capacity" 6700
-  description "The White Sun is a large nuclear reactor that the Wanderers use for powering their Strong Wind warships."
-
-outfit "Blue Sun Reactor"
-  category "Energy Generation"
-  thumbnail "outfit/blue sun"
-  licences
-    Wanderer
-  cost 21500000
-  "mass" 152
-  "outfit space" -152
-  "energy generation" 31.3
-  "heat generation" 39
-  "energy capacity" 8900
-  description "As the Wanderers have begun producing heavy warships, a need has arisen for larger and larger reactor cores to power them."
 

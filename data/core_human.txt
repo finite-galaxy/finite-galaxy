@@ -1,0 +1,161 @@
+# energy generators
+outfit "nGVF-AA Fuel Cell"
+  category "Energy Generation"
+  thumbnail "outfit/fuel_cell_tiny"
+  cost 40000
+  "mass" 20
+  "outfit space" -20
+  "core capacity" -20
+#  "fuel consumption" 0.10
+  "fuel energy" 1.2
+  "fuel heat" 1.9
+  description "Fuel cells have been the cheapest and most common starship power sources since the dawn of the space era. This model produces only enough power for very small or slow ships."
+
+outfit "nGVF-BB Fuel Cell"
+  category "Energy Generation"
+  thumbnail "outfit/fuel_cell_small"
+  cost 47000
+  "mass" 30
+  "outfit space" -30
+  "core capacity" -30
+#  "fuel consumption" 0.15
+  "fuel energy" 1.9
+  "fuel heat" 2.9
+  description "This is a step up from the smallest fuel cells, providing enough energy to power a few small guns in addition to your engines."
+
+outfit "nGVF-CC Fuel Cell"
+  category "Energy Generation"
+  thumbnail "outfit/fuel_cell_medium"
+  cost 72000
+  "mass" 40
+  "outfit space" -40
+  "core capacity" -40
+#  "fuel consumption" 0.20
+  "fuel energy" 2.6
+  "fuel heat" 3.8
+  description "This is a medium-sized fuel cell, designed to be sufficient for larger civilian ships and small warships while still being more affordable than the more sophisticated generator options."
+
+outfit "nGVF-DD Fuel Cell"
+  category "Energy Generation"
+  thumbnail "outfit/fuel_cell_large"
+  cost 118000
+  "mass" 60
+  "outfit space" -60
+  "core capacity" -60
+#  "fuel consumption" 0.30
+  "fuel energy" 4.1
+  "fuel heat" 5.7
+  description "This is a relatively large fuel cell. Other generators are available that produce more energy and fit into a smaller space, but they are much more expensive. As a result, large civilian ships that will not be frequently in combat often come equipped with these fuel cells."
+
+outfit "nGVF-EE Fuel Cell"
+  category "Energy Generation"
+  thumbnail "outfit/fuel_cell_huge"
+  cost 177000
+  "mass" 80
+  "outfit space" -80
+  "core capacity" -80
+#  "fuel consumption" 0.40
+  "fuel energy" 5.9
+  "fuel heat" 7.8
+  description "This is the largest fuel cell available, larger than some nuclear reactors but much, much more affordable. Many captains on a tight budget are willing to put up with one of these until they can raise the money for something more efficient."
+
+
+outfit "RT-I Radiothermal"
+  category "Energy Generation"
+  thumbnail "outfit/small radiothermal"
+  cost 300000
+  "mass" 45
+  "outfit space" -45
+  "core capacity" -45
+  "energy generation" 4.4
+  "heat generation" 18
+  description "Radiothermal generators harvest heat from radioactive isotopes and convert it into electricity. They are more powerful than fuel cells, but also produce a relatively high amount of heat."
+
+outfit "S3 Thermionic"
+  category "Energy Generation"
+  thumbnail "outfit/small thermionic"
+  cost 360000
+  "mass" 55
+  "outfit space" -55
+  "core capacity" -55
+  "energy generation" 5.0
+  "heat generation" 12
+  description "Thermionic radioisotopic generators were designed as a cooler-running alternative to radiothermal generators."
+
+outfit "NT-200 Nucleovoltaic"
+  category "Energy Generation"
+  thumbnail "outfit/small nucleovoltaic"
+  cost 570000
+  "mass" 65
+  "outfit space" -65
+  "core capacity" -65
+  "energy generation" 7.2
+  "heat generation" 15
+  description "Nucleovoltaic generators are a relatively recent generator technology that harvests energy from the decay of a radioisotope source and converts it directly into electricity. They are the most powerful generator that relies on nuclear decay instead of an active nuclear chain reaction."
+
+outfit "Dwarf Core"
+  category "Energy Generation"
+  thumbnail "outfit/dwarf core"
+  cost 800000
+  "mass" 36
+  "outfit space" -36
+  "core capacity" -36
+  "energy generation" 4.8
+  "heat generation" 14
+  description "A Dwarf Core is a miniaturized nuclear reactor, small enough to be installed in any ship larger than a fighter. It was designed by Deep Sky to be paired with their power-hungry atomic engines."
+
+outfit "Fission Reactor"
+  category "Energy Generation"
+  thumbnail "outfit/fission"
+  cost 1500000
+  "mass" 65
+  "outfit space" -65
+  "core capacity" -65
+  "energy generation" 9.4
+  "heat generation" 25
+  description "Fission reactors have been a mainstay of large military vessels since even before the dawn of the space era. Today's models are very safe and efficient, but some pilots still find them disconcerting."
+
+outfit "Breeder Reactor"
+  category "Energy Generation"
+  cost 2500000
+  thumbnail "outfit/breeder"
+  "mass" 80
+  "outfit space" -80
+  "core capacity" -80
+  "energy generation" 12.8
+  "heat generation" 35
+  description "A breeder reactor is a more efficient fission reactor that captures some of the neutron radiation produced by the reactor and uses it to enrich more fuel. They are also, of course, bigger and more expensive as a result."
+
+outfit "Fusion Reactor"
+  category "Energy Generation"
+  thumbnail "outfit/fusion"
+  cost 5000000
+  "mass" 100
+  "outfit space" -100
+  "core capacity" -100
+  "energy generation" 18.2
+  "heat generation" 40
+  description "The invention of practical fusion power near the end of the twenty-first century spurred a new era of prosperity and plenty. Centuries later, the generators have been reduced in size, but are still generally only used in capital warships."
+
+outfit "Armageddon Core"
+  category "Energy Generation"
+  thumbnail "outfit/core"
+  cost 9000000
+  "mass" 130
+  "outfit space" -130
+  "core capacity" -130
+  "energy generation" 24.2
+  "heat generation" 75
+  description "The Armageddon Core was designed to meet the extreme power needs of the largest warships of the Republic Navy. One of these generators costs more than an entire fleet of smaller ships."
+
+outfit "Stack Core"
+  category "Energy Generation"
+  thumbnail "outfit/stack core"
+  cost 4500000
+  "mass" 140
+  "outfit space" -140
+  "core capacity" -140
+  "energy generation" 22.9
+  "heat generation" 55
+  description "The Stack Core was created by the Free Worlds primarily as a power source for their Dreadnoughts. It is a fission reactor, and therefore less efficient than the Navy's fusion technology, but it is also significantly cheaper to produce."
+
