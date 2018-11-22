@@ -1,45 +1,51 @@
+# user content
+/plugins/
+/saves/
+
+# compiled and operation system specific files
 /finite-galaxy
-/build/
-/.sconsign.dblite
 .DS_Store
 *.db
-/FiniteGalaxy.xcodeproj/project.xcworkspace/
-/FiniteGalaxy.xcodeproj/xcuserdata/
-/obj/Debug/
-/obj/Release/
-/obj/Win32/
-/bin/
-x64/
-Debug/
-*.exe
 *.dll
-*.layout
+*.exe
+*.lnk
+*.xcodeproj/
+
+# build directories and toolchain-generated files
+/bin/
+/build/
+/Debug/
+/obj/
+/Release/
+/x64/
 *.depend
-/plugins/
+*.layout
+.sconsign.dblite
 
 # CI configs (allow local edits)
-.winmake
 .appveyor.yml
 .travis.yml
+.winmake
+
 # IDEs (no support implied)
-.vscode
+/ipch/
 .vs
-*.psess
-*.vsp
-*.vspx
-*.sap
-ipch/
+.vscode
 *.aps
+*.cachefile
 *.ncb
 *.opendb
 *.opensdf
+*.psess
+*.sap
 *.sdf
-*.cachefile
+*.sln
+*.sln.docstates
+*.suo
+*.userosscache
+*.vcxproj*
 *.VC.db
 *.VC.VC.opendb
-*.suo
-*.sln
-*.vcxproj*
-*.userosscache
-*.sln.docstates
+*.vsp
+*.vspx
 
