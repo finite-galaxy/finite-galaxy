@@ -1061,8 +1061,9 @@ void GameData::PrintShipTable()
     cout << attributes.Get("fuel capacity") << '\t';
     
     cout << ship.BaseAttributes().Get("outfit space") << '\t';
-    cout << ship.BaseAttributes().Get("weapon capacity") << '\t';
+    cout << ship.BaseAttributes().Get("core capacity") << '\t';
     cout << ship.BaseAttributes().Get("engine capacity") << '\t';
+    cout << ship.BaseAttributes().Get("weapon capacity") << '\t';
     cout << 60. * attributes.Get("thrust") / attributes.Get("drag") << '\t';
     cout << 3600. * attributes.Get("thrust") / attributes.Mass() << '\t';
     cout << 60. * attributes.Get("turn") / attributes.Mass() << '\t';

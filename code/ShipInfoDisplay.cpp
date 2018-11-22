@@ -176,6 +176,7 @@ void ShipInfoDisplay::UpdateAttributes(const Ship &ship, const Depreciation &dep
   map<string, double> chassis;
   static const vector<string> NAMES = {
     "outfit space free:", "outfit space",
+    "    core capacity:", "core capacity",
     "    engine capacity:", "engine capacity",
     "    weapon capacity:", "weapon capacity",
     "gun ports free:", "gun ports",

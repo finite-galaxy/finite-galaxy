@@ -400,14 +400,14 @@ void OutfitterPanel::FailBuy() const
     return;
   }
   
-  double weaponNeeded = -selectedOutfit->Get("weapon capacity");
-  double weaponSpace = playerShip->Attributes().Get("weapon capacity");
-  if(weaponNeeded > weaponSpace)
+  double coreNeeded = -selectedOutfit->Get("core capacity");
+  double coreSpace = playerShip->Attributes().Get("core capacity");
+  if(coreNeeded > coreSpace)
   {
-    GetUI()->Push(new Dialogue("Only part of your ship's outfit capacity is usable for weapons. "
+    GetUI()->Push(new Dialogue("Only part of your ship's outfit capacity is usable for core systems. "
       "You cannot install this outfit, because it takes up "
-      + Tons(weaponNeeded) + " of weapon space, and this ship has "
-      + Tons(weaponSpace) + " free."));
+      + Tons(coreNeeded) + " of core space, and this ship has "
+      + Tons(coreSpace) + " free."));
     return;
   }
   
@@ -419,6 +419,17 @@ void OutfitterPanel::FailBuy() const
       "You cannot install this outfit, because it takes up "
       + Tons(engineNeeded) + " of engine space, and this ship has "
       + Tons(engineSpace) + " free."));
+    return;
+  }
+  
+  double weaponNeeded = -selectedOutfit->Get("weapon capacity");
+  double weaponSpace = playerShip->Attributes().Get("weapon capacity");
+  if(weaponNeeded > weaponSpace)
+  {
+    GetUI()->Push(new Dialogue("Only part of your ship's outfit capacity is usable for weapons. "
+      "You cannot install this outfit, because it takes up "
+      + Tons(weaponNeeded) + " of weapon space, and this ship has "
+      + Tons(weaponSpace) + " free."));
     return;
   }
   
