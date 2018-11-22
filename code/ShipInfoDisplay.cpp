@@ -172,28 +172,42 @@ void ShipInfoDisplay::UpdateAttributes(const Ship &ship, const Depreciation &dep
   attributeValues.push_back(Format::Number(emptyMass));
   attributesHeight += 20;
   
-  // Find out how much outfit, engine, and weapon space the chassis has.
+  // Find out how much outfit, core, engine, and weapon space the chassis has.
   map<string, double> chassis;
   static const vector<string> NAMES = {
-    "outfit space free:", "outfit space",
-    "    core capacity:", "core capacity",
-    "    engine capacity:", "engine capacity",
-    "    weapon capacity:", "weapon capacity",
-    "gun ports free:", "gun ports",
-    "turret mounts free:", "turret mounts"
+    "outfit space", "core capacity", "engine capacity", "weapon capacity", "gun ports", "turret mounts"
   };
-  for(unsigned i = 1; i < NAMES.size(); i += 2)
+  for(unsigned i = 0; i < NAMES.size(); i++)
     chassis[NAMES[i]] = attributes.Get(NAMES[i]);
   for(const auto &it : ship.Outfits())
     for(auto &cit : chassis)
       cit.second -= it.second * it.first->Get(cit.first);
-  for(unsigned i = 0; i < NAMES.size(); i += 2)
-  {
-    attributeLabels.push_back(NAMES[i]);
-    attributeValues.push_back(Format::Number(attributes.Get(NAMES[i + 1]))
-      + " / " + Format::Number(chassis[NAMES[i + 1]]));
-    attributesHeight += 20;
-  }
+  
+  attributeLabels.push_back("outfit space free:");
+  attributeValues.push_back(Format::Number(attributes.Get(NAMES[0]))
+      + " / " + Format::Number(chassis[NAMES[0]]));
+  attributesHeight += 20;
+  attributeLabels.push_back("    core capacity:");
+  attributeValues.push_back(Format::Number(attributes.Get(NAMES[1]))
+      + " / " + Format::Number(chassis[NAMES[1]]));
+  attributesHeight += 20;
+  attributeLabels.push_back("    engine capacity:");
+  attributeValues.push_back(Format::Number(attributes.Get(NAMES[2]))
+      + " / " + Format::Number(chassis[NAMES[2]]));
+  attributesHeight += 20;
+  attributeLabels.push_back("    weapon capacity:");
+  attributeValues.push_back(Format::Number(attributes.Get(NAMES[3]))
+      + " / " + Format::Number(chassis[NAMES[3]]));
+  attributesHeight += 20;
+  attributeLabels.push_back("gun ports free:");
+  attributeValues.push_back(Format::Number(attributes.Get(NAMES[4]))
+      + " / " + Format::Number(chassis[NAMES[4]]));
+  attributesHeight += 20;
+  attributeLabels.push_back("turret mounts free:");
+  attributeValues.push_back(Format::Number(attributes.Get(NAMES[5]))
+      + " / " + Format::Number(chassis[NAMES[5]]));
+  attributesHeight += 20;
+
   if(ship.BaysFree(false))
   {
     attributeLabels.push_back("drone bays:");

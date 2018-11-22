@@ -389,17 +389,6 @@ void OutfitterPanel::FailBuy() const
   if(!playerShip)
     return;
   
-  double outfitNeeded = -selectedOutfit->Get("outfit space");
-  double outfitSpace = playerShip->Attributes().Get("outfit space");
-  if(outfitNeeded > outfitSpace)
-  {
-    string need =  to_string(outfitNeeded) + (outfitNeeded != 1. ? "tons" : "ton");
-    GetUI()->Push(new Dialogue("You cannot install this outfit, because it takes up "
-      + Tons(outfitNeeded) + " of outfit space, and this ship has "
-      + Tons(outfitSpace) + " free."));
-    return;
-  }
-  
   double coreNeeded = -selectedOutfit->Get("core capacity");
   double coreSpace = playerShip->Attributes().Get("core capacity");
   if(coreNeeded > coreSpace)
@@ -430,6 +419,17 @@ void OutfitterPanel::FailBuy() const
       "You cannot install this outfit, because it takes up "
       + Tons(weaponNeeded) + " of weapon space, and this ship has "
       + Tons(weaponSpace) + " free."));
+    return;
+  }
+  
+  double outfitNeeded = -selectedOutfit->Get("outfit space");
+  double outfitSpace = coreSpace + engineSpace + weaponSpace;
+  if(outfitNeeded > outfitSpace)
+  {
+    string need =  to_string(outfitNeeded) + (outfitNeeded != 1. ? "tons" : "ton");
+    GetUI()->Push(new Dialogue("You cannot install this outfit, because it takes up "
+      + Tons(outfitNeeded) + " of outfit space, and this ship has "
+      + Tons(outfitSpace) + " free."));
     return;
   }
   
