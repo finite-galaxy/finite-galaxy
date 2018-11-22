@@ -22,8 +22,8 @@ ship "Archon"
     "mass" 1200
     "drag" 27
     "heat dissipation" 10
-    "outfit space" 800
-    "core capacity" 0
+    "outfit space" 850
+    "core capacity" 50
     "engine capacity" 200
     "weapon capacity" 600
 # miscellaneous stats
@@ -43,15 +43,16 @@ ship "Archon"
       "hull damage" 10000
       "hit force" 30000
   outfits
-    "Graviton Engines"
+    "Hyperdrive"
+    "Jump Drive"
+
+    "Graviton Engines" 2
 
     "Antimatter Cannon"
     "Bolt Turret" 3
     "Draining Field"
     "Distancer" 2
     "Anti-Missile Field" 2
-
-    "Jump Drive"
   engine -17 92
   engine 17 92
   gun 0 -74 "Antimatter Cannon"
