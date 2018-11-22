@@ -6,6 +6,8 @@
   * changed font to Linux Libertine Display
   * move ship and outfit categories to data files (@Hadron1776)
   * introduce new fuel attributes (@Nescio0)
+  * introduce core capacity, used by energy generators and some other outfits
+    * outfit space = core capacity + engine capacity + weapon capacity
   * add support for bombers
   * stat info display:
     * display projectile velocity on same line as range
@@ -69,7 +71,7 @@
     * renamed:
       * removed species from outfit names
     * other changes:
-      * bunk room, cargo expansion, and outfit expansion sizes halved
+      * bunk room, cargo space expansion, and outfit space expansion sizes halved
       * biodefences and security station require 1 outfit space each
       * fuel processor is larger, has double capacity, and halved ramscoop
       * numerous tweaks to stats of many outfits
@@ -262,7 +264,7 @@
     * renamed many images for consistency
     * deleted some licences and a few other images
     * added "mod quad blaster turret" (@Pointedstick)
-    * more colour versions of the screwdriver, created using GIMP Channel Mixer:
+    * more colour versions of the screwdriver, created using GIMP's Channel Mixer:
       * 100, 100, 100: white
       * 100, 100, 001: yellow
       * 100, 001, 100: magenta
