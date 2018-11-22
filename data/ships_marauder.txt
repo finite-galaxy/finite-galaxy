@@ -50,6 +50,7 @@ ship "Marauder Argosy"
     "heat dissipation" .6
     "cargo space" 60
     "outfit space" 380
+    "core capacity" 160
     "engine capacity" 80
     "weapon capacity" 140
     weapon
@@ -162,6 +163,7 @@ ship "Marauder Arrow"
     "heat dissipation" .85
     "cargo space" 5
     "outfit space" 255
+    "core capacity" 115
     "engine capacity" 80
     "weapon capacity" 60
     "self destruct" .25
@@ -200,6 +202,7 @@ ship "Marauder Arrow"
 ship "Marauder Arrow" "Marauder Arrow (Engines)"
   sprite "ship/marrowe"
   add attributes
+    "core capacity" -20
     "engine capacity" 20
   outfits
     "A370 Atomic Thruster"
@@ -225,6 +228,7 @@ ship "Marauder Arrow" "Marauder Arrow (Engines)"
 ship "Marauder Arrow" "Marauder Arrow (Weapons)"
   sprite "ship/marroww"
   add attributes
+    "core capacity" -10
     "weapon capacity" 10
   outfits
     "A250 Atomic Thruster"
@@ -265,6 +269,7 @@ ship "Marauder Bounder"
     "heat dissipation" .8
     "cargo space" 10
     "outfit space" 345
+    "core capacity" 150
     "engine capacity" 115
     "weapon capacity" 80
     "self destruct" .25
@@ -304,6 +309,7 @@ ship "Marauder Bounder"
 ship "Marauder Bounder" "Marauder Bounder (Engines)"
   sprite "ship/mboundere"
   add attributes
+    "core capacity" -15
     "engine capacity" 15
   outfits
     "A370 Atomic Thruster"
@@ -331,6 +337,7 @@ ship "Marauder Bounder" "Marauder Bounder (Engines)"
 ship "Marauder Bounder" "Marauder Bounder (Weapons)"
   sprite "ship/mbounderw"
   add attributes
+    "core capacity" -20
     "weapon capacity" 20
   outfits
     "A250 Atomic Thruster"
@@ -372,6 +379,7 @@ ship "Marauder Falcon"
     "heat dissipation" .8
     "cargo space" 30
     "outfit space" 670
+    "core capacity" 240
     "engine capacity" 165
     "weapon capacity" 265
     "self destruct" .15
@@ -417,6 +425,7 @@ ship "Marauder Falcon"
 ship "Marauder Falcon" "Marauder Falcon (Engines)"
   sprite "ship/mfalcone"
   add attributes
+    "core capacity" -55
     "engine capacity" 55
   outfits
     "A860 Atomic Thruster"
@@ -451,6 +460,7 @@ ship "Marauder Falcon" "Marauder Falcon (Engines)"
 ship "Marauder Falcon" "Marauder Falcon (Weapons)"
   sprite "ship/mfalconw"
   add attributes
+    "core capacity" -35
     "weapon capacity" 35
   outfits
     "A370 Atomic Thruster"
@@ -499,6 +509,7 @@ ship "Marauder Firebird"
     "heat dissipation" .6
     "cargo space" 10
     "outfit space" 505
+    "core capacity" 220
     "engine capacity" 110
     "weapon capacity" 175
     "self destruct" .25
@@ -542,6 +553,7 @@ ship "Marauder Firebird"
 ship "Marauder Firebird" "Marauder Firebird (Engines)"
   sprite "ship/mfirebirde"
   add attributes
+    "core capacity" -20
     "engine capacity" 20
   outfits
     "A370 Atomic Thruster"
@@ -573,6 +585,7 @@ ship "Marauder Firebird" "Marauder Firebird (Engines)"
 ship "Marauder Firebird" "Marauder Firebird (Weapons)"
   sprite "ship/mfirebirdw"
   add attributes
+    "core capacity" -35
     "weapon capacity" 35
   outfits
     "A250 Atomic Thruster"
@@ -608,6 +621,7 @@ ship "Marauder Leviathan"
     "heat dissipation" .5
     "cargo space" 40
     "outfit space" 730
+    "core capacity" 325
     "engine capacity" 140
     "weapon capacity" 265
     "self destruct" .15
@@ -655,6 +669,7 @@ ship "Marauder Leviathan"
 ship "Marauder Leviathan" "Marauder Leviathan (Engines)"
   sprite "ship/mleviathane"
   add attributes
+    "core capacity" -80
     "engine capacity" 80
   outfits
     "A860 Atomic Thruster"
@@ -681,6 +696,7 @@ ship "Marauder Leviathan" "Marauder Leviathan (Engines)"
 ship "Marauder Leviathan" "Marauder Leviathan (Weapons)"
   sprite "ship/mleviathanw"
   add attributes
+    "core capacity" -35
     "weapon capacity" 35
   outfits
     "A370 Atomic Thruster"
@@ -726,6 +742,7 @@ ship "Marauder Manta"
     "heat dissipation" .8
     "cargo space" 10
     "outfit space" 430
+    "core capacity" 160
     "engine capacity" 110
     "weapon capacity" 160
     "self destruct" .25
@@ -770,6 +787,7 @@ ship "Marauder Manta"
 ship "Marauder Manta" "Marauder Manta (Engines)"
   sprite "ship/mmantae"
   add attributes
+    "core capacity" -20
     "engine capacity" 20
   outfits
     "A370 Atomic Thruster"
@@ -804,6 +822,7 @@ ship "Marauder Manta" "Marauder Manta (Engines)"
 ship "Marauder Manta" "Marauder Manta (Weapons)"
   sprite "ship/mmantaw"
   add attributes
+    "core capacity" -20
     "weapon capacity" 20
   outfits
     "A250 Atomic Thruster"
@@ -850,6 +869,7 @@ ship "Marauder Quicksilver"
     "heat dissipation" .8
     "cargo space" 5
     "outfit space" 305
+    "core capacity" 165
     "engine capacity" 75
     "weapon capacity" 65
     "self destruct" .25
@@ -887,6 +907,7 @@ ship "Marauder Quicksilver"
 ship "Marauder Quicksilver" "Marauder Quicksilver (Engines)"
   sprite "ship/mquicksilvere"
   add attributes
+    "core capacity" -40
     "engine capacity" 40
   outfits
     "A370 Atomic Thruster"
@@ -912,6 +933,7 @@ ship "Marauder Quicksilver" "Marauder Quicksilver (Engines)"
 ship "Marauder Quicksilver" "Marauder Quicksilver (Weapons)"
   sprite "ship/mquicksilverw"
   add attributes
+    "core capacity" -15
     "weapon capacity" 15
   outfits
     "A250 Atomic Thruster"
@@ -949,6 +971,7 @@ ship "Marauder Raven"
     "heat dissipation" .8
     "cargo space" 10
     "outfit space" 380
+    "core capacity" 165
     "engine capacity" 110
     "weapon capacity" 105
     "self destruct" .25
@@ -991,6 +1014,7 @@ ship "Marauder Raven"
 ship "Marauder Raven" "Marauder Raven (Engines)"
   sprite "ship/mravene"
   add attributes
+    "core capacity" -20
     "engine capacity" 20
   outfits
     "A370 Atomic Thruster"
@@ -1016,6 +1040,7 @@ ship "Marauder Raven" "Marauder Raven (Engines)"
 ship "Marauder Raven" "Marauder Raven (Weapons)"
   sprite "ship/mravenw"
   add attributes
+    "core capacity" -30
     "weapon capacity" 30
   outfits
     "A250 Atomic Thruster"
@@ -1057,6 +1082,7 @@ ship "Marauder Splinter"
     "heat dissipation" .7
     "cargo space" 40
     "outfit space" 515
+    "core capacity" 240
     "engine capacity" 110
     "weapon capacity" 165
     "self destruct" .25
@@ -1099,6 +1125,7 @@ ship "Marauder Splinter"
 ship "Marauder Splinter" "Marauder Splinter (Engines)"
   sprite "ship/msplintere"
   add attributes
+    "core capacity" -20
     "engine capacity" 20
   outfits
     "A370 Atomic Thruster"
@@ -1129,6 +1156,7 @@ ship "Marauder Splinter" "Marauder Splinter (Engines)"
 ship "Marauder Splinter" "Marauder Splinter (Weapons)"
   sprite "ship/msplinterw"
   add attributes
+    "core capacity" -20
     "weapon capacity" 20
   outfits
     "A250 Atomic Thruster"
