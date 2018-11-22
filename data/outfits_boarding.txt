@@ -10,19 +10,12 @@ outfit "Biodefences"
   "capture defence" 250
   description "This defence system is designed to release a suite of toxins that are lethal to human beings (and probably to some other species, as well) but which have no effect at all on the Pug."
 
-outfit "Laser Rifle"
-  category "Boarding"
-  thumbnail "outfit/rifle_human"
-  cost 4000
-  "capture attack" .6
-  "capture defence" .8
-  description "A laser rifle is a step up from the sidearms that crew members typically carry for defence against pirates: more powerful, and more accurate as well. For each of these rifles that one of your crew is wielding, your odds of capturing another ship or defending your own ship from boarders are increased substantially."
-
 outfit "Fragmentation Grenades"
   plural "Fragmentation Grenades"
   category "Boarding"
   thumbnail "outfit/fragmentation_grenades"
   cost 7000
+  "mass" 0.005
   "capture attack" 1.3
   "capture defence" .3
   description "Fragmentation grenades are an only marginally legal weapon for hand-to-hand combat when boarding a ship, useful for flushing out defenders who are hunkered down in defensible choke points inside their own ship. They are much less useful as a defensive weapon, but still better than nothing."
@@ -40,17 +33,28 @@ outfit "Ion Rifle"
   category "Boarding"
   licences
     Heliarch
-  cost 25000
   thumbnail "outfit/rifle_heliarch"
+  cost 25000
+  "mass" 0.009
   "capture attack" 2.1
   "capture defense" 2.8
   description "The Ion Rifle is a heavy hand-held weapon which shoots disrupting ions to kill its opponents. It was developed long ago. Because Coalition space is peaceful nowadays, sales are restricted by the Heliarchs, and nobody needs hand-to-hand weapons any more. Nevertheless, all Heliarch ships are equipped with a number of Ion Rifles, just in case."
+
+outfit "Laser Rifle"
+  category "Boarding"
+  thumbnail "outfit/rifle_human"
+  cost 4000
+  "mass" 0.010
+  "capture attack" .6
+  "capture defence" .8
+  description "A laser rifle is a step up from the sidearms that crew members typically carry for defence against pirates: more powerful, and more accurate as well. For each of these rifles that one of your crew is wielding, your odds of capturing another ship or defending your own ship from boarders are increased substantially."
 
 outfit "Nerve Gas"
   plural "Nerve Gas"
   category "Boarding"
   thumbnail "outfit/nerve_gas"
   cost 13000
+  "mass" 0.008
   "capture attack" 2.8
   "capture defence" .8
   "illegal" 1000000
@@ -62,6 +66,7 @@ outfit "Repeater Rifle"
   licences
     Korath
   cost 16000
+  "mass" 0.012
   "capture attack" 1.5
   "capture defence" 2.0
   description "This rifle is commonplace among the Korath, predating the creation of the Repeater by at least two centuries. As it uses superheated plasma instead of lasers, the rifle is slow to fire and can sometimes burn its user's hands if they aren't careful. It makes up for these setbacks by guaranteeing that those hit won't live long enough to fire back."
