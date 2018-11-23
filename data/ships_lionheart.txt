@@ -14,9 +14,6 @@ shipyard "Lionheart Variants"
   "Lance"
   "Lance (Electron)"
   "Lance (Torpedo)"
-  "Mule"
-  "Mule (Hai)"
-  "Mule (Heavy)"
   "Scout"
   "Scout (Afterburner)"
   "Scout (Hai)"
@@ -578,120 +575,6 @@ ship "Lance" "Lance (Torpedo)"
     "LP036a Battery Pack"
     "Fuel Barrel" 50
     "Tactical Scanner" 4
-
-
-
-ship "Mule"
-  sprite "ship/mule"
-  thumbnail "thumbnail/mule"
-  attributes
-    category "Frigate"
-#    manufacturer "Lionheart"
-    licences
-      Pilot
-    "cost" 4580000
-    "shields" 5400
-    "hull" 4400
-    "required crew" 6
-    "bunks" 43
-    "mass" 320
-    "drag" 5.7
-    "heat dissipation" .5
-    "cargo space" 270
-    "outfit space" 510
-    "core space" 190
-    "engine space" 110
-    "weapon space" 210
-    weapon
-      "blast radius" 100
-      "shield damage" 1000
-      "hull damage" 500
-      "hit force" 1500
-  outfits
-    "D41-HY Shield Generator"
-    "NT-200 Nucleovoltaic"
-    "Hyperdrive"
-
-    "A250 Atomic Thruster"
-    "A255 Atomic Steering"
-
-    "Torpedo" 30
-    "Torpedo Storage Rack"
-    "Torpedo Launcher"
-    "Heavy Laser Turret" 3
-    "Heavy Anti-Missile Turret"
-
-    "Liquid Water Cooler"
-    "LP144a Battery Pack"
-    "Fuel Barrel" 60
-    "Large Radar Jammer"
-    "Ramscoop"
-    "Tactical Scanner" 4
-  engine -12 123
-  engine 12 123
-  gun 0 -123 "Torpedo Launcher"
-  turret 22 -65 "Heavy Laser Turret"
-  turret -37 -21 "Heavy Laser Turret"
-  turret 39 35 "Heavy Laser Turret"
-  turret -9 59 "Heavy Anti-Missile Turret"
-  fighter -16 -9
-  leak "leak" 50 50
-  leak "flame" 80 80
-  leak "big leak" 80 30
-  explode "tiny explosion" 10
-  explode "small explosion" 30
-  explode "medium explosion" 20
-  "final explode" "final explosion medium"
-  description "The Mule is as much of a hodgepodge as its looks suggest. The Lionheart ship designers combined a good deal of cargo space with a decent amount of weaponry and even a fighter bay, and ended up with a ship that is mostly used as a freighter but must be classified as a warship because of its heavy armament and shields."
-
-
-ship "Mule" "Mule (Hai)"
-  outfits
-    "Diamond Regenerator"
-    "Geode Reactor"
-    "Hyperdrive"
-
-    `"Bondir" Atomic Thruster`
-    `"Biroo" Atomic Steering`
-
-    "Tracker" 56
-    "Tracker Storage Pod"
-    "Tracker Launcher"
-    "Pulse Turret" 3
-    "Chameleon Anti-Missile"
-
-    "Ravine Batteries"
-    "Williwaw Cooling" 2
-    "Fuel Pod" 6
-    "Large Radar Jammer"
-    "Ramscoop"
-    "Yoloy Scanner"
-    "Outfit Space Expansion" 2
-
-
-ship "Mule" "Mule (Heavy)"
-  outfits
-    "D94-YV Shield Generator"
-    "NT-200 Nucleovoltaic"
-    "Dwarf Core"
-    "Hyperdrive"
-
-    "A370 Atomic Thruster"
-    "A375 Atomic Steering"
-
-    "Torpedo" 30
-    "Torpedo Storage Rack"
-    "Torpedo Launcher"
-    "Heavy Laser Turret" 4
-
-    "LP036a Battery Pack"
-    "Liquid Nitrogen Cooler"
-    "Fuel Barrel" 60
-    "Large Radar Jammer"
-    "Ramscoop"
-    "Tactical Scanner" 4
-    "Outfit Space Expansion" 8
-    "Laser Rifle" 40
 
 
 
