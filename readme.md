@@ -3,20 +3,19 @@
 Both games can be installed alongside and played independently of each other. Although derived from the same source code and basically using the same content, Finite Galaxy and Endless Sky have diverged and are no longer compatible. If you transpose a save game from one to the other, you are likely to encounter hundreds of errors.
 
 ## Table of contents
-* https://github.com/finite-galaxy/finite-galaxy#installation
-* https://github.com/finite-galaxy/finite-galaxy#gnu-linux
-* https://github.com/finite-galaxy/finite-galaxy#microsoft-windows
-* https://github.com/finite-galaxy/finite-galaxy#apple-mac-os-x
-* https://github.com/finite-galaxy/finite-galaxy#gnu-linux
-* https://github.com/finite-galaxy/finite-galaxy#changes
-* https://github.com/finite-galaxy/finite-galaxy#major-changes
-* https://github.com/finite-galaxy/finite-galaxy#minor-changes
-* https://github.com/finite-galaxy/finite-galaxy#not-yet-implemented-ideas
-* https://github.com/finite-galaxy/finite-galaxy#syndicate-branch
-* https://github.com/finite-galaxy/finite-galaxy#heliarch-invasion
-* https://github.com/finite-galaxy/finite-galaxy#contributing
-* https://github.com/finite-galaxy/finite-galaxy#posting-issues
-* https://github.com/finite-galaxy/finite-galaxy#posting-pull-requests
+* [Installation](https://github.com/finite-galaxy/finite-galaxy#installation)
+  * [GNU/Linux](https://github.com/finite-galaxy/finite-galaxy#gnu-linux)
+  * [Microsoft Windows](https://github.com/finite-galaxy/finite-galaxy#microsoft-windows)
+  * [Apple/Mac OS X](https://github.com/finite-galaxy/finite-galaxy#apple-mac-os-x)
+* [Changes](https://github.com/finite-galaxy/finite-galaxy#changes)
+  * [Major changes](https://github.com/finite-galaxy/finite-galaxy#major-changes)
+  * [Minor changes](https://github.com/finite-galaxy/finite-galaxy#minor-changes)
+  * [Not yet implemented ideas](https://github.com/finite-galaxy/finite-galaxy#not-yet-implemented-ideas)
+   * [Syndicate branch](https://github.com/finite-galaxy/finite-galaxy#syndicate-branch)
+   * [Heliarch invasion](https://github.com/finite-galaxy/finite-galaxy#heliarch-invasion)
+* [Contributing](https://github.com/finite-galaxy/finite-galaxy#contributing)
+  * [Posting issues](https://github.com/finite-galaxy/finite-galaxy#posting-issues)
+  * [Posting pull requests](https://github.com/finite-galaxy/finite-galaxy#posting-pull-requests)
 
 
 
