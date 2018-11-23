@@ -20,6 +20,10 @@ shipyard "Betelgeuse Variants"
   "Light Shuttle"
   "Light Shuttle (Armed)"
   "Light Shuttle (Miner)"
+  "Mongrel"
+  "Mongrel (Particle)"
+  "Mongrel (Plasma)"
+  "Mongrel (Proton)"
 
 
 
@@ -676,4 +680,88 @@ ship "Light Shuttle" "Light Shuttle (Miner)"
     "Fuel Barrel" 40
     "Small Radar Jammer"
     "Outfit Space Expansion"
+
+
+
+ship "Mongrel"
+  sprite "ship/barb"
+  thumbnail "thumbnail/barb"
+  attributes
+    category "Bomber"
+#    manufacturer "Lionheart"
+    licences
+      Pilot
+    "carried" 3
+    "cost" 50000
+    "shields" 700
+    "hull" 300
+    "required crew" 1
+    "bunks" 2
+    "mass" 45
+    "drag" .8
+    "heat dissipation" .75
+    "outfit space" 95
+    "core space" 45
+    "engine space" 20
+    "weapon space" 30
+    weapon
+      "blast radius" 12
+      "shield damage" 120
+      "hull damage" 60
+      "hit force" 180
+  outfits
+    "D14-RN Shield Generator"
+    "nGVF-AA Fuel Cell"
+
+    "IC-900 Ion Engines"
+
+    "Javelin" 100
+    "Javelin Pod"
+    "Light Anti-Missile Turret"
+
+    "LP036a Battery Pack"
+  engine -10 28
+  engine 9 28
+  gun -9 -29 "Javelin Pod"
+  turret 8 6 "Light Anti-Missile Turret"
+  leak "leak" 60 50
+  explode "tiny explosion" 15
+  explode "small explosion" 5
+  description `The design of the Mongrel seems to be a Mule condensed to the level of a Dagger, and as you look at the cockpit nestled between the massive gun port and turret mount, you wonder where the power systems are supposed to go. Needless to say, there is no room for a hyperdrive, fuel barrels, and cargo. The Mongrel is categorized as a bomber rather than a fighter, because of its relatively high weapon space, and because its awkward shape makes it unable to fit into ordinary fighter bays. Though its operation range is currently rather limited, it seems flexible enough to become a dangerous addition to warfleets, if ever any bomber carriers will be designed.`
+
+
+ship "Mongrel" "Mongrel (Particle)"
+  outfits
+    "D14-RN Shield Generator"
+    "nGVF-AA Fuel Cell"
+
+    "IC-900 Ion Engines"
+
+    "Particle Cannon"
+
+    "LP036a Battery Pack"
+
+
+ship "Mongrel" "Mongrel (Plasma)"
+  outfits
+    "D14-RN Shield Generator"
+    "nGVF-AA Fuel Cell"
+
+    "IC-900 Ion Engines"
+
+    "Plasma Cannon"
+
+    "LP036a Battery Pack"
+
+
+ship "Mongrel" "Mongrel (Proton)"
+  outfits
+    "D14-RN Shield Generator"
+    "nGVF-AA Fuel Cell"
+
+    "IC-900 Ion Engines"
+
+    "Proton Cannon"
+
+    "LP036a Battery Pack"
 
