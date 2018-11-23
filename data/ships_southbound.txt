@@ -10,12 +10,12 @@ shipyard "Southbound Variants"
   "Bastion (Laser)"
   "Bastion (Plasma)"
   "Bastion (Scanner)"
-  "Brig"
-  "Brig (Flamethrower)"
-  "Brig (Gatling)"
-  "Brig (Laser)"
-  "Brig (Miner)"
-  "Brig (Rocket)"
+  "Berserker"
+  "Berserker (Flamethrower)"
+  "Berserker (Gatling)"
+  "Berserker (Laser)"
+  "Berserker (Miner)"
+  "Berserker (Rocket)"
   "Clipper"
   "Clipper (Javelin)"
   "Clipper (Nuclear)"
@@ -316,7 +316,7 @@ ship "Bastion" "Bastion (Scanner)"
 
 
 
-ship "Brig"
+ship "Berserker"
   sprite "ship/berserker"
   thumbnail "thumbnail/berserker"
   attributes
@@ -336,7 +336,7 @@ ship "Brig"
     "outfit space" 240
     "core space" 140
     "engine space" 65
-    "weapon space" 35
+    "weapon space" 40
     weapon
       "blast radius" 30
       "shield damage" 300
@@ -366,10 +366,10 @@ ship "Brig"
   explode "tiny explosion" 10
   explode "small explosion" 15
   "final explode" "final explosion small"
-  description "Once one of the most popular interceptor-class ships, the Star Champion's popularity is now waning in favour of more modern and powerful ships like the Hawk. Although limited numbers are still produced by Southbound Shipyards, most Star Champions that are in service today are more than half a century old."
+  description "Once one of the most popular interceptor-class ships, the Berserker's popularity is now waning in favour of more modern and powerful ships like the Hawk. Although limited numbers are still produced by Southbound Shipyards, most Star Champions that are in service today are more than half a century old."
 
 
-ship "Brig" "Brig (Flamethrower)"
+ship "Berserker" "Berserker (Flamethrower)"
   outfits
     "D23-QP Shield Generator"
     "nGVF-BB Fuel Cell"
@@ -386,7 +386,7 @@ ship "Brig" "Brig (Flamethrower)"
     "Tactical Scanner"
 
 
-ship "Brig" "Brig (Gatling)"
+ship "Berserker" "Berserker (Gatling)"
   outfits
     "D23-QP Shield Generator"
     "nGVF-BB Fuel Cell"
@@ -404,7 +404,7 @@ ship "Brig" "Brig (Gatling)"
     "Tactical Scanner"
 
 
-ship "Brig" "Brig (Laser)"
+ship "Berserker" "Berserker (Laser)"
   outfits
     "D23-QP Shield Generator"
     "nGVF-CC Fuel Cell"
@@ -420,7 +420,7 @@ ship "Brig" "Brig (Laser)"
     "Tactical Scanner"
 
 
-ship "Brig" "Brig (Miner)"
+ship "Berserker" "Berserker (Miner)"
   outfits
     "D23-QP Shield Generator"
     "nGVF-BB Fuel Cell"
@@ -437,7 +437,7 @@ ship "Brig" "Brig (Miner)"
     "Tactical Scanner"
 
 
-ship "Brig" "Brig (Rocket)"
+ship "Berserker" "Berserker (Rocket)"
   outfits
     "D23-QP Shield Generator"
     "nGVF-BB Fuel Cell"
