@@ -15,6 +15,12 @@ shipyard "Lionheart Variants"
   "Lance"
   "Lance (Electron)"
   "Lance (Torpedo)"
+  "Leviathan"
+  "Leviathan (Hai)"
+  "Leviathan (Heavy)"
+  "Leviathan (Particle)"
+  "Leviathan (Plasma)"
+  "Leviathan (Proton)"
   "Scout"
   "Scout (Afterburner)"
   "Scout (Hai)"
@@ -592,6 +598,170 @@ ship "Lance" "Lance (Torpedo)"
 
     "LP036a Battery Pack"
     "Fuel Barrel" 50
+    "Tactical Scanner" 4
+
+
+
+ship "Leviathan"
+  sprite "ship/leviathan"
+  thumbnail "thumbnail/leviathan"
+  attributes
+    category "Frigate"
+#    manufacturer "Betelgeuse"
+    licences
+      Pilot
+    "cost" 9800000
+    "shields" 12500
+    "hull" 6400
+    "required crew" 50
+    "bunks" 75
+    "mass" 500
+    "drag" 7.6
+    "heat dissipation" .5
+    "cargo space" 100
+    "outfit space" 650
+    "core space" 280
+    "engine space" 120
+    "weapon space" 250
+    weapon
+      "blast radius" 80
+      "shield damage" 800
+      "hull damage" 400
+      "hit force" 1200
+  outfits
+    "D94-YV Shield Generator"
+    "Fusion Reactor"
+    "Hyperdrive"
+
+    "A370 Atomic Thruster"
+    "A525 Atomic Steering"
+
+    "Heavy Laser Cannon" 4
+    "Heavy Laser Turret" 4
+
+    "LP144a Battery Pack"
+    "Liquid Helium Cooler"
+    "Fuel Barrel" 50
+    "Large Radar Jammer"
+    "Tactical Scanner" 4
+  engine -25 125
+  engine 25 125
+  gun -39 -33 "Heavy Laser Cannon"
+  gun 39 -33 "Heavy Laser Cannon"
+  gun -51 -21 "Heavy Laser Cannon"
+  gun 51 -21 "Heavy Laser Cannon"
+  turret -15 -50 "Heavy Laser Turret"
+  turret 15 -50 "Heavy Laser Turret"
+  turret -25 10 "Heavy Laser Turret"
+  turret 25 10 "Heavy Laser Turret"
+  leak "leak" 50 50
+  leak "flame" 30 80
+  leak "big leak" 60 30
+  explode "tiny explosion" 18
+  explode "small explosion" 36
+  explode "medium explosion" 24
+  explode "large explosion" 8
+  "final explode" "final explosion large"
+  description "The Lionheart Leviathan has been in service since long before the Republic existed. Although considered today to be an outdated and clunky model, it is still a force to be reckoned with."
+
+
+ship "Leviathan" "Leviathan (Hai)"
+  outfits
+    "Diamond Regenerator" 2
+    "Boulder Reactor"
+    "Pebble Core"
+    "Hyperdrive"
+
+    `"Bondir" Atomic Thruster`
+    `"Bondir" Atomic Steering`
+
+    "Ion Cannon" 4
+    "Chameleon Anti-Missile" 2
+
+    "Gorge Batteries"
+    "Williwaw Cooling" 5
+    "Fuel Pod" 5
+    "Yoloy Scanner"
+    "Outfit Space Expansion" 7
+
+
+ship "Leviathan" "Leviathan (Heavy)"
+  outfits
+    "D94-YV Shield Generator"
+    "Fusion Reactor"
+    "Hyperdrive"
+
+    "A370 Atomic Thruster"
+    "A525 Atomic Steering"
+
+    "Torpedo" 120
+    "Torpedo Storage Rack" 4
+    "Torpedo Launcher" 4
+    "Heavy Laser Turret" 4
+
+    "LP072a Battery Pack"
+    "Liquid Nitrogen Cooler"
+    "Fuel Barrel" 50
+    "Large Radar Jammer"
+    "Tactical Scanner" 4
+    "Outfit Space Expansion" 4
+
+
+ship "Leviathan" "Leviathan (Particle)"
+  outfits
+    "D94-YV Shield Generator"
+    "Fusion Reactor"
+    "Hyperdrive"
+
+    "A370 Atomic Thruster"
+    "A525 Atomic Steering"
+
+    "Particle Cannon" 4
+    "X4 Blaster Turret" 4
+
+    "LP144a Battery Pack"
+    "Liquid Helium Cooler"
+    "Fuel Barrel" 50
+    "Large Radar Jammer"
+    "Tactical Scanner" 4
+    "Outfit Space Expansion"
+
+
+ship "Leviathan" "Leviathan (Plasma)"
+  outfits
+    "D94-YV Shield Generator"
+    "Fusion Reactor"
+    "Hyperdrive"
+
+    "A370 Atomic Thruster"
+    "A525 Atomic Steering"
+
+    "Plasma Cannon" 4
+    "X4 Blaster Turret" 4
+
+    "LP144a Battery Pack"
+    "Liquid Helium Cooler"
+    "Fuel Barrel" 50
+    "Large Radar Jammer"
+    "Tactical Scanner" 4
+
+
+ship "Leviathan" "Leviathan (Proton)"
+  outfits
+    "D94-YV Shield Generator"
+    "Fusion Reactor"
+    "Hyperdrive"
+
+    "A370 Atomic Thruster"
+    "A525 Atomic Steering"
+
+    "Proton Cannon" 4
+    "X4 Blaster Turret" 4
+
+    "LP144a Battery Pack"
+    "Liquid Helium Cooler"
+    "Fuel Barrel" 50
+    "Large Radar Jammer"
     "Tactical Scanner" 4
 
 
