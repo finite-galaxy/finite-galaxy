@@ -198,3 +198,47 @@ outfit "Yoloy Scanner"
   "tactical scan power" 55
   description "The Hai highly value life. This device allows them to determine the status of other ships, both friend and foe."
 
+
+# Solar collection
+outfit "Small Collector Module"
+  category "Systems"
+  thumbnail "outfit/small collector module"
+  licences
+    Coalition
+  cost 60000
+  "mass" 8
+  "outfit space" -8
+  "solar collection" .8
+  "heat generation" .4
+  description "Solar power is the mainstay of the Coalition's merchant marine. The design of these panels has been refined over the millennia, growing ever more efficient."
+
+outfit "Large Collector Module"
+  category "Systems"
+  thumbnail "outfit/large collector module"
+  licences
+    Coalition
+  cost 300000
+  "mass" 28
+  "outfit space" -28
+  "solar collection" 3.3
+  "heat generation" 1.5
+  description "One of these solar panels is enough to meet the energy needs of a medium-sized Coalition civilian ship, especially given the energy efficiency of their engines and the fact that under their laws only Heliarch ships are allowed to have weapons."
+
+
+outfit "KP-6 Photovoltaic Panel"
+  category "Systems"
+  thumbnail "outfit/photovoltaic_tiny"
+  cost 10000
+  "mass" 3
+  "outfit space" -3
+  "solar collection" .1
+  description "This early commercial photovoltaic system was the driving force behind humanity's first interplanetary trade network. Rugged and modular, it can be bolted to the hull of any ship and has seen even the most remote parts of human space."
+
+outfit "KP-6 Photovoltaic Array"
+  category "Systems"
+  thumbnail "outfit/photovoltaic_small"
+  cost 90000
+  "mass" 24
+  "outfit space" -24
+  "solar collection" 1.1
+  description "The compact modularity of the KP-6 lent itself well to the creation of larger solar collection arrays. This original Korunak Photovoltaics model is equipped with a solar tracker, allowing it to make better use of available light."
