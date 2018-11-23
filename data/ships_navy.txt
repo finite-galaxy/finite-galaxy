@@ -127,14 +127,14 @@ ship "Jupiter"
     "hull" 8300
     "required crew" 111
     "bunks" 184
-    "mass" 910
+    "mass" 900
     "drag" 18.9
     "heat dissipation" .4
     "cargo space" 100
-    "outfit space" 900
-    "core space" 350
+    "outfit space" 910
+    "core space" 310
     "engine space" 200
-    "weapon space" 350
+    "weapon space" 400
     weapon
       "blast radius" 300
       "shield damage" 3000
@@ -157,6 +157,7 @@ ship "Jupiter"
     "LP144a Battery Pack"
     "Liquid Helium Cooler"
     "Fuel Barrel" 70
+    "Large Radar Jammer"
     "Ramscoop"
     "Tactical Scanner" 7
     "Fragmentation Grenades" 80
@@ -213,9 +214,9 @@ ship "Jupiter" "Jupiter (Alpha)"
     "Slicer" 2
 
     "Large Heat Shunt" 3
-    "Fuel Processor" 2
-    "Tactical Scanner" 4
-    "Outfit Space Expansion"
+    "Catalytic Ramscoop"
+    "Fuel Pod" 8
+    "Outfit Space Expansion" 2
     "Fragmentation Grenades" 80
     "Laser Rifle" 160
   turret "Disruptor"
@@ -233,23 +234,24 @@ ship "Jupiter" "Jupiter (Jump)"
     "A860 Atomic Thruster"
     "A525 Atomic Steering"
 
-    "Torpedo" 120
-    "Torpedo Launcher" 4
-    "Torpedo Storage Rack" 4
-    "Particle Turret" 2
+    "Typhoon Torpedo" 80
+    "Typhoon Storage Tube" 4
+    "Typhoon Launcher" 4
+    "Electron Turret" 2
     "Heavy Anti-Missile Turret" 2
 
     "LP144a Battery Pack"
     "Liquid Helium Cooler"
-    "Catalytic Ramscoop"
+    "Ramscoop"
     "Fuel Barrel" 80
+    "Large Radar Jammer"
     "Tactical Scanner" 7
-    "Outfit Space Expansion" 2
+    "Outfit Space Expansion"
     "Fragmentation Grenades" 80
     "Laser Rifle" 160
-  turret "Particle Turret"
+  turret "Electron Turret"
   turret "Heavy Anti-Missile Turret"
-  turret "Particle Turret"
+  turret "Electron Turret"
   turret "Heavy Anti-Missile Turret"
 
 
@@ -270,10 +272,10 @@ ship "Jupiter" "Jupiter (Mark II)"
 
     "LP144a Battery Pack"
     "Liquid Helium Cooler"
-    "Catalytic Ramscoop"
+    "Ramscoop"
     "Fuel Barrel" 70
+    "Large Radar Jammer"
     "Tactical Scanner" 7
-    "Outfit Space Expansion"
     "Fragmentation Grenades" 80
     "Laser Rifle" 160
   turret "Electron Turret"
@@ -324,8 +326,8 @@ ship "Mars"
     "Cooling Ducts"
     "Cargo Scanner"
     "Fuel Barrel" 60
-    "Outfit Scanner"
     "Large Radar Jammer"
+    "Outfit Scanner"
     "Tactical Scanner" 4
     "Fragmentation Grenades" 5
     "Laser Rifle" 10
@@ -359,6 +361,7 @@ ship "Mars" "Mars (Anti-Missile)"
     "Cooling Ducts"
     "Cargo Scanner"
     "Fuel Barrel" 60
+    "Large Radar Jammer"
     "Outfit Scanner"
     "Tactical Scanner" 4
     "Fragmentation Grenades" 5
@@ -482,12 +485,12 @@ ship "Saturn"
     "hull" 6400
     "required crew" 81
     "bunks" 136
-    "mass" 630
+    "mass" 600
     "drag" 9.8
     "heat dissipation" .5
     "cargo space" 70
-    "outfit space" 790
-    "core space" 340
+    "outfit space" 820
+    "core space" 370
     "engine space" 150
     "weapon space" 300
     weapon
@@ -503,25 +506,26 @@ ship "Saturn"
     "A520 Atomic Thruster"
     "A525 Atomic Steering"
 
-    "Meteor Missile" 160
-    "Meteor Missile Box" 4
-    "Meteor Missile Launcher" 4
+    "Sidewinder Missile" 200
+    "Sidewinder Missile Rack" 4
+    "Sidewinder Missile Launcher" 4
     "Particle Turret" 3
     "Heavy Anti-Missile Turret"
 
     "LP288a Battery Pack"
     "Liquid Nitrogen Cooler"
     "Fuel Barrel" 60
+    "Large Radar Jammer"
     "Ramscoop"
     "Tactical Scanner" 6
     "Fragmentation Grenades" 60
     "Laser Rifle" 120
   engine -29 156
   engine 29 156
-  gun -31 -63 "Meteor Missile Launcher"
-  gun 31 -63 "Meteor Missile Launcher"
-  gun -41 -52 "Meteor Missile Launcher"
-  gun 41 -52 "Meteor Missile Launcher"
+  gun -31 -63 "Sidewinder Missile Launcher"
+  gun 31 -63 "Sidewinder Missile Launcher"
+  gun -41 -52 "Sidewinder Missile Launcher"
+  gun 41 -52 "Sidewinder Missile Launcher"
   turret 0 -40 "Particle Turret"
   turret -33 -19 "Particle Turret"
   turret 33 -19 "Particle Turret"
@@ -551,18 +555,20 @@ ship "Saturn" "Saturn (Jump)"
     "A520 Atomic Thruster"
     "A525 Atomic Steering"
 
-    "Meteor Missile" 160
-    "Meteor Missile Box" 4
-    "Meteor Missile Launcher" 4
-    "Particle Turret" 3
+    "Typhoon Torpedo" 40
+    "Typhoon Storage Tube" 2
+    "Typhoon Launcher" 2
+    "Electron Cannon" 2
+    "Electron Turret" 3
     "Heavy Anti-Missile Turret"
 
     "LP288a Battery Pack"
     "Liquid Nitrogen Cooler"
-    "Catalytic Ramscoop"
+    "Ramscoop"
     "Fuel Barrel" 80
+    "Large Radar Jammer"
     "Tactical Scanner" 6
-    "Outfit Space Expansion" 3
+    "Outfit Space Expansion" 2
     "Fragmentation Grenades" 60
     "Laser Rifle" 120
 
@@ -576,14 +582,18 @@ ship "Saturn" "Saturn (Mark II)"
     "A520 Atomic Thruster"
     "A525 Atomic Steering"
 
-    "Electron Cannon" 4
+    "Typhoon Torpedo" 40
+    "Typhoon Storage Tube" 2
+    "Typhoon Launcher" 2
+    "Electron Cannon" 2
     "Electron Turret" 3
     "Heavy Anti-Missile Turret"
 
     "LP288a Battery Pack"
     "Liquid Nitrogen Cooler"
-    "Catalytic Ramscoop"
+    "Ramscoop"
     "Fuel Barrel" 60
+    "Large Radar Jammer"
     "Tactical Scanner" 6
     "Fragmentation Grenades" 60
     "Laser Rifle" 120
@@ -643,8 +653,8 @@ ship "Venus"
     "drag" 5.2
     "heat dissipation" .6
     "cargo space" 45
-    "outfit space" 540
-    "core space" 240
+    "outfit space" 530
+    "core space" 230
     "engine space" 100
     "weapon space" 200
     weapon
@@ -660,23 +670,24 @@ ship "Venus"
     "A370 Atomic Thruster"
     "A375 Atomic Steering"
 
-    "Sidewinder Missile" 100
-    "Sidewinder Missile Rack" 2
-    "Sidewinder Missile Launcher" 2
+    "Meteor Missile" 80
+    "Meteor Missile Box" 2
+    "Meteor Missile Launcher" 2
     "Particle Turret" 2
     "Heavy Anti-Missile Turret"
 
     "LP144a Battery Pack"
     "Liquid Water Cooler"
     "Fuel Barrel" 50
+    "Large Radar Jammer"
     "Ramscoop"
     "Tactical Scanner" 5
     "Fragmentation Grenades" 20
     "Laser Rifle" 40
   engine -26 92
   engine 26 92
-  gun -10 -83 "Sidewinder Missile Launcher"
-  gun 10 -83 "Sidewinder Missile Launcher"
+  gun -10 -83 "Meteor Missile Launcher"
+  gun 10 -83 "Meteor Missile Launcher"
   turret 0 -37 "Heavy Anti-Missile Turret"
   turret -12 -12 "Particle Turret"
   turret 12 -12 "Particle Turret"
@@ -706,8 +717,9 @@ ship "Venus" "Venus (Mark II)"
 
     "LP144a Battery Pack"
     "Liquid Water Cooler"
-    "Catalytic Ramscoop"
+    "Ramscoop"
     "Fuel Barrel" 50
+    "Large Radar Jammer"
     "Tactical Scanner" 5
     "Fragmentation Grenades" 20
     "Laser Rifle" 40
