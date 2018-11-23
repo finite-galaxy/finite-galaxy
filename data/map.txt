@@ -2378,7 +2378,7 @@ system "Aldebaran"
     sprite planet/cloud6-b
     distance 165.81
     period 34.1614
-  object "Ada"
+  object "Hephaestus"
     sprite planet/forest2-b
     distance 549.02
     period 205.827
@@ -8639,7 +8639,7 @@ system "Elnath"
     sprite planet/gas11
     distance 4745.58
     period 3157.63
-    object "Catoblepas Station"
+    object "Charybdis Station"
       sprite planet/station2
       distance 253
       period 12.546
@@ -14584,7 +14584,7 @@ system "Markab"
     sprite planet/rock19
     distance 172.09
     period 36.1205
-  object "Hephaestus"
+  object "Ada"
     sprite planet/forest3
     distance 522.53
     period 191.112
@@ -19795,7 +19795,7 @@ system "Scheat"
     sprite planet/gas0
     distance 2229.12
     period 1683.91
-    object "Charybdis Station"
+    object "Catoblepas Station"
       sprite planet/station6
       distance 281
       period 13.1034
@@ -24112,7 +24112,7 @@ planet "Ablub's Invention"
   "required reputation" 25
 
 planet "Ada"
-  attributes paradise mining
+  attributes core mining
   landscape land/canyon4
   description `Ada is the home planet of Lovelace Labs, one of the most highly respected designers of starship systems and weaponry. Ada was originally settled as a mining planet, and the mines here still produce a steady stream of metal to supply the Labs and the many other industrial companies here.`
   description `  From above, the planet looks almost lifeless and barren. Most of the major cities on Ada are built into the walls of the canyons, where they are protected from the high winds and occasional dust storms that sweep across the surface.`
@@ -24563,7 +24563,7 @@ planet "Carbuncle"
     fleet "Militia Large" 5
 
 planet "Catoblepas Station"
-  attributes north station research
+  attributes core station research
   landscape land/sivael4
   music ambient/machinery
   description `Catoblepas is a tiny station owned and operated by Lovelace Labs. You assume that like most such stations, it is primarily a deuterium refinery, but aside from the docking bay the rest of the station is closed off to visitors. Given the reputation of Lovelace Labs for exotic research, there could be almost anything beyond those sealed-off bulkheads.`
@@ -24600,7 +24600,7 @@ planet "Charon Station"
     fleet "Militia Small" 15
 
 planet "Charybdis Station"
-  attributes core station
+  attributes north station
   landscape land/sivael8
   music ambient/machinery
   description `Charybdis Station is privately owned by the Syndicate. It is a massive deuterium refinery, with harvester drones constantly flying in and out to scoop hydrogen gas out of the upper atmosphere of the planet below. If you need to repair or refuel in this system, you will need to visit the neighbouring world of Delve, instead of this station.`
@@ -25512,7 +25512,7 @@ planet "Helheim"
     fleet "Deep Security Small" 15
 
 planet "Hephaestus"
-  attributes core factory urban
+  attributes paradise factory urban
   landscape land/city0
   description `Hephaestus is home to Syndicated Systems, which manufactures parts used in shipyards throughout human space. Although not always the highest quality or most technologically advanced, ship outfits produced by the Syndicate are quite affordable and sufficient for any ordinary pilot's needs. The executives of many other companies have been known to make a pilgrimage of sorts to this planet, to witness firsthand how the Syndicate has made their production lines here so efficient and dependable.`
   description `  Nearly all the inhabitants of Hephaestus live in a single metropolitan area that has spread to cover almost an eighth of the total land mass. As with many Syndicate worlds, pollution is a growing problem that they are working hard to address.`
