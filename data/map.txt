@@ -24492,7 +24492,7 @@ planet "Buccaneer Bay"
   outfitter "Pirate Outfits"
   outfitter "Syndicate Basics"
   shipyard "Megaparsec Basics"
-  shipyard "Syndicate Basics"
+  shipyard "Vortex Basics"
   security 0
   tribute 800
     threshold 3000
@@ -24731,7 +24731,7 @@ planet "Covert"
   outfitter "Basic Outfits"
   outfitter "Pirate Outfits"
   shipyard "Megaparsec Basics"
-  shipyard "Syndicate Basics"
+  shipyard "Vortex Basics"
   "required reputation" 10
   bribe 0.1
   security 0
@@ -24846,7 +24846,7 @@ planet "Delve"
   spaceport `The spaceport is an enormous hollow carved out of the side of a mountain, with a network of steel beams and mesh holding the rock in place. Inside the hollow, the landings are caves carved into the rock itself, again with steel beams above to protect the ships within. A tiered set of cog railways transport passengers and cargo between the landings and the large town at the base of the hollow. Beyond the hollow, the mountainside falls off into a steep cliff and a mist-filled valley below. Although the port is well-built and modern, you cannot help an irrational fear that the whole place will slide off the edge of the mountain one day.`
   outfitter "Basic Outfits"
   outfitter "Syndicate Intermediate"
-  shipyard "Syndicate Basics"
+  shipyard "Vortex Basics"
   security 0.2
   tribute 1600
     threshold 4500
@@ -25186,7 +25186,7 @@ planet "Follower"
   outfitter "Deep Sky Basics"
   outfitter "Lovelace Basics"
   outfitter "Sisensis Intermediate"
-  shipyard "Betelgeuse Intermediate"
+  shipyard "Betelgeuse Basics"
   bribe 0.03
   security 0.4
   tribute 2400
@@ -25205,13 +25205,13 @@ planet "Forpelog"
 planet "Foundry"
   attributes core factory urban
   landscape land/city1
-  description `Foundry is home to the Syndicated Shipyards, where more than half of the commercial freighters in human space are manufactured. Although much of the planet is blanketed in smog from the factories, there are also regions of pristine forests and majestic mountains. The Syndicate has a generous vacation policy on Foundry that allows workers to take as much as a month of vacation time every year, and many choose to take that time to escape from the cities and explore the wilderness. The shipyards claim that this vacation time is partly responsible for the high reliability of the ships built here, because a well-rested and relaxed worker is less likely to make the sort of mistakes that can quickly become disastrous in outer space.`
-  spaceport `The spaceport is surrounded by kilometers of hangars and factories where new ships are being assembled. The port itself is a trio of towering buildings, with a skywalk on the top floors to provide a view of the surrounding area. Larger ships land on pads on the ground surrounding the towers, while smaller ships can fly into hangars built into the sides of the towers themselves. Everything is made of gleaming metal, and each tower is slightly tapered and adorned with painted fins that make it resemble an enormous starship.`
+  description `Foundry is home to the Vortex Shipyards, where ships ranging from small shuttles to the largest city-ships in human space are manufactured. Although much of the planet is blanketed in smog from the factories, there are also regions of pristine forests and majestic mountains. Vortex has a generous vacation policy that allows workers to take as much as a month of vacation time every year, and many choose to take that time to escape from the cities and explore the wilderness on Foundry. The shipyards claim that this vacation time is partly responsible for the high reliability of the ships built here, because a well-rested and relaxed worker is less likely to make the sort of mistakes that can quickly become disastrous in outer space.`
+  spaceport `The spaceport is a long, multi-storey building designed to look like a capital starship, but much larger. It is built mostly of steel and glass, with the sturdy beams and girders that support the building visible on the inside, giving it the look of a ship still in construction, whose interior has not yet been fully fitted out. In nearby hangars, final assembly is being done on ships, some of which have been completed and are now for sale.`
   outfitter "Common Outfits"
   outfitter "Earth Basics"
-  outfitter "Syndicate Intermediate"
+  outfitter "Lovelace Intermediate"
   shipyard "Megaparsec Intermediate"
-  shipyard "Syndicate Advanced"
+  shipyard "Vortex Advanced"
   bribe 0.1
   security 0.5
   tribute 2900
@@ -25272,7 +25272,7 @@ planet "Geminus"
   outfitter "Earth Intermediate"
   outfitter "Lovelace Intermediate"
   outfitter "Sisensis Intermediate"
-  shipyard "Betelgeuse Basics"
+  shipyard "Betelgeuse Intermediate"
   shipyard "Navy Advanced"
   bribe 0.1
   security 0.9
@@ -25523,7 +25523,7 @@ planet "Hephaestus"
   outfitter "Sisensis Basics"
   outfitter "Syndicate Advanced"
   shipyard "Megaparsec Intermediate"
-  shipyard "Syndicate Intermediate"
+  shipyard "Vortex Intermediate"
   bribe 0.1
   security 0.7
   tribute 3400
@@ -25855,7 +25855,7 @@ planet "Luna"
   shipyard "Betelgeuse Basics"
   shipyard "Hauler Advanced"
   shipyard "Navy Intermediate"
-  shipyard "Syndicate Intermediate"
+  shipyard "Vortex Intermediate"
   bribe 0.05
   security 0.2
   tribute 2500
@@ -26344,13 +26344,12 @@ planet "Precipitous"
 planet "Prime"
   attributes north urban factory
   landscape land/city11
-  description `Prime is a very Earth-like ocean world, with a population of over a billion people. It is home to Betelgeuse Shipyards, and much of the industry on the planet is related to ship-building in one way or another, like refining and working metal, or developing exotic new hull and framing materials. Although some mining is done in more remote regions of the planet, Prime is reliant on shipments of metal and other goods to feed its industries.`
-  spaceport `The spaceport is a long, multi-storey building designed to look like a capital starship, but much larger. It is built mostly of steel and glass, with the sturdy beams and girders that support the building visible on the inside, giving it the look of a ship still in construction, whose interior has not yet been fully fitted out. In nearby hangars, final assembly is being done on ships, some of which have been completed and are now for sale.`
+  description `Prime is a very Earth-like ocean world, with a population of over a billion people. It is home to Betelgeuse Shipyards, the shipbuilbing arm of the Syndicate, and much of the industry on the planet is related to ship-building in one way or another, like refining and working metal, or developing exotic new hull and framing materials. Although some mining is done in more remote regions of the planet, Prime is reliant on shipments of metal and other goods to feed its industries.`
+  spaceport `The spaceport is surrounded by kilometers of hangars and factories where new ships are being assembled. The port itself is a trio of towering buildings, with a skywalk on the top floors to provide a view of the surrounding area. Larger ships land on pads on the ground surrounding the towers, while smaller ships can fly into hangars built into the sides of the towers themselves. Everything is made of gleaming metal, and each tower is slightly tapered and adorned with painted fins that make it resemble an enormous starship.`
   outfitter "Common Outfits"
   outfitter "Earth Basics"
   outfitter "Lovelace Intermediate"
   shipyard "Betelgeuse Advanced"
-  shipyard "Navy Intermediate"
   "required reputation" 2
   bribe 0.05
   security 0.6
@@ -26455,7 +26454,7 @@ planet "Reunion"
   outfitter "Syndicate Basics"
   shipyard "Basic Ships"
   shipyard "Hauler Intermediate"
-  shipyard "Syndicate Intermediate"
+  shipyard "Vortex Intermediate"
   security 0.3
   tribute 2900
     threshold 5000
@@ -26723,7 +26722,7 @@ planet "Shangri-La"
   outfitter "Common Outfits"
   outfitter "Syndicate Intermediate"
   shipyard "Megaparsec Basics"
-  shipyard "Syndicate Intermediate"
+  shipyard "Vortex Intermediate"
   "required reputation" 5
   bribe 0.07
   security 0.7
@@ -26976,7 +26975,7 @@ planet "Sunracer"
   outfitter "Lovelace Intermediate"
   outfitter "Syndicate Intermediate"
   shipyard "Megaparsec Advanced"
-  shipyard "Syndicate Basics"
+  shipyard "Vortex Basics"
   bribe 0.06
   security 0.7
   tribute 1700
@@ -27068,7 +27067,7 @@ planet "Tinker"
   outfitter "Syndicate Basics"
   shipyard "Hauler Basics"
   shipyard "Megaparsec Basics"
-  shipyard "Syndicate Intermediate"
+  shipyard "Vortex Intermediate"
   bribe 0.04
   security 0.4
   tribute 1100
