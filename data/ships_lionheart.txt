@@ -2,6 +2,9 @@ shipyard "Lionheart Variants"
   "Aerie"
   "Arrow"
   "Arrow (Hai)"
+  "Behemoth"
+  "Behemoth (Free Worlds)"
+  "Behemoth (Hai)"
   "Dagger"
   "Flivver"
   "Flivver (Hai)"
@@ -153,6 +156,118 @@ ship "Arrow" "Arrow (Hai)"
     "Chasm Batteries"
     "Fuel Pod" 4
     "Yoloy Scanner"
+
+
+
+ship "Behemoth"
+  sprite "ship/behemoth"
+  thumbnail "thumbnail/behemoth"
+  attributes
+    category "Destroyer"
+#    manufacturer "Betelgeuse"
+    licences
+      Pilot
+    "cost" 10800000
+    "shields" 7600
+    "hull" 8100
+    "required crew" 12
+    "bunks" 30
+    "mass" 540
+    "drag" 11.7
+    "heat dissipation" .4
+    "cargo space" 490
+    "outfit space" 570
+    "core space" 200
+    "engine space" 90
+    "weapon space" 280
+    weapon
+      "blast radius" 140
+      "shield damage" 1400
+      "hull damage" 700
+      "hit force" 2100
+  outfits
+    "D41-HY Shield Generator"
+    "NT-200 Nucleovoltaic"
+    "Hyperdrive"
+
+    "A250 Atomic Thruster"
+    "A375 Atomic Steering"
+
+    "Torpedo" 60
+    "Torpedo Storage Rack" 2
+    "Torpedo Launcher" 2
+    "Heavy Laser Turret" 4
+    "Heavy Anti-Missile Turret" 2
+
+    "LP144a Battery Pack"
+    "Fuel Barrel" 60
+    "Tactical Scanner" 4
+  engine -34 154
+  engine 34 154
+  gun -27 -83 "Torpedo Launcher"
+  gun 27 -83 "Torpedo Launcher"
+  turret -34 -64 "Heavy Laser Turret"
+  turret 34 -64 "Heavy Anti-Missile Turret"
+  turret -58 11 "Heavy Laser Turret"
+  turret 58 11 "Heavy Laser Turret"
+  turret -24 78 "Heavy Anti-Missile Turret"
+  turret 24 78 "Heavy Laser Turret"
+  leak "leak" 30 50
+  leak "flame" 30 80
+  leak "big leak" 50 30
+  explode "small explosion" 15
+  explode "medium explosion" 25
+  explode "large explosion" 35
+  explode "huge explosion" 20
+  "final explode" "final explosion large"
+  description "The Behemoth is a recent ship design from Lionheart Shipyards, designed as an alternative to the Syndicate Bulk Freighter. Although its cargo capacity is somewhat lower, it is also more manoeuvrable, and packs a heavier armament by default."
+
+
+ship "Behemoth" "Behemoth (Free Worlds)"
+  outfits
+    "D94-YV Shield Generator"
+    "Breeder Reactor"
+    "Hyperdrive"
+
+    "Greyhound Plasma Thruster"
+    "Impala Plasma Steering"
+
+    "Heavy Rocket" 40
+    "Heavy Rocket Rack" 2
+    "Heavy Rocket Launcher" 2
+    "Modified Blaster Quad Turret" 4
+    "Heavy Anti-Missile Turret" 2
+
+    "LP144a Battery Pack"
+    "Liquid Nitrogen Cooler"
+    "Fuel Barrel" 60
+    "Tactical Scanner" 4
+    "Outfit Space Expansion" 4
+    "Fragmentation Grenades" 10
+    "Laser Rifle" 20
+
+
+ship "Behemoth" "Behemoth (Hai)"
+  outfits
+    "Diamond Regenerator"
+    "Boulder Reactor"
+    "Hyperdrive"
+
+    `"Benga" Atomic Thruster`
+    `"Biroo" Atomic Steering`
+    `"Benga" Atomic Steering`
+
+    "Tracker" 112
+    "Tracker Storage Pod" 2
+    "Tracker Launcher" 2
+    "Pulse Turret" 4
+    "Chameleon Anti-Missile" 2
+
+    "Ravine Batteries"
+    "Williwaw Cooling" 4
+    "Fuel Pod" 6
+    "Yoloy Scanner"
+    "Outfit Space Expansion" 7
 
 
 
