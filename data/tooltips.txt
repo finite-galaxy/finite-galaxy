@@ -177,6 +177,9 @@ tip "cooling energy:"
 tip "cooling inefficiency:"
   `Interferes with your ship's ability to cool itself. Its cooling systems will only be about 75% effective at a cooling inefficiency of 5, and 30% at an inefficiency of 10.`
 
+tip "core space needed:"
+  `Tons of core space this outfit takes up.`
+
 tip "cost:"
   `Cost, in credits. If you have sold any used (depreciated) items today, you can buy them back for the same price you sold them for.`
 
@@ -195,7 +198,7 @@ tip "energy consumption:"
 tip "energy generation:"
   `Energy generated per second. If your ship has weapons other than beam weapons, you will probably also need batteries to store energy in.`
 
-tip "engine capacity needed:"
+tip "engine space needed:"
   `Tons of engine space this outfit takes up.`
 
 tip "fuel:"
@@ -333,9 +336,6 @@ tip "solar collection:"
 tip "tactical scan power:"
   `Tactical scanners allow you to view your current target's crew complement, fuel, heat, and energy levels when it is within range. The range is proportional to the square root of this value.`
 
-tip "movement, full / no cargo:"
-  `How quickly this ship can accelerate and turn when its cargo hold is full versus when it is empty.`
-
 tip "thrust:"
   `Thrust produced by engines. Higher thrust increases a ship's acceleration and top speed. The more mass a ship has, the more thrust is needed to achieve the same acceleration.`
 
@@ -363,7 +363,7 @@ tip "turret mounts needed:"
 tip "turret mounts free:"
   `How many turrets can be mounted on this ship. Turrets fire in the direction of the currently selected target, instead of firing straight forward like guns.`
 
-tip "weapon capacity needed:"
+tip "weapon space needed:"
   `Tons of weapon space this outfit takes up.`
 
 
@@ -468,17 +468,26 @@ tip "hull repair / max:"
 tip "required crew / bunks:"
   `How many crew members are required to operate this ship, and how many total bunks are available. Extra bunks can be used for passengers or extra crew. The more bunks a ship has, the more energy its life support systems consume.`
 
-tip "    weapon capacity:"
-  `How many tons of weapons this ship can hold. (To install a weapon, you must also have enough total outfit space available.)`
+tip "    core space:"
+  `How many tons of core systems this ship can hold. (To install a core system, you must also have enough total outfit space available.)`
 
-tip "    engine capacity:"
+tip "    engine space:"
   `How many tons of engines this ship can hold. (To install an engine, you must also have enough total outfit space available.)`
+
+tip "    weapon space:"
+  `How many tons of weapons this ship can hold. (To install a weapon, you must also have enough total outfit space available.)`
 
 tip "drone bays:"
   `The number of ships from the "Drone" category that this ship can carry.`
 
 tip "fighter bays:"
   `The number of ships from the "Fighter" category that this ship can carry.`
+
+tip "bomber bays:"
+  `The number of ships from the "Bomber" category that this ship can carry.`
+
+tip "movement, full / no cargo:"
+  `How quickly this ship can accelerate and turn when its cargo hold is full versus when it is empty.`
 
 tip "    maximum velocity:"
   `The fastest this ship can travel when using ordinary thrusters and, separately, when using an afterburner, if applicable.`
