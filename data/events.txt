@@ -71,17 +71,15 @@ event "flamethrower available"
 
 
 event "navy arsenals available"
+  planet "Canyon"
+    outfitter "Navy"
   planet "Carbuncle"
     outfitter "Navy"
   planet "Farpoint"
     outfitter "Navy"
-  planet "Geminus"
-    outfitter "Navy"
   planet "Ingot"
     outfitter "Navy"
   planet "Luna"
-    outfitter "Navy"
-  planet "Maelstrom"
     outfitter "Navy"
 
 
@@ -255,9 +253,6 @@ event "initial deployment 1"
     fleet "Republic Small" 600
     fleet "Republic Large" 400
     fleet "Navy Surveillance" 2000
-  planet "Ingot"
-    description `Ingot is a volcanic moon, totally unsuitable for life but rich in metal. The miners who work here must spend all their time inside pressurized buildings. Because Ingot has almost no atmosphere to slow them down, meteorites are a constant danger to the colonists. The shells of the buildings have multiple layers, designed to be self-sealing in any but the largest of impacts. Most of the mining is done remotely by robotic vehicles, but someone still needs to be present to control them and to make repairs when something goes wrong.`
-    description `Ingot is also now home to a burgeoning Navy base, although since the planet is so unlivable most of the troops are just living in ships in orbit.`
   system "Fala"
     fleet "Merchants North Small" 1900
     fleet "Merchants North Large" 3500
