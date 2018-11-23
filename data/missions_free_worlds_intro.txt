@@ -1324,7 +1324,7 @@ mission "FW Escort 1"
       names "free worlds small"
       variant
         "Hawk" 2
-        "Sparrow" 5
+        "Fury" 5
   npc
     personality plunders entering
     government Pirate
@@ -1396,7 +1396,7 @@ mission "FW Escort 1B"
       names "free worlds small"
       variant
         "Hawk" 1
-        "Sparrow" 3
+        "Fury" 3
   npc
     personality plunders entering
     government Pirate
@@ -1462,7 +1462,7 @@ mission "FW Escort 2"
       cargo 0
       names "free worlds small"
       variant
-        "Sparrow" 3
+        "Fury" 3
   npc
     personality plunders staying
     government Pirate
@@ -1526,7 +1526,7 @@ mission "FW Escort 2B"
       cargo 0
       names "free worlds small"
       variant
-        "Sparrow" 2
+        "Fury" 2
   npc
     personality plunders staying
     government Pirate
@@ -1704,7 +1704,7 @@ mission "FW Bounty 1"
     ship "Star Champion (Gatling)" "Weasel"
     ship "Wasp (Gatling)" "Vixen"
     ship "Berserker (Laser)" "Stoat"
-    ship "Sparrow" "Rat"
+    ship "Fury" "Rat"
     dialogue `The "Rat Pack" has been eliminated. You can claim the bounty payment by returning to <destination>.`
   
   on complete
@@ -2026,7 +2026,7 @@ mission "Defend Sabik"
       names "free worlds small"
       variant
         "Hawk"
-        "Sparrow" 2
+        "Fury" 2
     fleet
       names "free worlds small"
       variant
@@ -2042,7 +2042,7 @@ mission "Defend Sabik"
         "Falcon"
         "Osprey" 2
         "Hawk" 3
-        "Sparrow" 5
+        "Fury" 5
   npc
     personality heroic disables
     government "Free Worlds"
@@ -2073,7 +2073,7 @@ mission "Defend Sabik"
       names "free worlds small"
       variant
         "Hawk" 2
-        "Sparrow" 1
+        "Fury" 1
   
   on complete
     dialogue `The Navy has been driven off, but at a great cost. You should probably visit the spaceport and see if Tomek is there, or someone else who can tell you what to do next.`
