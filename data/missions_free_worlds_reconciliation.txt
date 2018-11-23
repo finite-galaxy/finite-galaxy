@@ -279,7 +279,7 @@ mission "FW Reconciliation 2A"
         `  "Wait, before we talk details, are you saying that you believe Sawyer's testimony against the Syndicate?"`
       `  "Everyone believes him," says one of the other governors, "throughout human space, and in Parliament too. We can all see that the evidence is undeniable. What people don't agree on is how to respond to that evidence."`
       label police
-      `  "We want to see justice done," says Edricka. "Our proposal is that a fleet under our jurisdiction, but joined by Free Worlds and Oathkeeper vessels, will travel into the Core and arrest at least one of the Syndicate masterminds behind the terrorist attacks. Such an action would satisfy the technical requirements of legality provided that immediately prior to the arrest, one of our courts hears Sawyer's testimony and pronounces that Syndicate individual guilty."`
+      `  "We want to see justice done," says Edricka. "Our proposal is that a fleet under our jurisdiction, but joined by Free Worlds and Oathkeeper vessels, will travel into the Syndicate space and arrest at least one of the Syndicate masterminds behind the terrorist attacks. Such an action would satisfy the technical requirements of legality provided that immediately prior to the arrest, one of our courts hears Sawyer's testimony and pronounces that Syndicate individual guilty."`
       choice
         `  "'Technically legal' sounds to me like a euphemism for 'something we know full well is going to get us into trouble.'"`
         `  "How exactly is a fleet of warships going to travel through Syndicate space without a massive battle?"`
@@ -374,7 +374,7 @@ mission "FW Defend Farpoint"
   
   on offer
     conversation
-      `When you land back on Farpoint, Danforth eagerly meets you and asks what information you were able to obtain. You tell him. "So," he says, "one executive on Foundry, and one on Hephaestus. Both of those are core Syndicate planets, with billions of people on them. No way that would work. But this financial guy, Alexander Soylent... your contact says he lives on a giant yacht that sails around the ocean on Nimbus. Now, that's a much more inviting target. And from what Sawyer says, the Syndicate's financial arm were the ones who decided war would be beneficial in the first place."`
+      `When you land back on Farpoint, Danforth eagerly meets you and asks what information you were able to obtain. You tell him. "So," he says, "one executive on Prime, and one on Hephaestus. Both of those are core Syndicate planets, with billions of people on them. No way that would work. But this financial guy, Alexander Soylent... your contact says he lives on a giant yacht that sails around the ocean on Mainsail. Now, that's a much more inviting target. And from what Sawyer says, the Syndicate's financial arm were the ones who decided war would be beneficial in the first place."`
       `  As you're talking, one of Danforth's officers runs into the room. "Sir," he says, "we're detecting a pirate fleet incoming."`
       `  Danforth swears. "This is my real job, of course," he explains, "defending the North from pirate invasion. This isn't the first attack we've had to repulse, and lately Parliament has been finding reasons to reassign my best ships elsewhere. Captain <last>, would you be willing to join the defence fleet? We'll finish this conversation once they've been driven off."`
       `  You hurry to your ship and join the defenders...`
@@ -628,11 +628,11 @@ mission "FW Embassy 1C"
 
 mission "FW Syndicate Capture 1"
   landing
-  name "Raid on Nimbus"
+  name "Raid on Mainsail"
   description "Travel to <destination> along with ships from the Oathkeepers, the Deep, and the Free Worlds, to capture Alexander Soylent, a Syndicate executive. Do not allow your escorts to be destroyed."
   autosave
   source Earth
-  destination Nimbus
+  destination Mainsail
   clearance
   passengers 2
   to offer
@@ -641,7 +641,7 @@ mission "FW Syndicate Capture 1"
     dialogue `You have failed an essential Free Worlds mission. If you want to complete the story line, revert to the autosave or another earlier snapshot of the game.`
   
   on offer
-    log "Preparing to invade Syndicate space with a joint strike force made up of Free Worlds, Deep security, and Oathkeeper ships. The plan is to capture one of the Syndicate executives and bring him to trial."
+    log "Preparing to invade Syndicate space with a joint strike force made up of Free Worlds, Deep Security, and Oathkeeper ships. The plan is to capture one of the Syndicate executives and bring him to trial."
     conversation
       `You land on Earth and make a show of being very busy ensuring that the Free Worlds ambassadors are comfortable and well cared for, until finally you receive a secure message from Edricka. She tells you that the convoy from the Deep is landing on Mars right now, and an Oathkeeper Saturn is visiting the shipyard on Luna. As soon as you are ready, you can take off, and travel together into the heart of Syndicate space.`
       `  You make an excuse to depart, and return to your ship. "Well," says Ijs, "this is it. If we're lucky, they won't see us coming, but no matter what, getting back out of Syndicate space will be a nightmare. Good luck, all."`
@@ -660,8 +660,9 @@ mission "FW Syndicate Capture 1"
   npc accompany save
     personality escort heroic waiting
     government "Deep Security"
-    ship "Bactrian" "Unbreakable"
+    ship "Leviathan (Heavy)" "Unbreakable"
     ship "Aerie" "Eagle's Eye"
+    ship "Aerie" "Sharp Beak"
 
 
 
@@ -669,7 +670,7 @@ mission "FW Syndicate Capture 1B"
   landing
   name "Escape to <planet>"
   description "You have captured the Syndicate executive Alexander Soylent. Now, bring him safely to <planet>, where he will face trial."
-  source Nimbus
+  source Mainsail
   destination Valhalla
   passengers 2
   to offer
@@ -703,13 +704,13 @@ mission "FW Syndicate Capture 1B"
   npc
     personality escort heroic waiting
     government "Deep Security"
-    ship "Bactrian" "Unbreakable"
+    ship "Leviathan (Heavy)" "Unbreakable"
     ship "Aerie" "Eagle's Eye"
-    ship "Dagger" "Alpha One"
-    ship "Dagger" "Alpha Two"
-    ship "Dagger" "Alpha Three"
-    ship "Dagger" "Alpha Four"
-    ship "Dagger" "Alpha Five"
+    ship "Aerie" "Sharp Beak"
+    ship "Dagger" "Autumn One"
+    ship "Dagger" "Autumn Two"
+    ship "Dagger" "Autumn Three"
+    ship "Dagger" "Autumn Four"
   
   npc
     government Syndicate
@@ -1092,7 +1093,7 @@ mission "FW Pug 2B"
         `  "If it isn't you, then who is it?"`
           goto who
       
-      `  Alastair says, "That terrorism was the action of a certain extremist faction that we have since purged from our ranks, and we were in the process of hunting down the perpetrators. Your raid on Nimbus interrupted those plans and gave the others a chance to go into hiding, but we will see to it that they, too, are brought to justice. But now, we need to put the past behind us and figure out how to work together against our common foe."`
+      `  Alastair says, "That terrorism was the action of a certain extremist faction that we have since purged from our ranks, and we were in the process of hunting down the perpetrators. Your raid on Mainsail interrupted those plans and gave the others a chance to go into hiding, but we will see to it that they, too, are brought to justice. But now, we need to put the past behind us and figure out how to work together against our common foe."`
       choice
         `  "I think you're lying. You had years to turn over those extremists, and you did not."`
         `  "Very well. Who is this common foe? You seem to know more than we do."`
