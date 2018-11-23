@@ -20,6 +20,10 @@ shipyard "Vortex Variants"
   "Mule"
   "Mule (Hai)"
   "Mule (Heavy)"
+  "Wasp"
+  "Wasp (Gatling)"
+  "Wasp (Miner)"
+  "Wasp (Syndicate)"
 
 
 
@@ -686,3 +690,112 @@ ship "Mule" "Mule (Heavy)"
     "Tactical Scanner" 4
     "Outfit Space Expansion" 8
     "Laser Rifle" 40
+
+
+
+ship "Wasp"
+  sprite "ship/wasp"
+  thumbnail "thumbnail/wasp"
+  attributes
+    category "Interceptor"
+#    manufacturer "Vortex"
+    licences
+      Pilot
+    "cost" 400000
+    "shields" 1500
+    "hull" 500
+    "required crew" 1
+    "bunks" 2
+    "mass" 60
+    "drag" 1.2
+    "heat dissipation" .8
+    "cargo space" 10
+    "outfit space" 190
+    "core space" 100
+    "engine space" 60
+    "weapon space" 30
+    weapon
+      "blast radius" 20
+      "shield damage" 200
+      "hull damage" 100
+      "hit force" 300
+  outfits
+    "D14-RN Shield Generator"
+    "nGVF-BB Fuel Cell"
+    "Hyperdrive"
+
+    "IT-2700 Ion Thruster"
+    "IS-2200 Ion Steering"
+
+    "X1 Blaster Cannon" 3
+
+    "LP036a Battery Pack"
+    "Fuel Barrel" 40
+    "Tactical Scanner"
+    "Laser Rifle" 2
+  engine -6 33
+  engine 6 33
+  gun 0 -38 "X1 Blaster Cannon"
+  gun -13 -31 "X1 Blaster Cannon"
+  gun 13 -31 "X1 Blaster Cannon"
+  leak "leak" 60 50
+  explode "tiny explosion" 20
+  explode "small explosion" 10
+  description "The Wasp is a medium-strength interceptor, designed by Vortex Shipyards to serve as an escort for cargo vessels. Like most Vortex ships, it is not particularly pretty, but it is reliable and serves the purpose it was made for."
+
+
+ship "Wasp" "Wasp (Gatling)"
+  outfits
+    "D14-RN Shield Generator"
+    "nGVF-BB Fuel Cell"
+    "Hyperdrive"
+
+    "IT-2700 Ion Thruster"
+    "IS-2200 Ion Steering"
+
+    "Gatling Round" 9000
+    "Gatling Bullet Boxes" 6
+    "Gatling Gun" 3
+
+    "Supercapacitor"
+    "Fuel Barrel" 40
+    "Tactical Scanner"
+    "Laser Rifle" 2
+
+
+ship "Wasp" "Wasp (Miner)"
+  outfits
+    "D14-RN Shield Generator"
+    "nGVF-BB Fuel Cell"
+    "Hyperdrive"
+
+    "IT-2700 Ion Thruster"
+    "IS-2200 Ion Steering"
+
+    "Laser Cannon" 3
+
+    "Supercapacitor" 2
+    "Asteroid Scanner"
+    "Fuel Barrel" 40
+    "Tactical Scanner"
+    "Laser Rifle" 2
+
+
+ship "Wasp" "Wasp (Syndicate)"
+  outfits
+    "D14-RN Shield Generator"
+    "nGVF-BB Fuel Cell"
+    "Hyperdrive"
+
+    "IT-2700 Ion Thruster"
+    "IS-2200 Ion Steering"
+
+    "Proton Cannon"
+
+    "LP036a Battery Pack"
+    "Cargo Scanner"
+    "Fuel Barrel" 40
+    "Tactical Scanner" 3
+    "Outfit Space Expansion"
+    "Laser Rifle" 2
+
