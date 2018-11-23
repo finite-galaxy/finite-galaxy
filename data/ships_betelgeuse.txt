@@ -10,6 +10,9 @@ shipyard "Betelgeuse Variants"
   "Protector (Mark II)"
   "Star Barge"
   "Star Barge (Miner)"
+  "Star Champion"
+  "Star Champion (Gatling)"
+  "Star Champion (Miner)"
   "Star Freighter"
   "Star Freighter (Fancy)"
   "Star Freighter (Hai)"
@@ -399,6 +402,101 @@ ship "Star Barge" "Star Barge (Miner)"
     "LP036a Battery Pack"
     "Asteroid Scanner"
     "Fuel Barrel" 30
+
+
+
+ship "Star Champion"
+  sprite "ship/berserker"
+  thumbnail "thumbnail/berserker"
+  attributes
+    category "Interceptor"
+#    manufacturer "Vortex"
+    licences
+      Pilot
+    "cost" 520000
+    "shields" 2200
+    "hull" 500
+    "required crew" 1
+    "bunks" 2
+    "mass" 110
+    "drag" 2.2
+    "heat dissipation" .85
+    "cargo space" 10
+    "outfit space" 240
+    "core space" 140
+    "engine space" 65
+    "weapon space" 35
+    weapon
+      "blast radius" 30
+      "shield damage" 300
+      "hull damage" 150
+      "hit force" 450
+  outfits
+    "D23-QP Shield Generator"
+    "nGVF-CC Fuel Cell"
+    "Hyperdrive"
+
+    "IT-2700 Ion Thruster"
+    "IS-3200 Ion Steering"
+
+    "Gatling Round" 12000
+    "Gatling Bullet Boxes" 8
+    "Gatling Gun" 4
+
+    "Supercapacitor"
+    "Small Radar Jammer"
+    "Tactical Scanner"
+    "Fuel Barrel" 40
+  engine -10 45
+  engine 10 45
+  gun -20 12 "Gatling Gun"
+  gun 20 12 "Gatling Gun"
+  gun -44 10 "Gatling Gun"
+  gun 44 10 "Gatling Gun"
+  leak "leak" 60 50
+  leak "flame" 80 80
+  explode "tiny explosion" 10
+  explode "small explosion" 15
+  "final explode" "final explosion small"
+  description "Once one of the most popular interceptor-class ships, the Star Champion's popularity is now waning in favour of more modern and powerful ships like the Hawk. Although limited numbers are still produced by Betelgeuse Shipyards, most Star Champions that are in service today are more than half a century old."
+
+
+ship "Star Champion" "Star Champion (Gatling)"
+  outfits
+    "D23-QP Shield Generator"
+    "nGVF-CC Fuel Cell"
+    "Hyperdrive"
+
+    "IT-2700 Ion Thruster"
+    "IS-2200 Ion Steering"
+    "Afterburner"
+
+    "Gatling Round" 12000
+    "Gatling Bullet Boxes" 8
+    "Gatling Gun" 4
+
+    "Supercapacitor"
+    "Small Radar Jammer"
+    "Tactical Scanner"
+    "Fuel Barrel" 40
+
+
+ship "Star Champion" "Star Champion (Miner)"
+  outfits
+    "D23-QP Shield Generator"
+    "nGVF-CC Fuel Cell"
+    "Hyperdrive"
+
+    "IT-2700 Ion Thruster"
+    "IS-3200 Ion Steering"
+
+    "Laser Cannon" 4
+
+    "LP036a Battery Pack"
+    "Asteroid Scanner"
+    "Fuel Barrel" 40
+    "Small Radar Jammer"
+    "Tactical Scanner"
 
 
 
