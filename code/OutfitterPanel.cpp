@@ -389,8 +389,8 @@ void OutfitterPanel::FailBuy() const
   if(!playerShip)
     return;
   
-  double coreNeeded = -selectedOutfit->Get("core capacity");
-  double coreSpace = playerShip->Attributes().Get("core capacity");
+  double coreNeeded = -selectedOutfit->Get("core space");
+  double coreSpace = playerShip->Attributes().Get("core space");
   if(coreNeeded > coreSpace)
   {
     GetUI()->Push(new Dialogue("Only part of your ship's outfit capacity is usable for core systems. "
@@ -400,8 +400,8 @@ void OutfitterPanel::FailBuy() const
     return;
   }
   
-  double engineNeeded = -selectedOutfit->Get("engine capacity");
-  double engineSpace = playerShip->Attributes().Get("engine capacity");
+  double engineNeeded = -selectedOutfit->Get("engine space");
+  double engineSpace = playerShip->Attributes().Get("engine space");
   if(engineNeeded > engineSpace)
   {
     GetUI()->Push(new Dialogue("Only part of your ship's outfit capacity is usable for engines. "
@@ -411,8 +411,8 @@ void OutfitterPanel::FailBuy() const
     return;
   }
   
-  double weaponNeeded = -selectedOutfit->Get("weapon capacity");
-  double weaponSpace = playerShip->Attributes().Get("weapon capacity");
+  double weaponNeeded = -selectedOutfit->Get("weapon space");
+  double weaponSpace = playerShip->Attributes().Get("weapon space");
   if(weaponNeeded > weaponSpace)
   {
     GetUI()->Push(new Dialogue("Only part of your ship's outfit capacity is usable for weapons. "

@@ -1061,9 +1061,9 @@ void GameData::PrintShipTable()
     cout << attributes.Get("fuel capacity") << '\t';
     
     cout << ship.BaseAttributes().Get("outfit space") << '\t';
-    cout << ship.BaseAttributes().Get("core capacity") << '\t';
-    cout << ship.BaseAttributes().Get("engine capacity") << '\t';
-    cout << ship.BaseAttributes().Get("weapon capacity") << '\t';
+    cout << ship.BaseAttributes().Get("core space") << '\t';
+    cout << ship.BaseAttributes().Get("engine space") << '\t';
+    cout << ship.BaseAttributes().Get("weapon space") << '\t';
     cout << 60. * attributes.Get("thrust") / attributes.Get("drag") << '\t';
     cout << 3600. * attributes.Get("thrust") / attributes.Mass() << '\t';
     cout << 60. * attributes.Get("turn") / attributes.Mass() << '\t';
@@ -1105,7 +1105,7 @@ void GameData::PrintWeaponTable()
     const Outfit &outfit = it.second;
     cout << it.first << '\t';
     cout << outfit.Cost() << '\t';
-    cout << -outfit.Get("weapon capacity") << '\t';
+    cout << -outfit.Get("weapon space") << '\t';
     
     cout << outfit.Range() << '\t';
     

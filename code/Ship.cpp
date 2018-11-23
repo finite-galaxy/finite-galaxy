@@ -515,9 +515,9 @@ void Ship::FinishLoading(bool isNewInstance)
   const string &category = attributes.Category();
   canBeCarried = (category == "Fighter" || category == "Drone");
   
-  // Issue warnings if this ship has negative cargo, outfit, core, engine, or weapon capacity.
+  // Issue warnings if this ship has negative cargo, outfit, core, engine, or weapon space.
   string warning;
-  for(const string &attr : set<string>{"cargo space", "outfit space", "core capacity", "engine capacity", "weapon capacity"})
+  for(const string &attr : set<string>{"cargo space", "outfit space", "core space", "engine space", "weapon space"})
   {
     double val = attributes.Get(attr);
     if(val < 0)

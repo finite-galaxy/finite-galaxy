@@ -183,11 +183,11 @@ void MapOutfitterPanel::DrawItems()
       {
         double space = -outfit->Get("outfit space");
         info = Format::Number(space) + (abs(space) == 1. ? " ton" : " tons");
-        if(space && -outfit->Get("core capacity") == space)
+        if(space && -outfit->Get("core space") == space)
           info += " of core space";
-        else if(space && -outfit->Get("engine capacity") == space)
+        else if(space && -outfit->Get("engine space") == space)
           info += " of engine space";
-        else if(space && -outfit->Get("weapon capacity") == space)
+        else if(space && -outfit->Get("weapon space") == space)
           info += " of weapon space";
         else
           info += " of outfit space";

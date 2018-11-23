@@ -175,7 +175,7 @@ void ShipInfoDisplay::UpdateAttributes(const Ship &ship, const Depreciation &dep
   // Find out how much outfit, core, engine, and weapon space the chassis has.
   map<string, double> chassis;
   static const vector<string> NAMES = {
-    "outfit space", "core capacity", "engine capacity", "weapon capacity", "gun ports", "turret mounts"
+    "outfit space", "core space", "engine space", "weapon space", "gun ports", "turret mounts"
   };
   for(unsigned i = 0; i < NAMES.size(); i++)
     chassis[NAMES[i]] = attributes.Get(NAMES[i]);
@@ -183,19 +183,19 @@ void ShipInfoDisplay::UpdateAttributes(const Ship &ship, const Depreciation &dep
     for(auto &cit : chassis)
       cit.second -= it.second * it.first->Get(cit.first);
   
-  attributeLabels.push_back("outfit space free:");
+  attributeLabels.push_back("free outfit space:");
   attributeValues.push_back(Format::Number(attributes.Get(NAMES[0]))
       + " / " + Format::Number(chassis[NAMES[0]]));
   attributesHeight += 20;
-  attributeLabels.push_back("    core capacity:");
+  attributeLabels.push_back("    core space:");
   attributeValues.push_back(Format::Number(attributes.Get(NAMES[1]))
       + " / " + Format::Number(chassis[NAMES[1]]));
   attributesHeight += 20;
-  attributeLabels.push_back("    engine capacity:");
+  attributeLabels.push_back("    engine space:");
   attributeValues.push_back(Format::Number(attributes.Get(NAMES[2]))
       + " / " + Format::Number(chassis[NAMES[2]]));
   attributesHeight += 20;
-  attributeLabels.push_back("    weapon capacity:");
+  attributeLabels.push_back("    weapon space:");
   attributeValues.push_back(Format::Number(attributes.Get(NAMES[3]))
       + " / " + Format::Number(chassis[NAMES[3]]));
   attributesHeight += 20;

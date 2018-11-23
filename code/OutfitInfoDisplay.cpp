@@ -151,9 +151,9 @@ void OutfitInfoDisplay::UpdateRequirements(const Outfit &outfit, const PlayerInf
   static const vector<string> NAMES = {
     "", "",
     "outfit space needed:", "outfit space",
-    "core capacity needed:", "core capacity",
-    "engine capacity needed:", "engine capacity",
-    "weapon capacity needed:", "weapon capacity",
+    "core space needed:", "core space",
+    "engine space needed:", "engine space",
+    "weapon space needed:", "weapon space",
     "", "",
     "gun ports needed:", "gun ports",
     "turret mounts needed:", "turret mounts"
@@ -189,7 +189,7 @@ void OutfitInfoDisplay::UpdateAttributes(const Outfit &outfit)
   for(const pair<const char *, double> &it : outfit.Attributes())
   {
     static const set<string> SKIP = {
-      "outfit space", "core capacity", "engine capacity", "weapon capacity", "gun ports", "turret mounts"
+      "outfit space", "core space", "engine space", "weapon space", "gun ports", "turret mounts"
     };
     if(SKIP.count(it.first))
       continue;
