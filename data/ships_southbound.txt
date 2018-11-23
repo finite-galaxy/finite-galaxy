@@ -317,31 +317,31 @@ ship "Bastion" "Bastion (Scanner)"
 
 
 ship "Brig"
-  sprite "ship/fury"
-  thumbnail "thumbnail/fury"
+  sprite "ship/berserker"
+  thumbnail "thumbnail/berserker"
   attributes
     category "Interceptor"
 #    manufacturer "Southbound"
     licences
       Pilot
-    "cost" 490000
-    "shields" 2000
-    "hull" 400
+    "cost" 520000
+    "shields" 2200
+    "hull" 500
     "required crew" 1
-    "bunks" 3
-    "mass" 70
-    "drag" 1.6
-    "heat dissipation" .9
-    "cargo space" 15
-    "outfit space" 230
-    "core space" 130
-    "engine space" 60
-    "weapon space" 40
+    "bunks" 2
+    "mass" 110
+    "drag" 2.2
+    "heat dissipation" .85
+    "cargo space" 10
+    "outfit space" 240
+    "core space" 140
+    "engine space" 65
+    "weapon space" 35
     weapon
-      "blast radius" 24
-      "shield damage" 240
-      "hull damage" 120
-      "hit force" 360
+      "blast radius" 30
+      "shield damage" 300
+      "hull damage" 150
+      "hit force" 450
   outfits
     "D23-QP Shield Generator"
     "nGVF-CC Fuel Cell"
@@ -355,16 +355,18 @@ ship "Brig"
     "LP036a Battery Pack"
     "Fuel Barrel" 60
     "Tactical Scanner"
-  engine -17 35
-  engine 17 35
-  gun -10 -26 "Modified Blaster Cannon"
-  gun 10 -26 "Modified Blaster Cannon"
-  gun -16 -20 "Modified Blaster Cannon"
-  gun 16 -20 "Modified Blaster Cannon"
-  leak "flame" 50 80
+  engine -10 45
+  engine 10 45
+  gun -20 12 "Modified Blaster Cannon"
+  gun 20 12 "Modified Blaster Cannon"
+  gun -44 10 "Modified Blaster Cannon"
+  gun 44 10 "Modified Blaster Cannon"
+  leak "leak" 60 50
+  leak "flame" 80 80
   explode "tiny explosion" 10
-  explode "small explosion" 20
-  description "The Brig is Southbound Shipyard's most popular design of escort ship. They have greater firepower than most other interceptor-class vessel, meaning that any pirate flying solo will think twice before attacking a convoy that is accompanied by a Brig. However, Brigs are also much less manoeuvrable than other small ships."
+  explode "small explosion" 15
+  "final explode" "final explosion small"
+  description "Once one of the most popular interceptor-class ships, the Star Champion's popularity is now waning in favour of more modern and powerful ships like the Hawk. Although limited numbers are still produced by Southbound Shipyards, most Star Champions that are in service today are more than half a century old."
 
 
 ship "Brig" "Brig (Flamethrower)"
