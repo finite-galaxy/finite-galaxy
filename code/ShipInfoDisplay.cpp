@@ -167,10 +167,6 @@ void ShipInfoDisplay::UpdateAttributes(const Ship &ship, const Depreciation &dep
     attributeValues.push_back(Format::Number(ship.Cargo().Used())
       + " / " + Format::Number(attributes.Get("cargo space")));
   attributesHeight += 20;
-  double emptyMass = ship.Mass();
-  attributeLabels.push_back(isGeneric ? "mass with no cargo:" : "mass:");
-  attributeValues.push_back(Format::Number(emptyMass));
-  attributesHeight += 20;
   
   // Find out how much outfit, core, engine, and weapon space the chassis has.
   map<string, double> chassis;
@@ -280,6 +276,7 @@ void ShipInfoDisplay::UpdateAttributes(const Ship &ship, const Depreciation &dep
   }
   
   // Movement
+  double emptyMass = ship.Mass();
   double fullMass = emptyMass + (isGeneric ? attributes.Get("cargo space") : ship.Cargo().Used());
   isGeneric &= (fullMass != emptyMass);
   double thruster = attributes.Get("thrust");
@@ -291,8 +288,8 @@ void ShipInfoDisplay::UpdateAttributes(const Ship &ship, const Depreciation &dep
   attributeLabels.push_back(string());
   attributeValues.push_back(string());
   attributesHeight += 10;
-  attributeLabels.push_back("full / no cargo:");
-  attributeValues.push_back(" ");
+  attributeLabels.push_back("mass full / no cargo:");
+  attributeValues.push_back(Format::Round(fullMass) + " / " + Format::Round(emptyMass));
   attributesHeight += 20;
   
   /*
@@ -310,7 +307,7 @@ void ShipInfoDisplay::UpdateAttributes(const Ship &ship, const Depreciation &dep
 
   attributeLabels.push_back("    maximum velocity:");
   if(afterburner)
-    attributeValues.push_back(Format::Round(60. * forwardThrust / attributes.Get("drag")) 
+    attributeValues.push_back(Format::Round(60. * forwardThrust / attributes.Get("drag"))
       + " + " + Format::Round(60. * afterburner / attributes.Get("drag")));
   else
     attributeValues.push_back(Format::Round(60. * forwardThrust / attributes.Get("drag")));
