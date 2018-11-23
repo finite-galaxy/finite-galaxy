@@ -1023,7 +1023,7 @@ void MapPanel::DrawNames()
 {
   // Don't draw if too small.
   double zoom = Zoom();
-  if(zoom <= 0.5)
+  if(zoom <= 0.667)
     return;
   
   // Draw names for all systems you have visited.
