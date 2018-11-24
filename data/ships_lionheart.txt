@@ -10,9 +10,9 @@ shipyard "Lionheart Variants"
   "Headhunter (Afterburner)"
   "Headhunter (Hai)"
   "Headhunter (Particle)"
-  "Lance"
-  "Lance (Electron)"
-  "Lance (Torpedo)"
+  "Thunderbolt"
+  "Thunderbolt (Electron)"
+  "Thunderbolt (Torpedo)"
   "Leviathan"
   "Leviathan (Hai)"
   "Leviathan (Heavy)"
@@ -433,7 +433,7 @@ ship "Headhunter" "Headhunter (Particle)"
 
 
 
-ship "Lance"
+ship "Thunderbolt"
   sprite "ship/corvette"
   thumbnail "thumbnail/corvette"
   attributes
@@ -492,10 +492,10 @@ ship "Lance"
   explode "medium explosion" 24
   explode "large explosion" 8
   "final explode" "final explosion medium"
-  description "Incorporating new, experimental lightweight materials, the Lionheart Lance combines the speed and agility of a fighter with the armament of a heavy warship. Its weak hull is more than compensated for by its advanced shielding matrix."
+  description "Incorporating new, experimental lightweight materials, the Lionheart Thunderbolt combines the speed and agility of a fighter with the armament of a heavy warship. Its weak hull is more than compensated for by its advanced shielding matrix."
 
 
-ship "Lance" "Lance (Electron)"
+ship "Thunderbolt" "Thunderbolt (Electron)"
   outfits
     "D67-TM Shield Generator"
     "Fusion Reactor"
@@ -514,7 +514,7 @@ ship "Lance" "Lance (Electron)"
     "Outfit Space Expansion" 2
 
 
-ship "Lance" "Lance (Torpedo)"
+ship "Thunderbolt" "Thunderbolt (Torpedo)"
   outfits
     "D67-TM Shield Generator"
     "NT-200 Nucleovoltaic"

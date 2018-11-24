@@ -1085,16 +1085,7 @@ event "fw safe passage end"
   "reputation: Republic" <?= -1000
 
 
-event "navy using mark ii ships"
-  fleet "Deep Security Large"
-    add variant 2
-      "Lance (Electron)"
-    add variant 1
-      "Lance (Electron)" 2
-    add variant 1
-      "Lance (Electron)"
-      "Lance"
-  
+event "navy using mark ii ships"  
   fleet "Republic Home"
     add variant 3
       "Jupiter (Mark II)"
