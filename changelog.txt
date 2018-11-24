@@ -130,7 +130,7 @@
       * Chaser: +700 shields, +600 hull, +1 required crew, +1 bunk, +10 mass, +33 outfit space
       * Clipper: unchanged
       * Combat Drone: +0.01 drag, +2 outfit space
-      * Combat Fighter: unchanged
+      * Combat Fighter: −5 weapon space
       * Cool Breeze: unchanged
       * Courier: unchanged
       * Dagger: −0.03 drag, +5 outfit space
@@ -152,7 +152,7 @@
       * Hauler II: +1 required crew, −2 bunks, +20 cargo space
       * Hauler III: +1 required crew, −2 bunks, +30 cargo space
       * Hawk: −100 shields, +300 hull, +10 outfit space
-      * Headhunter: −10 cargo space, +10 weapon space
+      * Headhunter: +1 bunk, −10 cargo space, −5 engine space, +5 weapon space
       * Heavy Shuttle: +100 hull, −5 cargo space, +5 weapon space
       * Hulk: unchanged
       * Hurricane: unchanged
@@ -220,7 +220,7 @@
       * Spindle: unchanged
       * Spire: unchanged
       * Splinter: unchanged
-      * Star Barge: –10 cargo space, +10 outfit space, +10 weapon space
+      * Star Barge: +10 weapon space
       * Star Freighter: +10 cargo space
       * Star Queen: −9 required crew
       * Strong Wind: +3 outfit space
@@ -242,8 +242,8 @@
       * Visitor: unchanged
       * Wagon: unchanged
       * Wardragon: −95 bunks, −100 required crew, −110 mass, +112 outfit space, −20 engine space; removed energy generation, hull energy, hull repair rate, and ramscoop
-      * Warrior: unchanged
-      * Wasp: +2 weapon space
+      * Warrior: −10 weapon space
+      * Wasp: −10 engine space, −3 weapon space
       * Water Bug: unchanged
       * Winter Gale: unchanged
       * World-Ship A: cost from 27 690 000 to 47 690 000; +5000 shields, −5000 hull, −20 bunks, +20 required crew, +100 mass, −20 cargo space, +150 outfit space, +8 engine space, +14 weapon space
@@ -283,11 +283,9 @@
   * deleted all conversation scenes
   * shape (new): 
     * normalized derivatives of ship/*@2x.png
-  * ship:
-    * added "mheadhunter" (@MCOfficer)
+  * ship: —
   * star: —
-  * thumbnail:
-    * added "mheadhunter" (@MCOfficer)
+  * thumbnail: —
   * ui: —
 * sounds: —
 

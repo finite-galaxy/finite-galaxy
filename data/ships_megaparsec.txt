@@ -1,12 +1,14 @@
 shipyard "Megaparsec Variants"
   "Bounder"
   "Bounder (Hai)"
+  "Bounder (Miner)"
   "Manta"
   "Manta (Mark II)"
   "Manta (Nuclear)"
   "Manta (Proton)"
   "Quicksilver"
   "Quicksilver (Mark II)"
+  "Quicksilver (Patrol)"
   "Quicksilver (Proton)"
   "Thunderbolt"
 
@@ -79,6 +81,24 @@ ship "Bounder" "Bounder (Hai)"
     "Fuel Pod" 9
     "Quantum Keystone"
     "Yoloy Scanner"
+
+
+ship "Bounder" "Bounder (Miner)"
+  outfits
+    "D14-RN Shield Generator"
+    "RT-I Radiothermal"
+    "Hyperdrive"
+
+    "IT-3700 Ion Thruster"
+    "IS-3200 Ion Steering"
+
+    "Laser Turret" 2
+
+    "Supercapacitor" 3
+    "Asteroid Scanner"
+    "Fuel Barrel" 90
+    "Small Radar Jammer"
+    "Tactical Scanner"
 
 
 
@@ -269,6 +289,26 @@ ship "Quicksilver" "Quicksilver (Mark II)"
     "Liquid Nitrogen Cooler"
     "Fuel Barrel" 40
     "Tactical Scanner" 4
+    "Laser Rifle" 6
+
+
+ship "Quicksilver" "Quicksilver (Patrol)"
+  outfits
+    "D23-QP Shield Generator"
+    "RT-I Radiothermal"
+    "Hyperdrive"
+
+    "IT-3700 Ion Thruster"
+    "IS-3200 Ion Steering"
+
+    "Particle Cannon" 2
+
+    "LP036a Battery Pack"
+    "Cargo Scanner"
+    "Cooling Ducts"
+    "Fuel Barrel" 40
+    "Outfit Scanner"
+    "Tactical Scanner" 3
     "Laser Rifle" 6
 
 

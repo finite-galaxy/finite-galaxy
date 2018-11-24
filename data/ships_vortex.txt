@@ -23,7 +23,6 @@ shipyard "Vortex Variants"
   "Splinter (Mark II)"
   "Surveillance Drone"
   "Wasp"
-  "Wasp (Gatling)"
 
 
 
@@ -184,9 +183,9 @@ ship "Combat Fighter"
     "drag" .7
     "heat dissipation" .8
     "outfit space" 100
-    "core space" 50
+    "core space" 55
     "engine space" 30
-    "weapon space" 20
+    "weapon space" 15
     weapon
       "blast radius" 12
       "shield damage" 120
@@ -840,9 +839,9 @@ ship "Wasp"
     "heat dissipation" .8
     "cargo space" 10
     "outfit space" 190
-    "core space" 100
-    "engine space" 60
-    "weapon space" 30
+    "core space" 115
+    "engine space" 50
+    "weapon space" 25
     weapon
       "blast radius" 20
       "shield damage" 200
@@ -856,38 +855,22 @@ ship "Wasp"
     "IT-2700 Ion Thruster"
     "IS-2200 Ion Steering"
 
-    "X1 Blaster Cannon" 3
-
-    "LP036a Battery Pack"
-    "Fuel Barrel" 40
-    "Tactical Scanner"
-    "Laser Rifle" 2
-  engine -6 33
-  engine 6 33
-  gun 0 -38 "X1 Blaster Cannon"
-  gun -13 -31 "X1 Blaster Cannon"
-  gun 13 -31 "X1 Blaster Cannon"
-  leak "leak" 60 50
-  explode "tiny explosion" 20
-  explode "small explosion" 10
-  description "The Wasp is a medium-strength interceptor, designed by Vortex Shipyards to serve as an escort for cargo vessels. Like most Vortex ships, it is not particularly pretty, but it is reliable and serves the purpose it was made for."
-
-
-ship "Wasp" "Wasp (Gatling)"
-  outfits
-    "D14-RN Shield Generator"
-    "nGVF-BB Fuel Cell"
-    "Hyperdrive"
-
-    "IT-2700 Ion Thruster"
-    "IS-2200 Ion Steering"
-
     "Gatling Round" 9000
     "Gatling Bullet Boxes" 6
     "Gatling Gun" 3
 
-    "Supercapacitor"
     "Fuel Barrel" 40
+    "Small Radar Jammer"
+    "Supercapacitor"
     "Tactical Scanner"
     "Laser Rifle" 2
+  engine -6 33
+  engine 6 33
+  gun 0 -38 "Gatling Gun"
+  gun -13 -31 "Gatling Gun"
+  gun 13 -31 "Gatling Gun"
+  leak "leak" 60 50
+  explode "tiny explosion" 20
+  explode "small explosion" 10
+  description "The Wasp is a medium-strength interceptor, designed by Vortex Shipyards to serve as an escort for cargo vessels. Like most Vortex ships, it is not particularly pretty, but it is reliable and serves the purpose it was made for."
 

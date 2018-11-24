@@ -5,6 +5,7 @@ shipyard "Lionheart Variants"
   "Argosy (Laser)"
   "Argosy (Turret)"
   "Arrow"
+  "Arrow (Anti-Missile)"
   "Arrow (Hai)"
   "Behemoth"
   "Behemoth (Free Worlds)"
@@ -12,8 +13,10 @@ shipyard "Lionheart Variants"
   "Dagger"
   "Headhunter"
   "Headhunter (Afterburner)"
+  "Headhunter (Anti-Missile)"
   "Headhunter (Hai)"
   "Headhunter (Particle)"
+  "Headhunter (Patrol)"
   "Leviathan"
   "Leviathan (Hai)"
   "Leviathan (Heavy)"
@@ -24,6 +27,7 @@ shipyard "Lionheart Variants"
   "Scout (Afterburner)"
   "Scout (Hai)"
   "Scout (Javelin)"
+  "Scout (Miner)"
   "Scout (Speedy)"
 
 
@@ -127,8 +131,8 @@ ship "Argosy"
     "A250 Atomic Thruster"
     "A255 Atomic Steering"
 
-    "Heavy Laser Cannon" 2
-    "Heavy Laser Turret"
+    "Laser Cannon" 2
+    "Laser Turret" 2
 
     "LP072a Battery Pack"
     "Fuel Barrel" 40
@@ -136,10 +140,10 @@ ship "Argosy"
     "Tactical Scanner" 3
   engine -20 91
   engine 20 91
-  gun -22 -37 "Heavy Laser Cannon"
-  gun 22 -37 "Heavy Laser Cannon"
-  turret 0 -12 "Heavy Laser Turret"
-  turret 0 8 
+  gun -22 -37 "Laser Cannon"
+  gun 22 -37 "Laser Cannon"
+  turret 0 -12 "Laser Turret"
+  turret 0 8 "Laser Turret"
   leak "leak" 60 50
   leak "flame" 60 80
   explode "tiny explosion" 10
@@ -147,7 +151,7 @@ ship "Argosy"
   explode "medium explosion" 25
   explode "large explosion" 10
   "final explode" "final explosion medium"
-  description "The Argosy from Vortex Shipyards is very popular with merchants not because of its capacity, which is actually slightly smaller than the Star Freighter, but because it can hold its own in combat even against a small pirate fleet."
+  description "The Argosy from Vortex Shipyards is very popular with merchants not because of its capacity, which is actually slightly smaller than the Star Freighter, but because it can hold its own in combat against pirate interceptors."
   description "  The Argosy is also a very easy ship to upgrade with faster engines or more powerful weapons as needed, so many privately owned Argosies have very different capabilities than the stock model."
 
 
@@ -178,8 +182,8 @@ ship "Argosy" "Argosy (Laser)"
     "A250 Atomic Thruster"
     "A255 Atomic Steering"
 
-    "Laser Cannon" 2
-    "Laser Turret" 2
+    "Heavy Laser Cannon" 2
+    "Heavy Laser Turret"
 
     "LP072a Battery Pack"
     "Fuel Barrel" 40
@@ -239,23 +243,40 @@ ship "Arrow"
     "A250 Atomic Thruster"
     "A255 Atomic Steering"
 
-    "Laser Cannon" 2
-    "Heavy Anti-Missile Turret"
-
-    "Supercapacitor"
+    "LP036a Battery Pack"
+    "Cooling Ducts"
     "Fuel Barrel" 40
+    "Small Radar Jammer"
     "Tactical Scanner"
   engine -10 60
   engine 10 60
-  gun -8 -34 "Laser Cannon"
-  gun 8 -34 "Laser Cannon"
-  turret 0 16 "Heavy Anti-Missile Turret"
+  gun -8 -34
+  gun 8 -34
+  turret 0 16
   leak "leak" 80 50
   explode "tiny explosion" 12
   explode "small explosion" 18
   explode "medium explosion" 6
   "final explode" "final explosion small"
   description "The Arrow is a light transport, designed for bringing a small number of very rich passengers - CEOs, for example - from one planet to another with speed and style. It makes up for its light armament by being able to outrun nearly every other ship in the sky."
+
+
+ship "Arrow" "Arrow (Anti-Missile)"
+  outfits
+    "D14-RN Shield Generator"
+    "Dwarf Core"
+    "Hyperdrive"
+
+    "A250 Atomic Thruster"
+    "A255 Atomic Steering"
+
+    "Heavy Anti-Missile Turret"
+
+    "LP036a Battery Pack"
+    "Cooling Ducts"
+    "Fuel Barrel" 40
+    "Small Radar Jammer"
+    "Tactical Scanner"
 
 
 ship "Arrow" "Arrow (Hai)"
@@ -267,7 +288,6 @@ ship "Arrow" "Arrow (Hai)"
     `"Benga" Atomic Thruster`
     `"Biroo" Atomic Steering`
 
-    "Pulse Cannon" 2
     "Chameleon Anti-Missile"
 
     "Chasm Batteries"
@@ -447,15 +467,15 @@ ship "Headhunter"
     "shields" 3800
     "hull" 700
     "required crew" 2
-    "bunks" 4
+    "bunks" 5
     "mass" 120
     "drag" 2.6
     "heat dissipation" .8
     "cargo space" 40
     "outfit space" 290
-    "core space" 140
-    "engine space" 80
-    "weapon space" 70
+    "core space" 150
+    "engine space" 75
+    "weapon space" 65
     weapon
       "blast radius" 44
       "shield damage" 440
@@ -469,18 +489,19 @@ ship "Headhunter"
     "A250 Atomic Thruster"
     "A255 Atomic Steering"
 
-    "Heavy Laser Cannon" 2
-    "Heavy Laser Turret"
+    "Heavy Laser Cannon" 4
 
     "LP036a Battery Pack"
     "Fuel Barrel" 40
-    "Small Radar Jammer"
+    "Small Radar Jammer" 2
     "Tactical Scanner" 3
   engine -16 47
   engine 16 47
-  gun -13 -27 "Heavy Laser Cannon"
-  gun 13 -27 "Heavy Laser Cannon"
-  turret 0 9 "Heavy Laser Turret"
+  gun -12 -27 "Heavy Laser Cannon"
+  gun 12 -27 "Heavy Laser Cannon"
+  gun -17 -18 "Heavy Laser Cannon"
+  gun 17 -18 "Heavy Laser Cannon"
+  turret 0 9
   leak "leak" 60 50
   leak "flame" 80 80
   explode "tiny explosion" 20
@@ -500,14 +521,31 @@ ship "Headhunter" "Headhunter (Afterburner)"
     "A255 Atomic Steering"
     "Afterburner"
 
-    "Heavy Laser Cannon" 2
-    "Heavy Laser Turret"
+    "Heavy Laser Cannon" 4
 
     "LP036a Battery Pack"
     "Fuel Barrel" 40
-    "Small Radar Jammer"
+    "Small Radar Jammer" 2
     "Tactical Scanner" 3
-    "Outfit Space Expansion" 2
+    "Outfit Space Expansion"
+
+
+ship "Headhunter" "Headhunter (Anti-Missile)"
+  outfits
+    "D23-QP Shield Generator"
+    "NT-200 Nucleovoltaic"
+    "Hyperdrive"
+
+    "A250 Atomic Thruster"
+    "A255 Atomic Steering"
+
+    "Laser Cannon" 4
+    "Heavy Anti-Missile Turret"
+
+    "LP036a Battery Pack"
+    "Fuel Barrel" 40
+    "Small Radar Jammer" 2
+    "Tactical Scanner" 3
 
 
 ship "Headhunter" "Headhunter (Hai)"
@@ -517,7 +555,7 @@ ship "Headhunter" "Headhunter (Hai)"
     "Hyperdrive"
 
     `"Biroo" Atomic Thruster`
-    `"Biroo" Atomic Steering`
+    `"Benga" Atomic Steering`
 
     "Pulse Cannon" 2
     "Chameleon Anti-Missile"
@@ -525,7 +563,7 @@ ship "Headhunter" "Headhunter (Hai)"
     "Fissure Batteries"
     "Williwaw Cooling" 2
     "Fuel Pod" 4
-    "Small Radar Jammer"
+    "Small Radar Jammer" 2
     "Yoloy Scanner"
 
 
@@ -539,10 +577,32 @@ ship "Headhunter" "Headhunter (Particle)"
     "A255 Atomic Steering"
 
     "Particle Cannon" 2
+
     "LP036a Battery Pack"
     "Fuel Barrel" 40
-    "Small Radar Jammer"
+    "Small Radar Jammer" 2
     "Tactical Scanner" 3
+
+
+ship "Headhunter" "Headhunter (Patrol)"
+  outfits
+    "D41-HY Shield Generator"
+    "NT-200 Nucleovoltaic"
+    "Hyperdrive"
+
+    "A250 Atomic Thruster"
+    "A255 Atomic Steering"
+
+    "Heavy Laser Cannon" 4
+
+    "LP036a Battery Pack"
+    "Cargo Scanner"
+    "Fuel Barrel" 40
+    "Outfit Scanner"
+    "Small Radar Jammer" 2
+    "Tactical Scanner" 4
+    "Laser Rifle" 5
+    "Outfit Space Expansion"
 
 
 
@@ -649,6 +709,7 @@ ship "Leviathan" "Leviathan (Heavy)"
     "Large Radar Jammer"
     "Tactical Scanner" 4
     "Outfit Space Expansion" 4
+    "Laser Rifle" 75
 
 
 ship "Leviathan" "Leviathan (Particle)"
@@ -822,6 +883,26 @@ ship "Scout" "Scout (Javelin)"
     "Ramscoop"
     "Tactical Scanner" 2
     "Outfit Space Expansion" 2
+
+
+ship "Scout" "Scout (Miner)"
+  outfits
+    "D14-RN Shield Generator"
+    "NT-200 Nucleovoltaic"
+    "Hyperdrive"
+
+    "A250 Atomic Thruster"
+    "A255 Atomic Steering"
+
+    "Laser Cannon" 2
+    "Laser Turret"
+
+    "Supercapacitor"
+    "Asteroid Scanner"
+    "Fuel Barrel" 80
+    "Ramscoop"
+    "Small Radar Jammer"
+    "Tactical Scanner" 2
 
 
 ship "Scout" "Scout (Speedy)"

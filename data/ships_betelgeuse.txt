@@ -9,8 +9,6 @@ shipyard "Betelgeuse Variants"
   "Protector (Mark II)"
   "Star Barge"
   "Star Barge (Miner)"
-  "Warrior"
-  "Warrior (Gatling)"
   "Star Freighter"
   "Star Freighter (Fancy)"
   "Star Freighter (Hai)"
@@ -21,6 +19,9 @@ shipyard "Betelgeuse Variants"
   "Vanguard"
   "Vanguard (Mark II)"
   "Vanguard (Particle)"
+  "Warrior"
+  "Warrior (Gatling)"
+  "Warrior (Patrol)"
 
 
 
@@ -311,9 +312,9 @@ ship "Star Barge"
     "mass" 70
     "drag" 2.4
     "heat dissipation" .8
-    "cargo space" 40
-    "outfit space" 170
-    "core space" 100
+    "cargo space" 50
+    "outfit space" 160
+    "core space" 90
     "engine space" 40
     "weapon space" 30
     weapon
@@ -354,9 +355,11 @@ ship "Star Barge" "Star Barge (Miner)"
 
     "Laser Turret"
 
-    "LP036a Battery Pack"
+    "Supercapacitor" 2
     "Asteroid Scanner"
     "Fuel Barrel" 30
+    "Small Radar Jammer"
+    "Tactical Scanner"
 
 
 
@@ -472,6 +475,8 @@ ship "Star Freighter" "Star Freighter (Miner)"
     "Asteroid Scanner"
     "Fuel Barrel" 60
     "Ramscoop"
+    "Small Radar Jammer"
+    "Tactical Scanner"
 
 
 ship "Star Freighter" "Star Freighter (Secret Cargo)"
@@ -692,9 +697,9 @@ ship "Warrior"
     "heat dissipation" .9
     "cargo space" 15
     "outfit space" 220
-    "core space" 120
+    "core space" 130
     "engine space" 60
-    "weapon space" 40
+    "weapon space" 30
     weapon
       "blast radius" 24
       "shield damage" 240
@@ -743,4 +748,32 @@ ship "Warrior" "Warrior (Gatling)"
     "Small Radar Jammer"
     "Tactical Scanner"
     "Fuel Barrel" 40
+
+
+ship "Warrior" "Warrior (Patrol)"
+  outfits
+    "D23-QP Shield Generator"
+    "nGVF-CC Fuel Cell"
+    "Hyperdrive"
+
+    "IT-2700 Ion Thruster"
+    "IS-2200 Ion Steering"
+
+    "Meteor Missile" 80
+    "Meteor Missile Box" 2
+    "Meteor Missile Launcher" 2
+    "X1 Blaster Cannon" 2
+
+    "LP036a Battery Pack"
+    "Cargo Scanner"
+    "Fuel Barrel" 40
+    "Outfit Scanner"
+    "Small Radar Jammer"
+    "Tactical Scanner" 2
+    "Outfit Space Expansion"
+    "Laser Rifle" 2
+  gun "X1 Blaster Cannon"
+  gun "X1 Blaster Cannon"
+  gun "Meteor Missile Launcher"
+  gun "Meteor Missile Launcher"
 
