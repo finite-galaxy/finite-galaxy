@@ -24729,6 +24729,7 @@ planet "Covert"
   description `Covert is home to a powerful mining cartel, operating outside the control of Republic law or any other external authority. It is rumoured to be one of the few planets in human space where weapons-grade uranium and plutonium is mined and enriched. Any goods for sale here were most likely produced by slave labour, often by survivors of ships that have been captured by pirates. A massive pirate fleet is docked on the outskirts of the spaceport, a warning to any private pilot who might think of cheating or opposing the cartel.`
   spaceport `From the moment you landed, you have been followed by a pair of security guards with earpieces and laser guns. The spaceport is one enormous building, with square, straight hallways and featureless walls, and nearly every door you pass is locked. Cameras at each hallway intersection pivot to watch as you approach. This is simultaneously one of the most secure spaceports you have visited, and one of the most dangerous, although if you do not do anything to provoke the animosity of the cartel, you will probably be able to leave in peace.`
   outfitter "Basic Outfits"
+  outfitter "Lovelace Basics"
   outfitter "Pirate Outfits"
   shipyard "Pirate Covert"
   "required reputation" 10
@@ -24746,6 +24747,7 @@ planet "Crossroads"
   spaceport `The spaceport is marked out with radio beacons to allow ships to land or take off even if the air is too dusty to see the ground. The dusty air tastes metallic on your tongue. It is laced with radioactive elements, and you try your best not to breathe in too much of the dust while making your way from your ship to the low stone buildings of the port.`
   outfitter "Basic Outfits"
   outfitter "Lovelace Basics"
+  outfitter "Syndicate Basics"
   security 0.2
   tribute 1100
     threshold 3500
@@ -24804,6 +24806,7 @@ planet "Deadman's Cove"
   description `  One island archipelago is home to the spaceport, the only part of the planet where it is safe to land uninvited. The other islands - even some that seem from a distance to be uninhabited - are often used as staging bases for pirate fleets, who guard their secrets closely.`
   spaceport `Your ship is on a landing pad only a few meters above the pounding surf, and you can't help worrying about what might happen if the tide rises any higher. If nothing else, the salt water is bound to corrode your hull if you stay here too long. You make your way to a bar where a cage hanging from the ceiling holds an actual parrot. After trying for a while to get it to talk to you, you realize that it is dead, stuffed and nailed to its perch.`
   outfitter "Basic Outfits"
+  outfitter "Lovelace Basics"
   outfitter "Pirate Outfits"
   bribe 0.03
   security 0
@@ -25209,6 +25212,7 @@ planet "Foundry"
   outfitter "Common Outfits"
   outfitter "Earth Basics"
   outfitter "Lovelace Intermediate"
+  outfitter "Syndicate Intermediate"
   shipyard "Megaparsec Intermediate"
   shipyard "Vortex Advanced"
   bribe 0.1
@@ -25524,7 +25528,7 @@ planet "Hephaestus"
   security 0.7
   tribute 3400
     threshold 6500
-    fleet "Large Syndicate" 20
+    fleet "Syndicate Large" 20
 
 planet "Hermes"
   attributes paradise factory mining
@@ -25889,6 +25893,7 @@ planet "Maker"
   description `Maker is a sparsely settled world, home mostly to scientific research outposts. The environment here, orbiting so close to a red dwarf star, is very different from most other settled planets. The scientists estimate this star system to be over ten billion years old, enough that life here has had much more time to develop and evolve than on any planet orbiting a brighter, more short-lived star.`
   spaceport `The spaceport is a single building, and half the landing pads are just packed dirt. This port was not designed for large volumes of cargo or of visitors. Within the building is a sun-lit atrium, with separate storefronts for the commodity exchange, the job centre, and the bank. The only place you can see where you might be able to get something to eat is a bar, advertised by a sign showing an Erlenmeyer flask with a folding paper umbrella hung over the rim.`
   outfitter "Basic Outfits"
+  outfitter "Lovelace Basics"
   security 0.1
   tribute 800
     threshold 2500
@@ -26146,6 +26151,7 @@ planet "Nimbus"
   spaceport `The spaceport is on a small island, but well above the high water mark. The mixture of ocean spray and fog and drizzling rain is enough to turn your clothes damp even just on the short walk from your landing pad to the main cluster of buildings. Thankfully, the weather is warm, but you are glad to find a cozy, dry, and welcoming space in the coffeehouse across from the warehouse district.`
   outfitter "Basic Outfits"
   outfitter "Lovelace Basics"
+  outfitter "Syndicate Basics"
   security 0.3
   tribute 300
     threshold 2500
@@ -26915,7 +26921,9 @@ planet "Stormhold"
   description `A cold planet, with dense, foggy atmosphere. As with many pirate outposts, Stormhold is home to an unknown number of villages and hidden outposts, each controlled by a different pirate faction. It is also said that some of the most dangerous fugitives in the galaxy live deep in the forests of this planet, escaping detection by living underground or by avoiding the use of electronic devices.`
   spaceport `The spaceport is a large town, with a population of roughly thirty thousand. People of all races and cultures mingle freely, while keeping a wary eye open for off-worlders who may be Republic agents in disguise.`
   outfitter "Basic Outfits"
+  outfitter "Lovelace Basics"
   outfitter "Pirate Outfits"
+  outfitter "Syndicate Basics"
   bribe 0.03
   security 0
   tribute 500
@@ -27167,7 +27175,7 @@ planet "Valhalla"
   security 0.8
   tribute 3600
     threshold 7000
-    fleet "Large Deep Security" 35
+    fleet "Deep Security Large" 35
 
 planet "Var' Kar'i'i"
   attributes wanderer urban farming

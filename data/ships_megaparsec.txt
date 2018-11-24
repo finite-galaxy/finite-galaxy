@@ -10,10 +10,7 @@ shipyard "Megaparsec Variants"
   "Quicksilver (Mark II)"
   "Quicksilver (Proton)"
   "Quicksilver (Syndicate)"
-  "Splinter"
-  "Splinter (Laser)"
-  "Splinter (Mark II)"
-  "Splinter (Syndicate)"
+  "Thunderbolt"
 
 
 
@@ -44,7 +41,7 @@ ship "Bounder"
       "hull damage" 150
       "hit force" 450
   outfits
-    "D23-QP Shield Generator"
+    "D14-RN Shield Generator"
     "RT-I Radiothermal"
     "Hyperdrive"
 
@@ -55,7 +52,6 @@ ship "Bounder"
 
     "LP036a Battery Pack"
     "Fuel Barrel" 90
-    "Small Radar Jammer"
     "Tactical Scanner"
   engine -12 44
   engine 12 44
@@ -84,7 +80,6 @@ ship "Bounder" "Bounder (Hai)"
     "Williwaw Cooling"
     "Fuel Pod" 9
     "Quantum Keystone"
-    "Small Radar Jammer"
     "Yoloy Scanner"
 
 
@@ -107,16 +102,16 @@ ship "Manta"
     "heat dissipation" .8
     "cargo space" 20
     "outfit space" 390
-    "core space" 150
+    "core space" 170
     "engine space" 100
-    "weapon space" 140
+    "weapon space" 120
     weapon
       "blast radius" 80
       "shield damage" 800
       "hull damage" 400
       "hit force" 1200
   outfits
-    "D23-QP Shield Generator"
+    "D41-HY Shield Generator"
     "RT-I Radiothermal"
     "Hyperdrive"
 
@@ -128,7 +123,6 @@ ship "Manta"
     "LP144a Battery Pack"
     "Liquid Water Cooler"
     "Fuel Barrel" 40
-    "Large Radar Jammer"
     "Tactical Scanner" 4
   engine -33 38
   engine 33 38
@@ -147,26 +141,26 @@ ship "Manta"
 
 ship "Manta" "Manta (Mark II)"
   outfits
-    "S-270 Regenerator"
+    "D41-HY Shield Generator"
     "Fission Reactor"
     "Hyperdrive"
 
     "A370 Atomic Thruster"
     "A375 Atomic Steering"
 
-    "Particle Cannon" 4
+    "Electron Cannon" 4
 
     "LP072a Battery Pack"
-    "Liquid Water Cooler"
-    "Cooling Ducts"
+    "Liquid Nitrogen Cooler"
     "Fuel Barrel" 40
-    "Large Radar Jammer"
     "Tactical Scanner" 4
-    "Outfit Space Expansion"
     "Laser Rifle" 10
 
 
 ship "Manta" "Manta (Nuclear)"
+  add attributes
+    "core space" -20
+    "weapon space" 20
   outfits
     "S-270 Regenerator"
     "Fission Reactor"
@@ -195,7 +189,7 @@ ship "Manta" "Manta (Nuclear)"
 
 ship "Manta" "Manta (Proton)"
   outfits
-    "D23-QP Shield Generator"
+    "D41-HY Shield Generator"
     "RT-I Radiothermal"
     "Hyperdrive"
 
@@ -207,13 +201,12 @@ ship "Manta" "Manta (Proton)"
     "LP144a Battery Pack"
     "Liquid Water Cooler"
     "Fuel Barrel" 40
-    "Large Radar Jammer"
     "Tactical Scanner" 4
 
 
 ship "Manta" "Manta (Syndicate)"
   outfits
-    "D23-QP Shield Generator"
+    "D41-HY Shield Generator"
     "RT-I Radiothermal"
     "Hyperdrive"
 
@@ -226,7 +219,6 @@ ship "Manta" "Manta (Syndicate)"
     "Liquid Water Cooler"
     "Cargo Scanner"
     "Fuel Barrel" 40
-    "Large Radar Jammer"
     "Tactical Scanner" 4
     "Laser Rifle" 10
 
@@ -271,7 +263,6 @@ ship "Quicksilver"
     "LP036a Battery Pack"
     "Cooling Ducts"
     "Fuel Barrel" 40
-    "Small Radar Jammer" 2
     "Tactical Scanner" 4
   engine -17 54
   engine 17 54
@@ -286,20 +277,18 @@ ship "Quicksilver"
 
 ship "Quicksilver" "Quicksilver (Mark II)"
   outfits
-    "S-270 Regenerator"
+    "D23-QP Shield Generator"
     "Fission Reactor"
     "Hyperdrive"
 
     "A250 Atomic Thruster"
     "A255 Atomic Steering"
 
-    "Particle Cannon" 2
+    "Electron Cannon" 2
 
     "LP036a Battery Pack"
-    "Liquid Water Cooler"
-    "Cooling Ducts"
+    "Liquid Nitrogen Cooler"
     "Fuel Barrel" 40
-    "Small Radar Jammer" 2
     "Tactical Scanner" 4
     "Laser Rifle" 6
 
@@ -318,7 +307,6 @@ ship "Quicksilver" "Quicksilver (Proton)"
     "LP036a Battery Pack"
     "Cooling Ducts"
     "Fuel Barrel" 40
-    "Small Radar Jammer" 2
     "Tactical Scanner" 4
 
 
@@ -337,38 +325,37 @@ ship "Quicksilver" "Quicksilver (Syndicate)"
     "Cooling Ducts"
     "Cargo Scanner"
     "Fuel Barrel" 40
-    "Small Radar Jammer" 2
     "Tactical Scanner" 4
     "Laser Rifle" 6
 
 
 
-ship "Splinter"
-  sprite "ship/splinter"
-  thumbnail "thumbnail/splinter"
+ship "Thunderbolt"
+  sprite "ship/corvette"
+  thumbnail "thumbnail/corvette"
   attributes
     category "Corvette"
 #    manufacturer "Megaparsec"
     licences
       Pilot
-    "cost" 3100000
-    "shields" 5200
-    "hull" 1700
-    "required crew" 7
-    "bunks" 21
-    "mass" 250
-    "drag" 4.0
+    "cost" 4400000
+    "shields" 6100
+    "hull" 1200
+    "required crew" 8
+    "bunks" 32
+    "mass" 150
+    "drag" 3.5
     "heat dissipation" .7
-    "cargo space" 80
-    "outfit space" 460
-    "core space" 200
-    "engine space" 110
+    "cargo space" 40
+    "outfit space" 470
+    "core space" 220
+    "engine space" 100
     "weapon space" 150
     weapon
-      "blast radius" 60
-      "shield damage" 600
-      "hull damage" 300
-      "hit force" 900
+      "blast radius" 80
+      "shield damage" 800
+      "hull damage" 400
+      "hit force" 1200
   outfits
     "D67-TM Shield Generator"
     "RT-I Radiothermal"
@@ -377,103 +364,31 @@ ship "Splinter"
     "IT-3700 Ion Thruster"
     "IS-3200 Ion Steering"
 
-    "Sidewinder Missile" 100
-    "Sidewinder Missile Rack" 2
-    "Sidewinder Missile Launcher" 2
-    "X4 Blaster Turret" 2
+    "Sidewinder Missile" 200
+    "Sidewinder Missile Rack" 4
+    "Sidewinder Missile Launcher" 4
+    "X8 Blaster Turret"
     "Heavy Anti-Missile Turret"
 
     "LP144a Battery Pack"
     "Liquid Water Cooler"
-    "Fuel Barrel" 60
-    "Small Radar Jammer"
+    "Fuel Barrel" 50
     "Tactical Scanner" 4
-  engine -15 115
-  engine 15 115
-  gun -15 -80 "Sidewinder Missile Launcher"
-  gun 15 -80 "Sidewinder Missile Launcher"
-  turret -17 -28 "X4 Blaster Turret"
-  turret 0 -28 "Heavy Anti-Missile Turret"
-  turret 17 -28 "X4 Blaster Turret"
-  leak "leak" 60 50
-  leak "flame" 40 80
+  engine -11 118
+  engine 11 118
+  gun -12 -68 "Sidewinder Missile Launcher"
+  gun 12 -68 "Sidewinder Missile Launcher"
+  gun -14 -60 "Sidewinder Missile Launcher"
+  gun 14 -60 "Sidewinder Missile Launcher"
+  turret 0 -11 "X8 Blaster Turret"
+  turret 0 74 "Heavy Anti-Missile Turret"
+  leak "leak" 40 50
+  leak "flame" 50 80
   leak "big leak" 90 30
   explode "tiny explosion" 18
   explode "small explosion" 36
   explode "medium explosion" 24
   explode "large explosion" 8
   "final explode" "final explosion medium"
-  description "The Splinter is the largest warship produced by the Megaparsec shipyard. It is designed to be faster and more manoeuvrable than other ships of a similar size, in order to serve as a heavy escort ship or as part of a planetary defence and patrol fleet. Because of its intended use in merchant convoys, it also has a fair amount of cargo space."
-
-
-ship "Splinter" "Splinter (Laser)"
-  outfits
-    "D67-TM Shield Generator"
-    "RT-I Radiothermal"
-    "Hyperdrive"
-
-    "IT-3700 Ion Thruster"
-    "IS-3200 Ion Steering"
-
-    "Heavy Laser Cannon" 2
-    "Heavy Laser Turret" 2
-    "Heavy Anti-Missile Turret"
-
-    "LP144a Battery Pack"
-    "Liquid Water Cooler"
-    "Fuel Barrel" 60
-    "Small Radar Jammer"
-    "Tactical Scanner" 4
-  turret "Heavy Laser Turret"
-  turret "Heavy Anti-Missile Turret"
-  turret "Heavy Laser Turret"
-
-
-ship "Splinter" "Splinter (Mark II)"
-  outfits
-    "S-970 Regenerator"
-    "Fission Reactor"
-    "Hyperdrive"
-
-    "A370 Atomic Thruster"
-    "A375 Atomic Steering"
-
-    "Particle Cannon" 2
-    "X4 Blaster Turret" 2
-    "Heavy Anti-Missile Turret"
-
-    "LP144a Battery Pack"
-    "Liquid Nitrogen Cooler"
-    "Fuel Barrel" 60
-    "Small Radar Jammer"
-    "Tactical Scanner" 4
-    "Outfit Space Expansion" 3
-    "Laser Rifle" 20
-
-
-ship "Splinter" "Splinter (Syndicate)"
-  outfits
-    "D67-TM Shield Generator"
-    "RT-I Radiothermal"
-    "Hyperdrive"
-
-    "IT-3700 Ion Thruster"
-    "IS-3200 Ion Steering"
-
-    "Meteor Missile" 80
-    "Meteor Missile Box" 2
-    "Meteor Missile Launcher" 2
-    "X4 Blaster Turret" 2
-    "Heavy Anti-Missile Turret"
-
-    "LP144a Battery Pack"
-    "Liquid Water Cooler"
-    "Cargo Scanner"
-    "Fuel Barrel" 60
-    "Small Radar Jammer"
-    "Tactical Scanner" 4
-    "Laser Rifle" 20
-  turret "X4 Blaster Turret"
-  turret "Heavy Anti-Missile Turret"
-  turret "X4 Blaster Turret"
+  description "Incorporating new, experimental lightweight materials, the Megaparsec Thunderbolt combines the speed and agility of a fighter with the armament of a heavy warship. Its weak hull is more than compensated for by its advanced shielding matrix."
 

@@ -1,5 +1,10 @@
 shipyard "Lionheart Variants"
   "Aerie"
+  "Argosy"
+  "Argosy (Blaster)"
+  "Argosy (Laser)"
+  "Argosy (Miner)"
+  "Argosy (Turret)"
   "Arrow"
   "Arrow (Hai)"
   "Behemoth"
@@ -10,9 +15,6 @@ shipyard "Lionheart Variants"
   "Headhunter (Afterburner)"
   "Headhunter (Hai)"
   "Headhunter (Particle)"
-  "Thunderbolt"
-  "Thunderbolt (Electron)"
-  "Thunderbolt (Torpedo)"
   "Leviathan"
   "Leviathan (Hai)"
   "Leviathan (Heavy)"
@@ -46,8 +48,8 @@ ship "Aerie"
     "heat dissipation" .7
     "cargo space" 50
     "outfit space" 440
-    "core space" 195
-    "engine space" 95
+    "core space" 200
+    "engine space" 90
     "weapon space" 150
     weapon
       "blast radius" 80
@@ -88,7 +90,139 @@ ship "Aerie"
   explode "medium explosion" 25
   explode "large explosion" 10
   "final explode" "final explosion medium"
-  description "The B Aerie is a light carrier, designed to be just big enough for two fighter bays plus a decent armament of its own. Variations on this same ship design have been in use in the Deep for almost half a millennium, but this model comes with the very latest in generator and weapon technology."
+  description "The Aerie is a light carrier, designed to be just big enough for two fighter bays plus a decent armament of its own. Variations on this same ship design have been in use in the Deep for almost half a millennium, but this model comes with the very latest in generator and weapon technology."
+
+
+
+ship "Argosy"
+  plural "Argosies"
+  sprite "ship/argosy"
+  thumbnail "thumbnail/argosy"
+  attributes
+    category "Corvette"
+#    manufacturer "Lionheart"
+    licences
+      Pilot
+    "cost" 1960000
+    "shields" 4200
+    "hull" 2600
+    "required crew" 4
+    "bunks" 14
+    "mass" 330
+    "drag" 5.9
+    "heat dissipation" .7
+    "cargo space" 120
+    "outfit space" 310
+    "core space" 140
+    "engine space" 80
+    "weapon space" 90
+    weapon
+      "blast radius" 60
+      "shield damage" 600
+      "hull damage" 300
+      "hit force" 900
+  outfits
+    "D23-QP Shield Generator"
+    "NT-200 Nucleovoltaic"
+    "Hyperdrive"
+
+    "A250 Atomic Thruster"
+    "A255 Atomic Steering"
+
+    "Heavy Laser Cannon" 2
+    "Heavy Laser Turret"
+
+    "LP072a Battery Pack"
+    "Fuel Barrel" 40
+    "Small Radar Jammer" 2
+    "Tactical Scanner" 3
+  engine -20 91
+  engine 20 91
+  gun -22 -37 "Heavy Laser Cannon"
+  gun 22 -37 "Heavy Laser Cannon"
+  turret 0 -12 "Heavy Laser Turret"
+  turret 0 8 
+  leak "leak" 60 50
+  leak "flame" 60 80
+  explode "tiny explosion" 10
+  explode "small explosion" 25
+  explode "medium explosion" 25
+  explode "large explosion" 10
+  "final explode" "final explosion medium"
+  description "The Argosy from Vortex Shipyards is very popular with merchants not because of its capacity, which is actually slightly smaller than the Star Freighter, but because it can hold its own in combat even against a small pirate fleet."
+  description "  The Argosy is also a very easy ship to upgrade with faster engines or more powerful weapons as needed, so many privately owned Argosies have very different capabilities than the stock model."
+
+
+ship "Argosy" "Argosy (Blaster)"
+  outfits
+    "D23-QP Shield Generator"
+    "NT-200 Nucleovoltaic"
+    "Hyperdrive"
+
+    "A250 Atomic Thruster"
+    "A255 Atomic Steering"
+
+    "X1 Blaster Cannon" 2
+    "X4 Blaster Turret" 2
+
+    "LP072a Battery Pack"
+    "Fuel Barrel" 40
+    "Small Radar Jammer" 2
+    "Tactical Scanner" 3
+
+
+ship "Argosy" "Argosy (Laser)"
+  outfits
+    "D23-QP Shield Generator"
+    "NT-200 Nucleovoltaic"
+    "Hyperdrive"
+
+    "A250 Atomic Thruster"
+    "A255 Atomic Steering"
+
+    "Laser Cannon" 2
+    "Laser Turret" 2
+
+    "LP072a Battery Pack"
+    "Fuel Barrel" 40
+    "Small Radar Jammer" 2
+    "Tactical Scanner" 3
+
+
+ship "Argosy" "Argosy (Miner)"
+  outfits
+    "D23-QP Shield Generator"
+    "NT-200 Nucleovoltaic"
+    "Hyperdrive"
+
+    "A250 Atomic Thruster"
+    "A255 Atomic Steering"
+
+    "Laser Cannon" 2
+    "Laser Turret" 2
+
+    "LP072a Battery Pack"
+    "Asteroid Scanner"
+    "Fuel Barrel" 40
+    "Small Radar Jammer" 2
+    "Tactical Scanner" 3
+
+
+ship "Argosy" "Argosy (Turret)"
+  outfits
+    "D23-QP Shield Generator"
+    "NT-200 Nucleovoltaic"
+    "Hyperdrive"
+
+    "A250 Atomic Thruster"
+    "A255 Atomic Steering"
+
+    "Heavy Laser Turret" 2
+
+    "LP072a Battery Pack"
+    "Fuel Barrel" 40
+    "Small Radar Jammer" 2
+    "Tactical Scanner" 3
 
 
 
@@ -433,108 +567,6 @@ ship "Headhunter" "Headhunter (Particle)"
 
 
 
-ship "Thunderbolt"
-  sprite "ship/corvette"
-  thumbnail "thumbnail/corvette"
-  attributes
-    category "Corvette"
-#    manufacturer "Lionheart"
-    licences
-      Pilot
-    "cost" 4400000
-    "shields" 6100
-    "hull" 1200
-    "required crew" 8
-    "bunks" 32
-    "mass" 150
-    "drag" 3.5
-    "heat dissipation" .7
-    "cargo space" 40
-    "outfit space" 470
-    "core space" 210
-    "engine space" 100
-    "weapon space" 160
-    weapon
-      "blast radius" 80
-      "shield damage" 800
-      "hull damage" 400
-      "hit force" 1200
-  outfits
-    "D67-TM Shield Generator"
-    "NT-200 Nucleovoltaic"
-    "Hyperdrive"
-
-    "A370 Atomic Thruster"
-    "A375 Atomic Steering"
-
-    "Heavy Laser Cannon" 4
-    "Heavy Laser Turret"
-    "Heavy Anti-Missile Turret"
-
-    "LP144a Battery Pack"
-    "LP036a Battery Pack"
-    "Liquid Water Cooler"
-    "Fuel Barrel" 50
-    "Tactical Scanner" 4
-  engine -11 118
-  engine 11 118
-  gun -12 -68 "Heavy Laser Cannon"
-  gun 12 -68 "Heavy Laser Cannon"
-  gun -14 -60 "Heavy Laser Cannon"
-  gun 14 -60 "Heavy Laser Cannon"
-  turret 0 -11 "Heavy Laser Turret"
-  turret 0 74 "Heavy Anti-Missile Turret"
-  leak "leak" 40 50
-  leak "flame" 50 80
-  leak "big leak" 90 30
-  explode "tiny explosion" 18
-  explode "small explosion" 36
-  explode "medium explosion" 24
-  explode "large explosion" 8
-  "final explode" "final explosion medium"
-  description "Incorporating new, experimental lightweight materials, the Lionheart Thunderbolt combines the speed and agility of a fighter with the armament of a heavy warship. Its weak hull is more than compensated for by its advanced shielding matrix."
-
-
-ship "Thunderbolt" "Thunderbolt (Electron)"
-  outfits
-    "D67-TM Shield Generator"
-    "Fusion Reactor"
-    "Hyperdrive"
-
-    "A370 Atomic Thruster"
-    "A375 Atomic Steering"
-
-    "Electron Cannon" 4
-    "Electron Turret"
-
-    "LP036a Battery Pack"
-    "Liquid Nitrogen Cooler"
-    "Fuel Barrel" 50
-    "Tactical Scanner" 4
-    "Outfit Space Expansion" 2
-
-
-ship "Thunderbolt" "Thunderbolt (Torpedo)"
-  outfits
-    "D67-TM Shield Generator"
-    "NT-200 Nucleovoltaic"
-    "Hyperdrive"
-
-    "A370 Atomic Thruster"
-    "A375 Atomic Steering"
-
-    "Torpedo" 120
-    "Torpedo Storage Rack" 4
-    "Torpedo Launcher" 4
-    "Laser Turret"
-    "Heavy Anti-Missile Turret"
-
-    "LP036a Battery Pack"
-    "Fuel Barrel" 50
-    "Tactical Scanner" 4
-
-
-
 ship "Leviathan"
   sprite "ship/leviathan"
   thumbnail "thumbnail/leviathan"
@@ -847,5 +879,4 @@ ship "Scout" "Scout (Speedy)"
     "Fuel Barrel" 80
     "Ramscoop"
     "Tactical Scanner" 2
-
 

@@ -19,6 +19,9 @@ shipyard "Vortex Variants"
   "Mule"
   "Mule (Hai)"
   "Mule (Heavy)"
+  "Splinter"
+  "Splinter (Laser)"
+  "Splinter (Mark II)"
   "Surveillance Drone"
   "Wasp"
   "Wasp (Gatling)"
@@ -690,6 +693,117 @@ ship "Mule" "Mule (Heavy)"
     "Tactical Scanner" 4
     "Outfit Space Expansion" 8
     "Laser Rifle" 40
+
+
+
+ship "Splinter"
+  sprite "ship/splinter"
+  thumbnail "thumbnail/splinter"
+  attributes
+    category "Corvette"
+#    manufacturer "Vortex"
+    licences
+      Pilot
+    "cost" 3100000
+    "shields" 5200
+    "hull" 1700
+    "required crew" 7
+    "bunks" 21
+    "mass" 250
+    "drag" 4.0
+    "heat dissipation" .7
+    "cargo space" 75
+    "outfit space" 460
+    "core space" 210
+    "engine space" 100
+    "weapon space" 150
+    weapon
+      "blast radius" 60
+      "shield damage" 600
+      "hull damage" 300
+      "hit force" 900
+  outfits
+    "D41-HY Shield Generator"
+    "RT-I Radiothermal"
+    "Hyperdrive"
+
+    "IT-3700 Ion Thruster"
+    "IS-3200 Ion Steering"
+
+    "Sidewinder Missile" 100
+    "Sidewinder Missile Rack" 2
+    "Sidewinder Missile Launcher" 2
+    "X6 Blaster Turret" 2
+    "Heavy Anti-Missile Turret"
+
+    "LP144a Battery Pack"
+    "Liquid Water Cooler"
+    "Fuel Barrel" 60
+    "Large Radar Jammer"
+    "Tactical Scanner" 4
+  engine -15 115
+  engine 15 115
+  gun -15 -80 "Sidewinder Missile Launcher"
+  gun 15 -80 "Sidewinder Missile Launcher"
+  turret -17 -28 "X6 Blaster Turret"
+  turret 0 -28 "Heavy Anti-Missile Turret"
+  turret 17 -28 "X6 Blaster Turret"
+  leak "leak" 60 50
+  leak "flame" 40 80
+  leak "big leak" 90 30
+  explode "tiny explosion" 18
+  explode "small explosion" 36
+  explode "medium explosion" 24
+  explode "large explosion" 8
+  "final explode" "final explosion medium"
+  description "The Splinter is designed to be faster and more manoeuvrable than other ships of a similar size, in order to serve as a heavy escort ship or as part of a planetary defence and patrol fleet. Because of its intended use in merchant convoys, it also has a fair amount of cargo space."
+
+
+ship "Splinter" "Splinter (Laser)"
+  outfits
+    "D41-HY Shield Generator"
+    "RT-I Radiothermal"
+    "Hyperdrive"
+
+    "IT-3700 Ion Thruster"
+    "IS-3200 Ion Steering"
+
+    "Heavy Laser Cannon" 2
+    "Heavy Laser Turret" 2
+    "Heavy Anti-Missile Turret"
+
+    "LP144a Battery Pack"
+    "Liquid Water Cooler"
+    "Fuel Barrel" 60
+    "Large Radar Jammer"
+    "Tactical Scanner" 4
+  turret "Heavy Laser Turret"
+  turret "Heavy Anti-Missile Turret"
+  turret "Heavy Laser Turret"
+
+
+ship "Splinter" "Splinter (Mark II)"
+  outfits
+    "D41-HY Shield Generator"
+    "Fission Reactor"
+    "Hyperdrive"
+
+    "A370 Atomic Thruster"
+    "A375 Atomic Steering"
+
+    "Electron Turret" 2
+    "Heavy Anti-Missile Turret"
+
+    "LP144a Battery Pack"
+    "Liquid Water Cooler"
+    "Fuel Barrel" 60
+    "Large Radar Jammer"
+    "Tactical Scanner" 4
+    "Outfit Space Expansion"
+    "Laser Rifle" 20
+  turret "Electron Turret"
+  turret "Heavy Anti-Missile Turret"
+  turret "Electron Turret"
 
 
 
