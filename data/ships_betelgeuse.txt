@@ -11,7 +11,6 @@ shipyard "Betelgeuse Variants"
   "Star Barge (Miner)"
   "Warrior"
   "Warrior (Gatling)"
-  "Warrior (Miner)"
   "Star Freighter"
   "Star Freighter (Fancy)"
   "Star Freighter (Hai)"
@@ -361,96 +360,6 @@ ship "Star Barge" "Star Barge (Miner)"
 
 
 
-ship "Warrior"
-  sprite "ship/fury"
-  thumbnail "thumbnail/fury"
-  attributes
-    category "Interceptor"
-#    manufacturer "Vortex"
-    licences
-      Pilot
-    "cost" 490000
-    "shields" 2000
-    "hull" 400
-    "required crew" 1
-    "bunks" 3
-    "mass" 70
-    "drag" 1.6
-    "heat dissipation" .9
-    "cargo space" 15
-    "outfit space" 220
-    "core space" 120
-    "engine space" 60
-    "weapon space" 40
-    weapon
-      "blast radius" 24
-      "shield damage" 240
-      "hull damage" 120
-      "hit force" 360
-  outfits
-    "D23-QP Shield Generator"
-    "nGVF-CC Fuel Cell"
-    "Hyperdrive"
-
-    "IT-2700 Ion Thruster"
-    "IS-2200 Ion Steering"
-
-    "X1 Blaster Cannon" 4
-
-    "LP036a Battery Pack"
-    "Small Radar Jammer"
-    "Tactical Scanner"
-    "Fuel Barrel" 40
-  engine -17 35
-  engine 17 35
-  gun -10 -26 "X1 Blaster Cannon"
-  gun 10 -26 "X1 Blaster Cannon"
-  gun -16 -20 "X1 Blaster Cannon"
-  gun 16 -20 "X1 Blaster Cannon"
-  leak "flame" 50 80
-  explode "tiny explosion" 10
-  explode "small explosion" 20
-  description "The Warrior is Betelgeuse Shipyard's most popular design of escort ship. They have greater firepower than most other interceptor-class vessel, meaning that any pirate flying solo will think twice before attacking a convoy that is accompanied by a Warrior. However, Warriors are also much less manoeuvrable than other small ships."
-
-
-ship "Warrior" "Warrior (Gatling)"
-  outfits
-    "D23-QP Shield Generator"
-    "nGVF-CC Fuel Cell"
-    "Hyperdrive"
-
-    "IT-2700 Ion Thruster"
-    "IS-2200 Ion Steering"
-
-    "Gatling Round" 12000
-    "Gatling Bullet Boxes" 8
-    "Gatling Gun" 4
-
-    "Supercapacitor"
-    "Small Radar Jammer"
-    "Tactical Scanner"
-    "Fuel Barrel" 40
-
-
-ship "Warrior" "Warrior (Miner)"
-  outfits
-    "D23-QP Shield Generator"
-    "nGVF-CC Fuel Cell"
-    "Hyperdrive"
-
-    "IT-2700 Ion Thruster"
-    "IS-2200 Ion Steering"
-
-    "Laser Cannon" 4
-
-    "LP036a Battery Pack"
-    "Asteroid Scanner"
-    "Fuel Barrel" 40
-    "Small Radar Jammer"
-    "Tactical Scanner"
-
-
-
 ship "Star Freighter"
   sprite "ship/freighter"
   thumbnail "thumbnail/freighter"
@@ -762,4 +671,76 @@ ship "Vanguard" "Vanguard (Particle)"
     "Fuel Barrel" 40
     "Tactical Scanner" 4
     "Laser Rifle" 40
+
+
+
+ship "Warrior"
+  sprite "ship/fury"
+  thumbnail "thumbnail/fury"
+  attributes
+    category "Interceptor"
+#    manufacturer "Vortex"
+    licences
+      Pilot
+    "cost" 490000
+    "shields" 2000
+    "hull" 400
+    "required crew" 1
+    "bunks" 3
+    "mass" 70
+    "drag" 1.6
+    "heat dissipation" .9
+    "cargo space" 15
+    "outfit space" 220
+    "core space" 120
+    "engine space" 60
+    "weapon space" 40
+    weapon
+      "blast radius" 24
+      "shield damage" 240
+      "hull damage" 120
+      "hit force" 360
+  outfits
+    "D23-QP Shield Generator"
+    "nGVF-CC Fuel Cell"
+    "Hyperdrive"
+
+    "IT-2700 Ion Thruster"
+    "IS-2200 Ion Steering"
+
+    "X1 Blaster Cannon" 4
+
+    "LP036a Battery Pack"
+    "Small Radar Jammer"
+    "Tactical Scanner"
+    "Fuel Barrel" 40
+  engine -17 35
+  engine 17 35
+  gun -10 -26 "X1 Blaster Cannon"
+  gun 10 -26 "X1 Blaster Cannon"
+  gun -16 -20 "X1 Blaster Cannon"
+  gun 16 -20 "X1 Blaster Cannon"
+  leak "flame" 50 80
+  explode "tiny explosion" 10
+  explode "small explosion" 20
+  description "The Warrior is Betelgeuse Shipyard's most popular design of escort ship. They have greater firepower than most other interceptor-class vessel, meaning that any pirate flying solo will think twice before attacking a convoy that is accompanied by a Warrior. However, Warriors are also much less manoeuvrable than other small ships."
+
+
+ship "Warrior" "Warrior (Gatling)"
+  outfits
+    "D23-QP Shield Generator"
+    "nGVF-CC Fuel Cell"
+    "Hyperdrive"
+
+    "IT-2700 Ion Thruster"
+    "IS-2200 Ion Steering"
+
+    "Gatling Round" 12000
+    "Gatling Bullet Boxes" 8
+    "Gatling Gun" 4
+
+    "Supercapacitor"
+    "Small Radar Jammer"
+    "Tactical Scanner"
+    "Fuel Barrel" 40
 
