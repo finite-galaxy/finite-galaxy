@@ -526,11 +526,12 @@ void Ship::FinishLoading(bool isNewInstance)
   if(!warning.empty())
   {
     // This check is mostly useful for variants and stock ships, which have
-    // no names. Instead, print the outfits and attributes to facilitate identification.
+    // no names. Instead, print the outfits to facilitate identification.
     cerr << (!name.empty() ? "Ship \"" + name + "\" " : "") << "(" + modelName + "):\n"
         << warning << "outfits:" << endl;
     for(const auto &it : outfits)
       cerr << '\t' << it.second << " " + it.first->Name() << endl;
+/*
     cerr << "attributes:" << endl;
     size_t maxAttr = 0;
     for(const auto &it : attributes.Attributes())
@@ -540,6 +541,7 @@ void Ship::FinishLoading(bool isNewInstance)
       auto attr = string(it.first);
       cerr << '\t' << attr.append(maxAttr - attr.size(), ' ')  << ": " << it.second << endl;
     }
+*/
   }
   
   // Ships read from a save file may have non-default shields or hull.
