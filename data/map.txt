@@ -3,7 +3,7 @@ galaxy "Milky Way"
   sprite ui/galaxy
 
 galaxy "label core"
-  pos -136 130
+  pos -180 110
   sprite label/core
 
 galaxy "label deep"
@@ -23,11 +23,11 @@ galaxy "label north"
   sprite label/north
 
 galaxy "label paradise"
-  pos -345 -136
+  pos -385 -106
   sprite label/paradise
 
 galaxy "label rim"
-  pos -778 265
+  pos -810 200
   sprite label/rim
 
 galaxy "label south"
@@ -3146,7 +3146,7 @@ system "Alnair"
   object
     sprite star/m4
     period 10
-  object "Hippocrates"
+  object "Maker"
     sprite planet/cloud4
     distance 160.25
     period 69.8377
@@ -3785,8 +3785,8 @@ system "Alpheratz"
     sprite planet/fog0
     distance 306.613
     period 65.3294
-  object "Moonshake"
-    sprite planet/forest4
+  object "Farseer"
+    sprite planet/ocean2
     distance 858.853
     period 306.268
     object
@@ -7391,7 +7391,7 @@ system "Delta Capricorni"
     sprite planet/io
     distance 273.406
     period 62.4158
-  object "Maker"
+  object "Pilot"
     sprite planet/rock4
     distance 498.016
     period 153.443
@@ -8631,7 +8631,7 @@ system "Elnath"
     sprite planet/cloud1
     distance 1147.13
     period 375.273
-  object "Pilot"
+  object "Hippocrates"
     sprite planet/desert4
     distance 1926.02
     period 816.43
@@ -13903,8 +13903,8 @@ system "Kursa"
     sprite star/m4
     distance 65.4066
     period 16.8182
-  object "Farseer"
-    sprite planet/ocean2
+  object "Moonshake"
+    sprite planet/forest4
     distance 357.847
     period 126.94
   object
@@ -24600,7 +24600,7 @@ planet "Charon Station"
     fleet "Militia Small" 15
 
 planet "Charybdis Station"
-  attributes north station
+  attributes paradise station
   landscape land/sivael8
   music ambient/machinery
   description `Charybdis Station is privately owned by the Syndicate. It is a massive deuterium refinery, with harvester drones constantly flying in and out to scoop hydrogen gas out of the upper atmosphere of the planet below. If you need to repair or refuel in this system, you will need to visit the neighbouring world of Delve, instead of this station.`
@@ -24841,7 +24841,7 @@ planet "Deep Water"
 planet "Delve"
   attributes core mining
   landscape land/snow1
-  description `Delve is a world of towering mountains and valleys so steep that some slopes never see the light of the sun, where snow and ice remain on the topmost peaks year-round. The Syndicate's mining operations here are among the most extensive in the region, with some shafts descending several kilometers below the surface. Some of the mines are as large as a city, and in fact many of the mining cities are under ground, built in sections of old mines that have long since run out of useful metals. With all the mines and underground cities reliant on mechanical ventilation from the surface, the miners live in constant fear of two things: cave-ins, and power failures.`
+  description `Delve is a world of towering mountains and valleys so steep that some slopes never see the light of the sun, where snow and ice remain on the topmost peaks year-round. The mining operations here are among the most extensive in the region, with some shafts descending several kilometers below the surface. Some of the mines are as large as a city, and in fact many of the mining cities are under ground, built in sections of old mines that have long since run out of useful metals. With all the mines and underground cities reliant on mechanical ventilation from the surface, the miners live in constant fear of two things: cave-ins, and power failures.`
   spaceport `The spaceport is an enormous hollow carved out of the side of a mountain, with a network of steel beams and mesh holding the rock in place. Inside the hollow, the landings are caves carved into the rock itself, again with steel beams above to protect the ships within. A tiered set of cog railways transport passengers and cargo between the landings and the large town at the base of the hollow. Beyond the hollow, the mountainside falls off into a steep cliff and a mist-filled valley below. Although the port is well-built and modern, you cannot help an irrational fear that the whole place will slide off the edge of the mountain one day.`
   outfitter "Basic Outfits"
   outfitter "Lovelace Intermediate"
@@ -25249,8 +25249,8 @@ planet "Frostmark"
 planet "Furnace"
   attributes core military moon
   landscape land/bwerner4
-  description `Furnace is a nearly uninhabited world, used mostly as a waypoint for shipping and as a staging point for the Syndicate fleets that seek to keep this region of space free from pirates. The atmosphere is barely thick enough to be breathable, and none of the plants that grow here are useful for eating. However, because it is only a large moon instead of a full-sized planet, moving cargo and fleets of ships to and from its surface is fairly easy and inexpensive.`
-  description `  Conducting any business here is a nightmare of tedium. Syndicate doctrine claims that corporate structure and process produce a leaner and more effective military force without the perceived wastage of the Republic Navy. But in practice, they seem to have combined all the worst aspects of military and corporate bureaucracy.`
+  description `Furnace is a nearly uninhabited world, used mostly as a waypoint for shipping and as a staging point for the Republic Navy fleets that seek to keep this region of space free from pirates. The atmosphere is barely thick enough to be breathable, and none of the plants that grow here are useful for eating. However, because it is only a large moon instead of a full-sized planet, moving cargo and fleets of ships to and from its surface is fairly easy and inexpensive.`
+#  description `  Conducting any business here is a nightmare of tedium. Syndicate doctrine claims that corporate structure and process produce a leaner and more effective military force without the perceived wastage of the Republic Navy. But in practice, they seem to have combined all the worst aspects of military and corporate bureaucracy.`
   spaceport `The spaceport is mostly a military base. Uniformed crew members hurry back and forth without giving you a second glance. The food in the mess hall is standard military fare, hearty but bland and unappetizing, and there are few shops or other services catering to civilians.`
   outfitter "Basic Outfits"
   outfitter "Lovelace Basics"
@@ -25528,19 +25528,17 @@ planet "Hephaestus"
     fleet "Syndicate Home" 3
 
 planet "Hermes"
-  attributes paradise research medical
-  landscape land/myrabella3
-  description `No one is permitted to settle on Hermes without a government permit. It is a sparsely populated world, mostly used for medical research and development - including some research that, if the rumours are true, are carried out here in isolation so that if something goes wrong, entire districts can be quarantined or even "sterilized" by orbital bombardment.`
-  description `  The landscape is nondescript, mostly rolling plains and forests. The oceans are relatively small, and as a result it is a somewhat dry planet.`
-  spaceport `The spaceport is far removed from any of this world's cities. It consists of a single, ring-shaped building; the docking bays open onto the central atrium, which visiting ships fly through to reach them. Industrial strength ultraviolet lasers are mounted on turrets throughout the atrium, and fire automatically at entering and departing ships to sterilize them. Once you land, the docking bay is hermetically sealed. Based on the precautions they are taking, you find yourself wanting to spend as little time as possible breathing the air here.`
+  attributes paradise factory mining
+  landscape land/bwerner3
+  description `When families or young adults on Earth find themselves stifled by the crowded conditions on humanity's home world, Hermes is where many of them end up. The Syndicate offers free transportation and housing in exchange for anyone willing to sign a five years contract to the mines or factories on Hermes. The living conditions are often unpleasant, with young men and women packed into dormitories, and with those who are most in need of income taking dangerous jobs in the mines. Five or ten years of work will earn you enough to set up a homestead on any of the frontier worlds, and to many, those years are worth it.`
+  spaceport `The spaceport on Hermes is enormous, but laid out very efficiently. In one sector, a steady stream of passengers, most of them young and dressed somewhat shabbily, are disembarking. They are funneled straight to a labour and immigration centre, from which they will be assigned to different factories. Meanwhile, a smaller stream of older, tired-looking but better dressed workers flows in the other direction; people who have finished their terms of service and are boarding ships for other worlds.`
+  spaceport `  In the commercial sector of the port, robotic cargo trucks rumble through the streets at frightening speeds, while pedestrians walk from building to building along skyways several storeys up.`
   outfitter "Basic Outfits"
   outfitter "Syndicate Intermediate"
-  "required reputation" 10
-  bribe 0.1
-  security 0.9
-  tribute 1400
-    threshold 3500
-    fleet "Republic Large" 6
+  security 0.4
+  tribute 1700
+    threshold 4500
+    fleet "Syndicate Large" 10
 
 planet "Hestia"
   attributes paradise rich
@@ -25556,15 +25554,19 @@ planet "Hestia"
     fleet "Republic Large" 18
 
 planet "Hippocrates"
-  attributes core research frontier
-  landscape land/water11-harro
-  description `Hippocrates is a sparsely settled world, home mostly to scientific research outposts. The environment here, orbiting so close to a red dwarf star, is very different from most other settled planets. The scientists estimate this star system to be over ten billion years old, enough that life here has had much more time to develop and evolve than on any planet orbiting a brighter, more short-lived star.`
-  spaceport `The spaceport is a single building, and half the landing pads are just packed dirt. This port was not designed for large volumes of cargo or of visitors. Within the building is a sun-lit atrium, with separate storefronts for the commodity exchange, the job centre, and the bank. The only place you can see where you might be able to get something to eat is a bar, advertised by a sign showing an Erlenmeyer flask with a folding paper umbrella hung over the rim.`
+  attributes paradise research medical
+  landscape land/myrabella3
+  description `No one is permitted to settle on Hippocrates without a government permit. It is a sparsely populated world, mostly used for medical research and development - including some research that, if the rumours are true, are carried out here in isolation so that if something goes wrong, entire districts can be quarantined or even "sterilized" by orbital bombardment.`
+  description `  The landscape is nondescript, mostly rolling plains and forests. The oceans are relatively small, and as a result it is a somewhat dry planet.`
+  spaceport `The spaceport is far removed from any of this world's cities. It consists of a single, ring-shaped building; the docking bays open onto the central atrium, which visiting ships fly through to reach them. Industrial strength ultraviolet lasers are mounted on turrets throughout the atrium, and fire automatically at entering and departing ships to sterilize them. Once you land, the docking bay is hermetically sealed. Based on the precautions they are taking, you find yourself wanting to spend as little time as possible breathing the air here.`
   outfitter "Basic Outfits"
-  security 0.1
-  tribute 800
-    threshold 2500
-    fleet "Syndicate Small" 9
+  outfitter "Syndicate Basics"
+  "required reputation" 10
+  bribe 0.1
+  security 0.9
+  tribute 1400
+    threshold 3500
+    fleet "Republic Large" 6
 
 planet "Hope"
   attributes uninhabited
@@ -25855,7 +25857,7 @@ planet "Luna"
     fleet "Republic Large" 10
 
 planet "Maelstrom"
-  attributes north mining frontier
+  attributes paradise mining frontier
   landscape land/mountain21-harro
   description `Maelstrom is a stormy, geologically young world with towering mountains and frequent earthquakes. Most of the large cities are near the centre of the planet's main continent, where the iron beds from an ancient ocean are exposed. Maelstrom is one of the chief exporters of iron, copper, gold, titanium, and other metals to Hephaestus, where Syndicate Systems and the associated industries have a continuous need for raw materials.`
   description `  Extreme rock climbing is a hugely popular sport among the mining workers here, who have a tendency to be young, male, and reckless. The mountains are dramatic enough to even attract off-world climbers as tourists, though more than once a favourite climbing face has been sloughed off its mountain in an earthquake.`
@@ -25883,17 +25885,15 @@ planet "Mainsail"
     fleet "Republic Small" 57
 
 planet "Maker"
-  attributes core factory mining
-  landscape land/bwerner3
-  description `When families or young adults on Earth find themselves stifled by the crowded conditions on humanity's home world, Maker is where many of them end up. The Syndicate offers free transportation and housing in exchange for anyone willing to sign a five years contract to the mines or factories on Maker. The living conditions are often unpleasant, with young men and women packed into dormitories, and with those who are most in need of income taking dangerous jobs in the mines. Five or ten years of work will earn you enough to set up a homestead on any of the frontier worlds, and to many, those years are worth it.`
-  spaceport `The spaceport on Maker is enormous, but laid out very efficiently. In one sector, a steady stream of passengers, most of them young and dressed somewhat shabbily, are disembarking. They are funneled straight to a labour and immigration centre, from which they will be assigned to different factories. Meanwhile, a smaller stream of older, tired-looking but better dressed workers flows in the other direction; people who have finished their terms of service and are boarding ships for other worlds.`
-  spaceport `  In the commercial sector of the port, robotic cargo trucks rumble through the streets at frightening speeds, while pedestrians walk from building to building along skyways several storeys up.`
+  attributes core research frontier
+  landscape land/water11-harro
+  description `Maker is a sparsely settled world, home mostly to scientific research outposts. The environment here, orbiting so close to a red dwarf star, is very different from most other settled planets. The scientists estimate this star system to be over ten billion years old, enough that life here has had much more time to develop and evolve than on any planet orbiting a brighter, more short-lived star.`
+  spaceport `The spaceport is a single building, and half the landing pads are just packed dirt. This port was not designed for large volumes of cargo or of visitors. Within the building is a sun-lit atrium, with separate storefronts for the commodity exchange, the job centre, and the bank. The only place you can see where you might be able to get something to eat is a bar, advertised by a sign showing an Erlenmeyer flask with a folding paper umbrella hung over the rim.`
   outfitter "Basic Outfits"
-  outfitter "Lovelace Basics"
-  security 0.4
-  tribute 1700
-    threshold 4500
-    fleet "Syndicate Large" 10
+  security 0.1
+  tribute 800
+    threshold 2500
+    fleet "Syndicate Small" 9
 
 planet "Makerplace"
   attributes hai manufacturing "hai tourism"
@@ -26047,13 +26047,13 @@ planet "Mirrorlake"
   spaceport `This spaceport appears to be a tourist destination. The architecture is different than on other Hai worlds, and much more primitive: stone and mortar instead of polished metal. However, all the buildings are in good repair: despite their ancient appearance, they must be maintained and rebuilt on a regular basis.`
 
 planet "Moonshake"
-  attributes core urban factory
+  attributes paradise urban factory
   landscape land/city7
   description `Moonshake is a planet of overpopulated cities side by side with dense wilderness. A few centuries ago it became a local centre of industrial production when the Syndicate began building factories here. Since then, immigrants looking for steady work have been pouring in, doubling the planet's population every few decades. It is now a regional centre for the production of everything from textiles to molded plastic parts to reactor-grade plutonium.`
   description `  It is characteristic of the Syndicate that the wilderness is entirely ignored, both scientifically and agriculturally, until it is ploughed under to make way for expanding industry. Nowhere else in the galaxy is the local fauna so plentiful and yet so poorly characterized.`
   spaceport `The smog is so thick here that you could barely see the landing pad until you were only half a kilometer above it. At street level, the smog is less evident, but the air leaves a faint metallic taste in your mouth. The spaceport, like the rest of this city, is overcrowded, with people walking along the narrow streets and trying to thread their way in between large cargo trucks loaded with crates. You see signs for restaurants of every variety imaginable, but most of them look dirty and dimly lit.`
   outfitter "Common Outfits"
-  outfitter "Lovelace Basics"
+  outfitter "Syndicate Basics"
   security 0.2
   tribute 1200
     threshold 3500
@@ -26251,7 +26251,7 @@ planet "Phoenix Station"
     fleet "Deep Security Large" 5
 
 planet "Pilot"
-  attributes north research
+  attributes core research
   landscape land/bwerner2
   description `Pilot is used as a research and testing station for Lovelace Labs. The research buildings are not open to non-employees. From a distance it looks almost like a small war is going on, with missiles being fired from a silo toward a hilltop where an anti-missile turret is picking them off one by one.`
   description `  Rumours say that the Sidewinder Missile engineering team and the Missile Defence team are in fierce competition with each other, and whichever team is currently losing to the other must buy them lunch every Friday.`
