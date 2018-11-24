@@ -1,5 +1,4 @@
 shipyard "Betelgeuse Variants"
-  "Boxwing"
   "Bulk Freighter"
   "Bulk Freighter (Blaster)"
   "Bulk Freighter (Hai)"
@@ -23,49 +22,6 @@ shipyard "Betelgeuse Variants"
   "Vanguard"
   "Vanguard (Mark II)"
   "Vanguard (Particle)"
-
-
-
-ship "Boxwing"
-  sprite "ship/boxwing"
-  thumbnail "thumbnail/boxwing"
-  attributes
-    category "Fighter"
-#    manufacturer "Betelgeuse"
-    licences
-      Pilot
-    "carried" 2
-    "cost" 369000
-    "shields" 400
-    "hull" 800
-    "required crew" 1
-    "bunks" 1
-    "mass" 40
-    "drag" .6
-    "heat dissipation" .27
-    "cargo space" 50
-    "outfit space" 45
-    "core space" 25
-    "engine space" 20
-    weapon
-      "blast radius" 12
-      "shield damage" 120
-      "hull damage" 60
-      "hit force" 180
-  outfits
-    "IC-900 Ion Engines"
-
-    "KP-6 Photovoltaic Panel" 5
-    "LP036a Battery Pack"
-  engine 23 -1
-  engine -23 -1
-  engine 19 29
-  engine -19 29
-  leak "leak" 70 50
-  leak "flame" 50 80
-  explode "tiny explosion" 15
-  explode "small explosion" 5
-  description `After introducing the "Type F" cargo pod for the Hauler, it became apparent to merchant captains that the new carriers could offer more flexibility within their fleet, if there were a cargo box they could attach to the fighter arms. Enter the "F6-C: Boxwing", the Fighter that doesn't fight, but carries cargo instead. Cargo preservation equipment gives the Boxwing much more mass and very poor heat dissipation characteristics compared to other fighters. That it cannot carry any weapons is only part of the reason jocks call it "Flying Coffin" amongst themselves; besides the ship resembling one and being very sluggish, the pilot "seat" doubles as a bunk, and is cramped beyond the comfort level of most. The interactive panoramic window H.U.D. is the only thing that keeps claustrophobic episodes from becoming a major problem.`
 
 
 

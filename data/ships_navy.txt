@@ -1,116 +1,17 @@
 shipyard "Navy Variants"
-  "Combat Drone"
-  "Combat Fighter"
   "Jupiter"
   "Jupiter (Alpha)"
   "Jupiter (Jump)"
   "Jupiter (Mark II)"
   "Mars"
-  "Mars (Anti-Missile)"
   "Mars (Mark II)"
   "Mercury"
   "Mercury (Mark II)"
   "Saturn"
   "Saturn (Jump)"
   "Saturn (Mark II)"
-  "Surveillance Drone"
   "Venus"
   "Venus (Mark II)"
-
-
-
-ship "Combat Drone"
-  sprite "ship/combat drone"
-  thumbnail "thumbnail/combat drone"
-  attributes
-    category "Drone"
-#    manufacturer "Navy"
-    licences
-      Navy
-    "carried" 1
-    "cost" 83000
-    "hull" 700
-    "automaton" 1
-    "mass" 20
-    "drag" .6
-    "heat dissipation" .9
-    "outfit space" 60
-    "core space" 24
-    "engine space" 28
-    "weapon space" 8
-    weapon
-      "blast radius" 5
-      "shield damage" 50
-      "hull damage" 25
-      "hit force" 75
-  outfits
-    "nGVF-AA Fuel Cell"
-
-    "IT-1700 Ion Thruster"
-    "IS-1200 Ion Steering"
-
-    "Gatling Round" 1500
-    "Gatling Bullet Boxes"
-    "Gatling Gun"
-
-    "Supercapacitor"
-    "Tactical Scanner"
-  engine -9 29
-  engine 9 29
-  gun 0 -29 "Gatling Gun"
-  explode "tiny explosion" 15
-  description "Combat Drones are pilotless attack ships used primarily by the Republic Navy. Although very weak and easy to destroy, they can be very effective in large numbers. Because drones do not need a cockpit, they can be filled entirely with equipment and solid metal, which makes their hulls stronger than other small ships."
-
-
-
-ship "Combat Fighter"
-  sprite "ship/lance"
-  thumbnail "thumbnail/lance"
-  attributes
-    category "Fighter"
-#    manufacturer "Navy"
-    licences
-      Navy
-    "carried" 2
-    "cost" 93000
-    "shields" 800
-    "hull" 400
-    "required crew" 1
-    "bunks" 1
-    "mass" 30
-    "drag" .7
-    "heat dissipation" .8
-    "outfit space" 100
-    "core space" 50
-    "engine space" 30
-    "weapon space" 20
-    weapon
-      "blast radius" 12
-      "shield damage" 120
-      "hull damage" 60
-      "hit force" 180
-  outfits
-    "D14-RN Shield Generator"
-    "nGVF-AA Fuel Cell"
-
-    "IT-1700 Ion Thruster"
-    "IS-1200 Ion Steering"
-
-    "Gatling Round" 3000
-    "Gatling Bullet Boxes" 2
-    "Gatling Gun" 2
-
-    "LP036a Battery Pack"
-    "Small Radar Jammer"
-    "Tactical Scanner" 2
-    "Laser Rifle"
-  engine -15 30
-  engine 15 30
-  gun -14 -10 "Gatling Gun"
-  gun 14 -10 "Gatling Gun"
-  explode "tiny explosion" 15
-  explode "small explosion" 5
-  description "The Combat Fighter is the primary fighter used by the Republic Navy. As with all fighters, it is weak by itself but very effective as part of a larger squadron."
 
 
 
@@ -302,7 +203,7 @@ ship "Mars"
     "drag" 3.1
     "heat dissipation" .7
     "cargo space" 25
-    "outfit space" 380
+    "outfit space" 370
     "core space" 200
     "engine space" 80
     "weapon space" 100
@@ -311,41 +212,6 @@ ship "Mars"
       "shield damage" 720
       "hull damage" 360
       "hit force" 1080
-  outfits
-    "D23-QP Shield Generator"
-    "NT-200 Nucleovoltaic"
-    "Hyperdrive"
-
-    "A250 Atomic Thruster"
-    "A375 Atomic Steering"
-
-    "Particle Cannon" 2
-    "Heavy Laser Turret"
-
-    "LP072a Battery Pack"
-    "Cooling Ducts"
-    "Cargo Scanner"
-    "Fuel Barrel" 60
-    "Large Radar Jammer"
-    "Outfit Scanner"
-    "Tactical Scanner" 4
-    "Fragmentation Grenades" 5
-    "Laser Rifle" 10
-  engine -12 57
-  engine 12 57
-  gun -28 -28 "Particle Cannon"
-  gun 28 -28 "Particle Cannon"
-  turret 0 -8 "Heavy Laser Turret"
-  leak "leak" 50 50
-  leak "flame" 80 80
-  explode "tiny explosion" 10
-  explode "small explosion" 20
-  explode "medium explosion" 15
-  "final explode" "final explosion small"
-  description "The Navy Mars is designed for engaging targets at short range, and also serves as the Navy's mobile sensor platform, scanning ships for illegal equipment or cargo."
-
-
-ship "Mars" "Mars (Anti-Missile)"
   outfits
     "D23-QP Shield Generator"
     "NT-200 Nucleovoltaic"
@@ -366,6 +232,18 @@ ship "Mars" "Mars (Anti-Missile)"
     "Tactical Scanner" 4
     "Fragmentation Grenades" 5
     "Laser Rifle" 10
+  engine -12 57
+  engine 12 57
+  gun -28 -28 "Particle Cannon"
+  gun 28 -28 "Particle Cannon"
+  turret 0 -8 "Heavy Anti-Missile Turret"
+  leak "leak" 50 50
+  leak "flame" 80 80
+  explode "tiny explosion" 10
+  explode "small explosion" 20
+  explode "medium explosion" 15
+  "final explode" "final explosion small"
+  description "The Navy Mars is designed for engaging targets at short range, and also serves as the Navy's mobile sensor platform, scanning ships for illegal equipment or cargo."
 
 
 ship "Mars" "Mars (Mark II)"
@@ -384,9 +262,10 @@ ship "Mars" "Mars (Mark II)"
     "Cooling Ducts"
     "Cargo Scanner"
     "Fuel Barrel" 60
-    "Outfit Scanner"
     "Large Radar Jammer"
+    "Outfit Scanner"
     "Tactical Scanner" 4
+    "Outfit Space Expansion"
     "Fragmentation Grenades" 5
     "Laser Rifle" 10
 
@@ -597,42 +476,6 @@ ship "Saturn" "Saturn (Mark II)"
     "Tactical Scanner" 6
     "Fragmentation Grenades" 60
     "Laser Rifle" 120
-
-
-
-ship "Surveillance Drone"
-  sprite "ship/surveillance drone"
-  thumbnail "thumbnail/surveillance drone"
-  attributes
-    category "Drone"
-#    manufacturer "Navy"
-    licences
-      Navy
-    "carried" 1
-    "cost" 50000
-    "hull" 300
-    "automaton" 1
-    "mass" 15
-    "drag" .5
-    "heat dissipation" .9
-    "outfit space" 60
-    "core space" 40
-    "engine space" 20
-    weapon
-      "blast radius" 3
-      "shield damage" 30
-      "hull damage" 15
-      "hit force" 45
-  outfits
-    "IC-900 Ion Engines"
-
-    "KP-6 Photovoltaic Array"
-    "LP036a Battery Pack"
-    "Surveillance Pod"
-  engine -5 29
-  engine 5 29
-  explode "tiny explosion" 15
-  description "Surveillance Drones are unarmed drones used by the Republic navy to scan ships and planets in a star system."
 
 
 

@@ -1,6 +1,8 @@
 shipyard "Vortex Variants"
   "Bactrian"
   "Bactrian (Hired Gun)"
+  "Combat Drone"
+  "Combat Fighter"
   "Firebird"
   "Firebird (Hai)"
   "Firebird (Laser)"
@@ -17,6 +19,7 @@ shipyard "Vortex Variants"
   "Mule"
   "Mule (Hai)"
   "Mule (Heavy)"
+  "Surveillance Drone"
   "Wasp"
   "Wasp (Gatling)"
   "Wasp (Miner)"
@@ -116,6 +119,101 @@ ship "Bactrian" "Bactrian (Hired Gun)"
     "Tactical Scanner" 6
     "Outfit Space Expansion" 7
     "Laser Rifle" 240
+
+
+
+ship "Combat Drone"
+  sprite "ship/combat drone"
+  thumbnail "thumbnail/combat drone"
+  attributes
+    category "Drone"
+#    manufacturer "Navy"
+    licences
+      Navy
+    "carried" 1
+    "cost" 83000
+    "hull" 700
+    "automaton" 1
+    "mass" 20
+    "drag" .6
+    "heat dissipation" .9
+    "outfit space" 60
+    "core space" 24
+    "engine space" 28
+    "weapon space" 8
+    weapon
+      "blast radius" 5
+      "shield damage" 50
+      "hull damage" 25
+      "hit force" 75
+  outfits
+    "nGVF-AA Fuel Cell"
+
+    "IT-1700 Ion Thruster"
+    "IS-1200 Ion Steering"
+
+    "Gatling Round" 1500
+    "Gatling Bullet Boxes"
+    "Gatling Gun"
+
+    "Supercapacitor"
+    "Tactical Scanner"
+  engine -9 29
+  engine 9 29
+  gun 0 -29 "Gatling Gun"
+  explode "tiny explosion" 15
+  description "Combat Drones are pilotless attack ships used primarily by the Republic Navy. Although very weak and easy to destroy, they can be very effective in large numbers. Because drones do not need a cockpit, they can be filled entirely with equipment and solid metal, which makes their hulls stronger than other small ships."
+
+
+
+ship "Combat Fighter"
+  sprite "ship/lance"
+  thumbnail "thumbnail/lance"
+  attributes
+    category "Fighter"
+#    manufacturer "Navy"
+    licences
+      Navy
+    "carried" 2
+    "cost" 93000
+    "shields" 800
+    "hull" 400
+    "required crew" 1
+    "bunks" 1
+    "mass" 30
+    "drag" .7
+    "heat dissipation" .8
+    "outfit space" 100
+    "core space" 50
+    "engine space" 30
+    "weapon space" 20
+    weapon
+      "blast radius" 12
+      "shield damage" 120
+      "hull damage" 60
+      "hit force" 180
+  outfits
+    "D14-RN Shield Generator"
+    "nGVF-AA Fuel Cell"
+
+    "IT-1700 Ion Thruster"
+    "IS-1200 Ion Steering"
+
+    "Gatling Round" 3000
+    "Gatling Bullet Boxes" 2
+    "Gatling Gun" 2
+
+    "LP036a Battery Pack"
+    "Small Radar Jammer"
+    "Tactical Scanner" 2
+    "Laser Rifle"
+  engine -15 30
+  engine 15 30
+  gun -14 -10 "Gatling Gun"
+  gun 14 -10 "Gatling Gun"
+  explode "tiny explosion" 15
+  explode "small explosion" 5
+  description "The Combat Fighter is the primary fighter used by the Republic Navy. As with all fighters, it is weak by itself but very effective as part of a larger squadron."
 
 
 
@@ -592,6 +690,42 @@ ship "Mule" "Mule (Heavy)"
     "Tactical Scanner" 4
     "Outfit Space Expansion" 8
     "Laser Rifle" 40
+
+
+
+ship "Surveillance Drone"
+  sprite "ship/surveillance drone"
+  thumbnail "thumbnail/surveillance drone"
+  attributes
+    category "Drone"
+#    manufacturer "Navy"
+    licences
+      Navy
+    "carried" 1
+    "cost" 50000
+    "hull" 300
+    "automaton" 1
+    "mass" 15
+    "drag" .5
+    "heat dissipation" .9
+    "outfit space" 60
+    "core space" 40
+    "engine space" 20
+    weapon
+      "blast radius" 3
+      "shield damage" 30
+      "hull damage" 15
+      "hit force" 45
+  outfits
+    "IC-900 Ion Engines"
+
+    "KP-6 Photovoltaic Array"
+    "LP036a Battery Pack"
+    "Surveillance Pod"
+  engine -5 29
+  engine 5 29
+  explode "tiny explosion" 15
+  description "Surveillance Drones are unarmed drones used by the Republic navy to scan ships and planets in a star system."
 
 
 
