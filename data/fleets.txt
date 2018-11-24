@@ -11,11 +11,9 @@
 #   "Saryd Large"
 #   "Saryd Small"
 # Deep Security:
-#   "Deep Security Home"
 #   "Deep Security Large"
 #   "Deep Security Small"
 # Free Worlds:
-#   "Free Worlds Home"
 #   "Free Worlds Large"
 #   "Free Worlds Small"
 # Hai:
@@ -57,7 +55,6 @@
 #   "Miners North"
 #   "Miners South"
 # Militia:
-#   "Militia Home"
 #   "Militia Large"
 #   "Militia Small"
 # Navy (Oathkeeper):
@@ -92,13 +89,11 @@
 #   "Remnant Large"
 #   "Remnant Small"
 # Republic:
-#   "Republic Home"
 #   "Republic Large"
 #   "Republic Small"
 #   "Gunboat Only"
 #   "Navy Surveillance"
 # Syndicate:
-#   "Syndicate Home"
 #   "Syndicate Large"
 #   "Syndicate Small"
 # Syndicate Extremists:
@@ -405,25 +400,6 @@ fleet "Saryd Small"
 
 
 # Deep Security
-fleet "Deep Security Home"
-  government "Deep Security"
-  names "deep"
-  fighters "deep fighter"
-  cargo 0
-  personality
-    heroic
-  variant 1
-    "Bactrian"
-    "Mule (Heavy)" 2
-    "Thunderbolt" 3
-    "Aerie" 4
-    "Headhunter" 5
-    "Scout" 6
-    "Arrow" 7
-    "Flivver" 8
-    "Dagger" 13
-
-
 fleet "Deep Security Large"
   government "Deep Security"
   names "deep"
@@ -431,63 +407,8 @@ fleet "Deep Security Large"
   cargo 0
   personality
     heroic
-  variant 4
-    "Mule (Heavy)"
-    "Dagger"
-  variant 2
-    "Mule (Heavy)"
-    "Dagger"
-    "Headhunter"
-  variant 2
-    "Mule (Heavy)"
-    "Dagger"
-    "Headhunter" 2
-  variant 3
-    "Thunderbolt"
-  variant 3
-    "Thunderbolt (Torpedo)"
   variant 1
-    "Thunderbolt" 2
-  variant 1
-    "Thunderbolt"
-    "Thunderbolt (Torpedo)"
-  variant 1
-    "Thunderbolt (Torpedo)" 2
-  variant 2
-    "Thunderbolt"
-    "Aerie"
-    "Dagger" 2
-  variant 2
-    "Thunderbolt (Torpedo)"
-    "Aerie"
-    "Dagger" 2
-  variant 1
-    "Thunderbolt"
-    "Headhunter"
-  variant 1
-    "Thunderbolt"
-    "Headhunter" 2
-  variant 1
-    "Thunderbolt (Torpedo)"
-    "Headhunter"
-  variant 1
-    "Thunderbolt (Torpedo)"
-    "Headhunter" 2
-  variant 3
-    "Aerie" 2
-    "Dagger" 4
-  variant 6
-    "Aerie"
-    "Dagger" 2
-    "Headhunter"
-  variant 3
-    "Aerie"
-    "Dagger" 2
-    "Headhunter" 2
-  variant 3
-    "Aerie"
-    "Dagger" 2
-    "Headhunter" 3
+    "Leviathan"
 
 fleet "Deep Security Small"
   government "Deep Security"
@@ -497,38 +418,12 @@ fleet "Deep Security Small"
   personality
     heroic
   variant 1
-    "Thunderbolt"
-  variant 1
     "Aerie"
     "Dagger" 2
-  variant 1
-    "Headhunter" 
-  variant 1
-    "Headhunter" 2
-  variant 1
-    "Headhunter" 3
 
 
 
-# Free Worlds
-fleet "Free Worlds Home"
-  government "Free Worlds"
-  names "free worlds capital"
-  fighters "free worlds fighter"
-  cargo 1
-  personality
-    heroic disables opportunistic
-  variant 1
-    "Dreadnought (Rocket)"
-    "Skein" 2 
-    "Roost" 3
-    "Nest" 4
-    "Bastion" 5
-    "Argosy" 6
-    "Clipper" 7
-    "Berserker" 8
-    "Harpy" 32
-   
+# Free Worlds   
 fleet "Free Worlds Large"
   government "Free Worlds"
   names "free worlds capital"
@@ -550,16 +445,6 @@ fleet "Free Worlds Large"
   variant 4
     "Osprey (Laser)"
     "Berserker (Laser)"
-  variant 4
-    "Argosy"
-  variant 3
-    "Argosy (Blaster)"
-  variant 2
-    "Argosy (Laser)"
-  variant 2
-    "Argosy (Rocket)"
-  variant 2
-    "Argosy (Turret)"
   variant 6
     "Bastion"
     "Osprey"
@@ -809,16 +694,6 @@ fleet "Independent Large"
     plunders
   variant 3
     "Fury" 4
-  variant 5
-    "Argosy"
-  variant 3
-    "Argosy (Blaster)"
-  variant 2
-    "Argosy (Laser)"
-  variant 2
-    "Argosy (Rocket)"
-  variant 2
-    "Argosy (Turret)"
   variant 4
     "Clipper"
   variant 2
@@ -834,21 +709,6 @@ fleet "Independent Large"
   variant 1
     "Clipper (Speedy)"
     "Hawk (Speedy)"
-  variant 3
-    "Argosy"
-    "Hawk"
-  variant 1
-    "Argosy (Blaster)"
-    "Hawk (Rocket)"
-  variant 1
-    "Argosy (Laser)"
-    "Hawk (Speedy)"
-  variant 1
-    "Argosy (Turret)"
-    "Hawk (Speedy)"
-  variant 1
-    "Argosy (Rocket)"
-    "Hawk (Rocket)"
   variant 4
     "Bastion"
   variant 2
@@ -2150,11 +2010,7 @@ fleet "Miners Core"
     confusion 20
     timid frugal mining harvests
   variant 1
-    "Star Freighter (Miner)"
-  variant 2
-    "Wasp (Miner)"
-  variant 3
-    "Star Barge (Miner)"
+    "Argosy (Miner)"
 
 fleet "Miners Deep"
   government "Merchant"
@@ -2174,15 +2030,9 @@ fleet "Miners North"
     confusion 20
     timid frugal mining harvests
   variant 1
-    "Hauler III (Miner)"
-  variant 2
-    "Hauler II (Miner)"
+    "Star Freighter (Miner)"
   variant 3
-    "Hauler I (Miner)"
-  variant 12
-    "Warrior (Miner)"
-  variant 18
-    "Light Shuttle (Miner)"
+    "Star Barge (Miner)"
 
 fleet "Miners South"
   government "Merchant"
@@ -2192,31 +2042,15 @@ fleet "Miners South"
     confusion 20
     timid frugal mining harvests
   variant 1
-    "Argosy (Miner)"
+    "Hauler III (Miner)"
   variant 2
-    "Berserker (Miner)"
+    "Hauler II (Miner)"
   variant 3
-    "Fury (Miner)"
+    "Hauler I (Miner)"
 
 
 
 # Militia
-fleet "Militia Home"
-  government "Militia"
-  names "militia"
-  cargo 1
-  personality
-    heroic frugal
-    confusion 20
-  variant 1
-    "Kestrel (Shields)"
-    "Falcon" 2
-    "Osprey" 3
-    "Blackbird" 4
-    "Raven" 5
-    "Hawk" 6
-    "Fury" 7
-
 fleet "Militia Large"
   government "Militia"
   names "militia"
@@ -2239,16 +2073,6 @@ fleet "Militia Large"
   variant 4
     "Osprey (Laser)"
     "Berserker (Laser)"
-  variant 4
-    "Argosy"
-  variant 3
-    "Argosy (Blaster)"
-  variant 2
-    "Argosy (Laser)"
-  variant 2
-    "Argosy (Rocket)"
-  variant 2
-    "Argosy (Turret)"
   variant 6
     "Bastion"
     "Osprey"
@@ -3440,22 +3264,6 @@ fleet "Remnant Small"
 
 
 # Republic
-fleet "Republic Home"
-  government "Republic"
-  names "republic capital"
-  fighters "republic fighter"
-  cargo 0
-  personality
-    heroic opportunistic
-  variant 1
-    "Jupiter"
-    "Saturn" 2
-    "Venus" 3
-    "Mars" 4
-    "Mercury" 5
-    "Combat Fighter" 4
-    "Combat Drone" 14
-
 fleet "Republic Large"
   government "Republic"
   names "republic capital"
@@ -3578,23 +3386,6 @@ fleet "Navy Surveillance"
 
 
 # Syndicate
-fleet "Syndicate Home"
-  government "Syndicate"
-  names "syndicate capital"
-  fighters "syndicate fighter"
-  cargo 2
-  personality
-    heroic
-  variant 3
-    "Class C Freighter"
-    "Protector" 2
-    "Vanguard" 3
-    "Splinter" 4
-    "Manta (Syndicate)" 5
-    "Quicksilver (Syndicate)" 6
-    "Wasp (Syndicate)" 7
-    "Combat Drone" 12
-
 fleet "Syndicate Large"
   government "Syndicate"
   names "syndicate capital"
@@ -3604,31 +3395,8 @@ fleet "Syndicate Large"
     heroic
   variant 3
     "Protector"
-  variant 2
-    "Protector"
-    "Quicksilver (Syndicate)" 2
   variant 3
     "Vanguard"
-  variant 2
-    "Vanguard"
-    "Quicksilver (Syndicate)" 2
-  variant 2
-    "Splinter (Syndicate)" 2
-  variant 1
-    "Splinter (Syndicate)" 3
-  variant 1
-    "Splinter (Syndicate)"
-    "Quicksilver (Syndicate)" 3
-  variant 2
-    "Manta (Syndicate)" 2
-  variant 1
-    "Manta (Syndicate)" 2
-    "Quicksilver (Syndicate)"
-  variant 1
-    "Manta (Syndicate)"
-    "Quicksilver (Syndicate)" 2
-  variant 2
-    "Quicksilver (Syndicate)" 5
 
 fleet "Syndicate Small"
   government "Syndicate"
@@ -3636,20 +3404,8 @@ fleet "Syndicate Small"
   cargo 2
   personality
     heroic
-  variant 2
-    "Splinter (Syndicate)"
-  variant 1
-    "Splinter (Syndicate)"
-    "Quicksilver (Syndicate)" 2
-  variant 2
-    "Manta (Syndicate)"
-  variant 1
-    "Manta (Syndicate)"
-    "Wasp (Syndicate)" 2
-  variant 8
-    "Quicksilver (Syndicate)" 3
-  variant 6
-    "Wasp (Syndicate)" 5
+  variant 3
+    "Warrior" 5
 
 
 
