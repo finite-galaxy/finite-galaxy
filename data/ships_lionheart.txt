@@ -6,8 +6,6 @@ shipyard "Lionheart Variants"
   "Behemoth (Free Worlds)"
   "Behemoth (Hai)"
   "Dagger"
-  "Flivver"
-  "Flivver (Hai)"
   "Headhunter"
   "Headhunter (Afterburner)"
   "Headhunter (Hai)"
@@ -321,71 +319,6 @@ ship "Dagger"
   explode "tiny explosion" 15
   explode "small explosion" 5
   description "The Dagger is a fighter designed by Lionheart Industries, intended to be carried by their Aerie warship, although other ships have been known to carry them, as well. As with many Lionheart ships, its chassis is largely composed of lightweight composite materials, making it considerably faster than other fighters."
-
-
-
-ship "Flivver"
-  sprite "ship/flivver"
-  thumbnail "thumbnail/flivver"
-  attributes
-    category "Interceptor"
-#    manufacturer "Lionheart"
-    licences
-      Pilot
-    "cost" 180000
-    "shields" 1400
-    "hull" 200
-    "required crew" 1
-    "bunks" 3
-    "mass" 40
-    "drag" 1.0
-    "heat dissipation" .9
-    "cargo space" 5
-    "outfit space" 180
-    "core space" 110
-    "engine space" 45
-    "weapon space" 25
-    weapon
-      "blast radius" 16
-      "shield damage" 160
-      "hull damage" 80
-      "hit force" 240
-  outfits
-    "D14-RN Shield Generator"
-    "Dwarf Core"
-    "Hyperdrive"
-
-    "A120 Atomic Thruster"
-    "A125 Atomic Steering"
-
-    "Laser Cannon" 2
-
-    "Supercapacitor"
-    "Fuel Barrel" 50
-    "Tactical Scanner" 2
-  engine -16 27
-  engine 16 27
-  gun -6 -31 "Laser Cannon"
-  gun 6 -31 "Laser Cannon"
-  leak "leak" 60 50
-  explode "tiny explosion" 10
-  explode "small explosion" 10
-  description "Lionheart's Flivver is the fastest ship for sale, able to outspeed even Lionheart's Arrow or Scout. As a consequence, it has space for neither cargo nor passengers nor heavy weaponry. Flivvers are sold mostly to wealthy individuals who want to be able to travel the stars without needing to share a bunk room on a merchant transport with common people, and to rich kids obsessed with racing."
-
-
-ship "Flivver" "Flivver (Hai)"
-  outfits
-    "Corundum Regenerator"
-    "Pebble Core"
-    "Hyperdrive"
-
-    `"Benga" Atomic Thruster`
-    `"Basrem" Atomic Steering`
-
-    "Chasm Batteries"
-    "Williwaw Cooling"
-    "Fuel Pod" 5
-    "Yoloy Scanner"
 
 
 

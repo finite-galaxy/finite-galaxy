@@ -24120,7 +24120,7 @@ planet "Ada"
   outfitter "Common Outfits"
   outfitter "Lovelace Advanced"
   shipyard "Megaparsec Basics"
-  shipyard "Vortex Intermediate"
+  shipyard "Vortex Basics"
   "required reputation" 2
   bribe 0.1
   security 0.9
@@ -24486,13 +24486,12 @@ planet "Buccaneer Bay"
   attributes pirate "core pirate"
   landscape land/beach0
   description `Pirates who have struck it rich dream of retiring on Buccaneer Bay. It is a warm ocean planet, with many places reminiscent of the islands in the ancient Caribbean where humanity's first pirate fleets sailed.`
-  description `  Many of the inhabitants are in fact not pirates, but their descendants, and these children and grand-children of anarchist outlaws have built a system of regional government that oversees hospitals, schools, and other public services, all created without funding from the Republic or taxes paid to it. The planet even sports its own shipyard, although many of the ships built here are, not surprisingly, based on designs pirated from the Syndicate and Republic shipyards.`
+  description `  Many of the inhabitants are in fact not pirates, but their descendants, and these children and grand-children of anarchist outlaws have built a system of regional government that oversees hospitals, schools, and other public services, all created without funding from the Republic or taxes paid to it. The planet even sports its own shipyard, although many of the ships built here are, not surprisingly, based on designs pirated from other shipyards, especially Vortex.`
   spaceport `This is the sort of spaceport you picture in your head when you think of pirates. Half the storefronts are bars, and rum seems to be on the menu everywhere. It is almost like the stories of ancient Earth, except that the eye patches are cybernetic implants and the peg legs are motorized prosthetics. Swarthy, dangerous-looking women glance at you as you pass by, and scantily clad men crowd around the bars, which is what you seem to remember the stories said it was like on Earth, too, although there it may have been the other way around.`
   outfitter "Common Outfits"
   outfitter "Lovelace Basics"
   outfitter "Pirate Outfits"
-  shipyard "Megaparsec Basics"
-  shipyard "Vortex Basics"
+  shipyard "Vortex Intermediate"
   security 0
   tribute 800
     threshold 3000
@@ -24624,7 +24623,8 @@ planet "Chiron"
   outfitter "Lovelace Basics"
   outfitter "Sisensis Intermediate"
   outfitter "Syndicate Basics"
-  shipyard "Basic Ships"
+  shipyard "C-Square Advanced"
+  shipyard "Vortex Basics"
   bribe 0.02
   security 0.3
   tribute 4400
@@ -24653,7 +24653,7 @@ planet "Clark"
   spaceport `  In the central building, dozens of workers fill a large cafeteria with several stations serving different types of food. The mood here feels boisterous and energetic, very different from most of the Dirt Belt worlds you have visited.`
   outfitter "Basic Outfits"
   outfitter "Sisensis Basics"
-  shipyard "Basic Ships"
+  shipyard "Southbound Basics"
   security 0.1
   tribute 400
     threshold 2500
@@ -24730,7 +24730,6 @@ planet "Covert"
   spaceport `From the moment you landed, you have been followed by a pair of security guards with earpieces and laser guns. The spaceport is one enormous building, with square, straight hallways and featureless walls, and nearly every door you pass is locked. Cameras at each hallway intersection pivot to watch as you approach. This is simultaneously one of the most secure spaceports you have visited, and one of the most dangerous, although if you do not do anything to provoke the animosity of the cartel, you will probably be able to leave in peace.`
   outfitter "Basic Outfits"
   outfitter "Pirate Outfits"
-  shipyard "Megaparsec Basics"
   shipyard "Vortex Basics"
   "required reputation" 10
   bribe 0.1
@@ -24954,6 +24953,8 @@ planet "Earth"
   outfitter "Lovelace Intermediate"
   outfitter "Sisensis Intermediate"
   outfitter "Syndicate Intermediate"
+  shipyard "C-Square Intermediate"
+  shipyard "Vortex Intermediate"
   "required reputation" 2
   bribe 0.03
   security 0.3
@@ -25088,7 +25089,6 @@ planet "Farpoint"
   spaceport `The spaceport is the Navy base; there are no other settlements. There are a few pubs filled mostly with off-duty officers, and a quartermaster's warehouse where you can trade goods. The most striking aspect of the base, however, is how empty it is. There are enough buildings here to make it feel like a small city, but only one small corner of the port is in use; the rest of the buildings are boarded up. And there are enough landing pads and hangars to house perhaps a fifth of the entire fleet, but they are nearly all empty at the moment.`
   spaceport `  The massive scale of the fortifications, coupled with their state of near-total disuse, puts you in mind of the fabled Maginot Line on Earth - a relic of an anticipated battle that failed to materialize according to plan.`
   outfitter "Common Outfits"
-  outfitter "Syndicate Basics"
   "required reputation" 2
   bribe 0.08
   security 0.8
@@ -25269,7 +25269,6 @@ planet "Geminus"
   spaceport `  The hub of the spaceport is a food court with a ring of shops in the centre and seating on the outside, where you can look out of plate glass windows at the lava fields and caldera outside. By night, you can see the volcanic glow all around the horizon.`
   outfitter "Common Outfits"
   outfitter "Earth Intermediate"
-  outfitter "Sisensis Intermediate"
   outfitter "Syndicate Intermediate"
   shipyard "Betelgeuse Intermediate"
   bribe 0.1
@@ -25327,7 +25326,6 @@ planet "Glaze"
   spaceport `  You notice quite a few families with children sitting by the windows on the upper storeys of the tower, watching starships landing and taking off. Many of them have brought folding chairs or blankets to sit on. That must be what passes for entertainment on this world.`
   outfitter "Common Outfits"
   outfitter "Delta V Basics"
-  outfitter "Kraz Basics"
   shipyard "Southbound Basics"
   security 0.2
   tribute 1700
@@ -25521,6 +25519,7 @@ planet "Hephaestus"
   outfitter "Sisensis Basics"
   outfitter "Syndicate Advanced"
   shipyard "Betelgeuse Intermediate"
+  shipyard "C-Square Basics"
   shipyard "Megaparsec Intermediate"
   bribe 0.1
   security 0.7
@@ -25549,7 +25548,6 @@ planet "Hestia"
   description `In the distant past, Hestia was a nearly lifeless ice world. It is now a sub-tropical paradise, one of the great victories from the heyday of planetary engineering back when the galactic economy had more money to spare for terraforming. Today it is mostly a retirement community for those who can afford it, although most of the population consists of young service workers in rented housing who take care of the retirees. On Hestia, the poor live in cities; the rich live in country estates. Aside from the urban centres, most of this world is covered in rolling green hills and oceans.`
   spaceport `Hestia has two separate spaceports. The port where rich residents and their visitors arrive and depart is private, owned by a local company. Here in the public spaceport, no attempt has been made at impressive architecture: everything is spare and utilitarian, with floors of bare cement. There are a few trucks and forklifts carrying cargo, but the streets that connect the landing pads are mostly full of people on foot, walking toward the customs building.`
   outfitter "Common Outfits"
-  outfitter "Sisensis Basics"
   outfitter "Syndicate Basics"
   bribe 0.04
   security 0.5
@@ -25838,7 +25836,6 @@ planet "Longjump"
   spaceport `You can recognize the natives immediately because they are almost all taller than you, a result of growing up in a low-gravity environment. The spaceport consists of four large towers, connected by bridges, with openings for hangars in the sides. The upper storeys are for landing ships; business takes place down below, at street level.`
   outfitter "Basic Outfits"
   outfitter "Delta V Basics"
-  outfitter "Kraz Basics"
   security 0.1
   tribute 600
     threshold 3000
@@ -25850,10 +25847,7 @@ planet "Luna"
   description `In the early days of space travel, back when engines were still so inefficient that escaping from a planet's gravity was costly and difficult, an enormous shipyard was built on the Moon where asteroids, harvested from the asteroid belt, were mined for raw materials for ships.`
   description `  The facility is still in operation, although it is now overshadowed by the far more advanced shipbuilding centres like Geminus in the Castor system.`
   spaceport `The spaceport is rudimentary, and the main pressurized dome of the facility is probably at least half a millennium old. So many metal foil patches have been cemented to its outer wall to stop slow air leaks that in places they entirely cover the surface. Everything is so ancient and ramshackle that it feels almost like you have stepped back in time to the early days of human space flight. Perhaps that's what the tourists come here to experience.`
-  shipyard "Basic Ships"
-  shipyard "Betelgeuse Basics"
   shipyard "Navy Advanced"
-  shipyard "Vortex Intermediate"
   bribe 0.05
   security 0.2
   tribute 2500
@@ -25896,7 +25890,6 @@ planet "Maker"
   spaceport `  In the commercial sector of the port, robotic cargo trucks rumble through the streets at frightening speeds, while pedestrians walk from building to building along skyways several storeys up.`
   outfitter "Basic Outfits"
   outfitter "Lovelace Basics"
-  outfitter "Sisensis Basics"
   security 0.4
   tribute 1700
     threshold 4500
@@ -26042,7 +26035,6 @@ planet "Millrace"
   spaceport `The spaceport is ugly. As the population of Millrace has grown, the spaceport has been expanded to support the increase immigration; you can recognize the different sections because in the newer ones, the bare cement walls are lighter and have accumulated less soot and grime. Most of the restaurants are of the greasy spoon variety.`
   outfitter "Basic Outfits"
   outfitter "Lovelace Basics"
-  outfitter "Sisensis Basics"
   security 0.2
   tribute 1400
     threshold 4000
@@ -26348,6 +26340,7 @@ planet "Prime"
   outfitter "Earth Basics"
   outfitter "Syndicate Intermediate"
   shipyard "Betelgeuse Advanced"
+  shipyard "Megaparsec Basics"
   "required reputation" 2
   bribe 0.05
   security 0.6
@@ -26451,8 +26444,8 @@ planet "Reunion"
   outfitter "Lovelace Basics"
   outfitter "Sisensis Basics"
   outfitter "Syndicate Basics"
-  shipyard "Basic Ships"
-  shipyard "Vortex Intermediate"
+  shipyard "C-Square Basics"
+  shipyard "Vortex Basics"
   security 0.3
   tribute 2900
     threshold 5000
@@ -26715,11 +26708,10 @@ planet "Shadowed Valley"
 planet "Shangri-La"
   attributes core rich urban frontier
   landscape land/sea6
-  description `Named after a mythical paradise, Shangri-La is an almost ideal planet, with a mixture of advanced, developed cities and uninhabited mountains. It is a rich and prosperous world, and nearly self-sufficient, but the cost of living here is prohibitively high for anyone from off-world. Because Polaris is on the very fringe of human space, and because of the wealth of its economy, piracy is a constant threat. Although recently the Syndicate has provided good protection, in past centuries it was not unheard of for raiding parties of starships to attack major port cities here, carrying off valuable cargo and sometimes also human slaves.`
+  description `Named after a mythical paradise, Shangri-La is an almost ideal planet, with a mixture of advanced, developed cities and uninhabited mountains. It is a rich and prosperous world, and nearly self-sufficient, but the cost of living here is prohibitively high for anyone from off-world. Because Polaris is on the very fringe of human space, and because of the wealth of its economy, piracy is a constant threat. Although recently the Republic has provided good protection, in past centuries it was not unheard of for raiding parties of starships to attack major port cities here, carrying off valuable cargo and sometimes also human slaves.`
   spaceport `The spaceport is state-of-the-art. So are the laser turrets and missile silos spaced out along its periphery. But somehow, instead of making you feel more secure, the defences only serve to remind you of how far on the fringes of civilization you are, and of how rich this planet is compared to some of its neighbours. Everyone walking through the port is moving at a brisk, purposeful pace; loitering and sightseeing are not encouraged here.`
   outfitter "Common Outfits"
   outfitter "Lovelace Intermediate"
-  shipyard "Megaparsec Basics"
   shipyard "Vortex Intermediate"
   "required reputation" 5
   bribe 0.07
@@ -27011,7 +27003,6 @@ planet "Thrall"
   spaceport `The spaceport consists of a vast asphalt-paved field for landing ships, and some wooden buildings a few storeys tall. Most of the materials for export are stored in sheds or stacked under plastic tarps, with a few police officers clustered around them to make sure no ship picks up cargo that has not been paid for. Inside the buildings, two restaurants with different names serve an identical selection of fried foods.`
   outfitter "Basic Outfits"
   outfitter "Syndicate Basics"
-  outfitter "Sisensis Basics"
   bribe 0.04
   security 0.5
   tribute 2000
@@ -27064,6 +27055,7 @@ planet "Tinker"
   outfitter "Sisensis Basics"
   outfitter "Syndicate Basics"
   shipyard "Megaparsec Basics"
+  shipyard "C-Square Basics"
   shipyard "Vortex Intermediate"
   bribe 0.04
   security 0.4
