@@ -26,7 +26,7 @@ mission "event: war begins"
     conversation
       `The moment you step off your ship you realize something is very wrong. The spaceport is eerily quiet, and a large crowd of people is gathered around a video screen in the local bar.`
       `  You ask what is happening, and someone explains. Recently, a collection of local governments in the southern galactic arm sent the Republic Parliament what amounted to an ultimatum: a refusal to pay taxes until certain reforms were made in trade tariffs, ship licensing, and election of planetary representatives. The coalition calls themselves the "Free Worlds." Parliament outright refused to consider their demands.`
-      `  Then, in the early morning, nuclear explosions on Geminus and Martini destroyed the Republic Navy Yard and the Galactic Stock Exchange, crippling the military and economic centres of the Republic. The "Free Worlds" disclaim any responsibility for the attacks, despite the timing and the fact that the attacks serve their purposes very well.`
+      `  Then, in the early morning, nuclear explosions on Luna and Martini destroyed the Republic Navy Yard and the Galactic Stock Exchange, crippling the military and economic centres of the Republic. The "Free Worlds" disclaim any responsibility for the attacks, despite the timing and the fact that the attacks serve their purposes very well.`
       `  Unless the terrorists can be found or turn themselves in, civil war is imminent. It has been less than a year since you bought your ship, and already the galaxy is falling apart on you.`
         decline
 
@@ -784,7 +784,7 @@ mission "FW Katya 2B"
   name "Transport Mr. Eyes"
   description "Transport Mr. Eyes to <destination>, where the recent terrorist attack took place."
   source Foundry
-  destination Geminus
+  destination Luna
   clearance
   passengers 1
   npc
@@ -842,11 +842,11 @@ mission "FW Katya 2B"
         `  "Well, then, what's our plan?"`
       
       label plan
-      `  "First," he says, "we need to go to Geminus, where the attack happened. I can explain more when we get there. In the meantime, I should also warn you that I seem to have terrible luck with pirates showing up wherever I go. It's almost like someone has put a price on my head." He grins.`
+      `  "First," he says, "we need to go to Luna, where the attack happened. I can explain more when we get there. In the meantime, I should also warn you that I seem to have terrible luck with pirates showing up wherever I go. It's almost like someone has put a price on my head." He grins.`
         accept
   
   on accept
-    log `Met up with a friend of Katya's named Mr. Eyes, who calls himself a "vigilante nuclear power plant inspector." He thinks he can help hunt down the people who bombed Geminus and Martini, to prove that the Free Worlds were not behind it.`
+    log `Met up with a friend of Katya's named Mr. Eyes, who calls himself a "vigilante nuclear power plant inspector." He thinks he can help hunt down the people who bombed Luna and Martini, to prove that the Free Worlds were not behind it.`
 
 
 
@@ -854,7 +854,7 @@ mission "FW Katya 2C"
   landing
   name "Transport Mr. Eyes"
   description "Bring Mr. Eyes to <destination>, where you will meet up with Katya (and hopefully get paid)."
-  source Geminus
+  source Luna
   destination Rand
   passengers 1
   to offer
@@ -1258,7 +1258,7 @@ mission "FW Katya 7C"
     log "Found evidence of nuclear testing on Clink, a mining moon on the edge of Free Worlds territory. It's strange that the perpetrators left such clear evidence behind; the Navy's drones will certainly have discovered it before we did. Katya stayed behind to try to infiltrate the mining compound and collect more information."
     conversation
       `You land some distance from the mining settlement, and Mr. Eyes goes into the airlock in a pressure suit, cycling it to bring in some of the moon's thin atmosphere for him to test. "Firing up my instruments now," he says through the comm link. There is a long pause, and then he starts spouting a long string of creative profanity. Katya runs over to the airlock window to see what is happening.`
-      `  Finally, Eyes calms down enough to say, "It's a match! Not only has there been a recent test here, but the signature matches the one we took on Geminus. This is it."`
+      `  Finally, Eyes calms down enough to say, "It's a match! Not only has there been a recent test here, but the signature matches the one we took on Luna. This is it."`
       `  He cycles the airlock and comes back inside. "Let's fly around and see if we can find the site," he says. After a few hours of flying low over the surface and scanning for radiation signatures, you find a spot that looks like all the other meteorite craters but is full of radiation. Katya and Eyes look at the images of the surface almost in disbelief.`
       `  "Based on the isotopic decay rates, this explosion happened in mid-June," says Eyes. "Just before the attacks happened."`
       `  "It makes no sense," says Katya. "It's a blatant atmospheric test. No way the Navy hasn't found this. The Navy could act on this at any moment. Captain, is the outpost reporting any miner's jobs open?"`

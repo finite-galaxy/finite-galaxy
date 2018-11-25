@@ -9523,6 +9523,7 @@ system "Farinus"
   trade "Plastic" 354
   fleet "Remnant Large" 9000
   fleet "Remnant Small" 7000
+  fleet "Korath Raid" 50000
   object
     sprite star/k5-old
     distance 36.894
@@ -17321,6 +17322,7 @@ system "Peragenor"
   trade "Medical" 512
   trade "Metal" 271
   trade "Plastic" 373
+  fleet "Korath Raid" 40000
   object
     sprite star/g0-old
     period 10
@@ -19916,6 +19918,7 @@ system "Segesta"
   trade "Medical" 664
   trade "Metal" 406
   trade "Plastic" 295
+  fleet "Korath Raid" 20000
   object
     sprite star/k5-old
     period 10
@@ -24143,6 +24146,7 @@ planet "Ada"
   spaceport `The spaceport is built into the walls of a canyon which has been blasted out to create trenches that are hundreds of meters wide and deep, a network of flight lanes that are well marked out with lights and beacons. Behind the docking caves is a bustling subterranean city where bare rock and gleaming metal have been woven together in an architecture that is both functional and elegant. The lighting in the caverns varies over the course of the day to match the sunlight outside.`
   outfitter "Common Outfits"
   outfitter "Lovelace Advanced"
+  shipyard "Centaur Basics"
   shipyard "Megaparsec Basics"
   shipyard "Vortex Basics"
   "required reputation" 2
@@ -24647,7 +24651,8 @@ planet "Chiron"
   outfitter "Lovelace Basics"
   outfitter "Sisensis Intermediate"
   outfitter "Syndicate Basics"
-  shipyard "C-Square Advanced"
+  shipyard "Centaur Advanced"
+  shipyard "C-Square Basics"
   shipyard "Vortex Basics"
   bribe 0.02
   security 0.3
@@ -24872,6 +24877,7 @@ planet "Delve"
   spaceport `The spaceport is an enormous hollow carved out of the side of a mountain, with a network of steel beams and mesh holding the rock in place. Inside the hollow, the landings are caves carved into the rock itself, again with steel beams above to protect the ships within. A tiered set of cog railways transport passengers and cargo between the landings and the large town at the base of the hollow. Beyond the hollow, the mountainside falls off into a steep cliff and a mist-filled valley below. Although the port is well-built and modern, you cannot help an irrational fear that the whole place will slide off the edge of the mountain one day.`
   outfitter "Basic Outfits"
   outfitter "Lovelace Intermediate"
+  shipyard "Centaur Basics"
   shipyard "Vortex Basics"
   security 0.2
   tribute 1600
@@ -24980,6 +24986,7 @@ planet "Earth"
   outfitter "Lovelace Intermediate"
   outfitter "Sisensis Intermediate"
   outfitter "Syndicate Intermediate"
+  shipyard "Centaur Intermediate"
   shipyard "C-Square Intermediate"
   shipyard "Vortex Intermediate"
   "required reputation" 2
@@ -25024,6 +25031,7 @@ planet "Endless Sky"
   outfitter "Basic Outfits"
   outfitter "Sisensis Basics"
   shipyard "Basic Ships"
+  shipyard "Centaur Basics"
   security 0.05
   tribute 300
     threshold 2500
@@ -25213,6 +25221,7 @@ planet "Follower"
   outfitter "Sisensis Intermediate"
   outfitter "Syndicate Basics"
   shipyard "Betelgeuse Basics"
+  shipyard "C-Square Basics"
   bribe 0.03
   security 0.4
   tribute 2400
@@ -25290,7 +25299,7 @@ planet "Furnace"
 planet "Geminus"
   attributes paradise factory mining
   landscape land/mountain18-harro
-  description `Geminus, although not the most hospitable of worlds, is a young enough planet that large stores of iron, titanium, and other metals are easily accessible near the surface. For that reason, it has become one of the Republic's primary shipyards. More than half of the warships in the navy were constructed here.`
+  description `Geminus, although not the most hospitable of worlds, is a young enough planet that large stores of iron, titanium, and other metals are easily accessible near the surface. For that reason, it has become one of the Syndicate's secondary shipyards. It is also home to C-Square, producer of the Flivver.`
   description `  The constant volcanic activity leaves the planet perpetually shrouded in clouds of ash and fog, so that being outside means being in a twilight haze with low visibility. Probably in compensation for this, interior spaces tend to be brightly lit and painted in bold colours.`
   spaceport `Like everything else on Geminus, the spaceport is not terribly pretty, but is functional and efficient. Each of the wide hallways is marked out like a road, with space in the centre for electric carts carrying cargo, while pedestrians are relegated to the edges.`
   spaceport `  The hub of the spaceport is a food court with a ring of shops in the centre and seating on the outside, where you can look out of plate glass windows at the lava fields and caldera outside. By night, you can see the volcanic glow all around the horizon.`
@@ -25298,6 +25307,7 @@ planet "Geminus"
   outfitter "Earth Intermediate"
   outfitter "Syndicate Intermediate"
   shipyard "Betelgeuse Intermediate"
+  shipyard "C-Square Advanced"
   bribe 0.1
   security 0.9
   tribute 4800
@@ -25545,7 +25555,7 @@ planet "Hephaestus"
   outfitter "Sisensis Basics"
   outfitter "Syndicate Advanced"
   shipyard "Betelgeuse Intermediate"
-  shipyard "C-Square Basics"
+  shipyard "C-Square Intermediate"
   shipyard "Megaparsec Intermediate"
   bribe 0.1
   security 0.7
@@ -25841,6 +25851,7 @@ planet "Little Garden"
   spaceport `  There are always locals hanging around the port, some of them mere children, who are trying to find a cheap ride off-planet.`
   outfitter "Common Outfits"
   outfitter "Sisensis Advanced"
+  shipyard "Centaur Intermediate"
   security 0.1
   tribute 1400
     threshold 4000
@@ -25873,7 +25884,7 @@ planet "Luna"
   attributes "near earth" tourism factory moon
   landscape land/earthrise
   description `In the early days of space travel, back when engines were still so inefficient that escaping from a planet's gravity was costly and difficult, an enormous shipyard was built on the Moon where asteroids, harvested from the asteroid belt, were mined for raw materials for ships.`
-  description `  The facility is still in operation, although it is now overshadowed by the far more advanced shipbuilding centres like Geminus in the Castor system.`
+  description `  The facility is still in operation, although the Republic Navy is the only one who builds ships here; civilian ships are no longer produced on Luna.`
   spaceport `The spaceport is rudimentary, and the main pressurized dome of the facility is probably at least half a millennium old. So many metal foil patches have been cemented to its outer wall to stop slow air leaks that in places they entirely cover the surface. Everything is so ancient and ramshackle that it feels almost like you have stepped back in time to the early days of human space flight. Perhaps that's what the tourists come here to experience.`
   shipyard "Navy Advanced"
   bribe 0.05
@@ -25904,6 +25915,7 @@ planet "Mainsail"
   outfitter "Basic Outfits"
   outfitter "Syndicate Basics"
   shipyard "Betelgeuse Basics"
+  shipyard "C-Square Basics"
   bribe 0.06
   security 0.5
   tribute 1600
@@ -26472,6 +26484,7 @@ planet "Reunion"
   outfitter "Lovelace Basics"
   outfitter "Sisensis Basics"
   outfitter "Syndicate Basics"
+  shipyard "Centaur Basics"
   shipyard "C-Square Basics"
   shipyard "Vortex Basics"
   security 0.3
@@ -27095,6 +27108,7 @@ planet "Tinker"
   outfitter "Sisensis Basics"
   outfitter "Syndicate Basics"
   shipyard "Megaparsec Basics"
+  shipyard "Centaur Intermediate"
   shipyard "C-Square Basics"
   shipyard "Vortex Intermediate"
   bribe 0.04

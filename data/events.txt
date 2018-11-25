@@ -106,8 +106,6 @@ event "plasma turret available"
   outfitter "Delta V Advanced"
     "Plasma Turret"
   fleet "Free Worlds Large"
-    add variant 5
-      "Bastion (Plasma)"
     add variant 3
       "Falcon (Plasma)"
 
@@ -208,9 +206,10 @@ event "war begins"
     fleet "Merchants North Large" 4000
     fleet "Republic Small" 1100
     fleet "Republic Large" 1300
-  planet "Geminus"
-    description `Until recently, Geminus was home to the Republic Navy Yard, the largest shipyard in human space. Now, there is nothing left of the shipyard but a gaping crater in the ground, from the recent terrorist bombing.`
-    spaceport `Fortunately, the spaceport and residential areas survived the bombing, which was focused only on the Navy yard and happened early in the morning, when very few people were at work.`
+  planet "Luna"
+    description `In the early days of space travel, back when engines were still so inefficient that escaping from a planet's gravity was costly and difficult, an enormous shipyard was built on the Moon where asteroids, harvested from the asteroid belt, were mined for raw materials for ships.`
+    description `Until recently, Luna was home to the Republic Navy Yard, the largest military shipyard in human space. Now, there is nothing left of the shipyard but a gaping crater in the ground, from the recent terrorist bombing.`
+    spaceport `Fortunately, the spaceport and trading areas survived the bombing, which was focused only on the Navy yard and happened early in the morning, when very few people were at work.`
     spaceport `The Navy officers who are in charge here have no time for anyone who is not enlisted in the Navy and participating in the ongoing investigation.`
     remove shipyard "Navy Advanced"
     "required reputation" 100
@@ -2697,12 +2696,11 @@ event "fwc link restoration 3"
 
 # free worlds epilogue
 
-event "geminus rebuilt"
-  planet "Geminus"
-    description `Geminus, although not the most hospitable of worlds, is a young enough planet that large stores of iron, titanium, and other metals are easily accessible near the surface. The constant volcanic activity leaves the planet perpetually shrouded in a twilight haze of ash and fog.`
-    description `  The shattered remnants of the old Navy Yard are still left abandoned and slowly rusting away in the planet's caustic atmosphere, but the Republic has now built a new shipyard to replace the one destroyed in the bombing, and once again Geminus has become a central hub of technology and industry.`
-    spaceport `Like everything else on Geminus, the spaceport is not terribly pretty, but is functional and efficient. Each of the wide hallways is marked out like a road, with space in the centre for electric carts carrying cargo, while pedestrians are relegated to the edges. Video cameras and sensors have been placed at every intersection, and access to the shipbuilding facilities is tightly controlled.`
-    spaceport `  The hub of the spaceport is a food court with a ring of shops in the centre and seating on the outside, where you can look out of plate glass windows at the lava fields and caldera outside. By night, you can see the volcanic glow all around the horizon.`
+event "luna rebuilt"
+  planet "Luna"
+    description `In the early days of space travel, back when engines were still so inefficient that escaping from a planet's gravity was costly and difficult, an enormous shipyard was built on the Moon where asteroids, harvested from the asteroid belt, were mined for raw materials for ships.`
+    description `  The shattered remnants of the old Navy Yard are still left abandoned and slowly rusting away in the planet's caustic atmosphere, but the Republic has now built a new shipyard to replace the one destroyed in the bombing, and once again Luna has become a central hub of technology and industry.`
+    spaceport `The spaceport is rudimentary, and the main pressurized dome of the facility is probably at least half a millennium old. So many metal foil patches have been cemented to its outer wall to stop slow air leaks that in places they entirely cover the surface. Everything is so ancient and ramshackle that it feels almost like you have stepped back in time to the early days of human space flight. Perhaps that's what the tourists come here to experience.`
     shipyard "Navy Advanced"
 
 

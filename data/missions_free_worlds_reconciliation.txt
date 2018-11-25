@@ -147,7 +147,7 @@ mission "FW Reconciliation 1C"
     dialogue `You have failed an essential Free Worlds mission. If you want to complete the story line, revert to the autosave or another earlier snapshot of the game.`
   
   on offer
-    log "Collected atmospheric samples from Mutiny, a planet deep in Syndicate space, and verified that a nuclear test has been performed here using isotopes that match those from the attacks on Geminus and Martini. Also found carefully hidden signs of an underground test site."
+    log "Collected atmospheric samples from Mutiny, a planet deep in Syndicate space, and verified that a nuclear test has been performed here using isotopes that match those from the attacks on Luna and Martini. Also found carefully hidden signs of an underground test site."
     conversation
       `You skim low over the surface of <origin>, with the airlock slightly open to allow Ijs to collect atmospheric samples. He's dressed in a pressure suit, and over the suit's radio he says, "Any residue that's here will be very faint. Just a few more minutes."`
       `  Sawyer directs you to the site where the secret development took place. Nothing is left but a wide and slightly overgrown clearing. After checking your radar and seeing no incoming ships, you risk landing. Sawyer says that there were buildings here a few years ago, but now not even their foundations remain, and a sensor sweep for metallic objects turns up nothing, not even as small as a single nail.`
@@ -1483,7 +1483,7 @@ mission "FW Pug 3B"
   description "Travel to <planet> with two Free Worlds Dreadnoughts that will be joining the fight against the Pug."
   autosave
   source Zuq
-  destination Geminus
+  destination Luna
   clearance
   to offer
     has "FW Pug 3A: done"
@@ -1516,7 +1516,7 @@ mission "FW Pug 3C"
   name "Escort to Hephaestus"
   description "Escort the combined Free Worlds and Navy fleet to <destination>, where the Syndicate will fit all the ships with jump drives."
   autosave
-  source Geminus
+  source Luna
   destination Hephaestus
   to offer
     has "FW Pug 3B: done"
@@ -1527,7 +1527,7 @@ mission "FW Pug 3C"
   on offer
     log "The Free Worlds and Republic Navy are sending a joint fleet into Syndicate space, where they will be fitted with jump drives to make an assault on Pug territory. The Syndicate only has six jump drives available, so this fleet will have to survive without reinforcements until a way is found to reopen the connection to the rest of human space."
     conversation
-      `You land at the Republic Navy Yard on Geminus escorting the two Dreadnoughts that are the Free Worlds contribution to the war against the Pug. You are met by the shipyard supervisor and a team of engineers who are preparing the Navy ships to join you. "So, these are your Dreadnoughts," one of them says. "I'm glad to finally have the chance to see one up close. I don't suppose one of the captains would be willing to give me a tour."`
+      `You land at the Republic Navy Yard on Luna escorting the two Dreadnoughts that are the Free Worlds contribution to the war against the Pug. You are met by the shipyard supervisor and a team of engineers who are preparing the Navy ships to join you. "So, these are your Dreadnoughts," one of them says. "I'm glad to finally have the chance to see one up close. I don't suppose one of the captains would be willing to give me a tour."`
       choice
         `  "Um, we're right in the middle of resisting an alien invasion, here."`
         `  "Sorry, we aren't authorized to share military secrets with you."`
