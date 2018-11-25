@@ -506,12 +506,12 @@ interface "planet"
   
   visible if "has trade"
   sprite "ui/planet dialogue button"
-    centre -400 90
+    centre 280 90
   button t "_Trading"
-    centre -400 90
+    centre 280 90
     dimensions 140 40
     size 18
-    align left
+    align right
     pad 10 0
   
   visible if "has bank"
@@ -526,12 +526,12 @@ interface "planet"
   
   visible if "has spaceport"
   sprite "ui/planet dialogue button"
-    centre 280 90
+    centre -400 90
   button p "Space_port"
-    centre 280 90
+    centre -400 90
     dimensions 140 40
     size 18
-    align right
+    align left
     pad 10 0
   
   visible if "has ship"
