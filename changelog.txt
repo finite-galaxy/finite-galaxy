@@ -8,7 +8,7 @@
   * introduce new fuel attributes (@Nescio0)
   * introduce core space, used by energy generators and some other outfits
     * outfit space = core space + engine space + weapon space
-  * add support for bombers
+  * add support for bombers [work in progress]
   * stat info display:
     * display projectile velocity on same line as range
     * display per shot on same line as per second values
@@ -97,7 +97,7 @@
       * "Starling" to "Shadow"
       * removed species from ship names
     * changed outfits of nearly all ships and variants
-    * changed the number of gun ports on some ships, usually because there were two at the same location:
+    * gun port changes, usually because there were two at the same location:
       * Argosy, Bastion, Falcon, and Venus from 4 to 2
       * Bactrian from 4 to 3
       * Bulk Freighter and Model 8 from 2 to 0
@@ -107,8 +107,13 @@
       * Manta and Saturn from 6 to 4
       * Mule from 2 to 1
       * Tek Far 71 - Lek from 3 to 2
-    * changed the number of turret mounts on some ships:
+    * turret mount changes:
       * Model 8 from 0 to 1
+    * carried bay changes: 
+      * Nest: fighter bays from 2 to 0, bomber bays from 0 to 2
+      * Raider: fighter bays from 2 to 0, bomber bays from 0 to 2
+      * Roost: fighter bays from 4 to 0, bomber bays from 0 to 4
+      * Skein: fighter bays from 6 to 0, bomber bays from 0 to 6
     * now have 0 fuel capacity; equipped them with fuel barrels and pods; outfit space increased accordingly
     * stat tweaks:
       * Aerie: −5 engine capacity
@@ -129,11 +134,11 @@
       * Bulk Freighter: +40 cargo space
       * Chaser: +700 shields, +600 hull, +1 required crew, +1 bunk, +10 mass, +33 outfit space
       * Clipper: unchanged
-      * Combat Drone: +0.01 drag, +2 outfit space
-      * Combat Fighter: −5 weapon space
+      * Combat Drone: +0.01 drag, +2 outfit space, −1 weapon space
+      * Combat Fighter: +1 engine space, −6 weapon space
       * Cool Breeze: unchanged
       * Courier: unchanged
-      * Dagger: −0.03 drag, +5 outfit space
+      * Dagger: −0.03 drag, +5 outfit space, −1 engine space, −4 weapon space
       * Deep River: −150 outfit space, removed weapon space
       * Derecho: unchanged
       * Dreadnought: +1.0 drag, –10 cargo space, +10 outfit space

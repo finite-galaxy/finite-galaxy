@@ -294,8 +294,9 @@ public:
   // Check if this ship has a bay free for the given fighter, and the bay is
   // not reserved for one of its existing escorts.
   bool CanCarry(const Ship &ship) const;
-  // Check if this is a ship of a type that can be carried (drone, fighter, or bomber).
-  bool CanBeCarried() const;
+	// Check if this is a ship of a type that can be carried
+  // (drone == 1, fighter == 2, bomber == 3)
+  int CanBeCarried() const;
   // Move the given ship into one of the drone, fighter, or bomber bays, if possible.
   bool Carry(const std::shared_ptr<Ship> &ship);
   // Empty the fighter bays. If the fighters are not special ships that are
@@ -397,7 +398,7 @@ private:
   const Sprite *thumbnail = nullptr;
   // Characteristics of this particular ship:
   std::string name;
-  bool canBeCarried = false;
+  int canBeCarried = 0;
   
   int forget = 0;
   bool isInSystem = true;

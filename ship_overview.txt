@@ -127,18 +127,16 @@
   "Flivver":                        225 =   40 +  180 +    5 ; (    1 /    2 )
   "Fury":                           220 =   50 +  160 +   10 ; (    1 /    2 )
   "Earth Shaper":                   146 =   50 +   69 +   27 ; (    0 /    0 )
-# Bombers have to be carried in bomber bays; often 2 crew
+# lesser crafts carried in bays; incapable of independent hyperspace travel:
   "Chaser":                         175 =   50 +  125 +    0 ; (    2 /    3 )
-  "Barb":                           140 =   45 +   95 +    0 ; (    1 /    2 )
-# Fighters have to be carried in fighter bays; often 1 crew
   "Harpy":                          150 =   40 +  110 +    0 ; (    1 /    1 )
+  "Barb":                           140 =   45 +   95 +    0 ; (    1 /    2 )
   "Boxwing":                        140 =   45 +   55 +   40 ; (    1 /    1 )
   "Far Osk 27":                     134 =   34 +  100 +    0 ; (    0 /    0 )
   "Combat Fighter":                 130 =   30 +  100 +    0 ; (    1 /    1 )
   "Violin Spider":                  125 =   31 +   94 +    0 ; (    1 /    1 )
   "Dagger":                         115 =   20 +   95 +    0 ; (    1 /    1 )
   "Flycatcher":                     109 =   30 +   79 +    0 ; (    0 /    0 )
-# Drones have to be carried in drone bays; often 0 crew
   "Far Lek 14":                      92 =   26 +   66 +    0 ; (    0 /    0 )
   "Flea":                            81 =   21 +   60 +    0 ; (    0 /    0 )
   "Combat Drone":                    80 =   20 +   60 +    0 ; (    0 /    0 )
@@ -174,7 +172,7 @@
   "Marauder Falcon (Weapons)":      300 ;  6 ,  4 ,    ,    ,    ; 165 ,  6.7 ; 205 ,   .8
   "Marauder Leviathan (Weapons)":   300 ;  4 ,  4 ,    ,    ,    ; 140 ,  7.6 ; 290 ,   .5
   "Saturn":                         300 ;  4 ,  4 ,  4 ,    ,    ; 150 ,  9.8 ; 370 ,   .5
-  "Raider":                         284 ;    ,  6 ,    ,    ,    ; 159 , 12.  ; 334 ,   .5
+  "Raider":                         284 ;    ,  6 ,    ,    ,  2 ; 159 , 12.  ; 334 ,   .5
   "Behemoth":                       280 ;  2 ,  6 ,    ,    ,    ;  90 , 11.7 ; 200 ,   .4
   "Tek Far 78 - Osk":               271 ;  4 ,  5 ,    ,  8 ,    ; 117 , 10.2 ; 243 ,   .55
   "Tempest":                        271 ;  4 ,  3 ,    ,    ,    ; 122 ,  6.2 ; 242 ,   .65
@@ -227,9 +225,9 @@
   "Hauler II":                      140 ;  2 ,  4 ,    ,    ,    ;  80 , 11.5 ; 170 ,   .6
   "Hauler III":                     140 ;  2 ,  4 ,    ,    ,    ;  80 , 12.5 ; 170 ,   .6
   "Marauder Argosy":                140 ;  4 ,  2 ,    ,    ,    ;  80 ,  6.2 ; 160 ,   .6
-  "Nest":                           140 ;  2 ,  4 ,    ,  2 ,    ;  80 , 10.5 ; 240 ,   .6
-  "Roost":                          140 ;  2 ,  4 ,    ,  4 ,    ;  80 , 11.5 ; 310 ,   .6
-  "Skein":                          140 ;  2 ,  4 ,    ,  6 ,    ;  80 , 12.5 ; 380 ,   .6
+  "Nest":                           140 ;  2 ,  4 ,    ,    ,  2 ;  80 , 10.5 ; 240 ,   .6
+  "Roost":                          140 ;  2 ,  4 ,    ,    ,  4 ;  80 , 11.5 ; 310 ,   .6
+  "Skein":                          140 ;  2 ,  4 ,    ,    ,  6 ;  80 , 12.5 ; 380 ,   .6
   "Spindle":                        138 ;  2 ,  2 ,    ,    ,    ; 148 , 10.8 ; 188 ,   .55
   "Marauder Raven (Weapons)":       135 ;  4 ,  1 ,    ,    ,    ; 110 ,  3.7 ; 135 ,   .8
   "Wagon":                          132 ;  2 ,  2 ,    ,    ,    ;  92 , 10.6 ; 165 ,   .55
@@ -284,17 +282,17 @@
   "Wasp":                            25 ;  3 ,    ,    ,    ,    ;  50 ,  1.2 ; 115 ,   .8
   "Flycatcher":                      24 ;    ,  1 ,    ,    ,    ;  21 ,   .6 ;  34 ,   .9
   "Far Osk 27":                      22 ;  2 ,    ,    ,    ,    ;  24 ,  1.1 ;  54 ,  1.
-  "Dagger":                          20 ;  2 ,    ,    ,    ,    ;  30 ,   .6 ;  45 ,   .9
   "Fury":                            20 ;  2 ,    ,    ,    ,    ;  40 ,  1.  ; 100 ,   .8
   "Harpy":                           20 ;  2 ,    ,    ,    ,    ;  40 ,   .9 ;  50 ,   .85
   "Violin Spider":                   19 ;  1 ,    ,    ,    ,    ;  30 ,   .9 ;  45 ,   .7
-  "Combat Fighter":                  15 ;  2 ,    ,    ,    ,    ;  30 ,   .7 ;  55 ,   .8
+  "Dagger":                          16 ;  2 ,    ,    ,    ,    ;  29 ,   .6 ;  50 ,   .9
   "Flivver":                         15 ;  2 ,    ,    ,    ,    ;  45 ,  1.0 ; 120 ,   .9
   "Heavy Shuttle":                   15 ;  2 ,    ,    ,    ,    ;  60 ,  2.1 ;  95 ,   .8
+  "Combat Fighter":                  14 ;  2 ,    ,    ,    ,    ;  30 ,   .7 ;  56 ,   .8
   "Far Lek 14":                      11 ;  1 ,    ,    ,    ,    ;  24 ,   .8 ;  31 ,  1.1
   "Light Shuttle":                   10 ;  1 ,    ,    ,    ,    ;  60 ,  1.7 ;  90 ,   .8
   "Flea":                             9 ;  1 ,    ,    ,    ,    ;  24 ,   .5 ;  27 ,   .75
-  "Combat Drone":                     8 ;  1 ,    ,    ,    ,    ;  28 ,   .6 ;  24 ,   .9
+  "Combat Drone":                     7 ;  1 ,    ,    ,    ,    ;  28 ,   .6 ;  25 ,   .9
   "Boxwing":                          0 ;    ,    ,    ,    ,    ;  35 ,   .6 ;  20 ,   .5
   "Deep River":                       0 ;    ,    ,    ,    ,    ;  83 ,  9.4 ; 150 ,   .6
   "Earth Shaper":                     0 ;    ,    ,    ,    ,    ;  21 ,   .9 ;  46 ,   .9

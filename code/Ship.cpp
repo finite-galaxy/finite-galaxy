@@ -33,7 +33,7 @@ using namespace std;
 
 namespace {
   const string FIGHTER_REPAIR = "Repair fighters in";
-  const vector<string> BAY_TYPE = {"drone", "fighter"};
+  const vector<string> BAY_TYPE = {"drone", "fighter", "bomber"};
   const vector<string> BAY_SIDE = {"inside", "over", "under"};
   const vector<string> BAY_FACING = {"forward", "left", "right", "back"};
   const vector<Angle> BAY_ANGLE = {Angle(0.), Angle(-90.), Angle(90.), Angle(180.)};
@@ -434,11 +434,6 @@ void Ship::FinishLoading(bool isNewInstance)
     }
   }
   
-  // Mark any drone that has no "automaton" value as an automaton, to
-  // grandfather in the drones from before that attribute existed.
-  if(baseAttributes.Category() == "Drone" && !baseAttributes.Get("automaton"))
-    baseAttributes.Set("automaton", 1.);
-  
   baseAttributes.Set("gun ports", armament.GunCount());
   baseAttributes.Set("turret mounts", armament.TurretCount());
   
@@ -512,8 +507,9 @@ void Ship::FinishLoading(bool isNewInstance)
       bay.launchEffects.emplace_back(GameData::Effects().Get("basic launch"));  
 
   // Figure out if this ship can be carried.
-  const string &category = attributes.Category();
-  canBeCarried = (category == "Fighter" || category == "Drone");
+  // const string &category = attributes.Category();
+  // canBeCarried = (category == "Fighter" || category == "Drone");
+  canBeCarried = attributes.Get("carried");
   
   // Issue warnings if this ship has negative cargo, outfit, core, engine, or weapon space.
   string warning;
@@ -2684,7 +2680,7 @@ bool Ship::CanCarry(const Ship &ship) const
 
 
 
-bool Ship::CanBeCarried() const
+int Ship::CanBeCarried() const
 {
   return canBeCarried;
 }

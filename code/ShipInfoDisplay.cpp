@@ -131,6 +131,19 @@ void ShipInfoDisplay::UpdateAttributes(const Ship &ship, const Depreciation &dep
   attributeLabels.push_back(string());
   attributeValues.push_back(string());
   attributesHeight += 10;
+  int canBeCarried = attributes.Get("carried");
+  if(canBeCarried)
+  {
+    attributeLabels.push_back("carried, bay:");
+    if(canBeCarried == 1)
+      attributeValues.push_back("drone");
+    if(canBeCarried == 2)
+      attributeValues.push_back("fighter");
+    if(canBeCarried == 3)
+      attributeValues.push_back("bomber");
+    attributesHeight += 20;
+  }
+
   if(attributes.Get("shield generation"))
   {
     attributeLabels.push_back("shields charge / max:");
@@ -288,22 +301,19 @@ void ShipInfoDisplay::UpdateAttributes(const Ship &ship, const Depreciation &dep
   attributeLabels.push_back(string());
   attributeValues.push_back(string());
   attributesHeight += 10;
-  attributeLabels.push_back("mass full / no cargo:");
-  attributeValues.push_back(Format::Round(fullMass) + " / " + Format::Round(emptyMass));
-  attributesHeight += 20;
-  
-  /*
-  if(!attributes.Get("carried") && (attributes.Get("hyperdrive") || attributes.Get("jump drive")))
+
+  if(!isGeneric)
   {
-    attributeLabels.push_back("    jump fuel:");
-    if(!isGeneric)
-      attributeValues.push_back(Format::Round(hyperjumpfuel * fullMass * 0.001));
-    else
-      attributeValues.push_back(Format::Round(hyperjumpfuel * fullMass * 0.001)
-        + " / " + Format::Round(hyperjumpfuel * emptyMass * 0.001));
-    attributesHeight += 20;
+    attributeLabels.push_back("mass:");
+    attributeValues.push_back(Format::Round(emptyMass));
   }
-  */
+  else
+  {
+    attributeLabels.push_back("mass full / no cargo:");
+    attributeValues.push_back(Format::Round(fullMass) + " / " + Format::Round(emptyMass));
+  }
+  attributesHeight += 20;
+
 
   attributeLabels.push_back("    maximum velocity:");
   if(afterburner)
