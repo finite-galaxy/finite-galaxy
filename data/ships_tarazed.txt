@@ -5,8 +5,8 @@ shipyard "Tarazed Variants"
   "Falcon (Laser)"
   "Falcon (Plasma)"
   "Hawk"
+  "Hawk (Blaster)"
   "Hawk (Rocket)"
-  "Hawk (Speedy)"
   "Kestrel"
   "Kestrel (Engines)"
   "Kestrel (Shields)"
@@ -31,8 +31,8 @@ ship "Blackbird"
     licences
       Pilot
     "cost" 2900000
-    "shields" 4800
-    "hull" 1600
+    "shields" 4000
+    "hull" 2000
     "required crew" 3
     "bunks" 27
     "mass" 220
@@ -73,7 +73,7 @@ ship "Blackbird"
   explode "medium explosion" 18
   explode "large explosion" 2
   "final explode" "final explosion small"
-  description "The Tarazed Blackbird is a high-class passenger transport, designed to move large numbers of people across the galaxy with speed and safety. Although not equipped with much weaponry, a Blackbird is well shielded and fast enough to evade pirate attacks, and its cargo capacity is high enough to allow the captain to take courier missions on the side."
+  description "The Tarazed Blackbird is a high-class passenger transport, designed to move large numbers of people across the galaxy with speed and safety. Although not equipped with much weaponry, a Blackbird is well armoured and fast enough to evade pirate attacks, and its cargo capacity is high enough to allow the captain to take courier missions on the side."
 
 
 
@@ -86,8 +86,8 @@ ship "Falcon"
     licences
       Pilot
     "cost" 9800000
-    "shields" 13500
-    "hull" 4500
+    "shields" 12000
+    "hull" 4000
     "required crew" 32
     "bunks" 64
     "mass" 480
@@ -198,34 +198,34 @@ ship "Falcon" "Falcon (Plasma)"
 
 
 ship "Hawk"
-  sprite "ship/hawk"
-  thumbnail "thumbnail/hawk"
+  sprite "ship/headhunter"
+  thumbnail "thumbnail/headhunter"
   attributes
     category "Interceptor"
 #    manufacturer "Tarazed"
     licences
       Pilot
-    "cost" 670000
-    "shields" 2400
-    "hull" 800
+    "cost" 1850000
+    "shields" 3000
+    "hull" 1000
     "required crew" 2
     "bunks" 4
-    "mass" 150
-    "drag" 2.1
+    "mass" 120
+    "drag" 2.6
     "heat dissipation" .8
-    "cargo space" 20
-    "outfit space" 240
-    "core space" 120
+    "cargo space" 40
+    "outfit space" 290
+    "core space" 150
     "engine space" 70
     "weapon space" 50
     weapon
-      "blast radius" 30
-      "shield damage" 300
-      "hull damage" 150
-      "hit force" 450
+      "blast radius" 44
+      "shield damage" 440
+      "hull damage" 220
+      "hit force" 660
   outfits
     "D23-QP Shield Generator"
-    "nGVF-CC Fuel Cell"
+    "S3 Thermionic"
     "Hyperdrive"
 
     "Greyhound Plasma Thruster"
@@ -234,23 +234,45 @@ ship "Hawk"
     "Plasma Cannon" 2
 
     "LP036a Battery Pack"
-    "Fuel Barrel" 30
-    "Tactical Scanner" 2
-  engine -24 41
-  engine 24 41
-  gun -9 -17 "Plasma Cannon"
-  gun 9 -17 "Plasma Cannon"
+    "Fuel Barrel" 40
+    "Tactical Scanner" 5
+  engine -16 47
+  engine 16 47
+  gun -12 -27 "Plasma Cannon"
+  gun 12 -27 "Plasma Cannon"
+  gun -17 -18 
+  gun 17 -18 
+  turret 0 9 
   leak "leak" 60 50
-  explode "tiny explosion" 15
-  explode "small explosion" 5
+  leak "flame" 80 80
+  explode "tiny explosion" 20
+  explode "small explosion" 25
+  explode "medium explosion" 15
   "final explode" "final explosion small"
-  description "The Tarazed Hawk is an interceptor-class warship often used as an escort for freighters or in a planetary militia's patrol squadron. Hawks are fast enough to chase down most smaller ships, while also being much more heavily armed and armoured. They are also, of course, a favourite ship of pirate captains who have earned enough money to afford one."
+  description "The Tarazed Hawk is an interceptor-class warship often used as an escort for freighters or in a planetary militia's patrol squadron. Hawks are fast enough to chase down most smaller ships, but are capable of mounting much more weapons, including a turret. They are also, of course, a favorite ship of pirate captains who have earned enough money to afford one."
+
+
+ship "Hawk" "Hawk (Blaster)"
+  outfits
+    "D23-QP Shield Generator"
+    "S3 Thermionic"
+    "Hyperdrive"
+
+    "Greyhound Plasma Thruster"
+    "Greyhound Plasma Steering"
+
+    "Modified Blaster Cannon" 4
+    "Modified Blaster Turret"
+
+    "LP036a Battery Pack"
+    "Fuel Barrel" 40
+    "Tactical Scanner" 5
 
 
 ship "Hawk" "Hawk (Rocket)"
   outfits
     "D23-QP Shield Generator"
-    "nGVF-CC Fuel Cell"
+    "S3 Thermionic"
     "Hyperdrive"
 
     "Greyhound Plasma Thruster"
@@ -261,24 +283,8 @@ ship "Hawk" "Hawk (Rocket)"
     "Heavy Rocket Launcher" 2
 
     "LP036a Battery Pack"
-    "Fuel Barrel" 30
-    "Tactical Scanner" 2
-
-
-ship "Hawk" "Hawk (Speedy)"
-  outfits
-    "D41-HY Shield Generator"
-    "S3 Thermionic"
-    "Hyperdrive"
-
-    "A250 Atomic Thruster"
-    "A255 Atomic Steering"
-
-    "Heavy Laser Cannon" 2
-
-    "LP036a Battery Pack"
-    "Fuel Barrel" 30
-    "Tactical Scanner" 2
+    "Fuel Barrel" 40
+    "Tactical Scanner" 5
 
 
 
@@ -379,8 +385,8 @@ ship "Osprey"
     licences
       Pilot
     "cost" 4900000
-    "shields" 7200
-    "hull" 2400
+    "shields" 7500
+    "hull" 2500
     "required crew" 16
     "bunks" 32
     "mass" 270
@@ -498,8 +504,8 @@ ship "Raven"
     licences
       Pilot
     "cost" 1800000
-    "shields" 3600
-    "hull" 1200
+    "shields" 4500
+    "hull" 1500
     "required crew" 4
     "bunks" 8
     "mass" 130

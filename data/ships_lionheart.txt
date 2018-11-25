@@ -11,12 +11,6 @@ shipyard "Lionheart Variants"
   "Behemoth (Free Worlds)"
   "Behemoth (Hai)"
   "Dagger"
-  "Headhunter"
-  "Headhunter (Afterburner)"
-  "Headhunter (Anti-Missile)"
-  "Headhunter (Hai)"
-  "Headhunter (Particle)"
-  "Headhunter (Patrol)"
   "Leviathan"
   "Leviathan (Hai)"
   "Leviathan (Heavy)"
@@ -29,6 +23,7 @@ shipyard "Lionheart Variants"
   "Scout (Javelin)"
   "Scout (Miner)"
   "Scout (Speedy)"
+  "Stymphalian"
 
 
 
@@ -50,35 +45,35 @@ ship "Aerie"
     "heat dissipation" .7
     "cargo space" 50
     "outfit space" 440
-    "core space" 200
+    "core space" 190
     "engine space" 90
-    "weapon space" 150
+    "weapon space" 160
     weapon
       "blast radius" 80
       "shield damage" 800
       "hull damage" 400
       "hit force" 1200
   outfits
-    "D67-TM Shield Generator"
+    "D41-HY Shield Generator"
     "NT-200 Nucleovoltaic"
     "Hyperdrive"
 
     "A250 Atomic Thruster"
     "A255 Atomic Steering"
 
-    "Heavy Laser Cannon" 2
+    "Torpedo" 60
+    "Torpedo Storage Rack" 2
+    "Torpedo Launcher" 2
     "Heavy Laser Turret" 2
     "Heavy Anti-Missile Turret"
 
     "LP144a Battery Pack"
-    "Liquid Water Cooler"
     "Fuel Barrel" 50
-    "Large Radar Jammer"
     "Tactical Scanner" 4
   engine -10 91
   engine 10 91
-  gun -13 -79 "Heavy Laser Cannon"
-  gun 13 -79 "Heavy Laser Cannon"
+  gun -13 -79 "Torpedo Launcher"
+  gun 13 -79 "Torpedo Launcher"
   turret 0 0 "Heavy Anti-Missile Turret"
   turret -17 14 "Heavy Laser Turret"
   turret 17 14 "Heavy Laser Turret"
@@ -455,157 +450,6 @@ ship "Dagger"
 
 
 
-ship "Headhunter"
-  sprite "ship/headhunter"
-  thumbnail "thumbnail/headhunter"
-  attributes
-    category "Interceptor"
-#    manufacturer "Lionheart"
-    licences
-      Pilot
-    "cost" 1850000
-    "shields" 3800
-    "hull" 700
-    "required crew" 2
-    "bunks" 5
-    "mass" 120
-    "drag" 2.6
-    "heat dissipation" .8
-    "cargo space" 40
-    "outfit space" 290
-    "core space" 150
-    "engine space" 75
-    "weapon space" 65
-    weapon
-      "blast radius" 44
-      "shield damage" 440
-      "hull damage" 220
-      "hit force" 660
-  outfits
-    "D23-QP Shield Generator"
-    "NT-200 Nucleovoltaic"
-    "Hyperdrive"
-
-    "A250 Atomic Thruster"
-    "A255 Atomic Steering"
-
-    "Heavy Laser Cannon" 4
-
-    "LP036a Battery Pack"
-    "Fuel Barrel" 40
-    "Small Radar Jammer" 2
-    "Tactical Scanner" 3
-  engine -16 47
-  engine 16 47
-  gun -12 -27 "Heavy Laser Cannon"
-  gun 12 -27 "Heavy Laser Cannon"
-  gun -17 -18 "Heavy Laser Cannon"
-  gun 17 -18 "Heavy Laser Cannon"
-  turret 0 9
-  leak "leak" 60 50
-  leak "flame" 80 80
-  explode "tiny explosion" 20
-  explode "small explosion" 25
-  explode "medium explosion" 15
-  "final explode" "final explosion small"
-  description "The Headhunter is one of the newest ships designed by Lionheart: a versatile ship that can serve equally well for carrying valuable cargo, escorting freighters, or bounty hunting. It is capable of overtaking and defeating most other interceptors, hence its name. As with all of Lionheart's designs, the Headhunter's hull is mostly composite fiber rather than metal, sacrificing armour strength for the sake of lighter weight and faster movement. "
-
-
-ship "Headhunter" "Headhunter (Afterburner)"
-  outfits
-    "D23-QP Shield Generator"
-    "NT-200 Nucleovoltaic"
-    "Hyperdrive"
-
-    "A250 Atomic Thruster"
-    "A255 Atomic Steering"
-    "Afterburner"
-
-    "Heavy Laser Cannon" 4
-
-    "LP036a Battery Pack"
-    "Fuel Barrel" 40
-    "Small Radar Jammer" 2
-    "Tactical Scanner" 3
-    "Outfit Space Expansion"
-
-
-ship "Headhunter" "Headhunter (Anti-Missile)"
-  outfits
-    "D23-QP Shield Generator"
-    "NT-200 Nucleovoltaic"
-    "Hyperdrive"
-
-    "A250 Atomic Thruster"
-    "A255 Atomic Steering"
-
-    "Laser Cannon" 4
-    "Heavy Anti-Missile Turret"
-
-    "LP036a Battery Pack"
-    "Fuel Barrel" 40
-    "Small Radar Jammer" 2
-    "Tactical Scanner" 3
-
-
-ship "Headhunter" "Headhunter (Hai)"
-  outfits
-    "Corundum Regenerator"
-    "Geode Reactor"
-    "Hyperdrive"
-
-    `"Biroo" Atomic Thruster`
-    `"Benga" Atomic Steering`
-
-    "Pulse Cannon" 2
-    "Chameleon Anti-Missile"
-
-    "Fissure Batteries"
-    "Williwaw Cooling" 2
-    "Fuel Pod" 4
-    "Small Radar Jammer" 2
-    "Yoloy Scanner"
-
-
-ship "Headhunter" "Headhunter (Particle)"
-  outfits
-    "D23-QP Shield Generator"
-    "NT-200 Nucleovoltaic"
-    "Hyperdrive"
-
-    "A250 Atomic Thruster"
-    "A255 Atomic Steering"
-
-    "Particle Cannon" 2
-
-    "LP036a Battery Pack"
-    "Fuel Barrel" 40
-    "Small Radar Jammer" 2
-    "Tactical Scanner" 3
-
-
-ship "Headhunter" "Headhunter (Patrol)"
-  outfits
-    "D41-HY Shield Generator"
-    "NT-200 Nucleovoltaic"
-    "Hyperdrive"
-
-    "A250 Atomic Thruster"
-    "A255 Atomic Steering"
-
-    "Heavy Laser Cannon" 4
-
-    "LP036a Battery Pack"
-    "Cargo Scanner"
-    "Fuel Barrel" 40
-    "Outfit Scanner"
-    "Small Radar Jammer" 2
-    "Tactical Scanner" 4
-    "Laser Rifle" 5
-    "Outfit Space Expansion"
-
-
-
 ship "Leviathan"
   sprite "ship/leviathan"
   thumbnail "thumbnail/leviathan"
@@ -919,4 +763,56 @@ ship "Scout" "Scout (Speedy)"
     "Fuel Barrel" 80
     "Ramscoop"
     "Tactical Scanner" 2
+
+
+
+ship "Stymphalian"
+  sprite "ship/hawk"
+  thumbnail "thumbnail/hawk"
+  attributes
+    category "Interceptor"
+#    manufacturer "Lionheart"
+    licences
+      Pilot
+    "cost" 670000
+    "shields" 2500
+    "hull" 500
+    "required crew" 2
+    "bunks" 4
+    "mass" 150
+    "drag" 2.1
+    "heat dissipation" .8
+    "cargo space" 20
+    "outfit space" 230
+    "core space" 110
+    "engine space" 70
+    "weapon space" 50
+    weapon
+      "blast radius" 30
+      "shield damage" 300
+      "hull damage" 150
+      "hit force" 450
+  outfits
+    "D23-QP Shield Generator"
+    "nGVF-CC Fuel Cell"
+    "Hyperdrive"
+
+    "A250 Atomic Thruster"
+    "A255 Atomic Steering"
+
+    "Heavy Laser Cannon" 2
+
+    "LP036a Battery Pack"
+    "Fuel Barrel" 30
+    "Small Radar Jammer"
+    "Tactical Scanner" 4
+  engine -24 41
+  engine 24 41
+  gun -9 -17 "Heavy Laser Cannon"
+  gun 9 -17 "Heavy Laser Cannon"
+  leak "leak" 60 50
+  explode "tiny explosion" 15
+  explode "small explosion" 5
+  "final explode" "final explosion small"
+  description "The Stymphalian is one of the most affordable ships designed by Lionheart: a versatile ship that can serve equally well for escorting freighters or for bounty hunting. As with many of Lionheart's designs, the hull is mostly composite fiber rather than metal, sacrificing armor strength for the sake of lighter weight and faster movement."
 
