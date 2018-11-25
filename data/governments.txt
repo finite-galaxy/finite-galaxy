@@ -67,7 +67,6 @@ government "Bounty"
 
 government "Bounty Hunter"
   swizzle 23
-  colour .78 0 0
   "player reputation" -1000
   "bribe" .2
   "fine" 0
@@ -83,7 +82,7 @@ government "Coalition"
 
 government "Deep"
   swizzle 1
-  colour .42 .09 .91
+  colour .9 .4 .6
   "player reputation" 1
   "attitude toward"
     "Alpha" -.5
@@ -97,7 +96,6 @@ government "Deep"
 
 government "Deep Security"
   swizzle 1
-  colour .42 .09 .91
   "player reputation" 1
   "attitude toward"
     "Alpha" -.5
@@ -123,7 +121,7 @@ government "Escort"
 
 government "Free Worlds"
   swizzle 2
-  colour .06 .68 0
+  colour 0 .7 0
   "player reputation" 1
   "attitude toward"
     "Merchant" .3
@@ -137,7 +135,7 @@ government "Free Worlds"
 
 government "Hai"
   swizzle 0
-  colour .84 .42 .81
+  colour .8 .4 .8
   "player reputation" 0
   "attitude toward"
     "Hai (Unfettered)" -.5
@@ -149,7 +147,7 @@ government "Hai"
 
 government "Hai (Unfettered)"
   swizzle 4
-  colour .69 .33 .82
+  colour .8 .3 .4
   "player reputation" -1000
   "attitude toward"
     "Hai" -.01
@@ -164,7 +162,7 @@ government "Hai (Unfettered)"
 
 government "Heliarch"
   swizzle 0
-  colour 1 .8 .5
+  colour .5 .3 .7
   "player reputation" 1
   "friendly hail" "friendly heliarch"
   "hostile hail" "hostile heliarch"
@@ -174,7 +172,7 @@ government "Heliarch"
 
 government "Independent"
   swizzle 23
-  colour .78 .36 .36
+  colour .8 .7 0
   "player reputation" 10
   "bribe" .05
   "fine" 0
@@ -196,7 +194,7 @@ government "Indigenous Lifeform"
 
 government "Korath"
   swizzle 0
-  colour .8 .5 .1
+  colour .9 .8 0
   language "Korath"
   "attitude toward"
     "Kor Sestor" -.01
@@ -207,7 +205,7 @@ government "Korath Nanobots"
 
 government "Kor Efret"
   swizzle 4
-  colour .49 .33 .69
+  colour .8 .6 .4
   language "Korath"
   "attitude toward"
     "Kor Mereti" -.01
@@ -216,7 +214,7 @@ government "Kor Efret"
 
 government "Kor Mereti"
   swizzle 5
-  colour .32 .36 .65
+  colour 0 .4 .7
   language "Korath"
   "attitude toward"
     "Kor Sestor" -.01
@@ -232,7 +230,7 @@ government " Kor Mereti "
 
 government "Kor Sestor"
   swizzle 0
-  colour .75 .27 .37
+  colour .8 .5 .1
   language "Korath"  
   "attitude toward"
     "Kor Mereti" -.01
@@ -256,7 +254,6 @@ government "Merchant"
 
 government "Militia"
   swizzle 3
-  colour .84 .61 .37
   "player reputation" 0
   "attitude toward"
     "Merchant" .3
@@ -273,7 +270,6 @@ government "Navy Intelligence"
 
 government "Navy (Oathkeeper)"
   swizzle 0
-  colour .91 .42 .09  
   "player reputation" 100
   "attitude toward"
     "Alpha" -.3
@@ -288,7 +284,7 @@ government "Navy (Oathkeeper)"
 
 government "Neutral"
   swizzle 3
-  colour .84 .61 .37  
+  colour .3 .4 .7
   "player reputation" 1
   "attitude toward"
     "Merchant" .3
@@ -308,7 +304,7 @@ government "Parrot"
 
 government "Pirate"
   swizzle 23
-  colour .78 0 0  
+  colour .8 0 0  
   "player reputation" -10
   "attitude toward"
     "Author" -.01
@@ -324,7 +320,7 @@ government "Pirate"
 
 government "Pug"
   swizzle 0
-  colour .99 .89 .70  
+  colour 1 .8 .5
   "player reputation" 1
   "attitude toward"
     "Drak" -.01
@@ -334,7 +330,7 @@ government "Pug"
 
 government "Quarg"
   swizzle 0
-  colour .88 .77 0  
+  colour 1 .9 .8
   "player reputation" 1
   "attitude toward"
     "Merchant" .01
@@ -347,14 +343,14 @@ government "Quarg"
 
 government "Remnant"
   swizzle 0
-  colour .89 .38 .62  
+  colour .7 .3 .8
   "player reputation" 1
   "attitude toward"
     "Korath" -.01
 
 government "Republic"
   swizzle 0
-  colour .91 .42 .09  
+  colour .9 .4 .1
   "player reputation" 2
   "attitude toward"
     "Alpha" -.3
@@ -370,7 +366,7 @@ government "Republic"
 
 government "Syndicate"
   swizzle 4
-  colour 0 .41 .71  
+  colour .4 .1 .9
   "player reputation" 2
   "attitude toward"
     "Merchant" .3
@@ -383,7 +379,6 @@ government "Syndicate"
 
 government "Syndicate (Extremist)"
   swizzle 22
-  colour 0 .41 .71  
   "player reputation" -1000
   "attitude toward"
     "Syndicate" -.01
@@ -415,7 +410,7 @@ government "Uninhabited"
 
 government "Wanderer"
   swizzle 2
-  colour .70 .91 .12
+  colour .7 .9 .1
   "player reputation" 1
   language "Wanderer"
   "friendly hail" "wanderer untranslated"
