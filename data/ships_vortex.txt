@@ -1,8 +1,8 @@
 shipyard "Vortex Variants"
   "Bactrian"
   "Bactrian (Hired Gun)"
-  "Combat Drone"
-  "Combat Fighter"
+  "Poodle"
+  "Foxhound"
   "Firebird"
   "Firebird (Hai)"
   "Firebird (Laser)"
@@ -21,7 +21,7 @@ shipyard "Vortex Variants"
   "Splinter"
   "Splinter (Laser)"
   "Splinter (Mark II)"
-  "Surveillance Drone"
+  "Watch Dog"
   "Wasp"
 
 
@@ -121,7 +121,7 @@ ship "Bactrian" "Bactrian (Hired Gun)"
 
 
 
-ship "Combat Drone"
+ship "Poodle"
   sprite "ship/combat drone"
   thumbnail "thumbnail/combat drone"
   attributes
@@ -161,11 +161,11 @@ ship "Combat Drone"
   engine 9 29
   gun 0 -29 "Gatling Gun"
   explode "tiny explosion" 15
-  description "Combat Drones are pilotless attack ships used primarily by the Republic Navy. Although very weak and easy to destroy, they can be very effective in large numbers. Because drones do not need a cockpit, they can be filled entirely with equipment and solid metal, which makes their hulls stronger than other small ships."
+  description "The Poodle is a pilotless attack ship used primarily by the Republic Navy. Although very weak and easy to destroy, they can be very effective in large numbers. Because drones do not need a cockpit, they can be filled entirely with equipment and solid metal, which makes their hulls stronger than other small ships."
 
 
 
-ship "Combat Fighter"
+ship "Foxhound"
   sprite "ship/lance"
   thumbnail "thumbnail/lance"
   attributes
@@ -212,7 +212,7 @@ ship "Combat Fighter"
   gun 14 -10 "Gatling Gun"
   explode "tiny explosion" 15
   explode "small explosion" 5
-  description "The Combat Fighter is the primary fighter used by the Republic Navy. As with all fighters, it is weak by itself but very effective as part of a larger squadron."
+  description "The Foxhound is the primary fighter used by the Republic Navy. As with all fighters, it is weak by itself but very effective as part of a larger squadron."
 
 
 
@@ -785,7 +785,7 @@ ship "Splinter" "Splinter (Mark II)"
 
 
 
-ship "Surveillance Drone"
+ship "Watch Dog"
   sprite "ship/surveillance drone"
   thumbnail "thumbnail/surveillance drone"
   attributes
@@ -817,7 +817,7 @@ ship "Surveillance Drone"
   engine -5 29
   engine 5 29
   explode "tiny explosion" 15
-  description "Surveillance Drones are unarmed drones used by the Republic navy to scan ships and planets in a star system."
+  description "Watch Dogs are unarmed drones used by the Republic navy to scan ships and planets in a star system."
 
 
 
