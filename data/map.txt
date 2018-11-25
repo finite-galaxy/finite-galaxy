@@ -6396,6 +6396,30 @@ system "Celeborim"
       distance 373
       period 23.9558
 
+system "Charm"
+  pos -154 548
+  government "Quarg"
+  habitable 700
+  belt 1974
+  trade "Clothing" 361
+  trade "Electronics" 800
+  trade "Equipment" 485
+  trade "Food" 335
+  trade "Heavy Metals" 806
+  trade "Industrial" 838
+  trade "Luxury Goods" 1456
+  trade "Medical" 914
+  trade "Metal" 297
+  trade "Plastic" 412
+  fleet "Quarg Small" 600
+  object
+    sprite star/m8
+    period 10
+  object "Strange"
+    sprite planet/dust0
+    distance 360
+    period 60
+
 system "Chikatip"
   pos -78 -308
   government "Uninhabited"
@@ -25200,7 +25224,6 @@ planet "Forpelog"
   landscape land/canyon03
   description `Forpelog is a Quarg mining world, barely habitable by their standards and, because of its low gravity, unsuitable for long-term human habitation. The Quarg city is a marvel of advanced technology, entirely enclosed within glass and steel, with gardens and terraces where alien trees and plants grow. Outside the city, the landscape is rugged and beautiful, but the atmosphere is too thin to breathe and contains almost no oxygen.`
   spaceport `Your ship is docked on a metal pad immediately outside the dome of the city, which towers over you. Immediately after you landed, a smaller canopy unfolded around your ship, sealing it in and providing enough air for you to breathe as you make your way inside. The stark, lifeless badlands outside give way to bustling streets and lush blue foliage within. No other human beings are in sight.`
-  shipyard "Quarg"
   bribe 0
   security 0.9
 
@@ -26929,6 +26952,16 @@ planet "Stormhold"
   tribute 500
     threshold 2000
     fleet "Pirates Core Large" 7
+
+planet "Strange"
+  attributes quarg moon
+  landscape land/dust1
+  description `Because this system can only be reached by jump drive, it is isolated enough for the Quarg to produce their ships undisturbed. The atmosphere, gravity, light, and temperature are too extreme for humans, but apparently unproblematic for the Quarg.`
+  spaceport `The small part of the spaceport you are able to observe is too unusual to describe easily, as if it belongs to a parallel dimension where different laws of physics apply.`
+  outfitter "Quarg"
+  shipyard "Quarg"
+  "required reputation" 2
+  security 1
 
 planet "Stronghold of Flugbu"
   attributes arach factory

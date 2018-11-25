@@ -20,10 +20,12 @@ outfit "Fuel Pod"
 outfit "Hyperspace Tank"
   category "Miscellaneous"
   thumbnail "outfit/unknown"
-  cost 500000
-  "mass" 12
-  "outfit space" -12
-  "fuel capacity" 2000
+  licences
+    Quarg
+  cost 5000000
+  "mass" 50
+  "outfit space" -50
+  "fuel capacity" 10000
 
 
 # quantum keystones
@@ -92,6 +94,8 @@ outfit "Emergency Ramscoop"
 outfit "Quarg Ramscoop"
   category "Miscellaneous"
   thumbnail "outfit/unknown"
+  licences
+    Quarg
   cost 5000000
   "mass" 10
   "outfit space" -10
@@ -244,3 +248,4 @@ outfit "KP-6 Photovoltaic Array"
   "outfit space" -24
   "solar collection" 1.1
   description "The compact modularity of the KP-6 lent itself well to the creation of larger solar collection arrays. This original Korunak Photovoltaics model is equipped with a solar tracker, allowing it to make better use of available light."
+
