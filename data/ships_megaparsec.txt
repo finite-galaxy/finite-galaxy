@@ -5,11 +5,11 @@ shipyard "Megaparsec Variants"
   "Manta"
   "Manta (Mark II)"
   "Manta (Nuclear)"
-  "Manta (Proton)"
+  "Manta (Plasma)"
   "Quicksilver"
   "Quicksilver (Mark II)"
   "Quicksilver (Patrol)"
-  "Quicksilver (Proton)"
+  "Quicksilver (Plasma)"
   "Thunderbolt"
 
 
@@ -189,7 +189,7 @@ ship "Manta" "Manta (Nuclear)"
 
     "Nuclear Missile" 2
     "Particle Cannon" 2
-    "Proton Cannon" 2
+    "Plasma Cannon" 2
 
     "LP072a Battery Pack"
     "Liquid Nitrogen Cooler"
@@ -197,15 +197,15 @@ ship "Manta" "Manta (Nuclear)"
     "Tactical Scanner"
     "Outfit Space Expansion" 2
     "Laser Rifle" 10
-  gun -21 -35 "Proton Cannon"
-  gun 21 -35 "Proton Cannon"
+  gun -21 -35 "Plasma Cannon"
+  gun 21 -35 "Plasma Cannon"
   gun -27 -35 "Particle Cannon"
   gun 27 -35 "Particle Cannon"
   gun -66 -32 "Nuclear Missile"
   gun 66 -32 "Nuclear Missile"
 
 
-ship "Manta" "Manta (Proton)"
+ship "Manta" "Manta (Plasma)"
   outfits
     "D41-HY Shield Generator"
     "RT-I Radiothermal"
@@ -214,7 +214,7 @@ ship "Manta" "Manta (Proton)"
     "IT-3700 Ion Thruster"
     "IS-3200 Ion Steering"
 
-    "Proton Cannon" 4
+    "Plasma Cannon" 4
 
     "LP144a Battery Pack"
     "Liquid Water Cooler"
@@ -312,7 +312,7 @@ ship "Quicksilver" "Quicksilver (Patrol)"
     "Laser Rifle" 6
 
 
-ship "Quicksilver" "Quicksilver (Proton)"
+ship "Quicksilver" "Quicksilver (Plasma)"
   outfits
     "D23-QP Shield Generator"
     "RT-I Radiothermal"
@@ -321,7 +321,7 @@ ship "Quicksilver" "Quicksilver (Proton)"
     "IT-3700 Ion Thruster"
     "IS-3200 Ion Steering"
 
-    "Proton Cannon" 2
+    "Plasma Cannon" 2
 
     "LP036a Battery Pack"
     "Cooling Ducts"

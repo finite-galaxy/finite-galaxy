@@ -8,8 +8,8 @@ shipyard "Betelgeuse Variants"
   "Protector (Laser)"
   "Protector (Mark II)"
   "Vanguard"
+  "Vanguard (Anti-Missile)"
   "Vanguard (Mark II)"
-  "Vanguard (Particle)"
   "Warrior"
   "Warrior (Gatling)"
   "Warrior (Patrol)"
@@ -276,7 +276,7 @@ ship "Protector" "Protector (Mark II)"
     "A370 Atomic Thruster"
     "A375 Atomic Steering"
 
-    "X6 Blaster Turret" 6
+    "Electron Turret" 4
 
     "LP288a Battery Pack"
     "Liquid Nitrogen Cooler"
@@ -284,6 +284,12 @@ ship "Protector" "Protector (Mark II)"
     "Large Radar Jammer" 2
     "Tactical Scanner" 6
     "Laser Rifle" 60
+  turret "Electron Turret"
+  turret "Electron Turret"
+  turret
+  turret
+  turret "Electron Turret"
+  turret "Electron Turret"
 
 
 
@@ -305,9 +311,9 @@ ship "Vanguard"
     "heat dissipation" .6
     "cargo space" 50
     "outfit space" 600
-    "core space" 250
+    "core space" 270
     "engine space" 120
-    "weapon space" 230
+    "weapon space" 210
     weapon
       "blast radius" 160
       "shield damage" 1600
@@ -321,8 +327,7 @@ ship "Vanguard"
     "IT-3700 Ion Thruster"
     "IS-4200 Ion Steering"
 
-    "Proton Cannon" 7
-    "Heavy Anti-Missile Turret"
+    "Particle Cannon" 7
 
     "LP144a Battery Pack"
     "Liquid Nitrogen Cooler"
@@ -331,13 +336,13 @@ ship "Vanguard"
     "Laser Rifle" 40
   engine -15 130
   engine 15 130
-  gun 0 -132 "Proton Cannon"
-  gun -22 -122 "Proton Cannon"
-  gun 22 -122 "Proton Cannon"
-  gun -21 -45 "Proton Cannon"
-  gun 21 -45 "Proton Cannon"
-  gun -31 -45 "Proton Cannon"
-  gun 31 -45 "Proton Cannon"
+  gun 0 -132 "Particle Cannon"
+  gun -22 -122 "Particle Cannon"
+  gun 22 -122 "Particle Cannon"
+  gun -21 -45 "Particle Cannon"
+  gun 21 -45 "Particle Cannon"
+  gun -31 -45 "Particle Cannon"
+  gun 31 -45 "Particle Cannon"
   turret 0 42 "Heavy Anti-Missile Turret"
   leak "leak" 60 50
   leak "flame" 30 80
@@ -358,7 +363,7 @@ ship "Vanguard" "Vanguard (Mark II)"
     "A370 Atomic Thruster"
     "A525 Atomic Steering"
 
-    "Proton Cannon" 7
+    "Electron Cannon" 7
     "Heavy Anti-Missile Turret"
 
     "LP144a Battery Pack"
@@ -368,7 +373,7 @@ ship "Vanguard" "Vanguard (Mark II)"
     "Laser Rifle" 40
 
 
-ship "Vanguard" "Vanguard (Particle)"
+ship "Vanguard" "Vanguard (Anti-Missile)"
   outfits
     "D67-TM Shield Generator"
     "Fusion Reactor"
@@ -377,8 +382,11 @@ ship "Vanguard" "Vanguard (Particle)"
     "IT-3700 Ion Thruster"
     "IS-4200 Ion Steering"
 
-    "Particle Cannon" 7
-    "Light Anti-Missile Turret"
+    "Sidewinder Missile" 150
+    "Sidewinder Missile Rack" 3
+    "Sidewinder Missile Launcher" 3
+    "Particle Cannon" 4
+    "Heavy Anti-Missile Turret"
 
     "LP144a Battery Pack"
     "Liquid Nitrogen Cooler"

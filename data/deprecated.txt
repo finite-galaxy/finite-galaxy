@@ -169,13 +169,14 @@ outfit "Modified Blaster"
     "shield damage" 12
     "hull damage" 8
 
+
 outfit "Proton Gun"
   category "Deprecated"
   thumbnail "outfit/unknown"
   cost 150000
   "mass" 28
   "outfit space" -28
-  "weapon space" -28
+  "weapon capacity" -28
   "gun ports" -1
   weapon
     sprite "projectile/proton"
@@ -189,6 +190,50 @@ outfit "Proton Gun"
     "firing energy" 15
     "firing force" 2
     "firing heat" 60
+
+outfit "Proton Fragment"
+  weapon
+    sprite "projectile/proton fragment"
+      "no repeat"
+      "frame rate" 2
+    "hit effect" "proton impact"
+    "inaccuracy" 2
+    "lifetime" 24
+    "hit force" 6
+    "shield damage" 8.4
+    "hull damage" 7
+
+effect "proton impact"
+  sprite "effect/proton impact"
+    "no repeat"
+    "frame rate" 30
+  "lifetime" 20
+  "random angle" 2
+  "velocity scale" -.005
+
+outfit "Proton Turret"
+  category "Deprecated"
+  thumbnail "outfit/unknown"
+  cost 260000
+  "mass" 34
+  "outfit space" -34
+  "weapon capacity" -34
+  "turret mounts" -1
+  "required crew" 1
+  weapon
+    sprite "projectile/proton"
+    sound "proton"
+    "hit effect" "proton impact" 3
+    "inaccuracy" 4
+    "turret turn" 2.0
+    "submunition" "Proton Fragment" 3
+    "velocity" 24
+    "lifetime" 2
+    "reload" 8
+    "firing energy" 15
+    "firing force" 2
+    "firing heat" 60
+
 
 
 
@@ -1148,7 +1193,6 @@ outfit "Anti-Missile Turret"
   "weapon space" -16
   "turret mounts" -1
   weapon
-    "hardpoint offset" 4.
     "hit effect" "small anti-missile"
     "anti-missile" 5
     "velocity" 150

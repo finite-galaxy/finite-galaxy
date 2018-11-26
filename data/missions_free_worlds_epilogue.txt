@@ -4,24 +4,9 @@ mission "Free Worlds Aftermath"
   to offer
     has "free worlds plot completed"
   on offer
-    event "proton turret available" 30
     event "luna rebuilt" 90
     event "tarazed referendum" 180
     fail
-
-
-
-mission "Proton Turret Available"
-  landing
-  source
-    near "Markab" 100
-  to offer
-    has "event: proton turret available"
-  destination "Hephaestus"  
-  on offer
-    conversation
-      `After you've landed, your ship is targetted by advertisements, informing you that the Syndicate's newest weapon, the Proton Turret, is now for sale on Hephaestus. Apparently it has been developed as an answer to the Delta V's Plasma Turret.`
-        decline
 
 
 
