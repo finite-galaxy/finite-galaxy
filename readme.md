@@ -153,7 +153,8 @@ sudo install_name_tool -id "@rpath/libSDL2-2.0.0.dylib" /usr/local/lib/libSDL2-2
 * Installed outfits can no longer be plundered by default; outfits in cargo still can
 * Minimum depreciation value raised to 50%, time lowered to one year
 * Ship info display shows more stats
-* More regional specialization of outfitters and shipyards
+* Redistributed most human ships and many outfits to have more regional specialization
+* Removed tribute from planets (relevant code is still present for plug-ins)
 
 [(return to top)](https://github.com/finite-galaxy/finite-galaxy#finite-galaxy)
 
