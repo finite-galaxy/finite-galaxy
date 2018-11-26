@@ -1,4 +1,4 @@
-shipyard "Betelgeuse Variants"
+shipyard "Star Variants"
   "Star Barge"
   "Star Barge (Miner)"
   "Star Freighter"
@@ -16,7 +16,7 @@ ship "Star Barge"
   thumbnail "thumbnail/star barge"
   attributes
     category "Interceptor"
-#    manufacturer "Betelgeuse"
+#    manufacturer "Star"
     licences
       Pilot
     "cost" 210000
@@ -29,8 +29,8 @@ ship "Star Barge"
     "heat dissipation" .8
     "cargo space" 50
     "outfit space" 160
-    "core space" 90
-    "engine space" 40
+    "core space" 100
+    "engine space" 30
     "weapon space" 30
     weapon
       "blast radius" 16
@@ -83,7 +83,7 @@ ship "Star Freighter"
   thumbnail "thumbnail/freighter"
   attributes
     category "Corvette"
-#    manufacturer "Betelgeuse"
+#    manufacturer "Star"
     licences
       Pilot
     "cost" 730000
@@ -94,11 +94,11 @@ ship "Star Freighter"
     "mass" 240
     "drag" 5.6
     "heat dissipation" .6
-    "cargo space" 160
-    "outfit space" 310
+    "cargo space" 200
+    "outfit space" 290
     "core space" 160
-    "engine space" 70
-    "weapon space" 80
+    "engine space" 60
+    "weapon space" 90
     weapon
       "blast radius" 40
       "shield damage" 400
@@ -139,16 +139,17 @@ ship "Star Freighter" "Star Freighter (Fancy)"
     "RT-I Radiothermal"
     "Hyperdrive"
 
-    "IT-2700 Ion Thruster"
-    "IS-2200 Ion Steering"
+    "Chipmunk Plasma Thruster"
+    "Chipmunk Plasma Steering"
     "Afterburner"
 
     "Laser Turret" 2
     "Heavy Anti-Missile Turret"
 
-    "LP072a Battery Pack"
+    "LP036a Battery Pack"
     "Fuel Barrel" 60
     "Ramscoop"
+    "Tactical Scanner" 2
     "Outfit Space Expansion"
   turret "Laser Turret"
   turret "Heavy Anti-Missile Turret"
@@ -167,9 +168,8 @@ ship "Star Freighter" "Star Freighter (Hai)"
     "Pulse Turret"
     "Chameleon Anti-Missile" 2
 
-    "Chasm Batteries"
+    "Fissure Batteries"
     "Fuel Pod" 6
-    "Ramscoop"
   turret "Chameleon Anti-Missile"
   turret "Pulse Turret"
   turret "Chameleon Anti-Missile"
@@ -190,8 +190,8 @@ ship "Star Freighter" "Star Freighter (Miner)"
     "Asteroid Scanner"
     "Fuel Barrel" 60
     "Ramscoop"
-    "Small Radar Jammer"
     "Tactical Scanner"
+    "Outfit Space Expansion"
 
 
 ship "Star Freighter" "Star Freighter (Secret Cargo)"
@@ -221,7 +221,7 @@ ship "Star Queen"
   thumbnail "thumbnail/star queen"
   attributes
     category "Corvette"
-#    manufacturer "Betelgeuse"
+#    manufacturer "Star"
     licences
       Pilot
     "cost" 5500000

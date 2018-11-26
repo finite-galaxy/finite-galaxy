@@ -429,6 +429,7 @@ ship "Harpy"
   description "When the Free Worlds started requesting a carrier solution from its local shipyards, Southbound Shipyards quickly saw that a few modifications could make their entry level interceptor into a top tier fighter. Over 85% of the parts that make up the Harpy are shared with the Fury assembly line, so it's no surprise that even trimmed down to fit into a bomber bay, the Harpy bears strong resemblance to its hyperspace-faring cousin."
 
 
+
 ship "Hauler I"
   sprite "ship/hauler i"
   thumbnail "thumbnail/hauler i"
@@ -441,13 +442,13 @@ ship "Hauler I"
     "shields" 2500
     "hull" 3700
     "required crew" 4
-    "bunks" 10
+    "bunks" 12
     "mass" 250
     "drag" 10.5
     "heat dissipation" .6
     "cargo space" 140
-    "outfit space" 390
-    "core space" 170
+    "outfit space" 400
+    "core space" 180
     "engine space" 80
     "weapon space" 140
     weapon
@@ -456,28 +457,27 @@ ship "Hauler I"
       "hull damage" 300
       "hit force" 900
   outfits
-    "D23-QP Shield Generator"
-    "RT-I Radiothermal"
+    "D41-HY Shield Generator"
+    "S3 Thermionic"
     "Hyperdrive"
 
-    "IT-3700 Ion Thruster"
-    "IS-3200 Ion Steering"
+    "Greyhound Plasma Thruster"
+    "Impala Plasma Steering"
 
-    "Meteor Missile" 80
-    "Meteor Missile Box" 2
-    "Meteor Missile Launcher" 2
-    "X4 Blaster Turret" 2
-    "Heavy Anti-Missile Turret" 2
+    "Modified Blaster Quad Turret" 4
+
     "LP144a Battery Pack"
+    "Liquid Water Cooler"
     "Fuel Barrel" 40
+    "Tactical Scanner" 4
   engine -45 122
   engine 45 122
-  gun -15 -91 "Meteor Missile Launcher"
-  gun 15 -91 "Meteor Missile Launcher"
-  turret -26 -49 "X4 Blaster Turret"
-  turret 26 -49 "X4 Blaster Turret"
-  turret -19 77 "Heavy Anti-Missile Turret"
-  turret 19 77 "Heavy Anti-Missile Turret"
+  gun -15 -91
+  gun 15 -91
+  turret -26 -49
+  turret 26 -49
+  turret -19 77
+  turret 19 77
   leak "leak" 60 50
   leak "flame" 50 80
   leak "big leak" 90 30
@@ -498,26 +498,23 @@ ship "Hauler I" "Hauler I (Hai)"
     `"Biroo" Atomic Thruster`
     `"Biroo" Atomic Steering`
 
-    "Tracker" 112
-    "Tracker Storage Pod" 2
-    "Tracker Launcher" 2
-    "X4 Blaster Turret" 2
+    "Pulse Turret" 2
     "Chameleon Anti-Missile" 2
 
     "Gorge Batteries"
     "Williwaw Cooling"
     "Fuel Pod" 4
-    "Outfit Space Expansion"
+    "Yoloy Scanner"
 
 
 ship "Hauler I" "Hauler I (Miner)"
   outfits
-    "D23-QP Shield Generator"
-    "RT-I Radiothermal"
+    "D41-HY Shield Generator"
+    "S3 Thermionic"
     "Hyperdrive"
 
-    "IT-3700 Ion Thruster"
-    "IS-3200 Ion Steering"
+    "Greyhound Plasma Thruster"
+    "Impala Plasma Steering"
 
     "Heavy Laser Cannon" 2
     "Laser Turret" 4
@@ -526,6 +523,7 @@ ship "Hauler I" "Hauler I (Miner)"
     "Asteroid Scanner"
     "Fuel Barrel" 40
     "Ramscoop"
+    "Tactical Scanner" 4
 
 
 
@@ -541,13 +539,13 @@ ship "Hauler II"
     "shields" 2900
     "hull" 5200
     "required crew" 4
-    "bunks" 10
+    "bunks" 12
     "mass" 360
     "drag" 11.5
     "heat dissipation" .6
     "cargo space" 280
-    "outfit space" 390
-    "core space" 170
+    "outfit space" 400
+    "core space" 180
     "engine space" 80
     "weapon space" 140
     weapon
@@ -556,29 +554,27 @@ ship "Hauler II"
       "hull damage" 400
       "hit force" 1200
   outfits
-    "D23-QP Shield Generator"
-    "RT-I Radiothermal"
+    "D41-HY Shield Generator"
+    "S3 Thermionic"
     "Hyperdrive"
 
-    "IT-3700 Ion Thruster"
-    "IS-3200 Ion Steering"
+    "Greyhound Plasma Thruster"
+    "Impala Plasma Steering"
 
-    "Meteor Missile" 80
-    "Meteor Missile Box" 2
-    "Meteor Missile Launcher" 2
-    "X4 Blaster Turret" 2
-    "Heavy Anti-Missile Turret" 2
+    "Modified Blaster Quad Turret" 4
 
     "LP144a Battery Pack"
+    "Liquid Water Cooler"
     "Fuel Barrel" 40
+    "Tactical Scanner" 4
   engine -45 160
   engine 45 160
-  gun -15 -128 "Meteor Missile Launcher"
-  gun 15 -128 "Meteor Missile Launcher"
-  turret -26 -85 "X4 Blaster Turret"
-  turret 26 -85 "X4 Blaster Turret"
-  turret -19 115 "Heavy Anti-Missile Turret"
-  turret 19 115 "Heavy Anti-Missile Turret"
+  gun -15 -128
+  gun 15 -128
+  turret -26 -85 "Modified Blaster Quad Turret"
+  turret 26 -85 "Modified Blaster Quad Turret"
+  turret -19 115 "Modified Blaster Quad Turret"
+  turret 19 115 "Modified Blaster Quad Turret"
   leak "leak" 60 50
   leak "flame" 40 80
   leak "big leak" 80 30
@@ -599,26 +595,23 @@ ship "Hauler II" "Hauler II (Hai)"
     `"Biroo" Atomic Thruster`
     `"Biroo" Atomic Steering`
 
-    "Tracker" 112
-    "Tracker Storage Pod" 2
-    "Tracker Launcher" 2
-    "X4 Blaster Turret" 2
+    "Pulse Turret" 2
     "Chameleon Anti-Missile" 2
 
     "Gorge Batteries"
     "Williwaw Cooling"
     "Fuel Pod" 4
-    "Outfit Space Expansion"
+    "Yoloy Scanner"
 
 
 ship "Hauler II" "Hauler II (Miner)"
   outfits
-    "D23-QP Shield Generator"
-    "RT-I Radiothermal"
+    "D41-HY Shield Generator"
+    "S3 Thermionic"
     "Hyperdrive"
 
-    "IT-3700 Ion Thruster"
-    "IS-3200 Ion Steering"
+    "Greyhound Plasma Thruster"
+    "Impala Plasma Steering"
 
     "Heavy Laser Cannon" 2
     "Laser Turret" 4
@@ -627,6 +620,7 @@ ship "Hauler II" "Hauler II (Miner)"
     "Asteroid Scanner"
     "Fuel Barrel" 40
     "Ramscoop"
+    "Tactical Scanner" 4
 
 
 
@@ -642,13 +636,13 @@ ship "Hauler III"
     "shields" 3300
     "hull" 6700
     "required crew" 4
-    "bunks" 10
+    "bunks" 12
     "mass" 470
     "drag" 12.5
     "heat dissipation" .6
     "cargo space" 420
-    "outfit space" 390
-    "core space" 170
+    "outfit space" 400
+    "core space" 180
     "engine space" 80
     "weapon space" 140
     weapon
@@ -657,29 +651,27 @@ ship "Hauler III"
       "hull damage" 500
       "hit force" 1500
   outfits
-    "D23-QP Shield Generator"
-    "RT-I Radiothermal"
+    "D41-HY Shield Generator"
+    "S3 Thermionic"
     "Hyperdrive"
 
-    "IT-3700 Ion Thruster"
-    "IS-3200 Ion Steering"
+    "Greyhound Plasma Thruster"
+    "Impala Plasma Steering"
 
-    "Meteor Missile" 80
-    "Meteor Missile Box" 2
-    "Meteor Missile Launcher" 2
-    "X4 Blaster Turret" 2
-    "Heavy Anti-Missile Turret" 2
+    "Modified Blaster Quad Turret" 4
 
     "LP144a Battery Pack"
+    "Liquid Water Cooler"
     "Fuel Barrel" 40
+    "Tactical Scanner" 4
   engine -45 196
   engine 45 196
-  gun -15 -165 "Meteor Missile Launcher"
-  gun 15 -165 "Meteor Missile Launcher"
-  turret -26 -122 "X4 Blaster Turret"
-  turret 26 -122 "X4 Blaster Turret"
-  turret -19 151 "Heavy Anti-Missile Turret"
-  turret 19 151 "Heavy Anti-Missile Turret"
+  gun -15 -165
+  gun 15 -165
+  turret -26 -122 "Modified Blaster Quad Turret"
+  turret 26 -122 "Modified Blaster Quad Turret"
+  turret -19 151 "Modified Blaster Quad Turret"
+  turret 19 151 "Modified Blaster Quad Turret"
   leak "leak" 50 50
   leak "flame" 40 80
   leak "big leak" 80 30
@@ -700,26 +692,23 @@ ship "Hauler III" "Hauler III (Hai)"
     `"Biroo" Atomic Thruster`
     `"Biroo" Atomic Steering`
 
-    "Tracker" 112
-    "Tracker Storage Pod" 2
-    "Tracker Launcher" 2
-    "X4 Blaster Turret" 2
+    "Pulse Turret" 2
     "Chameleon Anti-Missile" 2
 
     "Gorge Batteries"
     "Williwaw Cooling"
     "Fuel Pod" 4
-    "Outfit Space Expansion"
+    "Yoloy Scanner"
 
 
 ship "Hauler III" "Hauler III (Miner)"
   outfits
-    "D23-QP Shield Generator"
-    "RT-I Radiothermal"
+    "D41-HY Shield Generator"
+    "S3 Thermionic"
     "Hyperdrive"
 
-    "IT-3700 Ion Thruster"
-    "IS-3200 Ion Steering"
+    "Greyhound Plasma Thruster"
+    "Impala Plasma Steering"
 
     "Heavy Laser Cannon" 2
     "Laser Turret" 4
@@ -728,6 +717,7 @@ ship "Hauler III" "Hauler III (Miner)"
     "Asteroid Scanner"
     "Fuel Barrel" 40
     "Ramscoop"
+    "Tactical Scanner" 4
 
 
 
@@ -744,7 +734,7 @@ ship "Nest"
     "shields" 2500
     "hull" 3700
     "required crew" 6
-    "bunks" 12
+    "bunks" 14
     "mass" 250
     "drag" 10.5
     "heat dissipation" .6
@@ -772,7 +762,7 @@ ship "Nest"
     "Liquid Water Cooler"
     "Fuel Barrel" 50
     "Large Radar Jammer"
-    "Tactical Scanner" 5
+    "Tactical Scanner" 4
   engine -45 122
   engine 45 122
   gun -15 -91
@@ -855,7 +845,7 @@ ship "Roost"
     "Liquid Water Cooler"
     "Fuel Barrel" 60
     "Large Radar Jammer"
-    "Tactical Scanner" 5
+    "Tactical Scanner" 4
   engine -45 159
   engine 45 159
   gun -15 -128
@@ -912,7 +902,7 @@ ship "Skein"
     "shields" 3300
     "hull" 6700
     "required crew" 10
-    "bunks" 20
+    "bunks" 18
     "mass" 470
     "drag" 12.5
     "heat dissipation" .6
@@ -940,7 +930,7 @@ ship "Skein"
     "Liquid Water Cooler"
     "Fuel Barrel" 70
     "Large Radar Jammer"
-    "Tactical Scanner" 5
+    "Tactical Scanner" 4
   engine -45 197
   engine 45 197
   gun -15 -165
