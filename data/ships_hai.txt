@@ -128,11 +128,11 @@ ship "Lightning Bug"
     "mass" 190
     "drag" 3.8
     "heat dissipation" .85
-    "cargo space" 53
-    "outfit space" 372
-    "core space" 192
-    "engine space" 87
-    "weapon space" 93
+    "cargo space" 43
+    "outfit space" 376
+    "core space" 196
+    "engine space" 83
+    "weapon space" 97
     weapon
       "blast radius" 84
       "shield damage" 840
@@ -149,8 +149,7 @@ ship "Lightning Bug"
     "Ion Cannon"
     "Chameleon Anti-Missile" 2
 
-    "Gorge Batteries"
-    "Williwaw Cooling"
+    "Chasm Batteries"
     "Fuel Pod" 6
     "Quantum Keystone"
     "Yoloy Scanner"
@@ -181,9 +180,11 @@ ship "Lightning Bug" "Lightning Bug (Pulse)"
     "Tracker Launcher"
     "Pulse Turret" 2
 
-    "Gorge Batteries"
+    "Fissure Batteries"
+    "Williwaw Cooling"
     "Fuel Pod" 6
     "Yoloy Scanner"
+    "Outfit Space Expansion" 3
 
 
 
@@ -204,8 +205,8 @@ ship "Pond Strider"
     "drag" 3.6
     "heat dissipation" .7
     "cargo space" 71
-    "outfit space" 374
-    "core space" 169
+    "outfit space" 372
+    "core space" 167
     "engine space" 76
     "weapon space" 129
     weapon
@@ -219,23 +220,21 @@ ship "Pond Strider"
     "Hyperdrive"
 
     `"Benga" Atomic Thruster`
-    `"Biroo" Atomic Steering`
+    `"Benga" Atomic Steering`
 
-    "Railgun Slug" 450
-    "Railgun" 3
     "Pulse Turret" 2
     "Chameleon Anti-Missile" 
 
-    "Gorge Batteries"
+    "Fissure Batteries"
     "Williwaw Cooling" 2
     "Fuel Pod" 3
     "Quantum Keystone"
     "Yoloy Scanner"
   engine -23 80
   engine 23 80
-  gun 0 -76 "Railgun"
-  gun -15 -72 "Railgun"
-  gun 15 -72 "Railgun"
+  gun 0 -76
+  gun -15 -72
+  gun 15 -72
   turret -18 -65 "Pulse Turret"
   turret 18 -65 "Pulse Turret"
   turret 0 26 "Chameleon Anti-Missile"
@@ -262,14 +261,12 @@ ship "Pond Strider" "Pond Strider (Jump)"
     "Jump Drive"
 
     `"Benga" Atomic Thruster`
-    `"Biroo" Atomic Steering`
+    `"Benga" Atomic Steering`
 
-    "Railgun Slug" 450
-    "Railgun" 3
     "Pulse Turret" 2
     "Chameleon Anti-Missile" 
 
-    "Gorge Batteries"
+    "Fissure Batteries"
     "Williwaw Cooling" 2
     "Fuel Pod" 8
     "Quantum Keystone"
@@ -294,9 +291,9 @@ ship "Shield Beetle"
     "mass" 650
     "drag" 8.8
     "heat dissipation" .60
-    "cargo space" 127
-    "outfit space" 869
-    "core space" 386
+    "cargo space" 142
+    "outfit space" 838
+    "core space" 355
     "engine space" 150
     "weapon space" 333
     weapon
@@ -307,18 +304,17 @@ ship "Shield Beetle"
   outfits
     "Diamond Regenerator" 2
     "Boulder Reactor"
+    "Pebble Core"
     "Hyperdrive"
 
     `"Bondir" Atomic Thruster`
     `"Bufaer" Atomic Steering`
 
-    "Tracker" 224
-    "Tracker Storage Pod" 4
-    "Tracker Launcher" 4
     "Ion Cannon" 4
+    "Pulse Turret" 2
     "Chameleon Anti-Missile" 2
 
-    "Chasm Batteries"
+    "Fissure Batteries"
     "Williwaw Cooling" 4
     "Fuel Pod" 5
     "Quantum Keystone"
@@ -327,14 +323,14 @@ ship "Shield Beetle"
   engine 44 133
   gun -22 -102 "Ion Cannon"
   gun 22 -102 "Ion Cannon"
-  gun -34 -68 "Tracker Launcher"
-  gun 34 -68 "Tracker Launcher"
+  gun -34 -68
+  gun 34 -68
   gun -49 -38 "Ion Cannon"
   gun 49 -38 "Ion Cannon"
-  gun -61 -14 "Tracker Launcher"
-  gun 61 -14 "Tracker Launcher"
-  turret -39 48
-  turret 39 48
+  gun -61 -14
+  gun 61 -14
+  turret -39 48 "Pulse Turret"
+  turret 39 48 "Pulse Turret"
   turret -57 75 "Chameleon Anti-Missile"
   turret 57 75 "Chameleon Anti-Missile"
   explode "tiny explosion" 50
@@ -350,18 +346,17 @@ ship "Shield Beetle" "Shield Beetle (Jump)"
   outfits
     "Diamond Regenerator" 2
     "Boulder Reactor"
+    "Pebble Core"
     "Jump Drive"
 
     `"Bondir" Atomic Thruster`
     `"Bufaer" Atomic Steering`
 
-    "Tracker" 224
-    "Tracker Storage Pod" 4
-    "Tracker Launcher" 4
     "Ion Cannon" 4
+    "Pulse Turret" 2
     "Chameleon Anti-Missile" 2
 
-    "Chasm Batteries"
+    "Fissure Batteries"
     "Williwaw Cooling" 4
     "Fuel Pod" 8
     "Quantum Keystone"
@@ -369,16 +364,12 @@ ship "Shield Beetle" "Shield Beetle (Jump)"
     "Outfit Space Expansion" 3
   gun "Ion Cannon"
   gun "Ion Cannon"
-  gun "Tracker Launcher"
-  gun "Tracker Launcher"
+  gun
+  gun
   gun "Ion Cannon"
   gun "Ion Cannon"
-  gun "Tracker Launcher"
-  gun "Tracker Launcher"
-  turret
-  turret
-  turret "Chameleon Anti-Missile"
-  turret "Chameleon Anti-Missile"
+  gun
+  gun
 
 
 ship "Shield Beetle" "Shield Beetle (Pulse)"
@@ -391,12 +382,15 @@ ship "Shield Beetle" "Shield Beetle (Pulse)"
     `"Bufaer" Atomic Steering`
 
     "Pulse Cannon" 8
-    "Pulse Turret" 4
+    "Pulse Turret" 2
+    "Chameleon Anti-Missile" 2
 
-    "Ravine Batteries"
-    "Williwaw Cooling" 8
+    "Gorge Batteries"
+    "Williwaw Cooling" 4
     "Fuel Pod" 5
+    "Quantum Keystone"
     "Yoloy Scanner"
+    "Outfit Space Expansion"
 
 
 ship "Shield Beetle" "Shield Beetle (Pulse, Jump)"
@@ -409,13 +403,15 @@ ship "Shield Beetle" "Shield Beetle (Pulse, Jump)"
     `"Bufaer" Atomic Steering`
 
     "Pulse Cannon" 8
-    "Pulse Turret" 4
+    "Pulse Turret" 2
+    "Chameleon Anti-Missile" 2
 
-    "Ravine Batteries"
-    "Williwaw Cooling" 8
+    "Gorge Batteries"
+    "Williwaw Cooling" 4
     "Fuel Pod" 8
+    "Quantum Keystone"
     "Yoloy Scanner"
-    "Outfit Space Expansion" 3
+    "Outfit Space Expansion" 4
 
 
 ship "Shield Beetle" "Shield Beetle (Tracker)"
@@ -436,7 +432,9 @@ ship "Shield Beetle" "Shield Beetle (Tracker)"
     "Chasm Batteries"
     "Williwaw Cooling" 4
     "Fuel Pod" 5
+    "Quantum Keystone"
     "Yoloy Scanner"
+    "Outfit Space Expansion"
 
 
 ship "Shield Beetle" "Shield Beetle (Tracker, Jump)"
@@ -457,8 +455,9 @@ ship "Shield Beetle" "Shield Beetle (Tracker, Jump)"
     "Chasm Batteries"
     "Williwaw Cooling" 4
     "Fuel Pod" 8
+    "Quantum Keystone"
     "Yoloy Scanner"
-    "Outfit Space Expansion" 3
+    "Outfit Space Expansion" 4
 
 
 
@@ -497,10 +496,11 @@ ship "Solifuge"
     `"Bondir" Atomic Steering`
 
     "Ion Cannon" 5
-    "Bullfrog Anti-Missile" 7
+    "Pulse Turret"
+    "Bullfrog Anti-Missile" 6
 
-    "Fissure Batteries"
-    "Williwaw Cooling" 6
+    "Gorge Batteries"
+    "Williwaw Cooling" 4
     "Fuel Pod" 6
     "Quantum Keystone"
     "Yoloy Scanner"
@@ -511,7 +511,7 @@ ship "Solifuge"
   gun 11.5 -138.5 "Ion Cannon"
   gun -9.5 -101 "Ion Cannon"
   gun 9.5 -101 "Ion Cannon"
-  turret 0 -109.5 "Bullfrog Anti-Missile"
+  turret 0 -109.5 "Pulse Turret"
   turret 54.5 -48.5 "Bullfrog Anti-Missile"
   turret -54.5 -48.5 "Bullfrog Anti-Missile"
   turret 55 1 "Bullfrog Anti-Missile"
@@ -543,10 +543,11 @@ ship "Solifuge" "Solifuge (Jump)"
     `"Bondir" Atomic Steering`
 
     "Ion Cannon" 5
-    "Bullfrog Anti-Missile" 7
+    "Pulse Turret"
+    "Bullfrog Anti-Missile" 6
 
-    "Fissure Batteries"
-    "Williwaw Cooling" 6
+    "Gorge Batteries"
+    "Williwaw Cooling" 4
     "Fuel Pod" 8
     "Quantum Keystone"
     "Yoloy Scanner"
@@ -555,7 +556,7 @@ ship "Solifuge" "Solifuge (Jump)"
 
 ship "Solifuge" "Solifuge (Tracker)"
   outfits
-    "Diamond Regenerator"
+    "Diamond Regenerator" 2
     "Boulder Reactor"
     "Hyperdrive"
 
@@ -568,11 +569,12 @@ ship "Solifuge" "Solifuge (Tracker)"
     "Pulse Turret" 5
     "Chameleon Anti-Missile" 2
 
-    "Fissure Batteries"
-    "Williwaw Cooling" 6
+    "Gorge Batteries"
+    "Williwaw Cooling" 4
     "Fuel Pod" 6
+    "Quantum Keystone"
     "Yoloy Scanner"
-    "Outfit Space Expansion"
+    "Outfit Space Expansion" 4
   turret "Pulse Turret"
   turret "Pulse Turret"
   turret "Pulse Turret"
@@ -584,7 +586,7 @@ ship "Solifuge" "Solifuge (Tracker)"
 
 ship "Solifuge" "Solifuge (Tracker, Jump)"
   outfits
-    "Diamond Regenerator"
+    "Diamond Regenerator" 2
     "Boulder Reactor"
     "Jump Drive"
 
@@ -597,11 +599,12 @@ ship "Solifuge" "Solifuge (Tracker, Jump)"
     "Pulse Turret" 5
     "Chameleon Anti-Missile" 2
 
-    "Fissure Batteries"
-    "Williwaw Cooling" 6
+    "Gorge Batteries"
+    "Williwaw Cooling" 4
     "Fuel Pod" 8
+    "Quantum Keystone"
     "Yoloy Scanner"
-    "Outfit Space Expansion" 3
+    "Outfit Space Expansion" 6
   turret "Pulse Turret"
   turret "Pulse Turret"
   turret "Pulse Turret"
@@ -629,10 +632,10 @@ ship "Violin Spider"
     "mass" 31
     "drag" 0.9
     "heat dissipation" .7
-    "outfit space" 94
-    "core space" 45
+    "outfit space" 98
+    "core space" 42
     "engine space" 30
-    "weapon space" 19
+    "weapon space" 26
     weapon
       "blast radius" 12
       "shield damage" 120
@@ -703,14 +706,12 @@ ship "Water Bug"
     `"Benga" Atomic Thruster`
     `"Benga" Atomic Steering`
 
-    "Tracker" 112
-    "Tracker Storage Pod" 2
+    "Tracker" 56
     "Tracker Launcher" 2
     "Pulse Turret"
     "Chameleon Anti-Missile" 2
 
-    "Gorge Batteries"
-    "Chasm Batteries"
+    "Fissure Batteries"
     "Williwaw Cooling"
     "Fuel Pod" 6
     "Quantum Keystone"
@@ -739,14 +740,12 @@ ship "Water Bug" "Water Bug (Jump)"
     `"Benga" Atomic Thruster`
     `"Benga" Atomic Steering`
 
-    "Tracker" 112
-    "Tracker Storage Pod" 2
+    "Tracker" 56
     "Tracker Launcher" 2
     "Pulse Turret"
     "Chameleon Anti-Missile" 2
 
-    "Gorge Batteries"
-    "Chasm Batteries"
+    "Fissure Batteries"
     "Williwaw Cooling"
     "Fuel Pod" 8
     "Quantum Keystone"
@@ -758,38 +757,42 @@ ship "Water Bug" "Water Bug (Pulse)"
   outfits
     "Diamond Regenerator"
     "Geode Reactor"
-    "Pebble Core"
     "Hyperdrive"
 
     `"Benga" Atomic Thruster`
     `"Benga" Atomic Steering`
 
-    "Pulse Cannon" 2
+    "Tracker" 56
+    "Tracker Launcher" 2
     "Pulse Turret" 3
 
     "Fissure Batteries"
-    "Williwaw Cooling" 2
+    "Chasm Batteries"
+    "Williwaw Cooling"
     "Fuel Pod" 6
+    "Quantum Keystone"
     "Yoloy Scanner"
-    "Outfit Space Expansion"
+    "Outfit Space Expansion" 3
 
 
 ship "Water Bug" "Water Bug (Pulse, Jump)"
   outfits
     "Diamond Regenerator"
     "Geode Reactor"
-    "Pebble Core"
     "Jump Drive"
 
     `"Benga" Atomic Thruster`
     `"Benga" Atomic Steering`
 
-    "Pulse Cannon" 2
+    "Tracker" 56
+    "Tracker Launcher" 2
     "Pulse Turret" 3
 
     "Fissure Batteries"
-    "Williwaw Cooling" 2
+    "Chasm Batteries"
+    "Williwaw Cooling"
     "Fuel Pod" 8
+    "Quantum Keystone"
     "Yoloy Scanner"
-    "Outfit Space Expansion" 3
+    "Outfit Space Expansion" 5
 
