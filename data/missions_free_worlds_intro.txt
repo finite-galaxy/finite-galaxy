@@ -1324,7 +1324,7 @@ mission "FW Escort 1"
       names "free worlds small"
       variant
         "Hawk" 2
-        "Fury" 5
+        "Harpy" 5
   npc
     personality plunders entering
     government Pirate
@@ -1396,7 +1396,7 @@ mission "FW Escort 1B"
       names "free worlds small"
       variant
         "Hawk" 1
-        "Fury" 3
+        "Harpy" 3
   npc
     personality plunders entering
     government Pirate
@@ -1462,7 +1462,7 @@ mission "FW Escort 2"
       cargo 0
       names "free worlds small"
       variant
-        "Fury" 3
+        "Harpy" 3
   npc
     personality plunders staying
     government Pirate
@@ -1526,7 +1526,7 @@ mission "FW Escort 2B"
       cargo 0
       names "free worlds small"
       variant
-        "Fury" 2
+        "Harpy" 2
   npc
     personality plunders staying
     government Pirate
@@ -1700,11 +1700,11 @@ mission "FW Bounty 1"
     system
       near Seginus 1 2
     ship "Hawk" "Cluny"
-    ship "Stymphalian" "Ferret"
-    ship "Fury" "Rat"
-    ship "Berserker" "Stoat"
+    ship "Warrior" "Ferret"
+    ship "Harpy" "Rat"
+    ship "Harpy" "Stoat"
     ship "Wasp" "Vixen"
-    ship "Warrior" "Weasel"
+    ship "Hero" "Weasel"
     dialogue `The "Rat Pack" has been eliminated. You can claim the bounty payment by returning to <destination>.`
   
   on complete
@@ -2026,12 +2026,12 @@ mission "Defend Sabik"
       names "free worlds small"
       variant
         "Hawk"
-        "Fury" 2
+        "Harpy" 2
     fleet
       names "free worlds small"
       variant
         "Hawk"
-        "Berserker" 2
+        "Fury" 2
   npc
     personality heroic disables
     government "Free Worlds"
@@ -2042,7 +2042,7 @@ mission "Defend Sabik"
         "Falcon"
         "Osprey" 2
         "Hawk" 3
-        "Fury" 5
+        "Harpy" 5
   npc
     personality heroic disables
     government "Free Worlds"
@@ -2052,7 +2052,7 @@ mission "Defend Sabik"
       variant
         "Bastion" 2
         "Argosy" 4
-        "Berserker" 6
+        "Fury" 6
     fleet
       names "free worlds capital"
       variant
@@ -2073,7 +2073,7 @@ mission "Defend Sabik"
       names "free worlds small"
       variant
         "Hawk" 2
-        "Fury" 1
+        "Harpy" 1
   
   on complete
     dialogue `The Navy has been driven off, but at a great cost. You should probably visit the spaceport and see if Tomek is there, or someone else who can tell you what to do next.`

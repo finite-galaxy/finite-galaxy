@@ -318,8 +318,8 @@ mission "Intro [1 Interceptor]"
   npc
     government Pirate
     personality entering plunders
-    ship "Fury" "Bloodletter"
-    ship "Berserker" "Hand of Fate"
+    ship "Harpy" "Bloodletter"
+    ship "Fury" "Hand of Fate"
   
   on offer
     conversation
@@ -373,13 +373,13 @@ mission "Intro [2 Interceptor]"
         `  "Got it."`
           accept
         `  "I really shouldn't try to fight?"`
-      `  "It just isn't feasible," he says. "If a ship has turrets, your Fury can't get close enough to hit it without being damaged, and then it's just a matter of whose weapons and shields are stronger. And one heavy rocket hit could nearly disable you. So, don't risk it."`
+      `  "It just isn't feasible," he says. "If a ship has turrets, your Harpy can't get close enough to hit it without being damaged, and then it's just a matter of whose weapons and shields are stronger. And one heavy rocket hit could nearly disable you. So, don't risk it."`
         accept
   
   on complete
     payment 40000
     conversation
-      `As you land on Ingot, James says, "Well, you made it in one piece! Still think you want to be piloting a Fury?"`
+      `As you land on Ingot, James says, "Well, you made it in one piece! Still think you want to be piloting a Harpy?"`
       choice
         `  "Sure, but I can't wait until I've got a ship big enough to stand up to pirates instead of running from them."`
         `  "Well, maybe I should've bought a freighter instead."`

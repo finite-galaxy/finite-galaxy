@@ -58,12 +58,12 @@ mission "Liberate Kornephoros"
       names "free worlds small"
       variant
         "Hawk"
-        "Fury" 2
+        "Harpy" 2
     fleet
       names "free worlds small"
       variant
         "Hawk (Rocket)"
-        "Berserker (Rocket)" 2
+        "Fury (Rocket)" 2
     fleet
       names "free worlds capital"
       variant
@@ -76,13 +76,13 @@ mission "Liberate Kornephoros"
         "Osprey"
         "Osprey (Laser)"
         "Hawk" 3
-        "Fury" 5
+        "Harpy" 5
     fleet
       names "free worlds capital"
       variant
         "Bastion (Heavy)" 2
         "Argosy (Blaster)" 4
-        "Berserker" 6
+        "Fury" 6
   
   npc evade
     personality staying heroic
@@ -1098,7 +1098,7 @@ mission "FW Flamethrower 2"
       label available
       `  "Well, I should have an initial model for sale in a month or so," he says. "I'll be interested to see what uses you or anyone else might find for them. Anyway, thanks for your help." You say goodbye and head back to your ship.`
 
-ship "Berserker" "Doombat"
+ship "Fury" "Doombat"
   add attributes
     "self destruct" 1
   outfits

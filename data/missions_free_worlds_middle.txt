@@ -277,7 +277,7 @@ mission "FW Southern Battle 1B"
   on offer
     conversation
       `When you land on <origin>, a Southbound Shipyards executive leads you to a hangar. The hangar is huge, but it clearly was not meant to hold a ship as large as the one it now contains. There is barely enough space for the cranes and catwalks being used by the construction crews. He says, "The Dreadnought is a new design, the largest ship we've ever built. Only three of them have been completed so far." You can't help but be impressed at the size of the Dreadnought: as bulky as a Saturn, it looks like a cross between a Bastion and an Argosy.`
-      `  He then leads you out to a section of the spaceport where three Dreadnoughts are parked. Next to them, and looking tiny by comparison, are five Berserkers. You ask, "Are those Berserkers part of the battle fleet, too?"`
+      `  He then leads you out to a section of the spaceport where three Dreadnoughts are parked. Next to them, and looking tiny by comparison, are five Furies. You ask, "Are those Furies part of the battle fleet, too?"`
       `  "Yes," he says, "equipped with some fancy new weapons from Barmy Edward up at Kraz Cybernetics. I haven't seen them in action yet, but he's convinced they'll be useful against the Navy."`
       `  You thank him for his time, and meet up with the captains of the battle fleet, arranging for them to follow you back to Trinket.`
         accept
@@ -288,11 +288,11 @@ mission "FW Southern Battle 1B"
     ship "Dreadnought" "F.S. Sequoia"
     ship "Dreadnought" "F.S. Sitka"
     ship "Dreadnought" "F.S. Rosewood"
-    ship "Berserker (Flamethrower)" "F.S. Montag"
-    ship "Berserker (Flamethrower)" "F.S. Faber"
-    ship "Berserker (Flamethrower)" "F.S. Beatty"
-    ship "Berserker (Flamethrower)" "F.S. Mildred"
-    ship "Berserker (Flamethrower)" "F.S. Clarisse"
+    ship "Fury (Flamethrower)" "F.S. Montag"
+    ship "Fury (Flamethrower)" "F.S. Faber"
+    ship "Fury (Flamethrower)" "F.S. Beatty"
+    ship "Fury (Flamethrower)" "F.S. Mildred"
+    ship "Fury (Flamethrower)" "F.S. Clarisse"
   
   on visit
     dialogue "You have reached <planet>, but you left part of your convoy behind! Better depart and wait for them to arrive in this star system."
@@ -333,11 +333,11 @@ mission "FW Southern Battle 2"
     ship "Dreadnought" "F.S. Sequoia"
     ship "Dreadnought" "F.S. Sitka"
     ship "Dreadnought" "F.S. Rosewood"
-    ship "Berserker (Flamethrower)" "F.S. Montag"
-    ship "Berserker (Flamethrower)" "F.S. Faber"
-    ship "Berserker (Flamethrower)" "F.S. Beatty"
-    ship "Berserker (Flamethrower)" "F.S. Mildred"
-    ship "Berserker (Flamethrower)" "F.S. Clarisse"
+    ship "Fury (Flamethrower)" "F.S. Montag"
+    ship "Fury (Flamethrower)" "F.S. Faber"
+    ship "Fury (Flamethrower)" "F.S. Beatty"
+    ship "Fury (Flamethrower)" "F.S. Mildred"
+    ship "Fury (Flamethrower)" "F.S. Clarisse"
   
   npc
     system Rastaban
@@ -371,7 +371,7 @@ mission "FW Southern Battle 2"
       fighters "free worlds fighters"
       variant
         "Skein" 2
-        "Harpy" 12
+        "Stymphalian" 12
     fleet
       names "free worlds capital"
       variant
@@ -1411,8 +1411,8 @@ mission "FW Bloodsea 1.1B"
       variant
         "Raven (Afterburner)" 2
         Hawk 2
-        "Berserker (Flamethrower)" 3
-        Fury 5
+        "Fury (Flamethrower)" 3
+        Harpy 5
   
   on complete
     set "fw bloodsea done"
@@ -1480,8 +1480,8 @@ mission "FW Bloodsea 1.2A"
         "Firebird (Laser)"
         "Raven (Afterburner)" 2
         "Hawk (Rocket)" 2
-        "Berserker (Flamethrower)" 3
-        Fury 5
+        "Fury (Flamethrower)" 3
+        Harpy 5
     ship "Leviathan" "Freedom"
     ship "Manta" "Lucifer"
     ship "Bastion (Heavy)" "Punisher"
@@ -1701,12 +1701,12 @@ mission "FW Rand 1"
     ship "Falcon (Plasma)" "F.S. Reliant"
     ship "Falcon (Heavy)" "F.S. Bismark"
     ship "Skein" "F.S. Lapwing"
-    ship "Harpy" "Bravo 8-4"
-    ship "Harpy" "Bravo 0-9"
-    ship "Harpy" "Bravo 6-2"
-    ship "Harpy" "Bravo 3-1"
-    ship "Harpy" "Bravo 1-5"
-    ship "Harpy" "Bravo 9-1"
+    ship "Stymphalian" "Bravo 8-4"
+    ship "Stymphalian" "Bravo 0-9"
+    ship "Stymphalian" "Bravo 6-2"
+    ship "Stymphalian" "Bravo 3-1"
+    ship "Stymphalian" "Bravo 1-5"
+    ship "Stymphalian" "Bravo 9-1"
     ship "Hawk (Rocket)" "F.S. Echo"
     ship "Hawk" "F.S. Shadow"
   npc
@@ -1772,19 +1772,19 @@ mission "FW Rand 1B"
     ship "Dreadnought" "F.S. Holly"
     ship "Falcon (Plasma)" "F.S. Nebula"
     ship "Skein" "F.S. Larkspur"
-    ship "Harpy" "Charlie 6-2"
-    ship "Harpy" "Charlie 0-9"
-    ship "Harpy" "Charlie 3-1"
-    ship "Harpy" "Charlie 9-1"
-    ship "Harpy" "Charlie 1-5"
-    ship "Harpy" "Charlie 8-4"
+    ship "Stymphalian" "Charlie 6-2"
+    ship "Stymphalian" "Charlie 0-9"
+    ship "Stymphalian" "Charlie 3-1"
+    ship "Stymphalian" "Charlie 9-1"
+    ship "Stymphalian" "Charlie 1-5"
+    ship "Stymphalian" "Charlie 8-4"
     ship "Skein" "F.S. Ironwood"
-    ship "Harpy" "Echo 5-3"
-    ship "Harpy" "Echo 4-1"
-    ship "Harpy" "Echo 2-3"
-    ship "Harpy" "Echo 5-8"
-    ship "Harpy" "Echo 2-4"
-    ship "Harpy" "Echo 6-9"
+    ship "Stymphalian" "Echo 5-3"
+    ship "Stymphalian" "Echo 4-1"
+    ship "Stymphalian" "Echo 2-3"
+    ship "Stymphalian" "Echo 5-8"
+    ship "Stymphalian" "Echo 2-4"
+    ship "Stymphalian" "Echo 6-9"
     ship "Argosy" "F.S. Nightingale"
 
 
@@ -1871,19 +1871,19 @@ mission "FW Defend Bod"
     ship "Dreadnought" "F.S. Holly"
     ship "Falcon (Plasma)" "F.S. Nebula"
     ship "Skein" "F.S. Larkspur"
-    ship "Harpy" "Charlie 6-2"
-    ship "Harpy" "Charlie 0-9"
-    ship "Harpy" "Charlie 3-1"
-    ship "Harpy" "Charlie 9-1"
-    ship "Harpy" "Charlie 1-5"
-    ship "Harpy" "Charlie 8-4"
+    ship "Stymphalian" "Charlie 6-2"
+    ship "Stymphalian" "Charlie 0-9"
+    ship "Stymphalian" "Charlie 3-1"
+    ship "Stymphalian" "Charlie 9-1"
+    ship "Stymphalian" "Charlie 1-5"
+    ship "Stymphalian" "Charlie 8-4"
     ship "Skein" "F.S. Ironwood"
-    ship "Harpy" "Echo 5-3"
-    ship "Harpy" "Echo 4-1"
-    ship "Harpy" "Echo 2-3"
-    ship "Harpy" "Echo 5-8"
-    ship "Harpy" "Echo 2-4"
-    ship "Harpy" "Echo 6-9"
+    ship "Stymphalian" "Echo 5-3"
+    ship "Stymphalian" "Echo 4-1"
+    ship "Stymphalian" "Echo 2-3"
+    ship "Stymphalian" "Echo 5-8"
+    ship "Stymphalian" "Echo 2-4"
+    ship "Stymphalian" "Echo 6-9"
     ship "Argosy" "F.S. Nightingale"
   
   on complete
@@ -2019,7 +2019,7 @@ mission "FW Liberate Delta Sagittarii"
       fighters "free worlds fighters"
       variant
         "Skein" 2
-        "Harpy" 12
+        "Stymphalian" 12
     fleet
       names "free worlds capital"
       variant

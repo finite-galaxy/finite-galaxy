@@ -117,8 +117,8 @@ fleet "Bounty Hunters"
   personality
     nemesis waiting heroic
   variant 5
-    "Berserker" 2
-    "Berserker (Rocket)" 2
+    "Fury" 2
+    "Fury (Rocket)" 2
   variant 5
     "Hawk" 2
     "Hawk (Rocket)" 2
@@ -127,25 +127,25 @@ fleet "Bounty Hunters"
     "Hawk"
   variant 3
     "Raven"
-    "Berserker (Rocket)" 2
+    "Fury (Rocket)" 2
   variant 1
     "Firebird"
-    "Berserker (Rocket)"
+    "Fury (Rocket)"
   variant 1
     "Aerie"
-    "Berserker (Rocket)"
+    "Fury (Rocket)"
   variant 1
     "Firebird"
-    "Berserker (Rocket)"
+    "Fury (Rocket)"
   variant 1
     "Osprey"
-    "Berserker (Rocket)"
+    "Fury (Rocket)"
   variant 1
     "Manta"
-    "Berserker (Rocket)"
+    "Fury (Rocket)"
   variant 1
     "Splinter"
-    "Berserker (Rocket)"
+    "Fury (Rocket)"
 
 
 fleet "Hired Guns"
@@ -421,7 +421,7 @@ fleet "Deep Security Small"
     "Aerie"
     "Dagger" 2
   variant 3
-    "Stymphalian" 3
+    "Warrior" 3
 
 
 # Free Worlds   
@@ -439,13 +439,13 @@ fleet "Free Worlds Large"
     "Bastion (Laser)"
   variant 8
     "Osprey"
-    "Berserker"
+    "Fury"
   variant 4
     "Osprey (Rocket)"
-    "Berserker (Rocket)"
+    "Fury (Rocket)"
   variant 4
     "Osprey (Laser)"
-    "Berserker (Laser)"
+    "Fury (Laser)"
   variant 6
     "Bastion"
     "Osprey"
@@ -457,13 +457,13 @@ fleet "Free Worlds Large"
     "Osprey (Laser)"
   variant 4
     "Bastion"
-    "Fury" 2
+    "Harpy" 2
   variant 2
     "Bastion (Heavy)"
-    "Fury" 2
+    "Harpy" 2
   variant 2
     "Bastion (Laser)"
-    "Fury" 2
+    "Harpy" 2
   variant 2
     "Falcon"
   variant 1
@@ -473,15 +473,15 @@ fleet "Free Worlds Large"
   variant 2
     "Falcon"
     "Hawk" 2
-    "Fury" 3
+    "Harpy" 3
   variant 1
     "Falcon (Heavy)"
     "Hawk" 2
-    "Fury" 3
+    "Harpy" 3
   variant 1
     "Falcon (Laser)"
     "Hawk" 2
-    "Fury" 3
+    "Harpy" 3
   variant 4
     "Falcon"
     "Bastion"
@@ -503,23 +503,23 @@ fleet "Free Worlds Small"
     heroic disables opportunistic
   variant 8
     "Hawk"
+    "Harpy"
+  variant 4
+    "Hawk"
     "Fury"
+  variant 2
+    "Hawk"
+    "Fury (Rocket)"
+  variant 2
+    "Hawk"
+    "Fury (Laser)"
   variant 4
-    "Hawk"
-    "Berserker"
-  variant 2
-    "Hawk"
-    "Berserker (Rocket)"
-  variant 2
-    "Hawk"
-    "Berserker (Laser)"
-  variant 4
-    "Berserker" 2
-  variant 2
-    "Berserker (Laser)"
-    "Berserker (Rocket)"
-  variant 10
     "Fury" 2
+  variant 2
+    "Fury (Laser)"
+    "Fury (Rocket)"
+  variant 10
+    "Harpy" 2
   variant 2
     "Hawk"
   variant 1
@@ -527,18 +527,18 @@ fleet "Free Worlds Small"
   variant 1
     "Hawk (Blaster)"
   variant 2
-    "Fury"
+    "Harpy"
   variant 2
     "Osprey"
   variant 4
     "Hawk"
-    "Fury" 2
+    "Harpy" 2
   variant 2
     "Hawk (Rocket)"
-    "Fury" 2
+    "Harpy" 2
   variant 2
     "Hawk (Blaster)"
-    "Fury" 2
+    "Harpy" 2
 
 
 
@@ -694,7 +694,7 @@ fleet "Independent Large"
   personality
     plunders
   variant 3
-    "Fury" 4
+    "Harpy" 4
   variant 4
     "Clipper"
   variant 2
@@ -731,7 +731,7 @@ fleet "Independent Small"
     plunders
     confusion 20
   variant 8
-    "Fury"
+    "Harpy"
   variant 3
     "Hawk"
   variant 2
@@ -739,36 +739,36 @@ fleet "Independent Small"
   variant 2
     "Hawk (Rocket)"
   variant 5
-    "Berserker"
+    "Fury"
   variant 2
-    "Berserker (Laser)"
+    "Fury (Laser)"
   variant 1
-    "Berserker (Rocket)"
+    "Fury (Rocket)"
   variant 2
-    "Fury" 2
+    "Harpy" 2
   variant 1
     "Hawk"
-    "Fury"
+    "Harpy"
   variant 1
     "Hawk (Blaster)"
-    "Fury"
-  variant 1
-    "Berserker" 3
-  variant 1
-    "Berserker (Rocket)" 3
-  variant 1
-    "Berserker"
-    "Hawk"
-  variant 1
-    "Hawk"
-    "Berserker"
-    "Fury"
-  variant 1
-    "Hawk (Rocket)"
-    "Berserker (Rocket)"
-    "Fury"
+    "Harpy"
   variant 1
     "Fury" 3
+  variant 1
+    "Fury (Rocket)" 3
+  variant 1
+    "Fury"
+    "Hawk"
+  variant 1
+    "Hawk"
+    "Fury"
+    "Harpy"
+  variant 1
+    "Hawk (Rocket)"
+    "Fury (Rocket)"
+    "Harpy"
+  variant 1
+    "Harpy" 3
   variant 1
     "Hawk" 2
   variant 1
@@ -1341,13 +1341,13 @@ fleet "Merchants Deep Large"
   variant 5
     "Aerie"
     "Dagger" 2
-    "Stymphalian"
+    "Warrior"
   variant 3
     "Aerie"
     "Dagger" 2
     "Raven"
   variant 3
-    "Stymphalian" 2
+    "Warrior" 2
   variant 3
     "Aerie" 2
     "Dagger" 4
@@ -1423,10 +1423,10 @@ fleet "Merchants Hai Large"
     "Firebird (Hai)"
   variant 6
     "Star Freighter (Hai)" 2
-    "Warrior" 2
+    "Hero" 2
   variant 3
     "Star Freighter (Hai)" 2
-    "Warrior (Gatling)" 2
+    "Hero (Gatling)" 2
   variant 10
     "Star Freighter" 2
     "Firebird (Hai)"
@@ -1463,29 +1463,29 @@ fleet "Merchants Hai Large"
     "Bulk Freighter (Hai)"
   variant 10
     "Bulk Freighter"
-    "Fury" 2
+    "Harpy" 2
   variant 4
     "Bulk Freighter (Laser)"
-    "Fury" 2
+    "Harpy" 2
   variant 2
     "Bulk Freighter (Hai)"
-    "Warrior" 2
+    "Hero" 2
   variant 2
     "Bulk Freighter (Hai)"
-    "Warrior (Gatling)" 2
+    "Hero (Gatling)" 2
   variant 4
     "Bulk Freighter (Blaster)"
-    "Fury" 2
+    "Harpy" 2
   variant 10
     "Behemoth" 2
     "Firebird (Hai)" 1
   variant 10
     "Star Freighter (Hai)" 4
-    "Fury" 2
+    "Harpy" 2
     "Firebird" 1
   variant 3
     "Star Freighter (Fancy)" 4
-    "Fury" 2
+    "Harpy" 2
     "Firebird (Laser)" 1
   variant 2
     "Arrow (Hai)"
@@ -1496,7 +1496,7 @@ fleet "Merchants Hai Large"
     "Star Queen"
   variant 1
     "Star Queen"
-    "Warrior (Gatling)" 2
+    "Hero (Gatling)" 2
   variant 1
     "Star Queen (Hai)"
     "Leviathan (Heavy)"
@@ -1522,7 +1522,7 @@ fleet "Merchants Hai Large"
     "Hauler II"
   variant 3
     "Aphid" 2
-    "Fury" 2
+    "Harpy" 2
     "Firebird (Laser)" 1
   variant 2
     "Hauler II" 2
@@ -1558,16 +1558,16 @@ fleet "Merchants Hai Small"
     "Light Shuttle" 4
   variant 6
     "Star Freighter (Hai)"
-    "Warrior"
+    "Hero"
   variant 3
     "Star Freighter"
-    "Warrior (Gatling)"
+    "Hero (Gatling)"
   variant 5
     "Star Freighter (Hai)"
     "Light Shuttle" 4
   variant 10
     "Star Freighter" 3
-    "Fury" 1
+    "Harpy" 1
   variant 3
     "Mule (Hai)"
   variant 3
@@ -1612,10 +1612,10 @@ fleet "Merchants North Large"
     "Firebird"
   variant 6
     "Star Freighter" 2
-    "Warrior" 2
+    "Hero" 2
   variant 3
     "Star Freighter" 2
-    "Warrior (Gatling)" 2
+    "Hero (Gatling)" 2
   variant 10
     "Star Freighter" 2
     "Firebird (Laser)"
@@ -1655,37 +1655,37 @@ fleet "Merchants North Large"
     "Bulk Freighter"
   variant 10
     "Bulk Freighter"
-    "Fury" 2
+    "Harpy" 2
   variant 4
     "Bulk Freighter (Laser)"
-    "Fury" 2
+    "Harpy" 2
   variant 2
     "Bulk Freighter (Laser)"
-    "Warrior" 2
+    "Hero" 2
   variant 2
     "Bulk Freighter (Laser)"
-    "Warrior (Gatling)" 2
+    "Hero (Gatling)" 2
   variant 4
     "Bulk Freighter (Blaster)"
-    "Fury" 2
+    "Harpy" 2
   variant 10
     "Behemoth" 2
     "Firebird" 1
   variant 10
     "Star Freighter" 4
-    "Fury" 2
+    "Harpy" 2
     "Firebird" 1
   variant 3
     "Star Freighter (Fancy)" 4
-    "Fury" 2
+    "Harpy" 2
     "Firebird (Laser)" 1
   variant 3
     "Star Freighter" 4
-    "Fury" 2
+    "Harpy" 2
     "Firebird (Laser)" 1
   variant 1
     "Star Freighter (Hai)" 4
-    "Fury" 2
+    "Harpy" 2
     "Firebird" 1
   variant 2
     "Arrow"
@@ -1724,10 +1724,10 @@ fleet "Merchants North Small"
     "Heavy Shuttle" 3
   variant 6
     "Star Freighter"
-    "Warrior"
+    "Hero"
   variant 3
     "Star Freighter"
-    "Warrior (Gatling)"
+    "Hero (Gatling)"
   variant 5
     "Star Freighter (Fancy)"
     "Light Shuttle" 4
@@ -1736,7 +1736,7 @@ fleet "Merchants North Small"
     "Light Shuttle" 4
   variant 10
     "Star Freighter" 3
-    "Fury" 1
+    "Harpy" 1
   variant 3
     "Mule"
     "Dagger"
@@ -1777,7 +1777,7 @@ fleet "Merchants Paradise"
     "Quicksilver" 2
   variant 3
     "Star Queen"
-    "Warrior" 3
+    "Hero" 3
   variant 3
     "Star Queen"
     "Wasp" 4
@@ -1804,7 +1804,7 @@ fleet "Merchants Paradise"
     "Blackbird"
   variant 3
     "Blackbird"
-    "Warrior" 2
+    "Hero" 2
 
 
 fleet "Merchants South Large"
@@ -1822,11 +1822,11 @@ fleet "Merchants South Large"
     "Hawk"
   variant 30
     "Star Freighter" 2
-    "Fury" 2
+    "Harpy" 2
   variant 10
     "Star Freighter (Fancy)"
     "Star Freighter"
-    "Fury" 2
+    "Harpy" 2
   variant 40
     "Argosy"
   variant 20
@@ -1857,14 +1857,14 @@ fleet "Merchants South Large"
     "Bastion"
     "Star Freighter" 3
     "Star Barge" 4
-    "Berserker"
-    "Fury" 2
+    "Fury"
+    "Harpy" 2
   variant 3
     "Bastion (Heavy)"
     "Star Freighter (Fancy)" 3
     "Star Barge" 4
-    "Berserker (Rocket)"
-    "Fury" 2
+    "Fury (Rocket)"
+    "Harpy" 2
   variant 20
     "Argosy" 2
   variant 10
@@ -1875,7 +1875,7 @@ fleet "Merchants South Large"
     "Argosy (Turret)" 2
   variant 10
     "Blackbird"
-    "Fury" 2
+    "Harpy" 2
   variant 12
     "Hauler III"
     "Hauler II"
@@ -1885,7 +1885,7 @@ fleet "Merchants South Large"
     "Hauler I" 2
   variant 6
     "Hauler III"
-    "Warrior" 2
+    "Hero" 2
 
 fleet "Merchants South Small"
   government "Merchant"
@@ -1906,17 +1906,17 @@ fleet "Merchants South Small"
     "Clipper (Speedy)"
   variant 30
     "Star Barge" 2
-    "Fury"
+    "Harpy"
   variant 30
     "Star Freighter"
   variant 10
     "Star Freighter (Fancy)"
   variant 10
     "Star Freighter"
-    "Fury"
+    "Harpy"
   variant 10
     "Star Freighter (Fancy)"
-    "Fury"
+    "Harpy"
   variant 20
     "Blackbird"
   variant 1
@@ -1937,7 +1937,7 @@ fleet "Merchants South Small"
     "Hauler II"
   variant 7
     "Hauler I"
-    "Warrior"
+    "Hero"
 
 
 fleet "Miners Core"
@@ -2004,13 +2004,13 @@ fleet "Militia Large"
     "Bastion (Laser)"
   variant 8
     "Osprey"
-    "Berserker"
+    "Fury"
   variant 4
     "Osprey (Rocket)"
-    "Berserker (Rocket)"
+    "Fury (Rocket)"
   variant 4
     "Osprey (Laser)"
-    "Berserker (Laser)"
+    "Fury (Laser)"
   variant 6
     "Bastion"
     "Osprey"
@@ -2022,13 +2022,13 @@ fleet "Militia Large"
     "Osprey (Laser)"
   variant 4
     "Bastion"
-    "Fury" 2
+    "Harpy" 2
   variant 2
     "Bastion (Heavy)"
-    "Fury" 2
+    "Harpy" 2
   variant 2
     "Bastion (Laser)"
-    "Fury" 2
+    "Harpy" 2
   variant 2
     "Falcon"
   variant 1
@@ -2038,15 +2038,15 @@ fleet "Militia Large"
   variant 2
     "Falcon"
     "Hawk" 2
-    "Fury" 3
+    "Harpy" 3
   variant 1
     "Falcon (Heavy)"
     "Hawk" 2
-    "Fury" 3
+    "Harpy" 3
   variant 1
     "Falcon (Laser)"
     "Hawk" 2
-    "Fury" 3
+    "Harpy" 3
 
 fleet "Militia Small"
   government "Militia"
@@ -2057,23 +2057,23 @@ fleet "Militia Small"
     confusion 20
   variant 8
     "Hawk"
+    "Harpy"
+  variant 4
+    "Hawk"
     "Fury"
+  variant 2
+    "Hawk"
+    "Fury (Rocket)"
+  variant 2
+    "Hawk"
+    "Fury (Laser)"
   variant 4
-    "Hawk"
-    "Berserker"
-  variant 2
-    "Hawk"
-    "Berserker (Rocket)"
-  variant 2
-    "Hawk"
-    "Berserker (Laser)"
-  variant 4
-    "Berserker" 2
-  variant 2
-    "Berserker (Laser)"
-    "Berserker (Rocket)"
-  variant 10
     "Fury" 2
+  variant 2
+    "Fury (Laser)"
+    "Fury (Rocket)"
+  variant 10
+    "Harpy" 2
   variant 2
     "Hawk"
   variant 1
@@ -2081,18 +2081,18 @@ fleet "Militia Small"
   variant 1
     "Hawk (Blaster)"
   variant 2
-    "Fury"
+    "Harpy"
   variant 2
     "Osprey"
   variant 4
     "Hawk"
-    "Fury" 2
+    "Harpy" 2
   variant 2
     "Hawk (Rocket)"
-    "Fury" 2
+    "Harpy" 2
   variant 2
     "Hawk (Blaster)"
-    "Fury" 2
+    "Harpy" 2
     
 
 
@@ -2674,7 +2674,7 @@ fleet "Pirates Core Small"
   variant 2
     "Hawk (Blaster)"
   variant 6
-    "Warrior"
+    "Hero"
   variant 3
     "Wasp"
   variant 2
@@ -2682,13 +2682,13 @@ fleet "Pirates Core Small"
   variant 1
     "Wasp" 3
   variant 2
-    "Fury"
+    "Harpy"
   variant 2
-    "Fury (Gatling)"
+    "Harpy (Gatling)"
   variant 1
-    "Fury" 2
+    "Harpy" 2
   variant 1
-    "Fury (Gatling)" 2
+    "Harpy (Gatling)" 2
 
 
 fleet "Pirates North Large"
@@ -2720,13 +2720,13 @@ fleet "Pirates North Large"
     "Firebird (Laser)" 2
   variant 2
     "Firebird"
-    "Berserker"
+    "Fury"
   variant 2
     "Firebird"
-    "Warrior" 2
+    "Hero" 2
   variant 1
     "Firebird (Laser)"
-    "Berserker (Rocket)"
+    "Fury (Rocket)"
   variant 2
     "Leviathan"
     "Firebird"
@@ -2749,13 +2749,13 @@ fleet "Pirates North Large"
   variant 1
     "Leviathan (Heavy)"
   variant 1
-    "Warrior" 3
+    "Hero" 3
   variant 1
-    "Warrior (Gatling)" 3
+    "Hero (Gatling)" 3
   variant 2
-    "Warrior" 2
+    "Hero" 2
   variant 2
-    "Warrior (Gatling)" 2
+    "Hero (Gatling)" 2
 
 fleet "Pirates North Small"
   government "Pirate"
@@ -2765,7 +2765,7 @@ fleet "Pirates North Small"
     plunders harvests
     confusion 20
   variant 6
-    "Stymphalian"
+    "Warrior"
   variant 2
     "Scout"
   variant 2
@@ -2773,9 +2773,9 @@ fleet "Pirates North Small"
   variant 2
     "Scout (Javelin)"
   variant 4
-    "Warrior"
+    "Hero"
   variant 4
-    "Warrior (Gatling)"
+    "Hero (Gatling)"
 
 
 fleet "Pirates South Large"
@@ -2785,9 +2785,9 @@ fleet "Pirates South Large"
   personality
     plunders harvests
   variant 2
-    "Fury" 4
+    "Harpy" 4
   variant 1
-    "Fury (Gatling)" 3
+    "Harpy (Gatling)" 3
   variant 5
     "Argosy"
   variant 3
@@ -2833,13 +2833,13 @@ fleet "Pirates South Large"
     "Hawk (Blaster)"
   variant 1
     "Marauder Argosy"
-    "Fury" 2
+    "Harpy" 2
   variant 1
     "Marauder Argosy (Heavy)"
-    "Fury" 2
+    "Harpy" 2
   variant 1
     "Marauder Argosy (Blaster)"
-    "Fury" 2
+    "Harpy" 2
   variant 1
     "Marauder Argosy (Missile)" 2
   variant 4
@@ -2863,7 +2863,7 @@ fleet "Pirates South Small"
     plunders harvests
     confusion 20
   variant 8
-    "Fury"
+    "Harpy"
   variant 3
     "Hawk"
   variant 2
@@ -2871,38 +2871,38 @@ fleet "Pirates South Small"
   variant 2
     "Hawk (Rocket)"
   variant 5
-    "Berserker"
+    "Fury"
   variant 1
-    "Berserker (Laser)"
+    "Fury (Laser)"
   variant 1
-    "Berserker (Gatling)"
+    "Fury (Gatling)"
   variant 1
-    "Berserker (Rocket)"
+    "Fury (Rocket)"
   variant 2
-    "Fury" 2
+    "Harpy" 2
   variant 1
     "Hawk"
-    "Fury"
+    "Harpy"
   variant 1
     "Hawk (Blaster)"
-    "Fury"
-  variant 1
-    "Berserker" 3
-  variant 1
-    "Berserker (Rocket)" 3
-  variant 1
-    "Berserker"
-    "Hawk"
-  variant 1
-    "Hawk"
-    "Berserker"
-    "Fury"
-  variant 1
-    "Hawk (Rocket)"
-    "Berserker (Rocket)"
-    "Fury"
+    "Harpy"
   variant 1
     "Fury" 3
+  variant 1
+    "Fury (Rocket)" 3
+  variant 1
+    "Fury"
+    "Hawk"
+  variant 1
+    "Hawk"
+    "Fury"
+    "Harpy"
+  variant 1
+    "Hawk (Rocket)"
+    "Fury (Rocket)"
+    "Harpy"
+  variant 1
+    "Harpy" 3
   variant 1
     "Hawk" 2
   variant 1
@@ -2940,24 +2940,24 @@ fleet "pirate raid"
     "Clipper (Speedy)"
   variant 1
     "Clipper (Particle)"
-    "Stymphalian"
+    "Warrior"
   variant 1
     "Clipper (Speedy)"
-    "Stymphalian"
+    "Warrior"
   variant 6
-    "Stymphalian" 3
+    "Warrior" 3
   variant 1
     "Argosy (Blaster)"
-    "Stymphalian"
+    "Warrior"
   variant 1
     "Argosy (Laser)"
-    "Stymphalian"
+    "Warrior"
   variant 1
     "Argosy (Turret)"
-    "Stymphalian"
+    "Warrior"
   variant 1
     "Marauder Argosy (Heavy)"
-    "Stymphalian" 2
+    "Warrior" 2
   variant 1
     "Marauder Argosy (Blaster)"
     "Raven (Afterburner)" 2
@@ -3005,16 +3005,16 @@ fleet "pirate raid"
     "Firebird (Laser)"
   variant 2
     "Firebird"
-    "Warrior" 2
+    "Hero" 2
   variant 1
     "Firebird (Laser)"
-    "Berserker (Rocket)"
+    "Fury (Rocket)"
   variant 8
     "Raven (Afterburner)" 2
   variant 2
     "Raven (Rocket)" 2
   variant 1
-    "Stymphalian" 3
+    "Warrior" 3
   variant 2
     "Leviathan"
     "Firebird"
@@ -3025,11 +3025,11 @@ fleet "pirate raid"
     "Leviathan (Heavy)"
     "Firebird (Laser)"
   variant 1
-    "Warrior" 3
+    "Hero" 3
   variant 8
-    "Warrior (Gatling)" 3
+    "Hero (Gatling)" 3
   variant 2
-    "Warrior (Gatling)" 2
+    "Hero (Gatling)" 2
 
 
 
@@ -3319,7 +3319,7 @@ fleet "Syndicate Small"
   personality
     heroic
   variant 3
-    "Warrior (Patrol)" 5
+    "Hero (Patrol)" 5
 
 
 

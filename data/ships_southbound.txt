@@ -1,16 +1,15 @@
 shipyard "Southbound Variants"
-  "Berserker"
-  "Berserker (Flamethrower)"
-  "Berserker (Gatling)"
-  "Berserker (Laser)"
-  "Berserker (Rocket)"
   "Boxwing"
   "Dreadnought"
   "Dreadnought (Jump)"
   "Dreadnought (Rocket)"
   "Fury"
+  "Fury (Flamethrower)"
   "Fury (Gatling)"
+  "Fury (Laser)"
+  "Fury (Rocket)"
   "Harpy"
+  "Harpy (Gatling)"
   "Hauler I"
   "Hauler I (Hai)"
   "Hauler I (Miner)"
@@ -26,130 +25,7 @@ shipyard "Southbound Variants"
   "Roost (Sidewinder)"
   "Skein"
   "Skein (Sidewinder)"
-
-
-
-ship "Berserker"
-  sprite "ship/berserker"
-  thumbnail "thumbnail/berserker"
-  attributes
-    category "Interceptor"
-#    manufacturer "Southbound"
-    licences
-      Pilot
-    "cost" 520000
-    "shields" 2200
-    "hull" 500
-    "required crew" 1
-    "bunks" 2
-    "mass" 110
-    "drag" 2.2
-    "heat dissipation" .85
-    "cargo space" 10
-    "outfit space" 240
-    "core space" 140
-    "engine space" 60
-    "weapon space" 40
-    weapon
-      "blast radius" 30
-      "shield damage" 300
-      "hull damage" 150
-      "hit force" 450
-  outfits
-    "D23-QP Shield Generator"
-    "nGVF-CC Fuel Cell"
-    "Hyperdrive"
-
-    "Chipmunk Plasma Thruster"
-    "Greyhound Plasma Steering"
-
-    "Modified Blaster Cannon" 4
-
-    "LP036a Battery Pack"
-    "Fuel Barrel" 60
-    "Tactical Scanner"
-  engine -10 45
-  engine 10 45
-  gun -20 12 "Modified Blaster Cannon"
-  gun 20 12 "Modified Blaster Cannon"
-  gun -44 10 "Modified Blaster Cannon"
-  gun 44 10 "Modified Blaster Cannon"
-  leak "leak" 60 50
-  leak "flame" 80 80
-  explode "tiny explosion" 10
-  explode "small explosion" 15
-  "final explode" "final explosion small"
-  description "Once one of the most popular interceptor-class ships, the Berserker's popularity is now waning in favour of more modern and powerful ships like the Hawk. Although limited numbers are still produced by Southbound Shipyards, most Berserkers that are in service today are more than half a century old."
-
-
-ship "Berserker" "Berserker (Flamethrower)"
-  outfits
-    "D23-QP Shield Generator"
-    "nGVF-BB Fuel Cell"
-    "Hyperdrive"
-
-    "Chipmunk Plasma Thruster"
-    "Greyhound Plasma Steering"
-
-    "Flamethrower" 4
-
-    "Supercapacitor"
-    "Fuel Barrel" 60
-    "Ramscoop"
-    "Tactical Scanner"
-
-
-ship "Berserker" "Berserker (Gatling)"
-  outfits
-    "D23-QP Shield Generator"
-    "nGVF-BB Fuel Cell"
-    "Hyperdrive"
-
-    "Chipmunk Plasma Thruster"
-    "Greyhound Plasma Steering"
-
-    "Gatling Round" 12000
-    "Gatling Bullet Boxes" 8
-    "Gatling Gun" 4
-
-    "Supercapacitor"
-    "Fuel Barrel" 60
-    "Tactical Scanner"
-
-
-ship "Berserker" "Berserker (Laser)"
-  outfits
-    "D23-QP Shield Generator"
-    "nGVF-CC Fuel Cell"
-    "Hyperdrive"
-
-    "Chipmunk Plasma Thruster"
-    "Greyhound Plasma Steering"
-
-    "Heavy Laser Cannon" 2
-
-    "LP036a Battery Pack"
-    "Fuel Barrel" 60
-    "Tactical Scanner"
-
-
-ship "Berserker" "Berserker (Rocket)"
-  outfits
-    "D23-QP Shield Generator"
-    "nGVF-BB Fuel Cell"
-    "Hyperdrive"
-
-    "Chipmunk Plasma Thruster"
-    "Greyhound Plasma Steering"
-
-    "Heavy Rocket" 40
-    "Heavy Rocket Rack" 2
-    "Heavy Rocket Launcher" 2
-
-    "Supercapacitor"
-    "Fuel Barrel" 60
-    "Tactical Scanner"
-    "Outfit Space Expansion"
+  "Stymphalian"
 
 
 
@@ -313,6 +189,131 @@ ship "Dreadnought" "Dreadnought (Rocket)"
 
 ship "Fury"
   plural "Furies"
+  sprite "ship/berserker"
+  thumbnail "thumbnail/berserker"
+  attributes
+    category "Interceptor"
+#    manufacturer "Southbound"
+    licences
+      Pilot
+    "cost" 520000
+    "shields" 2200
+    "hull" 500
+    "required crew" 1
+    "bunks" 2
+    "mass" 110
+    "drag" 2.2
+    "heat dissipation" .85
+    "cargo space" 10
+    "outfit space" 240
+    "core space" 140
+    "engine space" 60
+    "weapon space" 40
+    weapon
+      "blast radius" 30
+      "shield damage" 300
+      "hull damage" 150
+      "hit force" 450
+  outfits
+    "D23-QP Shield Generator"
+    "nGVF-CC Fuel Cell"
+    "Hyperdrive"
+
+    "Chipmunk Plasma Thruster"
+    "Greyhound Plasma Steering"
+
+    "Modified Blaster Cannon" 4
+
+    "LP036a Battery Pack"
+    "Fuel Barrel" 60
+    "Tactical Scanner"
+  engine -10 45
+  engine 10 45
+  gun -20 12 "Modified Blaster Cannon"
+  gun 20 12 "Modified Blaster Cannon"
+  gun -44 10 "Modified Blaster Cannon"
+  gun 44 10 "Modified Blaster Cannon"
+  leak "leak" 60 50
+  leak "flame" 80 80
+  explode "tiny explosion" 10
+  explode "small explosion" 15
+  "final explode" "final explosion small"
+  description "The Fury is Southbound Shipyard's most popular design of escort ship. They have greater firepower than most other interceptor-class vessels, meaning that any pirate flying solo will think twice before attacking a convoy that is accompanied by a Fury. However, Furies are also less manoeuvrable than other small ships."
+
+
+ship "Fury" "Fury (Flamethrower)"
+  outfits
+    "D23-QP Shield Generator"
+    "nGVF-BB Fuel Cell"
+    "Hyperdrive"
+
+    "Chipmunk Plasma Thruster"
+    "Greyhound Plasma Steering"
+
+    "Flamethrower" 4
+
+    "Supercapacitor"
+    "Fuel Barrel" 60
+    "Ramscoop"
+    "Tactical Scanner"
+
+
+ship "Fury" "Fury (Gatling)"
+  outfits
+    "D23-QP Shield Generator"
+    "nGVF-BB Fuel Cell"
+    "Hyperdrive"
+
+    "Chipmunk Plasma Thruster"
+    "Greyhound Plasma Steering"
+
+    "Gatling Round" 12000
+    "Gatling Bullet Boxes" 8
+    "Gatling Gun" 4
+
+    "Supercapacitor"
+    "Fuel Barrel" 60
+    "Tactical Scanner"
+
+
+ship "Fury" "Fury (Laser)"
+  outfits
+    "D23-QP Shield Generator"
+    "nGVF-CC Fuel Cell"
+    "Hyperdrive"
+
+    "Chipmunk Plasma Thruster"
+    "Greyhound Plasma Steering"
+
+    "Heavy Laser Cannon" 2
+
+    "LP036a Battery Pack"
+    "Fuel Barrel" 60
+    "Tactical Scanner"
+
+
+ship "Fury" "Fury (Rocket)"
+  outfits
+    "D23-QP Shield Generator"
+    "nGVF-BB Fuel Cell"
+    "Hyperdrive"
+
+    "Chipmunk Plasma Thruster"
+    "Greyhound Plasma Steering"
+
+    "Heavy Rocket" 40
+    "Heavy Rocket Rack" 2
+    "Heavy Rocket Launcher" 2
+
+    "Supercapacitor"
+    "Fuel Barrel" 60
+    "Tactical Scanner"
+    "Outfit Space Expansion"
+
+
+
+ship "Harpy"
+  plural "Harpies"
   sprite "ship/sparrow"
   thumbnail "thumbnail/sparrow"
   attributes
@@ -358,11 +359,11 @@ ship "Fury"
   leak "flame" 60 80
   explode "tiny explosion" 15
   explode "small explosion" 5
-  description "Classified as an interceptor rather than a fighter because it has its own "Hyperdrive" instead of needing to be carried inside a larger ship, the Southbound Fury is the smallest and cheapest combat ship available. Because of its limited cargo and passenger space, the primary way for a Fury pilot to pay the bills is by hunting pirates... or by becoming one. In either case, it is a perilous way to earn a living."
-  description "  Insurance reports indicate that as many as two out of every three first-time ship buyers who choose to pilot a Fury lose their ship (and often, their life as well) within the first month of owning it."
+  description "Classified as an interceptor rather than a fighter because it has its own "Hyperdrive" instead of needing to be carried inside a larger ship, the Southbound Harpy is the smallest and cheapest combat ship available. Because of its limited cargo and passenger space, the primary way for a Harpy pilot to pay the bills is by hunting pirates... or by becoming one. In either case, it is a perilous way to earn a living."
+  description "  Insurance reports indicate that as many as two out of every three first-time ship buyers who choose to pilot a Harpy lose their ship (and often, their life as well) within the first month of owning it."
 
 
-ship "Fury" "Fury (Gatling)"
+ship "Harpy" "Harpy (Gatling)"
   outfits
     "D14-RN Shield Generator"
     "nGVF-AA Fuel Cell"
@@ -378,55 +379,6 @@ ship "Fury" "Fury (Gatling)"
     "LP036a Battery Pack"
     "Fuel Barrel" 30
     "Tactical Scanner"
-
-
-
-ship "Harpy"
-  plural "Harpies"
-  sprite "ship/finch"
-  thumbnail "thumbnail/finch"
-  attributes
-    category "Bomber"
-#    manufacturer "Southbound"
-    licences
-      Pilot
-    "carried" 3
-    "cost" 126000
-    "shields" 900
-    "hull" 300
-    "required crew" 1
-    "bunks" 1
-    "mass" 40
-    "drag" .9
-    "heat dissipation" .85
-    "outfit space" 110
-    "core space" 50
-    "engine space" 40
-    "weapon space" 20
-    weapon
-      "blast radius" 12
-      "shield damage" 120
-      "hull damage" 60
-      "hit force" 180
-  outfits
-    "D14-RN Shield Generator"
-    "nGVF-BB Fuel Cell"
-
-    "Chipmunk Plasma Thruster"
-    "Chipmunk Plasma Steering"
-
-    "Modified Blaster Cannon" 2
-
-    "LP036a Battery Pack"
-    "Tactical Scanner"
-  engine -5 32
-  engine 5 32
-  gun -7 -14 "Modified Blaster Cannon"
-  gun 7 -14 "Modified Blaster Cannon"
-  leak "flame" 60 80
-  explode "tiny explosion" 15
-  explode "small explosion" 5
-  description "When the Free Worlds started requesting a carrier solution from its local shipyards, Southbound Shipyards quickly saw that a few modifications could make their entry level interceptor into a top tier fighter. Over 85% of the parts that make up the Harpy are shared with the Fury assembly line, so it's no surprise that even trimmed down to fit into a bomber bay, the Harpy bears strong resemblance to its hyperspace-faring cousin."
 
 
 
@@ -781,7 +733,7 @@ ship "Nest"
   explode "medium explosion" 20
   explode "large explosion" 5
   "final explode" "final explosion medium"
-  description `Southbound Shipyards quickly answered the Free Worlds' call for a carrier by building modified cargo containers for Haulers - adding a pair of Fighter docking arms, some additional outfit space, and even a couple of bunks. Access to the fighters from within the ship is so inconvenient that most pilots opt to just stay aboard their fighters when in flight. While the technical name for this ship is "Hauler I: Type F", Southbound assembly workers started calling the single container variant the "Nest" due to its complement of Harpy Fighters, and the name stuck.`
+  description `Southbound Shipyards quickly answered the Free Worlds' call for a carrier by building modified cargo containers for Haulers - adding a pair of Fighter docking arms, some additional outfit space, and even a couple of bunks. Access to the fighters from within the ship is so inconvenient that most pilots opt to just stay aboard their fighters when in flight. While the technical name for this ship is "Hauler I: Type F", Southbound assembly workers started calling the single container variant the "Nest" due to its complement of Stymphalian Fighters, and the name stuck.`
 
 
 ship "Nest" "Nest (Sidewinder)"
@@ -974,4 +926,53 @@ ship "Skein" "Skein (Sidewinder)"
     "LP144a Battery Pack"
     "Fuel Barrel" 70
     "Tactical Scanner" 4
+
+
+
+ship "Stymphalian"
+  plural "Harpies"
+  sprite "ship/finch"
+  thumbnail "thumbnail/finch"
+  attributes
+    category "Bomber"
+#    manufacturer "Southbound"
+    licences
+      Pilot
+    "carried" 3
+    "cost" 126000
+    "shields" 900
+    "hull" 300
+    "required crew" 1
+    "bunks" 1
+    "mass" 40
+    "drag" .9
+    "heat dissipation" .85
+    "outfit space" 110
+    "core space" 50
+    "engine space" 40
+    "weapon space" 20
+    weapon
+      "blast radius" 12
+      "shield damage" 120
+      "hull damage" 60
+      "hit force" 180
+  outfits
+    "D14-RN Shield Generator"
+    "nGVF-BB Fuel Cell"
+
+    "Chipmunk Plasma Thruster"
+    "Chipmunk Plasma Steering"
+
+    "Modified Blaster Cannon" 2
+
+    "LP036a Battery Pack"
+    "Tactical Scanner"
+  engine -5 32
+  engine 5 32
+  gun -7 -14 "Modified Blaster Cannon"
+  gun 7 -14 "Modified Blaster Cannon"
+  leak "flame" 60 80
+  explode "tiny explosion" 15
+  explode "small explosion" 5
+  description "When the Free Worlds started requesting a carrier solution from its local shipyards, Southbound Shipyards quickly saw that a few modifications could make their entry level interceptor into a top tier fighter. Over 85% of the parts that make up the Stymphalian are shared with the Harpy assembly line, so it's no surprise that even trimmed down to fit into a bomber bay, the Stymphalian bears strong resemblance to its hyperspace-faring cousin."
 

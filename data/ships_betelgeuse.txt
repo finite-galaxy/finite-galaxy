@@ -4,15 +4,15 @@ shipyard "Betelgeuse Variants"
   "Bulk Freighter (Hai)"
   "Bulk Freighter (Laser)"
   "Class C Freighter"
+  "Hero"
+  "Hero (Gatling)"
+  "Hero (Patrol)"
   "Protector"
   "Protector (Laser)"
   "Protector (Mark II)"
   "Vanguard"
   "Vanguard (Anti-Missile)"
   "Vanguard (Mark II)"
-  "Warrior"
-  "Warrior (Gatling)"
-  "Warrior (Patrol)"
 
 
 
@@ -182,6 +182,107 @@ ship "Bulk Freighter" "Class C Freighter"
   drone -66 135 left
   drone 66 135 right
   description `The Class C "Star Freighter" is a stealth warship designed by Betelgeuse for baiting pirates with the offer of a seemingly helpless, ordinary bulk freighter. Inside, its cargo space has all been converted into drone bays, allowing it to carry a dozen combat drones.`
+
+
+
+ship "Hero"
+  plural "Heroes"
+  sprite "ship/fury"
+  thumbnail "thumbnail/fury"
+  attributes
+    category "Interceptor"
+#    manufacturer "Vortex"
+    licences
+      Pilot
+    "cost" 490000
+    "shields" 2000
+    "hull" 400
+    "required crew" 1
+    "bunks" 3
+    "mass" 70
+    "drag" 1.6
+    "heat dissipation" .9
+    "cargo space" 15
+    "outfit space" 220
+    "core space" 130
+    "engine space" 60
+    "weapon space" 30
+    weapon
+      "blast radius" 24
+      "shield damage" 240
+      "hull damage" 120
+      "hit force" 360
+  outfits
+    "D23-QP Shield Generator"
+    "nGVF-CC Fuel Cell"
+    "Hyperdrive"
+
+    "IT-2700 Ion Thruster"
+    "IS-2200 Ion Steering"
+
+    "X1 Blaster Cannon" 4
+
+    "LP036a Battery Pack"
+    "Small Radar Jammer"
+    "Tactical Scanner"
+    "Fuel Barrel" 40
+  engine -17 35
+  engine 17 35
+  gun -10 -26 "X1 Blaster Cannon"
+  gun 10 -26 "X1 Blaster Cannon"
+  gun -16 -20 "X1 Blaster Cannon"
+  gun 16 -20 "X1 Blaster Cannon"
+  leak "flame" 50 80
+  explode "tiny explosion" 10
+  explode "small explosion" 20
+  description "Once one of the most popular interceptor-class ships, the Hero's popularity is now waning in favour of more modern and versatile ships like the Hawk. Although large numbers are still produced by Betelgeuse Shipyards, many other Heroes that are in service today are more than half a century old."
+
+
+ship "Hero" "Hero (Gatling)"
+  outfits
+    "D23-QP Shield Generator"
+    "nGVF-CC Fuel Cell"
+    "Hyperdrive"
+
+    "IT-2700 Ion Thruster"
+    "IS-2200 Ion Steering"
+
+    "Gatling Round" 12000
+    "Gatling Bullet Boxes" 8
+    "Gatling Gun" 4
+
+    "Supercapacitor"
+    "Small Radar Jammer"
+    "Tactical Scanner"
+    "Fuel Barrel" 40
+
+
+ship "Hero" "Hero (Patrol)"
+  outfits
+    "D23-QP Shield Generator"
+    "nGVF-CC Fuel Cell"
+    "Hyperdrive"
+
+    "IT-2700 Ion Thruster"
+    "IS-2200 Ion Steering"
+
+    "Meteor Missile" 80
+    "Meteor Missile Box" 2
+    "Meteor Missile Launcher" 2
+    "X1 Blaster Cannon" 2
+
+    "LP036a Battery Pack"
+    "Cargo Scanner"
+    "Fuel Barrel" 40
+    "Outfit Scanner"
+    "Small Radar Jammer"
+    "Tactical Scanner" 2
+    "Outfit Space Expansion"
+    "Laser Rifle" 2
+  gun "X1 Blaster Cannon"
+  gun "X1 Blaster Cannon"
+  gun "Meteor Missile Launcher"
+  gun "Meteor Missile Launcher"
 
 
 
@@ -396,104 +497,4 @@ ship "Vanguard" "Vanguard (Anti-Missile)"
     "Large Radar Jammer"
     "Tactical Scanner" 4
     "Laser Rifle" 40
-
-
-
-ship "Warrior"
-  sprite "ship/fury"
-  thumbnail "thumbnail/fury"
-  attributes
-    category "Interceptor"
-#    manufacturer "Vortex"
-    licences
-      Pilot
-    "cost" 490000
-    "shields" 2000
-    "hull" 400
-    "required crew" 1
-    "bunks" 3
-    "mass" 70
-    "drag" 1.6
-    "heat dissipation" .9
-    "cargo space" 15
-    "outfit space" 220
-    "core space" 130
-    "engine space" 60
-    "weapon space" 30
-    weapon
-      "blast radius" 24
-      "shield damage" 240
-      "hull damage" 120
-      "hit force" 360
-  outfits
-    "D23-QP Shield Generator"
-    "nGVF-CC Fuel Cell"
-    "Hyperdrive"
-
-    "IT-2700 Ion Thruster"
-    "IS-2200 Ion Steering"
-
-    "X1 Blaster Cannon" 4
-
-    "LP036a Battery Pack"
-    "Small Radar Jammer"
-    "Tactical Scanner"
-    "Fuel Barrel" 40
-  engine -17 35
-  engine 17 35
-  gun -10 -26 "X1 Blaster Cannon"
-  gun 10 -26 "X1 Blaster Cannon"
-  gun -16 -20 "X1 Blaster Cannon"
-  gun 16 -20 "X1 Blaster Cannon"
-  leak "flame" 50 80
-  explode "tiny explosion" 10
-  explode "small explosion" 20
-  description "The Warrior is Betelgeuse Shipyard's most popular design of escort ship. They have greater firepower than most other interceptor-class vessel, meaning that any pirate flying solo will think twice before attacking a convoy that is accompanied by a Warrior. However, Warriors are also much less manoeuvrable than other small ships."
-
-
-ship "Warrior" "Warrior (Gatling)"
-  outfits
-    "D23-QP Shield Generator"
-    "nGVF-CC Fuel Cell"
-    "Hyperdrive"
-
-    "IT-2700 Ion Thruster"
-    "IS-2200 Ion Steering"
-
-    "Gatling Round" 12000
-    "Gatling Bullet Boxes" 8
-    "Gatling Gun" 4
-
-    "Supercapacitor"
-    "Small Radar Jammer"
-    "Tactical Scanner"
-    "Fuel Barrel" 40
-
-
-ship "Warrior" "Warrior (Patrol)"
-  outfits
-    "D23-QP Shield Generator"
-    "nGVF-CC Fuel Cell"
-    "Hyperdrive"
-
-    "IT-2700 Ion Thruster"
-    "IS-2200 Ion Steering"
-
-    "Meteor Missile" 80
-    "Meteor Missile Box" 2
-    "Meteor Missile Launcher" 2
-    "X1 Blaster Cannon" 2
-
-    "LP036a Battery Pack"
-    "Cargo Scanner"
-    "Fuel Barrel" 40
-    "Outfit Scanner"
-    "Small Radar Jammer"
-    "Tactical Scanner" 2
-    "Outfit Space Expansion"
-    "Laser Rifle" 2
-  gun "X1 Blaster Cannon"
-  gun "X1 Blaster Cannon"
-  gun "Meteor Missile Launcher"
-  gun "Meteor Missile Launcher"
 
