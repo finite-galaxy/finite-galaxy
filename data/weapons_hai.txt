@@ -181,10 +181,10 @@ effect "tracker cloud"
 outfit "Pulse Cannon"
   category "Cannons"
   thumbnail "outfit/pulse_cannon"
-  cost 130000
-  "mass" 13
-  "outfit space" -13
-  "weapon space" -13
+  cost 520000
+  "mass" 26
+  "outfit space" -26
+  "weapon space" -26
   "gun ports" -1
   weapon
     sprite "projectile/pulse"
@@ -193,17 +193,17 @@ outfit "Pulse Cannon"
     "inaccuracy" 1
     "velocity" 19
     "lifetime" 30
-    "reload" 20
-    "firing energy" 24
-    "firing heat" 70
-    "shield damage" 45
+    "reload" 10
+    "firing energy" 27
+    "firing heat" 72
+    "shield damage" 43
     "hull damage" 34
   description "Like most examples of Hai engineering that you have seen, the Pulse Cannon does not stand out as a particularly advanced or elegant technology, but it has a reputation for being efficient, reliable, and well-balanced."
 
 outfit "Pulse Turret"
   category "Turrets"
   thumbnail "outfit/pulse_turret"
-  cost 590000
+  cost 680000
   "mass" 34
   "drag" .34
   "outfit space" -34
@@ -213,7 +213,7 @@ outfit "Pulse Turret"
   weapon
     sprite "projectile/pulse"
     "hardpoint sprite" "hardpoint/pulse_turret"
-    "hardpoint offset" 7.
+    "hardpoint offset" 14.
     sound "pulse"
     "hit effect" "pulse impact"
     "inaccuracy" 1
@@ -221,11 +221,11 @@ outfit "Pulse Turret"
     "velocity" 19
     "lifetime" 30
     "reload" 10
-    "firing energy" 24
-    "firing heat" 70
-    "shield damage" 45
+    "firing energy" 27
+    "firing heat" 72
+    "shield damage" 43
     "hull damage" 34
-  description "Pulse Cannons are the primary offensive weapon used by Hai ships. This turret mounts two pulse cannons side by side and allows them to track even the fastest-moving of targets."
+  description "Pulse Cannons are the primary offensive weapon used by Hai ships. This turret mounts one pulse cannon and allows it to rotate and track even the fastest-moving of targets."
 
 effect "pulse impact"
   sprite "effect/pulse impact"
