@@ -3057,7 +3057,7 @@ system "Almaaz"
 
 system "Almach"
   pos -7 232
-  government "Pirate"
+  government "Republic"
   habitable 320
   belt 1914
   link Schedar
@@ -3080,9 +3080,11 @@ system "Almach"
   trade "Medical" 746
   trade "Metal" 338
   trade "Plastic" 266
-  fleet "Pirates Core Small" 500
-  fleet "Pirates Core Large" 1400
-  fleet "Republic Large" 6000
+  fleet "Merchants Core Small" 3000
+  fleet "Merchants Core Large" 5000
+  fleet "Pirates Core Small" 4000
+  fleet "Pirates Core Large" 8000
+  fleet "Republic Small" 12000
   fleet "Korath Raid" 20000
   object
     sprite star/k5
@@ -3091,8 +3093,8 @@ system "Almach"
     sprite planet/desert8
     distance 197.61
     period 62.1153
-  object "Deadman's Cove"
-    sprite planet/ocean9
+  object "Featherweight"
+    sprite planet/forest3-b
     distance 639.82
     period 361.886
     object
@@ -3326,9 +3328,8 @@ system "Alnitak"
   government "Republic"
   habitable 349
   belt 1907
-  link Rigel
   link Mintaka
-  link Saiph
+  link Rigel
   asteroids "small rock" 1 5.4375
   asteroids "medium rock" 24 4.6875
   asteroids "large rock" 14 9.25
@@ -3540,8 +3541,11 @@ system "Alpha Centauri"
   trade "Medical" 498
   trade "Metal" 393
   trade "Plastic" 253
+  fleet "Merchants Core Small" 900
+  fleet "Merchants Core Large" 1100
   fleet "Merchants North Small" 800
   fleet "Merchants North Large" 1000
+  fleet "Merchants Paradise" 1200
   fleet "Republic Small" 2000
   fleet "Republic Large" 6000
   object
@@ -3815,10 +3819,10 @@ system "Altair"
   government "Republic"
   habitable 945
   belt 1830
-  link Vega
-  link Sol
   link "Delta Capricorni"
   link Fomalhaut
+  link Sol
+  link Vega
   asteroids "large metal" 1 4.6748
   trade "Clothing" 378
   trade "Electronics" 806
@@ -5228,9 +5232,10 @@ system "Betelgeuse"
   government "Syndicate"
   habitable 1080
   belt 1641
-  link Mirzam
   link Alheka
+  link Mirzam
   link Rigel
+  link Saiph
   asteroids "medium rock" 21 1.86
   asteroids "large rock" 7 1.65
   asteroids "small metal" 78 2.7
@@ -14832,7 +14837,7 @@ system "Mebla"
 
 system "Mebsuta"
   pos -482 -394
-  government "Syndicate"
+  government "Pirate"
   habitable 670
   belt 1740
   link Mirzam
@@ -14853,11 +14858,9 @@ system "Mebsuta"
   trade "Medical" 457
   trade "Metal" 385
   trade "Plastic" 420
-  fleet "Merchants North Small" 3000
-  fleet "Merchants North Large" 5000
-  fleet "Pirates North Small" 4000
-  fleet "Pirates North Large" 8000
-  fleet "Syndicate Small" 12000
+  fleet "Pirates North Small" 500
+  fleet "Pirates North Large" 1400
+  fleet "Syndicate Large" 6000
   object
     sprite star/k0
     distance 37.1157
@@ -14871,8 +14874,8 @@ system "Mebsuta"
     sprite planet/desert8-b
     distance 305.544
     period 82.5342
-  object "Featherweight"
-    sprite planet/forest3-b
+  object "Deadman's Cove"
+    sprite planet/ocean9
     distance 655.034
     period 259.071
     object
@@ -19507,11 +19510,11 @@ system "Sagittarius A*"
 
 system "Saiph"
   pos -375 -390
-  government "Republic"
+  government "Syndicate"
   habitable 320
   belt 1690
+  link Betelgeuse
   link Rigel
-  link Alnitak
   asteroids "small rock" 103 6.4974
   asteroids "medium rock" 69 5.4054
   asteroids "large rock" 13 3.003
@@ -19531,8 +19534,8 @@ system "Saiph"
   fleet "Merchants North Large" 2000
   fleet "Pirates North Small" 2000
   fleet "Pirates North Large" 3000
-  fleet "Republic Small" 4000
-  fleet "Republic Large" 7000
+  fleet "Syndicate Small" 4000
+  fleet "Syndicate Large" 7000
   object
     sprite star/k5
     period 10
@@ -20964,12 +20967,12 @@ system "Sol"
   government "Republic"
   habitable 1080
   belt 1529
-  link Vega
   link "Alpha Centauri"
   link Altair
-  link Sirius
-  link Denebola
   link Caph
+  link Denebola
+  link Sirius
+  link Vega
   asteroids "small rock" 30 2.691
   asteroids "large rock" 50 5.0508
   asteroids "medium metal" 4 2.8566
@@ -22873,9 +22876,9 @@ system "Vega"
   habitable 1400
   belt 1744
   link Altair
-  link Sol
   link Menkent
   link Nocte
+  link Sol
   asteroids "small rock" 2 5.7596
   asteroids "medium rock" 1 6.4736
   asteroids "large rock" 1 6.5688
@@ -24660,7 +24663,7 @@ planet "Chiron"
   outfitter "Sisensis Intermediate"
   outfitter "Syndicate Intermediate"
   shipyard "Centaur Advanced"
-  shipyard "C-Square Basics"
+  shipyard "Star Intermediate"
   shipyard "Vortex Basics"
   bribe 0.02
   security 0.3
@@ -24841,18 +24844,18 @@ planet "Darkwaste"
   description `This planet seems to have all the conditions necessary for a vibrant, Earth-like ecology. The gravity and temperature are moderate, and there is a fair amount of surface water, although the oceans are quite small. However, aside from a few stunted plants and lichen, there is almost no native life here. Given how skilled the Hai appear to be at terraforming other worlds, it is strange that this one has been left barren.`
 
 planet "Deadman's Cove"
-  attributes pirate "core pirate"
+  attributes pirate "north pirate"
   landscape land/sea1
   description `Deadman's Cove is an ocean planet; the continents take up only a tenth of its surface area. Legends tell of massive sea creatures hiding in the deeps: serpents hundreds of meters long; colossal sea turtles; strange tentacled monsters and exotic fish.`
   description `  One island archipelago is home to the spaceport, the only part of the planet where it is safe to land uninvited. The other islands - even some that seem from a distance to be uninhabited - are often used as staging bases for pirate fleets, who guard their secrets closely.`
   spaceport `Your ship is on a landing pad only a few meters above the pounding surf, and you can't help worrying about what might happen if the tide rises any higher. If nothing else, the salt water is bound to corrode your hull if you stay here too long. You make your way to a bar where a cage hanging from the ceiling holds an actual parrot. After trying for a while to get it to talk to you, you realize that it is dead, stuffed and nailed to its perch.`
-  outfitter "Lovelace Basics"
+  outfitter "Syndicate Basics"
   outfitter "Pirate Outfits"
   bribe 0.03
   security 0
   tribute 600
     threshold 2500
-    fleet "Pirates Core Small" 45
+    fleet "Pirates North Small" 45
 
 planet "Deep"
   attributes south fishing
@@ -25001,7 +25004,7 @@ planet "Earth"
   outfitter "Sisensis Intermediate"
   outfitter "Syndicate Intermediate"
   shipyard "Centaur Intermediate"
-  shipyard "C-Square Intermediate"
+  shipyard "Star Intermediate"
   shipyard "Vortex Intermediate"
   "required reputation" 2
   bribe 0.03
@@ -25046,7 +25049,6 @@ planet "Endless Sky"
   outfitter "Basic Outfits"
   outfitter "Sisensis Basics"
   shipyard "Basic Ships"
-  shipyard "Centaur Basics"
   security 0.05
   tribute 300
     threshold 2500
@@ -25166,7 +25168,7 @@ planet "Farwater"
   spaceport `The spaceport appears to have been built by expanding a natural set of caves in a cliff facing the ocean. At high tide the lower caves flood, allowing barges to dock and unload the compounds they have harvested. Tunnels lead deep into the rock to rooms that have been carved out as warehouse space and living quarters. The rock remains somewhat cool, even at midday, but the air is still oppressively humid.`
 
 planet "Featherweight"
-  attributes north research frontier
+  attributes core research
   landscape land/sky6
   description `Featherweight is a small world, with lighter than normal gravity. Centuries ago, because of its remoteness, this world was the site of some illegal genetic experiments, and rumours say that the current inhabitants are the result of those experiments. Because they are so well adapted to low gravity, few of them choose to leave, and very few outsiders choose to settle here, so this world's culture remains quite insular and detached from the rest of the galaxy.`
   spaceport `Although this is a human planet, as you walk through this spaceport you feel as if you are on an alien world. The ceilings and doorways are all a bit higher than you are used to, and the locals tower over you. Aside from a few food carts in the marketplace, there are no shops or restaurants in the spaceport, and the nearest village is several kilometers away. It is as if the entire port was designed in order to limit interactions with outsiders to the bare minimum that is necessary.`
@@ -25238,7 +25240,7 @@ planet "Follower"
   outfitter "Sisensis Intermediate"
   outfitter "Syndicate Basics"
   shipyard "Betelgeuse Basics"
-  shipyard "C-Square Basics"
+  shipyard "Star Basics"
   bribe 0.03
   security 0.4
   tribute 2400
@@ -25319,7 +25321,7 @@ planet "Furnace"
 planet "Geminus"
   attributes paradise factory mining
   landscape land/mountain18-harro
-  description `Geminus, although not the most hospitable of worlds, is a young enough planet that large stores of iron, titanium, and other metals are easily accessible near the surface. For that reason, it has become one of the Syndicate's secondary shipyards. It is also home to C-Square, producer of the Flivver.`
+  description `Geminus, although not the most hospitable of worlds, is a young enough planet that large stores of iron, titanium, and other metals are easily accessible near the surface. For that reason, it has become one of the busiest centres of shipbuilding in human space, home to Syndicate's Star Shipyards.`
   description `  The constant volcanic activity leaves the planet perpetually shrouded in clouds of ash and fog, so that being outside means being in a twilight haze with low visibility. Probably in compensation for this, interior spaces tend to be brightly lit and painted in bold colours.`
   spaceport `Like everything else on Geminus, the spaceport is not terribly pretty, but is functional and efficient. Each of the wide hallways is marked out like a road, with space in the centre for electric carts carrying cargo, while pedestrians are relegated to the edges.`
   spaceport `  The hub of the spaceport is a food court with a ring of shops in the centre and seating on the outside, where you can look out of plate glass windows at the lava fields and caldera outside. By night, you can see the volcanic glow all around the horizon.`
@@ -25328,7 +25330,7 @@ planet "Geminus"
   outfitter "Earth Basics"
   outfitter "Syndicate Intermediate"
   shipyard "Betelgeuse Intermediate"
-  shipyard "C-Square Advanced"
+  shipyard "Star Advanced"
   bribe 0.1
   security 0.9
   tribute 4800
@@ -25579,7 +25581,8 @@ planet "Hephaestus"
   outfitter "Lovelace Intermediate"
   outfitter "Syndicate Advanced"
   shipyard "Betelgeuse Intermediate"
-  shipyard "C-Square Intermediate"
+  shipyard "Centaur Basics"
+  shipyard "Star Intermediate"
   shipyard "Megaparsec Intermediate"
   bribe 0.1
   security 0.7
@@ -25884,6 +25887,7 @@ planet "Little Garden"
   outfitter "Common Outfits"
   outfitter "Sisensis Advanced"
   shipyard "Centaur Intermediate"
+  shipyard "Star Basics"
   security 0.1
   tribute 1400
     threshold 4000
@@ -25950,7 +25954,7 @@ planet "Mainsail"
   outfitter "Basic Outfits"
   outfitter "Syndicate Basics"
   shipyard "Betelgeuse Basics"
-  shipyard "C-Square Basics"
+  shipyard "Star Basics"
   bribe 0.06
   security 0.5
   tribute 1600
@@ -26425,7 +26429,7 @@ planet "Precipitous"
 planet "Prime"
   attributes north urban factory
   landscape land/city11
-  description `Prime is a very Earth-like ocean world, with a population of over a billion people. It is home to Betelgeuse Shipyards, the shipbuilbing arm of the Syndicate, and much of the industry on the planet is related to ship-building in one way or another, like refining and working metal, or developing exotic new hull and framing materials. Although some mining is done in more remote regions of the planet, Prime is reliant on shipments of metal and other goods to feed its industries.`
+  description `Prime is a very Earth-like ocean world, with a population of over a billion people. It is home to Betelgeuse Shipyards, the heavy ship-builbing arm of the Syndicate, and much of the industry on the planet is related to ship-building in one way or another, like refining and working metal, or developing exotic new hull and framing materials. Although some mining is done in more remote regions of the planet, Prime is reliant on shipments of metal and other goods to feed its industries.`
   spaceport `The spaceport is surrounded by kilometers of hangars and factories where new ships are being assembled. The port itself is a trio of towering buildings, with a skywalk on the top floors to provide a view of the surrounding area. Larger ships land on pads on the ground surrounding the towers, while smaller ships can fly into hangars built into the sides of the towers themselves. Everything is made of gleaming metal, and each tower is slightly tapered and adorned with painted fins that make it resemble an enormous starship.`
   outfitter "Pilot Licence"
   outfitter "Common Outfits"
@@ -26538,7 +26542,7 @@ planet "Reunion"
   outfitter "Sisensis Basics"
   outfitter "Syndicate Basics"
   shipyard "Centaur Basics"
-  shipyard "C-Square Basics"
+  shipyard "Star Basics"
   shipyard "Vortex Basics"
   security 0.3
   tribute 2900
@@ -26853,7 +26857,7 @@ planet "Shroud"
   outfitter "Pilot Licence"
   outfitter "Common Outfits"
   outfitter "Syndicate Basics"
-  shipyard "Syndicate Intermediate"
+  shipyard "Betelgeuse Intermediate"
   bribe 0.04
   security 0.8
   tribute 3800
@@ -27165,7 +27169,7 @@ planet "Tinker"
   outfitter "Syndicate Basics"
   shipyard "Megaparsec Basics"
   shipyard "Centaur Intermediate"
-  shipyard "C-Square Basics"
+  shipyard "Star Basics"
   shipyard "Vortex Intermediate"
   bribe 0.04
   security 0.4

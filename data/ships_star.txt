@@ -1,0 +1,293 @@
+shipyard "Betelgeuse Variants"
+  "Star Barge"
+  "Star Barge (Miner)"
+  "Star Freighter"
+  "Star Freighter (Fancy)"
+  "Star Freighter (Hai)"
+  "Star Freighter (Miner)"
+  "Star Freighter (Secret Cargo)"
+  "Star Queen"
+  "Star Queen (Hai)"
+
+
+
+ship "Star Barge"
+  sprite "ship/star barge"
+  thumbnail "thumbnail/star barge"
+  attributes
+    category "Interceptor"
+#    manufacturer "Betelgeuse"
+    licences
+      Pilot
+    "cost" 210000
+    "shields" 600
+    "hull" 1000
+    "required crew" 1
+    "bunks" 3
+    "mass" 70
+    "drag" 2.4
+    "heat dissipation" .8
+    "cargo space" 50
+    "outfit space" 160
+    "core space" 90
+    "engine space" 40
+    "weapon space" 30
+    weapon
+      "blast radius" 16
+      "shield damage" 160
+      "hull damage" 80
+      "hit force" 240
+  outfits
+    "D14-RN Shield Generator"
+    "nGVF-BB Fuel Cell"
+    "Hyperdrive"
+
+    "IT-1700 Ion Thruster"
+    "IS-1200 Ion Steering"
+
+    "Light Anti-Missile Turret"
+
+    "LP036a Battery Pack"
+    "Fuel Barrel" 30
+  engine -9 38
+  engine 9 38
+  turret 0 -8 "Light Anti-Missile Turret"
+  leak "leak" 60 50
+  explode "tiny explosion" 10
+  explode "small explosion" 10
+  description "The Syndicate CT-50 Star Barge is little more than a cluster of cargo containers with an engine at one end and a cockpit on the other. It is a slow and ugly ship, but it can carry enough cargo to earn its captain a steady income even in parts of the galaxy where it is hard to find passengers to carry or courier missions."
+  description "  Because they often carry valuable cargo, and because they are too slow to evade any attackers, Star Barges are a common target of pirates."
+
+
+ship "Star Barge" "Star Barge (Miner)"
+  outfits
+    "D14-RN Shield Generator"
+    "nGVF-BB Fuel Cell"
+    "Hyperdrive"
+
+    "IT-1700 Ion Thruster"
+    "IS-1200 Ion Steering"
+
+    "Laser Turret"
+
+    "Supercapacitor" 2
+    "Asteroid Scanner"
+    "Fuel Barrel" 30
+    "Small Radar Jammer"
+    "Tactical Scanner"
+
+
+
+ship "Star Freighter"
+  sprite "ship/freighter"
+  thumbnail "thumbnail/freighter"
+  attributes
+    category "Corvette"
+#    manufacturer "Betelgeuse"
+    licences
+      Pilot
+    "cost" 730000
+    "shields" 2000
+    "hull" 2000
+    "required crew" 2
+    "bunks" 7
+    "mass" 240
+    "drag" 5.6
+    "heat dissipation" .6
+    "cargo space" 160
+    "outfit space" 310
+    "core space" 160
+    "engine space" 70
+    "weapon space" 80
+    weapon
+      "blast radius" 40
+      "shield damage" 400
+      "hull damage" 200
+      "hit force" 600
+  outfits
+    "D23-QP Shield Generator"
+    "RT-I Radiothermal"
+    "Hyperdrive"
+
+    "IT-2700 Ion Thruster"
+    "IS-2200 Ion Steering"
+    "IR-1700 Ion Reverse"
+
+    "X4 Blaster Turret"
+    "Light Anti-Missile Turret" 2
+
+    "LP072a Battery Pack"
+    "Fuel Barrel" 60
+  engine -9 97
+  engine 9 97
+  turret 0 -52 "Light Anti-Missile Turret"
+  turret 0 6 "X4 Blaster Turret"
+  turret 0 65 "Light Anti-Missile Turret"
+  leak "leak" 60 50
+  leak "flame" 50 80
+  explode "tiny explosion" 10
+  explode "small explosion" 30
+  explode "medium explosion" 20
+  "final explode" "final explosion small"
+  description "The Star Freighter is designed by Syndicate's Star Shipyards to be an efficient means of carrying cargo from system to system, but is so slow and difficult to land that most pilots hate flying them."
+  description "  Freighters are an obvious target for pirates, but turn much too slowly to be able to bring any forward-facing guns to bear on an approaching enemy. As a result, the latest model is equipped only with turrets, including anti-missile turrets to prevent attackers from simply bombarding them into submission from a safe distance."
+
+
+ship "Star Freighter" "Star Freighter (Fancy)"
+  outfits
+    "D23-QP Shield Generator"
+    "RT-I Radiothermal"
+    "Hyperdrive"
+
+    "IT-2700 Ion Thruster"
+    "IS-2200 Ion Steering"
+    "Afterburner"
+
+    "Laser Turret" 2
+    "Heavy Anti-Missile Turret"
+
+    "LP072a Battery Pack"
+    "Fuel Barrel" 60
+    "Ramscoop"
+    "Outfit Space Expansion"
+  turret "Laser Turret"
+  turret "Heavy Anti-Missile Turret"
+  turret "Laser Turret"
+
+
+ship "Star Freighter" "Star Freighter (Hai)"
+  outfits
+    "Corundum Regenerator"
+    "Geode Reactor"
+    "Hyperdrive"
+
+    `"Benga" Atomic Steering`
+    `"Benga" Atomic Thruster`
+
+    "Pulse Turret"
+    "Chameleon Anti-Missile" 2
+
+    "Chasm Batteries"
+    "Fuel Pod" 6
+    "Ramscoop"
+  turret "Chameleon Anti-Missile"
+  turret "Pulse Turret"
+  turret "Chameleon Anti-Missile"
+
+
+ship "Star Freighter" "Star Freighter (Miner)"
+  outfits
+    "D23-QP Shield Generator"
+    "RT-I Radiothermal"
+    "Hyperdrive"
+
+    "IT-2700 Ion Thruster"
+    "IS-2200 Ion Steering"
+
+    "Laser Turret" 3
+
+    "LP072a Battery Pack"
+    "Asteroid Scanner"
+    "Fuel Barrel" 60
+    "Ramscoop"
+    "Small Radar Jammer"
+    "Tactical Scanner"
+
+
+ship "Star Freighter" "Star Freighter (Secret Cargo)"
+  outfits
+    "D23-QP Shield Generator"
+    "RT-I Radiothermal"
+    "Hyperdrive"
+
+    "IT-2700 Ion Thruster"
+    "IS-2200 Ion Steering"
+    "IR-1700 Ion Reverse"
+
+    "X4 Blaster Turret"
+    "Light Anti-Missile Turret" 2
+
+    "LP072a Battery Pack"
+    "Fuel Barrel" 60
+    "Secret Cargo"
+  turret "Light Anti-Missile Turret"
+  turret "X4 Blaster Turret"
+  turret "Light Anti-Missile Turret"
+
+
+
+ship "Star Queen"
+  sprite "ship/star queen"
+  thumbnail "thumbnail/star queen"
+  attributes
+    category "Corvette"
+#    manufacturer "Betelgeuse"
+    licences
+      Pilot
+    "cost" 5500000
+    "shields" 4100
+    "hull" 2200
+    "required crew" 34
+    "bunks" 112
+    "mass" 230
+    "drag" 5.5
+    "heat dissipation" .65
+    "cargo space" 60
+    "outfit space" 410
+    "core space" 190
+    "engine space" 100
+    "weapon space" 120
+    weapon
+      "blast radius" 60
+      "shield damage" 600
+      "hull damage" 300
+      "hit force" 900
+  outfits
+    "D94-YV Shield Generator"
+    "Fission Reactor"
+    "Hyperdrive"
+
+    "IT-3700 Ion Thruster"
+    "IS-3200 Ion Steering"
+
+    "Meteor Missile" 120
+    "Meteor Missile Box" 3
+    "Meteor Missile Launcher" 3
+    "Heavy Anti-Missile Turret" 2
+
+    "LP072a Battery Pack"
+    "Fuel Barrel" 50
+  engine -18 116
+  engine 18 116
+  gun 0 -116 "Meteor Missile Launcher"
+  gun -22 -80 "Meteor Missile Launcher"
+  gun 22 -80 "Meteor Missile Launcher"
+  turret -28 -9 "Heavy Anti-Missile Turret"
+  turret 28 -9 "Heavy Anti-Missile Turret"
+  leak "leak" 50 50
+  leak "big leak" 80 30
+  explode "tiny explosion" 10
+  explode "small explosion" 25
+  explode "medium explosion" 25
+  explode "large explosion" 10
+  "final explode" "final explosion medium"
+  description "The Star Queen is a relic of a more peaceful period of galactic history: a luxury liner for high-end tourists. Every cabin has its own mini-bar, and the bathrooms have marble tile and showers that use actual hot water instead of chemicals or sonic vibrations."
+
+
+ship "Star Queen" "Star Queen (Hai)"
+  outfits
+    "Diamond Regenerator"
+    "Geode Reactor"
+    "Hyperdrive"
+
+    `"Biroo" Atomic Steering`
+    `"Biroo" Atomic Thruster`
+
+    "Tracker" 168
+    "Tracker Storage Pod" 3
+    "Tracker Launcher" 3
+    "Chameleon Anti-Missile" 2
+
+    "Gorge Batteries"
+    "Fuel Pod" 5
+
