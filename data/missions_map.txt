@@ -1,18 +1,28 @@
+# "Drak guarding Korath space"
+# "Drak guarding Sayaiban"
+# "Drak guarding Void Sprites"
+# "Permanent Deep fleets"
+# "Permanent Militia fleets"
+# "Permanent Republic fleets"
+# "Permanent Syndicate fleets"
+
+
+
 mission "Drak guarding Korath space"
   invisible
   landing
   npc kill
-    government Drak
+    government "Drak"
     personality heroic vindictive staying
     system Fasitopfar
     ship "Archon" "Kasiliri's Folly"
   npc kill
-    government Drak
+    government "Drak"
     personality heroic vindictive staying
     system Kasikfar
     ship "Archon" "Sword of Eden"
   npc kill
-    government Drak
+    government "Drak"
     personality heroic vindictive staying
     system Peresedersi
     ship "Archon" "Snows of Far Door Nai"
@@ -21,7 +31,7 @@ mission "Drak guarding Sayaiban"
   invisible
   landing
   npc kill
-    government Drak
+    government "Drak"
     personality heroic vindictive staying
     system Sayaiban
     ship "Archon" "Watchful Gravetender"
@@ -73,8 +83,137 @@ mission "Drak guarding Void Sprites"
   invisible
   landing
   npc kill
-    government Drak
+    government "Drak"
     personality heroic vindictive staying
     system Nenia
     ship "Archon (Cloaked)" "Sleeping Dragon"
+
+
+
+mission "Permanent Deep fleets"
+  invisible
+  landing
+  npc kill
+    government "Deep"
+    personality heroic vindictive staying
+    system "Zosma"
+    ship "Leviathan" "D.S.S. Snow White"
+    ship "Warrior (Patrol)" "D.S.S. Bashful"
+    ship "Warrior (Patrol)" "D.S.S. Doc"
+    ship "Warrior (Patrol)" "D.S.S. Dopey"
+    ship "Warrior (Patrol)" "D.S.S. Grumpy"
+    ship "Warrior (Patrol)" "D.S.S. Happy"
+    ship "Warrior (Patrol)" "D.S.S. Sleepy"
+    ship "Warrior (Patrol)" "D.S.S. Sneezy"
+
+mission "Permanent Militia fleets"
+  invisible
+  landing
+  npc kill
+    government "Militia"
+    personality heroic vindictive staying
+    system "Tarazed"
+    ship "Falcon" "I.M.S. Boreas"
+    ship "Falcon" "I.M.S. Eurus"
+    ship "Falcon" "I.M.S. Notus"
+    ship "Falcon" "I.M.S. Zephyrus"
+
+mission "Permanent Republic fleets"
+  invisible
+  landing
+  npc kill
+    government "Republic"
+    personality heroic vindictive staying
+    system "Sol"
+    ship "Jupiter (Particle)" "R.N.S. Oceanus"
+    ship "Foxhound" "Omega One"
+    ship "Foxhound" "Omega Two"
+    ship "Foxhound" "Omega Three"
+    ship "Foxhound" "Omega Four"
+    ship "Poodle" "Omega Five"
+    ship "Poodle" "Omega Six"
+    ship "Poodle" "Omega Seven"
+    ship "Poodle" "Omega Eight"
+    ship "Poodle" "Omega Nine"
+    ship "Poodle" "Omega Ten"
+  npc kill
+    government "Republic"
+    personality heroic vindictive staying
+    system "Alnitak"
+    ship "Saturn" "R.N.S. Weser"
+    ship "Poodle" "Psi One"
+    ship "Poodle" "Psi Two"
+    ship "Poodle" "Psi Three"
+    ship "Poodle" "Psi Four"
+    ship "Mars" "R.N.S. Fulda"
+    ship "Mars" "R.N.S. Leine"
+    ship "Mars" "R.N.S. Werra"
+  npc kill
+    government "Republic"
+    personality heroic vindictive staying
+    system "Tania Australis"
+    ship "Saturn" "R.N.S. Seine"
+    ship "Poodle" "Sigma One"
+    ship "Poodle" "Sigma Two"
+    ship "Poodle" "Sigma Three"
+    ship "Poodle" "Sigma Four"
+    ship "Mars" "R.N.S. Marne"
+    ship "Mars" "R.N.S. Oise"
+    ship "Mars" "R.N.S. Yonne"
+  npc kill
+    government "Republic"
+    personality heroic vindictive staying
+    system "Zaurak"
+    ship "Saturn" "R.N.S. Po"
+    ship "Poodle" "Pi One"
+    ship "Poodle" "Pi Two"
+    ship "Poodle" "Pi Three"
+    ship "Poodle" "Pi Four"
+    ship "Mars" "R.N.S. Adda"
+    ship "Mars" "R.N.S. Oglio"
+    ship "Mars" "R.N.S. Ticino"
+
+mission "Permanent Syndicate fleets"
+  invisible
+  landing
+  npc kill
+    government "Syndicate"
+    personality heroic vindictive staying
+    system "Aldebaran"
+    ship "Vanguard" "S.S. Arges"
+    ship "Vanguard" "S.S. Brontes"
+    ship "Vanguard" "S.S. Steropes"
+  npc kill
+    government "Syndicate"
+    personality heroic vindictive staying
+    system "Alphard"
+    ship "Protector" "S.S. Euryale"
+    ship "Quicksilver (Patrol)" "S-30E1"
+    ship "Quicksilver (Patrol)" "S-30E2"
+    ship "Quicksilver (Patrol)" "S-30E3"
+    ship "Quicksilver (Patrol)" "S-30E4"
+    ship "Quicksilver (Patrol)" "S-30E5"
+    ship "Quicksilver (Patrol)" "S-30E6"
+  npc kill
+    government "Syndicate"
+    personality heroic vindictive staying
+    system "Betelgeuse"
+    ship "Protector" "S.S. Medusa"
+    ship "Quicksilver (Patrol)" "S-12M1"
+    ship "Quicksilver (Patrol)" "S-12M2"
+    ship "Quicksilver (Patrol)" "S-12M3"
+    ship "Quicksilver (Patrol)" "S-12M4"
+    ship "Quicksilver (Patrol)" "S-12M5"
+    ship "Quicksilver (Patrol)" "S-12M6"
+  npc kill
+    government "Syndicate"
+    personality heroic vindictive staying
+    system "Nihal"
+    ship "Protector" "S.S. Stheno"
+    ship "Quicksilver (Patrol)" "S-02S1"
+    ship "Quicksilver (Patrol)" "S-02S2"
+    ship "Quicksilver (Patrol)" "S-02S3"
+    ship "Quicksilver (Patrol)" "S-02S4"
+    ship "Quicksilver (Patrol)" "S-02S5"
+    ship "Quicksilver (Patrol)" "S-02S6"
 

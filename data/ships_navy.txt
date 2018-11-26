@@ -3,6 +3,7 @@ shipyard "Navy Variants"
   "Jupiter (Alpha)"
   "Jupiter (Jump)"
   "Jupiter (Mark II)"
+  "Jupiter (Particle)"
   "Mars"
   "Mars (Mark II)"
   "Mercury"
@@ -70,11 +71,7 @@ ship "Jupiter"
   gun -25 -166 "Torpedo Launcher"
   gun 25 -166 "Torpedo Launcher"
   turret 0 -114 "Particle Turret"
-#  turret -40 -53 "Heavy Anti-Missile Turret"
-#  turret 40 -53 "Heavy Anti-Missile Turret"
   turret 0 15 "Heavy Anti-Missile Turret"
-#  turret -39 52 "Heavy Anti-Missile Turret"
-#  turret 39 52 "Heavy Anti-Missile Turret"
   turret 0 103 "Particle Turret"
   turret 0 157 "Heavy Anti-Missile Turret"
   fighter -37 -65
@@ -184,6 +181,27 @@ ship "Jupiter" "Jupiter (Mark II)"
   turret "Electron Turret"
   turret "Heavy Anti-Missile Turret"
 
+
+ship "Jupiter" "Jupiter (Particle)"
+  outfits
+    "D94-YV Shield Generator"
+    "Armageddon Core"
+    "Hyperdrive"
+
+    "A860 Atomic Thruster"
+    "A525 Atomic Steering"
+
+    "Particle Cannon" 4
+    "Particle Turret" 4
+
+    "LP144a Battery Pack"
+    "Liquid Helium Cooler"
+#    "Fuel Barrel" 70
+    "Large Radar Jammer"
+    "Ramscoop"
+    "Tactical Scanner" 7
+    "Fragmentation Grenades" 80
+    "Laser Rifle" 160
 
 
 ship "Mars"
