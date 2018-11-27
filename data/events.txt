@@ -179,28 +179,13 @@ event "war begins"
   system "Castor"
     fleet "Merchants North Small" 800
     fleet "Merchants North Large" 1100
-    fleet "Republic Small" 800
-    fleet "Republic Large" 400
+    fleet "Syndicate Small" 800
+    fleet "Syndicate Large" 400
   system "Pollux"
     fleet "Merchants North Small" 700
     fleet "Merchants North Large" 1100
-    fleet "Republic Small" 700
-    fleet "Republic Large" 900
-  system "Vega"
-    fleet "Merchants North Small" 1000
-    fleet "Merchants North Large" 4000
-    fleet "Republic Small" 900
-    fleet "Republic Large" 1000
-  system "Denebola"
-    fleet "Merchants North Small" 1000
-    fleet "Merchants North Large" 3000
-    fleet "Republic Small" 700
-    fleet "Republic Large" 900
-  system "Merak"
-    fleet "Merchants North Small" 1500
-    fleet "Merchants North Large" 4000
-    fleet "Republic Small" 1100
-    fleet "Republic Large" 1300
+    fleet "Syndicate Small" 700
+    fleet "Syndicate Large" 900
   planet "Luna"
     description `In the early days of space travel, back when engines were still so inefficient that escaping from a planet's gravity was costly and difficult, an enormous shipyard was built on the Moon where asteroids, harvested from the asteroid belt, were mined for raw materials for ships.`
     description `Until recently, Luna was home to the Republic Navy Yard, the largest military shipyard in human space. Now, there is nothing left of the shipyard but a gaping crater in the ground, from the recent terrorist bombing.`
@@ -216,150 +201,32 @@ event "war begins"
 
 event "initial deployment 1"
   date 24 7 3019
-  system "Spica"
-    fleet "Merchants South Small" 1200
-    fleet "Merchants South Large" 1700
+  system "Zubenelgenubi"
+    fleet "Merchants South Small" 500
+    fleet "Merchants South Large" 900
     fleet "Free Worlds Small" 800
-    fleet "Free Worlds Large" 1500
-  system "Minkar"
-    fleet "Merchants South Small" 700
-    fleet "Merchants South Large" 1500
-    fleet "Free Worlds Small" 700
-    fleet "Free Worlds Large" 1200
-  system "Mimosa"
-    fleet "Merchants South Small" 1200
-    fleet "Merchants South Large" 2300
-    fleet "Free Worlds Small" 1200
-    fleet "Free Worlds Large" 1900
-  system "Kraz"
-    fleet "Merchants South Small" 900
-    fleet "Merchants South Large" 1600
-    fleet "Free Worlds Small" 700
-    fleet "Free Worlds Large" 900
-  system "Acrux"
-    fleet "Merchants South Small" 500
-    fleet "Merchants South Large" 800
-    fleet "Miners South" 5000
-    fleet "Free Worlds Small" 700
-    fleet "Free Worlds Large" 1100  
-  system "Tania Australis"
-    fleet "Merchants North Small" 1400
-    fleet "Merchants North Large" 2900
-    fleet "Republic Small" 600
-    fleet "Republic Large" 400
-    fleet "Navy Surveillance" 2000
-  system "Fala"
-    fleet "Merchants North Small" 1900
-    fleet "Merchants North Large" 3500
-    fleet "Republic Small" 600
-    fleet "Republic Large" 400
-    fleet "Pirates North Small" 4000
-    fleet "Pirates North Large" 8000
-    fleet "Navy Surveillance" 2000
-  system "Phecda"
-    fleet "Merchants North Small" 900
-    fleet "Merchants South Small" 1100
-    fleet "Republic Small" 900
-    fleet "Republic Large" 1100
-    fleet "Navy Surveillance" 2000
-  system "Algorel"
-    fleet "Merchants South Small" 800
-    fleet "Merchants South Large" 1200
-    fleet "Republic Small" 700
-    fleet "Republic Large" 500
-    fleet "Pirates South Small" 2500
-    fleet "Pirates South Large" 8000
-    fleet "Navy Surveillance" 2000
-  planet "Porringer"
-    description `Porringer is home to a few mining outposts which extract and refine rare earth minerals and heavy metals. It is dangerous work: the mines are deep underground and prone to noxious gases and cave-ins, and the refineries work with molten radioactive materials and caustic chemicals. Due to the somewhat dim light of the star Algorel, and the cloudiness of the atmosphere, this is not a good world for farming, and the population remains quite small.`
-    description `The Republic Navy has planted a base on Porringer: so far, just a densely packed cluster of prefabricated barracks and infirmary buildings on the outskirts of one of the mining colonies.`
-  system "Porrima"
-    fleet "Merchants South Small" 1400
-    fleet "Merchants South Large" 4000
-    fleet "Republic Small" 1200
-    fleet "Republic Large" 1800
-    fleet "Pirates South Small" 9000
-    fleet "Navy Surveillance" 2000
-  system "Ipsing"
-    fleet "Merchants South Small" 2800
-    fleet "Merchants South Large" 7000
-    fleet "Republic Small" 2500
-    fleet "Republic Large" 4000
-    fleet "Pirates South Small" 5000
-    fleet "Navy Surveillance" 2000
-  system "Mizar"
-    fleet "Merchants South Small" 1400
-    fleet "Merchants South Large" 4500
-    fleet "Republic Small" 1000
-    fleet "Republic Large" 1400
-    fleet "Pirates South Small" 9000
-    fleet "Navy Surveillance" 2000
-  system "Muphrid"
-    fleet "Merchants South Small" 1200
-    fleet "Merchants South Large" 4800
-    fleet "Republic Small" 1100
-    fleet "Republic Large" 1900
-    fleet "Pirates South Small" 9000
-    fleet "Navy Surveillance" 2000
-  system "Menkent"
-    fleet "Merchants South Small" 700
-    fleet "Merchants South Large" 1900
-    fleet "Miners South" 2000
-    fleet "Republic Small" 500
-    fleet "Republic Large" 600
-    fleet "Navy Surveillance" 2000
-  planet "Carbuncle"
-    description `Carbuncle is a rugged mountain world, full of snow-capped peaks and valleys so deep and so steep that they rarely see sunlight. The few settlements that have been built here were developed for mining sapphires and rubies; the sapphires found in Carbuncle range from blue to yellow to black to clear in colour, and are used both for industrial abrasives and for jewelry.`
-    description `The Navy has recently requisitioned one of the abandoned mining towns and begun refurbishing it for a secure military base, with the mining tunnels used as deep underground bunkers.`
-
-
-event "initial deployment 2"
-  date 14 8 3019
-  planet "Martini"
-    "required reputation" 10
-  system "Izar"
-    fleet "Merchants South Small" 500
-    fleet "Merchants South Large" 1500
-    fleet "Free Worlds Small" 700
     fleet "Free Worlds Large" 1000
-  system "Zeta Centauri"
-    fleet "Merchants South Small" 700
-    fleet "Merchants South Large" 1700
-    fleet "Free Worlds Small" 1200
-    fleet "Free Worlds Large" 2000
-    fleet "Pirates South Small" 6000
-    fleet "Pirates South Large" 9000
-  system "Hadar"
+    fleet "Pirates South Small" 5000
+    fleet "Pirates South Large" 8000
+  system "Unukalhai"
+    fleet "Merchants South Small" 900
+    fleet "Merchants South Large" 3000
+    fleet "Free Worlds Small" 3000
+    fleet "Free Worlds Large" 6000
+    fleet "Pirates South Small" 3000
+  system "Sabik"
     fleet "Merchants South Small" 400
     fleet "Merchants South Large" 600
-    fleet "Free Worlds Small" 600
-    fleet "Free Worlds Large" 1100
-  system "Alkaid"
-    fleet "Merchants South Small" 1200
-    fleet "Merchants South Large" 4000
-    fleet "Free Worlds Small" 6000
-    fleet "Free Worlds Large" 10000
+    fleet "Free Worlds Small" 1000
+    fleet "Free Worlds Large" 1600
+  system "Fala"
+    fleet "Merchants South Small" 1900
+    fleet "Merchants South Large" 3500
     fleet "Pirates South Small" 4000
     fleet "Pirates South Large" 8000
-  system "Zubeneschamali"
-    fleet "Merchants South Small" 500
-    fleet "Merchants South Large" 1000
-    fleet "Free Worlds Small" 1400
-    fleet "Free Worlds Large" 2400
-    fleet "Pirates South Small" 4000
-    fleet "Pirates South Large" 5000
-  system "Kochab"
-    fleet "Merchants South Small" 1800
-    fleet "Merchants South Large" 5000
-    fleet "Pirates South Small" 6000
-    fleet "Free Worlds Small" 5000
-  system "Ildaria"
-    fleet "Merchants South Small" 900
-    fleet "Merchants South Large" 1800
-    fleet "Free Worlds Small" 2200
-    fleet "Free Worlds Large" 3600
-    fleet "Pirates South Small" 4000
-    fleet "Pirates South Large" 7000  
+    fleet "Republic Small" 600
+    fleet "Republic Large" 400
+    fleet "Navy Surveillance" 2000
   system "Mora"
     fleet "Merchants South Small" 2800
     fleet "Merchants South Large" 5000
@@ -384,6 +251,86 @@ event "initial deployment 2"
     fleet "Republic Small" 1000
     fleet "Republic Large" 1800
     fleet "Navy Surveillance" 1600
+  system "Algorel"
+    fleet "Merchants South Small" 800
+    fleet "Merchants South Large" 1200
+    fleet "Republic Small" 700
+    fleet "Republic Large" 500
+    fleet "Pirates South Small" 2500
+    fleet "Pirates South Large" 8000
+    fleet "Navy Surveillance" 2000
+  planet "Porringer"
+    description `Porringer is home to a few mining outposts which extract and refine rare earth minerals and heavy metals. It is dangerous work: the mines are deep underground and prone to noxious gases and cave-ins, and the refineries work with molten radioactive materials and caustic chemicals. Due to the somewhat dim light of the star Algorel, and the cloudiness of the atmosphere, this is not a good world for farming, and the population remains quite small.`
+    description `The Republic Navy has planted a base on Porringer: so far, just a densely packed cluster of prefabricated barracks and infirmary buildings on the outskirts of one of the mining colonies.`
+  system "Phecda"
+    fleet "Merchants North Small" 900
+    fleet "Merchants South Small" 1100
+    fleet "Republic Small" 900
+    fleet "Republic Large" 1100
+    fleet "Navy Surveillance" 2000
+  system "Porrima"
+    fleet "Merchants South Small" 1400
+    fleet "Merchants South Large" 4000
+    fleet "Republic Small" 1200
+    fleet "Republic Large" 1800
+    fleet "Navy Surveillance" 2000
+  system "Muphrid"
+    fleet "Merchants South Small" 1200
+    fleet "Merchants South Large" 4800
+    fleet "Republic Small" 1100
+    fleet "Republic Large" 1900
+    fleet "Navy Surveillance" 2000
+  system "Menkent"
+    fleet "Merchants South Small" 700
+    fleet "Merchants South Large" 1900
+    fleet "Miners South" 2000
+    fleet "Republic Small" 500
+    fleet "Republic Large" 600
+    fleet "Navy Surveillance" 2000
+  planet "Carbuncle"
+    description `Carbuncle is a rugged mountain world, full of snow-capped peaks and valleys so deep and so steep that they rarely see sunlight. The few settlements that have been built here were developed for mining sapphires and rubies; the sapphires found in Carbuncle range from blue to yellow to black to clear in colour, and are used both for industrial abrasives and for jewelry.`
+    description `The Navy has recently requisitioned one of the abandoned mining towns and begun refurbishing it for a secure military base, with the mining tunnels used as deep underground bunkers.`
+
+
+event "initial deployment 2"
+  date 14 8 3019
+  planet "Martini"
+    "required reputation" 10
+  system "Kornephoros"
+    fleet "Merchants South Small" 600
+    fleet "Merchants South Large" 700
+    fleet "Miners South" 3000
+    fleet "Pirates South Small" 5000
+    fleet "Free Worlds Small" 1000
+    fleet "Free Worlds Large" 2000
+  system "Aldhibain"
+    fleet "Merchants South Small" 400
+    fleet "Merchants South Large" 500
+    fleet "Pirates South Small" 1400
+    fleet "Pirates South Large" 3000
+    fleet "Free Worlds Small" 600
+    fleet "Free Worlds Large" 700
+  system "Alniyat"
+    fleet "Merchants South Small" 500
+    fleet "Merchants South Large" 600
+    fleet "Pirates South Small" 2000
+    fleet "Pirates South Large" 4000
+    fleet "Free Worlds Small" 1500
+    fleet "Free Worlds Large" 4000
+  system "Ipsing"
+    fleet "Merchants South Small" 2800
+    fleet "Merchants South Large" 7000
+    fleet "Republic Small" 2500
+    fleet "Republic Large" 4000
+    fleet "Pirates South Small" 5000
+    fleet "Navy Surveillance" 2000
+  system "Mizar"
+    fleet "Merchants South Small" 1400
+    fleet "Merchants South Large" 4500
+    fleet "Republic Small" 1000
+    fleet "Republic Large" 1400
+    fleet "Pirates South Small" 9000
+    fleet "Navy Surveillance" 2000
   system "Gacrux"
     fleet "Merchants South Small" 2000
     fleet "Merchants South Large" 5000
@@ -451,20 +398,6 @@ event "initial deployment 2"
     fleet "Republic Small" 1000
     fleet "Republic Large" 2000
     fleet "Navy Surveillance" 1600
-  system "Alphecca"
-    fleet "Merchants South Small" 2000
-    fleet "Merchants North Large" 3500
-    fleet "Pirates South Small" 3000
-    fleet "Republic Small" 3000
-    fleet "Republic Large" 4000
-    fleet "Navy Surveillance" 1600
-  system "Boral"
-    fleet "Merchants South Small" 3000
-    fleet "Merchants North Large" 8000
-    fleet "Pirates South Small" 1500
-    fleet "Republic Small" 7000
-    fleet "Republic Large" 12000
-    fleet "Navy Surveillance" 1600
   system "Cebalrai"
     fleet "Merchants South Small" 600
     fleet "Merchants South Large" 2000
@@ -484,51 +417,60 @@ event "initial deployment 2"
 
 event "initial deployment 3"
   date 29 8 3019
-  system "Zubenelgenubi"
+  system "Pherkad"
     fleet "Merchants South Small" 500
-    fleet "Merchants South Large" 900
-    fleet "Free Worlds Small" 800
-    fleet "Free Worlds Large" 1000
-    fleet "Pirates South Small" 5000
-    fleet "Pirates South Large" 8000
-  system "Unukalhai"
-    fleet "Merchants South Small" 900
-    fleet "Merchants South Large" 3000
-    fleet "Pirates South Small" 3000
-    fleet "Free Worlds Small" 3000
-    fleet "Free Worlds Large" 6000
-  system "Sabik"
-    fleet "Merchants South Small" 400
-    fleet "Merchants South Large" 600
-    fleet "Free Worlds Small" 1000
-    fleet "Free Worlds Large" 1600
-  system "Aldhibain"
-    fleet "Merchants South Small" 400
-    fleet "Merchants South Large" 500
-    fleet "Free Worlds Small" 600
-    fleet "Free Worlds Large" 700
-    fleet "Pirates South Small" 1400
-    fleet "Pirates South Large" 3000
-  system "Kornephoros"
-    fleet "Merchants South Small" 600
     fleet "Merchants South Large" 700
-    fleet "Miners South" 3000
-    fleet "Pirates South Small" 5000
-    fleet "Free Worlds Small" 1000
-    fleet "Free Worlds Large" 2000
-  system "Wei"
+    fleet "Free Worlds Small" 900
+    fleet "Free Worlds Large" 1700
+    fleet "Pirates South Small" 1000
+    fleet "Pirates South Large" 1900
+  system "Yed Prior"
+    fleet "Merchants North Small" 800
+    fleet "Merchants North Large" 1100
+    fleet "Pirates South Small" 1000
+    fleet "Pirates South Large" 2000
+    fleet "Free Worlds Small" 5000
+    fleet "Free Worlds Large" 8000
+  system "Beta Lupi"
     fleet "Merchants South Small" 800
-    fleet "Merchants South Large" 2500
-    fleet "Pirates South Small" 6000
-    fleet "Republic Small" 800
-    fleet "Republic Large" 700
-    fleet "Navy Surveillance" 1200
+    fleet "Pirates South Small" 1100
+    fleet "Pirates South Large" 1600
+    fleet "Free Worlds Small" 4000
+    fleet "Free Worlds Large" 8000
+  system "Kappa Centauri"
+    fleet "Merchants South Small" 900
+    fleet "Merchants South Large" 2700
+    fleet "Pirates South Small" 1600
+    fleet "Pirates South Large" 2000
+    fleet "Free Worlds Small" 3000
+    fleet "Free Worlds Large" 5000
+  system "Alphecca"
+    fleet "Merchants South Small" 2000
+    fleet "Merchants North Large" 3500
+    fleet "Pirates South Small" 3000
+    fleet "Republic Small" 3000
+    fleet "Republic Large" 4000
+    fleet "Navy Surveillance" 1600
+  system "Boral"
+    fleet "Merchants South Small" 3000
+    fleet "Merchants North Large" 8000
+    fleet "Pirates South Small" 1500
+    fleet "Republic Small" 7000
+    fleet "Republic Large" 12000
+    fleet "Navy Surveillance" 1600
   system "Seginus"
     fleet "Merchants South Small" 1200
     fleet "Merchants South Large" 2700
     fleet "Pirates South Small" 8000
     fleet "Republic Small" 1200
     fleet "Republic Large" 1400
+    fleet "Navy Surveillance" 1200
+  system "Wei"
+    fleet "Merchants South Small" 800
+    fleet "Merchants South Large" 2500
+    fleet "Pirates South Small" 6000
+    fleet "Republic Small" 800
+    fleet "Republic Large" 700
     fleet "Navy Surveillance" 1200
   system "Alnasl"
     fleet "Merchants South Small" 1300
@@ -563,16 +505,22 @@ event "initial deployment 3"
 
 event "initial deployment 4"
   date 17 9 3019
-  planet "Geminus"
+  planet "Luna"
     "required reputation" 10
-  system "Sargas"
-    fleet "Merchants South Small" 600
-    fleet "Merchants South Large" 2500
-    fleet "Pirates South Small" 3000
-    fleet "Pirates South Large" 5000
+  system "Han"
+    fleet "Merchants South Small" 800
+    fleet "Merchants South Large" 4000
+    fleet "Pirates South Small" 2000
+    fleet "Pirates South Large" 9000
+    fleet "Free Worlds Small" 3000
+    fleet "Free Worlds Large" 8000
+  system "Atria"
+    fleet "Merchants South Small" 700
+    fleet "Merchants South Large" 2600
+    fleet "Pirates South Small" 5000
+    fleet "Pirates South Large" 8000
     fleet "Free Worlds Small" 1000
-    fleet "Free Worlds Large" 1500
-    fleet "Navy Surveillance" 800
+    fleet "Free Worlds Large" 2100
   system "Dschubba"
     fleet "Merchants South Small" 800
     fleet "Merchants South Large" 2600
@@ -580,6 +528,14 @@ event "initial deployment 4"
     fleet "Pirates South Large" 6000
     fleet "Free Worlds Small" 2000
     fleet "Free Worlds Large" 3000
+    fleet "Navy Surveillance" 800
+  system "Sargas"
+    fleet "Merchants South Small" 600
+    fleet "Merchants South Large" 2500
+    fleet "Pirates South Small" 3000
+    fleet "Pirates South Large" 5000
+    fleet "Free Worlds Small" 1000
+    fleet "Free Worlds Large" 1500
     fleet "Navy Surveillance" 800
   system "Lesath"
     fleet "Merchants South Small" 800
@@ -589,54 +545,6 @@ event "initial deployment 4"
     fleet "Free Worlds Small" 800
     fleet "Free Worlds Large" 1100
     fleet "Navy Surveillance" 800
-  system "Atria"
-    fleet "Merchants South Small" 700
-    fleet "Merchants South Large" 2600
-    fleet "Pirates South Small" 5000
-    fleet "Pirates South Large" 8000
-    fleet "Free Worlds Small" 1000
-    fleet "Free Worlds Large" 2100
-  system "Alniyat"
-    fleet "Merchants South Small" 500
-    fleet "Merchants South Large" 600
-    fleet "Pirates South Small" 2000
-    fleet "Pirates South Large" 4000
-    fleet "Free Worlds Small" 1500
-    fleet "Free Worlds Large" 4000
-  system "Han"
-    fleet "Merchants South Small" 800
-    fleet "Merchants South Large" 4000
-    fleet "Pirates South Small" 2000
-    fleet "Pirates South Large" 9000
-    fleet "Free Worlds Small" 3000
-    fleet "Free Worlds Large" 8000
-  system "Pherkad"
-    fleet "Merchants South Small" 500
-    fleet "Merchants South Large" 700
-    fleet "Free Worlds Small" 900
-    fleet "Free Worlds Large" 1700
-    fleet "Pirates South Small" 1000
-    fleet "Pirates South Large" 1900
-  system "Beta Lupi"
-    fleet "Merchants South Small" 800
-    fleet "Pirates South Small" 1100
-    fleet "Pirates South Large" 1600
-    fleet "Free Worlds Small" 4000
-    fleet "Free Worlds Large" 8000
-  system "Yed Prior"
-    fleet "Merchants North Small" 800
-    fleet "Merchants North Large" 1100
-    fleet "Pirates South Small" 1000
-    fleet "Pirates South Large" 2000
-    fleet "Free Worlds Small" 5000
-    fleet "Free Worlds Large" 8000
-  system "Kappa Centauri"
-    fleet "Merchants South Small" 900
-    fleet "Merchants South Large" 2700
-    fleet "Pirates South Small" 1600
-    fleet "Pirates South Large" 2000
-    fleet "Free Worlds Small" 3000
-    fleet "Free Worlds Large" 5000
   system "Rastaban"
     fleet "Merchants South Small" 1000
     fleet "Merchants South Large" 1900
@@ -645,11 +553,13 @@ event "initial deployment 4"
     fleet "Republic Small" 900
     fleet "Republic Large" 700
     fleet "Navy Surveillance" 1200
-  system "Sabik"
-    fleet "Merchants South Small" 600
-    fleet "Merchants South Large" 800
-    fleet "Free Worlds Small" 800
-    fleet "Free Worlds Large" 1200
+  system "Kornephoros"
+    fleet "Merchants South Small" 800
+    fleet "Merchants South Large" 1000
+    fleet "Miners South" 3000
+    fleet "Pirates South Small" 5000
+    fleet "Free Worlds Small" 900
+    fleet "Free Worlds Large" 1700
     fleet "Navy Surveillance" 800
   system "Aldhibain"
     fleet "Merchants South Small" 600
@@ -659,13 +569,11 @@ event "initial deployment 4"
     fleet "Pirates South Small" 1400
     fleet "Pirates South Large" 3000
     fleet "Navy Surveillance" 800
-  system "Kornephoros"
-    fleet "Merchants South Small" 800
-    fleet "Merchants South Large" 1000
-    fleet "Miners South" 3000
-    fleet "Pirates South Small" 5000
-    fleet "Free Worlds Small" 900
-    fleet "Free Worlds Large" 1700
+  system "Sabik"
+    fleet "Merchants South Small" 600
+    fleet "Merchants South Large" 800
+    fleet "Free Worlds Small" 800
+    fleet "Free Worlds Large" 1200
     fleet "Navy Surveillance" 800
 
 
