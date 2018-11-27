@@ -1,7 +1,4 @@
 shipyard "Megaparsec Variants"
-  "Bounder"
-  "Bounder (Hai)"
-  "Bounder (Miner)"
   "Manta"
   "Manta (Mark II)"
   "Manta (Nuclear)"
@@ -10,95 +7,13 @@ shipyard "Megaparsec Variants"
   "Quicksilver (Mark II)"
   "Quicksilver (Patrol)"
   "Quicksilver (Plasma)"
+  "Scout"
+  "Scout (Afterburner)"
+  "Scout (Hai)"
+  "Scout (Javelin)"
+  "Scout (Miner)"
+  "Scout (Speedy)"
   "Thunderbolt"
-
-
-
-ship "Bounder"
-  sprite "ship/bounder"
-  thumbnail "thumbnail/bounder"
-  attributes
-    category "Interceptor"
-#    manufacturer "Megaparsec"
-    licences
-      Pilot
-    "cost" 1140000
-    "shields" 2200
-    "hull" 700
-    "required crew" 2
-    "bunks" 17
-    "mass" 130
-    "drag" 3.7
-    "heat dissipation" .8
-    "cargo space" 40
-    "outfit space" 310
-    "core space" 175
-    "engine space" 90
-    "weapon space" 45
-    weapon
-      "blast radius" 30
-      "shield damage" 300
-      "hull damage" 150
-      "hit force" 450
-  outfits
-    "D14-RN Shield Generator"
-    "RT-I Radiothermal"
-    "Hyperdrive"
-
-    "IT-3700 Ion Thruster"
-    "IS-3200 Ion Steering"
-
-    "Light Anti-Missile Turret" 2
-
-    "LP036a Battery Pack"
-    "Fuel Barrel" 90
-    "Tactical Scanner"
-  engine -12 44
-  engine 12 44
-  turret -37 4 "Light Anti-Missile Turret"
-  turret 37 4 "Light Anti-Missile Turret"
-  leak "leak" 60 50
-  explode "tiny explosion" 10
-  explode "small explosion" 20
-  explode "medium explosion" 15
-  "final explode" "final explosion small"
-  description "The Megaparsec Bounder is a scout ship and courier, designed not for battle but for carrying passengers and small amounts of cargo across large distances quickly."
-
-
-ship "Bounder" "Bounder (Hai)"
-  outfits
-    "Corundum Regenerator"
-    "Pebble Core"
-    "Hyperdrive"
-
-    `"Biroo" Atomic Steering`
-    `"Biroo" Atomic Thruster`
-
-    "Chameleon Anti-Missile" 2
-
-    "Gorge Batteries"
-    "Williwaw Cooling"
-    "Fuel Pod" 9
-    "Quantum Keystone"
-    "Yoloy Scanner"
-
-
-ship "Bounder" "Bounder (Miner)"
-  outfits
-    "D14-RN Shield Generator"
-    "RT-I Radiothermal"
-    "Hyperdrive"
-
-    "IT-3700 Ion Thruster"
-    "IS-3200 Ion Steering"
-
-    "Laser Turret" 2
-
-    "Supercapacitor" 3
-    "Asteroid Scanner"
-    "Fuel Barrel" 90
-    "Small Radar Jammer"
-    "Tactical Scanner"
 
 
 
@@ -326,6 +241,150 @@ ship "Quicksilver" "Quicksilver (Plasma)"
     "LP036a Battery Pack"
     "Cooling Ducts"
     "Fuel Barrel" 40
+    "Tactical Scanner" 4
+
+
+
+ship "Scout"
+  sprite "ship/scout"
+  thumbnail "thumbnail/scout"
+  attributes
+    category "Interceptor"
+#    manufacturer "Lionheart"
+    licences
+      Pilot
+    "cost" 850000
+    "shields" 1200
+    "hull" 400
+    "required crew" 2
+    "bunks" 12
+    "mass" 110
+    "drag" 3.4
+    "heat dissipation" .7
+    "cargo space" 55
+    "outfit space" 300
+    "core space" 160
+    "engine space" 100
+    "weapon space" 40
+    weapon
+      "blast radius" 16
+      "shield damage" 160
+      "hull damage" 80
+      "hit force" 240
+  outfits
+    "D14-RN Shield Generator"
+    "RT-I Radiothermal"
+    "Hyperdrive"
+
+    "IT-3700 Ion Thruster"
+    "IS-3200 Ion Steering"
+
+    "X1 Blaster Cannon" 2
+    "Light Anti-Missile Turret"
+
+    "LP036a Battery Pack"
+    "Fuel Barrel" 80
+    "Tactical Scanner" 4
+  engine -8 46
+  engine 8 46
+  gun -20 -7 "X1 Blaster Cannon"
+  gun 20 -7 "X1 Blaster Cannon"
+  turret 0 -7 "Light Anti-Missile Turret"
+  explode "tiny explosion" 10
+  explode "small explosion" 20
+  explode "medium explosion" 15
+  leak "leak" 50 50
+  leak "flame" 60 80
+  "final explode" "final explosion small"
+  description "The Megaparsec Scout is a scout ship and courier, designed not for battle but for carrying passengers and small amounts of cargo across large distances quickly."
+
+
+ship "Scout" "Scout (Afterburner)"
+  outfits
+    "D14-RN Shield Generator"
+    "RT-I Radiothermal"
+    "Hyperdrive"
+
+    "IT-3700 Ion Thruster"
+    "IS-3200 Ion Steering"
+    "Afterburner"
+
+    "X1 Blaster Cannon" 2
+    "Light Anti-Missile Turret"
+
+    "LP036a Battery Pack"
+    "Fuel Barrel" 80
+    "Tactical Scanner" 4
+
+
+ship "Scout" "Scout (Hai)"
+  outfits
+    "Corundum Regenerator"
+    "Pebble Core" 2
+    "Hyperdrive"
+
+    `"Biroo" Atomic Thruster`
+    `"Biroo" Atomic Steering`
+
+    "Chameleon Anti-Missile"
+
+    "Fissure Batteries"
+    "Williwaw Cooling"
+    "Fuel Pod" 8
+    "Yoloy Scanner"
+
+
+ship "Scout" "Scout (Javelin)"
+  outfits
+    "D14-RN Shield Generator"
+    "NT-200 Nucleovoltaic"
+    "Hyperdrive"
+
+    "A250 Atomic Thruster"
+    "A255 Atomic Steering"
+
+    "Javelin" 400
+    "Javelin Storage Crate" 2
+    "Javelin Pod" 2
+    "Anti-Missile Turret"
+
+    "LP036a Battery Pack"
+    "Fuel Barrel" 80
+    "Tactical Scanner" 4
+    "Outfit Space Expansion"
+
+
+ship "Scout" "Scout (Miner)"
+  outfits
+    "D14-RN Shield Generator"
+    "RT-I Radiothermal"
+    "Hyperdrive"
+
+    "IT-3700 Ion Thruster"
+    "IS-3200 Ion Steering"
+
+    "Laser Cannon" 2
+    "Laser Turret"
+
+    "Supercapacitor"
+    "Asteroid Scanner"
+    "Fuel Barrel" 80
+    "Ramscoop"
+    "Tactical Scanner" 4
+
+
+ship "Scout" "Scout (Speedy)"
+  outfits
+    "D14-RN Shield Generator"
+    "NT-200 Nucleovoltaic"
+    "Hyperdrive"
+
+    "A370 Atomic Thruster"
+    "A375 Atomic Steering"
+
+    "LP036a Battery Pack"
+    "Liquid Water Cooler"
+    "Fuel Barrel" 80
     "Tactical Scanner" 4
 
 
