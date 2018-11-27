@@ -4,6 +4,10 @@ shipyard "Betelgeuse Variants"
   "Bulk Freighter (Hai)"
   "Bulk Freighter (Laser)"
   "Class C Freighter"
+  "Firebird"
+  "Firebird (Hai)"
+  "Firebird (Laser)"
+  "Firebird (Torpedo)"
   "Hero"
   "Hero (Gatling)"
   "Hero (Patrol)"
@@ -20,7 +24,7 @@ ship "Bulk Freighter"
   sprite "ship/bulk freighter"
   thumbnail "thumbnail/bulk freighter"
   attributes
-    category "Destroyer"
+    category "Cruiser"
 #    manufacturer "Betelgeuse"
     licences
       Pilot
@@ -32,10 +36,10 @@ ship "Bulk Freighter"
     "mass" 870
     "drag" 15.8
     "heat dissipation" .5
-    "cargo space" 640
-    "outfit space" 470
-    "core space" 205
-    "engine space" 85
+    "cargo space" 660
+    "outfit space" 480
+    "core space" 210
+    "engine space" 90
     "weapon space" 180
     weapon
       "blast radius" 120
@@ -51,13 +55,20 @@ ship "Bulk Freighter"
     "IS-3200 Ion Steering"
     "IR-3700 Ion Reverse"
 
+    "Meteor Missile" 80
+    "Meteor Missile Box" 2
+    "Meteor Missile Launcher" 2
     "X8 Blaster Turret"
     "Light Anti-Missile Turret" 4
 
     "LP144a Battery Pack"
     "Fuel Barrel" 60
+    "Ramscoop"
+    "Tactical Scanner" 4
   engine -22 198
   engine 22 198
+  gun -20 -175 "Meteor Missile Launcher"
+  gun 20 -175 "Meteor Missile Launcher"
   turret -12 -155 "Light Anti-Missile Turret"
   turret 12 -155 "Light Anti-Missile Turret"
   turret 0 5 "X8 Blaster Turret"
@@ -71,7 +82,7 @@ ship "Bulk Freighter"
   explode "large explosion" 35
   explode "huge explosion" 20
   "final explode" "final explosion large"
-  description "The Bulk Freighter is the ultimate cargo ship, able to carry as much cargo as four ordinary Star Freighters. It is also, however, an incredibly slow ship and difficult to manoeuvre, especially when loaded down with cargo. Some freight caravans use multiple smaller freighters instead of bulk freighters just to avoid the hassle of constantly having to wait for the Bulk Freighter to properly align itself for hyperspace travel."
+  description "The Bulk Freighter is the ultimate cargo ship, able to carry as much more cargo than any other human ship. It is also, however, an incredibly slow ship and difficult to manoeuvre, especially when loaded down with cargo. Some freight caravans use multiple smaller freighters instead of bulk freighters just to avoid the hassle of constantly having to wait for the Bulk Freighter to properly align itself for hyperspace travel."
 
 
 ship "Bulk Freighter" "Bulk Freighter (Blaster)"
@@ -89,7 +100,9 @@ ship "Bulk Freighter" "Bulk Freighter (Blaster)"
     "LP072a Battery Pack"
     "Liquid Nitrogen Cooler"
     "Fuel Barrel" 60
-    "Outfit Space Expansion" 6
+    "Ramscoop"
+    "Tactical Scanner" 4
+    "Outfit Space Expansion" 5
   turret "X6 Blaster Turret"
   turret "X6 Blaster Turret"
   turret "Heavy Anti-Missile Turret"
@@ -99,7 +112,7 @@ ship "Bulk Freighter" "Bulk Freighter (Blaster)"
 
 ship "Bulk Freighter" "Bulk Freighter (Hai)"
   outfits
-    "Corundum Regenerator"
+    "Corundum Regenerator" 2
     "Geode Reactor"
     "Hyperdrive"
 
@@ -109,9 +122,10 @@ ship "Bulk Freighter" "Bulk Freighter (Hai)"
     "Pulse Turret" 4
     "Chameleon Anti-Missile"
 
-    "Ravine Batteries"
+    "Gorge Batteries"
     "Fuel Pod" 6
-    "Outfit Space Expansion"
+    "Ramscoop"
+    "Yoloy Scanner"
   turret "Pulse Turret"
   turret "Pulse Turret"
   turret "Chameleon Anti-Missile"
@@ -133,7 +147,8 @@ ship "Bulk Freighter" "Bulk Freighter (Laser)"
 
     "LP144a Battery Pack"
     "Fuel Barrel" 60
-    "Outfit Space Expansion"
+    "Ramscoop"
+    "Tactical Scanner" 4
   turret "Heavy Laser Turret"
   turret "Heavy Laser Turret"
   turret "Light Anti-Missile Turret"
@@ -150,26 +165,32 @@ ship "Bulk Freighter" "Class C Freighter"
     "outfit space" 30
   outfits
     "D94-YV Shield Generator"
-    "Fission Reactor"
+    "Fusion Reactor"
     "Hyperdrive"
 
     "IT-3700 Ion Thruster"
     "IS-3200 Ion Steering"
 
-    "X8 Blaster Turret" 2
-    "Heavy Anti-Missile Turret" 2
+    "Sidewinder Missile" 100
+    "Sidewinder Missile Rack" 2
+    "Sidewinder Missile Launcher" 2
+    "X4 Blaster Turret" 4
+    "Heavy Anti-Missile Turret"
 
-    "LP144a Battery Pack"
+    "LP036a Battery Pack"
+    "Liquid Water Cooler"
     "Fuel Barrel" 60
+    "Ramscoop"
     "Tactical Scanner" 8
-    "Bunk Room" 15
+    "Bunk Room" 10
+    "Outfit Space Expansion" 3
     "Fragmentation Grenades" 20
     "Laser Rifle" 40
-  turret "X8 Blaster Turret"
+  turret "X4 Blaster Turret"
+  turret "X4 Blaster Turret"
   turret "Heavy Anti-Missile Turret"
-  turret
-  turret "X8 Blaster Turret"
-  turret "Heavy Anti-Missile Turret"
+  turret "X4 Blaster Turret"
+  turret "X4 Blaster Turret"
   drone -66 -115 left
   drone 66 -115 right
   drone -66 -65 left
@@ -183,6 +204,129 @@ ship "Bulk Freighter" "Class C Freighter"
   drone -66 135 left
   drone 66 135 right
   description `The Class C "Star Freighter" is a stealth warship designed by Betelgeuse for baiting pirates with the offer of a seemingly helpless, ordinary bulk freighter. Inside, its cargo space has all been converted into drone bays, allowing it to carry a dozen combat drones.`
+
+
+
+ship "Firebird"
+  sprite "ship/firebird"
+  thumbnail "thumbnail/firebird"
+  attributes
+    category "Corvette"
+#    manufacturer "Vortex"
+    licences
+      Pilot
+    "cost" 3700000
+    "shields" 6400
+    "hull" 2800
+    "required crew" 7
+    "bunks" 22
+    "mass" 290
+    "drag" 4.5
+    "heat dissipation" .6
+    "cargo space" 50
+    "outfit space" 440
+    "core space" 180
+    "engine space" 100
+    "weapon space" 160
+    weapon
+      "blast radius" 100
+      "shield damage" 1000
+      "hull damage" 500
+      "hit force" 1500
+  outfits
+    "D41-HY Shield Generator"
+    "RT-I Radiothermal"
+    "Hyperdrive"
+
+    "IT-3700 Ion Thruster"
+    "IS-3200 Ion Steering"
+    "Afterburner"
+
+    "Particle Cannon" 4
+    "X2 Blaster Turret" 2
+
+    "LP144a Battery Pack"
+    "Liquid Water Cooler"
+    "Fuel Barrel" 40
+    "Large Radar Jammer"
+    "Tactical Scanner" 3
+  engine -33 65
+  engine 33 65
+  gun -28 -27 "Particle Cannon"
+  gun 28 -27 "Particle Cannon"
+  gun -39 -13 "Particle Cannon"
+  gun 39 -13 "Particle Cannon"
+  turret -5 3 "X2 Blaster Turret"
+  turret 5 3 "X2 Blaster Turret"
+  leak "leak" 50 50
+  leak "flame" 30 80
+  explode "tiny explosion" 18
+  explode "small explosion" 36
+  explode "medium explosion" 24
+  explode "large explosion" 8
+  "final explode" "final explosion medium"
+  description "The Vortex Shipyards Firebird is a warship with a long and storied past; Firebirds fought on both sides of the Alpha Wars over half a millennium ago, and although the equipment and systems have been upgraded continuously since then, the basic design remains almost the same. The Firebird is also a very rugged ship and easy to repair; supposedly a few of the Firebirds that fought in those wars are still in service today."
+
+
+ship "Firebird" "Firebird (Hai)"
+  outfits
+    "Diamond Regenerator"
+    "Geode Reactor"
+    "Hyperdrive"
+
+    `"Biroo" Atomic Thruster`
+    `"Biroo" Atomic Steering`
+
+    "Pulse Cannon" 4
+    "Chameleon Anti-Missile" 2
+
+    "Fissure Batteries"
+    "Williwaw Cooling" 2
+    "Fuel Pod" 4
+    "Yoloy Scanner"
+    "Outfit Space Expansion" 3
+
+
+ship "Firebird" "Firebird (Laser)"
+  outfits
+    "D41-HY Shield Generator"
+    "RT-I Radiothermal"
+    "Hyperdrive"
+
+    "IT-3700 Ion Thruster"
+    "IS-3200 Ion Steering"
+    "Afterburner"
+
+    "Heavy Laser Cannon" 4
+    "Heavy Laser Turret" 2
+
+    "LP144a Battery Pack"
+    "Liquid Water Cooler"
+    "Fuel Barrel" 40
+    "Large Radar Jammer"
+    "Tactical Scanner" 3
+
+
+ship "Firebird" "Firebird (Torpedo)"
+  outfits
+    "D41-HY Shield Generator"
+    "RT-I Radiothermal"
+    "Hyperdrive"
+
+    "IT-3700 Ion Thruster"
+    "IS-3200 Ion Steering"
+    "Afterburner"
+
+    "Torpedo" 120
+    "Torpedo Storage Rack" 4
+    "Torpedo Launcher" 4
+    "X2 Blaster Turret" 2
+
+    "LP072a Battery Pack"
+    "Liquid Water Cooler"
+    "Fuel Barrel" 40
+    "Large Radar Jammer"
+    "Tactical Scanner" 3
 
 
 
@@ -225,7 +369,7 @@ ship "Hero"
 
     "LP036a Battery Pack"
     "Small Radar Jammer"
-    "Tactical Scanner"
+    "Tactical Scanner" 2
     "Fuel Barrel" 40
   engine -17 35
   engine 17 35
@@ -254,7 +398,7 @@ ship "Hero" "Hero (Gatling)"
 
     "Supercapacitor"
     "Small Radar Jammer"
-    "Tactical Scanner"
+    "Tactical Scanner" 2
     "Fuel Barrel" 40
 
 
@@ -435,7 +579,7 @@ ship "Vanguard"
     "Liquid Nitrogen Cooler"
     "Fuel Barrel" 40
     "Large Radar Jammer"
-    "Tactical Scanner" 4
+    "Tactical Scanner" 5
     "Laser Rifle" 40
   engine -15 130
   engine 15 130
@@ -473,7 +617,7 @@ ship "Vanguard" "Vanguard (Mark II)"
     "Liquid Nitrogen Cooler"
     "Fuel Barrel" 40
     "Large Radar Jammer"
-    "Tactical Scanner" 4
+    "Tactical Scanner" 5
     "Laser Rifle" 40
 
 
@@ -496,6 +640,6 @@ ship "Vanguard" "Vanguard (Anti-Missile)"
     "Liquid Nitrogen Cooler"
     "Fuel Barrel" 40
     "Large Radar Jammer"
-    "Tactical Scanner" 4
+    "Tactical Scanner" 5
     "Laser Rifle" 40
 
