@@ -40,8 +40,8 @@ effect "flame"
     "frame rate" 30
   "lifetime" 11
   "random angle" 10
-  "random velocity" 4
   "random spin" 10
+  "random velocity" 4
 
 effect "leak"
   sprite "effect/leak"
@@ -49,8 +49,8 @@ effect "leak"
     "frame rate" 30
   "lifetime" 7
   "random angle" 30
-  "random velocity" 7
   "random spin" 2
+  "random velocity" 7
 
 effect "big leak"
   sprite "effect/leak big"
@@ -58,8 +58,8 @@ effect "big leak"
     "frame rate" 30
   "lifetime" 7
   "random angle" 20
-  "random velocity" 12
   "random spin" 2
+  "random velocity" 12
 
 
 effect "tiny explosion"
@@ -69,9 +69,9 @@ effect "tiny explosion"
   sound "explosion tiny"
   "lifetime" 20
   "random angle" 360
-  "random velocity" .2
-  "random spin" 1
   "random frame rate" 5
+  "random spin" 1
+  "random velocity" .2
   "velocity scale" .4
 
 effect "small explosion"
@@ -81,9 +81,9 @@ effect "small explosion"
   sound "explosion small"
   "lifetime" 24
   "random angle" 360
-  "random velocity" .4
-  "random spin" 2
   "random frame rate" 5
+  "random spin" 2
+  "random velocity" .4
   "velocity scale" .4
 
 effect "medium explosion"
@@ -93,9 +93,9 @@ effect "medium explosion"
   sound "explosion medium"
   "lifetime" 28
   "random angle" 360
-  "random velocity" .6
-  "random spin" 3
   "random frame rate" 5
+  "random spin" 3
+  "random velocity" .6
   "velocity scale" .4
 
 effect "large explosion"
@@ -105,9 +105,9 @@ effect "large explosion"
   sound "explosion large"
   "lifetime" 32
   "random angle" 360
-  "random velocity" .8
-  "random spin" 4
   "random frame rate" 5
+  "random spin" 4
+  "random velocity" .8
   "velocity scale" .4
 
 effect "huge explosion"
@@ -117,9 +117,9 @@ effect "huge explosion"
   sound "explosion huge"
   "lifetime" 36
   "random angle" 360
-  "random velocity" 1
-  "random spin" 5
   "random frame rate" 5
+  "random spin" 5
+  "random velocity" 1
   "velocity scale" .4
 
 
@@ -163,9 +163,9 @@ effect "missile hit"
   sound "missile hit"
   "lifetime" 28
   "random angle" 360
-  "random velocity" .6
-  "random spin" 3
   "random frame rate" 5
+  "random spin" 3
+  "random velocity" .6
   "velocity scale" .4
 
 
@@ -176,9 +176,9 @@ effect "torpedo hit"
   sound "torpedo hit"
   "lifetime" 32
   "random angle" 360
-  "random velocity" .8
-  "random spin" 4
   "random frame rate" 5
+  "random spin" 4
+  "random velocity" .8
   "velocity scale" .4
 
 
@@ -194,9 +194,9 @@ effect "box"
   sprite "effect/box"
     "frame rate" 6
     "random start frame"
-  "random frame rate" 12
   "lifetime" 60000
   "random angle" 30
+  "random frame rate" 12
   "random spin" 10
   "random velocity" -1
 
@@ -206,8 +206,8 @@ effect "flotsam death"
     "frame rate" 8
   "lifetime" 60
   "random angle" 360
-  "random spin" 5
   "random frame rate" 8
+  "random spin" 5
 
 effect "bolide"
   sprite "effect/bolide"
@@ -216,6 +216,7 @@ effect "bolide"
     "frame rate" 3
   "lifetime" 120
   "random angle" 360
+  "random frame rate" 6
   "random spin" 5
   "velocity scale" .8
-  "random frame rate" 6
+
