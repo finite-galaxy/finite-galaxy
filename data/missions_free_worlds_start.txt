@@ -163,9 +163,9 @@ mission "FW Prisoner Parole"
   npc accompany save
     government "Free Worlds"
     personality timid escort
-    ship "Falcon (Heavy)" "F.S. Starry Warrior"
-    ship "Blackbird" "Flight of Fancy"
-    ship "Blackbird" "Southern Luxury"
+    ship "Falcon (Heavy)" "F.W.S. Starry Warrior"
+    ship "Blackbird" "F.W.S. Flight of Fancy"
+    ship "Blackbird" "F.W.S. Southern Luxury"
   
   on visit
     dialogue "You have reached <planet>, but you left part of your convoy behind! Better depart and wait for them to arrive in this star system."
@@ -203,9 +203,9 @@ mission "FW Prisoner Parole 2"
   npc accompany save
     government "Free Worlds"
     personality timid escort
-    ship "Falcon (Heavy)" "F.S. Starry Warrior"
-    ship "Blackbird" "Flight of Fancy"
-    ship "Blackbird" "Southern Luxury"
+    ship "Falcon (Heavy)" "F.W.S. Starry Warrior"
+    ship "Blackbird" "F.W.S. Flight of Fancy"
+    ship "Blackbird" "F.W.S. Southern Luxury"
   
   on visit
     dialogue "You have reached <planet>, but you left part of your convoy behind! Better depart and wait for them to arrive in this star system."
@@ -1206,7 +1206,7 @@ mission "FW Pirates 3"
   npc accompany save
     personality timid escort
     government "Free Worlds"
-    ship "Falcon" "F.S. Terebinth"
+    ship "Falcon" "F.W.S. Terebinth"
   
   on offer
     log "Given orders by the Free Worlds Senate to escort a diplomatic mission to the anarchist planet Thule. Tomek is not happy about bargaining with the pirates instead of fighting them."
@@ -1459,9 +1459,9 @@ mission "FW Pirates 4"
     personality heroic
     government "Free Worlds"
     system "Sabik"
-    ship "Falcon (Plasma)" "F.S. White Oak"
-    ship "Falcon (Plasma)" "F.S. Larch"
-    ship "Falcon (Plasma)" "F.S. Ironwood"
+    ship "Falcon (Plasma)" "F.W.S. White Oak"
+    ship "Falcon (Plasma)" "F.W.S. Larch"
+    ship "Falcon (Plasma)" "F.W.S. Ironwood"
   
   on offer
     conversation
@@ -1494,7 +1494,7 @@ mission "FW Pirates 4B"
   npc accompany save
     personality timid escort
     government "Free Worlds"
-    ship "Falcon" "F.S. Terebinth"
+    ship "Falcon" "F.W.S. Terebinth"
   
   on visit
     dialogue "You have reached <planet>, but you left the <npc> behind! Better depart and wait for them to arrive in this star system."

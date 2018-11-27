@@ -376,7 +376,7 @@ mission "FWC Nuke Supply 1B"
   npc accompany save
     personality escort timid
     government Merchant
-    ship "Bulk Freighter" "F.S. Blue Yonder"
+    ship "Bulk Freighter" "F.W.S. Blue Yonder"
   
   on visit
     dialogue "You have reached <planet>, but the Blue Yonder is not here yet! Better depart and wait for them to arrive in this star system."
@@ -403,7 +403,7 @@ mission "FWC Nuke Supply 1C"
   npc accompany save
     personality escort timid
     government Merchant
-    ship "Bulk Freighter" "F.S. Blue Yonder"
+    ship "Bulk Freighter" "F.W.S. Blue Yonder"
 
 
 
@@ -485,7 +485,7 @@ mission "FWC Diplomacy 1B"
   npc accompany save
     government "Escort"
     personality timid escort
-    ship "Argosy" "F.S. Big Brother"
+    ship "Argosy" "F.W.S. Big Brother"
 
   on visit
     dialogue "You have reached <planet>, but the Big Brother is not here yet! Better depart and wait for them to arrive in this star system."
@@ -530,7 +530,7 @@ mission "FWC Diplomacy 1C"
   npc
     government "Escort"
     personality timid escort
-    ship "Argosy" "F.S. Big Brother"
+    ship "Argosy" "F.W.S. Big Brother"
 
   npc
     personality staying heroic
@@ -838,10 +838,10 @@ mission "FWC Checkmate 1B"
     personality staying heroic uninterested disables
     government "Free Worlds"
     system Menkent
-    ship "Clipper (Nuclear)" "F.S. Warmaker"
-    ship "Clipper (Nuclear)" "F.S. Pestilence"
-    ship "Clipper (Nuclear)" "F.S. Disease"
-    ship "Clipper (Nuclear)" "F.S. Famine"
+    ship "Clipper (Nuclear)" "F.W.S. Warmaker"
+    ship "Clipper (Nuclear)" "F.W.S. Pestilence"
+    ship "Clipper (Nuclear)" "F.W.S. Disease"
+    ship "Clipper (Nuclear)" "F.W.S. Famine"
   
   npc evade
     personality heroic staying
@@ -954,7 +954,7 @@ mission "FWC Checkmate Escorts"
       variant
         "Falcon (Heavy)"
         "Osprey (Laser)"
-        "Argosy (Turret)"
+        "Argosy (Torpedo)"
 
 
 
@@ -1026,7 +1026,7 @@ mission "FWC Pug 1"
         "Argosy"
         "Argosy (Blaster)"
         "Argosy (Laser)"
-        "Argosy (Turret)"
+        "Argosy (Torpedo)"
   
   npc evade
     personality staying disables heroic
@@ -1494,7 +1494,7 @@ mission "FWC Pug 3B"
         "Stymphalian" 6
         "Argosy (Blaster)"
         "Argosy (Laser)"
-        "Argosy (Turret)"
+        "Argosy (Torpedo)"
   
   npc disable
     personality entering disables heroic
@@ -1654,7 +1654,7 @@ mission "FWC Pug 3D: Reinforcements"
       variant
         "Falcon (Heavy)"
         "Osprey (Laser)"
-        "Argosy (Turret)"
+        "Argosy (Torpedo)"
 
 
 
@@ -2211,7 +2211,7 @@ mission "FWC Pug 6"
       variant
         "Falcon (Heavy)"
         "Osprey (Laser)"
-        "Argosy (Turret)"
+        "Argosy (Torpedo)"
   
   on complete
     log `The Pug have fled, apparently travelling through an artificial wormhole back to whatever galaxy they came from. And, it turns out that many of their cities on "Pugglemug" were only for show: buildings with no inhabitants, and with holograms creating the appearance of a heavily populated world. They left no advanced technology behind, and no sign of what their true intentions were, but it turns out that the fake cities here were designed for human habitation. They must have been planning this departure for a very long time.`

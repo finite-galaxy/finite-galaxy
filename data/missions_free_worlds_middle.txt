@@ -285,14 +285,14 @@ mission "FW Southern Battle 1B"
   npc accompany save
     government "Free Worlds"
     personality timid escort
-    ship "Dreadnought" "F.S. Sequoia"
-    ship "Dreadnought" "F.S. Sitka"
-    ship "Dreadnought" "F.S. Rosewood"
-    ship "Fury (Flamethrower)" "F.S. Montag"
-    ship "Fury (Flamethrower)" "F.S. Faber"
-    ship "Fury (Flamethrower)" "F.S. Beatty"
-    ship "Fury (Flamethrower)" "F.S. Mildred"
-    ship "Fury (Flamethrower)" "F.S. Clarisse"
+    ship "Dreadnought" "F.W.S. Sequoia"
+    ship "Dreadnought" "F.W.S. Sitka"
+    ship "Dreadnought" "F.W.S. Rosewood"
+    ship "Fury (Flamethrower)" "F.W.S. Montag"
+    ship "Fury (Flamethrower)" "F.W.S. Faber"
+    ship "Fury (Flamethrower)" "F.W.S. Beatty"
+    ship "Fury (Flamethrower)" "F.W.S. Mildred"
+    ship "Fury (Flamethrower)" "F.W.S. Clarisse"
   
   on visit
     dialogue "You have reached <planet>, but you left part of your convoy behind! Better depart and wait for them to arrive in this star system."
@@ -330,14 +330,14 @@ mission "FW Southern Battle 2"
   npc
     government "Free Worlds"
     personality heroic disables escort
-    ship "Dreadnought" "F.S. Sequoia"
-    ship "Dreadnought" "F.S. Sitka"
-    ship "Dreadnought" "F.S. Rosewood"
-    ship "Fury (Flamethrower)" "F.S. Montag"
-    ship "Fury (Flamethrower)" "F.S. Faber"
-    ship "Fury (Flamethrower)" "F.S. Beatty"
-    ship "Fury (Flamethrower)" "F.S. Mildred"
-    ship "Fury (Flamethrower)" "F.S. Clarisse"
+    ship "Dreadnought" "F.W.S. Sequoia"
+    ship "Dreadnought" "F.W.S. Sitka"
+    ship "Dreadnought" "F.W.S. Rosewood"
+    ship "Fury (Flamethrower)" "F.W.S. Montag"
+    ship "Fury (Flamethrower)" "F.W.S. Faber"
+    ship "Fury (Flamethrower)" "F.W.S. Beatty"
+    ship "Fury (Flamethrower)" "F.W.S. Mildred"
+    ship "Fury (Flamethrower)" "F.W.S. Clarisse"
   
   npc
     system Rastaban
@@ -503,11 +503,11 @@ mission "FW Southern Prisoners - Release"
   npc accompany save
     government "Escort"
     personality timid escort
-    ship "Blackbird" "F.S. Charity"
-    ship "Blackbird" "F.S. Good Hope"
-    ship "Blackbird" "F.S. Stoutheart"
-    ship "Blackbird" "F.S. Nightingale"
-    ship "Blackbird" "F.S. Turtledove"
+    ship "Blackbird" "F.W.S. Charity"
+    ship "Blackbird" "F.W.S. Good Hope"
+    ship "Blackbird" "F.W.S. Stoutheart"
+    ship "Blackbird" "F.W.S. Nightingale"
+    ship "Blackbird" "F.W.S. Turtledove"
   npc
     government Republic
     personality staying uninterested
@@ -567,11 +567,11 @@ mission "FW Southern Prisoners - Released"
   npc accompany save
     government "Escort"
     personality timid escort
-    ship "Blackbird" "F.S. Charity"
-    ship "Blackbird" "F.S. Good Hope"
-    ship "Blackbird" "F.S. Stoutheart"
-    ship "Blackbird" "F.S. Nightingale"
-    ship "Blackbird" "F.S. Turtledove"
+    ship "Blackbird" "F.W.S. Charity"
+    ship "Blackbird" "F.W.S. Good Hope"
+    ship "Blackbird" "F.W.S. Stoutheart"
+    ship "Blackbird" "F.W.S. Nightingale"
+    ship "Blackbird" "F.W.S. Turtledove"
   npc
     government Republic
     personality staying uninterested
@@ -972,7 +972,7 @@ mission "FW Northern 4.1A"
     government "Navy (Oathkeeper)"
     personality heroic staying uninterested
     system Alioth
-    ship "Saturn (Mark II)" "N.S. Peacemaker"
+    ship "Saturn (Mark II)" "R.N.S. Peacemaker"
 
 
 
@@ -1063,12 +1063,12 @@ mission "FW Alphas 1.1"
   npc accompany save
     government "Navy (Oathkeeper)"
     personality escort heroic
-    ship "Saturn (Mark II)" "N.S. Peacemaker"
+    ship "Saturn (Mark II)" "R.N.S. Peacemaker"
   npc
     government "Free Worlds"
     personality heroic escort
-    ship "Falcon (Plasma)" "F.S. Alder"
-    ship "Falcon" "F.S. Starry Warrior"
+    ship "Falcon (Plasma)" "F.W.S. Alder"
+    ship "Falcon" "F.W.S. Starry Warrior"
   npc kill
     government "Pirate"
     personality heroic staying target
@@ -1157,9 +1157,9 @@ mission "FW Alphas 1.2"
   npc accompany save
     government "Free Worlds"
     personality heroic escort
-    ship "Falcon (Plasma)" "F.S. Oak"
-    ship "Falcon (Plasma)" "F.S. Alder"
-    ship "Falcon" "F.S. Starry Warrior"
+    ship "Falcon (Plasma)" "F.W.S. Oak"
+    ship "Falcon (Plasma)" "F.W.S. Alder"
+    ship "Falcon" "F.W.S. Starry Warrior"
   npc kill
     government "Pirate"
     personality heroic staying target
@@ -1189,7 +1189,7 @@ mission "FW Alphas 1.1A"
   npc accompany save
     government "Navy (Oathkeeper)"
     personality escort heroic
-    ship "Saturn (Mark II)" "N.S. Peacemaker"
+    ship "Saturn (Mark II)" "R.N.S. Peacemaker"
   
   on visit
     dialogue "You have reached <planet>, but you left the <npc> behind! Better depart and wait for them to arrive in this star system."
@@ -1366,8 +1366,8 @@ mission "FW Bloodsea 1.1A"
   npc accompany save
     government Merchant
     personality escort heroic
-    ship "Behemoth (Free Worlds)" "F.S. Bungles"
-    ship "Behemoth (Free Worlds)" "F.S. Humble"
+    ship "Behemoth (Free Worlds)" "F.W.S. Bungles"
+    ship "Behemoth (Free Worlds)" "F.W.S. Humble"
   
   on visit
     dialogue "You have reached <planet>, but you left the freighters behind! Better depart and wait for them to arrive in this star system."
@@ -1396,8 +1396,8 @@ mission "FW Bloodsea 1.1B"
   npc accompany save
     government Merchant
     personality escort heroic
-    ship "Behemoth (Free Worlds)" "F.S. Bungles"
-    ship "Behemoth (Free Worlds)" "F.S. Humble"
+    ship "Behemoth (Free Worlds)" "F.W.S. Bungles"
+    ship "Behemoth (Free Worlds)" "F.W.S. Humble"
   
   on visit
     dialogue "You have reached <planet>, but you left the freighters behind! Better depart and wait for them to arrive in this star system."
@@ -1466,9 +1466,9 @@ mission "FW Bloodsea 1.2A"
   npc
     government "Free Worlds"
     personality heroic escort
-    ship "Dreadnought" "F.S. Bombastic"
-    ship "Falcon (Plasma)" "F.S. Equalizer"
-    ship "Falcon (Plasma)" "F.S. Enforcer"
+    ship "Dreadnought" "F.W.S. Bombastic"
+    ship "Falcon (Plasma)" "F.W.S. Equalizer"
+    ship "Falcon (Plasma)" "F.W.S. Enforcer"
   
   npc evade
     personality heroic staying
@@ -1697,23 +1697,23 @@ mission "FW Rand 1"
   npc
     government "Free Worlds"
     personality heroic disables escort
-    ship "Dreadnought" "F.S. Elder"
-    ship "Falcon (Plasma)" "F.S. Reliant"
-    ship "Falcon (Heavy)" "F.S. Bismark"
-    ship "Skein" "F.S. Lapwing"
+    ship "Dreadnought" "F.W.S. Elder"
+    ship "Falcon (Plasma)" "F.W.S. Reliant"
+    ship "Falcon (Heavy)" "F.W.S. Bismark"
+    ship "Skein" "F.W.S. Lapwing"
     ship "Stymphalian" "Bravo 8-4"
     ship "Stymphalian" "Bravo 0-9"
     ship "Stymphalian" "Bravo 6-2"
     ship "Stymphalian" "Bravo 3-1"
     ship "Stymphalian" "Bravo 1-5"
     ship "Stymphalian" "Bravo 9-1"
-    ship "Hawk (Rocket)" "F.S. Echo"
-    ship "Hawk" "F.S. Shadow"
+    ship "Hawk (Rocket)" "F.W.S. Echo"
+    ship "Hawk" "F.W.S. Shadow"
   npc
     government "Free Worlds"
     personality heroic disables
     system "Kochab"
-    ship "Dreadnought" "F.S. Linden"
+    ship "Dreadnought" "F.W.S. Linden"
   
   npc evade
     government "Republic"
@@ -1769,23 +1769,23 @@ mission "FW Rand 1B"
     government "Free Worlds"
     personality staying timid
     system Tarazed
-    ship "Dreadnought" "F.S. Holly"
-    ship "Falcon (Plasma)" "F.S. Nebula"
-    ship "Skein" "F.S. Larkspur"
+    ship "Dreadnought" "F.W.S. Holly"
+    ship "Falcon (Plasma)" "F.W.S. Nebula"
+    ship "Skein" "F.W.S. Larkspur"
     ship "Stymphalian" "Charlie 6-2"
     ship "Stymphalian" "Charlie 0-9"
     ship "Stymphalian" "Charlie 3-1"
     ship "Stymphalian" "Charlie 9-1"
     ship "Stymphalian" "Charlie 1-5"
     ship "Stymphalian" "Charlie 8-4"
-    ship "Skein" "F.S. Ironwood"
+    ship "Skein" "F.W.S. Ironwood"
     ship "Stymphalian" "Echo 5-3"
     ship "Stymphalian" "Echo 4-1"
     ship "Stymphalian" "Echo 2-3"
     ship "Stymphalian" "Echo 5-8"
     ship "Stymphalian" "Echo 2-4"
     ship "Stymphalian" "Echo 6-9"
-    ship "Argosy" "F.S. Nightingale"
+    ship "Argosy" "F.W.S. Nightingale"
 
 
 
@@ -1868,23 +1868,23 @@ mission "FW Defend Bod"
   npc
     government "Free Worlds"
     personality heroic escort disables
-    ship "Dreadnought" "F.S. Holly"
-    ship "Falcon (Plasma)" "F.S. Nebula"
-    ship "Skein" "F.S. Larkspur"
+    ship "Dreadnought" "F.W.S. Holly"
+    ship "Falcon (Plasma)" "F.W.S. Nebula"
+    ship "Skein" "F.W.S. Larkspur"
     ship "Stymphalian" "Charlie 6-2"
     ship "Stymphalian" "Charlie 0-9"
     ship "Stymphalian" "Charlie 3-1"
     ship "Stymphalian" "Charlie 9-1"
     ship "Stymphalian" "Charlie 1-5"
     ship "Stymphalian" "Charlie 8-4"
-    ship "Skein" "F.S. Ironwood"
+    ship "Skein" "F.W.S. Ironwood"
     ship "Stymphalian" "Echo 5-3"
     ship "Stymphalian" "Echo 4-1"
     ship "Stymphalian" "Echo 2-3"
     ship "Stymphalian" "Echo 5-8"
     ship "Stymphalian" "Echo 2-4"
     ship "Stymphalian" "Echo 6-9"
-    ship "Argosy" "F.S. Nightingale"
+    ship "Argosy" "F.W.S. Nightingale"
   
   on complete
     event "end battle of alioth"

@@ -2009,8 +2009,8 @@ system "Adhara"
   fleet "Merchants North Small" 600
   fleet "Merchants North Large" 800
   fleet "Pirates North Small" 2000
-  fleet "Deep Security Small" 900
-  fleet "Deep Security Large" 2400
+  fleet "Deep Small" 900
+  fleet "Deep Large" 2400
   object
     sprite star/k0
     distance 33.5961
@@ -2599,8 +2599,8 @@ system "Algieba"
   trade "Plastic" 476
   fleet "Merchants North Small" 800
   fleet "Merchants North Large" 1000
-  fleet "Deep Security Small" 3000
-  fleet "Deep Security Large" 12000
+  fleet "Deep Small" 3000
+  fleet "Deep Large" 12000
   fleet "Republic Small" 1000
   fleet "Republic Large" 4000
   fleet "Syndicate Small" 2000
@@ -3903,8 +3903,8 @@ system "Aludra"
   fleet "Merchants North Small" 500
   fleet "Merchants North Large" 1200
   fleet "Miners Deep" 5000
-  fleet "Deep Security Small" 1800
-  fleet "Deep Security Large" 3000
+  fleet "Deep Small" 1800
+  fleet "Deep Large" 3000
   object
     sprite star/k0
     period 10
@@ -4622,7 +4622,7 @@ system "Aspidiske"
   fleet "Merchants Deep Large" 3000
   fleet "Merchants North Small" 800
   fleet "Merchants North Large" 2000
-  fleet "Deep Security Small" 2000
+  fleet "Deep Small" 2000
   object
     sprite star/m4
     period 10
@@ -4749,8 +4749,8 @@ system "Avior"
   fleet "Merchants Deep Large" 4000
   fleet "Merchants North Small" 900
   fleet "Merchants North Large" 3000
-  fleet "Deep Security Small" 2800
-  fleet "Deep Security Large" 10000
+  fleet "Deep Small" 2800
+  fleet "Deep Large" 10000
   object
     sprite star/g0
     distance 11
@@ -7941,8 +7941,8 @@ system "Dubhe"
   fleet "Merchants North Large" 4000
   fleet "Pirates North Small" 12000
   fleet "Pirates North Large" 8000
-  fleet "Deep Security Small" 2000
-  fleet "Deep Security Large" 7000
+  fleet "Deep Small" 2000
+  fleet "Deep Large" 7000
   object
     sprite star/m0
     distance 42.6977
@@ -8907,8 +8907,8 @@ system "Epsilon Leonis"
   fleet "Merchants Deep Large" 2500
   fleet "Merchants North Small" 700
   fleet "Merchants North Large" 1400
-  fleet "Deep Security Small" 2000
-  fleet "Deep Security Large" 6000
+  fleet "Deep Small" 2000
+  fleet "Deep Large" 6000
   object
     sprite star/g0
     distance 25.8286
@@ -10689,8 +10689,8 @@ system "Gomeisa"
   fleet "Merchants Deep Large" 5000
   fleet "Merchants North Small" 600
   fleet "Merchants North Large" 1300
-  fleet "Deep Security Small" 1800
-  fleet "Deep Security Large" 4000
+  fleet "Deep Small" 1800
+  fleet "Deep Large" 4000
   object
     sprite star/k0
     distance 55.5
@@ -14688,8 +14688,8 @@ system "Markeb"
   fleet "Merchants North Small" 1000
   fleet "Merchants North Large" 2500
   fleet "Pirates North Large" 5000
-  fleet "Deep Security Small" 4000
-  fleet "Deep Security Large" 8000
+  fleet "Deep Small" 4000
+  fleet "Deep Large" 8000
   object
     sprite star/k0
     period 10
@@ -16366,8 +16366,8 @@ system "Naos"
   fleet "Merchants North Small" 600
   fleet "Merchants North Large" 1500
   fleet "Miners Deep" 2000
-  fleet "Deep Security Small" 2400
-  fleet "Deep Security Large" 5000
+  fleet "Deep Small" 2400
+  fleet "Deep Large" 5000
   object
     sprite star/g5
     period 10
@@ -18808,8 +18808,8 @@ system "Regor"
   fleet "Merchants Deep Large" 5000
   fleet "Merchants North Small" 2000
   fleet "Merchants North Large" 6000
-  fleet "Deep Security Small" 3600
-  fleet "Deep Security Large" 8000
+  fleet "Deep Small" 3600
+  fleet "Deep Large" 8000
   object
     sprite star/k0
     period 10
@@ -21662,7 +21662,7 @@ system "Suhail"
   fleet "Merchants North Small" 4000
   fleet "Merchants North Large" 9000
   fleet "Pirates North Large" 9000
-  fleet "Deep Security Small" 10000
+  fleet "Deep Small" 10000
   object
     sprite star/f5
     period 10
@@ -23451,8 +23451,8 @@ system "Wezen"
   fleet "Merchants North Small" 2000
   fleet "Merchants North Large" 4000
   fleet "Pirates North Small" 8000
-  fleet "Deep Security Small" 5000
-  fleet "Deep Security Large" 10000
+  fleet "Deep Small" 5000
+  fleet "Deep Large" 10000
   object
     sprite star/f0
     distance 11.8889
@@ -23906,8 +23906,8 @@ system "Zosma"
   fleet "Merchants Paradise" 2500
   fleet "Pirates North Small" 5000
   fleet "Pirates North Large" 9000
-  fleet "Deep Security Small" 1000
-  fleet "Deep Security Large" 2000
+  fleet "Deep Small" 1000
+  fleet "Deep Large" 2000
   object
     sprite star/k0
     period 10
@@ -24211,7 +24211,7 @@ planet "Alexandria"
   bribe 0.1
 #  tribute 1000
 #    threshold 8000
-#    fleet "Deep Security Large" 10
+#    fleet "Deep Large" 10
 
 planet "Alfheim"
   attributes deep oil factory
@@ -24226,7 +24226,7 @@ planet "Alfheim"
   security 0.7
 #  tribute 1200
 #    threshold 5000
-#    fleet "Deep Security Small" 27
+#    fleet "Deep Small" 27
 
 planet "Allhome"
   attributes hai farming "human tourism"
@@ -24310,7 +24310,7 @@ planet "Asgard"
   security 0.7
 #  tribute 4000
 #    threshold 7000
-#    fleet "Deep Security Large" 39
+#    fleet "Deep Large" 39
 
 planet "Ashy Reach"
   attributes kimek shipping moon
@@ -24375,7 +24375,7 @@ planet "Bivrost"
   security 0.8
 #  tribute 3600
 #    threshold 7000
-#    fleet "Deep Security Large" 35
+#    fleet "Deep Large" 35
 
 planet "Blizzard"
   attributes "dirt belt" textiles
@@ -25194,7 +25194,7 @@ planet "Fenrir Station"
   security 0.8
 #  tribute 600
 #    threshold 3000
-#    fleet "Deep Security Small" 14
+#    fleet "Deep Small" 14
 
 planet "Firelode"
   attributes unfettered
@@ -25535,7 +25535,7 @@ planet "Haze"
   security 0.6
 #  tribute 2600
 #    threshold 5500
-#    fleet "Deep Security Large" 26
+#    fleet "Deep Large" 26
 
 planet "Heartland"
   attributes "dirt belt" farming
@@ -25567,7 +25567,7 @@ planet "Helheim"
   security 0.6
 #  tribute 700
 #    threshold 3000
-#    fleet "Deep Security Small" 15
+#    fleet "Deep Small" 15
 
 planet "Hephaestus"
   attributes paradise factory urban
@@ -25666,7 +25666,7 @@ planet "Huginn Station"
   security 0.9
 #  tribute 1800
 #    threshold 5500
-#    fleet "Deep Security Large" 18
+#    fleet "Deep Large" 18
 
 planet "Humanica"
   attributes south farming
@@ -25859,7 +25859,7 @@ planet "Leviathan Station"
   security 0.9
 #  tribute 1200
 #    threshold 3500
-#    fleet "Deep Security Small" 27
+#    fleet "Deep Small" 27
 
 planet "Lichen"
   attributes south farming frontier
@@ -25993,7 +25993,7 @@ planet "Mani"
   security 0.6
 #  tribute 500
 #    threshold 3000
-#    fleet "Deep Security Small" 11
+#    fleet "Deep Small" 11
 
 planet "Market of Gupta"
   attributes arach shipping
@@ -26046,7 +26046,7 @@ planet "Memory"
   security 0.8
 #  tribute 700
 #    threshold 4000
-#    fleet "Deep Security Small" 16
+#    fleet "Deep Small" 16
 
 planet "Merask Fortuno"
   attributes korath station
@@ -26101,7 +26101,7 @@ planet "Midgard"
   security 0.8
 #  tribute 3000
 #    threshold 6000
-#    fleet "Deep Security Large" 30
+#    fleet "Deep Large" 30
 
 planet "Midway Emerald"
   attributes kimek shipping urban wealthy
@@ -26157,7 +26157,7 @@ planet "Muninn Station"
   security 0.8
 #  tribute 1100
 #    threshold 5500
-#    fleet "Deep Security Small" 25
+#    fleet "Deep Small" 25
 
 planet "Muspel"
   attributes deep mining factory
@@ -26169,7 +26169,7 @@ planet "Muspel"
   security 0.6
 #  tribute 600
 #    threshold 3000
-#    fleet "Deep Security Small" 14
+#    fleet "Deep Small" 14
 
 planet "Mutiny"
   attributes pirate
@@ -26225,7 +26225,7 @@ planet "Nifel"
   security 0.7
 #  tribute 1500
 #    threshold 4000
-#    fleet "Deep Security Large" 16
+#    fleet "Deep Large" 16
 
 planet "Nimbus"
   attributes core fishing medical
@@ -26256,7 +26256,7 @@ planet "Norn"
   security 0.6
 #  tribute 500
 #    threshold 3000
-#    fleet "Deep Security Small" 12
+#    fleet "Deep Small" 12
 
 planet "Oasis"
   attributes rim farming textiles
@@ -26340,7 +26340,7 @@ planet "Phoenix Station"
   security 0.7
 #  tribute 500
 #    threshold 2000
-#    fleet "Deep Security Large" 5
+#    fleet "Deep Large" 5
 
 planet "Pilot"
   attributes core research
@@ -27285,7 +27285,7 @@ planet "Valhalla"
   security 0.8
 #  tribute 3600
 #    threshold 7000
-#    fleet "Deep Security Large" 35
+#    fleet "Deep Large" 35
 
 planet "Var' Kar'i'i"
   attributes wanderer urban farming
@@ -27538,7 +27538,7 @@ planet "Windblain"
   security 0.6
 #  tribute 800
 #    threshold 3500
-#    fleet "Deep Security Small" 18
+#    fleet "Deep Small" 18
 
 planet "Winter"
   attributes south factory frontier

@@ -1795,14 +1795,14 @@ event "fw syndicate capture begin"
   "reputation: Syndicate" <?= -100
   government "Syndicate"
     "attitude toward"
-      "Deep Security" -.01
+      "Deep" -.01
       "Navy (Oathkeeper)" -.01
 
 
 event "fw syndicate capture end"
   government "Syndicate"
     "attitude toward"
-      "Deep Security" 0
+      "Deep" 0
       "Navy (Oathkeeper)" 0
 
 

@@ -10,9 +10,9 @@
 #   "Kimek Small"
 #   "Saryds Large"
 #   "Saryds Small"
-# Deep Security:
-#   "Deep Security Large"
-#   "Deep Security Small"
+# Deep:
+#   "Deep Large"
+#   "Deep Small"
 # Free Worlds:
 #   "Free Worlds Large"
 #   "Free Worlds Small"
@@ -399,29 +399,50 @@ fleet "Saryds Small"
 
 
 
-# Deep Security
-fleet "Deep Security Large"
-  government "Deep Security"
+# Deep
+fleet "Deep Large"
+  government "Deep"
   names "deep"
   fighters "deep fighter"
   cargo 0
   personality
     heroic
-  variant 1
+  variant 2
     "Leviathan (Heavy)"
+  variant 2
+    "Leviathan (Mark II)"
+  variant 1
+    "Aerie (Mark II)" 3
+    "Dagger" 6
+  variant 1
+    "Aerie (Mark II)" 2
+    "Dagger" 4
+    "Argosy (Torpedo)"
+    "Warrior (Mark II)" 3
+  variant 1
+    "Aerie (Mark II)"
+    "Dagger" 4
+    "Argosy (Torpedo)" 2
+    "Warrior (Mark II)" 2
+  variant 1
+    "Argosy (Torpedo)" 3
+    "Warrior (Mark II)" 3
 
-fleet "Deep Security Small"
-  government "Deep Security"
+fleet "Deep Small"
+  government "Deep"
   names "deep"
   fighters "deep fighter"
   cargo 0
   personality
     heroic
   variant 1
-    "Aerie"
+    "Aerie (Mark II)"
     "Dagger" 2
+  variant 1
+    "Argosy (Torpedo)"
+    "Warrior (Mark II)"
   variant 3
-    "Warrior" 3
+    "Warrior (Mark II)" 3
 
 
 # Free Worlds   
@@ -1320,7 +1341,7 @@ fleet "Merchants Core Small"
   variant 2
     "Argosy (Laser)"
   variant 2
-    "Argosy (Turret)"
+    "Argosy (Torpedo)"
   variant 5
     "Heavy Shuttle"
   variant 3
@@ -1834,7 +1855,7 @@ fleet "Merchants South Large"
   variant 30
     "Argosy (Blaster)"
   variant 20
-    "Argosy (Turret)"
+    "Argosy (Torpedo)"
   variant 10
     "Bastion"
     "Star Freighter" 3
@@ -1849,7 +1870,7 @@ fleet "Merchants South Large"
     "Argosy"
   variant 10
     "Bastion (Heavy)"
-    "Argosy (Turret)"
+    "Argosy (Torpedo)"
   variant 10
     "Bastion (Laser)"
     "Argosy (Laser)"
@@ -1872,7 +1893,7 @@ fleet "Merchants South Large"
   variant 10
     "Argosy (Laser)" 2
   variant 10
-    "Argosy (Turret)" 2
+    "Argosy (Torpedo)" 2
   variant 10
     "Blackbird"
     "Harpy" 2
@@ -2795,7 +2816,7 @@ fleet "Pirates South Large"
   variant 3
     "Argosy (Laser)"
   variant 3
-    "Argosy (Turret)"
+    "Argosy (Torpedo)"
   variant 1
     "Marauder Argosy"
   variant 1
@@ -2829,7 +2850,7 @@ fleet "Pirates South Large"
     "Argosy (Laser)"
     "Hawk (Blaster)"
   variant 1
-    "Argosy (Turret)"
+    "Argosy (Torpedo)"
     "Hawk (Blaster)"
   variant 1
     "Marauder Argosy"
@@ -2929,7 +2950,7 @@ fleet "pirate raid"
   variant 2
     "Argosy (Laser)"
   variant 2
-    "Argosy (Turret)"
+    "Argosy (Torpedo)"
   variant 1
     "Marauder Argosy"
   variant 1
@@ -2953,7 +2974,7 @@ fleet "pirate raid"
     "Argosy (Laser)"
     "Warrior"
   variant 1
-    "Argosy (Turret)"
+    "Argosy (Torpedo)"
     "Warrior"
   variant 1
     "Marauder Argosy (Heavy)"

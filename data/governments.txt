@@ -6,7 +6,6 @@
 #   "Bounty Hunter" 23
 #   "Coalition" 5
 #   "Deep" 1
-#   "Deep Security" 1
 #   "Drak" 5
 #   " Drak "
 #   "Escort" 5
@@ -86,20 +85,8 @@ government "Deep"
   "player reputation" 1
   "attitude toward"
     "Alpha" -.5
-    "Deep Security" 1
-    "Merchant" .2
-    "Navy Intelligence" .1
-    "Neutral" .1
-    "Pirate" -.2
-  "friendly hail" "friendly deep"
-  "hostile hail" "hostile deep"
-
-government "Deep Security"
-  swizzle 1
-  "player reputation" 1
-  "attitude toward"
-    "Alpha" -.5
     "Merchant" .5
+    "Neutral" .1
     "Pirate" -.2
   "friendly hail" "friendly deep"
   "hostile hail" "hostile deep"

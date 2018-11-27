@@ -13,7 +13,7 @@ mission "FW Reconciliation 1"
   npc accompany save
     personality escort timid
     government "Navy Intelligence"
-    ship "Mars" "Eye of Horus"
+    ship "Mars" "R.N.S. Eye of Horus"
   
   on visit
     dialogue "You have reached <planet>, but you left Raven's ship behind! Better depart and wait for them to arrive in this star system."
@@ -115,7 +115,7 @@ mission "FW Reconciliation 1B"
   npc accompany save
     personality escort timid
     government "Navy Intelligence"
-    ship "Mars" "Eye of Horus"
+    ship "Mars" "R.N.S. Eye of Horus"
   
   on visit
     dialogue "You have reached <planet>, but you've either left Raven's ship behind, or failed to destroy some of the Syndicate ships watching you."
@@ -159,7 +159,7 @@ mission "FW Reconciliation 1C"
   npc accompany save
     personality escort timid
     government "Navy Intelligence"
-    ship "Mars" "Eye of Horus"
+    ship "Mars" "R.N.S. Eye of Horus"
   
   on visit
     dialogue "You have reached <planet>, but you left Raven's ship behind! Better depart and wait for them to arrive in this star system."
@@ -204,13 +204,13 @@ mission "FW Reconciliation 2"
   npc accompany save
     personality escort timid
     government "Navy Intelligence"
-    ship "Mars" "Eye of Horus"
+    ship "Mars" "R.N.S. Eye of Horus"
   
   on visit
     dialogue "You have reached <planet>, but you left Raven's ship behind! Better depart and wait for them to arrive in this star system."
   
   on offer
-    "reputation: Deep Security" >?= 1
+    "reputation: Deep" >?= 1
     log "Parliament still refuses to believe that the Syndicate could have been behind the attacks; the Syndicate has far too much power and influence in the government of the Republic. But, the people of the Deep might be more open to the defector's story."
     conversation
       `As you came fleeing out of Syndicate space with their ships in hot pursuit, you couldn't help noticing that no Republic ships moved to help you or attack your pursuers. Apparently, they are not ready to strike the Syndicate until Parliament has made a decision. As you are waiting for Parliament to hear your evidence, Katya asks you quietly, "So, how are you feeling about our chances here?"`
@@ -267,7 +267,7 @@ mission "FW Reconciliation 2A"
     dialogue `You have failed an essential Free Worlds mission. If you want to complete the story line, revert to the autosave or another earlier snapshot of the game.`
   
   on offer
-    log "People" "Edricka Flint" `Edricka Flint is the governor of Valhalla, the most important planet of the Deep, and therefore authorized to request Deep Security starships for "police actions". She feels the Deep has a responsibility to safeguard and preserve civilization and justice in human space, is sympathetic to the Free Worlds, and believes the Syndicate is responsible for masterminding the recent war.`
+    log "People" "Edricka Flint" `Edricka Flint is the governor of Valhalla, the most important planet of the Deep, and therefore authorized to request Deep Defence starships for "police actions". She feels the Deep has a responsibility to safeguard and preserve civilization and justice in human space, is sympathetic to the Free Worlds, and believes the Syndicate is responsible for masterminding the recent war.`
     log `The governor of Valhalla, in the Deep, has proposed a "police action" to arrest one or more of the Syndicate leaders and bring them to justice. It will be a secret joint operation between the Free Worlds, the Deep, and the Oathkeepers.`
     event "deep sky tech available"
     conversation
@@ -296,7 +296,7 @@ mission "FW Reconciliation 2A"
   npc accompany save
     personality escort timid
     government "Navy Intelligence"
-    ship "Mars" "Eye of Horus"
+    ship "Mars" "R.N.S. Eye of Horus"
   
   on visit
     dialogue "You have reached <planet>, but you left Raven's ship behind! Better depart and wait for them to arrive in this star system."
@@ -584,7 +584,7 @@ mission "FW Embassy 1C"
   npc accompany save
     government "Free Worlds"
     personality escort heroic
-    ship "Dreadnought" "F.S. Gibraltar"
+    ship "Dreadnought" "F.W.S. Gibraltar"
   
   on visit
     dialogue "You have reached <planet>, but you left the ambassadors behind! Better depart and wait for them to arrive in this star system."
@@ -641,7 +641,7 @@ mission "FW Syndicate Capture 1"
     dialogue `You have failed an essential Free Worlds mission. If you want to complete the story line, revert to the autosave or another earlier snapshot of the game.`
   
   on offer
-    log "Preparing to invade Syndicate space with a joint strike force made up of Free Worlds, Deep Security, and Oathkeeper ships. The plan is to capture one of the Syndicate executives and bring him to trial."
+    log "Preparing to invade Syndicate space with a joint strike force made up of Free Worlds, Deep Defence, and Oathkeeper ships. The plan is to capture one of the Syndicate executives and bring him to trial."
     conversation
       `You land on Earth and make a show of being very busy ensuring that the Free Worlds ambassadors are comfortable and well cared for, until finally you receive a secure message from Edricka. She tells you that the convoy from the Deep is landing on Mars right now, and an Oathkeeper Saturn is visiting the shipyard on Luna. As soon as you are ready, you can take off, and travel together into the heart of Syndicate space.`
       `  You make an excuse to depart, and return to your ship. "Well," says Ijs, "this is it. If we're lucky, they won't see us coming, but no matter what, getting back out of Syndicate space will be a nightmare. Good luck, all."`
@@ -649,20 +649,20 @@ mission "FW Syndicate Capture 1"
   
   npc accompany save
     personality escort heroic
-    ship "Dreadnought" "F.S. Gibraltar"
+    ship "Dreadnought" "F.W.S. Gibraltar"
     government "Free Worlds"
   
   npc accompany save
     personality escort heroic waiting
     government "Navy (Oathkeeper)"
-    ship "Saturn (Mark II)" "N.S. Hand of Justice"
+    ship "Saturn (Mark II)" "R.N.S. Hand of Justice"
   
   npc accompany save
     personality escort heroic waiting
-    government "Deep Security"
-    ship "Leviathan (Heavy)" "Unbreakable"
-    ship "Aerie" "Eagle's Eye"
-    ship "Aerie" "Sharp Beak"
+    government "Deep"
+    ship "Leviathan (Heavy)" "D.D.S. Unbreakable"
+    ship "Aerie (Mark II)" "D.D.S. Eagle Eye"
+    ship "Aerie (Mark II)" "D.D.S. Sharp Beak"
 
 
 
@@ -682,7 +682,7 @@ mission "FW Syndicate Capture 1B"
     event "fw syndicate capture begin"
     conversation
       `As you approach the planet, your ships spread out and begin scanning the ocean surface for a yacht matching the description you were given. After a few tense moments of wondering if Soylent is off-world at the moment, you find the ship.`
-      `  With neither deflector shields nor any weaponry that you can see, the yacht clearly poses no threat to an armed starship. The Aerie that Edricka sent launches its two fighters; when they land on the yacht's deck, armed police officers emerge. Meanwhile your fleet is ready to open fire at the first sign of resistance.`
+      `  With neither deflector shields nor any weaponry that you can see, the yacht clearly poses no threat to an armed starship. The Aeries that Edricka sent launches their fighters; when they land on the yacht's deck, armed police officers emerge. Meanwhile your fleet is ready to open fire at the first sign of resistance.`
       `  The officers soon radio you that they have found Soylent, and they bring him aboard your ship. Amid all the confusion, you notice a figure in diving gear who jumps off the rear of the yacht and disappears beneath the waves - one of Soylent's men, trying to escape. But since his leader is now in your custody, and your mission is accomplished, you see no reason to chase after him.`
       `  The Oathkeeper captain sends you a brief message: "Your first priority is to reach the Deep with the prisoner. Our crew is prepared to serve as a rearguard, staying behind if necessary to ensure that you survive. Good luck, Captain."`
         accept
@@ -691,22 +691,22 @@ mission "FW Syndicate Capture 1B"
   
   npc
     personality escort heroic
-    ship "Dreadnought" "F.S. Gibraltar"
+    ship "Dreadnought" "F.W.S. Gibraltar"
     government "Free Worlds"
   npc
     personality escort heroic waiting
     government "Navy (Oathkeeper)"
-    ship "Saturn (Mark II)" "N.S. Hand of Justice"
+    ship "Saturn (Mark II)" "R.N.S. Hand of Justice"
     ship "Mark II Drone" "Eta One"
     ship "Mark II Drone" "Eta Two"
     ship "Mark II Drone" "Eta Three"
     ship "Mark II Drone" "Eta Four"
   npc
     personality escort heroic waiting
-    government "Deep Security"
-    ship "Leviathan (Heavy)" "Unbreakable"
-    ship "Aerie" "Eagle's Eye"
-    ship "Aerie" "Sharp Beak"
+    government "Deep"
+    ship "Leviathan (Heavy)" "D.D.S. Unbreakable"
+    ship "Aerie (Mark II)" "D.D.S. Eagle Eye"
+    ship "Aerie (Mark II)" "D.D.S. Sharp Beak"
     ship "Dagger" "Autumn One"
     ship "Dagger" "Autumn Two"
     ship "Dagger" "Autumn Three"
@@ -1503,8 +1503,8 @@ mission "FW Pug 3B"
   npc accompany save
     government "Free Worlds"
     personality escort disables
-    ship "Dreadnought" "F.S. Independence"
-    ship "Dreadnought" "F.S. Freedom"
+    ship "Dreadnought" "F.W.S. Independence"
+    ship "Dreadnought" "F.W.S. Freedom"
   
   on visit
     dialogue "You have reached <planet>, but the dreadnoughts are lagging behind you because they are using ordinary hyperdrives. Better depart and wait for them to arrive in this star system."
@@ -1546,8 +1546,8 @@ mission "FW Pug 3C"
   npc accompany save
     government "Free Worlds"
     personality escort
-    ship "Dreadnought" "F.S. Independence"
-    ship "Dreadnought" "F.S. Freedom"
+    ship "Dreadnought" "F.W.S. Independence"
+    ship "Dreadnought" "F.W.S. Freedom"
   npc accompany save
     personality escort
     government "Republic"
@@ -1574,8 +1574,8 @@ mission "FW Pug 4: Escorts"
   npc kill
     government "Free Worlds"
     personality escort heroic disables
-    ship "Dreadnought (Jump)" "F.S. Freedom"
-    ship "Dreadnought (Jump)" "F.S. Independence"
+    ship "Dreadnought (Jump)" "F.W.S. Freedom"
+    ship "Dreadnought (Jump)" "F.W.S. Independence"
   npc kill
     personality escort heroic disables
     government "Republic"
@@ -2163,7 +2163,7 @@ mission "FW Syndicate Extremists 1"
   npc accompany save
     government "Navy (Oathkeeper)"
     personality escort heroic
-    ship "Saturn (Mark II)" "N.S. Peacemaker"
+    ship "Saturn (Mark II)" "R.N.S. Peacemaker"
   
   on visit
     dialogue "You have reached <planet>, but you left the <npc> behind! Better depart and wait for them to arrive in this star system."
@@ -2229,7 +2229,7 @@ mission "FW Syndicate Extremists 1A"
   npc accompany save
     government "Navy (Oathkeeper)"
     personality escort heroic
-    ship "Saturn (Mark II)" "N.S. Peacemaker"
+    ship "Saturn (Mark II)" "R.N.S. Peacemaker"
   
   on visit
     dialogue "You have reached <planet>, but you left the <npc> behind! Better depart and wait for them to arrive in this star system."

@@ -1,9 +1,10 @@
 shipyard "Lionheart Variants"
   "Aerie"
+  "Aerie (Mark II)"
   "Argosy"
   "Argosy (Blaster)"
   "Argosy (Laser)"
-  "Argosy (Turret)"
+  "Argosy (Torpedo)"
   "Arrow"
   "Arrow (Anti-Missile)"
   "Arrow (Hai)"
@@ -14,6 +15,7 @@ shipyard "Lionheart Variants"
   "Leviathan"
   "Leviathan (Hai)"
   "Leviathan (Heavy)"
+  "Leviathan (Mark II)"
   "Leviathan (Particle)"
   "Leviathan (Plasma)"
   "Scout"
@@ -23,7 +25,7 @@ shipyard "Lionheart Variants"
   "Scout (Miner)"
   "Scout (Speedy)"
   "Warrior"
-  "Warrior (Patrol)"
+  "Warrior (Mark II)"
 
 
 
@@ -45,25 +47,23 @@ ship "Aerie"
     "heat dissipation" .7
     "cargo space" 50
     "outfit space" 440
-    "core space" 190
+    "core space" 200
     "engine space" 90
-    "weapon space" 160
+    "weapon space" 150
     weapon
       "blast radius" 80
       "shield damage" 800
       "hull damage" 400
       "hit force" 1200
   outfits
-    "D41-HY Shield Generator"
+    "D67-TM Shield Generator"
     "NT-200 Nucleovoltaic"
     "Hyperdrive"
 
     "A250 Atomic Thruster"
     "A255 Atomic Steering"
 
-    "Torpedo" 60
-    "Torpedo Storage Rack" 2
-    "Torpedo Launcher" 2
+    "Heavy Laser Cannon" 2
     "Heavy Laser Turret" 2
     "Heavy Anti-Missile Turret"
 
@@ -72,8 +72,8 @@ ship "Aerie"
     "Tactical Scanner" 4
   engine -10 91
   engine 10 91
-  gun -13 -79 "Torpedo Launcher"
-  gun 13 -79 "Torpedo Launcher"
+  gun -13 -79 "Heavy Laser Cannon"
+  gun 13 -79 "Heavy Laser Cannon"
   turret 0 0 "Heavy Anti-Missile Turret"
   turret -17 14 "Heavy Laser Turret"
   turret 17 14 "Heavy Laser Turret"
@@ -88,6 +88,24 @@ ship "Aerie"
   explode "large explosion" 10
   "final explode" "final explosion medium"
   description "The Aerie is a light carrier, designed to be just big enough for two fighter bays plus a decent armament of its own. Variations on this same ship design have been in use in the Deep for almost half a millennium, but this model comes with the very latest in generator and weapon technology."
+
+
+ship "Aerie" "Aerie (Mark II)"
+  outfits
+    "D67-TM Shield Generator"
+    "NT-200 Nucleovoltaic"
+    "Hyperdrive"
+
+    "A250 Atomic Thruster"
+    "A255 Atomic Steering"
+
+    "Electron Turret" 2
+    "Heavy Anti-Missile Turret"
+
+    "LP144a Battery Pack"
+    "Fuel Barrel" 50
+    "Tactical Scanner" 4
+    "Laser Rifle" 28
 
 
 
@@ -119,7 +137,7 @@ ship "Argosy"
       "hull damage" 300
       "hit force" 900
   outfits
-    "D23-QP Shield Generator"
+    "D41-HY Shield Generator"
     "NT-200 Nucleovoltaic"
     "Hyperdrive"
 
@@ -131,7 +149,7 @@ ship "Argosy"
 
     "LP072a Battery Pack"
     "Fuel Barrel" 40
-    "Small Radar Jammer" 2
+    "Small Radar Jammer"
     "Tactical Scanner" 3
   engine -20 91
   engine 20 91
@@ -152,7 +170,7 @@ ship "Argosy"
 
 ship "Argosy" "Argosy (Blaster)"
   outfits
-    "D23-QP Shield Generator"
+    "D41-HY Shield Generator"
     "NT-200 Nucleovoltaic"
     "Hyperdrive"
 
@@ -164,31 +182,13 @@ ship "Argosy" "Argosy (Blaster)"
 
     "LP072a Battery Pack"
     "Fuel Barrel" 40
-    "Small Radar Jammer" 2
+    "Small Radar Jammer"
     "Tactical Scanner" 3
 
 
 ship "Argosy" "Argosy (Laser)"
   outfits
-    "D23-QP Shield Generator"
-    "NT-200 Nucleovoltaic"
-    "Hyperdrive"
-
-    "A250 Atomic Thruster"
-    "A255 Atomic Steering"
-
-    "Heavy Laser Cannon" 2
-    "Heavy Laser Turret"
-
-    "LP072a Battery Pack"
-    "Fuel Barrel" 40
-    "Small Radar Jammer" 2
-    "Tactical Scanner" 3
-
-
-ship "Argosy" "Argosy (Turret)"
-  outfits
-    "D23-QP Shield Generator"
+    "D41-HY Shield Generator"
     "NT-200 Nucleovoltaic"
     "Hyperdrive"
 
@@ -199,8 +199,31 @@ ship "Argosy" "Argosy (Turret)"
 
     "LP072a Battery Pack"
     "Fuel Barrel" 40
-    "Small Radar Jammer" 2
+    "Small Radar Jammer"
     "Tactical Scanner" 3
+    "Outfit Space Expansion"
+
+
+ship "Argosy" "Argosy (Torpedo)"
+  outfits
+    "D41-HY Shield Generator"
+    "NT-200 Nucleovoltaic"
+    "Hyperdrive"
+
+    "A250 Atomic Thruster"
+    "A255 Atomic Steering"
+
+    "Torpedo" 60
+    "Torpedo Storage Rack" 2
+    "Torpedo Launcher" 2
+    "Heavy Laser Turret"
+
+    "LP036a Battery Pack"
+    "Fuel Barrel" 40
+    "Small Radar Jammer"
+    "Tactical Scanner" 3
+    "Outfit Space Expansion" 3
+    "Laser Rifle" 14
 
 
 
@@ -333,7 +356,7 @@ ship "Behemoth"
 
     "LP144a Battery Pack"
     "Fuel Barrel" 60
-    "Tactical Scanner" 4
+    "Tactical Scanner" 5
   engine -34 154
   engine 34 154
   gun -27 -83 "Torpedo Launcher"
@@ -373,7 +396,7 @@ ship "Behemoth" "Behemoth (Free Worlds)"
     "LP144a Battery Pack"
     "Liquid Nitrogen Cooler"
     "Fuel Barrel" 60
-    "Tactical Scanner" 4
+    "Tactical Scanner" 5
     "Outfit Space Expansion" 4
     "Fragmentation Grenades" 10
     "Laser Rifle" 20
@@ -553,6 +576,25 @@ ship "Leviathan" "Leviathan (Heavy)"
     "Large Radar Jammer"
     "Tactical Scanner" 4
     "Outfit Space Expansion" 4
+    "Laser Rifle" 75
+
+
+ship "Leviathan" "Leviathan (Mark II)"
+  outfits
+    "D94-YV Shield Generator"
+    "Fusion Reactor"
+    "Hyperdrive"
+
+    "A370 Atomic Thruster"
+    "A525 Atomic Steering"
+
+    "Electron Turret" 4
+
+    "LP144a Battery Pack"
+    "Liquid Helium Cooler"
+    "Fuel Barrel" 50
+    "Large Radar Jammer"
+    "Tactical Scanner" 4
     "Laser Rifle" 75
 
 
@@ -796,10 +838,10 @@ ship "Warrior"
   explode "tiny explosion" 15
   explode "small explosion" 5
   "final explode" "final explosion small"
-  description "The Warrior is one of the most affordable ships designed by Lionheart: a versatile ship that can serve equally well for escorting freighters or for bounty hunting. As with many of Lionheart's designs, the hull is mostly composite fiber rather than metal, sacrificing armor strength for the sake of lighter weight and faster movement."
+  description "The Warrior is one of the most affordable ships designed by Lionheart: a versatile ship that can serve equally well for escorting freighters or for bounty hunting. As with many of Lionheart's designs, the hull is mostly composite fiber rather than metal, sacrificing armour strength for the sake of lighter weight and faster movement."
 
 
-ship "Warrior" "Warrior (Patrol)"
+ship "Warrior" "Warrior (Mark II)"
   outfits
     "D23-QP Shield Generator"
     "nGVF-CC Fuel Cell"
@@ -808,7 +850,7 @@ ship "Warrior" "Warrior (Patrol)"
     "A250 Atomic Thruster"
     "A255 Atomic Steering"
 
-    "Heavy Laser Cannon" 2
+    "Electron Cannon" 2
 
     "LP072a Battery Pack"
     "Cargo Scanner"
@@ -816,6 +858,6 @@ ship "Warrior" "Warrior (Patrol)"
     "Outfit Scanner"
     "Small Radar Jammer"
     "Tactical Scanner" 4
-    "Outfit Space Expansion"
+    "Outfit Space Expansion" 2
     "Laser Rifle" 4
 
