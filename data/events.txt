@@ -1080,72 +1080,69 @@ event "fw safe passage end"
   "reputation: Republic" <?= -1000
 
 
-event "navy using mark ii ships"  
-  fleet "Republic Home"
-    add variant 3
-      "Jupiter (Mark II)"
-      "Saturn (Mark II)" 2
-      "Venus (Mark II)" 3
-      "Mars (Mark II)" 4
-      "Mercury (Mark II)" 5
-      "Foxhound" 4
-      "Poodle" 14
+event "navy using mark ii ships"
+  shipyard "Centaur Advanced"
+    "Mark II Drone"
+  shipyard "Centaur Intermediate"
+    "Mark II Drone"
+  shipyard "Centaur Basics"
+    "Mark II Drone"
   
   fleet "Republic Large"
     add variant 6
       "Jupiter (Mark II)"
       "Foxhound" 4
-      "Poodle" 6
+      "Mark II Drone" 6
     add variant 3
       "Jupiter (Mark II)"
       "Foxhound" 4
-      "Poodle" 6
+      "Mark II Drone" 6
       "Venus (Mark II)"
     add variant 3
       "Jupiter (Mark II)"
       "Foxhound" 4
-      "Poodle" 6
+      "Mark II Drone" 6
       "Mars (Mark II)"
     add variant 3
       "Jupiter (Mark II)"
       "Foxhound" 4
-      "Poodle" 6
+      "Mark II Drone" 6
       "Mercury (Mark II)"
     add variant 9
       "Saturn (Mark II)"
-      "Poodle" 4
+      "Mark II Drone" 4
     add variant 3
       "Saturn (Mark II)"
-      "Poodle" 4
+      "Mark II Drone" 4
       "Venus (Mark II)"
       "Mars (Mark II)"
       "Mercury (Mark II)"
     add variant 3
       "Saturn (Mark II)"
-      "Poodle" 4
+      "Mark II Drone" 4
       "Venus (Mark II)" 2
     add variant 3
       "Saturn (Mark II)"
-      "Poodle" 4
+      "Mark II Drone" 4
       "Venus (Mark II)"
       "Mars (Mark II)"
     add variant 3
       "Saturn (Mark II)"
-      "Poodle" 4
+      "Mark II Drone" 4
       "Venus (Mark II)"
       "Mercury (Mark II)"
     add variant 3
       "Saturn (Mark II)"
-      "Poodle" 4
+      "Mark II Drone" 4
       "Mars (Mark II)" 2
     add variant 3
       "Saturn (Mark II)"
-      "Poodle" 4
+      "Mark II Drone" 4
       "Mars (Mark II)"
       "Mercury (Mark II)"
     add variant 3
       "Saturn (Mark II)"
-      "Poodle" 4
+      "Mark II Drone" 4
       "Mercury (Mark II)" 2
     add variant 18
       "Venus (Mark II)" 2

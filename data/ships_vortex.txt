@@ -16,7 +16,6 @@ shipyard "Vortex Variants"
   "Mule"
   "Mule (Hai)"
   "Mule (Heavy)"
-  "Poodle"
   "Splinter"
   "Splinter (Laser)"
   "Splinter (Mark II)"
@@ -248,9 +247,7 @@ ship "Foxhound"
   thumbnail "thumbnail/lance"
   attributes
     category "Fighter"
-#    manufacturer "Navy"
-    licences
-      Navy
+#    manufacturer "Vortex"
     "carried" 2
     "cost" 93000
     "shields" 800
@@ -436,7 +433,7 @@ ship "Mongrel"
   thumbnail "thumbnail/barb"
   attributes
     category "Bomber"
-#    manufacturer "Lionheart"
+#    manufacturer "Vortex"
     licences
       Pilot
     "carried" 3
@@ -616,50 +613,6 @@ ship "Mule" "Mule (Heavy)"
 
 
 
-ship "Poodle"
-  sprite "ship/combat drone"
-  thumbnail "thumbnail/combat drone"
-  attributes
-    category "Drone"
-#    manufacturer "Navy"
-    licences
-      Navy
-    "carried" 1
-    "cost" 83000
-    "hull" 700
-    "automaton" 1
-    "mass" 20
-    "drag" .6
-    "heat dissipation" .9
-    "outfit space" 60
-    "core space" 25
-    "engine space" 28
-    "weapon space" 7
-    weapon
-      "blast radius" 5
-      "shield damage" 50
-      "hull damage" 25
-      "hit force" 75
-  outfits
-    "nGVF-AA Fuel Cell"
-
-    "IT-1700 Ion Thruster"
-    "IS-1200 Ion Steering"
-
-    "Gatling Round" 1500
-    "Gatling Bullet Boxes"
-    "Gatling Gun"
-
-    "Supercapacitor"
-    "Tactical Scanner"
-  engine -9 29
-  engine 9 29
-  gun 0 -29 "Gatling Gun"
-  explode "tiny explosion" 15
-  description "The Poodle is a pilotless attack ship used primarily by the Republic Navy. Although very weak and easy to destroy, they can be very effective in large numbers. Because drones do not need a cockpit, they can be filled entirely with equipment and solid metal, which makes their hulls stronger than other small ships."
-
-
-
 ship "Splinter"
   sprite "ship/splinter"
   thumbnail "thumbnail/splinter"
@@ -776,7 +729,7 @@ ship "Watch Dog"
   thumbnail "thumbnail/surveillance drone"
   attributes
     category "Drone"
-#    manufacturer "Navy"
+#    manufacturer "Vortex"
     licences
       Navy
     "carried" 1

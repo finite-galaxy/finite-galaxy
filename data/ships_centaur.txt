@@ -9,6 +9,8 @@ shipyard "Centaur Variants"
   "Clipper (Speedy)"
   "Flivver"
   "Flivver (Hai)"
+  "Mark I Drone"
+  "Mark II Drone"
 
 
 
@@ -308,4 +310,84 @@ ship "Flivver" "Flivver (Hai)"
     "Williwaw Cooling"
     "Fuel Pod" 5
     "Yoloy Scanner"
+
+
+
+ship "Mark I Drone"
+  sprite "ship/combat drone"
+  thumbnail "thumbnail/combat drone"
+  attributes
+    category "Drone"
+#    manufacturer "Centaur"
+    licences
+      Navy
+    "carried" 1
+    "cost" 83000
+    "hull" 700
+    "automaton" 1
+    "mass" 20
+    "drag" .6
+    "heat dissipation" .9
+    "outfit space" 75
+    "core space" 32
+    "engine space" 28
+    "weapon space" 15
+    weapon
+      "blast radius" 5
+      "shield damage" 50
+      "hull damage" 25
+      "hit force" 75
+  outfits
+    "nGVF-BB Fuel Cell"
+
+    "IT-1700 Ion Thruster"
+    "IS-1200 Ion Steering"
+
+    "Heavy Laser Cannon"
+
+    "Supercapacitor"
+  engine -9 29
+  engine 9 29
+  gun 0 -29 "Heavy Laser Cannon"
+  explode "tiny explosion" 15
+  description "The Mark I Drone is a pilotless attack ship used exclusively by the Republic Navy. Although very weak and easy to destroy, they can be quite effective in large numbers. Because drones do not need to accomodate life support systems, a cockpit, bunks, cargo space, or shield emitters, they can have similar firepower and a stronger hull than larger fighters or interceptors."
+
+
+ship "Mark II Drone"
+  sprite "ship/combat drone"
+  thumbnail "thumbnail/combat drone"
+  attributes
+    category "Drone"
+#    manufacturer "Centaur"
+    licences
+      Navy
+    "carried" 1
+    "cost" 83000
+    "hull" 700
+    "automaton" 1
+    "mass" 20
+    "drag" .6
+    "heat dissipation" .9
+    "outfit space" 75
+    "core space" 32
+    "engine space" 20
+    "weapon space" 23
+    weapon
+      "blast radius" 5
+      "shield damage" 50
+      "hull damage" 25
+      "hit force" 75
+  outfits
+    "nGVF-BB Fuel Cell"
+
+    "IC-900 Ion Engines"
+
+    "Electron Cannon"
+
+    "Supercapacitor"
+  engine -9 29
+  engine 9 29
+  gun 0 -29 "Electron Cannon"
+  explode "tiny explosion" 15
+  description "The Mark II Drone is external identical to its predecessor, but internal it has reduced engine space to increase its weapon space, sacrificing speed to accomodate a larger cannon."
 
