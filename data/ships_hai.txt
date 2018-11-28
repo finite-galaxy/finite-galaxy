@@ -3,6 +3,8 @@ shipyard "Hai Variants"
   "Flea"
   "Lightning Bug"
   "Lightning Bug (Pulse)"
+  "Mosquito"
+  "Mosquito (Tracker)"
   "Pond Strider"
   "Pond Strider (Jump)"
   "Shield Beetle"
@@ -15,8 +17,6 @@ shipyard "Hai Variants"
   "Solifuge (Jump)"
   "Solifuge (Tracker)"
   "Solifuge (Tracker, Jump)"
-  "Violin Spider"
-  "Violin Spider (Tracker)"
   "Water Bug"
   "Water Bug (Jump)"
   "Water Bug (Pulse)"
@@ -25,8 +25,8 @@ shipyard "Hai Variants"
 
 
 ship "Aphid"
-  sprite "ship/hai aphid"
-  thumbnail "thumbnail/hai aphid"
+  sprite "ship/aphid"
+  thumbnail "thumbnail/aphid"
   attributes
     category "Interceptor"
 #    manufacturer "Hai"
@@ -74,8 +74,8 @@ ship "Aphid"
 
 
 ship "Flea"
-  sprite "ship/hai flea"
-  thumbnail "thumbnail/hai flea"
+  sprite "ship/flea"
+  thumbnail "thumbnail/flea"
   attributes
     category "Drone"
 #    manufacturer "Hai"
@@ -115,8 +115,8 @@ ship "Flea"
 
 
 ship "Lightning Bug"
-  sprite "ship/hai lightning bug"
-  thumbnail "thumbnail/hai lightning bug"
+  sprite "ship/lightning_bug"
+  thumbnail "thumbnail/lightning_bug"
   attributes
     category "Corvette"
 #    manufacturer "Hai"
@@ -188,9 +188,68 @@ ship "Lightning Bug" "Lightning Bug (Pulse)"
 
 
 
+ship "Mosquito"
+  sprite "ship/mosquito"
+  thumbnail "thumbnail/mosquito"
+  attributes
+    category "Fighter"
+#    manufacturer "Hai"
+    licences
+      Unfettered
+    "carried" 2
+    "cost" 320000
+    "shields" 1400
+    "hull" 1200
+    "required crew" 1
+    "bunks" 1
+    "mass" 31
+    "drag" 0.9
+    "heat dissipation" .7
+    "outfit space" 98
+    "core space" 42
+    "engine space" 30
+    "weapon space" 26
+    weapon
+      "blast radius" 12
+      "shield damage" 120
+      "hull damage" 60
+      "hit force" 180
+  outfits
+    "Pebble Core"
+
+    `"Basrem" Atomic Steering`
+    `"Basrem" Atomic Thruster`
+
+    "Pulse Cannon"
+
+    "Chasm Batteries"
+    "Williwaw Cooling"
+  engine -15 30
+  engine 15 30
+  gun 0 -31 "Pulse Cannon"
+  turret 0 5
+  explode "tiny explosion" 15
+  explode "small explosion" 5
+  description `The Hai fighter is equipped with what most humans would consider the greatest technology available, but all of that high tech comes at a cost.`
+
+ship "Mosquito" "Mosquito (Tracker)"
+  outfits
+    "Pebble Core"
+
+    `"Basrem" Atomic Steering`
+    `"Basrem" Atomic Thruster`
+
+    "Tracker" 28
+    "Tracker Launcher"
+
+    "Chasm Batteries"
+    "Williwaw Cooling"
+
+
+
 ship "Pond Strider"
-  sprite "ship/hai pond strider"
-  thumbnail "thumbnail/hai pond strider"
+  sprite "ship/pond_strider"
+  thumbnail "thumbnail/pond_strider"
   attributes
     category "Corvette"
 #    manufacturer "Hai"
@@ -252,7 +311,7 @@ ship "Pond Strider"
   explode "large explosion" 40
   explode "huge explosion" 10
   "final explode" "final explosion large"
-  description "This short range drone carrier was built by the Hai to contain the increasingly aggressive Unfettered with their new Solifuge and Violin Spider ships. The Hai's greater value for life is evident in the remotely-piloted robotic fighter craft, preferring to keep valuable pilots out of harm's way."
+  description "This short range drone carrier was built by the increasingly powerful Unfettered, as a cheaper alternative to their new Solifuge and Mosquito ships. The Hai's greater value for life is evident in the remotely-piloted robotic fighter craft, preferring to keep valuable pilots out of harm's way."
 
 ship "Pond Strider" "Pond Strider (Jump)"
   outfits
@@ -276,8 +335,8 @@ ship "Pond Strider" "Pond Strider (Jump)"
 
 
 ship "Shield Beetle"
-  sprite "ship/hai shield beetle"
-  thumbnail "thumbnail/hai shield beetle"
+  sprite "ship/shield_beetle"
+  thumbnail "thumbnail/shield_beetle"
   attributes
     category "Destroyer"
 #    manufacturer "Hai"
@@ -462,8 +521,8 @@ ship "Shield Beetle" "Shield Beetle (Tracker, Jump)"
 
 
 ship "Solifuge"
-  sprite "ship/hai solifuge"
-  thumbnail "thumbnail/hai solifuge"
+  sprite "ship/solifuge"
+  thumbnail "thumbnail/solifuge"
   attributes
     category "Destroyer"
 #    manufacturer "Hai"
@@ -615,68 +674,9 @@ ship "Solifuge" "Solifuge (Tracker, Jump)"
 
 
 
-ship "Violin Spider"
-  sprite "ship/hai violin spider"
-  thumbnail "thumbnail/hai violin spider"
-  attributes
-    category "Fighter"
-#    manufacturer "Hai"
-    licences
-      Unfettered
-    "carried" 2
-    "cost" 320000
-    "shields" 1400
-    "hull" 1200
-    "required crew" 1
-    "bunks" 1
-    "mass" 31
-    "drag" 0.9
-    "heat dissipation" .7
-    "outfit space" 98
-    "core space" 42
-    "engine space" 30
-    "weapon space" 26
-    weapon
-      "blast radius" 12
-      "shield damage" 120
-      "hull damage" 60
-      "hit force" 180
-  outfits
-    "Pebble Core"
-
-    `"Basrem" Atomic Steering`
-    `"Basrem" Atomic Thruster`
-
-    "Pulse Cannon"
-
-    "Chasm Batteries"
-    "Williwaw Cooling"
-  engine -15 30
-  engine 15 30
-  gun 0 -31 "Pulse Cannon"
-  turret 0 5
-  explode "tiny explosion" 15
-  explode "small explosion" 5
-  description `The Hai fighter is equipped with what most humans would consider the greatest technology available, but all of that high tech comes at a cost.`
-
-ship "Violin Spider" "Violin Spider (Tracker)"
-  outfits
-    "Pebble Core"
-
-    `"Basrem" Atomic Steering`
-    `"Basrem" Atomic Thruster`
-
-    "Tracker" 28
-    "Tracker Launcher"
-
-    "Chasm Batteries"
-    "Williwaw Cooling"
-
-
-
 ship "Water Bug"
-  sprite "ship/hai water bug"
-  thumbnail "thumbnail/hai water bug"
+  sprite "ship/water_bug"
+  thumbnail "thumbnail/water_bug"
   attributes
     category "Corvette"
 #    manufacturer "Hai"

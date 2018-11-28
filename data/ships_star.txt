@@ -12,8 +12,8 @@ shipyard "Star Variants"
 
 
 ship "Star Barge"
-  sprite "ship/star barge"
-  thumbnail "thumbnail/star barge"
+  sprite "ship/star_barge"
+  thumbnail "thumbnail/star_barge"
   attributes
     category "Interceptor"
 #    manufacturer "Star"
@@ -79,8 +79,8 @@ ship "Star Barge" "Star Barge (Miner)"
 
 
 ship "Star Freighter"
-  sprite "ship/freighter"
-  thumbnail "thumbnail/freighter"
+  sprite "ship/star_freighter"
+  thumbnail "thumbnail/star_freighter"
   attributes
     category "Corvette"
 #    manufacturer "Star"
@@ -111,12 +111,12 @@ ship "Star Freighter"
 
     "IT-2700 Ion Thruster"
     "IS-2200 Ion Steering"
-    "IR-1700 Ion Reverse"
+    "IR-2700 Ion Reverse"
 
     "X4 Blaster Turret"
     "Light Anti-Missile Turret" 2
 
-    "LP072a Battery Pack"
+    "LP036a Battery Pack"
     "Fuel Barrel" 60
   engine -9 97
   engine 9 97
@@ -186,12 +186,11 @@ ship "Star Freighter" "Star Freighter (Miner)"
 
     "Laser Turret" 3
 
-    "LP072a Battery Pack"
+    "LP036a Battery Pack"
     "Asteroid Scanner"
     "Fuel Barrel" 60
     "Ramscoop"
     "Tactical Scanner"
-    "Outfit Space Expansion"
 
 
 ship "Star Freighter" "Star Freighter (Secret Cargo)"
@@ -202,12 +201,12 @@ ship "Star Freighter" "Star Freighter (Secret Cargo)"
 
     "IT-2700 Ion Thruster"
     "IS-2200 Ion Steering"
-    "IR-1700 Ion Reverse"
+    "IR-2700 Ion Reverse"
 
     "X4 Blaster Turret"
     "Light Anti-Missile Turret" 2
 
-    "LP072a Battery Pack"
+    "LP036a Battery Pack"
     "Fuel Barrel" 60
     "Secret Cargo"
   turret "Light Anti-Missile Turret"
@@ -217,8 +216,8 @@ ship "Star Freighter" "Star Freighter (Secret Cargo)"
 
 
 ship "Star Queen"
-  sprite "ship/star queen"
-  thumbnail "thumbnail/star queen"
+  sprite "ship/star_queen"
+  thumbnail "thumbnail/star_queen"
   attributes
     category "Corvette"
 #    manufacturer "Star"

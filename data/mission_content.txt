@@ -152,7 +152,7 @@ fleet "Nanobots"
 
 # Science Drone
 ship "Science Drone"
-  sprite "ship/science drone"
+  sprite "ship/science_drone"
   attributes
     category "Drone"
     hull 200
@@ -195,7 +195,7 @@ outfit "Timer Weapon"
 # Void Sprites
 ship "Void Sprite"
   noun "creature"
-  sprite "ship/void sprite adult"
+  sprite "ship/void_sprite_adult"
     "frame rate" 3.2
     rewind
   "never disabled"
@@ -239,7 +239,7 @@ effect "void sprite adult death"
 
 
 ship "Void Sprite" "Void Sprite (Infant)"
-  sprite "ship/void sprite infant"
+  sprite "ship/void_sprite_infant"
     "frame rate" 7.4
     rewind
   "never disabled"

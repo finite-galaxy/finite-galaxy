@@ -15,8 +15,8 @@ shipyard "Vortex Variants"
   "Splinter"
   "Splinter (Laser)"
   "Splinter (Mark II)"
-  "Watch Dog"
   "Wasp"
+  "Watch Dog"
 
 
 
@@ -116,8 +116,8 @@ ship "Bactrian" "Bactrian (Hired Gun)"
 
 
 ship "Foxhound"
-  sprite "ship/lance"
-  thumbnail "thumbnail/lance"
+  sprite "ship/foxhound"
+  thumbnail "thumbnail/foxhound"
   attributes
     category "Fighter"
 #    manufacturer "Vortex"
@@ -165,8 +165,8 @@ ship "Foxhound"
 
 
 ship "Heavy Shuttle"
-  sprite "ship/heavy shuttle"
-  thumbnail "thumbnail/heavy shuttle"
+  sprite "ship/shuttle_heavy"
+  thumbnail "thumbnail/shuttle_heavy"
   attributes
     category "Interceptor"
 #    manufacturer "Vortex"
@@ -232,11 +232,11 @@ ship "Heavy Shuttle" "Heavy Shuttle (Armed)"
 
 
 ship "Light Shuttle"
-  sprite "ship/shuttle"
+  sprite "ship/shuttle_light"
     "frame time" 4
     "delay" 14
     "random start frame"
-  thumbnail "thumbnail/shuttle"
+  thumbnail "thumbnail/shuttle_light"
   attributes
     category "Interceptor"
 #    manufacturer "Vortex"
@@ -302,8 +302,8 @@ ship "Light Shuttle" "Light Shuttle (Armed)"
 
 
 ship "Mongrel"
-  sprite "ship/barb"
-  thumbnail "thumbnail/barb"
+  sprite "ship/mongrel"
+  thumbnail "thumbnail/mongrel"
   attributes
     category "Bomber"
 #    manufacturer "Vortex"
@@ -597,42 +597,6 @@ ship "Splinter" "Splinter (Mark II)"
 
 
 
-ship "Watch Dog"
-  sprite "ship/surveillance drone"
-  thumbnail "thumbnail/surveillance drone"
-  attributes
-    category "Drone"
-#    manufacturer "Vortex"
-    licences
-      Navy
-    "carried" 1
-    "cost" 50000
-    "hull" 300
-    "automaton" 1
-    "mass" 15
-    "drag" .5
-    "heat dissipation" .9
-    "outfit space" 60
-    "core space" 40
-    "engine space" 20
-    weapon
-      "blast radius" 3
-      "shield damage" 30
-      "hull damage" 15
-      "hit force" 45
-  outfits
-    "IC-900 Ion Engines"
-
-    "KP-6 Photovoltaic Array"
-    "LP036a Battery Pack"
-    "Surveillance Pod"
-  engine -5 29
-  engine 5 29
-  explode "tiny explosion" 15
-  description "Watch Dogs are unarmed drones used by the Republic navy to scan ships and planets in a star system."
-
-
-
 ship "Wasp"
   sprite "ship/wasp"
   thumbnail "thumbnail/wasp"
@@ -685,4 +649,40 @@ ship "Wasp"
   explode "tiny explosion" 20
   explode "small explosion" 10
   description "The Wasp is a medium-strength interceptor, designed by Vortex Shipyards to serve as an escort for cargo vessels. Like most Vortex ships, it is not particularly pretty, but it is reliable and serves the purpose it was made for."
+
+
+
+ship "Watch Dog"
+  sprite "ship/watch_dog"
+  thumbnail "thumbnail/watch_dog"
+  attributes
+    category "Drone"
+#    manufacturer "Vortex"
+    licences
+      Navy
+    "carried" 1
+    "cost" 50000
+    "hull" 300
+    "automaton" 1
+    "mass" 15
+    "drag" .5
+    "heat dissipation" .9
+    "outfit space" 60
+    "core space" 40
+    "engine space" 20
+    weapon
+      "blast radius" 3
+      "shield damage" 30
+      "hull damage" 15
+      "hit force" 45
+  outfits
+    "IC-900 Ion Engines"
+
+    "KP-6 Photovoltaic Array"
+    "LP036a Battery Pack"
+    "Surveillance Pod"
+  engine -5 29
+  engine 5 29
+  explode "tiny explosion" 15
+  description "Watch Dogs are unarmed drones used by the Republic navy to scan ships and planets in a star system."
 
