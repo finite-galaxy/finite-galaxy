@@ -111,7 +111,7 @@ void Radar::Draw(const Point &centre, double scale, double radius, double pointe
   }
   RingShader::Unbind();
   
-  // Draw neighboring system indicators.
+  // Draw neighbouring system indicators.
   PointerShader::Bind();
   for(const Pointer &pointer : pointers)
     PointerShader::Add(centre, pointer.unit, 10., 10., pointerRadius, pointer.colour);

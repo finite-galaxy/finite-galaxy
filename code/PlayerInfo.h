@@ -176,7 +176,7 @@ public:
   bool HasVisited(const System *system) const;
   bool HasVisited(const Planet *planet) const;
   bool KnowsName(const System *system) const;
-  // Marking a system as visited also "sees" its neighbors.
+  // Marking a system as visited also "sees" its neighbours.
   void Visit(const System *system);
   void Visit(const Planet *planet);
   // Mark a system and its planets as unvisited, even if visited previously.

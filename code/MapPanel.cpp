@@ -837,7 +837,7 @@ void MapPanel::DrawTravelPlan()
   {
     const System *next = player.TravelPlan()[i];
     bool isHyper = previous->Links().count(next);
-    bool isJump = !isHyper && previous->Neighbors().count(next);
+    bool isJump = !isHyper && previous->Neighbours().count(next);
     bool isWormhole = false;
     for(const StellarObject &object : previous->Objects())
       isWormhole |= (object.GetPlanet() && player.HasVisited(object.GetPlanet())

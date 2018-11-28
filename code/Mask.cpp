@@ -88,7 +88,7 @@ namespace {
   
   void SmoothAndCentre(vector<Point> *raw, Point size)
   {
-    // Smooth out the outline by averaging neighboring points.
+    // Smooth out the outline by averaging neighbouring points.
     Point prev = raw->back();
     for(Point &p : *raw)
     {

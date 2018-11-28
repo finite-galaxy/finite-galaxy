@@ -70,9 +70,9 @@ public:
   static void AddPurchase(const System &system, const std::string &commodity, int tons);
   // Apply the given change to the universe.
   static void Change(const DataNode &node);
-  // Update the neighbor lists of all the systems. This must be done any time
+  // Update the neighbour lists of all the systems. This must be done any time
   // that a change creates or moves a system.
-  static void UpdateNeighbors();
+  static void UpdateNeighbours();
   
   // Re-activate any special persons that were created previously but that are
   // still alive.

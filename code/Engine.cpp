@@ -189,10 +189,10 @@ Engine::Engine(PlayerInfo &player)
       radar[calcTickTock].Add(object.RadarType(flagship), object.Position(), r, r - 1.);
     }
   
-  // Add all neighboring systems to the radar.
+  // Add all neighbouring systems to the radar.
   const System *targetSystem = flagship ? flagship->GetTargetSystem() : nullptr;
   const set<const System *> &links = (flagship && flagship->Attributes().Get("jump drive")) ?
-    player.GetSystem()->Neighbors() : player.GetSystem()->Links();
+    player.GetSystem()->Neighbours() : player.GetSystem()->Links();
   for(const System *system : links)
     radar[calcTickTock].AddPointer(
       (system == targetSystem) ? Radar::SPECIAL : Radar::INACTIVE,
@@ -1434,7 +1434,7 @@ void Engine::SpawnFleets()
     player.ClearActiveBoardingMission();
   }
   
-  // Non-mission NPCs spawn at random intervals in neighboring systems,
+  // Non-mission NPCs spawn at random intervals in neighbouring systems,
   // or coming from planets in the current one.
   for(const System::FleetProbability &fleet : player.GetSystem()->Fleets())
     if(!Random::Int(fleet.Period()))
@@ -1847,12 +1847,12 @@ void Engine::FillRadar()
       radar[calcTickTock].Add(object.RadarType(flagship), object.Position(), r, r - 1.);
     }
   
-  // Add pointers for neighboring systems.
+  // Add pointers for neighbouring systems.
   if(flagship)
   {
     const System *targetSystem = flagship->GetTargetSystem();
     const set<const System *> &links = (flagship->Attributes().Get("jump drive")) ?
-      playerSystem->Neighbors() : playerSystem->Links();
+      playerSystem->Neighbours() : playerSystem->Links();
     for(const System *system : links)
       radar[calcTickTock].AddPointer(
         (system == targetSystem) ? Radar::SPECIAL : Radar::INACTIVE,

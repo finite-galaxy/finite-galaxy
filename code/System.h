@@ -64,9 +64,9 @@ public:
 public:
   // Load a system's description.
   void Load(const DataNode &node, Set<Planet> &planets);
-  // Once the star map is fully loaded, figure out which stars are "neighbors"
+  // Once the star map is fully loaded, figure out which stars are "neighbours"
   // of this one, i.e. close enough to see or to reach via jump drive.
-  void UpdateNeighbors(const Set<System> &systems);
+  void UpdateNeighbours(const Set<System> &systems);
   
   // Modify a system's links.
   void Link(System *other);
@@ -88,7 +88,7 @@ public:
   // Get a list of systems you can "see" from here, whether or not there is a
   // direct hyperspace link to them. This is also the set of systems that you
   // can travel to from here via the jump drive.
-  const std::set<const System *> &Neighbors() const;
+  const std::set<const System *> &Neighbours() const;
   
   // Move the stellar objects to their positions on the given date.
   void SetDate(const Date &date);
@@ -159,7 +159,7 @@ private:
   
   // Hyperspace links to other systems.
   std::set<const System *> links;
-  std::set<const System *> neighbors;
+  std::set<const System *> neighbours;
   
   // Stellar objects, listed in such an order that an object's parents are
   // guaranteed to appear before it (so that if we traverse the vector in

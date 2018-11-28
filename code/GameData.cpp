@@ -174,8 +174,8 @@ bool GameData::BeginLoad(const char * const *argv)
       LoadFile(path, debugMode);
   }
   
-  // Now that all the stars are loaded, update the neighbor lists.
-  UpdateNeighbors();
+  // Now that all the stars are loaded, update the neighbour lists.
+  UpdateNeighbours();
   // And, update the ships with the outfits we've now finished loading.
   for(auto &it : ships)
     it.second.FinishLoading(true);
@@ -482,11 +482,11 @@ void GameData::StepEconomy()
       for(const Trade::Commodity &commodity : trade.Commodities())
       {
         double supply = system.Supply(commodity.name);
-        for(const System *neighbor : system.Links())
+        for(const System *neighbour : system.Links())
         {
-          double scale = neighbor->Links().size();
+          double scale = neighbour->Links().size();
           if(scale)
-            supply += neighbor->Exports(commodity.name) / scale;
+            supply += neighbour->Exports(commodity.name) / scale;
         }
         system.SetSupply(commodity.name, supply);
       }
@@ -532,12 +532,12 @@ void GameData::Change(const DataNode &node)
 
 
 
-// Update the neighbor lists of all the systems. This must be done any time
+// Update the neighbour lists of all the systems. This must be done any time
 // that a change creates or moves a system.
-void GameData::UpdateNeighbors()
+void GameData::UpdateNeighbours()
 {
   for(auto &it : systems)
-    it.second.UpdateNeighbors(systems);
+    it.second.UpdateNeighbours(systems);
 }
 
 

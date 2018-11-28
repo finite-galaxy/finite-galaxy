@@ -17,7 +17,7 @@ class System;
 // This is a map of how many hyperspace jumps it takes to get to other systems
 // from the given "centre" system. Ships with a hyperdrive travel using the
 // "links" between systems. Ships with jump drives can make use of those links,
-// but can also travel to any of a system's "neighbors." A distance map can also
+// but can also travel to any of a system's "neighbours." A distance map can also
 // be used to calculate the shortest route between two systems.
 class DistanceMap {
 public:

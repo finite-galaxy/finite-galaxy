@@ -49,9 +49,9 @@ void OutlineShader::Init()
   // in the interior of the silhouette as well.
   
   // To reduce sampling error and bring out fine details, for every output
-  // pixel the Sobel filter is actually applied in a 3x3 neighborhood and
-  // averaged together. That neighborhood's scale is .618034 times the scale
-  // of the Sobel neighborhood (i.e. the golden ratio) to minimize any
+  // pixel the Sobel filter is actually applied in a 3x3 neighbourhood and
+  // averaged together. That neighbourhood's scale is .618034 times the scale
+  // of the Sobel neighbourhood (i.e. the golden ratio) to minimize any
   // aliasing effects between the two.
   static const char *fragmentCode =
     "uniform sampler2DArray tex;\n"

@@ -77,15 +77,15 @@ namespace {
     return (d > maximum) ? -1 : d;
   }
   
-  // Check that at least one neighbor of the hub system matches, for each of the neighbor filters.
+  // Check that at least one neighbour of the hub system matches, for each of the neighbour filters.
   // False if at least one filter fails to match, true if all filters find at least one match.
-  bool MatchesNeighborFilters(const list<LocationFilter> &neighborFilters, const System *hub, const System *origin)
+  bool MatchesNeighbourFilters(const list<LocationFilter> &neighbourFilters, const System *hub, const System *origin)
   {
-    for(const LocationFilter &filter : neighborFilters)
+    for(const LocationFilter &filter : neighbourFilters)
     {
       bool hasMatch = false;
-      for(const System *neighbor : hub->Links())
-        if(filter.Matches(neighbor, origin))
+      for(const System *neighbour : hub->Links())
+        if(filter.Matches(neighbour, origin))
         {
           hasMatch = true;
           break;
@@ -112,12 +112,12 @@ void LocationFilter::Load(const DataNode &node)
   for(const DataNode &child : node)
   {
     // Handle filters that must not match, or must apply to a
-    // neighboring system. If the token is alone on a line, it
+    // neighbouring system. If the token is alone on a line, it
     // introduces many lines of this type of filter. Otherwise, this
     // child is a normal LocationFilter line.
-    if(child.Token(0) == "not" || child.Token(0) == "neighbor")
+    if(child.Token(0) == "not" || child.Token(0) == "neighbour")
     {
-      list<LocationFilter> &filters = ((child.Token(0) == "not") ? notFilters : neighborFilters);
+      list<LocationFilter> &filters = ((child.Token(0) == "not") ? notFilters : neighbourFilters);
       filters.emplace_back();
       if(child.Size() == 1)
         filters.back().Load(child);
@@ -140,9 +140,9 @@ void LocationFilter::Save(DataWriter &out) const
       out.Write("not");
       filter.Save(out);
     }
-    for(const LocationFilter &filter : neighborFilters)
+    for(const LocationFilter &filter : neighbourFilters)
     {
-      out.Write("neighbor");
+      out.Write("neighbour");
       filter.Save(out);
     }
     if(!planets.empty())
@@ -218,7 +218,7 @@ void LocationFilter::Save(DataWriter &out) const
 bool LocationFilter::IsEmpty() const
 {
   return planets.empty() && attributes.empty() && systems.empty() && governments.empty()
-    && !centre && originMaxDistance < 0 && notFilters.empty() && neighborFilters.empty()
+    && !centre && originMaxDistance < 0 && notFilters.empty() && neighbourFilters.empty()
     && outfits.empty() && shipCategory.empty();
 }
 
@@ -312,7 +312,7 @@ bool LocationFilter::Matches(const Ship &ship) const
     if(filter.Matches(ship))
       return false;
   
-  if(!MatchesNeighborFilters(neighborFilters, origin, origin))
+  if(!MatchesNeighbourFilters(neighbourFilters, origin, origin))
     return false;
   
   // Check if this ship's current system meets a "near <system>" criterion.
@@ -395,11 +395,11 @@ const Planet *LocationFilter::PickPlanet(const System *origin, bool hasClearance
 // Load one particular line of conditions.
 void LocationFilter::LoadChild(const DataNode &child)
 {
-  bool isNot = (child.Token(0) == "not" || child.Token(0) == "neighbor");
+  bool isNot = (child.Token(0) == "not" || child.Token(0) == "neighbour");
   int valueIndex = 1 + isNot;
   const string &key = child.Token(valueIndex - 1);
-  if(key == "not" || key == "neighbor")
-    child.PrintTrace("Skipping unsupported use of 'not' and 'neighbor'. These keywords must be nested if used together.");
+  if(key == "not" || key == "neighbour")
+    child.PrintTrace("Skipping unsupported use of 'not' and 'neighbour'. These keywords must be nested if used together.");
   else if(key == "planet")
   {
     for(int i = valueIndex; i < child.Size(); ++i)
@@ -533,7 +533,7 @@ bool LocationFilter::Matches(const System *system, const System *origin, bool di
         return false;
   }
   
-  if(!MatchesNeighborFilters(neighborFilters, system, origin))
+  if(!MatchesNeighbourFilters(neighbourFilters, system, origin))
     return false;
   
   // Check this system's distance from the desired reference system.

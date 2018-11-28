@@ -309,23 +309,23 @@ void System::Load(const DataNode &node, Set<Planet> &planets)
 
 
 
-// Once the star map is fully loaded, figure out which stars are "neighbors"
+// Once the star map is fully loaded, figure out which stars are "neighbours"
 // of this one, i.e. close enough to see or to reach via jump drive.
-void System::UpdateNeighbors(const Set<System> &systems)
+void System::UpdateNeighbours(const Set<System> &systems)
 {
-  neighbors.clear();
+  neighbours.clear();
   
-  // Every star system that is linked to this one is automatically a neighbor,
+  // Every star system that is linked to this one is automatically a neighbour,
   // even if it is farther away than the maximum distance.
   for(const System *system : links)
     if(!(system->Position().Distance(position) <= NEIGHBOR_DISTANCE))
-      neighbors.insert(system);
+      neighbours.insert(system);
   
-  // Any other star system that is within the neighbor distance is also a
-  // neighbor. This will include any nearby linked systems.
+  // Any other star system that is within the neighbour distance is also a
+  // neighbour. This will include any nearby linked systems.
   for(const auto &it : systems)
     if(&it.second != this && it.second.Position().Distance(position) <= NEIGHBOR_DISTANCE)
-      neighbors.insert(&it.second);
+      neighbours.insert(&it.second);
   
   // Calculate the solar power and solar wind.
   solarPower = 0.;
@@ -352,8 +352,8 @@ void System::Link(System *other)
   links.insert(other);
   other->links.insert(this);
   
-  neighbors.insert(other);
-  other->neighbors.insert(this);
+  neighbours.insert(other);
+  other->neighbours.insert(this);
 }
 
 
@@ -363,12 +363,12 @@ void System::Unlink(System *other)
   links.erase(other);
   other->links.erase(this);
   
-  // If the only reason these systems are neighbors is because of a hyperspace
-  // link, they are no longer neighbors.
+  // If the only reason these systems are neighbours is because of a hyperspace
+  // link, they are no longer neighbours.
   if(position.Distance(other->position) > NEIGHBOR_DISTANCE)
   {
-    neighbors.erase(other);
-    other->neighbors.erase(this);
+    neighbours.erase(other);
+    other->neighbours.erase(this);
   }
 }
 
@@ -426,9 +426,9 @@ const set<const System *> &System::Links() const
 // Get a list of systems you can "see" from here, whether or not there is a
 // direct hyperspace link to them. This is also the set of systems that you
 // can travel to from here via the jump drive.
-const set<const System *> &System::Neighbors() const
+const set<const System *> &System::Neighbours() const
 {
-  return neighbors;
+  return neighbours;
 }
 
 

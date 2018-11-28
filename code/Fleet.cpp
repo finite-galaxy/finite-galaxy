@@ -155,15 +155,15 @@ void Fleet::Enter(const System &system, list<shared_ptr<Ship>> &ships, const Pla
     if(hasJump || hasHyper)
     {
       bool isWelcomeHere = !system.GetGovernment()->IsEnemy(government);
-      for(const System *neighbor : (hasJump ? system.Neighbors() : system.Links()))
+      for(const System *neighbour : (hasJump ? system.Neighbours() : system.Links()))
       {
         // If this ship is not "welcome" in the current system, prefer to have
         // it enter from a system that is friendly to it. (This is for realism,
         // so attack fleets don't come from what ought to be a safe direction.)
-        if(isWelcomeHere || neighbor->GetGovernment()->IsEnemy(government))
-          linkVector.push_back(neighbor);
+        if(isWelcomeHere || neighbour->GetGovernment()->IsEnemy(government))
+          linkVector.push_back(neighbour);
         else
-          linkVector.insert(linkVector.end(), 8, neighbor);
+          linkVector.insert(linkVector.end(), 8, neighbour);
       }
     }
   

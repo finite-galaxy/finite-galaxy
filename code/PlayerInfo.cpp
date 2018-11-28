@@ -369,13 +369,13 @@ void PlayerInfo::AddChanges(list<DataNode> &changes)
   if(changedSystems)
   {
     // Recalculate what systems have been seen.
-    GameData::UpdateNeighbors();
+    GameData::UpdateNeighbours();
     seen.clear();
     for(const System *system : visitedSystems)
     {
       seen.insert(system);
-      for(const System *neighbor : system->Neighbors())
-        seen.insert(neighbor);
+      for(const System *neighbour : system->Neighbours())
+        seen.insert(neighbour);
     }
   }
   
@@ -1748,7 +1748,7 @@ bool PlayerInfo::KnowsName(const System *system) const
 
 
 
-// Mark the given system as visited, and mark all its neighbors as seen.
+// Mark the given system as visited, and mark all its neighbours as seen.
 void PlayerInfo::Visit(const System *system)
 {
   if(!system)
@@ -1756,8 +1756,8 @@ void PlayerInfo::Visit(const System *system)
   
   visitedSystems.insert(system);
   seen.insert(system);
-  for(const System *neighbor : system->Neighbors())
-    seen.insert(neighbor);
+  for(const System *neighbour : system->Neighbours())
+    seen.insert(neighbour);
 }
 
 
