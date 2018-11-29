@@ -1930,7 +1930,7 @@ system "Acrux"
   trade "Plastic" 448
   fleet "Merchants South Small" 500
   fleet "Merchants South Large" 800
-  fleet "Miners South" 5000
+  fleet "Miners Rim" 5000
   fleet "Free Worlds Small" 700
   fleet "Free Worlds Large" 1100 
   object
@@ -2592,8 +2592,10 @@ system "Algieba"
   trade "Medical" 621
   trade "Metal" 251
   trade "Plastic" 476
-  fleet "Merchants North Small" 2000
-  fleet "Miners North" 3000
+  fleet "Merchants West Small" 2000
+  fleet "Miners West" 3000
+  fleet "Pirates South Small" 2000
+  fleet "Pirates South Large" 4000
   fleet "Republic Small" 5000
   object
     sprite star/f0
@@ -2718,10 +2720,8 @@ system "Algorel"
   trade "Medical" 758
   trade "Metal" 490
   trade "Plastic" 427
-  fleet "Merchants North Small" 400
-  fleet "Merchants North Large" 800
-  fleet "Merchants South Small" 600
-  fleet "Merchants South Large" 900
+  fleet "Merchants West Small" 600
+  fleet "Merchants West Large" 900
   fleet "Pirates South Small" 1600
   fleet "Pirates South Large" 5000
   fleet "Militia Small" 2000
@@ -2957,6 +2957,7 @@ system "Alkaid"
   trade "Plastic" 305
   fleet "Merchants South Small" 1200
   fleet "Merchants South Large" 4000
+  fleet "Miners Rim" 3000
   fleet "Free Worlds Small" 6000
   fleet "Free Worlds Large" 10000
   fleet "Pirates South Small" 4000
@@ -6962,9 +6963,9 @@ system "Cor Caroli"
   trade "Medical" 806
   trade "Metal" 517
   trade "Plastic" 485
-  fleet "Merchants South Small" 700
-  fleet "Merchants South Large" 1300
-  fleet "Miners South" 3000
+  fleet "Merchants West Small" 700
+  fleet "Merchants West Large" 1300
+  fleet "Miners West" 3000
   fleet "Pirates South Small" 2000
   fleet "Republic Small" 10000
   fleet "Militia Small" 7000
@@ -7513,9 +7514,9 @@ system "Delta Velorum"
   trade "Medical" 717
   trade "Metal" 547
   trade "Plastic" 481
-  fleet "Merchants South Small" 1000
-  fleet "Merchants South Large" 3000
-  fleet "Miners South" 2000
+  fleet "Merchants West Small" 1000
+  fleet "Merchants West Large" 3000
+  fleet "Miners West" 2000
   fleet "Pirates South Small" 2000
   fleet "Pirates South Large" 5000
   fleet "Republic Small" 12000
@@ -7623,8 +7624,8 @@ system "Denebola"
   trade "Medical" 477
   trade "Metal" 489
   trade "Plastic" 253
-  fleet "Merchants North Small" 1000
-  fleet "Merchants North Large" 3000
+  fleet "Merchants West Small" 1000
+  fleet "Merchants West Large" 3000
   fleet "Republic Small" 700
   fleet "Republic Large" 900
   object
@@ -9282,9 +9283,9 @@ system "Fala"
   trade "Medical" 747
   trade "Metal" 448
   trade "Plastic" 441
-  fleet "Merchants North Small" 1600
-  fleet "Merchants North Large" 3000
-  fleet "Miners North" 2000
+  fleet "Merchants West Small" 1600
+  fleet "Merchants West Large" 3000
+  fleet "Miners West" 2000
   fleet "Pirates South Small" 2000
   fleet "Pirates South Large" 4000
   fleet "Republic Small" 4000
@@ -9905,11 +9906,9 @@ system "Fingol"
   trade "Medical" 534
   trade "Metal" 416
   trade "Plastic" 321
-  fleet "Merchants North Small" 1200
-  fleet "Merchants North Large" 3000
-  fleet "Miners North" 3000
+  fleet "Merchants West Small" 1200
+  fleet "Miners West" 3000
   fleet "Republic Small" 2000
-  fleet "Republic Large" 3000
   object
     sprite star/m4
     period 10
@@ -10274,8 +10273,8 @@ system "Gacrux"
   trade "Medical" 848
   trade "Metal" 542
   trade "Plastic" 491
-  fleet "Merchants South Small" 2000
-  fleet "Merchants South Large" 5000
+  fleet "Merchants West Small" 2000
+  fleet "Merchants West Large" 5000
   fleet "Pirates South Small" 1000
   fleet "Pirates South Large" 3000
   fleet "Republic Small" 15000
@@ -10404,14 +10403,11 @@ system "Gamma Corvi"
   trade "Medical" 590
   trade "Metal" 473
   trade "Plastic" 510
-  fleet "Merchants South Small" 1400
-  fleet "Merchants South Large" 2900
-  fleet "Miners South" 5000
-  fleet "Pirates South Small" 10000
+  fleet "Merchants South Small" 600
+  fleet "Merchants South Large" 1400
+  fleet "Miners Rim" 5000
   fleet "Free Worlds Small" 600
   fleet "Free Worlds Large" 1300
-  fleet "Militia Small" 1000
-  fleet "Militia Large" 2000
   object
     sprite star/g0
     distance 39.0165
@@ -11921,12 +11917,12 @@ system "Ildaria"
   trade "Medical" 612
   trade "Metal" 580
   trade "Plastic" 384
-  fleet "Merchants South Small" 1000
-  fleet "Merchants South Large" 2000
-  fleet "Militia Small" 3000
-  fleet "Militia Large" 6000
-  fleet "Pirates South Small" 1000
-  fleet "Pirates South Large" 2000
+  fleet "Merchants South Small" 900
+  fleet "Merchants South Large" 1800
+  fleet "Pirates South Small" 4000
+  fleet "Pirates South Large" 7000
+  fleet "Free Worlds Small" 2200
+  fleet "Free Worlds Large" 3600
   object
     sprite star/wr
     period 10
@@ -14159,7 +14155,7 @@ system "Limen"
   trade "Medical" 802
   trade "Metal" 497
   trade "Plastic" 378
-  fleet "Miners South" 1000
+  fleet "Miners West" 1000
   fleet "Pirates South Small" 1000
   fleet "Pirates South Large" 2000
   object
@@ -15444,8 +15440,8 @@ system "Merak"
   trade "Medical" 547
   trade "Metal" 457
   trade "Plastic" 291
-  fleet "Merchants North Small" 1500
-  fleet "Merchants North Large" 4000
+  fleet "Merchants West Small" 1500
+  fleet "Merchants West Large" 4000
   fleet "Republic Small" 1100
   fleet "Republic Large" 1300
   object
@@ -16180,8 +16176,8 @@ system "Mora"
   habitable 320
   belt 1176
   link "Delta Velorum"
-  link "Tania Australis"
   link Limen
+  link "Tania Australis"
   asteroids "medium rock" 54 1.9305
   asteroids "large rock" 33 1.9877
   asteroids "medium metal" 3 1.287
@@ -16199,12 +16195,12 @@ system "Mora"
   trade "Medical" 731
   trade "Metal" 445
   trade "Plastic" 428
-  fleet "Merchants South Small" 900
-  fleet "Merchants South Large" 1800
-  fleet "Free Worlds Small" 2200
-  fleet "Free Worlds Large" 3600
-  fleet "Pirates South Small" 4000
-  fleet "Pirates South Large" 7000
+  fleet "Merchants West Small" 2000
+  fleet "Merchants West Large" 4000
+  fleet "Miners West" 2000
+  fleet "Pirates South Small" 2000
+  fleet "Pirates South Large" 3000
+  fleet "Republic Small" 20000
   object
     sprite star/k5
     period 10
@@ -16251,8 +16247,8 @@ system "Muhlifain"
   trade "Medical" 825
   trade "Metal" 525
   trade "Plastic" 441
-  fleet "Merchants South Small" 1000
-  fleet "Merchants South Large" 3500
+  fleet "Merchants West Small" 1000
+  fleet "Merchants West Large" 3500
   fleet "Pirates South Small" 6000
   object
     sprite star/k0
@@ -16639,8 +16635,8 @@ system "Nocte"
   trade "Medical" 566
   trade "Metal" 285
   trade "Plastic" 363
-  fleet "Merchants North Small" 1500
-  fleet "Miners North" 1600
+  fleet "Merchants South Small" 1500
+  fleet "Miners South" 1600
   fleet "Republic Small" 3000
   fleet "Republic Large" 7000
   object
@@ -17647,11 +17643,11 @@ system "Phecda"
   trade "Medical" 684
   trade "Metal" 413
   trade "Plastic" 326
-  fleet "Merchants North Small" 700
-  fleet "Merchants North Large" 1000
-  fleet "Merchants South Small" 700
-  fleet "Merchants South Large" 1000
-  fleet "Miners South" 2000
+  fleet "Merchants West Small" 700
+  fleet "Merchants West Large" 1000
+  fleet "Merchants West Small" 700
+  fleet "Merchants West Large" 1000
+  fleet "Miners West" 2000
   fleet "Republic Small" 5000
   object
     sprite star/k5
@@ -18022,9 +18018,8 @@ system "Porrima"
   trade "Medical" 510
   trade "Metal" 490
   trade "Plastic" 381
-  fleet "Merchants North Small" 1000
-  fleet "Merchants North Large" 3000
-  fleet "Pirates South Small" 6000
+  fleet "Merchants West Small" 1400
+  fleet "Merchants West Large" 4000
   fleet "Republic Small" 8000
   object
     sprite star/g5
@@ -18860,8 +18855,8 @@ system "Regulus"
   trade "Medical" 537
   trade "Metal" 406
   trade "Plastic" 318
-  fleet "Merchants North Small" 4000
-  fleet "Miners North" 3000
+  fleet "Merchants West Small" 6000
+  fleet "Miners West" 3000
   fleet "Republic Small" 10000
   object
     sprite star/b5
@@ -19681,8 +19676,8 @@ system "Sarin"
   trade "Medical" 824
   trade "Metal" 531
   trade "Plastic" 349
-  fleet "Merchants South Small" 1000
-  fleet "Merchants South Large" 3000
+  fleet "Merchants West Small" 1000
+  fleet "Merchants West Large" 3000
   fleet "Pirates South Small" 2000
   fleet "Pirates South Large" 6000
   object
@@ -21940,8 +21935,8 @@ system "Tania Australis"
   trade "Medical" 677
   trade "Metal" 351
   trade "Plastic" 390
-  fleet "Merchants North Small" 1400
-  fleet "Merchants North Large" 2900
+  fleet "Merchants West Small" 1400
+  fleet "Merchants West Large" 2900
   fleet "Republic Small" 600
   fleet "Republic Large" 400
   fleet "Navy Surveillance" 2000
@@ -22447,9 +22442,9 @@ system "Turais"
   trade "Medical" 781
   trade "Metal" 559
   trade "Plastic" 473
-  fleet "Merchants South Small" 2000
-  fleet "Merchants South Large" 6000
-  fleet "Miners South" 2000
+  fleet "Merchants West Small" 2000
+  fleet "Merchants West Large" 6000
+  fleet "Miners West" 2000
   fleet "Pirates South Small" 3000
   fleet "Pirates South Large" 7000
   object
@@ -22937,8 +22932,8 @@ system "Vindemiatrix"
   trade "Medical" 824
   trade "Metal" 535
   trade "Plastic" 408
-  fleet "Merchants South Small" 600
-  fleet "Merchants South Large" 3000
+  fleet "Merchants West Small" 600
+  fleet "Merchants West Large" 3000
   fleet "Pirates South Small" 2000
   fleet "Pirates South Large" 4000
   object
