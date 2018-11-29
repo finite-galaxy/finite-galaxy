@@ -78,6 +78,8 @@ event "navy arsenals available"
     outfitter "Navy"
   planet "Farpoint"
     outfitter "Navy"
+  planet "Furnace"
+    outfitter "Navy"
   planet "Ingot"
     outfitter "Navy"
   planet "Luna"
@@ -219,6 +221,7 @@ event "initial deployment 1"
     fleet "Merchants South Large" 600
     fleet "Free Worlds Small" 1000
     fleet "Free Worlds Large" 1600
+
   system "Fala"
     fleet "Merchants North Small" 1900
     fleet "Merchants North Large" 3500
@@ -259,9 +262,6 @@ event "initial deployment 1"
     fleet "Republic Small" 700
     fleet "Republic Large" 500
     fleet "Navy Surveillance" 2000
-  planet "Porringer"
-    description `Porringer is home to a few mining outposts which extract and refine rare earth minerals and heavy metals. It is dangerous work: the mines are deep underground and prone to noxious gases and cave-ins, and the refineries work with molten radioactive materials and caustic chemicals. Due to the somewhat dim light of the star Algorel, and the cloudiness of the atmosphere, this is not a good world for farming, and the population remains quite small.`
-    description `The Republic Navy has planted a base on Porringer: so far, just a densely packed cluster of prefabricated barracks and infirmary buildings on the outskirts of one of the mining colonies.`
   system "Phecda"
     fleet "Merchants North Small" 900
     fleet "Merchants North Large" 1100
@@ -287,9 +287,10 @@ event "initial deployment 1"
     fleet "Republic Small" 500
     fleet "Republic Large" 600
     fleet "Navy Surveillance" 2000
-  planet "Carbuncle"
-    description `Carbuncle is a rugged mountain world, full of snow-capped peaks and valleys so deep and so steep that they rarely see sunlight. The few settlements that have been built here were developed for mining sapphires and rubies; the sapphires found in Carbuncle range from blue to yellow to black to clear in colour, and are used both for industrial abrasives and for jewelry.`
-    description `The Navy has recently requisitioned one of the abandoned mining towns and begun refurbishing it for a secure military base, with the mining tunnels used as deep underground bunkers.`
+
+#    description `The Republic Navy has planted a base on Bos: so far, just a densely packed cluster of prefabricated barracks and infirmary buildings on the outskirts of one of the larger towns.`
+#    description `Clear Sky/Dancer is also now home to a burgeoning Navy base, although since the planet is so unlivable most of the troops are just living in ships in orbit.`
+#    description `The Navy has recently requisitioned one of the abandoned mining towns on Tundra and begun refurbishing it for a secure military base, with the mining tunnels used as deep underground bunkers.`
 
 
 event "initial deployment 2"
@@ -2033,13 +2034,13 @@ event "pug flee"
 
 event "pug territory liberated"
   system "Orvala"
-    government "Free Worlds"
+    government "Republic"
   system "Nocte"
     government "Republic"
   system "Zeta Aquilae"
-    government "Free Worlds"
+    government "Republic"
   system "Rasalhague"
-    government "Free Worlds"
+    government "Republic"
   system "Vega"
     government "Republic"
   system "Altair"
@@ -2055,15 +2056,13 @@ event "pug territory liberated"
   system "Caph"
     government "Republic"
   system "Deneb"
-    government "Neutral"
+    government "Republic"
     fleet "Merchants Core Small" 400
     fleet "Merchants Core Large" 600
     fleet "Merchants North Small" 1000
     fleet "Merchants North Large" 3000
     fleet "Republic Small" 700
-    fleet "Republic Large" 900 
-    fleet "Syndicate Small" 1200
-    fleet "Syndicate Large" 2000
+    fleet "Republic Large" 900
   planet "Rand"
     security 0.05
   planet "Oblivion"

@@ -31,29 +31,29 @@ galaxy "label rim"
   sprite label/rim
 
 galaxy "label south"
-  pos -560 500
+  pos -640 460
   sprite label/south
 
 galaxy "label wanderers"
-  pos -145 -753
+  pos -140 -740
 
 galaxy "label hai"
-  pos -74 -497
+  pos -80 -500
 
 galaxy "label korath"
-  pos 165 -347
+  pos 160 -360
 
 galaxy "label saryds"
-  pos -1080 678
+  pos -1080 680
 
 galaxy "label kimek"
-  pos -1250 215
+  pos -1240 220
 
 galaxy "label arachi"
-  pos -750 615
+  pos -760 620
 
 galaxy "label waste"
-  pos 80 315
+  pos 60 300
 
 galaxy "pug empty galaxy"
   pos 10000 7000
@@ -1778,11 +1778,11 @@ system "Ablub"
 
 system "Acamar"
   pos -284 -3
-  government "Syndicate"
+  government "Republic"
   habitable 1080
   belt 1013
-  link Diphda
   link Aldebaran
+  link Diphda
   link Elnath
   link Kugel
   asteroids "medium rock" 2 2.352
@@ -2157,8 +2157,8 @@ system "Albaldah"
   belt 1622
   link Albireo
   link Girtab
+  link Lurata
   link Nunki
-  link Eltanin
   asteroids "small rock" 1 8.82
   asteroids "medium rock" 20 5.4
   asteroids "large rock" 9 7.02
@@ -2228,10 +2228,9 @@ system "Albireo"
   government "Republic"
   habitable 760
   belt 1030
-  link Tarazed
   link Albaldah
-  link Sadr
   link Lurata
+  link Sadr
   asteroids "small rock" 2 3.57
   asteroids "medium rock" 4 2.5466
   asteroids "large rock" 4 3.1654
@@ -2396,6 +2395,7 @@ system "Alderamin"
   belt 1908
   link Alnair
   link "Delta Capricorni"
+  link Matar
   asteroids "small rock" 1 9.5472
   asteroids "medium rock" 3 8.5644
   asteroids "large rock" 1 10.3896
@@ -2568,13 +2568,11 @@ system "Algenib"
       period 42.6838
 
 system "Algieba"
-  pos -686 -52
+  pos -691 -52
   government "Republic"
   habitable 2695
   belt 1070
   link "Tania Australis"
-  link Alphard
-  link Zosma
   asteroids "small rock" 7 7.236
   asteroids "medium rock" 1 3.726
   asteroids "large rock" 4 5.238
@@ -2594,14 +2592,9 @@ system "Algieba"
   trade "Medical" 621
   trade "Metal" 251
   trade "Plastic" 476
-  fleet "Merchants North Small" 800
-  fleet "Merchants North Large" 1000
-  fleet "Deep Small" 3000
-  fleet "Deep Large" 12000
-  fleet "Republic Small" 1000
-  fleet "Republic Large" 4000
-  fleet "Syndicate Small" 2000
-  fleet "Syndicate Large" 8000
+  fleet "Merchants North Small" 2000
+  fleet "Miners North" 3000
+  fleet "Republic Small" 5000
   object
     sprite star/f0
     distance 5.86085
@@ -2772,6 +2765,7 @@ system "Alheka"
   belt 1380
   link Betelgeuse
   link Canopus
+  link Phact
   asteroids "small rock" 3 6.24
   asteroids "medium rock" 11 9.906
   asteroids "large rock" 5 8.892
@@ -2827,6 +2821,7 @@ system "Alhena"
   habitable 945
   belt 1078
   link Menkalinan
+  link Tejat
   link Wazn
   asteroids "small rock" 21 8.7906
   asteroids "medium rock" 14 5.98
@@ -2893,10 +2888,9 @@ system "Alioth"
   government "Republic"
   habitable 456
   belt 1889
-  link Wei
-  link Vindemiatrix
-  link Alphecca
   link Holeb
+  link Vindemiatrix
+  link Wei
   asteroids "small metal" 5 4.0832
   asteroids "medium metal" 2 4.048
   asteroids "large metal" 4 3.7664
@@ -3055,7 +3049,7 @@ system "Almaaz"
 
 system "Almach"
   pos -7 232
-  government "Republic"
+  government "Pirate"
   habitable 320
   belt 1914
   link Schedar
@@ -3078,11 +3072,9 @@ system "Almach"
   trade "Medical" 746
   trade "Metal" 338
   trade "Plastic" 266
-  fleet "Merchants Core Small" 3000
-  fleet "Merchants Core Large" 5000
-  fleet "Pirates Core Small" 4000
-  fleet "Pirates Core Large" 8000
-  fleet "Republic Small" 12000
+  fleet "Pirates Core Small" 500
+  fleet "Pirates Core Large" 1400
+  fleet "Republic Large" 6000
   fleet "Korath Raid" 20000
   object
     sprite star/k5
@@ -3091,8 +3083,8 @@ system "Almach"
     sprite planet/desert8
     distance 197.61
     period 62.1153
-  object "Featherweight"
-    sprite planet/forest3-b
+  object "Deadman's Cove"
+    sprite planet/ocean9
     distance 639.82
     period 361.886
     object
@@ -3121,8 +3113,8 @@ system "Alnair"
   government "Republic"
   habitable 135
   belt 1969
-  link Persian
   link Alderamin
+  link Persian
   asteroids "small rock" 20 6.825
   asteroids "medium rock" 242 4.355
   asteroids "large rock" 19 8.32
@@ -3150,7 +3142,7 @@ system "Alnair"
   object
     sprite star/m4
     period 10
-  object "Maker"
+  object "Hippocrates"
     sprite planet/cloud4
     distance 160.25
     period 69.8377
@@ -3188,10 +3180,9 @@ system "Alnasl"
   government "Republic"
   habitable 640
   belt 1412
+  link Eber
   link Seginus
   link Wei
-  link "Kaus Borealis"
-  link Eber
   asteroids "medium rock" 1 1.4784
   asteroids "large rock" 1 3.5112
   asteroids "small metal" 15 3.2208
@@ -3328,6 +3319,7 @@ system "Alnitak"
   belt 1907
   link Mintaka
   link Rigel
+  link Saiph
   asteroids "small rock" 1 5.4375
   asteroids "medium rock" 24 4.6875
   asteroids "large rock" 14 9.25
@@ -3375,16 +3367,14 @@ system "Alnitak"
     period 2125.7
 
 system "Alniyat"
-  pos -686 498
+  pos -691 501
   government "Republic"
   habitable 534
   belt 1760
-  link Pherkad
-  link Graffias
-  link Antares
-  link Han
-  link Dschubba
   link Aldhibain
+  link Antares
+  link Dschubba
+  link Graffias
   asteroids "small rock" 19 10.368
   asteroids "medium rock" 148 6.156
   asteroids "large rock" 37 4.455
@@ -3637,10 +3627,10 @@ system "Alphard"
   government "Syndicate"
   habitable 1081
   belt 1101
-  link Algieba
-  link Zosma
+  link Lolami
   link Miaplacidus
   link Talita
+  link Zosma
   asteroids "small rock" 2 7.7896
   asteroids "medium rock" 33 8.8088
   asteroids "large rock" 2 7.4984
@@ -3702,9 +3692,9 @@ system "Alphecca"
   government "Republic"
   habitable 1400
   belt 1101
-  link Alioth
-  link Seginus
   link Boral
+  link Holeb
+  link Seginus
   asteroids "large metal" 1 4.3296
   trade "Clothing" 343
   trade "Electronics" 799
@@ -3790,8 +3780,8 @@ system "Alpheratz"
     sprite planet/fog0
     distance 306.613
     period 65.3294
-  object "Farseer"
-    sprite planet/ocean2
+  object "Glory"
+    sprite planet/forest4
     distance 858.853
     period 306.268
     object
@@ -3833,8 +3823,6 @@ system "Altair"
   trade "Plastic" 274
   fleet "Merchants Core Small" 400
   fleet "Merchants Core Large" 600
-  fleet "Merchants North Small" 1000
-  fleet "Merchants North Large" 3000
   fleet "Republic Small" 2000
   fleet "Republic Large" 6000
   object
@@ -3858,7 +3846,7 @@ system "Altair"
     sprite planet/rock13-b
     distance 698.458
     period 240.19
-  object "Shiver"
+  object "Silver"
     sprite planet/cloud8
     distance 1210.95
     period 548.318
@@ -4472,11 +4460,11 @@ system "Ascella"
   government "Republic"
   habitable 640
   belt 1971
+  link "Kaus Borealis"
   link Peacock
-  link "Zeta Aquilae"
-  link Tais
   link Rasalhague
-  link Naper
+  link Tais
+  link "Zeta Aquilae"
   asteroids "small rock" 3 1.3328
   asteroids "medium rock" 258 1.5708
   asteroids "large rock" 6 1.547
@@ -4848,11 +4836,10 @@ system "Beginning"
   government "Coalition"
   habitable 426
   belt 1833
-  link Belonging
+  link "Dark Hills"
   link "Fallen Leaf"
   link "Good Omen"
   link Remembrance
-  link "Dark Hills"
   asteroids "small rock" 9 6.9888
   asteroids "medium rock" 12 5.2962
   asteroids "large rock" 47 4.8048
@@ -4910,6 +4897,7 @@ system "Bellatrix"
   government "Republic"
   habitable 670
   belt 1564
+  link Kugel
   link Menkar
   link Mirfak
   asteroids "small rock" 6 4.8438
@@ -4970,8 +4958,8 @@ system "Belonging"
   habitable 625
   belt 1407
   link "Bright Void"
+  link "Hunter"
   link "Sol Saryds"
-  link Beginning
   asteroids "medium metal" 2 3.4848
   asteroids "large metal" 1 4.1472
   trade "Clothing" 286
@@ -5231,7 +5219,6 @@ system "Betelgeuse"
   link Alheka
   link Mirzam
   link Rigel
-  link Saiph
   asteroids "medium rock" 21 1.86
   asteroids "large rock" 7 1.65
   asteroids "small metal" 78 2.7
@@ -5901,8 +5888,6 @@ system "Canopus"
   government "Syndicate"
   habitable 214
   belt 1530
-  link Phurad
-  link Mirzam
   link Alheka
   link Phact
   asteroids "large metal" 1 6.8264
@@ -6404,8 +6389,8 @@ system "Celeborim"
 system "Charm"
   pos -154 548
   government "Quarg"
-  habitable 700
-  belt 1974
+  habitable 1272
+  belt 1702
   trade "Clothing" 363
   trade "Electronics" 834
   trade "Equipment" 538
@@ -7124,10 +7109,10 @@ system "Dabih"
   government "Republic"
   habitable 670
   belt 1088
-  link Tarazed
   link Eltanin
   link "Kaus Australis"
   link Lurata
+  link Tarazed
   asteroids "small rock" 1 3.456
   asteroids "medium rock" 9 2.976
   asteroids "large rock" 1 2.784
@@ -7183,7 +7168,6 @@ system "Danoa"
   habitable 135
   belt 1689
   link Hassaleh
-  link Rigel
   link Sumar
   asteroids "small rock" 26 2.425
   asteroids "medium rock" 274 2.15
@@ -7420,7 +7404,7 @@ system "Delta Capricorni"
     sprite planet/io
     distance 273.406
     period 62.4158
-  object "Pilot"
+  object "Maker"
     sprite planet/rock4
     distance 498.016
     period 153.443
@@ -7507,9 +7491,9 @@ system "Delta Velorum"
   government "Republic"
   habitable 1080
   belt 1221
-  link Turais
   link Fala
   link Mora
+  link Turais
   asteroids "small rock" 6 2.775
   asteroids "medium rock" 39 2.8875
   asteroids "large rock" 6 3.45
@@ -7843,10 +7827,11 @@ system "Dschubba"
   government "Republic"
   habitable 398
   belt 1429
-  link Atria
-  link Lesath
-  link Alniyat
   link Aldhibain
+  link Alniyat
+  link Atria
+  link Han
+  link Lesath
   asteroids "small rock" 20 1.85
   asteroids "medium rock" 66 2.85
   asteroids "large rock" 11 2.375
@@ -7916,6 +7901,7 @@ system "Dubhe"
   government "Deep"
   habitable 349
   belt 1120
+  link Gomeisa
   link Zosma
   asteroids "medium rock" 12 3.5496
   asteroids "large rock" 1 3.48
@@ -8100,6 +8086,7 @@ system "Eber"
   belt 1199
   link Alnasl
   link "Alpha Arae"
+  link Sargas
   asteroids "small rock" 18 1.4868
   asteroids "medium rock" 3 3.5532
   asteroids "large rock" 13 1.8648
@@ -8662,7 +8649,7 @@ system "Elnath"
     sprite planet/cloud1
     distance 1147.13
     period 375.273
-  object "Hippocrates"
+  object "Pilot"
     sprite planet/desert4
     distance 1926.02
     period 816.43
@@ -8670,7 +8657,7 @@ system "Elnath"
     sprite planet/gas11
     distance 4745.58
     period 3157.63
-    object "Charybdis Station"
+    object "Catoblepas Station"
       sprite planet/station2
       distance 253
       period 12.546
@@ -8682,7 +8669,7 @@ system "Eltanin"
   belt 1859
   link Dabih
   link "Delta Sagittarii"
-  link Albaldah
+  link Lurata
   asteroids "small rock" 34 1.904
   asteroids "medium rock" 12 4.896
   asteroids "large rock" 6 3.298
@@ -9273,8 +9260,9 @@ system "Fala"
   government "Republic"
   habitable 625
   belt 1264
-  link "Tania Australis"
   link "Delta Velorum"
+  link Phecda
+  link "Tania Australis"
   asteroids "small rock" 2 3.0464
   asteroids "medium rock" 91 2.8672
   asteroids "large rock" 2 2.0832
@@ -10354,9 +10342,11 @@ system "Gamma Cassiopeiae"
   trade "Medical" 694
   trade "Metal" 261
   trade "Plastic" 284
-  fleet "Miners Core" 2000
-  fleet "Pirates Core Small" 1000
-  fleet "Pirates Core Large" 2000
+  fleet "Merchants Core Small" 1000
+  fleet "Merchants Core Large" 1200
+  fleet "Miners Core" 3000
+  fleet "Pirates Core Small" 4000
+  fleet "Republic Small" 3000
   fleet "Republic Large" 5000
   object
     sprite star/k0-old
@@ -10373,6 +10363,10 @@ system "Gamma Cassiopeiae"
     sprite planet/desert6-b
     distance 789.64
     period 415.815
+  object "Amazon"
+    sprite planet/cloud1
+    distance 951.97
+    period 357.506
   object
     sprite planet/gas3
     distance 1622.89
@@ -10662,9 +10656,10 @@ system "Gomeisa"
   government "Deep"
   habitable 911
   belt 1616
-  link Zosma
-  link "Epsilon Leonis"
   link Adhara
+  link Dubhe
+  link "Epsilon Leonis"
+  link Zosma
   asteroids "small rock" 44 4.956
   asteroids "medium rock" 13 3.78
   asteroids "large rock" 1 3.024
@@ -10846,6 +10841,7 @@ system "Graffias"
   habitable 911
   belt 1977
   link Alniyat
+  link Pherkad
   asteroids "small rock" 15 3.069
   asteroids "medium rock" 45 1.749
   asteroids "large rock" 40 2.574
@@ -11081,8 +11077,8 @@ system "Han"
   government "Republic"
   habitable 1081
   belt 1517
-  link Alniyat
   link Atria
+  link Dschubba
   asteroids "large metal" 1 2.85
   trade "Clothing" 337
   trade "Electronics" 762
@@ -11140,7 +11136,7 @@ system "Hassaleh"
   habitable 670
   belt 1924
   link Danoa
-  link Rajak
+  link Rigel
   link Sumar
   asteroids "small rock" 6 1.9305
   asteroids "medium rock" 75 4.4928
@@ -11626,8 +11622,9 @@ system "Holeb"
   habitable 1715
   belt 1181
   link Alioth
-  link Rutilicus
+  link Alphecca
   link Arcturus
+  link Rutilicus
   asteroids "large metal" 1 3.5904
   trade "Clothing" 271
   trade "Electronics" 842
@@ -11785,9 +11782,10 @@ system "Hunter"
   government "Coalition"
   habitable 426
   belt 1498
+  link "Belonging"
+  link "Broken Bowl"
   link "Bright Void"
   link "Dark Hills"
-  link "Broken Bowl"
   asteroids "small rock" 10 2.7189
   asteroids "medium rock" 2 3.7449
   asteroids "large rock" 7 4.8222
@@ -12804,9 +12802,10 @@ system "Kaus Borealis"
   government "Republic"
   habitable 591
   belt 1074
-  link Cebalrai
   link "Alpha Arae"
-  link Alnasl
+  link Ascella
+  link Cebalrai
+  link Naper
   asteroids "small rock" 1 4.2504
   asteroids "medium rock" 10 4.1888
   asteroids "large rock" 4 3.388
@@ -13827,10 +13826,12 @@ system "Kraz"
 
 system "Kugel"
   pos -230 -26
-  government "Syndicate"
+  government "Republic"
   habitable 625
   belt 1051
   link Acamar
+  link Bellatrix
+  link Menkar
   asteroids "small rock" 58 3.234
   asteroids "medium rock" 24 2.2792
   asteroids "large rock" 134 3.2648
@@ -13849,6 +13850,7 @@ system "Kugel"
   trade "Metal" 335
   trade "Plastic" 421
   fleet "Merchants North Small" 4000
+  fleet "Merchants North Large" 4000
   fleet "Miners North" 4000
   fleet "Republic Small" 6000
   fleet "Syndicate Small" 8000
@@ -13927,8 +13929,8 @@ system "Kursa"
     sprite star/m4
     distance 65.4066
     period 16.8182
-  object "Moonshake"
-    sprite planet/forest4
+  object "Farseer"
+    sprite planet/ocean2
     distance 357.847
     period 126.94
   object
@@ -14193,6 +14195,7 @@ system "Lolami"
   government "Republic"
   habitable 1215
   belt 1072
+  link Alphard
   link "Tania Australis"
   asteroids "small rock" 68 1.6926
   asteroids "medium rock" 55 1.6653
@@ -14212,9 +14215,14 @@ system "Lolami"
   trade "Medical" 757
   trade "Metal" 439
   trade "Plastic" 316
-  fleet "Merchants North Small" 2000
-  fleet "Miners North" 3000
-  fleet "Republic Small" 5000
+  fleet "Merchants North Small" 800
+  fleet "Merchants North Large" 1000
+  fleet "Deep Small" 3000
+  fleet "Deep Large" 12000
+  fleet "Republic Small" 1000
+  fleet "Republic Large" 4000
+  fleet "Syndicate Small" 2000
+  fleet "Syndicate Large" 8000
   object
     sprite star/g0
     distance 11
@@ -14433,8 +14441,11 @@ system "Lurata"
   government "Republic"
   habitable 456
   belt 1151
-  link Dabih
+  link Albaldah
   link Albireo
+  link Dabih
+  link Eltanin
+  link Tarazed
   asteroids "medium rock" 2 4.225
   asteroids "large rock" 1 8.125
   asteroids "small metal" 4 6.76
@@ -14713,6 +14724,7 @@ system "Matar"
   government "Republic"
   habitable 456
   belt 1308
+  link Alderamin
   link Persian
   link Scheat
   asteroids "large metal" 1 3.0888
@@ -14823,7 +14835,7 @@ system "Mebla"
 
 system "Mebsuta"
   pos -482 -394
-  government "Pirate"
+  government "Republic"
   habitable 670
   belt 1740
   link Mirzam
@@ -14844,9 +14856,11 @@ system "Mebsuta"
   trade "Medical" 457
   trade "Metal" 385
   trade "Plastic" 420
-  fleet "Pirates North Small" 500
-  fleet "Pirates North Large" 1400
-  fleet "Syndicate Large" 6000
+  fleet "Merchants North Small" 3000
+  fleet "Merchants North Large" 5000
+  fleet "Pirates North Small" 4000
+  fleet "Pirates North Large" 8000
+  fleet "Republic Small" 12000
   object
     sprite star/k0
     distance 37.1157
@@ -14860,8 +14874,8 @@ system "Mebsuta"
     sprite planet/desert8-b
     distance 305.544
     period 82.5342
-  object "Deadman's Cove"
-    sprite planet/ocean9
+  object "Featherweight"
+    sprite planet/forest3-b
     distance 655.034
     period 259.071
     object
@@ -15277,9 +15291,9 @@ system "Menkar"
   government "Republic"
   habitable 456
   belt 1634
-  link Zaurak
-  link Mirfak
   link Bellatrix
+  link Kugel
+  link Mirfak
   asteroids "small rock" 109 4.3
   asteroids "medium rock" 33 7.45
   asteroids "large rock" 44 6.45
@@ -15299,12 +15313,12 @@ system "Menkar"
   trade "Medical" 769
   trade "Metal" 396
   trade "Plastic" 285
-  fleet "Merchants Core Small" 800
-  fleet "Merchants Core Large" 1000
-  fleet "Miners Core" 2000
+  fleet "Merchants North Small" 800
+  fleet "Merchants North Large" 1000
+  fleet "Miners North" 2000
   fleet "Republic Small" 1500
   fleet "Republic Large" 2000
-  fleet "Pirates Core Large" 4000
+  fleet "Pirates North Large" 4000
   object
     sprite star/k0
     period 10
@@ -15338,10 +15352,9 @@ system "Menkent"
   government "Republic"
   habitable 2340
   belt 1728
-  link Vega
-  link Rutilicus
   link Cebalrai
   link Muphrid
+  link Rutilicus
   asteroids "small rock" 33 2.9328
   asteroids "medium rock" 44 1.4144
   asteroids "large rock" 32 1.04
@@ -15536,9 +15549,9 @@ system "Miaplacidus"
   government "Syndicate"
   habitable 456
   belt 1236
-  link Tejat
   link Alphard
   link Talita
+  link Tejat
   asteroids "small rock" 25 6.902
   asteroids "medium rock" 8 3.2844
   asteroids "large rock" 52 2.38
@@ -15863,8 +15876,8 @@ system "Mirach"
   habitable 293
   belt 1980
   link "Al Dhanab"
-  link Scheat
   link "Gamma Cassiopeiae"
+  link Scheat
   link Schedar
   asteroids "small rock" 84 3.4884
   asteroids "medium rock" 64 3.1518
@@ -15884,12 +15897,13 @@ system "Mirach"
   trade "Medical" 686
   trade "Metal" 267
   trade "Plastic" 299
-  fleet "Merchants Core Small" 1000
-  fleet "Merchants Core Large" 1200
-  fleet "Miners Core" 3000
-  fleet "Pirates Core Small" 4000
+  fleet "Merchants Core Small" 900
+  fleet "Merchants Core Large" 1000
+  fleet "Miners Core" 2000
+  fleet "Pirates Core Small" 2000
+  fleet "Pirates Core Large" 3000
   fleet "Republic Small" 3000
-  fleet "Republic Large" 5000
+  fleet "Republic Large" 4000
   object
     sprite star/m0
     distance 21.1004
@@ -15929,8 +15943,8 @@ system "Mirfak"
   government "Republic"
   habitable 320
   belt 1887
-  link Menkar
   link Bellatrix
+  link Menkar
   link Moktar
   asteroids "small rock" 3 3.3592
   asteroids "medium rock" 5 4.6436
@@ -15951,10 +15965,10 @@ system "Mirfak"
   trade "Medical" 811
   trade "Metal" 451
   trade "Plastic" 267
-  fleet "Merchants Core Small" 500
-  fleet "Merchants Core Large" 700
-  fleet "Merchants North Small" 1500
-  fleet "Merchants North Large" 3000
+  fleet "Merchants Core Small" 1500
+  fleet "Merchants Core Large" 3000
+  fleet "Merchants North Small" 500
+  fleet "Merchants North Large" 700
   fleet "Republic Small" 1000
   fleet "Republic Large" 1800
   object
@@ -15982,13 +15996,14 @@ system "Mirfak"
     period 2117.9
 
 system "Mirzam"
-  pos -498 -301
-  government "Syndicate"
+#  pos -498 -301
+  pos -425 -384
+  government "Republic"
   habitable 1080
   belt 1025
-  link Canopus
   link Betelgeuse
   link Mebsuta
+  link Saiph
   asteroids "small rock" 24 3.402
   asteroids "medium rock" 42 4.4712
   asteroids "large rock" 6 1.6848
@@ -16011,8 +16026,8 @@ system "Mirzam"
   fleet "Merchants North Large" 2000
   fleet "Pirates North Small" 5000
   fleet "Pirates North Large" 8000
-  fleet "Syndicate Small" 3000
-  fleet "Syndicate Large" 4000
+  fleet "Republic Small" 3000
+  fleet "Republic Large" 4000
   object
     sprite star/g0
     period 10
@@ -16269,7 +16284,6 @@ system "Muphrid"
   habitable 839
   belt 1759
   link Menkent
-  link Porrima
   asteroids "small rock" 10 4.7348
   asteroids "medium rock" 7 3.192
   asteroids "large rock" 8 3.4048
@@ -16286,8 +16300,7 @@ system "Muphrid"
   trade "Medical" 510
   trade "Metal" 478
   trade "Plastic" 455
-  fleet "Merchants South Small" 800
-  fleet "Merchants South Large" 3500
+  fleet "Merchants South Small" 1500
   fleet "Pirates South Small" 6000
   fleet "Republic Small" 5000
   object
@@ -16397,7 +16410,7 @@ system "Naper"
   government "Republic"
   habitable 1715
   belt 1445
-  link Ascella
+  link "Kaus Borealis"
   asteroids "small rock" 3 2.0757
   asteroids "medium rock" 13 0.9724
   asteroids "large rock" 9 1.3277
@@ -17541,8 +17554,9 @@ system "Phact"
   government "Syndicate"
   habitable 1081
   belt 1704
-  link Wazn
+  link Alheka
   link Canopus
+  link Wazn
   asteroids "small rock" 1 1.0816
   asteroids "medium rock" 71 2.3153
   asteroids "large rock" 2 1.8421
@@ -17607,12 +17621,12 @@ system "Phact"
     period 1717.94
 
 system "Phecda"
-  pos -607 82
+  pos -607 88
   government "Republic"
   habitable 320
   belt 1375
   link Algorel
-  link "Tania Australis"
+  link Fala
   link Merak
   asteroids "small rock" 182 3.2
   asteroids "medium rock" 57 6.95
@@ -17664,13 +17678,13 @@ system "Phecda"
     period 5955.43
 
 system "Pherkad"
-  pos -773 451
+  pos -798 451
   government "Republic"
   habitable 135
   belt 1924
   link "Beta Lupi"
+  link Graffias
   link "Kappa Centauri"
-  link Alniyat
   link "Yed Prior"
   asteroids "large metal" 1 2.6884
   trade "Clothing" 325
@@ -17723,8 +17737,6 @@ system "Phurad"
   habitable 1080
   belt 1881
   link Tejat
-  link Canopus
-  link Wazn
   asteroids "small rock" 78 11.907
   asteroids "medium rock" 1 9.801
   asteroids "large rock" 5 6.237
@@ -17990,7 +18002,6 @@ system "Porrima"
   government "Republic"
   habitable 760
   belt 1636
-  link Muphrid
   link Merak
   asteroids "small rock" 20 4.7334
   asteroids "medium rock" 35 3.0429
@@ -18011,10 +18022,8 @@ system "Porrima"
   trade "Medical" 510
   trade "Metal" 490
   trade "Plastic" 381
-  fleet "Merchants North Small" 2000
-  fleet "Merchants North Large" 6000
-  fleet "Merchants South Small" 1000
-  fleet "Merchants South Large" 3000
+  fleet "Merchants North Small" 1000
+  fleet "Merchants North Large" 3000
   fleet "Pirates South Small" 6000
   fleet "Republic Small" 8000
   object
@@ -18536,7 +18545,6 @@ system "Rajak"
   habitable 78
   belt 1410
   link Sumar
-  link Hassaleh
   link "Ultima Thule"
   asteroids "small rock" 15 2.3232
   asteroids "medium rock" 51 4.1536
@@ -18601,9 +18609,10 @@ system "Rasalhague"
   government "Republic"
   habitable 456
   belt 1282
-  link "Zeta Aquilae"
-  link Cebalrai
   link Ascella
+  link Cebalrai
+  link "Zeta Aquilae"
+  link Vega
   asteroids "small rock" 2 1.9
   asteroids "medium rock" 32 2.546
   asteroids "large rock" 1 1.292
@@ -18851,11 +18860,8 @@ system "Regulus"
   trade "Medical" 537
   trade "Metal" 406
   trade "Plastic" 318
-  fleet "Merchants South Small" 6000
-  fleet "Merchants North Small" 6000
-  fleet "Miners South" 3000
-  fleet "Pirates South Small" 2000
-  fleet "Pirates South Large" 8000
+  fleet "Merchants North Small" 4000
+  fleet "Miners North" 3000
   fleet "Republic Small" 10000
   object
     sprite star/b5
@@ -18960,7 +18966,7 @@ system "Rigel"
   belt 1782
   link Alnitak
   link Betelgeuse
-  link Danoa
+  link Hassaleh
   link Saiph
   asteroids "small rock" 12 11.076
   asteroids "medium rock" 42 3.9
@@ -19491,10 +19497,11 @@ system "Sagittarius A*"
 
 system "Saiph"
   pos -375 -390
-  government "Syndicate"
+  government "Republic"
   habitable 320
   belt 1690
-  link Betelgeuse
+  link Alnitak
+  link Mirzam
   link Rigel
   asteroids "small rock" 103 6.4974
   asteroids "medium rock" 69 5.4054
@@ -19515,8 +19522,8 @@ system "Saiph"
   fleet "Merchants North Large" 2000
   fleet "Pirates North Small" 2000
   fleet "Pirates North Large" 3000
-  fleet "Syndicate Small" 4000
-  fleet "Syndicate Large" 7000
+  fleet "Republic Small" 4000
+  fleet "Republic Large" 7000
   object
     sprite star/k5
     period 10
@@ -19611,6 +19618,7 @@ system "Sargas"
   government "Republic"
   habitable 911
   belt 1642
+  link Eber
   link Kornephoros
   link Lesath
   asteroids "large metal" 1 2.6656
@@ -19809,7 +19817,7 @@ system "Scheat"
     sprite planet/gas0
     distance 2229.12
     period 1683.91
-    object "Catoblepas Station"
+    object "Charybdis Station"
       sprite planet/station6
       distance 281
       period 13.1034
@@ -19819,9 +19827,9 @@ system "Schedar"
   government "Republic"
   habitable 1080
   belt 1903
-  link Mirach
   link Achernar
   link Almach
+  link Mirach
   asteroids "small rock" 10 1.736
   asteroids "medium rock" 2 0.896
   asteroids "large rock" 3 1.148
@@ -19839,12 +19847,9 @@ system "Schedar"
   trade "Medical" 743
   trade "Metal" 325
   trade "Plastic" 279
-  fleet "Merchants Core Small" 900
-  fleet "Merchants Core Large" 1000
-  fleet "Republic Small" 3000
-  fleet "Republic Large" 4000
-  fleet "Pirates Core Small" 2000
-  fleet "Pirates Core Large" 3000
+  fleet "Pirates Core Small" 1000
+  fleet "Pirates Core Large" 2000
+  fleet "Republic Large" 5000
   object
     sprite star/g0
     period 10
@@ -19860,10 +19865,6 @@ system "Schedar"
     sprite planet/forest0
     distance 572.21
     period 166.602
-  object "Amazon"
-    sprite planet/cloud1
-    distance 951.97
-    period 357.506
   object
     sprite planet/rock3
     distance 1589.22
@@ -19945,8 +19946,8 @@ system "Seginus"
   habitable 135
   belt 1906
   link Alnasl
-  link Wei
   link Alphecca
+  link Wei
   asteroids "small rock" 11 5.5188
   asteroids "medium rock" 3 6.2748
   asteroids "large rock" 1 4.6116
@@ -21299,8 +21300,8 @@ system "Sospi"
   government "Syndicate"
   habitable 1715
   belt 1715
-  link Volax
   link Nihal
+  link Volax
   asteroids "small rock" 1 2.8336
   asteroids "large rock" 1 1.9481
   asteroids "small metal" 6 3.1625
@@ -21918,11 +21919,10 @@ system "Tania Australis"
   government "Republic"
   habitable 1080
   belt 1738
-  link Phecda
   link Algieba
   link Fala
-  link Mora
   link Lolami
+  link Mora
   asteroids "medium rock" 4 4.6656
   asteroids "large rock" 13 5.2704
   asteroids "medium metal" 1 2.5488
@@ -21991,8 +21991,8 @@ system "Tarazed"
   habitable 1215
   belt 1169
   link Enif
-  link Albireo
   link Dabih
+  link Lurata
   link Umbral
   asteroids "small rock" 2 2.2968
   asteroids "medium rock" 1 2.1978
@@ -22113,8 +22113,9 @@ system "Tejat"
   government "Syndicate"
   habitable 1158
   belt 1447
-  link Phurad
+  link Alhena
   link Miaplacidus
+  link Phurad
   asteroids "small rock" 5 4.5675
   asteroids "medium rock" 5 3.1755
   asteroids "large rock" 5 4.959
@@ -22852,8 +22853,8 @@ system "Vega"
   habitable 1400
   belt 1744
   link Altair
-  link Menkent
   link Nocte
+  link Rasalhague
   link Sol
   asteroids "small rock" 2 5.7596
   asteroids "medium rock" 1 6.4736
@@ -22874,8 +22875,8 @@ system "Vega"
   trade "Medical" 496
   trade "Metal" 356
   trade "Plastic" 315
-  fleet "Merchants North Small" 1000
-  fleet "Merchants North Large" 4000
+  fleet "Merchants South Small" 1000
+  fleet "Merchants South Large" 4000
   fleet "Republic Small" 900
   fleet "Republic Large" 1000
   object
@@ -22895,7 +22896,7 @@ system "Vega"
     sprite planet/gas12-b
     distance 714.136
     period 204.017
-  object "Silver"
+  object "Shiver"
     sprite planet/cloud3
     distance 1359.23
     period 535.714
@@ -23285,7 +23286,6 @@ system "Wazn"
   link Alhena
   link Kursa
   link Phact
-  link Phurad
   asteroids "small metal" 9 2.6048
   asteroids "medium metal" 3 4.4704
   asteroids "large metal" 9 1.9008
@@ -23319,7 +23319,7 @@ system "Wazn"
     sprite planet/lava5
     distance 263.027
     period 73.8139
-  object "Glory"
+  object "Moonshake"
     sprite planet/forest1-b
     distance 542.917
     period 218.896
@@ -23671,7 +23671,6 @@ system "Zaurak"
   habitable 625
   belt 1130
   link Hamal
-  link Menkar
   link Oblate
   asteroids "small rock" 30 5.0232
   asteroids "medium rock" 34 5.2052
@@ -23853,9 +23852,8 @@ system "Zosma"
   government "Deep"
   habitable 456
   belt 1436
-  link Algieba
-  link Dubhe
   link Alphard
+  link Dubhe
   link Gomeisa
   asteroids "small rock" 17 3.2175
   asteroids "medium rock" 1 3.77
@@ -24194,7 +24192,6 @@ planet "Alfheim"
   description `  Settlements show up as small bright points on the dark side of the planet - not from city lights, but from natural gas burnoff at the drilling stations.`
   spaceport `The spaceport is in the middle of a field of oil derricks so vast that from above, the desert seemed to be covered in spiky grey fur. The spaceport itself is a soaring canopy, made to look like a tent, or sails on a ship. But it is built of a sturdy composite of plastic and carbon fiber, and coated in reflective plastic. Inside, hovercraft and massive sand-crawlers are bringing cargo to and from the refineries and factories scattered across the planet's surface.`
   outfitter "Pilot Licence"
-  outfitter "Basic Outfits"
   outfitter "Deep Sky Basics"
   bribe 0.05
   security 0.7
@@ -24219,7 +24216,7 @@ planet "Alta Hai"
   security 0.9
 
 planet "Amazon"
-  attributes core tourism oil frontier
+  attributes core tourism oil
   landscape land/forest5
   description `Amazon is a lush, green, tropical world, a popular tourist destination for many who live in this region of space. The indigenous forests are dense and hardy enough that growing human crops here is a constant battle, and none of the native plants or fruits are edible. Aside from tourism, most of the planet's income is from petroleum mining.`
   description `  The forests are home to a stunning variety of wildlife, some of it dangerous but most of it entirely indifferent to human presence. Plant life is so abundant here that even the oceans are green rather than blue, teeming with kelp and algae.`
@@ -24276,7 +24273,6 @@ planet "Asgard"
   spaceport `As with many of the worlds here in the Deep, walking around this spaceport feels like making a visit to the future. Everything is immaculately clean. The port is a single building reminiscent of a sand castle or termite mound: a jumble of spires, each a slightly different shape, all piled on top of each other. Docking bays open on various sides of the spires in a haphazard arrangement. It feels like this building is an organic thing, rather than the work of human hands.`
   spaceport `  The locals hurry by, seemingly oblivious to your presence; the only people who meet your gaze are your fellow wide-eyed visitors.`
   outfitter "Pilot Licence"
-  outfitter "Common Outfits"
   outfitter "Deep Sky Advanced"
   outfitter "Luminosity Intermediate"
   shipyard "Lionheart Intermediate"
@@ -24344,7 +24340,6 @@ planet "Bivrost"
   spaceport `The spaceport is within sight of the capital city, Rainbridge, but far enough away that the sound of ships taking off and landing will not be too disturbing to the locals. The warehouse space here is underground, level after level of tunnels and caverns stocked with lead-lined trunks filled with uranium and plastic crates of manufactured goods. Above ground, the spaceport is entirely enclosed within a dome of glass and plastic composite.`
   spaceport `  A video screen plays a looping advertisement from the local chamber of commerce. A prosperous-looking man is saying, "I knew there was a fortune to be made in uranium - but I was afraid my children would start glowing in the dark."`
   outfitter "Pilot Licence"
-  outfitter "Basic Outfits"
   outfitter "Deep Sky Basics"
   security 0.8
 #  tribute 3600
@@ -24575,10 +24570,10 @@ planet "Carbuncle"
 #    fleet "Militia Large" 5
 
 planet "Catoblepas Station"
-  attributes core station research
+  attributes paradise station research
   landscape land/sivael4
   music ambient/machinery
-  description `Catoblepas is a tiny station owned and operated by Lovelace Labs. You assume that like most such stations, it is primarily a deuterium refinery, but aside from the docking bay the rest of the station is closed off to visitors. Given the reputation of Lovelace Labs for exotic research, there could be almost anything beyond those sealed-off bulkheads.`
+  description `Catoblepas is a tiny station owned and operated by the Syndicate. You assume that like most such stations, it is primarily a deuterium refinery, but aside from the docking bay the rest of the station is closed off to visitors. Given the reputation of the Syndicate for secret research, there could be almost anything beyond those sealed-off bulkheads.`
   "required reputation" 100
   bribe 0.05
   security 0.9
@@ -24612,10 +24607,10 @@ planet "Charon Station"
 #    fleet "Militia Small" 15
 
 planet "Charybdis Station"
-  attributes paradise station
+  attributes core station
   landscape land/sivael8
   music ambient/machinery
-  description `Charybdis Station is privately owned by the Syndicate. It is a massive deuterium refinery, with harvester drones constantly flying in and out to scoop hydrogen gas out of the upper atmosphere of the planet below. If you need to repair or refuel in this system, you will need to visit the neighbouring world of Delve, instead of this station.`
+  description `Charybdis Station is privately owned by Vortex Shipyards. It is a massive deuterium refinery, with harvester drones constantly flying in and out to scoop hydrogen gas out of the upper atmosphere of the planet below. If you need to repair or refuel in this system, you will need to visit the neighbouring world of Delve, instead of this station.`
   "required reputation" 20
   bribe 0.05
   security 0.6
@@ -24687,7 +24682,7 @@ planet "Clear Sky"
 #    fleet "Militia Small" 24
 
 planet "Clink"
-  attributes mining moon
+  attributes south mining moon
   landscape land/desert3
   description `About a decade ago, a mining corporation from Zuq planted a colony on Clink for harvesting some rare earth minerals that are present in this moon's crust due to its unusually high rate of asteroid impacts. The atmosphere here is too thin to breathe without a respirator, and because of the low gravity, the dust raised by the mining operations hangs perpetually in the air.`
   description `  The miners who work here are a tight-knit group, since most of them were part of the original colonization team. They are not particularly open to outsiders, and the facilities here are so rudimentary that they do not even stock fuel for visiting ships.`
@@ -24818,7 +24813,7 @@ planet "Darkwaste"
   description `This planet seems to have all the conditions necessary for a vibrant, Earth-like ecology. The gravity and temperature are moderate, and there is a fair amount of surface water, although the oceans are quite small. However, aside from a few stunted plants and lichen, there is almost no native life here. Given how skilled the Hai appear to be at terraforming other worlds, it is strange that this one has been left barren.`
 
 planet "Deadman's Cove"
-  attributes pirate "north pirate"
+  attributes pirate "core pirate"
   landscape land/sea1
   description `Deadman's Cove is an ocean planet; the continents take up only a tenth of its surface area. Legends tell of massive sea creatures hiding in the deeps: serpents hundreds of meters long; colossal sea turtles; strange tentacled monsters and exotic fish.`
   description `  One island archipelago is home to the spaceport, the only part of the planet where it is safe to land uninvited. The other islands - even some that seem from a distance to be uninhabited - are often used as staging bases for pirate fleets, who guard their secrets closely.`
@@ -24978,6 +24973,7 @@ planet "Earth"
   outfitter "Sisensis Intermediate"
   outfitter "Syndicate Intermediate"
   shipyard "Centaur Intermediate"
+  shipyard "Megaparsec Basics"
   shipyard "Star Intermediate"
   shipyard "Vortex Intermediate"
   "required reputation" 2
@@ -25142,7 +25138,7 @@ planet "Farwater"
   spaceport `The spaceport appears to have been built by expanding a natural set of caves in a cliff facing the ocean. At high tide the lower caves flood, allowing barges to dock and unload the compounds they have harvested. Tunnels lead deep into the rock to rooms that have been carved out as warehouse space and living quarters. The rock remains somewhat cool, even at midday, but the air is still oppressively humid.`
 
 planet "Featherweight"
-  attributes core research
+  attributes north research frontier
   landscape land/sky6
   description `Featherweight is a small world, with lighter than normal gravity. Centuries ago, because of its remoteness, this world was the site of some illegal genetic experiments, and rumours say that the current inhabitants are the result of those experiments. Because they are so well adapted to low gravity, few of them choose to leave, and very few outsiders choose to settle here, so this world's culture remains quite insular and detached from the rest of the galaxy.`
   spaceport `Although this is a human planet, as you walk through this spaceport you feel as if you are on an alien world. The ceilings and doorways are all a bit higher than you are used to, and the locals tower over you. Aside from a few food carts in the marketplace, there are no shops or restaurants in the spaceport, and the nearest village is several kilometers away. It is as if the entire port was designed in order to limit interactions with outsiders to the bare minimum that is necessary.`
@@ -25183,7 +25179,7 @@ planet "Firka Tesk"
   security 0
 
 planet "Flood"
-  attributes rim tourism farming
+  attributes south tourism farming
   landscape land/water8
   description `The scenic fjords and rugged mountains make Flood a popular tourist destination. Nearly all the land in the planet's temperate zone is covered in mountains, making traditional agriculture difficult. The locals survive mostly by raising sheep and goats, plus a few native species, and grow fruit and vegetables in small terrace gardens tended by hand rather than by tractor. Most of the population is employed in the tourist industry, running inns for the visitors to their quaint mountainside villages, or making handcrafts for sale as gifts.`
   spaceport `You have never seen this many shops in a single spaceport. Hand-glazed pottery, wooden furniture, dolls, sweaters, scarves, paintings - the variety is overwhelming. Crowds of tourists bustle around from shop to shop, making it very difficult for you to get through.`
@@ -25205,7 +25201,7 @@ planet "Flowing Fields"
 planet "Follower"
   attributes paradise factory
   landscape land/city10
-  description `Follower is on the edge of the Paradise Planets region of space: not really one of them yet, but aspiring to be. It is prosperous, but from manufacturing rather than law or finance or venture capitalism. A significant fraction of the local taxes collected here are being spent on terraforming, raising global temperatures and reducing seasonal fluctuations. The goods produced here always have a ready market to purchase them, so Follower's job economy is considered very stable.`
+  description `Follower is on the edge of the Paradise Planets region of space: not really one of them yet, but aspiring to be. It is prosperous, but from manufacturing rather than law or finance or venture capitalism. A significant fraction of the local taxes collected here is being spent on terraforming, raising global temperatures and reducing seasonal fluctuations. The goods produced here always have a ready market to purchase them, so Follower's job economy is considered very stable.`
   description `  As one of the few planets still actively engaged in terraforming, Follower has been the location of several experiments with new technology, trying to leapfrog the centuries-slow process that other worlds have gone through. Unfortunately most of these experiments have failed, sometimes spectacularly.`
   spaceport `The spaceport is a single skyscraper, fifty floors tall and as wide as it is high, with the floors twisting around each other in a helical patterns so that on each level, the landing bays are approached from a slightly different angle. The whole structure is built of steel and gleaming glass. Inside, the soaring ceilings give you more of a sense of opulence than of comfort.`
   outfitter "Pilot Licence"
@@ -25213,8 +25209,7 @@ planet "Follower"
   outfitter "Deep Sky Basics"
   outfitter "Sisensis Intermediate"
   outfitter "Syndicate Basics"
-  shipyard "Betelgeuse Basics"
-  shipyard "Star Basics"
+  shipyard "Star Intermediate"
   bribe 0.03
   security 0.4
 #  tribute 2400
@@ -25230,7 +25225,7 @@ planet "Forpelog"
   security 0.9
 
 planet "Foundry"
-  attributes core factory urban
+  attributes core factory urban frontier
   landscape land/city1
   description `Foundry is home to the Vortex Shipyards, where ships ranging from small shuttles to the largest city-ships in human space are manufactured. Although much of the planet is blanketed in smog from the factories, there are also regions of pristine forests and majestic mountains. Vortex has a generous vacation policy that allows workers to take as much as a month of vacation time every year, and many choose to take that time to escape from the cities and explore the wilderness on Foundry. The shipyards claim that this vacation time is partly responsible for the high reliability of the ships built here, because a well-rested and relaxed worker is less likely to make the sort of mistakes that can quickly become disastrous in outer space.`
   spaceport `The spaceport is a long, multi-storey building designed to look like a capital starship, but much larger. It is built mostly of steel and glass, with the sturdy beams and girders that support the building visible on the inside, giving it the look of a ship still in construction, whose interior has not yet been fully fitted out. In nearby hangars, final assembly is being done on ships, some of which have been completed and are now for sale.`
@@ -25239,7 +25234,6 @@ planet "Foundry"
   outfitter "Earth Basics"
   outfitter "Lovelace Intermediate"
   outfitter "Syndicate Intermediate"
-  shipyard "Megaparsec Basics"
   shipyard "Vortex Advanced"
   bribe 0.1
   security 0.5
@@ -25303,7 +25297,6 @@ planet "Geminus"
   outfitter "Common Outfits"
   outfitter "Earth Basics"
   outfitter "Syndicate Intermediate"
-  shipyard "Betelgeuse Basics"
   shipyard "Star Advanced"
   bribe 0.1
   security 0.9
@@ -25377,7 +25370,7 @@ planet "Glittering Ice"
   "required reputation" 15
 
 planet "Glory"
-  attributes paradise medical
+  attributes core medical
   landscape land/sky8
   description `Elsewhere in the galaxy, people speak dismissively of the "boughten sunshine" that rich terraformed worlds can afford. On Glory, even many of the lakes and hills are artificial, crafted to garden-like perfection. Fittingly, the chief industry on Glory is plastic surgery, along with other medical efforts aimed at prolonging life, funded by rich, elderly folks who have settled here.`
   description `  Glory is also home to the Academy of Planetary Sciences, the organization at the forefront of terraforming research. The Academy takes on only a handful of apprentices each year, and guards its secrets very closely.`
@@ -25502,7 +25495,6 @@ planet "Haze"
   spaceport `The spaceport is constructed purely for efficiency and functionality. It is a long building, stretching in a straight line across more than a kilometer. Through the centre, on tracks elevated at various levels, run monourail trams for carrying passengers and cargo. Along the sides of the building are docking bays alternating with storage rooms. The wide corridors are packed both with people and with robotic freight carts.`
   spaceport `  As the planet's economy grows and the spaceport becomes too cramped, the port authority simply clears more land and extends the building, the tramways, and the docks out farther along the same line.`
   outfitter "Pilot Licence"
-  outfitter "Basic Outfits"
   outfitter "Deep Sky Intermediate"
   outfitter "Luminosity Basics"
   shipyard "Lionheart Basics"
@@ -25593,20 +25585,17 @@ planet "Hestia"
 #    fleet "Republic Large" 18
 
 planet "Hippocrates"
-  attributes paradise research medical
-  landscape land/myrabella3
-  description `No one is permitted to settle on Hippocrates without a government permit. It is a sparsely populated world, mostly used for medical research and development - including some research that, if the rumours are true, are carried out here in isolation so that if something goes wrong, entire districts can be quarantined or even "sterilized" by orbital bombardment.`
-  description `  The landscape is nondescript, mostly rolling plains and forests. The oceans are relatively small, and as a result it is a somewhat dry planet.`
-  spaceport `The spaceport is far removed from any of this world's cities. It consists of a single, ring-shaped building; the docking bays open onto the central atrium, which visiting ships fly through to reach them. Industrial strength ultraviolet lasers are mounted on turrets throughout the atrium, and fire automatically at entering and departing ships to sterilize them. Once you land, the docking bay is hermetically sealed. Based on the precautions they are taking, you find yourself wanting to spend as little time as possible breathing the air here.`
+  attributes core research frontier
+  landscape land/water11-harro
+  description `Hippocrates is a sparsely settled world, home mostly to scientific research outposts. The environment here, orbiting so close to a red dwarf star, is very different from most other settled planets. The scientists estimate this star system to be over ten billion years old, enough that life here has had much more time to develop and evolve than on any planet orbiting a brighter, more short-lived star.`
+  spaceport `The spaceport is a single building, and half the landing pads are just packed dirt. This port was not designed for large volumes of cargo or of visitors. Within the building is a sun-lit atrium, with separate storefronts for the commodity exchange, the job centre, and the bank. The only place you can see where you might be able to get something to eat is a bar, advertised by a sign showing an Erlenmeyer flask with a folding paper umbrella hung over the rim.`
   outfitter "Pilot Licence"
   outfitter "Basic Outfits"
-  outfitter "Syndicate Basics"
-  "required reputation" 10
-  bribe 0.1
-  security 0.9
-#  tribute 1400
-#    threshold 3500
-#    fleet "Republic Large" 6
+  outfitter "Lovelace Basics"
+  security 0.1
+#  tribute 800
+#    threshold 2500
+#    fleet "Syndicate Small" 9
 
 planet "Hope"
   attributes uninhabited
@@ -25688,7 +25677,6 @@ planet "Ingot"
   attributes "dirt belt" volcanic mining moon
   landscape land/mountain8
   description `Ingot is a volcanic moon, totally unsuitable for life but rich in metal. The miners who work here must spend all their time inside pressurized buildings. Because Ingot has almost no atmosphere to slow them down, meteorites are a constant danger to the colonists. The shells of the buildings have multiple layers, designed to be self-sealing in any but the largest of impacts. Most of the mining is done remotely by robotic vehicles, but someone still needs to be present to control them and to make repairs when something goes wrong.`
-  description `  Ingot is also now home to a burgeoning Navy base, although since the planet is so unlivable most of the troops are just living in ships in orbit.`
   spaceport `In this spaceport, ships dock inside a hangar whose ceiling protects them from meteorite impacts. The hangar is not pressurized, so there are also landing tubes that connect to each of the visiting ships. Many of the people inside are carrying emergency oxygen masks in case a sudden impact ruptures the building.`
   spaceport `  In addition to being the spaceport, this complex is also the repair and control centre for the mining robots. There are a handful of buildings elsewhere on Ingot, but not many. You cannot imagine spending so much time with so little space or change of scenery.`
   outfitter "Pilot Licence"
@@ -25879,7 +25867,7 @@ planet "Lodestone"
 #    fleet "Syndicate Small" 6
 
 planet "Longjump"
-  attributes rim tourism factory
+  attributes south tourism factory
   landscape land/city9
   description `Longjump is a mostly industrial world, with lower than normal gravity that makes it relatively easy to operate and transport heavy equipment. Hang-gliding is also a popular sport here, although for safety reasons it is prohibited anywhere near the spaceport.`
   spaceport `You can recognize the natives immediately because they are almost all taller than you, a result of growing up in a low-gravity environment. The spaceport consists of four large towers, connected by bridges, with openings for hangars in the sides. The upper storeys are for landing ships; business takes place down below, at street level.`
@@ -25936,17 +25924,17 @@ planet "Mainsail"
 #    fleet "Republic Small" 57
 
 planet "Maker"
-  attributes core research frontier
-  landscape land/water11-harro
-  description `Maker is a sparsely settled world, home mostly to scientific research outposts. The environment here, orbiting so close to a red dwarf star, is very different from most other settled planets. The scientists estimate this star system to be over ten billion years old, enough that life here has had much more time to develop and evolve than on any planet orbiting a brighter, more short-lived star.`
-  spaceport `The spaceport is a single building, and half the landing pads are just packed dirt. This port was not designed for large volumes of cargo or of visitors. Within the building is a sun-lit atrium, with separate storefronts for the commodity exchange, the job centre, and the bank. The only place you can see where you might be able to get something to eat is a bar, advertised by a sign showing an Erlenmeyer flask with a folding paper umbrella hung over the rim.`
-  outfitter "Pilot Licence"
-  outfitter "Basic Outfits"
-  outfitter "Lovelace Basics"
-  security 0.1
-#  tribute 800
-#    threshold 2500
-#    fleet "Syndicate Small" 9
+  attributes core research
+  landscape land/bwerner2
+  description `Maker is used as a research and testing station for Lovelace Labs. The research buildings are not open to non-employees. From a distance it looks almost like a small war is going on, with missiles being fired from a silo toward a hilltop where an anti-missile turret is picking them off one by one.`
+  description `  Rumours say that the Sidewinder Missile engineering team and the Missile Defence team are in fierce competition with each other, and whichever team is currently losing to the other must buy them lunch every Friday.`
+  spaceport `The workers grudgingly refuel your ship, but it is quite clear that you are out of place here. Nearly everyone in the spaceport is wearing a lab coat or a uniform, and several groups of people halt their conversations as soon as you pass within earshot.`
+  "required reputation" 100
+  bribe 0.1
+  security 0.9
+#  tribute 600
+#    threshold 2000
+#    fleet "Republic Small" 21
 
 planet "Makerplace"
   attributes hai manufacturing "hai tourism"
@@ -25962,7 +25950,6 @@ planet "Mani"
   description `Mani is a small moon, with an atmosphere thick enough to keep your blood from boiling off but too thin to breathe without assistance. It is used only as a cargo depot and a spot for refueling and repairs. The native plant life mostly consists of pale-coloured lichens and a few species of grass. The only animals are insects.`
   spaceport `The spaceport is shaped like a wheel with no rim: a series of spokes jutting out from a central hub, where each spoke is a docking tunnel that can connect to any ship that lands beside it. Inside are about a dozen people and a couple hundred robots. The people and robots alike seem uninterested in any interactions with you. It is a strange sort of aloofness that you have heard is common to all the worlds in the Deep.`
   outfitter "Pilot Licence"
-  outfitter "Basic Outfits"
   outfitter "Deep Sky Basics"
   security 0.6
 #  tribute 500
@@ -26015,7 +26002,6 @@ planet "Memory"
   description `  This planet was first settled only a few centuries ago, and the population is still relatively low, but they have developed a diverse set of industries including manufacturing and medical research.`
   spaceport `The local government has not yet seen the need to set aside funds to replace the spaceport built by the original settlers: mostly just a collection of poured concrete pads where larger ships can land without sinking into the sand of the desert. They have added some large hangars for richer clients and Navy ships, however, and over the years more and more buildings have sprung up along the periphery of the landing field.`
   outfitter "Pilot Licence"
-  outfitter "Basic Outfits"
   outfitter "Deep Sky Basics"
   security 0.8
 #  tribute 700
@@ -26067,7 +26053,6 @@ planet "Midgard"
   description `  Food, fashion, and entertainment here all strike you as out of pace with broader galactic culture. The deep independent history of the planet makes it less likely to simply follow the latest Earth trends as the more recent colonies do.`
   spaceport `The spaceport is located in the centre of the city of New Reykjavik, a bustling metropolis which is also Midgard's centre of government. The port was built five hundred years ago, and its architecture is much more conservative than other ports in the Deep: instead of domes and rounded, wavy surfaces, it is a collection of tall, square granite towers, connected by bridges at various levels. Most of the hotels and restaurants are in a central tower, slightly higher than the others. There is no central marketplace; instead, you can just buy or sell cargo from a computer terminal and a robotic forklift will arrive at your docking bay to carry it.`
   outfitter "Pilot Licence"
-  outfitter "Common Outfits"
   outfitter "Deep Sky Intermediate"
   outfitter "Luminosity Advanced"
   shipyard "Lionheart Intermediate"
@@ -26193,7 +26178,6 @@ planet "Nifel"
   description `  Four centuries ago, when much of human space had been in travel quarantine for a decade to block the spread of the Rigellian Plague, it was here that researchers discovered a cryophilic bacterium growing in the permafrost that could be used to combat and eventually eliminate the plague. Some research labs and manufacturing plants still remain in operation here.`
   spaceport `As with many of the fanciest buildings in the Deep, the spaceport here is built of carbon fiber and plastic composite instead of more traditional materials. The particular composite used here is slightly translucent, so the hallways and hangars are all bathed in dim and diffuse sunlight. The port is located near the equator, but the air is still uncomfortably cold. The spaceport is large enough to house ten times the number of people and ships that are currently here.`
   outfitter "Pilot Licence"
-  outfitter "Basic Outfits"
   outfitter "Deep Sky Basics"
   bribe 0.05
   security 0.7
@@ -26222,7 +26206,6 @@ planet "Norn"
   description `Norn is a water world, with low gravity but an atmosphere dense enough to breathe easily. Large mats of seaweed and algae form natural rafts that drift around with the ocean currents, and a few intrepid settlers have colonized them, people who prefer a life of relative solitude and are willing to trust their fates to wherever the winds might take them. Others have settled the few, low islands, which are prone to frequent flooding. Fish are common here, including a few species of flying fish which travel in large packs and are a considerable nuisance for the land-dwellers.`
   spaceport `The spaceport is on one of the larger islands, a network of small buildings connected by bridges and raised up on enormous stilts about fifty meters high. Cargo winches are used to load and unload cargo from the boats that dock below. Starships dock in individual hangars, to protect them from the wind. The whole complex sways slightly, almost imperceptibly, as if it were a large boat at sea. The walkways all have tall railings, but you still find yourself afraid to venture too near the edge or to look down at the island and the sea below. The locals, however, walk swiftly and gracefully, with no sign of fear.`
   outfitter "Pilot Licence"
-  outfitter "Basic Outfits"
   outfitter "Deep Sky Basics"
   outfitter "Luminosity Basics"
   shipyard "Lionheart Basics"
@@ -26244,16 +26227,17 @@ planet "Oasis"
 #    fleet "Militia Large" 5
 
 planet "Oberon Station"
-  attributes core station
-  landscape land/sivael9
+  attributes core station military
+  landscape land/sivael0
   music ambient/machinery
-  description `Oberon Station is a deuterium refinery owned and operated by the Syndicate, and aside from a few docking bays for visiting ships to use in an emergency, the rest of the station is sealed off to non-employees.`
+  description `Oberon Station serves both as a refinery for hyperspace fuel, and as a garrison for ships of the Republic Navy. Patrol ships are constantly landing here and then taking off to scour the surrounding systems for pirates. Although pirates are not unusual in this part of space, it seems like a very tedious job.`
+  spaceport `The mess hall is empty except for one table where some Navy officers are playing a card game. They are sitting right under a ventilation duct, and the cards keep blowing off the table; the station's low simulated gravity is not enough to hold them there.`
   "required reputation" 10
-  bribe 0.03
-  security 0.4
-#  tribute 400
-#    threshold 2000
-#    fleet "Syndicate Small" 5
+  bribe 0.08
+  security 0.8
+#  tribute 600
+#    threshold 4000
+#    fleet "Republic Small" 24
 
 planet "Oblivion"
   attributes "dirt belt" oil mining
@@ -26317,17 +26301,20 @@ planet "Phoenix Station"
 #    fleet "Deep Large" 5
 
 planet "Pilot"
-  attributes core research
-  landscape land/bwerner2
-  description `Pilot is used as a research and testing station for Lovelace Labs. The research buildings are not open to non-employees. From a distance it looks almost like a small war is going on, with missiles being fired from a silo toward a hilltop where an anti-missile turret is picking them off one by one.`
-  description `  Rumours say that the Sidewinder Missile engineering team and the Missile Defence team are in fierce competition with each other, and whichever team is currently losing to the other must buy them lunch every Friday.`
-  spaceport `The workers grudgingly refuel your ship, but it is quite clear that you are out of place here. Nearly everyone in the spaceport is wearing a lab coat or a uniform, and several groups of people halt their conversations as soon as you pass within earshot.`
-  "required reputation" 100
+  attributes paradise research medical
+  landscape land/myrabella3
+  description `No one is permitted to settle on Pilot without a government permit. It is a sparsely populated world, mostly used for medical research and development - including some research that, if the rumours are true, are carried out here in isolation so that if something goes wrong, entire districts can be quarantined or even "sterilized" by orbital bombardment.`
+  description `  The landscape is nondescript, mostly rolling plains and forests. The oceans are relatively small, and as a result it is a somewhat dry planet.`
+  spaceport `The spaceport is far removed from any of this world's cities. It consists of a single, ring-shaped building; the docking bays open onto the central atrium, which visiting ships fly through to reach them. Industrial strength ultraviolet lasers are mounted on turrets throughout the atrium, and fire automatically at entering and departing ships to sterilize them. Once you land, the docking bay is hermetically sealed. Based on the precautions they are taking, you find yourself wanting to spend as little time as possible breathing the air here.`
+  outfitter "Pilot Licence"
+  outfitter "Basic Outfits"
+  outfitter "Syndicate Basics"
+  "required reputation" 10
   bribe 0.1
   security 0.9
-#  tribute 600
-#    threshold 2000
-#    fleet "Republic Small" 21
+#  tribute 1400
+#    threshold 3500
+#    fleet "Republic Large" 6
 
 planet "Placer"
   attributes core mining frontier
@@ -26401,7 +26388,7 @@ planet "Precipitous"
 #    fleet "Republic Small" 11
 
 planet "Prime"
-  attributes north urban factory
+  attributes north urban factory frontier
   landscape land/city11
   description `Prime is a very Earth-like ocean world, with a population of over a billion people. It is home to Betelgeuse Shipyards, the heavy ship-builbing arm of the Syndicate, and much of the industry on the planet is related to ship-building in one way or another, like refining and working metal, or developing exotic new hull and framing materials. Although some mining is done in more remote regions of the planet, Prime is reliant on shipments of metal and other goods to feed its industries.`
   spaceport `The spaceport is surrounded by kilometers of hangars and factories where new ships are being assembled. The port itself is a trio of towering buildings, with a skywalk on the top floors to provide a view of the surrounding area. Larger ships land on pads on the ground surrounding the towers, while smaller ships can fly into hangars built into the sides of the towers themselves. Everything is made of gleaming metal, and each tower is slightly tapered and adorned with painted fins that make it resemble an enormous starship.`
@@ -26516,6 +26503,7 @@ planet "Reunion"
   outfitter "Sisensis Basics"
   outfitter "Syndicate Basics"
   shipyard "Centaur Basics"
+  shipyard "Megaparsec Basics"
   shipyard "Star Basics"
   shipyard "Vortex Basics"
   security 0.3
@@ -27050,7 +27038,6 @@ planet "Sunracer"
   outfitter "Lovelace Intermediate"
   outfitter "Syndicate Intermediate"
   shipyard "Megaparsec Advanced"
-  shipyard "Vortex Basics"
   bribe 0.06
   security 0.7
 #  tribute 1700
@@ -27166,17 +27153,16 @@ planet "Trinket"
 #    fleet "Militia Small" 36
 
 planet "Triton Station"
-  attributes north station military
-  landscape land/sivael0
+  attributes north station
+  landscape land/sivael9
   music ambient/machinery
-  description `Triton Station serves both as a refinery for hyperspace fuel, and as a garrison for ships of the Republic Navy. Patrol ships are constantly landing here and then taking off to scour the surrounding systems for pirates. Since pirates are scarce in this part of space, it seems like a very tedious job.`
-  spaceport `The mess hall is empty except for one table where some Navy officers are playing a card game. They are sitting right under a ventilation duct, and the cards keep blowing off the table; the station's low simulated gravity is not enough to hold them there.`
+  description `Triton Station is a deuterium refinery owned and operated by the Syndicate, and aside from a few docking bays for visiting ships to use in an emergency, the rest of the station is sealed off to non-employees.`
   "required reputation" 10
-  bribe 0.08
-  security 0.8
-#  tribute 600
-#    threshold 4000
-#    fleet "Republic Small" 24
+  bribe 0.03
+  security 0.4
+#  tribute 400
+#    threshold 2000
+#    fleet "Syndicate Small" 5
 
 planet "Trove"
   attributes core mining
@@ -27250,7 +27236,6 @@ planet "Valhalla"
   description `  The shipyards of Lionheart Industries are located here. Centuries ago, warships built here turned the tide of the Alpha War, and today the ships designed and built in the Deep continue to be some of the most technologically advanced ships in human space - and the most expensive. Lionheart actually consists of two different branches, one producing powerful multi-purpose ships such as the Mule, the other offering a wide range of lightweight ships, both for civilian and military purposes.`
   spaceport `Surrounding the spaceport is a metropolis of skyscrapers and factories that spreads all the way to the horizon in every direction. The spaceport itself is an imposing building, composed of three towers rising over a hundred storeys into the air and connected at various levels by bridges. The docking bays are on the higher levels, with warehouse space lower down and loading platforms for trucks at ground level. Massive cargo elevators run up and down in the centre of each building, and the hallways are all wide enough to allow small robotic carts and forklifts in addition to foot traffic.`
   outfitter "Pilot Licence"
-  outfitter "Common Outfits"
   outfitter "Deep Sky Intermediate"
   outfitter "Earth Intermediate"
   outfitter "Luminosity Intermediate"
@@ -27460,7 +27445,7 @@ planet "Watcher"
   security 0
 
 planet "Wayfarer"
-  attributes south factory
+  attributes "dirt belt" factory
   landscape land/nasa1
   description `Wayfarer was initially settled by a team of scientists and diplomats seeking to build a relationship with the Quarg worlds to the galactic southeast of here. Partly through the aid of the Quarg and partly through a desire to emulate them, it has grown into a very technologically advanced world.`
   description `  Tarazed Corporation, a maker of alien-inspired ships and outfits, is one of the largest industries on Wayfarer, and they draw raw materials from throughout this region of space.`
@@ -27507,7 +27492,6 @@ planet "Windblain"
   description `  The local climate and economy are neither good enough to attract immigration, nor bad enough to drive people to leave. There seems to be almost no interest in the affairs of the wider galaxy.`
   spaceport `The spaceport is in one of the main cities, and is built partly on land and partly on piers that stretch out into the harbour, so that cargo can be brought to the port by truck or by barge. There are even a few runways for aircraft, in addition to the landing pads for starships. In the wharf area, fresh cooked fish and sushi are sold from a small cluster of wooden huts. Farther inland, cargo crates are stacked under the immense tents that serve as warehouses. There is a constant flow of people and cargo in between the harbour and the city.`
   outfitter "Pilot Licence"
-  outfitter "Basic Outfits"
   outfitter "Deep Sky Basics"
   security 0.6
 #  tribute 800
