@@ -128,9 +128,6 @@ void ShipInfoDisplay::UpdateAttributes(const Ship &ship, const Depreciation &dep
   attributeValues.push_back(Format::Credits(depreciated));
   attributesHeight += 20;
   
-  attributeLabels.push_back(string());
-  attributeValues.push_back(string());
-  attributesHeight += 10;
   int canBeCarried = attributes.Get("carried");
   if(canBeCarried)
   {
@@ -143,6 +140,10 @@ void ShipInfoDisplay::UpdateAttributes(const Ship &ship, const Depreciation &dep
       attributeValues.push_back("bomber");
     attributesHeight += 20;
   }
+
+  attributeLabels.push_back(string());
+  attributeValues.push_back(string());
+  attributesHeight += 10;
 
   if(attributes.Get("shield generation"))
   {
@@ -296,7 +297,6 @@ void ShipInfoDisplay::UpdateAttributes(const Ship &ship, const Depreciation &dep
   double afterburner = attributes.Get("afterburner thrust");
   double reverse = -attributes.Get("reverse thrust");
   double turning = attributes.Get("turn");
-  //double hyperjumpfuel = attributes.Get("jump fuel");
   double forwardThrust = reverse && !thruster ? reverse : thruster;
   attributeLabels.push_back(string());
   attributeValues.push_back(string());
@@ -360,6 +360,21 @@ void ShipInfoDisplay::UpdateAttributes(const Ship &ship, const Depreciation &dep
     attributeValues.push_back(Format::Round(60. * turning / fullMass)
       + " / " + Format::Round(60. * turning / emptyMass));
   attributesHeight += 20;
+  if(!canBeCarried && isGeneric && (attributes.Get("hyperdrive") || attributes.Get("jump drive")))
+  {
+    if(attributes.Get("scram drive"))
+    {
+      attributeLabels.push_back("scram drive:");
+      attributeValues.push_back(Format::Number(attributes.Get("scram drive")));
+      attributesHeight += 20;
+    }
+    else
+    {
+      attributeLabels.push_back("jump speed:");
+      attributeValues.push_back(Format::Number(60 * attributes.Get("jump speed")));
+      attributesHeight += 20;
+    }
+  }
   
   // fuel/energy/heat table
   tableLabels.clear();

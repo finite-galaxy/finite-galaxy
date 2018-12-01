@@ -550,8 +550,8 @@ void Engine::Step(bool isActive)
   info.SetString("date", player.GetDate().ToString());
   if(flagship)
   {
-    info.SetBar("fuel", flagship->Fuel(),
-      flagship->Attributes().Get("fuel capacity") * .001);
+    //info.SetBar("fuel", flagship->Fuel(), flagship->Attributes().Get("fuel capacity") * .001);
+    info.SetBar("fuel", flagship->Fuel());
     info.SetBar("energy", flagship->Energy());
     double heat = flagship->Heat();
     info.SetBar("heat", min(1., heat));

@@ -371,7 +371,7 @@ private:
   // Get the hull amount at which this ship is disabled.
   double MinimumHull() const;
   // Find out how much fuel is consumed by the hyperdrive of the given type.
-  double BestFuel(const std::string &type, const std::string &subtype, double defaultFuel) const;
+  double BestFuel(const std::string &type, const std::string &subtype) const;
   // Create one of this ship's explosions, within its mask. The explosions can
   // either stay over the ship, or spread out if this is the final explosion.
   void CreateExplosion(std::vector<Visual> &visuals, bool spread = false);

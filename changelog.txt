@@ -6,6 +6,7 @@
   * changed font to Linux Libertine Display
   * move ship and outfit categories to data files (@Hadron1776)
   * introduce new fuel attributes (@Nescio0)
+  * hyperjump fuel is equal to the ship's effective mass (including cargo and carried ships) plus best outfit fuel
   * introduce core space, used by energy generators and some other outfits
     * outfit space = core space + engine space + weapon space
   * add support for bombers [work in progress]
@@ -198,7 +199,7 @@
       * Behemoth: +1800 hull
       * Blackbird: cost from 2230 000 to 2900 000; −400 shields, +1100 hull, −1 bunk
       * Bounder: +1 required crew, −20 engine space, −5 weapon space
-      * Boxwing: +0.01 drag, +0.23 heat dissipation, +10 outfit space, −40 cargo space, +7 engine space
+      * Boxwing: +0.71 drag, +0.23 heat dissipation, +10 outfit space, −40 cargo space, +7 engine space
       * Briar: unchanged
       * Bulk Freighter: +60 cargo space, +10 outfit space, +5 engine space
       * Chaser: +700 shields, +600 hull, +1 required crew, +1 bunk, +10 mass, +33 outfit space

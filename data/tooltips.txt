@@ -196,16 +196,16 @@ tip "energy consumption:"
   `Energy consumed per second while in flight.`
   
 tip "energy generation:"
-  `Energy generated per second. If your ship has weapons other than beam weapons, you will probably also need batteries to store energy in.`
+  `Energy generated per second. If your ship has cannons and turrets, you will probably also need batteries to store energy in.`
 
 tip "engine space needed:"
   `Tons of engine space this outfit takes up.`
 
 tip "fuel:"
-  `This ship's current fuel amount. An ordinary hyperdrive jump consumes 100 fuel.`
+  `This ship's current fuel amount. An ordinary hyperspace jump consumes one unit of fuel per mass.`
 
 tip "fuel capacity:"
-  `An ordinary hyperdrive jump consumes 100 fuel. Fuel is replenished for free when you land on an inhabited planet.`
+  `An ordinary hyperjump requires one unit of fuel per mass. Fuel is replenished for free when you land on a planet with a spaceport.`
 
 tip "fuel consumption:"
   `Fuel consumed per second while in flight (can generate energy or heat).`
@@ -253,16 +253,16 @@ tip "ion resistance:"
   `How much ionization damage this ship can resist per second.`
 
 tip "jump speed:"
-  `How slow the ship must be moving to make a jump.`
+  `The maximum velocity below which the ship must be moving in order to make a hyperspace jump.`
 
 tip "jump fuel:"
-  `How much fuel is consumed when you jump between systems using this drive.`
+  `How much extra fuel is consumed when you jump between systems using this drive. This is in addition to the ship's effective mass.`
 
 tip "map:"
   `How many star systems are included in this map.`
 
 tip "mass:"
-  `Mass, in tons. A ship's mass determines how fast it turns and accelerates.`
+  `Mass, in tons. A ship's mass determines how fast it turns and accelerates. Each ton also requires one unit of fuel to make a hyperspace jump.`
 
 tip "outfit scan:"
   `Lets you scan your target ship's outfits from up to this distance away.`
@@ -295,10 +295,10 @@ tip "reverse thrusting heat:"
   `Heat produced per second when firing reverse thrusters.`
 
 tip "scan interference:"
-  `Ability to evade detection when a ship is carrying illegal outfits or cargo. Interference of 1 blocks 50% of scan attempts; 3 blocks 75%, and 9 blocks 90%.`
+  `Ability to evade detection when a ship is carrying illegal outfits or cargo. Interference of 1 blocks 50% of scan attempts, 3 blocks 75%, and 9 blocks 90%.`
 
 tip "scram drive:"
-  `This hyperdrive allows you to jump without coming to a stop, as long as your velocity is within this range of being lined up with the direction you are jumping in.`
+  `This hyperdrive allows you to jump without coming to a stop, as long as your velocity is within this angle of being lined up with the direction you are jumping in.`
 
 tip "self destruct:"
   `How likely this ship is to self-destruct when you try to board or capture it.`
@@ -487,7 +487,7 @@ tip "bomber bays:"
   `The number of ships from the "Bomber" category that this ship can carry.`
 
 tip "mass full / no cargo:"
-  `Mass of this ship when not carrying any drones, fighters, or bombers. Cargo increases mass, which reduces acceleration and turn rate.`
+  `Mass of this ship when not carrying any ships (e.g. fighters). Cargo increases mass, which reduces acceleration and turn rate. Furthermore, each unit of mass (including cargo and carried ships) requires one unit of fuel when making hyperspace jumps.`
 
 tip "    maximum velocity:"
   `The fastest this ship can travel when using ordinary thrusters and, separately, when using an afterburner, if applicable.`

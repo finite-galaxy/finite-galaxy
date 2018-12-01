@@ -2392,9 +2392,9 @@ double Ship::HyperdriveFuel() const
     return JumpDriveFuel();
   
   if(attributes.Get("scram drive"))
-    return BestFuel("hyperdrive", "scram drive", 150.);
+    return BestFuel("hyperdrive", "scram drive");
   
-  return BestFuel("hyperdrive", "", 100.);
+  return BestFuel("hyperdrive", "");
 }
 
 
@@ -2405,7 +2405,7 @@ double Ship::JumpDriveFuel() const
   if(!attributes.Get("jump drive"))
     return 0.;
   
-  return BestFuel("jump drive", "", 200.);
+  return BestFuel("jump drive", "");
 }
 
 
@@ -3078,27 +3078,30 @@ double Ship::MinimumHull() const
 
 
 // Find out how much fuel is consumed by the hyperdrive of the given type.
-double Ship::BestFuel(const string &type, const string &subtype, double defaultFuel) const
+double Ship::BestFuel(const string &type, const string &subtype) const
 {
   // Find the outfit that provides the least costly hyperjump.
   double best = 0.;
-  // Make it possible for a hyperdrive to be integrated into a ship.
-  if(baseAttributes.Get(type) && (subtype.empty() || baseAttributes.Get(subtype)))
-  {
-    best = baseAttributes.Get("jump fuel");
-    if(!best)
-      best = defaultFuel;
-  }
+
   // Search through all the outfits.
   for(const auto &it : outfits)
     if(it.first->Get(type) && (subtype.empty() || it.first->Get(subtype)))
     {
       double fuel = it.first->Get("jump fuel");
-      if(!fuel)
-        fuel = defaultFuel;
       if(!best || fuel < best)
         best = fuel;
     }
+
+  // Make it possible for a hyperdrive to be integrated into a ship.
+  if(baseAttributes.Get(type) && (subtype.empty() || baseAttributes.Get(subtype)))
+  {
+    double base = baseAttributes.Get("jump fuel");
+    if(base < best)
+      best = base;
+  }
+  
+  // Required fuel = total mass + best fuel
+  best += Mass();
   return best;
 }
 

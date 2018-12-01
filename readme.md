@@ -147,6 +147,7 @@ sudo install_name_tool -id "@rpath/libSDL2-2.0.0.dylib" /usr/local/lib/libSDL2-2
 -->
 
 ### Major changes
+* Hyperjump fuel is based on your ship's effective mass (including cargo and carried ships)
 * Ship categories are based on total mass
   * `ship mass = hull mass + outfit space + cargo space`
 * Introduced core space, reserved for energy generators, shields and hull systems, and hyperdrives
@@ -189,7 +190,7 @@ See `changelog.txt`, `ship_overview.txt`, and https://github.com/finite-galaxy/f
 
 #### Syndicate branch
 Currently there are two possible endings to the Free Worlds storyline. In the Checkmate branch, you ignore the Syndicate defector, focus on fighting the Republic, unlock nuclear missiles, and prepare an assault on Earth, upon which the Pug intervene. In the Reconciliation branch, you pick up the Syndicate defector, bring him to safety in the Deep, lead a combined Deep Security-Free Worlds-Republic Navy police action against the Syndicate, where you are gifted a Jump Drive and a Cloaking device, to solve the Pug invasion. But what if there were a third option? 
-You could speak with the Syndicate defector, learn there is a one million credits bounty on his head, return him to the Syndicate, get the reward, and disappoint the Free Worlds Council. Afterwards the Syndicate recruits you by offering you more than twice the salary, you accept, change colours, assist the Syndicate in conquering Deadman's Cove in Almach. Because the Navy suffered several defeats against the Free Worlds and a large part of their personnel joined the Oathkeepers, the Republic hires the Syndicate to fight the Free Worlds, offering them exclusive trade rights in certain systems. You join the Syndicate invasion fleet, but then plans suddenly change because of the appearance of the Pug.
+You could speak with the Syndicate defector, learn there is a one million credits bounty on his head, return him to the Syndicate, get the reward, and disappoint the Free Worlds Council. Afterwards the Syndicate recruits you by offering you more than twice the salary, you accept, change colours, assist the Syndicate in conquering a pirate world. Because the Navy suffered several defeats against the Free Worlds and a large part of their personnel joined the Oathkeepers, the Republic hires the Syndicate to fight the Free Worlds, offering them exclusive trade rights in certain systems. You join the Syndicate invasion fleet, but then plans suddenly change because of the appearance of the Pug.
 
 [(return to top)](https://github.com/finite-galaxy/finite-galaxy#finite-galaxy)
 
