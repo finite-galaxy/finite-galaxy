@@ -1002,20 +1002,21 @@ interface "hail panel"
 
   active if "can bribe"
   button b "Offer _Bribe"
-    centre 130 115
+    centre -20 115
     dimensions 140 30
     
   visible if "show dominate"
   active if "can dominate"
   button t "Demand _Tribute"
-    centre -20 115
+    centre 130 115
     dimensions 140 30
   visible if "show relinquish"
   button t "Relinquish _Tribute"
-    centre -20 115
+    centre 130 115
     dimensions 140 30
   visible if "show assist"
   active if "can assist"
   button h "Ask For _Help"
-    centre -20 115
+    centre 130 115
     dimensions 140 30
+

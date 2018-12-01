@@ -166,16 +166,16 @@ void HailPanel::Draw()
   }
   else
   {
-    if(!GameData::GetPolitics().HasDominated(planet))
-      info.SetCondition("show dominate");
-    else
-      info.SetCondition("show relinquish");
     if(hasLanguage)
     {
       info.SetCondition("can dominate");
       if(!planet->CanLand())
         info.SetCondition("can bribe");
     }
+    if(GameData::GetPolitics().HasDominated(planet))
+      info.SetCondition("show relinquish");
+    else
+      info.SetCondition("show dominate");
   }
   
   const Interface *interface = GameData::Interfaces().Get("hail panel");
