@@ -8,6 +8,8 @@ shipyard "Betelgeuse Variants"
   "Firebird (Hai)"
   "Firebird (Laser)"
   "Firebird (Torpedo)"
+  "Flivver"
+  "Flivver (Hai)"
   "Hero"
   "Hero (Gatling)"
   "Hero (Patrol)"
@@ -327,6 +329,69 @@ ship "Firebird" "Firebird (Torpedo)"
     "Fuel Barrel" 40
     "Large Radar Jammer"
     "Tactical Scanner" 3
+
+
+
+ship "Flivver"
+  sprite "ship/flivver"
+  thumbnail "thumbnail/flivver"
+  attributes
+    category "Interceptor"
+#    manufacturer "Betelgeuse"
+    licences
+      Pilot
+    "cost" 180000
+    "shields" 1400
+    "hull" 200
+    "required crew" 1
+    "bunks" 2
+    "mass" 40
+    "drag" 1.0
+    "heat dissipation" .9
+    "cargo space" 5
+    "outfit space" 180
+    "core space" 120
+    "engine space" 45
+    "weapon space" 15
+    weapon
+      "blast radius" 16
+      "shield damage" 160
+      "hull damage" 80
+      "hit force" 240
+  outfits
+    "D14-RN Shield Generator"
+    "Dwarf Core"
+    "Hyperdrive"
+
+    "A120 Atomic Thruster"
+    "A125 Atomic Steering"
+
+    "Supercapacitor"
+    "Fuel Barrel" 50
+    "Tactical Scanner" 1
+  engine -16 27
+  engine 16 27
+  gun -6 -31
+  gun 6 -31
+  leak "leak" 60 50
+  explode "tiny explosion" 10
+  explode "small explosion" 10
+  description "The Flivver is the fastest ship for sale, designed to outspeed anything else. As a consequence, it has space for neither cargo nor passengers nor heavy weaponry. Flivvers are sold mostly to wealthy individuals who want to be able to travel the stars without needing to share a bunk room on a merchant transport with common people, and to rich youths obsessed with racing."
+
+
+ship "Flivver" "Flivver (Hai)"
+  outfits
+    "Corundum Regenerator"
+    "Pebble Core"
+    "Hyperdrive"
+
+    `"Benga" Atomic Thruster`
+    `"Basrem" Atomic Steering`
+
+    "Chasm Batteries"
+    "Williwaw Cooling"
+    "Fuel Pod" 5
+    "Yoloy Scanner"
 
 
 

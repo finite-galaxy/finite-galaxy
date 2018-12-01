@@ -4,9 +4,23 @@ mission "Free Worlds Aftermath"
   to offer
     has "free worlds plot completed"
   on offer
+    event "particle turret available" 30
     event "luna rebuilt" 90
     event "tarazed referendum" 180
     fail
+
+
+
+mission "particle turret available"
+  landing
+  source
+    near "Markab" 100
+  to offer
+    has "event: particle turret available"
+  on offer
+    conversation
+      `Your ship is targetted by advertisements, informing you Lovelace Labs started selling their Particle Turret to everyone. Hithereto it was available to the Republic Navy only. They probably felt compelled to compete with Deep Sky's Electron Turret and Delta V's Plasma Turret, although the fact that Navy Mark II vessels are no longer using Lovelace's Particle Turret might have something to do with it as well.`
+        decline
 
 
 

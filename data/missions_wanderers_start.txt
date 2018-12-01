@@ -1015,7 +1015,7 @@ mission "Wanderers: Alpha Surveillance F"
   
   on offer
     log "Admiral Danforth agreed to bring his Saturn to the planet in Korath space where the Alphas seem to be hiding, with enough troops and equipment to launch an assault on the base."
-    log "Factions" "Oathkeepers" `However, the true reason that the powerful Oathkeeper fleet is positioned in the North is not just to keep the pirates at bay, but also to stand as a last defence in case the Hai decide to invade human space. Apparently the Navy has known about the Hai and the wormhole linking their space to human space for some time, but chooses not to make that knowledge public.`
+    log "Factions" "Oathkeepers" `However, the true reason that the powerful Oathkeeper fleet is positioned in the North is not just to keep the pirates at bay, but also to be able to defend and counter-attack in case the Hai decide to invade human space. Apparently the Navy has known about the Hai and the wormhole linking their space to human space for some time, but chooses not to make that knowledge public.`
     conversation
       `Danforth welcomes you into his private office and uses a device to sweep the room for bugs. "Please forgive my caution," he says when he is done. "Now, show me where this planet is."`
       `  You show him the planet on your map. "That's a long way out from human space," says Danforth. "All the way on the other side of Hai territory. Are the Hai rebels still occupying these systems?" He points to the three systems where the Unfettered live.`
@@ -1023,7 +1023,7 @@ mission "Wanderers: Alpha Surveillance F"
         `  "Yes."`
           goto jump
         `  "Wait, you know about the Hai?"`
-      `  Danforth looks bemused. "Living on their doorstep? Of course I do. Why do you think the Navy maintains such a large base on Farpoint in the first place? It's not like the human anarchists up north pose that much of a threat."`
+      `  Danforth looks bemused. "Living on their doorstep? Of course I do. Why do you think the Navy maintains such a large presence here on Farpoint in the first place? Or the base on Sunracer? It's not like those human anarchists up north pose that much of a threat."`
       label jump
       `  "It's not just the distance," says Elias. "The only way to get there is by jump drive. Fortunately Captain <last> has one."`
       `  "As do I," says Danforth, a bit smugly. When he sees your surprised expressions he elaborates. "Recovered it from the Pug. Accidentally forgot to file the paperwork reporting it. You know how it is. Old men like me can be absent-minded." He smiles. "My engineers are installing it in my flagship even as we speak."`

@@ -949,7 +949,7 @@ mission "FW Senate 1"
   name "Senator Huygens"
   description "Meet Senator Arianna Huygens on <planet>, and transport her to the new Free Worlds Senate building on Bourne."
   source "Longjump"
-  destination "Mere"
+  destination "Flood"
   to offer
     has "FW Pirates 1: done"
   on fail
@@ -958,7 +958,7 @@ mission "FW Senate 1"
   on offer
     log "The Free Worlds have finally elected a Senate, which will be convening for the first time soon on Bourne."
     conversation
-      `Surprisingly, when you get back to Longjump you find that Tomek is no longer there. A courier hands you a short note: "Captain <last>: because the decision of how to deal with the pirates is of interest to all the Free Worlds, we are convening the first session of the Free Worlds Senate ahead of schedule. I have already left for Bourne. You have been assigned to transport Senator Arianna Huygens of Mere; please pick her up as soon as possible and bring her with you."`
+      `Surprisingly, when you get back to Longjump you find that Tomek is no longer there. A courier hands you a short note: "Captain <last>: because the decision of how to deal with the pirates is of interest to all the Free Worlds, we are convening the first session of the Free Worlds Senate ahead of schedule. I have already left for Bourne. You have been assigned to transport Senator Arianna Huygens of Flood; please pick her up as soon as possible and bring her with you."`
         accept
 
 
@@ -967,7 +967,7 @@ mission "FW Senate 1B"
   landing
   name "Senator Huygens"
   description "Transport Senator Arianna Huygens to <destination>."
-  source Mere
+  source Flood
   destination Bourne
   to offer
     has "FW Senate 1: done"
@@ -977,7 +977,7 @@ mission "FW Senate 1B"
     dialogue `You have failed an essential Free Worlds mission. If you want to complete the story line, revert to the autosave or another earlier snapshot of the game.`
   
   on offer
-    log "People" "Arianna Huygens" `Arianna Huygens represents Mere in the Free Worlds Senate on Bourne.`
+    log "People" "Arianna Huygens" `Arianna Huygens represents Flood in the Free Worlds Senate on Bourne.`
     log "People" "Ijs Springborn" `Ijs is now working to found the Conservatory, a publicly funded Free Worlds university that will have a particular focus on terraforming technology. Their goal is to make terraforming methods efficient enough that even Dirt Belt worlds will be able to afford them.`
     conversation
       `Senator Huygens turns out to be an attractive woman in her mid-fifties, with a dour expression on her face. "About time you showed up," is all she says when you introduce yourself.`
@@ -1569,10 +1569,10 @@ mission "FW Pirates 4.1"
       `With some trepidation, you enter the Senate building and introduce yourself to the receptionist. He says, "Please wait here. Someone will come for you when they are ready."`
       branch greenrock
         has "FW Pirates 3.2B: done"
-      `  Several hours pass. Finally, you are led into the Senate chamber, where several dozen senators sit, each with a name card identifying the world they represent. Senator Huygens of Mere asks the first question. "Captain <last>, is it true that you took part in a recent unauthorized attack on Bloodsea in the Antares system?"`
+      `  Several hours pass. Finally, you are led into the Senate chamber, where several dozen senators sit, each with a name card identifying the world they represent. Senator Huygens of Flood asks the first question. "Captain <last>, is it true that you took part in a recent unauthorized attack on Bloodsea in the Antares system?"`
         goto start
       label greenrock
-      `  Several hours pass. Finally, you are led into the Senate chamber, where several dozen senators sit, each with a name card identifying the world they represent. Senator Huygens of Mere asks the first question. "Captain <last>, is it true that you took part in a recent unauthorized attack on Greenrock in the Shaula system?"`
+      `  Several hours pass. Finally, you are led into the Senate chamber, where several dozen senators sit, each with a name card identifying the world they represent. Senator Huygens of Flood asks the first question. "Captain <last>, is it true that you took part in a recent unauthorized attack on Greenrock in the Shaula system?"`
       label start
       choice
         `  "Yes, that is correct."`
@@ -1609,10 +1609,10 @@ mission "FW Pirates 4.1"
 mission "FW Refinery 1"
   landing
   name "Smuggler's Den Repairs"
-  description "Travel to Tundra and pick up a shipment of equipment for repairing the refinery on Smuggler's Den."
+  description "Travel to Alapia and pick up a shipment of equipment for repairing the refinery on Smuggler's Den."
   autosave
   source Longjump
-  destination Tundra
+  destination Alapia
   clearance
   to offer
     has "FW Pirates 4B: done"
@@ -1646,20 +1646,20 @@ mission "FW Refinery 1"
       `  "I suppose you're right," you say. "So, what's next?"`
       label repairs
       `  "Well, thanks to you, the Men system is no longer engaged in piracy," says JJ. "And that means the folks on Smuggler's Den are in need of new work. That station used to be a deuterium refinery. With a little work, it can be one, again."`
-      `  "A working refinery could bring more income to that system than piracy ever did," says Freya. "Only problem is, the replacement parts are rare, and hard to come by. The Syndicate agreed to sell us the parts, but only if we meet them halfway, on Tundra. That's in the Cebalrai system. Just one jump away from one of the major new Navy bases."`
+      `  "A working refinery could bring more income to that system than piracy ever did," says Freya. "Only problem is, the replacement parts are rare, and hard to come by. The Syndicate agreed to sell us the parts, but only if we meet them halfway, on Alapia. That's in the Ascella system. Just one jump away from two of the new Navy bases."`
       choice
         `  "We're going to take a supply convoy through Republic space?"`
           goto convoy
         `  "How do we know this isn't a trap?"`
       `  "We don't," says Freya, "except that the Syndicate is greedy, and we have money. I don't think they're ready yet to give up on the chance to sell their wares to both sides in this war."`
-      `  "Still, how do they expect us to get a convoy safely to Tundra?"`
+      `  "Still, how do they expect us to get a convoy safely to Alapia?"`
       label convoy
-      `  "Not a convoy," says JJ. "Just you, captain. It's only ten tons of spare parts. Your job is to fly to Tundra, retrieve the parts, and return here."`
+      `  "Not a convoy," says JJ. "Just you, captain. It's only ten tons of spare parts. Your job is to fly to Alapia, retrieve the parts, and return here."`
       choice
         `  "I'll do my best."`
           accept
         `  "I hope this doesn't turn out to be a suicide mission."`
-      `  "I hope so too," says Freya. "If your ship has enough fuel capacity, you might try flying over to the neutral territory of Dabih or Tarazed, and then up to Cebalrai from there, to avoid the worst of the Navy patrols. Good luck, Captain. If anyone can do it, you can."`
+      `  "I hope so too," says Freya. "Remember the Navy has bases in the Kaus Borealis and Rasalhague systems. If your ship has enough fuel capacity, you might try flying over to the neutral territory of Dabih or Tarazed, and then up to Cebalrai from there, to avoid the worst of the Navy patrols. Good luck, Captain. If anyone can do it, you can."`
         accept
 
 
@@ -1668,7 +1668,7 @@ mission "FW Refinery 1A"
   landing
   name "Smuggler's Den Repairs"
   description "Bring a shipment of special refinery equipment to Smuggler's Den."
-  source Tundra
+  source Alapia
   destination "Smuggler's Den"
   to offer
     has "FW Refinery 1: done"
@@ -1679,7 +1679,7 @@ mission "FW Refinery 1A"
   
   on offer
     conversation
-      `Your landing site is an abandoned settlement a thousand kilometers from Tundra's main spaceport. It's an old oil field that ran dry decades ago, and only a few of the landing pads are still usable. The Syndicate employees quickly load the cargo onto your ship, and say, "Now, take off quickly, before the Navy sees us doing business with a ship flying Free Worlds colours."`
+      `Your landing site is an abandoned settlement a thousand kilometers from Alapia's main spaceport. It's an old oil field that ran dry decades ago, and only a few of the landing pads are still usable. The Syndicate employees quickly load the cargo onto your ship, and say, "Now, take off quickly, before the Navy sees us doing business with a ship flying Free Worlds colours."`
         launch
   
   on complete

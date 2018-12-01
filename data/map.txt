@@ -24256,6 +24256,7 @@ planet "Arahas"
   attributes "dirt belt" factory
   landscape land/water1
   description `Arahas is mostly desert and savanna, with very little precipitation. A century ago, some entrepreneurs settled here and built a factory complex that is entirely powered by wind and solar energy, because there are so few cloudy days here and the wind and sunshine are so reliable. The factory is mostly autonomous, with only a few thousand people living here to perform maintenance or to grow crops in irrigated fields.`
+  description `The only other settlement is a minor base of the Republic Navy, located here to resupply the patrol ships that keep the space from here to Earth pirate-free.`
   spaceport `The spaceport consists of a few large concrete slabs, each big enough for a dozen small ships or a pair of bulk freighters to land on. Farther away are fields of solar panels and the factories that they power. The spaceport buildings themselves, however, are underground, where less energy is needed to keep the air cool. Light pipes bring sunlight down from the surface to illuminate the subterranean storage caverns and living quarters, while keeping the searing heat of the sunlight out.`
   security 0.05
 #  tribute 400
@@ -24555,7 +24556,6 @@ planet "Canyon"
   landscape land/canyon1
   description `Canyon is a large world, with gravity near the high end of what human beings can comfortably bear. Much of its surface is sandstone, leading scientists to believe that the planet was once home to large oceans, before some cataclysmic event, perhaps a rogue star drifting through the system, caused much of the planet's water to boil away. The few settlers who live here mostly farm the deep canyons; the mesas above are dry and almost lifeless.`
   description `  The angular rock formations that cover most of the mesa land are identified in local mythology as the ruins of an unspeakably vast and ancient alien city. A gullible tourist can find any number of opportunities to tour these alleged sites. Off-world science has been largely skeptical of these claims.`
-#  description `  The planet is also home to a Navy base with numerous eartquake-proof storehouses. The number of vessels stationed here is much smaller than the number of landing pads available; perhaps those are a leftover from more volatile times.`
   spaceport `The spaceport is a wide, flat stone field with no individual landing spots marked out; you're simply responsible for finding an unoccupied space large enough for your ship, A half kilometer away from the field is a small village with a marketplace and a pub. There are only a few starships parked here. In the village, you can recognize the locals because of their stout, muscular stature; you are taller than almost everyone here.`
   security 0.1
 #  tribute 400
@@ -24625,7 +24625,7 @@ planet "Chiron"
   attributes "near earth" urban
   landscape land/city18-iridium
   description `Chiron is the only planet outside the solar system that was colonized by humanity prior to the discovery of the hyperdrive. It is now the second most populous planet in the Republic, with many sprawling cities and a burgeoning pollution problem.`
-  description `  Although Earth still has the most prestigious universities in the galaxy, Chiron has become the de-facto leader of the higher education industry, catering to those who value excellent teaching more highly than an illustrious name. As a result, off-world students form a noticeable fraction of the population.`
+  description `  Although Earth still has the most prestigious universities in the galaxy, Chiron has become the de facto leader of the higher education industry, catering to those who value excellent teaching more highly than an illustrious name. As a result, off-world students form a noticeable fraction of the population.`
   spaceport `There are two spaceports on Chiron. The Old Port was built back when it was first settled, and was placed in a desert region, far from where people would want to live, so that they would not be as affected by the fallout from the nuclear propulsion that was used in the first, pre-hyperspace starships.`
   spaceport `  The New Port, on the other hand, is in the centre of New Sydney, one of Chiron's largest cities. Its soaring architecture and gleaming mirrored glass is intended to make a clear statement, that Chiron is everything Earth is not: clean, modern, prosperous.`
   outfitter "Pilot Licence"
@@ -24756,7 +24756,7 @@ planet "Crossroads"
   attributes core mining
   landscape land/valley1
   description `Crossroads is a thoroughly unbeautiful planet. The scrawny local vegetation has blue and purple leaves, shocking to your human eyes, and grows only reluctantly, leaving the land looking like a blighted wasteland.`
-  description `  The Syndicate's vast operation strip mining for uranium ore does nothing to improve this situation. They say that sandstorms were frequent here even before the Syndicate arrived, but the storms have gotten far worse in recent years, with some storms now reaching several kilometers high and dozens of kilometers in diameter.`
+  description `  The extensive strip mining for uranium ore does nothing to improve this situation. They say that sandstorms were frequent here even before the vast mining operations started, but the storms have gotten far worse in recent years, with some storms now reaching several kilometers high and dozens of kilometers in diameter.`
   spaceport `The spaceport is marked out with radio beacons to allow ships to land or take off even if the air is too dusty to see the ground. The dusty air tastes metallic on your tongue. It is laced with radioactive elements, and you try your best not to breathe in too much of the dust while making your way from your ship to the low stone buildings of the port.`
   outfitter "Pilot Licence"
   outfitter "Basic Outfits"
@@ -25178,7 +25178,7 @@ planet "Firelode"
 planet "Firka Tesk"
   attributes korath
   landscape land/lava0
-  description `This appears to have once been an inhabited world, and the remnants of a few cities still remain. But the planet's crust has been cracked like an eggshell, releasing rivers of lava and leaving behind unnaturally steep mountains and fault lines. The wind whistles and howls through the rifts and fissures as if the planet itself is screaming in pain. A thick haze of sulfur dioxide and ash hangs over everything.`
+  description `This appears to have once been an inhabited world, and the remnants of a few cities still remain. But the planet's crust has been cracked like an eggshell, releasing rivers of lava and leaving behind unnaturally steep mountains and fault lines. The wind whistles and howls through the rifts and fissures as if the planet itself is screaming in pain. A thick haze of sulphur dioxide and ash hangs over everything.`
   security 0
 
 planet "Flood"
@@ -25550,9 +25550,8 @@ planet "Hephaestus"
   outfitter "Lovelace Intermediate"
   outfitter "Syndicate Advanced"
   shipyard "Betelgeuse Intermediate"
-  shipyard "Centaur Basics"
-  shipyard "Star Intermediate"
   shipyard "Megaparsec Intermediate"
+  shipyard "Star Intermediate"
   bribe 0.1
   security 0.7
 #  tribute 3400
@@ -25611,7 +25610,7 @@ planet "Hope"
 planet "Hopper"
   attributes "dirt belt" mining
   landscape land/myrabella1
-  description `Hopper is a temperate world of oceans, mountains, and plains, but with unfortunately high levels of sulfuric acid in its atmosphere. Metal and stone that are exposed to the atmosphere corrode quickly, requiring frequent maintenance. As a result, Hopper has only a few small settlements on it, and most of the industry is focused on underground mining. The oceans are populated only by a few indigenous life forms that have adapted to their high acidity; Earth fish could not be introduced successfully here.`
+  description `Hopper is a temperate world of oceans, mountains, and plains, but with unfortunately high levels of sulphuric acid in its atmosphere. Metal and stone that are exposed to the atmosphere corrode quickly, requiring frequent maintenance. As a result, Hopper has only a few small settlements on it, and most of the industry is focused on underground mining. The oceans are populated only by a few indigenous life forms that have adapted to their high acidity; Earth fish could not be introduced successfully here.`
   spaceport `The spaceport consists mostly of a cluster of steel-framed warehouses with tin roofs, surrounded by concrete slabs for ships to land on. Scattered among the warehouses are a few smaller wooden buildings, housing a pub, a restaurant, and a small inn. Some of the warehouses are relatively new, with metal that still gleams; others are covered in rust, and a few stand in ruins, with large holes worn through their roofs and rusted girders poking through like dead trees.`
   outfitter "Pilot Licence"
   outfitter "Basic Outfits"
@@ -25861,7 +25860,7 @@ planet "Little Garden"
 planet "Lodestone"
   attributes core volcanic mining
   landscape land/lava5
-  description `Lodestone is a young, volcanically active world. The atmosphere is often filled with choking dust or sulfur dioxide, and new eruptions can occur with hardly any warning. Building any sort of structure here is an exercise in futility.`
+  description `Lodestone is a young, volcanically active world. The atmosphere is often filled with choking dust or sulphur dioxide, and new eruptions can occur with hardly any warning. Building any sort of structure here is an exercise in futility.`
   description `  The only reason Lodestone is inhabited is because of the planet's unusually rich reserves of heavy metals and other rare minerals.`
   spaceport `This port is known as "Fourth Port." The previous three ports are partly or completely buried under lava flows. The present port is built on a raised platform a hundred meters above the ground. The steel stilts supporting the platform are intended to keep the port from being buried by any encroaching lava flow. However, given that some explosive eruptions here have been known to launch lava nearly a kilometer into the air, sooner or later Fourth Port will need to be replaced by a fifth.`
   security 0.05
@@ -26245,7 +26244,7 @@ planet "Oberon Station"
 planet "Oblivion"
   attributes "dirt belt" oil mining
   landscape land/sky7
-  description `The atmosphere here is a toxic mix of ammonia, sulfur, and methane. Although breathable by human beings if necessary, the locals use masks to reduce the risk of chronic respiratory problems. Even so, the life expectancy here is short, but that is partly because the two best-paying industries are oil drilling and mining for radioactive elements.`
+  description `The atmosphere here is a toxic mix of ammonia, sulphur, and methane. Although breathable by human beings if necessary, the locals use masks to reduce the risk of chronic respiratory problems. Even so, the life expectancy here is short, but that is partly because the two best-paying industries are oil drilling and mining for radioactive elements.`
   spaceport `The spaceport is a long landing strip paved in asphalt, with warehouses on either side of it constructed from stone and mortar. Inside are stacked lead-lined crates of radioactive materials for sale. Unlike many Dirt Belt worlds, you see few curious children watching ships land or playing among the buildings; this is not the sort of world where many people choose to put down roots and build a family.`
   outfitter "Pilot Licence"
   outfitter "Basic Outfits"
@@ -26322,7 +26321,7 @@ planet "Pilot"
 planet "Placer"
   attributes core mining frontier
   landscape land/mfield5
-  description `Placer is uninhabited aside from one small mining outpost; the atmosphere contains uncomfortable levels of ammonia and sulfur dioxide, and although brief exposure is not considered a health threat, those who live here must wear breathing gear when they leave their pressurized homes and mine shafts. Several scientific experiments over the last few centuries have sought to introduce microorganisms that would break down the harmful chemicals and transform the atmosphere to make it safer for human beings to breathe, but none have been successful.`
+  description `Placer is uninhabited aside from one small mining outpost; the atmosphere contains uncomfortable levels of ammonia and sulphur dioxide, and although brief exposure is not considered a health threat, those who live here must wear breathing gear when they leave their pressurized homes and mine shafts. Several scientific experiments over the last few centuries have sought to introduce microorganisms that would break down the harmful chemicals and transform the atmosphere to make it safer for human beings to breathe, but none have been successful.`
   spaceport `The port consists of a large atmospheric dome, with landing pads and airlocks around the periphery. Although brief exposure to the air is not considered harmful, you find yourself holding your breath as you run from your ship to the airlock. Inside the dome, hanging gardens and open park land create a much more hospitable place, but the spaceport is nearly deserted, aside from one small pub that seems to be full of mine workers whose shift has just ended.`
   security 0.2
 #  tribute 300
@@ -26761,7 +26760,7 @@ planet "Shadow of Leaves"
 planet "Shadowed Valley"
   attributes saryd research
   landscape land/fog7
-  description `A dizzying variety of bizarre and stunted life forms have evolved on Shadowed Valley, each with different means of coping with the high levels of sulfuric acid in the planet's atmosphere and rainwater. In the mountains where cliffs and rocks are exposed to the acid rain, they have been sculpted into smooth, flowing contours etched with lines and wrinkles. But the Saryds prize this planet primarily for the beauty of its gypsum caves, full of delicate crystalline deposits, towering speleothems, and deep, clear pools of poisonous water.`
+  description `A dizzying variety of bizarre and stunted life forms have evolved on Shadowed Valley, each with different means of coping with the high levels of sulphuric acid in the planet's atmosphere and rainwater. In the mountains where cliffs and rocks are exposed to the acid rain, they have been sculpted into smooth, flowing contours etched with lines and wrinkles. But the Saryds prize this planet primarily for the beauty of its gypsum caves, full of delicate crystalline deposits, towering speleothems, and deep, clear pools of poisonous water.`
   spaceport `The spaceport here is built almost entirely underground, and populated mostly by research scientists; very few Saryds have chosen to call this planet home, although it does draw the occasional adventurous tourist. In a few large caverns they have installed sun lamps and planted groves of trees to make up for the relative lack of vegetation on the surface.`
   spaceport `  The atmosphere outside the port is breathable, but not terribly pleasant.`
   "required reputation" 15
@@ -27034,7 +27033,8 @@ planet "Sunracer"
   landscape land/myrabella8
   description `Sunracer is home of Megaparsec, Inc., a shipyard that specializes in designing fast, lightweight ships. It is a well-settled planet with a population of nearly half a billion, and a diverse economy that includes farming and fishing in addition to the shipyards.`
   description `  Outside the cities, large regions of undeveloped land still remain. Hovercraft racing is a major local sport, and some massive and elaborate courses have been constructed in the wilderness.`
-  spaceport `On Sunracer, the spaceport and shipyard are one and the same. As you walk among the landing pads and hangars, it is not immediately clear which ships are visiting starships undergoing minor repairs, and which are new ones under construction. A series of enormous cranes tower over one section of landing pads. From them hang hull fragments, engines, and even a few small ships, each being swung from one location within the shipyard to another. Meanwhile, forklifts and flatbed trucks are weaving between the buildings in every direction.`
+  description `  The Republic Navy also has a base here, although the relatively small garrison and few ships based here do not justify the large number of landing pads and warehouses. Most structures look old and rusty too.`
+  spaceport `The spaceport of Sunracer has been growing by amalgamation for centuries. At its core is the "Old Port," a set of quaint and rudimentary shops and warehouses. The landing pads for the Old Port were torn up to make room for what the locals call "The Port," a set of buildings that were constructed a century ago, with bolder architecture and more modern design. Some distance away is the "New Port," a towering structure with robotic cargo lifts and large hangars for more expensive ships. Meanwhile, plans are apparently underway for an expansion of the New Port. You can't help but wonder what the new expansion will be named.`
   outfitter "Pilot Licence"
   outfitter "Common Outfits"
   outfitter "Earth Basics"
@@ -27061,6 +27061,7 @@ planet "Tefkar Ret"
 
 planet "The Eye"
   description ""
+  spaceport ""
 
 planet "Third Umber"
   attributes kimek factory research
@@ -27549,7 +27550,7 @@ planet "Zuq"
   landscape land/city4
   description `Zuq is a pleasant world of rolling hills, fertile fields, and a few small oceans. Hundreds of millions of people live here, with more immigrants arriving every day, almost faster than the construction industry can keep up with them. In addition to the larger cities, many people live in smaller farming villages, making this one of the few worlds in the region that is truly self-sufficient both in industry and in agriculture.`
   description `  The largest industry on Zuq is Southbound Shipyards, which focuses on designing well-defended merchant ships to survive the pirates that are so common here.`
-  spaceport `The spaceport of Zuq has been growing by amalgamation for centuries. At its core is the "Old Port," a set of quaint and rudimentary shops and warehouses. The landing pads for the Old Port were torn up to make room for what the locals call "The Port," a set of buildings that were constructed a century ago, with bolder architecture and more modern design. Some distance away is the "New Port," a towering structure with robotic cargo lifts and large hangars for more expensive ships. Meanwhile, plans are apparently underway for an expansion of the New Port. You can't help but wonder what the new expansion will be named.`
+  spaceport `On Zuq, the spaceport and shipyard are one and the same. As you walk among the landing pads and hangars, it is not immediately clear which ships are visiting starships undergoing minor repairs, and which are new ones under construction. A series of enormous cranes tower over one section of landing pads. From them hang hull fragments, engines, and even a few small ships, each being swung from one location within the shipyard to another. Meanwhile, forklifts and flatbed trucks are weaving between the buildings in every direction.`
   outfitter "Pilot Licence"
   outfitter "Common Outfits"
   outfitter "Delta V Intermediate"

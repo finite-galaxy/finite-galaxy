@@ -22,7 +22,7 @@ mission "event: war begins"
   to offer
     has "event: war begins"
   on offer
-    log "Factions" "Free Worlds" `The Free Worlds is a collection of local governments in the southern galactic arm who have declared independence from the Republic after Parliament refused to address issues they raised about trade tariffs, taxation, and representation. They may be linked to the recent terrorist attacks on the Navy Yard and the galactic stock exchange, although they deny responsibility.`
+    log "Factions" "Free Worlds" `The Free Worlds formally declared independence from the Republic after Parliament repeatedly refused to address issues they raised about trade tariffs, taxation, and representation. At the same moment a large number of systems in the galactic South decided to join them. The Free Worlds may be linked to the recent terrorist attacks on the Navy yard on Luna and the galactic stock exchange on Martini, although they deny responsibility.`
     conversation
       `The moment you step off your ship you realize something is very wrong. The spaceport is eerily quiet, and a large crowd of people is gathered around a video screen in the local bar.`
       `  You ask what is happening, and someone explains. Recently, a collection of local governments in the southern galactic arm sent the Republic Parliament what amounted to an ultimatum: a refusal to pay taxes until certain reforms were made in trade tariffs, ship licensing, and election of planetary representatives. The coalition calls themselves the "Free Worlds." Parliament outright refused to consider their demands.`
@@ -195,7 +195,7 @@ mission "Pact Recon 3"
 
 mission "Pact Questioning"
   source
-    attributes "near earth" "paradise"
+    attributes "near earth" "core"
     government "Republic"
   to offer
     not "chosen sides"
@@ -321,7 +321,7 @@ mission "FW Recon 0"
 
 mission "FW Recon 1"
   name "Free Worlds Reconnaissance"
-  description "Perform an outfit scan on the Saturn <npc>, then report to a Free Worlds officer on <destination>."
+  description "Perform an outfit scan on the Saturn <npc>, then report to a Free Worlds officer on <destination>. (Your ship needs to have an outfit scanner installed.)"
   source
     planet Glaze
   to offer

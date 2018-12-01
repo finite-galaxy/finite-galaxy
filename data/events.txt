@@ -72,17 +72,17 @@ event "flamethrower available"
 
 
 event "navy arsenals available"
-  planet "Canyon"
+  planet "Arahas"
     outfitter "Navy"
-  planet "Carbuncle"
+  planet "Bod"
     outfitter "Navy"
   planet "Farpoint"
     outfitter "Navy"
+  planet "Luna"
+    outfitter "Navy"
   planet "Furnace"
     outfitter "Navy"
-  planet "Ingot"
-    outfitter "Navy"
-  planet "Luna"
+  planet "Sunracer"
     outfitter "Navy"
 
 
@@ -178,6 +178,7 @@ event "war begins"
     government "Free Worlds"
   system "Kappa Centauri"
     government "Free Worlds"
+
   system "Castor"
     fleet "Merchants North Small" 800
     fleet "Merchants North Large" 1100
@@ -283,9 +284,13 @@ event "initial deployment 1"
     fleet "Republic Large" 600
     fleet "Navy Surveillance" 2000
 
-#    description `The Republic Navy has planted a base on Bos: so far, just a densely packed cluster of prefabricated barracks and infirmary buildings on the outskirts of one of the larger towns.`
-#    description `Clear Sky/Dancer is also now home to a burgeoning Navy base, although since the planet is so unlivable most of the troops are just living in ships in orbit.`
-#    description `The Navy has recently requisitioned one of the abandoned mining towns on Tundra and begun refurbishing it for a secure military base, with the mining tunnels used as deep underground bunkers.`
+  planet "Clear Sky"
+    description `Clear Sky is a perpetually hazy volcanic world, with a slightly caustic atmosphere but enough reserves of metal and petrochemicals to draw a large number of settlers. Some of those settlers also make a living as farmers, and a few well-developed factory towns produce goods for export to other worlds.`
+    description `  Many of the inhabitants wear dust masks to avoid letting the particulate matter from the volcanoes accumulate in their lungs.`
+    description `  The Navy has recently requisitioned one of the abandoned mining towns on Clear Sky and begun refurbishing it for a secure military base, with the mining tunnels used as deep underground bunkers.`
+  planet "Oblivion"
+    description `The atmosphere here is a toxic mix of ammonia, sulphur, and methane. Although breathable by human beings if necessary, the locals use masks to reduce the risk of chronic respiratory problems. Even so, the life expectancy here is short, but that is partly because the two best-paying industries are oil drilling and mining for radioactive elements.`
+    description `  Oblivion is also now home to a burgeoning Navy base, although since the planet is so unlivable most of the troops are just living in ships in orbit.`
 
 
 event "initial deployment 2"
@@ -410,6 +415,14 @@ event "initial deployment 2"
     fleet "Republic Small" 3000
     fleet "Republic Large" 4000
     fleet "Navy Surveillance" 1600
+  planet "Bod"
+    description `Bod is a world of jagged mountains and deeply shadowed valleys. Although it has been inhabited for centuries, in many places the terrain is so rugged that roads cannot be built, leaving several of the smaller towns almost completely isolated. Taking advantage of this isolation, several monastic orders have built monasteries here.`
+    description `  In the lowlands, large farms support sprawling cities full of factories, a striking contrast to the simplicity and isolation of the mountain villages.`
+    description `  The Navy built a base here, to be able to counter the Free Worlds, if necessary.`
+  planet "Clark"
+    description `Clark is a recently settled world, and most of its surface remains covered in dense forests and uninhabited mountains. Because clearing new land is so difficult, agriculture here has not grown far beyond the level of subsistence farming. But the temperate climate has drawn several million settlers, most of whom work in factories that have been planted here by off-world corporations to take advantage of the cheap labour.`
+    description `  The low cost of living and virtually zero unemployment rate make poverty and crime relatively rare occurrences. Instead there is a pioneering spirit, a startup-world attitude that anything is attainable with a bit of hard work and frugality.`
+    description `  The Navy has planted a base on Clark: so far, just a densely packed cluster of prefabricated barracks and infirmary buildings on the outskirts of one of the larger towns.`
 
 
 event "initial deployment 3"
@@ -1220,15 +1233,17 @@ event "fw occupying the north"
 
 
 event "fw northern expansion"
-  system "Alioth"
+  system "Eber"
+    government "Free Worlds"
+  system "Alnasl"
+    government "Free Worlds"
+  system "Wei"
+    government "Free Worlds"
+  system "Seginus"
     government "Free Worlds"
   system "Alphecca"
     government "Free Worlds"
   system "Boral"
-    government "Free Worlds"
-  system "Seginus"
-    government "Free Worlds"
-  system "Wei"
     government "Free Worlds"
 
 

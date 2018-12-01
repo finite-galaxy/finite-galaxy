@@ -3,9 +3,11 @@ shipyard "Vortex Variants"
   "Bactrian (Hired Gun)"
   "Foxhound"
   "Heavy Shuttle"
-  "Heavy Shuttle (Armed)"
+  "Heavy Shuttle (Blaster)"
+  "Heavy Shuttle (Gatling)"
   "Light Shuttle"
-  "Light Shuttle (Armed)"
+  "Light Shuttle (Blaster)"
+  "Light Shuttle (Gatling)"
   "Mongrel"
   "Mongrel (Particle)"
   "Mongrel (Plasma)"
@@ -211,7 +213,24 @@ ship "Heavy Shuttle"
   description "The Heavy Shuttle is an updated shuttle model from Vortex Shipyards, attempting to improve on their perennial classic by offering slightly better cargo and passenger capacity, at the expense of some speed and manoeuvrability."
 
 
-ship "Heavy Shuttle" "Heavy Shuttle (Armed)"
+ship "Heavy Shuttle" "Heavy Shuttle (Blaster)"
+  outfits
+    "D14-RN Shield Generator"
+    "nGVF-AA Fuel Cell"
+    "Hyperdrive"
+
+    "IT-2700 Ion Thruster"
+    "IS-2200 Ion Steering"
+
+    "X1 Blaster Cannon" 2
+
+    "LP036a Battery Pack"
+    "Fuel Barrel" 50
+    "Small Radar Jammer"
+    "Outfit Space Expansion"
+
+
+ship "Heavy Shuttle" "Heavy Shuttle (Gatling)"
   outfits
     "D14-RN Shield Generator"
     "nGVF-AA Fuel Cell"
@@ -281,7 +300,23 @@ ship "Light Shuttle"
   description `  Shuttles are not designed to withstand combat of any sort, but they are fast and manoeuvrable enough to get out of harm's way if attacked by a larger, slower ship. Although they are typically unarmed, they have enough space for one weapon, which is the origin of the popular phrase, "as useless as a blaster cannon on a shuttlecraft."`
 
 
-ship "Light Shuttle" "Light Shuttle (Armed)"
+ship "Light Shuttle" "Light Shuttle (Blaster)"
+  outfits
+    "D14-RN Shield Generator"
+    "nGVF-AA Fuel Cell"
+    "Hyperdrive"
+
+    "IT-2700 Ion Thruster"
+    "IS-2200 Ion Steering"
+
+    "X1 Blaster Cannon"
+
+    "LP036a Battery Pack"
+    "Fuel Barrel" 40
+    "Small Radar Jammer"
+
+
+ship "Light Shuttle" "Light Shuttle (Gatling)"
   outfits
     "D14-RN Shield Generator"
     "nGVF-AA Fuel Cell"
