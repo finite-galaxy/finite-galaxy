@@ -145,30 +145,77 @@ void ShipInfoDisplay::UpdateAttributes(const Ship &ship, const Depreciation &dep
   attributeValues.push_back(string());
   attributesHeight += 10;
 
-  if(attributes.Get("shield generation"))
+  int maximumShields = attributes.Get("shields");
+  int maximumHull = attributes.Get("hull");
+  int maximumFuel = attributes.Get("fuel capacity");
+  int maximumEnergy = attributes.Get("energy capacity");
+  int maximumHeat = 60. * ship.HeatDissipation() * ship.MaximumHeat();
+/*
+  if(!isGeneric)
   {
-    attributeLabels.push_back("shields charge / max:");
-    attributeValues.push_back(Format::Number(60. * attributes.Get("shield generation"))
-      + " / " + Format::Number(attributes.Get("shields")));
+    ostringstream shields;
+    shields << "shields (" << round(100. * ship.Shields()) << "%):";
+    attributeLabels.push_back(shields.str());
+    attributeValues.push_back(Format::Round(ship.Shields() * maximumShields)
+      + " / " + Format::Round(maximumShields));
+    attributesHeight += 20;
+    ostringstream hull;
+    hull << "hull (" << round(100. * ship.Shields()) << "%):";
+    attributeLabels.push_back(hull.str());
+    attributeValues.push_back(Format::Round(ship.Hull() * maximumHull)
+      + " / " + Format::Round(maximumHull));
+    attributesHeight += 20;
+    ostringstream fuel;
+    fuel << "fuel (" << round(100. * ship.Fuel()) << "%):";
+    attributeLabels.push_back(fuel.str());
+    attributeValues.push_back(Format::Round(ship.Fuel() * maximumFuel)
+      + " / " + Format::Round(maximumFuel));
+    attributesHeight += 20;
+    ostringstream energy;
+    energy << "energy (" << round(100. * ship.Energy()) << "%):";
+    attributeLabels.push_back(energy.str());
+    attributeValues.push_back(Format::Round(ship.Energy() * maximumEnergy)
+      + " / " + Format::Round(maximumEnergy));
+    attributesHeight += 20;
+    ostringstream heat;
+    heat << "heat (" << round(100. * ship.Heat()) << "%):";
+    attributeLabels.push_back(heat.str());
+    attributeValues.push_back(Format::Round(ship.Heat() * maximumHeat)
+      + " / " + Format::Round(maximumHeat));
+    attributesHeight += 20;
   }
   else
+*/
   {
-    attributeLabels.push_back("shields:");
-    attributeValues.push_back(Format::Number(attributes.Get("shields")));
+    if(attributes.Get("shield generation"))
+    {
+      attributeLabels.push_back("shields charge / max:");
+      attributeValues.push_back(Format::Number(60. * attributes.Get("shield generation"))
+        + " / " + Format::Number(maximumShields));
+    }
+    else
+    {
+      attributeLabels.push_back("shields:");
+      attributeValues.push_back(Format::Number(maximumShields));
+    }
+    attributesHeight += 20;
+    if(attributes.Get("hull repair rate"))
+    {
+      attributeLabels.push_back("hull repair / max:");
+      attributeValues.push_back(Format::Number(60. * attributes.Get("hull repair rate"))
+        + " / " + Format::Number(maximumHull));
+    }
+    else
+    {
+      attributeLabels.push_back("hull:");
+      attributeValues.push_back(Format::Number(maximumHull));
+    }
+    attributesHeight += 20;
   }
-  attributesHeight += 20;
-  if(attributes.Get("hull repair rate"))
-  {
-    attributeLabels.push_back("hull repair / max:");
-    attributeValues.push_back(Format::Number(60. * attributes.Get("hull repair rate"))
-      + " / " + Format::Number(attributes.Get("hull")));
-  }
-  else
-  {
-    attributeLabels.push_back("hull:");
-    attributeValues.push_back(Format::Number(attributes.Get("hull")));
-  }
-  attributesHeight += 20;
+
+  attributeLabels.push_back(string());
+  attributeValues.push_back(string());
+  attributesHeight += 10;
 
   attributeLabels.push_back("required crew / bunks:");
   attributeValues.push_back(Format::Number(ship.RequiredCrew())
@@ -454,11 +501,11 @@ void ShipInfoDisplay::UpdateAttributes(const Ship &ship, const Depreciation &dep
       + attributes.Get("hull heat")
       - ship.CoolingEfficiency() * attributes.Get("active cooling"))));
   attributesHeight += 20;  
-  
+
   tableLabels.push_back("capacity:");
-  fuelTable.push_back(Format::Round(attributes.Get("fuel capacity")));
-  energyTable.push_back(Format::Round(attributes.Get("energy capacity")));
-  heatTable.push_back(Format::Round(60. * ship.HeatDissipation() * ship.MaximumHeat()));
+  fuelTable.push_back(Format::Round(maximumFuel));
+  energyTable.push_back(Format::Round(maximumEnergy));
+  heatTable.push_back(Format::Round(maximumHeat));
   // Pad by 10 pixels on the top and bottom.
   attributesHeight += 30;
 }
