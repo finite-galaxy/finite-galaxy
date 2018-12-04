@@ -1069,7 +1069,7 @@ mission "FW Flamethrower 2"
   npc save disable
     personality staying heroic
     government "Test Dummy"
-    ship "Doombat" "Doombat"
+    ship "Fury (Doombat)" "Doombat"
   
   on complete
     event "flamethrower available" 30
@@ -1097,21 +1097,6 @@ mission "FW Flamethrower 2"
         goto available
       label available
       `  "Well, I should have an initial model for sale in a month or so," he says. "I'll be interested to see what uses you or anyone else might find for them. Anyway, thanks for your help." You say goodbye and head back to your ship.`
-
-ship "Fury" "Doombat"
-  add attributes
-    "self destruct" 1
-  outfits
-    "D23-QP Shield Generator"
-    "nGVF-BB Fuel Cell"
-    "Hyperdrive"
-    "Chipmunk Plasma Thruster"
-    "Greyhound Plasma Steering"
-    "Flamethrower" 4
-    "Supercapacitor"
-    "Fuel Barrel" 22
-    "Ramscoop"
-    "Tactical Scanner"
 
 
 

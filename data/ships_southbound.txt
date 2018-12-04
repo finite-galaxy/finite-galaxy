@@ -112,7 +112,7 @@ ship "Dreadnought"
     "LP144a Battery Pack"
     "Liquid Helium Cooler"
     "Catalytic Ramscoop"
-    "Fuel Barrel" 100
+    "Fuel Pod" 100
     "Tactical Scanner" 6
     "Fragmentation Grenades" 50
     "Laser Rifle" 100
@@ -154,7 +154,7 @@ ship "Dreadnought" "Dreadnought (Jump)"
     "LP144a Battery Pack"
     "Liquid Helium Cooler"
     "Catalytic Ramscoop"
-    "Fuel Barrel" 100
+    "Fuel Pod" 100
     "Tactical Scanner" 6
     "Fragmentation Grenades" 50
     "Laser Rifle" 100
@@ -178,7 +178,7 @@ ship "Dreadnought" "Dreadnought (Rocket)"
     "LP144a Battery Pack"
     "Liquid Helium Cooler"
     "Catalytic Ramscoop"
-    "Fuel Barrel" 100
+    "Fuel Pod" 100
     "Tactical Scanner" 6
     "Outfit Space Expansion" 6
     "Fragmentation Grenades" 50
@@ -224,7 +224,7 @@ ship "Fury"
     "Modified Blaster Cannon" 4
 
     "LP036a Battery Pack"
-    "Fuel Barrel" 14
+    "Fuel Pod" 14
     "Tactical Scanner"
   engine -10 45
   engine 10 45
@@ -240,6 +240,25 @@ ship "Fury"
   description "The Fury is Southbound Shipyard's most popular design of escort ship. They have greater firepower than most other interceptor-class vessels, meaning that any pirate flying solo will think twice before attacking a convoy that is accompanied by a Fury. However, Furies are also less manoeuvrable than other small ships."
 
 
+ship "Fury" "Fury (Doombat)"
+  add attributes
+    "self destruct" 1
+  outfits
+    "D23-QP Shield Generator"
+    "nGVF-BB Fuel Cell"
+    "Hyperdrive"
+
+    "Chipmunk Plasma Thruster"
+    "Greyhound Plasma Steering"
+
+    "Flamethrower" 4
+
+    "Supercapacitor"
+    "Fuel Pod" 14
+    "Ramscoop"
+    "Tactical Scanner"
+
+
 ship "Fury" "Fury (Flamethrower)"
   outfits
     "D23-QP Shield Generator"
@@ -252,7 +271,7 @@ ship "Fury" "Fury (Flamethrower)"
     "Flamethrower" 4
 
     "Supercapacitor"
-    "Fuel Barrel" 14
+    "Fuel Pod" 14
     "Ramscoop"
     "Tactical Scanner"
 
@@ -271,7 +290,7 @@ ship "Fury" "Fury (Gatling)"
     "Gatling Gun" 4
 
     "Supercapacitor"
-    "Fuel Barrel" 14
+    "Fuel Pod" 14
     "Tactical Scanner"
 
 
@@ -287,7 +306,7 @@ ship "Fury" "Fury (Laser)"
     "Heavy Laser Cannon" 2
 
     "LP036a Battery Pack"
-    "Fuel Barrel" 14
+    "Fuel Pod" 14
     "Tactical Scanner"
 
 
@@ -305,7 +324,7 @@ ship "Fury" "Fury (Rocket)"
     "Heavy Rocket Launcher" 2
 
     "Supercapacitor"
-    "Fuel Barrel" 14
+    "Fuel Pod" 14
     "Tactical Scanner"
 
 
@@ -348,7 +367,7 @@ ship "Harpy"
     "Modified Blaster Cannon" 2
 
     "LP036a Battery Pack"
-    "Fuel Barrel" 6
+    "Fuel Pod" 6
     "Tactical Scanner"
   engine -5 35
   engine 5 35
@@ -375,7 +394,7 @@ ship "Harpy" "Harpy (Gatling)"
     "Gatling Gun" 2
 
     "LP036a Battery Pack"
-    "Fuel Barrel" 6
+    "Fuel Pod" 6
     "Tactical Scanner"
 
 
@@ -418,7 +437,7 @@ ship "Hauler I"
 
     "LP144a Battery Pack"
     "Liquid Water Cooler"
-    "Fuel Barrel" 32
+    "Fuel Pod" 32
     "Tactical Scanner" 4
   engine -45 122
   engine 45 122
@@ -453,7 +472,7 @@ ship "Hauler I" "Hauler I (Hai)"
 
     "Gorge Batteries"
     "Williwaw Cooling"
-    "Fuel Barrel" 32
+    "Fuel Pod" 32
     "Yoloy Scanner"
 
 
@@ -471,7 +490,7 @@ ship "Hauler I" "Hauler I (Miner)"
 
     "LP144a Battery Pack"
     "Asteroid Scanner"
-    "Fuel Barrel" 32
+    "Fuel Pod" 32
     "Ramscoop"
     "Tactical Scanner" 4
 
@@ -515,7 +534,7 @@ ship "Hauler II"
 
     "LP144a Battery Pack"
     "Liquid Water Cooler"
-    "Fuel Barrel" 42
+    "Fuel Pod" 42
     "Tactical Scanner" 4
   engine -45 160
   engine 45 160
@@ -550,7 +569,7 @@ ship "Hauler II" "Hauler II (Hai)"
 
     "Gorge Batteries"
     "Williwaw Cooling"
-    "Fuel Barrel" 42
+    "Fuel Pod" 42
     "Yoloy Scanner"
 
 
@@ -568,7 +587,7 @@ ship "Hauler II" "Hauler II (Miner)"
 
     "LP144a Battery Pack"
     "Asteroid Scanner"
-    "Fuel Barrel" 42
+    "Fuel Pod" 42
     "Ramscoop"
     "Tactical Scanner" 4
 
@@ -612,7 +631,7 @@ ship "Hauler III"
 
     "LP144a Battery Pack"
     "Liquid Water Cooler"
-    "Fuel Barrel" 53
+    "Fuel Pod" 53
     "Tactical Scanner" 4
   engine -45 196
   engine 45 196
@@ -647,7 +666,7 @@ ship "Hauler III" "Hauler III (Hai)"
 
     "Gorge Batteries"
     "Williwaw Cooling"
-    "Fuel Barrel" 53
+    "Fuel Pod" 53
     "Yoloy Scanner"
 
 
@@ -665,7 +684,7 @@ ship "Hauler III" "Hauler III (Miner)"
 
     "LP144a Battery Pack"
     "Asteroid Scanner"
-    "Fuel Barrel" 53
+    "Fuel Pod" 53
     "Ramscoop"
     "Tactical Scanner" 4
 
@@ -710,7 +729,7 @@ ship "Nest"
 
     "LP144a Battery Pack"
     "Liquid Water Cooler"
-    "Fuel Barrel" 42
+    "Fuel Pod" 42
     "Large Radar Jammer"
     "Tactical Scanner" 4
   engine -45 122
@@ -750,7 +769,7 @@ ship "Nest" "Nest (Sidewinder)"
     "Heavy Anti-Missile Turret" 2
 
     "LP144a Battery Pack"
-    "Fuel Barrel" 42
+    "Fuel Pod" 42
     "Tactical Scanner" 4
 
 
@@ -793,7 +812,7 @@ ship "Roost"
 
     "LP144a Battery Pack"
     "Liquid Water Cooler"
-    "Fuel Barrel" 62
+    "Fuel Pod" 62
     "Large Radar Jammer"
     "Tactical Scanner" 4
   engine -45 159
@@ -835,7 +854,7 @@ ship "Roost" "Roost (Sidewinder)"
     "Heavy Anti-Missile Turret" 2
 
     "LP144a Battery Pack"
-    "Fuel Barrel" 62
+    "Fuel Pod" 62
     "Tactical Scanner" 4
 
 
@@ -878,7 +897,7 @@ ship "Skein"
 
     "LP144a Battery Pack"
     "Liquid Water Cooler"
-    "Fuel Barrel" 83
+    "Fuel Pod" 83
     "Large Radar Jammer"
     "Tactical Scanner" 4
   engine -45 197
@@ -922,7 +941,7 @@ ship "Skein" "Skein (Sidewinder)"
     "Heavy Anti-Missile Turret" 2
 
     "LP144a Battery Pack"
-    "Fuel Barrel" 83
+    "Fuel Pod" 83
     "Tactical Scanner" 4
 
 
