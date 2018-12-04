@@ -33,7 +33,7 @@ ship "Boxwing"
   sprite "ship/boxwing"
   thumbnail "thumbnail/boxwing"
   attributes
-    category "Bomber"
+    category "Fighter"
 #    manufacturer "Southbound"
     licences
       Pilot
@@ -89,8 +89,8 @@ ship "Dreadnought"
     "drag" 11.1
     "heat dissipation" .65
     "cargo space" 90
-    "outfit space" 860
-    "core space" 320
+    "outfit space" 900
+    "core space" 360
     "engine space" 180
     "weapon space" 360
     weapon
@@ -112,7 +112,7 @@ ship "Dreadnought"
     "LP144a Battery Pack"
     "Liquid Helium Cooler"
     "Catalytic Ramscoop"
-    "Fuel Barrel" 60
+    "Fuel Barrel" 100
     "Tactical Scanner" 6
     "Fragmentation Grenades" 50
     "Laser Rifle" 100
@@ -154,9 +154,8 @@ ship "Dreadnought" "Dreadnought (Jump)"
     "LP144a Battery Pack"
     "Liquid Helium Cooler"
     "Catalytic Ramscoop"
-    "Fuel Barrel" 80
+    "Fuel Barrel" 100
     "Tactical Scanner" 6
-    "Outfit Space Expansion" 3
     "Fragmentation Grenades" 50
     "Laser Rifle" 100
 
@@ -179,7 +178,7 @@ ship "Dreadnought" "Dreadnought (Rocket)"
     "LP144a Battery Pack"
     "Liquid Helium Cooler"
     "Catalytic Ramscoop"
-    "Fuel Barrel" 60
+    "Fuel Barrel" 100
     "Tactical Scanner" 6
     "Outfit Space Expansion" 6
     "Fragmentation Grenades" 50
@@ -205,8 +204,8 @@ ship "Fury"
     "drag" 2.2
     "heat dissipation" .85
     "cargo space" 10
-    "outfit space" 240
-    "core space" 140
+    "outfit space" 200
+    "core space" 100
     "engine space" 60
     "weapon space" 40
     weapon
@@ -225,7 +224,7 @@ ship "Fury"
     "Modified Blaster Cannon" 4
 
     "LP036a Battery Pack"
-    "Fuel Barrel" 60
+    "Fuel Barrel" 14
     "Tactical Scanner"
   engine -10 45
   engine 10 45
@@ -253,7 +252,7 @@ ship "Fury" "Fury (Flamethrower)"
     "Flamethrower" 4
 
     "Supercapacitor"
-    "Fuel Barrel" 60
+    "Fuel Barrel" 14
     "Ramscoop"
     "Tactical Scanner"
 
@@ -272,7 +271,7 @@ ship "Fury" "Fury (Gatling)"
     "Gatling Gun" 4
 
     "Supercapacitor"
-    "Fuel Barrel" 60
+    "Fuel Barrel" 14
     "Tactical Scanner"
 
 
@@ -288,7 +287,7 @@ ship "Fury" "Fury (Laser)"
     "Heavy Laser Cannon" 2
 
     "LP036a Battery Pack"
-    "Fuel Barrel" 60
+    "Fuel Barrel" 14
     "Tactical Scanner"
 
 
@@ -306,9 +305,8 @@ ship "Fury" "Fury (Rocket)"
     "Heavy Rocket Launcher" 2
 
     "Supercapacitor"
-    "Fuel Barrel" 60
+    "Fuel Barrel" 14
     "Tactical Scanner"
-    "Outfit Space Expansion"
 
 
 
@@ -330,8 +328,8 @@ ship "Harpy"
     "drag" 1.0
     "heat dissipation" .8
     "cargo space" 10
-    "outfit space" 160
-    "core space" 100
+    "outfit space" 140
+    "core space" 80
     "engine space" 40
     "weapon space" 20
     weapon
@@ -350,7 +348,7 @@ ship "Harpy"
     "Modified Blaster Cannon" 2
 
     "LP036a Battery Pack"
-    "Fuel Barrel" 30
+    "Fuel Barrel" 6
     "Tactical Scanner"
   engine -5 35
   engine 5 35
@@ -366,7 +364,7 @@ ship "Harpy"
 ship "Harpy" "Harpy (Gatling)"
   outfits
     "D14-RN Shield Generator"
-    "nGVF-AA Fuel Cell"
+    "nGVF-BB Fuel Cell"
     "Hyperdrive"
 
     "Chipmunk Plasma Thruster"
@@ -377,7 +375,7 @@ ship "Harpy" "Harpy (Gatling)"
     "Gatling Gun" 2
 
     "LP036a Battery Pack"
-    "Fuel Barrel" 30
+    "Fuel Barrel" 6
     "Tactical Scanner"
 
 
@@ -420,7 +418,7 @@ ship "Hauler I"
 
     "LP144a Battery Pack"
     "Liquid Water Cooler"
-    "Fuel Barrel" 40
+    "Fuel Barrel" 32
     "Tactical Scanner" 4
   engine -45 122
   engine 45 122
@@ -455,7 +453,7 @@ ship "Hauler I" "Hauler I (Hai)"
 
     "Gorge Batteries"
     "Williwaw Cooling"
-    "Fuel Pod" 4
+    "Fuel Barrel" 32
     "Yoloy Scanner"
 
 
@@ -473,7 +471,7 @@ ship "Hauler I" "Hauler I (Miner)"
 
     "LP144a Battery Pack"
     "Asteroid Scanner"
-    "Fuel Barrel" 40
+    "Fuel Barrel" 32
     "Ramscoop"
     "Tactical Scanner" 4
 
@@ -496,8 +494,8 @@ ship "Hauler II"
     "drag" 11.5
     "heat dissipation" .6
     "cargo space" 280
-    "outfit space" 400
-    "core space" 180
+    "outfit space" 410
+    "core space" 190
     "engine space" 80
     "weapon space" 140
     weapon
@@ -517,7 +515,7 @@ ship "Hauler II"
 
     "LP144a Battery Pack"
     "Liquid Water Cooler"
-    "Fuel Barrel" 40
+    "Fuel Barrel" 42
     "Tactical Scanner" 4
   engine -45 160
   engine 45 160
@@ -552,7 +550,7 @@ ship "Hauler II" "Hauler II (Hai)"
 
     "Gorge Batteries"
     "Williwaw Cooling"
-    "Fuel Pod" 4
+    "Fuel Barrel" 42
     "Yoloy Scanner"
 
 
@@ -570,7 +568,7 @@ ship "Hauler II" "Hauler II (Miner)"
 
     "LP144a Battery Pack"
     "Asteroid Scanner"
-    "Fuel Barrel" 40
+    "Fuel Barrel" 42
     "Ramscoop"
     "Tactical Scanner" 4
 
@@ -593,8 +591,8 @@ ship "Hauler III"
     "drag" 12.5
     "heat dissipation" .6
     "cargo space" 420
-    "outfit space" 400
-    "core space" 180
+    "outfit space" 420
+    "core space" 200
     "engine space" 80
     "weapon space" 140
     weapon
@@ -614,7 +612,7 @@ ship "Hauler III"
 
     "LP144a Battery Pack"
     "Liquid Water Cooler"
-    "Fuel Barrel" 40
+    "Fuel Barrel" 53
     "Tactical Scanner" 4
   engine -45 196
   engine 45 196
@@ -649,7 +647,7 @@ ship "Hauler III" "Hauler III (Hai)"
 
     "Gorge Batteries"
     "Williwaw Cooling"
-    "Fuel Pod" 4
+    "Fuel Barrel" 53
     "Yoloy Scanner"
 
 
@@ -667,7 +665,7 @@ ship "Hauler III" "Hauler III (Miner)"
 
     "LP144a Battery Pack"
     "Asteroid Scanner"
-    "Fuel Barrel" 40
+    "Fuel Barrel" 53
     "Ramscoop"
     "Tactical Scanner" 4
 
@@ -691,8 +689,8 @@ ship "Nest"
     "drag" 10.5
     "heat dissipation" .6
     "cargo space" 30
-    "outfit space" 460
-    "core space" 240
+    "outfit space" 450
+    "core space" 230
     "engine space" 80
     "weapon space" 140
     weapon
@@ -712,7 +710,7 @@ ship "Nest"
 
     "LP144a Battery Pack"
     "Liquid Water Cooler"
-    "Fuel Barrel" 50
+    "Fuel Barrel" 42
     "Large Radar Jammer"
     "Tactical Scanner" 4
   engine -45 122
@@ -752,7 +750,7 @@ ship "Nest" "Nest (Sidewinder)"
     "Heavy Anti-Missile Turret" 2
 
     "LP144a Battery Pack"
-    "Fuel Barrel" 50
+    "Fuel Barrel" 42
     "Tactical Scanner" 4
 
 
@@ -795,7 +793,7 @@ ship "Roost"
 
     "LP144a Battery Pack"
     "Liquid Water Cooler"
-    "Fuel Barrel" 60
+    "Fuel Barrel" 62
     "Large Radar Jammer"
     "Tactical Scanner" 4
   engine -45 159
@@ -837,7 +835,7 @@ ship "Roost" "Roost (Sidewinder)"
     "Heavy Anti-Missile Turret" 2
 
     "LP144a Battery Pack"
-    "Fuel Barrel" 60
+    "Fuel Barrel" 62
     "Tactical Scanner" 4
 
 
@@ -859,8 +857,8 @@ ship "Skein"
     "drag" 12.5
     "heat dissipation" .6
     "cargo space" 90
-    "outfit space" 600
-    "core space" 380
+    "outfit space" 610
+    "core space" 390
     "engine space" 80
     "weapon space" 140
     weapon
@@ -880,7 +878,7 @@ ship "Skein"
 
     "LP144a Battery Pack"
     "Liquid Water Cooler"
-    "Fuel Barrel" 70
+    "Fuel Barrel" 83
     "Large Radar Jammer"
     "Tactical Scanner" 4
   engine -45 197
@@ -924,7 +922,7 @@ ship "Skein" "Skein (Sidewinder)"
     "Heavy Anti-Missile Turret" 2
 
     "LP144a Battery Pack"
-    "Fuel Barrel" 70
+    "Fuel Barrel" 83
     "Tactical Scanner" 4
 
 
@@ -933,7 +931,7 @@ ship "Stymphalian"
   sprite "ship/stymphalian"
   thumbnail "thumbnail/stymphalian"
   attributes
-    category "Bomber"
+    category "Fighter"
 #    manufacturer "Southbound"
     licences
       Pilot

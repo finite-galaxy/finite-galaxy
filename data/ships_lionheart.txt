@@ -8,12 +8,12 @@ shipyard "Lionheart Variants"
   "Arrow"
   "Arrow (Anti-Missile)"
   "Arrow (Hai)"
-  "Bounder"
-  "Bounder (Hai)"
-  "Bounder (Miner)"
   "Behemoth"
   "Behemoth (Free Worlds)"
   "Behemoth (Hai)"
+  "Bounder"
+  "Bounder (Hai)"
+  "Bounder (Miner)"
   "Dagger"
   "Leviathan"
   "Leviathan (Hai)"
@@ -43,8 +43,8 @@ ship "Aerie"
     "drag" 4.1
     "heat dissipation" .7
     "cargo space" 50
-    "outfit space" 440
-    "core space" 200
+    "outfit space" 430
+    "core space" 190
     "engine space" 90
     "weapon space" 150
     weapon
@@ -65,7 +65,7 @@ ship "Aerie"
     "Heavy Anti-Missile Turret"
 
     "LP144a Battery Pack"
-    "Fuel Barrel" 50
+    "Fuel Barrel" 42
     "Tactical Scanner" 4
   engine -10 91
   engine 10 91
@@ -100,7 +100,7 @@ ship "Aerie" "Aerie (Mark II)"
     "Heavy Anti-Missile Turret"
 
     "LP144a Battery Pack"
-    "Fuel Barrel" 50
+    "Fuel Barrel" 42
     "Tactical Scanner" 4
     "Laser Rifle" 28
 
@@ -124,8 +124,8 @@ ship "Argosy"
     "drag" 5.9
     "heat dissipation" .7
     "cargo space" 120
-    "outfit space" 310
-    "core space" 140
+    "outfit space" 300
+    "core space" 130
     "engine space" 80
     "weapon space" 90
     weapon
@@ -145,7 +145,7 @@ ship "Argosy"
     "Laser Turret" 2
 
     "LP072a Battery Pack"
-    "Fuel Barrel" 40
+    "Fuel Barrel" 30
     "Small Radar Jammer"
     "Tactical Scanner" 3
   engine -20 91
@@ -178,7 +178,7 @@ ship "Argosy" "Argosy (Blaster)"
     "X4 Blaster Turret" 2
 
     "LP072a Battery Pack"
-    "Fuel Barrel" 40
+    "Fuel Barrel" 30
     "Small Radar Jammer"
     "Tactical Scanner" 3
 
@@ -195,7 +195,7 @@ ship "Argosy" "Argosy (Laser)"
     "Heavy Laser Turret" 2
 
     "LP072a Battery Pack"
-    "Fuel Barrel" 40
+    "Fuel Barrel" 30
     "Small Radar Jammer"
     "Tactical Scanner" 3
     "Outfit Space Expansion"
@@ -216,7 +216,7 @@ ship "Argosy" "Argosy (Torpedo)"
     "Heavy Laser Turret"
 
     "LP036a Battery Pack"
-    "Fuel Barrel" 40
+    "Fuel Barrel" 30
     "Small Radar Jammer"
     "Tactical Scanner" 3
     "Outfit Space Expansion" 3
@@ -241,8 +241,8 @@ ship "Arrow"
     "drag" 2.2
     "heat dissipation" .85
     "cargo space" 10
-    "outfit space" 220
-    "core space" 110
+    "outfit space" 190
+    "core space" 80
     "engine space" 60
     "weapon space" 50
     weapon
@@ -260,7 +260,7 @@ ship "Arrow"
 
     "LP036a Battery Pack"
     "Cooling Ducts"
-    "Fuel Barrel" 40
+    "Fuel Barrel" 14
     "Small Radar Jammer"
     "Tactical Scanner"
   engine -10 60
@@ -289,7 +289,7 @@ ship "Arrow" "Arrow (Anti-Missile)"
 
     "LP036a Battery Pack"
     "Cooling Ducts"
-    "Fuel Barrel" 40
+    "Fuel Barrel" 14
     "Small Radar Jammer"
     "Tactical Scanner"
 
@@ -306,7 +306,7 @@ ship "Arrow" "Arrow (Hai)"
     "Chameleon Anti-Missile"
 
     "Chasm Batteries"
-    "Fuel Pod" 4
+    "Fuel Barrel" 14
     "Yoloy Scanner"
 
 
@@ -352,7 +352,7 @@ ship "Behemoth"
     "Heavy Anti-Missile Turret" 2
 
     "LP144a Battery Pack"
-    "Fuel Barrel" 60
+    "Fuel Barrel" 64
     "Tactical Scanner" 5
   engine -34 154
   engine 34 154
@@ -392,7 +392,7 @@ ship "Behemoth" "Behemoth (Free Worlds)"
 
     "LP144a Battery Pack"
     "Liquid Nitrogen Cooler"
-    "Fuel Barrel" 60
+    "Fuel Barrel" 64
     "Tactical Scanner" 5
     "Outfit Space Expansion" 4
     "Fragmentation Grenades" 10
@@ -417,9 +417,9 @@ ship "Behemoth" "Behemoth (Hai)"
 
     "Gorge Batteries"
     "Williwaw Cooling" 2
-    "Fuel Pod" 6
+    "Fuel Barrel" 64
     "Yoloy Scanner"
-    "Outfit Space Expansion" 2
+    "Outfit Space Expansion" 4
 
 
 
@@ -440,8 +440,8 @@ ship "Bounder"
     "drag" 3.7
     "heat dissipation" .8
     "cargo space" 40
-    "outfit space" 310
-    "core space" 175
+    "outfit space" 260
+    "core space" 125
     "engine space" 90
     "weapon space" 45
     weapon
@@ -460,7 +460,7 @@ ship "Bounder"
     "Light Anti-Missile Turret" 2
 
     "LP036a Battery Pack"
-    "Fuel Barrel" 90
+    "Fuel Barrel" 39
     "Tactical Scanner"
   engine -12 44
   engine 12 44
@@ -486,7 +486,7 @@ ship "Bounder" "Bounder (Hai)"
     "Chameleon Anti-Missile" 2
 
     "Gorge Batteries"
-    "Fuel Pod" 9
+    "Fuel Barrel" 39
     "Quantum Keystone"
     "Yoloy Scanner"
 
@@ -504,7 +504,7 @@ ship "Bounder" "Bounder (Miner)"
 
     "LP036a Battery Pack"
     "Asteroid Scanner"
-    "Fuel Barrel" 90
+    "Fuel Barrel" 39
     "Tactical Scanner"
 
 
@@ -573,8 +573,8 @@ ship "Leviathan"
     "drag" 7.6
     "heat dissipation" .5
     "cargo space" 100
-    "outfit space" 650
-    "core space" 280
+    "outfit space" 660
+    "core space" 290
     "engine space" 120
     "weapon space" 250
     weapon
@@ -595,7 +595,7 @@ ship "Leviathan"
 
     "LP144a Battery Pack"
     "Liquid Helium Cooler"
-    "Fuel Barrel" 50
+    "Fuel Barrel" 63
     "Large Radar Jammer"
     "Tactical Scanner" 4
   engine -25 125
@@ -621,7 +621,7 @@ ship "Leviathan"
 
 ship "Leviathan" "Leviathan (Hai)"
   outfits
-    "Diamond Regenerator" 2
+    "Diamond Regenerator"
     "Boulder Reactor"
     "Hyperdrive"
 
@@ -634,9 +634,9 @@ ship "Leviathan" "Leviathan (Hai)"
 
     "Fissure Batteries"
     "Williwaw Cooling" 4
-    "Fuel Pod" 5
+    "Fuel Barrel" 63
     "Yoloy Scanner"
-    "Outfit Space Expansion" 6
+    "Outfit Space Expansion" 2
 
 
 ship "Leviathan" "Leviathan (Heavy)"
@@ -655,7 +655,7 @@ ship "Leviathan" "Leviathan (Heavy)"
 
     "LP072a Battery Pack"
     "Liquid Nitrogen Cooler"
-    "Fuel Barrel" 50
+    "Fuel Barrel" 63
     "Large Radar Jammer"
     "Tactical Scanner" 4
     "Outfit Space Expansion" 4
@@ -675,9 +675,10 @@ ship "Leviathan" "Leviathan (Mark II)"
 
     "LP144a Battery Pack"
     "Liquid Helium Cooler"
-    "Fuel Barrel" 50
+    "Fuel Barrel" 63
     "Large Radar Jammer"
     "Tactical Scanner" 4
+    "Outfit Space Expansion"
     "Laser Rifle" 75
 
 
@@ -695,10 +696,10 @@ ship "Leviathan" "Leviathan (North)"
 
     "LP144a Battery Pack"
     "Liquid Helium Cooler"
-    "Fuel Barrel" 50
+    "Fuel Barrel" 63
     "Large Radar Jammer"
     "Tactical Scanner" 4
-    "Outfit Space Expansion"
+    "Outfit Space Expansion" 2
 
 
 ship "Leviathan" "Leviathan (South)"
@@ -715,10 +716,10 @@ ship "Leviathan" "Leviathan (South)"
 
     "LP144a Battery Pack"
     "Liquid Helium Cooler"
-    "Fuel Barrel" 50
+    "Fuel Barrel" 63
     "Large Radar Jammer"
     "Tactical Scanner" 4
-    "Outfit Space Expansion"
+    "Outfit Space Expansion" 2
 
 
 
@@ -739,8 +740,8 @@ ship "Warrior"
     "drag" 2.1
     "heat dissipation" .8
     "cargo space" 20
-    "outfit space" 230
-    "core space" 110
+    "outfit space" 210
+    "core space" 90
     "engine space" 70
     "weapon space" 50
     weapon
@@ -759,7 +760,7 @@ ship "Warrior"
     "Heavy Laser Cannon" 2
 
     "LP072a Battery Pack"
-    "Fuel Barrel" 30
+    "Fuel Barrel" 12
     "Small Radar Jammer"
     "Tactical Scanner" 4
   engine -24 41
@@ -786,7 +787,7 @@ ship "Warrior" "Warrior (Mark II)"
 
     "LP072a Battery Pack"
     "Cargo Scanner"
-    "Fuel Barrel" 30
+    "Fuel Barrel" 12
     "Outfit Scanner"
     "Small Radar Jammer"
     "Tactical Scanner" 4

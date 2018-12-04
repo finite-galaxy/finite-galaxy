@@ -4,10 +4,8 @@ shipyard "Vortex Variants"
   "Foxhound"
   "Heavy Shuttle"
   "Heavy Shuttle (Blaster)"
-  "Heavy Shuttle (Gatling)"
   "Light Shuttle"
   "Light Shuttle (Blaster)"
-  "Light Shuttle (Gatling)"
   "Mongrel"
   "Mongrel (Particle)"
   "Mongrel (Plasma)"
@@ -39,8 +37,8 @@ ship "Bactrian"
     "drag" 16.1
     "heat dissipation" .4
     "cargo space" 530
-    "outfit space" 810
-    "core space" 330
+    "outfit space" 930
+    "core space" 450
     "engine space" 180
     "weapon space" 300
     weapon
@@ -64,7 +62,7 @@ ship "Bactrian"
 
     "LP144a Battery Pack"
     "Liquid Nitrogen Cooler"
-    "Fuel Barrel" 70
+    "Fuel Barrel" 200
     "Large Radar Jammer" 2
     "Ramscoop"
     "Tactical Scanner" 6
@@ -109,10 +107,10 @@ ship "Bactrian" "Bactrian (Hired Gun)"
 
     "LP144a Battery Pack"
     "Liquid Helium Cooler"
-    "Fuel Barrel" 70
+    "Fuel Barrel" 200
     "Large Radar Jammer" 2
     "Tactical Scanner" 6
-    "Outfit Space Expansion" 7
+    "Outfit Space Expansion" 8
     "Laser Rifle" 240
 
 
@@ -183,8 +181,8 @@ ship "Heavy Shuttle"
     "drag" 2.1
     "heat dissipation" .8
     "cargo space" 30
-    "outfit space" 170
-    "core space" 95
+    "outfit space" 130
+    "core space" 55
     "engine space" 60
     "weapon space" 15
     weapon
@@ -201,7 +199,7 @@ ship "Heavy Shuttle"
     "IS-2200 Ion Steering"
 
     "LP036a Battery Pack"
-    "Fuel Barrel" 50
+    "Fuel Barrel" 14
     "Small Radar Jammer"
   engine 6 30
   engine -6 30
@@ -225,28 +223,9 @@ ship "Heavy Shuttle" "Heavy Shuttle (Blaster)"
     "X1 Blaster Cannon" 2
 
     "LP036a Battery Pack"
-    "Fuel Barrel" 50
+    "Fuel Barrel" 14
     "Small Radar Jammer"
     "Outfit Space Expansion"
-
-
-ship "Heavy Shuttle" "Heavy Shuttle (Gatling)"
-  outfits
-    "D14-RN Shield Generator"
-    "nGVF-AA Fuel Cell"
-    "Hyperdrive"
-
-    "IT-2700 Ion Thruster"
-    "IS-2200 Ion Steering"
-
-    "Gatling Round" 6000
-    "Gatling Bullet Boxes" 4
-    "Gatling Gun" 2
-
-    "LP036a Battery Pack"
-    "Fuel Barrel" 50
-    "Small Radar Jammer"
-    "Outfit Space Expansion" 2
 
 
 
@@ -270,8 +249,8 @@ ship "Light Shuttle"
     "drag" 1.7
     "heat dissipation" .8
     "cargo space" 20
-    "outfit space" 160
-    "core space" 90
+    "outfit space" 130
+    "core space" 60
     "engine space" 60
     "weapon space" 10
     weapon
@@ -288,7 +267,7 @@ ship "Light Shuttle"
     "IS-2200 Ion Steering"
 
     "LP036a Battery Pack"
-    "Fuel Barrel" 40
+    "Fuel Barrel" 10
     "Small Radar Jammer"
   engine 6 30
   engine -6 30
@@ -312,27 +291,8 @@ ship "Light Shuttle" "Light Shuttle (Blaster)"
     "X1 Blaster Cannon"
 
     "LP036a Battery Pack"
-    "Fuel Barrel" 40
+    "Fuel Barrel" 10
     "Small Radar Jammer"
-
-
-ship "Light Shuttle" "Light Shuttle (Gatling)"
-  outfits
-    "D14-RN Shield Generator"
-    "nGVF-AA Fuel Cell"
-    "Hyperdrive"
-
-    "IT-2700 Ion Thruster"
-    "IS-2200 Ion Steering"
-
-    "Gatling Round" 3000
-    "Gatling Bullet Boxes" 2
-    "Gatling Gun"
-
-    "LP036a Battery Pack"
-    "Fuel Barrel" 40
-    "Small Radar Jammer"
-    "Outfit Space Expansion"
 
 
 
@@ -425,8 +385,8 @@ ship "Mule"
     "drag" 5.7
     "heat dissipation" .5
     "cargo space" 270
-    "outfit space" 510
-    "core space" 190
+    "outfit space" 520
+    "core space" 200
     "engine space" 110
     "weapon space" 210
     weapon
@@ -450,7 +410,7 @@ ship "Mule"
 
     "Liquid Nitrogen Cooler"
     "LP144a Battery Pack"
-    "Fuel Barrel" 60
+    "Fuel Barrel" 75
     "Large Radar Jammer"
     "Ramscoop"
     "Tactical Scanner" 4
@@ -489,10 +449,10 @@ ship "Mule" "Mule (Hai)"
 
     "Gorge Batteries"
     "Williwaw Cooling" 2
-    "Fuel Pod" 6
+    "Fuel Barrel" 75
     "Ramscoop"
     "Yoloy Scanner"
-    "Outfit Space Expansion" 2
+    "Outfit Space Expansion" 4
 
 
 ship "Mule" "Mule (Heavy)"
@@ -512,7 +472,7 @@ ship "Mule" "Mule (Heavy)"
 
     "LP036a Battery Pack"
     "Liquid Nitrogen Cooler"
-    "Fuel Barrel" 60
+    "Fuel Barrel" 75
     "Large Radar Jammer"
     "Ramscoop"
     "Tactical Scanner" 4
@@ -538,8 +498,8 @@ ship "Splinter"
     "drag" 4.0
     "heat dissipation" .7
     "cargo space" 75
-    "outfit space" 460
-    "core space" 210
+    "outfit space" 450
+    "core space" 200
     "engine space" 100
     "weapon space" 150
     weapon
@@ -563,7 +523,7 @@ ship "Splinter"
 
     "LP144a Battery Pack"
     "Liquid Water Cooler"
-    "Fuel Barrel" 60
+    "Fuel Barrel" 47
     "Large Radar Jammer"
     "Tactical Scanner" 4
   engine -15 115
@@ -599,7 +559,7 @@ ship "Splinter" "Splinter (Laser)"
 
     "LP144a Battery Pack"
     "Liquid Water Cooler"
-    "Fuel Barrel" 60
+    "Fuel Barrel" 47
     "Large Radar Jammer"
     "Tactical Scanner" 4
   turret "Heavy Laser Turret"
@@ -621,7 +581,7 @@ ship "Splinter" "Splinter (Mark II)"
 
     "LP144a Battery Pack"
     "Liquid Water Cooler"
-    "Fuel Barrel" 60
+    "Fuel Barrel" 47
     "Large Radar Jammer"
     "Tactical Scanner" 4
     "Outfit Space Expansion"
@@ -649,8 +609,8 @@ ship "Wasp"
     "drag" 1.2
     "heat dissipation" .8
     "cargo space" 10
-    "outfit space" 190
-    "core space" 115
+    "outfit space" 160
+    "core space" 85
     "engine space" 50
     "weapon space" 25
     weapon
@@ -670,7 +630,7 @@ ship "Wasp"
     "Gatling Bullet Boxes" 6
     "Gatling Gun" 3
 
-    "Fuel Barrel" 40
+    "Fuel Barrel" 10
     "Small Radar Jammer"
     "Supercapacitor"
     "Tactical Scanner"

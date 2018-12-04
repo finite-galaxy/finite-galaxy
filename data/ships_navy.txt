@@ -20,7 +20,7 @@ ship "Jupiter"
   sprite "ship/jupiter"
   thumbnail "thumbnail/jupiter"
   attributes
-    category "Destroyer"
+    category "Cruiser"
 #    manufacturer "Navy"
     licences
       Jupiter
@@ -29,12 +29,12 @@ ship "Jupiter"
     "hull" 8300
     "required crew" 111
     "bunks" 184
-    "mass" 900
+    "mass" 910
     "drag" 18.9
     "heat dissipation" .4
     "cargo space" 100
-    "outfit space" 910
-    "core space" 310
+    "outfit space" 1020
+    "core space" 420
     "engine space" 200
     "weapon space" 400
     weapon
@@ -58,10 +58,10 @@ ship "Jupiter"
 
     "LP144a Battery Pack"
     "Liquid Helium Cooler"
-    "Fuel Barrel" 70
+    "Fuel Barrel" 190
     "Large Radar Jammer"
     "Ramscoop"
-    "Tactical Scanner" 7
+    "Tactical Scanner" 6
     "Fragmentation Grenades" 80
     "Laser Rifle" 160
   engine -35 200
@@ -113,8 +113,8 @@ ship "Jupiter" "Jupiter (Alpha)"
 
     "Large Heat Shunt" 3
     "Catalytic Ramscoop"
-    "Fuel Pod" 8
-    "Outfit Space Expansion" 2
+    "Fuel Barrel" 190
+    "Outfit Space Expansion" 4
     "Fragmentation Grenades" 80
     "Laser Rifle" 160
   turret "Disruptor"
@@ -141,9 +141,9 @@ ship "Jupiter" "Jupiter (Jump)"
     "LP144a Battery Pack"
     "Liquid Helium Cooler"
     "Ramscoop"
-    "Fuel Barrel" 80
+    "Fuel Barrel" 190
     "Large Radar Jammer"
-    "Tactical Scanner" 7
+    "Tactical Scanner" 6
     "Outfit Space Expansion"
     "Fragmentation Grenades" 80
     "Laser Rifle" 160
@@ -171,9 +171,10 @@ ship "Jupiter" "Jupiter (Mark II)"
     "LP144a Battery Pack"
     "Liquid Helium Cooler"
     "Ramscoop"
-    "Fuel Barrel" 70
+    "Fuel Barrel" 190
     "Large Radar Jammer"
-    "Tactical Scanner" 7
+    "Tactical Scanner" 6
+    "Outfit Space Expansion"
     "Fragmentation Grenades" 80
     "Laser Rifle" 160
   turret "Electron Turret"
@@ -194,14 +195,15 @@ ship "Jupiter" "Jupiter (Particle)"
     "Particle Cannon" 4
     "Particle Turret" 4
 
-    "LP144a Battery Pack"
+    "LP576a Battery Pack"
     "Liquid Helium Cooler"
-#    "Fuel Barrel" 70
+#    "Fuel Barrel" 190
     "Large Radar Jammer"
     "Ramscoop"
-    "Tactical Scanner" 7
+    "Tactical Scanner" 6
     "Fragmentation Grenades" 80
     "Laser Rifle" 160
+
 
 
 ship "Mars"
@@ -221,8 +223,8 @@ ship "Mars"
     "drag" 3.1
     "heat dissipation" .7
     "cargo space" 25
-    "outfit space" 370
-    "core space" 200
+    "outfit space" 340
+    "core space" 160
     "engine space" 80
     "weapon space" 100
     weapon
@@ -244,10 +246,10 @@ ship "Mars"
     "LP072a Battery Pack"
     "Cooling Ducts"
     "Cargo Scanner"
-    "Fuel Barrel" 60
+    "Fuel Barrel" 31
     "Large Radar Jammer"
     "Outfit Scanner"
-    "Tactical Scanner" 4
+    "Tactical Scanner" 3
     "Fragmentation Grenades" 5
     "Laser Rifle" 10
   engine -12 57
@@ -279,10 +281,10 @@ ship "Mars" "Mars (Mark II)"
     "LP072a Battery Pack"
     "Cooling Ducts"
     "Cargo Scanner"
-    "Fuel Barrel" 60
+    "Fuel Barrel" 31
     "Large Radar Jammer"
     "Outfit Scanner"
-    "Tactical Scanner" 4
+    "Tactical Scanner" 3
     "Outfit Space Expansion"
     "Fragmentation Grenades" 5
     "Laser Rifle" 10
@@ -306,8 +308,8 @@ ship "Mercury"
     "drag" 3.8
     "heat dissipation" .8
     "cargo space" 10
-    "outfit space" 280
-    "core space" 170
+    "outfit space" 260
+    "core space" 150
     "engine space" 60
     "weapon space" 50
     weapon
@@ -328,9 +330,9 @@ ship "Mercury"
     "Javelin Pod" 4
 
     "LP036a Battery Pack"
-    "Fuel Barrel" 50
+    "Fuel Barrel" 27
     "Large Radar Jammer"
-    "Tactical Scanner" 3
+    "Tactical Scanner" 2
     "Fragmentation Grenades" 5
     "Laser Rifle" 10
   engine -8 46
@@ -361,9 +363,9 @@ ship "Mercury" "Mercury (Mark II)"
     "Electron Cannon" 2
 
     "LP036a Battery Pack"
-    "Fuel Barrel" 50
+    "Fuel Barrel" 27
     "Large Radar Jammer"
-    "Tactical Scanner" 3
+    "Tactical Scanner" 2
     "Fragmentation Grenades" 5
     "Laser Rifle" 10
 
@@ -373,7 +375,7 @@ ship "Saturn"
   sprite "ship/saturn"
   thumbnail "thumbnail/saturn"
   attributes
-    category "Frigate"
+    category "Destroyer"
 #    manufacturer "Navy"
     licences
       Saturn
@@ -382,12 +384,12 @@ ship "Saturn"
     "hull" 6400
     "required crew" 81
     "bunks" 136
-    "mass" 600
+    "mass" 670
     "drag" 9.8
     "heat dissipation" .5
     "cargo space" 70
-    "outfit space" 820
-    "core space" 370
+    "outfit space" 870
+    "core space" 420
     "engine space" 150
     "weapon space" 300
     weapon
@@ -411,10 +413,10 @@ ship "Saturn"
 
     "LP288a Battery Pack"
     "Liquid Nitrogen Cooler"
-    "Fuel Barrel" 60
+    "Fuel Barrel" 120
     "Large Radar Jammer"
     "Ramscoop"
-    "Tactical Scanner" 6
+    "Tactical Scanner" 4
     "Fragmentation Grenades" 60
     "Laser Rifle" 120
   engine -29 156
@@ -462,10 +464,9 @@ ship "Saturn" "Saturn (Jump)"
     "LP288a Battery Pack"
     "Liquid Nitrogen Cooler"
     "Ramscoop"
-    "Fuel Barrel" 80
+    "Fuel Barrel" 120
     "Large Radar Jammer"
-    "Tactical Scanner" 6
-    "Outfit Space Expansion" 2
+    "Tactical Scanner" 4
     "Fragmentation Grenades" 60
     "Laser Rifle" 120
 
@@ -489,9 +490,9 @@ ship "Saturn" "Saturn (Mark II)"
     "LP288a Battery Pack"
     "Liquid Nitrogen Cooler"
     "Ramscoop"
-    "Fuel Barrel" 60
+    "Fuel Barrel" 120
     "Large Radar Jammer"
-    "Tactical Scanner" 6
+    "Tactical Scanner" 4
     "Fragmentation Grenades" 60
     "Laser Rifle" 120
 
@@ -539,10 +540,10 @@ ship "Venus"
 
     "LP144a Battery Pack"
     "Liquid Water Cooler"
-    "Fuel Barrel" 50
+    "Fuel Barrel" 54
     "Large Radar Jammer"
     "Ramscoop"
-    "Tactical Scanner" 5
+    "Tactical Scanner" 4
     "Fragmentation Grenades" 20
     "Laser Rifle" 40
   engine -26 92
@@ -579,9 +580,9 @@ ship "Venus" "Venus (Mark II)"
     "LP144a Battery Pack"
     "Liquid Water Cooler"
     "Ramscoop"
-    "Fuel Barrel" 50
+    "Fuel Barrel" 54
     "Large Radar Jammer"
-    "Tactical Scanner" 5
+    "Tactical Scanner" 4
     "Fragmentation Grenades" 20
     "Laser Rifle" 40
   turret "Heavy Anti-Missile Turret"

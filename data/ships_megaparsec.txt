@@ -34,8 +34,8 @@ ship "Manta"
     "drag" 4.7
     "heat dissipation" .8
     "cargo space" 20
-    "outfit space" 390
-    "core space" 170
+    "outfit space" 370
+    "core space" 150
     "engine space" 100
     "weapon space" 120
     weapon
@@ -54,8 +54,8 @@ ship "Manta"
     "Particle Cannon" 4
 
     "LP144a Battery Pack"
-    "Liquid Water Cooler"
-    "Fuel Barrel" 40
+    "Cooling Ducts"
+    "Fuel Barrel" 23
     "Tactical Scanner" 4
   engine -33 38
   engine 33 38
@@ -85,7 +85,7 @@ ship "Manta" "Manta (Mark II)"
 
     "LP072a Battery Pack"
     "Liquid Nitrogen Cooler"
-    "Fuel Barrel" 40
+    "Fuel Barrel" 23
     "Tactical Scanner" 4
     "Laser Rifle" 10
 
@@ -108,7 +108,7 @@ ship "Manta" "Manta (Nuclear)"
 
     "LP072a Battery Pack"
     "Liquid Nitrogen Cooler"
-    "Fuel Barrel" 40
+    "Fuel Barrel" 23
     "Tactical Scanner"
     "Outfit Space Expansion" 2
     "Laser Rifle" 10
@@ -132,8 +132,8 @@ ship "Manta" "Manta (Plasma)"
     "Plasma Cannon" 4
 
     "LP144a Battery Pack"
-    "Liquid Water Cooler"
-    "Fuel Barrel" 40
+    "Liquid Nitrogen Cooler"
+    "Fuel Barrel" 23
     "Tactical Scanner" 4
 
 
@@ -155,8 +155,8 @@ ship "Quicksilver"
     "drag" 2.7
     "heat dissipation" .8
     "cargo space" 10
-    "outfit space" 290
-    "core space" 150
+    "outfit space" 270
+    "core space" 130
     "engine space" 80
     "weapon space" 60
     weapon
@@ -176,7 +176,7 @@ ship "Quicksilver"
 
     "LP036a Battery Pack"
     "Cooling Ducts"
-    "Fuel Barrel" 40
+    "Fuel Barrel" 16
     "Tactical Scanner" 4
   engine -17 54
   engine 17 54
@@ -201,8 +201,8 @@ ship "Quicksilver" "Quicksilver (Mark II)"
     "Electron Cannon" 2
 
     "LP036a Battery Pack"
-    "Liquid Nitrogen Cooler"
-    "Fuel Barrel" 40
+    "Liquid Water Cooler"
+    "Fuel Barrel" 16
     "Tactical Scanner" 4
     "Laser Rifle" 6
 
@@ -221,9 +221,9 @@ ship "Quicksilver" "Quicksilver (Patrol)"
     "LP036a Battery Pack"
     "Cargo Scanner"
     "Cooling Ducts"
-    "Fuel Barrel" 40
+    "Fuel Barrel" 16
     "Outfit Scanner"
-    "Tactical Scanner" 3
+    "Tactical Scanner" 4
     "Laser Rifle" 6
 
 
@@ -239,8 +239,8 @@ ship "Quicksilver" "Quicksilver (Plasma)"
     "Plasma Cannon" 2
 
     "LP036a Battery Pack"
-    "Cooling Ducts"
-    "Fuel Barrel" 40
+    "Liquid Water Cooler"
+    "Fuel Barrel" 16
     "Tactical Scanner" 4
 
 
@@ -262,8 +262,8 @@ ship "Scout"
     "drag" 3.4
     "heat dissipation" .7
     "cargo space" 55
-    "outfit space" 300
-    "core space" 160
+    "outfit space" 250
+    "core space" 110
     "engine space" 100
     "weapon space" 40
     weapon
@@ -283,7 +283,8 @@ ship "Scout"
     "Light Anti-Missile Turret"
 
     "LP036a Battery Pack"
-    "Fuel Barrel" 80
+    "Cooling Ducts"
+    "Fuel Barrel" 34
     "Tactical Scanner" 4
   engine -8 46
   engine 8 46
@@ -313,8 +314,10 @@ ship "Scout" "Scout (Afterburner)"
     "Light Anti-Missile Turret"
 
     "LP036a Battery Pack"
-    "Fuel Barrel" 80
+    "Cooling Ducts"
+    "Fuel Barrel" 34
     "Tactical Scanner" 4
+    "Outfit Space Expansion"
 
 
 ship "Scout" "Scout (Hai)"
@@ -330,28 +333,30 @@ ship "Scout" "Scout (Hai)"
 
     "Fissure Batteries"
     "Williwaw Cooling"
-    "Fuel Pod" 8
+    "Fuel Barrel" 34
     "Yoloy Scanner"
+    "Outfit Space Expansion"
 
 
 ship "Scout" "Scout (Javelin)"
   outfits
     "D14-RN Shield Generator"
-    "NT-200 Nucleovoltaic"
+    "RT-I Radiothermal"
     "Hyperdrive"
 
-    "A250 Atomic Thruster"
-    "A255 Atomic Steering"
+    "IT-3700 Ion Thruster"
+    "IS-3200 Ion Steering"
 
     "Javelin" 400
     "Javelin Storage Crate" 2
     "Javelin Pod" 2
-    "Anti-Missile Turret"
+    "Light Anti-Missile Turret"
 
     "LP036a Battery Pack"
-    "Fuel Barrel" 80
+    "Cooling Ducts"
+    "Fuel Barrel" 34
     "Tactical Scanner" 4
-    "Outfit Space Expansion"
+    "Outfit Space Expansion" 2
 
 
 ship "Scout" "Scout (Miner)"
@@ -366,11 +371,12 @@ ship "Scout" "Scout (Miner)"
     "Laser Cannon" 2
     "Laser Turret"
 
-    "Supercapacitor"
+    "LP036a Battery Pack"
+    "Cooling Ducts"
     "Asteroid Scanner"
-    "Fuel Barrel" 80
-    "Ramscoop"
+    "Fuel Barrel" 34
     "Tactical Scanner" 4
+    "Outfit Space Expansion"
 
 
 ship "Scout" "Scout (Speedy)"
@@ -384,7 +390,7 @@ ship "Scout" "Scout (Speedy)"
 
     "LP036a Battery Pack"
     "Liquid Water Cooler"
-    "Fuel Barrel" 80
+    "Fuel Barrel" 34
     "Tactical Scanner" 4
 
 
@@ -406,8 +412,8 @@ ship "Thunderbolt"
     "drag" 3.5
     "heat dissipation" .7
     "cargo space" 40
-    "outfit space" 470
-    "core space" 220
+    "outfit space" 450
+    "core space" 200
     "engine space" 100
     "weapon space" 150
     weapon
@@ -430,8 +436,8 @@ ship "Thunderbolt"
     "Heavy Anti-Missile Turret"
 
     "LP144a Battery Pack"
-    "Liquid Water Cooler"
-    "Fuel Barrel" 50
+    "Cooling Ducts"
+    "Fuel Barrel" 33
     "Tactical Scanner" 4
   engine -11 118
   engine 11 118
