@@ -286,7 +286,6 @@ void ShipInfoDisplay::UpdateAttributes(const Ship &ship, const Depreciation &dep
   }
 */
   // Miscellaneous
-  if(isGeneric)
   {
     attributeLabels.push_back(string());
     attributeValues.push_back(string());
