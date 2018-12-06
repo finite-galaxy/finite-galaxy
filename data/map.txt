@@ -2008,7 +2008,7 @@ system "Adhara"
   fleet "Merchants Deep Large" 900
   fleet "Merchants North Small" 600
   fleet "Merchants North Large" 800
-  fleet "Pirates North Small" 2000
+  fleet "Pirates West Small" 2000
   fleet "Deep Small" 900
   fleet "Deep Large" 2400
   object
@@ -2768,8 +2768,8 @@ system "Algorel"
   trade "Plastic" 427
   fleet "Merchants West Small" 600
   fleet "Merchants West Large" 900
-  fleet "Pirates South Small" 1600
-  fleet "Pirates South Large" 5000
+  fleet "Pirates West Small" 1600
+  fleet "Pirates West Large" 5000
   fleet "Militia Small" 2000
   fleet "Republic Small" 3000
   object
@@ -3679,7 +3679,6 @@ system "Alphard"
   habitable 1081
   belt 1101
   link Chalawan
-  link Lolami
   link Miaplacidus
   link Talita
   asteroids "small rock" 2 7.7896
@@ -5954,6 +5953,8 @@ system "Canopus"
   trade "Plastic" 485
   fleet "Merchants North Small" 900
   fleet "Merchants North Large" 700
+  fleet "Pirates North Small" 4000
+  fleet "Pirates North Large" 8000
   fleet "Syndicate Small" 1000
   fleet "Syndicate Large" 2000
   object
@@ -7079,7 +7080,7 @@ system "Cor Caroli"
   fleet "Merchants West Small" 700
   fleet "Merchants West Large" 1300
   fleet "Miners West" 3000
-  fleet "Pirates South Small" 2000
+  fleet "Pirates West Small" 2000
   fleet "Republic Small" 10000
   fleet "Militia Small" 7000
   object
@@ -7631,8 +7632,8 @@ system "Delta Velorum"
   fleet "Merchants West Small" 1000
   fleet "Merchants West Large" 3000
   fleet "Miners West" 2000
-  fleet "Pirates South Small" 2000
-  fleet "Pirates South Large" 5000
+  fleet "Pirates West Small" 2000
+  fleet "Pirates West Large" 5000
   fleet "Republic Small" 12000
   object
     sprite star/g0
@@ -8038,8 +8039,8 @@ system "Dubhe"
   fleet "Merchants Deep Large" 7000
   fleet "Merchants North Small" 1200
   fleet "Merchants North Large" 4000
-  fleet "Pirates North Small" 12000
-  fleet "Pirates North Large" 8000
+  fleet "Pirates West Small" 12000
+  fleet "Pirates West Large" 8000
   fleet "Deep Small" 2000
   fleet "Deep Large" 7000
   object
@@ -9400,8 +9401,8 @@ system "Fala"
   fleet "Merchants West Small" 1600
   fleet "Merchants West Large" 3000
   fleet "Miners West" 2000
-  fleet "Pirates South Small" 2000
-  fleet "Pirates South Large" 4000
+  fleet "Pirates West Small" 2000
+  fleet "Pirates West Large" 4000
   fleet "Republic Small" 4000
   object
     sprite star/g5-old
@@ -10389,8 +10390,8 @@ system "Gacrux"
   trade "Plastic" 491
   fleet "Merchants West Small" 2000
   fleet "Merchants West Large" 5000
-  fleet "Pirates South Small" 1000
-  fleet "Pirates South Large" 3000
+  fleet "Pirates West Small" 1000
+  fleet "Pirates West Large" 3000
   fleet "Republic Small" 15000
   object
     sprite star/k5
@@ -12333,8 +12334,8 @@ system "Ipsing"
   trade "Medical" 697
   trade "Metal" 388
   trade "Plastic" 416
-  fleet "Merchants South Small" 2000
-  fleet "Pirates South Small" 3000
+  fleet "Merchants West Small" 2000
+  fleet "Pirates West Small" 3000
   object
     sprite star/g0-old
     distance 21.7143
@@ -14029,8 +14030,6 @@ system "Kursa"
   fleet "Merchants North Small" 2000
   fleet "Merchants North Large" 3000
   fleet "Merchants Paradise" 3000
-  fleet "Pirates North Small" 4000
-  fleet "Pirates North Large" 8000
   fleet "Syndicate Small" 5000
   fleet "Syndicate Large" 8000
   object
@@ -14258,9 +14257,9 @@ system "Limen"
   government "Republic"
   habitable 1715
   belt 1463
+  link Mora
   link Orbona
   link Terminus
-  link Mora
   asteroids "large metal" 1 2.7552
   trade "Clothing" 271
   trade "Electronics" 793
@@ -14273,8 +14272,8 @@ system "Limen"
   trade "Metal" 497
   trade "Plastic" 378
   fleet "Miners West" 1000
-  fleet "Pirates South Small" 1000
-  fleet "Pirates South Large" 2000
+  fleet "Pirates West Small" 1000
+  fleet "Pirates West Large" 2000
   object
     sprite star/f5
     period 10
@@ -14305,10 +14304,10 @@ system "Limen"
 
 system "Lolami"
   pos -628 -10
-  government "Syndicate"
+  government "Republic"
   habitable 1215
   belt 1072
-  link Alphard
+  link "Tania Australis"
   asteroids "small rock" 68 1.6926
   asteroids "medium rock" 55 1.6653
   asteroids "large rock" 180 3.003
@@ -14327,11 +14326,11 @@ system "Lolami"
   trade "Medical" 757
   trade "Metal" 439
   trade "Plastic" 316
-  fleet "Merchants North Small" 2000
-  fleet "Miners North" 3000
-  fleet "Pirates North Small" 2000
-  fleet "Pirates North Large" 4000
-  fleet "Syndicate Small" 5000
+  fleet "Merchants West Small" 2000
+  fleet "Miners West" 3000
+  fleet "Pirates West Small" 2000
+  fleet "Pirates West Large" 4000
+  fleet "Republic Small" 5000
   object
     sprite star/g0
     distance 11
@@ -14791,7 +14790,7 @@ system "Markeb"
   fleet "Merchants Deep Large" 4000
   fleet "Merchants North Small" 1000
   fleet "Merchants North Large" 2500
-  fleet "Pirates North Large" 5000
+  fleet "Pirates West Large" 5000
   fleet "Deep Small" 4000
   fleet "Deep Large" 8000
   object
@@ -15528,9 +15527,9 @@ system "Merak"
   government "Republic"
   habitable 1081
   belt 1769
+  link Denebola
   link Phecda
   link Porrima
-  link Denebola
   link Regulus
   asteroids "small rock" 1 4.1847
   asteroids "medium rock" 87 5.6173
@@ -16181,9 +16180,9 @@ system "Mizar"
   trade "Medical" 715
   trade "Metal" 442
   trade "Plastic" 486
-  fleet "Merchants South Small" 1000
-  fleet "Merchants South Large" 3500
-  fleet "Pirates South Small" 6000
+  fleet "Merchants West Small" 1000
+  fleet "Merchants West Large" 3500
+  fleet "Pirates West Small" 6000
   object
     sprite star/g0-old
     period 10
@@ -16307,8 +16306,8 @@ system "Mora"
   fleet "Merchants West Small" 2000
   fleet "Merchants West Large" 4000
   fleet "Miners West" 2000
-  fleet "Pirates South Small" 2000
-  fleet "Pirates South Large" 3000
+  fleet "Pirates West Small" 2000
+  fleet "Pirates West Large" 3000
   fleet "Republic Small" 20000
   object
     sprite star/k5
@@ -16358,7 +16357,7 @@ system "Muhlifain"
   trade "Plastic" 441
   fleet "Merchants West Small" 1000
   fleet "Merchants West Large" 3500
-  fleet "Pirates South Small" 6000
+  fleet "Pirates West Small" 6000
   object
     sprite star/k0
     period 10
@@ -16915,7 +16914,7 @@ system "Oblate"
     period 2465.86
 
 system "Orbona"
-  pos -736 -97
+  pos -728 -23
   government "Pirate"
   habitable 2859
   belt 1507
@@ -16940,8 +16939,8 @@ system "Orbona"
   trade "Metal" 415
   trade "Plastic" 466
   fleet "Pirate Miners" 1500
-  fleet "Pirates South Small" 1200
-  fleet "Pirates South Large" 3200
+  fleet "Pirates West Small" 1200
+  fleet "Pirates West Large" 3200
   object
     sprite star/giant
     distance 20.2539
@@ -17755,12 +17754,11 @@ system "Phecda"
   trade "Medical" 684
   trade "Metal" 413
   trade "Plastic" 326
-  fleet "Merchants West Small" 700
-  fleet "Merchants West Large" 1000
-  fleet "Merchants West Small" 700
-  fleet "Merchants West Large" 1000
+  fleet "Merchants West Small" 900
+  fleet "Merchants West Large" 1100
   fleet "Miners West" 2000
-  fleet "Republic Small" 5000
+  fleet "Republic Small" 900
+  fleet "Republic Large" 1100
   object
     sprite star/k5
     period 10
@@ -17865,7 +17863,6 @@ system "Phurad"
   trade "Plastic" 476
   fleet "Merchants North Small" 800
   fleet "Merchants North Large" 1500
-  fleet "Pirates North Small" 9000
   fleet "Syndicate Small" 2000
   fleet "Syndicate Large" 5000
   object
@@ -19797,8 +19794,8 @@ system "Sarin"
   trade "Plastic" 349
   fleet "Merchants West Small" 1000
   fleet "Merchants West Large" 3000
-  fleet "Pirates South Small" 2000
-  fleet "Pirates South Large" 6000
+  fleet "Pirates West Small" 2000
+  fleet "Pirates West Large" 6000
   object
     sprite star/g0
     period 10
@@ -21759,7 +21756,7 @@ system "Suhail"
   fleet "Merchants Deep Large" 7000
   fleet "Merchants North Small" 4000
   fleet "Merchants North Large" 9000
-  fleet "Pirates North Large" 9000
+  fleet "Pirates West Large" 9000
   fleet "Deep Small" 10000
   object
     sprite star/f5
@@ -22040,6 +22037,7 @@ system "Tania Australis"
   belt 1738
   link Algieba
   link Fala
+  link Lolami
   link Mora
   asteroids "medium rock" 4 4.6656
   asteroids "large rock" 13 5.2704
@@ -22060,8 +22058,8 @@ system "Tania Australis"
   trade "Plastic" 390
   fleet "Merchants West Small" 1000
   fleet "Merchants West Large" 2000
-  fleet "Pirates South Small" 4000
-  fleet "Pirates South Large" 9000
+  fleet "Pirates West Small" 4000
+  fleet "Pirates West Large" 9000
   fleet "Republic Small" 3000
   fleet "Republic Large" 6000
   object
@@ -22306,7 +22304,7 @@ system "Tejat"
       period 22.9367
 
 system "Terminus"
-  pos -728 -23
+  pos -736 -97
   government "Republic"
   habitable 426
   belt 1221
@@ -22330,8 +22328,8 @@ system "Terminus"
   trade "Medical" 865
   trade "Metal" 421
   trade "Plastic" 402
-  fleet "Pirates South Small" 2000
-  fleet "Pirates South Large" 5000
+  fleet "Pirates West Small" 2000
+  fleet "Pirates West Large" 5000
   object
     sprite star/k5-old
     period 10
@@ -22569,8 +22567,8 @@ system "Turais"
   fleet "Merchants West Small" 2000
   fleet "Merchants West Large" 6000
   fleet "Miners West" 2000
-  fleet "Pirates South Small" 3000
-  fleet "Pirates South Large" 7000
+  fleet "Pirates West Small" 3000
+  fleet "Pirates West Large" 7000
   object
     sprite star/k5
     period 10
@@ -23058,8 +23056,8 @@ system "Vindemiatrix"
   trade "Plastic" 408
   fleet "Merchants West Small" 600
   fleet "Merchants West Large" 3000
-  fleet "Pirates South Small" 2000
-  fleet "Pirates South Large" 4000
+  fleet "Pirates West Small" 2000
+  fleet "Pirates West Large" 4000
   object
     sprite star/g0
     period 10
@@ -23544,7 +23542,7 @@ system "Wezen"
   fleet "Merchants Deep Large" 5000
   fleet "Merchants North Small" 2000
   fleet "Merchants North Large" 4000
-  fleet "Pirates North Small" 8000
+  fleet "Pirates West Small" 8000
   fleet "Deep Small" 5000
   fleet "Deep Large" 10000
   object
@@ -23997,8 +23995,8 @@ system "Zosma"
   fleet "Merchants North Small" 800
   fleet "Merchants North Large" 1200
   fleet "Merchants Paradise" 2500
-  fleet "Pirates North Small" 5000
-  fleet "Pirates North Large" 9000
+  fleet "Pirates West Small" 5000
+  fleet "Pirates West Large" 9000
   fleet "Deep Small" 1000
   fleet "Deep Large" 2000
   object
@@ -24278,7 +24276,7 @@ planet "Ahr"
   shipyard "Coalition Basics"
 
 planet "Albatross"
-  attributes pirate "south pirate"
+  attributes pirate "pirate south"
   landscape land/snow6
   description `Albatross is a cold ocean world orbiting a small, cold sun. The first settlers on Albatross were anarchists who believed that in a society free from unnatural laws and constraints, everyone would happily and freely work for the common good. The next settlers were pirates who believed that a planet free from laws and constraints would be a great base of operations.`
   description `  The anarchist farming communes, each operating independently but trading with outsiders to gain necessary supplies, are clustered in the barely temperate climate near the equator. The pirate bases, having a much more ready source of supplies, are located wherever there are flat landing areas close to craggy, defensible mountains.`
@@ -24612,7 +24610,7 @@ planet "Bright Echo"
   shipyard "Saryd Intermediate"
 
 planet "Buccaneer Bay"
-  attributes pirate "core pirate"
+  attributes pirate "pirate east"
   landscape land/beach0
   description `Pirates who have struck it rich dream of retiring on Buccaneer Bay. It is a warm ocean planet, with many places reminiscent of the islands in the ancient Caribbean where humanity's first pirate fleets sailed.`
   description `  Many of the inhabitants are in fact not pirates, but their descendants, and these children and grand-children of anarchist outlaws have built a system of regional government that oversees hospitals, schools, and other public services, all created without funding from the Republic or taxes paid to it. The planet even sports its own shipyard, although many of the ships built here are, not surprisingly, based on designs pirated from other shipyards, especially Vortex.`
@@ -24855,7 +24853,7 @@ planet "Corral of Meblumem"
   "required reputation" 15
 
 planet "Covert"
-  attributes pirate mining "core pirate"
+  attributes pirate mining "pirate east"
   landscape land/badlands2
   description `Covert is home to a powerful mining cartel, operating outside the control of Republic law or any other external authority. It is rumoured to be one of the few planets in human space where weapons-grade uranium and plutonium is mined and enriched. Any goods for sale here were most likely produced by slave labour, often by survivors of ships that have been captured by pirates. A massive pirate fleet is docked on the outskirts of the spaceport, a warning to any private pilot who might think of cheating or opposing the cartel.`
   spaceport `From the moment you landed, you have been followed by a pair of security guards with earpieces and laser guns. The spaceport is one enormous building, with square, straight hallways and featureless walls, and nearly every door you pass is locked. Cameras at each hallway intersection pivot to watch as you approach. This is simultaneously one of the most secure spaceports you have visited, and one of the most dangerous, although if you do not do anything to provoke the animosity of the cartel, you will probably be able to leave in peace.`
@@ -24933,12 +24931,12 @@ planet "Darkwaste"
   description `This planet seems to have all the conditions necessary for a vibrant, Earth-like ecology. The gravity and temperature are moderate, and there is a fair amount of surface water, although the oceans are quite small. However, aside from a few stunted plants and lichen, there is almost no native life here. Given how skilled the Hai appear to be at terraforming other worlds, it is strange that this one has been left barren.`
 
 planet "Deadman's Cove"
-  attributes pirate "core pirate"
+  attributes pirate "pirate east"
   landscape land/sea1
   description `Deadman's Cove is an ocean planet; the continents take up only a tenth of its surface area. Legends tell of massive sea creatures hiding in the deeps: serpents hundreds of meters long; colossal sea turtles; strange tentacled monsters and exotic fish.`
   description `  One island archipelago is home to the spaceport, the only part of the planet where it is safe to land uninvited. The other islands - even some that seem from a distance to be uninhabited - are often used as staging bases for pirate fleets, who guard their secrets closely.`
   spaceport `Your ship is on a landing pad only a few meters above the pounding surf, and you can't help worrying about what might happen if the tide rises any higher. If nothing else, the salt water is bound to corrode your hull if you stay here too long. You make your way to a bar where a cage hanging from the ceiling holds an actual parrot. After trying for a while to get it to talk to you, you realize that it is dead, stuffed and nailed to its perch.`
-  outfitter "Syndicate Basics"
+  outfitter "Lovelace Basics"
   outfitter "Pirate Outfits"
   bribe 0.03
   security 0
@@ -25326,8 +25324,6 @@ planet "Follower"
   spaceport `The spaceport is a single skyscraper, fifty floors tall and as wide as it is high, with the floors twisting around each other in a helical patterns so that on each level, the landing bays are approached from a slightly different angle. The whole structure is built of steel and gleaming glass. Inside, the soaring ceilings give you more of a sense of opulence than of comfort.`
   outfitter "Pilot Licence"
   outfitter "Common Outfits"
-  outfitter "Deep Sky Basics"
-  outfitter "Sisensis Intermediate"
   outfitter "Syndicate Basics"
   shipyard "Star Intermediate"
   bribe 0.03
@@ -25368,7 +25364,7 @@ planet "Fourth Shadow"
   spaceport `The spaceport is crowded with travellers, about equally divided between those who are freshly arriving, drawn by the promise of plentiful work and a cheap cost of living, and those who are preparing to leave and attempt to build a better life somewhere else. Most Kimek choose to specialize as workers rather than raising families, so the vast majority of the travellers are alone or travelling only with a loosely knit group of friends.`
 
 planet "Freedom"
-  attributes pirate farming "north pirate"
+  attributes pirate farming "pirate north"
   landscape land/bwerner7
   description `Freedom is home to the oldest and largest anarchist colonies in human history. The original settlers arrived in the first century after the invention of the hyperdrive, coming with the goal of simply getting as far away from civilization as possible. The colony has reinvented itself countless times since then as different leaders have taken control, and in fact at present it is split into two separate towns, East Mesa and West Mesa.`
   description `  The environment is a mix of deserts and brackish oceans, with a fair amount of native wildlife and good potential for farming. Anywhere else in human space, this planet would have become densely settled, but out here it has remained mostly empty.`
@@ -25517,7 +25513,7 @@ planet "Greenbloom"
   spaceport `The spaceport is a massive floating island built by the Hai - a network of hexagonal platforms, each roughly half a kilometer in diameter, linked by bridges that can bend to accommodate the platforms rising and falling in rough weather. You are not sure what sort of alloy the platforms are built from, but judging by the fact that some of them have coral colonies growing on their edges, they can probably last for centuries without requiring any maintenance.`
 
 planet "Greenrock"
-  attributes pirate "south pirate"
+  attributes pirate "pirate south"
   landscape land/sky0
   description `Greenrock is the closest thing that the pirates in southern human space have to a centre of government, but taking the form of large, powerful corporations rather than elected officials. When rival pirate bands seek to negotiate on neutral territory, this is where they meet. Nearly everything is for sale here: illegal weapons, ships customized for pirating, and even slaves.`
   spaceport `You have heard enough about this port's reputation that you are not surprised to see the slave markets, heavily guarded in case any visitors happen to find themselves in possession of a conscience. Nor are you shocked by the shady establishments catering to all manner of prurient interests. This is, after all, a pirate port, and everything is for sale here.`
@@ -25597,7 +25593,7 @@ planet "Harmony"
 #    fleet "Militia Small" 30
 
 planet "Haven"
-  attributes pirate mining "north pirate"
+  attributes pirate mining "pirate north"
   landscape land/dune1
   description `Haven was founded by highly successful "privateers" nearly two centuries ago. Since then, as rival bands of pirates have fought over it, it has changed hands fourteen times, but has never been successfully invaded by the Republic. Numerous small manufacturing shops sell outfits that cannot be bought legally, and there is even a small shipyard where customized ships are sold.`
   description `  Much of the planet is desert, but with enough moisture to grow enough crops to feed the entire population. Strip mining has turned other parts of the planet into barren wastelands, and has polluted many of the rivers.`
@@ -25668,6 +25664,7 @@ planet "Hephaestus"
   outfitter "Common Outfits"
   outfitter "Earth Intermediate"
   outfitter "Lovelace Intermediate"
+  outfitter "Sisensis Intermediate"
   outfitter "Syndicate Advanced"
   shipyard "Betelgeuse Intermediate"
   shipyard "Megaparsec Intermediate"
@@ -26316,7 +26313,6 @@ planet "Nimbus"
   outfitter "Pilot Licence"
   outfitter "Basic Outfits"
   outfitter "Lovelace Basics"
-  outfitter "Syndicate Basics"
   security 0.3
 #  tribute 300
 #    threshold 2500
@@ -26375,7 +26371,7 @@ planet "Oblivion"
 #    fleet "Militia Large" 8
 
 planet "Obscurity"
-  attributes pirate moon
+  attributes pirate "pirate west" moon
   landscape land/canyon03
   description `Although generally believed to be uninhabited, it turns out this rocky moon has a hidden pirate base, called "Obscurity". Because it has no atmosphere, the surface temperature fluctuates from very hot to exremely cold, depending on whether this moon is on the sun side or on the opposite side of its planet, which is also why all human activity takes place underground.`
   description `   Nothing grows here and there are no valuable materials on Obscurity, therefore everything has to be imported, and there is a lively trade in commodities, without anyone asking where it comes from, obviously.`
@@ -26384,7 +26380,7 @@ planet "Obscurity"
   security 0
 #  tribute 100
 #    threshold 500
-#    fleet "Pirates South Large" 3
+#    fleet "Pirates West Large" 3
 
 planet "Ovis"
   attributes "dirt belt" textiles
@@ -27005,7 +27001,7 @@ planet "Slylandro"
   security 0
 
 planet "Smuggler's Den"
-  attributes pirate station "south pirate"
+  attributes pirate station "pirate south"
   landscape land/loc1
   description `Smuggler's Den was formerly known as Grendel Station, back when it was an operating refinery. But, it has since been taken over by pirates, who turned it into a haven for all manner of smugglers and privateers. The repair shops here can make a variety of legal and illegal modifications to your ship, and in the shipyard you can buy refurbished starships... if it does not trouble your conscience to think about the likely fates of their previous owners.`
   spaceport `It is a strange but indisputable fact that pirates smell worse than ordinary human beings. In this day and age, where even the cheapest shuttlecraft at least has a sonic shower, there is no logical explanation for it, except that anarchist tendencies must somehow go hand in hand with a tendency to reject society's norms around hygiene. Here in a space station, with nothing but recycled air to breathe, the effect is overpowering.`
@@ -27096,7 +27092,7 @@ planet "Stonebreak"
   shipyard "Hai Intermediate"
 
 planet "Stormhold"
-  attributes pirate "core pirate"
+  attributes pirate "pirate east"
   landscape land/fog3
   description `A cold planet, with dense, foggy atmosphere. As with many pirate outposts, Stormhold is home to an unknown number of villages and hidden outposts, each controlled by a different pirate faction. It is also said that some of the most dangerous fugitives in the galaxy live deep in the forests of this planet, escaping detection by living underground or by avoiding the use of electronic devices.`
   spaceport `The spaceport is a large town, with a population of roughly thirty thousand. People of all races and cultures mingle freely, while keeping a wary eye open for off-worlders who may be Republic agents in disguise.`
@@ -27202,6 +27198,8 @@ planet "Thrall"
   outfitter "Pilot Licence"
   outfitter "Basic Outfits"
   outfitter "Lovelace Basics"
+  outfitter "Sisensis Basics"
+  outfitter "Syndicate Basics"
   bribe 0.04
   security 0.5
 #  tribute 2000
@@ -27209,7 +27207,7 @@ planet "Thrall"
 #    fleet "Republic Large" 8
 
 planet "Thule"
-  attributes pirate "south pirate"
+  attributes pirate "pirate south"
   landscape land/dmottl2
   description `Thule is a mountainous world with a population of nearly a billion, settled in the early days of space exploration. When the colony was first established, the Earth government did not yet have the strength to control any system but its own, and when the Republic was formed, Thule did not join, and has repulsed all efforts to force them to do so. It is well-known that the planet sponsors pirate fleets which bring it cheap materials to bolster its economy, but the planet is so far from the centre of Republic space that fighting a war here would be prohibitively expensive, and so they remain unopposed.`
   spaceport `The inhabitants of Thule are notoriously suspicious of strangers. They all seem to immediately recognize you as an off-worlder, perhaps by your clothing or your accent. The food sold in the shops is like nothing you have seen elsewhere, and the natives' accents are so strong that they almost seem to be speaking a different language. You feel as if you are visiting an alien world; centuries of separation has created a culture here that is very different from your own.`
@@ -27651,7 +27649,7 @@ planet "Wyvern Station"
 #    fleet "Militia Large" 6
 
 planet "Zenith"
-  attributes pirate "north pirate"
+  attributes pirate "pirate north"
   landscape land/water4
   description `Zenith is a cold and unpleasant world, where the fog seldom lifts and the sun is rarely seen, where much of the lowlands are flooded each day by the tide, and storms are unpredictable and fierce. It has, however, one major advantage as a place to settle: it is far enough away that the Republic makes no attempt to control it.`
   description `  Several villages have been founded near the equator, and in addition there are an unknown number of private holdings, ranging from underground bunkers to enormous cement fortresses. Because the land is owned by no government and anyone can build a dwelling without permission or paperwork as long as they are willing to fight off any other claimants, the total population of Zenith is unknown.`

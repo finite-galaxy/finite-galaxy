@@ -82,6 +82,8 @@
 #   "Pirates North Small"
 #   "Pirates South Large"
 #   "Pirates South Small"
+#   "Pirates West Large"
+#   "Pirates West Small"
 #   "pirate raid"
 # Pug:
 #   "Pug Large"
@@ -3016,6 +3018,30 @@ fleet "Pirates South Small"
     "Clipper (Speedy)"
   variant 1
     "Marauder Argosy"
+
+
+fleet "Pirates West Large"
+  government "Pirate"
+  names "pirate"
+  cargo 1
+  personality
+    plunders harvests
+  variant 2
+    "Leviathan"
+  variant 1
+    "Leviathan (North)"
+  variant 1
+    "Leviathan (Heavy)"
+
+fleet "Pirates West Small"
+  government "Pirate"
+  names "pirate"
+  cargo 1
+  personality
+    plunders harvests
+    confusion 20
+  variant 6
+    "Warrior"
 
 
 fleet "pirate raid"
