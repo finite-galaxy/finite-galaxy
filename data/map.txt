@@ -2156,6 +2156,7 @@ system "Albaldah"
   habitable 534
   belt 1622
   link Albireo
+  link Eltanin
   link Girtab
   link Lurata
   link Nunki
@@ -2510,6 +2511,49 @@ system "Aldhibain"
       sprite planet/station2
       distance 211
       period 13.622
+
+system "Algedi"
+  pos -756 482
+  government "Republic"
+  habitable 527
+  belt 1887
+  link Alniyat
+  link Graffias
+  link Pherkad
+  asteroids "large metal" 6 3.162
+  trade "Clothing" 318
+  trade "Electronics" 804
+  trade "Equipment" 402
+  trade "Food" 181
+  trade "Heavy Metals" 1023
+  trade "Industrial" 723
+  trade "Luxury Goods" 1073
+  trade "Medical" 867
+  trade "Metal" 407
+  trade "Plastic" 370
+  fleet "Merchants South Small" 700
+  fleet "Merchants South Large" 1900
+  fleet "Pirates South Small" 2000
+  fleet "Pirates South Large" 4000
+  object
+    sprite star/g5
+    period 10
+  object
+    sprite planet/rock11-b
+    distance 277.4
+    period 87.2766
+  object
+    sprite planet/rock19-b
+    distance 637.6
+    period 339.904
+  object
+    sprite planet/desert4-b
+    distance 1172
+    period 770.262
+  object
+    sprite planet/gas10-b
+    distance 1744
+    period 1785.50
 
 system "Algenib"
   pos -118 341
@@ -3373,9 +3417,9 @@ system "Alniyat"
   habitable 534
   belt 1760
   link Aldhibain
+  link Algedi
   link Antares
   link Dschubba
-  link Graffias
   asteroids "small rock" 19 10.368
   asteroids "medium rock" 148 6.156
   asteroids "large rock" 37 4.455
@@ -3442,10 +3486,10 @@ system "Alpha Arae"
   government "Republic"
   habitable 945
   belt 1405
-  link "Delta Sagittarii"
-  link Rastaban
-  link "Kaus Borealis"
   link Eber
+  link "Delta Sagittarii"
+  link "Kaus Borealis"
+  link Rastaban
   asteroids "small rock" 1 1.302
   asteroids "medium rock" 26 3.129
   asteroids "large rock" 28 1.974
@@ -3697,7 +3741,6 @@ system "Alphecca"
   government "Republic"
   habitable 1400
   belt 1101
-  link Boral
   link Holeb
   link Seginus
   asteroids "large metal" 1 4.3296
@@ -4292,9 +4335,10 @@ system "Arcturus"
   government "Republic"
   habitable 320
   belt 1422
+  link "Cor Caroli"
+  link Holeb
   link Mizar
   link Rutilicus
-  link Holeb
   asteroids "small rock" 4 2.86
   asteroids "medium rock" 3 2.508
   asteroids "large rock" 5 2.288
@@ -4465,9 +4509,9 @@ system "Ascella"
   government "Republic"
   habitable 640
   belt 1971
-  link "Kaus Borealis"
+  link Hintar
+  link Naper
   link Peacock
-  link Rasalhague
   link Tais
   link "Zeta Aquilae"
   asteroids "small rock" 3 1.3328
@@ -5479,7 +5523,7 @@ system "Boral"
   government "Republic"
   habitable 214
   belt 1867
-  link Alphecca
+  link "Kaus Borealis"
   asteroids "small rock" 7 2.4752
   asteroids "medium rock" 126 4.42
   asteroids "large rock" 8 4.9946
@@ -6278,11 +6322,11 @@ system "Cebalrai"
   government "Republic"
   habitable 625
   belt 1955
-  link Rutilicus
-  link "Kaus Borealis"
-  link Rasalhague
-  link Menkent
   link Hintar
+  link "Kaus Borealis"
+  link Menkent
+  link Rasalhague
+  link Rutilicus
   asteroids "small rock" 3 4.5
   asteroids "medium rock" 9 1.77
   asteroids "large rock" 18 3.63
@@ -6944,10 +6988,10 @@ system "Cor Caroli"
   government "Republic"
   habitable 1080
   belt 1474
-  link Vindemiatrix
-  link Gacrux
   link Algorel
-  link Mizar
+  link Arcturus
+  link Gacrux
+  link Vindemiatrix
   asteroids "small rock" 24 3.2472
   asteroids "medium rock" 20 1.4784
   asteroids "large rock" 5 2.7456
@@ -7431,9 +7475,10 @@ system "Delta Sagittarii"
   government "Republic"
   habitable 320
   belt 1414
-  link Rastaban
   link "Alpha Arae"
   link Eltanin
+  link Naper
+  link Rastaban
   link Tais
   asteroids "small rock" 35 4.914
   asteroids "medium rock" 14 4.4577
@@ -8672,9 +8717,9 @@ system "Eltanin"
   government "Republic"
   habitable 456
   belt 1859
+  link Albaldah
   link Dabih
   link "Delta Sagittarii"
-  link Lurata
   asteroids "small rock" 34 1.904
   asteroids "medium rock" 12 4.896
   asteroids "large rock" 6 3.298
@@ -10515,9 +10560,9 @@ system "Girtab"
   government "Republic"
   habitable 1080
   belt 1387
+  link Albaldah
   link Lesath
   link Rastaban
-  link Albaldah
   asteroids "large rock" 1 7.695
   asteroids "small metal" 9 3.648
   asteroids "medium metal" 1 5.7
@@ -10840,8 +10885,7 @@ system "Graffias"
   government "Republic"
   habitable 911
   belt 1977
-  link Alniyat
-  link Pherkad
+  link Algedi
   asteroids "small rock" 15 3.069
   asteroids "medium rock" 45 1.749
   asteroids "large rock" 40 2.574
@@ -11562,7 +11606,11 @@ system "Hintar"
   government "Republic"
   habitable 625
   belt 1725
+  link Ascella
   link Cebalrai
+  link "Kaus Borealis"
+  link Rasalhague
+  link "Zeta Aquilae"
   asteroids "small rock" 34 2.016
   asteroids "medium rock" 7 3.168
   asteroids "large rock" 4 1.584
@@ -12803,9 +12851,9 @@ system "Kaus Borealis"
   habitable 591
   belt 1074
   link "Alpha Arae"
-  link Ascella
+  link Boral
   link Cebalrai
-  link Naper
+  link Hintar
   asteroids "small rock" 1 4.2504
   asteroids "medium rock" 10 4.1888
   asteroids "large rock" 4 3.388
@@ -14444,7 +14492,6 @@ system "Lurata"
   link Albaldah
   link Albireo
   link Dabih
-  link Eltanin
   link Tarazed
   asteroids "medium rock" 2 4.225
   asteroids "large rock" 1 8.125
@@ -16061,9 +16108,8 @@ system "Mizar"
   government "Republic"
   habitable 1080
   belt 1876
-  link Arcturus
-  link "Cor Caroli"
   link Algorel
+  link Arcturus
   link Ipsing
   asteroids "large metal" 1 2.6304
   trade "Clothing" 187
@@ -16410,7 +16456,9 @@ system "Naper"
   government "Republic"
   habitable 1715
   belt 1445
-  link "Kaus Borealis"
+  link Ascella
+  link "Delta Sagittarii"
+  link Tais
   asteroids "small rock" 3 2.0757
   asteroids "medium rock" 13 0.9724
   asteroids "large rock" 9 1.3277
@@ -17160,9 +17208,9 @@ system "Peacock"
   government "Republic"
   habitable 214
   belt 1870
-  link Tais
-  link "Kaus Australis"
   link Ascella
+  link "Kaus Australis"
+  link Tais
   asteroids "small rock" 18 3.06
   asteroids "medium rock" 79 3.312
   asteroids "large rock" 29 5.4
@@ -17682,8 +17730,8 @@ system "Pherkad"
   government "Republic"
   habitable 135
   belt 1924
+  link Algedi
   link "Beta Lupi"
-  link Graffias
   link "Kappa Centauri"
   link "Yed Prior"
   asteroids "large metal" 1 2.6884
@@ -18608,8 +18656,8 @@ system "Rasalhague"
   government "Republic"
   habitable 456
   belt 1282
-  link Ascella
   link Cebalrai
+  link Hintar
   link "Zeta Aquilae"
   link Vega
   asteroids "small rock" 2 1.9
@@ -21802,10 +21850,11 @@ system "Tais"
   government "Republic"
   habitable 3645
   belt 1379
+  link Ascella
   link "Delta Sagittarii"
   link "Kaus Australis"
+  link Naper
   link Peacock
-  link Ascella
   asteroids "medium rock" 7 6.65
   asteroids "large rock" 2 7
   asteroids "small metal" 1 10.15
@@ -22599,7 +22648,7 @@ system "Ultima Thule"
       sprite planet/ice8-b
       distance 216
       period 11.1964
-  object "Wormhole Alpha"
+  object "Hai Wormhole"
     sprite planet/wormhole
     distance 4208.63
     period 2158.5
@@ -23276,7 +23325,7 @@ system "Waypoint"
     sprite planet/luna-b
     distance 1499.03
     period 2626.52
-  object "Wormhole Alpha"
+  object "Hai Wormhole"
     sprite planet/wormhole
     distance 2079.28
     period 4290.76
@@ -23729,8 +23778,9 @@ system "Zeta Aquilae"
   habitable 1400
   belt 1829
   link Ascella
-  link Rasalhague
+  link Hintar
   link Orvala
+  link Rasalhague
   asteroids "small rock" 5 7.695
   asteroids "medium rock" 11 4.536
   asteroids "large rock" 2 10.611
@@ -25440,6 +25490,9 @@ planet "Hai-home"
   outfitter "Hai Advanced"
   shipyard "Hai Advanced"
   "required reputation" 10
+
+planet "Hai Wormhole"
+  description ""
 
 planet "Hamlet"
   attributes "dirt belt" farming textiles frontier
@@ -27518,9 +27571,6 @@ planet "Winter"
 #  tribute 300
 #    threshold 2500
 #    fleet "Militia Large" 5
-
-planet "Wormhole Alpha"
-  description ""
 
 planet "Wyvern Station"
   attributes rim station
