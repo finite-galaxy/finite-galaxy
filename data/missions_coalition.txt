@@ -8,7 +8,7 @@ mission "Coalition: First Contact"
   on offer
     "reputation: Coalition" += 10
     "reputation: Heliarch" += 10
-    log "Factions" "Coalition" `The Coalition is an alliance of three different alien species living in peace with each other: the Saryds, the Kimek, and the Arachi. On many Coalition worlds, all three species live together in harmony, which is made easier by the fact that each species prefers a very different climate and thus gravitates to different parts of a planet. They are ruled by individuals known as the Heliarch.`
+    log "Factions" "Coalition" `The Coalition is an alliance of three different alien species living in peace with each other: the Saryd, the Kimek, and the Arachi. On many Coalition worlds, all three species live together in harmony, which is made easier by the fact that each species prefers a very different climate and thus gravitates to different parts of a planet. They are ruled by individuals known as the Heliarch.`
     conversation
       `This planet seems to be inhabited by at least three different sentient species. First are giant beetles, about a meter tall, who scurry quickly toward your ship and swarm around it, gawking at you, as soon as you land. The second species, even more disturbing than the beetles, are giant spiders. And the third species are centipedes. Not just something vaguely resembling centipedes; they look like they could have stepped right off the page of a story book from ancient Earth.`
       `  One of the spiders walks up to you, stretching its legs to raise its face and many eyes to the level of your own face, and says something to you in a gloopy sort of burbling language that you don't understand. The beetles, meanwhile, are talking to each other in a different language, all clicks and chittering. And the centipede stands quietly at a distance and keeps glancing back toward the spaceport as if waiting for someone.`
@@ -68,7 +68,7 @@ mission "Coalition: First Contact"
         `  "But, the Quarg do let the humans and the Hai make contact with each other."`
       `  This, apparently, is news to them. You explain to them who the Hai are, and that some humans have made contact with them and are living in their territory. "A second Coalition you are forming!" says the centipede, tapping its hooves on the floor in excitement. "Once again, foiled the Quarg are. A secret way for species to work together, they have overlooked. Great things, from this may come."`
       label end
-      `  You talk with them for a while longer, and learn that the centipedes are called "Saryds," and are the oldest of the three species. The beetles are the "Kimek," and come next, and the spiders are called "Arachi," and were the last of the three to discover spaceflight.`
+      `  You talk with them for a while longer, and learn that the centipedes are called "Saryd," and are the oldest of the three species. The beetles are the "Kimek," and come next, and the spiders are called "Arachi," and were the last of the three to discover spaceflight.`
       `  They tell you that the best way to learn more about them is to visit their worlds, and to see for yourself how the three species live in friendship and equality. They also offer to give you jobs to do in their territory, so that you may become a "valuable contributor" to their society.`
 
 mission "Discovered Coalition Space"
@@ -100,18 +100,18 @@ mission "Coalition: Contributor"
     "reputation: Heliarch" += 10
     set "licence: Coalition"
     log "Completed a lot of Coalition jobs and received permission to purchase civilian technology and ships."
-    log "Factions" "Saryds" `Saryds are an alien species who look suspiciously similar to the centipedes found in early human children's books. They prefer to live on worlds with as much green space as possible, and even their major cities are full of parks and gardens. Most Saryds live in small communes with up to a few dozen of them per house.`
-    log "Factions" "Kimek" `The Kimek are large insectoid aliens, and are members of the Coalition. They discovered spaceflight after the Saryds, but before the Arachi. They are intensely social creatures, preferring to live together in massive buildings with thousands of inhabitants, and many of their worlds have populations in the tens of billions, far more than any human world.`
+    log "Factions" "Saryd" `Saryd are an alien species who look suspiciously similar to the centipedes found in early human children's books. They prefer to live on worlds with as much green space as possible, and even their major cities are full of parks and gardens. Most Saryd live in small communes with up to a few dozen of them per house.`
+    log "Factions" "Kimek" `The Kimek are large insectoid aliens, and are members of the Coalition. They discovered spaceflight after the Saryd, but before the Arachi. They are intensely social creatures, preferring to live together in massive buildings with thousands of inhabitants, and many of their worlds have populations in the tens of billions, far more than any human world.`
     log "Factions" "Arachi" `The spider-like Arachi were the last of the three Coalition species to discover interstellar travel. Most members of their society owe allegiance to one of the great Arachi "Houses," organizations that are somewhat similar to guilds and that each specialize in one particular form of industry or technology.`
     conversation
-      `Once again, when you exit your ship you are met by a member of each of the three Coalition species, wearing the golden circlets that mark them as Heliarch. "Told we have been," says the Saryds, "that among us with great diligence and commitment, small tasks you have performed."`
+      `Once again, when you exit your ship you are met by a member of each of the three Coalition species, wearing the golden circlets that mark them as Heliarch. "Told we have been," says the Saryd, "that among us with great diligence and commitment, small tasks you have performed."`
       `  The Kimek says, "Those who in our society's prosperity have invested, with our society's technology may be trusted."`
       `  "But," says the Arachi, "like all civilians, even citizens, to you our weapons and warships we still cannot sell."`
       choice
         `  "Thank you."`
           goto end
         `  "Why don't you allow civilians to purchase weapons or warships?"`
-      `  "For the sake of peace it is," says the Saryds. "The Heliarch military, well trained to use weapons only for defence and only for justice, they are. And to place the needs of the Coalition over the ambitions of their own native species, each one committed is. No such discipline do civilians have."`
+      `  "For the sake of peace it is," says the Saryd. "The Heliarch military, well trained to use weapons only for defence and only for justice, they are. And to place the needs of the Coalition over the ambitions of their own native species, each one committed is. No such discipline do civilians have."`
       label end
       `  Apparently nothing is for sale here, but they assure you that many Coalition worlds will now grant you access to their shipyards and outfitters.`
 
