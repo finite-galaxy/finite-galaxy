@@ -47,7 +47,8 @@
 #   "Merchants Hai Small"
 #   "Merchants North Large"
 #   "Merchants North Small"
-#   "Merchants Paradise"
+#   "Merchants Paradise Large"
+#   "Merchants Paradise Small"
 #   "Merchants South Large"
 #   "Merchants South Small"
 #   "Merchants West Large"
@@ -1785,18 +1786,13 @@ fleet "Merchants North Small"
     "Hauler I"
 
 
-fleet "Merchants Paradise"
+fleet "Merchants Paradise Large"
   government "Merchant"
   names "civilian"
   cargo 2
   personality
     confusion 50
     timid frugal appeasing
-  variant 20
-    "Light Shuttle"
-  variant 20
-    "Heavy Shuttle"
-    "Light Shuttle" 2
   variant 40
     "Star Queen"
   variant 2
@@ -1811,6 +1807,14 @@ fleet "Merchants Paradise"
   variant 3
     "Star Queen"
     "Wasp" 5
+
+fleet "Merchants Paradise Small"
+  government "Merchant"
+  names "civilian"
+  cargo 2
+  personality
+    confusion 50
+    timid frugal appeasing
   variant 10
     "Arrow"
   variant 10
@@ -1827,11 +1831,11 @@ fleet "Merchants Paradise"
     "Flivver" 2
   variant 10
     "Flivver" 3
-  variant 3
-    "Blackbird"
-  variant 3
-    "Blackbird"
-    "Hero" 2
+  variant 20
+    "Heavy Shuttle"
+    "Light Shuttle" 2
+  variant 20
+    "Light Shuttle"
 
 
 fleet "Merchants South Large"
