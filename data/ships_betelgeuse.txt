@@ -4,10 +4,6 @@ shipyard "Betelgeuse Variants"
   "Bulk Freighter (Hai)"
   "Bulk Freighter (Laser)"
   "Class C Freighter"
-  "Firebird"
-  "Firebird (Hai)"
-  "Firebird (Laser)"
-  "Firebird (Torpedo)"
   "Flivver"
   "Flivver (Hai)"
   "Hero"
@@ -16,6 +12,9 @@ shipyard "Betelgeuse Variants"
   "Protector"
   "Protector (Laser)"
   "Protector (Mark II)"
+  "Splinter"
+  "Splinter (Laser)"
+  "Splinter (Mark II)"
   "Vanguard"
   "Vanguard (Anti-Missile)"
   "Vanguard (Mark II)"
@@ -207,129 +206,6 @@ ship "Bulk Freighter" "Class C Freighter"
   drone -66 135 left
   drone 66 135 right
   description `The Class C "Star Freighter" is a stealth warship designed by Betelgeuse for baiting pirates with the offer of a seemingly helpless, ordinary bulk freighter. Inside, its cargo space has all been converted into drone bays, allowing it to carry a dozen combat drones.`
-
-
-
-ship "Firebird"
-  sprite "ship/firebird"
-  thumbnail "thumbnail/firebird"
-  attributes
-    category "Corvette"
-#    manufacturer "Vortex"
-    licences
-      Pilot
-    "cost" 3700000
-    "shields" 6400
-    "hull" 2800
-    "required crew" 7
-    "bunks" 22
-    "mass" 290
-    "drag" 4.5
-    "heat dissipation" .6
-    "cargo space" 50
-    "outfit space" 440
-    "core space" 180
-    "engine space" 100
-    "weapon space" 160
-    weapon
-      "blast radius" 100
-      "shield damage" 1000
-      "hull damage" 500
-      "hit force" 1500
-  outfits
-    "D41-HY Shield Generator"
-    "RT-I Radiothermal"
-    "Hyperdrive"
-
-    "IT-3700 Ion Thruster"
-    "IS-3200 Ion Steering"
-    "Afterburner"
-
-    "Particle Cannon" 4
-    "X2 Blaster Turret" 2
-
-    "LP144a Battery Pack"
-    "Liquid Water Cooler"
-    "Fuel Pod" 32
-    "Large Radar Jammer"
-    "Tactical Scanner" 3
-  engine -33 65
-  engine 33 65
-  gun -28 -27 "Particle Cannon"
-  gun 28 -27 "Particle Cannon"
-  gun -39 -13 "Particle Cannon"
-  gun 39 -13 "Particle Cannon"
-  turret -5 3 "X2 Blaster Turret"
-  turret 5 3 "X2 Blaster Turret"
-  leak "leak" 50 50
-  leak "flame" 30 80
-  explode "tiny explosion" 18
-  explode "small explosion" 36
-  explode "medium explosion" 24
-  explode "large explosion" 8
-  "final explode" "final explosion medium"
-  description "The Vortex Shipyards Firebird is a warship with a long and storied past; Firebirds fought on both sides of the Alpha Wars over half a millennium ago, and although the equipment and systems have been upgraded continuously since then, the basic design remains almost the same. The Firebird is also a very rugged ship and easy to repair; supposedly a few of the Firebirds that fought in those wars are still in service today."
-
-
-ship "Firebird" "Firebird (Hai)"
-  outfits
-    "Diamond Regenerator"
-    "Geode Reactor"
-    "Hyperdrive"
-
-    `"Biroo" Atomic Thruster`
-    `"Biroo" Atomic Steering`
-
-    "Pulse Cannon" 4
-    "Chameleon Anti-Missile" 2
-
-    "Fissure Batteries"
-    "Williwaw Cooling" 2
-    "Fuel Pod" 32
-    "Yoloy Scanner"
-    "Outfit Space Expansion" 3
-
-
-ship "Firebird" "Firebird (Laser)"
-  outfits
-    "D41-HY Shield Generator"
-    "RT-I Radiothermal"
-    "Hyperdrive"
-
-    "IT-3700 Ion Thruster"
-    "IS-3200 Ion Steering"
-    "Afterburner"
-
-    "Heavy Laser Cannon" 4
-    "Heavy Laser Turret" 2
-
-    "LP144a Battery Pack"
-    "Liquid Water Cooler"
-    "Fuel Pod" 32
-    "Large Radar Jammer"
-    "Tactical Scanner" 3
-
-
-ship "Firebird" "Firebird (Torpedo)"
-  outfits
-    "D41-HY Shield Generator"
-    "RT-I Radiothermal"
-    "Hyperdrive"
-
-    "IT-3700 Ion Thruster"
-    "IS-3200 Ion Steering"
-    "Afterburner"
-
-    "Torpedo" 120
-    "Torpedo Storage Rack" 4
-    "Torpedo Launcher" 4
-    "X2 Blaster Turret" 2
-
-    "LP072a Battery Pack"
-    "Liquid Water Cooler"
-    "Fuel Pod" 32
-    "Large Radar Jammer"
-    "Tactical Scanner" 3
 
 
 
@@ -601,6 +477,113 @@ ship "Protector" "Protector (Mark II)"
   turret
   turret
   turret "Electron Turret"
+  turret "Electron Turret"
+
+
+
+ship "Splinter"
+  sprite "ship/splinter"
+  thumbnail "thumbnail/splinter"
+  attributes
+    category "Corvette"
+#    manufacturer "Vortex"
+    licences
+      Pilot
+    "cost" 3100000
+    "shields" 5200
+    "hull" 1700
+    "required crew" 7
+    "bunks" 21
+    "mass" 250
+    "drag" 4.0
+    "heat dissipation" .7
+    "cargo space" 75
+    "outfit space" 450
+    "core space" 200
+    "engine space" 100
+    "weapon space" 150
+    weapon
+      "blast radius" 60
+      "shield damage" 600
+      "hull damage" 300
+      "hit force" 900
+  outfits
+    "D41-HY Shield Generator"
+    "RT-I Radiothermal"
+    "Hyperdrive"
+
+    "IT-3700 Ion Thruster"
+    "IS-3200 Ion Steering"
+
+    "Meteor Missile" 80
+    "Meteor Missile Box" 2
+    "Meteor Missile Launcher" 2
+    "X6 Blaster Turret" 2
+    "Heavy Anti-Missile Turret"
+
+    "LP288a Battery Pack"
+    "Liquid Water Cooler"
+    "Fuel Pod" 47
+    "Tactical Scanner" 4
+  engine -15 115
+  engine 15 115
+  gun -15 -80 "Meteor Missile Launcher"
+  gun 15 -80 "Meteor Missile Launcher"
+  turret -17 -28 "X6 Blaster Turret"
+  turret 0 -28 "Heavy Anti-Missile Turret"
+  turret 17 -28 "X6 Blaster Turret"
+  leak "leak" 60 50
+  leak "flame" 40 80
+  leak "big leak" 90 30
+  explode "tiny explosion" 18
+  explode "small explosion" 36
+  explode "medium explosion" 24
+  explode "large explosion" 8
+  "final explode" "final explosion medium"
+  description "The Splinter is designed to be faster and more manoeuvrable than other ships of a similar size, in order to serve as a heavy escort ship or as part of a planetary defence and patrol fleet. Because of its intended use in merchant convoys, it also has a fair amount of cargo space."
+
+
+ship "Splinter" "Splinter (Laser)"
+  outfits
+    "D41-HY Shield Generator"
+    "RT-I Radiothermal"
+    "Hyperdrive"
+
+    "IT-3700 Ion Thruster"
+    "IS-3200 Ion Steering"
+
+    "Heavy Laser Cannon" 2
+    "Heavy Laser Turret" 2
+    "Heavy Anti-Missile Turret"
+
+    "LP144a Battery Pack"
+    "Liquid Water Cooler"
+    "Fuel Pod" 47
+    "Tactical Scanner" 4
+  turret "Heavy Laser Turret"
+  turret "Heavy Anti-Missile Turret"
+  turret "Heavy Laser Turret"
+
+
+ship "Splinter" "Splinter (Mark II)"
+  outfits
+    "D41-HY Shield Generator"
+    "Fission Reactor"
+    "Hyperdrive"
+
+    "A370 Atomic Thruster"
+    "A375 Atomic Steering"
+
+    "Electron Turret" 2
+    "Heavy Anti-Missile Turret"
+
+    "LP144a Battery Pack"
+    "Liquid Water Cooler"
+    "Fuel Pod" 47
+    "Tactical Scanner" 4
+    "Laser Rifle" 20
+  turret "Electron Turret"
+  turret "Heavy Anti-Missile Turret"
   turret "Electron Turret"
 
 
