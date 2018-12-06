@@ -39,10 +39,10 @@
 #   "Kor Sestor Large"
 #   "Kor Sestor Small"
 # Merchant:
-#   "Merchants Core Large"
-#   "Merchants Core Small"
 #   "Merchants Deep Large"
 #   "Merchants Deep Small"
+#   "Merchants East Large"
+#   "Merchants East Small"
 #   "Merchants Hai Large"
 #   "Merchants Hai Small"
 #   "Merchants North Large"
@@ -52,9 +52,10 @@
 #   "Merchants South Small"
 #   "Merchants West Large"
 #   "Merchants West Small"
-#   "Miners Core"
 #   "Miners Deep"
+#   "Miners East"
 #   "Miners North"
+#   "Miners Rim"
 #   "Miners South"
 #   "Miners West"
 # Militia:
@@ -75,8 +76,8 @@
 #   "Marauder fleet IX"
 #   "Marauder fleet X"
 #   "Pirate Miners"
-#   "Pirates Core Large"
-#   "Pirates Core Small"
+#   "Pirates East Large"
+#   "Pirates East Small"
 #   "Pirates North Large"
 #   "Pirates North Small"
 #   "Pirates South Large"
@@ -1205,7 +1206,87 @@ fleet "Kor Sestor Small"
 
 
 # Merchant
-fleet "Merchants Core Large"
+fleet "Merchants Deep Large"
+  government "Merchant"
+  names "deep"
+  fighters "deep fighter"
+  cargo 0
+  personality
+    heroic
+  variant 5
+    "Aerie"
+    "Dagger" 2
+    "Warrior"
+  variant 3
+    "Aerie"
+    "Dagger" 2
+    "Raven"
+  variant 3
+    "Warrior" 2
+  variant 3
+    "Aerie" 2
+    "Dagger" 4
+  variant 8
+    "Mule" 3
+    "Dagger" 3
+  variant 2
+    "Mule" 3
+    "Dagger" 3
+    "Raven"
+    "Aerie"
+    "Dagger" 2
+  variant 2
+    "Mule" 3
+    "Dagger" 3
+    "Raven (Rocket)"
+    "Aerie"
+    "Dagger" 2
+  variant 5
+    "Mule" 3
+    "Dagger" 3
+    "Mule" 2
+    "Dagger" 2
+  variant 2
+    "Mule" 3
+    "Dagger" 3
+    "Mule (Heavy)" 2
+    "Dagger" 2
+
+fleet "Merchants Deep Small"
+  government "Merchant"
+  names "deep"
+  fighters "deep fighter"
+  cargo 0
+  personality
+    heroic
+  variant 4
+    "Aerie"
+    "Dagger" 2
+  variant 6
+    "Mule"
+    "Dagger"
+  variant 2
+    "Mule (Heavy)"
+    "Dagger"
+  variant 2
+    "Mule"
+    "Dagger"
+    "Raven"
+  variant 1
+    "Mule (Heavy)"
+    "Dagger"
+    "Raven (Rocket)"
+  variant 5
+    "Flivver"
+  variant 5
+    "Scout"
+  variant 5
+    "Scout (Speedy)"
+  variant 5
+    "Arrow"
+
+
+fleet "Merchants East Large"
   government "Merchant"
   names "civilian"
   cargo 4
@@ -1296,7 +1377,7 @@ fleet "Merchants Core Large"
   variant 2
     "Arrow"
 
-fleet "Merchants Core Small"
+fleet "Merchants East Small"
   government "Merchant"
   names "civilian"
   cargo 3
@@ -1353,86 +1434,6 @@ fleet "Merchants Core Small"
     "Flivver"
   variant 1
     "Flivver"
-
-
-fleet "Merchants Deep Large"
-  government "Merchant"
-  names "deep"
-  fighters "deep fighter"
-  cargo 0
-  personality
-    heroic
-  variant 5
-    "Aerie"
-    "Dagger" 2
-    "Warrior"
-  variant 3
-    "Aerie"
-    "Dagger" 2
-    "Raven"
-  variant 3
-    "Warrior" 2
-  variant 3
-    "Aerie" 2
-    "Dagger" 4
-  variant 8
-    "Mule" 3
-    "Dagger" 3
-  variant 2
-    "Mule" 3
-    "Dagger" 3
-    "Raven"
-    "Aerie"
-    "Dagger" 2
-  variant 2
-    "Mule" 3
-    "Dagger" 3
-    "Raven (Rocket)"
-    "Aerie"
-    "Dagger" 2
-  variant 5
-    "Mule" 3
-    "Dagger" 3
-    "Mule" 2
-    "Dagger" 2
-  variant 2
-    "Mule" 3
-    "Dagger" 3
-    "Mule (Heavy)" 2
-    "Dagger" 2
-
-fleet "Merchants Deep Small"
-  government "Merchant"
-  names "deep"
-  fighters "deep fighter"
-  cargo 0
-  personality
-    heroic
-  variant 4
-    "Aerie"
-    "Dagger" 2
-  variant 6
-    "Mule"
-    "Dagger"
-  variant 2
-    "Mule (Heavy)"
-    "Dagger"
-  variant 2
-    "Mule"
-    "Dagger"
-    "Raven"
-  variant 1
-    "Mule (Heavy)"
-    "Dagger"
-    "Raven (Rocket)"
-  variant 5
-    "Flivver"
-  variant 5
-    "Scout"
-  variant 5
-    "Scout (Speedy)"
-  variant 5
-    "Arrow"
 
 
 fleet "Merchants Hai Large"
@@ -2016,16 +2017,6 @@ fleet "Merchants West Small"
     "Star Freighter"
 
 
-fleet "Miners Core"
-  government "Merchant"
-  names "civilian"
-  cargo 0
-  personality
-    confusion 20
-    timid frugal mining harvests
-  variant 1
-    "Scout (Miner)"
-
 fleet "Miners Deep"
   government "Merchant"
   names "civilian"
@@ -2035,6 +2026,16 @@ fleet "Miners Deep"
     timid frugal mining harvests
   variant 1
     "Bounder (Miner)"
+
+fleet "Miners East"
+  government "Merchant"
+  names "civilian"
+  cargo 0
+  personality
+    confusion 20
+    timid frugal mining harvests
+  variant 1
+    "Scout (Miner)"
 
 fleet "Miners North"
   government "Merchant"
@@ -2728,7 +2729,7 @@ fleet "Pirate Miners"
     "Star Freighter (Miner)"
 
 
-fleet "Pirates Core Large"
+fleet "Pirates East Large"
   government "Pirate"
   names "pirate"
   cargo 1
@@ -2756,7 +2757,7 @@ fleet "Pirates Core Large"
   variant 7
     "Quicksilver" 3
 
-fleet "Pirates Core Small"
+fleet "Pirates East Small"
   government "Pirate"
   names "pirate"
   cargo 1
