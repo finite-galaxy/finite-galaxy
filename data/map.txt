@@ -2351,8 +2351,8 @@ system "Aldebaran"
   government "Syndicate"
   habitable 625
   belt 1296
-  link Capella
   link Acamar
+  link Capella
   link Elnath
   link Kursa
   asteroids "large metal" 1 2.8322
@@ -2868,9 +2868,9 @@ system "Alhena"
   government "Syndicate"
   habitable 945
   belt 1078
+  link Capella
+  link Kursa
   link Menkalinan
-  link Tejat
-  link Wazn
   asteroids "small rock" 21 8.7906
   asteroids "medium rock" 14 5.98
   asteroids "large rock" 1 6.3986
@@ -5550,7 +5550,6 @@ system "Boral"
   fleet "Merchants South Small" 3000
   fleet "Miners South" 2000
   fleet "Pirates South Small" 1500
-  fleet "Militia Small" 10000
   object
     sprite star/m0
     period 10
@@ -5985,9 +5984,9 @@ system "Capella"
   government "Syndicate"
   habitable 456
   belt 1722
-  link Procyon
   link Aldebaran
-  link Menkalinan
+  link Alhena
+  link Procyon
   asteroids "small rock" 175 2.1204
   asteroids "medium rock" 62 1.482
   asteroids "large rock" 8 2.3712
@@ -14018,8 +14017,9 @@ system "Kursa"
   government "Syndicate"
   habitable 455
   belt 1624
-  link Elnath
   link Aldebaran
+  link Alhena
+  link Elnath
   link Wazn
   asteroids "large metal" 1 3.87
   trade "Clothing" 253
@@ -15334,12 +15334,14 @@ system "Men"
       period 14.0811
 
 system "Menkalinan"
-  pos -400 -61
+#  pos -400 -61
+  pos -429 -110
   government "Syndicate"
   habitable 3430
   belt 1424
   link Alhena
-  link Capella
+  link Tejat
+  link Wazn
   asteroids "small rock" 17 2.7216
   asteroids "medium rock" 19 4.9086
   asteroids "large rock" 1 2.8674
@@ -16920,6 +16922,7 @@ system "Oblate"
     period 2465.86
 
 system "Orbona"
+#  pos -736 -97
   pos -728 -23
   government "Pirate"
   habitable 2859
@@ -17765,6 +17768,7 @@ system "Phecda"
   fleet "Miners West" 2000
   fleet "Republic Small" 900
   fleet "Republic Large" 1100
+  fleet "Navy Surveillance" 1200
   object
     sprite star/k5
     period 10
@@ -18727,8 +18731,8 @@ system "Rasalhague"
   belt 1282
   link Cebalrai
   link Hintar
-  link "Zeta Aquilae"
   link Vega
+  link "Zeta Aquilae"
   asteroids "small rock" 2 1.9
   asteroids "medium rock" 32 2.546
   asteroids "large rock" 1 1.292
@@ -22243,7 +22247,7 @@ system "Tejat"
   government "Syndicate"
   habitable 1158
   belt 1447
-  link Alhena
+  link Menkalinan
   link Miaplacidus
   link Phurad
   asteroids "small rock" 5 4.5675
@@ -22318,6 +22322,7 @@ system "Tejat"
       period 22.9367
 
 system "Terminus"
+#  pos -728 -23
   pos -736 -97
   government "Republic"
   habitable 426
@@ -23414,8 +23419,8 @@ system "Wazn"
   government "Syndicate"
   habitable 534
   belt 1414
-  link Alhena
   link Kursa
+  link Menkalinan
   link Phact
   asteroids "small metal" 9 2.6048
   asteroids "medium metal" 3 4.4704
@@ -26110,7 +26115,7 @@ planet "Mars"
 planet "Martini"
   attributes paradise rich
   landscape land/myrabella4
-  description `Martini is a world of exotic beaches and perfect weather. The Republic's central bank and the galactic stock exchange are headquartered here, and so much money flows through this world's economy every day that the cost of utterly controlling its weather and climate is only a drop in the bucket. Not surprisingly, real estate prices here are astronomical; a small condo in one of Martini's main cities costs more than a capital starship.`
+  description `Martini is a world of exotic beaches and perfect weather. The Republic's galactic stock exchange iis headquartered here, and so much money flows through this world's economy every day that the cost of utterly controlling its weather and climate is only a drop in the bucket. Not surprisingly, real estate prices here are astronomical; a small appartment in one of Martini's main cities costs more than a capital starship.`
   spaceport `The spaceport is a set of four skyscrapers joined by bridges and platforms at various levels. Hangars are built directly into the towers themselves, with deflector shield generators set up to ensure that ships do not crash, intentionally or otherwise, while approaching the towers to dock. Inside, all the floors and walls are gleaming granite, with teams of workers constantly polishing everything to ensure that not even so much as a fingerprint smudge is visible.`
   outfitter "Pilot Licence"
   outfitter "Common Outfits"

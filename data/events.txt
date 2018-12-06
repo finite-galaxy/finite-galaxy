@@ -147,6 +147,18 @@ event "remembrance day"
 
 event "war begins"
   date 4 7 3019
+  planet "Luna"
+    description `In the early days of space travel, back when engines were still so inefficient that escaping from a planet's gravity was costly and difficult, an enormous shipyard was built on the Moon where asteroids, harvested from the asteroid belt, were mined for raw materials for ships.`
+    description `Until recently, Luna was home to the Republic Navy Yard, the largest military shipyard in human space. Now, there is nothing left of the shipyard but a gaping crater in the ground, from the recent terrorist bombing.`
+    spaceport `Fortunately, the spaceport and trading areas survived the bombing, which was focused only on the Navy yard and happened early in the morning, when very few people were at work.`
+    spaceport `The Navy officers who are in charge here have no time for anyone who is not enlisted in the Navy and participating in the ongoing investigation.`
+    remove shipyard "Navy Advanced"
+    "required reputation" 100
+  planet "Martini"
+    description `Martini is a world of exotic beaches and perfect weather. The Republic's galactic stock exchange was previously headquartered here, before a terrorist attack destroyed them and a large portion of the capital city as well.`
+    "required reputation" 100
+    security .9
+
   system "Zubenelgenubi"
     government "Free Worlds"
   system "Sabik"
@@ -183,28 +195,25 @@ event "war begins"
   system "Castor"
     fleet "Merchants North Small" 800
     fleet "Merchants North Large" 1100
+    fleet "Merchants Paradise Small" 1000
+    fleet "Merchants Paradise Large" 1500
     fleet "Syndicate Small" 800
     fleet "Syndicate Large" 400
   system "Pollux"
     fleet "Merchants North Small" 700
     fleet "Merchants North Large" 1100
+    fleet "Merchants Paradise Small" 800
+    fleet "Merchants Paradise Large" 1200
     fleet "Syndicate Small" 700
     fleet "Syndicate Large" 900
-  planet "Luna"
-    description `In the early days of space travel, back when engines were still so inefficient that escaping from a planet's gravity was costly and difficult, an enormous shipyard was built on the Moon where asteroids, harvested from the asteroid belt, were mined for raw materials for ships.`
-    description `Until recently, Luna was home to the Republic Navy Yard, the largest military shipyard in human space. Now, there is nothing left of the shipyard but a gaping crater in the ground, from the recent terrorist bombing.`
-    spaceport `Fortunately, the spaceport and trading areas survived the bombing, which was focused only on the Navy yard and happened early in the morning, when very few people were at work.`
-    spaceport `The Navy officers who are in charge here have no time for anyone who is not enlisted in the Navy and participating in the ongoing investigation.`
-    remove shipyard "Navy Advanced"
-    "required reputation" 100
-  planet "Martini"
-    description `Martini is a world of exotic beaches and perfect weather. The Republic's central bank and the galactic stock exchange were previously headquartered here, before a terrorist attack destroyed them and a large portion of the capital city as well.`
-    "required reputation" 100
-    security .9
 
 
 event "initial deployment 1"
   date 24 7 3019
+  planet "Oblivion"
+    description `The atmosphere here is a toxic mix of ammonia, sulphur, and methane. Although breathable by human beings if necessary, the locals use masks to reduce the risk of chronic respiratory problems. Even so, the life expectancy here is short, but that is partly because the two best-paying industries are oil drilling and mining for radioactive elements.`
+    description `  Oblivion is also now home to a burgeoning Navy base, although since the planet is so unlivable most of the troops are just living in ships in orbit.`
+
   system "Zubenelgenubi"
     fleet "Merchants South Small" 500
     fleet "Merchants South Large" 900
@@ -224,20 +233,66 @@ event "initial deployment 1"
     fleet "Free Worlds Small" 1000
     fleet "Free Worlds Large" 1600
 
+  system "Rasalhague"
+    fleet "Merchants South Small" 1500
+    fleet "Merchants South Large" 2000
+    fleet "Pirates South Small" 4000
+    fleet "Pirates South Large" 8000
+    fleet "Republic Small" 600
+    fleet "Republic Large" 400
+    fleet "Navy Surveillance" 1200
+  system "Cebalrai"
+    fleet "Merchants South Small" 600
+    fleet "Merchants South Large" 2000
+    fleet "Pirates South Small" 4000
+    fleet "Republic Small" 1000
+    fleet "Republic Large" 2000
+    fleet "Navy Surveillance" 1200
+  system "Kaus Borealis"
+    fleet "Merchants South Small" 900
+    fleet "Merchants South Large" 4000
+    fleet "Pirates South Small" 8000
+    fleet "Republic Small" 1100
+    fleet "Republic Large" 800
+    fleet "Navy Surveillance" 1200
+  system "Hintar"
+    fleet "Merchants South Small" 1000
+    fleet "Merchants South Large" 3000
+    fleet "Pirates South Small" 2000
+    fleet "Republic Small" 3000
+    fleet "Republic Large" 4000
+    fleet "Navy Surveillance" 1800
+  system "Ascella"
+    fleet "Merchants South Small" 600
+    fleet "Merchants South Large" 1000
+    fleet "Miners South" 1600
+    fleet "Pirates South Small" 3000
+    fleet "Republic Small" 3000
+    fleet "Republic Large" 4000
+    fleet "Navy Surveillance" 1800
+  system "Zeta Aquilae"
+    fleet "Merchants South Small" 1000
+    fleet "Merchants South Large" 3000
+    fleet "Pirates South Small" 2000
+    fleet "Pirates South Large" 5000
+    fleet "Republic Small" 3000
+    fleet "Republic Large" 4000
+    fleet "Navy Surveillance" 1800
+
+  system "Fala"
+    fleet "Merchants West Small" 1900
+    fleet "Merchants West Large" 3500
+    fleet "Pirates West Small" 4000
+    fleet "Pirates West Large" 8000
+    fleet "Republic Small" 600
+    fleet "Republic Large" 400
+    fleet "Navy Surveillance" 1800
   system "Tania Australis"
     fleet "Merchants West Small" 1400
     fleet "Merchants West Large" 2900
     fleet "Republic Small" 600
     fleet "Republic Large" 400
-    fleet "Navy Surveillance" 2000
-  system "Fala"
-    fleet "Merchants West Small" 1900
-    fleet "Merchants West Large" 3500
-    fleet "Pirates South Small" 4000
-    fleet "Pirates South Large" 8000
-    fleet "Republic Small" 600
-    fleet "Republic Large" 400
-    fleet "Navy Surveillance" 2000
+    fleet "Navy Surveillance" 1800
   system "Mora"
     fleet "Merchants West Small" 2800
     fleet "Merchants West Large" 5000
@@ -245,7 +300,7 @@ event "initial deployment 1"
     fleet "Pirates South Large" 4000
     fleet "Republic Small" 1000
     fleet "Republic Large" 2000
-    fleet "Navy Surveillance" 1600
+    fleet "Navy Surveillance" 1800
   system "Delta Velorum"
     fleet "Merchants West Small" 1000
     fleet "Merchants West Large" 3000
@@ -253,7 +308,7 @@ event "initial deployment 1"
     fleet "Pirates South Large" 5000
     fleet "Republic Small" 1600
     fleet "Republic Large" 2400
-    fleet "Navy Surveillance" 1600
+    fleet "Navy Surveillance" 1800
   system "Turais"
     fleet "Merchants West Small" 2000
     fleet "Merchants West Large" 6000
@@ -261,7 +316,7 @@ event "initial deployment 1"
     fleet "Pirates South Large" 7000
     fleet "Republic Small" 1000
     fleet "Republic Large" 1800
-    fleet "Navy Surveillance" 1600
+    fleet "Navy Surveillance" 1800
   system "Algorel"
     fleet "Merchants West Small" 800
     fleet "Merchants West Large" 1200
@@ -269,31 +324,22 @@ event "initial deployment 1"
     fleet "Pirates South Large" 8000
     fleet "Republic Small" 700
     fleet "Republic Large" 500
-    fleet "Navy Surveillance" 2000
-
-  system "Muphrid"
-    fleet "Merchants South Small" 1200
-    fleet "Merchants South Large" 4800
-    fleet "Republic Small" 1100
-    fleet "Republic Large" 1900
-    fleet "Navy Surveillance" 2000
-  system "Menkent"
-    fleet "Merchants South Small" 700
-    fleet "Merchants South Large" 1900
-    fleet "Miners South" 2000
-    fleet "Republic Small" 500
-    fleet "Republic Large" 600
-    fleet "Navy Surveillance" 2000
-
-  planet "Oblivion"
-    description `The atmosphere here is a toxic mix of ammonia, sulphur, and methane. Although breathable by human beings if necessary, the locals use masks to reduce the risk of chronic respiratory problems. Even so, the life expectancy here is short, but that is partly because the two best-paying industries are oil drilling and mining for radioactive elements.`
-    description `  Oblivion is also now home to a burgeoning Navy base, although since the planet is so unlivable most of the troops are just living in ships in orbit.`
+    fleet "Navy Surveillance" 1800
 
 
 event "initial deployment 2"
   date 14 8 3019
+  planet "Bod"
+    description `Bod is a world of jagged mountains and deeply shadowed valleys. Although it has been inhabited for centuries, in many places the terrain is so rugged that roads cannot be built, leaving several of the smaller towns almost completely isolated. Taking advantage of this isolation, several monastic orders have built monasteries here.`
+    description `  In the lowlands, large farms support sprawling cities full of factories, a striking contrast to the simplicity and isolation of the mountain villages.`
+    description `  The Navy built a base here, to be able to counter the Free Worlds, if necessary.`
+  planet "Clear Sky"
+    description `Clear Sky is a perpetually hazy volcanic world, with a slightly caustic atmosphere but enough reserves of metal and petrochemicals to draw a large number of settlers. Some of those settlers also make a living as farmers, and a few well-developed factory towns produce goods for export to other worlds.`
+    description `  Many of the inhabitants wear dust masks to avoid letting the particulate matter from the volcanoes accumulate in their lungs.`
+    description `  The Navy has recently requisitioned one of the abandoned mining towns on Clear Sky and begun refurbishing it for a secure military base, with the mining tunnels used as deep underground bunkers.`
   planet "Martini"
     "required reputation" 10
+
   system "Kornephoros"
     fleet "Merchants South Small" 600
     fleet "Merchants South Large" 700
@@ -316,114 +362,96 @@ event "initial deployment 2"
     fleet "Free Worlds Small" 1500
     fleet "Free Worlds Large" 4000
 
-  system "Ipsing"
-    fleet "Merchants West Small" 2800
-    fleet "Merchants West Large" 7000
-    fleet "Republic Small" 2500
-    fleet "Republic Large" 4000
-    fleet "Pirates South Small" 5000
-    fleet "Navy Surveillance" 2000
-  system "Mizar"
-    fleet "Merchants West Small" 1400
-    fleet "Merchants West Large" 4500
-    fleet "Republic Small" 1000
-    fleet "Republic Large" 1400
-    fleet "Pirates South Small" 9000
-    fleet "Navy Surveillance" 2000
-  system "Gacrux"
-    fleet "Merchants West Small" 2000
-    fleet "Merchants West Large" 5000
-    fleet "Pirates South Small" 2000
-    fleet "Pirates South Large" 4000
-    fleet "Republic Small" 2000
-    fleet "Republic Large" 3000
-    fleet "Navy Surveillance" 1600
-  system "Cor Caroli"
-    fleet "Merchants West Small" 700
-    fleet "Merchants Weste Large" 1300
-    fleet "Pirates South Small" 2000
-    fleet "Republic Small" 1200
-    fleet "Republic Large" 1800
-    fleet "Navy Surveillance" 1600
-  system "Muhlifain"
-    fleet "Merchants West Small" 1000
-    fleet "Merchants West Large" 3500
-    fleet "Pirates South Small" 6000
-    fleet "Republic Small" 3000
-    fleet "Republic Large" 4000
-    fleet "Navy Surveillance" 1600
-  system "Vindemiatrix"
-    fleet "Merchants West Small" 600
-    fleet "Merchants West Large" 3000
-    fleet "Pirates South Small" 2000
-    fleet "Pirates South Large" 4000
-    fleet "Republic Small" 2000
-    fleet "Republic Large" 3000
-    fleet "Navy Surveillance" 1600
-  system "Sarin"
-    fleet "Merchants West Small" 1000
-    fleet "Merchants West Large" 3000
-    fleet "Pirates South Small" 2000
-    fleet "Pirates South Large" 6000
-    fleet "Republic Small" 8000
-    fleet "Republic Large" 15000
-    fleet "Navy Surveillance" 1600
-  system "Alioth"
-    fleet "Merchants South Small" 400
-    fleet "Merchants South Large" 600
-    fleet "Pirates South Small" 1200
-    fleet "Pirates South Large" 2400
-    fleet "Republic Small" 3000
-    fleet "Republic Large" 4000
-    fleet "Navy Surveillance" 1600
-  system "Holeb"
-    fleet "Merchants South Small" 1000
-    fleet "Merchants South Large" 3000
-    fleet "Pirates South Small" 5000
-    fleet "Republic Small" 2000
-    fleet "Republic Large" 3000
-    fleet "Navy Surveillance" 1600
-  system "Arcturus"
+  system "Menkent"
     fleet "Merchants South Small" 700
-    fleet "Merchants South Large" 3000
-    fleet "Pirates South Small" 4000
-    fleet "Republic Small" 2000
-    fleet "Republic Large" 3000
-    fleet "Navy Surveillance" 1600
+    fleet "Merchants South Large" 1900
+    fleet "Miners South" 2000
+    fleet "Republic Small" 3000
+    fleet "Republic Large" 4000
+    fleet "Navy Surveillance" 1800
   system "Rutilicus"
     fleet "Merchants South Small" 600
     fleet "Merchants South Large" 2000
     fleet "Pirates South Small" 8000
     fleet "Republic Small" 1000
     fleet "Republic Large" 2000
-    fleet "Navy Surveillance" 1600
-  system "Cebalrai"
-    fleet "Merchants South Small" 600
-    fleet "Merchants South Large" 2000
+    fleet "Navy Surveillance" 1800
+  system "Arcturus"
+    fleet "Merchants South Small" 700
+    fleet "Merchants South Large" 3000
     fleet "Pirates South Small" 4000
+    fleet "Republic Small" 2000
+    fleet "Republic Large" 3000
+    fleet "Navy Surveillance" 1800
+  system "Holeb"
+    fleet "Merchants South Small" 1000
+    fleet "Merchants South Large" 3000
+    fleet "Pirates South Small" 5000
+    fleet "Republic Small" 2000
+    fleet "Republic Large" 3000
+    fleet "Navy Surveillance" 1800
+  system "Alioth"
+    fleet "Merchants South Small" 400
+    fleet "Merchants South Large" 600
+    fleet "Republic Small" 500
+    fleet "Republic Large" 600
+    fleet "Navy Surveillance" 1200
+
+  system "Mizar"
+    fleet "Merchants West Small" 1400
+    fleet "Merchants West Large" 4500
+    fleet "Pirates West Small" 9000
     fleet "Republic Small" 1000
-    fleet "Republic Large" 2000
-    fleet "Navy Surveillance" 1600
-  system "Rasalhague"
-    fleet "Merchants South Small" 1500
-    fleet "Merchants South Large" 2000
-    fleet "Pirates South Small" 4000
-    fleet "Pirates South Large" 8000
+    fleet "Republic Large" 1400
+    fleet "Navy Surveillance" 1800
+  system "Gacrux"
+    fleet "Merchants West Small" 2000
+    fleet "Merchants West Large" 5000
+    fleet "Pirates West Small" 2000
+    fleet "Pirates West Large" 4000
+    fleet "Republic Small" 2000
+    fleet "Republic Large" 3000
+    fleet "Navy Surveillance" 1800
+  system "Cor Caroli"
+    fleet "Merchants West Small" 700
+    fleet "Merchants West Large" 1300
+    fleet "Pirates West Small" 2000
+    fleet "Republic Small" 1200
+    fleet "Republic Large" 1800
+    fleet "Navy Surveillance" 1800
+  system "Muhlifain"
+    fleet "Merchants West Small" 1000
+    fleet "Merchants West Large" 3500
+    fleet "Pirates West Small" 6000
     fleet "Republic Small" 3000
     fleet "Republic Large" 4000
-    fleet "Navy Surveillance" 1600
-  planet "Bod"
-    description `Bod is a world of jagged mountains and deeply shadowed valleys. Although it has been inhabited for centuries, in many places the terrain is so rugged that roads cannot be built, leaving several of the smaller towns almost completely isolated. Taking advantage of this isolation, several monastic orders have built monasteries here.`
-    description `  In the lowlands, large farms support sprawling cities full of factories, a striking contrast to the simplicity and isolation of the mountain villages.`
-    description `  The Navy built a base here, to be able to counter the Free Worlds, if necessary.`
-  planet "Clear Sky"
-    description `Clear Sky is a perpetually hazy volcanic world, with a slightly caustic atmosphere but enough reserves of metal and petrochemicals to draw a large number of settlers. Some of those settlers also make a living as farmers, and a few well-developed factory towns produce goods for export to other worlds.`
-    description `  Many of the inhabitants wear dust masks to avoid letting the particulate matter from the volcanoes accumulate in their lungs.`
-    description `  The Navy has recently requisitioned one of the abandoned mining towns on Clear Sky and begun refurbishing it for a secure military base, with the mining tunnels used as deep underground bunkers.`
+    fleet "Navy Surveillance" 1800
+  system "Vindemiatrix"
+    fleet "Merchants West Small" 600
+    fleet "Merchants West Large" 3000
+    fleet "Pirates West Small" 2000
+    fleet "Pirates West Large" 4000
+    fleet "Republic Small" 2000
+    fleet "Republic Large" 3000
+    fleet "Navy Surveillance" 1800
+  system "Sarin"
+    fleet "Merchants West Small" 1000
+    fleet "Merchants West Large" 3000
+    fleet "Pirates West Small" 2000
+    fleet "Pirates West Large" 6000
+    fleet "Republic Small" 8000
+    fleet "Republic Large" 15000
+    fleet "Navy Surveillance" 1800
 
 
 event "initial deployment 3"
   date 29 8 3019
+  planet "Bundok"
+    description `Bundok is a cloudy planet orbiting a dim star; the only reason it is not completely frozen is because of the heat trapped by its upper atmosphere. There are only a handful of towns here, and nothing big enough to warrant being called a city. Most of the settlers are subsistence farmers who can only dream about life on other worlds. Many houses here do not even have running water or personal computers.`
+    description `  Some of the farms near the spaceport are planted with different crops forming abstract patterns visible from the air. Such a whimsical extravagance seems particularly odd when you consider that the owners will never be able to afford to see their fields from that angle. But perhaps that is precisely the point.`
+    description `  The Navy has planted a base on Bundok: so far, just a densely packed cluster of prefabricated barracks and infirmary buildings on the outskirts of one of the larger towns.`
+
+#  system "Algedi"
   system "Pherkad"
     fleet "Merchants South Small" 500
     fleet "Merchants South Large" 700
@@ -452,20 +480,13 @@ event "initial deployment 3"
     fleet "Free Worlds Small" 3000
     fleet "Free Worlds Large" 5000
 
-  system "Boral"
-    fleet "Merchants South Small" 3000
-    fleet "Merchants South Large" 8000
-    fleet "Pirates South Small" 1500
-    fleet "Republic Small" 7000
-    fleet "Republic Large" 12000
-    fleet "Navy Surveillance" 1600
   system "Alphecca"
     fleet "Merchants South Small" 2000
     fleet "Merchants South Large" 3500
     fleet "Pirates South Small" 3000
     fleet "Republic Small" 3000
     fleet "Republic Large" 4000
-    fleet "Navy Surveillance" 1600
+    fleet "Navy Surveillance" 1800
   system "Seginus"
     fleet "Merchants South Small" 1200
     fleet "Merchants South Large" 2700
@@ -502,61 +523,6 @@ event "initial deployment 3"
     fleet "Republic Small" 900
     fleet "Republic Large" 800
     fleet "Navy Surveillance" 1200
-  system "Kaus Borealis"
-    fleet "Merchants South Small" 900
-    fleet "Merchants South Large" 4000
-    fleet "Pirates South Small" 8000
-    fleet "Republic Small" 1100
-    fleet "Republic Large" 800
-    fleet "Navy Surveillance" 1200
-  planet "Bundok"
-    description `Bundok is a cloudy planet orbiting a dim star; the only reason it is not completely frozen is because of the heat trapped by its upper atmosphere. There are only a handful of towns here, and nothing big enough to warrant being called a city. Most of the settlers are subsistence farmers who can only dream about life on other worlds. Many houses here do not even have running water or personal computers.`
-    description `  Some of the farms near the spaceport are planted with different crops forming abstract patterns visible from the air. Such a whimsical extravagance seems particularly odd when you consider that the owners will never be able to afford to see their fields from that angle. But perhaps that is precisely the point.`
-    description `  The Navy has planted a base on Clark: so far, just a densely packed cluster of prefabricated barracks and infirmary buildings on the outskirts of one of the larger towns.`
-
-
-event "initial deployment 4"
-  date 17 9 3019
-  planet "Luna"
-    "required reputation" 10
-  system "Han"
-    fleet "Merchants South Small" 800
-    fleet "Merchants South Large" 4000
-    fleet "Pirates South Small" 2000
-    fleet "Pirates South Large" 9000
-    fleet "Free Worlds Small" 3000
-    fleet "Free Worlds Large" 8000
-  system "Atria"
-    fleet "Merchants South Small" 700
-    fleet "Merchants South Large" 2600
-    fleet "Pirates South Small" 5000
-    fleet "Pirates South Large" 8000
-    fleet "Free Worlds Small" 1000
-    fleet "Free Worlds Large" 2100
-  system "Dschubba"
-    fleet "Merchants South Small" 800
-    fleet "Merchants South Large" 2600
-    fleet "Pirates South Small" 3000
-    fleet "Pirates South Large" 6000
-    fleet "Free Worlds Small" 2000
-    fleet "Free Worlds Large" 3000
-    fleet "Navy Surveillance" 800
-  system "Sargas"
-    fleet "Merchants South Small" 600
-    fleet "Merchants South Large" 2500
-    fleet "Pirates South Small" 3000
-    fleet "Pirates South Large" 5000
-    fleet "Free Worlds Small" 1000
-    fleet "Free Worlds Large" 1500
-    fleet "Navy Surveillance" 800
-  system "Lesath"
-    fleet "Merchants South Small" 800
-    fleet "Merchants South Large" 1600
-    fleet "Pirates South Small" 3000
-    fleet "Pirates South Large" 7000
-    fleet "Free Worlds Small" 800
-    fleet "Free Worlds Large" 1100
-    fleet "Navy Surveillance" 800
   system "Rastaban"
     fleet "Merchants South Small" 1000
     fleet "Merchants South Large" 1900
@@ -565,6 +531,52 @@ event "initial deployment 4"
     fleet "Republic Small" 900
     fleet "Republic Large" 700
     fleet "Navy Surveillance" 1200
+
+
+event "initial deployment 4"
+  date 17 9 3019
+  planet "Luna"
+    "required reputation" 10
+  system "Dschubba"
+    fleet "Merchants South Small" 800
+    fleet "Merchants South Large" 2600
+    fleet "Pirates South Small" 3000
+    fleet "Pirates South Large" 6000
+    fleet "Free Worlds Small" 2000
+    fleet "Free Worlds Large" 3000
+    fleet "Navy Surveillance" 1800
+  system "Han"
+    fleet "Merchants South Small" 800
+    fleet "Merchants South Large" 4000
+    fleet "Pirates South Small" 2000
+    fleet "Pirates South Large" 9000
+    fleet "Free Worlds Small" 3000
+    fleet "Free Worlds Large" 8000
+    fleet "Navy Surveillance" 1800
+  system "Atria"
+    fleet "Merchants South Small" 700
+    fleet "Merchants South Large" 2600
+    fleet "Pirates South Small" 5000
+    fleet "Pirates South Large" 8000
+    fleet "Free Worlds Small" 1000
+    fleet "Free Worlds Large" 2100
+    fleet "Navy Surveillance" 1800
+  system "Lesath"
+    fleet "Merchants South Small" 800
+    fleet "Merchants South Large" 1600
+    fleet "Pirates South Small" 3000
+    fleet "Pirates South Large" 7000
+    fleet "Free Worlds Small" 800
+    fleet "Free Worlds Large" 1100
+    fleet "Navy Surveillance" 1800
+  system "Sargas"
+    fleet "Merchants South Small" 600
+    fleet "Merchants South Large" 2500
+    fleet "Pirates South Small" 3000
+    fleet "Pirates South Large" 5000
+    fleet "Free Worlds Small" 1000
+    fleet "Free Worlds Large" 1500
+    fleet "Navy Surveillance" 1800
   system "Kornephoros"
     fleet "Merchants South Small" 800
     fleet "Merchants South Large" 1000
@@ -572,7 +584,7 @@ event "initial deployment 4"
     fleet "Pirates South Small" 5000
     fleet "Free Worlds Small" 900
     fleet "Free Worlds Large" 1700
-    fleet "Navy Surveillance" 800
+    fleet "Navy Surveillance" 1800
   system "Aldhibain"
     fleet "Merchants South Small" 600
     fleet "Merchants South Large" 800
@@ -580,14 +592,14 @@ event "initial deployment 4"
     fleet "Free Worlds Large" 600
     fleet "Pirates South Small" 1400
     fleet "Pirates South Large" 3000
-    fleet "Navy Surveillance" 800
+    fleet "Navy Surveillance" 1800
   system "Sabik"
     fleet "Merchants South Small" 600
     fleet "Merchants South Large" 800
     fleet "Free Worlds Small" 800
     fleet "Free Worlds Large" 1200
-    fleet "Navy Surveillance" 800
-
+    fleet "Navy Surveillance" 1800
+# Alniyat, Algedi, Graffias
 
 
 # free worlds intro events
@@ -733,7 +745,7 @@ event "capture of Kornephoros"
     fleet "Merchants South Large" 1400
     fleet "Republic Small" 300
     fleet "Republic Large" 500
-    fleet "Navy Surveillance" 800
+    fleet "Navy Surveillance" 900
   system "Sabik"
     fleet "Merchants South Small" 800
     fleet "Merchants South Large" 1000
@@ -812,18 +824,15 @@ event "temporary ceasefire"
 
 
 event "oathkeepers founded"
-  system "Canopus"
-    fleet "Merchants North Small" 900
-    fleet "Merchants North Large" 700
-    fleet "Oathkeeper Small" 1000
-    fleet "Oathkeeper Large" 2000
-  system "Alheka"
-    fleet "Merchants North Small" 1000
-    fleet "Merchants North Large" 3000
-    fleet "Oathkeeper Small" 1200
-    fleet "Oathkeeper Large" 4000
-    fleet "Pirates North Small" 2000
-    fleet "Pirates North Large" 2000
+  planet "Farpoint"
+    description `Farpoint, on the northernmost end of human space, is a rocky desert planet home to a Republic Navy base and not much else. Farming is possible only within greenhouses, and this system is too far from the galactic centre to be desirable for trade or industry.`
+    description `  Lately the Navy base on Farpoint is growing, because it has become the new home of the Navy Oathkeepers, a small branch of the Navy that has sworn to stay uninvolved in the conflict with the Free Worlds.`
+  system "Mebsuta"
+    fleet "Merchants North Small" 3000
+    fleet "Merchants North Large" 5000
+    fleet "Pirates North Small" 4000
+    fleet "Pirates North Large" 8000
+    fleet "Oathkeeper Small" 12000
   system "Mirzam"
     fleet "Merchants North Small" 2000
     fleet "Merchants North Large" 2000
@@ -831,12 +840,6 @@ event "oathkeepers founded"
     fleet "Oathkeeper Large" 4000
     fleet "Pirates North Small" 5000
     fleet "Pirates North Large" 8000
-  system "Mebsuta"
-    fleet "Merchants North Small" 3000
-    fleet "Merchants North Large" 5000
-    fleet "Pirates North Small" 4000
-    fleet "Pirates North Large" 8000
-    fleet "Oathkeeper Small" 12000
   system "Betelgeuse"
     fleet "Merchants North Small" 2000
     fleet "Merchants North Large" 800
@@ -850,11 +853,6 @@ event "oathkeepers founded"
     fleet "Oathkeeper Large" 2000
     fleet "Pirates North Small" 3000
     fleet "Pirates North Large" 5000
-  system "Alnitak"
-    fleet "Pirates North Small" 3000
-    fleet "Pirates North Large" 5000
-    fleet "Oathkeeper Small" 500
-    fleet "Oathkeeper Large" 1000
   system "Saiph"
     fleet "Merchants North Small" 1200
     fleet "Merchants North Large" 2000
@@ -862,28 +860,30 @@ event "oathkeepers founded"
     fleet "Pirates North Large" 3000
     fleet "Oathkeeper Small" 1000
     fleet "Oathkeeper Large" 2000
+  system "Alnitak"
+    fleet "Pirates North Small" 3000
+    fleet "Pirates North Large" 5000
+    fleet "Oathkeeper Small" 500
+    fleet "Oathkeeper Large" 1000
   system "Mintaka"
     fleet "Pirates North Small" 2000
     fleet "Pirates North Large" 2000
     fleet "Oathkeeper Large" 2000
     fleet "Merchants North Small" 4000
-  system "Almaaz"
-    fleet "Pirates North Small" 500
-    fleet "Pirates North Large" 600
-    fleet "Oathkeeper Large" 4000
-  system "Gorvi"
-    fleet "Pirates North Small" 1000
-    fleet "Pirates North Large" 1000
-    fleet "Oathkeeper Large" 4000
-    fleet "Merchants North Small" 8000
   system "Tortor"
     fleet "Pirates North Small" 1000
     fleet "Pirates North Large" 1000
     fleet "Oathkeeper Large" 6000
     fleet "Merchants North Small" 6000
-  planet "Farpoint"
-    description `Farpoint, on the northernmost end of human space, is a rocky desert planet home to a Republic Navy base and not much else. Farming is possible only within greenhouses, and this system is too far from the galactic centre to be desirable for trade or industry.`
-    description `  Lately the Navy base on Farpoint is growing, because it has become the new home of the Navy Oathkeepers, a small branch of the Navy that has sworn to stay uninvolved in the conflict with the Free Worlds.`
+  system "Gorvi"
+    fleet "Pirates North Small" 1000
+    fleet "Pirates North Large" 1000
+    fleet "Oathkeeper Large" 4000
+    fleet "Merchants North Small" 8000
+  system "Almaaz"
+    fleet "Pirates North Small" 500
+    fleet "Pirates North Large" 600
+    fleet "Oathkeeper Large" 4000
 
 
 event "tarazed neutrality"
