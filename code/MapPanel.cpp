@@ -181,7 +181,7 @@ void MapPanel::DrawButtons(const string &condition)
   // Draw the buttons to switch to other map modes.
   Information info;
   info.SetCondition(condition);
-  if(player.MapZoom() == 8)
+  if(player.MapZoom() == 4)
     info.SetCondition("max zoom");
   if(player.MapZoom() == -4)
     info.SetCondition("min zoom");
@@ -339,7 +339,7 @@ bool MapPanel::KeyDown(SDL_Keycode key, Uint16 mod, const Command &command)
     return true;
   }
   else if(key == '+' || key == '=')
-    player.SetMapZoom(min(8, player.MapZoom() + 1));
+    player.SetMapZoom(min(4, player.MapZoom() + 1));
   else if(key == '-')
     player.SetMapZoom(max(-4, player.MapZoom() - 1));
   else
@@ -421,7 +421,7 @@ bool MapPanel::Scroll(double dx, double dy)
   Point mouse = UI::GetMouse();
   Point anchor = mouse / Zoom() - centre;
   if(dy > 0.)
-    player.SetMapZoom(min(8, player.MapZoom() + 1));
+    player.SetMapZoom(min(4, player.MapZoom() + 1));
   else if(dy < 0.)
     player.SetMapZoom(max(-4, player.MapZoom() - 1));
   
