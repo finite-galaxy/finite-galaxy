@@ -11,7 +11,7 @@ galaxy "label deep"
   sprite label/deep
 
 galaxy "label dirt belt"
-  pos -520 260
+  pos -480 260
   sprite "label/dirt belt"
 
 galaxy "label earth"
@@ -23,7 +23,7 @@ galaxy "label north"
   sprite label/north
 
 galaxy "label paradise"
-  pos -380 -100
+  pos -400 -80
   sprite label/paradise
 
 galaxy "label rim"
@@ -31,7 +31,7 @@ galaxy "label rim"
   sprite label/rim
 
 galaxy "label south"
-  pos -640 460
+  pos -600 480
   sprite label/south
 
 galaxy "label wanderers"
@@ -1840,9 +1840,10 @@ system "Achernar"
   habitable 625
   belt 1963
   link "Al Dhanab"
+  link "Alpha Hydri"
   link Alpheratz
-  link Schedar
   link Polaris
+  link Schedar
   asteroids "medium metal" 27 1.8676
   asteroids "large metal" 2 4.7334
   minables "copper" 4 3.93672
@@ -1861,6 +1862,7 @@ system "Achernar"
   fleet "Merchants Core Small" 300
   fleet "Merchants Core Large" 400
   fleet "Miners Core" 3000
+  fleet "Pirates Core Small" 1200
   fleet "Republic Large" 600
   fleet "Republic Small" 500
   object
@@ -2616,6 +2618,7 @@ system "Algieba"
   government "Republic"
   habitable 2695
   belt 1070
+  link Chalawan
   link "Tania Australis"
   asteroids "small rock" 7 7.236
   asteroids "medium rock" 1 3.726
@@ -2636,11 +2639,10 @@ system "Algieba"
   trade "Medical" 621
   trade "Metal" 251
   trade "Plastic" 476
-  fleet "Merchants West Small" 2000
-  fleet "Miners West" 3000
-  fleet "Pirates South Small" 2000
-  fleet "Pirates South Large" 4000
-  fleet "Republic Small" 5000
+  fleet "Merchants West Small" 400
+  fleet "Merchants West Large" 600
+  fleet "Republic Small" 1400
+  fleet "Republic Large" 5000
   object
     sprite star/f0
     distance 5.86085
@@ -3624,7 +3626,7 @@ system "Alpha Hydri"
   government "Republic"
   habitable 1400
   belt 1839
-  link Ruchbah
+  link Achernar
   asteroids "medium rock" 1 7.467
   asteroids "large rock" 1 7.125
   asteroids "large metal" 1 7.752
@@ -3676,10 +3678,10 @@ system "Alphard"
   government "Syndicate"
   habitable 1081
   belt 1101
+  link Chalawan
   link Lolami
   link Miaplacidus
   link Talita
-  link Zosma
   asteroids "small rock" 2 7.7896
   asteroids "medium rock" 33 8.8088
   asteroids "large rock" 2 7.4984
@@ -3789,8 +3791,9 @@ system "Alpheratz"
   habitable 1081
   belt 1645
   link "Al Dhanab"
-  link Ruchbah
   link Achernar
+  link Ankaa
+  link Ruchbah
   asteroids "small rock" 8 5.44
   asteroids "medium rock" 5 4.12
   asteroids "large rock" 1 3.48
@@ -4042,8 +4045,9 @@ system "Ankaa"
   government "Republic"
   habitable 625
   belt 1003
-  link Markab
+  link Alpheratz
   link Diphda
+  link Markab
   link Ruchbah
   asteroids "medium rock" 1 2.016
   asteroids "large rock" 1 1.664
@@ -4073,7 +4077,7 @@ system "Ankaa"
     sprite planet/rock4-b
     distance 214.69
     period 50.3312
-  object "Lodestone"
+  object "Crossroads"
     sprite planet/rock18
     distance 563.78
     period 214.183
@@ -4335,7 +4339,6 @@ system "Arcturus"
   government "Republic"
   habitable 320
   belt 1422
-  link "Cor Caroli"
   link Holeb
   link Mizar
   link Rutilicus
@@ -4966,8 +4969,8 @@ system "Bellatrix"
   trade "Medical" 846
   trade "Metal" 422
   trade "Plastic" 274
-  fleet "Merchants Core Small" 800
-  fleet "Merchants Core Large" 1500
+  fleet "Merchants North Small" 800
+  fleet "Merchants North Large" 1500
   fleet "Republic Small" 1000
   fleet "Republic Large" 2000
   fleet "Pirates Core Small" 3000
@@ -5543,7 +5546,6 @@ system "Boral"
   trade "Metal" 511
   trade "Plastic" 535
   fleet "Merchants South Small" 3000
-  fleet "Merchants South Large" 8000
   fleet "Miners South" 2000
   fleet "Pirates South Small" 1500
   fleet "Militia Small" 10000
@@ -6048,9 +6050,10 @@ system "Caph"
   government "Republic"
   habitable 670
   belt 1173
-  link Sol
   link Diphda
   link Eteron
+  link Fomalhaut
+  link Sol
   asteroids "small rock" 19 4.14
   asteroids "medium rock" 15 2.925
   asteroids "large rock" 104 3.6
@@ -6241,8 +6244,8 @@ system "Castor"
   habitable 1715
   belt 1675
   link Pollux
+  link Procyon
   link Talita
-  link Menkalinan
   asteroids "small rock" 3 3.5154
   asteroids "medium rock" 9 4.8762
   asteroids "large rock" 10 7.7679
@@ -6435,11 +6438,74 @@ system "Celeborim"
       distance 373
       period 23.9558
 
+system "Chalawan"
+  pos -641 -83
+  government "Republic"
+  habitable 1411
+  belt 1202
+  link Algieba
+  link Alphard
+  link Zosma
+  asteroids "small rock" 9 6.0810
+  asteroids "medium rock" 12 5.4349
+  asteroids "large rock" 15 4.6901
+  asteroids "small metal" 4 4.3379
+  asteroids "medium metal" 34 6.1831
+  asteroids "large metal" 6 5.3101
+  minables "titanium" 10 11.5967
+  trade "Clothing" 339
+  trade "Electronics" 704
+  trade "Equipment" 629
+  trade "Food" 529
+  trade "Heavy Metals" 1095
+  trade "Industrial" 599
+  trade "Luxury Goods" 1419
+  trade "Medical" 618
+  trade "Metal" 269
+  trade "Plastic" 490
+  fleet "Merchants North Small" 800
+  fleet "Merchants North Large" 1000
+  fleet "Deep Small" 3000
+  fleet "Deep Large" 12000
+  fleet "Republic Small" 1000
+  fleet "Republic Large" 4000
+  fleet "Syndicate Small" 2000
+  fleet "Syndicate Large" 8000
+  object
+    sprite star/f5
+    period 10
+  object
+    sprite planet/titan
+    distance 288.2
+    period 63.0720
+  object
+    sprite planet/desert3-b
+    distance 589.46
+    period 194.431
+  object
+    sprite planet/forest3-b
+    distance 819.06
+    period 244.551
+  object
+    sprite planet/gas14-b
+    distance 1482.1
+    period 766.122
+  object
+    sprite planet/gas1
+    distance 3076.8
+    period 2300.85
+
 system "Charm"
   pos -154 548
   government "Quarg"
   habitable 1272
   belt 1702
+  asteroids "small rock" 1 4.6099
+  asteroids "medium rock" 78 4.1025
+  asteroids "large rock" 7 5.5265
+  asteroids "small metal" 1 4.1412
+  asteroids "medium metal" 5 4.8331
+  asteroids "large metal" 1 5.4182
   trade "Clothing" 363
   trade "Electronics" 834
   trade "Equipment" 538
@@ -6989,7 +7055,6 @@ system "Cor Caroli"
   habitable 1080
   belt 1474
   link Algorel
-  link Arcturus
   link Gacrux
   link Vindemiatrix
   asteroids "small rock" 24 3.2472
@@ -7507,7 +7572,7 @@ system "Delta Sagittarii"
   object
     sprite star/k5
     period 10
-  object "Bundok"
+  object "Dancer"
     sprite planet/ocean6
     distance 259.64
     period 93.5497
@@ -10056,7 +10121,7 @@ system "Fomalhaut"
   habitable 456
   belt 1854
   link Altair
-  link Markab
+  link Caph
   asteroids "small rock" 3 7.1415
   asteroids "medium rock" 2 9.2529
   asteroids "large rock" 1 4.2228
@@ -14240,11 +14305,10 @@ system "Limen"
 
 system "Lolami"
   pos -628 -10
-  government "Republic"
+  government "Syndicate"
   habitable 1215
   belt 1072
   link Alphard
-  link "Tania Australis"
   asteroids "small rock" 68 1.6926
   asteroids "medium rock" 55 1.6653
   asteroids "large rock" 180 3.003
@@ -14263,14 +14327,11 @@ system "Lolami"
   trade "Medical" 757
   trade "Metal" 439
   trade "Plastic" 316
-  fleet "Merchants North Small" 800
-  fleet "Merchants North Large" 1000
-  fleet "Deep Small" 3000
-  fleet "Deep Large" 12000
-  fleet "Republic Small" 1000
-  fleet "Republic Large" 4000
-  fleet "Syndicate Small" 2000
-  fleet "Syndicate Large" 8000
+  fleet "Merchants North Small" 2000
+  fleet "Miners North" 3000
+  fleet "Pirates North Small" 2000
+  fleet "Pirates North Large" 4000
+  fleet "Syndicate Small" 5000
   object
     sprite star/g0
     distance 11
@@ -14627,10 +14688,9 @@ system "Markab"
   government "Republic"
   habitable 625
   belt 1411
+  link Ankaa
   link "Delta Capricorni"
   link Scheat
-  link Ankaa
-  link Fomalhaut
   asteroids "small rock" 11 4.4863
   asteroids "medium rock" 54 5.2403
   asteroids "large rock" 8 2.0358
@@ -15273,9 +15333,8 @@ system "Menkalinan"
   government "Syndicate"
   habitable 3430
   belt 1424
-  link Capella
-  link Castor
   link Alhena
+  link Capella
   asteroids "small rock" 17 2.7216
   asteroids "medium rock" 19 4.9086
   asteroids "large rock" 1 2.8674
@@ -16479,6 +16538,7 @@ system "Naper"
   trade "Metal" 414
   trade "Plastic" 326
   fleet "Merchants South Small" 1500
+  fleet "Merchants South Large" 3000
   fleet "Miners South" 3000
   fleet "Pirates South Small" 1000
   fleet "Militia Small" 5000
@@ -17966,6 +18026,7 @@ system "Polaris"
   trade "Plastic" 418
   fleet "Merchants Core Small" 600
   fleet "Merchants Core Large" 700
+  fleet "Pirates Core Small" 1500
   fleet "Republic Small" 1000
   fleet "Republic Large" 2000
   fleet "Korath Raid" 50000
@@ -17998,8 +18059,8 @@ system "Pollux"
   government "Syndicate"
   habitable 1080
   belt 1161
-  link Procyon
   link Castor
+  link Procyon
   link Talita
   asteroids "small rock" 2 8.94
   asteroids "medium rock" 8 3.48
@@ -18189,9 +18250,10 @@ system "Procyon"
   government "Syndicate"
   habitable 456
   belt 1763
-  link Sirius
-  link Pollux
   link Capella
+  link Castor
+  link Pollux
+  link Sirius
   asteroids "small rock" 9 4.4226
   asteroids "medium rock" 16 2.7594
   asteroids "large rock" 157 4.4604
@@ -18753,7 +18815,7 @@ system "Rastaban"
     sprite planet/dust6
     distance 398.4
     period 96.7892
-  object "Dancer"
+  object "Bundok"
     sprite planet/ocean6
     distance 933.4
     period 347.096
@@ -19086,11 +19148,10 @@ system "Ruchbah"
   government "Republic"
   habitable 2560
   belt 1598
-  link Ankaa
-  link Alpheratz
-  link Hamal
-  link "Alpha Hydri"
   link Algol
+  link Alpheratz
+  link Ankaa
+  link Hamal
   asteroids "small rock" 6 4.8412
   asteroids "medium rock" 17 2.1476
   asteroids "large rock" 57 4.7684
@@ -19137,7 +19198,7 @@ system "Ruchbah"
     sprite planet/oberon-b
     distance 1246.16
     period 347.777
-  object "Crossroads"
+  object "Lodestone"
     sprite planet/cloud4
     distance 1794.6
     period 601.024
@@ -19226,6 +19287,12 @@ system "Ruwarku"
   link "Ekuarik"
   link "Ki War Ek"
   link "Quaru"
+  asteroids "small rock" 5 3.4722
+  asteroids "medium rock" 5 5.8569
+  asteroids "large rock" 8 4.8297
+  asteroids "small metal" 44 3.8634
+  asteroids "medium metal" 19 5.4659
+  asteroids "large metal" 9 5.5868
   trade "Clothing" 377
   trade "Electronics" 666
   trade "Equipment" 670
@@ -21973,7 +22040,6 @@ system "Tania Australis"
   belt 1738
   link Algieba
   link Fala
-  link Lolami
   link Mora
   asteroids "medium rock" 4 4.6656
   asteroids "large rock" 13 5.2704
@@ -21992,11 +22058,12 @@ system "Tania Australis"
   trade "Medical" 677
   trade "Metal" 351
   trade "Plastic" 390
-  fleet "Merchants West Small" 1400
-  fleet "Merchants West Large" 2900
-  fleet "Republic Small" 600
-  fleet "Republic Large" 400
-  fleet "Navy Surveillance" 2000
+  fleet "Merchants West Small" 1000
+  fleet "Merchants West Large" 2000
+  fleet "Pirates South Small" 4000
+  fleet "Pirates South Large" 9000
+  fleet "Republic Small" 3000
+  fleet "Republic Large" 6000
   object
     sprite star/g0-old
     period 10
@@ -23905,7 +23972,7 @@ system "Zosma"
   government "Deep"
   habitable 456
   belt 1436
-  link Alphard
+  link Chalawan
   link Dubhe
   link Gomeisa
   asteroids "small rock" 17 3.2175
@@ -24559,7 +24626,7 @@ planet "Buccaneer Bay"
 #    fleet "Pirates Core Large" 9
 
 planet "Bundok"
-  attributes "dirt belt" farming
+  attributes south farming
   landscape land/sky3
   description `Bundok is a cloudy planet orbiting a dim star; the only reason it is not completely frozen is because of the heat trapped by its upper atmosphere. There are only a handful of towns here, and nothing big enough to warrant being called a city. Most of the settlers are subsistence farmers who can only dream about life on other worlds. Many houses here do not even have running water or personal computers.`
   description `  Some of the farms near the spaceport are planted with different crops forming abstract patterns visible from the air. Such a whimsical extravagance seems particularly odd when you consider that the owners will never be able to afford to see their fields from that angle. But perhaps that is precisely the point.`
@@ -25495,7 +25562,7 @@ planet "Hai Wormhole"
   description ""
 
 planet "Hamlet"
-  attributes "dirt belt" farming textiles frontier
+  attributes south farming textiles frontier
   landscape land/forest0
   description `Hamlet was first settled less than a century ago, and the settlers are still struggling to establish themselves. It is a hospitable climate, but the amount of labour needed to clear forests and to plow rocky fields has meant that the towns here can only grow very slowly. The farms grow both food crops and cotton, and very recently they have begun manufacturing their own textiles instead of just shipping the raw cotton off-world for processing.`
   spaceport `Hamlet's spaceport is a ring of low wooden buildings around a wide landing area paved with concrete slabs. Around the perimeter carts of trade goods are driven, some being pulled by tractors and others, by horses or oxen. You even think you see a few carts being pulled by water buffalo.`
@@ -26894,7 +26961,7 @@ planet "Silver"
 #    fleet "Republic Small" 25
 
 planet "Sinter"
-  attributes "dirt belt" mining
+  attributes south mining
   landscape land/nasa2
   description `Sinter is a world where life never developed; the atmosphere is unbreathable, but warm enough and dense enough that people can survive here in pressurized homes or outside when wearing oxygen tanks. The only industry here is mining, which is mostly done with remotely controlled robots, so the population of the entire planet is only a few thousand people.`
   spaceport `The spaceport is built next to a large smelter where ore is processed into metal ingots. Even on a planet as inhospitable as this one, the cost of extracting metal from ore is still cheaper than the cost of shipping the ore off-world for processing. A long enclosed terminal building extends out from the smelter, with docking tubes and landing pads every few hundred meters for connecting to visiting ships. Small robotic trolleys carry cargo crates back and forth; only a handful of people are walking around here, and most of them are probably off-worlders.`
