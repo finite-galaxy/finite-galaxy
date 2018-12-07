@@ -960,6 +960,7 @@ event "thule becomes independent"
   planet "Thule"
     description `Thule is a mountainous world with a population of nearly a billion, settled in the early days of space exploration. When the colony was first established, the Earth government did not yet have the strength to control any system but its own, and when the Republic was formed, Thule did not join, and has repulsed all efforts to force them to do so.`
     description `  Until recently, Thule was a well-known den of pirate activity, but the major tribal authorities have now forsworn piracy in the interest of keeping the Free Worlds from further meddling in their affairs. However, it is likely that all manner of illegal activity is still going on in secret here.`
+    shipyard "Southbound Intermediate"
   planet "Smuggler's Den"
     description `Smuggler's Den was formerly known as Grendel Station, back when it was an operating refinery. After that, it was taken over by pirates, and became a haven for all manner of smugglers and privateers. Now, at least in theory it is an independent station, no longer allied with the pirates. In practice, you suspect a fair amount of piracy still goes on here.`
     description `The repair shops here can make a variety of legal and illegal modifications to your ship, and in the shipyard you can buy refurbished starships... if it does not trouble your conscience to think about the likely fates of their previous owners.`
@@ -2814,10 +2815,10 @@ event "wanderers: unfettered invasion starts"
     attributes "unfettered"
     description `Varu K'est is a spare, ancient planet of arid plateaus and deep, meandering canyons, with too little rainfall to support any but the hardiest of shrubs. Before the Unfettered invaded, the only Wanderer settlements remaining here were the military bases they had set up to defend their frontier. Now, it is home to an ever-growing number of Unfettered settlements, including many civilians who have come here just for the chance to live on a world that is not overcrowded and polluted.`
     spaceport `The Unfettered are using the few jump drives they have to ferry more and more of their people into Wanderer space. When each wave of ships arrives here in the spaceport, technicians carefully remove the jump drives from all but a few of them. A few well guarded jump-capable ships then carry those spare jump drives back to Unfettered space, where they are used to bring more ships and people.`
-    outfitter clear
+    remove outfitter "Wanderer Intermediate"
     outfitter "Hai Intermediate"
     outfitter "Hai Unfettered"
-    shipyard clear
+    remove shipyard "Wanderer Basics"
     shipyard "Hai Advanced"
     shipyard "Hai Unfettered"
   planet "Darkcloud"
@@ -2839,9 +2840,9 @@ event "capture of ik'kara'ka"
     attributes "unfettered" "factory"
     description `This Wanderer factory world was recently captured by the Unfettered Hai, who are now busy trying to repurpose the Wanderer factories and equipment that were left behind, to build more ships for their war fleets. The Wanderers did not have time to demolish any of their equipment or to carry it off-world before the planet was lost. As a result, they have given the Unfettered a significant technological advantage here.`
     spaceport `The Unfettered seem to be quite at home in the tree house dwellings that the Wanderers left behind, and the Unfettered youth living here scramble up trunks and leap from tree to tree with reckless abandon, exulting in this new world they have captured and trying to outdo each other with their daredevil escapades.`
-    outfitter clear
+    remove outfitter "Wanderer Advanced"
     outfitter "Hai Unfettered"
-    shipyard clear
+    remove shipyard "Wanderer Intermediate"
 
 
 event "wanderers: tempest mass production"
