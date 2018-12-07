@@ -1,24 +1,24 @@
-outfit "Torpedo"
-  plural "Torpedoes"
+outfit "Cyclone Torpedo"
+  plural "Cyclone Torpedoes"
   category "Ammunition"
   thumbnail "outfit/torpedo"
   cost 2000
   "mass" .4
   "plunderable" 1
-  "torpedo capacity" -1
-  description "Torpedoes are ammunition for the Torpedo Launcher. You cannot install torpedoes unless you have also installed a launcher to fire them from."
+  "cyclone capacity" -1
+  description "Cyclone Torpedoes are ammunition for the Cyclone Torpedo Launcher. You cannot install torpedoes unless you have also installed a launcher to fire them from."
 
-outfit "Torpedo Storage Rack"
+outfit "Cyclone Torpedo Rack"
   category "Ammunition Storage"
   thumbnail "outfit/torpedo_storage"
   cost 30000
   "mass" 3
   "outfit space" -9
-  "torpedo capacity" 15
-  ammo "Torpedo"
-  description "The Torpedo Storage Rack is used to store extra ammunition for Torpedo Launchers."
+  "cyclone capacity" 15
+  ammo "Cyclone Torpedo"
+  description "The Cyclone Torpedo Rack is used to store extra ammunition for Torpedo Launchers."
 
-outfit "Torpedo Launcher"
+outfit "Cyclone Torpedo Launcher"
   category "Secondary Weapons"
   thumbnail "outfit/torpedo_launcher"
   cost 80000
@@ -26,15 +26,15 @@ outfit "Torpedo Launcher"
   "outfit space" -24
   "weapon space" -24
   "gun ports" -1
-  "torpedo capacity" 15
+  "cyclone capacity" 15
   weapon
-    sprite "projectile/torpedo"
+    sprite "projectile/cyclone"
       "frame rate" 2
       "random start frame"
-    sound "torpedo"
-    ammo "Torpedo"
-    icon "icon/torpedo"
-    "fire effect" "torpedo fire"
+    sound "cyclone"
+    ammo "Cyclone Torpedo"
+    icon "icon/cyclone"
+    "fire effect" "cyclone fire"
     "hit effect" "torpedo hit"
     "die effect" "tiny explosion"
     "inaccuracy" 5
@@ -53,10 +53,10 @@ outfit "Torpedo Launcher"
     "hull damage" 680
     "hit force" 300
     "missile strength" 30
-  description "Torpedoes are the most powerful homing weapon, but they move slowly enough that fast ships can simply outrun them, making them most useful against large targets or against small ships at times when they are too distracted to dodge. Torpedo launchers are also much larger than other missile systems, so they are most often found in capital ships."
+  description "Cyclone Torpedoes are the most powerful homing weapon, but they move slowly enough that fast ships can simply outrun them, making them most useful against large targets or against small ships at times when they are too distracted to dodge. Torpedo launchers are also much larger than other missile systems, so they are most often found in capital ships."
 
-effect "torpedo fire"
-  sprite "effect/torpedo fire"
+effect "cyclone fire"
+  sprite "effect/cyclone fire"
     "no repeat"
     "frame rate" 10
   "lifetime" 15
@@ -70,9 +70,9 @@ outfit "Typhoon Torpedo"
   "mass" .6
   "plunderable" 1
   "typhoon capacity" -1
-  description "Typhoon Torpedoes are ammunition for the Typhoon Launcher. You cannot install Typhoon Torpedoes unless you have also installed a launcher to fire them from."
+  description "Typhoon Torpedoes are ammunition for the Typhoon Torpedo Launcher. You cannot install Typhoon Torpedoes unless you have also installed a launcher to fire them from."
 
-outfit "Typhoon Storage Tube"
+outfit "Typhoon Torpedo Box"
   category "Ammunition Storage"
   thumbnail "outfit/typhoon_storage"
   cost 40000
@@ -80,9 +80,9 @@ outfit "Typhoon Storage Tube"
   "outfit space" -10
   "typhoon capacity" 10
   ammo "Typhoon Torpedo"
-  description "The Typhoon Storage Tube is used to store extra ammunition for Typhoon Launchers."
+  description "The Typhoon Torpedo Box is used to store extra ammunition for Typhoon Torpedo Launchers."
 
-outfit "Typhoon Launcher"
+outfit "Typhoon Torpedo Launcher"
   category "Secondary Weapons"
   thumbnail "outfit/typhoon_launcher"
   cost 260000

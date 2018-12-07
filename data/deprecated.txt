@@ -97,6 +97,11 @@
 # "Remnant License"
 # "Reverse Thruster"
 # "Small Bunk Room"
+# "Torpedo"
+# "Torpedo Storage Rack"
+# "Torpedo Launcher"
+# "Typhoon Storage Tube"
+# "Typhoon Launcher"
 # "Wanderer License"
 # "Wanderer Military License"
 # "Wanderer Outfits License"
@@ -1600,6 +1605,104 @@ outfit "Small Bunk Room"
   "mass" 3
   "bunks" 2
   "outfit space" -12
+
+
+outfit "Torpedo"
+  plural "Torpedoes"
+  category "Deprecated"
+  thumbnail "outfit/unknown"
+  cost 1400
+  "mass" .4
+  "torpedo capacity" -1
+
+outfit "Torpedo Storage Rack"
+  category "Deprecated"
+  thumbnail "outfit/unknown"
+  cost 21000
+  thumbnail "outfit/torpedo storage"
+  "mass" 3
+  "outfit space" -9
+  "torpedo capacity" 15
+  ammo "Torpedo"
+
+outfit "Torpedo Launcher"
+  category "Deprecated"
+  thumbnail "outfit/unknown"
+  cost 80000
+  "mass" 13
+  "outfit space" -25
+  "weapon capacity" -25
+  "gun ports" -1
+  "torpedo capacity" 30
+  weapon
+    sprite "projectile/cyclone"
+      "frame rate" 2
+      "random start frame"
+    sound "cyclone"
+    ammo "Torpedo"
+    icon "icon/cyclone"
+    "fire effect" "cyclone fire"
+    "hit effect" "torpedo hit"
+    "die effect" "tiny explosion"
+    "inaccuracy" 5
+    "velocity" 6
+    "lifetime" 600
+    "reload" 150
+    "firing energy" 2
+    "firing heat" 45
+    "acceleration" .15
+    "drag" .025
+    "turn" 1.5
+    "homing" 3
+    "optical tracking" .8
+    "shield damage" 680
+    "hull damage" 680
+    "hit force" 300
+    "missile strength" 30
+
+outfit "Typhoon Storage Tube"
+  category "Deprecated"
+  thumbnail "outfit/unknown"
+  cost 40500
+  "mass" 2.5
+  "outfit space" -10
+  "typhoon capacity" 15
+  ammo "Typhoon Torpedo"
+
+outfit "Typhoon Launcher"
+  category "Deprecated"
+  thumbnail "outfit/unknown"
+  cost 260000
+  "mass" 20
+  "outfit space" -35
+  "weapon capacity" -35
+  "gun ports" -1
+  "typhoon capacity" 30
+  weapon
+    sprite "projectile/typhoon"
+      "frame rate" 4
+      "random start frame"
+    sound "typhoon"
+    ammo "Typhoon Torpedo"
+    icon "icon/typhoon"
+    "fire effect" "typhoon fire"
+    "hit effect" "torpedo hit"
+    "die effect" "tiny explosion"
+    "inaccuracy" 5
+    "velocity" 5
+    "lifetime" 600
+    "reload" 120
+    "firing energy" 4
+    "firing heat" 50
+    "acceleration" .1
+    "drag" .02
+    "turn" 1.5
+    "homing" 4
+    "optical tracking" .9
+    "shield damage" 880
+    "hull damage" 880
+    "hit force" 450
+    "missile strength" 40
 
 
 outfit "Wanderer License"
