@@ -71,15 +71,6 @@ mission "Coalition: First Contact"
       `  You talk with them for a while longer, and learn that the centipedes are called "Saryd," and are the oldest of the three species. The beetles are the "Kimek," and come next, and the spiders are called "Arachi," and were the last of the three to discover spaceflight.`
       `  They tell you that the best way to learn more about them is to visit their worlds, and to see for yourself how the three species live in friendship and equality. They also offer to give you jobs to do in their territory, so that you may become a "valuable contributor" to their society.`
 
-mission "Discovered Coalition Space"
-  landing
-  invisible
-  source
-    government "Heliarch"
-  on offer
-    event "label coalition space"
-    fail
-
 
 
 mission "Coalition: Contributor"
@@ -114,15 +105,4 @@ mission "Coalition: Contributor"
       `  "For the sake of peace it is," says the Saryd. "The Heliarch military, well trained to use weapons only for defence and only for justice, they are. And to place the needs of the Coalition over the ambitions of their own native species, each one committed is. No such discipline do civilians have."`
       label end
       `  Apparently nothing is for sale here, but they assure you that many Coalition worlds will now grant you access to their shipyards and outfitters.`
-
-#For pre-0.9.7 compatibility
-mission "Coalition Licence Patch"
-  invisible
-  landing
-  to offer
-    has "Coalition: Contributor: done"
-    not "licence: Coalition"
-  on offer
-    set "licence: Coalition"
-    fail
 

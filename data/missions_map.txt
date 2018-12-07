@@ -1,3 +1,16 @@
+# "Discovered Coalition Space"
+# "Discovered Ember Waste"
+# "Discovered Hai Space"
+# "Discovered Korath Space"
+# "Discovered the Core"
+# "Discovered the Deep"
+# "Discovered the Dirt Belt"
+# "Discovered the Far North"
+# "Discovered the Near Earth Planets"
+# "Discovered the Paradise Planets"
+# "Discovered the Rim"
+# "Discovered the South"
+# "Discovered Wanderer Space"
 # "Drak guarding Korath space"
 # "Drak guarding Sayaiban"
 # "Drak guarding Void Sprites"
@@ -5,6 +18,124 @@
 # "Permanent Militia fleets"
 # "Permanent Republic fleets"
 # "Permanent Syndicate fleets"
+
+
+mission "Discovered Coalition Space"
+  landing
+  invisible
+  source
+    government "Heliarch"
+  on offer
+    event "label coalition space"
+    fail
+
+mission "Discovered Ember Waste"
+  landing
+  invisible
+  source
+    government "Remnant"
+  on offer
+    event "label ember waste"
+    fail
+
+mission "Discovered Hai Space"
+  landing
+  invisible
+  source
+    government "Hai"
+  on offer
+    event "label hai space"
+    fail
+
+mission "Discovered Korath Space"
+  landing
+  invisible
+  source
+    attributes "efret"
+  on offer
+    event "label korath space"
+    fail
+
+mission "Discovered the Core"
+  landing
+  invisible
+  source
+    attributes "core"
+  on offer
+    event "label core"
+    fail
+
+mission "Discovered the Deep"
+  landing
+  invisible
+  source
+    attributes "deep"
+  on offer
+    event "label deep"
+    fail
+
+mission "Discovered the Dirt Belt"
+  landing
+  invisible
+  source
+    attributes "dirt belt"
+  on offer
+    event "label dirt belt"
+    fail
+
+mission "Discovered the Far North"
+  landing
+  invisible
+  source
+    attributes "north"
+  on offer
+    event "label north"
+    fail
+
+mission "Discovered the Near Earth Planets"
+  landing
+  invisible
+  source
+    attributes "near earth"
+  on offer
+    event "label earth"
+    fail
+
+mission "Discovered the Paradise Planets"
+  landing
+  invisible
+  source
+    attributes "paradise"
+  on offer
+    event "label paradise"
+    fail
+
+mission "Discovered the Rim"
+  landing
+  invisible
+  source
+    attributes "rim"
+  on offer
+    event "label rim"
+    fail
+
+mission "Discovered the South"
+  landing
+  invisible
+  source
+    attributes "south"
+  on offer
+    event "label south"
+    fail
+
+mission "Discovered Wanderer Space"
+  landing
+  invisible
+  source
+    government "Wanderer"
+  on offer
+    event "label wanderer space"
+    fail
 
 
 
@@ -136,42 +267,6 @@ mission "Permanent Republic fleets"
     ship "Mark I Drone" "Omega Eight"
     ship "Mark I Drone" "Omega Nine"
     ship "Mark I Drone" "Omega Ten"
-  npc kill
-    government "Republic"
-    personality heroic vindictive staying
-    system "Alnitak"
-    ship "Saturn" "R.N.S. Weser"
-    ship "Mark I Drone" "Psi One"
-    ship "Mark I Drone" "Psi Two"
-    ship "Mark I Drone" "Psi Three"
-    ship "Mark I Drone" "Psi Four"
-    ship "Mars" "R.N.S. Fulda"
-    ship "Mars" "R.N.S. Leine"
-    ship "Mars" "R.N.S. Werra"
-  npc kill
-    government "Republic"
-    personality heroic vindictive staying
-    system "Tania Australis"
-    ship "Saturn" "R.N.S. Seine"
-    ship "Mark I Drone" "Sigma One"
-    ship "Mark I Drone" "Sigma Two"
-    ship "Mark I Drone" "Sigma Three"
-    ship "Mark I Drone" "Sigma Four"
-    ship "Mars" "R.N.S. Marne"
-    ship "Mars" "R.N.S. Oise"
-    ship "Mars" "R.N.S. Yonne"
-  npc kill
-    government "Republic"
-    personality heroic vindictive staying
-    system "Zaurak"
-    ship "Saturn" "R.N.S. Po"
-    ship "Mark I Drone" "Pi One"
-    ship "Mark I Drone" "Pi Two"
-    ship "Mark I Drone" "Pi Three"
-    ship "Mark I Drone" "Pi Four"
-    ship "Mars" "R.N.S. Adda"
-    ship "Mars" "R.N.S. Oglio"
-    ship "Mars" "R.N.S. Ticino"
 
 mission "Permanent Syndicate fleets"
   invisible

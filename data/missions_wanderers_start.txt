@@ -58,17 +58,6 @@ mission "First Contact: Wanderer"
 
 
 
-mission "Discovered Wanderer Space"
-  landing
-  invisible
-  source
-    government "Wanderer"
-  on offer
-    event "label wanderer space"
-    fail
-
-
-
 mission "Wanderers: Hai Diplomat"
   description "Travel to Hai-home to pick up a diplomat who can help you communicate with the Wanderers."
   landing

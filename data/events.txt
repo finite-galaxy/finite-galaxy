@@ -19,16 +19,32 @@
 # map label events
 
 event "label coalition space"
-  galaxy "label saryd"
-    sprite "label/saryd"
-  galaxy "label kimek"
-    sprite "label/kimek"
   galaxy "label arachi"
     sprite "label/arachi"
+  galaxy "label kimek"
+    sprite "label/kimek"
+  galaxy "label saryd"
+    sprite "label/saryd"
+
+event "label core"
+  galaxy "label core"
+    sprite "label/core"
+
+event "label deep"
+  galaxy "label deep"
+    sprite "label/deep"
+
+event "label dirt belt"
+  galaxy "label dirt belt"
+    sprite "label/dirt_belt"
+
+event "label earth"
+  galaxy "label earth"
+    sprite "label/earth"
 
 event "label ember waste"
-  galaxy "label waste"
-    sprite label/waste
+  galaxy "label ember waste"
+    sprite label/ember_waste
 
 event "label hai space"
   galaxy "label hai"
@@ -37,6 +53,22 @@ event "label hai space"
 event "label korath space"
   galaxy "label korath"
     sprite "label/korath"
+
+event "label north"
+  galaxy "label north"
+    sprite "label/north"
+
+event "label paradise"
+  galaxy "label paradise"
+    sprite "label/paradise"
+
+event "label rim"
+  galaxy "label rim"
+    sprite "label/rim"
+
+event "label south"
+  galaxy "label south"
+    sprite "label/south"
 
 event "label wanderer space"
   galaxy "label wanderers"

@@ -33,15 +33,6 @@ mission "First Contact: Hai"
   on decline
     log "Factions" "Hai" `The Hai are a species of giant, intelligent rodents, who live to the north of human space. They allow any humans who discover their territory to live alongside them, and to trade with them and purchase their technology.`
 
-mission "Discovered Hai Space"
-  landing
-  invisible
-  source
-    government "Hai"
-  on offer
-    event "label hai space"
-    fail
-
 
 
 mission "First Contact: Unfettered"
