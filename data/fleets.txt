@@ -2212,48 +2212,17 @@ fleet "Oathkeeper Large"
   cargo 0
   personality
     heroic opportunistic
-  variant 2
-    "Jupiter"
-    "Foxhound" 4
-    "Mark I Drone" 6
-  variant 1
-    "Jupiter"
-    "Foxhound" 4
-    "Mark I Drone" 6
-    "Venus"
-  variant 1
-    "Jupiter"
-    "Foxhound" 4
-    "Mark I Drone" 6
-    "Mars"
-  variant 1
-    "Jupiter"
-    "Foxhound" 4
-    "Mark I Drone" 6
-    "Mercury"
   variant 3
     "Saturn"
     "Mark I Drone" 4
-  variant 1
+  variant 2
     "Saturn"
     "Mark I Drone" 4
     "Venus"
+  variant 1
+    "Saturn"
+    "Mark I Drone" 4
     "Mars"
-    "Mercury"
-  variant 1
-    "Saturn"
-    "Mark I Drone" 4
-    "Venus" 2
-  variant 1
-    "Saturn"
-    "Mark I Drone" 4
-    "Venus"
-    "Mars"
-  variant 1
-    "Saturn"
-    "Mark I Drone" 4
-    "Venus"
-    "Mercury"
   variant 1
     "Saturn"
     "Mark I Drone" 4
@@ -2267,18 +2236,14 @@ fleet "Oathkeeper Large"
     "Saturn"
     "Mark I Drone" 4
     "Mercury" 2
-  variant 6
-    "Venus" 2
-    "Mars"
-    "Mercury"
-  variant 2
+  variant 1
+    "Saturn"
+    "Mark I Drone" 4
+    "Mercury" 3
+  variant 5
     "Venus"
     "Mars" 2
-    "Mercury"
-  variant 2
-    "Venus"
-    "Mars"
-    "Mercury" 2
+    "Mercury" 3
 
 fleet "Oathkeeper Small"
   government "Navy (Oathkeeper)"
@@ -2288,16 +2253,9 @@ fleet "Oathkeeper Small"
     heroic opportunistic
   variant 4
     "Venus"
-  variant 6
-    "Mars"
-  variant 3
-    "Mars" 2
   variant 5
-    "Mars"
-    "Mercury"
+    "Mars" 2
   variant 6
-    "Mercury" 2
-  variant 1
     "Mercury" 3
 
 
@@ -3417,6 +3375,19 @@ fleet "Gunboat Only"
     "Mars (Mark II)"
 
 
+fleet "Navy Patrol"
+  government "Republic"
+  names "republic capital"
+  fighters "republic fighter"
+  cargo 0
+  personality
+    heroic opportunistic
+  variant 1
+    "Saturn"
+    "Mark I Drone" 4
+    "Venus" 2
+
+
 fleet "Navy Surveillance"
   government "Republic"
   names "republic capital"
@@ -3424,10 +3395,10 @@ fleet "Navy Surveillance"
   cargo 0
   personality
     surveillance opportunistic
-  variant 10
+  variant 1
     "Saturn"
     "Watch Dog" 4
-  variant 10
+  variant 3
     "Mars" 2
 
 

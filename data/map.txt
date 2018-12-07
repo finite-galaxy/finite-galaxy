@@ -1804,6 +1804,7 @@ system "Acamar"
   trade "Plastic" 483
   fleet "Merchants North Large" 3000
   fleet "Merchants North Small" 2000
+  fleet "Navy Patrol" 7200
   fleet "Republic Small" 3200
   fleet "Syndicate Small" 3600
   object
@@ -3385,6 +3386,8 @@ system "Alnitak"
   trade "Medical" 809
   trade "Metal" 318
   trade "Plastic" 452
+  fleet "Merchants North Small" 2000
+  fleet "Navy Patrol" 7200
   fleet "Pirates North Small" 3000
   fleet "Pirates North Large" 5000
   fleet "Republic Small" 2000
@@ -3588,8 +3591,7 @@ system "Alpha Centauri"
   fleet "Merchants South Large" 2500
   fleet "Merchants West Small" 1500
   fleet "Merchants West Large" 1800
-  fleet "Republic Small" 2000
-  fleet "Republic Large" 6000
+  fleet "Navy Surveillance" 3600
   object
     sprite star/k5
     distance 26.7033
@@ -3876,6 +3878,7 @@ system "Altair"
   trade "Plastic" 274
   fleet "Merchants East Small" 400
   fleet "Merchants East Large" 600
+  fleet "Navy Surveillance" 3600
   fleet "Republic Small" 2000
   fleet "Republic Large" 6000
   object
@@ -4973,6 +4976,7 @@ system "Bellatrix"
   trade "Plastic" 274
   fleet "Merchants North Small" 800
   fleet "Merchants North Large" 1500
+  fleet "Navy Patrol" 7200
   fleet "Republic Small" 1000
   fleet "Republic Large" 2000
   fleet "Pirates East Small" 3000
@@ -6082,6 +6086,8 @@ system "Caph"
   fleet "Merchants North Small" 500
   fleet "Merchants North Large" 700
   fleet "Miners East" 2000
+  fleet "Navy Patrol" 7200
+  fleet "Navy Surveillance" 3600
   fleet "Republic Small" 1000
   fleet "Republic Small" 1600
   object
@@ -6122,8 +6128,8 @@ system "Cardax"
   habitable 1705
   belt 1228
   link Moktar
-  link Volax
   link Sumar
+  link Volax
   asteroids "small rock" 26 5.4366
   asteroids "medium rock" 14 3.978
   asteroids "large rock" 32 3.1382
@@ -6143,6 +6149,7 @@ system "Cardax"
   trade "Plastic" 424
   fleet "Merchants North Small" 1200
   fleet "Merchants North Large" 3000
+  fleet "Navy Patrol" 7200
   fleet "Pirates North Small" 1000
   fleet "Pirates North Large" 3000
   fleet "Pirates East Small" 3000
@@ -7745,6 +7752,7 @@ system "Denebola"
   trade "Plastic" 253
   fleet "Merchants West Small" 1000
   fleet "Merchants West Large" 3000
+  fleet "Navy Surveillance" 3600
   fleet "Republic Small" 700
   fleet "Republic Large" 900
   object
@@ -7812,6 +7820,7 @@ system "Diphda"
   fleet "Merchants East Large" 600
   fleet "Merchants North Small" 500
   fleet "Merchants North Large" 700
+  fleet "Navy Patrol" 7200
   fleet "Republic Small" 3000
   object
     sprite star/k0
@@ -9217,8 +9226,7 @@ system "Eteron"
   fleet "Merchants North Small" 1000
   fleet "Merchants North Large" 1500
   fleet "Miners North" 2000
-  fleet "Republic Small" 2000
-  fleet "Republic Large" 4000
+  fleet "Navy Surveillance" 3600
   object
     sprite star/m4
     period 10
@@ -10027,6 +10035,7 @@ system "Fingol"
   trade "Plastic" 321
   fleet "Merchants West Small" 1200
   fleet "Miners West" 3000
+  fleet "Navy Surveillance" 7200
   fleet "Republic Small" 2000
   object
     sprite star/m4
@@ -10147,8 +10156,7 @@ system "Fomalhaut"
   trade "Plastic" 267
   fleet "Merchants East Small" 1000
   fleet "Merchants East Large" 1200
-  fleet "Republic Small" 5000
-  fleet "Republic Large" 10000
+  fleet "Navy Surveillance" 3600
   object
     sprite star/k0
     period 10
@@ -10900,8 +10908,8 @@ system "Gorvi"
   government "Republic"
   habitable 670
   belt 1345
-  link Tortor
   link Mintaka
+  link Tortor
   asteroids "small rock" 60 1.1781
   asteroids "medium rock" 3 2.1692
   asteroids "large rock" 17 2.7302
@@ -11273,6 +11281,7 @@ system "Hassaleh"
   trade "Plastic" 462
   fleet "Merchants North Small" 9000
   fleet "Miners North" 2000
+  fleet "Navy Patrol" 7200
   fleet "Pirates North Small" 6000
   fleet "Pirates North Large" 20000
   fleet "Republic Large" 20000
@@ -13970,6 +13979,7 @@ system "Kugel"
   fleet "Merchants North Small" 4000
   fleet "Merchants North Large" 4000
   fleet "Miners North" 4000
+  fleet "Navy Patrol" 7200
   fleet "Republic Small" 6000
   fleet "Syndicate Small" 8000
   object
@@ -15429,6 +15439,7 @@ system "Menkar"
   fleet "Merchants North Small" 800
   fleet "Merchants North Large" 1000
   fleet "Miners North" 2000
+  fleet "Navy Patrol" 7200
   fleet "Republic Small" 1500
   fleet "Republic Large" 2000
   fleet "Pirates North Large" 4000
@@ -15559,6 +15570,7 @@ system "Merak"
   trade "Plastic" 291
   fleet "Merchants West Small" 1500
   fleet "Merchants West Large" 4000
+  fleet "Navy Surveillance" 2400
   fleet "Republic Small" 1100
   fleet "Republic Large" 1300
   object
@@ -16083,8 +16095,9 @@ system "Mirfak"
   fleet "Merchants East Large" 3000
   fleet "Merchants North Small" 500
   fleet "Merchants North Large" 700
-  fleet "Republic Small" 1000
-  fleet "Republic Large" 1800
+  fleet "Navy Patrol" 3600
+  fleet "Republic Small" 1200
+  fleet "Republic Large" 2400
   object
     sprite star/k5
     period 10
@@ -16249,10 +16262,11 @@ system "Moktar"
   trade "Plastic" 345
   fleet "Merchants North Small" 1000
   fleet "Merchants North Large" 2000
-  fleet "Republic Small" 3000
-  fleet "Republic Large" 4000
+  fleet "Navy Patrol" 7200
   fleet "Pirates East Small" 2000
   fleet "Pirates North Small" 3000
+  fleet "Republic Small" 3000
+  fleet "Republic Large" 5000
   object
     sprite star/k5
     distance 29.0769
@@ -16756,8 +16770,7 @@ system "Nocte"
   trade "Plastic" 363
   fleet "Merchants South Small" 1500
   fleet "Miners South" 1600
-  fleet "Republic Small" 3000
-  fleet "Republic Large" 7000
+  fleet "Navy Surveillance" 3600
   object
     sprite star/m4
     period 10
@@ -18143,7 +18156,7 @@ system "Porrima"
   trade "Plastic" 381
   fleet "Merchants West Small" 1400
   fleet "Merchants West Large" 4000
-  fleet "Republic Small" 8000
+  fleet "Navy Surveillance" 7200
   object
     sprite star/g5
     distance 21.1382
@@ -18982,7 +18995,7 @@ system "Regulus"
   trade "Plastic" 318
   fleet "Merchants West Small" 6000
   fleet "Miners West" 3000
-  fleet "Republic Small" 10000
+  fleet "Navy Surveillance" 7200
   object
     sprite star/b5
     period 10
@@ -19110,6 +19123,7 @@ system "Rigel"
   fleet "Merchants North Small" 2000
   fleet "Merchants North Large" 4000
   fleet "Miners North" 2000
+  fleet "Navy Patrol" 7200
   fleet "Pirates North Small" 3000
   fleet "Pirates North Large" 5000
   fleet "Republic Small" 3000
@@ -20850,9 +20864,9 @@ system "Sirius"
   government "Republic"
   habitable 1800
   belt 1407
-  link Sol
-  link Procyon
   link Eteron
+  link Procyon
+  link Sol
   asteroids "small rock" 1 5.225
   asteroids "medium rock" 6 4.565
   asteroids "large rock" 6 7.645
@@ -20876,6 +20890,7 @@ system "Sirius"
   fleet "Merchants North Large" 700
   fleet "Merchants Paradise Small" 800
   fleet "Merchants Paradise Large" 1000
+  fleet "Navy Surveillance" 3600
   fleet "Republic Small" 1000
   fleet "Republic Large" 1500
   object
@@ -21106,8 +21121,10 @@ system "Sol"
   fleet "Merchants South Large" 3000
   fleet "Merchants West Small" 1200
   fleet "Merchants West Large" 2500
+  fleet "Navy Patrol" 7200
+  fleet "Navy Surveillance" 900
   fleet "Republic Small" 600
-  fleet "Republic Large" 900
+  fleet "Republic Large" 1200
   object
     sprite star/g0
     period 25.38
@@ -21808,8 +21825,8 @@ system "Sumar"
   habitable 2560
   belt 1778
   link Cardax
-  link Hassaleh
   link Danoa
+  link Hassaleh
   link Rajak
   asteroids "large metal" 1 2.2176
   trade "Clothing" 316
@@ -21822,6 +21839,7 @@ system "Sumar"
   trade "Medical" 713
   trade "Metal" 306
   trade "Plastic" 408
+  fleet "Navy Patrol" 7200
   fleet "Pirates North Small" 2000
   fleet "Pirates North Large" 6000
   fleet "Republic Large" 30000
@@ -23013,6 +23031,7 @@ system "Vega"
   trade "Plastic" 315
   fleet "Merchants South Small" 1000
   fleet "Merchants South Large" 4000
+  fleet "Navy Surveillance" 1800
   fleet "Republic Small" 900
   fleet "Republic Large" 1000
   object
