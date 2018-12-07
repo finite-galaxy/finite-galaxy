@@ -24301,6 +24301,10 @@ planet "Alapia"
   description `  Aside from hunting, most of the industry takes the form of harvesting and refining petrochemicals to make plastics, polymers, and oils. In some parts of Alapia, the pumpjacks outnumber the people a hundred to one.`
   spaceport `The spaceport consists mostly of a wide, open field paved in asphalt, the cheapest material available here. The pavement shimmers with heat, and is pockmarked with divots where ships' landing gear has sunk several centimeters in to the surface.`
   spaceport `  At the centre of the pavement is a small cluster of refrigerated sheds and stacks of crates carrying various goods for trade; a few armed guards patrol around them to prevent theft. A food truck is parked nearby, serving burgers and tacos to the port workers and to the crews of the few starships that are parked here at the moment.`
+  outfitter "Map"
+  outfitter "Pilot Licence"
+  outfitter "Fuel Pod"
+  outfitter "Basic Outfits"
   security 0.1
 #  tribute 600
 #    threshold 2500
@@ -24340,8 +24344,8 @@ planet "Alexandria"
   landscape land/space7
   description `At the height of the Alpha War, the government of the Deep constructed Alexandria as the galaxy's largest storehouse of human literature, scientific writing, and technology. It also houses a vast museum of cultural artifacts dating back to long before the start of the space age. Today the station is mostly populated by visitors looking for particularly arcane writings or information, and librarians who have devoted their lives to keeping the archives well-indexed and up to date.`
   description `  Entire sections of the station are off limits to ordinary visitors. There are many rumours about what those restricted areas contain.`
-  spaceport `The station's cavernous visitor centre is by far the quietest spaceport you have ever been in. Many people are bustling back and forth, wheeling carts of old books or carrying data pads, but they are entirely silent except for the occasional startled outburst when a scholar, walking deep in thought or immersed in reading, accidentally collides with someone.`
-  spaceport `  From here, passageways lead off into the wings of the library in a veritable labyrinth of hallways, stairs, and library stacks. A few particularly heavy doors require key cards to enter, and others have no opening controls of any sort that you can see.`
+#  spaceport `The station's cavernous visitor centre is by far the quietest spaceport you have ever been in. Many people are bustling back and forth, wheeling carts of old books or carrying data pads, but they are entirely silent except for the occasional startled outburst when a scholar, walking deep in thought or immersed in reading, accidentally collides with someone.`
+#  spaceport `  From here, passageways lead off into the wings of the library in a veritable labyrinth of hallways, stairs, and library stacks. A few particularly heavy doors require key cards to enter, and others have no opening controls of any sort that you can see.`
   "required reputation" 100
   bribe 0.1
 #  tribute 1000
@@ -24422,6 +24426,10 @@ planet "Arahas"
   description `Arahas is mostly desert and savanna, with very little precipitation. A century ago, some entrepreneurs settled here and built a factory complex that is entirely powered by wind and solar energy, because there are so few cloudy days here and the wind and sunshine are so reliable. The factory is mostly autonomous, with only a few thousand people living here to perform maintenance or to grow crops in irrigated fields.`
   description `The only other settlement is a minor base of the Republic Navy, located here to resupply the patrol ships that keep the space from here to Earth pirate-free.`
   spaceport `The spaceport consists of a few large concrete slabs, each big enough for a dozen small ships or a pair of bulk freighters to land on. Farther away are fields of solar panels and the factories that they power. The spaceport buildings themselves, however, are underground, where less energy is needed to keep the air cool. Light pipes bring sunlight down from the surface to illuminate the subterranean storage caverns and living quarters, while keeping the searing heat of the sunlight out.`
+  outfitter "Map"
+  outfitter "Pilot Licence"
+  outfitter "Fuel Pod"
+  outfitter "Basic Outfits"
   security 0.05
 #  tribute 400
 #    threshold 3000
@@ -24615,6 +24623,10 @@ planet "Bod"
   description `Bod is a world of jagged mountains and deeply shadowed valleys. Although it has been inhabited for centuries, in many places the terrain is so rugged that roads cannot be built, leaving several of the smaller towns almost completely isolated. Taking advantage of this isolation, several monastic orders have built monasteries here.`
   description `  In the lowlands, large farms support sprawling cities full of factories, a striking contrast to the simplicity and isolation of the mountain villages.`
   spaceport `The spaceport is in a hilly region, just outside of the largest city, with a view of a valley full of farms that stretch for tens of kilometers, all the way down to the ocean. The port is much less modern than the city nearby; it was built by the early settlers and has not been significantly updated since then, because the focus has been on improving life for the locals, not for their occasional visitors.`
+  outfitter "Map"
+  outfitter "Pilot Licence"
+  outfitter "Fuel Pod"
+  outfitter "Basic Outfits"
   security 0.1
 #  tribute 700
 #    threshold 3000
@@ -24799,7 +24811,7 @@ planet "Charon Station"
   music ambient/machinery
   description `Charon Station provides hyperspace fuel for much of the southern galactic rim. It is a tiny, cramped, and aging station, with twice as many workers here as it was originally designed for. Centuries ago, before much of the Dirt Belt was settled, this was the first spot below Algorel where merchant caravan fleets from the Deep could stop over on their way to the worlds farther up the Rim.`
   description `  The close quarters have fostered an extreme scrupulosity about personal space. It is unnerving to walk down a densely crowded hallway and fail to make eye contact with anyone.`
-  spaceport `The refinery here operates in shifts, non-stop, so there are always people coming and going in the hallways and docking bays. The cafeteria is so crowded that many workers are just standing up against the walls eating off their trays instead of trying to find a place to sit. Every few minutes, light flashes in through one of the windows from welders outside in space suits trying to keep the aging hull in perfect shape. Others drift around outside checking up on the solar panels and replacing burnt-out modules.`
+#  spaceport `The refinery here operates in shifts, non-stop, so there are always people coming and going in the hallways and docking bays. The cafeteria is so crowded that many workers are just standing up against the walls eating off their trays instead of trying to find a place to sit. Every few minutes, light flashes in through one of the windows from welders outside in space suits trying to keep the aging hull in perfect shape. Others drift around outside checking up on the solar panels and replacing burnt-out modules.`
   security 0.4
 #  tribute 200
 #    threshold 1500
@@ -25396,7 +25408,7 @@ planet "Fenrir Station"
   music ambient/machinery
   description `Fenrir Station is a bustling refinery, and from the way the foremen looked at you when you stepped off your ship, they seem to be eager for new recruits. In addition to harvesting deuterium, this is one of the few refinery stations in human space which also collects helium-3, an isotope with some exotic uses in medical imaging and in energy research.`
   description `  The diversity of isotopes found here is partly due to the station being a relatively new construction and benefiting from modern technology. But the gas giant which the station harvests from also has a composition unlike any other known planet. One theory is that it is on the cusp of becoming a brown dwarf star, in which case the isotopes now being stirred into the upper atmosphere by convection will eventually be depleted by fusion.`
-  spaceport `This station is composed of two rings, one containing the refinery and the other, the living quarters and cafeteria for the workers, in addition to a docking bay for visiting freighters. The workers all seem to be very busy, and few of them pay any attention to you.`
+#  spaceport `This station is composed of two rings, one containing the refinery and the other, the living quarters and cafeteria for the workers, in addition to a docking bay for visiting freighters. The workers all seem to be very busy, and few of them pay any attention to you.`
   bribe 0.05
   security 0.8
 #  tribute 600
@@ -26034,7 +26046,7 @@ planet "Ki Patek Ka"
   shipyard "Kimek Advanced"
 
 planet "Korati Efreti"
-  attributes station efret
+  attributes efret station
   landscape land/loc2
   description `This small Korath station is positioned at the Lagrangian point in between this system's sun and the planet that the Quarg had been mining for material to build the ringworld. The station is dwarfed by the ringworld, but nonetheless manages to make a statement: re-asserting the territorial rights of the Korath in the face of an alien species that chose to build a settlement in one of their systems.`
   spaceport `As the Korath civil war became more and more brutal, the safest home for those who wanted to avoid the fighting was right here in the shadow of the Quarg. This small station is still home to well over a thousand Korath, and they are constantly on the move from one section to another, their boots ringing loudly on the metal floors.`
@@ -26071,7 +26083,7 @@ planet "Kraken Station"
   landscape land/sivael7
   music ambient/machinery
   description `Kraken Station is seven centuries old; it was the first space station built outside of the Sol system. The station has been modified and repaired so often since that time that in all likelihood not a single deck panel or bulkhead that was part of the original station remains. Four centuries ago it was nearly destroyed by an asteroid impact, but other than that it has been a working deuterium refinery for its entire lifetime.`
-  spaceport `The main ring of the station consists of three different levels, with living quarters, repair shops, a few small cafeterias, and even a barber. The lower levels also house some of the refinery equipment, but much of the harvesting is done automatically by robotic drones. For a station that is so old, everything feels surprisingly sturdy; the bolts and beams that make up the station are much thicker than they probably need to be.`
+  description `  The main ring of the station consists of three different levels, with living quarters, repair shops, a few small cafeterias, and even a barber. The lower levels also house some of the refinery equipment, but much of the harvesting is done automatically by robotic drones. For a station that is so old, everything feels surprisingly sturdy; the bolts and beams that make up the station are much thicker than they probably need to be.`
   security 0.3
 #  tribute 500
 #    threshold 3500
@@ -26107,8 +26119,8 @@ planet "Leviathan Station"
   landscape land/sivael3
   music ambient/machinery
   description `Leviathan Station is the Deep's most productive deuterium harvesting station. Built nearly four hundred years ago, the station was one of the first to fuel the massive cargo caravans sent out from the Deep back when this was one of the only regions of the galaxy with a prosperous economy and a democratic government. Today it remains under government control, because the citizens of the Deep are wary of any private corporation controlling the industry that makes interstellar travel possible.`
-  spaceport `This is a refinery, not a tourist destination. You were allowed to dock here, and the massive cafeteria used by the local workers is available to you if you want to eat, but beyond that no one seems particularly interested in entertaining you or interacting with you.`
-  spaceport `  On the other hand, you get some small satisfaction from knowing that you refueled your ship with deuterium that just yesterday was most likely still floating around in the upper cloud banks of the gas giant below.`
+  description `  This is a refinery, not a tourist destination. You were allowed to dock here, and the massive cafeteria used by the local workers is available to you if you want to eat, but beyond that no one seems particularly interested in entertaining you or interacting with you.`
+#  spaceport `  On the other hand, you get some small satisfaction from knowing that you refueled your ship with deuterium that just yesterday was most likely still floating around in the upper cloud banks of the gas giant below.`
   "required reputation" 10
   bribe 0.08
   security 0.9
@@ -26431,7 +26443,7 @@ planet "Muninn Station"
   landscape land/sivael6
   music ambient/machinery
   description `Muninn Station, along with its brother station Huginn, serves as the gateway to the region of space known as the Deep. They both harvest and refine deuterium for use as rocket fuel, and in addition Muninn Station is used as a military base for the local defence fleets.`
-  spaceport `Most of the station is closed off to you, but you are told that if you want you may visit the large military mess hall, where hundreds of Navy members and local militia sit and eat or watch the news videos. You would normally expect a military mess hall to be a noisy, rowdy place, but this one is almost eerily silent, with a few quiet conversations going on in the corners but otherwise no noise except the video screens.`
+  description `  Most of the station is closed off to you, but you are told that if you want you may visit the large military mess hall, where hundreds of Navy members and local militia sit and eat or watch the news videos. You would normally expect a military mess hall to be a noisy, rowdy place, but this one is almost eerily silent, with a few quiet conversations going on in the corners but otherwise no noise except the video screens.`
   "required reputation" 10
   bribe 0.05
   security 0.8
@@ -26559,7 +26571,7 @@ planet "Oberon Station"
   landscape land/sivael0
   music ambient/machinery
   description `Oberon Station serves both as a refinery for hyperspace fuel, and as a garrison for ships of the Republic Navy. Patrol ships are constantly landing here and then taking off to scour the surrounding systems for pirates. Although pirates are not unusual in this part of space, it seems like a very tedious job.`
-  spaceport `The mess hall is empty except for one table where some Navy officers are playing a card game. They are sitting right under a ventilation duct, and the cards keep blowing off the table; the station's low simulated gravity is not enough to hold them there.`
+  description `  The mess hall is empty except for one table where some Navy officers are playing a card game. They are sitting right under a ventilation duct, and the cards keep blowing off the table; the station's low simulated gravity is not enough to hold them there.`
   "required reputation" 10
   bribe 0.08
   security 0.8
@@ -27530,7 +27542,7 @@ planet "Tinker"
   shipyard "Megaparsec Basics"
   shipyard "Centaur Intermediate"
   shipyard "Star Basics"
-  shipyard "Vortex Intermediate"
+  shipyard "Vortex Basics"
   bribe 0.04
   security 0.4
 #  tribute 1100
@@ -27963,7 +27975,7 @@ planet "Wyvern Station"
   landscape land/sivael7
   music ambient/machinery
   description `Wyvern Station was once one of the end destinations for the merchant caravans travelling along the Rim, back in the days before the Republic existed when most systems were not policed and the only way to avoid being plundered by pirates was for ships to travel in large convoys. It has also been a continuously operating hyperspace fuel refinery for more than three centuries.`
-  spaceport `This station is old, and some parts are dirty and in need of repair, but it is at least structurally sound, and the workers here seem optimistic and energetic. The cafeteria is loud and raucous, and the repair shop is more than willing to work on starships as a break from the tedium of repairing the harvester drones that dip into the planet's atmosphere to bring back pressurized tanks full of hydrogen gas.`
+  description `  This station is old, and some parts are dirty and in need of repair, but it is at least structurally sound, and the workers here seem optimistic and energetic. The cafeteria is loud and raucous, and the repair shop is more than willing to work on starships as a break from the tedium of repairing the harvester drones that dip into the planet's atmosphere to bring back pressurized tanks full of hydrogen gas.`
   security 0.4
 #  tribute 400
 #    threshold 3500
