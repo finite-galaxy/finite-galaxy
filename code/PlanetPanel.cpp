@@ -116,8 +116,6 @@ void PlanetPanel::Draw()
       if(planet.IsInhabited() && planet.GetSystem()->HasTrade()) 
         info.SetCondition("has trade");
     }
-    if(planet.IsInhabited())
-      info.SetCondition("is inhabited");
   }
   
   ui.Draw(info, this);
@@ -140,12 +138,6 @@ bool PlanetPanel::KeyDown(SDL_Keycode key, Uint16 mod, const Command &command)
   else if(key == 'l')
   {
     selectedPanel = nullptr;
-  }
-  else if(key == 'p' && flagship && planet.HasSpaceport() && hasAccess)
-  {
-    selectedPanel = spaceport.get();
-    spaceport->UpdateNews();
-    GetUI()->Push(spaceport);
   }
   else if(key == 's' && planet.HasShipyard() && hasAccess)
   {
@@ -170,23 +162,26 @@ bool PlanetPanel::KeyDown(SDL_Keycode key, Uint16 mod, const Command &command)
     selectedPanel = bank.get();
     GetUI()->Push(bank);
   }
-  else if(flagship && planet.HasSpaceport() && planet.IsInhabited() && hasAccess)
+  else if(key == 'p' && flagship && planet.HasSpaceport() && hasAccess)
   {
-    if(key == 't' && planet.GetSystem()->HasTrade())
-    {
-      selectedPanel = trading.get();
-      GetUI()->Push(trading);
-    }
-    else if(key == 'h' && flagship && planet.HasSpaceport() && planet.IsInhabited() && hasAccess)
-    {
-      selectedPanel = hiring.get();
-      GetUI()->Push(hiring);
-    }
-    else if(key == 'j' && flagship && planet.HasSpaceport() && planet.IsInhabited() && hasAccess)
-    {
-      GetUI()->Push(new MissionPanel(player));
-      return true;
-    }
+    selectedPanel = spaceport.get();
+    spaceport->UpdateNews();
+    GetUI()->Push(spaceport);
+  }
+  else if(key == 't' && flagship && planet.GetSystem()->HasTrade() && planet.IsInhabited() && planet.HasSpaceport() && hasAccess)
+  {
+    selectedPanel = trading.get();
+    GetUI()->Push(trading);
+  }
+  else if(key == 'h' && flagship && planet.IsInhabited() && planet.HasSpaceport() && hasAccess)
+  {
+    selectedPanel = hiring.get();
+    GetUI()->Push(hiring);
+  }
+  else if(key == 'j' && flagship && planet.IsInhabited() && planet.HasSpaceport() && hasAccess)
+  {
+    GetUI()->Push(new MissionPanel(player));
+    return true;
   }
   else if(command.Has(Command::MAP))
   {
