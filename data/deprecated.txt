@@ -10,6 +10,7 @@
 # "Blaster Turret"
 # "Bullfrog Anti-Missile Turret"
 # "Bullet Boxes"
+# "Bunk Room"
 # "Cargo Expansion"
 # "Chameleon Anti-Missile Turret"
 # "Coalition License"
@@ -242,6 +243,15 @@ outfit "Bullet Boxes"
   "outfit space" -5
   "gatling round capacity" 1500
   ammo "Gatling Gun Ammo"
+
+outfit "Bunk Room"
+  category "Deprecated"
+  thumbnail "outfit/unknown"
+  cost 40000
+  "mass" 5
+  "bunks" 4
+  "outfit space" -20
+  unplunderable 1
 
 
 outfit "Cargo Expansion"
