@@ -173,7 +173,7 @@ See `changelog.txt`, `ship_overview.txt`, and https://github.com/finite-galaxy/f
 * Add “Licences” tab in player info panel
 * Add “Tribute” tab in player info panel
 * Separate fleet overview column in outfitter and shipyard from ship info display
-* Sort outfits and ships by size or mass instead of alphabetically
+* Sort outfits and ships by cost, size, or mass instead of alphabetically
 * Add “Manufacturer” to ships
 * Add quotation mark preference
 * Add support for landing fees
@@ -183,8 +183,8 @@ See `changelog.txt`, `ship_overview.txt`, and https://github.com/finite-galaxy/f
 * Display flagship speed by default and display target's speed with tactical scanner
 * De-hardcode jump radius
 * Increase jump radius if you have multiple jump drives installed, perhaps 100*(jump drive)^0.5
-* Make hyperjump fuel proportional to ship's total mass
 * Make ship explosion ‘weapon’ proportional to mass (base, empty, or total mass)
+* Introduce a Navy Battleship with 250 engine space, 500 weapon space, six guns, six turrets, and twelve fighter bays.
 
 [(return to top)](https://github.com/finite-galaxy/finite-galaxy#finite-galaxy)
 
