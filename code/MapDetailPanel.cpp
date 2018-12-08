@@ -440,7 +440,8 @@ void MapDetailPanel::DrawInfo()
         
         SpriteShader::Draw(planetSprite, uiPoint);
         planetY[planet] = uiPoint.Y() - 60;
-      
+
+//        font.Draw(planet->IsInhabited() ? object.Name() + " (" + planet->GetGovernment()->GetName() + ")" : object.Name() + " (Uninhabited)",
         font.Draw(object.Name(),
           uiPoint + Point(-70., -55.),
           planet == selectedPlanet ? medium : dim);

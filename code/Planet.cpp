@@ -195,8 +195,10 @@ void Planet::Load(const DataNode &node, const Set<Sale<Ship>> &ships, const Set<
       attributes.erase(AUTO_ATTRIBUTES[i]);
   }
 
-  inhabited = (HasSpaceport() || requiredReputation || !defenceFleets.empty()) && !attributes.count("uninhabited");
-  bank = (inhabited && attributes.count("bank"));
+  bank = attributes.count("bank");
+//  fuel = attributes.count("fuel");
+//  inhabited = (HasSpaceport() || requiredReputation || !defenceFleets.empty()) && !attributes.count("uninhabited");
+  inhabited = !attributes.count("uninhabited");
 }
 
 
@@ -284,8 +286,7 @@ const string &Planet::SpaceportDescription() const
 
 
 
-// Check if this planet is inhabited (i.e. it has a spaceport, and does not
-// have the "uninhabited" attribute).
+// Check if this planet is inhabited (i.e. it does not have the "uninhabited" attribute).
 bool Planet::IsInhabited() const
 {
   return inhabited;
@@ -293,7 +294,7 @@ bool Planet::IsInhabited() const
 
 
   
-// Check if this planet has a bank.
+// Check if this planet has a bank (i.e. it has the 
 bool Planet::HasBank() const
 {
   return bank;

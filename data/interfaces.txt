@@ -466,59 +466,31 @@ interface "planet"
     centre -60 -140
     dimensions 720 360
   
-  visible if "has shipyard"
-  sprite "ui/planet dialogue button"
-    centre 280 150
-  button s "_Shipyard"
-    centre 280 150
-    dimensions 140 40
-    size 18
-    align right
-    pad 10 0
-  
-  visible if "has outfitter"
-  sprite "ui/planet dialogue button"
-    centre 280 210
-  button o "_Outfitter"
-    centre 280 210
-    dimensions 140 40
-    size 18
-    align right
-    pad 10 0
-  
-  visible if "is inhabited"
-  sprite "ui/planet dialogue button"
-    centre -400 150
-  button j "_Job Board"
-    centre -400 150
-    dimensions 140 40
-    size 18
-    align left
-    pad 10 0
-  sprite "ui/planet dialogue button"
-    centre -400 210
-  button h "_Hire Crew"
-    centre -400 210
-    dimensions 140 40
-    size 18
-    align left
-    pad 10 0
-  
   visible if "has trade"
   sprite "ui/planet dialogue button"
-    centre 280 90
+    centre -400 90
   button t "_Trading"
-    centre 280 90
+    centre -400 90
     dimensions 140 40
     size 18
-    align right
+    align left
+    pad 10 0
+
+  visible if "has hiring"
+  sprite "ui/planet dialogue button"
+    centre -400 145
+  button h "_Hire Crew"
+    centre -400 145
+    dimensions 140 40
+    size 18
+    align left
     pad 10 0
   
-  visible if "has bank"
+  visible if "has jobs"
   sprite "ui/planet dialogue button"
-    centre -400 270
-  button b "_Bank"
-    centre -400 270
+    centre -400 200
+  button j "_Job Board"
+    centre -400 200
     dimensions 140 40
     size 18
     align left
@@ -526,19 +498,49 @@ interface "planet"
   
   visible if "has spaceport"
   sprite "ui/planet dialogue button"
-    centre -400 90
+    centre -400 310
   button p "Space_port"
-    centre -400 90
+    centre -400 310
     dimensions 140 40
     size 18
     align left
     pad 10 0
   
+  visible if "has shipyard"
+  sprite "ui/planet dialogue button"
+    centre 280 90
+  button s "_Shipyard"
+    centre 280 90
+    dimensions 140 40
+    size 18
+    align right
+    pad 10 0
+  
+  visible if "has outfitter"
+  sprite "ui/planet dialogue button"
+    centre 280 145
+  button o "_Outfitter"
+    centre 280 145
+    dimensions 140 40
+    size 18
+    align right
+    pad 10 0
+  
+  visible if "has bank"
+  sprite "ui/planet dialogue button"
+    centre 280 200
+  button b "_Bank"
+    centre 280 200
+    dimensions 140 40
+    size 18
+    align right
+    pad 10 0
+  
   visible if "has ship"
   sprite "ui/planet dialogue button"
-    centre 280 270
+    centre 280 310
   button d "_Depart"
-    centre 280 270
+    centre 280 310
     dimensions 140 40
     size 18
     align right
