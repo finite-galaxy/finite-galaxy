@@ -98,18 +98,21 @@ void PlanetPanel::Draw()
     }
   if(flagship && flagship->CanBeFlagship())
     info.SetCondition("has ship");
-  if(flagship && planet.IsInhabited() && planet.GetSystem()->HasTrade() && hasAccess)
-    info.SetCondition("has trade");
-  if(planet.IsInhabited() && hasAccess)
-    info.SetCondition("has bank");
-  if(flagship && planet.IsInhabited() && hasAccess)
-    info.SetCondition("is inhabited");
-  if(flagship && planet.HasSpaceport() && hasAccess)
-    info.SetCondition("has spaceport");
-  if(planet.HasShipyard() && hasAccess)
-    info.SetCondition("has shipyard");
-  if(hasShip && planet.HasOutfitter() && hasAccess)
-    info.SetCondition("has outfitter");
+  if(hasAccess)
+  {
+    if(planet.HasBank())
+      info.SetCondition("has bank");
+    if(planet.HasOutfitter() && hasShip)
+      info.SetCondition("has outfitter");
+    if(planet.HasShipyard())
+      info.SetCondition("has shipyard");
+    if(planet.HasSpaceport() && flagship)
+      info.SetCondition("has spaceport");
+    if(planet.IsInhabited() && planet.GetSystem()->HasTrade() && flagship)
+      info.SetCondition("has trade");
+    if(planet.IsInhabited())
+      info.SetCondition("is inhabited");
+  }
   
   ui.Draw(info, this);
   
@@ -137,7 +140,7 @@ bool PlanetPanel::KeyDown(SDL_Keycode key, Uint16 mod, const Command &command)
     selectedPanel = trading.get();
     GetUI()->Push(trading);
   }
-  else if(key == 'b' && planet.IsInhabited() && hasAccess)
+  else if(key == 'b' && planet.HasBank() && hasAccess)
   {
     selectedPanel = bank.get();
     GetUI()->Push(bank);

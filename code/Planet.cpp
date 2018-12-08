@@ -196,6 +196,7 @@ void Planet::Load(const DataNode &node, const Set<Sale<Ship>> &ships, const Set<
   }
 
   inhabited = (HasSpaceport() || requiredReputation || !defenceFleets.empty()) && !attributes.count("uninhabited");
+  bank = (inhabited && attributes.count("bank"));
 }
 
 
@@ -288,6 +289,14 @@ const string &Planet::SpaceportDescription() const
 bool Planet::IsInhabited() const
 {
   return inhabited;
+}
+
+
+  
+// Check if this planet has a bank.
+bool Planet::HasBank() const
+{
+  return bank;
 }
 
 

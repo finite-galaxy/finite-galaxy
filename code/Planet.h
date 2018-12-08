@@ -57,6 +57,8 @@ public:
   // Check if this planet is inhabited (i.e. it has a spaceport, and does not
   // have the "uninhabited" attribute).
   bool IsInhabited() const;
+  // Check if this planet is inhabited and has the "bank" attribute.
+  bool HasBank() const;
   
   // Check if this planet has a shipyard.
   bool HasShipyard() const;
@@ -133,6 +135,7 @@ private:
   double bribe = 0.01;
   double security = .25;
   bool inhabited;
+  bool bank;
   
   // The salary to be paid if this planet is dominated.
   int tribute = 0;
