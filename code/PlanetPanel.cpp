@@ -108,7 +108,7 @@ void PlanetPanel::Draw()
       info.SetCondition("has shipyard");
     if(planet.HasSpaceport() && flagship)
       info.SetCondition("has spaceport");
-    if(planet.IsInhabited() && planet.GetSystem()->HasTrade() && flagship)
+    if(planet.GetSystem()->HasTrade() && planet.IsInhabited() && flagship)
       info.SetCondition("has trade");
     if(planet.IsInhabited())
       info.SetCondition("is inhabited");

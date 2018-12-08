@@ -400,3 +400,4 @@ void MapSalesPanel::ClickCategory(const string &name)
   else
     collapsed.insert(name);
 }
+

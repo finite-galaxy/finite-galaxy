@@ -128,3 +128,4 @@ void PlanetLabel::Draw() const
     PointerShader::Draw(position, barbAngle.Unit(), 15., 15., radius + 25., colour);
   }
 }
+
