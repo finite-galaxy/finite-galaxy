@@ -1,6 +1,7 @@
 # Miscellanious content:
 #   Asteroid
 #   Hallucination
+#   Lampyrid
 #   Nanobots
 #   Science Drone
 #   Timer Ship
@@ -84,6 +85,53 @@ effect "puff"
   "lifetime" 20
   "random angle" 360
   "velocity scale" -.005
+
+
+
+# Lampyrid
+ship "Lampyrid"
+  sprite "ship/lampyrid"
+  attributes
+    category "Corvette"
+#    manufacturer "Unknown"
+    cost 2760000
+    "shields" 5400
+    "hull" 4400
+    "required crew" 5
+    "bunks" 14
+    "mass" 240
+    "drag" 8.5
+    "heat dissipation" .7
+    "cargo space" 160
+    "outfit space" 330
+    "core space" 225
+    "engine space" 105
+    weapon
+      "blast radius" 100
+      "shield damage" 1000
+      "hull damage" 500
+      "hit force" 1500
+  outfits
+    "S3 Thermionic"
+    "Hyperdrive"
+
+    "Impala Plasma Thruster"
+    "Impala Plasma Steering"
+    "D67-TM Shield Generator"
+
+    "LP036a Battery Pack"
+    "Fuel Pod" 52
+    "Large Radar Jammer"
+    "Ramscoop"
+  engine -64 28 0.7
+  engine 0 80 1.8
+  engine 0 100 1.2
+  engine 64 28 0.7
+  explode "tiny explosion" 10
+  explode "small explosion" 25
+  explode "medium explosion" 30
+  explode "large explosion" 15
+  "final explode" "final explosion medium" 1
 
 
 

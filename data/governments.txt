@@ -1,6 +1,5 @@
 # governments with swizzle:
 #   "Alpha" 22
-#   "Author"
 #   "Bad Trip"
 #   "Bounty" 23
 #   "Bounty Hunter" 23
@@ -27,7 +26,6 @@
 #   "Navy (Oathkeeper)" 0
 #   "Neutral" 3
 #   "None"
-#   "Parrot" 2
 #   "Pirate" 23
 #   "Pug" 0
 #   "Quarg" 0
@@ -48,10 +46,6 @@
 government "Alpha"
   swizzle 22
   "player reputation" -1000
-  "bribe" 0
-
-government "Author"
-  "player reputation" 1
   "bribe" 0
 
 government "Bad Trip"
@@ -284,20 +278,19 @@ government "Neutral"
 government "None"
   colour .7 .7 .7
 
-government "Parrot"
-  swizzle 2
-  "player reputation" 1
-  "bribe" 0
-
 government "Pirate"
   swizzle 23
   colour .8 0 0  
   "player reputation" -10
   "attitude toward"
-    "Author" -.01
+    "Deep" -.01
+    "Free Worlds" -.01
     "Hai" -.01
     "Korath" -.01
     "Merchant" -.1
+    "Militia" -.01
+    "Neutral" -.01
+    "Republic" -.01
     "Syndicate" -.01
   "bribe" .05
   "fine" 0
