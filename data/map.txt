@@ -4222,10 +4222,10 @@ system "Antevorta"
   habitable 320
   belt 1994
   haze _menu/haze-red
-  link Ossipago
   link Cardea
   link Convector
   link Insitor
+  link Ossipago
   asteroids "small rock" 1 1.6272
   asteroids "medium rock" 14 1.2816
   asteroids "large rock" 1 1.1088
@@ -4575,10 +4575,10 @@ system "Asikafarnut"
   government "Kor Sestor"
   habitable 320
   belt 1342
+  link Celeborim
+  link Makferuti
   link Silikatakfar
   link Sobarati
-  link Makferuti
-  link Celeborim
   asteroids "small rock" 1 4.1328
   asteroids "medium rock" 3 4.536
   asteroids "large rock" 3 2.184
@@ -6186,8 +6186,8 @@ system "Cardea"
   habitable 852
   belt 1725
   haze _menu/haze-red
-  link Nenia
   link Antevorta
+  link Nenia
   asteroids "small rock" 2 1.071
   asteroids "medium rock" 34 1.2138
   asteroids "large rock" 26 0.7497
@@ -6534,7 +6534,7 @@ system "Charm"
 
 system "Chikatip"
   pos -78 -308
-  government "Uninhabited"
+  government "Kor Efret"
   habitable 426
   belt 1929
   link Furmeliki
@@ -6592,9 +6592,9 @@ system "Chimitarp"
   government "Kor Mereti"
   habitable 913
   belt 1932
+  link Farbutero
   link Mekislepti
   link Sepetrosk
-  link Farbutero
   link Similisti
   asteroids "small rock" 3 2.717
   asteroids "medium rock" 103 4.0546
@@ -6708,7 +6708,7 @@ system "Chirr'ay'akai"
 
 system "Chornifath"
   pos 40 -215
-  government "Uninhabited"
+  government "Kor Efret"
   habitable 487
   belt 1434
   link Dokdobaru
@@ -6885,9 +6885,9 @@ system "Coluber"
   habitable 659
   belt 1590
   haze _menu/haze-red
-  link Parca
   link Levana
   link Lucina
+  link Parca
   asteroids "small rock" 4 2.1021
   asteroids "medium rock" 21 1.8291
   asteroids "large rock" 22 4.0131
@@ -7848,11 +7848,11 @@ system "Dokdobaru"
   government "Quarg"
   habitable 700
   belt 1935
+  link Chornifath
+  link Furmeliki
   link Hesselpost
   link Kashikt
-  link Furmeliki
   link Meftarkata
-  link Chornifath
   asteroids "small rock" 4 5.6295
   asteroids "medium rock" 1 5.751
   asteroids "large rock" 2 2.349
@@ -8850,9 +8850,9 @@ system "Eneremprukt"
   government "Kor Sestor"
   habitable 487
   belt 1421
-  link Silikatakfar
-  link Mesuket
   link Ferukistek
+  link Mesuket
+  link Silikatakfar
   asteroids "medium rock" 11 3.456
   asteroids "large rock" 10 7.29
   asteroids "large metal" 4 7.506
@@ -9126,8 +9126,8 @@ system "Eshkoshtar"
   habitable 806.68
   belt 1105
   link Mekislepti
-  link Similisti
   link Mesuket
+  link Similisti
   asteroids "small rock" 4 4.44
   asteroids "medium rock" 31 2.49
   asteroids "large rock" 2 4.02
@@ -9548,13 +9548,13 @@ system "Far Horizon"
 
 system "Farbutero"
   pos 93 -252
-  government "Uninhabited"
+  government "Kor Mereti"
   habitable 625
   belt 1175
-  link Meftarkata
+  link Chimitarp
   link Feroteri
   link Korsmanath
-  link Chimitarp
+  link Meftarkata
   asteroids "small rock" 2 4.7357
   asteroids "medium rock" 9 9.1379
   asteroids "large rock" 16 8.8044
@@ -9693,8 +9693,8 @@ system "Faronektu"
   government "Kor Mereti"
   habitable 1080
   belt 1630
-  link Similisti
   link Salipastart
+  link Similisti
   asteroids "small rock" 32 2.244
   asteroids "medium rock" 53 2.754
   asteroids "large rock" 15 1.9125
@@ -9756,7 +9756,7 @@ system "Faronektu"
 
 system "Fasitopfar"
   pos 92 -106
-  government "Uninhabited"
+  government "Drak"
   habitable 100
   belt 1670
   asteroids "small rock" 24 7.722
@@ -9873,7 +9873,7 @@ system "Fell Omen"
 
 system "Feroteri"
   pos 149 -206
-  government "Uninhabited"
+  government "Kor Mereti"
   habitable 5426
   belt 1419
   link Farbutero
@@ -10187,13 +10187,13 @@ system "Fomalhaut"
 
 system "Fornarep"
   pos 79 -310
-  government "Uninhabited"
+  government "Kor Efret"
   habitable 320
   belt 1922
-  link Skeruto
-  link Meftarkata
   link Kaliptari
+  link Meftarkata
   link Mekislepti
+  link Skeruto
   asteroids "small rock" 15 2.9904
   asteroids "medium rock" 4 1.8144
   asteroids "large rock" 5 3.528
@@ -10313,11 +10313,11 @@ system "Four Pillars"
 
 system "Furmeliki"
   pos -36 -282
-  government "Uninhabited"
+  government "Kor Efret"
   habitable 487
   belt 1577
-  link Dokdobaru
   link Chikatip
+  link Dokdobaru
   link Kashikt
   link Skeruto
   asteroids "large metal" 1 3.5511
@@ -11438,7 +11438,7 @@ system "Heia Due"
 
 system "Hesselpost"
   pos -31 -188
-  government "Uninhabited"
+  government "Kor Efret"
   habitable 487
   belt 1327
   link Dokdobaru
@@ -12634,15 +12634,15 @@ system "Ka'pru"
 
 system "Kaliptari"
   pos 85 -403
-  government "Uninhabited"
+  government "Kor Efret"
   habitable 320
   belt 1089
-  link Skeruto
   link Fornarep
   link Mekislepti
-  link Solifar
-  link Sepriaptu
   link Sabriset
+  link Sepriaptu
+  link Skeruto
+  link Solifar
   asteroids "small rock" 8 4.2282
   asteroids "medium rock" 11 6.9498
   asteroids "large rock" 25 5.4918
@@ -12773,8 +12773,8 @@ system "Kashikt"
   belt 1013
   link Dokdobaru
   link Furmeliki
-  link Sumprast
   link Sevrelect
+  link Sumprast
   asteroids "small rock" 15 4.1055
   asteroids "medium rock" 39 6.5688
   asteroids "large rock" 12 2.9463
@@ -12835,7 +12835,7 @@ system "Kashikt"
 
 system "Kasikfar"
   pos 10 -128
-  government "Uninhabited"
+  government "Drak"
   habitable 100
   belt 1539
   asteroids "small rock" 4 3.8019
@@ -13395,8 +13395,8 @@ system "Kor En'lakfar"
   government "Korath"
   habitable 1080
   belt 1115
-  link "Kor Men"
   link "Kor Fel'tar"
+  link "Kor Men"
   asteroids "small rock" 7 0.84
   asteroids "medium rock" 20 1.17
   asteroids "large rock" 31 1.27
@@ -13826,11 +13826,11 @@ system "Kornephoros"
 
 system "Korsmanath"
   pos 97 -186
-  government "Uninhabited"
+  government "Kor Mereti"
   habitable 487
   belt 1775
-  link Feroteri
   link Farbutero
+  link Feroteri
   asteroids "small rock" 2 2.4123
   asteroids "medium rock" 1 2.5993
   asteroids "large rock" 4 1.3277
@@ -14509,8 +14509,8 @@ system "Lucina"
   habitable 320
   belt 1466
   haze _menu/haze-red
-  link Parca
   link Coluber
+  link Parca
   asteroids "small rock" 1 4.59
   asteroids "medium rock" 9 4.7175
   asteroids "large rock" 1 3.06
@@ -15029,13 +15029,13 @@ system "Mebsuta"
 
 system "Meftarkata"
   pos 52 -277
-  government "Uninhabited"
+  government "Kor Efret"
   habitable 2202
   belt 1232
-  link Skeruto
   link Dokdobaru
-  link Fornarep
   link Farbutero
+  link Fornarep
+  link Skeruto
   asteroids "small rock" 6 1.8096
   asteroids "medium rock" 4 1.716
   asteroids "large rock" 14 0.8892
@@ -15155,10 +15155,10 @@ system "Mekislepti"
   government "Kor Mereti"
   habitable 1705
   belt 1673
-  link Fornarep
-  link Kaliptari
   link Chimitarp
   link Eshkoshtar
+  link Fornarep
+  link Kaliptari
   link Similisti
   asteroids "small rock" 63 1.3552
   asteroids "medium rock" 126 1.2826
@@ -15603,13 +15603,13 @@ system "Merak"
 
 system "Mesuket"
   pos 220 -410
-  government "Uninhabited"
+  government "Kor Sestor"
   habitable 426
   belt 1189
-  link Eshkoshtar
-  link Silikatakfar
   link Eneremprukt
+  link Eshkoshtar
   link Salipastart
+  link Silikatakfar
   asteroids "large metal" 1 1.6758
   trade "Clothing" 252
   trade "Electronics" 746
@@ -16600,8 +16600,8 @@ system "Nenia"
   habitable 2340
   belt 1343
   haze _menu/haze-red
-  link Ossipago
   link Cardea
+  link Ossipago
   asteroids "small rock" 4 1.4352
   asteroids "medium rock" 10 2.3
   asteroids "large rock" 3 2.0608
@@ -17131,7 +17131,7 @@ system "Ossipago"
 
 system "Over the Rainbow"
   pos 9904 7176
-  government "Uninhabited"
+  government "Pug"
   link "Terra Incognita"
   habitable 1215
   asteroids "small rock" 1 3.3098
@@ -17489,7 +17489,7 @@ system "Peragenor"
 
 system "Peresedersi"
   pos 81 -155
-  government "Uninhabited"
+  government "Drak"
   habitable 100
   belt 1065
   asteroids "small rock" 49 1.403
@@ -19392,11 +19392,11 @@ system "Sabik"
 
 system "Sabriset"
   pos 152 -427
-  government "Uninhabited"
+  government "Kor Efret"
   habitable 1567
   belt 1025
-  link Sepriaptu
   link Kaliptari
+  link Sepriaptu
   asteroids "small rock" 3 3.9285
   asteroids "medium rock" 6 2.6325
   asteroids "large rock" 5 4.779
@@ -19692,9 +19692,9 @@ system "Salipastart"
   government "Kor Mereti"
   habitable 487
   belt 1056
-  link Similisti
   link Faronektu
   link Mesuket
+  link Similisti
   asteroids "small rock" 2 6.7116
   asteroids "medium rock" 9 4.3792
   asteroids "large rock" 9 5.95
@@ -20146,11 +20146,11 @@ system "Seginus"
 
 system "Seketra"
   pos -25 -357
-  government "Uninhabited"
+  government "Kor Efret"
   habitable 426
   belt 1465
-  link Skeruto
   link Chikatip
+  link Skeruto
   asteroids "large metal" 1 1.7556
   trade "Clothing" 247
   trade "Electronics" 792
@@ -20257,7 +20257,7 @@ system "Sepetrosk"
 
 system "Sepriaptu"
   pos 139 -449
-  government "Uninhabited"
+  government "Kor Efret"
   habitable 2035
   belt 1120
   link Kaliptari
@@ -20311,8 +20311,8 @@ system "Sevrelect"
   government "Kor Efret"
   habitable 320
   belt 1763
-  link Sumprast
   link Kashikt
+  link Sumprast
   asteroids "large metal" 1 2.97
   trade "Clothing" 225
   trade "Electronics" 853
@@ -20614,10 +20614,10 @@ system "Silikatakfar"
   government "Kor Sestor"
   habitable 426
   belt 1641
-  link Mesuket
-  link Eneremprukt
   link Asikafarnut
+  link Eneremprukt
   link Ferukistek
+  link Mesuket
   asteroids "small rock" 2 1.9936
   asteroids "medium rock" 1 1.2544
   asteroids "large rock" 1 2.128
@@ -20798,11 +20798,11 @@ system "Similisti"
   habitable 1080
   belt 1349
   link Chimitarp
-  link Mekislepti
   link Eshkoshtar
-  link Sepetrosk
   link Faronektu
+  link Mekislepti
   link Salipastart
+  link Sepetrosk
   asteroids "small rock" 3 3.015
   asteroids "medium rock" 2 6.345
   asteroids "large rock" 21 4.23
@@ -20924,13 +20924,13 @@ system "Sirius"
 
 system "Skeruto"
   pos 28 -340
-  government "Uninhabited"
+  government "Kor Efret"
   habitable 320
   belt 1198
-  link Furmeliki
-  link Meftarkata
   link Fornarep
+  link Furmeliki
   link Kaliptari
+  link Meftarkata
   link Seketra
   asteroids "large metal" 1 1.5554
   trade "Clothing" 286
@@ -21390,7 +21390,7 @@ system "Sol Saryd"
 
 system "Solifar"
   pos 47 -436
-  government "Uninhabited"
+  government "Kor Efret"
   habitable 320
   belt 1517
   link Kaliptari
@@ -22392,7 +22392,7 @@ system "Terminus"
 
 system "Terra Incognita"
   pos 9922 7087
-  government "Uninhabited"
+  government "Pug"
   link "Over the Rainbow"
   habitable 456
   asteroids "small rock" 8 1.8432
@@ -23635,7 +23635,7 @@ system "Wezen"
 
 system "World's End"
   pos 9967 7018
-  government "Uninhabited"
+  government "Pug"
   habitable 700
   object
     sprite star/g5
@@ -24433,7 +24433,7 @@ planet "Arahas"
 #    fleet "Militia Large" 6
 
 planet "Aresepru Nat"
-  attributes korath
+  attributes korath uninhabited
   landscape land/sea0
   description `Now that the Korath are gone, the oceans on this planet have begun to teem with fish and other living creatures once again, and the levels of dissolved oxygen and carbon dioxide are slowly swinging back into balance. Species of algae and bacteria that are able to metabolize the plastics and chemicals that the Korath left behind have spread throughout the oceans.`
   security 0
@@ -25099,13 +25099,13 @@ planet "Delve of Bloptab"
   "required reputation" 25
 
 planet "Desi Seledrak"
-  attributes korath
+  attributes korath uninhabited
   landscape land/hills3
   description `Plumes of soot and ash rise from a cluster of several dozen volcanoes on this planet's main continent, shrouding the planet in a thick layer of clouds and choking out the sunlight. The ruins of several Korath cities and the geometric grids of cleared land surrounding them show that this was once a farming world, but now few plants are able to survive and kilometer-high glaciers have begun creeping down from the poles. It may be centuries before the skies clear and this world begins to thaw.`
   security 0
 
 planet "Devru Kaska"
-  attributes korath station
+  attributes korath sestor station
   landscape land/space4
   description `The Kor Sestor prefer to develop planets rather than planting stations in space, but this is a necessary exception: a deuterium refinery that harvests hydrogen both from the gas giant it orbits, and from the strong solar wind from this system's primary star.`
   spaceport `As the station's orbit carries it in and out of the gas giant's shadow, the station cools by a considerable amount, and the metal of the hull creaks and groans in protest. When the station is not in shadow, the temperatures here are almost too hot for human survival.`
@@ -25129,7 +25129,7 @@ planet "Double Haze"
   "required reputation" 15
 
 planet "Drekag Firask"
-  attributes korath
+  attributes korath uninhabited
   landscape land/sea5
   description `Much of the surface of this world is covered in water. Ships the size of small cities float in the oceans, carried by the tides. The ships are designed to incubate algae and other microorganisms that once provided the Korath both with food and with a source of mixed hydrocarbons similar to petroleum. With the Korath gone and the food no longer needed, many of the ships have fallen into disrepair, or have drifted into the polar regions and been crushed against icebergs.`
   spaceport `This is one of the few city-ships still in operation, probably because it was designed to produce oils and petroleum rather than raw food stuff. But even this ship is in poor repair, drifting low enough in the water that when storms arise, the waves break over the outer walls of the city and flood the streets where the Korath inhabitants once lived.`
@@ -25222,7 +25222,7 @@ planet "Echo"
   security 0.9
 
 planet "Elek Kartanu"
-  attributes korath
+  attributes korath uninhabited
   landscape land/lava2
   description `You have no idea what has happened to this planet, and you are not sure you want to know. The atmosphere is unusually hot and wet for a planet this distance from its sun, and the ocean levels seem to have dropped significantly in the recent past, leaving barnacles and bleached coral exposed to the air all around the shorelines. The wind is frenzied and full of wild energy, and the fog moves like a living creature.`
   security 0
@@ -25256,14 +25256,14 @@ planet "Endless Sky"
 #    fleet "Militia Small" 23
 
 planet "Esayaku Fen"
-  attributes korath
+  attributes korath uninhabited
   landscape land/badlands5
   description `The Kor Mereti robots seem to prefer to build their factories and refineries in space rather than on planets, harvesting their raw materials from asteroids so that they do not have to deal with gravity, or atmosphere, or rain, or sandstorms. They have left this desert world unoccupied.`
   description `  The deserts here are home to an unusual number of plant species, which have adapted to survive the occasional catastrophic flash floods.`
   security 0
 
 planet "Esek Stovar"
-  attributes korath station
+  attributes korath mereti station
   landscape land/space4
   description `This Kor Mereti outpost is far enough from the front in their war with the Kor Sestor that it has fallen somewhat into disuse. The largest docking bays are still kept open for refueling and repairs, but the sections of the station that used to be living quarters have been sealed off.`
   spaceport `Because this station is only in use now by autonomous vehicles, there is no atmosphere, and no need for airlocks or containment fields. The hangar bay doors have all been left wide open, so ships can come and go as they please.`
@@ -25273,13 +25273,13 @@ planet "Esek Stovar"
   security 0
 
 planet "Eskar Kortuka"
-  attributes korath
+  attributes korath uninhabited
   landscape land/snow2
   description `This is a barely habitable frozen world. The Korath built nothing here except for a few small mining facilities, now abandoned. There is no sign that the occupants were forced to leave by violence. Rather, it seems that they simply packed up their things one day and moved out. The buildings they left behind are now half-covered by snowdrifts.`
   security 0
 
 planet "Esperaktu Station"
-  attributes korath station
+  attributes korath station uninhabited
   landscape land/station0
   description `This small space station has plenty of blast marks on its outer hull, but they have all been patched and the interior still holds atmosphere. But although still intact, the station is entirely abandoned.`
   description `  For food, the Korath set up vats of photosynthetic yeast and bacteria in some rooms on the outer shell of the station. In their absence, the bacterial soup has worked its way through the ventilation system into the rest of the station and formed a thin layer of slime on almost every sun-facing wall.`
@@ -25326,7 +25326,6 @@ planet "Far'en Lai"
   attributes uninhabited
   landscape land/dune3
   description `When the Korath were banished to the Core, they were left with only one living world, a planet they call "Far'en Lai," meaning, "the last candle-flame." Afraid that this planet's biosphere will turn to dust in their hands like all the other worlds they once controlled, the Korath have left Far'en Lai entirely unsettled and unexploited. It is rumoured that the terms of their exile dictate that if Far'en Lai withers and dies, the remaining Korath exiles will be exterminated, but that if they can learn to make the planet flourish, their place in the galaxy will be restored.`
-  government "Uninhabited"
   security 0
 
 planet "Fara Skaeruti"
@@ -25385,7 +25384,7 @@ planet "Featherweight"
 #    fleet "Republic Small" 30
 
 planet "Fek Rembatu"
-  attributes korath
+  attributes korath uninhabited
   landscape land/beach10-sfiera
   description `Everything on this planet that is made of metal is overgrown with a thick layer of a reddish lichen or fungus. In the cities, the tallest buildings look like they have been melted or half digested by the fungus: tall towers lean at crazy angles, and smaller buildings are entirely buried and indistinct. The air smells like sauerkraut and roses.`
   security 0
@@ -25410,7 +25409,7 @@ planet "Firelode"
   spaceport `The spaceport is in the middle of a large city with typical Hai architecture: raw metal and chamfered corners. However, much of the city appears to have been ruined long ago, probably in a battle. The ruins have not been rebuilt, but instead it appears that most of the ruined buildings have been torn down for scrap metal. Several of the spaceport hangars are in bad repair, as well.`
 
 planet "Firka Tesk"
-  attributes korath
+  attributes korath uninhabited
   landscape land/lava0
   description `This appears to have once been an inhabited world, and the remnants of a few cities still remain. But the planet's crust has been cracked like an eggshell, releasing rivers of lava and leaving behind unnaturally steep mountains and fault lines. The wind whistles and howls through the rifts and fissures as if the planet itself is screaming in pain. A thick haze of sulphur dioxide and ash hangs over everything.`
   security 0
@@ -25993,13 +25992,13 @@ planet "Karek Fornati"
   spaceport `  Outside the city, the land is divided up by perfectly straight strips of pine trees laid out perpendicular to the prevailing wind direction. Many of the fields are growing what looks like hay, or clover, or black, nearly leafless shrubs; only a few of the fields are actively being harvested.`
 
 planet "Kasichara Fet"
-  attributes korath
+  attributes korath uninhabited
   landscape land/sky8
   description `This planet appears to have suffered irradiation when the neighbouring star of Peresedersi went nova. The local flora and fauna are alive but still struggling to recover from the loss. Several large Korath cities remain. It seems that they were not able, or not willing, to evacuate the entire population in time to escape the nova's gamma radiation; sun-bleached bones are scattered in the streets of the largest cities.`
   security 0
 
 planet "Keneska Fek"
-  attributes korath
+  attributes korath sestor
   landscape land/desert10-harro
   description `The Kor Sestor apparently use this as a mining world, but rather than digging for minerals they have been intentionally crashing metal-rich asteroids into undeveloped sections of the desert where the robots can then break them apart and extract the ore. Predictably, the ecological effects of this sort of mining are devastating.`
   spaceport `The Kor Sestor refineries are laid out in a grid pattern. Each square of the grid is a few kilometers on each side, and is laid out in exactly the same way: a central power station, surrounded by smelters and repair bays and factories and storehouses laid out like spokes of a wheel. Each square produces and maintains a fleet of worker robots that occasionally collaborate to construct a new square, extending the city farther outward. Lines of harvester robots snake out from the refineries to the downed asteroids like trails of ants.`
@@ -26039,7 +26038,7 @@ planet "Korati Efreti"
   security 0.5
 
 planet "Korbatri Eska"
-  attributes korath
+  attributes korath uninhabited
   landscape land/myrabella7
   description `The cities on this world have been hit by an astonishing variety of weapons. Some were leveled by massive explosions, while others show signs of strafing by low-flying ships or of orbital bombardment. Outside the cities, the land is fruitful and varied: forests, mountains, oceans, desert, and tundra.`
   security 0
@@ -26312,7 +26311,7 @@ planet "Memory"
 #    fleet "Deep Small" 16
 
 planet "Merask Fortuno"
-  attributes korath station
+  attributes korath mereti station
   landscape land/space4
   description `This station was built primarily for harvesting hyperspace fuel. Even when the Korath were still here, the harvesting was almost entirely automated, so the station only has living quarters for a handful of people.`
   spaceport `Despite their masters being gone, the machines and robots of this station carry out their work just as diligently as before, harvesting fuel that will now be used only by other automata.`
@@ -26333,7 +26332,7 @@ planet "Mere"
 #    fleet "Militia Large" 14
 
 planet "Mereti Station"
-  attributes korath station
+  attributes korath mereti station
   landscape land/space7
   description `This large station serves as the "mission control" for the robotic ships of the Kor Mereti faction. Warships of every shape and design are clustered in its docking bays or flying patrol outside.`
   spaceport `The central core of this station is entirely sealed off, running on its own power generators serviced by self-maintaining repair robots. Inside the core are the advanced computers that direct the Kor Mereti war effort.`
@@ -26773,7 +26772,7 @@ planet "Refuge of Belugt"
   spaceport `  Many of the shops and restaurants have signs on the doors that are oddly reminiscent of human beach towns: the signs explain pictorially that all patrons must be wearing pants.`
 
 planet "Rekat Moraski"
-  attributes korath station
+  attributes korath mereti station
   landscape land/space4
   description `This station is a refinery where ore from asteroids is processed into metal. Larger asteroids are processed where they are; smaller ones are brought into the refinery itself to be mined.`
   spaceport `This station has several bays large enough that a small asteroid can be steered inside. Tiny harvester robots then work their way into seams of metal in the asteroid, digging deeper and deeper until the asteroid is honeycombed with small tunnels and all the metal-rich veins have been extracted.`
@@ -26906,7 +26905,7 @@ planet "Rusty Second"
   shipyard "Kimek Basics"
 
 planet "Sabira Eseskrai"
-  attributes korath
+  attributes korath uninhabited
   landscape land/bwerner3
   description `Long ago, this planet was home to several Korath oil mining settlements, but now all that remains visible are the tops of a few dozen of the tallest buildings. Everything else has been buried by sandstorms.`
   description `  Due to a recent shift in climate the deserts have begun shrinking once more, with local vegetation growing to cover more and more land each year, but the Korath are no longer here to benefit from the change.`
@@ -26932,7 +26931,7 @@ planet "Sandy Two"
   outfitter "Coalition Basics"
 
 planet "Sapira Mereti"
-  attributes korath
+  attributes korath mereti
   landscape land/lava6
   description `This was the seat of government and last military stronghold of the Kor Mereti faction during the Korath civil war. Here they built the factories and shipyards that churned out autonomous warships to prosecute their war against the Kor Sestor. The machines now rule this world alone, and have made it entirely uninhabitable for living creatures as they delve ever deeper into the planet's crust to harvest metal and fuel, and construct more and more factories to build new generations of robotic warships.`
   spaceport `With no living creatures in sight, the only noises in this refuelling depot are the roaring engines as robot ships land and take off, communicating silently with each other via radio. The autonomous ships land and take off with perfect precision in a steady, unbroken stream. Many of them have been damaged by weapons fire, and as soon as they land they are covered by a swarm of welding and repair robots that attach new layers of hull armour and replace weapons and engines that have been destroyed.`
@@ -26942,7 +26941,7 @@ planet "Sapira Mereti"
   security 0
 
 planet "Sarisa Fentra"
-  attributes korath
+  attributes korath uninhabited
   landscape land/sky1
   description `This planet's atmosphere has dangerously high radiation levels. On several of the continents there are patches, each nearly a hundred kilometers across, where the soil has been melted into glass by a nuclear explosion. Outside these blasted regions the plant life still flourishes, but the only land animals left alive are insects.`
   description `  In the oceans, bizarre and corrupted creatures frolic.`
@@ -26960,13 +26959,13 @@ planet "Saros"
   shipyard "Saryd Advanced"
 
 planet "Sasirka Gatru"
-  attributes korath
+  attributes korath uninhabited
   landscape land/desert7
   description `This was probably a habitable world at one point. It is no longer. Nothing lives or grows here, and the atmosphere is full of toxic chemicals.`
   security 0
 
 planet "Sebra Skira"
-  attributes korath station
+  attributes korath sestor station
   landscape land/space4
   description `This is one of the primary war platforms for the Kor Sestor. Some sections of the station are much newer than others, and the scars are still visible in places where weapons fire has annihilated part of the station. The robots have rebuilt the damaged parts in a seemingly random pattern, like burls of bark growing over damaged parts of a tree.`
   spaceport `There is no atmosphere inside this station, and indeed it is unlikely the station could hold air even if it were ever recaptured by living beings. In places, the stars shine through small cracks in the hull.`
@@ -27010,20 +27009,20 @@ planet "Secret Sky"
   "required reputation" 15
 
 planet "Sek Alarfarat"
-  attributes korath
+  attributes korath uninhabited
   landscape land/bwerner2
   description `A hideously powerful weapon tore open scars on this planet's surface so deep that pools of magma bled out through them. Presumably these wounds were inflicted on the planet by yet another Korath super-weapon devised in the final years of their civil war. A few ruined cities remain, some of which were sliced in two by the trail of weapon fire.`
   security 0
 
 planet "Selefkar Refinery"
-  attributes korath station
+  attributes korath station uninhabited
   landscape land/space6
   description `This station's hull is pockmarked by weapons fire and torn open by larger explosions. Only one section remains that still contains atmosphere. Inside are the corpses of a few dozen Korath, mummified by exposure to the dry and antiseptic air of the station. It's not a pretty sight.`
   description `  Before the war put an end to it, this appears to have been a refinery, processing ore harvested from the system's unusually dense population of metallic asteroids.`
   security 0
 
 planet "Seleptra Nak"
-  attributes korath
+  attributes korath uninhabited
   landscape land/fog2
   description `The most disturbing thing about the empty Korath cities on this planet is how pristine they are: no sign of bombing or of weapons fire. Either everyone who lived here chose to leave, or they were killed by a weapon that did no damage to the buildings they live in.`
   description `  Outside the cities, plant and animal life has begun to flourish, and some of the smaller villages have already been swallowed up by the growing forests. The climate is temperate, and rainfall is plentiful; aside from the reduction in biodiversity, it will not take this planet long to forget its former owners.`
@@ -27068,7 +27067,7 @@ planet "Sessiliki Far"
   security 0
 
 planet "Sestor Ikfar"
-  attributes korath
+  attributes korath sestor
   landscape land/hills1
   description `This dry, hot world is home to almost no native life, but is ideal for the Korath automata because of its abundant solar energy. In the places where the Korath cities once were, the Kor Sestor have built massive factories with buildings sometimes close to a kilometer in height. In other places the land remains undeveloped, but the factories are constantly expanding outward.`
   spaceport `In place of streets, massive tunnels and shafts run through the factory cities, wide enough for two capital ships to pass each other travelling in opposite directions without the risk of collision. The tunnels branch out into smaller and smaller passageways like capillaries branching out from an artery.`
@@ -27266,13 +27265,13 @@ planet "Solace"
 #    fleet "Militia Large" 15
 
 planet "Solima Skarati"
-  attributes korath
+  attributes korath uninhabited
   landscape land/beach12-harro
   description `The Korath were endlessly creative in devising new weapons of war during the twilight years of their empire, but what destroyed this planet in the end was not a military disaster but an ecological one. Small villages along the ocean shores and rusting fleets of boats bear witness to the fact that this ocean world was once a fruitful fishery. But now the ocean carries high levels of industrial toxins, and in place of large fish only small invertebrates remain.`
   security 0
 
 planet "Sopi Lefarkata"
-  attributes korath
+  attributes korath sestor
   landscape land/mountain24-spfld
   description `This is a cold and mountainous world, and most of its oceans are covered in ice. A handful of giant craters gouged out from the sides of mountains are the only sign that there were once Korath settlements here. But, the Kor Sestor robots have begun building settlements of their own, in caverns deep under the mountains where they are safe from orbital bombardment. Where recent Kor Mereti attacks have collapsed one of the access tunnels, swarms of robots have gathered to dig them out like ants when their hill has been stepped on.`
   spaceport `The caverns of the Kor Sestor are hidden deep under the mountains, but there are also a handful of refueling stations on the surface. Each one is guarded by towering weapon platforms and swarms of autonomous fighter drones.`
@@ -27282,7 +27281,7 @@ planet "Sopi Lefarkata"
   security 0
 
 planet "Spera Anatrusk"
-  attributes korath
+  attributes korath uninhabited
   landscape land/badlands6
   description `This is a relatively dry planet, and the only Korath cities were close to the poles where the temperatures are more mild and the lifeless deserts give way to grasslands and even a few scattered forests. The largest city was clearly destroyed by orbital bombardment. The other cities seem to have been done in by rioting or looting, leaving smashed windows and burned-out buildings behind. Some of the damage is very recent; the Korath survivors here held out for a long time.`
   security 0
@@ -27413,7 +27412,7 @@ planet "Tebuteb's Table"
   spaceport `The spaceport is next door to the city's meat-packing district, which is not any more pleasant or scenic than its equivalent on a human world would be. The actual slaughterhouses are some distance outside the city limits, placed there because in the early days of the colony a particularly large longcow in its death throes went on a rampage and destroyed several city blocks before it bled out and died.`
 
 planet "Tefkar Ret"
-  attributes korath station
+  attributes korath station uninhabited
   landscape land/station0
   description `This station is run down and completely abandoned, emptied of atmosphere so that air pressure will not put ongoing stress on the station's structure. Each section is sealed off from the others by heavy blast doors, leaving most of the station inaccessible.`
 

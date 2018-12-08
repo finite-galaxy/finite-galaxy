@@ -3174,10 +3174,14 @@ event "wanderers: spera anatrusk colony"
   system "Ap'arak"
     remove fleet "Unfettered Large"
     add fleet "Unfettered Large" 8000
+  system "Sabriset"
+    government "Wanderer"
+  system "Sepriaptu"
+    government "Wanderer"
   system "Kaliptari"
     government "Wanderer"
   planet "Spera Anatrusk"
-    attributes "wanderer"
+    attributes wanderer
     add description `  Hidden deep in a canyon, the Wanderers have begun establishing a military base here.`
     spaceport `The Wanderers have hollowed out hangars and caves in the soft sandstone walls of this canyon and have begun to build a military base where they can store supplies and repair their ships while trying to decide how best to deal with the new challenges that face them in Korath space.`
     spaceport `  Oddly enough, they have also found enough time to plant a large garden on a terrace near the base of the canyon, where they are experimenting to find out which plant species will best grow in this arid environment. The Wanderer drive to understand and transform the local ecology is strong, indeed.`
@@ -3266,7 +3270,7 @@ event "wanderers: desi seledrak"
   system "Solifar"
     government "Wanderer"
   planet "Desi Seledrak"
-    attributes "wanderer"
+    attributes wanderer
     description `Plumes of soot and ash rise from a cluster of several dozen volcanoes on this planet's main continent, shrouding the planet in a thick layer of clouds and choking out the sunlight. The ruins of several Korath cities and the geometric grids of cleared land surrounding them show that this was once a farming world, but now few plants are able to survive and kilometer-high glaciers have begun creeping down from the poles.`
     description `  With some help from the Mereti drones, the Wanderers have set up factories here that are pumping out carbon dioxide and methane to warm the atmosphere. In a few decades, the glaciers may start to recede.`
     spaceport `This odd settlement was built half by the Wanderers and half by the Mereti drones. The layout of the streets is completely chaotic, and they have planted rows of trees and bushes everywhere: some inside greenhouses, and some hardier species out in the open air. The settlement is near the equator, but it is still not particularly warm.`
@@ -3558,7 +3562,7 @@ event "wanderers: sabira eseskrai colony"
   system "Furmeliki"
     add fleet "Kor Efret Home" 800
   planet "Sabira Eseskrai"
-    add attributes "wanderer"
+    attributes wanderer
     description `Long ago, this planet was home to several Korath oil mining settlements, but now all that remains visible are the tops of a few dozen of the tallest buildings. Everything else has been buried by sandstorms.`
     description `  Due to a recent shift in climate the deserts have begun shrinking once more, with local vegetation growing to cover more and more land each year. The Wanderers, working together with the Kor Efreti, have founded a settlement here and begun working to accelerate the process of rejuvenating the wastelands.`
     spaceport `This small settlement is populated by a roughly equal number of Korath and Wanderer settlers. Since most of them do not speak each other's language, the two groups do not mingle much, and communicate mostly via gestures and drawings. It's not much, but it's at least a start for the two species to begin learning from each other.`

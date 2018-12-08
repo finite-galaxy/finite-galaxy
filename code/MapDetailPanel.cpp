@@ -446,14 +446,13 @@ void MapDetailPanel::DrawInfo()
           uiPoint + Point(-70., -55.),
           planet == selectedPlanet ? medium : dim);
         
-        bool hasSpaceport = planet->HasSpaceport();
-        string reputationLabel = !hasSpaceport ? "No Spaceport" :
+        string reputationLabel = !planet->IsInhabited() ? "Uninhabited" :
           GameData::GetPolitics().HasDominated(planet) ? "Dominated" :
           planet->GetGovernment()->IsEnemy() ? "Hostile" :
           planet->CanLand() ? "Friendly" : "Restricted";
         font.Draw(reputationLabel,
           uiPoint + Point(-60., -35.),
-          hasSpaceport ? medium : faint);
+          planet->IsInhabited() ? medium : faint);
         if(commodity == SHOW_REPUTATION)
           PointerShader::Draw(uiPoint + Point(-60., -25.), Point(1., 0.),
             10., 10., 0., medium);
