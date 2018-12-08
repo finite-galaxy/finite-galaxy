@@ -1719,7 +1719,7 @@ event "fw restore gienah"
   system "Gienah"
     fleet "Pirates East Small" 500
     fleet "Pirates East Large" 800
-    fleet "Syndicate Large" 5000
+    fleet "Republic Large" 5000
 
 
 event "navy out of rastaban"
@@ -1971,7 +1971,7 @@ event "at war with the pug"
 
 event "battle for delta capricorni"
   system "Delta Capricorni"
-    government "Syndicate"
+    government "Republic"
 
 
 event "reconnected delta capricorni"
@@ -1981,7 +1981,7 @@ event "reconnected delta capricorni"
     fleet "Merchants East Large" 3000
     fleet "Miners East" 3000
     fleet "Pug Small" 2000
-    fleet "Syndicate Large" 400
+    fleet "Republic Large" 400
 
 
 event "battle for altair"
@@ -1995,7 +1995,7 @@ event "liberation of altair"
     fleet "Merchants East Small" 1000
     fleet "Merchants East Large" 2000
     fleet "Pug Small" 2000
-    fleet "Syndicate Large" 800
+    fleet "Republic Large" 800
 
 
 event "reconnected altair"
@@ -2038,13 +2038,13 @@ event "pug flee"
   system "Delta Capricorni"
     fleet "Merchants East Small" 700
     fleet "Merchants East Large" 800
-    fleet "Syndicate Small" 500
-    fleet "Syndicate Large" 600
+    fleet "Republic Small" 500
+    fleet "Republic Large" 600
   system "Alderamin"
     fleet "Merchants East Small" 2000
     fleet "Merchants East Large" 3200
-    fleet "Syndicate Small" 700
-    fleet "Syndicate Large" 900
+    fleet "Republic Small" 700
+    fleet "Republic Large" 900
   system "Diphda"
     fleet "Merchants East Small" 2000
     fleet "Merchants East Large" 600
@@ -2128,8 +2128,8 @@ event "pug territory liberated"
     government "Republic"
     fleet "Merchants East Small" 400
     fleet "Merchants East Large" 600
-    fleet "Merchants North Small" 1000
-    fleet "Merchants North Large" 3000
+    fleet "Merchants South Small" 1000
+    fleet "Merchants South Large" 3000
     fleet "Republic Small" 700
     fleet "Republic Large" 900
   planet "Rand"
@@ -2181,7 +2181,7 @@ event "battle of algenib"
     "attitude toward"
       "Syndicate (Extremist)" -.1
   system "Algenib"
-    fleet "Syndicate Small" 5000
+    fleet "Republic Small" 5000
   "reputation: Syndicate (Extremist)" <?= -1000
 
 
@@ -2190,12 +2190,10 @@ event "navy occupies algenib"
     government "Republic"
     fleet "Republic Small" 500
     fleet "Republic Large" 800
-    fleet "Syndicate Large" 800
   system "Gienah"
     government "Republic"
     fleet "Republic Small" 800
     fleet "Republic Large" 1200
-    fleet "Syndicate Large" 1000
 
 
 event "navy done with algenib"
@@ -2203,13 +2201,12 @@ event "navy done with algenib"
     government "Pirate"
     fleet "Pirates East Small" 300
     fleet "Pirates East Large" 500
-    fleet "Syndicate Large" 800
-    fleet "Merchants East Small" 600
+    fleet "Republic Large" 800
   system "Gienah"
     government "Pirate"
     fleet "Pirates East Small" 500
     fleet "Pirates East Large" 800
-    fleet "Syndicate Large" 5000
+    fleet "Republic Large" 5000
 
 
 
@@ -2610,15 +2607,13 @@ event "fwc pug defeated"
   system "Alderamin"
     government "Republic"
   system "Deneb"
-    government "Neutral"
+    government "Republic"
     fleet "Merchants East Small" 400
     fleet "Merchants East Large" 600
-    fleet "Merchants North Small" 1000
-    fleet "Merchants North Large" 3000
+    fleet "Merchants South Small" 1000
+    fleet "Merchants South Large" 3000
     fleet "Republic Small" 700
     fleet "Republic Large" 900
-    fleet "Syndicate Small" 1200
-    fleet "Syndicate Large" 2000
   system "Nocte"
     government "Republic"
   planet "Rand"
