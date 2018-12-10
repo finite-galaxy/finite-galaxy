@@ -1,3 +1,40 @@
+# "Liberate Kornephoros"
+# "FW Prisoner Parole"
+# "FW Prisoner Parole 2"
+# "Oathkeepers founded"
+# "FW Syndicate Diplomacy 1"
+# "FW Syndicate Diplomacy 1B"
+# "FW Syndicate Diplomacy 1C"
+# "FW Syndicate Diplomacy 1D"
+# "FW Hope Recon 1"
+# "FW Hope Recon 1B"
+# "FW Hope Recon 1C"
+# "FW Hope Recon 1D"
+# "FW Plasma Testing 1"
+# "FW Plasma Testing 1B"
+# "plasma turret available"
+# "FW Supply Convoy 1"
+# "FW Pirates 1"
+# "FW Pirates 1A"
+# "FW Senate 1"
+# "FW Senate 1B"
+# "FW Flamethrower 1"
+# "FW Flamethrower 2"
+# "FW Pirates 2"
+# "FW Pirates 3"
+# "FW Pirates 3.1"
+# "FW Pirates 3.2"
+# "FW Pirates 3.2A"
+# "FW Pirates 3.1B"
+# "FW Pirates 3.2B"
+# "FW Pirates 4"
+# "FW Pirates 4B"
+# "FW Pirates 4.1"
+# "FW Refinery 1"
+# "FW Refinery 1A"
+
+
+
 mission "Liberate Kornephoros"
   description "Travel with the Free Worlds militia to the <system> system and drive off the Navy fleet that is occupying the system."
   autosave
@@ -228,11 +265,11 @@ mission "FW Prisoner Parole 2"
       label next
       `  "The Navy has had two crushing defeats," he says. "They will be hesitant to attack again until their numbers are much stronger. That gives us some time for diplomacy, to strengthen our position and look for allies, or at least for sympathizers. Which is where you come in. I'm going to ask you to carry a diplomatic mission to the Syndicate. Meet us in the spaceport when you are ready."`
     "reputation: Republic" <?= -1000
-    event "oathkeepers founded" 50
+    event "Oathkeepers founded" 50
 
 
 
-mission "oathkeepers founded"
+mission "Oathkeepers founded"
   landing
   to offer
     has "event: oathkeepers founded"

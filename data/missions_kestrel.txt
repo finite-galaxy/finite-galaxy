@@ -1,3 +1,11 @@
+# "Kestrel Testing"
+# "Kestrel: More Engines"
+# "Kestrel: More Shields"
+# "Kestrel: More Weapons"
+# "Kestrel Available"
+
+
+
 mission "Kestrel Testing"
   name "Warship Testing"
   description "Travel to the <waypoints> system to fight and disable a prototype warship that Tarazed Corporation is testing. Do not destroy the ship, or you will lose your payment and your opportunity to buy one."
@@ -137,18 +145,6 @@ mission "Kestrel Testing"
 
 
 
-mission "Kestrel: More Weapons"
-  landing
-  invisible
-  to offer
-    has "kestrel: more weapons"
-  on offer
-    event "kestrel available: more weapons" 50
-  to complete
-    has "kestrel available"
-
-
-
 mission "Kestrel: More Engines"
   landing
   invisible
@@ -160,7 +156,6 @@ mission "Kestrel: More Engines"
     has "kestrel available"
 
 
-
 mission "Kestrel: More Shields"
   landing
   invisible
@@ -168,6 +163,17 @@ mission "Kestrel: More Shields"
     has "kestrel: more shields"
   on offer
     event "kestrel available: more shields" 50
+  to complete
+    has "kestrel available"
+
+
+mission "Kestrel: More Weapons"
+  landing
+  invisible
+  to offer
+    has "kestrel: more weapons"
+  on offer
+    event "kestrel available: more weapons" 50
   to complete
     has "kestrel available"
 

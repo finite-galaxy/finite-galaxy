@@ -1,3 +1,17 @@
+# "Transport executive to <planet>"
+# "Corporate retreat from <origin>"
+# "Corporate espionage"
+# "Document delivery to <planet>"
+# "Waste recycling on <planet>"
+# "Rush fuel Delivery"
+# "Rush equipment Delivery"
+# "Syndicate target practice [0]"
+# "Syndicate target practice [1]"
+# "Syndicate target practice [2]"
+# "Syndicate target practice [3]"
+
+
+
 mission "Transport executive to <planet>"
   job
   repeat
@@ -271,24 +285,4 @@ mission "Syndicate target practice [3]"
   on complete
     payment 100000
     dialogue "You transmit the scan results to a team of eager engineers and collect your payment of <payment>."
-
-ship "Hero" "Hero Test Dummy"
-  add attributes
-    "automaton" 1
-    "self destruct" 1
-
-ship "Quicksilver" "Quicksilver Test Dummy"
-  add attributes
-    "automaton" 1
-    "self destruct" 1
-
-ship "Splinter" "Splinter Test Dummy"
-  add attributes
-    "automaton" 1
-    "self destruct" 1
-
-ship "Vanguard" "Vanguard Test Dummy"
-  add attributes
-    "automaton" 1
-    "self destruct" 1
 

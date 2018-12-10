@@ -1,3 +1,25 @@
+# "Pug Cease Hostilities"
+# "Free Worlds Aftermath"
+# "particle turret available"
+# "Tarazed joins the Free Worlds"
+# "FW Epilogue: Ijs and Katya"
+# "FW Epilogue: Alondo"
+# "FW Epilogue: Freya"
+# "FW Epilogue: Danforth"
+
+
+
+mission "Pug Cease Hostilities"
+  landing
+  invisible
+  to offer
+    has "main plot completed"
+  on offer
+    "reputation: Pug" >?= 1
+    fail
+
+
+
 mission "Free Worlds Aftermath"
   landing
   invisible

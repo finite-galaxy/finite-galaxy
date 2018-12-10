@@ -4,6 +4,7 @@
 #   Lampyrid
 #   Nanobots
 #   Science Drone
+#   Test Dummy
 #   Timer Ship
 #   Void Sprite
 
@@ -209,6 +210,29 @@ ship "Science Drone"
     "heat dissipation" 1
   explode "tiny explosion" 5
   explode "small explosion" 2
+
+
+
+# Test Dummy
+ship "Hero" "Hero Test Dummy"
+  add attributes
+    "automaton" 1
+    "self destruct" 1
+
+ship "Quicksilver" "Quicksilver Test Dummy"
+  add attributes
+    "automaton" 1
+    "self destruct" 1
+
+ship "Splinter" "Splinter Test Dummy"
+  add attributes
+    "automaton" 1
+    "self destruct" 1
+
+ship "Vanguard" "Vanguard Test Dummy"
+  add attributes
+    "automaton" 1
+    "self destruct" 1
 
 
 

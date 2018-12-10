@@ -1,20 +1,56 @@
-# Courier
-# Deep Archaeology
-# Drug Running
-# Expedition to Hope
-# Humanitarian
-# Immigrant Workers
-# Migrant Workers
-# Pookie
-# Rescue Miners
-# Rim Archaeology
-# Smuggler's Den
-# Terminus Exploration
-# Terraforming Rand
-# There Might Be Riots
-# Transport Workers
-# Wolf, Goat, Cabbage
-# WR Star
+# "Courier 1"
+# "Courier 2"
+# "Courier 3"
+# "Courier 4"
+# "Deep Archaeology 1"
+# "Deep Archaeology 2"
+# "Deep Archaeology 3"
+# "Deep Archaeology 4"
+# "Deep Archaeology 5"
+# "Drug Running 1"
+# "Drug Running 2"
+# "Drug Running 3"
+# "Hallucination"
+# "Expedition to Hope 1"
+# "Expedition to Hope 2"
+# "Humanitarian 1"
+# "Humanitarian 2"
+# "Immigrant Workers"
+# "Migrant Workers 1"
+# "Pookie 1"
+# "Pookie 2"
+# "Rescue Miners 1"
+# "Rescue Miners 2"
+# "Rim Archaeology 1"
+# "Rim Archaeology 2A"
+# "Rim Archaeology 2B"
+# "Rim Archaeology 3A"
+# "Rim Archaeology 3B"
+# "Rim Archaeology 4A"
+# "Rim Archaeology 4B"
+# "Rim Archaeology 5A"
+# "Rim Archaeology 5B"
+# "Rim Archaeology 6"
+# "Smuggler's Den 1"
+# "Smuggler's Den 2"
+# "Smuggler's Den: Payment"
+# "Smuggler's Den: Follow Up"
+# "Terminus exploration"
+# "Terraforming 1"
+# "Terraforming 2"
+# "Terraforming 3"
+# "Terraforming 4"
+# "Terraforming 5"
+# "There Might Be Riots 1"
+# "There Might Be Riots part 2"
+# "There Might Be Riots part 3A"
+# "There Might Be Riots part 3B"
+# "Sad Archie"
+# "Transport Workers A"
+# "Transport Workers B"
+# "Transport Workers C"
+# "A wolf, a goat, and a cabbage"
+# "WR Star 1"
 
 
 
@@ -666,7 +702,7 @@ mission "Migrant Workers 1"
 
 
 # Pookie
-mission "Pookie, Part 1"
+mission "Pookie 1"
   name "Pookie"
   description "Travel to <destination> and meet Pookie, who is staying with her aunt and may be scared of flying."
   minor
@@ -689,7 +725,7 @@ mission "Pookie, Part 1"
 
 
 
-mission "Pookie, Part 2"
+mission "Pookie 2"
   name "Pookie"
   landing
   description "Return Pookie the poodle to <destination>."
@@ -698,7 +734,7 @@ mission "Pookie, Part 2"
   passengers 1
   cargo "chew toys" 1
   to offer
-    has "Pookie, Part 1: done"
+    has "Pookie 1: done"
   on offer
     conversation
       `You called ahead while your ship was landing and agreed to meet Pookie's aunt at the spaceport. She told you, "Meet me outside the shop with the ridiculous sheepskin coats." The shop is not hard to find; the mannequins in the window look like feral sheep with overgrown wool in bad need of grooming.`
@@ -1058,7 +1094,7 @@ mission "Rim Archaeology 6"
 
 
 # Smuggler's Den
-mission "Smuggler's Den, Part 1"
+mission "Smuggler's Den 1"
   name "Refugees to <planet>"
   description "You met Joe and Maria, a young couple with a newborn baby, on the Smuggler's Den station. They want to start a new life on <destination>."
   minor
@@ -1131,14 +1167,14 @@ mission "Smuggler's Den, Part 1"
 
 
 
-mission "Smuggler's Den, Part 2"
+mission "Smuggler's Den 2"
   landing
   name "Refugees to <planet>"
   description "Joe and Maria were unable to find work on <origin>. Take them to <destination> to see if they can get a job there."
   destination "Millrace"
   passengers 2
   to offer
-    has "Smuggler's Den, Part 1: done"
+    has "Smuggler's Den 1: done"
   on offer
     conversation
       `As soon as you have landed, Joe finds a computer terminal and tries to look up his cousin who works here, but with no success. You go with him to the company office, where after a short wait you are ushered in to meet with a foreman. After Joe introduces himself, the man says, "I'm really sorry to tell you this, but Leroy died in a refinery fire several months ago."`

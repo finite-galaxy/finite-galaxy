@@ -1,3 +1,9 @@
+# "Ruin: Landing"
+# "Pug in Wanderer Space"
+# "Pug Angry at Being Farmed"
+
+
+
 mission "Ruin: Landing"
   landing
   source Ruin
@@ -10,15 +16,6 @@ mission "Ruin: Landing"
         decline
 
 
-
-mission "Pug Cease Hostilities"
-  landing
-  invisible
-  to offer
-    has "main plot completed"
-  on offer
-    "reputation: Pug" >?= 1
-    fail
 
 mission "Pug in Wanderer Space"
   landing
@@ -51,6 +48,8 @@ mission "Pug in Wanderer Space"
       label ship
       `  You decide to play it safe and return to your ship. The Pug remain as enigmatic as ever.`
         decline
+
+
 
 mission "Pug Angry at Being Farmed"
   landing

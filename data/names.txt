@@ -1,3 +1,82 @@
+# digit
+# letter
+# greek
+# one to twelve
+# cardinal directions
+# seasons
+# months
+# zodiac
+# heraldic tinctures
+# colours
+# chemical elements abbreviated
+# chemical elements full
+# adjectives
+# singular nouns
+# plural nouns
+# nouns of indeterminate quantity
+# the-nouns
+# things you can be of
+# male titles
+# female titles
+# gender-neutral titles
+# all titles
+# male names
+# female names
+# plural quantities
+# sometimes a successor
+# standalone civilian ship names
+#
+# civilian
+#
+# deep
+# free worlds capital
+# free worlds small
+# militia
+# republic
+# syndicate capital
+# syndicate small
+# deep fighter
+# free worlds fighter
+# republic fighter
+# syndicate fighter
+#
+# sinister names
+# pirate adjectives that work as titles
+# pirate adjectives that don't work as titles
+# pirate adjectives that don't work before singular nouns
+# pirate nouns
+# pirate nouns that work after bad outcomes
+# bad outcomes
+#
+# pirate
+# bounty hunter
+#
+# arachi start
+# arachi middle
+# arachi next
+# arachi empty
+# arachi
+# hai
+# heliarch
+# kimek start
+# kimek middle
+# kimek next
+# kimek
+# korath
+# kor mereti
+# kor sestor
+# kor sestor fighter
+# pug
+# quarg
+# remnant
+# saryd start
+# saryd middle
+# saryd end
+# saryd
+# wanderer
+
+
+
 # Word lists that are re-used for many different ship name phrases
 phrase "digit"
   word
@@ -1754,6 +1833,7 @@ phrase "standalone civilian ship names"
     "Normandy"
     "Magna Carta"
     "Casablanca"
+
 
 
 # Final phrases that make ship names
@@ -4223,7 +4303,7 @@ phrase "bounty hunter"
 
 
 
-phrase "arach start"
+phrase "arachi start"
   word
     "Mug"
     "Glub"
@@ -4257,7 +4337,8 @@ phrase "arach start"
     "Floot"
     "Flut"
     "Flop"
-phrase "arach middle"
+
+phrase "arachi middle"
   word
     "alug"
     "abug"
@@ -4296,27 +4377,29 @@ phrase "arach middle"
     "root"
     "rup"
     "rub"
-phrase "arach next"
+
+phrase "arachi next"
   word
     " "
   phrase
-    "arach start"
-phrase "arach empty"
+    "arachi start"
+
+phrase "arachi empty"
   word
     ""
-phrase "arach"
-  phrase
-    "arach start"
-  phrase
-    "arach middle"
-  phrase
-    "arach middle"
-    "arach empty"
-    "arach next"
-  phrase
-    "arach middle"
-    "arach empty"
 
+phrase "arachi"
+  phrase
+    "arachi start"
+  phrase
+    "arachi middle"
+  phrase
+    "arachi middle"
+    "arachi empty"
+    "arachi next"
+  phrase
+    "arachi middle"
+    "arachi empty"
 
 
 phrase "hai"
@@ -4345,7 +4428,6 @@ phrase "hai"
     "Lur"
     "Sen"
     "Bin"
-
 
 
 phrase "heliarch"
@@ -4432,7 +4514,6 @@ phrase "heliarch"
     "Manager"
 
 
-
 phrase "kimek start"
   word
     "I"
@@ -4449,6 +4530,7 @@ phrase "kimek start"
     "Pai"
     "Pa"
     "Pi"
+
 phrase "kimek middle"
   word
     "ka"
@@ -4472,11 +4554,13 @@ phrase "kimek middle"
     "yee"
     "ya"
     "yi"
+
 phrase "kimek next"
   word
     " "
   phrase
     "kimek start"
+
 phrase "kimek"
   phrase
     "kimek start"
@@ -4490,7 +4574,6 @@ phrase "kimek"
     "kimek middle"
   phrase
     "kimek middle"
-
 
 
 phrase "korath"
@@ -4612,7 +4695,6 @@ phrase "korath"
     "far"
 
 
-
 phrase "kor mereti"
   phrase
     "digit"
@@ -4634,7 +4716,6 @@ phrase "kor mereti"
     ":"
   phrase
     "digit"
-
 
 
 phrase "kor sestor"
@@ -4676,7 +4757,6 @@ phrase "kor sestor fighter"
     "."
   phrase
     "digit"
-
 
 
 phrase "pug"
@@ -4730,7 +4810,6 @@ phrase "pug"
     "Wan"
 
 
-
 phrase "quarg"
   word
     "Quar"
@@ -4763,7 +4842,6 @@ phrase "quarg"
     "trum"
     "ruk"
     "rook"
-
 
 
 phrase "remnant"
@@ -4831,7 +4909,6 @@ phrase "remnant"
     "Alive"
 
 
-
 phrase "saryd start"
   word
     "Lo"
@@ -4864,6 +4941,7 @@ phrase "saryd start"
     "Au"
     "I"
     "Rep"
+
 phrase "saryd middle"
   word
     "rem"
@@ -4893,9 +4971,11 @@ phrase "saryd middle"
     "fic"
     "ser"
     "lit"
+
 phrase "saryd middle"
   word
     ""
+
 phrase "saryd end"
   word
     "um"
@@ -4930,6 +5010,7 @@ phrase "saryd end"
     "ar"
     "aris"
     "atur"
+
 phrase "saryd"
   phrase
     "saryd start"
@@ -4945,7 +5026,6 @@ phrase "saryd"
     "saryd middle"
   phrase
     "saryd end"
-
 
 
 phrase "wanderer"
