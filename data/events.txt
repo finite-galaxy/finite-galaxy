@@ -642,7 +642,7 @@ event "southern carriers 1"
     "Stymphalian"
 
   fleet "Free Worlds Small"
-    fighters "free worlds fighters"
+    fighters "free worlds fighter"
     add variant 1
       "Nest"
       "Stymphalian" 2
@@ -655,7 +655,7 @@ event "southern carriers 2"
     "Stymphalian"
 
   fleet "Free Worlds Large"
-    fighters "free worlds fighters"
+    fighters "free worlds fighter"
     add variant 2
       "Roost"
       "Stymphalian" 4
@@ -676,7 +676,7 @@ event "southern carriers 2"
       "Stymphalian" 2
 
   fleet "Pirates South Small"
-    fighters "free worlds fighters"
+    fighters "free worlds fighter"
     add variant 1
       "Nest"
       "Stymphalian" 2
@@ -701,7 +701,7 @@ event "southern carriers 3"
       "Stymphalian" 2
 
   fleet "Free Worlds Large"
-    fighters "free worlds fighters"
+    fighters "free worlds fighter"
     add variant 2
       "Skein"
       "Stymphalian" 6
@@ -722,7 +722,7 @@ event "southern carriers 3"
       "Stymphalian" 4
 
   fleet "Pirates South Large"
-    fighters "free worlds fighters"
+    fighters "free worlds fighter"
     add variant 1
       "Nest" 2
       "Stymphalian" 4
@@ -764,7 +764,7 @@ event "southern carriers 4"
       "Stymphalian" 4
 
   fleet "Pirates South Large"
-    fighters "free worlds fighters"
+    fighters "free worlds fighter"
     add variant 1
       "Roost"
       "Stymphalian" 4
@@ -3553,6 +3553,8 @@ event "wanderers: exiles have drones"
 
 
 event "wanderers: sabira eseskrai colony"
+  system "Fornarep"
+    government "Wanderer"
   system "Skeruto"
     government "Wanderer"
     fleet "Quarg Large" 1000
@@ -3570,59 +3572,72 @@ event "wanderers: sabira eseskrai colony"
 
 event "wanderers: sestor eliminated"
   system "Celeborim"
-    government "Uninhabited"
+    government "Kor Mereti"
     fleet "Kor Mereti Small" 10000
   system "Makferuti"
-    government "Uninhabited"
+    government "Kor Mereti"
     fleet "Kor Mereti Small" 10000
   system "Asikafarnut"
-    government "Uninhabited"
+    government "Kor Mereti"
     fleet "Kor Mereti Large" 3600
   system "Sobarati"
-    government "Uninhabited"
+    government "Kor Mereti"
     fleet "Kor Mereti Small" 10000
   system "Silikatakfar"
-    government "Uninhabited"
+    government "Kor Mereti"
     fleet "Kor Mereti Large" 1600
   system "Ferukistek"
-    government "Uninhabited"
+    government "Kor Mereti"
     fleet "Kor Mereti Large" 2400
   system "Eneremprukt"
-    government "Uninhabited"
+    government "Kor Mereti"
     fleet "Kor Mereti Large" 2000
   system "Mesuket"
+    government "Kor Mereti"
     remove fleet "Kor Sestor Large"
+  planet "Devru Kaska"
+    add attributes uninhabited
+    outfitter clear
+    shipyard clear
+    spaceport clear
+  planet "Drekag Firask"
+    add attributes uninhabited
+    outfitter clear
+    shipyard clear
+    spaceport clear
+  planet "Keneska Fek"
+    add attributes uninhabited
+    outfitter clear
+    shipyard clear
+    spaceport clear
+  planet "Sebra Skira"
+    add attributes uninhabited
+    outfitter clear
+    shipyard clear
+    spaceport clear
+  planet "Sestor Ikfar"
+    add attributes uninhabited
+    outfitter clear
+    shipyard clear
+    spaceport clear
+  planet "Sopi Lefarkata"
+    add attributes uninhabited
+    outfitter clear
+    shipyard clear
+    spaceport clear
 
 
 event "wanderers: sestor planets unrestricted"
   planet "Devru Kaska"
     "required reputation" 0
-    outfitter clear
-    shipyard clear
-    spaceport clear
   planet "Drekag Firask"
     "required reputation" 0
-    outfitter clear
-    shipyard clear
-    spaceport clear
   planet "Keneska Fek"
     "required reputation" 0
-    outfitter clear
-    shipyard clear
-    spaceport clear
   planet "Sebra Skira"
     "required reputation" 0
-    outfitter clear
-    shipyard clear
-    spaceport clear
   planet "Sestor Ikfar"
     "required reputation" 0
-    outfitter clear
-    shipyard clear
-    spaceport clear
   planet "Sopi Lefarkata"
     "required reputation" 0
-    outfitter clear
-    shipyard clear
-    spaceport clear
 

@@ -4285,8 +4285,8 @@ system "Ap'arak"
   habitable 1080
   belt 1385
   link Chirr'ay'akai
-  link Sich'ka'ara
   link Ka'ch'chrai
+  link Sich'ka'ara
   asteroids "medium rock" 6 7.383
   asteroids "large rock" 2 4.485
   asteroids "medium metal" 1 7.797
@@ -5589,8 +5589,8 @@ system "Bore Fah"
   government "Hai"
   habitable 625
   belt 1823
-  link "Wah Ki"
   link "Bote Asu"
+  link "Wah Ki"
   asteroids "small rock" 29 3.0912
   asteroids "medium rock" 108 5.8443
   asteroids "large rock" 27 4.2021
@@ -5647,10 +5647,10 @@ system "Bote Asu"
   government "Hai"
   habitable 2859
   belt 1613
-  link "Wah Ki"
-  link "Ula Mon"
-  link "Ya Hai"
   link "Bore Fah"
+  link "Ula Mon"
+  link "Wah Ki"
+  link "Ya Hai"
   asteroids "small rock" 10 5.4758
   asteroids "medium rock" 58 4.1382
   asteroids "large rock" 4 3.6366
@@ -6663,8 +6663,8 @@ system "Chirr'ay'akai"
   government "Wanderer"
   habitable 487
   belt 1425
-  link Prakacha'a
   link Ap'arak
+  link Prakacha'a
   asteroids "large rock" 1 3.762
   asteroids "small metal" 2 2.964
   asteroids "medium metal" 3 5.548
@@ -6770,8 +6770,8 @@ system "Chy'chra"
   government "Wanderer"
   habitable 625
   belt 1120
-  link Prakacha'a
   link Ik'kara'ka
+  link Prakacha'a
   asteroids "small rock" 5 3.8019
   asteroids "medium rock" 6 5.0141
   asteroids "large rock" 2 3.0305
@@ -8082,11 +8082,11 @@ system "Due Yoot"
   government "Hai"
   habitable 233
   belt 1854
-  link "Wah Oh"
-  link "Io Mann"
   link "Heia Due"
-  link "Rati Cal"
+  link "Io Mann"
   link "Lom Tahr"
+  link "Rati Cal"
+  link "Wah Oh"
   asteroids "small rock" 2 4.5045
   asteroids "medium rock" 11 3.15
   asteroids "large rock" 4 4.0635
@@ -8250,8 +8250,8 @@ system "Eber"
       sprite planet/rock7
       distance 323
       period 19.6268
-  object
-    sprite planet/io
+  object "Hope"
+    sprite planet/ice2
     distance 957.74
     period 662.76
   object
@@ -8451,10 +8451,10 @@ system "Ek'kek'ru"
   government "Wanderer"
   habitable 320
   belt 1517
-  link Ka'ch'chrai
-  link Si'yak'ku
-  link Pik'ro'iyak
   link Iyech'yek
+  link Ka'ch'chrai
+  link Pik'ro'iyak
+  link Si'yak'ku
   asteroids "small rock" 54 1.683
   asteroids "medium rock" 12 1.1385
   asteroids "large rock" 50 1.5015
@@ -8509,11 +8509,11 @@ system "Ekuarik"
   government "Heliarch"
   habitable 700
   belt 1711
+  link Belug
   link "Ki War Ek"
   link Quaru
-  link Belug
-  link Speloog
   link "Ruwarku"
+  link Speloog
   asteroids "small rock" 2 4.5954
   asteroids "medium rock" 3 9.1908
   asteroids "large rock" 2 5.5269
@@ -11372,9 +11372,9 @@ system "Heia Due"
   government "Hai"
   habitable 1215
   belt 1079
-  link Waypoint
   link "Due Yoot"
   link "Io Lowe"
+  link Waypoint
   asteroids "small rock" 28 8.9775
   asteroids "medium rock" 10 7.3575
   asteroids "large rock" 12 9.99
@@ -12202,9 +12202,9 @@ system "Io Lowe"
   habitable 135
   belt 1552
   link "Heia Due"
+  link "Lom Tahr"
   link "Mei Yohn"
   link "Ula Mon"
-  link "Lom Tahr"
   asteroids "small rock" 16 8.0325
   asteroids "medium rock" 9 7.425
   asteroids "large rock" 29 8.235
@@ -12260,8 +12260,8 @@ system "Io Mann"
   government "Hai"
   habitable 973
   belt 1132
-  link "Wah Oh"
   link "Due Yoot"
+  link "Wah Oh"
   asteroids "small rock" 25 5.5944
   asteroids "medium rock" 19 4.6116
   asteroids "large rock" 2 4.4982
@@ -12988,10 +12988,10 @@ system "Ki War Ek"
   government "Heliarch"
   habitable 700
   belt 1777
-  link Quaru
-  link Ekuarik
-  link "14 Winter Below"
   link "5 Axis"
+  link "14 Winter Below"
+  link Ekuarik
+  link Quaru
   link "Ruwarku"
   asteroids "small rock" 12 2.349
   asteroids "medium rock" 11 2.523
@@ -13171,8 +13171,8 @@ system "Kiro'ku"
   government "Wanderer"
   habitable 1111.68
   belt 1308
-  link Sich'ka'ara
   link Ka'pru
+  link Sich'ka'ara
   asteroids "small rock" 32 4.9572
   asteroids "medium rock" 25 5.4675
   asteroids "large rock" 14 6.1965
@@ -14384,11 +14384,11 @@ system "Lom Tahr"
   government "Hai"
   habitable 2373
   belt 1445
-  link "Ya Hai"
-  link "Io Lowe"
-  link "Due Yoot"
-  link "Rati Cal"
   link "Da Lest"
+  link "Due Yoot"
+  link "Io Lowe"
+  link "Rati Cal"
+  link "Ya Hai"
   asteroids "small rock" 7 2.961
   asteroids "medium rock" 9 2.163
   asteroids "large rock" 2 1.638
@@ -15092,9 +15092,9 @@ system "Mei Yohn"
   government "Hai"
   habitable 426
   belt 1075
-  link "Zuba Zub"
-  link "Ula Mon"
   link "Io Lowe"
+  link "Ula Mon"
+  link "Zuba Zub"
   asteroids "medium rock" 1 5.1282
   asteroids "large rock" 1 3.7884
   asteroids "small metal" 2 4.851
@@ -17922,10 +17922,10 @@ system "Pik'ro'iyak"
   government "Wanderer"
   habitable 233
   belt 1279
-  link Si'yak'ku
-  link Ek'kek'ru
   link Aya'k'k
+  link Ek'kek'ru
   link Es'sprak'ai
+  link Si'yak'ku
   asteroids "large metal" 1 3.7488
   trade "Clothing" 270
   trade "Electronics" 760
@@ -18195,10 +18195,10 @@ system "Prakacha'a"
   government "Wanderer"
   habitable 1506
   belt 1637
+  link Chirr'ay'akai
   link Chy'chra
   link Ik'kara'ka
   link Sich'ka'ara
-  link Chirr'ay'akai
   asteroids "small rock" 32 1.974
   asteroids "medium rock" 45 1.484
   asteroids "large rock" 20 1.75
@@ -18386,10 +18386,10 @@ system "Quaru"
   government "Heliarch"
   habitable 700
   belt 1440
-  link "Ki War Ek"
   link Ekuarik
-  link "Last Word"
   link Homeward
+  link "Ki War Ek"
+  link "Last Word"
   link "Ruwarku"
   asteroids "large metal" 1 2.0202
   trade "Clothing" 372
@@ -20563,9 +20563,9 @@ system "Sich'ka'ara"
   government "Wanderer"
   habitable 1715
   belt 1744
-  link Prakacha'a
   link Ap'arak
   link Kiro'ku
+  link Prakacha'a
   asteroids "large metal" 1 2.3738
   trade "Clothing" 327
   trade "Electronics" 745
@@ -22635,8 +22635,8 @@ system "Ula Mon"
   habitable 640
   belt 1574
   link "Bote Asu"
-  link "Mei Yohn"
   link "Io Lowe"
+  link "Mei Yohn"
   link "Ya Hai"
   asteroids "small rock" 1 3.2319
   asteroids "medium rock" 12 2.793
@@ -23173,10 +23173,10 @@ system "Wah Ki"
   government "Hai"
   habitable 426
   belt 1585
-  link "Zuba Zub"
-  link "Wah Yoot"
-  link "Bote Asu"
   link "Bore Fah"
+  link "Bote Asu"
+  link "Wah Yoot"
+  link "Zuba Zub"
   asteroids "small rock" 39 5.9598
   asteroids "medium rock" 1 5.4978
   asteroids "large rock" 24 2.4024
@@ -23241,10 +23241,10 @@ system "Wah Oh"
   government "Hai"
   habitable 5000
   belt 1194
-  link "Io Mann"
   link "Due Yoot"
   link "Fah Root"
   link "Fah Soom"
+  link "Io Mann"
   asteroids "small rock" 12 1.917
   asteroids "medium rock" 21 1.89
   asteroids "large rock" 6 3.321
@@ -23317,9 +23317,9 @@ system "Wah Yoot"
   government "Hai (Unfettered)"
   habitable 1080
   belt 1222
-  link "Wah Ki"
   link "Ehma Ti"
   link "Hi Yahr"
+  link "Wah Ki"
   asteroids "small rock" 44 2.0592
   asteroids "medium rock" 26 3.4452
   asteroids "large rock" 9 2.6532
@@ -23531,8 +23531,8 @@ system "Wei"
     sprite planet/lava1-b
     distance 334.14
     period 114.459
-  object "Hope"
-    sprite planet/ice2
+  object
+    sprite planet/io
     distance 605.15
     period 278.966
   object
@@ -23696,11 +23696,11 @@ system "Ya Hai"
   government "Hai"
   habitable 426
   belt 1120
-  link "Ula Mon"
   link "Bote Asu"
-  link "Uwa Fahn"
-  link "Lom Tahr"
   link "Da Ent"
+  link "Lom Tahr"
+  link "Ula Mon"
+  link "Uwa Fahn"
   asteroids "medium rock" 10 1.2096
   asteroids "large rock" 1 2.0328
   asteroids "small metal" 17 1.1928
@@ -24069,8 +24069,8 @@ system "Zuba Zub"
   government "Hai"
   habitable 426
   belt 1911
-  link "Mei Yohn"
   link "Imo Dep"
+  link "Mei Yohn"
   link "Wah Ki"
   asteroids "small rock" 3 3.12
   asteroids "large rock" 5 2.76
@@ -25214,10 +25214,10 @@ planet "Earth"
 
 planet "Echo"
   attributes quarg moon
+  government "Quarg"
   landscape land/desert2
   description `This is a small Quarg outpost, which you suspect was built mostly to keep an eye on Tarazed Corporation and their alien-influenced research on the planet below. Like most Quarg worlds, the gravity is much too low here for it to be a feasible human colony, and although there is an atmosphere, it is too thin for a human being to breathe. Supposedly the Quarg have lungs designed for a continuous one way airflow, like a bird's lungs, rather than the ordinary in and out flow of human lungs; this is what enables them to survive on low-gravity, low-atmosphere worlds.`
   spaceport `This outpost was really not designed with human beings in mind. The indoor air is not pressurized, so even there you need an oxygen mask to be able to breathe comfortably. And all the rooms and hallways are taller and narrower than you are used to. The station feels like a maze, full of winding passageways with no clear order or pattern to them, although perhaps the order would be readily apparent if you had an alien mind.`
-  government "Quarg"
   bribe 0
   security 0.9
 
@@ -26029,11 +26029,11 @@ planet "Ki Patek Ka"
 
 planet "Korati Efreti"
   attributes efret station
+  government "Kor Efret"
   landscape land/loc2
   description `This small Korath station is positioned at the Lagrangian point in between this system's sun and the planet that the Quarg had been mining for material to build the ringworld. The station is dwarfed by the ringworld, but nonetheless manages to make a statement: re-asserting the territorial rights of the Korath in the face of an alien species that chose to build a settlement in one of their systems.`
   spaceport `As the Korath civil war became more and more brutal, the safest home for those who wanted to avoid the fighting was right here in the shadow of the Quarg. This small station is still home to well over a thousand Korath, and they are constantly on the move from one section to another, their boots ringing loudly on the metal floors.`
   spaceport `  The Korath studiously avoid staring at you or even making eye contact, but you get the sense that many of them are quite curious about who you are and what you are doing here.`
-  government "Kor Efret"
   bribe 0.1
   security 0.5
 
@@ -26562,7 +26562,6 @@ planet "Obscurity"
   description `Although generally believed to be uninhabited, it turns out this rocky moon has a hidden pirate base, called "Obscurity". Because it has no atmosphere, the surface temperature fluctuates from very hot to exremely cold, depending on whether this moon is on the sun side or on the opposite side of its planet, which is also why all human activity takes place underground.`
   description `   Nothing grows here and there are no valuable materials on Obscurity, therefore everything has to be imported, and there is a lively trade in commodities, without anyone asking where it comes from, obviously.`
   spaceport `The spaceport is located underground in what looks like an abandoned mining operation. You have to park your ship at some distance and walk towards it in your spacesuit. Because it's so small, it's always hot and lively inside, even if there are only a few people around. You can order drinks, refuel your ship, sell harvested materials, and trade in commodities, often in the same corner.`
-  government "Pirate"
   security 0
 #  tribute 100
 #    threshold 500
