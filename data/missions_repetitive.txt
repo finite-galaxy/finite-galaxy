@@ -1,0 +1,495 @@
+# "Assisting Hai"
+# "Assisting Merchant"
+#
+# "Marauder Hunted"
+# "Hunted by State [0]"
+# "Hunted by State [1]"
+#
+# "Eastern Pirate Attack"
+# "Northern Pirate Attack"
+# "Southern Pirate Attack"
+# "Raider Attack 1"
+# "Raider Attack 2"
+# "Eastern Pirate Defence"
+# "Eastern Pirate Defence [Unpaid]"
+# conversation "eastern pirate defence"
+# "Northern Pirate Defence"
+# "Northern Pirate Defence [Unpaid]"
+# conversation "northern pirate defence"
+# "Southern Pirate Defence"
+# "Southern Pirate Defence [Unpaid]"
+# conversation "southern pirate defence"
+
+
+
+mission "Assisting Hai"
+  assisting
+  repeat
+  to offer
+    random < 27
+  source
+    government Hai
+  on offer
+    payment 30000
+    conversation
+      `Knowing you risked your life to save the <origin>, the captain gives you <payment>.`
+        decline
+  # A mission with no destination will not be offered, so give it one.
+  # What the destination is doesn't matter, because you always 'decline' this.
+  destination Hai-home
+
+mission "Assisting Merchant"
+  assisting
+  repeat
+  to offer
+    random < 10
+  source
+    government Merchant
+  on offer
+    payment 10000
+    conversation
+      `When you repair the <origin>, the captain thanks you for your assistance and pays you <payment>.`
+        decline
+  destination Earth
+
+
+
+# Must destroy hunters and land to fail
+mission "Hunted by State [0]"
+  invisible
+  landing
+  repeat
+  destination Earth
+  source
+    government "Deep" "Free Worlds" "Neutral" "Pirate" "Republic" "Syndicate" 
+  to offer
+    random < 10
+    "combat rating" > 150
+    or
+      not "chosen sides"
+      has "main plot completed"
+    or
+      "reputation: Free Worlds" < -10
+      "reputation: Republic" < -10
+      "reputation: Syndicate" < -10
+  to complete
+    never
+  npc save
+    government "Bounty Hunter"
+    personality heroic nemesis plunders
+    system
+      distance 5 5
+    fleet "Bounty Hunters"
+
+mission "Hunted by State [1]"
+  invisible
+  landing
+  repeat
+  destination Earth
+  source
+    government "Deep" "Free Worlds" "Neutral" "Pirate" "Republic" "Syndicate"
+  to offer
+    random > 95
+    "combat rating" > 1100
+    or
+      not "chosen sides"
+      has "main plot completed"
+    or
+      "reputation: Free Worlds" < -200
+      "reputation: Republic" < -200
+      "reputation: Syndicate" < -200
+  to complete
+    never
+  npc save
+    government "Bounty Hunter"
+    personality heroic nemesis plunders
+    system
+      distance 5 5
+    fleet "Hired Guns"
+
+mission "Marauder Hunted"
+  invisible
+  landing
+  repeat
+  destination Earth
+  source
+    government "Deep" "Free Worlds" "Neutral" "Republic" "Syndicate"
+  to offer
+    "combat rating" > 8103
+    random < 3
+  to complete
+    never
+  npc save
+    government "Bounty Hunter"
+    personality heroic unconstrained waiting nemesis plunders harvests
+    system
+      distance 5 5
+    fleet "Marauder fleet X"
+
+
+
+mission "Eastern Pirate Attack"
+  name "Defend <planet>"
+  description "Defeat a pirate raid on <destination>."
+  minor
+  repeat
+  to offer
+    "combat rating" > 100
+    random < 10
+  source
+    attributes frontier
+    attributes core
+  npc evade
+    government "Pirate"
+    personality heroic staying target harvests plunders
+    fleet "Pirates East Small"
+    fleet "Pirates East Small" 2
+  npc
+    government "Republic"
+    personality heroic staying
+    fleet "Republic Small" 2
+  on offer
+    conversation
+      `Suddenly you hear raised voices and shouting outside: "We are under attack! <planet> is under attack by pirates! We need every combat-worthy ship to join the defences!" The authorities will probably pay you quite well if you assist them, but this could also be an easy way to get yourself killed.`
+      choice
+        `  (Stay here until the fight is over.)`
+          decline
+        `  (Join the defence fleet.)`
+      `The local defence forces are preparing to repel the pirate attack. You join them, and take off together...`
+        launch
+  on complete
+    payment 200000
+    "reputation: Republic" += 1
+    dialogue "The government of <planet> pays you <payment> for helping to drive off the pirates."
+
+mission "Northern Pirate Attack"
+  name "Defend <planet>"
+  description "Defeat a pirate raid on <destination>."
+  minor
+  repeat
+  to offer
+    "combat rating" > 100
+    random < 10
+  source
+    attributes frontier
+    attributes north paradise
+  npc evade
+    government "Pirate"
+    personality heroic staying target harvests plunders
+    fleet "Pirates North Small"
+    fleet "Pirates North Large" 2
+  npc
+    government "Syndicate"
+    personality heroic staying
+    fleet "Syndicate Small" 2
+  on offer
+    conversation
+      `Suddenly you hear raised voices and shouting outside: "We are under attack! <planet> is under attack by pirates! We need every combat-worthy ship to join the defences!" The authorities will probably pay you quite well if you assist them, but this could also be an easy way to get yourself killed.`
+      choice
+        `  (Stay here until the fight is over.)`
+          decline
+        `  (Join the defence fleet.)`
+      `The local defence forces are preparing to repel the pirate attack. You join them, and take off together...`
+        launch
+  on complete
+    payment 250000
+    "reputation: Syndicate" += 1
+    dialogue "The government of <planet> pays you <payment> for helping to drive off the pirates."
+
+mission "Southern Pirate Attack"
+  name "Defend <planet>"
+  description "Defeat a pirate raid on <destination>."
+  minor
+  repeat
+  to offer
+    "combat rating" > 100
+    random < 10
+  source
+    attributes frontier
+    attributes "dirt belt" rim south
+  npc evade
+    government "Pirate"
+    personality heroic staying target harvests plunders
+    fleet "Pirates South Small"
+    fleet "Pirates South Large" 2
+  npc
+    government "Militia"
+    personality heroic staying
+    fleet "Militia Small" 2
+  on offer
+    conversation
+      `Suddenly you hear raised voices and shouting outside: "We are under attack! <planet> is under attack by pirates! We need every combat-worthy ship to join the defences!" The authorities will probably pay you quite well if you assist them, but this could also be an easy way to get yourself killed.`
+      choice
+        `  (Stay here until the fight is over.)`
+          decline
+        `  (Join the defence fleet.)`
+      `The local defence forces are preparing to repel the pirate attack. You join them, and take off together...`
+        launch
+  on complete
+    payment 150000
+    "reputation: Militia" += 1
+    dialogue "The government of <planet> pays you <payment> for helping to drive off the pirates."
+
+
+mission "Raider Attack 1"
+  name "Defend <planet>"
+  description "Defeat an alien raid on <destination>."
+  minor
+  repeat
+  to offer
+    "combat rating" > 550
+    random < 7
+    has "main plot completed"
+  source
+    planet "Nimbus"
+    planet "Shangri-La"
+    planet "Sundive"
+  npc evade
+    government "Korath"
+    personality target timid unconstrained uninterested harvests plunders
+    fleet "Korath Raid" 2
+  npc
+    government "Republic"
+    personality heroic staying vindictive
+    fleet "Republic Large"
+    fleet "Republic Small"
+  on offer
+    conversation
+      `Suddenly you hear raised voices and shouting outside: "We are under attack! <planet> is under attack by alien raiders! We need every combat-worthy ship to join the defences!" The authorities will probably pay you quite well if you assist them, but this could also be an easy way to get yourself killed.`
+      choice
+        `  (Stay here until the fight is over.)`
+          decline
+        `  (Join the defence fleet.)`
+      `The local defence forces are preparing to repel the pirate attack. You join them, and take off together...`
+        launch
+  on complete
+    payment 550000
+    "reputation: Republic" += 4
+    dialogue `The government of <planet> pays you <payment> for helping to drive off the raiders.`
+    
+mission "Raider Attack 2"
+  name "Defend <planet>"
+  description "Defeat an alien raid on <destination>."
+  minor
+  repeat
+  to offer
+    "combat rating" > 750
+    random < 5
+    has "main plot completed"
+  source
+    planet "Nimbus"
+    planet "Shangri-La"
+    planet "Sundive"
+  npc evade
+    government "Korath"
+    personality target timid unconstrained uninterested harvests plunders
+    fleet "Korath Raid" 3    
+  npc
+    government "Republic"
+    personality heroic staying vindictive
+    fleet "Republic Large" 2
+  on offer
+    conversation
+      `Suddenly you hear raised voices and shouting outside: "We are under attack! <planet> is under attack by alien raiders! We need every combat-worthy ship to join the defences!" The authorities will probably pay you quite well if you assist them, but this could also be an easy way to get yourself killed.`
+      choice
+        `  (Stay here until the fight is over.)`
+          decline
+        `  (Join the defence fleet.)`
+      `The local defence forces are preparing to repel the pirate attack. You join them, and take off together...`
+        launch
+  on complete
+    payment 750000
+    "reputation: Republic" += 6
+    dialogue `The government of <planet> pays you <payment> for helping to drive off the raiders.`
+
+
+
+mission "Eastern Pirate Defence"
+  name "Defend <planet>"
+  repeat
+  minor
+  description "Local Navy forces are attacking <destination>! Defeat them to defend anarchy!"
+  to offer
+    random < 15
+    "reputation: Pirate" >= 0
+  source
+    government "Pirate"
+    attributes "pirate east"
+  npc evade
+    government "Republic"
+    personality heroic staying waiting
+    fleet "Republic Small"
+    fleet "Republic Large" 2
+    dialogue `The Navy fleets have been defeated. Return to <destination>.`
+  npc
+    government "Pirate"
+    personality plunders staying
+    fleet "Pirates East Small" 2
+  on offer
+    conversation "eastern pirate defence"
+  on complete
+    payment 200000
+    dialogue `Many locals of <planet> thank you and collectively pay you <payment> for helping to drive off the Navy.`
+
+mission "Eastern Pirate Defence [Unpaid]"
+  name "Defend <planet>"
+  repeat
+  minor
+  description "Local Navy forces are attacking <destination>! Defeat them to defend anarchy!"
+  to offer
+    random < 5
+    "reputation: Pirate" >= 0
+  source
+    government "Pirate"
+    attributes "pirate east"
+  npc evade
+    government "Republic"
+    personality heroic staying waiting
+    fleet "Republic Small" 2
+    fleet "Republic Large"
+    dialogue `The Navy fleets have been defeated. Return to <destination>.`
+  npc
+    government "Pirate"
+    personality plunders staying
+    fleet "Pirates East Small" 2
+  on offer
+    conversation "eastern pirate defence"
+  on complete
+    dialogue `Many locals of <planet> thank you for helping to drive off the Navy.`
+
+conversation "eastern pirate defence"
+  `Suddenly you hear raised voices and shouting outside: "We are under attack! <planet> is under attack by the Syndicate! We need every combat-worthy ship to join the defences!" This could be an easy way to get yourself killed, and you can't even guarantee that you will be paid for your work.`
+  choice
+    `  (Stay here until the fight is over.)`
+      decline
+    `  (Join the defence fleet.)`
+  `  Local pirate forces are preparing to repel the Syndicate attack. You join them, and take off together...`
+    launch
+
+
+mission "Northern Pirate Defence"
+  name "Defend <planet>"
+  repeat
+  minor
+  description "Local Navy forces are attacking <destination>! Defeat them to defend anarchy!"
+  to offer
+    random < 15
+    "reputation: Pirate" >= 0
+  source
+    government "Pirate"
+    attributes "pirate north"
+  npc evade
+    government "Republic"
+    personality heroic staying waiting
+    fleet "Republic Large" 2
+    dialogue `The Navy fleets have been defeated. Return to <destination>.`
+  npc
+    government "Pirate"
+    personality plunders staying
+    fleet "Pirates North Large"
+    fleet "Pirates North Small"
+  on offer
+    conversation "northern pirate defence"
+  on complete
+    payment 200000
+    dialogue `Many locals of <planet> thank you and collectively pay you <payment> for helping to drive off the Navy.`
+
+mission "Northern Pirate Defence [Unpaid]"
+  name "Defend <planet>"
+  repeat
+  minor
+  description "Local Navy forces are attacking <destination>! Defeat them to defend anarchy!"
+  to offer
+    random < 5
+    "reputation: Pirate" >= 0
+  source
+    government "Pirate"
+    attributes "pirate north"
+  npc evade
+    government "Republic"
+    personality heroic staying waiting
+    fleet "Republic Large"
+    fleet "Republic Small"
+    dialogue `The Navy fleets have been defeated. Return to <destination>.`
+  npc
+    government "Pirate"
+    personality plunders staying
+    fleet "Pirates North Large"
+    fleet "Pirates North Small"
+  on offer
+    conversation "northern pirate defence"
+  on complete
+    dialogue `Many locals of <planet> thank you for helping to drive off the Navy.`
+
+conversation "northern pirate defence"
+  `Suddenly you hear raised voices and shouting outside: "We are under attack! <planet> is under attack by the Navy! We need every combat-worthy ship to join the defences!" This could be an easy way to get yourself killed, and you can't even guarantee that you will be paid for your work.`
+  choice
+    `  (Stay here until the fight is over.)`
+      decline
+    `  (Join the defence fleet.)`
+  `  Local pirate forces are preparing to repel the Navy attack. You join them, and take off together...`
+    launch
+
+
+mission "Southern Pirate Defence"
+  name "Defend <planet>"
+  repeat
+  minor
+  description "Local militia forces are attacking <destination>! Defeat them to defend anarchy!"
+  to offer
+    random < 15
+    "reputation: Pirate" >= 0
+  source
+    government "Pirate"
+    attributes "pirate south"
+  npc evade
+    government "Militia"
+    personality heroic staying waiting
+    fleet "Militia Small"
+    fleet "Militia Large" 2
+    dialogue `The militia fleets have been defeated. Return to <destination>.`
+  npc
+    government "Pirate"
+    personality plunders staying
+    fleet "Pirates South Small" 2
+  on offer
+    conversation "southern pirate defence"
+  on complete
+    payment 200000
+    dialogue `Many locals of <planet> thank you and collectively pay you <payment> for helping to drive off the militia forces.`
+
+mission "Southern Pirate Defence [Unpaid]"
+  name "Defend <planet>"
+  repeat
+  minor
+  description "Local militia forces are attacking <destination>! Defeat them to defend anarchy!"
+  to offer
+    random < 5
+    "reputation: Pirate" >= 0
+  source
+    government "Pirate"
+    attributes "pirate south"
+  npc evade
+    government "Militia"
+    personality heroic staying waiting
+    fleet "Militia Small" 2
+    fleet "Militia Large"
+    dialogue `The militia fleets have been defeated. Return to <destination>.`
+  npc
+    government "Pirate"
+    personality plunders staying
+    fleet "Pirates South Small" 2
+  on offer
+    conversation "southern pirate defence"
+  on complete
+    dialogue `Many locals of <planet> thank you for helping to drive off the militia forces.`
+
+conversation "southern pirate defence"
+  `Suddenly you hear raised voices and shouting outside: "We are under attack! <planet> is under attack by the militia! We need every combat-worthy ship to join the defences!" This could be an easy way to get yourself killed, and you can't even guarantee that you will be paid for your work.`
+  choice
+    `  (Stay here until the fight is over.)`
+      decline
+    `  (Join the defence fleet.)`
+  `  Local pirate forces are preparing to repel the militia attack. You join them, and take off together...`
+    launch
+

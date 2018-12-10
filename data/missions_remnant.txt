@@ -1,7 +1,6 @@
 # "First Contact: Remnant"
 # "Remnant: Defence 1"
 # "Remnant: Defence 2"
-# "Remnant: Bounty"
 # "Remnant: Defence 3"
 # "Remnant: Keystones"
 # "Remnant: Void Sprites 1"
@@ -154,33 +153,6 @@ mission "Remnant: Defence 2"
     payment 250000
     dialogue `The same woman meets you when you land on <planet>. "Again, thank you," she says. "I will suggest to others that they might offer you similar bounty hunting jobs in the future." She pays you <payment>.`
     log "Factions" "Remnant" `Recently, Korath ships have begun raiding Remnant worlds. The Remnant have decided not to try to discourage these raids, because they are a perfect opportunity to steal jump drives and other valuable alien technology from the Korath.`
-
-
-
-mission "Remnant: Bounty"
-  job
-  repeat
-  name "Remnant bounty"
-  description "Hunt down a Korath ship that is lurking in Remnant territory, then return to <planet> to receive your payment of <payment>."
-  source
-    government "Remnant"
-  to offer
-    has "Remnant: Defence 2: done"
-    random < 60
-  npc kill
-    government Korath
-    personality coward target uninterested marked waiting
-    system
-      distance 1 2
-    fleet
-      names "korath"
-      cargo 3
-      variant
-        "Raider"
-    dialogue "You have destroyed the Korath ship. You can now return to <planet> to collect your payment."
-  on complete
-    payment 200000
-    dialogue "A Remnant military leader thanks you for hunting down the Korath ship <npc>, and gives you the agreed-upon payment of <payment>."
 
 
 

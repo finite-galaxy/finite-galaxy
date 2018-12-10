@@ -1,0 +1,30 @@
+# "Remnant: Bounty"
+
+
+
+mission "Remnant: Bounty"
+  job
+  repeat
+  name "Remnant bounty"
+  description "Hunt down a Korath ship that is lurking in Remnant territory, then return to <planet> to receive your payment of <payment>."
+  source
+    government "Remnant"
+  to offer
+    has "Remnant: Defence 2: done"
+    random < 60
+  npc kill
+    government Korath
+    personality coward target uninterested marked waiting
+    system
+      distance 1 2
+    fleet
+      names "korath"
+      cargo 3
+      variant
+        "Raider"
+    dialogue "You have destroyed the Korath ship. You can now return to <planet> to collect your payment."
+  on complete
+    payment 200000
+    "reputation: Remnant" += 2
+    dialogue "A Remnant military leader thanks you for hunting down the Korath ship <npc>, and gives you the agreed-upon payment of <payment>."
+

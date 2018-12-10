@@ -72,6 +72,7 @@ mission "Coalition: Ringworld Workers 1"
     government "Heliarch"
   on complete
     "coalition jobs" ++
+    "reputation: Coalition" ++
     payment
     payment 10000
     dialogue `You drop off the volunteers on the <planet>. A few minutes later you receive a transfer of <payment>.`
@@ -91,6 +92,7 @@ mission "Coalition: Ringworld Workers 2"
     government "Heliarch"
   on complete
     "coalition jobs" ++
+    "reputation: Coalition" ++
     payment
     payment 15000
     dialogue `You drop off the volunteers on the <planet>. A few minutes later you receive a transfer of <payment>.`
@@ -110,6 +112,7 @@ mission "Coalition: Ringworld Workers 3"
     government "Heliarch"
   on complete
     "coalition jobs" ++
+    "reputation: Coalition" ++
     payment
     payment 20000
     dialogue `You drop off the volunteers on the <planet>. A few minutes later you receive a transfer of <payment>.`
@@ -130,6 +133,7 @@ mission "Coalition: Ringworld Volunteers 1"
     government "Heliarch"
   on complete
     "coalition jobs" ++
+    "reputation: Coalition" ++
     payment
     payment 4000
     dialogue `You drop off the volunteers on the <planet>, where they are met by a Heliarch agent. A few minutes later you receive a transfer of <payment>.`
@@ -149,6 +153,7 @@ mission "Coalition: Ringworld Volunteers 2"
     government "Heliarch"
   on complete
     "coalition jobs" ++
+    "reputation: Coalition" ++
     payment
     payment 8000
     dialogue `You drop off the volunteers on the <planet>, where they are met by a Heliarch agent. A few minutes later you receive a transfer of <payment>.`
@@ -168,6 +173,7 @@ mission "Coalition: Ringworld Volunteers 3"
     government "Heliarch"
   on complete
     "coalition jobs" ++
+    "reputation: Coalition" ++
     payment
     payment 12000
     dialogue `You drop off the volunteers on the <planet>, where they are met by a Heliarch agent. A few minutes later you receive a transfer of <payment>.`
@@ -189,6 +195,7 @@ mission "Coalition: Ringworld Materials 1"
     government "Heliarch"
   on complete
     "coalition jobs" ++
+    "reputation: Coalition" ++
     payment
     payment 30000
     dialogue `You drop off the construction materials and receive <payment> in payment.`
@@ -209,6 +216,7 @@ mission "Coalition: Ringworld Materials 2"
     government "Heliarch"
   on complete
     "coalition jobs" ++
+    "reputation: Coalition" ++
     payment
     payment 40000
     dialogue `You drop off the construction materials and receive <payment> in payment.`
@@ -229,6 +237,7 @@ mission "Coalition: Ringworld Materials 3"
     government "Heliarch"
   on complete
     "coalition jobs" ++
+    "reputation: Coalition" ++
     payment
     payment 50000
     dialogue `You drop off the construction materials and receive <payment> in payment.`
@@ -249,6 +258,7 @@ mission "Coalition: Ringworld Supplies 1"
     government "Heliarch"
   on complete
     "coalition jobs" ++
+    "reputation: Coalition" ++
     payment
     payment 2000
     dialogue `You drop off the donation of <commodity> and receive <payment> in payment.`
@@ -268,6 +278,7 @@ mission "Coalition: Ringworld Supplies 2"
     government "Heliarch"
   on complete
     "coalition jobs" ++
+    "reputation: Coalition" ++
     payment
     payment 4000
     dialogue `You drop off the donation of <commodity> and receive <payment> in payment.`
@@ -287,6 +298,7 @@ mission "Coalition: Ringworld Supplies 3"
     government "Heliarch"
   on complete
     "coalition jobs" ++
+    "reputation: Coalition" ++
     payment
     payment 6000
     dialogue `You drop off the donation of <commodity> and receive <payment> in payment.`
@@ -308,6 +320,7 @@ mission "Coalition: Heliarch Candidate"
     government "Heliarch"
   on complete
     "coalition jobs" ++
+    "reputation: Coalition" ++
     payment
     payment 50000
     dialogue `Heliarch agents meet your ship as soon as it docks and receive the candidate whom you have been transporting, in a small ceremony. A few minutes later you receive a transfer of <payment>.`
@@ -328,6 +341,7 @@ mission "Coalition: Interpreters 1"
     government "Coalition"
   on complete
     "coalition jobs" ++
+    "reputation: Coalition" ++
     payment
     payment 5000
     dialogue `You drop off the interpreters on <planet>. A few minutes later you receive a transfer of <payment>.`
@@ -347,6 +361,7 @@ mission "Coalition: Interpreters 2"
     government "Coalition"
   on complete
     "coalition jobs" ++
+    "reputation: Coalition" ++
     payment
     payment 10000
     dialogue `You drop off the interpreters on <planet>. A few minutes later you receive a transfer of <payment>.`
@@ -366,6 +381,7 @@ mission "Coalition: Interpreters 3"
     government "Coalition"
   on complete
     "coalition jobs" ++
+    "reputation: Coalition" ++
     payment
     payment 10000
     dialogue `You drop off the interpreters on <planet>. A few minutes later you receive a transfer of <payment>.`
@@ -386,6 +402,7 @@ mission "Coalition: Peacekeepers 1"
     government "Coalition"
   on complete
     "coalition jobs" ++
+    "reputation: Coalition" ++
     payment
     payment 20000
     dialogue `You drop off the peacekeepers on <planet>. A few minutes later you receive a transfer of <payment>.`
@@ -405,6 +422,7 @@ mission "Coalition: Peacekeepers 2"
     government "Coalition"
   on complete
     "coalition jobs" ++
+    "reputation: Coalition" ++
     payment
     payment 30000
     dialogue `You drop off the peacekeepers on <planet>. A few minutes later you receive a transfer of <payment>.`
@@ -422,9 +440,10 @@ mission "Coalition: Saryd Interspecies 1"
   source
     attributes "saryd"
   destination
-    attributes "kimek" "arach"
+    attributes "kimek" "arachi"
   on complete
     "coalition jobs" ++
+    "reputation: Coalition" ++
     payment
     payment 10000
     dialogue `You drop off the settlers on <planet>. A few minutes later you receive a transfer of <payment>.`
@@ -441,9 +460,10 @@ mission "Coalition: Saryd Interspecies 2"
   source
     attributes "saryd"
   destination
-    attributes "kimek" "arach"
+    attributes "kimek" "arachi"
   on complete
     "coalition jobs" ++
+    "reputation: Coalition" ++
     payment
     payment 15000
     dialogue `You drop off the settlers on <planet>. A few minutes later you receive a transfer of <payment>.`
@@ -460,9 +480,10 @@ mission "Coalition: Kimek Interspecies 1"
   source
     attributes "kimek"
   destination
-    attributes "saryd" "arach"
+    attributes "saryd" "arachi"
   on complete
     "coalition jobs" ++
+    "reputation: Coalition" ++
     payment
     payment 10000
     dialogue `You drop off the settlers on <planet>. A few minutes later you receive a transfer of <payment>.`
@@ -479,9 +500,10 @@ mission "Coalition: Kimek Interspecies 2"
   source
     attributes "kimek"
   destination
-    attributes "saryd" "arach"
+    attributes "saryd" "arachi"
   on complete
     "coalition jobs" ++
+    "reputation: Coalition" ++
     payment
     payment 15000
     dialogue `You drop off the settlers on <planet>. A few minutes later you receive a transfer of <payment>.`
@@ -496,11 +518,12 @@ mission "Coalition: Arachi Interspecies 1"
     has "known to the heliarchs"
     random < 70
   source
-    attributes "arach"
+    attributes "arachi"
   destination
     attributes "saryd" "kimek"
   on complete
     "coalition jobs" ++
+    "reputation: Coalition" ++
     payment
     payment 10000
     dialogue `You drop off the settlers on <planet>. A few minutes later you receive a transfer of <payment>.`
@@ -515,11 +538,12 @@ mission "Coalition: Arachi Interspecies 2"
     has "known to the heliarchs"
     random < 30
   source
-    attributes "arach"
+    attributes "arachi"
   destination
     attributes "saryd" "kimek"
   on complete
     "coalition jobs" ++
+    "reputation: Coalition" ++
     payment
     payment 15000
     dialogue `You drop off the settlers on <planet>. A few minutes later you receive a transfer of <payment>.`
@@ -542,6 +566,7 @@ mission "Coalition: Transfer 1"
     distance 2 20
   on complete
     "coalition jobs" ++
+    "reputation: Coalition" ++
     payment
     payment 5000
     dialogue `You drop off the workers on <planet>. A few minutes later you receive a transfer of <payment>.`
@@ -563,6 +588,7 @@ mission "Coalition: Transfer 2"
     distance 2 20
   on complete
     "coalition jobs" ++
+    "reputation: Coalition" ++
     payment
     payment 10000
     dialogue `You drop off the workers on <planet>. A few minutes later you receive a transfer of <payment>.`
@@ -584,6 +610,7 @@ mission "Coalition: Transfer 3"
     distance 2 20
   on complete
     "coalition jobs" ++
+    "reputation: Coalition" ++
     payment
     payment 15000
     dialogue `You drop off the workers on <planet>. A few minutes later you receive a transfer of <payment>.`
@@ -607,6 +634,7 @@ mission "Coalition: Tourists Out 1"
     distance 5 20
   on complete
     "coalition jobs" ++
+    "reputation: Coalition" ++
     payment
     payment 20000
     dialogue `The tourists thank you for bringing them to <planet> and pay you <payment>.`
@@ -629,6 +657,7 @@ mission "Coalition: Tourists Out 2"
     distance 5 20
   on complete
     "coalition jobs" ++
+    "reputation: Coalition" ++
     payment
     payment 30000
     dialogue `The tourists thank you for bringing them to <planet> and pay you <payment>.`
@@ -651,6 +680,7 @@ mission "Coalition: Tourists Out 3"
     distance 5 20
   on complete
     "coalition jobs" ++
+    "reputation: Coalition" ++
     payment
     payment 40000
     dialogue `The tourists thank you for bringing them to <planet> and pay you <payment>.`
@@ -674,6 +704,7 @@ mission "Coalition: Tourists Home 1"
     distance 5 20
   on complete
     "coalition jobs" ++
+    "reputation: Coalition" ++
     payment
     payment 20000
     dialogue `The tourists thank you for bringing them home and pay you <payment>.`
@@ -696,6 +727,7 @@ mission "Coalition: Tourists Home 2"
     distance 5 20
   on complete
     "coalition jobs" ++
+    "reputation: Coalition" ++
     payment
     payment 30000
     dialogue `The tourists thank you for bringing them home and pay you <payment>.`
@@ -718,6 +750,7 @@ mission "Coalition: Tourists Home 3"
     distance 5 20
   on complete
     "coalition jobs" ++
+    "reputation: Coalition" ++
     payment
     payment 40000
     dialogue `The tourists thank you for bringing them home and pay you <payment>.`
@@ -740,6 +773,7 @@ mission "Coalition: Fast Courier 1"
     distance 6 20
   on complete
     "coalition jobs" ++
+    "reputation: Coalition" ++
     payment
     payment 30000
     dialogue `The recipient thanks you for bringing the <commodity> here so quickly, and pays you <payment>.`
@@ -761,6 +795,7 @@ mission "Coalition: Fast Courier 2"
     distance 6 20
   on complete
     "coalition jobs" ++
+    "reputation: Coalition" ++
     payment
     payment 40000
     dialogue `The recipient thanks you for bringing the <commodity> here so quickly, and pays you <payment>.`
@@ -782,6 +817,7 @@ mission "Coalition: Fast Courier 3"
     distance 6 20
   on complete
     "coalition jobs" ++
+    "reputation: Coalition" ++
     payment
     payment 50000
     dialogue `The recipient thanks you for bringing the <commodity> here so quickly, and pays you <payment>.`
@@ -803,6 +839,7 @@ mission "Coalition: Cargo 1"
     distance 2 20
   on complete
     "coalition jobs" ++
+    "reputation: Coalition" ++
     payment
     payment 2000
     dialogue `You drop off the <commodity> on <planet>, and receive <payment> in payment.`
@@ -823,6 +860,7 @@ mission "Coalition: Cargo 2"
     distance 2 20
   on complete
     "coalition jobs" ++
+    "reputation: Coalition" ++
     payment
     payment 4000
     dialogue `You drop off the <commodity> on <planet>, and receive <payment> in payment.`
@@ -843,6 +881,7 @@ mission "Coalition: Cargo 3"
     distance 2 20
   on complete
     "coalition jobs" ++
+    "reputation: Coalition" ++
     payment
     payment 6000
     dialogue `You drop off the <commodity> on <planet>, and receive <payment> in payment.`
@@ -863,6 +902,7 @@ mission "Coalition: Cargo 4"
     distance 2 20
   on complete
     "coalition jobs" ++
+    "reputation: Coalition" ++
     payment
     payment 8000
     dialogue `You drop off the <commodity> on <planet>, and receive <payment> in payment.`
@@ -884,6 +924,7 @@ mission "Coalition: Bulk 1"
     distance 3 20
   on complete
     "coalition jobs" ++
+    "reputation: Coalition" ++
     payment
     payment 10000
     dialogue `You drop off the <commodity> on <planet>, and receive <payment> in payment.`
@@ -904,6 +945,7 @@ mission "Coalition: Bulk 2"
     distance 3 20
   on complete
     "coalition jobs" ++
+    "reputation: Coalition" ++
     payment
     payment 14000
     dialogue `You drop off the <commodity> on <planet>, and receive <payment> in payment.`
@@ -924,6 +966,7 @@ mission "Coalition: Bulk 3"
     distance 3 20
   on complete
     "coalition jobs" ++
+    "reputation: Coalition" ++
     payment
     payment 20000
     dialogue `You drop off the <commodity> on <planet>, and receive <payment> in payment.`
@@ -944,6 +987,7 @@ mission "Coalition: Bulk 4"
     distance 3 20
   on complete
     "coalition jobs" ++
+    "reputation: Coalition" ++
     payment
     payment 30000
     dialogue `You drop off the <commodity> on <planet>, and receive <payment> in payment.`
@@ -966,6 +1010,7 @@ mission "Coalition: Rush 1"
     distance 4 20
   on complete
     "coalition jobs" ++
+    "reputation: Coalition" ++
     payment
     payment 32000
     dialogue `You drop off the <commodity> on <planet>, and receive <payment> in payment.`
@@ -987,6 +1032,7 @@ mission "Coalition: Rush 2"
     distance 4 20
   on complete
     "coalition jobs" ++
+    "reputation: Coalition" ++
     payment
     payment 40000
     dialogue `You drop off the <commodity> on <planet>, and receive <payment> in payment.`
@@ -1008,6 +1054,7 @@ mission "Coalition: Rush 3"
     distance 4 20
   on complete
     "coalition jobs" ++
+    "reputation: Coalition" ++
     payment
     payment 50000
     dialogue `You drop off the <commodity> on <planet>, and receive <payment> in payment.`
@@ -1030,6 +1077,7 @@ mission "Coalition: Doctors"
     distance 4 20
   on complete
     "coalition jobs" ++
+    "reputation: Coalition" ++
     payment
     payment 50000
     dialogue `The doctors methodically pack up their equipment and leave your ship. From their lack of urgency, it appears that this is a routine event, not a crisis. A few minutes later you receive a transfer of <payment>.`
@@ -1050,6 +1098,7 @@ mission "Coalition: Cadets 1"
   destination "Belug's Plunge"
   on complete
     "coalition jobs" ++
+    "reputation: Coalition" ++
     payment
     payment 10000
     dialogue `You drop off the cadets on <planet>. A few minutes later you receive a transfer of <payment>.`
@@ -1069,6 +1118,7 @@ mission "Coalition: Cadets 2"
   destination "Belug's Plunge"
   on complete
     "coalition jobs" ++
+    "reputation: Coalition" ++
     payment
     payment 12000
     dialogue `You drop off the cadets on <planet>. A few minutes later you receive a transfer of <payment>.`
@@ -1091,6 +1141,7 @@ mission "Coalition: To Games 1"
   destination "Far Home"
   on complete
     "coalition jobs" ++
+    "reputation: Coalition" ++
     payment 10000 200
     dialogue `The passengers thank you for bringing them to <planet> and pay you <payment>.`
 
@@ -1111,6 +1162,7 @@ mission "Coalition: To Games 2"
   destination "Far Home"
   on complete
     "coalition jobs" ++
+    "reputation: Coalition" ++
     payment 15000 200
     dialogue `The passengers thank you for bringing them to <planet> and pay you <payment>.`
 
@@ -1131,6 +1183,7 @@ mission "Coalition: To Games 3"
   destination "Far Home"
   on complete
     "coalition jobs" ++
+    "reputation: Coalition" ++
     payment 25000 200
     dialogue `The passengers thank you for bringing them to <planet> and pay you <payment>.`
 
@@ -1152,6 +1205,7 @@ mission "Coalition: From Games 1"
     distance 2 20
   on complete
     "coalition jobs" ++
+    "reputation: Coalition" ++
     payment
     payment 10000
     dialogue `The passengers thank you for bringing them to <planet> and pay you <payment>.`
@@ -1173,6 +1227,7 @@ mission "Coalition: From Games 2"
     distance 2 20
   on complete
     "coalition jobs" ++
+    "reputation: Coalition" ++
     payment
     payment 15000
     dialogue `The passengers thank you for bringing them to <planet> and pay you <payment>.`
@@ -1194,6 +1249,7 @@ mission "Coalition: From Games 3"
     distance 2 20
   on complete
     "coalition jobs" ++
+    "reputation: Coalition" ++
     payment
     payment 25000
     dialogue `The passengers thank you for bringing them to <planet> and pay you <payment>.`
