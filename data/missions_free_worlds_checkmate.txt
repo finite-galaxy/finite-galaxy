@@ -46,7 +46,7 @@ mission "FWC Scouting 1"
   name "Scout Kaus Borealis"
   description "Travel through the <waypoints> system to determine how strong the Navy presence is there, while JJ works to gather a fleet to attack it."
   autosave
-  source "Bundok"
+  source "Dancer"
   waypoint "Kaus Borealis"
   to offer
     has "FW Liberate Delta Sagittarii: done"
@@ -80,7 +80,7 @@ mission "FWC Attack Kaus Borealis"
   name "Attack Kaus Borealis"
   description "Destroy the Navy fleet defending Kaus Borealis. The Wolf Pack will attack them first to soften them up."
   autosave
-  source "Bundok"
+  source "Dancer"
   destination "Clear Sky"
   clearance
   to offer
@@ -91,7 +91,7 @@ mission "FWC Attack Kaus Borealis"
   on offer
     event "fwc attack kaus borealis"
     conversation
-      `When you return to Bundok, a sizeable Free Worlds fleet is already parked on the landing pads surrounding the spaceport. JJ explains to you, "When the Navy struck and cut our territory in half, a lot of these ships were cut off from their chain of command and just went and sheltered wherever they could. So it took a bit of doing to gather them all together. And now what we need is another stirring victory, or they'll begin to scatter again."`
+      `When you return to Dancer, a sizeable Free Worlds fleet is already parked on the landing pads surrounding the spaceport. JJ explains to you, "When the Navy struck and cut our territory in half, a lot of these ships were cut off from their chain of command and just went and sheltered wherever they could. So it took a bit of doing to gather them all together. And now what we need is another stirring victory, or they'll begin to scatter again."`
       choice
         `  "Are you saying we risk having members of our militia desert?"`
           goto desert
@@ -331,10 +331,10 @@ mission "FWC Cebalrai 1B"
 mission "FWC Nuke Supply 1"
   landing
   name "Uranium Convoy"
-  description "Travel to Oblivion to escort a freighter that is delivering uranium to a warlord on Greenrock."
+  description "Travel to <planet> to escort a freighter that is delivering uranium to a warlord on Greenrock."
   autosave
-  source Tundra
-  destination Oblivion
+  source "Tundra"
+  destination "Rand"
   to offer
     has "FWC Cebalrai 1B: done"
   on fail
@@ -356,7 +356,7 @@ mission "FWC Nuke Supply 1"
       `  "I hope so," says Alondo. "We'll let them keep shooting at us for a while, to vent their anger and let them prove their point. Then once they see the Navy isn't going to rescue them, we'll negotiate. That's really our only alternative. I do not want to be the person who authorizes the first attack on civilian targets since the dawn of the Republic."`
         goto next
       label next
-      `  You wait for about an hour. Meanwhile, more Free Worlds ships continue to enter the system, one of which is carrying Tomek. He radios you and says, "I think we've got things under control here, which means there's a new mission for you. You probably aren't going to like this, but we need you to escort a freighter from Oblivion. Part of our ongoing deal with the Devil: a shipment of uranium headed for Greenrock."`
+      `  You wait for about an hour. Meanwhile, more Free Worlds ships continue to enter the system, one of which is carrying Tomek. He radios you and says, "I think we've got things under control here, which means there's a new mission for you. You probably aren't going to like this, but we need you to escort a freighter from <planet>. Part of our ongoing deal with the Devil: a shipment of uranium headed for Greenrock."`
       `  A Free Worlds ship lands close enough to your own ship that Alondo can transfer over to it without being in sight of the snipers. "Good luck," he says as he departs. "I hope when you return we will have negotiated some sort of meeting with Parliament."`
         accept
 
@@ -372,25 +372,25 @@ mission "FWC Nuke Supply: Enemies"
     has "FWC Nuke Supply 1C: done"
   
   npc kill
-    government Republic
+    government "Republic"
     personality nemesis heroic
-    system Cebalrai
+    system "Rasalhague"
     fleet
       names "republic"
       variant
         "Mars (Mark II)" 3  
   npc kill
-    government Republic
+    government "Republic"
     personality nemesis heroic
-    system Castor
+    system "Diphda"
     fleet
       names "republic"
       variant
         "Mars (Mark II)" 3
   npc kill
-    government Republic
+    government "Republic"
     personality nemesis heroic
-    system Betelgeuse
+    system "Mirfak"
     fleet
       names "republic"
       variant
@@ -403,8 +403,8 @@ mission "FWC Nuke Supply 1B"
   name "Uranium Convoy"
   description "Escort a freighter that is delivering uranium to a warlord on Greenrock."
   autosave
-  source Oblivion
-  destination Greenrock
+  source "Rand"
+  destination "Greenrock"
   clearance
   to offer
     has "FWC Nuke Supply 1: done"
@@ -418,7 +418,7 @@ mission "FWC Nuke Supply 1B"
   
   npc accompany save
     personality escort timid
-    government Merchant
+    government "Merchant"
     ship "Bulk Freighter" "F.W.S. Blue Yonder"
   
   on visit
@@ -430,8 +430,8 @@ mission "FWC Nuke Supply 1C"
   landing
   name "Warhead Convoy"
   description "Escort a freighter carrying nuclear warheads to Solace."
-  source Greenrock
-  destination Solace
+  source "Greenrock"
+  destination "Solace"
   to offer
     has "FWC Nuke Supply 1B: done"
   on fail
@@ -445,7 +445,7 @@ mission "FWC Nuke Supply 1C"
   
   npc accompany save
     personality escort timid
-    government Merchant
+    government "Merchant"
     ship "Bulk Freighter" "F.W.S. Blue Yonder"
 
 
@@ -455,8 +455,8 @@ mission "FWC Diplomacy 1"
   name "Let's Try Diplomacy"
   description "Return to Tundra to meet up with Alondo and take him on another visit to Parliament. Maybe this time they will be willing to negotiate a truce."
   autosave
-  source Solace
-  destination Tundra
+  source "Solace"
+  destination "Tundra"
   to offer
     has "FWC Nuke Supply 1C: done"
   on fail
@@ -492,8 +492,8 @@ mission "FWC Diplomacy 1B"
   name "Let's Try Diplomacy"
   description "Travel to Earth with Alondo and meet with Parliament to try to negotiate terms of a truce."
   autosave
-  source Tundra
-  destination Earth
+  source "Tundra"
+  destination "Earth"
   clearance
   to offer
     has "FWC Diplomacy 1: done"
@@ -514,12 +514,12 @@ mission "FWC Diplomacy 1B"
       `  "Well, I sincerely hope you're wrong," says Alondo. "I miss her. We might never have gotten into such dire straits if she had been leading us."`
         goto escort
       label escort
-      `  As you are returning to your ship, Alondo points out an Argosy parked next to you and says, "By the way, this ship will be escorting us on this mission. Providing a bit of extra defence."`
+      `  As you are returning to your ship, Alondo points out an Hauler II parked next to you and says, "By the way, this ship will be escorting us on this mission. Providing a bit of extra defence."`
       choice
-        `  "Um, I don't think an Argosy is strong enough to tip the scales in a battle against the Navy."`
+        `  "Um, I don't think an hauler is strong enough to tip the scales in a battle against the Navy."`
         `  "Please tell me that thing isn't armed with nukes. Because that would cause a major diplomatic incident."`
           goto nukes
-      `  Alondo sighs. "Yes, but the Senate thought if we brought anything bigger, it might look like an attack fleet rather than an escort. And of course, it's not carrying nukes, because if the Navy picked those up on their sensors, they'd blast us out of the sky long before we could land on Earth. Anyway, let's get going and hope for the best."`
+      `  Alondo sighs. "Yes, but the Senate thought if we brought anything heavier armed, it might look like an attack fleet rather than an escort. And of course, it's not carrying nukes, because if the Navy picked those up on their sensors, they'd blast us out of the sky long before we could land on Earth. Anyway, let's get going and hope for the best."`
         accept
       label nukes
       `  "No, no, of course not," sys Alondo. "If the Navy picked those up on their sensors, they'd blast us out of the sky long before we could land on Earth. Anyway, let's get going and hope for the best."`
@@ -528,7 +528,7 @@ mission "FWC Diplomacy 1B"
   npc accompany save
     government "Escort"
     personality timid escort
-    ship "Argosy" "F.W.S. Big Brother"
+    ship "Hauler II" "F.W.S. Big Brother"
 
   on visit
     dialogue "You have reached <planet>, but the Big Brother is not here yet! Better depart and wait for them to arrive in this star system."
@@ -539,8 +539,8 @@ mission "FWC Diplomacy 1C"
   landing
   name "Return to <planet>"
   description "The peace negotiations with Parliament failed. Return to <planet> without being destroyed by the Navy."
-  source Earth
-  destination Tundra
+  source "Earth"
+  destination "Tundra"
   to offer
     has "FWC Diplomacy 1B: done"
   passengers 2
@@ -573,7 +573,7 @@ mission "FWC Diplomacy 1C"
   npc
     government "Escort"
     personality timid escort
-    ship "Argosy" "F.W.S. Big Brother"
+    ship "Hauler II" "F.W.S. Big Brother"
 
   npc
     personality staying heroic
@@ -618,7 +618,7 @@ mission "FWC Checkmate 1"
   name "Defend Cebalrai"
   description "Destroy the Republic ships that are attacking this system, then land and decide what to do next. Free Worlds reinforcements should be on their way."
   autosave
-  source Tundra
+  source "Tundra"
   to offer
     has "FWC Diplomacy 1C: done"
   on fail
@@ -802,8 +802,8 @@ mission "FWC Checkmate 1: Equipment"
   landing
   name "Upgrade Your Ship"
   description "If you want, travel to <destination> to install nuclear missiles in your ship. You may also want to invest in some other upgrades. Then meet Tomek and the others in the spaceport on Tundra."
-  source Tundra
-  destination Solace
+  source "Tundra"
+  destination "Solace"
   to offer
     has "FWC Checkmate 1: done"
   
@@ -816,8 +816,8 @@ mission "FWC Checkmate 1: Equipment 2"
   landing
   name "Upgrade Your Ship"
   description "Make any further upgrades to your ship that you consider necessary. Then meet Tomek and the others in the spaceport on Tundra."
-  source Solace
-  destination Tundra
+  source "Solace"
+  destination "Tundra"
   to offer
     has "FWC Checkmate 1: Equipment: done"
   
@@ -827,11 +827,11 @@ mission "FWC Checkmate 1: Equipment 2"
 
 
 mission "FWC Checkmate 1B"
-  name "Attack Menkent"
-  description "The Wolf Pack has launched an initial attack on the Menkent system. Follow up with your fleet and finish off the Navy defences. Katya will ride with you."
+  name "Attack Rasalhague"
+  description "The Wolf Pack has launched an initial attack on the Rasalhague system. Follow up with your fleet and finish off the Navy defences. Katya will ride with you."
   autosave
-  source Tundra
-  destination "Carbuncle"
+  source "Tundra"
+  destination "Oblivion"
   clearance
   to offer
     has "FWC Checkmate 1: done"
@@ -843,14 +843,14 @@ mission "FWC Checkmate 1B"
   on offer
     event "fwc attack menkent"
     conversation
-      `You meet up with Tomek in the spaceport. He is talking with the captain of one of a group of four Clippers that have landed next to each other some distance away from the rest of the Free Worlds fleet. The Clippers appear to have unusually large engines and afterburners, and in place of guns they are each carrying four missiles. Tomek sees you approaching and says, "And here's Captain <last>. Captain, are you ready to lead the attack?"`
+      `You meet up with Tomek in the spaceport. He is talking with the captain of one of a group of four Hawks that have landed next to each other some distance away from the rest of the Free Worlds fleet. The Hawks appear to have unusually powerful engines, and in place of guns they are each carrying four missiles. Tomek sees you approaching and says, "And here's Captain <last>. Captain, are you ready to lead the attack?"`
       choice
         `  "Yes, I'm ready."`
           goto ready
         `  "Are these the Wolf Pack ships?"`
       `  "Yes indeed," says Tomek. "I know, you probably have mixed feelings about this, but they really are the quickest way to win this war."`
       label ready
-      `  Tomek tells the Wolf Pack captain, "Okay, we're ready to go. Launch immediately, and Captain <last> will follow behind you. <first>, Katya has asked to travel with you; she wants to get back into the action, and I thought she might have the best chance of anyone at dealing with the folks on the ground on <planet>. Once again, you'll need to drive off any Navy ships before landing there. Good luck."`
+      `  Tomek tells the Wolf Pack captains, "Okay, we're ready to go. Launch immediately, and Captain <last> will follow behind you. <first>, Katya has asked to travel with you; she wants to get back into the action, and I thought she might have the best chance of anyone at dealing with the folks on the ground on <planet>. Once again, you'll need to drive off any Navy ships before landing there. Good luck."`
         accept
   
   on complete
@@ -880,16 +880,16 @@ mission "FWC Checkmate 1B"
   npc
     personality staying heroic uninterested disables
     government "Free Worlds"
-    system Menkent
-    ship "Clipper (Nuclear)" "F.W.S. Warmaker"
-    ship "Clipper (Nuclear)" "F.W.S. Pestilence"
-    ship "Clipper (Nuclear)" "F.W.S. Disease"
-    ship "Clipper (Nuclear)" "F.W.S. Famine"
+    system "Rasalhague"
+    ship "Hawk (Nuclear)" "F.W.S. Disease"
+    ship "Hawk (Nuclear)" "F.W.S. Famine"
+    ship "Hawk (Nuclear)" "F.W.S. Pestilence"
+    ship "Hawk (Nuclear)" "F.W.S. Warmaker"
   
   npc evade
     personality heroic staying
     government "Republic"
-    system Menkent
+    system "Rasalhague"
     fleet 2
       names "republic"
       fighters "republic fighter"
@@ -907,7 +907,7 @@ mission "FWC Checkmate 1B"
   npc
     personality derelict
     government "Republic"
-    system Menkent
+    system "Rasalhague"
     fleet
       names "republic"
       fighters "republic fighter"
@@ -930,8 +930,8 @@ mission "FWC Checkmate 1C"
   name "Capture <planet>"
   description "Bring a fleet to <destination>, driving off any Republic ships in the system."
   autosave
-  source "Carbuncle"
-  destination "Silver"
+  source "Oblivion"
+  destination "Shiver"
   clearance
   to offer
     has "FWC Checkmate 1B: done"
@@ -1004,7 +1004,7 @@ mission "FWC Checkmate Escorts"
 mission "FWC Pug 1"
   name "Defend <planet>"
   description "<planet> is under attack by ships of an unknown type. Drive them off, and then return to the planet to figure out what to do next."
-  source "Silver"
+  source "Shiver"
   to offer
     has "FWC Checkmate 1C: done"
   on fail
@@ -1055,13 +1055,13 @@ mission "FWC Pug 1"
       variant
         "Skein"
         "Stymphalian" 6
-        "Clipper"
-        "Clipper (Particle)"
-        "Clipper (Speedy)"
+        "Hawk"
+        "Hawk (Blaster)"
+        "Hawk (Rocket)"
     fleet 4
       names "free worlds small"
       variant
-        "Clipper (Nuclear)"
+        "Hawk (Nuclear)"
     fleet
       names "free worlds small"
       variant
@@ -1073,7 +1073,7 @@ mission "FWC Pug 1"
   
   npc evade
     personality staying disables heroic
-    government Pug
+    government "Pug"
     fleet 2
       names "pug"
       variant
@@ -1088,7 +1088,7 @@ mission "FWC Pug 1"
   
   npc evade
     personality entering disables heroic
-    government Pug
+    government "Pug"
     fleet 2
       names "pug"
       variant
@@ -1103,7 +1103,7 @@ mission "FWC Pug 1"
   
   npc evade
     personality disables heroic
-    government Pug
+    government "Pug"
     system "Delta Capricorni"
     fleet 2
       names "pug"
@@ -1123,8 +1123,8 @@ mission "FWC Pug 1B"
   landing
   name "Investigate <system>"
   description "This area of space has somehow been cut off from the rest of the galaxy. Visit <planet> to see if they, too, have been invaded by the aliens."
-  source "Silver"
-  destination "Shiver"
+  source "Shiver"
+  destination "Silver"
   to offer
     has "FWC Pug 1: done"
   on fail
@@ -1159,9 +1159,9 @@ mission "FWC Pug 1B"
 mission "FWC Pug 2"
   landing
   name "Report to Katya"
-  description "You met someone on Shiver who was able to give you more information about the aliens and their intentions. Report back to Katya with what you discovered."
-  source "Shiver"
-  destination "Silver"
+  description "You met someone on <origin> who was able to give you more information about the aliens and their intentions. Report back to Katya with what you discovered."
+  source "Silver"
+  destination "Shiver"
   to offer
     has "FWC Pug 1B: done"
   on fail
@@ -1235,7 +1235,7 @@ mission "FWC Pug 2B"
   landing
   name "Visit the Pug"
   description "Locate the Pug homeworld, which is presumably in the <system> system, and see if you can negotiate with them."
-  source "Silver"
+  source "Shiver"
   destination "Pugglemug"
   clearance
   to offer
@@ -1270,7 +1270,7 @@ mission "FWC Pug 2B"
 
 mission "FWC Pug 2B: Pugglequat"
   landing
-  source Pugglequat
+  source "Pugglequat"
   to offer
     has "FWC Pug 2B: active"
     not "FWC Pug 2C: done"
@@ -1286,8 +1286,8 @@ mission "FWC Pug 2C"
   name "Visit <planet>"
   description "Visit <destination>, which was part of Free Worlds territory before the alien invasion, and see if any military equipment is still available there."
   landing
-  source Pugglemug
-  destination Oblivion
+  source "Pugglemug"
+  destination "Oblivion"
   to offer
     has "FWC Pug 2B: done"
   passengers 1
@@ -1347,7 +1347,7 @@ mission "FWC Pug 2D"
   source "Oblivion"
   destination "Clear Sky"
   clearance "The locals are terrified by the fact that you have decided to fight the Pug, but eventually they agree to let you land."
-    planet Oblivion
+    planet "Oblivion"
   to offer
     has "FWC Pug 2C: done"
   passengers 1
@@ -1357,7 +1357,7 @@ mission "FWC Pug 2D"
   on offer
     event "fwc navy retakes cebalrai"
     conversation
-      `Just like Shiver, the spaceport on Oblivion is being patrolled by the Pug, and the locals seem to be resigned to their fate. Not surprisingly, you find that there are not many supplies left from when the main Free Worlds fleet was located here for a few days. But, at least the spaceport has a working repair shop and outfitter.`
+      `Just like Silver, the spaceport on Oblivion is being patrolled by the Pug, and the locals seem to be resigned to their fate. Not surprisingly, you find that there are not many supplies left from when the main Free Worlds fleet was located here for a few days. But, at least the spaceport has a working repair shop and outfitter.`
       `  While you are exploring the spaceport, a group of men in one of the local pubs see you walking past and gesture to you. "Hey, get in here," whispers one of them. They recognize you as a Council member, and tell you that they are leaders of a local resistance movement, biding their time and waiting for the right moment to strike back against the Pug. "Do you have a plan?" they ask.`
       choice
         `  "Sorry, not yet."`
@@ -1378,7 +1378,7 @@ mission "FWC Pug 3"
   name "Talk to the Navy"
   description "Freya is on <planet>, presumably in Navy custody. Travel there and see if, given the current circumstances, the Navy is willing to talk with you."
   source "Clear Sky"
-  destination "Carbuncle"
+  destination "Luna"
   clearance
   to offer
     has "FWC Pug 2D: done"
@@ -1437,7 +1437,7 @@ mission "FWC Pug 3A"
   landing
   name "Bring Freya to <planet>"
   description "Freya thinks that if she can locate the equipment the Pug used to disrupt the hyperspace links, she may be able to restore them. Take her to <planet>, while Katya stays behind in the Navy's custody."
-  source "Carbuncle"
+  source "Luna"
   destination "Oblivion"
   clearance
   to offer
@@ -1498,8 +1498,8 @@ mission "FWC Pug 3B"
   landing
   name "Defend <planet>"
   description "Freya found a piece of alien technology that she believes can be used to restore the hyperspace link. Hold off the Pug for long enough for her to figure out how it works."
-  source Oblivion
-  destination Oblivion
+  source "Oblivion"
+  destination "Oblivion"
   clearance
   to offer
     has "FWC Pug 3A: done"
@@ -1541,7 +1541,7 @@ mission "FWC Pug 3B"
   
   npc disable
     personality entering disables heroic
-    government Pug
+    government "Pug"
     fleet
       names "pug"
       variant
@@ -1561,9 +1561,9 @@ mission "FWC Pug 3C"
   landing
   name "Return to <planet>"
   description `Return to <planet> with Freya, carrying a "graviton reflector" that Freya thinks can be used to restore the hyperspace link.`
-  source Oblivion
-  destination Tundra
-  on enter Cebalrai
+  source "Oblivion"
+  destination "Tundra"
+  on enter "Cebalrai"
     dialogue
       "As soon as you reenter human space, you contact the Navy and tell them to send an attack fleet to the Cebalrai system. Then, just for good measure, you contact the Free Worlds and ask them to do the same."
   to offer
@@ -1595,8 +1595,8 @@ mission "FWC Pug 3D"
   landing
   name "Liberate <system>"
   description "Travel to the <system> system with a combined fleet of Navy and Free Worlds ships, drive off the Pug, and occupy the system so that the Pug cannot return and sever the hyperspace link again."
-  source Tundra
-  destination Oblivion
+  source "Tundra"
+  destination "Oblivion"
   clearance
   to offer
     has "FWC Pug 3C: done"
@@ -1615,7 +1615,7 @@ mission "FWC Pug 3D"
   
   npc evade
     personality disables heroic staying
-    government Pug
+    government "Pug"
     system Rasalhague
     fleet
       names "pug"
@@ -1658,7 +1658,7 @@ mission "FWC Pug 3D: Reinforcements"
         "Mark II Drone" 6
         "Mars (Mark II)" 3
   npc kill
-    government Republic
+    government "Republic"
     personality heroic waiting
     fleet
       names "republic"
@@ -1705,8 +1705,8 @@ mission "FWC Pug 4"
   landing
   name "Defend <system>"
   description "Drive off the Pug fleet that is invading <system>"
-  source Oblivion
-  destination Oblivion
+  source "Oblivion"
+  destination "Oblivion"
   clearance
   to offer
     has "FWC Pug 3D: done"
@@ -1724,8 +1724,8 @@ mission "FWC Pug 4"
   
   npc disable
     personality disables heroic entering
-    government Pug
-    system Rasalhague
+    government "Pug"
+    system "Rasalhague"
     fleet
       names "pug"
       variant
@@ -1740,8 +1740,8 @@ mission "FWC Pug 4"
   
   npc disable
     personality disables heroic
-    government Pug
-    system Alderamin
+    government "Pug"
+    system "Alderamin"
     fleet 2
       names "pug"
       variant
@@ -1756,8 +1756,8 @@ mission "FWC Pug 4"
   
   npc disable
     personality disables heroic
-    government Pug
-    system Markab
+    government "Pug"
+    system "Markab"
     fleet 4
       names "pug"
       variant
@@ -1767,8 +1767,8 @@ mission "FWC Pug 4"
   
   npc disable
     personality disables heroic
-    government Pug
-    system Alpheratz
+    government "Pug"
+    system "Alpheratz"
     fleet 2
       names "pug"
       variant
@@ -1788,8 +1788,8 @@ mission "FWC Pug 4A"
   name "Equipment from <planet>"
   description "Travel with Freya to pick up the alien equipment that you installed on <planet> and bring it to Alapia to reopen another of the hyperspace links."
   autosave
-  source Oblivion
-  destination Tundra
+  source "Oblivion"
+  destination "Tundra"
   to offer
     has "FWC Pug 4: done"
   passengers 1
@@ -1839,8 +1839,8 @@ mission "FWC Pug 4B"
   landing
   name "Equipment to <planet>"
   description "Travel with Freya to <planet> to set up the alien equipment and see if you can reopen another one of the disrupted hyperspace links."
-  source Tundra
-  destination Alapia
+  source "Tundra"
+  destination "Alapia"
   to offer
     has "FWC Pug 4A: done"
   cargo "graviton reflector" 10
@@ -1877,8 +1877,8 @@ mission "FWC Pug 4B: Quarg"
   landing
   name "Visit the Quarg"
   description "If you want, visit the Quarg to see what they can tell you about the Pug, before you continue fighting them."
-  source Tundra
-  destination Lagrange
+  source "Tundra"
+  destination "Lagrange"
   to offer
     has "FWC Pug 4: done"
   to fail
@@ -1933,8 +1933,8 @@ mission "FWC Pug 4C"
   name "Liberate <planet>"
   description "Travel to the <system> system to assist the Navy in driving out the Pug and reestablishing a direct hyperspace link to the Ascella system."
   autosave
-  source Alapia
-  destination Rand
+  source "Alapia"
+  destination "Rand"
   clearance
   to offer
     has "FWC Pug 4B: done"
@@ -1943,7 +1943,7 @@ mission "FWC Pug 4C"
     dialogue `You have failed an essential Free Worlds mission. If you want to complete the story line, revert to the autosave or another earlier snapshot of the game.`
   
   on offer
-    event "fwc reconnect ascella"
+    event "fwc reconnect hintar"
     conversation
       `You help Freya to unload and set up the reflector equipment, then contact the Navy on Oblivion and instruct them to point the transmitter in your direction. A few minutes later Admiral Danforth contacts you. "This link appears to be returning too," he says. "So, let's move on. We're going to make an attack on the <system> system, now, and we would welcome your assistance in this battle." You leave the equipment on <origin> and return to your ship with Freya.`
         accept
@@ -1955,7 +1955,7 @@ mission "FWC Pug 4C"
   
   npc evade
     personality disables heroic staying
-    government Pug
+    government "Pug"
     system "Zeta Aquilae"
     fleet 6
       names "pug"
@@ -1982,7 +1982,7 @@ mission "FWC Pug 4C"
         "Mark II Drone" 4
         "Mars (Mark II)" 2
   npc
-    government Republic
+    government "Republic"
     system "Zeta Aquilae"
     personality heroic staying uninterested
     fleet 2
@@ -2006,8 +2006,8 @@ mission "FWC Pug 5"
   name "Liberate <system>"
   description "Some of the Navy ships have been outfitted with jump drives. Travel with them to the <system> system, avoiding the main Pug fleet in their home system, and reclaim control of the planet."
   autosave
-  source Rand
-  destination Silver
+  source "Rand"
+  destination "Shiver"
   clearance
   to offer
     has "FWC Pug 4C: done"
@@ -2052,8 +2052,8 @@ mission "FWC Pug 5"
   
   npc evade
     personality disables heroic staying
-    government Pug
-    system Vega
+    government "Pug"
+    system "Vega"
     fleet 2
       names "pug"
       variant
@@ -2072,8 +2072,8 @@ mission "FWC Pug 5B"
   name "Travel to <planet>"
   description `Travel with Freya to <planet>, where you can set up the "graviton reflector" to restore the hyperspace link from Sol to the Pug territory. (She thinks Mars is a better option than a heavily populated planet like Earth.)`
   autosave
-  source Silver
-  destination Mars
+  source "Shiver"
+  destination "Mars"
   to offer
     has "FWC Pug 5: done"
   passengers 1
@@ -2099,7 +2099,7 @@ mission "FWC Pug 5B"
         accept
   
   npc
-    government Republic
+    government "Republic"
     system Sol
     personality heroic staying uninterested
     fleet 3
@@ -2122,8 +2122,8 @@ mission "FWC Pug 5C"
   name "Return to <planet>"
   description "Return to <planet>, and join the Navy fleet in preparing for an attack on the Pug home system. A Free Worlds fleet will be attacking from the south at the same time."
   autosave
-  source Mars
-  destination Silver
+  source "Mars"
+  destination "Shiver"
   to offer
     has "FWC Pug 5B: done"
   passengers 1
@@ -2139,7 +2139,7 @@ mission "FWC Pug 5C"
         accept
   
   npc
-    government Republic
+    government "Republic"
     system Sol
     personality heroic waiting
     fleet 3
@@ -2162,14 +2162,14 @@ mission "FWC Pug 6"
   name "Defeat the Pug"
   description "Join the Navy fleet in attacking the Pug home system. Once their fleet is eliminated, land on their home world of <planet> to attempt to negotiate for peace."
   autosave
-  source Silver
-  destination Pugglemug
+  source "Shiver"
+  destination "Pugglemug"
   clearance
   to offer
     has "FWC Pug 5C: done"
   passengers 1
   blocked "You need at least one bunk free for Freya in order to continue this mission."
-  on enter Deneb
+  on enter "Deneb"
     dialogue
       `You enter the Deneb system expecting a massive Pug battle fleet to be waiting for you. Instead, it is entirely deserted. Also, your sensors are picking up some sort of anomaly outside the orbit of the outermost planet.`
   on fail
@@ -2191,7 +2191,7 @@ mission "FWC Pug 6"
         accept
   
   npc
-    government Republic
+    government "Republic"
     personality heroic
     fleet 3
       names "republic"
@@ -2208,7 +2208,7 @@ mission "FWC Pug 6"
   npc
     government "Navy (Oathkeeper)"
     personality heroic
-    system Cebalrai
+    system "Cebalrai"
     fleet 2
       names "republic"
       fighters "republic fighter"
@@ -2226,7 +2226,7 @@ mission "FWC Pug 6"
         "Mars (Mark II)" 3
   npc
     personality heroic
-    system Cebalrai
+    system "Cebalrai"
     government "Free Worlds"
     fleet
       names "free worlds capital"
@@ -2262,8 +2262,8 @@ mission "FWC Pug 6"
     log "Factions" "Pug" `The Pug disappeared from human space, and left behind more questions than answers. It is possible that the true purpose of their attack was to give human beings a common enemy that would force them to band together and forget their internal struggles.`
     event "fwc pug defeated"
     event "fwc link restoration 1" 10
-    event "fwc link restoration 2" 18
-    event "fwc link restoration 3" 29
+    event "fwc link restoration 2" 20
+    event "fwc link restoration 3" 30
     conversation
       `As you bring your fleet in for a landing, you find that the main Pug spaceport is surprisingly empty. However, a group of Pug children are gathered in a loose circle on one of the landing pads. They appear to be playing some sort of game; they ignore your fleet overhead.`
       choice
@@ -2316,8 +2316,8 @@ mission "FWC End"
   name "Talk to Parliament"
   description "Travel to Earth for another meeting with Parliament. Alondo and Katya will meet you there. (Hopefully it will go better than your last visit.)"
   autosave
-  source Pugglemug
-  destination Earth
+  source "Pugglemug"
+  destination "Earth"
   to offer
     has "FWC Pug 6: done"
   on fail

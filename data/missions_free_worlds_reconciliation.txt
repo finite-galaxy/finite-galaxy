@@ -177,7 +177,7 @@ mission "FW Reconciliation 1B"
   npc evade
     personality heroic staying nemesis
     system Gienah
-    government Syndicate
+    government "Syndicate"
     ship "Splinter (Mark II)" "Silence"
     ship "Manta (Mark II)" "Morning Star"
     ship "Quicksilver (Mark II)" "Light-Bearer"
@@ -220,23 +220,23 @@ mission "FW Reconciliation 1C"
   
   npc
     personality heroic nemesis waiting
-    government Syndicate
+    government "Syndicate"
     fleet "Syndicate Small"
   
   npc
     personality heroic nemesis entering
-    government Syndicate
+    government "Syndicate"
     fleet "Syndicate Small"
   
   npc
     personality heroic nemesis waiting
-    government Syndicate
+    government "Syndicate"
     fleet "Syndicate Large"
     system Markab
   
   npc
     personality heroic nemesis waiting
-    government Syndicate
+    government "Syndicate"
     fleet "Syndicate Large"
     system Alnair
 
@@ -457,7 +457,7 @@ mission "FW Defend Farpoint"
         "Mars (Mark II)" 2
   
   npc disable
-    government Pirate
+    government "Pirate"
     system Mintaka
     personality heroic
     fleet
@@ -538,7 +538,7 @@ mission "FW Embassy 1B"
   
   npc accompany save
     personality escort timid
-    government Republic
+    government "Republic"
     ship "Star Queen" "Lady of the Lake"
   
   on visit
@@ -644,7 +644,7 @@ mission "FW Embassy 1C"
     dialogue "You have reached <planet>, but you left the ambassadors behind! Better depart and wait for them to arrive in this star system."
   
   npc
-    government Pirate
+    government "Pirate"
     system Wei
     personality heroic nemesis
     fleet
@@ -653,7 +653,7 @@ mission "FW Embassy 1C"
         "Raven (Afterburner)" 6
   
   npc
-    government Pirate
+    government "Pirate"
     system Hintar
     personality heroic nemesis
     fleet
@@ -668,7 +668,7 @@ mission "FW Embassy 1C"
         "Firebird" 2
   
   npc
-    government Pirate
+    government "Pirate"
     system Markab
     personality heroic nemesis
     fleet
@@ -767,7 +767,7 @@ mission "FW Syndicate Capture 1B"
     ship "Dagger" "Autumn Four"
   
   npc
-    government Syndicate
+    government "Syndicate"
     personality heroic nemesis entering
     fleet
       names "syndicate capital"
@@ -777,7 +777,7 @@ mission "FW Syndicate Capture 1B"
         "Quicksilver (Mark II)" 4
   npc
     system Ruchbah
-    government Syndicate
+    government "Syndicate"
     personality heroic staying nemesis
     fleet
       names "syndicate capital"
@@ -788,7 +788,7 @@ mission "FW Syndicate Capture 1B"
   
   npc
     system Ankaa
-    government Syndicate
+    government "Syndicate"
     personality heroic nemesis staying
     fleet
       names "syndicate capital"
@@ -796,7 +796,7 @@ mission "FW Syndicate Capture 1B"
         "Manta (Nuclear)"
   npc
     system Ankaa
-    government Syndicate
+    government "Syndicate"
     personality heroic nemesis staying
     fleet
       names "syndicate capital"
@@ -804,7 +804,7 @@ mission "FW Syndicate Capture 1B"
         "Manta (Nuclear)"
   npc
     system Ankaa
-    government Syndicate
+    government "Syndicate"
     personality heroic nemesis staying
     fleet
       names "syndicate capital"
@@ -812,7 +812,7 @@ mission "FW Syndicate Capture 1B"
         "Manta (Nuclear)"
   npc
     system Scheat
-    government Syndicate
+    government "Syndicate"
     personality heroic nemesis staying
     fleet
       names "syndicate capital"
@@ -820,7 +820,7 @@ mission "FW Syndicate Capture 1B"
         "Manta (Nuclear)"
   npc
     system Scheat
-    government Syndicate
+    government "Syndicate"
     personality heroic nemesis staying
     fleet
       names "syndicate capital"
@@ -828,7 +828,7 @@ mission "FW Syndicate Capture 1B"
         "Manta (Nuclear)"
   npc
     system Scheat
-    government Syndicate
+    government "Syndicate"
     personality heroic nemesis staying
     fleet
       names "syndicate capital"
@@ -836,7 +836,7 @@ mission "FW Syndicate Capture 1B"
         "Manta (Nuclear)"
   npc
     system Sheratan
-    government Syndicate
+    government "Syndicate"
     personality heroic nemesis staying
     fleet
       names "syndicate capital"
@@ -844,7 +844,7 @@ mission "FW Syndicate Capture 1B"
         "Manta (Nuclear)"
   npc
     system Sheratan
-    government Syndicate
+    government "Syndicate"
     personality heroic nemesis staying
     fleet
       names "syndicate capital"
@@ -852,7 +852,7 @@ mission "FW Syndicate Capture 1B"
         "Manta (Nuclear)"
   npc
     system Sheratan
-    government Syndicate
+    government "Syndicate"
     personality heroic nemesis staying
     fleet
       names "syndicate capital"
@@ -1275,7 +1275,7 @@ mission "FW Pug 2C: Jump Drive"
 mission "FW Pug 2C: Side"
   landing
   source
-    government Pug
+    government "Pug"
     near Deneb 1 100
   to offer
     has "fw given jump drive"
@@ -1695,7 +1695,7 @@ mission "FW Pug 4"
   npc evade
     personality disables staying
     system "Delta Capricorni"
-    government Pug
+    government "Pug"
     fleet 2
       names "pug"
       variant
@@ -1743,7 +1743,7 @@ mission "FW Pug 4A"
   
   npc
     system Deneb
-    government Pug
+    government "Pug"
     personality disables
     fleet
       names "pug"
@@ -1759,7 +1759,7 @@ mission "FW Pug 4A"
   
   npc disable
     system Rasalhague
-    government Pug
+    government "Pug"
     personality disables
     dialogue `You receive a message from Freya: "Captain, I think I've figured out the transmitter, and there is indeed a chance that we can reopen the hyperspace links. Meet me back down on the planet as soon as possible - I'll need you to take some equipment back to Hephaestus and set it up there."`
     fleet
@@ -1826,7 +1826,7 @@ mission "FW Pug 4B: Enemies"
   npc kill
     personality waiting disables
     system Deneb
-    government Pug
+    government "Pug"
     fleet 4
       names "pug"
       variant
@@ -1848,7 +1848,7 @@ mission "FW Pug 4B: Reinforcements"
   npc kill
     personality disables
     system Markab
-    government Syndicate
+    government "Syndicate"
     fleet
       names "syndicate capital"
       variant
@@ -1916,7 +1916,7 @@ mission "FW Pug 5"
   npc evade
     personality staying disables
     system Altair
-    government Pug
+    government "Pug"
     fleet 3
       names "pug"
       variant
@@ -1943,7 +1943,7 @@ mission "FW Pug 5A: Enemies"
   npc kill
     personality waiting disables
     system Deneb
-    government Pug
+    government "Pug"
     fleet 4
       names "pug"
       variant
@@ -1976,7 +1976,7 @@ mission "FW Pug 5A"
         accept
   
   npc
-    government Republic
+    government "Republic"
     personality staying
     system Sol
     fleet
@@ -2018,7 +2018,7 @@ mission "FW Pug 5B"
         accept
   
   npc
-    government Republic
+    government "Republic"
     personality escort disables waiting
     fleet 2
       names "republic"
@@ -2037,7 +2037,7 @@ mission "FW Pug 5B"
         "Mars (Mark II)" 3
   
   npc evade
-    government Pug
+    government "Pug"
     personality staying disables
     system Altair
     fleet 5
@@ -2100,7 +2100,7 @@ mission "FW Pug 6"
         "Mark II Drone" 6
         "Mars (Mark II)" 3
   npc
-    government Republic
+    government "Republic"
     personality disables
     fleet 2
       names "republic"
@@ -2119,7 +2119,7 @@ mission "FW Pug 6"
         "Mars" 3
   npc
     personality disables waiting
-    government Syndicate
+    government "Syndicate"
     fleet 2
       names "syndicate capital"
       variant
@@ -2136,8 +2136,8 @@ mission "FW Pug 6"
     log `Now that the Pug are gone, the Navy will be able to use the "graviton reflectors" to repair the broken hyperspace links and to reconnect all of human space.`
     log "Factions" "Pug" `The Pug disappeared from human space, and left behind more questions than answers. It is possible that the true purpose of their attack was to give human beings a common enemy that would force them to band together and forget their internal struggles.`
     event "pug territory liberated"
-    event "pug link restoration 1" 10
-    event "pug link restoration 2" 25
+    event "pug link restoration 1" 15
+    event "pug link restoration 2" 30
     event "pug link restoration 3" 45
     event "pug link restoration 4" 60
     conversation

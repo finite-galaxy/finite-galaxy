@@ -123,7 +123,7 @@ mission "Liberate Kornephoros"
   
   npc evade
     personality staying heroic
-    government Republic
+    government "Republic"
     system Kornephoros
     fleet
       names "republic"
@@ -359,7 +359,7 @@ mission "FW Syndicate Diplomacy 1B"
   
   npc
     personality heroic
-    government Republic
+    government "Republic"
     system Sol
     fleet "Republic Small" 3
   
@@ -425,7 +425,7 @@ mission "FW Syndicate Diplomacy 1C"
 
   npc
     personality heroic
-    government Republic
+    government "Republic"
     system Rutilicus
     fleet "Republic Small" 3
   
@@ -577,7 +577,7 @@ mission "FW Hope Recon 1C"
   
   npc
     personality fleeing uninterested timid
-    government Republic
+    government "Republic"
     ship "Mars" "R.N.S. Susquehanna"
   
   on offer
@@ -663,7 +663,7 @@ mission "FW Hope Recon 1D"
   npc
     system Wei
     personality staying
-    government Republic
+    government "Republic"
     fleet "Republic Large"
   
   on complete
@@ -1147,6 +1147,7 @@ mission "FW Pirates 2"
   waypoint "Beta Lupi"
   waypoint "Kappa Centauri"
   waypoint "Pherkad"
+  waypoint "Algedi"
   waypoint "Alniyat"
   waypoint "Dschubba"
   waypoint "Han"
@@ -1681,7 +1682,7 @@ mission "FW Refinery 1"
         `  "I'll do my best."`
           accept
         `  "I hope this doesn't turn out to be a suicide mission."`
-      `  "I hope so too," says Freya. "Remember the Navy has bases in the Kaus Borealis and Rasalhague systems. If your ship has enough fuel capacity, you might try flying over to the neutral territory of Dabih or Tarazed, and then up to Cebalrai from there, to avoid the worst of the Navy patrols. Good luck, Captain. If anyone can do it, you can."`
+      `  "I hope so too," says Freya. "Remember the Navy has bases in the Rasalhague and Kaus Borealis systems. If your ship has enough fuel capacity, you might try flying over to the neutral territory of Dabih or Tarazed, and then up to Ascella from there, to avoid the worst of the Navy patrols. Good luck, Captain. If anyone can do it, you can."`
         accept
 
 

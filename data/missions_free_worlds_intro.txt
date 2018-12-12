@@ -65,7 +65,7 @@ mission "Remembrance Day"
 mission "War begins"
   landing
   source
-    government "Deep" "Free Worlds" "Republic" "Syndicate"
+    government "Deep" "Free Worlds" "Neutral" "Republic" "Syndicate"
   to offer
     has "event: war begins"
   on offer
@@ -161,7 +161,7 @@ mission "Pact Recon 1"
   waypoint "Eber"
   waypoint "Alpha Arae"
   source
-    attributes "south" "dirt belt" "rim" "near earth"
+    attributes "dirt belt" "rim" "south"
   destination "Glaze"
   to offer
     random < 40
@@ -188,7 +188,7 @@ mission "Pact Recon 2"
   waypoint "Shaula"
   waypoint "Nunki"
   source
-    attributes "south" "dirt belt" "rim" "near earth"
+    attributes "dirt belt" "rim" "south"
   destination "Glaze"
   to offer
     random < 40
@@ -210,12 +210,12 @@ mission "Pact Recon 3"
   landing
   name "Pirate Reconnaissance"
   description "Fly through the <waypoints> systems, searching for a gathering pirate fleet. Report to the Pact on <destination> when you are done."
-  waypoint "Orvala"
-  waypoint "Hintar"
-  waypoint "Naper"
   waypoint "Boral"
+  waypoint "Orvala"
+  waypoint "Naper"
+  waypoint "Sadr"
   source
-    attributes "south" "dirt belt" "rim" "near earth"
+    attributes "dirt belt" "rim" "south"
   destination "Glaze"
   to offer
     random < 40
@@ -433,7 +433,7 @@ mission "FW Recon 2"
     has "FW Recon 1: done"
   to fail
     has "chosen sides"
-  waypoint "Menkent"
+  waypoint "Kaus Borealis"
   
   on offer
     conversation
@@ -449,7 +449,7 @@ mission "FW Recon 2"
   npc "scan outfits"
     government "Republic"
     personality staying uninterested
-    system "Menkent"
+    system "Kaus Borealis"
     fleet
       names "republic"
       fighters "republic fighter"
@@ -469,7 +469,7 @@ mission "FW Recon 3"
   source
     planet Glaze
   destination
-    planet "Porringer"
+    planet "Bod"
   to offer
     has "FW Recon 2: done"
   to fail
@@ -477,7 +477,7 @@ mission "FW Recon 3"
   
   on offer
     conversation
-      `You meet JJ again in the bar. "I have one more reconnaissance mission for you," he says. "The Navy is building a base on Porringer, adjacent to the existing spaceport. From what I understand, they're employing thousands of locals to build it, so one more worker walking around would not seem out of place. I need you to walk around the base, take notes on the number and size of the landing pads and hangars, take pictures if you can, and report back to me. What do you say?"`
+      `You meet JJ again in the bar. "I have one more reconnaissance mission for you," he says. "The Navy is building a base on Bod, adjacent to the existing spaceport. From what I understand, they're employing thousands of locals to build it, so one more worker walking around would not seem out of place. I need you to walk around the base, take notes on the number and size of the landing pads and hangars, take pictures if you can, and report back to me. What do you say?"`
       choice
         `  "Sure, I can do that."`
           accept
@@ -499,7 +499,7 @@ mission "FW Recon 3B"
   description "Return to <destination> with information on the Navy base on <origin>."
   landing
   source
-    planet "Porringer"
+    planet "Bod"
   destination
     planet Glaze
   to offer
@@ -528,7 +528,7 @@ mission "FW Recon 3B"
         accept
   
   npc evade
-    government Republic
+    government "Republic"
     personality timid
     fleet
       names "republic"
@@ -536,7 +536,7 @@ mission "FW Recon 3B"
         "Mars"
   
   on visit
-    dialogue `A minute after you land, a Republic gunboat, <npc>, lands directly next to you. JJ does not approach you. You notice from your ship's logs that this gunboat has been following you ever since you left <origin>; before you can hand over the information, you will need to escape its pursuit.`
+    dialogue `A minute after you land, a Republic Navy Mars, <npc>, lands directly next to you. JJ does not approach you. You notice from your ship's logs that this gunboat has been following you ever since you left <origin>; before you can hand over the information, you will need to escape its pursuit.`
   
   on complete
     "assisted free worlds" ++
@@ -684,7 +684,7 @@ mission "FW Katya 1C"
   invisible
   landing
   source
-    government Republic
+    government "Republic"
   to offer
     has "FW Katya 1B: active"
   to fail
@@ -835,7 +835,7 @@ mission "FW Katya 2B"
   clearance
   passengers 1
   npc
-    government Pirate
+    government "Pirate"
     personality nemesis plunders waiting
     fleet "Pirates East Small" 2
   to offer
@@ -986,7 +986,7 @@ mission "FW Katya 4"
   name "Katya and Mr. Eyes"
   description "Stop on <destination> and check the planet for signs of nuclear testing."
   source Rand
-  destination Oblivion
+  destination Alapia
   blocked "You need bunks for both Katya and Eyes in order to continue this mission."
   passengers 2
   to offer
@@ -1004,8 +1004,8 @@ mission "FW Katya 4"
         `  "How did you escape?"`
       
       `  "The eruption was on the other continent," she explains, "so no one was killed in the blast. It was a slow-moving disaster. We had six months or so to move two million settlers off-world before the temperatures would drop too low to be livable. More than half of the Navy was mobilized to ferry our people to other planets."`
-      `  "Here's the best part," says Eyes. "The Navy operates with a certain amount of autonomy. Turns out when they found out about the disaster, they mobilized without even waiting to clear it with Parliament. Which was technically within their mandate, this being a natural disaster. But the Navy is funded by taxes, and the Core Planets pay ten times as much in taxes as the Dirt Belt."`
-      `  "The Core Planets viewed the Navy as their own private security force," says Katya, "so they got really mad when half the Navy suddenly vanished to assist some dirty refugees. Because those admirals gave the order to assist us, millions of lives were saved. And then Parliament fired them."`
+      `  "Here's the best part," says Eyes. "The Navy operates with a certain amount of autonomy. Turns out when they found out about the disaster, they mobilized without even waiting to clear it with Parliament. Which was technically within their mandate, this being a natural disaster. But the Navy is funded by taxes, and some individual planets near Earth pay ten times as much in taxes as the entire Dirt Belt."`
+      `  "Those Planets viewed the Navy as their own private security force," says Katya, "so they got really mad when half the Navy suddenly vanished to assist some dirty refugees. Because those admirals gave the order to assist us, millions of lives were saved. And then Parliament fired them."`
       choice
         `  "You're making the Navy sound like heroes. I thought they were your enemies."`
         `  "You've almost convinced me to join the Navy."`
@@ -1022,7 +1022,7 @@ mission "FW Katya 5"
   landing
   name "Information Gathering"
   description "Bring Katya and Mr. Eyes to <destination>, where some monks may be able to help you negotiate with the pirates for information."
-  source Oblivion
+  source Alapia
   destination Harmony
   passengers 2
   to offer
@@ -1211,7 +1211,7 @@ mission "FW Katya 6C"
   name "The Hunt Continues"
   description "Take Katya and Eyes to <destination>."
   source Hopper
-  destination "Clear Sky"
+  destination Dancer
   passengers 2
   to offer
     has "FW Katya 6B: done"
@@ -1228,7 +1228,7 @@ mission "FW Katya 7"
   landing
   name "The Hunt Continues"
   description "Take Katya and Eyes to <destination> to check for signs of underwater testing."
-  source "Clear Sky"
+  source Dancer
   destination Deep
   passengers 2
   to offer
@@ -1356,7 +1356,7 @@ mission "FW Escort 1"
   
   npc accompany save
     personality escort timid
-    government Merchant
+    government "Merchant"
     ship "Star Freighter" "F.W.S. Raleigh"
     ship "Star Freighter" "F.W.S. Scott"
     ship "Star Freighter" "F.W.S. Hudson"
@@ -1374,21 +1374,21 @@ mission "FW Escort 1"
         "Harpy" 5
   npc
     personality plunders entering
-    government Pirate
+    government "Pirate"
     fleet "Pirates South Large"
   npc
     personality plunders staying
-    government Pirate
+    government "Pirate"
     fleet "Pirates South Large"
     system "Alpha Arae"
   npc
     personality plunders staying
-    government Pirate
+    government "Pirate"
     fleet "Pirates South Large"
     system "Lesath"
   npc
     personality plunders waiting
-    government Pirate
+    government "Pirate"
     fleet "Pirates South Large" 2
     system "Tarazed"
   
@@ -1428,7 +1428,7 @@ mission "FW Escort 1B"
   
   npc accompany save
     personality escort timid
-    government Merchant
+    government "Merchant"
     ship "Star Freighter" "F.W.S. Raleigh"
     ship "Star Freighter" "F.W.S. Scott"
     ship "Star Freighter" "F.W.S. Hudson"
@@ -1446,21 +1446,21 @@ mission "FW Escort 1B"
         "Harpy" 3
   npc
     personality plunders entering
-    government Pirate
+    government "Pirate"
     fleet "Pirates South Large"
   npc
     personality plunders staying
-    government Pirate
+    government "Pirate"
     fleet "Pirates South Large"
     system "Alpha Arae"
   npc
     personality plunders staying
-    government Pirate
+    government "Pirate"
     fleet "Pirates South Large"
     system "Lesath"
   npc
     personality plunders waiting
-    government Pirate
+    government "Pirate"
     fleet "Pirates South Large" 2
     system "Sabik"
   
@@ -1495,7 +1495,7 @@ mission "FW Escort 2"
   
   npc accompany save
     personality escort timid
-    government Merchant
+    government "Merchant"
     ship "Star Freighter" "F.W.S. Raleigh"
     ship "Star Freighter" "F.W.S. Scott"
     ship "Star Freighter" "F.W.S. Hudson"
@@ -1512,17 +1512,17 @@ mission "FW Escort 2"
         "Harpy" 3
   npc
     personality plunders staying
-    government Pirate
+    government "Pirate"
     fleet "Pirates South Large"
     system "Alpha Arae"
   npc
     personality plunders staying
-    government Pirate
+    government "Pirate"
     fleet "Pirates South Large"
     system "Lesath"
   npc
     personality plunders waiting
-    government Pirate
+    government "Pirate"
     fleet "Pirates South Large" 3
     system "Tarazed"
   
@@ -1559,7 +1559,7 @@ mission "FW Escort 2B"
   
   npc accompany save
     personality escort timid
-    government Merchant
+    government "Merchant"
     ship "Star Freighter" "F.W.S. Raleigh"
     ship "Star Freighter" "F.W.S. Scott"
     ship "Star Freighter" "F.W.S. Hudson"
@@ -1576,19 +1576,19 @@ mission "FW Escort 2B"
         "Harpy" 2
   npc
     personality plunders staying
-    government Pirate
+    government "Pirate"
     fleet "Pirates South Large" 2
     fleet "Pirates South Small" 2
     system "Alpha Arae"
   npc
     personality plunders staying
-    government Pirate
+    government "Pirate"
     fleet "Pirates South Large" 2
     fleet "Pirates South Small" 2
     system "Lesath"
   npc
     personality plunders waiting
-    government Pirate
+    government "Pirate"
     fleet "Pirates South Large"
     fleet "Pirates South Small" 2
     system "Sabik"
@@ -1749,7 +1749,7 @@ mission "FW Bounty 1"
     ship "Hawk" "Cluny"
     ship "Warrior" "Ferret"
     ship "Harpy" "Rat"
-    ship "Harpy" "Stoat"
+    ship "Fury" "Stoat"
     ship "Wasp" "Vixen"
     ship "Hero" "Weasel"
     dialogue `The "Rat Pack" has been eliminated. You can claim the bounty payment by returning to <destination>.`
@@ -2034,7 +2034,7 @@ mission "Defend Sabik"
   
   npc evade
     personality waiting heroic
-    government Republic
+    government "Republic"
     fleet
       names "republic"
       fighters "republic fighter"
@@ -2048,7 +2048,7 @@ mission "Defend Sabik"
       
   npc evade
     personality heroic
-    government Republic
+    government "Republic"
     system Kornephoros
     fleet 2
       names "republic"

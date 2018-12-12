@@ -941,22 +941,18 @@ event "oathkeepers founded"
     fleet "Oathkeeper Large" 18000
     fleet "Pirates North Large" 500
     fleet "Pirates North Small" 400
+  system "Girtab"
+    government "Neutral"
 
 
 event "tarazed neutrality"
-  system "Tarazed"
-    government "Neutral"
-  system "Umbral"
-    government "Neutral"
   system "Dabih"
     government "Neutral"
   system "Lurata"
     government "Neutral"
-  system "Albireo"
+  system "Tarazed"
     government "Neutral"
-  system "Sadr"
-    government "Neutral"
-  system "Girtab"
+  system "Umbral"
     government "Neutral"
 
 
@@ -1171,7 +1167,7 @@ event "normal in Alnasl"
 
 
 event "battle for Rastaban"
-  "reputation: Republic" = -1000
+  "reputation: Republic" <?= -1000
   system "Rastaban"
     fleet "Free Worlds Small" 10000
   system "Lesath"
@@ -1187,14 +1183,6 @@ event "battle for Rastaban"
 
 
 event "fw southern expansion"
-  system "Lesath"
-    fleet "Merchants South Small" 800
-    fleet "Merchants South Large" 1600
-    fleet "Free Worlds Small" 800
-    fleet "Free Worlds Large" 1100
-    fleet "Pirates South Small" 2000
-    fleet "Pirates South Large" 5000
-    fleet "Navy Surveillance" 4000
   system "Sargas"
     fleet "Merchants South Small" 600
     fleet "Merchants South Large" 2500
@@ -1203,6 +1191,14 @@ event "fw southern expansion"
     fleet "Pirates South Small" 3000
     fleet "Pirates South Large" 7000
     fleet "Navy Surveillance" 5000
+  system "Lesath"
+    fleet "Merchants South Small" 800
+    fleet "Merchants South Large" 1600
+    fleet "Free Worlds Small" 800
+    fleet "Free Worlds Large" 1100
+    fleet "Pirates South Small" 2000
+    fleet "Pirates South Large" 5000
+    fleet "Navy Surveillance" 4000
   system "Rastaban"
     government "Free Worlds"
     fleet "Merchants South Small" 1200
@@ -1213,6 +1209,7 @@ event "fw southern expansion"
     fleet "Pirates South Large" 7000
     fleet "Navy Surveillance" 2000
   system "Girtab"
+    government "Free Worlds"
     fleet "Merchants South Small" 900
     fleet "Merchants South Large" 2000
     fleet "Free Worlds Small" 1000
@@ -1229,6 +1226,14 @@ event "fw southern expansion"
     fleet "Pirates South Small" 3000
     fleet "Pirates South Large" 7000
     fleet "Navy Surveillance" 5000
+  system "Albireo"
+    government "Free Worlds"
+  system "Sadr"
+    government "Free Worlds"
+  system "Lurata"
+    government "Free Worlds"
+  system "Eltanin"
+    government "Free Worlds"
   system "Delta Sagittarii"
     government "Free Worlds"
     fleet "Merchants South Small" 1200
@@ -1243,8 +1248,6 @@ event "fw southern expansion"
     fleet "Merchants South Large" 4000
     fleet "Republic Small" 400
     fleet "Republic Large" 500
-  system "Eltanin"
-    government "Free Worlds"
   planet "Clear Sky"
     description `Clear Sky is a perpetually hazy volcanic world, with a slightly caustic atmosphere but enough reserves of metal and petrochemicals to draw a large number of settlers. Some of those settlers also make a living as farmers, and a few well-developed factory towns produce goods for export to other worlds.`
     description `  In the wake of their defeat in the south, the Navy has begun to set up a massive new base here on Clear Sky, in order to allow them to continue to have a strong presence in this sector.`
@@ -1292,17 +1295,15 @@ event "fw occupying the north"
 
 
 event "fw northern expansion"
-  system "Eber"
-    government "Free Worlds"
-  system "Alnasl"
-    government "Free Worlds"
-  system "Wei"
+  system "Alphecca"
     government "Free Worlds"
   system "Seginus"
     government "Free Worlds"
-  system "Alphecca"
+  system "Wei"
     government "Free Worlds"
-  system "Boral"
+  system "Alnasl"
+    government "Free Worlds"
+  system "Eber"
     government "Free Worlds"
 
 
@@ -1413,25 +1414,15 @@ event "albatross joins free worlds"
 
 
 event "battle for zeta aquilae"
-  "reputation: Republic" = -1000
+  "reputation: Republic" <?= -1000
   system "Zeta Aquilae"
     fleet "Merchants South Small" 5000
 
 
 event "fw expanded and cut"
-  system "Rasalhague"
-    government "Free Worlds"
-  system "Zeta Aquilae"
-    government "Free Worlds"
-  system "Ascella"
-    government "Free Worlds"
   system "Peacock"
     government "Free Worlds"
   system "Kaus Australis"
-    government "Free Worlds"
-  system "Orvala"
-    government "Free Worlds"
-  system "Naper"
     government "Free Worlds"
   system "Tais"
     government "Free Worlds"
@@ -1624,7 +1615,7 @@ event "fwc southern liberation"
     fleet "Pirates South Large" 7000
     fleet "Republic Large" 3000
   system "Girtab"
-    government "Neutral"
+    government "Free Worlds"
     fleet "Merchants South Small" 900
     fleet "Merchants South Large" 2000
     fleet "Free Worlds Small" 1000
@@ -1640,6 +1631,12 @@ event "fwc southern liberation"
     fleet "Pirates South Large" 5000
     fleet "Navy Surveillance" 4000
   system "Eltanin"
+    government "Free Worlds"
+  system "Lurata"
+    government "Free Worlds"
+  system "Naper"
+    government "Free Worlds"
+  system "Tais"
     government "Free Worlds"
 
 
@@ -1733,7 +1730,7 @@ event "navy out of rastaban"
     fleet "Pirates South Large" 7000
     fleet "Navy Surveillance" 2000
   system "Girtab"
-    government "Neutral"
+    government "Free Worlds"
     fleet "Merchants South Small" 900
     fleet "Merchants South Large" 2000
     fleet "Free Worlds Small" 1000
@@ -1799,17 +1796,16 @@ event "syndicate occupies sol"
 
 
 event "pug invasion"
-  unlink "Zeta Aquilae" Ascella
-  unlink Rasalhague Cebalrai
-  link Deneb "Zeta Aquilae"
+  unlink Ascella "Zeta Aquilae"
+  unlink Cebalrai Rasalhague
   link Deneb Rasalhague
-  unvisit "Zeta Aquilae"
-  unvisit Rasalhague
-  unvisit Orvala
+  link Deneb "Zeta Aquilae"
+  unlink Hintar Rasalhague
+  unlink Hintar "Zeta Aquilae"
   unvisit Deneb
-  unvisit Cebalrai
-  unvisit Ascella
-  unvisit Peacock
+  unvisit Orvala
+  unvisit Rasalhague
+  unvisit "Zeta Aquilae"
   system "Zeta Aquilae"
     government "Pug"
     fleet "Merchants South Small" 1000
@@ -1835,16 +1831,14 @@ event "pug invasion"
 
 
 event "pug invasion 2"
-  unlink Vega Sol
+  unlink Altair Fomalhaut
   unlink Altair Sol
-  unlink Fomalhaut Caph
-  link Deneb Vega
   link Deneb Altair
-  unvisit Vega
+  link Deneb Vega
+  unlink Vega Sol
   unvisit Altair
   unvisit Nocte
-  unvisit Fomalhaut
-  unvisit Markab
+  unvisit Vega
   system "Vega"
     government "Pug"
     fleet "Merchants North Small" 800
@@ -1881,15 +1875,15 @@ event "pug invasion 2"
 
 
 event "pug invasion 3"
+  unlink Alderamin Matar
+  unlink Alnair Persian
   unlink "Delta Capricorni" Markab
   unlink "Delta Capricorni" Scheat
-  unlink Alderamin Alnair
-  link Deneb "Delta Capricorni"
   link Deneb Alderamin
-  unvisit "Delta Capricorni"
+  link Deneb "Delta Capricorni"
   unvisit Alderamin
-  unvisit Scheat
   unvisit Alnair
+  unvisit "Delta Capricorni"
   system "Delta Capricorni"
     government "Pug"
     fleet "Merchants East Small" 700
@@ -1909,14 +1903,16 @@ event "pug invasion 3"
 
 
 event "pug invasion 4"
-  unlink Caph Sol
+  link Altair Fomalhaut
   unlink Caph Eteron
+  unlink Caph Sol
   unlink Diphda Acamar
   unlink Diphda Ankaa
-  link Fomalhaut Caph
+  unvisit Acamar
+  unvisit Ankaa
   unvisit Caph
   unvisit Diphda
-  unvisit Ankaa
+  unvisit Eteron
   system "Sol"
     fleet "Merchants North Small" 300
     fleet "Merchants North Large" 500
@@ -2102,27 +2098,15 @@ event "pug flee"
 
 
 event "pug territory liberated"
-  system "Orvala"
-    government "Republic"
-  system "Nocte"
-    government "Republic"
-  system "Zeta Aquilae"
-    government "Republic"
-  system "Rasalhague"
-    government "Republic"
-  system "Vega"
+  system "Alnair"
     government "Republic"
   system "Altair"
     government "Republic"
-  system "Fomalhaut"
-    government "Republic"
-  system "Delta Capricorni"
-    government "Republic"
   system "Alderamin"
     government "Republic"
-  system "Diphda"
-    government "Republic"
   system "Caph"
+    government "Republic"
+  system "Delta Capricorni"
     government "Republic"
   system "Deneb"
     government "Republic"
@@ -2132,6 +2116,20 @@ event "pug territory liberated"
     fleet "Merchants South Large" 3000
     fleet "Republic Small" 700
     fleet "Republic Large" 900
+  system "Diphda"
+    government "Republic"
+  system "Fomalhaut"
+    government "Republic"
+  system "Nocte"
+    government "Republic"
+  system "Orvala"
+    government "Republic"
+  system "Rasalhague"
+    government "Republic"
+  system "Vega"
+    government "Republic"
+  system "Zeta Aquilae"
+    government "Republic"
   planet "Rand"
     security 0.05
   planet "Oblivion"
@@ -2153,24 +2151,24 @@ event "pug territory liberated"
 
 
 event "pug link restoration 1"
-  link Rasalhague Cebalrai
-  link Alderamin Alnair
-  link Vega Sol
-
+  link Cebalrai Rasalhague
+  link "Delta Capricorni" Scheat
+  link Sol Vega
 
 event "pug link restoration 2"
-  link "Zeta Aquilae" Ascella
+  link Alderamin Matar
   link Caph Sol
-
+  link Hintar Rasalhague
 
 event "pug link restoration 3"
+  link Alnair Persian
   link Caph Eteron
-  link Diphda Ankaa
-
+  link Hintar "Zeta Aquilae"
 
 event "pug link restoration 4"
-  link "Delta Capricorni" Scheat
-  link Diphda Acamar
+  link Acamar Diphda
+  link Ankaa Diphda
+  link Ascella "Zeta Aquilae"
 
 
 event "battle of algenib"
@@ -2364,14 +2362,17 @@ event "fwc attack vega"
 
 
 event "fwc pug invasion"
-  unlink Vega Sol
+  unlink Ascella "Zeta Aquilae"
+  unlink Hintar "Zeta Aquilae"
+  unlink Hintar Rasalhague
+  unlink Cebalrai Rasalhague
+  unlink Sol Vega
   unlink Altair Sol
   unlink Altair Fomalhaut
   unlink "Delta Capricorni" Markab
   unlink "Delta Capricorni" Scheat
+  unlink Alderamin Matar
   unlink Alderamin Alnair
-  unlink "Zeta Aquilae" Ascella
-  unlink Rasalhague Cebalrai
   link Deneb Alderamin
   link Deneb Altair
   link Deneb "Delta Capricorni"
@@ -2525,7 +2526,7 @@ event "fwc peace with the navy"
 
 
 event "fwc battle for rasalhague"
-  link Rasalhague Cebalrai
+  link Cebalrai Rasalhague
   system "Rasalhague"
     fleet "Merchants South Small" 10000
   government "Pug"
@@ -2565,12 +2566,13 @@ event "fwc liberation of rasalhague"
     fleet "Pug Large" 100
 
 
-event "fwc reconnect ascella"
-  link Rasalhague Ascella
+event "fwc reconnect hintar"
+  link Hintar Rasalhague
+  link Hintar "Zeta Aquilae"
 
 
 event "fwc reconnect zeta aquilae"
-  link "Zeta Aquilae" Ascella
+  link Ascella "Zeta Aquilae"
   system "Zeta Aquilae"
     government "Free Worlds"
     fleet "Merchants South Small" 1500
@@ -2637,21 +2639,20 @@ event "fwc pug defeated"
 
 
 event "fwc link restoration 1"
+  link Altair Fomalhaut
   link Altair Sol
-
 
 event "fwc link restoration 2"
   link "Delta Capricorni" Markab
-  link Alderamin Alnair
-
+  link "Delta Capricorni" Scheat
 
 event "fwc link restoration 3"
-  link Altair Fomalhaut
-  link "Delta Capricorni" Scheat
+  link Alderamin Alnair
 
 
 
 # free worlds epilogue
+
 
 event "luna rebuilt"
   planet "Luna"
@@ -2661,24 +2662,34 @@ event "luna rebuilt"
     shipyard "Navy Advanced"
 
 
-event "tarazed referendum"
-
-
-event "tarazed joins the free worlds"
-  system "Tarazed"
-    government "Free Worlds"
-  system "Umbral"
-    government "Free Worlds"
+event "tarazed rejoins republic"
+  system "Naper"
+    government "Republic"
+  system "Tais"
+    government "Republic"
+  system "Peacock"
+    government "Republic"
+  system "Kaus Australis"
+    government "Republic"
   system "Dabih"
-    government "Free Worlds"
-  system "Lurata"
-    government "Free Worlds"
-  system "Albireo"
-    government "Free Worlds"
-  system "Sadr"
-    government "Free Worlds"
-  system "Girtab"
-    government "Free Worlds"
+    government "Republic"
+  system "Tarazed"
+    government "Republic"
+  system "Umbral"
+    government "Republic"
+
+
+event "pug surprise"
+  system "Minkar"
+    add object "Rim Wormhole"
+      sprite planet/wormhole
+      distance 3622.45
+      period 3023.25
+  system "Procyon"
+    add object "Rim Wormhole"
+      sprite planet/wormhole
+      distance 4087.63
+      period 4803.02
 
 
 
@@ -3227,7 +3238,7 @@ event "wanderers: kor mereti friendly"
     "attitude toward"
       "Kor Mereti" 0
   "reputation: Kor Mereti" >?= 1
-  "reputation:  Kor Mereti " = -1000
+  "reputation:  Kor Mereti " <?= -1000
   planet "Rekat Moraski"
     "required reputation" 1000
 
@@ -3476,7 +3487,7 @@ event "wanderers: sestor shutdown"
 
 
 event "wanderers: exiles hostile"
-  "reputation: Korath" = -1000
+  "reputation: Korath" <?= -1000
 
 
 event "wanderers: exiles have drones"

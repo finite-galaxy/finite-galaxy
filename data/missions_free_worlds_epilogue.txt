@@ -1,62 +1,13 @@
-# "Pug Cease Hostilities"
-# "Free Worlds Aftermath"
-# "particle turret available"
-# "Tarazed joins the Free Worlds"
 # "FW Epilogue: Ijs and Katya"
 # "FW Epilogue: Alondo"
 # "FW Epilogue: Freya"
 # "FW Epilogue: Danforth"
-
-
-
-mission "Pug Cease Hostilities"
-  landing
-  invisible
-  to offer
-    has "main plot completed"
-  on offer
-    "reputation: Pug" >?= 1
-    fail
-
-
-
-mission "Free Worlds Aftermath"
-  landing
-  invisible
-  to offer
-    has "free worlds plot completed"
-  on offer
-    event "particle turret available" 30
-    event "luna rebuilt" 90
-    event "tarazed referendum" 180
-    fail
-
-
-
-mission "particle turret available"
-  landing
-  source
-    near "Markab" 100
-  to offer
-    has "event: particle turret available"
-  on offer
-    conversation
-      `Your ship is targetted by advertisements, informing you Lovelace Labs started selling their Particle Turret to everyone. Hithereto it was available to the Republic Navy only. They probably felt compelled to compete with Deep Sky's Electron Turret and Delta V's Plasma Turret, although the fact that Navy Mark II vessels are no longer using Lovelace's Particle Turret might have something to do with it as well.`
-        decline
-
-
-
-mission "Tarazed joins the Free Worlds"
-  landing
-  source
-    government "Free Worlds" "Neutral" "Republic"
-  to offer
-    has "event: tarazed referendum"
-  on offer
-    event "tarazed joins the free worlds"
-    log "Tarazed and nearby systems have decided to join the Free Worlds, as a result of a referendum on Wayfarer."
-    conversation
-      `Yesterday, about six months since the war ended, Wayfarer organized a referendum on its future. The results are now in: a clear majority voted in favour of joining the Free Worlds. Nearby systems have decided they follow Tarazed's lead. Although disappointed with the outcome, Parliament on Earth announced they will respect the referendum. Meanwhile the Senate on Bourne declared today a public holiday to celebrate the accession of the new systems.`
+# "Pug Cease Hostilities"
+# "Free Worlds Aftermath"
+# "Tarazed c.s. rejoins the Republic"
+# "particle turret available"
+# "Check Minkar"
+# "Check Procyon"
 
 
 
@@ -227,5 +178,83 @@ mission "FW Epilogue: Danforth"
       `  "A bit," he says. "We still have far too many pirates in this sector, in part due to the Free Worlds driving them out of the south. The pirates grew stronger and more bold as the war dragged on, when all our fleets were busy elsewhere, but now we're beginning to get them under control again."`
       `  Then he leans forward and says, more quietly, "Of course, you and I both know the pirates aren't the main threat. Raven is off infiltrating Syndicate worlds even as we speak, and several of my other best intelligence officers, too. The Syndicate wants us to believe that they've weeded out all the rotten apples from their ranks, but we're keeping an eye on them, all the same."`
       `  After you talk for a while longer, Danforth wishes you luck and sends you on your way. "I'll be in touch if we ever need your assistance in the future," he says.`
+        decline
+
+
+
+mission "Pug Cease Hostilities"
+  landing
+  invisible
+  to offer
+    has "main plot completed"
+  on offer
+    "reputation: Pug" >?= 1
+    fail
+
+
+
+mission "Free Worlds Aftermath"
+  landing
+  invisible
+  to offer
+    has "free worlds plot completed"
+  on offer
+    event "tarazed rejoins republic" 7
+    event "particle turret available" 30
+    event "luna rebuilt" 61
+    event "pug surprise" 366
+    fail
+
+
+
+mission "Tarazed c.s. rejoins the Republic"
+  landing
+  source
+    government "Free Worlds" "Neutral" "Republic"
+  to offer
+    has "event: tarazed rejoins republic"
+  on offer
+    log "Tarazed and nearby systems have decided to join the Free Worlds, as a result of a referendum on Wayfarer."
+    conversation
+      `Yesterday, about six months since the war ended, Wayfarer organized a referendum on its future. The results are now in: a clear majority voted in favour of joining the Free Worlds. Nearby systems have decided they follow Tarazed's lead. Although disappointed with the outcome, Parliament on Earth announced they will respect the referendum. Meanwhile the Senate on Bourne declared today a public holiday to celebrate the accession of the new systems.`
+
+
+
+mission "particle turret available"
+  landing
+  source
+    near "Markab" 100
+  to offer
+    has "event: particle turret available"
+  on offer
+    conversation
+      `Your ship is targetted by advertisements, informing you Lovelace Labs started selling their Particle Turret to everyone. Hithereto it was available to the Republic Navy only. They probably felt compelled to compete with Deep Sky's Electron Turret and Delta V's Plasma Turret, although the fact that Navy Mark II vessels are no longer using Lovelace's Particle Turret might have something to do with it as well.`
+        decline
+
+
+
+mission "Check Minkar"
+  landing
+  source
+    attributes rim
+  to offer
+    has "event: pug surprise"
+    not "Check Procyon: offered"
+  on offer
+    conversation
+      `Rumour has it that something odd is going on in the Minkar system. Nobody appears to know what exactly, though. Perhaps you should check it out yourself.`
+        decline
+
+
+mission "Check Procyon"
+  landing
+  source
+    attributes "near earth" paradise
+  to offer
+    has "event: pug surprise"
+    not "Check Minkar: offered"
+  on offer
+    conversation
+      `Rumour has it that something odd is going on in the Procyon system. Nobody appears to know what exactly, though. Perhaps you should check it out yourself.`
         decline
 
