@@ -321,7 +321,7 @@ mission "FW Recon 0"
   source
     government "Free Worlds"
     near Aldhibain 1 10
-  destination Glaze
+  destination "Glaze"
   to offer
     has "event: initial deployment 4"
     or
@@ -568,7 +568,7 @@ mission "FW Katya 1"
     has "chosen sides"
   source
     government "Free Worlds"
-  destination Glory
+  destination "Glory"
   on offer
     conversation
       `Wandering through the spaceport, you have stopped for a moment to read the menu posted in front of a restaurant, when your thoughts are interrupted by the click of a gun being cocked right behind your head, and a woman's voice saying, "Think fast, Captain."`
@@ -653,8 +653,8 @@ mission "FW Katya 1B"
     has "FW Katya 1: done"
   to fail
     has "chosen sides"
-  source Glory
-  destination Skymoot
+  source "Glory"
+  destination "Skymoot"
   passengers 2
   cargo "surgical gear" 10
   blocked "You have reached <origin>, but you need <capacity> in order to take on Katya's mission for the Free Worlds. Return here when you have the required space free."
@@ -767,7 +767,7 @@ mission "FW Katya Alt 2"
   minor
   source
     government "Free Worlds"
-  destination Foundry
+  destination "Foundry"
   blocked "You have reached <origin>, but you have no bunks free for Mr. Eyes. Return here when you have a bunk available, or abort one of your other missions to make room for this one."
   passengers 1
   to offer
@@ -806,8 +806,8 @@ mission "FW Katya Alt 2"
 mission "FW Katya 2"
   name "Transport Mr. Eyes"
   description "Katya Reynolds asked you to travel to <destination>, where her friend Mr. Eyes is waiting for you."
-  source Skymoot
-  destination Foundry
+  source "Skymoot"
+  destination "Foundry"
   passengers 1
   to offer
     has "FW Katya 1B: done"
@@ -830,8 +830,8 @@ mission "FW Katya 2B"
   landing
   name "Transport Mr. Eyes"
   description "Transport Mr. Eyes to <destination>, where the recent terrorist attack took place."
-  source Foundry
-  destination Luna
+  source "Foundry"
+  destination "Luna"
   clearance
   passengers 1
   npc
@@ -901,8 +901,8 @@ mission "FW Katya 2C"
   landing
   name "Transport Mr. Eyes"
   description "Bring Mr. Eyes to <destination>, where you will meet up with Katya (and hopefully get paid)."
-  source Luna
-  destination Rand
+  source "Luna"
+  destination "Rand"
   passengers 1
   to offer
     has "FW Katya 2B: done"
@@ -925,7 +925,7 @@ mission "FW Katya 2C"
 mission "FW Katya 3"
   name "Drone Hunting"
   description `Disable a surveillance drone (ideally when no warships are watching), board it, "salvage" its surveillance equipment, and return to <destination>. (Until you leave the system where you disabled the drone, other Republic ships may attack you.)`
-  source Rand
+  source "Rand"
   to offer
     has "FW Katya 2C: done"
   to fail
@@ -985,8 +985,8 @@ mission "FW Katya 3"
 mission "FW Katya 4"
   name "Katya and Mr. Eyes"
   description "Stop on <destination> and check the planet for signs of nuclear testing."
-  source Rand
-  destination Alapia
+  source "Rand"
+  destination "Alapia"
   blocked "You need bunks for both Katya and Eyes in order to continue this mission."
   passengers 2
   to offer
@@ -1022,8 +1022,8 @@ mission "FW Katya 5"
   landing
   name "Information Gathering"
   description "Bring Katya and Mr. Eyes to <destination>, where some monks may be able to help you negotiate with the pirates for information."
-  source Alapia
-  destination Harmony
+  source "Alapia"
+  destination "Harmony"
   passengers 2
   to offer
     has "FW Katya 4: done"
@@ -1078,8 +1078,8 @@ mission "FW Katya 5B"
   landing
   name "Information Gathering"
   description "Travel to <planet> with Brother Greg and see if he can get any information from the pirates there. (Hail the planet to have him negotiate landing clearance.)"
-  source Harmony
-  destination Greenrock
+  source "Harmony"
+  destination "Greenrock"
   clearance `Brother Greg talks briefly with the spaceport traffic controller. When they realize who he is, they agree to let you land "without paying the usual fee."`
   passengers 2
   to offer
@@ -1136,8 +1136,8 @@ mission "FW Katya 5C"
   landing
   name "Information Gathering"
   description "Return to <planet> with Katya and Brother Greg."
-  source Greenrock
-  destination Harmony
+  source "Greenrock"
+  destination "Harmony"
   passengers 2
   to offer
     has "FW Katya 5B: done"
@@ -1167,8 +1167,8 @@ mission "FW Katya 5C"
 mission "FW Katya 6"
   name "The Hunt Continues"
   description "Take Katya and Eyes to <destination>."
-  source Harmony
-  destination Sinter
+  source "Harmony"
+  destination "Sinter"
   passengers 2
   to offer
     has "FW Katya 5C: done"
@@ -1191,8 +1191,8 @@ mission "FW Katya 6B"
   landing
   name "The Hunt Continues"
   description "Take Katya and Eyes to <destination>."
-  source Sinter
-  destination Hopper
+  source "Sinter"
+  destination "Hopper"
   passengers 2
   to offer
     has "FW Katya 6: done"
@@ -1210,8 +1210,8 @@ mission "FW Katya 6C"
   landing
   name "The Hunt Continues"
   description "Take Katya and Eyes to <destination>."
-  source Hopper
-  destination Dancer
+  source "Hopper"
+  destination "Dancer"
   passengers 2
   to offer
     has "FW Katya 6B: done"
@@ -1228,8 +1228,8 @@ mission "FW Katya 7"
   landing
   name "The Hunt Continues"
   description "Take Katya and Eyes to <destination> to check for signs of underwater testing."
-  source Dancer
-  destination Deep
+  source "Dancer"
+  destination "Deep"
   passengers 2
   to offer
     has "FW Katya 6C: done"
@@ -1252,8 +1252,8 @@ mission "FW Katya 7B"
   landing
   name "The Hunt Continues"
   description "Take Katya and Eyes to the mining moon <planet>."
-  source Deep
-  destination Clink
+  source "Deep"
+  destination "Clink"
   passengers 2
   to offer
     has "FW Katya 7: done"
@@ -1294,8 +1294,8 @@ mission "FW Katya 7C"
   landing
   name "Bring Eyes to <planet>"
   description "While Katya is undercover on <origin>, bring Mr. Eyes to <destination> to report to the Free Worlds."
-  source Clink
-  destination Zuq
+  source "Clink"
+  destination "Zuq"
   passengers 1
   to offer
     has "FW Katya 7B: done"
@@ -1339,7 +1339,7 @@ mission "FW Escort 1"
   autosave
   source
     government "Free Worlds"
-  destination Wayfarer
+  destination "Wayfarer"
   to offer
     or
       and
@@ -1419,8 +1419,8 @@ mission "FW Escort 1B"
   name "Free Worlds Escort"
   description "Escort a Free Worlds supply convoy safely to <destination>."
   autosave
-  source Wayfarer
-  destination Longjump
+  source "Wayfarer"
+  destination "Longjump"
   to offer
     has "FW Escort 1: done"
   to fail
@@ -1486,8 +1486,8 @@ mission "FW Escort 2"
   name "Free Worlds Escort"
   description "Escort a Free Worlds supply convoy safely to <destination>."
   autosave
-  source Longjump
-  destination Wayfarer
+  source "Longjump"
+  destination "Wayfarer"
   to offer
     has "FW Escort 1B: done"
   to fail
@@ -1550,8 +1550,8 @@ mission "FW Escort 2B"
   name "Free Worlds Escort"
   autosave
   description "Escort a Free Worlds supply convoy safely to <destination>."
-  source Wayfarer
-  destination Longjump
+  source "Wayfarer"
+  destination "Longjump"
   to offer
     has "FW Escort 2: done"
   to fail
@@ -1661,7 +1661,7 @@ mission "FW Escort Second Chance"
   source
     near Sabik 1 100
     government "Free Worlds"
-  destination Longjump
+  destination "Longjump"
   to offer
     has "fw intro escort failed"
     not "chosen sides"
@@ -1890,8 +1890,8 @@ mission "Rescue Katya 1"
   name "Rescue Katya"
   description "Rescue Katya from <planet>, before the Navy discovers her, and bring her safely to Longjump."
   landing
-  source Bourne
-  destination Clink
+  source "Bourne"
+  destination "Clink"
   to offer
     has "FW Commitment: offered"
     not "chosen sides"
@@ -1943,8 +1943,8 @@ mission "Rescue Katya 2"
   landing
   name "Rescue Katya"
   description "Return to <planet> and report to the Free Worlds Council that you were unable to locate Katya."
-  source Clink
-  destination Longjump
+  source "Clink"
+  destination "Longjump"
   to offer
     has "Rescue Katya 1: done"
   on fail
@@ -1999,7 +1999,7 @@ mission "Defend Sabik"
   landing
   name "Defend Sabik"
   description "Help to repulse a Navy attack on Sabik, then land on Longjump to debrief."
-  source Longjump
+  source "Longjump"
   to offer
     has "Rescue Katya 2: done"
   on fail

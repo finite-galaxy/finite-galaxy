@@ -139,8 +139,8 @@ mission "FW Reconciliation 1B"
   description "Bring Ijs, Sawyer, and Katya to <system>. Destroy any Syndicate ships that are watching you, then land on <planet>. Make sure Raven's ship arrives there as well. You may need to bribe Syndicate worlds to let you refuel."
   autosave
   landing
-  source Winter
-  destination Mutiny
+  source "Winter"
+  destination "Mutiny"
   clearance
   passengers 3
   blocked "You need another bunk free (for Ijs) in order to continue this mission."
@@ -191,8 +191,8 @@ mission "FW Reconciliation 1C"
   name "Bring evidence to <planet>"
   description "Travel to <planet>, without you or Raven being killed by the Syndicate, to present your evidence and Sawyer's confession to Parliament."
   landing
-  source Mutiny
-  destination Earth
+  source "Mutiny"
+  destination "Earth"
   clearance
   passengers 3
   to offer
@@ -247,8 +247,8 @@ mission "FW Reconciliation 2"
   description "One of the representatives from the Deep gave you a note requesting that you visit them on <destination>. Travel there with Katya, Ijs, Sawyer, and Raven."
   autosave
   landing
-  source Earth
-  destination Valhalla
+  source "Earth"
+  destination "Valhalla"
   passengers 3
   to offer
     has "FW Reconciliation 1C: done"
@@ -311,8 +311,8 @@ mission "FW Reconciliation 2A"
   description "Travel to <destination> to meet with the Navy Oathkeepers. Raven's ship will continue to travel with you."
   autosave
   landing
-  source Valhalla
-  destination Farpoint
+  source "Valhalla"
+  destination "Farpoint"
   clearance
   passengers 2
   to offer
@@ -362,8 +362,8 @@ mission "FW Reconciliation 2B"
   description "Sawyer has named several Syndicate executives who were definitely part of the plot. Travel to the lawless world of Stormhold, where you will be able to purchase information about where those executives live."
   autosave
   landing
-  source Farpoint
-  destination Stormhold
+  source "Farpoint"
+  destination "Stormhold"
   clearance
   passengers 2
   to offer
@@ -394,8 +394,8 @@ mission "FW Reconciliation 2C"
   description "Return to <planet> with information about the whereabouts of certain Syndicate executives. Travel via the back route so that the Syndicate is not alerted to your presence."
   autosave
   landing
-  source Stormhold
-  destination Farpoint
+  source "Stormhold"
+  destination "Farpoint"
   clearance
   passengers 2
   to offer
@@ -418,7 +418,7 @@ mission "FW Defend Farpoint"
   name "Defend Farpoint"
   description "Assist the Oathkeepers in defending <planet> from a pirate attack, then land back on the planet."
   autosave
-  source Farpoint
+  source "Farpoint"
   clearance
   passengers 2
   to offer
@@ -493,8 +493,8 @@ mission "FW Embassy 1"
   description "The Republic has agreed to set up an embassy to the Free Worlds. Travel to Earth to meet the ambassadors and escort them to Free space."
   autosave
   landing
-  source Farpoint
-  destination Earth
+  source "Farpoint"
+  destination "Earth"
   clearance
   passengers 2
   to offer
@@ -523,8 +523,8 @@ mission "FW Embassy 1B"
   name "Ambassadors to Bourne"
   description "Escort this luxury vessel carrying Republic ambassadors to the Free Worlds capital of <destination>."
   autosave
-  source Earth
-  destination Bourne
+  source "Earth"
+  destination "Bourne"
   passengers 2
   to offer
     has "FW Embassy 1: done"
@@ -551,8 +551,8 @@ mission "FW Reconciliation Break"
   description "Bring Katya and Ijs to <destination> for a well-deserved sabbatical. Then you will be free to spend some time upgrading your ship while you wait for the Senate to select a team of ambassadors."
   autosave
   landing
-  source Bourne
-  destination Skymoot
+  source "Bourne"
+  destination "Skymoot"
   to offer
     has "FW Embassy 1B: done"
   passengers 2
@@ -600,7 +600,7 @@ mission "FW Reconciliation Break Ends"
   landing
   source
     near "Gamma Corvi" 1 100
-  destination Bourne
+  destination "Bourne"
   to offer
     has "event: fw reconciliation break"
     not "FW Embassy 1C: offered"
@@ -617,8 +617,8 @@ mission "FW Embassy 1C"
   name "Ambassadors to Earth"
   description `Escort a Dreadnought carrying Free Worlds ambassadors to Earth. This Dreadnought will then take part in your combined "police action" against the Syndicate.`
   autosave
-  source Bourne
-  destination Earth
+  source "Bourne"
+  destination "Earth"
   clearance
   passengers 2
   blocked "You do not have bunks available for Ijs and Katya. Return here when you do."
@@ -685,8 +685,8 @@ mission "FW Syndicate Capture 1"
   name "Raid on Mainsail"
   description "Travel to <destination> along with ships from the Oathkeepers, the Deep, and the Free Worlds, to capture Alexander Soylent, a Syndicate executive. Do not allow your escorts to be destroyed."
   autosave
-  source Earth
-  destination Mainsail
+  source "Earth"
+  destination "Mainsail"
   clearance
   passengers 2
   to offer
@@ -724,8 +724,8 @@ mission "FW Syndicate Capture 1B"
   landing
   name "Escape to <planet>"
   description "You have captured the Syndicate executive Alexander Soylent. Now, bring him safely to <planet>, where he will face trial."
-  source Mainsail
-  destination Valhalla
+  source "Mainsail"
+  destination "Valhalla"
   passengers 2
   to offer
     has "FW Syndicate Capture 1: done"
@@ -879,7 +879,7 @@ mission "FW Syndicate Capture 1C"
   name "Return to <planet>"
   description "The Syndicate is massing a fleet in the Sol system. Return to <planet> to rendezvous with the Free Worlds fleet in order to be ready to defend Earth if it is attacked."
   autosave
-  source Valhalla
+  source "Valhalla"
   destination "Bod"
   passengers 2
   to offer
@@ -970,7 +970,7 @@ mission "FW Pug 1 Tundra"
 
 mission "FW Pug 1 Alapia"
   landing
-  source Alapia
+  source "Alapia"
   to offer
     has "FW Pug 1: active"
   
@@ -1200,8 +1200,8 @@ mission "FW Pug 2C: Hyperdrive"
   landing
   name "Investigate the Pug"
   description "Travel to the Deneb system to investigate the Pug; if possible, make contact with them and determine what their goals and desires are."
-  source Hephaestus
-  destination Pugglemug
+  source "Hephaestus"
+  destination "Pugglemug"
   to offer
     has "FW Pug 2B: done"
     not "fw given jump drive"
@@ -1225,8 +1225,8 @@ mission "FW Pug 2C: Scram Drive"
   landing
   name "Investigate the Pug"
   description "Travel to the Deneb system to investigate the Pug; if possible, make contact with them and determine what their goals and desires are."
-  source Hephaestus
-  destination Pugglemug
+  source "Hephaestus"
+  destination "Pugglemug"
   to offer
     has "FW Pug 2B: done"
     not "fw given jump drive"
@@ -1250,8 +1250,8 @@ mission "FW Pug 2C: Jump Drive"
   landing
   name "Investigate the Pug"
   description "Travel to the Deneb system to investigate the Pug; if possible, make contact with them and determine what their goals and desires are."
-  source Hephaestus
-  destination Pugglemug
+  source "Hephaestus"
+  destination "Pugglemug"
   clearance
   to offer
     has "FW Pug 2B: done"
@@ -1276,7 +1276,7 @@ mission "FW Pug 2C: Side"
   landing
   source
     government "Pug"
-    near Deneb 1 100
+    near "Deneb" 1 100
   to offer
     has "fw given jump drive"
     not "FW Pug 3: offered"
@@ -1348,7 +1348,7 @@ mission "FW Pug 2C: Side"
 
 mission "FW Pug 2C: Pugglequat"
   landing
-  source Pugglequat
+  source "Pugglequat"
   to offer
     has "fw given jump drive"
     not "FW Pug 3: offered"
@@ -1365,8 +1365,8 @@ mission "FW Pug 3"
   description "Now that you have met with the Pug, travel to Earth and explain the situation to Parliament, and send word to the Free Worlds as well, so you can decide how to respond."
   autosave
   landing
-  source Pugglemug
-  destination Earth
+  source "Pugglemug"
+  destination "Earth"
   clearance
   to offer
     has "fw given jump drive"
@@ -1409,8 +1409,8 @@ mission "FW Pug 3: Deep"
   landing
   name "Visit the Deep (optional)"
   description "The Pug hinted that they have helped the people of the Deep in the past. Talk to Edricka, the governor of Valhalla, to see what she knows about the Pug. (This mission is optional.)"
-  source Earth
-  destination Valhalla
+  source "Earth"
+  destination "Valhalla"
   to offer
     has "FW Pug 3: done"
   to fail
@@ -1445,8 +1445,8 @@ mission "FW Pug 3: Quarg"
   landing
   name "Visit the Quarg (optional)"
   description "Visit the Quarg on <planet> to see if they know anything about the Pug or are willing to help you fight them. (This mission is optional.)"
-  source Earth
-  destination Lagrange
+  source "Earth"
+  destination "Lagrange"
   to offer
     has "FW Pug 3: done"
   to fail
@@ -1506,8 +1506,8 @@ mission "FW Pug 3A"
   name "Gather the fleet"
   description "Travel to <destination> and requisition two Free Worlds Dreadnoughts to join in the battle against the Pug. (But if you want to visit the Quarg or the Deep, do that first.)"
   autosave
-  source Earth
-  destination Zuq
+  source "Earth"
+  destination "Zuq"
   to offer
     has "FW Pug 3: done"
   passengers 1
@@ -1536,8 +1536,8 @@ mission "FW Pug 3B"
   name "Escort to <planet>"
   description "Travel to <planet> with two Free Worlds Dreadnoughts that will be joining the fight against the Pug."
   autosave
-  source Zuq
-  destination Luna
+  source "Zuq"
+  destination "Luna"
   clearance
   to offer
     has "FW Pug 3A: done"
@@ -1570,8 +1570,8 @@ mission "FW Pug 3C"
   name "Escort to Hephaestus"
   description "Escort the combined Free Worlds and Navy fleet to <destination>, where the Syndicate will fit all the ships with jump drives."
   autosave
-  source Luna
-  destination Hephaestus
+  source "Luna"
+  destination "Hephaestus"
   to offer
     has "FW Pug 3B: done"
   passengers 1
@@ -1618,7 +1618,7 @@ mission "FW Pug 3C"
 mission "FW Pug 4: Escorts"
   landing
   invisible
-  source Hephaestus
+  source "Hephaestus"
   to offer
     has "FW Pug 3C: done"
   
@@ -1673,8 +1673,8 @@ mission "FW Pug 4"
   name "Liberate <system>"
   description "Attempt to drive the Pug out of the <system> system, then land on <planet>."
   autosave
-  source Hephaestus
-  destination Maker
+  source "Hephaestus"
+  destination "Maker"
   clearance
   to offer
     has "FW Pug 3C: done"
@@ -1717,7 +1717,7 @@ mission "FW Pug 4A"
   landing
   name "Defend Maker"
   description "Keep the Pug from regaining control of Maker for long enough for Freya to figure out whether it is possible to restore the hyperspace link back to the Markab system."
-  source Maker
+  source "Maker"
   to offer
     has "FW Pug 4: done"
   on fail
@@ -1780,8 +1780,8 @@ mission "FW Pug 4B"
   landing
   name "Reflector to Hephaestus"
   description `Freya found a device that she believes is a "graviton reflector," which can somehow be set up in the <system> system to re-establish the hyperspace link between there and Delta Capricorni. Bring the transmitter to the Syndicate officials on <planet>.`
-  source Maker
-  destination Hephaestus
+  source "Maker"
+  destination "Hephaestus"
   to offer
     has "FW Pug 4A: done"
   cargo "graviton reflector" 10
@@ -1817,7 +1817,7 @@ mission "FW Pug 4B"
 mission "FW Pug 4B: Enemies"
   landing
   invisible
-  source Maker
+  source "Maker"
   to offer
     has "FW Pug 4A: done"
   to fail
@@ -1839,7 +1839,7 @@ mission "FW Pug 4B: Enemies"
 mission "FW Pug 4B: Reinforcements"
   landing
   invisible
-  source Maker
+  source "Maker"
   to offer
     has "FW Pug 4A: done"
   to fail
@@ -1866,8 +1866,8 @@ mission "FW Pug 4C"
   landing
   name "Return to <system>"
   description "Return to <destination>, accompanied by your new reinforcement fleet supplied by the Syndicate, and talk with Freya to decide on what your next steps should be now that you have the ability to restore the links to human space."
-  source Hephaestus
-  destination Maker
+  source "Hephaestus"
+  destination "Maker"
   to offer
     has "FW Pug 4B: done"
   on fail
@@ -1887,8 +1887,8 @@ mission "FW Pug 5"
   landing
   name "Liberate <planet>"
   description "If you can drive the Pug away from <destination>, you will be able to re-establish the hyperspace link between Altair and the Sol system, and immediately bring in Navy ships as reinforcements."
-  source Maker
-  destination Shiver
+  source "Maker"
+  destination "Shiver"
   clearance
   to offer
     has "FW Pug 4C: done"
@@ -1934,7 +1934,7 @@ mission "FW Pug 5"
 mission "FW Pug 5A: Enemies"
   landing
   invisible
-  source Shiver
+  source "Shiver"
   to offer
     has "FW Pug 5: done"
   to fail
@@ -1957,8 +1957,8 @@ mission "FW Pug 5A"
   landing
   name "Reflector to <planet>"
   description `Bring this "graviton reflector" to <planet> and set it up there, in order to restore the hyperspace link between the Sol and Altair systems.`
-  source Shiver
-  destination Earth
+  source "Shiver"
+  destination "Earth"
   clearance
   to offer
     has "FW Pug 5: done"
@@ -2001,8 +2001,8 @@ mission "FW Pug 5B"
   landing
   name "Defend Altair"
   description "Freya sent you a message that the <system> system is under attack. Return there, accompanied by your new Navy reinforcements, and drive off the Pug."
-  source Earth
-  destination Shiver
+  source "Earth"
+  destination "Shiver"
   clearance
   to offer
     has "FW Pug 5A: done"
@@ -2053,8 +2053,8 @@ mission "FW Pug 6"
   name "Defeat the Pug"
   description "Now that the Navy has joined you, it is time to take the battle directly to the Pug home system. Once their fleet is eliminated, land on their home world of <planet> to attempt to negotiate for peace."
   autosave
-  source Shiver
-  destination Pugglemug
+  source "Shiver"
+  destination "Pugglemug"
   clearance
   to offer
     has "FW Pug 5B: done"
@@ -2192,8 +2192,8 @@ mission "FW Syndicate Extremists 1"
   name "Deal with the Syndicate"
   description "Now that the Pug appear to have been driven off, it's time to get some answers from the Syndicate. Travel with Admiral Danforth back to <destination> for another meeting with the CEO of the Syndicate."
   autosave
-  source Pugglemug
-  destination Foundry
+  source "Pugglemug"
+  destination "Foundry"
   to offer
     has "FW Pug 6: done"
   passengers 1
@@ -2229,8 +2229,8 @@ mission "FW Syndicate Extremists 1A"
   name "Cloaking Device"
   description "Alastair Korban has agreed to give you a cloaking device that will allow you to evade missile attacks. Travel to Hephaestus, where they will install the device on your ship."
   autosave
-  source Foundry
-  destination Hephaestus
+  source "Foundry"
+  destination "Hephaestus"
   to offer
     has "FW Syndicate Extremists 1: done"
   passengers 1
@@ -2294,7 +2294,7 @@ mission "FW Syndicate Extremists 1B"
   landing
   name "Final Battle"
   description "A fleet of nuclear-armed Syndicate extremists controlled by the Alphas is occupying the <system> system. Travel there and use the cloaking device to draw their fire; the Oathkeeper fleet will be right behind you."
-  source Hephaestus
+  source "Hephaestus"
   destination "Buccaneer Bay"
   clearance
   to offer
@@ -2380,7 +2380,7 @@ mission "FW Syndicate Extremists 1C"
   description "Return to Earth to report to Parliament on the resolution of the conflicts with the Pug and with the Syndicate extremists."
   autosave
   source "Buccaneer Bay"
-  destination Earth
+  destination "Earth"
   clearance
   to offer
     has "FW Syndicate Extremists 1B: done"

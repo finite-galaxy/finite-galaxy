@@ -38,8 +38,8 @@
 mission "Liberate Kornephoros"
   description "Travel with the Free Worlds militia to the <system> system and drive off the Navy fleet that is occupying the system."
   autosave
-  source Longjump
-  destination Deep
+  source "Longjump"
+  destination "Deep"
   clearance
   to offer
     has "Defend Sabik: done"
@@ -347,8 +347,8 @@ mission "FW Syndicate Diplomacy 1B"
   landing
   name "Tarazed Diplomacy"
   description "Transport Alondo Gruyere to <planet> to negotiate with Tarazed Corporation."
-  source Hephaestus
-  destination Wayfarer
+  source "Hephaestus"
+  destination "Wayfarer"
   to offer
     has "FW Syndicate Diplomacy 1: done"
   clearance "Alondo has a brief chat with the spaceport controller and manages to get you permission to land."
@@ -413,8 +413,8 @@ mission "FW Syndicate Diplomacy 1C"
   landing
   name "Poisonwood Diplomacy"
   description "Travel to <planet> with Alondo Gruyere, to make one final diplomatic visit."
-  source Wayfarer
-  destination Poisonwood
+  source "Wayfarer"
+  destination "Poisonwood"
   to offer
     has "FW Syndicate Diplomacy 1B: done"
   clearance "Alondo has a brief chat with the spaceport controller and manages to get you permission to land."
@@ -448,8 +448,8 @@ mission "FW Syndicate Diplomacy 1D"
   landing
   name "Return to <planet>"
   description "Return to <planet> with Alondo, to report on the outcome of your diplomatic mission."
-  source Poisonwood
-  destination Longjump
+  source "Poisonwood"
+  destination "Longjump"
   to offer
     has "FW Syndicate Diplomacy 1C: done"
   passengers 1
@@ -533,8 +533,8 @@ mission "FW Hope Recon 1"
   name "Early Warning Systems"
   description "Land on the abandoned planet <destination> and place sensor there to monitor Navy fleet activity in the system."
   autosave
-  source Longjump
-  destination Hope
+  source "Longjump"
+  destination "Hope"
   to offer
     has "FW Syndicate Diplomacy 1D: done"
   cargo sensors 10
@@ -557,8 +557,8 @@ mission "FW Hope Recon 1B"
   landing
   name "Early Warning Systems"
   description "Report back to Freya on <planet>."
-  source Hope
-  destination Longjump
+  source "Hope"
+  destination "Longjump"
   to offer
     has "FW Hope Recon 1: done"
   on fail
@@ -569,7 +569,7 @@ mission "FW Hope Recon 1B"
 mission "FW Hope Recon 1C"
   landing
   invisible
-  source Hope
+  source "Hope"
   to offer
     has "FW Hope Recon 1: done"
   to fail
@@ -623,8 +623,8 @@ mission "FW Hope Recon 1D"
   landing
   name "Destroy Sensors"
   description "Travel back to <destination> and destroy any Republic sensors you find there."
-  source Longjump
-  destination Hope
+  source "Longjump"
+  destination "Hope"
   to offer
     has "FW Hope Recon 1B: done"
   
@@ -677,8 +677,8 @@ mission "FW Plasma Testing 1"
   landing
   name "Weapons Testing"
   description "Report to <destination> to assist in some experimental weapons testing."
-  source Longjump
-  destination Rust
+  source "Longjump"
+  destination "Rust"
   to offer
     has "FW Hope Recon 1B: done"
   on fail
@@ -834,8 +834,8 @@ mission "FW Supply Convoy 1"
   name "Escort Supply Convoy"
   description "Escort this convoy carrying equipment from Kraz Cybernetics to the militia base on <destination>."
   autosave
-  source Rust
-  destination Longjump
+  source "Rust"
+  destination "Longjump"
   to offer
     has "FW Plasma Testing 1B: done"
   on fail
@@ -891,7 +891,7 @@ mission "FW Supply Convoy 1"
 mission "FW Pirates 1"
   name "Pirate Reconnaissance"
   description "Scout out all the pirate systems on the southern fringe of human space, then report back to Tomek on <planet>."
-  source Longjump
+  source "Longjump"
   waypoint "Men"
   waypoint "Antares"
   waypoint "Shaula"
@@ -1004,8 +1004,8 @@ mission "FW Senate 1B"
   landing
   name "Senator Huygens"
   description "Transport Senator Arianna Huygens to <destination>."
-  source Flood
-  destination Bourne
+  source "Flood"
+  destination "Bourne"
   to offer
     has "FW Senate 1: done"
   passengers 1
@@ -1065,7 +1065,7 @@ mission "FW Flamethrower 1"
   description "When you have time, report to <destination>, where Barmy Edward has another weapon he would like you to test."
   source
     near Kraz 1 100
-  destination Rust
+  destination "Rust"
   to offer
     has "event: plasma turret available"
     random < 15
@@ -1081,7 +1081,7 @@ mission "FW Flamethrower 2"
   landing
   name "Weapon Testing"
   description "A test ship with new weaponry is in orbit around <planet>. Fight and disable it (but do not board or destroy it!) and then land to give Barmy Edward feedback on its performance."
-  source Rust
+  source "Rust"
   to offer
     has "FW Flamethrower 1: done"
   
@@ -1218,8 +1218,8 @@ mission "FW Pirates 2"
 mission "FW Pirates 3"
   name "Pirate Diplomacy"
   description "Following the Senate's orders, travel to <destination> and negotiate with the ruling authorities. Don't fight pirates if you don't have to, and don't let your escort be destroyed."
-  source Longjump
-  destination Thule
+  source "Longjump"
+  destination "Thule"
   clearance
   to offer
     has "FW Pirates 2: done"
@@ -1245,8 +1245,8 @@ mission "FW Pirates 3"
 mission "FW Pirates 3.1"
   name "Attack Antares"
   description "Instead of following the Senate's orders, launch a Free Worlds attack on <system> and suppress any Pirate opposition, then land on <planet>."
-  source Longjump
-  destination Bloodsea
+  source "Longjump"
+  destination "Bloodsea"
   clearance
   to offer
     has "FW Pirates 2: done"
@@ -1314,8 +1314,8 @@ mission "FW Pirates 3.1"
 mission "FW Pirates 3.2"
   name "Attack Greenrock"
   description "Disobeying the Senate's orders, head to <destination> and gather a Free Worlds fleet for an all-out attack on the pirate world of Greenrock."
-  source Longjump
-  destination Trinket
+  source "Longjump"
+  destination "Trinket"
   to offer
     has "FW Pirates 2: done"
     has "fw pirate suggestion: greenrock"
@@ -1507,8 +1507,8 @@ mission "FW Pirates 4B"
   description "Escort the newly repaired F.S. Terebinth back to the Free Worlds base on <destination>."
   autosave
   landing
-  source Thule
-  destination Longjump
+  source "Thule"
+  destination "Longjump"
   to offer
     has "FW Pirates 4: done"
   on fail
@@ -1634,8 +1634,8 @@ mission "FW Refinery 1"
   name "Smuggler's Den Repairs"
   description "Travel to Alapia and pick up a shipment of equipment for repairing the refinery on Smuggler's Den."
   autosave
-  source Longjump
-  destination Alapia
+  source "Longjump"
+  destination "Alapia"
   clearance
   to offer
     has "FW Pirates 4B: done"
@@ -1691,7 +1691,7 @@ mission "FW Refinery 1A"
   landing
   name "Smuggler's Den Repairs"
   description "Bring a shipment of special refinery equipment to Smuggler's Den."
-  source Alapia
+  source "Alapia"
   destination "Smuggler's Den"
   to offer
     has "FW Refinery 1: done"

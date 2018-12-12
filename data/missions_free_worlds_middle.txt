@@ -134,7 +134,7 @@ mission "FW Diplomacy 1C"
   name "Free Worlds Diplomacy"
   description "Bring Alondo to <planet> to meet with the senior Navy officers. Take as direct a route as possible, because your safe passage expires soon."
   source "Earth"
-  destination Bod
+  destination "Bod"
   clearance
   to offer
     has "FW Diplomacy 1B: done"
@@ -172,8 +172,8 @@ mission "FW Diplomacy 1D"
   landing
   name "Free Worlds Diplomacy"
   description "Bring Alondo back to <destination>. Take as direct a route as possible, because your safe passage expires soon."
-  source Bod
-  destination Longjump
+  source "Bod"
+  destination "Longjump"
   to offer
     has "FW Diplomacy 1C: done"
   passengers 1
@@ -261,8 +261,8 @@ mission "FW Southern Recon 1B"
 mission "FW Southern Recon 1B (Turret)"
   landing
   invisible
-  source Trinket
-  destination Trinket
+  source "Trinket"
+  destination "Trinket"
   to offer
     has "FW Southern Recon 1: done"
   to complete
@@ -279,8 +279,8 @@ mission "FW Southern Recon 1B (Turret)"
 mission "FW Southern Battle 1"
   name "Escort Battle Fleet"
   description "Travel to <planet> to gather a fleet of experimental new warships, and escort them back to Trinket."
-  source Trinket
-  destination Zuq
+  source "Trinket"
+  destination "Zuq"
   to offer
     or
       has "FW Southern Recon 1B: done"
@@ -319,8 +319,8 @@ mission "FW Southern Battle 1B"
   name "Escort Battle Fleet"
   description "Escort a fleet of experimental warships to <destination>."
   autosave
-  source Zuq
-  destination Trinket
+  source "Zuq"
+  destination "Trinket"
   to offer
     has "FW Southern Battle 1: done"
   on fail
@@ -357,8 +357,8 @@ mission "FW Southern Battle 1B"
 mission "FW Southern Battle 2"
   name "Attack Rastaban"
   description "Travel directly to the <system> system, so that you will arrive on <day> and join the battle against the Navy. Disable or destroy all Navy ships in system."
-  source Trinket
-  destination Bundok
+  source "Trinket"
+  destination "Bundok"
   clearance
   to offer
     has "FW Southern Battle 1B: done"
@@ -382,17 +382,17 @@ mission "FW Southern Battle 2"
   npc
     government "Free Worlds"
     personality heroic disables escort
+    ship "Dreadnought" "F.W.S. Rosewood"
     ship "Dreadnought" "F.W.S. Sequoia"
     ship "Dreadnought" "F.W.S. Sitka"
-    ship "Dreadnought" "F.W.S. Rosewood"
-    ship "Fury (Flamethrower)" "F.W.S. Montag"
-    ship "Fury (Flamethrower)" "F.W.S. Faber"
     ship "Fury (Flamethrower)" "F.W.S. Beatty"
-    ship "Fury (Flamethrower)" "F.W.S. Mildred"
+    ship "Fury (Flamethrower)" "F.W.S. Faber"
     ship "Fury (Flamethrower)" "F.W.S. Clarisse"
+    ship "Fury (Flamethrower)" "F.W.S. Mildred"
+    ship "Fury (Flamethrower)" "F.W.S. Montag"
   
   npc
-    system Rastaban
+    system "Rastaban"
     personality heroic uninterested staying disables
     government "Free Worlds"
     fleet
@@ -472,9 +472,9 @@ mission "FW Southern Battle 3"
   source "Bundok"
   to offer
     has "FW Southern Battle 2: done"
-  waypoint Girtab
-  waypoint Albaldah
-  waypoint Eltanin
+  waypoint "Girtab"
+  waypoint "Albaldah"
+  waypoint "Eltanin"
   waypoint "Delta Sagittarii"
   on fail
     dialogue `You have failed an essential Free Worlds mission. If you want to complete the story line, revert to the autosave or another earlier snapshot of the game.`
@@ -523,7 +523,7 @@ mission "FW Southern Battle 3"
 mission "FW Southern Prisoners - Release"
   name "Return Navy Prisoners"
   description "As a goodwill gesture, return the Navy prisoners to <destination> rather than imprisoning them on Clink. Your safe passage ends on <day>."
-  source Bundok
+  source "Bundok"
   clearance
   destination "Clear Sky"
   to offer
@@ -580,8 +580,8 @@ mission "FW Southern Prisoners - Release"
 mission "FW Southern Prisoners - Keep"
   name "Keep Navy Prisoners"
   description "Rather than releasing the Navy prisoners, deliver them to the mines on Clink, to be held until Katya is returned to you."
-  source Bundok
-  destination Clink
+  source "Bundok"
+  destination "Clink"
   to offer
     has "FW Southern Battle 3: done"
   to fail
@@ -600,7 +600,7 @@ mission "FW Southern Prisoners - Released"
   name "Report to Bundok"
   description "Report back to Freya and Alondo on Bundok that you chose to release the prisoners."
   source "Clear Sky"
-  destination Bundok
+  destination "Bundok"
   to offer
     has "FW Southern Prisoners - Release: done"
   on fail
@@ -640,8 +640,8 @@ mission "FW Southern Prisoners - Kept"
   landing
   name "Report to Bundok"
   description "Report back to Freya and Alondo on Bundok that you chose to keep the prisoners on Clink."
-  source Clink
-  destination Bundok
+  source "Clink"
+  destination "Bundok"
   to offer
     has "FW Southern Prisoners - Keep: done"
   on fail
@@ -656,7 +656,7 @@ mission "FW Southern Prisoners - Kept"
 
 mission "FW Southern Break"
   landing
-  source Bundok
+  source "Bundok"
   autosave
   to offer
     has "fw delivered prisoners"
