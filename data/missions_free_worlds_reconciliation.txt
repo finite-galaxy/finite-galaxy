@@ -2277,7 +2277,7 @@ mission "FW Syndicate Extremists 1A"
       
       `  "I don't see why not," says Danforth, fixing Alastair with a piercing gaze. "It's certainly better than leaving it in Syndicate hands."`
       label end
-      `  Alastair tells you that the device is being kept on Hephaestus, and the engineers there can install it in your ship. Meanwhile, Danforth will call in the rest of his Oathkeeper fleet. "The Alphas are holed up on Buccaneer Bay," says Alastair, "an old pirate world. Good luck in defeating them."`
+      `  Alastair tells you that the device is being kept on Hephaestus, and the engineers there can install it in your ship. Meanwhile, Danforth will call in the rest of his Oathkeeper fleet. "The Alphas are holed up on Stormhold," says Alastair, "an old pirate world. Good luck in defeating them."`
         accept
   
   npc accompany save
@@ -2295,7 +2295,7 @@ mission "FW Syndicate Extremists 1B"
   name "Final Battle"
   description "A fleet of nuclear-armed Syndicate extremists controlled by the Alphas is occupying the <system> system. Travel there and use the cloaking device to draw their fire; the Oathkeeper fleet will be right behind you."
   source "Hephaestus"
-  destination "Buccaneer Bay"
+  destination "Stormhold"
   clearance
   to offer
     has "FW Syndicate Extremists 1A: done"
@@ -2305,7 +2305,7 @@ mission "FW Syndicate Extremists 1B"
   
   on offer
     "reputation: Syndicate (Extremist)" = -1000
-    event "battle of algenib"
+    event "battle of alcyone"
     outfit "Cloaking Device" 1
     conversation
       `You land in the same private hangar that you visited previously to have the jump drive installed, and you think these engineers are the same crew that met you back then. "This thing is almost as bizarre as the jump drive itself," one of them says. "We have no clue how it works, and we weren't done studying it when Korban ordered us to give it to you, so please don't get yourself blown up. Okay?"`
@@ -2314,7 +2314,7 @@ mission "FW Syndicate Extremists 1B"
   
   npc evade
     government "Syndicate (Extremist)"
-    system Algenib
+    system "Alcyone"
     personality staying heroic
     fleet
       names "syndicate capital"
@@ -2322,7 +2322,7 @@ mission "FW Syndicate Extremists 1B"
         "Manta (Nuclear)" 2
   npc evade
     government "Syndicate (Extremist)"
-    system Algenib
+    system "Alcyone"
     personality staying heroic
     fleet
       names "syndicate capital"
@@ -2330,7 +2330,7 @@ mission "FW Syndicate Extremists 1B"
         "Manta (Nuclear)" 2
   npc evade
     government "Syndicate (Extremist)"
-    system Algenib
+    system "Alcyone"
     personality staying heroic
     fleet
       names "syndicate capital"
@@ -2338,7 +2338,7 @@ mission "FW Syndicate Extremists 1B"
         "Manta (Nuclear)" 2
   npc evade
     government "Syndicate (Extremist)"
-    system Algenib
+    system "Alcyone"
     personality staying heroic
     fleet
       names "syndicate capital"
@@ -2346,7 +2346,7 @@ mission "FW Syndicate Extremists 1B"
         "Manta (Nuclear)" 2
   npc evade
     government "Syndicate (Extremist)"
-    system Algenib
+    system "Alcyone"
     personality staying heroic
     fleet 3
       names "syndicate capital"
@@ -2360,7 +2360,7 @@ mission "FW Syndicate Extremists 1B"
   
   npc
     government "Navy (Oathkeeper)"
-    system Deneb
+    system "Deneb"
     personality heroic escort
     fleet
       names "republic"
@@ -2379,7 +2379,7 @@ mission "FW Syndicate Extremists 1C"
   name "Report to Parliament"
   description "Return to Earth to report to Parliament on the resolution of the conflicts with the Pug and with the Syndicate extremists."
   autosave
-  source "Buccaneer Bay"
+  source "Stormhold"
   destination "Earth"
   clearance
   to offer
@@ -2390,8 +2390,8 @@ mission "FW Syndicate Extremists 1C"
   
   on offer
     log "Succeeded in drawing the fire of the Syndicate extremists for long enough for a Navy fleet to safely arrive in-system and assist in destroying them. This cloaking device will come in very handy in the future."
-    event "navy occupies algenib"
-    event "navy done with algenib" 50
+    event "navy occupies alcyone"
+    event "navy done with alcyone" 50
     conversation
       `Soon after you land, more Navy ships begin pouring into the system, including Admiral Danforth's own Saturn. Navy soldiers and ships are scouring the whole surface of the planet; there is very little chance that any of the Alphas who remain here will be able to escape their detection. Admiral Danforth meets with you and Freya and thanks you for providing the decoy that kept his own ships from bearing the brunt of the Alphas' nuclear arsenal.`
       `  "Do you need us to do anything more here?" asks Freya.`
@@ -2407,9 +2407,11 @@ mission "FW Syndicate Extremists 1C"
         accept
   
   on complete
+    log "Wayfarer (Tarazed), Whenua (Dabih), Hopper (Kaus Australis), and Duskdawn (Peacock), still shocked at the Pug invasion, chose to rejoin the Republic. The Navy announced a new base on Alapia (Ascella), to be in a better position to patrol and protect these systems."
     log "Received an official commendation from Parliament and a promise that the war with the Free Worlds is officially over. Humanity is at peace once more, but new challenges may await in the star systems out beyond human space that are accessible only by jump drive."
     payment 5000000
     event "navy arsenals available"
+    event "free worlds end"
     set "free worlds plot completed"
     set "main plot completed"
     conversation

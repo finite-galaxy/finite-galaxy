@@ -100,23 +100,6 @@ event "flamethrower available"
     "Flamethrower"
 
 
-event "navy arsenals available"
-  planet "Alapia"
-    outfitter "Navy"
-  planet "Arahas"
-    outfitter "Navy"
-  planet "Bod"
-    outfitter "Navy"
-  planet "Farpoint"
-    outfitter "Navy"
-  planet "Furnace"
-    outfitter "Navy"
-  planet "Luna"
-    outfitter "Navy"
-  planet "Sunracer"
-    outfitter "Navy"
-
-
 event "new regenerators available"
   outfitter "Syndicate Advanced"
     "S-270 Regenerator"
@@ -1630,14 +1613,6 @@ event "fwc southern liberation"
     fleet "Pirates South Small" 2000
     fleet "Pirates South Large" 5000
     fleet "Navy Surveillance" 4000
-  system "Eltanin"
-    government "Free Worlds"
-  system "Lurata"
-    government "Free Worlds"
-  system "Naper"
-    government "Free Worlds"
-  system "Tais"
-    government "Free Worlds"
 
 
 
@@ -1946,7 +1921,7 @@ event "fw syndicate welcoming"
       "Republic" 0
       "Navy (Oathkeeper)" 0
     bribe .08
-  system "Algenib"
+  system "Alcyone"
     government "Syndicate (Extremist)"
     fleet "Pirates East Small" 1500
     fleet "Pirates East Large" 2000
@@ -2171,40 +2146,41 @@ event "pug link restoration 4"
   link Ascella "Zeta Aquilae"
 
 
-event "battle of algenib"
+event "battle of alcyone"
   government "Republic"
     "attitude toward"
       "Syndicate (Extremist)" -.1
   government "Navy (Oathkeeper)"
     "attitude toward"
       "Syndicate (Extremist)" -.1
-  system "Algenib"
+  system "Alcyone"
     fleet "Republic Small" 5000
   "reputation: Syndicate (Extremist)" <?= -1000
 
 
-event "navy occupies algenib"
-  system "Algenib"
+event "navy occupies alcyone"
+  system "Alcyone"
     government "Republic"
     fleet "Republic Small" 500
     fleet "Republic Large" 800
-  system "Gienah"
+  system "Durax"
     government "Republic"
     fleet "Republic Small" 800
     fleet "Republic Large" 1200
 
 
-event "navy done with algenib"
-  system "Algenib"
+event "navy done with alcyone"
+  system "Alcyone"
     government "Pirate"
-    fleet "Pirates East Small" 300
-    fleet "Pirates East Large" 500
-    fleet "Republic Large" 800
-  system "Gienah"
+    fleet "Pirates East Small" 400
+    fleet "Pirates East Large" 600
+    fleet "Republic Large" 1200
+  system "Durax"
     government "Pirate"
-    fleet "Pirates East Small" 500
-    fleet "Pirates East Large" 800
-    fleet "Republic Large" 5000
+    fleet "Pirates East Small" 600
+    fleet "Pirates East Large" 900
+    fleet "Republic Large" 2500
+    fleet "Korath Raid" 5000
 
 
 
@@ -2649,20 +2625,21 @@ event "fwc link restoration 2"
 event "fwc link restoration 3"
   link Alderamin Alnair
 
+event "fwc conquests returned"
+  system "Vega"
+    government "Republic"
+  system "Rasalhague"
+    government "Republic"
+  system "Cebalrai"
+    government "Republic"
+  system "Kaus Borealis"
+    government "Republic"
+
 
 
 # free worlds epilogue
 
-
-event "luna rebuilt"
-  planet "Luna"
-    description `In the early days of space travel, back when engines were still so inefficient that escaping from a planet's gravity was costly and difficult, an enormous shipyard was built on the Moon where asteroids, harvested from the asteroid belt, were mined for raw materials for ships.`
-    description `  The shattered remnants of the old Navy Yard are still left abandoned and slowly rusting away in the planet's caustic atmosphere, but the Republic has now built a new shipyard to replace the one destroyed in the bombing, and once again Luna has become a central hub of technology and industry.`
-    spaceport `The spaceport is rudimentary, and the main pressurized dome of the facility is probably at least half a millennium old. So many metal foil patches have been cemented to its outer wall to stop slow air leaks that in places they entirely cover the surface. Everything is so ancient and ramshackle that it feels almost like you have stepped back in time to the early days of human space flight. Perhaps that's what the tourists come here to experience.`
-    shipyard "Navy Advanced"
-
-
-event "tarazed rejoins republic"
+event "free worlds end"
   system "Naper"
     government "Republic"
   system "Tais"
@@ -2677,6 +2654,44 @@ event "tarazed rejoins republic"
     government "Republic"
   system "Umbral"
     government "Republic"
+
+  planet "Alapia"
+    description `Alapia is an uncomfortably hot and humid world of deserts, savanna, and a few small and scattered rainforests. Large herds of bison-like animals roam the plains, providing the locals with a steady source of food. Occasional stampedes, involving tens of thousands of these animals, have been known to level entire towns here.`
+    description `  Aside from hunting, most of the industry takes the form of harvesting and refining petrochemicals to make plastics, polymers, and oils. In some parts of Alapia, the pumpjacks outnumber the people a hundred to one.`
+    description `  The planet is now also home to a Navy base.`
+  planet "Bundok"
+    description `Bundok is a cloudy planet orbiting a dim star; the only reason it is not completely frozen is because of the heat trapped by its upper atmosphere. There are only a handful of towns here, and nothing big enough to warrant being called a city. Most of the settlers are subsistence farmers who can only dream about life on other worlds. Many houses here do not even have running water or personal computers.`
+    description `  Some of the farms near the spaceport are planted with different crops forming abstract patterns visible from the air. Such a whimsical extravagance seems particularly odd when you consider that the owners will never be able to afford to see their fields from that angle. But perhaps that is precisely the point.`
+  planet "Clear Sky"
+    description `Clear Sky is a perpetually hazy volcanic world, with a slightly caustic atmosphere but enough reserves of metal and petrochemicals to draw a large number of settlers. Some of those settlers also make a living as farmers, and a few well-developed factory towns produce goods for export to other worlds.`
+    description `  Many of the inhabitants wear dust masks to avoid letting the particulate matter from the volcanoes accumulate in their lungs.`
+  planet "Oblivion"
+    description `The atmosphere here is a toxic mix of ammonia, sulphur, and methane. Although breathable by human beings if necessary, the locals use masks to reduce the risk of chronic respiratory problems. Even so, the life expectancy here is short, but that is partly because the two best-paying industries are oil drilling and mining for radioactive elements.`
+
+
+event "navy arsenals available"
+  planet "Alapia"
+    outfitter "Navy"
+  planet "Arahas"
+    outfitter "Navy"
+  planet "Bod"
+    outfitter "Navy"
+  planet "Farpoint"
+    outfitter "Navy"
+  planet "Furnace"
+    outfitter "Navy"
+  planet "Luna"
+    outfitter "Navy"
+  planet "Sunracer"
+    outfitter "Navy"
+
+
+event "luna rebuilt"
+  planet "Luna"
+    description `In the early days of space travel, back when engines were still so inefficient that escaping from a planet's gravity was costly and difficult, an enormous shipyard was built on the Moon where asteroids, harvested from the asteroid belt, were mined for raw materials for ships.`
+    description `  The shattered remnants of the old Navy Yard are still left abandoned and slowly rusting away in the planet's caustic atmosphere, but the Republic has now built a new shipyard to replace the one destroyed in the bombing, and once again Luna has become a central hub of technology and industry.`
+    spaceport `The spaceport is rudimentary, and the main pressurized dome of the facility is probably at least half a millennium old. So many metal foil patches have been cemented to its outer wall to stop slow air leaks that in places they entirely cover the surface. Everything is so ancient and ramshackle that it feels almost like you have stepped back in time to the early days of human space flight. Perhaps that's what the tourists come here to experience.`
+    shipyard "Navy Advanced"
 
 
 event "pug surprise"

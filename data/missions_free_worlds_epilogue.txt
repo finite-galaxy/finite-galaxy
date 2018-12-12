@@ -4,7 +4,6 @@
 # "FW Epilogue: Danforth"
 # "Pug Cease Hostilities"
 # "Free Worlds Aftermath"
-# "Tarazed c.s. rejoins the Republic"
 # "particle turret available"
 # "Check Minkar"
 # "Check Procyon"
@@ -199,24 +198,10 @@ mission "Free Worlds Aftermath"
   to offer
     has "free worlds plot completed"
   on offer
-    event "tarazed rejoins republic" 7
     event "particle turret available" 30
     event "luna rebuilt" 61
     event "pug surprise" 366
     fail
-
-
-
-mission "Tarazed c.s. rejoins the Republic"
-  landing
-  source
-    government "Free Worlds" "Neutral" "Republic"
-  to offer
-    has "event: tarazed rejoins republic"
-  on offer
-    log "Tarazed and nearby systems have decided to join the Free Worlds, as a result of a referendum on Wayfarer."
-    conversation
-      `Yesterday, about six months since the war ended, Wayfarer organized a referendum on its future. The results are now in: a clear majority voted in favour of joining the Free Worlds. Nearby systems have decided they follow Tarazed's lead. Although disappointed with the outcome, Parliament on Earth announced they will respect the referendum. Meanwhile the Senate on Bourne declared today a public holiday to celebrate the accession of the new systems.`
 
 
 

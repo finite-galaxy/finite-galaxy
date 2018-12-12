@@ -2326,6 +2326,7 @@ mission "FWC End"
   on offer
     log "Parliament has agreed to a peace treaty, because the threat of alien invasion now seems much more pressing than the civil war with the Free Worlds. Whatever the true intention of the Pug was, the result of their interference is that humanity is at peace once more. There has been great loss of life, but nothing compared to what would have happened if the Free Worlds had tried to conquer Earth."
     log "It may be a while before members of the Free Worlds manage to re-earn the trust of the rest of humanity, however."
+    log "Clear Sky (Kaus Borealis), Tundra (Cebalrai), Oblivion (Rasalhague), and Shiver (Vega), which were taken by force, and. Wayfarer (Tarazed), Whenua (Dabih), Hopper (Kaus Australis), Duskdawn (Peacock), appalled at the use of nuclear weapons by the Free Worlds, have also rejoined the Republic."
     "reputation: Republic" += 20
     conversation
       `You find Admiral Danforth inspecting the Pug spaceport. "This is all very odd," he says. "I'm glad the aliens appear to have left, but I wish we knew where they came from and whether they're likely to return."`
@@ -2344,13 +2345,15 @@ mission "FWC End"
         accept
   
   on complete
+    event "fwc conquests returned"
     event "deep sky tech available"
     event "navy arsenals available"
+    event "free worlds end"
     set "free worlds plot completed"
     set "main plot completed"
     conversation
       `You arrive in the Parliament building just as Alondo and Katya have finished meeting with them. "Good news," says Katya. "We're all officially pardoned. And you, Captain <last>, have become something of a hero."`
-      `  "Better yet," says Alondo, "the war with the Republic is over. We agreed to limiting our territory to its current size, and to a very minor tax to cover the cost of Navy protection if the aliens attack again or some other major catastrophe strikes. In return, the Free Worlds have been granted autonomy from the Republic."`
+      `  "Better yet," says Alondo, "the war with the Republic is over. We agreed to accept a very minor tax to cover the cost of Navy protection if the aliens attack again or some other major catastrophe strikes, to limit our territory to its current size, and to allow any planet that does not want to be part of the Free Worlds to peacefully rejoin the Republic. In return, the Free Worlds have been formally granted autonomy from the Republic. The Navy announced they will start a new base on Alapia, in the Ascella system, to protect the Tarazed to Earth route, but they promised to abandon most of the new bases built during the war, keeping only the one on Bod."`
       `  "Furthermore," says Katya, "you've been given permission to use the Navy arsenals. Also, as their own expression of gratitude, the Deep members of Parliament have offered to make some of their new technology, developed during the war, available to everyone at an affordable price. And the Syndicate offered interest-free loans to rebuild the planets damaged during the war."`
       choice
         `  "That's very generous of them."`
