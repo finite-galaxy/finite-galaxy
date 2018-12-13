@@ -32,8 +32,8 @@
 #   "Kor Efret Home"
 # Kor Mereti:
 #   "Kor Mereti Large"
-#   "Kor Mereti Small"
 #   "Kor Mereti Miners"
+#   "Kor Mereti Small"
 # Kor Sestor:
 #   "Kor Sestor Jump"
 #   "Kor Sestor Large"
@@ -127,6 +127,7 @@ fleet "Bounty Hunters"
   names "bounty hunter"
   personality
     nemesis waiting heroic
+  # total: 24
   variant 5
     "Fury" 2
     "Fury (Rocket)" 2
@@ -164,6 +165,7 @@ fleet "Hired Guns"
   names "bounty hunter"
   personality
     nemesis waiting heroic
+  # total: 18
   variant 1
     "Leviathan (North)"
     "Marauder Argosy" 2
@@ -236,6 +238,7 @@ fleet "Arachi Large"
   cargo 3
   personality
     timid
+  # total: 120
   variant 30
     "Hulk"
   variant 20
@@ -265,6 +268,7 @@ fleet "Arachi Small"
   cargo 3
   personality
     timid
+  # total: 115
   variant 20
     "Transport"
     "Courier"
@@ -294,6 +298,7 @@ fleet "Kimek Large"
   cargo 3
   personality
     timid
+  # total: 125
   variant 40
     "Spire"
   variant 30
@@ -326,6 +331,7 @@ fleet "Kimek Small"
   cargo 3
   personality
     timid
+  # total: 150
   variant 40
     "Thorn"
   variant 30
@@ -356,6 +362,7 @@ fleet "Saryd Large"
   cargo 3
   personality
     timid
+  # total: 190
   variant 60
     "Traveller"
   variant 40
@@ -389,6 +396,7 @@ fleet "Saryd Small"
   cargo 3
   personality
     timid
+  # total: 160
   variant 60
     "Runabout"
   variant 40
@@ -418,6 +426,7 @@ fleet "Deep Large"
   cargo 0
   personality
     heroic
+  # total: 8
   variant 2
     "Leviathan (Heavy)"
   variant 2
@@ -446,6 +455,7 @@ fleet "Deep Small"
   cargo 0
   personality
     heroic
+  # total: 5
   variant 1
     "Aerie (Mark II)"
     "Dagger" 2
@@ -463,6 +473,7 @@ fleet "Free Worlds Large"
   cargo 1
   personality
     heroic disables opportunistic
+  # total: 72
   variant 10
     "Bastion"
   variant 5
@@ -533,6 +544,7 @@ fleet "Free Worlds Small"
   cargo 1
   personality
     heroic disables opportunistic
+  # total: 48
   variant 8
     "Hawk"
     "Harpy"
@@ -581,6 +593,7 @@ fleet "Hai Large"
   cargo 3
   personality
     disables opportunistic
+  # total: 27
   variant 2
     "Shield Beetle"
     "Lightning Bug (Pulse)" 2
@@ -635,6 +648,7 @@ fleet "Hai Small"
   cargo 3
   personality
     disables opportunistic
+  # total: 20
   variant 3
     "Water Bug"
     "Lightning Bug (Pulse)" 2
@@ -680,6 +694,7 @@ fleet "Heliarch"
   cargo 1
   personality
     heroic opportunistic
+  # total: 89
   variant 40
     "Neutralizer"
   variant 20
@@ -709,6 +724,7 @@ fleet "Heliarch Convoy"
   cargo 3
   personality
     timid opportunistic
+  # total: 1
   variant 1
     "Hulk" 3
     "Sojourner" 3
@@ -725,6 +741,7 @@ fleet "Independent Large"
   cargo 1
   personality
     plunders
+  # total: 27
   variant 3
     "Harpy" 4
   variant 4
@@ -762,6 +779,7 @@ fleet "Independent Small"
   personality
     plunders
     confusion 20
+  # total: 39
   variant 8
     "Harpy"
   variant 3
@@ -822,6 +840,7 @@ fleet "Korath Home"
   cargo 3
   personality
     timid opportunistic
+  # total: 36
   variant 12
     "World-Ship A"
   variant 12
@@ -836,6 +855,7 @@ fleet "Korath Raid"
   cargo 1
   personality
     disables plunders opportunistic harvests
+  # total: 3
   variant 3
     "Raider"
     "Chaser" 2
@@ -850,6 +870,7 @@ fleet "Kor Efret Home"
   cargo 3
   personality
     timid
+  # total: 3
   variant 1
     "World-Ship A"
   variant 1
@@ -867,6 +888,7 @@ fleet "Kor Mereti Large"
   commodities "Electronics" "Equipment" "Heavy Metals" "Industrial" "Plastic"
   personality
     opportunistic
+  # total: 128
   variant 5
     "Model 512"
     "Model 32"
@@ -963,6 +985,20 @@ fleet "Kor Mereti Large"
   variant 5
     "Model 128" 2
 
+fleet "Kor Mereti Miners"
+  government "Kor Mereti"
+  names "kor mereti"
+  cargo 0
+  personality
+    mining harvests
+  # total: 13
+  variant 10
+    "Model 8"
+  variant 3
+    "Model 8" 2
+  variant 1
+    "Model 8" 3
+
 fleet "Kor Mereti Small"
   government "Kor Mereti"
   names "kor mereti"
@@ -970,6 +1006,7 @@ fleet "Kor Mereti Small"
   commodities "Electronics" "Equipment" "Heavy Metals" "Industrial" "Plastic"
   personality
     opportunistic
+  # total: 53
   variant 1
     "Model 64"
     "Model 32"
@@ -1015,26 +1052,13 @@ fleet "Kor Mereti Small"
     "Model 64"
 
 
-fleet "Kor Mereti Miners"
-  government "Kor Mereti"
-  names "kor mereti"
-  cargo 0
-  personality
-    mining harvests
-  variant 10
-    "Model 8"
-  variant 3
-    "Model 8" 2
-  variant 1
-    "Model 8" 3
-
-
 
 # Kor Sestor
 fleet "Kor Sestor Jump"
   government "Kor Sestor"
   names "kor sestor"
   fighters "kor sestor fighter"
+  # total: 1
   variant 1
     "Kar Ik Vot 349 (Jump)"
     "Tek Far 71 - Lek (Jump)"
@@ -1051,6 +1075,7 @@ fleet "Kor Sestor Large"
   names "kor sestor"
   fighters "kor sestor fighter"
   commodities "Electronics" "Equipment" "Heavy Metals" "Industrial" "Plastic"
+  # total: 71
   variant 8
     "Kar Ik Vot 349"
     "Tek Far 71 - Lek"
@@ -1157,6 +1182,7 @@ fleet "Kor Sestor Small"
   names "kor sestor"
   fighters "kor sestor fighter"
   commodities "Electronics" "Equipment" "Heavy Metals" "Industrial" "Plastic"
+  # total: 54
   variant 5
     "Met Par Tek 53" 3
   variant 5
@@ -1346,7 +1372,6 @@ fleet "Merchants East Large"
     "Thunderbolt"
   variant 2
     "Thunderbolt"
-
 
 fleet "Merchants East Small"
   government "Merchant"
@@ -1584,8 +1609,6 @@ fleet "Merchants Hai Large"
     "Vanguard (Anti-Missile)"
   variant 1
     "Vanguard (Hai)"
-
-
 
 fleet "Merchants Hai Small"
   government "Merchant"
@@ -1932,62 +1955,118 @@ fleet "Merchants South Large"
   personality
     confusion 30
     timid frugal appeasing
-  variant 20
-    "Star Freighter"
-    "Hawk"
-  variant 10
-    "Star Freighter (Fancy)"
-    "Hawk"
-  variant 30
-    "Star Freighter" 2
-    "Harpy" 2
-  variant 10
-    "Star Freighter (Fancy)"
-    "Star Freighter"
-    "Harpy" 2
-  variant 10
-    "Bastion"
-    "Star Freighter" 3
-  variant 10
-    "Bastion (Heavy)"
-    "Star Freighter (Fancy)" 3
-  variant 10
-    "Bastion (Laser)"
-    "Star Freighter" 3
-  variant 20
-    "Bastion"
-    "Argosy"
-  variant 10
-    "Bastion (Heavy)"
-    "Argosy (Torpedo)"
-  variant 10
-    "Bastion (Laser)"
-    "Argosy (Laser)"
-  variant 10
-    "Bastion"
-    "Star Freighter" 3
-    "Star Barge" 4
-    "Fury"
-    "Harpy" 2
+  # total: 85
   variant 3
-    "Bastion (Heavy)"
-    "Star Freighter (Fancy)" 3
-    "Star Barge" 4
-    "Fury (Rocket)"
-    "Harpy" 2
-  variant 10
-    "Blackbird"
-    "Harpy" 2
-  variant 12
-    "Hauler III"
-    "Hauler II"
+    "Bastion"
+  variant 1
+    "Bastion" 2
+  variant 2
+    "Bastion"
+    "Star Freighter"
+  variant 2
+    "Bastion"
+    "Star Freighter" 2
+  variant 2
+    "Bastion"
+    "Star Freighter" 3
+  variant 3
+    "Bulk Freighter"
+  variant 3
+    "Bulk Freighter"
+    "Raven"
+  variant 1
+    "Bulk Freighter (Blaster)"
+  variant 1
+    "Bulk Freighter (Blaster)"
+    "Raven"
+  variant 1
+    "Bulk Freighter (Laser)"
+  variant 1
+    "Bulk Freighter (Laser)"
+    "Raven"
+  variant 2
+    "Falcon"
+    "Star Freighter" 2
+  variant 3
+    "Falcon"
+    "Star Freighter" 3
+  variant 2
+    "Falcon"
+    "Star Freighter" 4
+  variant 1
+    "Falcon (Laser)"
+    "Star Freighter" 2
+  variant 1
+    "Falcon (Laser)"
+    "Star Freighter" 3
+  variant 1
+    "Falcon (Laser)"
+    "Star Freighter" 4
+  variant 2
     "Hauler I"
-  variant 8
     "Hauler II"
-    "Hauler I" 2
-  variant 6
     "Hauler III"
-    "Hero" 2
+  variant 1
+    "Hauler I" 3
+  variant 1
+    "Hauler II" 3
+  variant 1
+    "Hauler III" 3
+  variant 1
+    "Hauler I"
+    "Hauler II" 2
+  variant 1
+    "Hauler I" 2
+    "Hauler II"
+  variant 1
+    "Hauler I"
+    "Hauler III" 2
+  variant 1
+    "Hauler I" 2
+    "Hauler III"
+  variant 1
+    "Hauler II"
+    "Hauler III" 2
+  variant 1
+    "Hauler II" 2
+    "Hauler III"
+  variant 6
+    "Hauler I" 2
+  variant 4
+    "Hauler II" 2
+  variant 2
+    "Hauler III" 2
+  variant 5
+    "Hauler I"
+    "Hauler II"
+  variant 4
+    "Hauler I"
+    "Hauler III"
+  variant 3
+    "Hauler II"
+    "Hauler III"
+  variant 3
+    "Osprey"
+    "Star Freighter"
+  variant 5
+    "Osprey"
+    "Star Freighter" 2
+  variant 4
+    "Osprey"
+    "Star Freighter" 3
+  variant 1
+    "Osprey (Laser)"
+    "Star Freighter"
+  variant 1
+    "Osprey (Laser)"
+    "Star Freighter" 2
+  variant 1
+    "Osprey (Laser)"
+    "Star Freighter" 3
+  variant 3
+    "Star Freighter" 2
+  variant 2
+    "Star Freighter" 3
 
 fleet "Merchants South Small"
   government "Merchant"
@@ -1996,31 +2075,68 @@ fleet "Merchants South Small"
   personality
     confusion 40
     timid frugal appeasing
-  variant 60
-    "Light Shuttle"
-  variant 50
-    "Star Barge"
-  variant 20
-    "Clipper"
-  variant 10
-    "Clipper (Particle)"
-  variant 10
-    "Clipper (Speedy)"
-  variant 30
-    "Star Barge" 2
-    "Harpy"
-  variant 30
-    "Star Freighter"
-  variant 10
-    "Star Freighter (Fancy)"
-  variant 10
-    "Star Freighter"
-    "Harpy"
-  variant 10
-    "Star Freighter (Fancy)"
-    "Harpy"
+  # total: 100
   variant 20
     "Blackbird"
+  variant 6
+    "Clipper"
+  variant 2
+    "Clipper (Particle)"
+  variant 2
+    "Clipper (Speedy)"
+  variant 3
+    "Fury"
+    "Star Barge"
+  variant 3
+    "Fury"
+    "Star Barge" 2
+  variant 1
+    "Fury (Gatling)"
+    "Star Barge"
+  variant 1
+    "Fury (Gatling)"
+    "Star Barge" 2
+  variant 3
+    "Harpy"
+    "Star Barge"
+  variant 3
+    "Harpy"
+    "Star Barge" 2
+  variant 1
+    "Harpy (Gatling)"
+    "Star Barge"
+  variant 1
+    "Harpy (Gatling)"
+    "Star Barge" 2
+  variant 7
+    "Hauler I"
+  variant 5
+    "Hauler II"
+  variant 3
+    "Hauler III"
+  variant 3
+    "Hawk"
+    "Star Barge"
+  variant 3
+    "Hawk"
+    "Star Barge" 2
+  variant 1
+    "Hawk (Blaster)"
+    "Star Barge"
+  variant 1
+    "Hawk (Blaster)"
+    "Star Barge" 2
+  variant 5
+    "Heavy Shuttle"
+  variant 15
+    "Light Shuttle"
+  variant 1
+    "Star Barge"
+  variant 8
+    "Star Freighter"
+  variant 2
+    "Star Freighter (Fancy)"
+
 
 fleet "Merchants West Large"
   government "Merchant"
@@ -2147,6 +2263,7 @@ fleet "Miners Deep"
   personality
     confusion 20
     timid frugal mining harvests
+  # total: 1
   variant 1
     "Bounder (Miner)"
 
@@ -2157,6 +2274,7 @@ fleet "Miners East"
   personality
     confusion 20
     timid frugal mining harvests
+  # total: 1
   variant 1
     "Scout (Miner)"
 
@@ -2167,6 +2285,7 @@ fleet "Miners North"
   personality
     confusion 20
     timid frugal mining harvests
+  # total: 4
   variant 1
     "Star Freighter (Miner)"
   variant 3
@@ -2179,6 +2298,7 @@ fleet "Miners Rim"
   personality
     confusion 20
     timid frugal mining harvests
+  # total: 6
   variant 1
     "Hauler III (Miner)"
   variant 2
@@ -2193,6 +2313,7 @@ fleet "Miners South"
   personality
     confusion 20
     timid frugal mining harvests
+  # total: 6
   variant 1
     "Hauler III (Miner)"
   variant 2
@@ -2207,6 +2328,7 @@ fleet "Miners West"
   personality
     confusion 20
     timid frugal mining harvests
+  # total: 1
   variant 1
     "Star Freighter (Miner)"
 
@@ -2220,6 +2342,7 @@ fleet "Militia Large"
   personality
     heroic frugal
     confusion 20
+  # total: 64
   variant 10
     "Bastion"
   variant 5
@@ -2379,6 +2502,7 @@ fleet "Oathkeeper Large"
   cargo 0
   personality
     heroic opportunistic
+  # total: 15
   variant 3
     "Saturn"
     "Mark I Drone" 4
@@ -2418,6 +2542,7 @@ fleet "Oathkeeper Small"
   cargo 0
   personality
     heroic opportunistic
+  # total: 15
   variant 4
     "Venus"
   variant 5
@@ -2434,6 +2559,7 @@ fleet "Marauder fleet I"
   cargo 1
   personality
     plunders
+  # total: 20
   variant 9
     "Marauder Quicksilver"
     "Marauder Arrow (Weapons)"
@@ -2473,6 +2599,7 @@ fleet "Marauder fleet II"
   cargo 1
   personality
     plunders
+  # total: 20
   variant 4
     "Marauder Quicksilver"
     "Marauder Arrow (Weapons)"
@@ -2512,6 +2639,7 @@ fleet "Marauder fleet III"
   cargo 1
   personality
     plunders
+  # total: 16
   variant 3
     "Marauder Quicksilver"
     "Marauder Arrow (Weapons)"
@@ -2551,6 +2679,7 @@ fleet "Marauder fleet IV"
   cargo 1
   personality
     plunders
+  # total: 50
   variant 8
     "Marauder Firebird"
     "Marauder Raven"
@@ -2594,6 +2723,7 @@ fleet "Marauder fleet V"
   cargo 1
   personality
     plunders
+  # total: 30
   variant 4
     "Marauder Firebird"
     "Marauder Raven"
@@ -2637,6 +2767,7 @@ fleet "Marauder fleet VI"
   cargo 1
   personality
     plunders
+  # total: 20
   variant 2
     "Marauder Firebird"
     "Marauder Raven"
@@ -2680,6 +2811,7 @@ fleet "Marauder fleet VII"
   cargo 1
   personality
     plunders
+  # total: 40
   variant 18
     "Marauder Falcon"
     "Osprey"
@@ -2717,6 +2849,7 @@ fleet "Marauder fleet VIII"
   cargo 1
   personality
     plunders
+  # total: 20
   variant 8
     "Marauder Falcon"
     "Osprey"
@@ -2754,6 +2887,7 @@ fleet "Marauder fleet IX"
   cargo 1
   personality
     plunders
+  # total: 10
   variant 3
     "Marauder Falcon"
     "Osprey"
@@ -2791,6 +2925,7 @@ fleet "Marauder fleet X"
   cargo 1
   personality
     plunders
+  # total: 20
   variant 3
     "Marauder Falcon"
     "Marauder Firebird"
@@ -2855,7 +2990,8 @@ fleet "Pirate Miners"
   cargo 0
   personality
     confusion 20
-    frugal mining harvests
+    timid frugal mining harvests
+  # total: 1
   variant 1
     "Star Freighter (Miner)"
 
@@ -2866,6 +3002,7 @@ fleet "Pirates East Large"
   cargo 1
   personality
     plunders harvests
+  # total: 34
   variant 2
     "Falcon"
   variant 1
@@ -2895,6 +3032,7 @@ fleet "Pirates East Small"
   personality
     plunders harvests
     confusion 20
+  # total: 30
   variant 4
     "Quicksilver"
   variant 2
@@ -2929,6 +3067,7 @@ fleet "Pirates North Large"
   cargo 1
   personality
     plunders harvests
+  # total: 41
   variant 4
     "Firebird"
   variant 2
@@ -2996,6 +3135,7 @@ fleet "Pirates North Small"
   personality
     plunders harvests
     confusion 20
+  # total: 20
   variant 6
     "Warrior"
   variant 2
@@ -3016,6 +3156,7 @@ fleet "Pirates South Large"
   cargo 1
   personality
     plunders harvests
+  # total: 55
   variant 2
     "Harpy" 4
   variant 1
@@ -3094,6 +3235,7 @@ fleet "Pirates South Small"
   personality
     plunders harvests
     confusion 20
+  # total: 41
   variant 8
     "Harpy"
   variant 3
@@ -3155,12 +3297,15 @@ fleet "Pirates West Large"
   cargo 1
   personality
     plunders harvests
+  # total: 5
   variant 2
     "Leviathan"
   variant 1
     "Leviathan (North)"
   variant 1
     "Leviathan (Heavy)"
+  variant 1
+    "Leviathan (South)"
 
 fleet "Pirates West Small"
   government "Pirate"
@@ -3169,6 +3314,7 @@ fleet "Pirates West Small"
   personality
     plunders harvests
     confusion 20
+  # total: 6
   variant 6
     "Warrior"
 
@@ -3296,6 +3442,7 @@ fleet "Pug Large"
   cargo 1
   personality
     heroic
+  # total: 11
   variant 1
     "Enfolta"
     "Zibruka" 2
@@ -3324,6 +3471,7 @@ fleet "Pug Small"
   cargo 1
   personality
     heroic
+  # total: 6
   variant 1
     "Zibruka"
   variant 2
@@ -3343,6 +3491,7 @@ fleet "Quarg Large"
   cargo 1
   personality
     forbearing opportunistic
+  # total: 7
   variant 2
     "Skylark" 2
     "Wardragon"
@@ -3365,6 +3514,7 @@ fleet "Quarg Small"
   cargo 3
   personality
     forbearing opportunistic
+  # total: 2
   variant 1
     "Skylark"
   variant 1
@@ -3379,6 +3529,7 @@ fleet "Remnant Large"
   cargo 2
   personality
     heroic disables plunders appeasing
+  # total: 34
   variant 6
     "Twilight"
     "Shadow" 2
@@ -3410,6 +3561,7 @@ fleet "Remnant Small"
   cargo 2
   personality
     heroic disables plunders appeasing
+  # total: 37
   variant 8
     "Shadow"
   variant 6
@@ -3540,6 +3692,7 @@ fleet "Gunboat Only"
   cargo 0
   personality
     heroic
+  # total: 1
   variant 1
     "Mars (Mark II)"
 
@@ -3551,6 +3704,7 @@ fleet "Navy Cargo"
   cargo 5
   personality
     opportunistic
+  # total: 1
   variant 1
     "Behemoth" 5
     "Saturn"
@@ -3565,6 +3719,7 @@ fleet "Navy Patrol"
   cargo 0
   personality
     heroic opportunistic
+  # total: 1
   variant 1
     "Saturn"
     "Mark I Drone" 4
@@ -3578,6 +3733,7 @@ fleet "Navy Surveillance"
   cargo 0
   personality
     surveillance opportunistic
+  # total: 4
   variant 1
     "Saturn"
     "Watch Dog" 4
@@ -3594,6 +3750,7 @@ fleet "Syndicate Invasion"
   cargo 2
   personality
     heroic
+  # total: 1
   variant 1
     "Class C Freighter"
     "Mark I Drone" 12
@@ -3608,6 +3765,7 @@ fleet "Syndicate Large"
   cargo 2
   personality
     heroic
+  # total: 10
   variant 3
     "Protector"
   variant 2
@@ -3621,6 +3779,7 @@ fleet "Syndicate Patrol"
   cargo 2
   personality
     heroic
+  # total: 1
   variant 1
     "Vanguard"
     "Splinter" 2
@@ -3631,6 +3790,7 @@ fleet "Syndicate Small"
   cargo 2
   personality
     heroic
+  # total: 10
   variant 4
     "Quicksilver (Patrol)" 3
   variant 6
@@ -3646,6 +3806,7 @@ fleet "Syndicate Extremists"
   cargo 0
   personality
     heroic
+  # total: 5
   variant 1
     "Leviathan"
     "Quicksilver" 2
@@ -3669,8 +3830,8 @@ fleet "Unfettered Large"
   names "hai"
   cargo 1
   personality
-    disables
-    plunders
+    disables plunders
+  # total: 21
   variant 2
     "Shield Beetle"
     "Lightning Bug (Pulse)" 2
@@ -3715,21 +3876,21 @@ fleet "Unfettered Raid"
   names "hai"
   cargo 1
   personality
-    disables
-    plunders
+    disables plunders
+  # total: 10
   variant 1
     "Shield Beetle (Jump)" 3
   variant 1
     "Shield Beetle (Jump)" 2
-    "Shield Beetle (Pulse, Jump)" 1
+    "Shield Beetle (Pulse, Jump)"
   variant 1
     "Shield Beetle (Jump)" 2
-    "Shield Beetle (Tracker, Jump)" 1
+    "Shield Beetle (Tracker, Jump)"
   variant 1
-    "Shield Beetle (Jump)" 1
+    "Shield Beetle (Jump)"
     "Shield Beetle (Pulse, Jump)" 2
   variant 1
-    "Shield Beetle (Jump)" 1
+    "Shield Beetle (Jump)"
     "Shield Beetle (Tracker, Jump)" 2
   variant 1
     "Shield Beetle (Jump)"
@@ -3739,9 +3900,9 @@ fleet "Unfettered Raid"
     "Shield Beetle (Pulse, Jump)" 3
   variant 1
     "Shield Beetle (Pulse, Jump)" 2
-    "Shield Beetle (Tracker, Jump)" 1
+    "Shield Beetle (Tracker, Jump)"
   variant 1
-    "Shield Beetle (Pulse, Jump)" 1
+    "Shield Beetle (Pulse, Jump)"
     "Shield Beetle (Tracker, Jump)" 2
   variant 1
     "Shield Beetle (Tracker, Jump)" 3
@@ -3751,8 +3912,8 @@ fleet "Unfettered Small"
   names "hai"
   cargo 1
   personality
-    disables
-    plunders
+    disables plunders
+  # total: 11
   variant 3
     "Lightning Bug" 2
   variant 3
@@ -3773,6 +3934,7 @@ fleet "Wanderer Defence"
   names "wanderer"
   personality
     heroic opportunistic
+  # total: 10
   variant 3
     "Strong Wind"
     "Summer Leaf" 2
@@ -3794,6 +3956,7 @@ fleet "Wanderer Drones"
   names "wanderer"
   personality
     surveillance
+  # total: 7
   variant 4
     "Earth Shaper"
   variant 2
@@ -3805,8 +3968,8 @@ fleet "Wanderer Flycatchers"
   government "Wanderer"
   names "wanderer"
   personality
-    swarming
-    heroic
+    swarming heroic
+  # total: 4
   variant 1
     "Flycatcher" 2
   variant 1
@@ -3822,6 +3985,7 @@ fleet "Wanderer Freight"
   cargo 3
   personality
     timid
+  # total: 21
   variant 1
     "Deep River"
   variant 1
