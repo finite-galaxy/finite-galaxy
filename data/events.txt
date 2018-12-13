@@ -624,11 +624,22 @@ event "southern carriers 1"
     "Nest"
     "Stymphalian"
 
-  fleet "Free Worlds Small"
+  fleet "Free Worlds Large"
     fighters "free worlds fighter"
+    add variant 2
+      "Nest"
+      "Stymphalian" 2
     add variant 1
       "Nest"
       "Stymphalian" 2
+      "Fury"
+    add variant 1
+      "Nest"
+      "Stymphalian" 2
+      "Fury" 2
+    add variant 1
+      "Nest" 2
+      "Stymphalian" 4
 
 
 event "southern carriers 2"
@@ -643,26 +654,16 @@ event "southern carriers 2"
       "Roost"
       "Stymphalian" 4
     add variant 1
+      "Roost"
+      "Stymphalian" 4
+      "Fury"
+    add variant 1
+      "Roost"
+      "Stymphalian" 4
+      "Fury" 2
+    add variant 1
       "Roost" 2
       "Stymphalian" 8
-
-  fleet "Independent Small"
-    fighters "free worlds fighter"
-    add variant 1
-      "Nest"
-      "Stymphalian" 2
-
-  fleet "Militia Small"
-    fighters "free worlds fighter"
-    add variant 1
-      "Nest"
-      "Stymphalian" 2
-
-  fleet "Pirates South Small"
-    fighters "free worlds fighter"
-    add variant 1
-      "Nest"
-      "Stymphalian" 2
 
 
 event "southern carriers 3"
@@ -671,23 +672,19 @@ event "southern carriers 3"
   shipyard "Southbound Basics"
     "Stymphalian"
 
-  fleet "Merchants South Large"
-    fighters "free worlds fighter"
-    add variant 15
-      "Hauler III"
-      "Nest"
-      "Stymphalian" 2
-    add variant 15
-      "Argosy"
-      "Hauler II"
-      "Nest"
-      "Stymphalian" 2
-
   fleet "Free Worlds Large"
     fighters "free worlds fighter"
     add variant 2
       "Skein"
       "Stymphalian" 6
+    add variant 1
+      "Skein"
+      "Stymphalian" 6
+      "Fury"
+    add variant 1
+      "Skein"
+      "Stymphalian" 6
+      "Fury" 2
     add variant 1
       "Skein" 2
       "Stymphalian" 12
@@ -695,11 +692,33 @@ event "southern carriers 3"
   fleet "Independent Large"
     fighters "free worlds fighter"
     add variant 2
+      "Nest"
+      "Stymphalian" 2
+    add variant 2
+      "Nest"
+      "Stymphalian" 2
+      "Fury"
+    add variant 2
+      "Nest"
+      "Stymphalian" 2
+      "Fury" 2
+    add variant 2
       "Nest" 2
       "Stymphalian" 4
 
   fleet "Militia Large"
     fighters "free worlds fighter"
+    add variant 2
+      "Nest"
+      "Stymphalian" 2
+    add variant 2
+      "Nest"
+      "Stymphalian" 2
+      "Fury"
+    add variant 2
+      "Nest"
+      "Stymphalian" 2
+      "Fury" 2
     add variant 2
       "Nest" 2
       "Stymphalian" 4
@@ -707,8 +726,68 @@ event "southern carriers 3"
   fleet "Pirates South Large"
     fighters "free worlds fighter"
     add variant 1
+      "Nest"
+      "Stymphalian" 2
+    add variant 1
+      "Nest"
+      "Stymphalian" 2
+      "Fury"
+    add variant 1
+      "Nest"
+      "Stymphalian" 2
+      "Fury" 2
+    add variant 1
       "Nest" 2
       "Stymphalian" 4
+
+  fleet "Merchants South Large"
+    fighters "free worlds fighter"
+    # total: 25
+    add variant 4
+      "Hauler I"
+      "Nest"
+      "Stymphalian" 2
+    add variant 4
+      "Hauler II"
+      "Nest"
+      "Stymphalian" 2
+    add variant 4
+      "Hauler III"
+      "Nest"
+      "Stymphalian" 2
+    add variant 2
+      "Hauler I" 2
+      "Nest"
+      "Stymphalian" 2
+    add variant 2
+      "Hauler II" 2
+      "Nest"
+      "Stymphalian" 2
+    add variant 2
+      "Hauler III" 2
+      "Nest"
+      "Stymphalian" 2
+    add variant 2
+      "Hauler I"
+      "Hauler II"
+      "Nest"
+      "Stymphalian" 2
+    add variant 2
+      "Hauler I"
+      "Hauler III"
+      "Nest"
+      "Stymphalian" 2
+    add variant 2
+      "Hauler II"
+      "Hauler III"
+      "Nest"
+      "Stymphalian" 2
+    add variant 1
+      "Hauler I"
+      "Hauler II"
+      "Hauler III"
+      "Nest"
+      "Stymphalian" 2
 
 
 event "southern carriers 4"
@@ -717,23 +796,6 @@ event "southern carriers 4"
   shipyard "Vortex Advanced"
     "Mongrel"
 
-  fleet "Merchants South Large"
-    fighters "free worlds fighter"
-    add variant 6
-      "Argosy" 3
-      "Roost"
-      "Boxwing" 2
-      "Stymphalian" 2
-    add variant 4
-      "Bastion"
-      "Roost" 2
-      "Stymphalian" 4
-      "Boxwing" 4
-    add variant 2
-      "Roost" 3
-      "Stymphalian" 6
-      "Boxwing" 6
-
   fleet "Independent Large"
     fighters "free worlds fighter"
     add variant 2
@@ -751,6 +813,62 @@ event "southern carriers 4"
     add variant 1
       "Roost"
       "Stymphalian" 4
+
+  fleet "Merchants South Large"
+    fighters "free worlds fighter"
+    # total: 10
+    add variant 1
+      "Hauler I" 2
+      "Roost"
+      "Boxwing" 2
+      "Stymphalian" 2
+    add variant 1
+      "Hauler II" 2
+      "Roost"
+      "Boxwing" 2
+      "Stymphalian" 2
+    add variant 1
+      "Hauler III" 2
+      "Roost"
+      "Boxwing" 2
+      "Stymphalian" 2
+    add variant 1
+      "Hauler I"
+      "Hauler II"
+      "Roost"
+      "Boxwing" 2
+      "Stymphalian" 2
+    add variant 1
+      "Hauler I"
+      "Hauler III"
+      "Roost"
+      "Boxwing" 2
+      "Stymphalian" 2
+    add variant 1
+      "Hauler II"
+      "Hauler III"
+      "Roost"
+      "Boxwing" 2
+      "Stymphalian" 2
+    add variant 1
+      "Hauler I"
+      "Roost" 2
+      "Stymphalian" 4
+      "Boxwing" 4
+    add variant 1
+      "Hauler II"
+      "Roost" 2
+      "Stymphalian" 4
+      "Boxwing" 4
+    add variant 1
+      "Hauler III"
+      "Roost" 2
+      "Stymphalian" 4
+      "Boxwing" 4
+    add variant 1
+      "Roost" 3
+      "Stymphalian" 6
+      "Boxwing" 6
 
 
 event "capture of Kornephoros"
@@ -1044,6 +1162,13 @@ event "navy using mark ii ships"
     "Mark II Drone"
   shipyard "Centaur Basics"
     "Mark II Drone"
+  
+  fleet "Navy Supplies"
+    add variant 3
+      "Behemoth (Mark II)" 5
+      "Saturn (Mark II)"
+      "Mark II Drone" 4
+      "Venus (Mark II)" 2
   
   fleet "Republic Large"
     add variant 6

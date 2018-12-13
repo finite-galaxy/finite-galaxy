@@ -11,6 +11,7 @@ shipyard "Lionheart Variants"
   "Behemoth"
   "Behemoth (Free Worlds)"
   "Behemoth (Hai)"
+  "Behemoth (Mark II)"
   "Bounder"
   "Bounder (Hai)"
   "Bounder (Miner)"
@@ -359,10 +360,10 @@ ship "Behemoth"
   gun -27 -83 "Cyclone Torpedo Launcher"
   gun 27 -83 "Cyclone Torpedo Launcher"
   turret -34 -64 "Heavy Laser Turret"
-  turret 34 -64 "Heavy Anti-Missile Turret"
-  turret -58 11 "Heavy Laser Turret"
-  turret 58 11 "Heavy Laser Turret"
-  turret -24 78 "Heavy Anti-Missile Turret"
+  turret 34 -64 "Heavy Laser Turret"
+  turret -58 11 "Heavy Anti-Missile Turret"
+  turret 58 11 "Heavy Anti-Missile Turret"
+  turret -24 78 "Heavy Laser Turret"
   turret 24 78 "Heavy Laser Turret"
   leak "leak" 30 50
   leak "flame" 30 80
@@ -372,7 +373,7 @@ ship "Behemoth"
   explode "large explosion" 35
   explode "huge explosion" 20
   "final explode" "final explosion large"
-  description "The Behemoth is a recent ship design from Lionheart Shipyards, designed as an alternative to the Syndicate Bulk Freighter. Although its cargo capacity is somewhat lower, it is also more manoeuvrable, and packs a heavier armament by default."
+  description "The Behemoth is a relatively recent ship design from Lionheart Shipyards, designed as an alternative to the Betelgeuse Bulk Freighter. Although its cargo capacity is somewhat lower, it is also more manoeuvrable, and packs a heavier armament by default."
 
 
 ship "Behemoth" "Behemoth (Free Worlds)"
@@ -397,6 +398,12 @@ ship "Behemoth" "Behemoth (Free Worlds)"
     "Extra Outfit Space" 4
     "Fragmentation Grenades" 10
     "Laser Rifle" 20
+  turret "Modified Blaster Quad Turret"
+  turret "Modified Blaster Quad Turret"
+  turret "Heavy Anti-Missile Turret"
+  turret "Heavy Anti-Missile Turret"
+  turret "Modified Blaster Quad Turret"
+  turret "Modified Blaster Quad Turret"
 
 
 ship "Behemoth" "Behemoth (Hai)"
@@ -420,6 +427,34 @@ ship "Behemoth" "Behemoth (Hai)"
     "Fuel Pod" 64
     "Yoloy Scanner"
     "Extra Outfit Space" 4
+  turret "Pulse Turret"
+  turret "Pulse Turret"
+  turret "Chameleon Anti-Missile"
+  turret "Chameleon Anti-Missile"
+  turret "Pulse Turret"
+  turret "Pulse Turret"
+
+
+ship "Behemoth" "Behemoth (Mark II)"
+  outfits
+    "D41-HY Shield Generator"
+    "NT-200 Nucleovoltaic"
+    "Hyperdrive"
+
+    "A250 Atomic Thruster"
+    "A375 Atomic Steering"
+    "Electron Turret" 4
+    "Heavy Anti-Missile Turret" 2
+
+    "LP144a Battery Pack"
+    "Fuel Pod" 64
+    "Tactical Scanner" 5
+  turret "Electron Turret"
+  turret "Electron Turret"
+  turret "Heavy Anti-Missile Turret"
+  turret "Heavy Anti-Missile Turret"
+  turret "Electron Turret"
+  turret "Electron Turret"
 
 
 

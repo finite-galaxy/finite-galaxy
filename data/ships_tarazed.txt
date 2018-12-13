@@ -18,6 +18,8 @@ shipyard "Tarazed Variants"
   "Osprey (Rocket)"
   "Raven"
   "Raven (Afterburner)"
+  "Raven (Mark II)"
+  "Raven (Mixed)"
   "Raven (Rocket)"
   "Unknown Ship Type"
 
@@ -587,6 +589,41 @@ ship "Raven" "Raven (Afterburner)"
     "Extra Outfit Space" 2
 
 
+ship "Raven" "Raven (Mark II)"
+  outfits
+    "D41-HY Shield Generator"
+    "S3 Thermionic"
+    "Hyperdrive"
+
+    "Greyhound Plasma Thruster"
+    "Greyhound Plasma Steering"
+
+    "Electron Cannon" 4
+
+    "LP036a Battery Pack"
+    "Fuel Pod" 24
+    "Tactical Scanner" 5
+
+
+ship "Raven" "Raven (Mixed)"
+  outfits
+    "D41-HY Shield Generator"
+    "S3 Thermionic"
+    "Hyperdrive"
+
+    "Greyhound Plasma Thruster"
+    "Greyhound Plasma Steering"
+
+    "Heavy Rocket" 40
+    "Heavy Rocket Rack" 2
+    "Heavy Rocket Launcher" 2
+    "Plasma Cannon" 2
+
+    "LP036a Battery Pack"
+    "Fuel Pod" 24
+    "Tactical Scanner" 5
+
+
 ship "Raven" "Raven (Rocket)"
   outfits
     "D41-HY Shield Generator"
@@ -603,7 +640,7 @@ ship "Raven" "Raven (Rocket)"
     "LP036a Battery Pack"
     "Fuel Pod" 24
     "Tactical Scanner" 5
-    "Extra Outfit Space" 2
+    "Extra Outfit Space"
 
 
 
