@@ -45,13 +45,13 @@ ship "Star Barge"
     "IT-1700 Ion Thruster"
     "IS-1200 Ion Steering"
 
-    "Light Anti-Missile Turret"
+    "Light Anti-Missile"
 
     "LP036a Battery Pack"
     "Fuel Pod" 9
   engine -9 38
   engine 9 38
-  turret 0 -8 "Light Anti-Missile Turret"
+  turret 0 -8 "Light Anti-Missile"
   leak "leak" 60 50
   explode "tiny explosion" 10
   explode "small explosion" 10
@@ -114,15 +114,15 @@ ship "Star Freighter"
     "IR-2700 Ion Reverse"
 
     "X4 Blaster Turret"
-    "Light Anti-Missile Turret" 2
+    "Light Anti-Missile" 2
 
     "LP036a Battery Pack"
     "Fuel Pod" 29
   engine -9 97
   engine 9 97
-  turret 0 -52 "Light Anti-Missile Turret"
+  turret 0 -52 "Light Anti-Missile"
   turret 0 6 "X4 Blaster Turret"
-  turret 0 65 "Light Anti-Missile Turret"
+  turret 0 65 "Light Anti-Missile"
   leak "leak" 60 50
   leak "flame" 50 80
   explode "tiny explosion" 10
@@ -144,14 +144,14 @@ ship "Star Freighter" "Star Freighter (Fancy)"
     "Afterburner"
 
     "Laser Turret" 2
-    "Heavy Anti-Missile Turret"
+    "Heavy Anti-Missile"
 
     "LP036a Battery Pack"
     "Fuel Pod" 29
     "Ramscoop"
     "Tactical Scanner" 2
   turret "Laser Turret"
-  turret "Heavy Anti-Missile Turret"
+  turret "Heavy Anti-Missile"
   turret "Laser Turret"
 
 
@@ -203,14 +203,14 @@ ship "Star Freighter" "Star Freighter (Secret Cargo)"
     "IR-2700 Ion Reverse"
 
     "X4 Blaster Turret"
-    "Light Anti-Missile Turret" 2
+    "Light Anti-Missile" 2
 
     "LP036a Battery Pack"
     "Fuel Pod" 29
     "Secret Cargo"
-  turret "Light Anti-Missile Turret"
+  turret "Light Anti-Missile"
   turret "X4 Blaster Turret"
-  turret "Light Anti-Missile Turret"
+  turret "Light Anti-Missile"
 
 
 
@@ -251,7 +251,7 @@ ship "Star Queen"
     "Meteor Missile" 120
     "Meteor Missile Box" 3
     "Meteor Missile Launcher" 3
-    "Heavy Anti-Missile Turret" 2
+    "Heavy Anti-Missile" 2
 
     "LP072a Battery Pack"
     "Fuel Pod" 36
@@ -260,8 +260,8 @@ ship "Star Queen"
   gun 0 -116 "Meteor Missile Launcher"
   gun -22 -80 "Meteor Missile Launcher"
   gun 22 -80 "Meteor Missile Launcher"
-  turret -28 -9 "Heavy Anti-Missile Turret"
-  turret 28 -9 "Heavy Anti-Missile Turret"
+  turret -28 -9 "Heavy Anti-Missile"
+  turret 28 -9 "Heavy Anti-Missile"
   leak "leak" 50 50
   leak "big leak" 80 30
   explode "tiny explosion" 10
