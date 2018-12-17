@@ -225,6 +225,10 @@ event "war begins"
 
 event "initial deployment 1"
   date 24 7 3019
+  planet "Clear Sky"
+    description `Clear Sky is a perpetually hazy volcanic world, with a slightly caustic atmosphere but enough reserves of metal and petrochemicals to draw a large number of settlers. Some of those settlers also make a living as farmers, and a few well-developed factory towns produce goods for export to other worlds.`
+    description `  Many of the inhabitants wear dust masks to avoid letting the particulate matter from the volcanoes accumulate in their lungs.`
+    description `  The Navy has recently requisitioned one of the abandoned mining towns on Clear Sky and begun refurbishing it for a secure military base, with the mining tunnels used as deep underground bunkers.`
   planet "Oblivion"
     description `The atmosphere here is a toxic mix of ammonia, sulphur, and methane. Although breathable by human beings if necessary, the locals use masks to reduce the risk of chronic respiratory problems. Even so, the life expectancy here is short, but that is partly because the two best-paying industries are oil drilling and mining for radioactive elements.`
     description `  Oblivion is also now home to a burgeoning Navy base, although since the planet is so unlivable most of the troops are just living in ships in orbit.`
@@ -248,51 +252,61 @@ event "initial deployment 1"
     fleet "Free Worlds Small" 1000
     fleet "Free Worlds Large" 1600
 
+  system "Vega"
+    fleet "Merchants South Small" 1000
+    fleet "Merchants South Large" 4000
+    fleet "Navy Cargo" 18000
+    fleet "Navy Surveillance" 1800
+    fleet "Republic Small" 900
+    fleet "Republic Large" 1000
   system "Rasalhague"
     fleet "Merchants South Small" 1500
     fleet "Merchants South Large" 2000
+    fleet "Navy Cargo" 18000
+    fleet "Navy Surveillance" 1200
     fleet "Pirates South Small" 4000
     fleet "Pirates South Large" 8000
     fleet "Republic Small" 600
     fleet "Republic Large" 400
-    fleet "Navy Surveillance" 1200
   system "Cebalrai"
     fleet "Merchants South Small" 600
     fleet "Merchants South Large" 2000
+    fleet "Navy Cargo" 18000
+    fleet "Navy Surveillance" 1200
     fleet "Pirates South Small" 4000
     fleet "Republic Small" 1000
     fleet "Republic Large" 2000
-    fleet "Navy Surveillance" 1200
   system "Kaus Borealis"
     fleet "Merchants South Small" 900
     fleet "Merchants South Large" 4000
+    fleet "Navy Cargo" 36000
+    fleet "Navy Surveillance" 1200
     fleet "Pirates South Small" 8000
     fleet "Republic Small" 1100
     fleet "Republic Large" 800
-    fleet "Navy Surveillance" 1200
   system "Hintar"
     fleet "Merchants South Small" 1000
     fleet "Merchants South Large" 3000
+    fleet "Navy Surveillance" 1800
     fleet "Pirates South Small" 2000
     fleet "Republic Small" 3000
     fleet "Republic Large" 4000
-    fleet "Navy Surveillance" 1800
   system "Ascella"
+    fleet "Merchant Miners South" 1600
     fleet "Merchants South Small" 600
     fleet "Merchants South Large" 1000
-    fleet "Merchant Miners South" 1600
+    fleet "Navy Surveillance" 1800
     fleet "Pirates South Small" 3000
     fleet "Republic Small" 3000
     fleet "Republic Large" 4000
-    fleet "Navy Surveillance" 1800
   system "Zeta Aquilae"
     fleet "Merchants South Small" 1000
     fleet "Merchants South Large" 3000
+    fleet "Navy Surveillance" 1800
     fleet "Pirates South Small" 2000
     fleet "Pirates South Large" 5000
     fleet "Republic Small" 3000
     fleet "Republic Large" 4000
-    fleet "Navy Surveillance" 1800
 
   system "Fala"
     fleet "Merchants West Small" 1900
@@ -348,10 +362,6 @@ event "initial deployment 2"
     description `Bod is a world of jagged mountains and deeply shadowed valleys. Although it has been inhabited for centuries, in many places the terrain is so rugged that roads cannot be built, leaving several of the smaller towns almost completely isolated. Taking advantage of this isolation, several monastic orders have built monasteries here.`
     description `  In the lowlands, large farms support sprawling cities full of factories, a striking contrast to the simplicity and isolation of the mountain villages.`
     description `  The Navy built a base here, to be able to counter the Free Worlds, if necessary.`
-  planet "Clear Sky"
-    description `Clear Sky is a perpetually hazy volcanic world, with a slightly caustic atmosphere but enough reserves of metal and petrochemicals to draw a large number of settlers. Some of those settlers also make a living as farmers, and a few well-developed factory towns produce goods for export to other worlds.`
-    description `  Many of the inhabitants wear dust masks to avoid letting the particulate matter from the volcanoes accumulate in their lungs.`
-    description `  The Navy has recently requisitioned one of the abandoned mining towns on Clear Sky and begun refurbishing it for a secure military base, with the mining tunnels used as deep underground bunkers.`
   planet "Martini"
     "required reputation" 10
 
@@ -378,85 +388,89 @@ event "initial deployment 2"
     fleet "Free Worlds Large" 4000
 
   system "Menkent"
+    fleet "Merchant Miners South" 2000
     fleet "Merchants South Small" 700
     fleet "Merchants South Large" 1900
-    fleet "Merchant Miners South" 2000
+    fleet "Navy Cargo" 18000
+    fleet "Navy Surveillance" 1800
     fleet "Republic Small" 3000
     fleet "Republic Large" 4000
-    fleet "Navy Surveillance" 1800
   system "Rutilicus"
     fleet "Merchants South Small" 600
     fleet "Merchants South Large" 2000
+    fleet "Navy Cargo" 18000
+    fleet "Navy Surveillance" 1800
     fleet "Pirates South Small" 8000
     fleet "Republic Small" 1000
     fleet "Republic Large" 2000
-    fleet "Navy Surveillance" 1800
   system "Arcturus"
     fleet "Merchants South Small" 700
     fleet "Merchants South Large" 3000
+    fleet "Navy Surveillance" 1800
     fleet "Pirates South Small" 4000
     fleet "Republic Small" 2000
     fleet "Republic Large" 3000
-    fleet "Navy Surveillance" 1800
   system "Holeb"
     fleet "Merchants South Small" 1000
     fleet "Merchants South Large" 3000
+    fleet "Navy Cargo" 18000
+    fleet "Navy Surveillance" 1800
     fleet "Pirates South Small" 5000
     fleet "Republic Small" 2000
     fleet "Republic Large" 3000
-    fleet "Navy Surveillance" 1800
   system "Alioth"
     fleet "Merchants South Small" 400
     fleet "Merchants South Large" 600
+    fleet "Navy Cargo" 18000
+    fleet "Navy Surveillance" 1200
     fleet "Republic Small" 500
     fleet "Republic Large" 600
-    fleet "Navy Surveillance" 1200
 
   system "Mizar"
     fleet "Merchants West Small" 1400
     fleet "Merchants West Large" 4500
+    fleet "Navy Surveillance" 1800
     fleet "Pirates West Small" 9000
     fleet "Republic Small" 1000
     fleet "Republic Large" 1400
-    fleet "Navy Surveillance" 1800
   system "Gacrux"
     fleet "Merchants West Small" 2000
     fleet "Merchants West Large" 5000
+    fleet "Navy Surveillance" 1800
     fleet "Pirates West Small" 2000
     fleet "Pirates West Large" 4000
     fleet "Republic Small" 2000
     fleet "Republic Large" 3000
-    fleet "Navy Surveillance" 1800
   system "Cor Caroli"
     fleet "Merchants West Small" 700
     fleet "Merchants West Large" 1300
+    fleet "Navy Surveillance" 1800
     fleet "Pirates West Small" 2000
     fleet "Republic Small" 1200
     fleet "Republic Large" 1800
-    fleet "Navy Surveillance" 1800
   system "Muhlifain"
     fleet "Merchants West Small" 1000
     fleet "Merchants West Large" 3500
+    fleet "Navy Surveillance" 1800
     fleet "Pirates West Small" 6000
     fleet "Republic Small" 3000
     fleet "Republic Large" 4000
-    fleet "Navy Surveillance" 1800
   system "Vindemiatrix"
     fleet "Merchants West Small" 600
     fleet "Merchants West Large" 3000
+    fleet "Navy Surveillance" 1800
     fleet "Pirates West Small" 2000
     fleet "Pirates West Large" 4000
     fleet "Republic Small" 2000
     fleet "Republic Large" 3000
-    fleet "Navy Surveillance" 1800
   system "Sarin"
     fleet "Merchants West Small" 1000
     fleet "Merchants West Large" 3000
+    fleet "Navy Surveillance" 1800
     fleet "Pirates West Small" 2000
     fleet "Pirates West Large" 6000
     fleet "Republic Small" 8000
     fleet "Republic Large" 15000
-    fleet "Navy Surveillance" 1800
 
 
 event "initial deployment 3"
@@ -466,7 +480,13 @@ event "initial deployment 3"
     description `  Some of the farms near the spaceport are planted with different crops forming abstract patterns visible from the air. Such a whimsical extravagance seems particularly odd when you consider that the owners will never be able to afford to see their fields from that angle. But perhaps that is precisely the point.`
     description `  The Navy has planted a base on Bundok: so far, just a densely packed cluster of prefabricated barracks and infirmary buildings on the outskirts of one of the larger towns.`
 
-#  system "Algedi"
+  system "Algedi"
+    fleet "Merchants South Small" 700
+    fleet "Merchants South Large" 1900
+    fleet "Pirates South Small" 2000
+    fleet "Pirates South Large" 4000
+    fleet "Free Worlds Small" 2500
+    fleet "Free Worlds Large" 5000
   system "Pherkad"
     fleet "Merchants South Small" 500
     fleet "Merchants South Large" 700
@@ -498,122 +518,125 @@ event "initial deployment 3"
   system "Alphecca"
     fleet "Merchants South Small" 2000
     fleet "Merchants South Large" 3500
+    fleet "Navy Surveillance" 1800
     fleet "Pirates South Small" 3000
     fleet "Republic Small" 3000
     fleet "Republic Large" 4000
-    fleet "Navy Surveillance" 1800
   system "Seginus"
     fleet "Merchants South Small" 1200
     fleet "Merchants South Large" 2700
+    fleet "Navy Surveillance" 1200
     fleet "Pirates South Small" 8000
     fleet "Republic Small" 1200
     fleet "Republic Large" 1400
-    fleet "Navy Surveillance" 1200
   system "Wei"
     fleet "Merchants South Small" 800
     fleet "Merchants South Large" 2500
+    fleet "Navy Surveillance" 1200
     fleet "Pirates South Small" 6000
     fleet "Republic Small" 800
     fleet "Republic Large" 700
-    fleet "Navy Surveillance" 1200
   system "Alnasl"
     fleet "Merchants South Small" 1300
     fleet "Merchants South Large" 2500
+    fleet "Navy Surveillance" 1200
     fleet "Pirates South Small" 6000
     fleet "Republic Small" 900
     fleet "Republic Large" 1100
-    fleet "Navy Surveillance" 1200
   system "Eber"
     fleet "Merchants South Small" 1900
     fleet "Merchants South Large" 2900
+    fleet "Navy Surveillance" 1200
     fleet "Pirates South Small" 3000
     fleet "Republic Small" 1000
     fleet "Republic Large" 1500
-    fleet "Navy Surveillance" 1200
   system "Alpha Arae"
     fleet "Merchants South Small" 2100
     fleet "Merchants South Large" 8000
+    fleet "Navy Cargo" 72000
+    fleet "Navy Surveillance" 1200
     fleet "Pirates South Small" 6000
     fleet "Pirates South Large" 13000
     fleet "Republic Small" 900
     fleet "Republic Large" 800
-    fleet "Navy Surveillance" 1200
   system "Rastaban"
     fleet "Merchants South Small" 1000
     fleet "Merchants South Large" 1900
+    fleet "Navy Cargo" 72000
+    fleet "Navy Surveillance" 1200
     fleet "Pirates South Small" 4000
     fleet "Pirates South Large" 8000
-    fleet "Republic Small" 900
+    fleet "Republic Small" 600
     fleet "Republic Large" 700
-    fleet "Navy Surveillance" 1200
 
 
 event "initial deployment 4"
   date 17 9 3019
   planet "Luna"
     "required reputation" 10
+
   system "Dschubba"
     fleet "Merchants South Small" 800
     fleet "Merchants South Large" 2600
+    fleet "Navy Surveillance" 1800
     fleet "Pirates South Small" 3000
     fleet "Pirates South Large" 6000
     fleet "Free Worlds Small" 2000
     fleet "Free Worlds Large" 3000
-    fleet "Navy Surveillance" 1800
   system "Han"
     fleet "Merchants South Small" 800
     fleet "Merchants South Large" 4000
+    fleet "Navy Surveillance" 1800
     fleet "Pirates South Small" 2000
     fleet "Pirates South Large" 9000
     fleet "Free Worlds Small" 3000
     fleet "Free Worlds Large" 8000
-    fleet "Navy Surveillance" 1800
   system "Atria"
     fleet "Merchants South Small" 700
     fleet "Merchants South Large" 2600
+    fleet "Navy Surveillance" 1800
     fleet "Pirates South Small" 5000
     fleet "Pirates South Large" 8000
     fleet "Free Worlds Small" 1000
     fleet "Free Worlds Large" 2100
-    fleet "Navy Surveillance" 1800
   system "Lesath"
     fleet "Merchants South Small" 800
     fleet "Merchants South Large" 1600
+    fleet "Navy Surveillance" 1800
     fleet "Pirates South Small" 3000
     fleet "Pirates South Large" 7000
     fleet "Free Worlds Small" 800
     fleet "Free Worlds Large" 1100
-    fleet "Navy Surveillance" 1800
   system "Sargas"
     fleet "Merchants South Small" 600
     fleet "Merchants South Large" 2500
+    fleet "Navy Surveillance" 1800
     fleet "Pirates South Small" 3000
     fleet "Pirates South Large" 5000
     fleet "Free Worlds Small" 1000
     fleet "Free Worlds Large" 1500
-    fleet "Navy Surveillance" 1800
   system "Kornephoros"
     fleet "Merchants South Small" 800
     fleet "Merchants South Large" 1000
     fleet "Merchant Miners South" 3000
+    fleet "Navy Surveillance" 1800
     fleet "Pirates South Small" 5000
     fleet "Free Worlds Small" 900
     fleet "Free Worlds Large" 1700
-    fleet "Navy Surveillance" 1800
   system "Aldhibain"
     fleet "Merchants South Small" 600
     fleet "Merchants South Large" 800
+    fleet "Navy Surveillance" 1800
     fleet "Free Worlds Small" 600
     fleet "Free Worlds Large" 600
     fleet "Pirates South Small" 1400
     fleet "Pirates South Large" 3000
-    fleet "Navy Surveillance" 1800
   system "Sabik"
     fleet "Merchants South Small" 600
     fleet "Merchants South Large" 800
+    fleet "Navy Surveillance" 1800
     fleet "Free Worlds Small" 800
     fleet "Free Worlds Large" 1200
-    fleet "Navy Surveillance" 1800
 # Alniyat, Algedi, Graffias
 
 
@@ -2189,6 +2212,16 @@ event "pug flee"
       sprite planet/wormhole
       distance 2320.29
       period 1788.2712
+  system "Minkar"
+    add object "Rim Wormhole"
+      sprite planet/wormhole
+      distance 3622.45
+      period 3023.25
+  system "Procyon"
+    add object "Rim Wormhole"
+      sprite planet/wormhole
+      distance 4087.63
+      period 4803.02
 
 
 event "pug territory liberated"
@@ -2757,22 +2790,58 @@ event "fwc conquests returned"
 
 
 # free worlds epilogue
-
 event "free worlds end"
   system "Naper"
     government "Republic"
+    fleet "Merchant Miners South" 3000
+    fleet "Merchants South Small" 1500
+    fleet "Merchants South Large" 3000
+    fleet "Navy Surveillance" 5400
+    fleet "Pirates South Small" 1000
   system "Tais"
     government "Republic"
+    fleet "Merchants South Small" 1500
+    fleet "Merchants South Large" 4000
+    fleet "Navy Surveillance" 5400
+    fleet "Pirates South Small" 3000
+    fleet "Pirates South Large" 7000
+    fleet "Quarg Small" 15000
   system "Peacock"
     government "Republic"
+    fleet "Merchant Miners South" 3000
+    fleet "Merchants South Small" 2000
+    fleet "Merchants South Large" 5000
+    fleet "Navy Surveillance" 5400
+    fleet "Pirates South Small" 4000
+    fleet "Pirates South Large" 10000
   system "Kaus Australis"
     government "Republic"
+    fleet "Merchants South Small" 2000
+    fleet "Merchants South Large" 3000
+    fleet "Navy Surveillance" 5400
+    fleet "Pirates South Small" 4000
+    fleet "Pirates South Large" 8000
+    fleet "Quarg Small" 10000
   system "Dabih"
     government "Republic"
+    fleet "Merchants South Small" 500
+    fleet "Merchants South Large" 800
+    fleet "Navy Surveillance" 5400
+    fleet "Pirates South Large" 10000
+    fleet "Quarg Small" 4000
   system "Tarazed"
     government "Republic"
+    fleet "Merchants South Small" 500
+    fleet "Merchants South Large" 1200
+    fleet "Navy Surveillance" 5400
+    fleet "Pirates South Large" 8000
+    fleet "Quarg Small" 7000
   system "Umbral"
     government "Republic"
+    fleet "Merchants South Small" 4000
+    fleet "Navy Surveillance" 5400
+    fleet "Pirates South Large" 6000
+    fleet "Quarg Small" 15000
 
   planet "Alapia"
     description `Alapia is an uncomfortably hot and humid world of deserts, savanna, and a few small and scattered rainforests. Large herds of bison-like animals roam the plains, providing the locals with a steady source of food. Occasional stampedes, involving tens of thousands of these animals, have been known to level entire towns here.`
@@ -2787,8 +2856,6 @@ event "free worlds end"
   planet "Oblivion"
     description `The atmosphere here is a toxic mix of ammonia, sulphur, and methane. Although breathable by human beings if necessary, the locals use masks to reduce the risk of chronic respiratory problems. Even so, the life expectancy here is short, but that is partly because the two best-paying industries are oil drilling and mining for radioactive elements.`
 
-
-event "navy arsenals available"
   planet "Alapia"
     outfitter "Navy"
   planet "Arahas"
@@ -2811,19 +2878,6 @@ event "luna rebuilt"
     description `  The shattered remnants of the old Navy Yard are still left abandoned and slowly rusting away in the planet's caustic atmosphere, but the Republic has now built a new shipyard to replace the one destroyed in the bombing, and once again Luna has become a central hub of technology and industry.`
     spaceport `The spaceport is rudimentary, and the main pressurized dome of the facility is probably at least half a millennium old. So many metal foil patches have been cemented to its outer wall to stop slow air leaks that in places they entirely cover the surface. Everything is so ancient and ramshackle that it feels almost like you have stepped back in time to the early days of human space flight. Perhaps that's what the tourists come here to experience.`
     shipyard "Navy Advanced"
-
-
-event "pug surprise"
-  system "Minkar"
-    add object "Rim Wormhole"
-      sprite planet/wormhole
-      distance 3622.45
-      period 3023.25
-  system "Procyon"
-    add object "Rim Wormhole"
-      sprite planet/wormhole
-      distance 4087.63
-      period 4803.02
 
 
 
