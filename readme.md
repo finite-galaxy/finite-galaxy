@@ -179,6 +179,7 @@ See `changelog.txt`, `ship_overview.txt`, and https://github.com/finite-galaxy/f
 * Add support for landing fees
 * Add fuel cost, one credit per fuel at spaceports, twice that when hailing ships in space
 * Add functionality to deposit credits at the bank for a fixed time (e.g. one year), receiving either the sum plus interest when it expires, or the sum minus a penalty when you claim it beforehand
+* Allow friendly fire
 * Limit the commodities for sale on specific planets
 * Display flagship speed by default and display target's speed with tactical scanner
 * De-hardcode jump radius
@@ -600,6 +601,7 @@ visited "Zubeneschamali"
 "visited planet" "Pug Wormhole"
 "visited planet" "Quarg Wormhole"
 "visited planet" "Remnant Wormhole"
+"visited planet" "Rim Wormhole"
 "visited planet" "The Eye"
 ```
 
