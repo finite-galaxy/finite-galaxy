@@ -1,3 +1,46 @@
+# fuel
+outfit "Bosonic Fuel Storage"
+  category "Miscellaneous"
+  thumbnail "outfit/unknown"
+  licences
+    Quarg
+  cost 500000
+  "mass" 10
+  "outfit space" -10
+  "fuel capacity" 1500
+
+outfit "Fuel Pod"
+  category "Miscellaneous"
+  thumbnail "outfit/fuel_pod"
+  cost 3000
+  "mass" 1
+  "outfit space" -1
+  "fuel capacity" 100
+  description "A fuel pod increases your fuel capacity, allowing your ship to travel further before it needs to land and refuel."
+
+outfit "Small Fuel Module"
+  category "Miscellaneous"
+  thumbnail "outfit/unknown"
+  licences
+    Coalition
+  cost 8000
+  "mass" 2
+  "outfit space" -2
+  "fuel capacity" 210
+  description "This module increases your fuel capacity by a small amount."
+
+outfit "Large Fuel Module"
+  category "Miscellaneous"
+  thumbnail "outfit/unknown"
+  licences
+    Coalition
+  cost 76000
+  "mass" 15
+  "outfit space" -15
+  "fuel capacity" 1700
+  description "This module increases your fuel capacity by a large amount."
+
+
 # ship expansions
 outfit "Extra Bunks"
   category "Miscellaneous"
@@ -48,15 +91,6 @@ outfit "Extra Shield Emitters"
   "hull" -100
   "outfit space" -1
   description "Remove part of your hull to install more shield emitters."
-
-outfit "Fuel Pod"
-  category "Miscellaneous"
-  thumbnail "outfit/fuel_pod"
-  cost 3000
-  "mass" 1
-  "outfit space" -1
-  "fuel capacity" 100
-  description "A fuel pod increases your fuel capacity, allowing your ship to travel further before it needs to land and refuel."
 
 outfit "Interference Plating"
   category "Miscellaneous"
@@ -136,7 +170,7 @@ outfit "Quarg Ramscoop"
   thumbnail "outfit/unknown"
   licences
     Quarg
-  cost 5000000
+  cost 2000000
   "mass" 10
   "outfit space" -10
   "ramscoop" 10
