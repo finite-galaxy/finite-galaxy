@@ -4,6 +4,7 @@ shipyard "Centaur Variants"
   "Bastion (Laser)"
   "Bastion (Patrol)"
   "Clipper"
+  "Clipper (Miner)"
   "Clipper (Particle)"
   "Clipper (Speedy)"
   "Mark I Drone"
@@ -191,6 +192,25 @@ ship "Clipper"
   explode "medium explosion" 10
   "final explode" "final explosion small"
   description "The Clipper is the smaller sister ship to the venerable Centaur Bastion. Although not able to carry as much cargo, Clippers are versatile ships that can be used as passenger transports, couriers, or even warships in a pinch, and they come with enough free space to be customized based on an individual captain's needs."
+
+
+ship "Clipper" "Clipper (Miner)"
+  outfits
+    "D41-HY Shield Generator"
+    "RT-I Radiothermal"
+    "Hyperdrive"
+
+    "IT-3700 Ion Thruster"
+    "IS-3200 Ion Steering"
+
+    "Heavy Laser Cannon" 4
+
+    "LP036a Battery Pack"
+    "Asteroid Scanner"
+    "Fuel Pod" 26
+    "Ramscoop"
+    "Small Radar Jammer"
+    "Tactical Scanner"
 
 
 ship "Clipper" "Clipper (Particle)"

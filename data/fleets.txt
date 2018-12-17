@@ -39,6 +39,12 @@
 #   "Kor Sestor Large"
 #   "Kor Sestor Small"
 # Merchant:
+#   "Merchant Miners Deep"
+#   "Merchant Miners East"
+#   "Merchant Miners North"
+#   "Merchant Miners Rim"
+#   "Merchant Miners South"
+#   "Merchant Miners West"
 #   "Merchants Deep Large"
 #   "Merchants Deep Small"
 #   "Merchants East Large"
@@ -53,12 +59,6 @@
 #   "Merchants South Small"
 #   "Merchants West Large"
 #   "Merchants West Small"
-#   "Miners Deep"
-#   "Miners East"
-#   "Miners North"
-#   "Miners Rim"
-#   "Miners South"
-#   "Miners West"
 # Militia:
 #   "Militia Large"
 #   "Militia Small"
@@ -76,7 +76,10 @@
 #   "Marauder fleet VIII"
 #   "Marauder fleet IX"
 #   "Marauder fleet X"
-#   "Pirate Miners"
+#   "Pirate Miners East"
+#   "Pirate Miners North"
+#   "Pirate Miners South"
+#   "Pirate Miners West"
 #   "Pirates East Large"
 #   "Pirates East Small"
 #   "Pirates North Large"
@@ -1239,6 +1242,91 @@ fleet "Kor Sestor Small"
 
 
 # Merchant
+
+
+fleet "Merchant Miners Deep"
+  government "Merchant"
+  names "civilian"
+  cargo 0
+  personality
+    confusion 20
+    timid frugal mining harvests
+  # total: 1
+  variant 1
+    "Bounder (Miner)"
+
+fleet "Merchant Miners East"
+  government "Merchant"
+  names "civilian"
+  cargo 0
+  personality
+    confusion 20
+    timid frugal mining harvests
+  # total: 6
+  variant 2
+    "Scout (Miner)"
+  variant 1
+    "Star Freighter (Miner)"
+  variant 2
+    "Wasp (Miner)"
+
+fleet "Merchant Miners North"
+  government "Merchant"
+  names "civilian"
+  cargo 0
+  personality
+    confusion 20
+    timid frugal mining harvests
+  # total: 4
+  variant 1
+    "Star Freighter (Miner)"
+  variant 3
+    "Star Barge (Miner)"
+
+fleet "Merchant Miners Rim"
+  government "Merchant"
+  names "civilian"
+  cargo 0
+  personality
+    confusion 20
+    timid frugal mining harvests
+  # total: 6
+  variant 1
+    "Hauler III (Miner)"
+  variant 2
+    "Hauler II (Miner)"
+  variant 3
+    "Hauler I (Miner)"
+
+fleet "Merchant Miners South"
+  government "Merchant"
+  names "civilian"
+  cargo 0
+  personality
+    confusion 20
+    timid frugal mining harvests
+  # total: 6
+  variant 1
+    "Hauler III (Miner)"
+  variant 2
+    "Hauler II (Miner)"
+  variant 3
+    "Hauler I (Miner)"
+
+fleet "Merchant Miners West"
+  government "Merchant"
+  names "civilian"
+  cargo 0
+  personality
+    confusion 20
+    timid frugal mining harvests
+  # total: 3
+  variant 2
+    "Clipper (Miner)"
+  variant 1
+    "Star Freighter (Miner)"
+
+
 fleet "Merchants Deep Large"
   government "Merchant"
   names "civilian"
@@ -2256,83 +2344,6 @@ fleet "Merchants West Small"
     "Star Freighter (Fancy)"
 
 
-fleet "Miners Deep"
-  government "Merchant"
-  names "civilian"
-  cargo 0
-  personality
-    confusion 20
-    timid frugal mining harvests
-  # total: 1
-  variant 1
-    "Bounder (Miner)"
-
-fleet "Miners East"
-  government "Merchant"
-  names "civilian"
-  cargo 0
-  personality
-    confusion 20
-    timid frugal mining harvests
-  # total: 1
-  variant 1
-    "Scout (Miner)"
-
-fleet "Miners North"
-  government "Merchant"
-  names "civilian"
-  cargo 0
-  personality
-    confusion 20
-    timid frugal mining harvests
-  # total: 4
-  variant 1
-    "Star Freighter (Miner)"
-  variant 3
-    "Star Barge (Miner)"
-
-fleet "Miners Rim"
-  government "Merchant"
-  names "civilian"
-  cargo 0
-  personality
-    confusion 20
-    timid frugal mining harvests
-  # total: 6
-  variant 1
-    "Hauler III (Miner)"
-  variant 2
-    "Hauler II (Miner)"
-  variant 3
-    "Hauler I (Miner)"
-
-fleet "Miners South"
-  government "Merchant"
-  names "civilian"
-  cargo 0
-  personality
-    confusion 20
-    timid frugal mining harvests
-  # total: 6
-  variant 1
-    "Hauler III (Miner)"
-  variant 2
-    "Hauler II (Miner)"
-  variant 3
-    "Hauler I (Miner)"
-
-fleet "Miners West"
-  government "Merchant"
-  names "civilian"
-  cargo 0
-  personality
-    confusion 20
-    timid frugal mining harvests
-  # total: 1
-  variant 1
-    "Star Freighter (Miner)"
-
-
 
 # Militia
 fleet "Militia Large"
@@ -2984,7 +2995,7 @@ fleet "Marauder fleet X"
     "Marauder Bounder"
 
 
-fleet "Pirate Miners"
+fleet "Pirate Miners East"
   government "Pirate"
   names "pirate"
   cargo 0
@@ -2993,7 +3004,40 @@ fleet "Pirate Miners"
     timid frugal mining harvests
   # total: 1
   variant 1
-    "Star Freighter (Miner)"
+    "Wasp (Miner)"
+
+fleet "Pirate Miners North"
+  government "Pirate"
+  names "pirate"
+  cargo 0
+  personality
+    confusion 20
+    timid frugal mining harvests
+  # total: 1
+  variant 1
+    "Star Barge (Miner)"
+
+fleet "Pirate Miners South"
+  government "Pirate"
+  names "pirate"
+  cargo 0
+  personality
+    confusion 20
+    timid frugal mining harvests
+  # total: 1
+  variant 1
+    "Hauler I (Miner)"
+
+fleet "Pirate Miners West"
+  government "Pirate"
+  names "pirate"
+  cargo 0
+  personality
+    confusion 20
+    timid frugal mining harvests
+  # total: 1
+  variant 1
+    "Clipper (Miner)"
 
 
 fleet "Pirates East Large"
@@ -3002,28 +3046,18 @@ fleet "Pirates East Large"
   cargo 1
   personality
     plunders harvests
-  # total: 34
-  variant 2
-    "Falcon"
+  # total: 10
   variant 1
-    "Falcon (Heavy)"
-  variant 1
-    "Falcon (Laser)"
-  variant 2
-    "Firebird"
-  variant 1
-    "Firebird (Laser)"
-  variant 1
-    "Firebird (Torpedo)"
-  variant 6
-    "Manta"
+    "Bastion"
   variant 4
-    "Splinter" 2
-  variant 9
-    "Splinter"
-    "Quicksilver"
-  variant 7
-    "Quicksilver" 3
+    "Firebird"
+  variant 3
+    "Manta"
+  variant 1
+    "Mule"
+    "Foxhound"
+  variant 1
+    "Thunderbolt"
 
 fleet "Pirates East Small"
   government "Pirate"
@@ -3032,33 +3066,21 @@ fleet "Pirates East Small"
   personality
     plunders harvests
     confusion 20
-  # total: 30
-  variant 4
-    "Quicksilver"
-  variant 2
-    "Quicksilver" 2
-  variant 2
-    "Hawk"
-  variant 2
-    "Hawk (Rocket)"
-  variant 2
-    "Hawk (Blaster)"
-  variant 6
-    "Hero"
+  # total: 25
   variant 3
+    "Clipper"
+  variant 1
+    "Clipper (Particle)"
+  variant 6
+    "Quicksilver"
+  variant 3
+    "Scout"
+  variant 1
+    "Scout (Afterburner)"
+  variant 1
+    "Scout (Javelin)"
+  variant 10
     "Wasp"
-  variant 2
-    "Wasp" 2
-  variant 1
-    "Wasp" 3
-  variant 2
-    "Harpy"
-  variant 2
-    "Harpy (Gatling)"
-  variant 1
-    "Harpy" 2
-  variant 1
-    "Harpy (Gatling)" 2
 
 
 fleet "Pirates North Large"
@@ -3067,66 +3089,11 @@ fleet "Pirates North Large"
   cargo 1
   personality
     plunders harvests
-  # total: 41
+  # total: 5
   variant 4
-    "Firebird"
-  variant 2
-    "Firebird (Torpedo)"
-  variant 2
-    "Firebird (Laser)"
-  variant 3
-    "Firebird" 2
+    "Splinter"
   variant 1
-    "Firebird"
-    "Firebird (Laser)"
-  variant 1
-    "Firebird"
-    "Firebird (Torpedo)"
-  variant 1
-    "Firebird (Torpedo)"
-    "Firebird (Laser)"
-  variant 1
-    "Firebird (Torpedo)" 2
-  variant 1
-    "Firebird (Laser)" 2
-  variant 2
-    "Firebird"
-    "Fury"
-  variant 2
-    "Firebird"
-    "Hero" 2
-  variant 1
-    "Firebird (Laser)"
-    "Fury (Rocket)"
-  variant 2
-    "Leviathan"
-    "Firebird"
-  variant 2
-    "Leviathan (North)"
-    "Firebird"
-  variant 2
-    "Leviathan (Heavy)"
-    "Firebird (Laser)"
-  variant 2
-    "Leviathan (Heavy)"
-    "Firebird (Torpedo)"
-  variant 2
-    "Leviathan (North)"
-    "Firebird (Torpedo)"
-  variant 2
-    "Leviathan"
-  variant 1
-    "Leviathan (North)"
-  variant 1
-    "Leviathan (Heavy)"
-  variant 1
-    "Hero" 3
-  variant 1
-    "Hero (Gatling)" 3
-  variant 2
-    "Hero" 2
-  variant 2
-    "Hero (Gatling)" 2
+    "Vanguard"
 
 fleet "Pirates North Small"
   government "Pirate"
@@ -3136,18 +3103,18 @@ fleet "Pirates North Small"
     plunders harvests
     confusion 20
   # total: 20
-  variant 6
-    "Warrior"
-  variant 2
-    "Scout"
-  variant 2
-    "Scout (Afterburner)"
-  variant 2
-    "Scout (Javelin)"
-  variant 4
+  variant 5
     "Hero"
-  variant 4
+  variant 5
     "Hero (Gatling)"
+  variant 5
+    "Quicksilver"
+  variant 3
+    "Scout"
+  variant 1
+    "Scout (Afterburner)"
+  variant 1
+    "Scout (Javelin)"
 
 
 fleet "Pirates South Large"
@@ -3156,77 +3123,15 @@ fleet "Pirates South Large"
   cargo 1
   personality
     plunders harvests
-  # total: 55
-  variant 2
-    "Harpy" 4
+  # total: 16
   variant 1
-    "Harpy (Gatling)" 3
-  variant 5
-    "Argosy"
-  variant 3
-    "Argosy (Blaster)"
-  variant 3
-    "Argosy (Laser)"
-  variant 3
-    "Argosy (Torpedo)"
-  variant 1
-    "Marauder Argosy"
-  variant 1
-    "Marauder Argosy (Heavy)"
-  variant 1
-    "Marauder Argosy (Blaster)"
-  variant 1
-    "Marauder Argosy (Missile)"
-  variant 4
-    "Clipper"
-  variant 2
-    "Clipper (Particle)"
-  variant 2
-    "Clipper (Speedy)"
-  variant 2
-    "Clipper"
-    "Hawk"
-  variant 1
-    "Clipper (Particle)"
-    "Hawk (Rocket)"
-  variant 1
-    "Clipper (Speedy)"
-    "Hawk (Blaster)"
-  variant 3
-    "Argosy"
-    "Hawk"
-  variant 1
-    "Argosy (Blaster)"
-    "Hawk (Rocket)"
-  variant 1
-    "Argosy (Laser)"
-    "Hawk (Blaster)"
-  variant 1
-    "Argosy (Torpedo)"
-    "Hawk (Blaster)"
-  variant 1
-    "Marauder Argosy"
-    "Harpy" 2
-  variant 1
-    "Marauder Argosy (Heavy)"
-    "Harpy" 2
-  variant 1
-    "Marauder Argosy (Blaster)"
-    "Harpy" 2
-  variant 1
-    "Marauder Argosy (Missile)" 2
-  variant 4
     "Bastion"
-  variant 2
-    "Bastion (Heavy)"
-  variant 2
-    "Bastion (Laser)"
-  variant 2
+  variant 3
     "Falcon"
-  variant 1
-    "Falcon (Heavy)"
-  variant 1
-    "Falcon (Laser)"
+  variant 5
+    "Osprey"
+  variant 7
+    "Raven"
 
 fleet "Pirates South Small"
   government "Pirate"
@@ -3235,60 +3140,19 @@ fleet "Pirates South Small"
   personality
     plunders harvests
     confusion 20
-  # total: 41
-  variant 8
-    "Harpy"
-  variant 3
-    "Hawk"
-  variant 2
-    "Hawk (Blaster)"
-  variant 2
-    "Hawk (Rocket)"
+  # total: 25
   variant 5
     "Fury"
-  variant 1
-    "Fury (Laser)"
-  variant 1
-    "Fury (Gatling)"
-  variant 1
-    "Fury (Rocket)"
-  variant 2
-    "Harpy" 2
-  variant 1
-    "Hawk"
-    "Harpy"
-  variant 1
-    "Hawk (Blaster)"
-    "Harpy"
-  variant 1
-    "Fury" 3
-  variant 1
-    "Fury (Rocket)" 3
-  variant 1
-    "Fury"
-    "Hawk"
-  variant 1
-    "Hawk"
-    "Fury"
-    "Harpy"
-  variant 1
-    "Hawk (Rocket)"
-    "Fury (Rocket)"
-    "Harpy"
-  variant 1
-    "Harpy" 3
-  variant 1
-    "Hawk" 2
-  variant 1
-    "Hawk (Blaster)" 2
   variant 3
-    "Clipper"
-  variant 1
-    "Clipper (Particle)"
-  variant 1
-    "Clipper (Speedy)"
-  variant 1
-    "Marauder Argosy"
+    "Fury (Gatling)"
+  variant 8
+    "Harpy"
+  variant 4
+    "Harpy (Gatling)"
+  variant 3
+    "Hawk"
+  variant 2
+    "Hawk (Blaster)"
 
 
 fleet "Pirates West Large"
@@ -3297,7 +3161,18 @@ fleet "Pirates West Large"
   cargo 1
   personality
     plunders harvests
-  # total: 5
+  # total: 20
+  variant 1
+    "Aerie"
+    "Dagger" 2
+  variant 5
+    "Argosy"
+  variant 4
+    "Argosy (Blaster)"
+  variant 3
+    "Argosy (Laser)"
+  variant 2
+    "Bastion"
   variant 2
     "Leviathan"
   variant 1
@@ -3314,8 +3189,14 @@ fleet "Pirates West Small"
   personality
     plunders harvests
     confusion 20
-  # total: 6
-  variant 6
+  # total: 10
+  variant 1
+    "Bounder (Laser)"
+  variant 3
+    "Clipper"
+  variant 1
+    "Clipper (Particle)"
+  variant 5
     "Warrior"
 
 

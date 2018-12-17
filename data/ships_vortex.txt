@@ -17,6 +17,7 @@ shipyard "Vortex Variants"
   "Mule (Hai)"
   "Mule (Heavy)"
   "Wasp"
+  "Wasp (Miner)"
   "Watch Dog"
 
 
@@ -647,7 +648,6 @@ ship "Wasp"
     "Small Radar Jammer"
     "Supercapacitor"
     "Tactical Scanner"
-    "Laser Rifle" 2
   engine -6 33
   engine 6 33
   gun 0 -38 "Gatling Gun"
@@ -657,6 +657,24 @@ ship "Wasp"
   explode "tiny explosion" 20
   explode "small explosion" 10
   description "The Wasp is a medium-strength interceptor, designed by Vortex Shipyards to serve as an escort for cargo vessels. Like most Vortex ships, it is not particularly pretty, but it is reliable and serves the purpose it was made for."
+
+
+ship "Wasp" "Wasp (Miner)"
+  outfits
+    "D14-RN Shield Generator"
+    "nGVF-BB Fuel Cell"
+    "Hyperdrive"
+
+    "IT-2700 Ion Thruster"
+    "IS-2200 Ion Steering"
+
+    "Laser Cannon" 3
+
+    "Fuel Pod" 10
+    "Asteroid Scanner"
+    "Small Radar Jammer"
+    "Supercapacitor"
+    "Tactical Scanner"
 
 
 
