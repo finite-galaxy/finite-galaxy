@@ -3217,19 +3217,6 @@ event "battle for sich'ka'ara end"
 
 
 event "wanderers: more systems lost"
-  system "Ka'pru"
-    government "Hai (Unfettered)"
-    fleet "Unfettered Large" 2000
-    fleet "Unfettered Small" 1000
-  system "Kiro'ku"
-    government "Hai (Unfettered)"
-    fleet "Unfettered Large" 1200
-    fleet "Unfettered Small" 800
-  system "Sich'ka'ara"
-    government "Hai (Unfettered)"
-    fleet "Unfettered Large" 400
-    fleet "Unfettered Small" 400
-    fleet "Wanderer Defence" 600
   planet "Vara Ke'stai"
     attributes "unfettered" "farming"
     description `The Wanderers worked for years to make this desert world bloom: planting hardy shrubs and cacti that eventually transform the sand into a soil that can hold moisture. In some regions, especially closer to the poles, the deserts have given way to dense forests, but near the equator there are still large stretches of dry and barren sand, broken by the occasional belt of green where a narrow river winds between the dunes.`
@@ -3246,6 +3233,30 @@ event "wanderers: more systems lost"
     attributes "unfettered" "fishing"
     description `The surface of this world is almost entirely ocean. The Wanderer settlements were built on massive floating algae mats, some of them the size of a small city. Engines are attached to some of these floating villages, allowing them to be slowly propelled from one part of the planet's surface to another, and the only native industries are fishing and seaweed farming.`
     spaceport `The raft of algae that supports the spaceport is probably at least a dozen meters thick, but flexible enough that it bends as the ocean swells pass underneath, causing individual buildings to rise up or tilt slightly relative to their neighbours. Now that this world has been captured by the Unfettered, nearly all the buildings are empty; it appears that the Hai are not too fond of the idea of inhabiting a water world, so they are using it mostly as a military base.`
+  system "Chy'chra"
+    government "Hai (Unfettered)"
+    fleet "Unfettered Raid" 1000
+    fleet "Unfettered Small" 400
+    fleet "Unfettered Large" 400
+  system "Ik'kara'ka"
+    fleet "Unfettered Small" 1200
+    fleet "Unfettered Large" 500
+  system "Ka'pru"
+    government "Hai (Unfettered)"
+    fleet "Unfettered Large" 2000
+    fleet "Unfettered Small" 1000
+  system "Kiro'ku"
+    government "Hai (Unfettered)"
+    fleet "Unfettered Large" 1200
+    fleet "Unfettered Small" 800
+  system "Prakacha'a"
+    fleet "Unfettered Large" 600
+    fleet "Unfettered Small" 600
+  system "Sich'ka'ara"
+    government "Hai (Unfettered)"
+    fleet "Unfettered Large" 400
+    fleet "Unfettered Small" 400
+    fleet "Wanderer Defence" 600
 
 
 event "wanderers: the eye begins to open"
