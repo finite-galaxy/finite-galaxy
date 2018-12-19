@@ -174,8 +174,6 @@ event "war begins"
     "required reputation" 100
     security .9
 
-  system "Zubenelgenubi"
-    government "Free Worlds"
   system "Sabik"
     government "Free Worlds"
   system "Unukalhai"
@@ -233,13 +231,6 @@ event "initial deployment 1"
     description `The atmosphere here is a toxic mix of ammonia, sulphur, and methane. Although breathable by human beings if necessary, the locals use masks to reduce the risk of chronic respiratory problems. Even so, the life expectancy here is short, but that is partly because the two best-paying industries are oil drilling and mining for radioactive elements.`
     description `  Oblivion is also now home to a burgeoning Navy base, although since the planet is so unlivable most of the troops are just living in ships in orbit.`
 
-  system "Zubenelgenubi"
-    fleet "Merchants South Small" 500
-    fleet "Merchants South Large" 900
-    fleet "Pirates South Small" 5000
-    fleet "Pirates South Large" 8000
-    fleet "Free Worlds Small" 800
-    fleet "Free Worlds Large" 1000
   system "Unukalhai"
     fleet "Merchants South Small" 900
     fleet "Merchants South Large" 3000
@@ -403,13 +394,6 @@ event "initial deployment 2"
     fleet "Pirates South Small" 8000
     fleet "Republic Small" 1000
     fleet "Republic Large" 2000
-  system "Arcturus"
-    fleet "Merchants South Small" 700
-    fleet "Merchants South Large" 3000
-    fleet "Navy Surveillance" 1800
-    fleet "Pirates South Small" 4000
-    fleet "Republic Small" 2000
-    fleet "Republic Large" 3000
   system "Holeb"
     fleet "Merchants South Small" 1000
     fleet "Merchants South Large" 3000
@@ -426,6 +410,13 @@ event "initial deployment 2"
     fleet "Republic Small" 500
     fleet "Republic Large" 600
 
+  system "Arcturus"
+    fleet "Merchants West Small" 700
+    fleet "Merchants West Large" 3000
+    fleet "Navy Surveillance" 1800
+    fleet "Pirates West Small" 4000
+    fleet "Republic Small" 2000
+    fleet "Republic Large" 3000
   system "Mizar"
     fleet "Merchants West Small" 1400
     fleet "Merchants West Large" 4500
@@ -1307,7 +1298,7 @@ event "battle for Rastaban"
     fleet "Free Worlds Large" 1500
 
 
-event "fw southern expansion"
+event "fw eastern expansion"
   system "Sargas"
     fleet "Merchants South Small" 600
     fleet "Merchants South Large" 2500
@@ -1324,15 +1315,6 @@ event "fw southern expansion"
     fleet "Pirates South Small" 2000
     fleet "Pirates South Large" 5000
     fleet "Navy Surveillance" 4000
-  system "Rastaban"
-    government "Free Worlds"
-    fleet "Merchants South Small" 1200
-    fleet "Merchants South Large" 2400
-    fleet "Free Worlds Small" 500
-    fleet "Free Worlds Large" 700
-    fleet "Pirates South Small" 3000
-    fleet "Pirates South Large" 7000
-    fleet "Navy Surveillance" 2000
   system "Girtab"
     government "Free Worlds"
     fleet "Merchants South Small" 900
@@ -1342,23 +1324,15 @@ event "fw southern expansion"
     fleet "Pirates South Small" 3000
     fleet "Pirates South Large" 7000
     fleet "Navy Surveillance" 5000
-  system "Albaldah"
+  system "Rastaban"
     government "Free Worlds"
-    fleet "Merchants South Small" 1000
-    fleet "Merchants South Large" 1200
-    fleet "Free Worlds Small" 900
-    fleet "Free Worlds Large" 1900
+    fleet "Merchants South Small" 1200
+    fleet "Merchants South Large" 2400
+    fleet "Free Worlds Small" 500
+    fleet "Free Worlds Large" 700
     fleet "Pirates South Small" 3000
     fleet "Pirates South Large" 7000
-    fleet "Navy Surveillance" 5000
-  system "Albireo"
-    government "Free Worlds"
-  system "Sadr"
-    government "Free Worlds"
-  system "Lurata"
-    government "Free Worlds"
-  system "Eltanin"
-    government "Free Worlds"
+    fleet "Navy Surveillance" 2000
   system "Delta Sagittarii"
     government "Free Worlds"
     fleet "Merchants South Small" 1200
@@ -1545,11 +1519,22 @@ event "battle for zeta aquilae"
 
 
 event "fw expanded and cut"
-  system "Peacock"
+  system "Albaldah"
     government "Free Worlds"
-  system "Kaus Australis"
+    fleet "Merchants South Small" 1000
+    fleet "Merchants South Large" 1200
+    fleet "Free Worlds Small" 900
+    fleet "Free Worlds Large" 1900
+    fleet "Pirates South Small" 3000
+    fleet "Pirates South Large" 7000
+    fleet "Navy Surveillance" 5000
+  system "Albireo"
     government "Free Worlds"
-  system "Tais"
+  system "Sadr"
+    government "Free Worlds"
+  system "Lurata"
+    government "Free Worlds"
+  system "Eltanin"
     government "Free Worlds"
   system "Delta Sagittarii"
     government "Republic"
@@ -1913,7 +1898,6 @@ event "syndicate occupies sol"
 
 
 event "pug invasion"
-  unlink Ascella "Zeta Aquilae"
   unlink Cebalrai Rasalhague
   link Deneb Rasalhague
   link Deneb "Zeta Aquilae"
@@ -2295,7 +2279,6 @@ event "pug link restoration 3"
 event "pug link restoration 4"
   link Acamar Diphda
   link Ankaa Diphda
-  link Ascella "Zeta Aquilae"
 
 
 event "battle of alcyone"
@@ -2490,7 +2473,6 @@ event "fwc attack vega"
 
 
 event "fwc pug invasion"
-  unlink Ascella "Zeta Aquilae"
   unlink Hintar "Zeta Aquilae"
   unlink Hintar Rasalhague
   unlink Cebalrai Rasalhague
@@ -2696,11 +2678,10 @@ event "fwc liberation of rasalhague"
 
 event "fwc reconnect hintar"
   link Hintar Rasalhague
-  link Hintar "Zeta Aquilae"
 
 
 event "fwc reconnect zeta aquilae"
-  link Ascella "Zeta Aquilae"
+  link Hintar "Zeta Aquilae"
   system "Zeta Aquilae"
     government "Free Worlds"
     fleet "Merchants South Small" 1500
@@ -2791,13 +2772,6 @@ event "fwc conquests returned"
 
 # free worlds epilogue
 event "free worlds end"
-  system "Naper"
-    government "Republic"
-    fleet "Merchant Miners South" 3000
-    fleet "Merchants South Small" 1500
-    fleet "Merchants South Large" 3000
-    fleet "Navy Surveillance" 5400
-    fleet "Pirates South Small" 1000
   system "Tais"
     government "Republic"
     fleet "Merchants South Small" 1500

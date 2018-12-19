@@ -56,12 +56,12 @@ mission "Intro [0]"
         `  "Sure, where are you trying to get to?"`
         `  "Sorry, I'd rather figure things out on my own."`
           decline
-      `  "Well," he says, "I've got a spot reserved in a retirement home, but I don't mind taking a roundabout way to get there. For starters, how about you give me a lift to <planet>? It's just one jump away from here; I can mark it on your map."`
+      `  "Well," he says, "I've got a spot reserved in a retirement home, but I don't mind taking a roundabout way to get there. For starters, how about you give me a lift to <planet>? It's just two jumps away from here; I can mark it on your map."`
       choice
         `  "Sounds good!"`
           goto end
         `  "How much will you pay me?"`
-      `  "That's kind of a rude question," he says, "but I'll pay you ten thousand credits. I guarantee you that's more than any captain ever gets for carrying one passenger for one day."`
+      `  "That's kind of a rude question," he says, "but I'll pay you ten thousand credits. I guarantee you that's more than any captain ever gets for carrying one passenger for two days."`
       choice
         `  "That's really generous. Thank you."`
           goto end

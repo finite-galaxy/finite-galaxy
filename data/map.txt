@@ -2283,6 +2283,7 @@ system "Alcyone"
   belt 1438
   link Durax
   link Oblate
+  link Salm
   asteroids "small rock" 4 1.62
   asteroids "medium rock" 16 1.3176
   asteroids "large rock" 16 1.08
@@ -2637,6 +2638,7 @@ system "Algieba"
   trade "Plastic" 476
   fleet "Merchants West Small" 400
   fleet "Merchants West Large" 600
+  fleet "Navy Surveillance" 7200
   fleet "Republic Small" 1400
   fleet "Republic Large" 5000
   object
@@ -2660,8 +2662,8 @@ system "Algieba"
     sprite planet/dust3-b
     distance 712.919
     period 146.67
-  object
-    sprite planet/forest0-b
+  object "Arahas"
+    sprite planet/forest0
     distance 1363.17
     period 387.798
   object
@@ -3741,7 +3743,6 @@ system "Alphecca"
   government "Republic"
   habitable 1400
   belt 1101
-  link Holeb
   link Seginus
   asteroids "large metal" 1 4.3296
   trade "Clothing" 343
@@ -3829,8 +3830,8 @@ system "Alpheratz"
     sprite planet/fog0
     distance 306.613
     period 65.3294
-  object "Glory"
-    sprite planet/forest4
+  object
+    sprite planet/ocean5
     distance 858.853
     period 306.268
     object
@@ -4340,7 +4341,6 @@ system "Arcturus"
   belt 1422
   link Holeb
   link Mizar
-  link Rutilicus
   asteroids "small rock" 4 2.86
   asteroids "medium rock" 3 2.508
   asteroids "large rock" 5 2.288
@@ -4360,8 +4360,8 @@ system "Arcturus"
   trade "Medical" 684
   trade "Metal" 416
   trade "Plastic" 461
-  fleet "Merchants South Small" 700
-  fleet "Merchants South Large" 3000
+  fleet "Merchants West Small" 700
+  fleet "Merchants West Large" 3000
   fleet "Merchant Miners South" 5000
   fleet "Militia Small" 10000
   object
@@ -4515,7 +4515,6 @@ system "Ascella"
   link Naper
   link Peacock
   link Tais
-  link "Zeta Aquilae"
   asteroids "small rock" 3 1.3328
   asteroids "medium rock" 258 1.5708
   asteroids "large rock" 6 1.547
@@ -7549,7 +7548,6 @@ system "Delta Sagittarii"
   belt 1414
   link "Alpha Arae"
   link Eltanin
-  link Naper
   link Rastaban
   link Tais
   asteroids "small rock" 35 4.914
@@ -7579,7 +7577,7 @@ system "Delta Sagittarii"
   object
     sprite star/k5
     period 10
-  object "Dancer"
+  object "Bundok"
     sprite planet/ocean6
     distance 259.64
     period 93.5497
@@ -7747,7 +7745,7 @@ system "Denebola"
   trade "Plastic" 253
   fleet "Merchants West Small" 1000
   fleet "Merchants West Large" 3000
-  fleet "Navy Surveillance" 3600
+  fleet "Navy Surveillance" 1800
   fleet "Republic Small" 700
   fleet "Republic Large" 900
   object
@@ -8900,94 +8898,6 @@ system "Eneremprukt"
     distance 2137.8
     period 1792.21
 
-system "Enif"
-  pos -177 498
-  government "Quarg"
-  habitable 700
-  belt 1974
-  link Sadalmelik
-  link Sadalsuud
-  link Tarazed
-  asteroids "small rock" 1 6.3336
-  asteroids "medium rock" 14 5.1968
-  asteroids "large rock" 17 12.0176
-  asteroids "small metal" 4 4.1412
-  asteroids "medium metal" 11 6.2524
-  asteroids "large metal" 2 8.0388
-  minables "neodymium" 10 15.6333
-  minables "silicon" 2 10.2511
-  minables "silver" 1 13.4158
-  trade "Clothing" 361
-  trade "Electronics" 800
-  trade "Equipment" 485
-  trade "Food" 335
-  trade "Heavy Metals" 806
-  trade "Industrial" 838
-  trade "Luxury Goods" 1456
-  trade "Medical" 914
-  trade "Metal" 297
-  trade "Plastic" 412
-  fleet "Merchants South Small" 1000
-  fleet "Merchants South Large" 4000
-  fleet "Quarg Small" 600
-  object
-    sprite star/g5
-    period 10
-  object
-    sprite planet/lava5-b
-    distance 271
-    period 360
-  object "Lagrange"
-    sprite planet/station0
-    distance 271
-    period 360
-    offset 180
-  object
-    sprite "planet/ringworld-left"
-    distance 271
-    period 360
-    offset -30
-  object
-    sprite planet/ringworld
-    distance 271
-    period 360
-    offset -50
-  object
-    sprite "planet/ringworld-right"
-    distance 271
-    period 360
-    offset -70
-  object
-    sprite "planet/ringworld-left"
-    distance 271
-    period 360
-    offset -90
-  object
-    sprite "planet/ringworld-right"
-    distance 271
-    period 360
-    offset -110
-  object
-    sprite "planet/ringworld-right"
-    distance 271
-    period 360
-    offset 40
-  object
-    sprite planet/ringworld
-    distance 271
-    period 360
-    offset 60
-  object
-    sprite planet/ringworld
-    distance 271
-    period 360
-    offset 80
-  object
-    sprite "planet/ringworld-left"
-    distance 271
-    period 360
-    offset 100
-
 system "Epsilon Leonis"
   pos -619 -229
   government "Deep"
@@ -9409,9 +9319,11 @@ system "Fala"
   fleet "Merchants West Small" 1600
   fleet "Merchants West Large" 3000
   fleet "Merchant Miners West" 2000
+  fleet "Navy Surveillance" 7200
   fleet "Pirates West Small" 2000
   fleet "Pirates West Large" 4000
-  fleet "Republic Small" 4000
+  fleet "Republic Small" 2500
+  fleet "Republic Large" 4000
   object
     sprite star/g5-old
     period 10
@@ -10160,7 +10072,7 @@ system "Fomalhaut"
     sprite planet/lava4
     distance 193.46
     period 50.4247
-  object "Thrall"
+  object "Glory"
     sprite planet/forest1
     distance 437.87
     period 171.701
@@ -11084,6 +10996,7 @@ system "Hadar"
   belt 1520
   link Alkaid
   link Izar
+  link Kochab
   link "Zeta Centauri"
   link Zubeneschamali
   asteroids "small rock" 37 3.5226
@@ -11141,6 +11054,7 @@ system "Hamal"
   belt 1241
   link Ruchbah
   link Sheratan
+  link Tarf
   link Zaurak
   asteroids "small rock" 3 2.7552
   asteroids "medium rock" 3 3.9648
@@ -11745,7 +11659,6 @@ system "Holeb"
   habitable 1715
   belt 1181
   link Alioth
-  link Alphecca
   link Arcturus
   link Rutilicus
   asteroids "large metal" 1 3.5904
@@ -12029,7 +11942,6 @@ system "Ildaria"
   habitable 625
   belt 1132
   link Kochab
-  link Zubeneschamali
   asteroids "medium rock" 1 3.159
   asteroids "large rock" 1 3.51
   asteroids "small metal" 9 3.3696
@@ -13304,6 +13216,7 @@ system "Kochab"
   government "Free Worlds"
   habitable 320
   belt 1912
+  link Hadar
   link Ildaria
   link Zubeneschamali
   asteroids "large metal" 1 6.9552
@@ -15566,7 +15479,7 @@ system "Merak"
   trade "Plastic" 291
   fleet "Merchants West Small" 1500
   fleet "Merchants West Large" 4000
-  fleet "Navy Surveillance" 2400
+  fleet "Navy Surveillance" 1800
   fleet "Republic Small" 1100
   fleet "Republic Large" 1300
   object
@@ -15827,6 +15740,7 @@ system "Mimosa"
   belt 1484
   link Kraz
   link Minkar
+  link Spica
   asteroids "medium rock" 22 3.3698
   asteroids "large rock" 3 5.4404
   asteroids "small metal" 2 3.3292
@@ -16208,8 +16122,8 @@ system "Mizar"
     sprite planet/desert6
     distance 192.09
     period 32.4045
-  object
-    sprite planet/ocean5
+  object "Thrall"
+    sprite planet/forest4
     distance 656.13
     period 204.566
   object
@@ -16237,6 +16151,7 @@ system "Moktar"
   link Cardax
   link Mirfak
   link Oblate
+  link Salm
   asteroids "small rock" 2 4.945
   asteroids "medium rock" 7 8.395
   asteroids "large rock" 3 4.83
@@ -16534,8 +16449,6 @@ system "Naper"
   habitable 1715
   belt 1445
   link Ascella
-  link "Delta Sagittarii"
-  link Tais
   asteroids "small rock" 3 2.0757
   asteroids "medium rock" 13 0.9724
   asteroids "large rock" 9 1.3277
@@ -16880,6 +16793,7 @@ system "Oblate"
   belt 1704
   link Alcyone
   link Moktar
+  link Salm
   link Zaurak
   asteroids "small rock" 2 2.1
   asteroids "medium rock" 7 1.3944
@@ -17776,14 +17690,14 @@ system "Phecda"
   fleet "Merchants West Small" 900
   fleet "Merchants West Large" 1100
   fleet "Merchant Miners West" 2000
+  fleet "Navy Surveillance" 7200
   fleet "Republic Small" 900
   fleet "Republic Large" 1100
-  fleet "Navy Surveillance" 1200
   object
     sprite star/k5
     period 10
-  object "Arahas"
-    sprite planet/forest0
+  object
+    sprite planet/forest0-b
     distance 173.24
     period 50.9867
   object
@@ -18837,7 +18751,7 @@ system "Rastaban"
     sprite planet/dust6
     distance 398.4
     period 96.7892
-  object "Bundok"
+  object "Dancer"
     sprite planet/ocean6
     distance 933.4
     period 347.096
@@ -19239,7 +19153,6 @@ system "Rutilicus"
   government "Republic"
   habitable 625
   belt 1771
-  link Arcturus
   link Cebalrai
   link Holeb
   link Menkent
@@ -19441,12 +19354,100 @@ system "Sabriset"
     distance 1367.84
     period 511.237
 
+system "Sadachbia"
+  pos -177 498
+  government "Quarg"
+  habitable 700
+  belt 1974
+  link Sadalmelik
+  link Sadalsuud
+  link Tarazed
+  asteroids "small rock" 1 6.3336
+  asteroids "medium rock" 14 5.1968
+  asteroids "large rock" 17 12.0176
+  asteroids "small metal" 4 4.1412
+  asteroids "medium metal" 11 6.2524
+  asteroids "large metal" 2 8.0388
+  minables "neodymium" 10 15.6333
+  minables "silicon" 2 10.2511
+  minables "silver" 1 13.4158
+  trade "Clothing" 361
+  trade "Electronics" 800
+  trade "Equipment" 485
+  trade "Food" 335
+  trade "Heavy Metals" 806
+  trade "Industrial" 838
+  trade "Luxury Goods" 1456
+  trade "Medical" 914
+  trade "Metal" 297
+  trade "Plastic" 412
+  fleet "Merchants South Small" 1000
+  fleet "Merchants South Large" 4000
+  fleet "Quarg Small" 600
+  object
+    sprite star/g5
+    period 10
+  object
+    sprite planet/lava5-b
+    distance 271
+    period 360
+  object "Lagrange"
+    sprite planet/station0
+    distance 271
+    period 360
+    offset 180
+  object
+    sprite "planet/ringworld-left"
+    distance 271
+    period 360
+    offset -30
+  object
+    sprite planet/ringworld
+    distance 271
+    period 360
+    offset -50
+  object
+    sprite "planet/ringworld-right"
+    distance 271
+    period 360
+    offset -70
+  object
+    sprite "planet/ringworld-left"
+    distance 271
+    period 360
+    offset -90
+  object
+    sprite "planet/ringworld-right"
+    distance 271
+    period 360
+    offset -110
+  object
+    sprite "planet/ringworld-right"
+    distance 271
+    period 360
+    offset 40
+  object
+    sprite planet/ringworld
+    distance 271
+    period 360
+    offset 60
+  object
+    sprite planet/ringworld
+    distance 271
+    period 360
+    offset 80
+  object
+    sprite "planet/ringworld-left"
+    distance 271
+    period 360
+    offset 100
+
 system "Sadalmelik"
   pos -145 472
   government "Quarg"
   habitable 1715
   belt 1273
-  link Enif
+  link Sadachbia
   link Sadalsuud
   asteroids "small rock" 1 3.38
   asteroids "medium rock" 220 3.0082
@@ -19501,7 +19502,7 @@ system "Sadalsuud"
   government "Quarg"
   habitable 1400
   belt 1859
-  link Enif
+  link Sadachbia
   link Sadalmelik
   asteroids "small rock" 1 4.116
   asteroids "large rock" 3 1.5876
@@ -19749,6 +19750,53 @@ system "Salipastart"
       sprite planet/ice8-b
       distance 291
       period 21.2086
+
+system "Salm"
+  pos -114 -179
+  government "Republic"
+  habitable 642
+  belt 1677
+  link Alcyone
+  link Moktar
+  link Oblate
+  asteroids "small rock" 3 2.8883
+  asteroids "medium rock" 10 3.7023
+  asteroids "large rock" 7 2.5692
+  asteroids "small metal" 2 3.3513
+  asteroids "medium metal" 7 2.5399
+  asteroids "large metal" 3 3.8056
+  trade "Clothing" 353
+  trade "Electronics" 660
+  trade "Equipment" 634
+  trade "Food" 245
+  trade "Heavy Metals" 964
+  trade "Industrial" 747
+  trade "Luxury Goods" 1100
+  trade "Medical" 692
+  trade "Metal" 320
+  trade "Plastic" 394
+  fleet "Pirates East Small" 1000
+  fleet "Pirates East Large" 1500
+  fleet "Republic Large" 3000
+  object
+    sprite star/a5
+    period 10
+  object
+    sprite planet/rock18-b
+    distance 403.576
+    period 138.827
+  object
+    sprite planet/gas12
+    distance 704.184
+    period 306.033
+  object
+    sprite planet/ice1
+    distance 1583.35
+    period 617.680
+  object
+    sprite planet/rock11-b
+    distance 3898.84
+    period 3752.44
 
 system "Sargas"
   pos -542 445
@@ -21577,6 +21625,7 @@ system "Spica"
   habitable 625
   belt 1940
   link "Gamma Corvi"
+  link Mimosa
   link Minkar
   asteroids "medium rock" 28 1.386
   asteroids "large rock" 4 1.554
@@ -21949,7 +21998,6 @@ system "Tais"
   link Ascella
   link "Delta Sagittarii"
   link "Kaus Australis"
-  link Naper
   link Peacock
   asteroids "medium rock" 7 6.65
   asteroids "large rock" 2 7
@@ -22091,6 +22139,7 @@ system "Tania Australis"
   trade "Plastic" 390
   fleet "Merchants West Small" 1000
   fleet "Merchants West Large" 2000
+  fleet "Navy Surveillance" 7200
   fleet "Pirates West Small" 4000
   fleet "Pirates West Large" 9000
   fleet "Republic Small" 3000
@@ -22141,8 +22190,8 @@ system "Tarazed"
   habitable 1215
   belt 1169
   link Dabih
-  link Enif
   link Lurata
+  link Sadachbia
   link Umbral
   asteroids "small rock" 2 2.2968
   asteroids "medium rock" 1 2.1978
@@ -22196,6 +22245,57 @@ system "Tarazed"
       sprite planet/station3
       distance 228
       period 16.9693
+
+system "Tarf"
+  pos -164 -10
+  government "Republic"
+  habitable 1422
+  belt 1323
+  link Hamal
+  asteroids "small rock" 13 4.0875
+  asteroids "medium rock" 18 3.7725
+  asteroids "large rock" 23 3.5065
+  asteroids "small metal" 2 3.4589
+  asteroids "medium metal" 71 2.2204
+  asteroids "large metal" 25 4.2037
+  trade "Clothing" 321
+  trade "Electronics" 715
+  trade "Equipment" 594
+  trade "Food" 202
+  trade "Heavy Metals" 725
+  trade "Industrial" 814
+  trade "Luxury Goods" 1110
+  trade "Medical" 634
+  trade "Metal" 319
+  trade "Plastic" 378
+  fleet "Merchants East Small" 2300
+  fleet "Pirates East Small" 1800
+  fleet "Pirates East Large" 3200
+  fleet "Republic Small" 3300
+  fleet "Republic Large" 6300
+  object
+    sprite star/k0-old
+    period 10
+  object
+    sprite planet/forest0-b
+    distance 182.192
+    period 27.1459
+  object
+    sprite planet/rock6
+    distance 505.558
+    period 146.122
+  object
+    sprite planet/io-b
+    distance 876.096
+    period 307.503
+  object
+    sprite planet/cloud6-b
+    distance 1074.03
+    period 423.614
+  object
+    sprite planet/rhea-b
+    distance 2008.53
+    period 1509.81
 
 system "Tebuteb"
   pos -616 710
@@ -23029,7 +23129,7 @@ system "Vega"
   trade "Plastic" 315
   fleet "Merchants South Small" 1000
   fleet "Merchants South Large" 4000
-  fleet "Navy Surveillance" 1800
+  fleet "Navy Surveillance" 3600
   fleet "Republic Small" 900
   fleet "Republic Large" 1000
   object
@@ -23879,7 +23979,6 @@ system "Zeta Aquilae"
   government "Republic"
   habitable 1400
   belt 1829
-  link Ascella
   link Hintar
   link Orvala
   link Rasalhague
@@ -24128,17 +24227,18 @@ system "Zuba Zub"
 
 system "Zubenelgenubi"
   pos -710 353
-  government "Republic"
+  government "Free Worlds"
   habitable 945
   belt 1475
   link Unukalhai
   link Sabik
+  link Zubenelhakrabi
   link Zubeneschamali
   asteroids "medium rock" 2 2.5344
   asteroids "large rock" 1 3.2076
   asteroids "small metal" 10 4.9104
   asteroids "medium metal" 39 5.7816
-  asteroids "large metal" 6 5.5836
+  asteroids "large metal" 39 5.5836
   minables "gold" 1 9.77852
   minables "iron" 3 10.6772
   trade "Clothing" 375
@@ -24152,11 +24252,11 @@ system "Zubenelgenubi"
   trade "Metal" 506
   trade "Plastic" 303
   fleet "Merchants South Small" 500
-  fleet "Merchants South Large" 1500
-  fleet "Militia Small" 2000
-  fleet "Militia Large" 3000
-  fleet "Pirates South Small" 3000
-  fleet "Pirates South Large" 5000
+  fleet "Merchants South Large" 900
+  fleet "Pirates South Small" 5000
+  fleet "Pirates South Large" 8000
+  fleet "Free Worlds Small" 800
+  fleet "Free Worlds Large" 1000
   object
     sprite star/g5
     distance 32.8466
@@ -24191,15 +24291,77 @@ system "Zubenelgenubi"
     distance 1993.37
     period 1158.05
 
+system "Zubenelhakrabi"
+  pos -775 366
+  government "Free Worlds"
+  habitable 1098
+  belt 1509
+  link Zubenelgenubi
+  link Zubeneschamali
+  asteroids "small rock" 5 1.2896
+  asteroids "medium rock" 30 2.1564
+  asteroids "large rock" 17 2.8518
+  asteroids "small metal" 20 3.9372
+  asteroids "medium metal" 40 4.4196
+  asteroids "large metal" 39 4.6794
+  trade "Clothing" 376
+  trade "Electronics" 699
+  trade "Equipment" 524
+  trade "Food" 164
+  trade "Heavy Metals" 1113
+  trade "Industrial" 714
+  trade "Luxury Goods" 995
+  trade "Medical" 591
+  trade "Metal" 530
+  trade "Plastic" 303
+  fleet "Merchants South Small" 1400
+  fleet "Free Worlds Small" 2200
+  fleet "Free Worlds Large" 3400
+  fleet "Pirates South Small" 3000
+  fleet "Pirates South Large" 4000
+  object
+    sprite star/f5
+    distance 22.1
+    period 14.0265
+  object
+    sprite star/g5
+    distance 55.25
+    period 14.0265
+    offset 180
+  object
+    sprite planet/forest4
+    distance 321.087
+    period 803.863
+    object
+      sprite planet/dust0
+      distance 146
+      period 23.8215
+  object
+    sprite planet/gas0
+    distance 691.462
+    period 245.859
+  object
+    sprite planet/cloud3-b
+    distance 1342.36
+    period 683.417
+  object
+    sprite planet/gas3-b
+    distance 1733.11
+    period 1245.66
+  object
+    sprite planet/uranus
+    distance 2343.25
+    period 1698.57
+
 system "Zubeneschamali"
   pos -759 338
   government "Free Worlds"
   habitable 1250
   belt 1543
   link Hadar
-  link Ildaria
   link Kochab
   link Zubenelgenubi
+  link Zubenelhakrabi
   asteroids "small rock" 9 1.9344
   asteroids "medium rock" 57 1.7784
   asteroids "large rock" 33 2.496
@@ -24229,11 +24391,11 @@ system "Zubeneschamali"
     sprite star/g5
     distance 62
     period 15.622
-    offset 180
   object
     sprite star/g5-old
     distance 62
     period 15.622
+    offset 180
   object
     sprite planet/cloud8
     distance 420.44
@@ -24418,7 +24580,7 @@ planet "Arahas"
   attributes "dirt belt" bank factory
   landscape land/water1
   description `Arahas is mostly desert and savanna, with very little precipitation. A century ago, some entrepreneurs settled here and built a factory complex that is entirely powered by wind and solar energy, because there are so few cloudy days here and the wind and sunshine are so reliable. The factory is mostly autonomous, with only a few thousand people living here to perform maintenance or to grow crops in irrigated fields.`
-  description `The only other settlement is a minor base of the Republic Navy, located here to resupply the patrol ships that keep the space from here to Earth pirate-free.`
+  description `The only other settlement is a minor base of the Republic Navy, located here to resupply the warships that patrol to and from Earth.`
   spaceport `The spaceport consists of a few large concrete slabs, each big enough for a dozen small ships or a pair of bulk freighters to land on. Farther away are fields of solar panels and the factories that they power. The spaceport buildings themselves, however, are underground, where less energy is needed to keep the air cool. Light pipes bring sunlight down from the surface to illuminate the subterranean storage caverns and living quarters, while keeping the searing heat of the sunlight out.`
   outfitter "Map"
   outfitter "Pilot Licence"
@@ -24617,7 +24779,7 @@ planet "Bod"
   outfitter "Pilot Licence"
   outfitter "Fuel Pod"
   outfitter "Basic Outfits"
-  outfitter "Sisensis Basics"
+  outfitter "Sisensis Intermediate"
   security 0.1
 #  tribute 700
 #    threshold 3000
@@ -24988,7 +25150,7 @@ planet "Dancer"
 #    fleet "Militia Small" 23
 
 planet "Darkcloak"
-  attributes unfettered
+  attributes unfettered military
   landscape land/water6
   description `Darkcloak is a world that is almost always obscured by a thick layer of clouds, making it difficult to produce food here.`
   description `  Although the Hai tend to be an easygoing and nonviolent species, there are always a few in each generation that yearn for excitement, warfare, and conquest. These "Unfettered" Hai have built a major military base here, and they launch raids from here on convoys travelling through the nearby systems.`
@@ -25240,7 +25402,6 @@ planet "Endless Sky"
   outfitter "Pilot Licence"
   outfitter "Fuel Pod"
   outfitter "Basic Outfits"
-  outfitter "Sisensis Basics"
   shipyard "Basic Ships"
   security 0.05
 #  tribute 300
@@ -25513,6 +25674,7 @@ planet "Furnace"
   outfitter "Fuel Pod"
   outfitter "Basic Outfits"
   outfitter "Lovelace Basics"
+  "required reputation" 2
   bribe 0.05
   security 0.1
 #  tribute 1200
@@ -25609,7 +25771,7 @@ planet "Glittering Ice"
   "required reputation" 15
 
 planet "Glory"
-  attributes core bank medical
+  attributes "near earth" bank medical
   landscape land/sky8
   description `Elsewhere in the galaxy, people speak dismissively of the "boughten sunshine" that rich terraformed worlds can afford. On Glory, even many of the lakes and hills are artificial, crafted to garden-like perfection. Fittingly, the chief industry on Glory is plastic surgery, along with other medical efforts aimed at prolonging life, funded by rich, elderly folks who have settled here.`
   description `  Glory is also home to the Academy of Planetary Sciences, the organization at the forefront of terraforming research. The Academy takes on only a handful of apprentices each year, and guards its secrets very closely.`
@@ -25620,6 +25782,7 @@ planet "Glory"
   outfitter "Fuel Pod"
   outfitter "Basic Outfits"
   outfitter "Lovelace Basics"
+  outfitter "Sisensis Basics"
   outfitter "Syndicate Basics"
   bribe 0.05
   security 0.6
@@ -27415,7 +27578,7 @@ planet "Third Umber"
   "required reputation" 15
 
 planet "Thrall"
-  attributes "near earth" bank textiles
+  attributes "dirt belt" bank textiles
   landscape land/fields5
   description `Thrall has a warm, moderate climate and a geography of mostly gently rolling hills. Most of the industry here takes the form of agriculture, especially growing cotton. There are also three major cities where the cotton is spun into thread and woven into textiles for export off world. It is one of the few places in the galaxy where cotton is picked by hand, because labour here is cheaper than the cost of buying and maintaining machinery.`
   description `  The locals are prevented from seeking more lucrative employment elsewhere partly by the crushingly low wages, which make the cost of space transport prohibitively high for most, and partly by the educational system, which is among the worst in the galaxy.`
@@ -27424,9 +27587,7 @@ planet "Thrall"
   outfitter "Pilot Licence"
   outfitter "Fuel Pod"
   outfitter "Basic Outfits"
-  outfitter "Lovelace Basics"
   outfitter "Sisensis Basics"
-  outfitter "Syndicate Basics"
   bribe 0.04
   security 0.5
 #  tribute 2000
@@ -27482,9 +27643,9 @@ planet "Tinker"
   outfitter "Pilot Licence"
   outfitter "Fuel Pod"
   outfitter "Common Outfits"
-  outfitter "Lovelace Basics"
-  outfitter "Sisensis Basics"
-  outfitter "Syndicate Basics"
+  outfitter "Lovelace Intermediate"
+  outfitter "Sisensis Intermediate"
+  outfitter "Syndicate Intermediate"
   shipyard "Megaparsec Basics"
   shipyard "Centaur Intermediate"
   shipyard "Star Basics"
@@ -27595,7 +27756,7 @@ planet "Valhalla"
   attributes deep bank farming fishing urban factory
   landscape land/mfield3
   description `Valhalla was the first world to be settled in this region of space, which is known as the Deep. It is rich in natural resources, but all its vast farms and fisheries are insufficient to feed its population of nearly five billion.`
-  description `  The shipyards of Lionheart Industries are located here. Centuries ago, warships built here turned the tide of the Alpha War, and today the ships designed and built in the Deep continue to be some of the most technologically advanced ships in human space - and the most expensive. Lionheart actually consists of two different branches, one producing powerful multi-purpose ships such as the Mule, the other offering a wide range of lightweight ships, both for civilian and military purposes.`
+  description `  The shipyards of Lionheart Industries are located here. Centuries ago, warships built here turned the tide of the Alpha War, and today the ships designed and built in the Deep continue to be some of the most technologically advanced ships in human space - and the most expensive.`
   spaceport `Surrounding the spaceport is a metropolis of skyscrapers and factories that spreads all the way to the horizon in every direction. The spaceport itself is an imposing building, composed of three towers rising over a hundred storeys into the air and connected at various levels by bridges. The docking bays are on the higher levels, with warehouse space lower down and loading platforms for trucks at ground level. Massive cargo elevators run up and down in the centre of each building, and the hallways are all wide enough to allow small robotic carts and forklifts in addition to foot traffic.`
   outfitter "Map"
   outfitter "Pilot Licence"

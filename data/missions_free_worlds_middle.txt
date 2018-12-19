@@ -460,7 +460,7 @@ mission "FW Southern Battle 2"
         "Mars (Mark II)" 2
   
   on complete
-    event "fw southern expansion"
+    event "fw eastern expansion"
 
 
 
@@ -1717,7 +1717,7 @@ mission "FW Rand 1"
   description "Take a Free Worlds fleet to <system>, drive away whatever Navy ships are there, and then land on <planet>, which has decided to join the Free Worlds."
   autosave
   source "Dancer"
-  destination "Duskdawn"
+  destination "Sinter"
   clearance
   passengers 2
   blocked "You need a bunk free for Freya (in addition to JJ) to continue this mission."
@@ -1727,10 +1727,10 @@ mission "FW Rand 1"
     dialogue `You have failed an essential Free Worlds mission. If you want to complete the story line, revert to the autosave or another earlier snapshot of the game.`
   
   on offer
-    log "Another two planets, Duskdawn and Hopper, have expressed an interest in joining the Free Worlds. They are rather far from the rest of Free Worlds territory, however, so JJ is worried that it would create an indefensible tactical position."
+    log "Another two planets, Hamlet and Hopper, have expressed an interest in joining the Free Worlds. They are rather far from the rest of Free Worlds territory, however, so JJ is worried that it would create an indefensible tactical position."
     event "battle for zeta aquilae"
     conversation
-      `When you land on Dancer, Freya has just received some exciting news. "It turns out taking out Bartlett had some unexpected side effects," she says. "Bartlett has been hounding the systems on the Tarazed to Vega route for years, and had a lot of enemies. The governments of Duskdawn and Hopper are so grateful to you for eliminating him that they've reached out to us to begin the process of joining the Free Worlds! And several other worlds in that region might become interested now, too."`
+      `When you land on Dancer, Freya has just received some exciting news. "It turns out taking out Bartlett had some unexpected side effects," she says. "Bartlett has been hounding the systems on the Tarazed routes for years, and had a lot of enemies. The governments of Hamlet and Sinter are so grateful to you for eliminating him that they've reached out to us to begin the process of joining the Free Worlds! And several other worlds in that region might become interested now, too."`
       `  JJ frowns. "That's really awful timing," he says, "and would put us in a really bad tactical position - spread out, and with the Navy right in the middle."`
       choice
         `  "Are you saying we shouldn't let them join, even though they want to?"`
@@ -1790,7 +1790,7 @@ mission "FW Rand 1B"
   name "Regroup at Wayfarer"
   description "The Free Worlds fleet has been scattered by a Navy invasion. Regroup with the ships that fled to <destination>, and plan your next move."
   autosave
-  source "Duskdawn"
+  source "Sinter"
   destination "Wayfarer"
   passengers 2
   to offer
