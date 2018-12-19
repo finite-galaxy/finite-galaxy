@@ -755,11 +755,11 @@ void MapPanel::UpdateCache()
               || GameData::GetPolitics().HasDominated(planet));
           }
         hasDominated &= (isInhabited && canLand);
-        // Some systems may count as "inhabited" but not contain any
-        // planets with spaceports. Colour those as if they're
-        // uninhabited to make it clear that no fuel is available there.
-        if(hasSpaceport || hasDominated)
-          colour = ReputationColour(reputation, canLand, hasDominated);
+        // Some systems may count as "inhabited" but do not contain
+        // any planets with spaceports, thus there is no fuel available. Colour those as if they're
+        // Colour those nevertheless.
+        // if(hasSpaceport || hasDominated)
+        colour = ReputationColour(reputation, canLand, hasDominated);
       }
     }
     
