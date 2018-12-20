@@ -8,11 +8,11 @@ shipyard "Hai Variants"
   "Pond Strider"
   "Pond Strider (Jump)"
   "Shield Beetle"
+  "Shield Beetle (Ion)"
+  "Shield Beetle (Ion, Jump)"
   "Shield Beetle (Jump)"
   "Shield Beetle (Pulse)"
   "Shield Beetle (Pulse, Jump)"
-  "Shield Beetle (Tracker)"
-  "Shield Beetle (Tracker, Jump)"
   "Solifuge"
   "Solifuge (Jump)"
   "Solifuge (Tracker)"
@@ -39,8 +39,8 @@ ship "Aphid"
     "drag" 1.9
     "heat dissipation" .90
     "cargo space" 51
-    "outfit space" 185
-    "core space" 100
+    "outfit space" 168
+    "core space" 88
     "engine space" 48
     "weapon space" 37
     weapon
@@ -58,9 +58,8 @@ ship "Aphid"
 
     "Chameleon Anti-Missile"
 
-    "Fissure Batteries"
-    "Williwaw Cooling"
-    "Fuel Pod" 14
+    "Chasm Batteries"
+    "Fuel Pod" 13
     "Quantum Keystone"
     "Yoloy Scanner"
   engine -8 40
@@ -129,8 +128,8 @@ ship "Lightning Bug"
     "drag" 3.8
     "heat dissipation" .85
     "cargo space" 43
-    "outfit space" 364
-    "core space" 184
+    "outfit space" 348
+    "core space" 168
     "engine space" 83
     "weapon space" 97
     weapon
@@ -140,7 +139,7 @@ ship "Lightning Bug"
       "hit force" 1260
   outfits
     "Corundum Regenerator" 2
-    "Geode Reactor"
+    "Pebble Core" 2
     "Hyperdrive"
 
     `"Biroo" Atomic Thruster`
@@ -149,8 +148,8 @@ ship "Lightning Bug"
     "Ion Cannon"
     "Chameleon Anti-Missile" 2
 
-    "Chasm Batteries"
-    "Fuel Pod" 36
+    "Gorge Batteries"
+    "Fuel Pod" 35
     "Quantum Keystone"
     "Yoloy Scanner"
   engine -40 22
@@ -169,7 +168,7 @@ ship "Lightning Bug"
 ship "Lightning Bug" "Lightning Bug (Pulse)"
   outfits
     "Corundum Regenerator" 2
-    "Geode Reactor"
+    "Pebble Core" 2
     "Hyperdrive"
 
     `"Biroo" Atomic Thruster`
@@ -180,11 +179,11 @@ ship "Lightning Bug" "Lightning Bug (Pulse)"
     "Tracker Launcher"
     "Pulse Turret" 2
 
-    "Fissure Batteries"
+    "Gorge Batteries"
     "Williwaw Cooling"
-    "Fuel Pod" 36
+    "Fuel Pod" 35
     "Yoloy Scanner"
-    "Extra Outfit Space" 3
+    "Extra Outfit Space" 2
 
 
 
@@ -362,31 +361,32 @@ ship "Shield Beetle"
   outfits
     "Diamond Regenerator" 2
     "Boulder Reactor"
-    "Pebble Core"
     "Hyperdrive"
 
     `"Bondir" Atomic Thruster`
     `"Bufaer" Atomic Steering`
 
-    "Ion Cannon" 4
+    "Tracker" 448
+    "Tracker Storage Pod" 8
+    "Tracker Launcher" 8
     "Pulse Turret" 2
     "Chameleon Anti-Missile" 2
 
     "Fissure Batteries"
-    "Williwaw Cooling" 4
+    "Williwaw Cooling" 2
     "Fuel Pod" 84
     "Quantum Keystone"
     "Yoloy Scanner"
   engine -44 133
   engine 44 133
-  gun -22 -102 "Ion Cannon"
-  gun 22 -102 "Ion Cannon"
-  gun -34 -68
-  gun 34 -68
-  gun -49 -38 "Ion Cannon"
-  gun 49 -38 "Ion Cannon"
-  gun -61 -14
-  gun 61 -14
+  gun -22 -102 "Tracker Launcher"
+  gun 22 -102 "Tracker Launcher"
+  gun -34 -68 "Tracker Launcher"
+  gun 34 -68 "Tracker Launcher"
+  gun -49 -38 "Tracker Launcher"
+  gun 49 -38 "Tracker Launcher"
+  gun -61 -14 "Tracker Launcher"
+  gun 61 -14 "Tracker Launcher"z
   turret -39 48 "Pulse Turret"
   turret 39 48 "Pulse Turret"
   turret -57 75 "Chameleon Anti-Missile"
@@ -400,11 +400,41 @@ ship "Shield Beetle"
   description "This ship was first built millenia ago, near the end of a more violent time in Hai history. Since then, it has served as the only heavy warship at the disposal of the Hai. The Shield Beetle is a versatile warship used by the Hai to guard their merchant convoys, or by the Unfettered to attack those very same convoys."
 
 
-ship "Shield Beetle" "Shield Beetle (Jump)"
+ship "Shield Beetle" "Shield Beetle (Ion)"
   outfits
     "Diamond Regenerator" 2
     "Boulder Reactor"
-    "Pebble Core"
+    "Geode Reactor"
+    "Hyperdrive"
+
+    `"Bondir" Atomic Thruster`
+    `"Bufaer" Atomic Steering`
+
+    "Ion Cannon" 4
+    "Pulse Turret" 2
+    "Chameleon Anti-Missile" 2
+
+    "Fissure Batteries"
+    "Williwaw Cooling" 5
+    "Fuel Pod" 84
+    "Quantum Keystone"
+    "Yoloy Scanner"
+    "Extra Outfit Space" 10
+  gun "Ion Cannon"
+  gun "Ion Cannon"
+  gun
+  gun
+  gun "Ion Cannon"
+  gun "Ion Cannon"
+  gun
+  gun
+
+
+ship "Shield Beetle" "Shield Beetle (Ion, Jump)"
+  outfits
+    "Diamond Regenerator" 2
+    "Boulder Reactor"
+    "Geode Reactor"
     "Jump Drive"
 
     `"Bondir" Atomic Thruster`
@@ -415,10 +445,11 @@ ship "Shield Beetle" "Shield Beetle (Jump)"
     "Chameleon Anti-Missile" 2
 
     "Fissure Batteries"
-    "Williwaw Cooling" 4
+    "Williwaw Cooling" 5
     "Fuel Pod" 84
     "Quantum Keystone"
     "Yoloy Scanner"
+    "Extra Outfit Space" 10
   gun "Ion Cannon"
   gun "Ion Cannon"
   gun
@@ -427,12 +458,35 @@ ship "Shield Beetle" "Shield Beetle (Jump)"
   gun "Ion Cannon"
   gun
   gun
+
+
+ship "Shield Beetle" "Shield Beetle (Jump)"
+  outfits
+    "Diamond Regenerator" 2
+    "Boulder Reactor"
+    "Jump Drive"
+
+    `"Bondir" Atomic Thruster`
+    `"Bufaer" Atomic Steering`
+
+    "Tracker" 448
+    "Tracker Storage Pod" 8
+    "Tracker Launcher" 8
+    "Pulse Turret" 2
+    "Chameleon Anti-Missile" 2
+
+    "Fissure Batteries"
+    "Williwaw Cooling" 2
+    "Fuel Pod" 84
+    "Quantum Keystone"
+    "Yoloy Scanner"
 
 
 ship "Shield Beetle" "Shield Beetle (Pulse)"
   outfits
     "Diamond Regenerator" 2
     "Boulder Reactor"
+    "Pebble Core"
     "Hyperdrive"
 
     `"Bondir" Atomic Thruster`
@@ -442,18 +496,19 @@ ship "Shield Beetle" "Shield Beetle (Pulse)"
     "Pulse Turret" 2
     "Chameleon Anti-Missile" 2
 
-    "Gorge Batteries"
-    "Williwaw Cooling" 4
+    "Fissure Batteries"
+    "Williwaw Cooling" 5
     "Fuel Pod" 84
     "Quantum Keystone"
     "Yoloy Scanner"
-    "Extra Outfit Space"
+    "Extra Outfit Space" 4
 
 
 ship "Shield Beetle" "Shield Beetle (Pulse, Jump)"
   outfits
     "Diamond Regenerator" 2
     "Boulder Reactor"
+    "Pebble Core"
     "Jump Drive"
 
     `"Bondir" Atomic Thruster`
@@ -463,58 +518,12 @@ ship "Shield Beetle" "Shield Beetle (Pulse, Jump)"
     "Pulse Turret" 2
     "Chameleon Anti-Missile" 2
 
-    "Gorge Batteries"
-    "Williwaw Cooling" 4
+    "Fissure Batteries"
+    "Williwaw Cooling" 5
     "Fuel Pod" 84
     "Quantum Keystone"
     "Yoloy Scanner"
-    "Extra Outfit Space"
-
-
-ship "Shield Beetle" "Shield Beetle (Tracker)"
-  outfits
-    "Diamond Regenerator" 2
-    "Boulder Reactor"
-    "Hyperdrive"
-
-    `"Bondir" Atomic Thruster`
-    `"Bufaer" Atomic Steering`
-
-    "Tracker" 448
-    "Tracker Storage Pod" 8
-    "Tracker Launcher" 8
-    "Pulse Turret" 2
-    "Chameleon Anti-Missile" 2
-
-    "Chasm Batteries"
-    "Williwaw Cooling" 4
-    "Fuel Pod" 84
-    "Quantum Keystone"
-    "Yoloy Scanner"
-    "Extra Outfit Space"
-
-
-ship "Shield Beetle" "Shield Beetle (Tracker, Jump)"
-  outfits
-    "Diamond Regenerator" 2
-    "Boulder Reactor"
-    "Jump Drive"
-
-    `"Bondir" Atomic Thruster`
-    `"Bufaer" Atomic Steering`
-
-    "Tracker" 448
-    "Tracker Storage Pod" 8
-    "Tracker Launcher" 8
-    "Pulse Turret" 2
-    "Chameleon Anti-Missile" 2
-
-    "Chasm Batteries"
-    "Williwaw Cooling" 4
-    "Fuel Pod" 84
-    "Quantum Keystone"
-    "Yoloy Scanner"
-    "Extra Outfit Space"
+    "Extra Outfit Space" 4
 
 
 
@@ -553,11 +562,10 @@ ship "Solifuge"
     `"Bondir" Atomic Steering`
 
     "Ion Cannon" 5
-    "Pulse Turret"
-    "Bullfrog Anti-Missile" 6
+    "Bullfrog Anti-Missile" 7
 
-    "Gorge Batteries"
-    "Williwaw Cooling" 4
+    "Ravine Batteries"
+    "Williwaw Cooling" 3
     "Fuel Pod" 171
     "Quantum Keystone"
     "Yoloy Scanner"
@@ -568,7 +576,7 @@ ship "Solifuge"
   gun 11.5 -138.5 "Ion Cannon"
   gun -9.5 -101 "Ion Cannon"
   gun 9.5 -101 "Ion Cannon"
-  turret 0 -109.5 "Pulse Turret"
+  turret 0 -109.5 "Bullfrog Anti-Missile"
   turret 54.5 -48.5 "Bullfrog Anti-Missile"
   turret -54.5 -48.5 "Bullfrog Anti-Missile"
   turret 55 1 "Bullfrog Anti-Missile"
@@ -600,11 +608,10 @@ ship "Solifuge" "Solifuge (Jump)"
     `"Bondir" Atomic Steering`
 
     "Ion Cannon" 5
-    "Pulse Turret"
-    "Bullfrog Anti-Missile" 6
+    "Bullfrog Anti-Missile" 7
 
-    "Gorge Batteries"
-    "Williwaw Cooling" 4
+    "Ravine Batteries"
+    "Williwaw Cooling" 3
     "Fuel Pod" 171
     "Quantum Keystone"
     "Yoloy Scanner"
