@@ -3256,7 +3256,8 @@ event "battle for ap'arak end"
 
 
 event "wanderers: the eye opens"
-  unvisit Sabriset
+  link "Ehma Ti" "Prakacha'a"
+  unvisit "Sabriset"
   system "Sabriset"
     add fleet "Wanderer Defence" 1200
     add fleet "Wanderer Drones" 600
@@ -3738,6 +3739,8 @@ event "wanderers: exiles have drones"
 
 event "wanderers: sabira eseskrai colony"
   system "Fornarep"
+    government "Wanderer"
+  system "Seketra"
     government "Wanderer"
   system "Skeruto"
     government "Wanderer"

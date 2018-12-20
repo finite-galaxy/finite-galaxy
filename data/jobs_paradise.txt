@@ -336,7 +336,7 @@ mission "Transport rich tourists"
   source
     attributes paradise
   destination
-    attributes religious quarg pirate volcanic frontier
+    attributes quarg pirate volcanic frontier
     distance 8 20
   on complete
     dialogue "Your passengers begin to wander off, some of them sporting puzzled looks as the memories of glossy photos in the brochures give way to reality. You collect your payment of <payment>."
@@ -355,7 +355,7 @@ mission "Pleasure cruise security"
   source
     attributes paradise rich
   stopover
-    attributes tourism religious quarg pirate volcanic frontier moon fishing
+    attributes tourism quarg pirate volcanic frontier moon fishing
     distance 6 15
   destination
     attributes paradise

@@ -11,8 +11,6 @@ Both games can be installed alongside and played independently of each other. Al
   * [Major changes](https://github.com/finite-galaxy/finite-galaxy#major-changes)
   * [Minor changes](https://github.com/finite-galaxy/finite-galaxy#minor-changes)
   * [Not yet implemented ideas](https://github.com/finite-galaxy/finite-galaxy#not-yet-implemented-ideas)
-    * [Syndicate branch](https://github.com/finite-galaxy/finite-galaxy#syndicate-branch)
-    * [Heliarch invasion](https://github.com/finite-galaxy/finite-galaxy#heliarch-invasion)
 * [Reveal entire map](https://github.com/finite-galaxy/finite-galaxy#reveal-entire-map)
 * [Contributing](https://github.com/finite-galaxy/finite-galaxy#contributing)
   * [Posting issues](https://github.com/finite-galaxy/finite-galaxy#posting-issues)
@@ -189,12 +187,15 @@ See `changelog.txt`, `ship_overview.txt`, and https://github.com/finite-galaxy/f
 
 [(return to top)](https://github.com/finite-galaxy/finite-galaxy#finite-galaxy)
 
+<!--
 #### Syndicate branch
-Currently there are two possible endings to the Free Worlds storyline. In the Checkmate branch, you ignore the Syndicate defector, focus on fighting the Republic, unlock nuclear missiles, and prepare an assault on Earth, upon which the Pug intervene. In the Reconciliation branch, you pick up the Syndicate defector, bring him to safety in the Deep, lead a combined Deep Security-Free Worlds-Republic Navy police action against the Syndicate, where you are gifted a Jump Drive and a Cloaking device, to solve the Pug invasion. But what if there were a third option? 
+Currently there are two possible endings to the Free Worlds storyline. In the Checkmate branch, you ignore the Syndicate defector, focus on fighting the Republic, unlock nuclear missiles, and prepare an assault on Earth, upon which the Pug intervene. In the Reconciliation branch, you pick up the Syndicate defector, bring him to safety in the Deep, lead a combined Deep Security-Free Worlds-Republic Navy police action against the Syndicate, where you are gifted a Jump Drive and a Cloaking device, to solve the Pug invasion. But what if there was a third option? 
 You could speak with the Syndicate defector, learn there is a one million credits bounty on his head, return him to the Syndicate, get the reward, and disappoint the Free Worlds Council. Afterwards the Syndicate recruits you by offering you more than twice the salary, you accept, change colours, assist the Syndicate in conquering a pirate world. Because the Navy suffered several defeats against the Free Worlds and a large part of their personnel joined the Oathkeepers, the Republic hires the Syndicate to fight the Free Worlds, offering them exclusive trade rights in certain systems. You join the Syndicate invasion fleet, but then plans suddenly change because of the appearance of the Pug.
 
 [(return to top)](https://github.com/finite-galaxy/finite-galaxy#finite-galaxy)
+-->
 
+<!--
 #### Heliarch Invasion
 Another idea is to introduce a new Heliarch Invasion story-line. It starts when you land on Ring of Power after finishing the Free Worlds storyline and doing at least a hundred Coalition jobs. The Heliarch then ask you to bring them twelve jump drives and offer 50 million in return. Afterwards they enter human space and start constructing a Coalition base on Poisonwood (Graffias). Every day twelve ships jump in, land, and send three ships back with the other jump drives in cargo. The Heliarch fleet steadily grows and starts patrolling nearby systems. When you go back to Ring of Friendship to ask politely what's going on, they answer that Coalition space is ruled by the Heliarch, therefore there is peace and order, whereas human space is controlled by the Quarg, therefore there is chaos and violence. You reply that most humans are peaceful, they answer some of their ships were attacked nonetheless, by “Quarg minions” (pirates, you guess). The Heliarch have hope humans might become the fourth species to join the Coalition in the distant future, but right now they believe humanity is not yet ready. A few months later the Heliarch “liberate” (conquer) Greenrock (Shaula), “pacify” (destroy) the pirate facilities there, and “evacuate” (deports) its population to Solace (Pherkad). They start constructing a Heliarch naval base there and Coalition convoys between Graffias and Solace are now a regular phenomenon. You get increasingly worried. Still later the Heliarch attack and destroy the Quarg station in Tarazed, but are repulsed in Sadachbia. You travel to Pug Iyik to ask the Pug for help. They answer the Pug are no friends of the Quarg and have no contact with the Heliarch, therefore they are not inclined to intervene. You reply half-heartedly that you don't object to the Heliarch and Quarg fighting each other, but that humanity is caught in between. The Pug seem to chuckle but say nothing more. You leave, seemingly empty-handed, and decide to visit the Quarg ringworld on Hevru Hai, to explain the situation to them. The Quarg say they know what you've done; if anything, the Quarg seems amused rather than annoyed. You don't understand and go back to human space. Later you discover a wormhole has been opened, possibly by the Pug, connecting Ruwarku with Sadachbia. The Heliarch perceive it as some Quarg trick and now faced with a Quarg invasion of Coalition space, they signal they are willing to negotiate with the Quarg, in secret. You travel to Lagrange to pick up a Quarg delegation in Lagrange (Sadachbia), which turns out to be a single individual, and bring him secretly to the new Heliarch base on Greenrock (Shaula). There you are allowed to stay during the negotiations as a neutral witness. The Heliarch say they hope the Quarg won't use the new wormhole and offer to do likewise; furthermore, they state that they intend to maintain their presence on Poisonwood (Graffias) to allow humans to get used to the Coalition; keep possession of Shaula to be able to protect humanity from there; but promise not to move beyond Lesath, Wei, and Zubenelgenubi; after all, the Heliarch only intend to help humanity, not to conquer new territory for themselves. The Quarg does little more than merely nodding. It seems they've somehow reached an agreement, although the talks seem rather alien to ordinary humans. You bring back the Quarg to Lagrange and the Heliarch inform you they'll reward you by allowing you to purchase some Heliarch technology on Poisonwood, but not weapons or warships. Meanwhile human governments fail to understand what's going on but are afraid both of the Heliarch and of the Quarg. As a consequence of the brief conflict the Free Worlds are practically partitioned into:
 * A Bourne-based neutral core in the northern Rim; Free Worlds Dreadnoughts permanently present in Zubeneschamali. 
@@ -204,6 +205,7 @@ Another idea is to introduce a new Heliarch Invasion story-line. It starts when 
 Furthermore, there is still that wormhole with a large Quarg fleet on one end and a large Heliarch fleet on the other, but no-one travelling through it. Although there is no official peace treaty, the ceasefire appears to hold.
 
 [(return to top)](https://github.com/finite-galaxy/finite-galaxy#finite-galaxy)
+-->
 
 
 
@@ -251,6 +253,7 @@ visited "Alderamin"
 visited "Aldhibain"
 visited "Algedi"
 visited "Algenib"
+visited "Algenubi"
 visited "Algieba"
 visited "Algol"
 visited "Algorel"
@@ -351,7 +354,6 @@ visited "Elnath"
 visited "Eltanin"
 visited "Eneremprukt"
 visited "Enif"
-visited "Epsilon Leonis"
 visited "Es'sprak'ai"
 visited "Eshkoshtar"
 visited "Eteron"
@@ -471,6 +473,7 @@ visited "Muhlifain"
 visited "Muphrid"
 visited "Naos"
 visited "Naper"
+visited "Nashira"
 visited "Nenia"
 visited "Nihal"
 visited "Nocte"
@@ -543,6 +546,7 @@ visited "Silver Bell"
 visited "Silver String"
 visited "Similisti"
 visited "Sirius"
+visited "Situla"
 visited "Skeruto"
 visited "Sko'karak"
 visited "Sobarati"

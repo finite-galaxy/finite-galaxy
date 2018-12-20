@@ -50,7 +50,7 @@ galaxy "label south"
   pos -600 480
 
 galaxy "label wanderers"
-  pos -140 -740
+  pos -200 -740
 
 
 
@@ -1980,8 +1980,9 @@ system "Adhara"
   government "Deep"
   habitable 670
   belt 1014
-  link "Epsilon Leonis"
+  link Algenubi
   link Gomeisa
+  link Situla
   asteroids "small rock" 5 3.705
   asteroids "medium rock" 3 5.3675
   asteroids "large rock" 9 5.3675
@@ -2559,6 +2560,7 @@ system "Algenib"
   government "Pirate"
   habitable 456
   belt 1273
+  link Enif
   link Gienah
   asteroids "large metal" 1 6.7392
   trade "Clothing" 357
@@ -2609,6 +2611,79 @@ system "Algenib"
       sprite planet/dust0
       distance 497
       period 42.6838
+
+system "Algenubi"
+  pos -619 -229
+  government "Deep"
+  habitable 1400
+  belt 1527
+  link Adhara
+  link Gomeisa
+  link Nashira
+  asteroids "small rock" 34 3.888
+  asteroids "medium rock" 66 1.836
+  asteroids "large rock" 24 2.376
+  asteroids "small metal" 13 2.052
+  asteroids "medium metal" 39 3.96
+  asteroids "large metal" 1 3.816
+  minables "lead" 15 3.56384
+  trade "Clothing" 297
+  trade "Electronics" 650
+  trade "Equipment" 447
+  trade "Food" 539
+  trade "Heavy Metals" 1090
+  trade "Industrial" 662
+  trade "Luxury Goods" 1304
+  trade "Medical" 599
+  trade "Metal" 216
+  trade "Plastic" 389
+  fleet "Merchants Deep Small" 1600
+  fleet "Merchants Deep Large" 2500
+  fleet "Merchants North Small" 700
+  fleet "Merchants North Large" 1400
+  fleet "Deep Small" 2000
+  fleet "Deep Large" 6000
+  object
+    sprite star/g0
+    distance 25.8286
+    period 12.8414
+    offset 180
+  object
+    sprite star/k5
+    distance 87.1714
+    period 12.8414
+  object
+    sprite planet/ice4-b
+    distance 403.211
+    period 86.5556
+    object
+      sprite planet/ice8-b
+      distance 133
+      period 17.5024
+  object
+    sprite planet/ganymede-b
+    distance 747.171
+    period 218.337
+  object "Valhalla"
+    sprite planet/earth
+    distance 1027.21
+    period 351.954
+  object
+    sprite planet/gas7
+    distance 2086.25
+    period 1018.7
+    object
+      sprite planet/dust1
+      distance 267
+      period 14.1568
+    object
+      sprite planet/tethys
+      distance 355
+      period 21.704
+    object
+      sprite planet/mercury
+      distance 515
+      period 37.9234
 
 system "Algieba"
   pos -691 -52
@@ -4639,7 +4714,7 @@ system "Aspidiske"
   habitable 135
   belt 1885
   link Avior
-  link "Epsilon Leonis"
+  link Nashira
   link Regor
   asteroids "large metal" 1 3.7422
   trade "Clothing" 276
@@ -4762,6 +4837,7 @@ system "Avior"
   link Aspidiske
   link Markeb
   link Naos
+  link Nashira
   asteroids "medium rock" 10 7.0875
   asteroids "large rock" 1 5.7834
   asteroids "medium metal" 1 5.8968
@@ -6530,14 +6606,18 @@ system "Charm"
     sprite planet/dust0
     distance 360
     period 60
+  object "Quarg Wormhole"
+    sprite planet/wormhole-red
+    distance 3008.73
+    period 2963.48
 
 system "Chikatip"
-  pos -78 -308
+#  pos -78 -308
+  pos -93 -308
   government "Kor Efret"
   habitable 426
   belt 1929
   link Furmeliki
-  link Seketra
   asteroids "small rock" 112 4.4965
   asteroids "medium rock" 59 2.8152
   asteroids "large rock" 5 2.8934
@@ -6585,6 +6665,10 @@ system "Chikatip"
     sprite planet/gas14-b
     distance 3728.22
     period 4412.13
+  object "Quarg Wormhole"
+    sprite planet/wormhole-red
+    distance 5043.00
+    period 5993.10
 
 system "Chimitarp"
   pos 150 -288
@@ -6765,7 +6849,8 @@ system "Chornifath"
       period 25.0729
 
 system "Chy'chra"
-  pos 86 -830
+#  pos 86 -830
+  pos 46 -830
   government "Wanderer"
   habitable 625
   belt 1120
@@ -8510,7 +8595,6 @@ system "Ekuarik"
   link Belug
   link "Ki War Ek"
   link Quaru
-  link "Ruwarku"
   link Speloog
   asteroids "small rock" 2 4.5954
   asteroids "medium rock" 3 9.1908
@@ -8898,78 +8982,49 @@ system "Eneremprukt"
     distance 2137.8
     period 1792.21
 
-system "Epsilon Leonis"
-  pos -619 -229
-  government "Deep"
-  habitable 1400
-  belt 1527
-  link Adhara
-  link Aspidiske
-  link Gomeisa
-  asteroids "small rock" 34 3.888
-  asteroids "medium rock" 66 1.836
-  asteroids "large rock" 24 2.376
-  asteroids "small metal" 13 2.052
-  asteroids "medium metal" 39 3.96
-  asteroids "large metal" 1 3.816
-  minables "lead" 15 3.56384
-  trade "Clothing" 297
-  trade "Electronics" 650
-  trade "Equipment" 447
-  trade "Food" 539
-  trade "Heavy Metals" 1090
-  trade "Industrial" 662
-  trade "Luxury Goods" 1304
-  trade "Medical" 599
-  trade "Metal" 216
+system "Enif"
+  pos -60 327
+  government "Pirate"
+  habitable 482
+  belt 1664
+  link Algenib
+  asteroids "small rock" 6 5.0338
+  asteroids "medium rock" 23 2.6291
+  asteroids "large rock" 6 3.6146
+  asteroids "small metal" 11 2.4052
+  asteroids "medium metal" 70 3.9849
+  asteroids "large metal" 27 4.1715
+  trade "Clothing" 310
+  trade "Electronics" 660
+  trade "Equipment" 438
+  trade "Food" 487
+  trade "Heavy Metals" 817
+  trade "Industrial" 632
+  trade "Luxury Goods" 1063
+  trade "Medical" 634
+  trade "Metal" 266
   trade "Plastic" 389
-  fleet "Merchants Deep Small" 1600
-  fleet "Merchants Deep Large" 2500
-  fleet "Merchants North Small" 700
-  fleet "Merchants North Large" 1400
-  fleet "Deep Small" 2000
-  fleet "Deep Large" 6000
+  fleet "Pirates East Small" 1600
+  fleet "Pirates East Large" 2600
   object
     sprite star/g0
-    distance 25.8286
-    period 12.8414
-    offset 180
+    period 10
   object
-    sprite star/k5
-    distance 87.1714
-    period 12.8414
+    sprite planet/forest2
+    distance 200.744
+    period 122.792
   object
-    sprite planet/ice4-b
-    distance 403.211
-    period 86.5556
-    object
-      sprite planet/ice8-b
-      distance 133
-      period 17.5024
+    sprite planet/rock16-b
+    distance 417.459
+    period 240.098
   object
-    sprite planet/ganymede-b
-    distance 747.171
-    period 218.337
-  object "Valhalla"
-    sprite planet/earth
-    distance 1027.21
-    period 351.954
+    sprite planet/cloud1-b
+    distance 751.708
+    period 310.233
   object
-    sprite planet/gas7
-    distance 2086.25
-    period 1018.7
-    object
-      sprite planet/dust1
-      distance 267
-      period 14.1568
-    object
-      sprite planet/tethys
-      distance 355
-      period 21.704
-    object
-      sprite planet/mercury
-      distance 515
-      period 37.9234
+    sprite planet/ice8
+    distance 1678.13
+    period 115.325
 
 system "Es'sprak'ai"
   pos -469 -733
@@ -10688,8 +10743,9 @@ system "Gomeisa"
   habitable 911
   belt 1616
   link Adhara
+  link Algenubi
   link Dubhe
-  link "Epsilon Leonis"
+  link Situla
   link Zosma
   asteroids "small rock" 44 4.956
   asteroids "medium rock" 13 3.78
@@ -11222,7 +11278,8 @@ system "Hassaleh"
     period 1577.14
 
 system "Hatysa"
-  pos -474 -542
+#  pos -474 -542
+  pos -444 -542
   government "Pirate"
   habitable 534
   belt 1163
@@ -11877,7 +11934,8 @@ system "Hunter"
       period 22.2053
 
 system "Ik'kara'ka"
-  pos 56 -888
+#  pos 56 -888
+  pos 16 -888
   government "Wanderer"
   habitable 625
   belt 1497
@@ -12420,7 +12478,8 @@ system "Izar"
       period 12.6652
 
 system "Ka'ch'chrai"
-  pos -240 -822
+#  pos -240 -822
+  pos -240 -802
   government "Wanderer"
   habitable 426
   belt 1745
@@ -12904,7 +12963,6 @@ system "Ki War Ek"
   link "14 Winter Below"
   link Ekuarik
   link Quaru
-  link "Ruwarku"
   asteroids "small rock" 12 2.349
   asteroids "medium rock" 11 2.523
   asteroids "large rock" 22 4.1325
@@ -13079,7 +13137,8 @@ system "Ki War Ek"
     offset 312
 
 system "Kiro'ku"
-  pos -132 -884
+#  pos -132 -884
+  pos -132 -914
   government "Wanderer"
   habitable 1111.68
   belt 1308
@@ -16505,6 +16564,64 @@ system "Naper"
       distance 286
       period 23.8403
 
+system "Nashira"
+  pos -645 -267
+  government "Deep"
+  habitable 917
+  belt 1503
+  link Algenubi
+  link Aspidiske
+  link Avior
+  asteroids "small rock" 11 3.888
+  asteroids "medium rock" 25 4.4618
+  asteroids "large rock" 8 4.0797
+  asteroids "small metal" 4 2.052
+  asteroids "medium metal" 13 4.9284
+  asteroids "large metal" 1 5.0142
+  trade "Clothing" 297
+  trade "Electronics" 650
+  trade "Equipment" 433
+  trade "Food" 475
+  trade "Heavy Metals" 983
+  trade "Industrial" 750
+  trade "Luxury Goods" 1230
+  trade "Medical" 673
+  trade "Metal" 265
+  trade "Plastic" 328
+  fleet "Merchants Deep Small" 1500
+  fleet "Merchants Deep Large" 3200
+  fleet "Merchants North Small" 800
+  fleet "Merchants North Large" 2100
+  fleet "Deep Small" 2000
+  fleet "Deep Large" 8000
+  object
+    sprite star/m0
+    period 10
+  object
+    sprite planet/rock11
+    distance 106.177
+    period 69.4230
+  object
+    sprite planet/gas17-b
+    distance 953.788
+    period 207.087
+    object
+      sprite planet/rock17
+      distance 209.336
+      period 12.0052
+    object
+      sprite planet/dust0
+      distance 354.572
+      period 21.8600
+  object
+    sprite planet/ocean9
+    distance 1964.18
+    period 467.237
+  object
+    sprite planet/ocean5
+    distance 2266.48
+    period 1059.17
+
 system "Nenia"
   pos -39 467
   government "Uninhabited"
@@ -17830,7 +17947,8 @@ system "Phurad"
     period 1650.11
 
 system "Pik'ro'iyak"
-  pos -379 -677
+#  pos -379 -677
+  pos -379 -697
   government "Wanderer"
   habitable 233
   belt 1279
@@ -18302,7 +18420,6 @@ system "Quaru"
   link Homeward
   link "Ki War Ek"
   link "Last Word"
-  link "Ruwarku"
   asteroids "large metal" 1 2.0202
   trade "Clothing" 372
   trade "Electronics" 637
@@ -19217,12 +19334,9 @@ system "Rutilicus"
 
 system "Ruwarku"
   pos -1075 410
-  government "Heliarch"
+  government "Quarg"
   habitable 700
   belt 1643
-  link "Ekuarik"
-  link "Ki War Ek"
-  link "Quaru"
   asteroids "small rock" 5 3.4722
   asteroids "medium rock" 5 5.8569
   asteroids "large rock" 8 4.8297
@@ -19239,16 +19353,13 @@ system "Ruwarku"
   trade "Medical" 849
   trade "Metal" 392
   trade "Plastic" 356
-  fleet "Arachi Small" 1700
-  fleet "Arachi Large" 2700
-  fleet "Kimek Small" 1700
-  fleet "Kimek Large" 2600
-  fleet "Saryd Small" 2300
-  fleet "Saryd Large" 4500
-  fleet "Heliarch" 450
   object
     sprite star/m0
     period 10
+  object "Quarg Wormhole"
+    sprite planet/wormhole-red
+    distance 2461.44
+    period 1535.99
 
 system "Sabik"
   pos -675 379
@@ -20195,7 +20306,6 @@ system "Seketra"
   government "Kor Efret"
   habitable 426
   belt 1465
-  link Chikatip
   link Skeruto
   asteroids "large metal" 1 1.7556
   trade "Clothing" 247
@@ -20968,6 +21078,57 @@ system "Sirius"
     distance 2162.3
     period 949.79
 
+system "Situla"
+  pos -678 -154
+  government "Deep"
+  habitable 679
+  belt 1355
+  link Adhara
+  link Zosma
+  asteroids "small rock" 22 3.9595
+  asteroids "medium rock" 6 4.3058
+  asteroids "large rock" 16 3.9455
+  asteroids "small metal" 2 4.0625
+  asteroids "medium metal" 8 5.4638
+  asteroids "large metal" 4 4.2470
+  trade "Clothing" 351
+  trade "Electronics" 700
+  trade "Equipment" 503
+  trade "Food" 548
+  trade "Heavy Metals" 1148
+  trade "Industrial" 599
+  trade "Luxury Goods" 1358
+  trade "Medical" 587
+  trade "Metal" 236
+  trade "Plastic" 463
+  fleet "Merchants Deep Small" 3000
+  fleet "Merchants Deep Large" 6000
+  fleet "Merchants North Small" 2000
+  fleet "Merchants North Large" 4000
+  fleet "Pirates West Small" 2500
+  fleet "Pirates West Large" 5000
+  fleet "Deep Small" 1500
+  fleet "Deep Large" 3000
+  object
+    sprite star/g0-old
+    period 10
+  object
+    sprite planet/luna-b
+    distance 224.002
+    period 52.7984
+  object
+    sprite planet/forest6
+    distance 809.790
+    period 244.541
+  object
+    sprite planet/tethys-b
+    distance 1050.44
+    period 1154.43
+  object
+    sprite planet/forest5
+    distance 2152.49
+    period 2540.68
+
 system "Skeruto"
   pos 28 -340
   government "Kor Efret"
@@ -21019,7 +21180,8 @@ system "Skeruto"
       period 11.9576
 
 system "Sko'karak"
-  pos -304 -931
+#  pos -304 -931
+  pos -284 -891
   government "Wanderer"
   habitable 320
   belt 1805
@@ -24109,6 +24271,7 @@ system "Zosma"
   link Chalawan
   link Dubhe
   link Gomeisa
+  link Situla
   asteroids "small rock" 17 3.2175
   asteroids "medium rock" 1 3.77
   asteroids "large rock" 39 3.445
@@ -24770,7 +24933,7 @@ planet "Bluestone"
 #    fleet "Syndicate Small" 6
 
 planet "Bod"
-  attributes "dirt belt" bank religious factory
+  attributes "dirt belt" bank factory
   landscape land/mountain0
   description `Bod is a world of jagged mountains and deeply shadowed valleys. Although it has been inhabited for centuries, in many places the terrain is so rugged that roads cannot be built, leaving several of the smaller towns almost completely isolated. Taking advantage of this isolation, several monastic orders have built monasteries here.`
   description `  In the lowlands, large farms support sprawling cities full of factories, a striking contrast to the simplicity and isolation of the mountain villages.`
@@ -25884,7 +26047,7 @@ planet "Hammer of Debrugt"
   "required reputation" 25
 
 planet "Harmony"
-  attributes south bank farming religious frontier
+  attributes south bank farming frontier
   landscape land/mountain4
   description `The first settlers who came to Harmony were an Amish community seeking a place where they could live a quiet life and do work with their own hands instead of relying on machines and computers. Their community grew to millions of people, who now live side by side with other, more modern settlers. There are still regions of the planet where motorized vehicles are prohibited, but in other places trucks and horse-drawn buggies share the same roads.`
   spaceport `The spaceport is on the outskirts of one of the larger cities, with a few medium-sized skyscrapers and many tall smokestacks for factories and oil refineries. The starship hangars here are shaped like oversized barns, and close to the hangars, grain is stored in silos. The spaceport police are on horseback.`
@@ -26886,6 +27049,7 @@ planet "Pug Wormhole"
   government "None"
 
 planet "Quarg Wormhole"
+  attributes "requires: quantum keystone"
   description ""
   government "None"
 
