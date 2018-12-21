@@ -114,9 +114,6 @@ ship "Falcon"
     "Orca Plasma Thruster"
     "Impala Plasma Steering"
 
-    "Heavy Rocket" 40
-    "Heavy Rocket Rack" 2
-    "Heavy Rocket Launcher" 2
     "K4 Blaster Turret" 4
 
     "LP144a Battery Pack"
@@ -125,8 +122,8 @@ ship "Falcon"
     "Tactical Scanner" 5
   engine -17 143
   engine 17 143
-  gun -17 -88 "Heavy Rocket Launcher"
-  gun 17 -88 "Heavy Rocket Launcher"
+  gun -17 -88
+  gun 17 -88
   turret -16 -24 "K4 Blaster Turret"
   turret 16 -24 "K4 Blaster Turret"
   turret -57 40 "K4 Blaster Turret"
@@ -299,9 +296,6 @@ ship "Hawk" "Hawk (Rocket)"
     "Greyhound Plasma Thruster"
     "Greyhound Plasma Steering"
 
-    "Heavy Rocket" 40
-    "Heavy Rocket Rack" 2
-    "Heavy Rocket Launcher" 2
 
     "LP036a Battery Pack"
     "Liquid Water Cooler"
@@ -345,8 +339,6 @@ ship "Kestrel"
     "Orca Plasma Steering"
     "Ionic Afterburner"
 
-    "Heavy Rocket" 60
-    "Heavy Rocket Launcher" 6
     "Plasma Cannon" 6
 
     "LP144a Battery Pack"
@@ -355,16 +347,16 @@ ship "Kestrel"
     "Tactical Scanner" 5
   engine -14 177
   engine 14 177
-  gun -86 55 "Heavy Rocket Launcher"
-  gun 86 55 "Heavy Rocket Launcher"
+  gun -86 55
+  gun 86 55
   gun -75 57 "Plasma Cannon"
   gun 75 57 "Plasma Cannon"
-  gun -64 59 "Heavy Rocket Launcher"
-  gun 64 59 "Heavy Rocket Launcher"
+  gun -64 59
+  gun 64 59
   gun -53 61 "Plasma Cannon"
   gun 53 61 "Plasma Cannon"
-  gun -42 63 "Heavy Rocket Launcher"
-  gun 42 63 "Heavy Rocket Launcher"
+  gun -42 63
+  gun 42 63
   gun -31 65 "Plasma Cannon"
   gun 31 65 "Plasma Cannon"
   turret -7 -4
@@ -504,9 +496,6 @@ ship "Osprey" "Osprey (Rocket)"
     "Impala Plasma Thruster"
     "Impala Plasma Steering"
 
-    "Heavy Rocket" 80
-    "Heavy Rocket Rack" 4
-    "Heavy Rocket Launcher" 4
     "K2 Blaster Turret" 2
 
     "LP072a Battery Pack"
@@ -550,9 +539,6 @@ ship "Raven"
     "Greyhound Plasma Thruster"
     "Greyhound Plasma Steering"
 
-    "Heavy Rocket" 40
-    "Heavy Rocket Rack" 2
-    "Heavy Rocket Launcher" 2
     "Plasma Cannon" 2
 
     "LP036a Battery Pack"
@@ -563,8 +549,8 @@ ship "Raven"
   engine 12 43
   gun -10 -33 "Plasma Cannon"
   gun 10 -33 "Plasma Cannon"
-  gun -16 -28 "Heavy Rocket Launcher"
-  gun 16 -28 "Heavy Rocket Launcher"
+  gun -16 -28
+  gun 16 -28
   leak "leak" 60 50
   leak "flame" 50 80
   explode "medium explosion" 24
@@ -585,9 +571,6 @@ ship "Raven" "Raven (Afterburner)"
     "Greyhound Plasma Steering"
     "Afterburner"
 
-    "Heavy Rocket" 40
-    "Heavy Rocket Rack" 2
-    "Heavy Rocket Launcher" 2
     "Plasma Cannon" 2
 
     "LP036a Battery Pack"
@@ -641,10 +624,6 @@ ship "Raven" "Raven (Rocket)"
     "Greyhound Plasma Thruster"
     "Greyhound Plasma Steering"
 
-    "Heavy Rocket" 80
-    "Heavy Rocket Rack" 4
-    "Heavy Rocket Launcher" 4
-
     "LP036a Battery Pack"
     "Fuel Pod" 24
     "Tactical Scanner" 5
@@ -686,8 +665,6 @@ ship "Unknown Ship Type"
     "Orca Plasma Steering"
     "Ionic Afterburner"
 
-    "Heavy Rocket" 60
-    "Heavy Rocket Launcher" 6
     "Plasma Cannon" 6
 
     "LP144a Battery Pack"
@@ -696,16 +673,16 @@ ship "Unknown Ship Type"
     "Tactical Scanner" 5
   engine -14 177
   engine 14 177
-  gun -86 55 "Heavy Rocket Launcher"
-  gun 86 55 "Heavy Rocket Launcher"
+  gun -86 55
+  gun 86 55
   gun -75 57 "Plasma Cannon"
   gun 75 57 "Plasma Cannon"
-  gun -64 59 "Heavy Rocket Launcher"
-  gun 64 59 "Heavy Rocket Launcher"
+  gun -64 59
+  gun 64 59
   gun -53 61 "Plasma Cannon"
   gun 53 61 "Plasma Cannon"
-  gun -42 63 "Heavy Rocket Launcher"
-  gun 42 63 "Heavy Rocket Launcher"
+  gun -42 63
+  gun 42 63
   gun -31 65 "Plasma Cannon"
   gun 31 65 "Plasma Cannon"
   turret -7 -4
