@@ -1922,21 +1922,21 @@ mission "Wanderers: Sestor: Farpoint Attack 1"
       names "republic"
       fighters "republic fighter"
       variant
-        "Jupiter (Mark II)"
+        "Saturn (Mark II)"
         "Foxhound" 4
         "Mark II Drone" 6
-        "Saturn (Mark II)"
+        "Venus (Mark II)"
         "Mark II Drone" 4
-        "Venus (Mark II)" 2
-        "Mercury (Mark II)" 2
         "Mars (Mark II)" 2
+        "Rainmaker (Mark II)" 2
+        "Mercury (Mark II)" 2
     fleet
       names "republic"
       fighters "republic fighter"
-        "Saturn"
-        "Mark II Drone" 4
         "Venus"
-        "Mercury"
+        "Mark II Drone" 4
+        "Mars"
+        "Rainmaker"
   npc
     government "Navy (Oathkeeper)"
     personality heroic staying
@@ -1944,28 +1944,28 @@ mission "Wanderers: Sestor: Farpoint Attack 1"
       names "republic"
       fighters "republic fighter"
       variant
-        "Jupiter (Mark II)"
+        "Saturn (Mark II)"
         "Foxhound" 4
         "Mark II Drone" 6
-        "Saturn (Mark II)"
+        "Venus (Mark II)"
         "Mark II Drone" 4
-        "Venus (Mark II)" 2
-        "Mercury (Mark II)" 2
         "Mars (Mark II)" 2
+        "Rainmaker (Mark II)" 2
+        "Mercury (Mark II)" 2
+    fleet
+      names "republic"
+      fighters "republic fighter"
+        "Venus"
+        "Mark II Drone" 4
+        "Mars"
+        "Rainmaker"
     fleet
       names "republic"
       fighters "republic fighter"
         "Saturn"
-        "Mark II Drone" 4
-        "Venus"
-        "Mercury"
-    fleet
-      names "republic"
-      fighters "republic fighter"
-        "Jupiter"
         "Foxhound" 4
         "Mark II Drone" 6
-        "Venus" 3
+        "Mars" 3
 
 
 
@@ -2106,47 +2106,47 @@ mission "Wanderers: Sestor: Farpoint Attack 2"
       names "republic"
       fighters "republic fighter"
       variant
-        "Jupiter (Mark II)"
+        "Saturn (Mark II)"
         "Foxhound" 4
         "Mark II Drone" 6
-        "Saturn (Mark II)"
+        "Venus (Mark II)"
         "Mark II Drone" 4
-        "Venus (Mark II)" 2
-        "Mercury (Mark II)" 2
         "Mars (Mark II)" 2
+        "Rainmaker (Mark II)" 2
+        "Mercury (Mark II)" 2
     fleet
       names "republic"
       fighters "republic fighter"
-        "Saturn"
-        "Mark II Drone" 4
         "Venus"
-        "Mercury"
+        "Mark II Drone" 4
+        "Mars"
+        "Rainmaker"
     fleet
       names "republic"
       fighters "republic fighter"
       variant
-        "Jupiter"
+        "Saturn"
         "Foxhound" 4
         "Mark II Drone" 6
-        "Saturn"
+        "Venus"
         "Mark II Drone" 4
-        "Venus" 2
-        "Mercury" 2
         "Mars" 2
+        "Rainmaker" 2
+        "Mercury" 2
+    fleet
+      names "republic"
+      fighters "republic fighter"
+        "Venus (Mark II)"
+        "Mark II Drone" 4
+        "Mars (Mark II)"
+        "Rainmaker (Mark II)"
     fleet
       names "republic"
       fighters "republic fighter"
         "Saturn (Mark II)"
-        "Mark II Drone" 4
-        "Venus (Mark II)"
-        "Mercury (Mark II)"
-    fleet
-      names "republic"
-      fighters "republic fighter"
-        "Jupiter (Mark II)"
         "Foxhound" 4
         "Mark II Drone" 6
-        "Venus (Mark II)" 3
+        "Mars (Mark II)" 3
   npc evade
     government "Kor Sestor"
     personality heroic staying
@@ -2521,29 +2521,29 @@ mission "Wanderers: Sestor: Drones in Alnilam"
       names "republic"
       fighters "republic fighter"
       variant
-        "Jupiter (Mark II)"
+        "Saturn (Mark II)"
         "Foxhound" 4
         "Mark II Drone" 6
-        "Saturn (Mark II)"
+        "Venus (Mark II)"
         "Mark II Drone" 4
-        "Venus (Mark II)" 2
-        "Mercury (Mark II)" 2
         "Mars (Mark II)" 2
+        "Rainmaker (Mark II)" 2
+        "Mercury (Mark II)" 2
+    fleet
+      names "republic"
+      fighters "republic fighter"
+        "Venus"
+        "Mark II Drone" 4
+        "Mars" 2
+        "Rainmaker" 4
     fleet
       names "republic"
       fighters "republic fighter"
         "Saturn"
-        "Mark II Drone" 4
-        "Venus" 2
-        "Mercury" 4
-    fleet
-      names "republic"
-      fighters "republic fighter"
-        "Jupiter"
         "Foxhound" 4
         "Mark II Drone" 6
-        "Venus" 3
         "Mars" 3
+        "Mercury" 3
 
 
 
@@ -2593,7 +2593,7 @@ mission "Wanderers: Sestor Alt: Alnilam 1"
 mission "Wanderers: Sestor Alt: Alnilam 2"
   landing
   name "Attack Alpha base"
-  description "Travel to the <system> system with these Oathkeeper Saturns to eliminate the Alpha base on <planet>."
+  description "Travel to the <system> system with these Oathkeeper Venuss to eliminate the Alpha base on <planet>."
   source "Farpoint"
   destination "Zenith"
   clearance
@@ -2618,16 +2618,16 @@ mission "Wanderers: Sestor Alt: Alnilam 2"
   npc accompany save
     government "Navy (Oathkeeper)"
     personality escort
-    ship "Saturn (Mark II)" "R.N.S. Dauntless"
-    ship "Saturn (Mark II)" "R.N.S. Forthright"
-    ship "Saturn (Mark II)" "R.N.S. Virtue"
+    ship "Venus (Mark II)" "R.N.S. Dauntless"
+    ship "Venus (Mark II)" "R.N.S. Forthright"
+    ship "Venus (Mark II)" "R.N.S. Virtue"
 
 
 
 mission "Wanderers: Sestor Alt: Alnilam 3"
   landing
   name "Return to <planet>"
-  description "Escort the Oathkeeper Saturns back to <destination>."
+  description "Escort the Oathkeeper Venuss back to <destination>."
   source "Zenith"
   destination "Farpoint"
   to offer
@@ -2641,9 +2641,9 @@ mission "Wanderers: Sestor Alt: Alnilam 3"
   npc accompany save
     government "Navy (Oathkeeper)"
     personality escort
-    ship "Saturn (Mark II)" "R.N.S. Dauntless"
-    ship "Saturn (Mark II)" "R.N.S. Forthright"
-    ship "Saturn (Mark II)" "R.N.S. Virtue"
+    ship "Venus (Mark II)" "R.N.S. Dauntless"
+    ship "Venus (Mark II)" "R.N.S. Forthright"
+    ship "Venus (Mark II)" "R.N.S. Virtue"
 
 
 

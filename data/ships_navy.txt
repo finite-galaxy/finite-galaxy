@@ -1,29 +1,287 @@
 shipyard "Navy Variants"
-  "Jupiter"
-  "Jupiter (Alpha)"
-  "Jupiter (Jump)"
-  "Jupiter (Mark II)"
-  "Jupiter (Particle)"
   "Mars"
   "Mars (Mark II)"
   "Mercury"
   "Mercury (Mark II)"
+  "Rainmaker"
+  "Rainmaker (Mark II)"
   "Saturn"
+  "Saturn (Alpha)"
   "Saturn (Jump)"
   "Saturn (Mark II)"
+  "Saturn (Particle)"
   "Venus"
+  "Venus (Jump)"
   "Venus (Mark II)"
 
 
 
-ship "Jupiter"
-  sprite "ship/jupiter"
-  thumbnail "thumbnail/jupiter"
+ship "Mars"
+  sprite "ship/mars"
+  thumbnail "thumbnail/mars"
+  attributes
+    category "Corvette"
+#    manufacturer "Navy"
+    licences
+      Mars
+    "cost" 5200000
+    "shields" 8000
+    "hull" 2500
+    "required crew" 21
+    "bunks" 44
+    "mass" 310
+    "drag" 5.2
+    "heat dissipation" .6
+    "cargo space" 50
+    "outfit space" 550
+    "core space" 250
+    "engine space" 100
+    "weapon space" 200
+    weapon
+      "blast radius" 100
+      "shield damage" 1000
+      "hull damage" 500
+      "hit force" 1500
+  outfits
+    "D41-HY Shield Generator"
+    "Fission Reactor"
+    "Hyperdrive"
+
+    "A370 Atomic Thruster"
+    "A375 Atomic Steering"
+
+    "Meteor Missile" 80
+    "Meteor Missile Box" 2
+    "Meteor Missile Launcher" 2
+    "Particle Turret" 2
+    "Heavy Anti-Missile"
+
+    "LP144a Battery Pack"
+    "Liquid Water Cooler"
+    "Fuel Pod" 55
+    "Large Radar Jammer"
+    "Ramscoop"
+    "Tactical Scanner" 16
+    "Fragmentation Grenades" 20
+    "Laser Rifle" 40
+    "Security Station" 2
+  engine -26 92
+  engine 26 92
+  gun -10 -83 "Meteor Missile Launcher"
+  gun 10 -83 "Meteor Missile Launcher"
+  turret 0 -37 "Heavy Anti-Missile"
+  turret -12 -12 "Particle Turret"
+  turret 12 -12 "Particle Turret"
+  leak "leak" 40 50
+  leak "flame" 50 80
+  leak "big leak" 90 30
+  explode "tiny explosion" 18
+  explode "small explosion" 36
+  explode "medium explosion" 24
+  explode "large explosion" 8
+  "final explode" "final explosion medium"
+  description "For centuries, the Mars was the largest warship produced by the Republic Navy Yard, but now they seem quite small compared to a Venus or a Saturn. Armed with a variety of weapons, and with relatively good manoeuvrability for a ship its size, the Mars is equally capable at fending off small fighters or bombarding larger ships."
+
+
+ship "Mars" "Mars (Mark II)"
+  outfits
+    "D41-HY Shield Generator"
+    "Fission Reactor"
+    "Hyperdrive"
+
+    "A370 Atomic Thruster"
+    "A375 Atomic Steering"
+
+    "Electron Cannon" 2
+    "Electron Turret" 2
+    "Heavy Anti-Missile"
+
+    "LP144a Battery Pack"
+    "Liquid Water Cooler"
+    "Ramscoop"
+    "Fuel Pod" 55
+    "Large Radar Jammer"
+    "Tactical Scanner" 16
+    "Fragmentation Grenades" 20
+    "Laser Rifle" 40
+    "Security Station" 2
+  turret "Heavy Anti-Missile"
+  turret "Electron Turret"
+  turret "Electron Turret"
+
+
+
+ship "Mercury"
+  sprite "ship/mercury"
+  thumbnail "thumbnail/mercury"
+  attributes
+    category "Corvette"
+#    manufacturer "Navy"
+    licences
+      Mercury
+    "cost" 3200000
+    "shields" 5800
+    "hull" 1400
+    "required crew" 7
+    "bunks" 12
+    "mass" 150
+    "drag" 3.1
+    "heat dissipation" .7
+    "cargo space" 30
+    "outfit space" 350
+    "core space" 170
+    "engine space" 80
+    "weapon space" 100
+    weapon
+      "blast radius" 72
+      "shield damage" 720
+      "hull damage" 360
+      "hit force" 1080
+  outfits
+    "D23-QP Shield Generator"
+    "NT-200 Nucleovoltaic"
+    "Hyperdrive"
+
+    "A250 Atomic Thruster"
+    "A375 Atomic Steering"
+
+    "Particle Cannon" 2
+    "Heavy Anti-Missile"
+
+    "LP072a Battery Pack"
+    "Cooling Ducts"
+    "Cargo Scanner"
+    "Fuel Pod" 32
+    "Large Radar Jammer"
+    "Outfit Scanner"
+    "Tactical Scanner" 9
+    "Fragmentation Grenades" 5
+    "Laser Rifle" 10
+    "Security Station"
+  engine -12 57
+  engine 12 57
+  gun -28 -28 "Particle Cannon"
+  gun 28 -28 "Particle Cannon"
+  turret 0 -8 "Heavy Anti-Missile"
+  leak "leak" 50 50
+  leak "flame" 80 80
+  explode "tiny explosion" 10
+  explode "small explosion" 20
+  explode "medium explosion" 15
+  "final explode" "final explosion small"
+  description "The Navy Mercury is designed for engaging targets at short range, and also serves as the Navy's mobile sensor platform, scanning ships for illegal equipment or cargo."
+
+
+ship "Mercury" "Mercury (Mark II)"
+  outfits
+    "D23-QP Shield Generator"
+    "NT-200 Nucleovoltaic"
+    "Hyperdrive"
+
+    "A250 Atomic Thruster"
+    "A375 Atomic Steering"
+
+    "Electron Cannon" 2
+    "Electron Turret"
+
+    "LP072a Battery Pack"
+    "Cooling Ducts"
+    "Cargo Scanner"
+    "Fuel Pod" 32
+    "Large Radar Jammer"
+    "Outfit Scanner"
+    "Tactical Scanner" 9
+    "Extra Outfit Space"
+    "Fragmentation Grenades" 5
+    "Laser Rifle" 10
+    "Security Station"
+
+
+
+ship "Rainmaker"
+  sprite "ship/rainmaker"
+  thumbnail "thumbnail/rainmaker"
+  attributes
+    category "Interceptor"
+#    manufacturer "Navy"
+    licences
+      Rainmaker
+    "cost" 1580000
+    "shields" 3500
+    "hull" 1200
+    "required crew" 7
+    "bunks" 14
+    "mass" 180
+    "drag" 3.8
+    "heat dissipation" .8
+    "cargo space" 15
+    "outfit space" 260
+    "core space" 150
+    "engine space" 60
+    "weapon space" 50
+    weapon
+      "blast radius" 40
+      "shield damage" 400
+      "hull damage" 200
+      "hit force" 600
+  outfits
+    "D23-QP Shield Generator"
+    "Dwarf Core"
+    "Hyperdrive"
+
+    "A250 Atomic Thruster"
+    "A255 Atomic Steering"
+
+    "Javelin" 800
+    "Javelin Storage Crate" 4
+    "Javelin Pod" 4
+
+    "LP036a Battery Pack"
+    "Fuel Pod" 28
+    "Large Radar Jammer"
+    "Tactical Scanner" 4
+  engine -8 46
+  engine 8 46
+  gun -10 -30
+  gun 10 -30
+  gun -27 -5 "Javelin Pod"
+  gun 27 -5 "Javelin Pod"
+  gun -17 -5 "Javelin Pod"
+  gun 17 -5 "Javelin Pod"
+  leak "leak" 50 50
+  explode "tiny explosion" 10
+  explode "small explosion" 20
+  explode "medium explosion" 15
+  "final explode" "final explosion small"
+  description "The Rainmaker is a missile boat built in the Republic Navy Yard. It comes equipped with four missile launchers and enough ammunition to destroy even ships many times its size. Because of their lack of manoeuvrability and relatively light shielding, Rainmaker serve best as long-range attack ships, and once their missile supply is spent, they are relatively useless in combat."
+
+
+ship "Rainmaker" "Rainmaker (Mark II)"
+  outfits
+    "D23-QP Shield Generator"
+    "Dwarf Core"
+    "Hyperdrive"
+
+    "A250 Atomic Thruster"
+    "A255 Atomic Steering"
+
+    "Electron Cannon" 2
+
+    "LP036a Battery Pack"
+    "Fuel Pod" 28
+    "Large Radar Jammer"
+    "Tactical Scanner" 4
+
+
+
+ship "Saturn"
+  sprite "ship/saturn"
+  thumbnail "thumbnail/saturn"
   attributes
     category "Cruiser"
 #    manufacturer "Navy"
     licences
-      Jupiter
+      Saturn
     "cost" 15200000
     "shields" 21400
     "hull" 8300
@@ -65,7 +323,7 @@ ship "Jupiter"
     "Tactical Scanner" 36
     "Fragmentation Grenades" 80
     "Laser Rifle" 160
-    "Security Station" 5
+    "Security Station" 4
   engine -35 200
   engine 35 200
   gun -16 -176 "Cyclone Torpedo Launcher"
@@ -95,10 +353,10 @@ ship "Jupiter"
   explode "large explosion" 40
   explode "huge explosion" 10
   "final explode" "final explosion large"
-  description "The Jupiter is more than just a warship: it is practically a mobile space station, with docking bays for an entire squadron of drones and fighters and enough crew to fill a small village. Although designed primarily for engaging enemies from a distance, a Jupiter can also do significant damage in close combat."
+  description "The Saturn is more than just a warship: it is practically a mobile space station, with docking bays for an entire squadron of drones and fighters and enough crew to fill a small village. Although designed primarily for engaging enemies from a distance, a Saturn can also do significant damage in close combat."
 
 
-ship "Jupiter" "Jupiter (Alpha)"
+ship "Saturn" "Saturn (Alpha)"
   outfits
     "Systems Core (Large)"
     "Triple Plasma Core"
@@ -118,14 +376,13 @@ ship "Jupiter" "Jupiter (Alpha)"
     "Fuel Pod" 190
     "Fragmentation Grenades" 80
     "Laser Rifle" 160
-    "Security Station" 5
   turret "Disruptor"
   turret "Slicer"
   turret "Disruptor"
   turret "Slicer"
 
 
-ship "Jupiter" "Jupiter (Jump)"
+ship "Saturn" "Saturn (Jump)"
   outfits
     "D94-YV Shield Generator"
     "Fusion Reactor"
@@ -149,14 +406,14 @@ ship "Jupiter" "Jupiter (Jump)"
     "Tactical Scanner" 36
     "Fragmentation Grenades" 80
     "Laser Rifle" 160
-    "Security Station" 5
+    "Security Station" 4
   turret "Electron Turret"
   turret "Heavy Anti-Missile"
   turret "Electron Turret"
   turret "Heavy Anti-Missile"
 
 
-ship "Jupiter" "Jupiter (Mark II)"
+ship "Saturn" "Saturn (Mark II)"
   outfits
     "D94-YV Shield Generator"
     "Fusion Reactor"
@@ -180,14 +437,14 @@ ship "Jupiter" "Jupiter (Mark II)"
     "Tactical Scanner" 36
     "Fragmentation Grenades" 80
     "Laser Rifle" 160
-    "Security Station" 5
+    "Security Station" 4
   turret "Electron Turret"
   turret "Heavy Anti-Missile"
   turret "Electron Turret"
   turret "Heavy Anti-Missile"
 
 
-ship "Jupiter" "Jupiter (Particle)"
+ship "Saturn" "Saturn (Particle)"
   outfits
     "D94-YV Shield Generator"
     "Fusion Reactor"
@@ -209,187 +466,18 @@ ship "Jupiter" "Jupiter (Particle)"
     "Tactical Scanner" 36
     "Fragmentation Grenades" 80
     "Laser Rifle" 160
-    "Security Station" 5
+    "Security Station" 4
 
 
 
-ship "Mars"
-  sprite "ship/mars"
-  thumbnail "thumbnail/mars"
-  attributes
-    category "Corvette"
-#    manufacturer "Navy"
-    licences
-      Mars
-    "cost" 3200000
-    "shields" 5800
-    "hull" 1400
-    "required crew" 7
-    "bunks" 12
-    "mass" 150
-    "drag" 3.1
-    "heat dissipation" .7
-    "cargo space" 30
-    "outfit space" 350
-    "core space" 170
-    "engine space" 80
-    "weapon space" 100
-    weapon
-      "blast radius" 72
-      "shield damage" 720
-      "hull damage" 360
-      "hit force" 1080
-  outfits
-    "D23-QP Shield Generator"
-    "NT-200 Nucleovoltaic"
-    "Hyperdrive"
-
-    "A250 Atomic Thruster"
-    "A375 Atomic Steering"
-
-    "Particle Cannon" 2
-    "Heavy Anti-Missile"
-
-    "LP072a Battery Pack"
-    "Cooling Ducts"
-    "Cargo Scanner"
-    "Fuel Pod" 32
-    "Large Radar Jammer"
-    "Outfit Scanner"
-    "Tactical Scanner" 9
-    "Fragmentation Grenades" 5
-    "Laser Rifle" 10
-    "Security Station" 2
-  engine -12 57
-  engine 12 57
-  gun -28 -28 "Particle Cannon"
-  gun 28 -28 "Particle Cannon"
-  turret 0 -8 "Heavy Anti-Missile"
-  leak "leak" 50 50
-  leak "flame" 80 80
-  explode "tiny explosion" 10
-  explode "small explosion" 20
-  explode "medium explosion" 15
-  "final explode" "final explosion small"
-  description "The Navy Mars is designed for engaging targets at short range, and also serves as the Navy's mobile sensor platform, scanning ships for illegal equipment or cargo."
-
-
-ship "Mars" "Mars (Mark II)"
-  outfits
-    "D23-QP Shield Generator"
-    "NT-200 Nucleovoltaic"
-    "Hyperdrive"
-
-    "A250 Atomic Thruster"
-    "A375 Atomic Steering"
-
-    "Electron Cannon" 2
-    "Electron Turret"
-
-    "LP072a Battery Pack"
-    "Cooling Ducts"
-    "Cargo Scanner"
-    "Fuel Pod" 32
-    "Large Radar Jammer"
-    "Outfit Scanner"
-    "Tactical Scanner" 9
-    "Extra Outfit Space"
-    "Fragmentation Grenades" 5
-    "Laser Rifle" 10
-    "Security Station" 2
-
-
-
-ship "Mercury"
-  sprite "ship/mercury"
-  thumbnail "thumbnail/mercury"
-  attributes
-    category "Interceptor"
-#    manufacturer "Navy"
-    licences
-      Mercury
-    "cost" 1580000
-    "shields" 3500
-    "hull" 1200
-    "required crew" 7
-    "bunks" 14
-    "mass" 180
-    "drag" 3.8
-    "heat dissipation" .8
-    "cargo space" 15
-    "outfit space" 260
-    "core space" 150
-    "engine space" 60
-    "weapon space" 50
-    weapon
-      "blast radius" 40
-      "shield damage" 400
-      "hull damage" 200
-      "hit force" 600
-  outfits
-    "D23-QP Shield Generator"
-    "Dwarf Core"
-    "Hyperdrive"
-
-    "A250 Atomic Thruster"
-    "A255 Atomic Steering"
-
-    "Javelin" 800
-    "Javelin Storage Crate" 4
-    "Javelin Pod" 4
-
-    "LP036a Battery Pack"
-    "Fuel Pod" 28
-    "Large Radar Jammer"
-    "Tactical Scanner" 4
-    "Fragmentation Grenades" 5
-    "Laser Rifle" 10
-    "Security Station"
-  engine -8 46
-  engine 8 46
-  gun -10 -30
-  gun 10 -30
-  gun -27 -5 "Javelin Pod"
-  gun 27 -5 "Javelin Pod"
-  gun -17 -5 "Javelin Pod"
-  gun 17 -5 "Javelin Pod"
-  leak "leak" 50 50
-  explode "tiny explosion" 10
-  explode "small explosion" 20
-  explode "medium explosion" 15
-  "final explode" "final explosion small"
-  description "The Mercury is a missile boat built in the Republic Navy Yard. It comes equipped with four missile launchers and enough ammunition to destroy even ships many times its size. Because of their lack of manoeuvrability and relatively light shielding, Mercury serve best as long-range attack ships, and once their missile supply is spent, they are relatively useless in combat."
-
-
-ship "Mercury" "Mercury (Mark II)"
-  outfits
-    "D23-QP Shield Generator"
-    "Dwarf Core"
-    "Hyperdrive"
-
-    "A250 Atomic Thruster"
-    "A255 Atomic Steering"
-
-    "Electron Cannon" 2
-
-    "LP036a Battery Pack"
-    "Fuel Pod" 28
-    "Large Radar Jammer"
-    "Tactical Scanner" 4
-    "Fragmentation Grenades" 5
-    "Laser Rifle" 10
-    "Security Station"
-
-
-
-ship "Saturn"
-  sprite "ship/saturn"
-  thumbnail "thumbnail/saturn"
+ship "Venus"
+  sprite "ship/venus"
+  thumbnail "thumbnail/venus"
   attributes
     category "Destroyer"
 #    manufacturer "Navy"
     licences
-      Saturn
+      Venus
     "cost" 11200000
     "shields" 19600
     "hull" 6400
@@ -430,7 +518,7 @@ ship "Saturn"
     "Tactical Scanner" 25
     "Fragmentation Grenades" 60
     "Laser Rifle" 120
-    "Security Station" 4
+    "Security Station" 3
   engine -29 156
   engine 29 156
   gun -31 -63 "Sidewinder Missile Launcher"
@@ -454,10 +542,10 @@ ship "Saturn"
   explode "large explosion" 40
   explode "huge explosion" 10
   "final explode" "final explosion large"
-  description "The Republic Saturn is a relatively recent design, a much larger version of the Venus designed to be able to take on an entire pirate fleet if necessary. In addition to a wide variety of weaponry, Saturns have space to carry four attack drones: fast, pilotless fighters that can be controlled remotely."
+  description "The Republic Venus is a relatively recent design, a much larger version of the Mars designed to be able to take on an entire pirate fleet if necessary. In addition to a wide variety of weaponry, Venuss have space to carry four attack drones: fast, pilotless fighters that can be controlled remotely."
 
 
-ship "Saturn" "Saturn (Jump)"
+ship "Venus" "Venus (Jump)"
   outfits
     "D67-TM Shield Generator"
     "Fusion Reactor"
@@ -481,10 +569,10 @@ ship "Saturn" "Saturn (Jump)"
     "Tactical Scanner" 25
     "Fragmentation Grenades" 60
     "Laser Rifle" 120
-    "Security Station" 4
+    "Security Station" 3
 
 
-ship "Saturn" "Saturn (Mark II)"
+ship "Venus" "Venus (Mark II)"
   outfits
     "D67-TM Shield Generator"
     "Fusion Reactor"
@@ -508,100 +596,5 @@ ship "Saturn" "Saturn (Mark II)"
     "Tactical Scanner" 25
     "Fragmentation Grenades" 60
     "Laser Rifle" 120
-    "Security Station" 4
-
-
-
-ship "Venus"
-  sprite "ship/venus"
-  thumbnail "thumbnail/venus"
-  attributes
-    category "Corvette"
-#    manufacturer "Navy"
-    licences
-      Venus
-    "cost" 5200000
-    "shields" 8000
-    "hull" 2500
-    "required crew" 21
-    "bunks" 44
-    "mass" 310
-    "drag" 5.2
-    "heat dissipation" .6
-    "cargo space" 50
-    "outfit space" 550
-    "core space" 250
-    "engine space" 100
-    "weapon space" 200
-    weapon
-      "blast radius" 100
-      "shield damage" 1000
-      "hull damage" 500
-      "hit force" 1500
-  outfits
-    "D41-HY Shield Generator"
-    "Fission Reactor"
-    "Hyperdrive"
-
-    "A370 Atomic Thruster"
-    "A375 Atomic Steering"
-
-    "Meteor Missile" 80
-    "Meteor Missile Box" 2
-    "Meteor Missile Launcher" 2
-    "Particle Turret" 2
-    "Heavy Anti-Missile"
-
-    "LP144a Battery Pack"
-    "Liquid Water Cooler"
-    "Fuel Pod" 55
-    "Large Radar Jammer"
-    "Ramscoop"
-    "Tactical Scanner" 16
-    "Fragmentation Grenades" 20
-    "Laser Rifle" 40
     "Security Station" 3
-  engine -26 92
-  engine 26 92
-  gun -10 -83 "Meteor Missile Launcher"
-  gun 10 -83 "Meteor Missile Launcher"
-  turret 0 -37 "Heavy Anti-Missile"
-  turret -12 -12 "Particle Turret"
-  turret 12 -12 "Particle Turret"
-  leak "leak" 40 50
-  leak "flame" 50 80
-  leak "big leak" 90 30
-  explode "tiny explosion" 18
-  explode "small explosion" 36
-  explode "medium explosion" 24
-  explode "large explosion" 8
-  "final explode" "final explosion medium"
-  description "For centuries, the Venus was the largest warship produced by the Republic Navy Yard, but now they seem quite small compared to a Saturn or a Jupiter. Armed with a variety of weapons, and with relatively good manoeuvrability for a ship its size, the Venus is equally capable at fending off small fighters or bombarding larger ships."
-
-
-ship "Venus" "Venus (Mark II)"
-  outfits
-    "D41-HY Shield Generator"
-    "Fission Reactor"
-    "Hyperdrive"
-
-    "A370 Atomic Thruster"
-    "A375 Atomic Steering"
-
-    "Electron Cannon" 2
-    "Electron Turret" 2
-    "Heavy Anti-Missile"
-
-    "LP144a Battery Pack"
-    "Liquid Water Cooler"
-    "Ramscoop"
-    "Fuel Pod" 55
-    "Large Radar Jammer"
-    "Tactical Scanner" 16
-    "Fragmentation Grenades" 20
-    "Laser Rifle" 40
-    "Security Station" 3
-  turret "Heavy Anti-Missile"
-  turret "Electron Turret"
-  turret "Electron Turret"
 

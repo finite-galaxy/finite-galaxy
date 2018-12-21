@@ -221,7 +221,7 @@ mission "FW Southern Recon 1"
 mission "FW Southern Recon 1B"
   landing
   name "Electron Cannon"
-  description "Steal an Electron Cannon from a Navy warship and return it to <planet> for Freya to look at. She thought your best bet for finding a lone Mars might be the Wei or Alnasl systems."
+  description "Steal an Electron Cannon from a Navy warship and return it to <planet> for Freya to look at. She thought your best bet for finding a lone Mercury might be the Wei or Alnasl systems."
   autosave
   source "Trinket"
   destination "Trinket"
@@ -243,7 +243,7 @@ mission "FW Southern Recon 1B"
       `  "We're going to have to fight them eventually, but first we need as much information as we can get on their new weapon systems. I'd like you to find one of their ships that has the new electron beam cannons installed, capture it, and bring it back here. Think you can do that?"`
 # I imagine one of them can't be much bigger than twenty or thirty tons, so you ought to be able to find space for it.
       choice
-        `  "How can I find a Mars that's all by itself? They're usually a part of a bigger fleet."`
+        `  "How can I find a Mercury that's all by itself? They're usually a part of a bigger fleet."`
       `  She thinks about that for a moment, then says, "The Navy has shifted most of their capital ships to the defecting systems in the south. That means that some of the systems up north will have lighter defences. You might try Wei or Alnasl. Good luck, Captain."`
         accept
   
@@ -309,7 +309,7 @@ mission "FW Southern Battle 1"
       choice
         `  "Okay, I'm ready to fight."`
         `  "I wish it hadn't come to this, but if you think it's our only option, I'll join the fight."`
-      `  "Thank you," she says. "But there's one more thing we must do to prepare for battle. I mentioned before that we have an ace up our sleeve. It's a new warship designed by Southbound Shipyards, intended to be a match for a Saturn. They've only finished building three of them. I'd like you to travel to Zuq and escort them back here. Once you return, we'll prepare for battle."`
+      `  "Thank you," she says. "But there's one more thing we must do to prepare for battle. I mentioned before that we have an ace up our sleeve. It's a new warship designed by Southbound Shipyards, intended to be a match for a Venus. They've only finished building three of them. I'd like you to travel to Zuq and escort them back here. Once you return, we'll prepare for battle."`
         accept
 
 
@@ -328,7 +328,7 @@ mission "FW Southern Battle 1B"
   
   on offer
     conversation
-      `When you land on <origin>, a Southbound Shipyards executive leads you to a hangar. The hangar is huge, but it clearly was not meant to hold a ship as large as the one it now contains. There is barely enough space for the cranes and catwalks being used by the construction crews. He says, "The Dreadnought is a new design, the largest ship we've ever built. Only three of them have been completed so far." You can't help but be impressed at the size of the Dreadnought: as bulky as a Saturn, it looks like a cross between a Bastion and an Argosy.`
+      `When you land on <origin>, a Southbound Shipyards executive leads you to a hangar. The hangar is huge, but it clearly was not meant to hold a ship as large as the one it now contains. There is barely enough space for the cranes and catwalks being used by the construction crews. He says, "The Dreadnought is a new design, the largest ship we've ever built. Only three of them have been completed so far." You can't help but be impressed at the size of the Dreadnought: as bulky as a Venus, it looks like a cross between a Bastion and an Argosy.`
       `  He then leads you out to a section of the spaceport where three Dreadnoughts are parked. Next to them, and looking tiny by comparison, are five Furies. You ask, "Are those Furies part of the battle fleet, too?"`
       `  "Yes," he says, "equipped with some fancy new weapons from Barmy Edward up at Kraz Cybernetics. I haven't seen them in action yet, but he's convinced they'll be useful against the Navy."`
       `  You thank him for his time, and meet up with the captains of the battle fleet, arranging for them to follow you back to Trinket.`
@@ -437,27 +437,27 @@ mission "FW Southern Battle 2"
       names "republic"
       fighters "republic fighter"
       variant
-        "Jupiter (Mark II)"
+        "Saturn (Mark II)"
         "Foxhound" 4
         "Mark II Drone" 6
     fleet 3
       names "republic"
       fighters "republic fighter"
       variant
-        "Saturn (Mark II)"
+        "Venus (Mark II)"
         "Mark II Drone" 4
     fleet 3
       names "republic"
       variant
+        "Rainmaker (Mark II)" 2
+    fleet 2
+      names "republic"
+      variant
+        "Mercury (Mark II)" 3
+    fleet 2
+      names "republic"
+      variant
         "Mercury (Mark II)" 2
-    fleet 2
-      names "republic"
-      variant
-        "Mars (Mark II)" 3
-    fleet 2
-      names "republic"
-      variant
-        "Mars (Mark II)" 2
   
   on complete
     event "fw eastern expansion"
@@ -1024,7 +1024,7 @@ mission "FW Northern 4.1A"
     government "Navy (Oathkeeper)"
     personality heroic staying uninterested
     system Alioth
-    ship "Saturn (Mark II)" "R.N.S. Peacemaker"
+    ship "Venus (Mark II)" "R.N.S. Peacemaker"
 
 
 
@@ -1102,11 +1102,11 @@ mission "FW Alphas 1.1"
       choice
         `  "It must be a trick. There can't still be Alphas around. Maybe the pirates dyed their skin green to make people fear them."`
         `  "How is it possible that some of the Alphas are still alive?"`
-      `  Alondo says, "This may be a trick, but we can't afford to take that risk. The Alphas were the greatest threat humanity has ever faced. And before they contacted us for help, Poisonwood reached out to the Navy." As he is speaking, a shadow passes overhead. You look up and see the unmistakable silhouette of a Navy Saturn, coming in for a landing.`
+      `  Alondo says, "This may be a trick, but we can't afford to take that risk. The Alphas were the greatest threat humanity has ever faced. And before they contacted us for help, Poisonwood reached out to the Navy." As he is speaking, a shadow passes overhead. You look up and see the unmistakable silhouette of a Navy Venus, coming in for a landing.`
       choice
         `  "Are you insane? You're letting the Navy come here?"`
         `  "We're going to work side by side with the Navy right after that awful battle?"`
-      `  Alondo explains, "It's only one Saturn, an 'Oathkeeper' ship, sworn to take no part in our war. The Free Worlds have almost no troops trained for ground combat, so without the Navy's help we would be unlikely to be able to eliminate the Alphas."`
+      `  Alondo explains, "It's only one Venus, an 'Oathkeeper' ship, sworn to take no part in our war. The Free Worlds have almost no troops trained for ground combat, so without the Navy's help we would be unlikely to be able to eliminate the Alphas."`
       `  The Navy ship lands, and a man steps off who you recognize immediately: Admiral William Danforth, who is something of a folk hero throughout human space, and who you have heard is the commander of the entire Oathkeepers regiment. With him is a man who he introduces as Commander Aaron Nguyen of the Navy Humanitarian Corps. As Nguyen shakes your hand, you are struck by the fact that although he is your enemy, you see no trace of hostility in his eyes - in fact, his expression is surprisingly warm and affectionate.`
       `  "We have no room for error," says Danforth. "These Alphas must be eliminated, and they must not be allowed to escape. On that, at least, we can all agree."`
       `  Freya says, "Captain <last> will lead the attack." She beckons to two of the Free Worlds captains. "Marco, Emily, you will join them with your Falcons. Destroy any pirate ships in orbit, then land and secure the facility. Understood?" You nod, and prepare to take off for the <system> system.`
@@ -1115,7 +1115,7 @@ mission "FW Alphas 1.1"
   npc accompany save
     government "Navy (Oathkeeper)"
     personality escort heroic
-    ship "Saturn (Mark II)" "R.N.S. Peacemaker"
+    ship "Venus (Mark II)" "R.N.S. Peacemaker"
   npc
     government "Free Worlds"
     personality heroic escort
@@ -1241,7 +1241,7 @@ mission "FW Alphas 1.1A"
   npc accompany save
     government "Navy (Oathkeeper)"
     personality escort heroic
-    ship "Saturn (Mark II)" "R.N.S. Peacemaker"
+    ship "Venus (Mark II)" "R.N.S. Peacemaker"
   
   on visit
     dialogue "You have reached <planet>, but you left the <npc> behind! Better depart and wait for them to arrive in this star system."
@@ -1775,10 +1775,10 @@ mission "FW Rand 1"
       names "republic"
       fighters "republic fighter"
       variant
-        "Jupiter (Mark II)"
+        "Saturn (Mark II)"
         "Foxhound" 4
         "Mark II Drone" 6
-        "Mars (Mark II)"
+        "Mercury (Mark II)"
   
   on complete
     event "fw expanded and cut"
@@ -2085,17 +2085,17 @@ mission "FW Liberate Delta Sagittarii"
       names "republic"
       fighters "republic fighter"
       variant
-        "Jupiter (Mark II)"
+        "Saturn (Mark II)"
         "Foxhound" 4
         "Mark II Drone" 6
-        "Mars (Mark II)" 4
+        "Mercury (Mark II)" 4
     fleet
       names "republic"
       fighters "republic fighter"
       variant
-        "Saturn (Mark II)"
+        "Venus (Mark II)"
         "Mark II Drone" 4
-        "Mercury (Mark II)" 4
+        "Rainmaker (Mark II)" 4
   
   npc
     personality staying derelict
@@ -2105,14 +2105,14 @@ mission "FW Liberate Delta Sagittarii"
       names "republic"
       fighters "republic fighter"
       variant
-        "Jupiter (Mark II)"
-        "Venus" 2
+        "Saturn (Mark II)"
+        "Mars" 2
     fleet
       names "republic"
       fighters "republic fighter"
       variant
-        "Saturn (Mark II)"
-        "Venus" 4
+        "Venus (Mark II)"
+        "Mars" 4
   
   npc
     personality staying heroic

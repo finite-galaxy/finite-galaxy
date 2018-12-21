@@ -223,7 +223,7 @@ mission "FW Stack Core 1B"
       names "republic"
       cargo 0
       variant
-        "Mars" 2
+        "Mercury" 2
   
   on complete
     event "stack core available" 25
@@ -408,8 +408,8 @@ mission "FW Wolf Pack 2A"
     government "Republic"
     system "Sarin"
     personality heroic staying
-    ship "Mars (Mark II)" "R.N.S. Atherstone"
-    ship "Mars (Mark II)" "R.N.S. Tyndale"
+    ship "Mercury (Mark II)" "R.N.S. Atherstone"
+    ship "Mercury (Mark II)" "R.N.S. Tyndale"
   
   on complete
     event "wolf pack 3 ready" 10
@@ -513,7 +513,7 @@ mission "FW Wolf Pack 4"
       fighters "republic fighter"
       cargo 0
       variant
-        "Jupiter (Mark II)"
+        "Saturn (Mark II)"
         "Foxhound" 4
         "Mark II Drone" 6
   
