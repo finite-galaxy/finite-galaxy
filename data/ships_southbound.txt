@@ -9,6 +9,7 @@ shipyard "Southbound Variants"
   "Fury (Gatling)"
   "Fury (Laser)"
   "Fury (Rocket)"
+  "Hag"
   "Harpy"
   "Harpy (Gatling)"
   "Hauler I"
@@ -26,7 +27,6 @@ shipyard "Southbound Variants"
   "Roost (Sidewinder)"
   "Skein"
   "Skein (Sidewinder)"
-  "Stymphalian"
 
 
 
@@ -329,6 +329,54 @@ ship "Fury" "Fury (Rocket)"
     "Fuel Pod" 14
     "Tactical Scanner"
     "Extra Outfit Space"
+
+
+
+ship "Hag"
+  sprite "ship/hag"
+  thumbnail "thumbnail/hag"
+  attributes
+    category "Fighter"
+#    manufacturer "Southbound"
+    licences
+      Pilot
+    "carried" 3
+    "cost" 126000
+    "shields" 900
+    "hull" 300
+    "required crew" 1
+    "bunks" 1
+    "mass" 40
+    "drag" .9
+    "heat dissipation" .85
+    "outfit space" 110
+    "core space" 50
+    "engine space" 40
+    "weapon space" 20
+    weapon
+      "blast radius" 12
+      "shield damage" 120
+      "hull damage" 60
+      "hit force" 180
+  outfits
+    "D14-RN Shield Generator"
+    "nGVF-BB Fuel Cell"
+
+    "Chipmunk Plasma Thruster"
+    "Chipmunk Plasma Steering"
+
+    "K1 Blaster Cannon" 2
+
+    "LP036a Battery Pack"
+    "Tactical Scanner"
+  engine -5 32
+  engine 5 32
+  gun -7 -14 "K1 Blaster Cannon"
+  gun 7 -14 "K1 Blaster Cannon"
+  leak "flame" 60 80
+  explode "tiny explosion" 15
+  explode "small explosion" 5
+  description "When the Free Worlds started requesting a carrier solution from its local shipyards, Southbound Shipyards quickly saw that a few modifications could make their entry level interceptor into a top tier fighter. Over 85% of the parts that make up the Hag are shared with the Harpy assembly line, so it's no surprise that even trimmed down to fit into a bomber bay, the Hag bears strong resemblance to its hyperspace-faring cousin."
 
 
 
@@ -753,7 +801,7 @@ ship "Nest"
   explode "medium explosion" 20
   explode "large explosion" 5
   "final explode" "final explosion medium"
-  description `Southbound Shipyards quickly answered the Free Worlds' call for a carrier by building modified cargo containers for Haulers - adding a pair of Fighter docking arms, some additional outfit space, and even a couple of bunks. Access to the fighters from within the ship is so inconvenient that most pilots opt to just stay aboard their fighters when in flight. While the technical name for this ship is "Hauler I: Type F", Southbound assembly workers started calling the single container variant the "Nest" due to its complement of Stymphalian Fighters, and the name stuck.`
+  description `Southbound Shipyards quickly answered the Free Worlds' call for a carrier by building modified cargo containers for Haulers - adding a pair of Fighter docking arms, some additional outfit space, and even a couple of bunks. Access to the fighters from within the ship is so inconvenient that most pilots opt to just stay aboard their fighters when in flight. While the technical name for this ship is "Hauler I: Type F", Southbound assembly workers started calling the single container variant the "Nest" due to its complement of Hag Fighters, and the name stuck.`
 
 
 ship "Nest" "Nest (Sidewinder)"
@@ -946,52 +994,4 @@ ship "Skein" "Skein (Sidewinder)"
     "LP144a Battery Pack"
     "Fuel Pod" 83
     "Tactical Scanner" 4
-
-
-
-ship "Stymphalian"
-  sprite "ship/stymphalian"
-  thumbnail "thumbnail/stymphalian"
-  attributes
-    category "Fighter"
-#    manufacturer "Southbound"
-    licences
-      Pilot
-    "carried" 3
-    "cost" 126000
-    "shields" 900
-    "hull" 300
-    "required crew" 1
-    "bunks" 1
-    "mass" 40
-    "drag" .9
-    "heat dissipation" .85
-    "outfit space" 110
-    "core space" 50
-    "engine space" 40
-    "weapon space" 20
-    weapon
-      "blast radius" 12
-      "shield damage" 120
-      "hull damage" 60
-      "hit force" 180
-  outfits
-    "D14-RN Shield Generator"
-    "nGVF-BB Fuel Cell"
-
-    "Chipmunk Plasma Thruster"
-    "Chipmunk Plasma Steering"
-
-    "K1 Blaster Cannon" 2
-
-    "LP036a Battery Pack"
-    "Tactical Scanner"
-  engine -5 32
-  engine 5 32
-  gun -7 -14 "K1 Blaster Cannon"
-  gun 7 -14 "K1 Blaster Cannon"
-  leak "flame" 60 80
-  explode "tiny explosion" 15
-  explode "small explosion" 5
-  description "When the Free Worlds started requesting a carrier solution from its local shipyards, Southbound Shipyards quickly saw that a few modifications could make their entry level interceptor into a top tier fighter. Over 85% of the parts that make up the Stymphalian are shared with the Harpy assembly line, so it's no surprise that even trimmed down to fit into a bomber bay, the Stymphalian bears strong resemblance to its hyperspace-faring cousin."
 
