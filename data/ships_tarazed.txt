@@ -19,7 +19,7 @@ shipyard "Tarazed Variants"
   "Raven"
   "Raven (Afterburner)"
   "Raven (Mark II)"
-  "Raven (Mixed)"
+  "Raven (Plasma)"
   "Raven (Rocket)"
   "Unknown Ship Type"
 
@@ -151,17 +151,15 @@ ship "Falcon" "Falcon (Heavy)"
     "A520 Atomic Thruster"
     "A525 Atomic Steering"
 
-    "Cyclone Torpedo" 60
-    "Cyclone Torpedo Rack" 2
-    "Cyclone Torpedo Launcher" 2
+    "Sidewinder Missile" 100
+    "Sidewinder Missile Rack" 2
+    "Sidewinder Missile Launcher" 2
     "Heavy Laser Turret" 4
 
     "LP036a Battery Pack"
     "Liquid Nitrogen Cooler"
     "Fuel Pod" 71
-    "Large Radar Jammer"
-    "Tactical Scanner" 4
-    "Extra Outfit Space" 4
+    "Tactical Scanner" 5
 
 
 ship "Falcon" "Falcon (Laser)"
@@ -195,10 +193,9 @@ ship "Falcon" "Falcon (Plasma)"
 
     "LP144a Battery Pack"
     "Liquid Nitrogen Cooler"
-    "Cooling Ducts"
     "Fuel Pod" 71
     "Tactical Scanner" 5
-    "Extra Outfit Space" 3
+    "Extra Outfit Space" 2
 
 
 
@@ -210,7 +207,7 @@ ship "Hawk"
 #    manufacturer "Tarazed"
     licences
       Pilot
-    "cost" 1850000
+    "cost" 1900000
     "shields" 3000
     "hull" 1000
     "required crew" 2
@@ -239,6 +236,7 @@ ship "Hawk"
     "Plasma Cannon" 2
 
     "LP036a Battery Pack"
+    "Liquid Water Cooler"
     "Fuel Pod" 18
     "Tactical Scanner" 5
   engine -16 47
@@ -269,7 +267,8 @@ ship "Hawk" "Hawk (Blaster)"
     "K1 Blaster Cannon" 4
     "K2 Blaster Turret"
 
-    "LP036a Battery Pack"
+    "LP072a Battery Pack"
+    "Liquid Water Cooler"
     "Fuel Pod" 18
     "Tactical Scanner" 5
 
@@ -305,6 +304,7 @@ ship "Hawk" "Hawk (Rocket)"
     "Heavy Rocket Launcher" 2
 
     "LP036a Battery Pack"
+    "Liquid Water Cooler"
     "Fuel Pod" 18
     "Tactical Scanner" 5
 
@@ -524,7 +524,7 @@ ship "Raven"
 #    manufacturer "Tarazed"
     licences
       Pilot
-    "cost" 1800000
+    "cost" 2400000
     "shields" 4500
     "hull" 1500
     "required crew" 4
@@ -533,8 +533,8 @@ ship "Raven"
     "drag" 3.7
     "heat dissipation" .8
     "cargo space" 30
-    "outfit space" 310
-    "core space" 120
+    "outfit space" 320
+    "core space" 130
     "engine space" 90
     "weapon space" 100
     weapon
@@ -550,17 +550,21 @@ ship "Raven"
     "Greyhound Plasma Thruster"
     "Greyhound Plasma Steering"
 
-    "Plasma Cannon" 4
+    "Heavy Rocket" 40
+    "Heavy Rocket Rack" 2
+    "Heavy Rocket Launcher" 2
+    "Plasma Cannon" 2
 
     "LP036a Battery Pack"
+    "Cooling Ducts"
     "Fuel Pod" 24
     "Tactical Scanner" 5
   engine -12 43
   engine 12 43
   gun -10 -33 "Plasma Cannon"
   gun 10 -33 "Plasma Cannon"
-  gun -16 -28 "Plasma Cannon"
-  gun 16 -28 "Plasma Cannon"
+  gun -16 -28 "Heavy Rocket Launcher"
+  gun 16 -28 "Heavy Rocket Launcher"
   leak "leak" 60 50
   leak "flame" 50 80
   explode "medium explosion" 24
@@ -581,9 +585,13 @@ ship "Raven" "Raven (Afterburner)"
     "Greyhound Plasma Steering"
     "Afterburner"
 
-    "Plasma Cannon" 4
+    "Heavy Rocket" 40
+    "Heavy Rocket Rack" 2
+    "Heavy Rocket Launcher" 2
+    "Plasma Cannon" 2
 
     "LP036a Battery Pack"
+    "Cooling Ducts"
     "Fuel Pod" 24
     "Tactical Scanner" 5
     "Extra Outfit Space" 2
@@ -600,12 +608,13 @@ ship "Raven" "Raven (Mark II)"
 
     "Electron Cannon" 4
 
-    "LP036a Battery Pack"
+    "LP072a Battery Pack"
+    "Liquid Water Cooler"
     "Fuel Pod" 24
     "Tactical Scanner" 5
 
 
-ship "Raven" "Raven (Mixed)"
+ship "Raven" "Raven (Plasma)"
   outfits
     "D41-HY Shield Generator"
     "S3 Thermionic"
@@ -614,14 +623,13 @@ ship "Raven" "Raven (Mixed)"
     "Greyhound Plasma Thruster"
     "Greyhound Plasma Steering"
 
-    "Heavy Rocket" 40
-    "Heavy Rocket Rack" 2
-    "Heavy Rocket Launcher" 2
-    "Plasma Cannon" 2
+    "Plasma Cannon" 4
 
-    "LP036a Battery Pack"
+    "LP072a Battery Pack"
+    "Liquid Water Cooler"
     "Fuel Pod" 24
     "Tactical Scanner" 5
+    "Extra Outfit Space"
 
 
 ship "Raven" "Raven (Rocket)"
@@ -640,7 +648,6 @@ ship "Raven" "Raven (Rocket)"
     "LP036a Battery Pack"
     "Fuel Pod" 24
     "Tactical Scanner" 5
-    "Extra Outfit Space"
 
 
 

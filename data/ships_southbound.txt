@@ -100,29 +100,29 @@ ship "Dreadnought"
       "hull damage" 1300
       "hit force" 3900
   outfits
-    "D41-HY Shield Generator"
+    "D67-TM Shield Generator"
     "Stack Core"
     "Hyperdrive"
 
     "Orca Plasma Thruster"
     "Orca Plasma Steering"
 
-    "Flamethrower" 4
     "Plasma Turret" 5
 
     "LP144a Battery Pack"
     "Liquid Helium Cooler"
     "Catalytic Ramscoop"
     "Fuel Pod" 98
+    "Large Radar Jammer"
     "Tactical Scanner" 6
     "Fragmentation Grenades" 50
     "Laser Rifle" 100
   engine -25 172
   engine 25 172
-  gun -10 -167 "Flamethrower"
-  gun 10 -167 "Flamethrower"
-  gun -20 -151 "Flamethrower"
-  gun 20 -151 "Flamethrower"
+  gun -10 -167
+  gun 10 -167
+  gun -20 -151
+  gun 20 -151
   turret 0 -94 "Plasma Turret"
   turret -38 -56 "Plasma Turret"
   turret 38 -56 "Plasma Turret"
@@ -142,20 +142,20 @@ ship "Dreadnought"
 
 ship "Dreadnought" "Dreadnought (Jump)"
   outfits
-    "D41-HY Shield Generator"
+    "D67-TM Shield Generator"
     "Stack Core"
     "Jump Drive"
 
     "Orca Plasma Thruster"
     "Orca Plasma Steering"
 
-    "Flamethrower" 4
     "Plasma Turret" 5
 
     "LP144a Battery Pack"
     "Liquid Helium Cooler"
     "Catalytic Ramscoop"
     "Fuel Pod" 98
+    "Large Radar Jammer"
     "Tactical Scanner" 6
     "Fragmentation Grenades" 50
     "Laser Rifle" 100
@@ -163,7 +163,7 @@ ship "Dreadnought" "Dreadnought (Jump)"
 
 ship "Dreadnought" "Dreadnought (Rocket)"
   outfits
-    "D41-HY Shield Generator"
+    "D67-TM Shield Generator"
     "Stack Core"
     "Hyperdrive"
 
@@ -176,10 +176,11 @@ ship "Dreadnought" "Dreadnought (Rocket)"
     "Plasma Turret" 4
     "Heavy Anti-Missile"
 
-    "LP144a Battery Pack"
+    "LP072a Battery Pack"
     "Liquid Helium Cooler"
     "Catalytic Ramscoop"
     "Fuel Pod" 98
+    "Large Radar Jammer"
     "Tactical Scanner" 6
     "Extra Outfit Space" 6
     "Fragmentation Grenades" 50
