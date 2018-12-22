@@ -127,6 +127,36 @@ event "stack core available"
     "Stack Core"
 
 
+event "wanderers: first tech increase"
+  outfitter "Wanderer Advanced"
+    "Thunderstorm Torpedo"
+    "Thunderstorm Storage"
+    "Thunderstorm Launcher"
+    "Dual Sunbeam Turret"
+    "Sunbeam Turret"
+    "Wanderer Anti-Missile"
+    "Wanderer Heat Sink"
+  outfitter "Wanderer Intermediate"
+    "Thunderstorm Torpedo"
+    "Thunderstorm Storage"
+    "Thunderstorm Launcher"
+    "Wanderer Anti-Missile"
+    "Wanderer Heat Sink"
+  outfitter "Wanderer Basics"
+    "Wanderer Heat Sink"
+
+
+event "wanderers: second tech increase"
+  outfitter "Wanderer Advanced"
+    "Tornado Torpedo"
+    "Tornado Storage"
+    "Tornado Launcher"
+    "Moonbeam"
+    "Moonbeam Turret"
+  outfitter "Wanderer Intermediate"
+    "Moonbeam"
+
+
 
 # ships available events
 event "dreadnought available"
@@ -2947,7 +2977,7 @@ event "robbed the wanderers"
     "required reputation" 5
 
 
-event "wanderers: first tech increase"
+event "wanderers: flycatcher mass production"
   system "Ik'kara'ka"
     add fleet "Wanderer Flycatchers" 400
   system "Chy'chra"
@@ -2962,6 +2992,15 @@ event "wanderers: first tech increase"
     add fleet "Wanderer Flycatchers" 1000
   system "Ap'arak"
     add fleet "Wanderer Flycatchers" 1200
+  shipyard "Wanderer Advanced"
+    "Flycatcher"
+  shipyard "Wanderer Intermediate"
+    "Flycatcher"
+  shipyard "Wanderer Basics"
+    "Flycatcher"
+
+
+event "wanderers: autumn leaf mass production"
   fleet "Wanderer Defence"
     add variant 2
       "Autumn Leaf" 2
@@ -2978,29 +3017,10 @@ event "wanderers: first tech increase"
     add variant 2
       "Autumn Leaf"
       "Summer Leaf"
-  outfitter "Wanderer Advanced"
-    "Thunderstorm Torpedo"
-    "Thunderstorm Torpedo Storage"
-    "Thunderstorm Torpedo Launcher"
-    "Dual Sunbeam Turret"
-    "Sunbeam Turret"
-    "Wanderer Anti-Missile"
-  outfitter "Wanderer Intermediate"
-    "Thunderstorm Torpedo"
-    "Thunderstorm Torpedo Storage"
-    "Thunderstorm Torpedo Launcher"
-    "Sunbeam Turret"
-    "Wanderer Anti-Missile"
-  outfitter "Wanderer Basics"
-    "Wanderer Anti-Missile"
   shipyard "Wanderer Advanced"
     "Autumn Leaf"
-    "Flycatcher"
   shipyard "Wanderer Intermediate"
     "Autumn Leaf"
-    "Flycatcher"
-  shipyard "Wanderer Basics"
-    "Flycatcher"
 
 
 event "wanderers: unfettered invasion starts"
@@ -3352,7 +3372,6 @@ event "wanderers: derecho mass production"
       "Tempest"
   outfitter "Wanderer Advanced"
     "Blue Sun Reactor"
-    "Wanderer Heat Sink"
   shipyard "Wanderer Advanced"
     "Derecho"
 

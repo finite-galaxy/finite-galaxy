@@ -105,6 +105,10 @@
 # "Remnant License"
 # "Reverse Thruster"
 # "Small Bunk Room"
+# "Thunderhead"
+# "Thunderhead Launcher"
+# "Thunderhead Missile"
+# "Thunderhead Storage Array"
 # "Torpedo"
 # effect "torpedo fire"
 # "Torpedo Launcher"
@@ -1735,6 +1739,78 @@ outfit "Small Bunk Room"
   "bunks" 2
   "outfit space" -12
 
+
+outfit "Thunderhead"
+  weapon
+    sprite "projectile/thunderhead fragment"
+      "no repeat"
+      "frame rate" .1
+    "die effect" "missile death"
+    "hit effect" "small explosion"
+    "inaccuracy" 90
+    "velocity" 2
+    "lifetime" 400
+    "acceleration" 1.4
+    "drag" .1
+    "turn" 3
+    "homing" 4
+    "optical tracking" .9
+    "radar tracking" .6
+    "shield damage" 110
+    "hull damage" 80
+    "hit force" 150
+    "missile strength" 3
+
+outfit "Thunderhead Launcher"
+  category "Deprecated"
+  thumbnail "outfit/unknown"
+  cost 450000
+  "mass" 14
+  "outfit space" -26
+  "weapon capacity" -26
+  "gun ports" -1
+  "thunderhead capacity" 40
+  weapon
+    sprite "projectile/thunderhead"
+      "no repeat"
+      "frame rate" .1
+    sound "thunderhead"
+    ammo "Thunderhead Missile"
+    icon "icon/thunderhead"
+    "submunition" "Thunderhead" 5
+    "split range" 600
+    "fire effect" "meteor fire"
+    "die effect" "missile death"
+    "hit effect" "medium explosion"
+    "inaccuracy" 10
+    "velocity" 4
+    "lifetime" 400
+    "reload" 75
+    "firing energy" 18
+    "firing heat" 36
+    "acceleration" 1.1
+    "drag" .1
+    "turn" 2
+    "homing" 4
+    "infrared tracking" .9
+    "radar tracking" .6
+    "missile strength" 12
+
+outfit "Thunderhead Missile"
+  category "Deprecated"
+  thumbnail "outfit/unknown"
+  cost 1800
+  mass .3
+  "thunderhead capacity" -1
+
+outfit "Thunderhead Storage Array"
+  category "Deprecated"
+  thumbnail "outfit/unknown"
+  cost 36000
+  "mass" 2
+  "outfit space" -8
+  "thunderhead capacity" 20
+  ammo "Thunderhead Missile"
 
 outfit "Torpedo"
   plural "Torpedoes"
