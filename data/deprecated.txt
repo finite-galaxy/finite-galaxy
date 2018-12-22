@@ -9,6 +9,7 @@
 # "Beam Laser"
 # effect "big explosion"
 # "Blaster Turret"
+# "Bullfrog Anti-Missile"
 # "Bullfrog Anti-Missile Turret"
 # "Bullet Boxes"
 # "Bunk Room"
@@ -102,8 +103,12 @@
 # "Pug Zapper Turret"
 # "Quad Blaster Turret"
 # "Quarg Skylance"
+# "Railgun"
+# "Railgun Slug"
+# effect "rail sparks"
 # "Remnant License"
 # "Reverse Thruster"
+# "rslug"
 # "Small Bunk Room"
 # "Thunderhead"
 # "Thunderhead Launcher"
@@ -238,6 +243,24 @@ outfit "Blaster Turret"
     "firing heat" 30
     "shield damage" 9.6
     "hull damage" 6
+
+outfit "Bullfrog Anti-Missile"
+  category "Deprecated"
+  thumbnail "outfit/unknown"
+  cost 55000
+  "mass" 10
+  "outfit space" -10
+  "weapon capacity" -10
+  "turret mounts" -1
+  weapon
+    "hit effect" "small anti-missile"
+    "anti-missile" 12
+    "velocity" 150
+    "lifetime" 1
+    "reload" 20
+    "firing energy" 12
+    "firing heat" 5
+    "stream"
 
 outfit "Bullfrog Anti-Missile Turret"
   category "Deprecated"
@@ -1716,6 +1739,50 @@ outfit "Quarg Skylance"
     "ion damage" .1
 
 
+outfit "Railgun"
+  category "Deprecated"
+  thumbnail "outfit/unknown"
+  cost 20000
+  "mass" 4
+  "outfit space" -7
+  "weapon capacity" -7
+  "gun ports" -1
+  "railgun slug capacity" 150
+  weapon
+    sprite "projectile/rail slug"
+      "frame rate" 30
+    ammo "Railgun Slug"
+    icon "icon/rail gun"
+    sound "ion impact"
+    "fire effect" "rail sparks" 2
+    "live effect" "rail sparks" 5
+    "hit effect" "bullet impact"
+    "inaccuracy" 3
+    "velocity" 22
+    "lifetime" 1
+    "reload" 120
+    "firing energy" 92
+    "firing heat" 39
+    "hit force" 44
+    "stream"
+
+outfit "Railgun Slug"
+  category "Deprecated"
+  thumbnail "outfit/unknown"
+  cost 60
+  "mass" 0.02
+  "railgun slug capacity" -1
+
+effect "rail sparks"
+  sprite "effect/railspark"
+    "random start frame"
+    "frame rate" 30
+    "rewind"
+  "lifetime" 6
+  "random angle" 360
+  "random spin" 30
+  "velocity scale" 1.2
+
 outfit "Remnant License"
   category "Deprecated"
 
@@ -1729,6 +1796,24 @@ outfit "Reverse Thruster"
   "reverse thrust" 15.4
   "reverse thrusting energy" 1.8
   "reverse thrusting heat" 3.5
+
+outfit "rslug"
+  weapon
+    "acceleration" .022
+    "drag" .001
+    "lifetime" 99
+    sprite "projectile/rail slug"
+      "frame rate" 30
+    "live effect" "rail sparks" 5
+    "hit effect" "bullet impact"
+    "shield damage" 65
+    "hull damage" 95
+    "homing" 1
+    "optical tracking" .4
+    "turn" .3
+    "hit force" 44
+    "missile strength" 14
+    "piercing" .1
 
 
 outfit "Small Bunk Room"

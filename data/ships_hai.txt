@@ -30,6 +30,8 @@ ship "Aphid"
   attributes
     category "Interceptor"
 #    manufacturer "Hai"
+#    licences
+#      Aphid
     "cost" 970000
     "shields" 1700
     "hull" 2400
@@ -79,7 +81,7 @@ ship "Flea"
     category "Drone"
 #    manufacturer "Hai"
     licences
-      Unfettered
+      Flea
     "carried" 1
     "cost" 210000
     "shields" 200
@@ -102,12 +104,9 @@ ship "Flea"
 
     `"Baellie" Atomic Engines`
 
-    "Railgun Slug" 150
-    "Railgun"
-
     "Chasm Batteries"
   engine 0 27
-  gun 0 -27 "Railgun"
+  gun 0 -27
   explode "tiny explosion" 15
   description `This is a combat drone designed to help contain Unfettered aggression with a minimum risk to Hai life.`
 
@@ -119,6 +118,8 @@ ship "Lightning Bug"
   attributes
     category "Corvette"
 #    manufacturer "Hai"
+#    licences
+#      "Lightning Bug"
     "cost" 4200000
     "shields" 6700
     "hull" 3400
@@ -194,7 +195,7 @@ ship "Mosquito"
     category "Fighter"
 #    manufacturer "Hai"
     licences
-      Unfettered
+      Mosquito
     "carried" 2
     "cost" 320000
     "shields" 1400
@@ -562,9 +563,10 @@ ship "Solifuge"
     `"Bondir" Atomic Steering`
 
     "Ion Cannon" 5
-    "Bullfrog Anti-Missile" 7
+    "Chameleon Anti-Missile" 4
 
-    "Ravine Batteries"
+    "Gorge Batteries"
+    "Fissure Batteries"
     "Williwaw Cooling" 3
     "Fuel Pod" 171
     "Quantum Keystone"
@@ -576,13 +578,13 @@ ship "Solifuge"
   gun 11.5 -138.5 "Ion Cannon"
   gun -9.5 -101 "Ion Cannon"
   gun 9.5 -101 "Ion Cannon"
-  turret 0 -109.5 "Bullfrog Anti-Missile"
-  turret 54.5 -48.5 "Bullfrog Anti-Missile"
-  turret -54.5 -48.5 "Bullfrog Anti-Missile"
-  turret 55 1 "Bullfrog Anti-Missile"
-  turret -55 1 "Bullfrog Anti-Missile"
-  turret 54.5 50.5 "Bullfrog Anti-Missile"
-  turret -54.5 50.5 "Bullfrog Anti-Missile"
+  turret 0 -109.5
+  turret 54.5 -48.5 "Chameleon Anti-Missile"
+  turret -54.5 -48.5 "Chameleon Anti-Missile"
+  turret 55 1
+  turret -55 1
+  turret 54.5 50.5 "Chameleon Anti-Missile"
+  turret -54.5 50.5 "Chameleon Anti-Missile"
   fighter -51.5 -71 under
   fighter 51.5 -71 under
   fighter -58.5 2 under
@@ -608,13 +610,21 @@ ship "Solifuge" "Solifuge (Jump)"
     `"Bondir" Atomic Steering`
 
     "Ion Cannon" 5
-    "Bullfrog Anti-Missile" 7
+    "Chameleon Anti-Missile" 4
 
-    "Ravine Batteries"
+    "Gorge Batteries"
+    "Fissure Batteries"
     "Williwaw Cooling" 3
     "Fuel Pod" 171
     "Quantum Keystone"
     "Yoloy Scanner"
+  turret 
+  turret "Chameleon Anti-Missile"
+  turret "Chameleon Anti-Missile"
+  turret
+  turret
+  turret "Chameleon Anti-Missile"
+  turret "Chameleon Anti-Missile"
 
 
 ship "Solifuge" "Solifuge (Tracker)"
@@ -684,6 +694,8 @@ ship "Water Bug"
   attributes
     category "Corvette"
 #    manufacturer "Hai"
+#    licences
+#      "Water Bug"
     "cost" 9700000
     "shields" 7900
     "hull" 9200
