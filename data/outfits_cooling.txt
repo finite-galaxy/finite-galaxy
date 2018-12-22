@@ -99,28 +99,28 @@ outfit "Neutrino Cooling"
 
 
 # Remnant
-outfit "Thermoelectric Cooler"
+outfit "Heat Sink"
   category "Cooling"
   thumbnail "outfit/cooling_remnant"
   licences
     Remnant
-  cost 100000
-  "mass" 4
-  "outfit space" -4
-  "active cooling" 7
-  "cooling energy" .4
+  cost 42000
+  "mass" 6
+  "outfit space" -6
+  "cooling" 8
   description "This cooler is actually just a power-generating element but wired so it can run in reverse: consuming electricity in order to transfer heat from a ship's systems to its exterior."
 
 
 # Wanderer
-outfit "Wanderer Heat Sink"
+outfit "Thermoelectric Cooler"
   category "Cooling"
   thumbnail "outfit/cooling_wanderer"
   licences
     "Wanderer Outfits"
   cost 94000
-  "mass" 12
-  "outfit space" -12
-  "cooling" 19
+  "mass" 4
+  "outfit space" -4
+  "active cooling" 7
+  "cooling energy" .4
   description "Most Wanderer systems are so efficient that ancillary cooling is unnecessary. As a result, their recent attempts to add cooling to their heavy warships are somewhat rudimentary."
 

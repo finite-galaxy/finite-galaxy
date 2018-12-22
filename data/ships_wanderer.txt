@@ -323,9 +323,9 @@ ship "Derecho"
     "Dual Sunbeam Turret" 2
     "Wanderer Anti-Missile" 2
 
-    "Wanderer Heat Sink"
+    "Thermoelectric Cooler" 3
     "Fuel Pod" 75
-    "Wanderer Ramscoop"
+    "Wanderer Ramscoop" 2
   engine -16 177
   engine 16 177
   gun -12 -156 "Sunbeam"
@@ -357,8 +357,10 @@ ship "Derecho" "Derecho (Tough)"
     "Sunbeam" 4
     "Sunbeam Turret" 4
 
+    "Thermoelectric Cooler" 2
     "Fuel Pod" 75
-    "Wanderer Ramscoop"
+    "Wanderer Ramscoop" 2
+    "Extra Outfit Space"
 
 
 ship "Derecho" "Derecho (Turret)"
@@ -376,9 +378,9 @@ ship "Derecho" "Derecho (Turret)"
 
     "Dual Sunbeam Turret" 4
 
-    "Wanderer Heat Sink"
+    "Thermoelectric Cooler" 3
     "Fuel Pod" 75
-    "Wanderer Ramscoop"
+    "Wanderer Ramscoop" 2
 
 
 
@@ -491,31 +493,32 @@ ship "Hurricane"
   outfits
     "Dark Storm Shielding" 2
     "Blue Sun Reactor"
-    "White Sun Reactor"
+    "Yellow Sun Reactor"
     "Scram Drive"
 
     "Type 4 Radiant Thruster"
+    "Type 1 Radiant Thruster"
     "Type 4 Radiant Steering"
-    "Type 2 Radiant Steering"
+    "Type 1 Radiant Steering"
 
-    "Sunbeam" 6
-    "Dual Sunbeam Turret" 2
+    "Thunderstorm Torpedo" 120
+    "Thunderstorm Launcher" 4
+    "Dual Sunbeam Turret" 3
     "Wanderer Anti-Missile" 2
 
-    "Wanderer Heat Sink"
     "Fuel Pod" 97
-    "Wanderer Ramscoop"
+    "Wanderer Ramscoop" 2
   engine -23 181
   engine 23 181
-  gun -68 5 "Sunbeam"
-  gun 68 5 "Sunbeam"
-  gun -85 21 "Sunbeam"
-  gun 85 21 "Sunbeam"
-  gun -62 32 "Sunbeam"
-  gun 62 32 "Sunbeam"
+  gun -68 5 "Thunderstorm Launcher"
+  gun 68 5 "Thunderstorm Launcher"
+  gun -85 21 "Thunderstorm Launcher"
+  gun 85 21 "Thunderstorm Launcher"
+  gun -62 32 
+  gun 62 32 
   turret -27 -80 "Dual Sunbeam Turret"
   turret 27 -80 "Dual Sunbeam Turret"
-  turret 0 -33
+  turret 0 -33 "Dual Sunbeam Turret"
   turret -39 140 "Wanderer Anti-Missile"
   turret 39 140 "Wanderer Anti-Missile"
   explode "small explosion" 20
@@ -534,23 +537,17 @@ ship "Hurricane" "Hurricane (Tough)"
     "Scram Drive"
 
     "Type 4 Radiant Thruster"
-    "Type 1 Radiant Thruster"
     "Type 4 Radiant Steering"
-    "Type 1 Radiant Steering"
+    "Type 2 Radiant Steering"
 
-    "Thunderstorm Torpedo" 120
-    "Thunderstorm Launcher" 4
-    "Sunbeam" 2
+    "Sunbeam" 6
     "Dual Sunbeam Turret" 2
     "Wanderer Anti-Missile" 2
+
+    "Thermoelectric Cooler" 3
     "Fuel Pod" 97
-    "Wanderer Ramscoop"
-  gun "Sunbeam"
-  gun "Sunbeam"
-  gun "Thunderstorm Launcher"
-  gun "Thunderstorm Launcher"
-  gun "Thunderstorm Launcher"
-  gun "Thunderstorm Launcher"
+    "Wanderer Ramscoop" 2
+    "Extra Outfit Space" 5
   turret "Dual Sunbeam Turret"
   turret "Dual Sunbeam Turret"
   turret
@@ -570,10 +567,10 @@ ship "Hurricane" "Hurricane (Turret)"
 
     "Dual Sunbeam Turret" 5
 
-    "Wanderer Heat Sink"
+    "Thermoelectric Cooler" 4
     "Fuel Pod" 97
-    "Wanderer Ramscoop"
-    "Extra Outfit Space" 3
+    "Wanderer Ramscoop" 2
+    "Extra Outfit Space" 4
 
 
 
@@ -723,6 +720,7 @@ ship "Tempest"
     "Dual Sunbeam Turret"
     "Wanderer Anti-Missile" 2
 
+    "Thermoelectric Cooler"
     "Fuel Pod" 64
     "Wanderer Ramscoop"
   engine -22 129
@@ -756,6 +754,8 @@ ship "Tempest" "Tempest (Heavy)"
     "Dual Sunbeam Turret"
     "Wanderer Anti-Missile" 2
     "Fuel Pod" 64
+
+    "Thermoelectric Cooler"
     "Wanderer Ramscoop"
     "Extra Outfit Space" 2
   turret "Dual Sunbeam Turret"
@@ -777,6 +777,7 @@ ship "Tempest" "Tempest (Missile)"
     "Thunderstorm Launcher" 4
     "Dual Sunbeam Turret" 2
 
+    "Thermoelectric Cooler"
     "Fuel Pod" 64
     "Wanderer Ramscoop"
   turret
