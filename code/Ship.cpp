@@ -1138,8 +1138,11 @@ void Ship::Move(vector<Visual> &visuals, list<shared_ptr<Flotsam>> &flotsam)
     static const double HYPER_A = 2.;
     static const double HYPER_D = 1000.;
     if(hyperspaceSystem)
+    {
       fuel -= hyperspaceFuelCost / HYPER_C;
-    
+      heat += attributes.Get("jump heat") * MaximumHeat() / HYPER_C;
+    }
+
     // Create the particle effects for the jump drive. This may create 100
     // or more particles per ship per turn at the peak of the jump.
     if(isUsingJumpDrive && !forget)
@@ -1387,7 +1390,7 @@ void Ship::Move(vector<Visual> &visuals, list<shared_ptr<Flotsam>> &flotsam)
        if(thrust && fuel >= fuelCost && energy >= energyCost) 
       {
         heat += attributes.Get("afterburner heat");
-         fuel -= fuelCost; 
+        fuel -= fuelCost; 
         energy -= energyCost;
         acceleration += angle.Unit() * thrust / mass;
         

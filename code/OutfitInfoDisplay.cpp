@@ -24,6 +24,10 @@ namespace {
     {"jump drive", "Lets you jump to any nearby system."}
   };
 
+  const map<string, double> PERCENT_ATTRIBUTES = {
+    {"jump heat", 1.}
+  };
+
   const map<string, double> SCALE = {
     {"active cooling", 60.},
     {"afterburner energy", 60.},
@@ -194,14 +198,21 @@ void OutfitInfoDisplay::UpdateAttributes(const Outfit &outfit)
     if(SKIP.count(it.first))
       continue;
     
+    auto bit = BOOLEAN_ATTRIBUTES.find(it.first);
+    auto pit = PERCENT_ATTRIBUTES.find(it.first);
     auto sit = SCALE.find(it.first);
     double scale = (sit == SCALE.end() ? 1. : sit->second);
     
-    auto bit = BOOLEAN_ATTRIBUTES.find(it.first);
     if(bit != BOOLEAN_ATTRIBUTES.end()) 
     {
       attributeLabels.emplace_back(bit->second);
       attributeValues.emplace_back(" ");
+      attributesHeight += 20;
+    }
+    else if(pit != PERCENT_ATTRIBUTES.end())
+    {
+      attributeLabels.emplace_back(static_cast<string>(it.first) + ":");
+      attributeValues.emplace_back(Format::Number(it.second * 100) + "%");
       attributesHeight += 20;
     }
     else
