@@ -1760,12 +1760,12 @@ outfit "Torpedo Launcher"
   "gun ports" -1
   "torpedo capacity" 30
   weapon
-    sprite "projectile/torpedo"
+    sprite "projectile/thunderstorm"
       "frame rate" 2
       "random start frame"
-    sound "torpedo"
+    sound "thunderstorm"
     ammo "Torpedo"
-    icon "icon/torpedo"
+    icon "icon/thunderstorm"
     "fire effect" "torpedo fire"
     "hit effect" "torpedo hit"
     "die effect" "tiny explosion"
@@ -1789,7 +1789,6 @@ outfit "Torpedo Storage Rack"
   category "Deprecated"
   thumbnail "outfit/unknown"
   cost 21000
-  thumbnail "outfit/torpedo storage"
   "mass" 3
   "outfit space" -9
   "torpedo capacity" 15
@@ -1811,12 +1810,12 @@ outfit "Typhoon Launcher"
   "gun ports" -1
   "typhoon capacity" 30
   weapon
-    sprite "projectile/typhoon"
+    sprite "projectile/tornado"
       "frame rate" 4
       "random start frame"
-    sound "typhoon"
+    sound "tornado"
     ammo "Typhoon Torpedo"
-    icon "icon/typhoon"
+    icon "icon/tornado"
     "fire effect" "typhoon fire"
     "hit effect" "torpedo hit"
     "die effect" "tiny explosion"
