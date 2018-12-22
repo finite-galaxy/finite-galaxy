@@ -48,13 +48,10 @@ ship "Autumn Leaf"
     "drag" 2.9
     "heat dissipation" .8
     "cargo space" 45
-    "outfit space" 399
-    "core space" 179
+    "outfit space" 438
+    "core space" 218
     "engine space" 117
     "weapon space" 103
-# miscellaneous stats
-    "hyperdrive" 1
-    "jump speed" .25
     weapon
       "blast radius" 80
       "shield damage" 800
@@ -63,6 +60,7 @@ ship "Autumn Leaf"
   outfits
     "Bright Cloud Shielding"
     "White Sun Reactor"
+    "Scram Drive"
 
     "Type 3 Radiant Thruster"
     "Type 3 Radiant Steering"
@@ -70,7 +68,7 @@ ship "Autumn Leaf"
     "Sunbeam" 2
     "Wanderer Anti-Missile"
 
-    "Fuel Pod" 58
+    "Fuel Pod" 62
     "Wanderer Ramscoop"
   engine -18 64
   engine 18 64
@@ -82,13 +80,13 @@ ship "Autumn Leaf"
   explode "medium explosion" 20
   "final explode" "final explosion small"
   description "The Autumn Leaf is based on the Wanderer Summer Leaf light warship, but slightly larger and better equipped for combat. Unlike Wanderer peacetime ships, it is equipped with a turret mount in addition to the ports for fixed guns."
-  description "  Wanderer ships have their hyperdrive thoroughly integrated in the hull; it cannot be removed."
 
 
 ship "Autumn Leaf" "Autumn Leaf (Heavy)"
   outfits
     "Bright Cloud Shielding"
     "White Sun Reactor"
+    "Scram Drive"
 
     "Type 3 Radiant Thruster"
     "Type 3 Radiant Steering"
@@ -96,7 +94,7 @@ ship "Autumn Leaf" "Autumn Leaf (Heavy)"
     "Sunbeam" 2
     "Moonbeam Turret"
 
-    "Fuel Pod" 58
+    "Fuel Pod" 62
     "Wanderer Ramscoop"
 
 
@@ -118,13 +116,10 @@ ship "Cool Breeze"
     "drag" 1.8
     "heat dissipation" .9
     "cargo space" 14
-    "outfit space" 182
-    "core space" 79
+    "outfit space" 219
+    "core space" 116
     "engine space" 62
     "weapon space" 41
-# miscellaneous stats
-    "hyperdrive" 1
-    "jump speed" .25
     weapon
       "blast radius" 36
       "shield damage" 360
@@ -133,13 +128,14 @@ ship "Cool Breeze"
   outfits
     "Bright Cloud Shielding"
     "Red Sun Reactor"
+    "Scram Drive"
 
     "Type 2 Radiant Thruster"
     "Type 3 Radiant Steering"
 
     "Moonbeam" 2
 
-    "Fuel Pod" 10
+    "Fuel Pod" 12
     "Wanderer Ramscoop"
   engine -10 47
   engine 10 47
@@ -149,20 +145,20 @@ ship "Cool Breeze"
   explode "small explosion" 10
   "final explode" "final explosion small"
   description "This is the first ship the Wanderers have built in millennia that is designed to be operated by a single pilot instead of a crew. They are flown mostly by young warriors eager to prove their mettle by winning individual glory in battle."
-  description "  Wanderer ships have their hyperdrive thoroughly integrated in the hull; it cannot be removed."
 
 
 ship "Cool Breeze" "Cool Breeze (Sunbeam)"
   outfits
     "Bright Cloud Shielding"
     "Red Sun Reactor"
+    "Scram Drive"
 
     "Type 3 Radiant Thruster"
     "Type 2 Radiant Steering"
 
     "Sunbeam"
 
-    "Fuel Pod" 10
+    "Fuel Pod" 12
     "Wanderer Ramscoop"
 
 
@@ -184,12 +180,9 @@ ship "Deep River"
     "drag" 9.4
     "heat dissipation" .6
     "cargo space" 1140
-    "outfit space" 275
-    "core space" 192
+    "outfit space" 312
+    "core space" 229
     "engine space" 83
-# miscellaneous stats
-    "hyperdrive" 1
-    "jump speed" .25
     weapon
       "blast radius" 280
       "shield damage" 2800
@@ -198,11 +191,12 @@ ship "Deep River"
   outfits
     "Bright Cloud Shielding"
     "Large Biochemical Cell"
+    "Scram Drive"
 
     "Type 2 Radiant Thruster"
     "Type 4 Radiant Steering"
 
-    "Fuel Pod" 109
+    "Fuel Pod" 111
     "Wanderer Ramscoop"
   engine 53 345 .7
   engine 0 345
@@ -213,7 +207,6 @@ ship "Deep River"
   explode "huge explosion" 20
   "final explode" "final explosion large"
   description "The Deep River is a bulk freighter, designed to carry cargo in detachable pods."
-  description "  Wanderer ships have their hyperdrive thoroughly integrated in the hull; it cannot be removed."
 
 
 ship "Deep River" "Deep River 0"
@@ -265,20 +258,21 @@ ship "Deep River" "Deep River (Jump)"
     "Type 2 Radiant Thruster"
     "Type 4 Radiant Steering"
 
-    "Fuel Pod" 95
+    "Fuel Pod" 97
     "Wanderer Ramscoop"
-    "Extra Outfit Space" 6
+    "Extra Outfit Space" 2
 
 
 ship "Deep River" "Deep River Transport"
   outfits
     "Dark Storm Shielding"
     "Yellow Sun Reactor"
+    "Scram Drive"
 
     "Type 3 Radiant Thruster"
     "Type 3 Radiant Steering"
 
-    "Fuel Pod" 109
+    "Fuel Pod" 111
     "Wanderer Ramscoop"
     "Extra Bunks" 100
     "Extra Outfit Space" 5
@@ -302,13 +296,10 @@ ship "Derecho"
     "drag" 8.7
     "heat dissipation" 0.6
     "cargo space" 56
-    "outfit space" 849
-    "core space" 310
+    "outfit space" 886
+    "core space" 380
     "engine space" 164
     "weapon space" 342
-# miscellaneous stats
-    "hyperdrive" 1
-    "jump speed" .25
     weapon
       "blast radius" 340
       "shield damage" 3400
@@ -319,6 +310,7 @@ ship "Derecho"
     "Bright Cloud Shielding"
     "Blue Sun Reactor"
     "Red Sun Reactor"
+    "Scram Drive"
 
     "Type 4 Radiant Thruster"
     "Type 1 Radiant Thruster"
@@ -332,7 +324,7 @@ ship "Derecho"
     "Wanderer Anti-Missile" 2
 
     "Wanderer Heat Sink"
-    "Fuel Pod" 73
+    "Fuel Pod" 75
     "Wanderer Ramscoop"
   engine -16 177
   engine 16 177
@@ -350,7 +342,6 @@ ship "Derecho"
   explode "huge explosion" 20
   "final explode" "final explosion large" 1
   description "Like a latent gene waiting to express itself, the knowledge of how to wage war in space has been passed down through hundreds of generations of Wanderers. Based on one of their ancient designs, the Derecho has a mixture of agility and raw firepower that is well-suited to their present, rapidly changing situation."
-  description "  Wanderer ships have their hyperdrive thoroughly integrated in the hull; it cannot be removed."
 
 
 ship "Derecho" "Derecho (Tough)"
@@ -358,6 +349,7 @@ ship "Derecho" "Derecho (Tough)"
     "Dark Storm Shielding" 2
     "Blue Sun Reactor"
     "Red Sun Reactor"
+    "Scram Drive"
 
     "Type 4 Radiant Thruster"
     "Type 4 Radiant Steering" 2
@@ -365,7 +357,7 @@ ship "Derecho" "Derecho (Tough)"
     "Sunbeam" 4
     "Sunbeam Turret" 4
 
-    "Fuel Pod" 73
+    "Fuel Pod" 75
     "Wanderer Ramscoop"
 
 
@@ -375,6 +367,7 @@ ship "Derecho" "Derecho (Turret)"
     "Bright Cloud Shielding"
     "Blue Sun Reactor"
     "Red Sun Reactor"
+    "Scram Drive"
 
     "Type 4 Radiant Thruster"
     "Type 2 Radiant Thruster"
@@ -384,7 +377,7 @@ ship "Derecho" "Derecho (Turret)"
     "Dual Sunbeam Turret" 4
 
     "Wanderer Heat Sink"
-    "Fuel Pod" 73
+    "Fuel Pod" 75
     "Wanderer Ramscoop"
 
 
@@ -404,12 +397,9 @@ ship "Earth Shaper"
     "drag" .9
     "heat dissipation" .9
     "cargo space" 27
-    "outfit space" 49
-    "core space" 28
+    "outfit space" 85
+    "core space" 64
     "engine space" 21
-# miscellaneous stats
-    "hyperdrive" 1
-    "jump speed" .25
     "atmosphere scan" 100
     weapon
       "blast radius" 10
@@ -418,18 +408,18 @@ ship "Earth Shaper"
       "hit force" 250
   outfits
     "Small Biochemical Cell"
+    "Scram Drive"
 
     "Type 1 Radiant Thruster"
     "Type 1 Radiant Steering"
 
-    "Fuel Pod" 4
+    "Fuel Pod" 5
     "Wanderer Ramscoop"
   engine -9 30
   engine 9 30
   explode "tiny explosion" 20
   explode "small explosion" 10
   description "The Earth Shaper is a robotic drone that the Wanderers use for mining, exploring, surveying, and terraforming."
-  description "  Wanderer ships have their hyperdrive thoroughly integrated in the hull; it cannot be removed."
 
 
 
@@ -437,7 +427,7 @@ ship "Flycatcher"
   sprite "ship/flycatcher"
   thumbnail "thumbnail/flycatcher"
   attributes
-    category "Interceptor"
+    category "Fighter"
 #    manufacturer "Wanderer"
     licences
       Wanderer
@@ -447,13 +437,10 @@ ship "Flycatcher"
     "mass" 40
     "drag" .6
     "heat dissipation" .9
-    "outfit space" 83
-    "core space" 38
+    "outfit space" 79
+    "core space" 34
     "engine space" 21
     "weapon space" 24
-# miscellaneous stats
-    "hyperdrive" 1
-    "jump speed" .25
     weapon
       "blast radius" 10
       "shield damage" 100
@@ -466,8 +453,6 @@ ship "Flycatcher"
     "Type 1 Radiant Steering"
 
     "Wanderer Anti-Missile"
-
-    "Fuel Pod" 3
   engine -9 28
   engine 9 28
   turret 0 4 "Wanderer Anti-Missile"
@@ -494,13 +479,10 @@ ship "Hurricane"
     "drag" 11.9
     "heat dissipation" 0.55
     "cargo space" 98
-    "outfit space" 1036
-    "core space" 468
+    "outfit space" 1072
+    "core space" 504
     "engine space" 140
     "weapon space" 428
-# miscellaneous stats
-    "hyperdrive" 1
-    "jump speed" .25
     weapon
       "blast radius" 400
       "shield damage" 4000
@@ -510,6 +492,7 @@ ship "Hurricane"
     "Dark Storm Shielding" 2
     "Blue Sun Reactor"
     "White Sun Reactor"
+    "Scram Drive"
 
     "Type 4 Radiant Thruster"
     "Type 4 Radiant Steering"
@@ -520,7 +503,7 @@ ship "Hurricane"
     "Wanderer Anti-Missile" 2
 
     "Wanderer Heat Sink"
-    "Fuel Pod" 96
+    "Fuel Pod" 97
     "Wanderer Ramscoop"
   engine -23 181
   engine 23 181
@@ -541,7 +524,6 @@ ship "Hurricane"
   explode "huge explosion" 30
   "final explode" "final explosion large" 1
   description "The Hurricane is not built for speed, elegance, or versatility, but for one simple purpose: to be durable enough to serve as a rearguard, absorbing an enemy's attacks for long enough to allow the fleet it is guarding to escape."
-  description "  Wanderer ships have their hyperdrive thoroughly integrated in the hull; it cannot be removed."
 
 
 ship "Hurricane" "Hurricane (Tough)"
@@ -549,6 +531,7 @@ ship "Hurricane" "Hurricane (Tough)"
     "Dark Storm Shielding" 3
     "Blue Sun Reactor"
     "White Sun Reactor"
+    "Scram Drive"
 
     "Type 4 Radiant Thruster"
     "Type 1 Radiant Thruster"
@@ -560,7 +543,7 @@ ship "Hurricane" "Hurricane (Tough)"
     "Sunbeam" 2
     "Dual Sunbeam Turret" 2
     "Wanderer Anti-Missile" 2
-    "Fuel Pod" 96
+    "Fuel Pod" 97
     "Wanderer Ramscoop"
   gun "Sunbeam"
   gun "Sunbeam"
@@ -579,6 +562,7 @@ ship "Hurricane" "Hurricane (Turret)"
   outfits
     "Dark Storm Shielding" 2
     "Blue Sun Reactor" 2
+    "Scram Drive"
 
     "Type 4 Radiant Thruster"
     "Type 2 Radiant Thruster"
@@ -587,7 +571,7 @@ ship "Hurricane" "Hurricane (Turret)"
     "Dual Sunbeam Turret" 5
 
     "Wanderer Heat Sink"
-    "Fuel Pod" 96
+    "Fuel Pod" 97
     "Wanderer Ramscoop"
     "Extra Outfit Space" 3
 
@@ -610,13 +594,10 @@ ship "Strong Wind"
     "drag" 4.7
     "heat dissipation" .7
     "cargo space" 68
-    "outfit space" 509
-    "core space" 197
+    "outfit space" 545
+    "core space" 233
     "engine space" 114
     "weapon space" 198
-# miscellaneous stats
-    "hyperdrive" 1
-    "jump speed" .25
     weapon
       "blast radius" 200
       "shield damage" 2000
@@ -625,6 +606,7 @@ ship "Strong Wind"
   outfits
     "Dark Storm Shielding"
     "White Sun Reactor"
+    "Scram Drive"
 
     "Type 4 Radiant Thruster"
     "Type 4 Radiant Steering"
@@ -632,7 +614,7 @@ ship "Strong Wind"
     "Thunderhead Missile" 80
     "Thunderhead Launcher" 2
     "Sunbeam" 4
-    "Fuel Pod" 34
+    "Fuel Pod" 35
     "Wanderer Ramscoop"
   engine -30 127
   engine 30 127
@@ -647,7 +629,6 @@ ship "Strong Wind"
   explode "large explosion" 20
   "final explode" "final explosion medium"
   description "The Strong Wind was originally designed for science and exploration, but recently the Wanderers have modified the design to allow it to be used as a warship."
-  description "  Wanderer ships have their hyperdrive thoroughly integrated in the hull; it cannot be removed."
 
 
 
@@ -665,17 +646,14 @@ ship "Summer Leaf"
     "hull" 6700
     "required crew" 6
     "bunks" 15
-    "mass" 120
+    "mass" 110
     "drag" 2.6
     "heat dissipation" .8
     "cargo space" 41
-    "outfit space" 341
-    "core space" 154
+    "outfit space" 378
+    "core space" 191
     "engine space" 103
     "weapon space" 84
-# miscellaneous stats
-    "hyperdrive" 1
-    "jump speed" .25
     weapon
       "blast radius" 70
       "shield damage" 700
@@ -684,12 +662,13 @@ ship "Summer Leaf"
   outfits
     "Bright Cloud Shielding"
     "Yellow Sun Reactor"
+    "Scram Drive"
 
     "Type 3 Radiant Thruster"
     "Type 3 Radiant Steering"
 
     "Sunbeam" 2
-    "Fuel Pod" 41
+    "Fuel Pod" 43
     "Wanderer Ramscoop"
   engine -18 64
   engine 18 64
@@ -700,7 +679,6 @@ ship "Summer Leaf"
   explode "medium explosion" 10
   "final explode" "final explosion small"
   description "The Summer Leaf is mostly used by the Wanderers as a light transport, but it is also quite effective in combat."
-  description "  Wanderer ships have their hyperdrive thoroughly integrated in the hull; it cannot be removed."
 
 
 
@@ -721,13 +699,10 @@ ship "Tempest"
     "drag" 6.2
     "heat dissipation" 0.65
     "cargo space" 47
-    "outfit space" 648
-    "core space" 255
+    "outfit space" 686
+    "core space" 293
     "engine space" 122
     "weapon space" 271
-# miscellaneous stats
-    "hyperdrive" 1
-    "jump speed" .25
     weapon
       "blast radius" 280
       "shield damage" 2800
@@ -736,6 +711,7 @@ ship "Tempest"
   outfits
     "Dark Storm Shielding"
     "Yellow Sun Reactor" 2
+    "Scram Drive"
 
     "Type 4 Radiant Thruster"
     "Type 4 Radiant Steering"
@@ -746,7 +722,7 @@ ship "Tempest"
     "Dual Sunbeam Turret"
     "Wanderer Anti-Missile" 2
 
-    "Fuel Pod" 61
+    "Fuel Pod" 64
     "Wanderer Ramscoop"
   engine -22 129
   engine 22 129
@@ -762,7 +738,6 @@ ship "Tempest"
   explode "large explosion" 25
   "final explode" "final explosion medium" 1
   description "In response to the Unfettered invasion, the Wanderers have begun digging up ancient warship designs from their archives and putting them back into production. The Tempest is the first purpose-built warship they have manufactured in tens of thousands of years."
-  description "  Wanderer ships have their hyperdrive thoroughly integrated in the hull; it cannot be removed."
 
 
 ship "Tempest" "Tempest (Heavy)"
@@ -770,6 +745,7 @@ ship "Tempest" "Tempest (Heavy)"
     "Dark Storm Shielding"
     "White Sun Reactor"
     "Red Sun Reactor"
+    "Scram Drive"
 
     "Type 3 Radiant Thruster"
     "Type 4 Radiant Steering"
@@ -778,7 +754,7 @@ ship "Tempest" "Tempest (Heavy)"
     "Sunbeam" 4
     "Dual Sunbeam Turret"
     "Wanderer Anti-Missile" 2
-    "Fuel Pod" 61
+    "Fuel Pod" 64
     "Wanderer Ramscoop"
     "Extra Outfit Space" 2
   turret "Dual Sunbeam Turret"
@@ -791,6 +767,7 @@ ship "Tempest" "Tempest (Missile)"
     "Dark Storm Shielding"
     "White Sun Reactor"
     "Small Biochemical Cell"
+    "Scram Drive"
 
     "Type 4 Radiant Thruster"
     "Type 4 Radiant Steering"
@@ -799,7 +776,7 @@ ship "Tempest" "Tempest (Missile)"
     "Thunderhead Launcher" 4
     "Dual Sunbeam Turret" 2
 
-    "Fuel Pod" 61
+    "Fuel Pod" 64
     "Wanderer Ramscoop"
   turret
   turret "Dual Sunbeam Turret"
@@ -824,13 +801,10 @@ ship "Winter Gale"
     "drag" 5.6
     "heat dissipation" .7
     "cargo space" 28
-    "outfit space" 505
-    "core space" 214
+    "outfit space" 542
+    "core space" 251
     "engine space" 120
     "weapon space" 171
-# miscellaneous stats
-    "hyperdrive" 1
-    "jump speed" .25
     weapon
       "blast radius" 120
       "shield damage" 1200
@@ -839,6 +813,7 @@ ship "Winter Gale"
   outfits
     "Dark Storm Shielding"
     "White Sun Reactor"
+    "Scram Drive"
 
     "Type 4 Radiant Thruster"
     "Type 4 Radiant Steering"
@@ -847,7 +822,7 @@ ship "Winter Gale"
     "Sunbeam" 2
     "Wanderer Anti-Missile"
 
-    "Fuel Pod" 47
+    "Fuel Pod" 49
     "Wanderer Ramscoop"
   engine -13 94
   engine 13 94
@@ -863,13 +838,13 @@ ship "Winter Gale"
   explode "medium explosion" 30
   "final explode" "final explosion medium"
   description "The Winter Gale was designed by the Wanderers as a hardier and better-armed alternative to their existing light patrol ships. The Gale's large number of weapon hardpoints makes it flexible enough to reconfigure for facing a wide variety of enemies."
-  description "  Wanderer ships have their hyperdrive thoroughly integrated in the hull; it cannot be removed."
 
 
 ship "Winter Gale" "Winter Gale (Heavy)"
   outfits
     "Dark Storm Shielding"
     "White Sun Reactor"
+    "Scram Drive"
 
     "Type 3 Radiant Thruster"
     "Type 2 Radiant Thruster"
@@ -878,7 +853,7 @@ ship "Winter Gale" "Winter Gale (Heavy)"
     "Sunbeam" 4
     "Moonbeam Turret"
 
-    "Fuel Pod" 47
+    "Fuel Pod" 49
     "Wanderer Ramscoop"
     "Extra Outfit Space"
 
@@ -887,6 +862,7 @@ ship "Winter Gale" "Winter Gale (Missile)"
   outfits
     "Dark Storm Shielding"
     "White Sun Reactor"
+    "Scram Drive"
 
     "Type 3 Radiant Thruster"
     "Type 4 Radiant Steering"
@@ -897,7 +873,7 @@ ship "Winter Gale" "Winter Gale (Missile)"
     "Moonbeam" 2
     "Wanderer Anti-Missile"
 
-    "Fuel Pod" 47
+    "Fuel Pod" 49
     "Wanderer Ramscoop"
     "Extra Outfit Space"
 
