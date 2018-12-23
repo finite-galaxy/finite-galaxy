@@ -158,9 +158,9 @@ outfit "Moonbeam"
   licences
     "Wanderer Weapons"
   cost 760000
-  "mass" 19
-  "outfit space" -19
-  "weapon space" -19
+  "mass" 23
+  "outfit space" -23
+  "weapon space" -23
   "gun ports" -1
   weapon
     sprite "projectile/moonbeam"
@@ -171,14 +171,11 @@ outfit "Moonbeam"
     "inaccuracy" 2.0
     "velocity" 650
     "lifetime" 1
-    # A full cycle is 45 frames. Beam is active 56% of the time.
-    "reload" 1.8
-    "burst count" 25
-    "burst reload" 1
-    "firing energy" 5.4
-    "firing heat" 1.8
-    "shield damage" 4.8
-    "hull damage" 8.4
+    "reload" 1
+    "firing energy" 3.6
+    "firing heat" 1.2
+    "shield damage" 3.2
+    "hull damage" 5.6
   description "Because their Sunbeams are not very effective against the heavy plating of the Korath drones, the Wanderers have developed a new beam weapon that is considerably more effective against hull armour."
 
 effect "moonbeam fleck"
@@ -220,15 +217,12 @@ outfit "Moonbeam Turret"
     "turret turn" 1.71
     "velocity" 650
     "lifetime" 1
-    # A full cycle is 36 frames. Beam is active 83% of the time.
-    "reload" 1.2
-    "burst count" 30
-    "burst reload" 1
-    "firing energy" 5.4
-    "firing heat" 1.8
-    "shield damage" 4.8
-    "hull damage" 8.4
-  description "This turret only carries a single Moonbeam weapon, but with its duty cycle increased so it can do 50% more damage than the non-turreted version."
+    "reload" 1
+    "firing energy" 3.6
+    "firing heat" 1.2
+    "shield damage" 3.2
+    "hull damage" 5.6
+  description "This turret carries a single Moonbeam. Because the weapon is smaller, the turret can rotate quicker than any Sunbeam turret."
 
 
 outfit "Sunbeam"

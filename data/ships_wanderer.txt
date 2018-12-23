@@ -23,10 +23,10 @@ shipyard "Wanderer Variants"
   "Summer Leaf"
   "Tempest"
   "Tempest (Heavy)"
-  "Tempest (Missile)"
+  "Tempest (Torpedo)"
   "Winter Gale"
   "Winter Gale (Heavy)"
-  "Winter Gale (Missile)"
+  "Winter Gale (Torpedo)"
 
 
 
@@ -116,10 +116,10 @@ ship "Cool Breeze"
     "drag" 1.8
     "heat dissipation" .9
     "cargo space" 14
-    "outfit space" 219
+    "outfit space" 224
     "core space" 116
     "engine space" 62
-    "weapon space" 41
+    "weapon space" 46
     weapon
       "blast radius" 36
       "shield damage" 360
@@ -764,7 +764,7 @@ ship "Tempest" "Tempest (Heavy)"
   turret "Wanderer Anti-Missile"
 
 
-ship "Tempest" "Tempest (Missile)"
+ship "Tempest" "Tempest (Torpedo)"
   outfits
     "Dark Storm Shielding"
     "White Sun Reactor"
@@ -821,8 +821,7 @@ ship "Winter Gale"
     "Type 4 Radiant Thruster"
     "Type 4 Radiant Steering"
 
-    "Moonbeam" 4
-    "Sunbeam" 2
+    "Moonbeam" 6
     "Wanderer Anti-Missile"
 
     "Fuel Pod" 49
@@ -833,8 +832,8 @@ ship "Winter Gale"
   gun 15 -55 "Moonbeam"
   gun -20 -48 "Moonbeam"
   gun 20 -48 "Moonbeam"
-  gun -41 -10 "Sunbeam"
-  gun 41 -10 "Sunbeam"
+  gun -41 -10 "Moonbeam"
+  gun 41 -10 "Moonbeam"
   turret 0 -28 "Wanderer Anti-Missile"
   explode "tiny explosion" 20
   explode "small explosion" 40
@@ -861,7 +860,7 @@ ship "Winter Gale" "Winter Gale (Heavy)"
     "Extra Outfit Space"
 
 
-ship "Winter Gale" "Winter Gale (Missile)"
+ship "Winter Gale" "Winter Gale (Torpedo)"
   outfits
     "Dark Storm Shielding"
     "White Sun Reactor"
@@ -871,12 +870,10 @@ ship "Winter Gale" "Winter Gale (Missile)"
     "Type 4 Radiant Steering"
     "Type 3 Radiant Steering"
 
-    "Thunderstorm Torpedo" 120
-    "Thunderstorm Launcher" 4
-    "Moonbeam" 2
-    "Wanderer Anti-Missile"
+    "Tornado Torpedo" 80
+    "Tornado Launcher" 4
+    "Moonbeam Turret"
 
     "Fuel Pod" 49
     "Wanderer Ramscoop"
-    "Extra Outfit Space"
 
