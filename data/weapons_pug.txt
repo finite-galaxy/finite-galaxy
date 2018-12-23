@@ -180,7 +180,7 @@ outfit "Pug Anti-Missile"
   description "This anti-missile system designed by the Pug draws a lot of energy, but its fast firing rate makes it twice as effective as anything that Lovelace Labs has been able to come up with. A ship with one of these turrets will be very difficult to hit with missiles."
 
 effect "pug anti-missile"
-  sprite "effect/large anti missile"
+  sprite "effect/anti-missile/large"
     "no repeat"
     "frame rate" 6
   sound "pug anti-missile"
@@ -188,7 +188,7 @@ effect "pug anti-missile"
   "velocity scale" 1
 
 
-outfit "Tier 3 Anti-Missile"
+outfit "Ceasefire Anti-Missile"
   category "Anti-Missile"
   thumbnail "outfit/unknown"
   licences
@@ -200,8 +200,8 @@ outfit "Tier 3 Anti-Missile"
   "weapon space" -67
   "turret mounts" -1
   weapon
-    "fire effect" "tier 3 anti-missile fire"
-    "die effect" "tier 3 anti-missile die" 2
+    "fire effect" "ceasefire anti-missile fire"
+    "die effect" "ceasefire anti-missile die" 2
     "anti-missile" 100
     "velocity" 570
     "lifetime" 1
@@ -209,16 +209,16 @@ outfit "Tier 3 Anti-Missile"
     "firing energy" 80
     "firing heat" 10
 
-effect "tier 3 anti-missile fire"
-  sprite "effect/anti-missile 3 fire"
+effect "ceasefire anti-missile fire"
+  sprite "effect/anti-missile/ceasefire_fire"
     "no repeat"
     "frame rate" 20
   "lifetime" 3
   "random angle" 360
   "velocity scale" 1
 
-effect "tier 3 anti-missile die"
-  sprite "effect/anti-missile 3 die"
+effect "ceasefire anti-missile die"
+  sprite "effect/anti-missile/ceasefire_die"
     "no repeat"
     "frame rate" 10
   "lifetime" 31

@@ -62,7 +62,7 @@ outfit "Thunderstorm Launcher"
   description "Thunderstorm Torpedoes are powerful, long range Wanderer missiles, useful against large targets or against clusters of small ships at times when they are too distracted to dodge."
 
 effect "thunderstorm fire"
-  sprite "effect/torpedo fire"
+  sprite "effect/thunderstorm fire"
     "no repeat"
     "frame rate" 10
   "lifetime" 15
@@ -132,7 +132,7 @@ outfit "Tornado Launcher"
   description "Typhoon Torpedoes are an improved Wanderer torpedo technology; they do considerably more damage than Thunderstorms. However, they are also slower, because they are intended mostly for use against large and slow-moving capital ships. As a result, sufficiently skilled pilots can often dodge around them."
 
 effect "tornado fire"
-  sprite "effect/typhoon fire"
+  sprite "effect/tornado fire"
     "no repeat"
     "frame rate" 10
   "lifetime" 15
@@ -358,7 +358,7 @@ outfit "Wanderer Anti-Missile"
   description "As a defence against the tracker pods used by the Unfettered Hai, the Wanderers have developed a hard-hitting anti-missile system that can knock almost any missile out of the sky with a single shot."
 
 effect "wanderer anti-missile"
-  sprite "effect/wanderer anti-missile"
+  sprite "effect/anti-missile/wanderer"
     "no repeat"
     "frame rate" 6
   sound "heavy anti-missile"

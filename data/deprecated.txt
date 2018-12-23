@@ -84,6 +84,9 @@
 # "NDR-114 Android"
 # "Outfits Expansion"
 # "Pilot's License"
+# effect "point defense die"
+# effect "point defense fire"
+# effect "point defense hit"
 # "Point Defense Turret"
 # "Proton Fragment"
 # "Proton Gun"
@@ -114,6 +117,9 @@
 # "Thunderhead Launcher"
 # "Thunderhead Missile"
 # "Thunderhead Storage Array"
+# "Tier 3 Anti-Missile"
+# effect "tier 3 anti-missile die"
+# effect "tier 3 anti-missile fire"
 # "Torpedo"
 # effect "torpedo fire"
 # "Torpedo Launcher"
@@ -1412,6 +1418,27 @@ outfit "Outfits Expansion"
 outfit "Pilot's License"
   category "Deprecated"
 
+effect "point defense die"
+  sprite "effect/anti-missile/point_defence_die"
+    "frame rate" 20
+    "no repeat"
+  lifetime 15
+  "velocity scale" .2
+
+effect "point defense fire"
+  sprite "effect/anti-missile/point_defence_fire"
+    "frame rate" 17
+    "no repeat"
+  lifetime 10
+  "velocity scale" .5
+
+effect "point defense hit"
+  sprite "effect/anti-missile/point_defence_hit"
+    "frame rate" 13
+    "no repeat"
+  lifetime 10
+  "velocity scale" .2
+
 outfit "Point Defense Turret"
   category "Deprecated"
   thumbnail "outfit/unknown"
@@ -1898,6 +1925,40 @@ outfit "Thunderhead Storage Array"
   "thunderhead capacity" 20
   ammo "Thunderhead Missile"
 
+outfit "Tier 3 Anti-Missile"
+  category "Deprecated"
+  thumbnail "outfit/unknown"
+  cost 12000000
+  "mass" 67
+  "outfit space" -67
+  "weapon capacity" -67
+  "turret mounts" -1
+  weapon
+    "fire effect" "tier 3 anti-missile fire"
+    "die effect" "tier 3 anti-missile die" 2
+    "anti-missile" 100
+    "velocity" 570
+    "lifetime" 1
+    "reload" 6
+    "firing energy" 80
+    "firing heat" 10
+
+effect "tier 3 anti-missile die"
+  sprite "effect/ceasefire_die"
+    "no repeat"
+    "frame rate" 10
+  "lifetime" 31
+  "random angle" 360
+  "velocity scale" .4
+
+effect "tier 3 anti-missile fire"
+  sprite "effect/ceasefire_fire"
+    "no repeat"
+    "frame rate" 20
+  "lifetime" 3
+  "random angle" 360
+  "velocity scale" 1
+
 outfit "Torpedo"
   plural "Torpedoes"
   category "Deprecated"
@@ -1907,7 +1968,7 @@ outfit "Torpedo"
   "torpedo capacity" -1
 
 effect "torpedo fire"
-  sprite "effect/torpedo fire"
+  sprite "effect/thunderstorm fire"
     "no repeat"
     "frame rate" 10
   "lifetime" 15
@@ -1957,7 +2018,7 @@ outfit "Torpedo Storage Rack"
   ammo "Torpedo"
 
 effect "typhoon fire"
-  sprite "effect/typhoon fire"
+  sprite "effect/tornado fire"
     "no repeat"
     "frame rate" 10
   "lifetime" 15

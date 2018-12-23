@@ -204,9 +204,30 @@ outfit "X8 Blaster Turret"
 
 
 
-outfit "Light Anti-Missile"
+outfit "AM3 Anti-Missile"
   category "Anti-Missile"
-  thumbnail "outfit/anti-missile_light"
+  thumbnail "outfit/anti-missile_tiny"
+  cost 50000
+  "mass" 10
+  "drag" .10
+  "outfit space" -10
+  "weapon space" -10
+  "turret mounts" -1
+  weapon
+    "hardpoint sprite" "hardpoint/anti-missile_tiny"
+    "hardpoint offset" 3.
+    "hit effect" "small anti-missile"
+    "anti-missile" 3
+    "velocity" 120
+    "lifetime" 1
+    "reload" 10
+    "firing energy" 3
+    "firing heat" 2
+  description "The Syndicate AM3 is the cheapest and smallest anti-missile system available. Although it does not offer much protection, it is better than nothing."
+
+outfit "AM5 Anti-Missile"
+  category "Anti-Missile"
+  thumbnail "outfit/anti-missile_small"
   cost 90000
   "mass" 16
   "drag" .16
@@ -214,19 +235,19 @@ outfit "Light Anti-Missile"
   "weapon space" -16
   "turret mounts" -1
   weapon
-    "hardpoint sprite" "hardpoint/anti-missile_light"
+    "hardpoint sprite" "hardpoint/anti-missile_small"
     "hardpoint offset" 4.
     "hit effect" "small anti-missile"
     "anti-missile" 5
-    "velocity" 150
+    "velocity" 160
     "lifetime" 1
     "reload" 8
     "firing energy" 5
     "firing heat" 3
-  description "The Syndicate Light Anti-Missile turret is clearly inferior to the Lovelace Heavy Anti-Missile turret, but it has one advantage: it is only about half the size and less than a third in price."
+  description "The Syndicate AM5 is clearly better than the AM3. Although it is certainly weaker than the Lovelace Heavy Anti-Missile turret, it is also cheaper and much smaller, thus a suitable option for many small ships."
 
 effect "small anti-missile"
-  sprite "effect/small anti missile"
+  sprite "effect/anti-missile/small"
     "no repeat"
     "frame rate" 3
   sound "anti-missile"

@@ -213,9 +213,9 @@ outfit "Point Defence"
   "turret mounts" -1
   weapon
     "hardpoint sprite" "hardpoint/point_defence"
-    "fire effect" "point defense fire"
-    "die effect" "point defense hit"
-    "die effect" "point defense die"
+    "fire effect" "point defence fire"
+    "hit effect" "point defence hit"
+    "die effect" "point defence die"
     "anti-missile" 42
     "velocity" 270
     "lifetime" 1
@@ -224,24 +224,24 @@ outfit "Point Defence"
     "firing heat" 18
   description "Not long after the Remnant settled on Aventine, they began to discover caches of alien technology in vaults deep under the mountains, guarded by ancient but still-functioning point-defence systems. The Remnant learned how to duplicate those defence systems, and they are now considered to be much more useful than most of the items that they were guarding."
 
-effect "point defense fire"
-  sprite "effect/point defense fire"
+effect "point defence die"
+  sprite "effect/anti-missile/point_defence_die"
+    "frame rate" 20
+    "no repeat"
+  lifetime 15
+  "velocity scale" .2
+
+effect "point defence fire"
+  sprite "effect/anti-missile/point_defence_fire"
     "frame rate" 17
     "no repeat"
   lifetime 10
   "velocity scale" .5
 
-effect "point defense hit"
-  sprite "effect/point defense hit"
+effect "point defence hit"
+  sprite "effect/anti-missile/point_defence_hit"
     "frame rate" 13
     "no repeat"
   lifetime 10
-  "velocity scale" .2
-
-effect "point defense die"
-  sprite "effect/point defense die"
-    "frame rate" 20
-    "no repeat"
-  lifetime 15
   "velocity scale" .2
 

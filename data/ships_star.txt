@@ -39,19 +39,21 @@ ship "Star Barge"
       "hit force" 240
   outfits
     "D14-RN Shield Generator"
-    "nGVF-BB Fuel Cell"
+    "nGVF-AA Fuel Cell"
     "Hyperdrive"
 
     "IT-1700 Ion Thruster"
     "IS-1200 Ion Steering"
+    "IR-1700 Ion Reverse"
 
-    "Light Anti-Missile"
+    "AM3 Anti-Missile"
 
     "LP036a Battery Pack"
     "Fuel Pod" 9
+    "Tactical Scanner"
   engine -9 38
   engine 9 38
-  turret 0 -8 "Light Anti-Missile"
+  turret 0 -8 "AM3 Anti-Missile"
   leak "leak" 60 50
   explode "tiny explosion" 10
   explode "small explosion" 10
@@ -113,16 +115,17 @@ ship "Star Freighter"
     "IR-2700 Ion Reverse"
 
     "X4 Blaster Turret"
-    "Light Anti-Missile" 2
+    "AM5 Anti-Missile" 2
 
     "LP072a Battery Pack"
     "LP036a Battery Pack"
     "Fuel Pod" 29
+    "Tactical Scanner" 3
   engine -9 97
   engine 9 97
-  turret 0 -52 "Light Anti-Missile"
+  turret 0 -52 "AM5 Anti-Missile"
   turret 0 6 "X4 Blaster Turret"
-  turret 0 65 "Light Anti-Missile"
+  turret 0 65 "AM5 Anti-Missile"
   leak "leak" 60 50
   leak "flame" 50 80
   explode "tiny explosion" 10
@@ -150,7 +153,7 @@ ship "Star Freighter" "Star Freighter (Fancy)"
     "LP036a Battery Pack"
     "Fuel Pod" 29
     "Ramscoop"
-    "Tactical Scanner" 2
+    "Tactical Scanner" 3
   turret "Laser Turret"
   turret "Heavy Anti-Missile"
   turret "Laser Turret"
@@ -170,6 +173,7 @@ ship "Star Freighter" "Star Freighter (Hai)"
 
     "Fissure Batteries"
     "Fuel Pod" 29
+    "Yoloy Scanner"
   turret "Chameleon Anti-Missile"
   turret "Pulse Turret"
   turret "Chameleon Anti-Missile"
@@ -191,7 +195,7 @@ ship "Star Freighter" "Star Freighter (Miner)"
     "Asteroid Scanner"
     "Fuel Pod" 29
     "Ramscoop"
-    "Tactical Scanner"
+    "Tactical Scanner" 3
 
 
 ship "Star Freighter" "Star Freighter (Secret Cargo)"
@@ -205,15 +209,16 @@ ship "Star Freighter" "Star Freighter (Secret Cargo)"
     "IR-2700 Ion Reverse"
 
     "X4 Blaster Turret"
-    "Light Anti-Missile" 2
+    "AM5 Anti-Missile" 2
 
     "LP072a Battery Pack"
     "LP036a Battery Pack"
     "Fuel Pod" 29
+    "Tactical Scanner" 3
     "Secret Cargo"
-  turret "Light Anti-Missile"
+  turret "AM5 Anti-Missile"
   turret "X4 Blaster Turret"
-  turret "Light Anti-Missile"
+  turret "AM5 Anti-Missile"
 
 
 
@@ -258,6 +263,7 @@ ship "Star Queen"
 
     "LP036a Battery Pack"
     "Fuel Pod" 36
+    "Tactical Scanner" 5
   engine -18 116
   engine 18 116
   gun 0 -116 "Meteor Missile Launcher"
@@ -292,5 +298,6 @@ ship "Star Queen" "Star Queen (Hai)"
     "Chasm Batteries"
     "Fuel Pod" 36
     "Quantum Keystone"
-    "Extra Outfit Space" 2
+    "Yoloy Scanner"
+    "Extra Outfit Space" 3
 
