@@ -13,7 +13,7 @@ outfit "IC-900 Ion Engines"
   "thrust" 4.0
   "thrusting energy" .4
   "thrusting heat" .6
-  "flare sprite" "effect/ion flare/tiny"
+  "flare sprite" "effect/flare/ion_tiny"
     "frame rate" 1.2
   "flare sound" "ion tiny"
   description `The Syndicate took the opportunity to integrate their smallest thruster models to create a more compact steering and thrusting engine. The result is not very useful on anything but a fighter, and is only "adequate" in that role. Still, if engine space is at a premium, this is the smallest set of engines that will still get you there (eventually).`
@@ -32,7 +32,7 @@ outfit "IT-1700 Ion Thruster"
   "thrust" 6.0
   "thrusting energy" .6
   "thrusting heat" .9
-  "flare sprite" "effect/ion flare/tiny"
+  "flare sprite" "effect/flare/ion_tiny"
     "frame rate" 1.2
   "flare sound" "ion tiny"
   description "This is the smallest thruster that you can buy, so weak that anything larger than a drone will accelerate quite slowly when using this engine. On the other hand, it is also very energy-efficient."
@@ -50,7 +50,7 @@ outfit "IT-2700 Ion Thruster"
   "thrust" 11.5
   "thrusting energy" 1.1
   "thrusting heat" 1.7
-  "flare sprite" "effect/ion flare/small"
+  "flare sprite" "effect/flare/ion_small"
     "frame rate" 1.1
   "flare sound" "ion small"
   description "The X2700 ion thruster is intended mostly for use in small, single-person or two-person ships, as well as in fighters. It is also used in larger ships, such as freighters, that have very little space for propulsion systems or energy to drive them. But these larger ships move unbearably slowly as a result."
@@ -68,7 +68,7 @@ outfit "IT-3700 Ion Thruster"
   "thrust" 22.1
   "thrusting energy" 1.9
   "thrusting heat" 3.2
-  "flare sprite" "effect/ion flare/medium"
+  "flare sprite" "effect/flare/ion_medium"
     "frame rate" 1.0
   "flare sound" "ion medium"
   description "The X3700 ion thruster is designed for freighters and small warships. In theory, it could be installed in smaller ships too, if they have enough engine space, to attain almost ridiculous speeds."
@@ -86,7 +86,7 @@ outfit "IT-4700 Ion Thruster"
   "thrust" 42.5
   "thrusting energy" 3.5
   "thrusting heat" 6.2
-  "flare sprite" "effect/ion flare/large"
+  "flare sprite" "effect/flare/ion_large"
     "frame rate" 0.9
   "flare sound" "ion large"
   description "The X4700 ion thruster was developed when the Republic Navy began building warships so large that the X3700 was not sufficient for them. It allows even a capital ship to move at a respectable speed."
@@ -104,7 +104,7 @@ outfit "IT-5700 Ion Thruster"
   "thrust" 81.5
   "thrusting energy" 6.3
   "thrusting heat" 11.7
-  "flare sprite" "effect/ion flare/huge"
+  "flare sprite" "effect/flare/ion_huge"
     "frame rate" 0.8
   "flare sound" "ion huge"
   description "The X5700 thruster is intended for only the largest of capital ships. When the Syndicate first began producing them, these engines were considered little more than a publicity stunt, because no ship at the time was large enough to hold one."
@@ -199,8 +199,6 @@ outfit "IR-1700 Ion Reverse"
   "reverse thrust" 6.0
   "reverse thrusting energy" .6
   "reverse thrusting heat" .9
-  "flare sprite" "effect/ion flare/tiny"
-    "frame rate" 1.2
   "flare sound" "ion tiny"
   description "A reverse thruster allows a ship to accelerate backwards, without needing to turn around. Because a reverse thruster must be facing forwards, it must be installed in the weapon section of your ship instead of the engine section."
   description "  Ion engines consume less energy than plasma engines and produce less heat, but they also take up more space."
@@ -217,8 +215,6 @@ outfit "IR-2700 Ion Reverse"
   "reverse thrust" 11.5
   "reverse thrusting energy" 1.1
   "reverse thrusting heat" 1.7
-  "flare sprite" "effect/ion flare/small"
-    "frame rate" 1.1
   "flare sound" "ion small"
   description "Reverse thrusters allow pilots to do fancy tricks. Because only a tiny minority of ships have them, they can offer an element of surprise in combat."
   description "  Ion engines consume less energy than plasma engines and produce less heat, but they also take up more space."
@@ -235,8 +231,6 @@ outfit "IR-3700 Ion Reverse"
   "reverse thrust" 22.1
   "reverse thrusting energy" 1.9
   "reverse thrusting heat" 3.2
-  "flare sprite" "effect/ion flare/medium"
-    "frame rate" 1.0
   "flare sound" "ion medium"
   description "If you want to bring a heavy ship to a standstill in order to prepare for a hyperspace jump, then using reverse thrusters might be faster than turning the ship around via its steering."
   description "  Ion engines consume less energy than plasma engines and produce less heat, but they also take up more space."
@@ -253,8 +247,6 @@ outfit "IR-4700 Ion Reverse"
   "reverse thrust" 42.5
   "reverse thrusting energy" 3.5
   "reverse thrusting heat" 6.2
-  "flare sprite" "effect/ion flare/large"
-    "frame rate" 0.9
   "flare sound" "ion large"
   description "The Syndicate does not release sale figures for individual products, but it is unlikely many of these are sold annually. On the other hand, the larger engines are basically compounds of smaller elements, therefore they are not expensive to produce."
   description "  Ion engines consume less energy than plasma engines and produce less heat, but they also take up more space."
@@ -271,8 +263,6 @@ outfit "IR-5700 Ion Reverse"
   "reverse thrust" 81.5
   "reverse thrusting energy" 6.3
   "reverse thrusting heat" 11.7
-  "flare sprite" "effect/ion flare/huge"
-    "frame rate" 0.8
   "flare sound" "ion huge"
   description "Only the very largest space ships can install these engines; and those typically prefer to use their limited space for something else."
   description "  Ion engines consume less energy than plasma engines and produce less heat, but they also take up more space."

@@ -303,7 +303,7 @@ effect "blood"
   "random velocity" 1
 
 effect "void sprite adult death"
-  sprite "effect/void sprite adult death"
+  sprite "effect/void_sprite/adult_death"
     "no repeat"
     "frame rate" 20
   "lifetime" 16
@@ -336,7 +336,7 @@ ship "Void Sprite" "Void Sprite (Infant)"
   "final explode" "void sprite infant death"
 
 effect "void sprite infant death"
-  sprite "effect/void sprite infant death"
+  sprite "effect/void_sprite/infant_death"
     "no repeat"
     "frame rate" 15
   "lifetime" 21

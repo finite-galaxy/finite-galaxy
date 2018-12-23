@@ -177,8 +177,19 @@ effect "missile hit"
   "velocity scale" .4
 
 
+effect "bolide"
+  sprite "effect/flotsam/bolide"
+    "random start frame"
+    "no repeat"
+    "frame rate" 3
+  "lifetime" 120
+  "random angle" 360
+  "random frame rate" 6
+  "random spin" 5
+  "velocity scale" .8
+
 effect "box"
-  sprite "effect/box"
+  sprite "effect/flotsam/box"
     "frame rate" 6
     "random start frame"
   "lifetime" 60000
@@ -195,15 +206,4 @@ effect "flotsam death"
   "random angle" 360
   "random frame rate" 8
   "random spin" 5
-
-effect "bolide"
-  sprite "effect/bolide"
-    "random start frame"
-    "no repeat"
-    "frame rate" 3
-  "lifetime" 120
-  "random angle" 360
-  "random frame rate" 6
-  "random spin" 5
-  "velocity scale" .8
 
