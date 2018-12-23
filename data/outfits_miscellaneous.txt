@@ -203,6 +203,7 @@ outfit "Asteroid Scanner"
   thumbnail "outfit/scanner_asteroid"
   cost 192000
   "mass" 6
+  "drag" .06
   "outfit space" -6
   "asteroid scan power" 49
   description "This highly specialized scanning system can analyse the mineral composition of nearby asteroids and identify the ones that contain valuable materials."
@@ -212,6 +213,7 @@ outfit "Cargo Scanner"
   thumbnail "outfit/scanner_cargo"
   cost 96000
   "mass" 2
+  "drag" .02
   "outfit space" -2
   "cargo scan power" 16
   "cargo scan speed" 1
@@ -222,6 +224,7 @@ outfit "Outfit Scanner"
   thumbnail "outfit/scanner_outfit"
   cost 48000
   "mass" 3
+  "drag" .03
   "outfit space" -3
   "outfit scan power" 25
   "outfit scan speed" 1
@@ -234,6 +237,7 @@ outfit "Scanning Module"
     Heliarch
   cost 453600
   "mass" 3
+  "drag" .03
   "outfit space" -3
   "outfit scan power" 25
   "outfit scan speed" 1
@@ -249,6 +253,7 @@ outfit "Surveillance Pod"
     Navy
   cost 144000
   "mass" 5
+  "drag" .05
   "outfit space" -5
   "asteroid scan power" 16
   "atmosphere scan" 100
@@ -265,6 +270,7 @@ outfit "Tactical Scanner"
   thumbnail "outfit/scanner_tactical"
   cost 24000
   "mass" 1
+  "drag" .01
   "outfit space" -1
   "tactical scan power" 9
   description "A tactical scanner allows your ship to determine the shields, hull, fuel, energy, heat, and crew complement of nearby targets."
@@ -274,6 +280,7 @@ outfit "Yoloy Scanner"
   thumbnail "outfit/unknown"
   cost 315000
   "mass" 4
+  "drag" .04
   "outfit space" -4
   "tactical scan power" 42
   description "The Hai highly value life. This device allows them to determine the status of other ships, both friend and foe."
