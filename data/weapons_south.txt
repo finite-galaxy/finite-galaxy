@@ -1,3 +1,51 @@
+outfit "Javelin"
+  category "Ammunition"
+  thumbnail "outfit/javelin"
+  cost 50
+  "mass" .04
+  "plunderable" 1
+  "javelin capacity" -1
+  description "A Javelin missile is ammunition for the Javelin Pod. You cannot install missiles unless you have also installed a launcher to fire them from."
+
+outfit "Javelin Storage Crate"
+  category "Ammunition Storage"
+  thumbnail "outfit/javelin_storage"
+  cost 5000
+  "mass" 2
+  "outfit space" -6
+  "javelin capacity" 100
+  ammo "Javelin"
+  description "The Javelin Storage Crate is used to store extra ammunition for Javelin Pods."
+
+outfit "Javelin Pod"
+  category "Secondary Weapons"
+  thumbnail "outfit/javelin_launcher"
+  cost 20000
+  "mass" 8
+  "outfit space" -12
+  "weapon space" -12
+  "gun ports" -1
+  "javelin capacity" 100
+  weapon
+    sprite "projectile/javelin"
+    sound "javelin"
+    ammo "Javelin"
+    icon "icon/javelin"
+    "hit effect" "tiny explosion"
+    "inaccuracy" 1
+    "velocity" 12
+    "lifetime" 60
+    "reload" 15
+    "firing energy" .2
+    "firing heat" 12
+    "blast radius" 1
+    "shield damage" 57
+    "hull damage" 36
+    "hit force" 50
+    "missile strength" 2
+  description "The Javelin Pod fires a rapid stream of unguided missiles. A Javelin Pod does far more damage than any gun of a comparable size, and has a longer range as well, but once a ship has fired off all its ammunition it must leave combat and find a planet where it can buy more, which makes Javelins less useful in protracted battles. As a result, they are very popular with pirates as a way to quickly disable a small target."
+
+
 outfit "Nuclear Missile"
   category "Secondary Weapons"
   thumbnail "outfit/nuke"

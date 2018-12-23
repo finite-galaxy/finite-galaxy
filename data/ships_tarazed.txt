@@ -6,21 +6,21 @@ shipyard "Tarazed Variants"
   "Falcon (Plasma)"
   "Hawk"
   "Hawk (Blaster)"
+  "Hawk (Javelin)"
   "Hawk (Nuclear)"
-  "Hawk (Rocket)"
   "Kestrel"
   "Kestrel (Engines)"
   "Kestrel (Shields)"
   "Kestrel (Weapons)"
   "Osprey"
   "Osprey (Hai)"
+  "Osprey (Javelin)"
   "Osprey (Laser)"
-  "Osprey (Rocket)"
   "Raven"
   "Raven (Afterburner)"
+  "Raven (Javelin)"
   "Raven (Mark II)"
   "Raven (Plasma)"
-  "Raven (Rocket)"
   "Unknown Ship Type"
 
 
@@ -114,6 +114,7 @@ ship "Falcon"
     "Orca Plasma Thruster"
     "Impala Plasma Steering"
 
+    "Plasma Cannon" 2
     "K4 Blaster Turret" 4
 
     "LP144a Battery Pack"
@@ -122,8 +123,8 @@ ship "Falcon"
     "Tactical Scanner" 5
   engine -17 143
   engine 17 143
-  gun -17 -88
-  gun 17 -88
+  gun -17 -88 "Plasma Cannon"
+  gun 17 -88 "Plasma Cannon"
   turret -16 -24 "K4 Blaster Turret"
   turret 16 -24 "K4 Blaster Turret"
   turret -57 40 "K4 Blaster Turret"
@@ -148,15 +149,16 @@ ship "Falcon" "Falcon (Heavy)"
     "A520 Atomic Thruster"
     "A525 Atomic Steering"
 
-    "Sidewinder Missile" 100
-    "Sidewinder Missile Rack" 2
-    "Sidewinder Missile Launcher" 2
+    "Impact Missile" 100
+    "Impact Missile Rack" 2
+    "Impact Missile Launcher" 2
     "Heavy Laser Turret" 4
 
     "LP036a Battery Pack"
-    "Liquid Nitrogen Cooler"
+    "Liquid Water Cooler"
     "Fuel Pod" 71
     "Tactical Scanner" 5
+    "Extra Outfit Space" 2
 
 
 ship "Falcon" "Falcon (Laser)"
@@ -270,6 +272,24 @@ ship "Hawk" "Hawk (Blaster)"
     "Tactical Scanner" 5
 
 
+ship "Hawk" "Hawk (Javelin)"
+  outfits
+    "D23-QP Shield Generator"
+    "S3 Thermionic"
+    "Hyperdrive"
+
+    "Greyhound Plasma Thruster"
+    "Greyhound Plasma Steering"
+
+    "Javelin" 800
+    "Javelin Storage Crate" 4
+    "Javelin Pod" 4
+
+    "LP036a Battery Pack"
+    "Fuel Pod" 18
+    "Tactical Scanner" 5
+
+
 ship "Hawk" "Hawk (Nuclear)"
   outfits
     "D67-TM Shield Generator"
@@ -284,22 +304,6 @@ ship "Hawk" "Hawk (Nuclear)"
     "LP036a Battery Pack"
     "Fuel Pod" 18
     "Large Radar Jammer"
-    "Tactical Scanner" 5
-
-
-ship "Hawk" "Hawk (Rocket)"
-  outfits
-    "D23-QP Shield Generator"
-    "S3 Thermionic"
-    "Hyperdrive"
-
-    "Greyhound Plasma Thruster"
-    "Greyhound Plasma Steering"
-
-
-    "LP036a Battery Pack"
-    "Liquid Water Cooler"
-    "Fuel Pod" 18
     "Tactical Scanner" 5
 
 
@@ -340,8 +344,10 @@ ship "Kestrel"
     "Ionic Afterburner"
 
     "Plasma Cannon" 6
+    "K4 Blaster Turret" 4
 
     "LP144a Battery Pack"
+    "LP072a Battery Pack"
     "Liquid Helium Cooler"
     "Fuel Pod" 87
     "Tactical Scanner" 5
@@ -359,10 +365,10 @@ ship "Kestrel"
   gun 42 63
   gun -31 65 "Plasma Cannon"
   gun 31 65 "Plasma Cannon"
-  turret -7 -4
-  turret 7 -4
-  turret -23 14
-  turret 23 14
+  turret -7 -4 "K4 Blaster Turret"
+  turret 7 -4 "K4 Blaster Turret"
+  turret -23 14 "K4 Blaster Turret"
+  turret 23 14 "K4 Blaster Turret"
   explode "small explosion" 25
   explode "medium explosion" 35
   explode "large explosion" 45
@@ -469,6 +475,26 @@ ship "Osprey" "Osprey (Hai)"
     "Extra Outfit Space" 3
 
 
+ship "Osprey" "Osprey (Javelin)"
+  outfits
+    "D67-TM Shield Generator"
+    "Breeder Reactor"
+    "Hyperdrive"
+
+    "Impala Plasma Thruster"
+    "Impala Plasma Steering"
+
+    "Javelin" 800
+    "Javelin Storage Crate" 4
+    "Javelin Pod" 4
+    "K4 Blaster Turret" 2
+
+    "LP072a Battery Pack"
+    "Liquid Nitrogen Cooler"
+    "Fuel Pod" 49
+    "Tactical Scanner" 5
+
+
 ship "Osprey" "Osprey (Laser)"
   outfits
     "D67-TM Shield Generator"
@@ -480,23 +506,6 @@ ship "Osprey" "Osprey (Laser)"
 
     "Heavy Laser Cannon" 4
     "Heavy Laser Turret" 2
-
-    "LP072a Battery Pack"
-    "Liquid Nitrogen Cooler"
-    "Fuel Pod" 49
-    "Tactical Scanner" 5
-
-
-ship "Osprey" "Osprey (Rocket)"
-  outfits
-    "D67-TM Shield Generator"
-    "Breeder Reactor"
-    "Hyperdrive"
-
-    "Impala Plasma Thruster"
-    "Impala Plasma Steering"
-
-    "K2 Blaster Turret" 2
 
     "LP072a Battery Pack"
     "Liquid Nitrogen Cooler"
@@ -539,10 +548,13 @@ ship "Raven"
     "Greyhound Plasma Thruster"
     "Greyhound Plasma Steering"
 
+    "Javelin" 400
+    "Javelin Storage Crate" 2
+    "Javelin Pod" 2
     "Plasma Cannon" 2
 
-    "LP036a Battery Pack"
-    "Cooling Ducts"
+    "LP072a Battery Pack"
+    "Liquid Water Cooler"
     "Fuel Pod" 24
     "Tactical Scanner" 5
   engine -12 43
@@ -571,13 +583,35 @@ ship "Raven" "Raven (Afterburner)"
     "Greyhound Plasma Steering"
     "Afterburner"
 
+    "Javelin" 400
+    "Javelin Storage Crate" 2
+    "Javelin Pod" 2
     "Plasma Cannon" 2
 
-    "LP036a Battery Pack"
-    "Cooling Ducts"
+    "LP072a Battery Pack"
+    "Liquid Water Cooler"
     "Fuel Pod" 24
     "Tactical Scanner" 5
-    "Extra Outfit Space" 2
+    "Extra Outfit Space"
+
+
+ship "Raven" "Raven (Javelin)"
+  outfits
+    "D41-HY Shield Generator"
+    "S3 Thermionic"
+    "Hyperdrive"
+
+    "Greyhound Plasma Thruster"
+    "Greyhound Plasma Steering"
+
+    "Javelin" 800
+    "Javelin Storage Crate" 4
+    "Javelin Pod" 4
+
+    "LP072a Battery Pack"
+    "Liquid Water Cooler"
+    "Fuel Pod" 24
+    "Tactical Scanner" 5
 
 
 ship "Raven" "Raven (Mark II)"
@@ -613,20 +647,6 @@ ship "Raven" "Raven (Plasma)"
     "Fuel Pod" 24
     "Tactical Scanner" 5
     "Extra Outfit Space"
-
-
-ship "Raven" "Raven (Rocket)"
-  outfits
-    "D41-HY Shield Generator"
-    "S3 Thermionic"
-    "Hyperdrive"
-
-    "Greyhound Plasma Thruster"
-    "Greyhound Plasma Steering"
-
-    "LP036a Battery Pack"
-    "Fuel Pod" 24
-    "Tactical Scanner" 5
 
 
 
@@ -666,11 +686,14 @@ ship "Unknown Ship Type"
     "Ionic Afterburner"
 
     "Plasma Cannon" 6
+    "K4 Blaster Turret" 4
 
     "LP144a Battery Pack"
     "Liquid Helium Cooler"
     "Fuel Pod" 87
+    "Interference Plating" 12
     "Tactical Scanner" 5
+    "Measurement Systems" 20
   engine -14 177
   engine 14 177
   gun -86 55
@@ -685,10 +708,10 @@ ship "Unknown Ship Type"
   gun 42 63
   gun -31 65 "Plasma Cannon"
   gun 31 65 "Plasma Cannon"
-  turret -7 -4
-  turret 7 -4
-  turret -23 14
-  turret 23 14
+  turret -7 -4 "K4 Blaster Turret"
+  turret 7 -4 "K4 Blaster Turret"
+  turret -23 14 "K4 Blaster Turret"
+  turret 23 14 "K4 Blaster Turret"
   explode "small explosion" 25
   explode "medium explosion" 35
   explode "large explosion" 45
