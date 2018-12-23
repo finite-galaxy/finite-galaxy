@@ -2517,7 +2517,7 @@ fleet "Oathkeeper Large"
   variant 3
     "Venus"
     "Mark I Drone" 4
-  variant 2
+  variant 1
     "Venus"
     "Mark I Drone" 4
     "Mars"
@@ -2529,23 +2529,14 @@ fleet "Oathkeeper Large"
     "Venus"
     "Mark I Drone" 4
     "Mercury" 2
-  variant 1
-    "Venus"
-    "Mark I Drone" 4
-    "Mercury"
-    "Rainmaker"
-  variant 1
-    "Venus"
-    "Mark I Drone" 4
-    "Rainmaker" 2
-  variant 1
-    "Venus"
-    "Mark I Drone" 4
-    "Rainmaker" 3
   variant 5
+    "Mars" 2
+  variant 3
     "Mars"
     "Mercury" 2
-    "Rainmaker" 3
+  variant 1
+    "Mars"
+    "Mercury" 3
 
 fleet "Oathkeeper Small"
   government "Navy (Oathkeeper)"
@@ -2554,13 +2545,12 @@ fleet "Oathkeeper Small"
   personality
     heroic opportunistic
   # total: 15
-  variant 4
-    "Mars"
   variant 5
-    "Mercury" 2
+    "Mars"
   variant 6
-    "Rainmaker" 3
-
+    "Mercury" 2
+  variant 4
+    "Mercury" 3
 
 
 # Pirate
@@ -3468,6 +3458,29 @@ fleet "Remnant Small"
 
 
 
+
+  variant 3
+    "Venus"
+    "Mark I Drone" 4
+  variant 2
+    "Venus"
+    "Mark I Drone" 4
+    "Mars"
+  variant 1
+    "Venus"
+    "Mark I Drone" 4
+    "Mercury"
+  variant 1
+    "Venus"
+    "Mark I Drone" 4
+    "Mercury" 2
+  variant 4
+    "Mars" 2
+  variant 4
+    "Mars"
+    "Mercury" 2
+
+
 # Republic
 fleet "Republic Large"
   government "Republic"
@@ -3495,7 +3508,7 @@ fleet "Republic Large"
     "Saturn"
     "Foxhound" 4
     "Mark I Drone" 6
-    "Rainmaker"
+    "Mercury" 2
   variant 3
     "Venus"
     "Mark I Drone" 4
@@ -3503,9 +3516,7 @@ fleet "Republic Large"
     "Venus"
     "Mark I Drone" 4
     "Mars"
-    "Mercury"
-    "Rainmaker"
-  variant 1
+  variant 2
     "Venus"
     "Mark I Drone" 4
     "Mars" 2
@@ -3518,7 +3529,11 @@ fleet "Republic Large"
     "Venus"
     "Mark I Drone" 4
     "Mars"
-    "Rainmaker"
+    "Mercury" 2
+  variant 1
+    "Venus"
+    "Mark I Drone" 4
+    "Mercury"
   variant 1
     "Venus"
     "Mark I Drone" 4
@@ -3526,24 +3541,15 @@ fleet "Republic Large"
   variant 1
     "Venus"
     "Mark I Drone" 4
-    "Mercury"
-    "Rainmaker"
-  variant 1
-    "Venus"
-    "Mark I Drone" 4
-    "Rainmaker" 2
-  variant 6
+    "Mercury" 3
+  variant 5
     "Mars" 2
-    "Mercury"
-    "Rainmaker"
-  variant 2
+  variant 3
     "Mars"
     "Mercury" 2
-    "Rainmaker"
-  variant 2
+  variant 1
     "Mars"
-    "Mercury"
-    "Rainmaker" 2
+    "Mercury" 3
 
 fleet "Republic Small"
   government "Republic"
@@ -3552,19 +3558,14 @@ fleet "Republic Small"
   personality
     heroic opportunistic
   # total: 25
-  variant 4
-    "Mars"
-  variant 6
-    "Mercury"
-  variant 3
-    "Mercury" 2
   variant 5
+    "Mars"
+  variant 10
     "Mercury"
-    "Rainmaker"
   variant 6
-    "Rainmaker" 2
-  variant 1
-    "Rainmaker" 3
+    "Mercury" 2
+  variant 4
+    "Mercury" 3
 
 
 fleet "Gunboat Only"

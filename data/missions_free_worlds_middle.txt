@@ -446,18 +446,18 @@ mission "FW Southern Battle 2"
       variant
         "Venus (Mark II)"
         "Mark II Drone" 4
+    fleet 2
+      names "republic"
+      variant
+        "Mars (Mark II)" 2
     fleet 3
       names "republic"
       variant
-        "Rainmaker (Mark II)" 2
+        "Mercury (Mark II)" 2
     fleet 2
       names "republic"
       variant
         "Mercury (Mark II)" 3
-    fleet 2
-      names "republic"
-      variant
-        "Mercury (Mark II)" 2
   
   on complete
     event "fw eastern expansion"
@@ -2095,7 +2095,7 @@ mission "FW Liberate Delta Sagittarii"
       variant
         "Venus (Mark II)"
         "Mark II Drone" 4
-        "Rainmaker (Mark II)" 4
+        "Mercury (Mark II)" 4
   
   npc
     personality staying derelict

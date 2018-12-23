@@ -3,8 +3,6 @@ shipyard "Navy Variants"
   "Mars (Mark II)"
   "Mercury"
   "Mercury (Mark II)"
-  "Rainmaker"
-  "Rainmaker (Mark II)"
   "Saturn"
   "Saturn (Alpha)"
   "Saturn (Jump)"
@@ -195,82 +193,6 @@ ship "Mercury" "Mercury (Mark II)"
     "Fragmentation Grenades" 5
     "Laser Rifle" 10
     "Security Station"
-
-
-
-ship "Rainmaker"
-  sprite "ship/rainmaker"
-  thumbnail "thumbnail/rainmaker"
-  attributes
-    category "Interceptor"
-#    manufacturer "Navy"
-    licences
-      Rainmaker
-    "cost" 1580000
-    "shields" 3500
-    "hull" 1200
-    "required crew" 7
-    "bunks" 14
-    "mass" 180
-    "drag" 3.8
-    "heat dissipation" .8
-    "cargo space" 15
-    "outfit space" 260
-    "core space" 150
-    "engine space" 60
-    "weapon space" 50
-    weapon
-      "blast radius" 40
-      "shield damage" 400
-      "hull damage" 200
-      "hit force" 600
-  outfits
-    "D23-QP Shield Generator"
-    "Dwarf Core"
-    "Hyperdrive"
-
-    "A250 Atomic Thruster"
-    "A255 Atomic Steering"
-
-    "Javelin" 800
-    "Javelin Storage Crate" 4
-    "Javelin Pod" 4
-
-    "LP036a Battery Pack"
-    "Fuel Pod" 28
-    "Large Radar Jammer"
-    "Tactical Scanner" 4
-  engine -8 46
-  engine 8 46
-  gun -10 -30
-  gun 10 -30
-  gun -27 -5 "Javelin Pod"
-  gun 27 -5 "Javelin Pod"
-  gun -17 -5 "Javelin Pod"
-  gun 17 -5 "Javelin Pod"
-  leak "leak" 50 50
-  explode "tiny explosion" 10
-  explode "small explosion" 20
-  explode "medium explosion" 15
-  "final explode" "final explosion small"
-  description "The Rainmaker is a missile boat built in the Republic Navy Yard. It comes equipped with four missile launchers and enough ammunition to destroy even ships many times its size. Because of their lack of manoeuvrability and relatively light shielding, Rainmaker serve best as long-range attack ships, and once their missile supply is spent, they are relatively useless in combat."
-
-
-ship "Rainmaker" "Rainmaker (Mark II)"
-  outfits
-    "D23-QP Shield Generator"
-    "Dwarf Core"
-    "Hyperdrive"
-
-    "A250 Atomic Thruster"
-    "A255 Atomic Steering"
-
-    "Electron Cannon" 2
-
-    "LP036a Battery Pack"
-    "Fuel Pod" 28
-    "Large Radar Jammer"
-    "Tactical Scanner" 4
 
 
 
