@@ -3014,9 +3014,11 @@ mission "Wanderers: Sestor: Final"
         "Met Par Tek 53 (Sniper)" 2
   on complete
     log "Discovered that when the Korath exiles shut down the Kor Sestor factory, they also took enough technology from the factory to be able to begin producing war drones of their own. It is possible that the exiles have just become a whole lot more dangerous than they used to be."
+    event "wanderers: winter gale mass production" 10
     event "wanderers: exiles have drones" 20
     event "wanderers: sabira eseskrai colony" 30
     event "wanderers: sestor eliminated" 40
+    event "wanderers: cool breeze mass production" 50
     conversation
       `You inform the Wanderers that the Korath exiles are now producing war drones. "This is [unfortunate, regrettable]," says Sobari Tele'ek. "Clearly they [anticipate, expect] further conflict in the future."`
       `  Tema'a Iriket says, "Perhaps they are [afraid of, threatened by] us and seek only to have the means to [defend, protect] themselves. The important thing is that the drones in this [territory, area] have been [neutralized, pacified] and we can now focus on our true work."`

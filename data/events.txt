@@ -2995,11 +2995,11 @@ event "wanderers: autumn leaf mass production"
     add variant 2
       "Strong Wind"
       "Autumn Leaf" 2
-    add variant
+    add variant 1
       "Strong Wind"
       "Autumn Leaf"
       "Summer Leaf"
-    add variant
+    add variant 1
       "Autumn Leaf"
       "Summer Leaf" 2
     add variant 2
@@ -3668,6 +3668,68 @@ event "wanderers: exiles hostile"
   "reputation: Korath" <?= -1000
 
 
+event "wanderers: winter gale mass production"
+  fleet "Wanderer Defence"
+    add variant 3
+      "Tempest"
+      "Winter Gale"
+    add variant 1
+      "Tempest"
+      "Winter Gale (Heavy)"
+    add variant 1
+      "Tempest"
+      "Winter Gale (Torpedo)"
+    add variant 3
+      "Strong Wind"
+      "Winter Gale"
+    add variant 1
+      "Strong Wind"
+      "Winter Gale (Heavy)"
+    add variant 1
+      "Strong Wind"
+      "Winter Gale (Torpedo)"
+    add variant 4
+      "Strong Wind"
+      "Autumn Leaf (Heavy)" 2
+    add variant 2
+      "Strong Wind"
+      "Autumn Leaf (Heavy)"
+      "Summer Leaf"
+    add variant 2
+      "Winter Gale" 2
+    add variant 1
+      "Winter Gale"
+      "Winter Gale (Heavy)"
+    add variant 1
+      "Winter Gale"
+      "Winter Gale (Torpedo)"
+    add variant 3
+      "Winter Gale"
+      "Autumn Leaf" 2
+    add variant 1
+      "Winter Gale (Heavy)"
+      "Autumn Leaf" 2
+    add variant 1
+      "Winter Gale (Torpedo)"
+      "Autumn Leaf" 2
+    add variant 3
+      "Winter Gale"
+      "Autumn Leaf"
+      "Summer Leaf"
+    add variant 1
+      "Winter Gale (Heavy)"
+      "Autumn Leaf"
+      "Summer Leaf"
+    add variant 1
+      "Winter Gale (Torpedo)"
+      "Autumn Leaf"
+      "Summer Leaf"
+  shipyard "Wanderer Advanced"
+    "Winter Gale"
+  shipyard "Wanderer Intermediate"
+    "Winter Gale"
+
+
 event "wanderers: exiles have drones"
   fleet "Korath Home"
     add variant 1
@@ -3816,6 +3878,76 @@ event "wanderers: sestor eliminated"
     outfitter clear
     shipyard clear
     spaceport clear
+
+
+event "wanderers: cool breeze mass production"
+  fleet "Wanderer Defence"
+    add variant 3
+      "Strong Wind"
+      "Cool Breeze" 2
+    add variant 2
+      "Strong Wind"
+      "Cool Breeze" 3
+    add variant 1
+      "Strong Wind"
+      "Cool Breeze" 4
+    add variant 2
+      "Winter Gale (Heavy)"
+      "Cool Breeze" 2
+    add variant 1
+      "Winter Gale"
+      "Autumn Leaf"
+      "Summer Leaf"
+      "Cool Breeze"
+    add variant 4
+      "Autumn Leaf"
+      "Cool Breeze" 3
+    add variant 3
+      "Autumn Leaf"
+      "Cool Breeze" 4
+    add variant 2
+      "Autumn Leaf" 2
+      "Cool Breeze" 3
+    add variant 1
+      "Autumn Leaf" 3
+      "Cool Breeze" 2
+    add variant 3
+      "Autumn Leaf"
+      "Summer Leaf"
+      "Cool Breeze"
+    add variant 2
+      "Autumn Leaf"
+      "Summer Leaf"
+      "Cool Breeze" 2
+    add variant 1
+      "Autumn Leaf"
+      "Summer Leaf"
+      "Cool Breeze" 3
+    add variant 2
+      "Autumn Leaf (Heavy)" 1
+      "Cool Breeze (Sunbeam)" 3
+    add variant 1
+      "Autumn Leaf (Heavy)" 2
+      "Cool Breeze (Sunbeam)" 3
+    add variant 3
+      "Summer Leaf" 2
+      "Cool Breeze" 3
+    add variant 2
+      "Summer Leaf" 3
+      "Cool Breeze" 2
+    add variant 2
+      "Cool Breeze" 3
+    add variant 1
+      "Cool Breeze" 4
+    add variant 1
+      "Strong Wind"
+      "Cool Breeze" 5
+  shipyard "Wanderer Advanced"
+    "Cool Breeze"
+  shipyard "Wanderer Intermediate"
+    "Cool Breeze"
+  shipyard "Wanderer Basics"
+    "Cool Breeze"
 
 
 event "wanderers: sestor planets unrestricted"
