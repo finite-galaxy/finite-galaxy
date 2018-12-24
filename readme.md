@@ -9,13 +9,13 @@ Both games can be installed alongside and played independently of each other. Al
 Why did I start this project? Why not contribute to Endless Sky instead?
 * Although I like Endless Sky as a whole, it also contains things I don't like. Conversation scenes, news and portraits, tribute, and plundering of installed outfits are just a few examples.
 * The pace of development seemed to slow down: there were only nine commits in September 2018 and zero in October. (I started Finite Galaxy on October 18.)
-* Numerous pull requests over there have been open for over a year, reviews are haphazard, there are many lengthy discussions on unimportant things, and useful proposals were often ignored.
+* Numerous pull requests over there have been open for over a year, reviews are haphazard, there are many lengthy discussions on unimportant things, while useful proposals were often ignored.
 * The direction and vision is not always clear.
 * Support for plug-ins is rather limited.
 
-In short, I consider it a better use of a time to work on a project where I can incorporate most of my ideas, where I can remove things I dislike, and where I can contribute whenever I like, without having to wait weeks or months for an arbitrary review. 
+In short, I consider it a better use of a time to work on a project where I can incorporate most of my ideas, where I can remove things I dislike, and where I can contribute whenever I like, without having to wait weeks or months for a review or wasting my time on something that won't be included. 
 
-Finite Galaxy is very much a work in progress. However, it can be compiled and played without erros. Feel free to try it out yourself!
+Finite Galaxy is very much a work in progress. Nevertheless, it can be compiled and played without errors. Feel free to try it out yourself!
 
 ## Table of contents
 * [Installation](https://github.com/finite-galaxy/finite-galaxy#installation)
