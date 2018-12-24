@@ -2333,6 +2333,90 @@ event "navy done with alcyone"
 
 
 
+
+
+event "navy using mark iii ships"
+  fleet "Navy Cargo"
+    add variant 1
+      "Behemoth (Mark III)" 5
+      "Venus (Mark III)"
+      "Mark II Drone" 4
+      "Mars (Mark III)" 2
+  
+  fleet "Republic Large"
+    add variant 2
+      "Saturn (Mark III)"
+      "Foxhound" 4
+      "Mark II Drone" 6
+    add variant 1
+      "Saturn (Mark III)"
+      "Foxhound" 4
+      "Mark II Drone" 6
+      "Mars"
+    add variant 1
+      "Saturn (Mark III)"
+      "Foxhound" 4
+      "Mark II Drone" 6
+      "Mercury (Mark II)"
+    add variant 1
+      "Saturn (Mark III)"
+      "Foxhound" 4
+      "Mark II Drone" 6
+      "Mercury (Mark III)" 2
+    add variant 3
+      "Venus (Mark III)"
+      "Mark II Drone" 4
+    add variant 2
+      "Venus (Mark III)"
+      "Mark II Drone" 4
+      "Mars (Mark III)"
+    add variant 1
+      "Venus (Mark III)"
+      "Mark II Drone" 4
+      "Mars (Mark III)" 2
+    add variant 1
+      "Venus (Mark III)"
+      "Mark II Drone" 4
+      "Mars (Mark III)"
+      "Mercury (Mark III)"
+    add variant 1
+      "Venus (Mark III)"
+      "Mark II Drone" 4
+      "Mars (Mark III)"
+      "Mercury (Mark III)" 2
+    add variant 1
+      "Venus (Mark III)"
+      "Mark II Drone" 4
+      "Mercury (Mark III)"
+    add variant 1
+      "Venus (Mark III)"
+      "Mark II Drone" 4
+      "Mercury (Mark III)" 2
+    add variant 1
+      "Venus (Mark III)"
+      "Mark II Drone" 4
+      "Mercury (Mark III)" 3
+    add variant 5
+      "Mars (Mark III)" 2
+    add variant 3
+      "Mars (Mark III)"
+      "Mercury (Mark III)" 2
+    add variant 1
+      "Mars (Mark III)"
+      "Mercury (Mark III)" 3
+
+  fleet "Republic Small"
+    add variant 5
+      "Mars (Mark III)"
+    add variant 10
+      "Mercury (Mark III)"
+    add variant 6
+      "Mercury (Mark III)" 2
+    add variant 4
+      "Mercury (Mark III)" 3
+
+
+
 # free worlds checkmate events
 
 event "fwc attack kaus borealis"
