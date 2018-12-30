@@ -3,8 +3,8 @@ shipyard "Vortex Variants"
   "Bactrian (Hired Gun)"
   "Firebird"
   "Firebird (Hai)"
+  "Firebird (Impact)"
   "Firebird (Laser)"
-  "Firebird (Torpedo)"
   "Foxhound"
   "Heavy Shuttle"
   "Heavy Shuttle (Blaster)"
@@ -57,8 +57,8 @@ ship "Bactrian"
     "IT-4700 Ion Thruster"
     "IS-5200 Ion Steering"
 
-    "Sidewinder Missile" 150
-    "Sidewinder Missile Rack" 3
+    "Sidewinder Missile" 90
+    "Sidewinder Missile Rack" 30
     "Sidewinder Missile Launcher" 3
     "X6 Blaster Turret" 4
     "Heavy Anti-Missile" 2
@@ -67,7 +67,7 @@ ship "Bactrian"
     "Liquid Nitrogen Cooler"
     "Fuel Pod" 196
     "Large Radar Jammer" 2
-    "Ramscoop"
+    "Ramscoop" 2
     "Tactical Scanner" 6
   engine -18 230
   engine 18 230
@@ -198,6 +198,28 @@ ship "Firebird" "Firebird (Hai)"
     "Extra Outfit Space" 4
 
 
+ship "Firebird" "Firebird (Impact)"
+  outfits
+    "D41-HY Shield Generator"
+    "RT-I Radiothermal"
+    "Hyperdrive"
+
+    "IT-3700 Ion Thruster"
+    "IS-3200 Ion Steering"
+    "Afterburner"
+
+    "Impact Missile" 80
+    "Impact Missile Rack" 20
+    "Impact Missile Launcher" 4
+    "X4 Blaster Turret" 2
+
+    "LP072a Battery Pack"
+    "Liquid Water Cooler"
+    "Fuel Pod" 32
+    "Large Radar Jammer"
+    "Tactical Scanner" 4
+
+
 ship "Firebird" "Firebird (Laser)"
   outfits
     "D41-HY Shield Generator"
@@ -212,28 +234,6 @@ ship "Firebird" "Firebird (Laser)"
     "Heavy Laser Turret" 2
 
     "LP144a Battery Pack"
-    "Liquid Water Cooler"
-    "Fuel Pod" 32
-    "Large Radar Jammer"
-    "Tactical Scanner" 4
-
-
-ship "Firebird" "Firebird (Torpedo)"
-  outfits
-    "D41-HY Shield Generator"
-    "RT-I Radiothermal"
-    "Hyperdrive"
-
-    "IT-3700 Ion Thruster"
-    "IS-3200 Ion Steering"
-    "Afterburner"
-
-    "Impact Missile" 120
-    "Impact Missile Rack" 4
-    "Impact Missile Launcher" 4
-    "X2 Blaster Turret" 2
-
-    "LP072a Battery Pack"
     "Liquid Water Cooler"
     "Fuel Pod" 32
     "Large Radar Jammer"
@@ -536,8 +536,8 @@ ship "Mule"
     "IT-3700 Ion Thruster"
     "IS-4200 Ion Steering"
 
-    "Sidewinder Missile" 50
-    "Sidewinder Missile Rack"
+    "Sidewinder Missile" 30
+    "Sidewinder Missile Rack" 10
     "Sidewinder Missile Launcher"
     "X4 Blaster Turret" 3
     "Heavy Anti-Missile"
@@ -599,8 +599,8 @@ ship "Mule" "Mule (Heavy)"
     "A370 Atomic Thruster"
     "A375 Atomic Steering"
 
-    "Impact Missile" 30
-    "Impact Missile Rack"
+    "Impact Missile" 20
+    "Impact Missile Rack" 5
     "Impact Missile Launcher"
     "Heavy Laser Turret" 4
 

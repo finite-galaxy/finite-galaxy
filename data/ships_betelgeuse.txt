@@ -59,8 +59,8 @@ ship "Bulk Freighter"
     "IS-3200 Ion Steering"
     "IR-3700 Ion Reverse"
 
-    "Meteor Missile" 80
-    "Meteor Missile Box" 2
+    "Meteor Missile" 36
+    "Meteor Missile Box"
     "Meteor Missile Launcher" 2
     "X8 Blaster Turret"
     "AM5 Anti-Missile" 4
@@ -98,8 +98,8 @@ ship "Bulk Freighter" "Bulk Freighter (Blaster)"
     "IT-3700 Ion Thruster"
     "IS-3200 Ion Steering"
 
-    "Meteor Missile" 80
-    "Meteor Missile Box" 2
+    "Meteor Missile" 36
+    "Meteor Missile Box"
     "Meteor Missile Launcher" 2
     "X4 Blaster Turret" 4
     "Heavy Anti-Missile"
@@ -177,8 +177,8 @@ ship "Bulk Freighter" "Class C Freighter"
     "IT-3700 Ion Thruster"
     "IS-3200 Ion Steering"
 
-    "Sidewinder Missile" 100
-    "Sidewinder Missile Rack" 2
+    "Sidewinder Missile" 60
+    "Sidewinder Missile Rack" 20
     "Sidewinder Missile Launcher" 2
     "X4 Blaster Turret" 4
     "Heavy Anti-Missile"
@@ -186,12 +186,13 @@ ship "Bulk Freighter" "Class C Freighter"
     "LP036a Battery Pack"
     "Liquid Water Cooler"
     "Fuel Pod" 82
+    "Large Radar Jammer"
     "Ramscoop"
     "Tactical Scanner" 12
-    "Extra Bunks" 10
-    "Extra Outfit Space" 4
-    "Fragmentation Grenades" 20
-    "Laser Rifle" 40
+    "Extra Bunks" 6
+    "Extra Outfit Space" 5
+    "Fragmentation Grenades" 15
+    "Laser Rifle" 30
   turret "X4 Blaster Turret"
   turret "X4 Blaster Turret"
   turret "Heavy Anti-Missile"
@@ -357,8 +358,8 @@ ship "Hero" "Hero (Patrol)"
     "IT-2700 Ion Thruster"
     "IS-2200 Ion Steering"
 
-    "Meteor Missile" 80
-    "Meteor Missile Box" 2
+    "Meteor Missile" 36
+    "Meteor Missile Box"
     "Meteor Missile Launcher" 2
     "X1 Blaster Cannon" 2
 
@@ -367,9 +368,7 @@ ship "Hero" "Hero (Patrol)"
     "Fuel Pod" 18
     "Outfit Scanner"
     "Small Radar Jammer"
-    "Tactical Scanner" 2
-    "Extra Outfit Space"
-    "Laser Rifle" 2
+    "Tactical Scanner" 4
   gun "X1 Blaster Cannon"
   gun "X1 Blaster Cannon"
   gun "Meteor Missile Launcher"
@@ -538,14 +537,13 @@ ship "Splinter"
     "IT-3700 Ion Thruster"
     "IS-3200 Ion Steering"
 
-    "Meteor Missile" 80
+    "Meteor Missile" 72
     "Meteor Missile Box" 2
     "Meteor Missile Launcher" 2
     "X6 Blaster Turret" 2
     "Heavy Anti-Missile"
 
     "LP288a Battery Pack"
-    "Liquid Water Cooler"
     "Fuel Pod" 48
     "Tactical Scanner" 4
   engine -15 115
@@ -604,7 +602,6 @@ ship "Splinter" "Splinter (Laser)"
     "Heavy Anti-Missile"
 
     "LP144a Battery Pack"
-    "Liquid Water Cooler"
     "Fuel Pod" 48
     "Tactical Scanner" 4
   turret "Heavy Laser Turret"
@@ -706,10 +703,10 @@ ship "Vanguard" "Vanguard (Anti-Missile)"
     "IT-3700 Ion Thruster"
     "IS-4200 Ion Steering"
 
-    "Sidewinder Missile" 150
-    "Sidewinder Missile Rack" 3
-    "Sidewinder Missile Launcher" 3
-    "Particle Cannon" 4
+    "Sidewinder Missile" 120
+    "Sidewinder Missile Rack" 40
+    "Sidewinder Missile Launcher" 4
+    "Particle Cannon" 3
     "Heavy Anti-Missile"
 
     "LP144a Battery Pack"
@@ -718,6 +715,13 @@ ship "Vanguard" "Vanguard (Anti-Missile)"
     "Large Radar Jammer"
     "Tactical Scanner" 5
     "Laser Rifle" 40
+  gun "Particle Cannon"
+  gun "Particle Cannon"
+  gun "Particle Cannon"
+  gun "Sidewinder Missile Launcher"
+  gun "Sidewinder Missile Launcher"
+  gun "Sidewinder Missile Launcher"
+  gun "Sidewinder Missile Launcher"
 
 
 ship "Vanguard" "Vanguard (Hai)"

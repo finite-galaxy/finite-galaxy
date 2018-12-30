@@ -81,10 +81,10 @@ outfit "Sidewinder Missile"
 outfit "Sidewinder Missile Rack"
   category "Ammunition Storage"
   thumbnail "outfit/sidewinder_storage"
-  cost 25000
-  "mass" 2
-  "outfit space" -7
-  "sidewinder capacity" 25
+  cost 3000
+  "mass" .4
+  "outfit space" -1
+  "sidewinder capacity" 3
   ammo "Sidewinder Missile"
   description "The Sidewinder Missile Rack is used to store extra ammunition for Sidewinder Missile Launchers."
 
@@ -92,11 +92,11 @@ outfit "Sidewinder Missile Launcher"
   category "Secondary Weapons"
   thumbnail "outfit/sidewinder_launcher"
   cost 60000
-  "mass" 9
+  "mass" 14
   "outfit space" -14
   "weapon space" -14
   "gun ports" -1
-  "sidewinder capacity" 25
+  "sidewinder capacity" 0
   weapon
     sprite "projectile/sidewinder"
       "no repeat"

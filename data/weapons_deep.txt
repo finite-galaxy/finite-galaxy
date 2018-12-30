@@ -10,10 +10,10 @@ outfit "Impact Missile"
 outfit "Impact Missile Rack"
   category "Ammunition Storage"
   thumbnail "outfit/impact_storage"
-  cost 30000
-  "mass" 3
-  "outfit space" -9
-  "impact capacity" 15
+  cost 8000
+  "mass" .4
+  "outfit space" -2
+  "impact capacity" 4
   ammo "Impact Missile"
   description "The Impact Missile Rack is used to store extra ammunition for Impact Missile Launchers."
 
@@ -21,11 +21,11 @@ outfit "Impact Missile Launcher"
   category "Secondary Weapons"
   thumbnail "outfit/impact_launcher"
   cost 80000
-  "mass" 18
-  "outfit space" -24
-  "weapon space" -24
+  "mass" 20
+  "outfit space" -20
+  "weapon space" -20
   "gun ports" -1
-  "impact capacity" 15
+  "impact capacity" 0
   weapon
     sprite "projectile/impact"
       "frame rate" 2

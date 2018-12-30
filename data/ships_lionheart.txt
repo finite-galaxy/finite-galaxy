@@ -3,8 +3,8 @@ shipyard "Lionheart Variants"
   "Aerie (Mark II)"
   "Argosy"
   "Argosy (Blaster)"
+  "Argosy (Impact)"
   "Argosy (Laser)"
-  "Argosy (Torpedo)"
   "Arrow"
   "Arrow (Anti-Missile)"
   "Arrow (Hai)"
@@ -186,6 +186,27 @@ ship "Argosy" "Argosy (Blaster)"
     "Tactical Scanner" 3
 
 
+ship "Argosy" "Argosy (Impact)"
+  outfits
+    "D41-HY Shield Generator"
+    "NT-200 Nucleovoltaic"
+    "Hyperdrive"
+
+    "A250 Atomic Thruster"
+    "A255 Atomic Steering"
+
+    "Impact Missile" 32
+    "Impact Missile Rack" 8
+    "Impact Missile Launcher" 2
+    "Heavy Laser Turret"
+
+    "LP036a Battery Pack"
+    "Fuel Pod" 30
+    "Small Radar Jammer"
+    "Tactical Scanner" 3
+    "Extra Outfit Space" 2
+
+
 ship "Argosy" "Argosy (Laser)"
   outfits
     "D41-HY Shield Generator"
@@ -202,27 +223,6 @@ ship "Argosy" "Argosy (Laser)"
     "Small Radar Jammer"
     "Tactical Scanner" 3
     "Extra Outfit Space"
-
-
-ship "Argosy" "Argosy (Torpedo)"
-  outfits
-    "D41-HY Shield Generator"
-    "NT-200 Nucleovoltaic"
-    "Hyperdrive"
-
-    "A250 Atomic Thruster"
-    "A255 Atomic Steering"
-
-    "Impact Missile" 60
-    "Impact Missile Rack" 2
-    "Impact Missile Launcher" 2
-    "Heavy Laser Turret"
-
-    "LP036a Battery Pack"
-    "Fuel Pod" 30
-    "Small Radar Jammer"
-    "Tactical Scanner" 3
-    "Extra Outfit Space" 3
 
 
 
@@ -347,8 +347,8 @@ ship "Behemoth"
     "A250 Atomic Thruster"
     "A375 Atomic Steering"
 
-    "Impact Missile" 60
-    "Impact Missile Rack" 2
+    "Impact Missile" 24
+    "Impact Missile Rack" 6
     "Impact Missile Launcher" 2
     "Heavy Laser Turret" 4
     "Heavy Anti-Missile" 2
@@ -393,7 +393,6 @@ ship "Behemoth" "Behemoth (Free Worlds)"
     "Liquid Nitrogen Cooler"
     "Fuel Pod" 64
     "Tactical Scanner" 4
-    "Extra Outfit Space" 4
   turret "K4 Blaster Turret"
   turret "K4 Blaster Turret"
   turret "Heavy Anti-Missile"
@@ -723,8 +722,8 @@ ship "Leviathan" "Leviathan (Heavy)"
     "A370 Atomic Thruster"
     "A525 Atomic Steering"
 
-    "Impact Missile" 120
-    "Impact Missile Rack" 4
+    "Impact Missile" 64
+    "Impact Missile Rack" 16
     "Impact Missile Launcher" 4
     "Heavy Laser Turret" 4
 
@@ -733,7 +732,7 @@ ship "Leviathan" "Leviathan (Heavy)"
     "Fuel Pod" 63
     "Large Radar Jammer"
     "Tactical Scanner" 4
-    "Extra Outfit Space" 4
+    "Extra Outfit Space" 2
     "Laser Rifle" 75
 
 
