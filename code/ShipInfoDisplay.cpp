@@ -232,7 +232,12 @@ void ShipInfoDisplay::UpdateAttributes(const Ship &ship, const Depreciation &dep
   // Find out how much outfit, core, engine, and weapon space the chassis has.
   map<string, double> chassis;
   static const vector<string> NAMES = {
-    "outfit space", "core space", "engine space", "weapon space", "gun ports", "turret mounts"
+    "outfit space",
+    "core space",
+    "engine space",
+    "weapon space",
+    "gun ports",
+    "turret mounts"
   };
   for(unsigned i = 0; i < NAMES.size(); i++)
     chassis[NAMES[i]] = attributes.Get(NAMES[i]);

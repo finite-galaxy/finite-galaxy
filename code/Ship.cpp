@@ -1548,7 +1548,7 @@ void Ship::DoGeneration()
     const double shieldsFuel = attributes.Get("shield fuel") / shieldsAvailable; 
     const double shieldsHeat = attributes.Get("shield heat") / shieldsAvailable;
     double shieldsRemaining = shieldsAvailable;
-     DoRepair(shields, shieldsRemaining, attributes.Get("shields"), energy, shieldsEnergy, fuel, shieldsFuel); 
+    DoRepair(shields, shieldsRemaining, attributes.Get("shields"), energy, shieldsEnergy, fuel, shieldsFuel); 
     
     if(!bays.empty())
     {

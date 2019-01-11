@@ -193,7 +193,12 @@ void OutfitInfoDisplay::UpdateAttributes(const Outfit &outfit)
   for(const pair<const char *, double> &it : outfit.Attributes())
   {
     static const set<string> SKIP = {
-      "outfit space", "core space", "engine space", "weapon space", "gun ports", "turret mounts"
+      "outfit space",
+      "core space",
+      "engine space",
+      "weapon space",
+      "gun ports",
+      "turret mounts"
     };
     if(SKIP.count(it.first))
       continue;
