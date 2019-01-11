@@ -780,7 +780,7 @@ string Ship::FlightCheck() const
     return "limited turn?";
   if(energy - .8 * solar < .2 * (turnEnergy + thrustEnergy))
     return "solar power?";
-  if(fuel <= 0.)
+  if(fuel < 0.)
     return "fuel?";
   if(!canBeCarried)
   {
@@ -1538,14 +1538,14 @@ void Ship::DoGeneration()
     
     const double hullAvailable = attributes.Get("hull repair rate");
     const double hullEnergy = attributes.Get("hull energy") / hullAvailable;
-     const double hullFuel = attributes.Get("hull fuel") / hullAvailable; 
+    const double hullFuel = attributes.Get("hull fuel") / hullAvailable; 
     const double hullHeat = attributes.Get("hull heat") / hullAvailable;
     double hullRemaining = hullAvailable;
-     DoRepair(hull, hullRemaining, attributes.Get("hull"), energy, hullEnergy, fuel, hullFuel); 
+    DoRepair(hull, hullRemaining, attributes.Get("hull"), energy, hullEnergy, fuel, hullFuel); 
     
     const double shieldsAvailable = attributes.Get("shield generation");
     const double shieldsEnergy = attributes.Get("shield energy") / shieldsAvailable;
-     const double shieldsFuel = attributes.Get("shield fuel") / shieldsAvailable; 
+    const double shieldsFuel = attributes.Get("shield fuel") / shieldsAvailable; 
     const double shieldsHeat = attributes.Get("shield heat") / shieldsAvailable;
     double shieldsRemaining = shieldsAvailable;
      DoRepair(shields, shieldsRemaining, attributes.Get("shields"), energy, shieldsEnergy, fuel, shieldsFuel); 
@@ -1705,6 +1705,40 @@ void Ship::Launch(list<shared_ptr<Ship>> &ships, vector<Visual> &visuals)
   for(Bay &bay : bays)
     if(bay.ship && bay.ship->Commands().Has(Command::DEPLOY) && !Random::Int(40 + 20 * bay.isFighter))
     {
+      // Determine which of the fighter's weapons we can restock.
+      set<const Outfit *> toRefill;
+      for(const auto &hit : bay.ship->Weapons())
+        if(hit.GetOutfit() && hit.GetOutfit()->Ammo() && OutfitCount(hit.GetOutfit()->Ammo()))
+          toRefill.insert(hit.GetOutfit()->Ammo());
+
+      // Transfer as much ammunition as the fighter can use.
+      for(const Outfit *outfit : toRefill)
+      {
+        int neededAmmo = bay.ship->attributes.CanAdd(*outfit, OutfitCount(outfit));
+        if(neededAmmo)
+        {
+          AddOutfit(outfit, -neededAmmo);
+          bay.ship->AddOutfit(outfit, neededAmmo);
+          carriedMass += outfit->Mass() * neededAmmo;
+        }
+      }
+
+      // This ship will refuel naturally based on the carrier's fuel
+      // collection, but the carrier may have some reserves to spare.
+      double maxFuel = bay.ship->attributes.Get("fuel capacity");
+      if(maxFuel)
+      {
+        double spareFuel = fuel - JumpFuel();
+        if(spareFuel > 0.)
+          TransferFuel(min(maxFuel - bay.ship->fuel, spareFuel), bay.ship.get());
+        // If still low or out-of-fuel, restock the carrier and don't launch.
+        if(bay.ship->fuel < .25 * maxFuel)
+				{
+					TransferFuel(bay.ship->fuel, this);
+					continue;
+				}
+      }
+
       ships.push_back(bay.ship);
       double maxV = bay.ship->MaxVelocity();
       Angle launchAngle = angle + BAY_ANGLE[bay.facing];
@@ -2709,6 +2743,13 @@ bool Ship::Carry(const shared_ptr<Ship> &ship)
       ship->SetParent(shared_from_this());
       ship->isThrusting = false;
       ship->commands.Clear();
+      // If this fighter collected anything in space, try to store it 
+      // (unless this is a player-owned ship).
+      if(!isYours && cargo.Free() && !ship->Cargo().IsEmpty())
+        ship->Cargo().TransferAll(cargo);
+      // Return unused fuel to the carrier, for any launching fighter that needs it.
+      ship->TransferFuel(ship->fuel, this);
+
       // Update the cached mass of the mothership.
       carriedMass += ship->Mass();
       return true;
