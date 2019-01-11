@@ -39,6 +39,7 @@ void GameEvent::Load(const DataNode &node)
     "galaxy",
     "government",
     "link",
+    "news",
     "outfitter",
     "planet",
     "shipyard",
