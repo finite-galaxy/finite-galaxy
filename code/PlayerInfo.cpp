@@ -1343,34 +1343,13 @@ void PlayerInfo::LoadCargo()
 }
 
 
-// Also unloads fighters.
+
 void PlayerInfo::UnLoadCargo()
 {
   // Unloads all cargo.
   for(const shared_ptr<Ship> &ship : ships)
     if(!ship->IsDisabled() && ship->GetSystem() == system)
       ship->Cargo().TransferAll(cargo);
-  
-  // Unloads all fighters.
-  for(const shared_ptr<Ship> &ship : ships)
-    ship->UnloadBays();
-}
-
-
-
-void PlayerInfo::LoadFighters()
-{
-  for(const shared_ptr<Ship> &ship : ships)
-  {
-    if(ship->IsParked() || ship->IsDisabled())
-      continue;
-    const string &category = ship->Attributes().Category();
-    if(category == "Fighter" || category == "Drone")
-      for(shared_ptr<Ship> &parent : ships)
-        if(parent->GetSystem() == ship->GetSystem() && !parent->IsParked()
-            && !parent->IsDisabled() && parent->Carry(ship))
-          break;
-  }
 }
 
 
