@@ -133,6 +133,7 @@ public:
   // Load or unload cargo while landed to simulate the effective mass in space.
   void LoadCargo();
   void UnLoadCargo();
+  void LoadFighters();
   
   // Get the player's logbook.
   const std::multimap<Date, std::string> &Logbook() const;

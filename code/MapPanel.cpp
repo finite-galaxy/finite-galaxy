@@ -812,7 +812,10 @@ void MapPanel::DrawTravelPlan()
   // Updating the cargo holds is needed to draw the correct path based
   // on the mass of each ship if the player would depart now.
   if(player.GetStellarObject())
+  {
     player.LoadCargo();
+    player.LoadFighters();
+  }
   
   // At each point in the path, keep track of how many ships in the
   // fleet are able to make it this far.
