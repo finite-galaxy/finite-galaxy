@@ -172,6 +172,7 @@ sudo install_name_tool -id "@rpath/libSDL2-2.0.0.dylib" /usr/local/lib/libSDL2-2
 * Removed tribute from planets (relevant code is still present for plug-ins)
 * Distances from planets to the sytem's centre are trebled; as a result space feels larger, thrusters are more desirable, and players won't always land immediately in the middle of a space fight
 * Non-missile weapons have their weapon range increased by about a third
+* Add fuel cost, a government specific price(usually between 0 and 2) per fuel at spaceports, twice that when hailing ships in space
 
 [(return to top)](https://github.com/finite-galaxy/finite-galaxy#finite-galaxy)
 
@@ -190,7 +191,6 @@ See `changelog.txt`, `ship_overview.txt`, and https://github.com/finite-galaxy/f
 * Add “Manufacturer” to ships
 * Add quotation mark preference
 * Add support for landing fees
-* Add fuel cost, one credit per fuel at spaceports, twice that when hailing ships in space
 * Add functionality to deposit credits at the bank for a fixed time (e.g. one year), receiving either the sum plus interest when it expires, or the sum minus a penalty when you claim it beforehand
 * Allow friendly fire
 * Limit the commodities for sale on specific planets
