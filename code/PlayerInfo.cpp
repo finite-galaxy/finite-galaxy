@@ -1078,6 +1078,10 @@ bool PlayerInfo::TakeOff(UI *ui)
   // Special persons who appeared last time you left the planet, can appear again.
   GameData::ResetPersons();
   
+  
+  // Store the total cargo counts in case we need to adjust cost bases below.
+  map<string, int> originalTotals = cargo.Commodities();
+	
   // Move the flagship to the start of your list of ships. It does not make
   // sense that the flagship would change if you are reunited with a different
   // ship that was higher up the list.
@@ -1130,9 +1134,6 @@ bool PlayerInfo::TakeOff(UI *ui)
       }
     }
   
-  // Store the total cargo counts in case we need to adjust cost bases below.
-  map<string, int> originalTotals = cargo.Commodities();
-
   if(cargo.Passengers())
   {
     int extra = min(cargo.Passengers(), flagship->Crew() - flagship->RequiredCrew());
