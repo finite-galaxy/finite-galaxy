@@ -130,7 +130,7 @@ public:
   void Land(UI *ui);
   // Load the cargo back into your ships. This may require selling excess.
   bool TakeOff(UI *ui);
-  // Loads or unloads cargo while landed to simulate the mas after takeoff.
+  // Load or unload cargo while landed to simulate the effective mass in space.
   void LoadCargo();
   void UnLoadCargo();
   

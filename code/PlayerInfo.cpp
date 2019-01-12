@@ -1081,7 +1081,7 @@ bool PlayerInfo::TakeOff(UI *ui)
   
   // Store the total cargo counts in case we need to adjust cost bases below.
   map<string, int> originalTotals = cargo.Commodities();
-	
+  
   // Move the flagship to the start of your list of ships. It does not make
   // sense that the flagship would change if you are reunited with a different
   // ship that was higher up the list.
