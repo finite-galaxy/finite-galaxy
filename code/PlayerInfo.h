@@ -132,8 +132,10 @@ public:
   bool TakeOff(UI *ui);
   // Load or unload cargo while landed to simulate the effective mass in space.
   void LoadCargo();
-  void UnLoadCargo();
+  void UnloadCargo();
+  // Load or unload fighters while landed to simulate the effective mass in space.
   void LoadFighters();
+  void UnloadFighters();
   
   // Get the player's logbook.
   const std::multimap<Date, std::string> &Logbook() const;

@@ -892,7 +892,10 @@ void MapPanel::DrawTravelPlan()
   
   // Remove all cargo if it was added above so the player can freely change the cargo.
   if(player.GetStellarObject())
-    player.UnLoadCargo();
+  {
+    player.UnloadCargo();
+    player.UnloadFighters();
+  }
 }
 
 

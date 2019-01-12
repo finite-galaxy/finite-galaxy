@@ -1329,17 +1329,13 @@ void PlayerInfo::LoadCargo()
 }
 
 
-// Also unloads fighters.
-void PlayerInfo::UnLoadCargo()
+
+// Unloads all cargo.
+void PlayerInfo::UnloadCargo()
 {
-  // Unloads all cargo.
   for(const shared_ptr<Ship> &ship : ships)
     if(!ship->IsDisabled() && ship->GetSystem() == system)
       ship->Cargo().TransferAll(cargo);
-  
-  // Unloads all fighters.
-  for(const shared_ptr<Ship> &ship : ships)
-    ship->UnloadBays();
 }
 
 
@@ -1358,6 +1354,16 @@ void PlayerInfo::LoadFighters()
           break;
   }
 }
+
+
+
+// Unloads all fighters.
+void PlayerInfo::UnloadFighters()
+{
+  for(const shared_ptr<Ship> &ship : ships)
+    ship->UnloadBays();
+}
+
 
 
 
