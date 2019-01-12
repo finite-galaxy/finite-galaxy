@@ -999,7 +999,7 @@ void PlayerInfo::Land(UI *ui)
   
   // Ships that are landed with you on the planet should fully recharge
   // and pool all their cargo together. Those in remote systems restore
-  // what they can without landing.
+  // what they can without landing. Fuel is refilled during departure.
   bool hasSpaceport = planet->HasSpaceport() && planet->CanUseServices();
   UpdateCargoCapacities();
   for(const shared_ptr<Ship> &ship : ships)
@@ -1007,7 +1007,7 @@ void PlayerInfo::Land(UI *ui)
     {
       if(ship->GetSystem() == system)
       {
-        ship->Recharge(hasSpaceport);
+        ship->Recharge(false, hasSpaceport);
         ship->Cargo().TransferAll(cargo);
         ship->SetPlanet(planet);
       }
@@ -1109,6 +1109,7 @@ bool PlayerInfo::TakeOff(UI *ui)
   
   LoadCargo();
   
+  int rechargedFuel = 0;
   // Recharge any ships that can be recharged, and determines the free bunk space.
   bool hasSpaceport = planet->HasSpaceport() && planet->CanUseServices();
   for(const shared_ptr<Ship> &ship : ships)
@@ -1120,7 +1121,7 @@ bool PlayerInfo::TakeOff(UI *ui)
         continue;
       }
       else
-        ship->Recharge(hasSpaceport);
+        rechargedFuel += ship->Recharge(hasSpaceport);
       
       if(ship != flagship)
         ship->Cargo().SetBunks(ship->Attributes().Get("bunks") - ship->RequiredCrew());
@@ -1312,6 +1313,19 @@ bool PlayerInfo::TakeOff(UI *ui)
     Messages::Add(out.str());
   }
   
+  // Pays the fuel and messages the price that was paid.
+  if(rechargedFuel)
+  {
+    int price = rechargedFuel*flagship->GetPlanet()->GetGovernment()->GetFuelPrice()/100;
+    if(price)
+    {
+      ostringstream out;
+      out << "You paid " << price << " credits to buy " << rechargedFuel << " tons of fuel.";
+      Messages::Add(out.str());
+      accounts.AddCredits(-price);
+    }
+  }
+  
   return true;
 }
 
@@ -1329,13 +1343,34 @@ void PlayerInfo::LoadCargo()
 }
 
 
-
+// Also unloads fighters.
 void PlayerInfo::UnLoadCargo()
 {
   // Unloads all cargo.
   for(const shared_ptr<Ship> &ship : ships)
     if(!ship->IsDisabled() && ship->GetSystem() == system)
       ship->Cargo().TransferAll(cargo);
+  
+  // Unloads all fighters.
+  for(const shared_ptr<Ship> &ship : ships)
+    ship->UnloadBays();
+}
+
+
+
+void PlayerInfo::LoadFighters()
+{
+  for(const shared_ptr<Ship> &ship : ships)
+  {
+    if(ship->IsParked() || ship->IsDisabled())
+      continue;
+    const string &category = ship->Attributes().Category();
+    if(category == "Fighter" || category == "Drone")
+      for(shared_ptr<Ship> &parent : ships)
+        if(parent->GetSystem() == ship->GetSystem() && !parent->IsParked()
+            && !parent->IsDisabled() && parent->Carry(ship))
+          break;
+  }
 }
 
 

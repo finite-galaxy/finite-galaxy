@@ -89,6 +89,8 @@ void Government::Load(const DataNode &node)
             grand.PrintTrace("Skipping unrecognized attribute:");
         }
     }
+    else if(child.Token(0) == "fuel price" && child.Size() >= 2)
+      fuelPrice = child.Value(1);
     else if(child.Token(0) == "bribe" && child.Size() >= 2)
       bribe = child.Value(1);
     else if(child.Token(0) == "fine" && child.Size() >= 2)
@@ -323,3 +325,10 @@ double Government::CrewDefence() const
   return crewDefence;
 }
 
+
+
+
+int Government::GetFuelPrice() const
+{
+  return fuelPrice;
+}

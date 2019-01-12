@@ -2209,16 +2209,22 @@ bool Ship::IsDestroyed() const
 
 
 // Recharge and repair this ship (e.g. because it has landed).
-void Ship::Recharge(bool atSpaceport)
+int Ship::Recharge(bool atSpaceport, bool refillCrew)
 {
+  int fuelRecharge = 0;
   if(IsDestroyed())
-    return;
+    return fuelRecharge;
   
   if(atSpaceport)
   {
     crew = min<int>(max(crew, RequiredCrew()), attributes.Get("bunks"));
+    // Calculates the amount of fuel that was recharged.
+    fuelRecharge = fuel;
     fuel = attributes.Get("fuel capacity");
-  }
+    fuelRecharge = fuel-fuelRecharge;
+  } // During landing the crew is refilled, but not the fuel.
+  else if(refillCrew)
+    crew = min<int>(max(crew, RequiredCrew()), attributes.Get("bunks"));
   pilotError = 0;
   pilotOkay = 0;
   
@@ -2233,6 +2239,7 @@ void Ship::Recharge(bool atSpaceport)
   ionization = 0.;
   disruption = 0.;
   slowness = 0.;
+  return fuelRecharge;
 }
 
 
