@@ -809,6 +809,11 @@ void MapPanel::DrawTravelPlan()
   const Colour &withinFleetFuelRangeColour = *colours.Get("map travel ok fleet");
   const Colour &wormholeColour = *colours.Get("map used wormhole");
   
+  // Updating the cargo holds is needed to draw the correct path based
+  // on the mass of each ship if the player would depart now.
+  if(player.GetStellarObject())
+    player.LoadCargo();
+  
   // At each point in the path, keep track of how many ships in the
   // fleet are able to make it this far.
   const Ship *flagship = player.Flagship();
@@ -881,6 +886,10 @@ void MapPanel::DrawTravelPlan()
     
     previous = next;
   }
+  
+  // Remove all cargo if it was added above so the player can freely change the cargo.
+  if(player.GetStellarObject())
+    player.UnLoadCargo();
 }
 
 

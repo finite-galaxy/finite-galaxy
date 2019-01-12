@@ -1078,9 +1078,6 @@ bool PlayerInfo::TakeOff(UI *ui)
   // Special persons who appeared last time you left the planet, can appear again.
   GameData::ResetPersons();
   
-  // Store the total cargo counts in case we need to adjust cost bases below.
-  map<string, int> originalTotals = cargo.Commodities();
-  
   // Move the flagship to the start of your list of ships. It does not make
   // sense that the flagship would change if you are reunited with a different
   // ship that was higher up the list.
@@ -1106,7 +1103,9 @@ bool PlayerInfo::TakeOff(UI *ui)
       ++it;
   }
   
-  // Recharge any ships that can be recharged, and load available cargo.
+  LoadCargo();
+  
+  // Recharge any ships that can be recharged, and determines the free bunk space.
   bool hasSpaceport = planet->HasSpaceport() && planet->CanUseServices();
   for(const shared_ptr<Ship> &ship : ships)
     if(!ship->IsParked() && !ship->IsDisabled())
@@ -1120,22 +1119,19 @@ bool PlayerInfo::TakeOff(UI *ui)
         ship->Recharge(hasSpaceport);
       
       if(ship != flagship)
-      {
         ship->Cargo().SetBunks(ship->Attributes().Get("bunks") - ship->RequiredCrew());
-        cargo.TransferAll(ship->Cargo());
-      }
       else
       {
-        // Your flagship takes first priority for passengers but last for cargo.
+        // Your flagship takes first priority for passengers.
         desiredCrew = ship->Crew();
         ship->Cargo().SetBunks(ship->Attributes().Get("bunks") - desiredCrew);
         for(const auto &it : cargo.PassengerList())
           cargo.TransferPassengers(it.first, it.second, ship->Cargo());
       }
     }
-  // Load up your flagship last, so that it will have space free for any
-  // plunder that you happen to acquire.
-  cargo.TransferAll(flagship->Cargo());
+  
+  // Store the total cargo counts in case we need to adjust cost bases below.
+  map<string, int> originalTotals = cargo.Commodities();
 
   if(cargo.Passengers())
   {
@@ -1316,6 +1312,29 @@ bool PlayerInfo::TakeOff(UI *ui)
   }
   
   return true;
+}
+
+
+
+void PlayerInfo::LoadCargo()
+{
+  // Load available cargo.
+  for(const shared_ptr<Ship> &ship : ships)
+    if(!ship->IsParked() && !ship->IsDisabled() && ship != flagship)
+        cargo.TransferAll(ship->Cargo());
+  // Load up your flagship last, so that it will have space free for any
+  // plunder that you happen to acquire.
+  cargo.TransferAll(flagship->Cargo());
+}
+
+
+
+void PlayerInfo::UnLoadCargo()
+{
+  // Unloads all cargo.
+  for(const shared_ptr<Ship> &ship : ships)
+    if(!ship->IsDisabled() && ship->GetSystem() == system)
+      ship->Cargo().TransferAll(cargo);
 }
 
 

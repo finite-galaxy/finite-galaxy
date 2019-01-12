@@ -130,6 +130,9 @@ public:
   void Land(UI *ui);
   // Load the cargo back into your ships. This may require selling excess.
   bool TakeOff(UI *ui);
+  // Loads or unloads cargo while landed to simulate the mas after takeoff.
+  void LoadCargo();
+  void UnLoadCargo();
   
   // Get the player's logbook.
   const std::multimap<Date, std::string> &Logbook() const;
