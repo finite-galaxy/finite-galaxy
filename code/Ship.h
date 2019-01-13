@@ -19,6 +19,7 @@
 #include <string>
 #include <vector>
 
+class Account;
 class DataNode;
 class DataWriter;
 class Effect;
@@ -362,6 +363,11 @@ public:
   void SetParent(const std::shared_ptr<Ship> &ship);
   std::shared_ptr<Ship> GetParent() const;
   const std::vector<std::weak_ptr<Ship>> &GetEscorts() const;
+
+
+public:
+  // Stores a pointer to the players account to be able to modify it.
+  static Account *player;
   
   
 private:

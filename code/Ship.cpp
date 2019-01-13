@@ -2,6 +2,7 @@
 
 #include "Ship.h"
 
+#include "Account.h"
 #include "Audio.h"
 #include "DataNode.h"
 #include "DataWriter.h"
@@ -2258,6 +2259,15 @@ double Ship::TransferFuel(double amount, Ship *to)
   {
     amount = min(to->attributes.Get("fuel capacity") - to->fuel, amount);
     to->fuel += amount;
+    if(to->GetGovernment()->IsPlayer() && player)
+    {
+      // The price for refueling in space is twice as high as usual.
+      int price = amount*government->GetFuelPrice()/50;
+      ostringstream out;
+      out << "You paid " << price << " credits to buy " << amount << " units of fuel.";
+      Messages::Add(out.str());
+      player->AddCredits(price);
+    }
   }
   fuel -= amount;
   return amount;
@@ -3216,3 +3226,7 @@ void Ship::CreateSparks(vector<Visual> &visuals, const string &name, double amou
       visuals.emplace_back(*effect, angle.Rotate(point) + position, velocity, angle);
   }
 }
+
+
+
+Account *Ship::player = nullptr;

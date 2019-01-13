@@ -86,6 +86,7 @@ void PlayerInfo::New()
   SetSystem(start.GetSystem());
   SetPlanet(start.GetPlanet());
   accounts = start.GetAccounts();
+  Ship::player = &accounts;
   start.GetConditions().Apply(conditions);
   UpdateAutoConditions();
   
@@ -290,6 +291,8 @@ void PlayerInfo::Load(const string &path)
   
   // Modify the game data with any changes that were loaded from this file.
   ApplyChanges();
+  
+  Ship::player = &accounts;
 }
 
 
