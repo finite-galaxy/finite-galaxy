@@ -96,7 +96,7 @@ public:
   double CrewAttack() const;
   double CrewDefence() const;
   
-  // Returns the prize for 100 tons of fuel,
+  // Returns the prize for 100 units of fuel,
   int GetFuelPrice() const;
   
   
