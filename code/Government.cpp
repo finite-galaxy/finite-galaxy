@@ -328,7 +328,7 @@ double Government::CrewDefence() const
 
 
 
-int Government::GetFuelPrice() const
+double Government::GetFuelPrice() const
 {
   return fuelPrice;
 }

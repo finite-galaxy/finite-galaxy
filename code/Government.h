@@ -96,8 +96,8 @@ public:
   double CrewAttack() const;
   double CrewDefence() const;
   
-  // Returns the prize for 100 units of fuel,
-  int GetFuelPrice() const;
+  // Returns the prize for 1 unit of fuel,
+  double GetFuelPrice() const;
   
   
 private:
@@ -105,7 +105,7 @@ private:
   std::string name;
   int swizzle = 0;
   Colour colour;
-  int fuelPrice = 0;
+  double fuelPrice = 0;
   
   std::vector<double> attitudeToward;
   double initialPlayerReputation = 0.;

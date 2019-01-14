@@ -2260,7 +2260,7 @@ double Ship::TransferFuel(double amount, Ship *to)
     if(!to->IsDisabled() && to->GetGovernment()->IsPlayer() && player)
     {
       // The price for refueling in space is twice as high as usual.
-      int price = amount*government->GetFuelPrice()/50;
+      int price = amount*government->GetFuelPrice()*2;
       ostringstream out;
       out << "You paid " << price << " credits to buy " << amount << " units of fuel.";
       Messages::Add(out.str());

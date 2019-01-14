@@ -1057,7 +1057,7 @@ void PlayerInfo::Land(UI *ui)
   // Pays the fuel and messages the price that was paid.
   if(rechargedFuel)
   {
-    int price = rechargedFuel*planet->GetGovernment()->GetFuelPrice()/100;
+    int price = rechargedFuel*planet->GetGovernment()->GetFuelPrice();
     if(price)
     {
       ostringstream out;
