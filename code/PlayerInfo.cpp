@@ -1126,9 +1126,7 @@ bool PlayerInfo::TakeOff(UI *ui)
   
   LoadCargo();
   
-  int rechargedFuel = 0;
   // Recharge any ships that can be recharged, and determines the free bunk space.
-  bool hasSpaceport = planet->HasSpaceport() && planet->CanUseServices();
   for(const shared_ptr<Ship> &ship : ships)
     if(!ship->IsParked() && !ship->IsDisabled())
     {
@@ -1138,7 +1136,7 @@ bool PlayerInfo::TakeOff(UI *ui)
         continue;
       }
       else
-        rechargedFuel += ship->Recharge(hasSpaceport);
+        ship->Recharge(false);
       
       if(ship != flagship)
         ship->Cargo().SetBunks(ship->Attributes().Get("bunks") - ship->RequiredCrew());

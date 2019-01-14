@@ -2210,7 +2210,7 @@ bool Ship::IsDestroyed() const
 
 
 // Recharge and repair this ship (e.g. because it has landed).
-int Ship::Recharge(bool atSpaceport, bool refillCrew)
+int Ship::Recharge(bool atSpaceport)
 {
   int fuelRecharge = 0;
   if(IsDestroyed())
@@ -2223,9 +2223,7 @@ int Ship::Recharge(bool atSpaceport, bool refillCrew)
     fuelRecharge = fuel;
     fuel = attributes.Get("fuel capacity");
     fuelRecharge = fuel-fuelRecharge;
-  } // During landing the crew is refilled, but not the fuel.
-  else if(refillCrew)
-    crew = min<int>(max(crew, RequiredCrew()), attributes.Get("bunks"));
+  }
   pilotError = 0;
   pilotOkay = 0;
   
@@ -2259,7 +2257,7 @@ double Ship::TransferFuel(double amount, Ship *to)
   {
     amount = min(to->attributes.Get("fuel capacity") - to->fuel, amount);
     to->fuel += amount;
-    if(to->GetGovernment()->IsPlayer() && player)
+    if(!to->IsDisabled() && to->GetGovernment()->IsPlayer() && player)
     {
       // The price for refueling in space is twice as high as usual.
       int price = amount*government->GetFuelPrice()/50;
