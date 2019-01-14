@@ -1003,6 +1003,7 @@ void PlayerInfo::Land(UI *ui)
   // Ships that are landed with you on the planet should fully recharge
   // and pool all their cargo together. Those in remote systems restore
   // what they can without landing. Fuel is refilled during departure.
+  int rechargedFuel = 0;
   bool hasSpaceport = planet->HasSpaceport() && planet->CanUseServices();
   UpdateCargoCapacities();
   for(const shared_ptr<Ship> &ship : ships)
@@ -1010,7 +1011,7 @@ void PlayerInfo::Land(UI *ui)
     {
       if(ship->GetSystem() == system)
       {
-        ship->Recharge(false, hasSpaceport);
+        rechargedFuel += ship->Recharge(hasSpaceport);
         ship->Cargo().TransferAll(cargo);
         ship->SetPlanet(planet);
       }
@@ -1052,6 +1053,19 @@ void PlayerInfo::Land(UI *ui)
   
   freshlyLoaded = false;
   flagship.reset();
+  
+  // Pays the fuel and messages the price that was paid.
+  if(rechargedFuel)
+  {
+    int price = rechargedFuel*planet->GetGovernment()->GetFuelPrice()/100;
+    if(price)
+    {
+      ostringstream out;
+      out << "You paid " << price << " credits to buy " << rechargedFuel << " units of fuel.";
+      Messages::Add(out.str());
+      accounts.AddCredits(-price);
+    }
+  }
 }
 
 
@@ -1314,19 +1328,6 @@ bool PlayerInfo::TakeOff(UI *ui)
     else
       out << ".";
     Messages::Add(out.str());
-  }
-  
-  // Pays the fuel and messages the price that was paid.
-  if(rechargedFuel)
-  {
-    int price = rechargedFuel*flagship->GetPlanet()->GetGovernment()->GetFuelPrice()/100;
-    if(price)
-    {
-      ostringstream out;
-      out << "You paid " << price << " credits to buy " << rechargedFuel << " units of fuel.";
-      Messages::Add(out.str());
-      accounts.AddCredits(-price);
-    }
   }
   
   return true;
