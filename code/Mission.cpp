@@ -1006,7 +1006,7 @@ Mission Mission::Instantiate(const PlayerInfo &player, const shared_ptr<Ship> &b
   
   // Estimate how far the player will have to travel to visit all the waypoints
   // and stopovers and then to land on the destination planet. Rather than a
-  // full traveling salesman path, just calculate a greedy approximation.
+  // full travelling salesman path, just calculate a greedy approximation.
   const System *path = source;
   list<const System *> destinations;
   for(const System *system : result.waypoints)

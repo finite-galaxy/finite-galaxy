@@ -4,20 +4,10 @@ It is derived from *Endless Sky*, a game created by Michael Zahniser, which is l
 
 Both games can be installed alongside and played independently of each other. Although derived from the same source code and basically using the same content, Finite Galaxy and Endless Sky have diverged and are no longer compatible. If you transpose a save game from one to the other, you are likely to encounter hundreds of errors.
 
-------
 
-Why did I start this project? Why not contribute to Endless Sky instead?
-* Although I like Endless Sky as a whole, it also contains things I don't like. Conversation scenes, news and portraits, tribute, and plundering of installed outfits are just a few examples.
-* The pace of development seemed to slow down: there were only nine commits in September 2018 and zero in October. (I started Finite Galaxy on October 18.)
-* Numerous pull requests over there have been open for over a year, reviews are haphazard, there are many lengthy discussions on unimportant things, while useful proposals were often ignored.
-* The direction and vision is not always clear.
-* Support for plug-ins is rather limited.
-
-In short, I consider it a better use of a time to work on a project where I can incorporate most of my ideas, where I can remove things I dislike, and where I can contribute whenever I like, without having to wait weeks or months for a review or wasting my time on something that won't be included. 
-
-Finite Galaxy is very much a work in progress. Nevertheless, it can be compiled and played without errors. Feel free to try it out yourself!
 
 ## Table of contents
+* [Introduction](https://github.com/finite-galaxy/finite-galaxy#introduction)
 * [Installation](https://github.com/finite-galaxy/finite-galaxy#installation)
   * [GNU/Linux](https://github.com/finite-galaxy/finite-galaxy#gnu-linux)
   * [Microsoft Windows](https://github.com/finite-galaxy/finite-galaxy#microsoft-windows)
@@ -30,6 +20,21 @@ Finite Galaxy is very much a work in progress. Nevertheless, it can be compiled 
 * [Contributing](https://github.com/finite-galaxy/finite-galaxy#contributing)
   * [Posting issues](https://github.com/finite-galaxy/finite-galaxy#posting-issues)
   * [Posting pull requests](https://github.com/finite-galaxy/finite-galaxy#posting-pull-requests)
+
+
+
+## Introduction
+
+Why did I start this project? Why not contribute to Endless Sky instead?
+* Although I like Endless Sky as a whole, it also contains things I don't like. Conversation scenes, news and portraits, tribute, and plundering of installed outfits are just a few examples.
+* The pace of development seemed to slow down: there were only nine commits in September 2018 and zero in October. (I started Finite Galaxy on October 18.)
+* Numerous pull requests over there have been open for over a year, reviews are haphazard, there are many lengthy discussions on unimportant things, while useful proposals were often ignored.
+* The direction and vision is not always clear.
+* Support for plug-ins is rather limited.
+
+In short, I consider it a better use of a time to work on a project where I can incorporate most of my ideas, where I can remove things I dislike, and where I can contribute whenever I like, without having to wait weeks or months for a review or wasting my time on something that won't be included. 
+
+Finite Galaxy is very much a work in progress. Nevertheless, it can be compiled and played without errors. Feel free to try it out yourself!
 
 
 
@@ -71,9 +76,12 @@ For more help, consult the man page (the finite-galaxy.6 file).
 
 [(return to top)](https://github.com/finite-galaxy/finite-galaxy#finite-galaxy)
 
+
 ### Microsoft Windows
 
-The Windows build has been tested on 64-bit Windows 7, only. You will need the Code::Blocks IDE and g++ 4.8 or higher. Code::Blocks is available here:
+*If you have trouble compiling or encounter errors, please post* [here](https://github.com/finite-galaxy/finite-galaxy/issues/17).
+
+You will need the Code::Blocks IDE and g++ 4.8 or higher. Code::Blocks is available here:
 
   http://sourceforge.net/projects/codeblocks/files/Binaries/13.12/Windows/codeblocks-13.12-setup.exe/download
 
@@ -99,7 +107,10 @@ You will also need libmingw32.a and libopengl32.a. Those should be included in t
 
 [(return to top)](https://github.com/finite-galaxy/finite-galaxy#finite-galaxy)
 
+
 ### Apple Mac OS X
+
+*If you have trouble compiling or encounter errors, please post* [here](https://github.com/finite-galaxy/finite-galaxy/issues/18).
 
 To build Finite Galaxy, you will first need to download Xcode from the App Store.
 
@@ -132,32 +143,6 @@ sudo install_name_tool -id "@rpath/libSDL2-2.0.0.dylib" /usr/local/lib/libSDL2-2
 
 
 ## Changes
-<!--
-   ! " # $ % & ' ( )
- * + , − . / 0 1 2 3
- 4 5 6 7 8 9 : ; < =
- > ? @ A B C D E F G
- H I J K L M N O P Q
- R S T U V W X Y Z [
- \ ] ^ _ ` a b c d e
- f g h i j k l m n o
- p q r s t u v w x y
- z { | } ~ ⌷ · ° ′ ″
- „ ‚ “ ‘ ” ’ « ‹ » ›
--->
-<!--
-   0,   28,   56,   84,  112,  140,  168,  196,  224,  252, 
- 280,  308,  336,  364,  392,  420,  448,  476,  504,  532, 
- 560,  588,  616,  644,  672,  700,  728,  756,  784,  812, 
- 840,  868,  896,  924,  952,  980, 1008, 1036, 1064, 1092, 
-1120, 1148, 1176, 1204, 1232, 1260, 1288, 1316, 1344, 1372, 
-1400, 1428, 1456, 1484, 1512, 1540, 1568, 1596, 1624, 1652, 
-1680, 1708, 1736, 1764, 1792, 1820, 1848, 1876, 1904, 1932, 
-1960, 1988, 2016, 2044, 2072, 2100, 2128, 2156, 2184, 2212, 
-2240, 2268, 2296, 2324, 2352, 2380, 2408, 2436, 2464, 2492, 
-2520, 2548, 2576, 2604, 2632, 2660, 2688, 2716, 2744, 2772, 
-2800, 2828, 2856, 2884, 2912, 2940, 2968, 2996, 3024, 3052
--->
 
 ### Major changes
 * Hyperjump fuel is based on your ship's effective mass (including cargo and carried ships)
@@ -175,10 +160,12 @@ sudo install_name_tool -id "@rpath/libSDL2-2.0.0.dylib" /usr/local/lib/libSDL2-2
 
 [(return to top)](https://github.com/finite-galaxy/finite-galaxy#finite-galaxy)
 
+
 ### Minor changes
 See `changelog.txt`, `ship_overview.txt`, and https://github.com/finite-galaxy/finite-galaxy/commits/master
 
 [(return to top)](https://github.com/finite-galaxy/finite-galaxy#finite-galaxy)
+
 
 ### Not yet implemented ideas
 * Add support for Unicode and different writing directions
@@ -199,6 +186,7 @@ See `changelog.txt`, `ship_overview.txt`, and https://github.com/finite-galaxy/f
 * Increase jump radius if you have multiple jump drives installed, perhaps 100*(jump drive)^0.5
 * Make ship explosion ‘weapon’ proportional to mass (base, empty, or total mass)
 * Introduce a Navy Battleship with 250 engine space, 500 weapon space, six guns, six turrets, and twelve fighter bays.
+* https://github.com/endless-sky/endless-sky/wiki/DevelopmentRoadmap
 
 [(return to top)](https://github.com/finite-galaxy/finite-galaxy#finite-galaxy)
 
@@ -648,6 +636,7 @@ If requesting a new feature, first ask yourself: will this make the game more fu
 If you believe your issue has been resolved, you can close the issue yourself.
 
 [(return to top)](https://github.com/finite-galaxy/finite-galaxy#finite-galaxy)
+
 
 ### Posting pull requests
 

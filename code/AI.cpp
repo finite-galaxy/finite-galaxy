@@ -115,7 +115,7 @@ namespace {
   }
   
   // Determine if the ship with the given travel plan should refuel in
-  // its current system, or if it should keep traveling.
+  // its current system, or if it should keep travelling.
   bool ShouldRefuel(const Ship &ship, const DistanceMap &route, double fuelCapacity = 0.)
   {
     if(!fuelCapacity)
@@ -125,7 +125,7 @@ namespace {
     const bool systemHasFuel = from->HasFuelFor(ship) && fuelCapacity;
     // If there is no fuel capacity in this ship, no fuel in this
     // system, if it is fully fueled, or its drive doesn't require
-    // fuel, then it should not refuel before traveling.
+    // fuel, then it should not refuel before travelling.
     if(!systemHasFuel || ship.Fuel() == 1. || !ship.JumpFuel())
       return false;
     
@@ -156,7 +156,7 @@ namespace {
     else
     {
       // If no direct jump route, or the target system has no
-      // fuel, perform a more elaborate refueling check.
+      // fuel, perform a more elaborate refuelling check.
       return ShouldRefuel(ship, DistanceMap(ship, to), fuelCapacity);
     }
   }
@@ -765,7 +765,7 @@ void AI::Step(const PlayerInfo &player)
     // escort behaviour when in a different system from you. Otherwise,
     // the behaviour depends on what the parent is doing, whether there
     // are hostile targets nearby, and whether the escort has any
-    // immediate needs (like refueling).
+    // immediate needs (like refuelling).
     else if(!parent)
       MoveIndependent(*it, command);
     else if(parent->GetSystem() != it->GetSystem())
@@ -1474,7 +1474,7 @@ void AI::MoveEscort(Ship &ship, Command &command) const
 
 
 
-// Prefer your parent's target planet for refueling, but if it and your current
+// Prefer your parent's target planet for refuelling, but if it and your current
 // target planet can't fuel you, try to find one that can.
 void AI::Refuel(Ship &ship, Command &command)
 {
@@ -2161,7 +2161,7 @@ void AI::DoSurveillance(Ship &ship, Command &command, shared_ptr<Ship> &target) 
         if(!object.IsStar() && !object.IsStation())
           targetPlanets.push_back(&object);
     
-    // If this ship can jump away, consider traveling to a nearby system.
+    // If this ship can jump away, consider travelling to a nearby system.
     vector<const System *> targetSystems;
     if(ship.JumpsRemaining())
     {

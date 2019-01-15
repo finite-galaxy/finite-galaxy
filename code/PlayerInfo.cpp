@@ -1366,7 +1366,6 @@ void PlayerInfo::UnloadFighters()
 
 
 
-
 // Get the player's logbook.
 const multimap<Date, string> &PlayerInfo::Logbook() const
 {
@@ -2694,7 +2693,7 @@ void PlayerInfo::Fine(UI *ui)
           + LastName()
           + ", we detect highly illegal material on your ship.\""
           "\n\tYou are sentenced to lifetime imprisonment on a penal colony."
-          " Your days of traveling the stars have come to an end.";
+          " Your days of travelling the stars have come to an end.";
         ui->Push(new Dialogue(message));
       }
       // All ships belonging to the player should be removed.

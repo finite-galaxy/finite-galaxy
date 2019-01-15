@@ -1195,7 +1195,7 @@ void Ship::Move(vector<Visual> &visuals, list<shared_ptr<Flotsam>> &flotsam)
       position = (target - distance * angle.Unit());
       position += hyperspaceOffset;
       // Make sure your velocity is in exactly the direction you are
-      // traveling in, so that when you decelerate there will not be a
+      // travelling in, so that when you decelerate there will not be a
       // sudden shift in direction at the end.
       velocity = velocity.Length() * angle.Unit();
     }
@@ -2112,7 +2112,7 @@ bool Ship::IsReadyToJump(bool waitingIsReady) const
   bool isJump = !attributes.Get("hyperdrive") || !currentSystem->Links().count(targetSystem);
   double scramThreshold = attributes.Get("scram drive");
   
-  // The ship can only enter hyperspace if it is traveling slowly enough
+  // The ship can only enter hyperspace if it is travelling slowly enough
   // and pointed in the right direction.
   if(!isJump && scramThreshold)
   {

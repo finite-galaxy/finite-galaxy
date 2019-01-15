@@ -497,7 +497,7 @@ double System::AsteroidBelt() const
 
 
 
-// Get the rate of solar collection and ramscoop refueling.
+// Get the rate of solar collection and ramscoop refuelling.
 double System::SolarPower() const
 {
   return solarPower;
