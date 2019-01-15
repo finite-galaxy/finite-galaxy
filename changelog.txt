@@ -34,6 +34,7 @@
   * more zoom out levels (@Nescio0)
   * more map zoom levels
   * more swizzle options (4^3=64 options)
+  * escorts refuel 5× as fast when landing on planets
 * data:
   * replaced tabs with two spaces
   * reorganized files
@@ -407,11 +408,10 @@
   * thumbnail: —
   * ui: —
 * sounds: —
-
+* added several scripts and configuration files (@tehhowch): test_parse.ps1, test_parse.sh, .appveyor.yml, .editorconfig, .travis.yml, .winmake
 
 
 ## Commits incorporated from Endless Sky since 18 October 2018
-  * add configuration files for CI tools (@tehhowch)
   * fix XCode libraries (@tiennou)
   * enable save-aware data parsing without modifying the save (@tehhowch)
   * remove compiler warnings issued by clang-902.0.39.2 (@tehhowch)
@@ -428,14 +428,13 @@
   * handle "outfit <outfit> 0" while loading (@tehhowch)
   * remove unneeded check (@tehhowch)
   * print warnings for ships with negative space (@tehhowch)
-  * update CI files and label .gitignore (@tehhowch)
+  * fix erroneous warning about unrecognized attribute (@tehhowch)
   * made fast-forward only apply when the player is in flight, not in any of the UI panels (@endless-sky)
   * avoid attempting to scan a hostile target (@tehhowch)
   * surveillance personality also do not scan hostiles (@tehhowch)
   * improve UX for PlayerInfo / ShipInfo panels (@tehhowch)
   * fix bug where music mp3s could not have extension ".MP3" (@tehhowch)
   * fix bug where GameEvents could not alter news (@tehhowch)
-  * update Windows makefile to use dependencies (@tehhowch)
   * carried ships unload collected cargo into carrier's cargo bay (@tehhowch)
   * fighters return to the carrier for ammo and fuel (@zwparchman)
   * split reboarding logic to own method (@tehhowch)

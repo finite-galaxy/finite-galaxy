@@ -36,6 +36,8 @@ In short, I consider it a better use of a time to work on a project where I can 
 
 Finite Galaxy is very much a work in progress. Nevertheless, it can be compiled and played without errors. Feel free to try it out yourself!
 
+[(return to top)](https://github.com/finite-galaxy/finite-galaxy#finite-galaxy)
+
 
 
 ## Installation
