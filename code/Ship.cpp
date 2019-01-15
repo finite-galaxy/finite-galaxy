@@ -1289,7 +1289,7 @@ void Ship::Move(vector<Visual> &visuals, list<shared_ptr<Flotsam>> &flotsam)
       landingPlanet = nullptr;
     }
     else
-      fuel = min(fuel + 1., attributes.Get("fuel capacity"));
+      fuel = min(fuel + 5., attributes.Get("fuel capacity"));
     
     // Move the ship at the velocity it had when it began landing, but
     // scaled based on how small it is now.

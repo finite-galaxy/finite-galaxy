@@ -124,7 +124,7 @@ namespace {
     const System *from = ship.GetSystem();
     const bool systemHasFuel = from->HasFuelFor(ship) && fuelCapacity;
     // If there is no fuel capacity in this ship, no fuel in this
-    // system, if it is fully fueled, or its drive doesn't require
+    // system, if it is fully fuelled, or its drive doesn't require
     // fuel, then it should not refuel before travelling.
     if(!systemHasFuel || ship.Fuel() == 1. || !ship.JumpFuel())
       return false;
@@ -642,14 +642,14 @@ void AI::Step(const PlayerInfo &player)
       continue;
     }
     
-    // Ships that harvest flotsam prioritize it over stopping to be refueled.
+    // Ships that harvest flotsam prioritize it over stopping to be refuelled.
     if(isPresent && personality.Harvests() && DoHarvesting(*it, command))
     {
       it->SetCommands(command);
       continue;
     }
     
-    // Attacking a hostile ship and stopping to be refueled are more important than mining.
+    // Attacking a hostile ship and stopping to be refuelled are more important than mining.
     if(isPresent && personality.IsMining() && !target && !isStranded && maxMinerCount)
     {
       // Miners with free cargo space and available mining time should mine. Mission NPCs
@@ -748,7 +748,7 @@ void AI::Step(const PlayerInfo &player)
     // Construct movement / navigation commands as appropriate for the ship.
     if(mustRecall || isStranded)
     {
-      // Stopping to let fighters board or to be refueled takes priority
+      // Stopping to let fighters board or to be refuelled takes priority
       // even over following orders from the player.
       if(it->Velocity().Length() > .001 || !target)
         Stop(*it, command);
