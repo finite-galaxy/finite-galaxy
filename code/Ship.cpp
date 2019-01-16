@@ -6,6 +6,7 @@
 #include "DataNode.h"
 #include "DataWriter.h"
 #include "Effect.h"
+#include "Files.h"
 #include "Flotsam.h"
 #include "Format.h"
 #include "GameData.h"
@@ -27,7 +28,7 @@
 
 #include <algorithm>
 #include <cmath>
-#include <iostream>
+#include <sstream>
 
 using namespace std;
 
@@ -417,20 +418,22 @@ void Ship::FinishLoading(bool isNewInstance)
       armament.Add(it.first, -excess);
       it.second -= excess;
       
-      cerr << modelName;
+      string warning = modelName;
       if(!name.empty())
-        cerr << " \"" << name << "\"";
-      cerr << ": outfit \"" << it.first->Name() << "\" equipped but not included in outfit list." << endl;
+				warning += " \"" + name + "\"";
+			warning += ": outfit \"" + it.first->Name() + "\" equipped but not included in outfit list.";
+			Files::LogError(warning);
     }
     else if(!it.first->IsWeapon())
     {
       // This ship was specified with a non-weapon outfit in a
       // hardpoint. Hardpoint::Install removes it, but issue a
       // warning so the definition can be fixed.
-      cerr << modelName;
+      string warning = modelName;
       if(!name.empty())
-        cerr << " \"" << name << "\"";
-      cerr << ": outfit \"" << it.first->Name() << "\" is not a weapon, but is installed as one." << endl;
+				warning += " \"" + name + "\"";
+			warning += ": outfit \"" + it.first->Name() + "\" is not a weapon, but is installed as one.";
+			Files::LogError(warning);
     }
   }
   
@@ -450,7 +453,7 @@ void Ship::FinishLoading(bool isNewInstance)
   {
     if(it.first->Name().empty())
     {
-      cerr << "Unrecognized outfit in " << modelName << " \"" << name << "\"" << endl;
+ 			Files::LogError("Unrecognized outfit in " + modelName + " \"" + name + "\"");
       continue;
     }
     attributes.Add(*it.first, it.second);
@@ -476,15 +479,14 @@ void Ship::FinishLoading(bool isNewInstance)
     const Outfit *outfit = hardpoint.GetOutfit();
     if(outfit && (hardpoint.IsTurret() != (outfit->Get("turret mounts") != 0.)))
     {
-      bool isTurret = hardpoint.IsTurret();
-      cerr << modelName;
+      string warning = modelName;
       if(!name.empty())
-        cerr << " \"" << name << "\"";
-      cerr << ": outfit \"" << outfit->Name() << "\" installed as a ";
-      cerr << (isTurret ? "turret but is a gun." : "gun but is a turret.");
-      cerr << "\n\t" << (isTurret ? "turret " : "gun ");
-      cerr << 2. * hardpoint.GetPoint().X() << " " << 2. * hardpoint.GetPoint().Y();
-      cerr << " \"" << outfit->Name() << "\"" << endl;
+				warning += " \"" + name + "\"";
+			warning += ": outfit \"" + outfit->Name() + "\" installed as a ";
+			warning += (hardpoint.IsTurret() ? "turret but is a gun.\n\tturret" : "gun but is a turret.\n\tgun");
+			warning += to_string(2. * hardpoint.GetPoint().X()) + " " + to_string(2. * hardpoint.GetPoint().Y());
+			warning += " \"" + outfit->Name() + "\"";
+			Files::LogError(warning);
     }
   }
   cargo.SetSize(attributes.Get("cargo space"));
@@ -523,21 +525,11 @@ void Ship::FinishLoading(bool isNewInstance)
   {
     // This check is mostly useful for variants and stock ships, which have
     // no names. Instead, print the outfits to facilitate identification.
-    cerr << (!name.empty() ? "Ship \"" + name + "\" " : "") << "(" + modelName + "):\n"
-        << warning << "outfits:" << endl;
+		string message = (!name.empty() ? "Ship \"" + name + "\" " : "") + "(" + modelName + "):\n";
+		ostringstream outfitNames("outfits:\n");
     for(const auto &it : outfits)
-      cerr << '\t' << it.second << " " + it.first->Name() << endl;
-/*
-    cerr << "attributes:" << endl;
-    size_t maxAttr = 0;
-    for(const auto &it : attributes.Attributes())
-      maxAttr = max<size_t>(maxAttr, string(it.first).size());
-    for(const auto &it : attributes.Attributes())
-    {
-      auto attr = string(it.first);
-      cerr << '\t' << attr.append(maxAttr - attr.size(), ' ')  << ": " << it.second << endl;
-    }
-*/
+			outfitNames << '\t' << it.second << " " + it.first->Name() << endl;
+		Files::LogError(message + warning + outfitNames.str());
   }
   
   // Ships read from a save file may have non-default shields or hull.
