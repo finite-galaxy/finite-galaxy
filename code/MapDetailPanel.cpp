@@ -361,7 +361,7 @@ void MapDetailPanel::DrawKey()
   {
     // Each system is coloured in accordance with the player's reputation
     // with its owning government. The specific colours associated with a
-    // given reputation (0.1, 100, and 10000) are shown for each sign.
+    // given reputation (0.1, 100, and 10'000) are shown for each sign.
     RingShader::Draw(pos, OUTER, INNER, ReputationColour(1e-1, true, false));
     RingShader::Draw(pos + Point(12., 0.), OUTER, INNER, ReputationColour(1e2, true, false));
     RingShader::Draw(pos + Point(24., 0.), OUTER, INNER, ReputationColour(1e4, true, false));

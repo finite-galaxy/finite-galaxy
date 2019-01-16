@@ -286,7 +286,7 @@ void Command::SetFire(int index)
 // Check if any weapons are firing.
 bool Command::IsFiring() const
 {
-  return (state & 0xFFFFFFFF00000000ull);
+  return (state & 0xFFFF'FFFF'0000'0000ull);
 }
 
 

@@ -1660,8 +1660,8 @@ void PlayerInfo::HandleEvent(const ShipEvent &event, UI *ui)
     if((event.Type() & ShipEvent::DISABLE) && event.Target())
     {
       int &rating = conditions["combat rating"];
-      static const int64_t maxRating = 2000000000;
-      rating = min(maxRating, rating + (event.Target()->Cost() + 250000) / 500000);
+      static const int64_t maxRating = 2000'000'000;
+      rating = min(maxRating, rating + (event.Target()->Cost() + 250'000) / 500'000);
     }
   
   for(Mission &mission : missions)
@@ -2279,7 +2279,7 @@ void PlayerInfo::ApplyChanges()
 void PlayerInfo::UpdateAutoConditions(bool isBoarding)
 {
   // Set a condition for the player's net worth. Limit it to the range of a 32-bit int.
-  static const int64_t limit = 2000000000;
+  static const int64_t limit = 2000'000'000;
   conditions["net worth"] = min(limit, max(-limit, accounts.NetWorth()));
   conditions["credits"] = min(limit, accounts.Credits());
   conditions["unpaid mortgages"] = min(limit, accounts.TotalDebt("Mortgage"));

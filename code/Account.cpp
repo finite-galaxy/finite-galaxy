@@ -276,7 +276,7 @@ int64_t Account::Prequalify() const
   // their net worth, to avoid absurd mortgages being offered when the player
   // has just captured some very lucrative ships.
   return max<int64_t>(0, min(
-    NetWorth() / 3 + 500000 - liabilities,
+    NetWorth() / 3 + 500'000 - liabilities,
     Mortgage::Maximum(YearlyRevenue(), creditScore, payments)));
 }
 

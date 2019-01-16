@@ -37,7 +37,7 @@ Flotsam::Flotsam(const Outfit *outfit, int count)
   : outfit(outfit), count(count)
 {
   // The more the outfit costs, the faster this flotsam should disappear.
-  int lifetimeBase = 300000000 / (outfit->Cost() * count + 1000000);
+  int lifetimeBase = 300'000'000 / (outfit->Cost() * count + 1000'000);
   lifetime = Random::Int(lifetimeBase) + lifetimeBase + 60;
 }
 

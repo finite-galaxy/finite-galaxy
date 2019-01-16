@@ -70,7 +70,7 @@ double DataNode::Value(int index) const
     return 0.;
   }
   
-  // Allowed format: "[+-]?[0-9]*[.]?[0-9]*([eE][+-]?[0-9]*)?".
+  // Allowed format: "[±]?[0-9]*[.]?[0-9]*([eE][±]?[0-9]*)?".
   const char *it = tokens[index].c_str();
   if(*it != '-' && *it != '.' && *it != '+' && !(*it >= '0' && *it <= '9'))
   {

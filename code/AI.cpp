@@ -221,7 +221,7 @@ namespace {
     ship.SetTargetStellar(nullptr);
   }
   
-  const double MAX_DISTANCE_FROM_CENTRE = 10000.;
+  const double MAX_DISTANCE_FROM_CENTRE = 10'000.;
   // Constants for the invisible fence timer.
   const int FENCE_DECAY = 4;
   const int FENCE_MAX = 600;
@@ -1998,7 +1998,7 @@ void AI::PickUp(Ship &ship, Command &command, const Body &target)
   // Use the afterburner if it will not cause you to miss your target.
   double squareDistance = p.LengthSquared();
   if(command.Has(Command::FORWARD) && ShouldUseAfterburner(ship))
-    if(dp > max(.9, min(.9999, 1. - squareDistance / 10000000.)))
+    if(dp > max(.9, min(.9999, 1. - squareDistance / 10'000'000.)))
       command |= Command::AFTERBURNER;
 }
 
@@ -2333,7 +2333,7 @@ bool AI::DoCloak(Ship &ship, Command &command)
     }
     
     // Otherwise, always cloak if you are in imminent danger.
-    static const double MAX_RANGE = 10000.;
+    static const double MAX_RANGE = 10'000.;
     double range = MAX_RANGE;
     shared_ptr<const Ship> nearestEnemy;
     for(const auto &other : ships)
@@ -2917,7 +2917,7 @@ double AI::RendezvousTime(const Point &p, const Point &v, double vp)
 
   discriminant = sqrt(discriminant);
 
-  // The solutions are b +- discriminant.
+  // The solutions are b ± discriminant.
   // But it's not a solution if it's negative.
   double r1 = (-b + discriminant) / (2. * a);
   double r2 = (-b - discriminant) / (2. * a);
@@ -3191,7 +3191,7 @@ void AI::MovePlayer(Ship &ship, const PlayerInfo &player)
             double distance = ship.Position().Distance(object.Position());
             const Planet *planet = object.GetPlanet();
             if((!planet->CanLand() || !planet->HasSpaceport()) && !planet->IsWormhole())
-              distance += 10000.;
+              distance += 10'000.;
           
             if(distance < closest)
             {
@@ -3571,7 +3571,7 @@ void AI::IssueOrders(const PlayerInfo &player, const Orders &newOrders, const st
   }
   // If this is a move command, make sure the fleet is bunched together
   // enough that each ship takes up no more than about 30,000 square pixels.
-  double maxSquadOffset = sqrt(10000. * squadCount);
+  double maxSquadOffset = sqrt(10'000. * squadCount);
   
   // Now, go through all the given ships and set their orders to the new
   // orders. But, if it turns out that they already had the given orders,

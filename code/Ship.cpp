@@ -1146,7 +1146,7 @@ void Ship::Move(vector<Visual> &visuals, list<shared_ptr<Flotsam>> &flotsam)
     // Create the particle effects for the jump drive. This may create 100
     // or more particles per ship per turn at the peak of the jump.
     if(isUsingJumpDrive && !forget)
-      CreateSparks(visuals, "jump drive", hyperspaceCount * Width() * Height() * .000006);
+      CreateSparks(visuals, "jump drive", hyperspaceCount * Width() * Height() * .000'006);
     
     if(hyperspaceCount == HYPER_C)
     {

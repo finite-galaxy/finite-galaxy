@@ -14,7 +14,7 @@ namespace {
   // Trace out a pixmap.
   void Trace(const ImageBuffer &image, int frame, vector<Point> *raw)
   {
-    uint32_t on = 0xFF000000;
+    uint32_t on = 0xFF00'0000;
     const uint32_t *begin = image.Pixels() + frame * image.Width() * image.Height();
     
     // Convert the pitch to uint32_ts instead of bytes.

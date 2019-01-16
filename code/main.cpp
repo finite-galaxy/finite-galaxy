@@ -415,7 +415,7 @@ void SetIcon(SDL_Window *window)
   
   // Convert the icon to an SDL surface.
   SDL_Surface *surface = SDL_CreateRGBSurfaceFrom(buffer.Pixels(), buffer.Width(), buffer.Height(),
-    32, 4 * buffer.Width(), 0x00FF0000, 0x0000FF00, 0x000000FF, 0xFF000000);
+    32, 4 * buffer.Width(), 0x00FF'0000, 0x0000'FF00, 0x0000'00FF, 0xFF00'0000);
   if(surface)
   {
     SDL_SetWindowIcon(window, surface);

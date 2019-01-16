@@ -299,7 +299,7 @@ namespace {
       for(uint32_t *end = it + buffer.Width(); it != end; ++it)
       {
         uint64_t value = *it;
-        uint64_t alpha = (value & 0xFF000000) >> 24;
+        uint64_t alpha = (value & 0xFF00'0000) >> 24;
         
         uint64_t red = (((value & 0xFF0000) * alpha) / 255) & 0xFF0000;
         uint64_t green = (((value & 0xFF00) * alpha) / 255) & 0xFF00;

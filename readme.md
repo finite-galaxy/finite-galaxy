@@ -91,7 +91,7 @@ You can install g++ separately through mingw-w64:
 
   http://sourceforge.net/projects/mingw-w64/files/Toolchains%20targetting%20Win64/Personal%20Builds/mingw-builds/4.8.5/threads-posix/seh/
 
-*** Be sure to install the "pthread" version of MinGW. The "win32-thread" one does not come with support for C++11 threading. If you are using 32-bit Windows, install the compiler for "dwarf" exceptions, not "sjlj." ***
+*** Be sure to install the "pthread" version of MinGW. The "win32-thread" one does not come with support for C++14 threading. If you are using 32-bit Windows, install the compiler for "dwarf" exceptions, not "sjlj." ***
 
 If you are on 64-bit Windows, a full set of development libraries are available here:
 
@@ -647,7 +647,9 @@ If you are posting a pull request, please:
 * Do not combine multiple unrelated changes into a single pull.
 * Check the diff and make sure the pull request does not contain unintended changes.
 * If changing the C++ code, follow the [coding standard](http://endless-sky.github.io/styleguide/styleguide.xml).
-* Do not use tabs; use two spaces instead.
+* In C++ code, make numbers with many digits easier to read for humans by inserting `'`
+  * decimal numbers: at intervals of three digits if there are more than four in a row
+  * hexadecimal numbers: at intervals of four digits if there are more than six in a row
 * Use Oxford spelling (the variant of English used by many scientific journals and international organizations such as the United Nations), instead of American, British, Canadian, or other national varieties.
 
 If proposing a major pull request, start by posting an issue and discussing the best way to implement it. Often the first strategy that occurs to you will not be the cleanest or most effective way to implement a new feature.

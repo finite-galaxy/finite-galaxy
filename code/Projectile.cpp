@@ -290,7 +290,7 @@ void Projectile::CheckLock(const Ship &target)
   if(weapon->OpticalTracking())
   {
     double weight = target.Mass() * target.Mass();
-    double probability = weapon->OpticalTracking() * weight / (200000. + weight);
+    double probability = weapon->OpticalTracking() * weight / (200'000. + weight);
     hasLock |= Check(probability, base);
   }
   

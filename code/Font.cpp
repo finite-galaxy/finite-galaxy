@@ -386,8 +386,8 @@ void Font::CalculateAdvances(ImageBuffer &image)
   // Get the format and size of the surface.
   int width = image.Width() / GLYPHS;
   height = image.Height();
-  unsigned mask = 0xFF000000;
-  unsigned half = 0xC0000000;
+  unsigned mask = 0xFF00'0000;
+  unsigned half = 0xC000'0000;
   int pitch = image.Width();
   
   // advance[previous * GLYPHS + next] is the x advance for each glyph pair.
