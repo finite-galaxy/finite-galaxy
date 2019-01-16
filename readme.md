@@ -648,8 +648,9 @@ If you are posting a pull request, please:
 * Check the diff and make sure the pull request does not contain unintended changes.
 * If changing the C++ code, follow the [coding standard](http://endless-sky.github.io/styleguide/styleguide.xml).
 * In C++ code, make numbers with many digits easier to read for humans by inserting `'`
-  * decimal numbers: at intervals of three digits if there are more than four in a row
-  * hexadecimal numbers: at intervals of four digits if there are more than six in a row
+  * (decimal numbers) at intervals of three digits if there are more than four in a row.
+  * (hexadecimal numbers) at intervals of four digits if there are more than six in a row.
+* Do not use tabs; use two spaces instead.
 * Use Oxford spelling (the variant of English used by many scientific journals and international organizations such as the United Nations), instead of American, British, Canadian, or other national varieties.
 
 If proposing a major pull request, start by posting an issue and discussing the best way to implement it. Often the first strategy that occurs to you will not be the cleanest or most effective way to implement a new feature.
