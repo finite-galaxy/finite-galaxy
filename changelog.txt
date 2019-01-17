@@ -2,6 +2,7 @@
 ## See also https://github.com/finite-galaxy/finite-galaxy/commits/master
 
 * code:
+  * C++14
   * replaced tabs with two spaces
   * changed font to Linux Libertine Display
   * move ship and outfit categories to data files (@Hadron1776)
@@ -13,6 +14,8 @@
   * add support for jump heat, a percentage of a ship's maximum heat
   * add support for bombers [work in progress]
   * stat info display:
+    * numbers display up to three decimals by default
+    * thousand separators are only inserted if there will be at least two digits before it
     * display projectile velocity on same line as range
     * display per shot on same line as per second values
     * reordered weapon outfit display stats
@@ -20,8 +23,6 @@
     * active cooling is included with shield recharge and hull repair, instead of under idle
     * display more stats in the ship info display
     * reordered ship info display
-    * numbers display up to three decimals by default
-    * thousand separators are only inserted if there will be at least two digits before the comma
     * ship details in shop above fleet overview instead of below
     * fleet overview from four to five ship icon columns
   * self-destruct is performed only once: upon boarding
@@ -36,6 +37,7 @@
   * more swizzle options (4^3=64 options)
   * escorts refuel 5× as fast when landing on planets
 * data:
+  * Oxford spelling
   * replaced tabs with two spaces
   * reorganized files
   * deleted news
@@ -175,6 +177,8 @@
       * removed species from outfit names
   * ships:
     * changed outfits of practically all ships and variants
+    * ship categories are determined by a ship's total mass = hull mass + outfit space + cargo space
+    * ship's blast radius = total mass / 5
     * ships have 0 fuel capacity; equipped them with fuel pods; core space increased accordingly
     * renamed:
       * "Albatross" to "Twilight"

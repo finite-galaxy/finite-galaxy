@@ -172,23 +172,24 @@ See `changelog.txt`, `ship_overview.txt`, and https://github.com/finite-galaxy/f
 ### Not yet implemented ideas
 * Add support for Unicode and different writing directions
 * Add ligatures
+* Add quotation mark preference
 * Add “Licences” tab in player info panel
 * Add “Tribute” tab in player info panel
-* Separate fleet overview column in outfitter and shipyard from ship info display
-* Sort outfits and ships by cost, size, or mass instead of alphabetically
 * Add “Manufacturer” to ships
-* Add quotation mark preference
-* Add support for landing fees
 * Add fuel cost, one credit per fuel at spaceports, twice that when hailing ships in space
 * Add functionality to deposit credits at the bank for a fixed time (e.g. one year), receiving either the sum plus interest when it expires, or the sum minus a penalty when you claim it beforehand
+* Add planet landing fees support
 * Allow friendly fire
-* Limit the commodities for sale on specific planets
 * Display flagship speed by default and display target's speed with tactical scanner
 * De-hardcode jump radius
 * Increase jump radius if you have multiple jump drives installed, perhaps 100*(jump drive)^0.5
+* Introduce damage randomness: effective weapon damage is a random number between Damage and Damage+RandomDamage
+* Limit the commodities for sale on specific planets
 * Make ship explosion ‘weapon’ proportional to mass (base, empty, or total mass)
-* Introduce a Navy Battleship with 250 engine space, 500 weapon space, six guns, six turrets, and twelve fighter bays.
+* Separate fleet overview column in outfitter and shipyard from ship info display
+* Sort outfits and ships by cost, size, or mass instead of alphabetically
 * https://github.com/endless-sky/endless-sky/wiki/DevelopmentRoadmap
+* Content: introduce a Navy Battleship with 250 engine space, 500 weapon space, six guns, six turrets, and twelve fighter bays
 
 [(return to top)](https://github.com/finite-galaxy/finite-galaxy#finite-galaxy)
 
