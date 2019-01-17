@@ -160,6 +160,7 @@ sudo install_name_tool -id "@rpath/libSDL2-2.0.0.dylib" /usr/local/lib/libSDL2-2
 * Removed tribute from planets (relevant code is still present for plug-ins)
 * Distances from planets to the sytem's centre are trebled; as a result space feels larger, thrusters are more desirable, and players won't always land immediately in the middle of a space fight
 * Non-missile weapons have their weapon range increased by about a third
+* Exploding ships are significantly more dangerous
 
 [(return to top)](https://github.com/finite-galaxy/finite-galaxy#finite-galaxy)
 

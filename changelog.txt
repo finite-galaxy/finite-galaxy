@@ -180,7 +180,10 @@
   * ships:
     * changed outfits of practically all ships and variants
     * ship categories are determined by a ship's total mass = hull mass + outfit space + cargo space
-    * ship's blast radius = total mass / 5
+    * ship weapon explosion:
+      * blast radius = total mass / 5
+      * heat damage = hull mass * 60
+      * random heat damage = (outfit space + cargo space) * 60
     * ships have 0 fuel capacity; equipped them with fuel pods; core space increased accordingly
     * renamed:
       * "Albatross" to "Twilight"
@@ -352,7 +355,7 @@
       * Summer Leaf: +58 core space
       * Tek Far 71 - Lek: +25 core space, −25 weapon space; self destruct from 0.70 to 0.9
       * Tek Far 78 - Osk: +21 core space, −1 weapon space; self destruct from 0.70 to 0.9
-      * Tek Far 109: +10 core space; self destruct from 0.70 to 0.9
+      * Tek Far 109: +200 mass, +10 core space; self destruct from 0.70 to 0.9
       * Tempest: +79 core space
       * Thistle: +47 core space
       * Thorn: +15 core space
