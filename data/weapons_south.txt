@@ -42,8 +42,11 @@ outfit "Javelin Pod"
     "firing heat" 12
     "blast radius" 1
     "shield damage" 57
+    "random shield damage" 14
     "hull damage" 36
+    "random hull damage" 9
     "hit force" 50
+    "random hit force" 12
     "missile strength" 2
   description "The Javelin Pod fires rapid, unguided missiles in bursts of up to 15, after which it needs to cool down and reload. This allows it to overwhelm anti-missile systems, but also means it can not fire for a relatively longer time after each burst. A Javelin Pod does far more damage than any gun of a comparable size, and has a longer range as well, but once a ship has fired off all its ammunition it must leave combat and find a planet where it can buy more, which makes Javelins less useful in protracted battles. As a result, they are very popular with pirates as a way to quickly disable a small target."
 
@@ -83,9 +86,12 @@ outfit "Nuclear Missile"
     "optical tracking" 1
     "trigger radius" 30
     "blast radius" 150
-    "shield damage" 9000
-    "hull damage" 7000
+    "shield damage" 8000
+    "random shield damage" 2000
+    "hull damage" 6000
+    "random hull damage" 1500
     "hit force" 4000
+    "random hit force" 1000
     "missile strength" 200
   description "It has been centuries since the last nuclear war was fought, and until very recently, most people in the galaxy assumed that that era of chaos and destruction was forever behind us..."
   description "  [Nuclear missiles are a one-shot weapon: each missile occupies a gun slot, and after it is fired, the slot it was in is left empty.]"
@@ -157,7 +163,8 @@ outfit "Flamethrower Projectile"
     "lifetime" 22
     "shield damage" .8
     "hull damage" .7
-    "heat damage" 200
+    "heat damage" 100
+    "random heat damage" 200
 
 effect "flamethrower die"
   sprite "effect/explosion/small"
