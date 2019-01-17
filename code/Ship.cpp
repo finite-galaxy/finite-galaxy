@@ -1315,7 +1315,7 @@ void Ship::Move(vector<Visual> &visuals, list<shared_ptr<Flotsam>> &flotsam)
   {
     pilotError = 30;
     if(parent.lock() || !isYours)
-      Messages::Add(name + " is moving erratically because there are not enough crew to pilot it.");
+      Messages::Add(name + " is moving erratically because it has not enough crew to pilot it.");
     else
       Messages::Add("Your ship is moving erratically because you do not have enough crew to pilot it.");
   }
@@ -2595,14 +2595,15 @@ int Ship::TakeDamage(const Projectile &projectile, bool isBlast)
     double rSquared = d * d / (blastRadius * blastRadius);
     damageScaling *= k / ((1. + rSquared * rSquared) * (1. + rSquared * rSquared));
   }
-  double shieldDamage = weapon.ShieldDamage() * damageScaling;
-  double hullDamage = weapon.HullDamage() * damageScaling;
-  double hitForce = weapon.HitForce() * damageScaling;
-  double fuelDamage = weapon.FuelDamage() * damageScaling;
-  double heatDamage = weapon.HeatDamage() * damageScaling;
-  double ionDamage = weapon.IonDamage() * damageScaling;
-  double disruptionDamage = weapon.DisruptionDamage() * damageScaling;
-  double slowingDamage = weapon.SlowingDamage() * damageScaling;
+  double rr = Random::Real();
+  double shieldDamage = (weapon.ShieldDamage() + rr * weapon.RandomShieldDamage()) * damageScaling;
+  double hullDamage = (weapon.HullDamage() + rr * weapon.RandomHullDamage()) * damageScaling;
+  double fuelDamage = (weapon.FuelDamage() + rr * weapon.RandomFuelDamage()) * damageScaling;
+  double heatDamage = (weapon.HeatDamage() + rr * weapon.RandomHeatDamage()) * damageScaling;
+  double ionDamage = (weapon.IonDamage() + rr * weapon.RandomIonDamage()) * damageScaling;
+  double disruptionDamage = (weapon.DisruptionDamage() + rr * weapon.RandomDisruptionDamage()) * damageScaling;
+  double slowingDamage = (weapon.SlowingDamage() + rr * weapon.RandomSlowingDamage()) * damageScaling;
+  double hitForce = (weapon.HitForce() + rr * weapon.RandomHitForce()) * damageScaling;
   bool wasDisabled = IsDisabled();
   bool wasDestroyed = IsDestroyed();
   

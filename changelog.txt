@@ -9,10 +9,12 @@
   * introduce new fuel attributes (@Nescio0)
   * hyperjump fuel is equal to the ship's effective mass (including cargo and carried ships) plus best outfit fuel
     * include cargo and fighter mass to estimate route when on planet (@IntegratedQuantum)
-  * introduce core space, used by energy generators and some other outfits
+  * introduced core space, used by energy generators and some other outfits
     * outfit space = core space + engine space + weapon space
-  * add support for jump heat, a percentage of a ship's maximum heat
-  * add support for bombers [work in progress]
+  * introduced random damage attributes for all weapon damage types
+    * weapon projectile damage = random(damage, damage + random damage)
+  * added support for jump heat, a percentage of a ship's maximum heat
+  * added support for bombers [work in progress]
   * stat info display:
     * numbers display up to three decimals by default
     * thousand separators are only inserted if there will be at least two digits before it

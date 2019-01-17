@@ -154,6 +154,7 @@ sudo install_name_tool -id "@rpath/libSDL2-2.0.0.dylib" /usr/local/lib/libSDL2-2
   * `outfit space = core space + engine space + weapon space`
 * Installed outfits can no longer be plundered by default; outfits in cargo still can
 * Minimum depreciation value raised to 50%, time lowered to one year
+* Weapon projectile damage is a random number between `damage` and `damage + random damage`
 * Ship info display shows more stats
 * Redistributed most human ships and many outfits to have more regional specialization
 * Removed tribute from planets (relevant code is still present for plug-ins)
@@ -183,7 +184,6 @@ See `changelog.txt`, `ship_overview.txt`, and https://github.com/finite-galaxy/f
 * Display flagship speed by default and display target's speed with tactical scanner
 * De-hardcode jump radius
 * Increase jump radius if you have multiple jump drives installed, perhaps 100*(jump drive)^0.5
-* Introduce damage randomness: effective weapon damage is a random number between Damage and Damage+RandomDamage
 * Limit the commodities for sale on specific planets
 * Make ship explosion ‘weapon’ proportional to mass (base, empty, or total mass)
 * Separate fleet overview column in outfitter and shipyard from ship info display
