@@ -505,6 +505,14 @@ interface "planet"
     size 18
     align left
     pad 10 0
+  sprite "ui/planet dialogue button"
+    centre 280 255
+  button r "_Refuel"
+    centre 280 255
+    dimensions 140 40
+    size 18
+    align right
+    pad 10 0
   
   visible if "has shipyard"
   sprite "ui/planet dialogue button"
@@ -796,6 +804,29 @@ interface "bank"
   button a "Pay _All"
     centre 140 355
     dimensions 80 40
+
+
+
+interface "refuel"
+  sprite "ui/dialogue cancel"
+    centre 140 355
+  button r "_Refuel All"
+    centre 140 355
+    dimensions 80 40
+  sprite "ui/empty bar"
+    centre -180 150
+  sprite "ui/empty bar"
+    centre -180 230
+  bar "refuel behaviour"
+    from -280 150
+    dimensions -200 0
+    colour "fuel"
+    size 3
+  bar "ramscoop behaviour"
+    from -280 230
+    dimensions -200 0
+    colour "fuel"
+    size 3
 
 
 
