@@ -52,6 +52,7 @@ private:
   std::shared_ptr<Panel> bank;
   std::shared_ptr<SpaceportPanel> spaceport;
   std::shared_ptr<Panel> hiring;
+  std::shared_ptr<Panel> refuel;
   Panel *selectedPanel = nullptr;
   
   WrappedText text;

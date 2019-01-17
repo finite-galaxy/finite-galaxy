@@ -223,7 +223,7 @@ public:
   // Check if this ship has been destroyed.
   bool IsDestroyed() const;
   // Recharge and repair this ship (e.g. because it has landed). Returns recharged fuel.
-  int Recharge(bool atSpaceport = true);
+  int Recharge(bool atSpaceport = true, bool rechargeFuel = true);
   // Check if this ship is able to give the given ship enough fuel to jump.
   bool CanRefuel(const Ship &other) const;
   // Give the other ship enough fuel for it to jump.

@@ -28,6 +28,12 @@ public:
   static double ViewZoom();
   static bool ZoomViewIn();
   static bool ZoomViewOut();
+  
+  // Refuel Preferences
+  static double GetMaxPrice();
+  static void SetMaxPrice(double price);
+  static double GetMaxRamscoopFactor();
+  static void SetMaxRamscoopFactor(double factor);
 };
 
 

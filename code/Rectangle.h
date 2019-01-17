@@ -44,6 +44,7 @@ public:
   double Bottom() const;
   Point TopLeft() const;
   Point BottomRight() const;
+  Point BottomLeft() const;
   
   // Check if a point is inside this rectangle.
   bool Contains(const Point &point) const;

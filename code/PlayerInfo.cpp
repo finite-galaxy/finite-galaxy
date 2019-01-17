@@ -1002,22 +1002,8 @@ void PlayerInfo::Land(UI *ui)
   
   // Ships that are landed with you on the planet should fully recharge
   // and pool all their cargo together. Those in remote systems restore
-  // what they can without landing. Fuel is refilled during departure.
-  int rechargedFuel = 0;
-  bool hasSpaceport = planet->HasSpaceport() && planet->CanUseServices();
-  UpdateCargoCapacities();
-  for(const shared_ptr<Ship> &ship : ships)
-    if(!ship->IsDisabled())
-    {
-      if(ship->GetSystem() == system)
-      {
-        rechargedFuel += ship->Recharge(hasSpaceport);
-        ship->Cargo().TransferAll(cargo);
-        ship->SetPlanet(planet);
-      }
-      else
-        ship->Recharge(false);
-    }
+  // what they can without landing. Fuel is also refilled.
+  Refuel(false);
   // Adjust cargo cost basis for any cargo lost due to a ship being destroyed.
   for(const auto &it : lostCargo)
     AdjustBasis(it.first, -(costBasis[it.first] * it.second) / (cargo.Get(it.first) + it.second));
@@ -1039,6 +1025,7 @@ void PlayerInfo::Land(UI *ui)
   
   // Hire extra crew back if any were lost in-flight (i.e. boarding) or
   // some bunks were freed up upon landing (i.e. completed missions).
+  bool hasSpaceport = planet->HasSpaceport() && planet->CanUseServices();
   if(Preferences::Has("Rehire extra crew when lost") && hasSpaceport && flagship)
   {
     int added = desiredCrew - flagship->Crew();
@@ -1053,19 +1040,6 @@ void PlayerInfo::Land(UI *ui)
   
   freshlyLoaded = false;
   flagship.reset();
-  
-  // Pays the fuel and messages the price that was paid.
-  if(rechargedFuel)
-  {
-    int price = rechargedFuel*planet->GetGovernment()->GetFuelPrice();
-    if(price)
-    {
-      ostringstream out;
-      out << "You paid " << price << " credits to buy " << rechargedFuel << " units of fuel.";
-      Messages::Add(out.str());
-      accounts.AddCredits(-price);
-    }
-  }
 }
 
 
@@ -1372,6 +1346,45 @@ void PlayerInfo::LoadFighters()
         if(parent->GetSystem() == ship->GetSystem() && !parent->IsParked()
             && !parent->IsDisabled() && parent->Carry(ship))
           break;
+  }
+}
+
+
+
+
+void PlayerInfo::Refuel(bool overridePrefs)
+{
+  double price = planet->GetGovernment()->GetFuelPrice();
+  // Refuels only if the price is in the preferred range or 0 or the player is overriding
+  // the preferences using the "Refuel All"-button.
+  bool rechargesFuel = price < Preferences::GetMaxPrice() || price || overridePrefs;
+  int rechargedFuel = 0;
+  bool hasSpaceport = planet->HasSpaceport() && planet->CanUseServices();
+  for(const shared_ptr<Ship> &ship : ships)
+    if(!ship->IsDisabled())
+    {
+      if(ship->GetSystem() == system)
+      {
+        // Only recharges the fuel of the ship if ramscoop preferences are met.
+        rechargedFuel += ship->Recharge(hasSpaceport, rechargesFuel && (overridePrefs || ship->Attributes().Get("ramscoop")/ship->Mass() < Preferences::GetMaxRamscoopFactor()));
+        ship->Cargo().TransferAll(cargo);
+        ship->SetPlanet(planet);
+      }
+      else
+        ship->Recharge(false);
+    }
+  
+  // Pays the fuel and messages the price that was paid.
+  if(rechargedFuel)
+  {
+    if(price)
+    {
+      int fuelPrice = rechargedFuel*price;
+      ostringstream out;
+      out << "You paid " << fuelPrice << " credits to buy " << rechargedFuel << " units of fuel.";
+      Messages::Add(out.str());
+      accounts.AddCredits(-fuelPrice);
+    }
   }
 }
 

@@ -150,6 +150,14 @@ Point Rectangle::BottomRight() const
 
 
 
+// Get the bottom right corner - that is, the minimum x and maximum y.
+Point Rectangle::BottomLeft() const
+{
+  return centre + Point(.5 * dimensions.X(), .5 * dimensions.Y());
+}
+
+
+
 // Check if a point is inside this rectangle.
 bool Rectangle::Contains(const Point &point) const
 {

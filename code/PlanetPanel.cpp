@@ -18,6 +18,7 @@
 #include "Planet.h"
 #include "PlayerInfo.h"
 #include "PlayerInfoPanel.h"
+#include "RefuelPanel.h"
 #include "Ship.h"
 #include "ShipyardPanel.h"
 #include "SpaceportPanel.h"
@@ -40,6 +41,7 @@ PlanetPanel::PlanetPanel(PlayerInfo &player, function<void()> callback)
   bank.reset(new BankPanel(player));
   spaceport.reset(new SpaceportPanel(player));
   hiring.reset(new HiringPanel(player));
+  refuel.reset(new RefuelPanel(player));
   
   text.SetFont(FontSet::Get(14));
   text.SetAlignment(WrappedText::JUSTIFIED);
@@ -177,6 +179,11 @@ bool PlanetPanel::KeyDown(SDL_Keycode key, Uint16 mod, const Command &command)
   {
     selectedPanel = hiring.get();
     GetUI()->Push(hiring);
+  }
+  else if(key == 'r' && flagship && planet.HasSpaceport())
+  {
+    selectedPanel = refuel.get();
+    GetUI()->Push(refuel);
   }
   else if(key == 'j' && flagship && planet.IsInhabited() && planet.HasSpaceport() && hasAccess)
   {
