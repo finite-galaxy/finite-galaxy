@@ -10,16 +10,16 @@ Both games can be installed alongside and played independently of each other. Al
 * [Introduction](https://github.com/finite-galaxy/finite-galaxy#introduction)
 * [Installation](https://github.com/finite-galaxy/finite-galaxy#installation)
   * [GNU/Linux](https://github.com/finite-galaxy/finite-galaxy#gnu-linux)
-  * [Microsoft Windows](https://github.com/finite-galaxy/finite-galaxy#microsoft-windows)
   * [Apple/Mac OS X](https://github.com/finite-galaxy/finite-galaxy#apple-mac-os-x)
+  * [Microsoft Windows](https://github.com/finite-galaxy/finite-galaxy#microsoft-windows)
 * [Changes](https://github.com/finite-galaxy/finite-galaxy#changes)
   * [Major changes](https://github.com/finite-galaxy/finite-galaxy#major-changes)
   * [Minor changes](https://github.com/finite-galaxy/finite-galaxy#minor-changes)
   * [Not yet implemented ideas](https://github.com/finite-galaxy/finite-galaxy#not-yet-implemented-ideas)
-* [Reveal entire map](https://github.com/finite-galaxy/finite-galaxy#reveal-entire-map)
 * [Contributing](https://github.com/finite-galaxy/finite-galaxy#contributing)
   * [Posting issues](https://github.com/finite-galaxy/finite-galaxy#posting-issues)
   * [Posting pull requests](https://github.com/finite-galaxy/finite-galaxy#posting-pull-requests)
+* [Reveal entire map](https://github.com/finite-galaxy/finite-galaxy#reveal-entire-map)
 
 
 
@@ -32,7 +32,7 @@ Why did I start this project? Why not contribute to Endless Sky instead?
 * The direction and vision is not always clear.
 * Support for plug-ins is rather limited.
 
-In short, I consider it a better use of a time to work on a project where I can incorporate most of my ideas, where I can remove things I dislike, and where I can contribute whenever I like, without having to wait weeks or months for a review or wasting my time on something that won't be included. 
+In short, I consider it a better use of time to work on a project where I can incorporate most of my ideas, where I can remove things I dislike, and where I can contribute whenever I like, without having to wait weeks or months for a review or wasting my time on something that won't be included. 
 
 Finite Galaxy is very much a work in progress. Nevertheless, it can be compiled and played without errors. Feel free to try it out yourself!
 
@@ -79,37 +79,6 @@ For more help, consult the man page (the finite-galaxy.6 file).
 [(return to top)](https://github.com/finite-galaxy/finite-galaxy#finite-galaxy)
 
 
-### Microsoft Windows
-
-*If you have trouble compiling or encounter errors, please post* [here](https://github.com/finite-galaxy/finite-galaxy/issues/17).
-
-You will need the Code::Blocks IDE and g++ 4.8 or higher. Code::Blocks is available here:
-
-  http://sourceforge.net/projects/codeblocks/files/Binaries/13.12/Windows/codeblocks-13.12-setup.exe/download
-
-You can install g++ separately through mingw-w64:
-
-  http://sourceforge.net/projects/mingw-w64/files/Toolchains%20targetting%20Win64/Personal%20Builds/mingw-builds/4.8.5/threads-posix/seh/
-
-*** Be sure to install the "pthread" version of MinGW. The "win32-thread" one does not come with support for C++14 threading. If you are using 32-bit Windows, install the compiler for "dwarf" exceptions, not "sjlj." ***
-
-If you are on 64-bit Windows, a full set of development libraries are available here:
-
-  http://endless-sky.github.io/win64-dev.zip
-
-If you don't want to have to edit the paths in the Code::Blocks file, unpack the "dev64" folder directly into C:\.
-
-If you are using 32-bit Windows, a full set of development libraries are available here:
-
-  http://endless-sky.github.io/win32-dev.zip
-
-You will probably need to adjust the paths to your compiler binaries, and you should also switch to the "Win32" build instead of the "Debug" or "Release" build.
-
-You will also need libmingw32.a and libopengl32.a. Those should be included in the MinGW g++ install. If they are not in C:\Program Files\mingw64\x86_64-w64-mingw32\lib\ you will have to adjust the paths in the Code::Blocks file.
-
-[(return to top)](https://github.com/finite-galaxy/finite-galaxy#finite-galaxy)
-
-
 ### Apple Mac OS X
 
 *If you have trouble compiling or encounter errors, please post* [here](https://github.com/finite-galaxy/finite-galaxy/issues/18).
@@ -139,6 +108,37 @@ sudo install_name_tool -id "@rpath/libmad.0.2.1.dylib" /usr/local/lib/libmad.0.2
 sudo install_name_tool -id "@rpath/libturbojpeg.0.dylib" /usr/local/opt/libjpeg-turbo/lib/libturbojpeg.0.dylib
 sudo install_name_tool -id "@rpath/libSDL2-2.0.0.dylib" /usr/local/lib/libSDL2-2.0.0.dylib
 ```
+
+[(return to top)](https://github.com/finite-galaxy/finite-galaxy#finite-galaxy)
+
+
+### Microsoft Windows
+
+*If you have trouble compiling or encounter errors, please post* [here](https://github.com/finite-galaxy/finite-galaxy/issues/17).
+
+You will need the Code::Blocks IDE and g++ 4.8 or higher. Code::Blocks is available here:
+
+  http://sourceforge.net/projects/codeblocks/files/Binaries/13.12/Windows/codeblocks-13.12-setup.exe/download
+
+You can install g++ separately through mingw-w64:
+
+  http://sourceforge.net/projects/mingw-w64/files/Toolchains%20targetting%20Win64/Personal%20Builds/mingw-builds/4.8.5/threads-posix/seh/
+
+*** Be sure to install the "pthread" version of MinGW. The "win32-thread" one does not come with support for C++14 threading. If you are using 32-bit Windows, install the compiler for "dwarf" exceptions, not "sjlj." ***
+
+If you are on 64-bit Windows, a full set of development libraries are available here:
+
+  http://endless-sky.github.io/win64-dev.zip
+
+If you don't want to have to edit the paths in the Code::Blocks file, unpack the "dev64" folder directly into C:\.
+
+If you are using 32-bit Windows, a full set of development libraries are available here:
+
+  http://endless-sky.github.io/win32-dev.zip
+
+You will probably need to adjust the paths to your compiler binaries, and you should also switch to the "Win32" build instead of the "Debug" or "Release" build.
+
+You will also need libmingw32.a and libopengl32.a. Those should be included in the MinGW g++ install. If they are not in C:\Program Files\mingw64\x86_64-w64-mingw32\lib\ you will have to adjust the paths in the Code::Blocks file.
 
 [(return to top)](https://github.com/finite-galaxy/finite-galaxy#finite-galaxy)
 
@@ -213,6 +213,43 @@ Furthermore, there is still that wormhole with a large Quarg fleet on one end an
 
 [(return to top)](https://github.com/finite-galaxy/finite-galaxy#finite-galaxy)
 -->
+
+
+
+## Contributing
+Contributions are welcome; anyone can contribute; feel free to open issues or make pull requests.
+
+### Posting issues
+
+The [issues page](https://github.com/finite-galaxy/finite-galaxy/issues) on GitHub is for tracking bugs and for art, content, and feature requests. When posting a new issue, please:
+
+* Be polite and always assume good faith.
+* Check to make sure it's not a duplicate of an existing issue.
+* Create a separate “issue” for each bug and each request.
+
+If requesting a new feature, first ask yourself: will this make the game more fun or interesting? Remember that this is a game, not a simulator. Changes will not be made purely for the sake of realism, especially if they introduce needless complexity or aggravation.
+
+If you believe your issue has been resolved, you can close the issue yourself.
+
+[(return to top)](https://github.com/finite-galaxy/finite-galaxy#finite-galaxy)
+
+
+### Posting pull requests
+
+If you are posting a pull request, please:
+
+* Do not combine multiple unrelated changes into a single pull.
+* Check the diff and make sure the pull request does not contain unintended changes.
+* If changing the C++ code, follow the [coding standard](http://endless-sky.github.io/styleguide/styleguide.xml).
+* In C++ code, make numbers with many digits easier to read for humans by inserting `'`
+  * (decimal numbers) at intervals of three digits if there are more than four in a row.
+  * (hexadecimal numbers) at intervals of four digits if there are more than six in a row.
+* Do not use tabs; use two spaces instead.
+* Use Oxford spelling (the variant of English used by many scientific journals and international organizations such as the United Nations), instead of American, British, Canadian, or other national varieties.
+
+If proposing a major pull request, start by posting an issue and discussing the best way to implement it. Often the first strategy that occurs to you will not be the cleanest or most effective way to implement a new feature.
+
+[(return to top)](https://github.com/finite-galaxy/finite-galaxy#finite-galaxy)
 
 
 
@@ -619,43 +656,6 @@ visited "Zubeneschamali"
 "visited planet" "Rim Wormhole"
 "visited planet" "The Eye"
 ```
-
-[(return to top)](https://github.com/finite-galaxy/finite-galaxy#finite-galaxy)
-
-
-
-## Contributing
-Contributions are welcome; anyone can contribute; feel free to open issues or make pull requests.
-
-### Posting issues
-
-The [issues page](https://github.com/finite-galaxy/finite-galaxy/issues) on GitHub is for tracking bugs and for art, content, and feature requests. When posting a new issue, please:
-
-* Be polite and always assume good faith.
-* Check to make sure it's not a duplicate of an existing issue.
-* Create a separate “issue” for each bug and each request.
-
-If requesting a new feature, first ask yourself: will this make the game more fun or interesting? Remember that this is a game, not a simulator. Changes will not be made purely for the sake of realism, especially if they introduce needless complexity or aggravation.
-
-If you believe your issue has been resolved, you can close the issue yourself.
-
-[(return to top)](https://github.com/finite-galaxy/finite-galaxy#finite-galaxy)
-
-
-### Posting pull requests
-
-If you are posting a pull request, please:
-
-* Do not combine multiple unrelated changes into a single pull.
-* Check the diff and make sure the pull request does not contain unintended changes.
-* If changing the C++ code, follow the [coding standard](http://endless-sky.github.io/styleguide/styleguide.xml).
-* In C++ code, make numbers with many digits easier to read for humans by inserting `'`
-  * (decimal numbers) at intervals of three digits if there are more than four in a row.
-  * (hexadecimal numbers) at intervals of four digits if there are more than six in a row.
-* Do not use tabs; use two spaces instead.
-* Use Oxford spelling (the variant of English used by many scientific journals and international organizations such as the United Nations), instead of American, British, Canadian, or other national varieties.
-
-If proposing a major pull request, start by posting an issue and discussing the best way to implement it. Often the first strategy that occurs to you will not be the cleanest or most effective way to implement a new feature.
 
 [(return to top)](https://github.com/finite-galaxy/finite-galaxy#finite-galaxy)
 
