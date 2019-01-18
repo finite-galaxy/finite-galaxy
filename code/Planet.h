@@ -113,6 +113,9 @@ public:
   void DeployDefence(std::list<std::shared_ptr<Ship>> &ships) const;
   void ResetDefence() const;
   
+  // Returns the planets fuel price
+  double GetFuelPrice() const;
+  
   
 private:
   std::string name;
@@ -134,6 +137,8 @@ private:
   double requiredReputation = 0.;
   double bribe = 0.01;
   double security = .25;
+  // a negative fuel price always means there is no fuel on this planet.
+  double fuelPrice = -1;
   bool inhabited;
   bool bank;
   

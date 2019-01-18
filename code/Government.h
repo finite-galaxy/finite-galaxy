@@ -76,6 +76,7 @@ public:
   
   // Check if this is the player government.
   bool IsPlayer() const;
+  bool IsEscort() const;
   // Commit the given "offence" against this government (which may not
   // actually consider it to be an offence). This may result in temporary
   // hostilities (if the even type is PROVOKE), or a permanent change to your

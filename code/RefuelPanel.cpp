@@ -64,7 +64,7 @@ void RefuelPanel::Draw()
   else
     priceText = "Only refuel if price is less than " + Format::Number(price) + " credits per unit.";
   price /= 10;
-  string localPrice = "The fuel price on this planet is " + Format::Number(player.GetPlanet()->GetGovernment()->GetFuelPrice()) + " credits per unit of fuel.";
+  string localPrice = "The fuel price on this planet is " + Format::Number(player.GetPlanet()->GetFuelPrice()) + " credits per unit of fuel.";
   string ramscoopText;
   if(ramscoop == 1)
     ramscoopText = "Refuel independently of ramscoop value of the ship";
@@ -129,5 +129,5 @@ bool RefuelPanel::Click(int x, int y, int clicks)
     return true;
   }
   
-  return true;
+  return false;
 }

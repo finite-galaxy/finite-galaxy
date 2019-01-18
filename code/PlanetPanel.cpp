@@ -118,6 +118,8 @@ void PlanetPanel::Draw()
       if(planet.IsInhabited() && planet.GetSystem()->HasTrade()) 
         info.SetCondition("has trade");
     }
+    if(planet.GetFuelPrice() > 0)
+      info.SetCondition("has fuel");
   }
   
   ui.Draw(info, this);

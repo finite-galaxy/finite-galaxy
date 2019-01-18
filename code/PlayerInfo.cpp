@@ -1354,10 +1354,10 @@ void PlayerInfo::LoadFighters()
 
 void PlayerInfo::Refuel(bool overridePrefs)
 {
-  double price = planet->GetGovernment()->GetFuelPrice();
+  double price = planet->GetFuelPrice();
   // Refuels only if the price is in the preferred range or 0 or the player is overriding
   // the preferences using the "Refuel All"-button.
-  bool rechargesFuel = price < Preferences::GetMaxPrice() || price || overridePrefs;
+  bool rechargesFuel = (price < Preferences::GetMaxPrice() || !price || overridePrefs) && price > 0;
   int rechargedFuel = 0;
   bool hasSpaceport = planet->HasSpaceport() && planet->CanUseServices();
   for(const shared_ptr<Ship> &ship : ships)
@@ -1375,16 +1375,13 @@ void PlayerInfo::Refuel(bool overridePrefs)
     }
   
   // Pays the fuel and messages the price that was paid.
-  if(rechargedFuel)
+  if(rechargedFuel && price > 0)
   {
-    if(price)
-    {
-      int fuelPrice = rechargedFuel*price;
-      ostringstream out;
-      out << "You paid " << fuelPrice << " credits to buy " << rechargedFuel << " units of fuel.";
-      Messages::Add(out.str());
-      accounts.AddCredits(-fuelPrice);
-    }
+    int fuelPrice = rechargedFuel*price;
+    ostringstream out;
+    out << "You paid " << fuelPrice << " credits to buy " << rechargedFuel << " units of fuel.";
+    Messages::Add(out.str());
+    accounts.AddCredits(-fuelPrice);
   }
 }
 

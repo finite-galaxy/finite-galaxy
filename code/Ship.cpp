@@ -2260,14 +2260,17 @@ double Ship::TransferFuel(double amount, Ship *to)
   {
     amount = min(to->attributes.Get("fuel capacity") - to->fuel, amount);
     to->fuel += amount;
-    if(!to->IsDisabled() && to->GetGovernment()->IsPlayer() && player)
+    if(!to->IsDisabled() && to->GetGovernment()->IsEscort() && player && !government->IsEscort())
     {
       // The price for refueling in space is twice as high as usual.
-      int price = amount*government->GetFuelPrice()*2;
-      ostringstream out;
-      out << "You paid " << price << " credits to buy " << amount << " units of fuel.";
-      Messages::Add(out.str());
-      player->AddCredits(price);
+      int price = amount*government->GetFuelPrice();
+      if(price)
+      {
+        ostringstream out;
+        out << "You paid " << price << " credits to buy " << amount << " units of fuel.";
+        Messages::Add(out.str());
+        player->AddCredits(price);
+      }
     }
   }
   fuel -= amount;
