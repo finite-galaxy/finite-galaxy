@@ -386,13 +386,14 @@ void AI::UpdateEvents(const list<ShipEvent> &events)
 
 
 
+// Remove records of what happened in the previous system, now that
+// the player has entered a new one.
 void AI::Clean()
 {
   actions.clear();
   notoriety.clear();
   governmentActions.clear();
   playerActions.clear();
-  helperList.clear();
   swarmCount.clear();
   fenceCount.clear();
   miningAngle.clear();
@@ -405,10 +406,11 @@ void AI::Clean()
 
 
 
-// Clear ship orders. This should be done when the player lands on a planet,
-// but not when they jump from one system to another.
+// Clear ship orders and assistance request. This should be done when
+// the player lands on a planet, but not when they jump from one system to another.
 void AI::ClearOrders()
 {
+  helperList.clear();
   orders.clear();
 }
 
@@ -877,11 +879,13 @@ void AI::AskForHelp(Ship &ship, bool &isStranded, const Ship *flagship)
       if(helper.get() == &ship)
         continue;
       
-      // If any enemies of this ship are in its system, it cannot call for help.
+      // If any able enemies of this ship are in its system, it cannot call for help.
       const System *system = ship.GetSystem();
       if(helper->GetGovernment()->IsEnemy(gov) && flagship && system == flagship->GetSystem())
       {
-        hasEnemy |= (system == helper->GetSystem() && !helper->IsDisabled());
+        // Disabled, overheated, or otherwise untargetable ships pose no threat.
+        bool harmless = helper->IsDisabled() || (helper->IsOverheated() && helper->Heat() >= 1.1) || !helper->IsTargetable();
+        hasEnemy |= (system == helper->GetSystem() && !harmless);
         if(hasEnemy)
           break;
       }

@@ -35,7 +35,7 @@ Projectile::Projectile(const Ship &parent, Point position, Angle angle, const We
   if(parent.IsBoarding() || parent.Commands().Has(Command::BOARD))
     targetShip.reset();
   
-  cachedTarget = targetShip.lock().get();
+  cachedTarget = TargetPtr().get();
   if(cachedTarget)
     targetGovernment = cachedTarget->GetGovernment();
   double inaccuracy = weapon->Inaccuracy();
@@ -58,7 +58,7 @@ Projectile::Projectile(const Projectile &parent, const Weapon *weapon)
   government = parent.government;
   targetGovernment = parent.targetGovernment;
   
-  cachedTarget = targetShip.lock().get();
+  cachedTarget = TargetPtr().get();
   double inaccuracy = weapon->Inaccuracy();
   if(inaccuracy)
   {
@@ -117,7 +117,7 @@ void Projectile::Move(vector<Visual> &visuals, vector<Projectile> &projectiles)
   const Ship *target = cachedTarget;
   if(target)
   {
-    target = targetShip.lock().get();
+    target = TargetPtr().get();
     if(!target || !target->IsTargetable() || target->GetGovernment() != targetGovernment)
     {
       targetShip.reset();
