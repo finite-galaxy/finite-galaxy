@@ -72,7 +72,7 @@ government "Coalition"
   "player reputation" 1
   "attitude toward"
     "Heliarch" 1
-  "fuel price" 1
+  "fuel price" 2
 
 government "Deep"
   swizzle 1
@@ -83,7 +83,7 @@ government "Deep"
     "Merchant" .5
     "Neutral" .1
     "Pirate" -.2
-  "fuel price" 1
+  "fuel price" 2
   "friendly hail" "friendly deep"
   "hostile hail" "hostile deep"
 
@@ -111,7 +111,7 @@ government "Free Worlds"
     "Militia" .3
     "Pirate" -.4
     "Neutral" .1
-  "fuel price" 1
+  "fuel price" 2
   "bribe" .1
   "friendly hail" "friendly free worlds"
   "hostile hail" "hostile free worlds"
@@ -124,7 +124,7 @@ government "Hai"
   "attitude toward"
     "Hai (Unfettered)" -.5
     "Merchant" .01
-  "fuel price" 1
+  "fuel price" 2
   "bribe" .02
   "fine" 0
   "friendly hail" "friendly hai"
@@ -140,7 +140,7 @@ government "Hai (Unfettered)"
     "Pug" -.01
     "Merchant" -.01
     "Kor Efret" -.01
-  "fuel price" 2
+  "fuel price" 4
   "bribe" .02
   "fine" 0
   "friendly hail" "friendly unfettered"
@@ -155,13 +155,13 @@ government "Heliarch"
   "attitude toward"
     "Quarg" -.01
     "Coalition" 1
-  "fuel price" 0.5
+  "fuel price" 1
 
 government "Independent"
   swizzle 23
   colour .8 .7 0
   "player reputation" 10
-  "fuel price" 1
+  "fuel price" 2
   "bribe" .05
   "fine" 0
   "friendly hail" "friendly civilian"
@@ -186,7 +186,7 @@ government "Korath"
   language "Korath"
   "attitude toward"
     "Kor Sestor" -.01
-  "fuel price" 4
+  "fuel price" 8
   "player reputation" -10
 
 government "Korath Nanobots"
@@ -199,7 +199,7 @@ government "Kor Efret"
   "attitude toward"
     "Kor Mereti" -.01
     "Kor Sestor" -.01
-  "fuel price" 1
+  "fuel price" 2
   "player reputation" 1
 
 government "Kor Mereti"
@@ -237,7 +237,7 @@ government "Merchant"
   "attitude toward"
     "Pirate" -.2
     "Korath" -.2
-  "fuel price" 2
+  "fuel price" 4
   "bribe" .05
   "fine" 0
   "friendly hail" "friendly civilian"
@@ -249,7 +249,7 @@ government "Militia"
   "attitude toward"
     "Merchant" .3
     "Pirate" -.4
-  "fuel price" 1
+  "fuel price" 2
   "bribe" .1
   "friendly hail" "friendly militia"
   "hostile hail" "hostile militia"
@@ -281,7 +281,7 @@ government "Neutral"
   "attitude toward"
     "Merchant" .3
     "Pirate" -.2
-  "fuel price" 1
+  "fuel price" 2
   "bribe" .05
   "friendly hail" "friendly civilian"
   "hostile hail" "hostile civilian"
@@ -303,7 +303,7 @@ government "Pirate"
     "Neutral" -.01
     "Republic" -.01
     "Syndicate" -.01
-  "fuel price" 2
+  "fuel price" 4
   "bribe" .05
   "fine" 0
   "friendly hail" "friendly pirate"
@@ -331,7 +331,7 @@ government "Quarg"
     "Kor Sestor" -.01
     "Hai" .01
     "Pirate" -.01
-  "fuel price" 0.5
+  "fuel price" 1
   "hostile hail" "hostile quarg"
 
 government "Remnant"
@@ -340,7 +340,7 @@ government "Remnant"
   "player reputation" 1
   "attitude toward"
     "Korath" -.01
-  "fuel price" 1
+  "fuel price" 2
 
 government "Republic"
   swizzle 0
@@ -354,7 +354,7 @@ government "Republic"
     "Navy Intelligence" 1
     "Navy (Oathkeeper)" 1
     "Neutral" .1
-  "fuel price" 1
+  "fuel price" 2
   "friendly hail" "friendly navy"
   "hostile hail" "hostile navy"
   raid "pirate raid"
@@ -367,7 +367,7 @@ government "Syndicate"
     "Merchant" .3
     "Pirate" -.4
     "Korath" -.5
-  "fuel price" 2
+  "fuel price" 4
   "bribe" .08
   "friendly hail" "friendly syndicate"
   "hostile hail" "hostile syndicate"
@@ -408,7 +408,7 @@ government "Wanderer"
   swizzle 2
   colour .7 .9 .1
   "player reputation" 1
-  "fuel price" 1
+  "fuel price" 2
   language "Wanderer"
   "friendly hail" "wanderer untranslated"
   "hostile hail" "wanderer untranslated"

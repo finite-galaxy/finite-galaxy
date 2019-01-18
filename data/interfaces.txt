@@ -505,6 +505,8 @@ interface "planet"
     size 18
     align left
     pad 10 0
+  
+  visible if "has fuel"
   sprite "ui/planet dialogue button"
     centre 280 255
   button r "_Refuel"
