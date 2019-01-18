@@ -181,9 +181,15 @@
     * changed outfits of practically all ships and variants
     * ship categories are determined by a ship's total mass = hull mass + outfit space + cargo space
     * ship weapon explosion:
-      * blast radius = total mass / 5
+      * blast radius = (hull mass + outfit space + cargo space) / 5
+      * shield damage = hull mass * 2
+      * random shield damage = (outfit space + cargo space) * 2
+      * hull damage = hull mass * 3
+      * random hull damage = (outfit space + cargo space) * 3
       * heat damage = hull mass * 60
       * random heat damage = (outfit space + cargo space) * 60
+      * hit force = hull mass * 5
+      * random hit force = (outfit space + cargo space) * 5
     * ships have 0 fuel capacity; equipped them with fuel pods; core space increased accordingly
     * renamed:
       * "Albatross" to "Twilight"
