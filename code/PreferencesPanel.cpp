@@ -8,6 +8,7 @@
 #include "Files.h"
 #include "Font.h"
 #include "FontSet.h"
+#include "Format.h"
 #include "GameData.h"
 #include "Information.h"
 #include "Interface.h"
@@ -67,6 +68,8 @@ void PreferencesPanel::Draw()
   info.SetBar("volume", Audio::Volume());
   GameData::Interfaces().Get("menu background")->Draw(info, this);
   string pageName = (page == 'c' ? "controls" : page == 's' ? "settings" : "plugins");
+  if(page == 's')
+    info.SetBar("refuel behaviour", Preferences::GetMaxPrice()/10);
   GameData::Interfaces().Get(pageName)->Draw(info, this);
   GameData::Interfaces().Get("preferences")->Draw(info, this);
   
@@ -116,6 +119,17 @@ bool PreferencesPanel::Click(int x, int y, int clicks)
   
   if(x >= 265 && x < 295 && y >= -220 && y < 70)
   {
+    Audio::SetVolume((20 - y) / 200.);
+    Audio::Play(Audio::Get("warder"));
+    return true;
+  }
+  
+  if(page == 's' && x >= -230 && x < -25 && y >= 95 && y < 125)
+  {
+    double max = (x+230)/20.;
+    if(max > 10)
+      max = 10;
+    Preferences::SetMaxPrice(max);
     Audio::SetVolume((20 - y) / 200.);
     Audio::Play(Audio::Get("warder"));
     return true;
@@ -423,6 +437,9 @@ void PreferencesPanel::DrawSettings()
     EXPEND_AMMO,
     FIGHTER_REPAIR,
     TURRET_TRACKING,
+    "",
+    "Automatic refuel behaviour",
+    // If you add anything in here be careful not to conflict with the "refuel behaviour"-bar.
     "\n",
     "Performance",
     "Show CPU / GPU load",
@@ -536,6 +553,24 @@ void PreferencesPanel::DrawSettings()
     table.Draw(setting, isOn ? medium : dim);
     table.Draw(text, isOn ? bright : medium);
   }
+  
+  // Draw the text under the refuel bar.
+  string refuelText;
+  string refuelText2 = "";
+  double maxPrice = Preferences::GetMaxPrice();
+  if(maxPrice == 10)
+    refuelText = "Always refuel";
+  else if(maxPrice)
+  {
+    refuelText = "Only refuel if the price is less than ";
+    refuelText2 = Format::Number(maxPrice)+" credits per unit.";
+  }
+  else
+    refuelText = "Only refuel if it is for free.";
+  table.DrawAt(Point(-130, 130));
+  table.Draw(refuelText, medium);
+  table.DrawAt(Point(-130, 150));
+  table.Draw(refuelText2, medium);
 }
 
 
