@@ -182,7 +182,7 @@ void HailPanel::Draw()
   interface->Draw(info, this);
   
   // Draw the sprite, rotated, scaled, and swizzled as necessary.
-  double zoom = min(2., 400. / max(sprite->Width(), sprite->Height()));
+  float zoom = min(2., 400. / max(sprite->Width(), sprite->Height()));
   Point centre(-170., -10.);
   
   DrawList draw;

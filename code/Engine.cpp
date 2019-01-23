@@ -819,10 +819,10 @@ void Engine::Draw() const
     Point pos = it.position * zoom;
     double radius = it.radius * zoom;
     if(it.outer > 0.)
-      RingShader::Draw(pos, radius + 3., 1.5, it.outer, colour[it.type], 0., it.angle);
+      RingShader::Draw(pos, radius + 3., 1.5f, it.outer, colour[it.type], 0.f, it.angle);
     double dashes = (it.type >= 2) ? 0. : 20. * min(1., zoom);
     if(it.inner > 0.)
-      RingShader::Draw(pos, radius, 1.5, it.inner, colour[3 + it.type], dashes, it.angle);
+      RingShader::Draw(pos, radius, 1.5f, it.inner, colour[3 + it.type], dashes, it.angle);
   }
   
   // Draw the flagship highlight, if any.
@@ -853,7 +853,7 @@ void Engine::Draw() const
     if(messagePoint.Y() < messageBox.Top())
       break;
     float alpha = (it->step + 1000 - step) * .001f;
-    Colour colour(alpha, 0.);
+    Colour colour(alpha, 0.f);
     messageLine.Draw(messagePoint, colour);
   }
   
@@ -865,7 +865,7 @@ void Engine::Draw() const
     
     for(int i = 0; i < target.count; ++i)
     {
-      PointerShader::Draw(target.centre * zoom, a.Unit(), 12., 14., -target.radius * zoom,
+      PointerShader::Draw(target.centre * zoom, a.Unit(), 12.f, 14.f, -target.radius * zoom,
         Radar::GetColour(target.type));
       a += da;
     }
@@ -885,7 +885,7 @@ void Engine::Draw() const
   {
     Point centre = interface->GetPoint("target");
     double radius = interface->GetValue("target radius");
-    PointerShader::Draw(centre, targetVector.Unit(), 10., 10., radius, Colour(1.));
+    PointerShader::Draw(centre, targetVector.Unit(), 10.f, 10.f, radius, Colour(1.));
   }
   
   // Draw the faction markers.
@@ -901,7 +901,7 @@ void Engine::Draw() const
       SpriteShader::Draw(mark[i], centre + Point(dx[i], 0.), 1., targetSwizzle);
   }
   if(jumpCount && Preferences::Has("Show mini-map"))
-    MapPanel::DrawMiniMap(player, .5 * min(1., jumpCount / 30.), jumpInProgress, step);
+    MapPanel::DrawMiniMap(player, .5f * min(1.f, jumpCount / 30.f), jumpInProgress, step);
   
   // Draw ammo status.
   static const double ICON_SIZE = 30.;
@@ -1697,7 +1697,7 @@ void Engine::DoCollisions(Projectile &projectile)
     // ship that they have hit.
     if(!projectile.GetWeapon().IsPhasing())
     {
-      Body *asteroid = asteroids.Collide(projectile, step, &closestHit);
+      Body *asteroid = asteroids.Collide(projectile, &closestHit);
       if(asteroid)
       {
         hitVelocity = asteroid->Velocity();

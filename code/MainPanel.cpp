@@ -143,10 +143,10 @@ void MainPanel::Draw()
     if(canDrag)
     {
       const Colour &dragColour = *GameData::Colours().Get("drag select");
-      LineShader::Draw(dragSource, Point(dragSource.X(), dragPoint.Y()), .8, dragColour);
-      LineShader::Draw(Point(dragSource.X(), dragPoint.Y()), dragPoint, .8, dragColour);
-      LineShader::Draw(dragPoint, Point(dragPoint.X(), dragSource.Y()), .8, dragColour);
-      LineShader::Draw(Point(dragPoint.X(), dragSource.Y()), dragSource, .8, dragColour);
+      LineShader::Draw(dragSource, Point(dragSource.X(), dragPoint.Y()), .8f, dragColour);
+      LineShader::Draw(Point(dragSource.X(), dragPoint.Y()), dragPoint, .8f, dragColour);
+      LineShader::Draw(dragPoint, Point(dragPoint.X(), dragSource.Y()), .8f, dragColour);
+      LineShader::Draw(Point(dragPoint.X(), dragSource.Y()), dragSource, .8f, dragColour);
     }
     else
       isDragging = false;

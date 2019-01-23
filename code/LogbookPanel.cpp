@@ -16,6 +16,7 @@
 #include "UI.h"
 #include "WrappedText.h"
 
+#include <algorithm>
 #include <set>
 
 using namespace std;

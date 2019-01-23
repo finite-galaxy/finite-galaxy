@@ -443,7 +443,7 @@ void Interface::ImageElement::Draw(const Rectangle &rect, const Information &inf
   float frame = info.GetSpriteFrame(name);
   if(isOutline)
   {
-    Colour colour = (isColoured ? info.GetOutlineColour() : Colour(1., 1.));
+    Colour colour = (isColoured ? info.GetOutlineColour() : Colour(1.f, 1.f));
     Point unit = info.GetSpriteUnit(name);
     OutlineShader::Draw(sprite, rect.Centre(), rect.Dimensions(), colour, unit, frame);
   }

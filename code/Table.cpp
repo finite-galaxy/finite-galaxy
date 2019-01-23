@@ -33,7 +33,7 @@ void Table::Clear()
   
   point = Point();
   it = columns.begin();
-  colour = Colour(1., 0.);
+  colour = Colour(1.f, 0.f);
 }
 
 

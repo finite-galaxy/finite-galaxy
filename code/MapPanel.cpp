@@ -65,8 +65,8 @@ namespace {
     }
   }
   
-  const Colour black(0., 1.);
-  const Colour red(1., 0., 0., 1.);
+  const Colour black(0.f, 1.f);
+  const Colour red(1.f, 0.f, 0.f, 1.f);
   
   // Hovering an escort pip for this many frames activates the tooltip.
   const int HOVER_TIME = 60;
@@ -74,11 +74,11 @@ namespace {
   const int RECENTRE_TIME = 20;
 }
 
-const double MapPanel::OUTER = 6.;
-const double MapPanel::INNER = 3.5;
-const double MapPanel::LINK_WIDTH = 1.2;
+const float MapPanel::OUTER = 6.f;
+const float MapPanel::INNER = 3.5f;
+const float MapPanel::LINK_WIDTH = 1.2f;
 // Draw links only outside the system ring, which has radius MapPanel::OUTER.
-const double MapPanel::LINK_OFFSET = 7.;
+const float MapPanel::LINK_OFFSET = 7.f;
 
 
 
@@ -137,12 +137,12 @@ void MapPanel::Draw()
     FogShader::Draw(centre, Zoom(), player);
   
   // Draw the "visible range" circle around your current location.
-  Colour dimColour(.1, 0.);
+  Colour dimColour(.1f, 0.f);
   RingShader::Draw(Zoom() * (playerSystem ? playerSystem->Position() + centre : centre),
     (System::NEIGHBOR_DISTANCE + .5) * Zoom(), (System::NEIGHBOR_DISTANCE - .5) * Zoom(), dimColour);
-  Colour brightColour(.4, 0.);
+  Colour brightColour(.4f, 0.f);
   RingShader::Draw(Zoom() * (selectedSystem ? selectedSystem->Position() + centre : centre),
-    11., 9., brightColour);
+    11.f, 9.f, brightColour);
   
   // Advance a "blink" timer.
   ++step;
@@ -191,19 +191,19 @@ void MapPanel::DrawButtons(const string &condition)
 
 
 
-void MapPanel::DrawMiniMap(const PlayerInfo &player, double alpha, const System *const jump[2], int step)
+void MapPanel::DrawMiniMap(const PlayerInfo &player, float alpha, const System *const jump[2], int step)
 {
   const Font &font = FontSet::Get(14);
-  Colour lineColour(alpha, 0.);
+  Colour lineColour(alpha, 0.f);
   Point centre = .5 * (jump[0]->Position() + jump[1]->Position());
   const Point &drawPos = GameData::Interfaces().Get("hud")->GetPoint("mini-map");
   set<const System *> drawnSystems = { jump[0], jump[1] };
   bool isLink = jump[0]->Links().count(jump[1]);
   
   const Set<Colour> &colours = GameData::Colours();
-  const Colour &currentColour = colours.Get("active mission")->Additive(alpha * 2.);
-  const Colour &blockedColour = colours.Get("blocked mission")->Additive(alpha * 2.);
-  const Colour &waypointColour = colours.Get("waypoint")->Additive(alpha * 2.);
+  const Colour &currentColour = colours.Get("active mission")->Additive(alpha * 2.f);
+  const Colour &blockedColour = colours.Get("blocked mission")->Additive(alpha * 2.f);
+  const Colour &waypointColour = colours.Get("waypoint")->Additive(alpha * 2.f);
   
   const Ship *flagship = player.Flagship();
   for(int i = 0; i < 2; ++i)
@@ -217,12 +217,13 @@ void MapPanel::DrawMiniMap(const PlayerInfo &player, double alpha, const System 
     
     // Draw the origin and destination systems, since they
     // might not be linked via hyperspace.
-    Colour colour = Colour(.5 * alpha, 0.);
+    Colour colour = Colour(.5f * alpha, 0.f);
     if(player.HasVisited(system) && system->IsInhabited(flagship) && gov)
       colour = Colour(
         alpha * gov->GetColour().Get()[0],
         alpha * gov->GetColour().Get()[1],
-        alpha * gov->GetColour().Get()[2], 0.);
+        alpha * gov->GetColour().Get()[2],
+        0.f);
     RingShader::Draw(from, OUTER, INNER, colour);
     
     for(const System *link : system->Links())
@@ -242,12 +243,13 @@ void MapPanel::DrawMiniMap(const PlayerInfo &player, double alpha, const System 
       drawnSystems.insert(link);
       
       gov = link->GetGovernment();
-      Colour colour = Colour(.5 * alpha, 0.);
+      Colour colour = Colour(.5f * alpha, 0.f);
       if(player.HasVisited(link) && link->IsInhabited(flagship) && gov)
         colour = Colour(
           alpha * gov->GetColour().Get()[0],
           alpha * gov->GetColour().Get()[1],
-          alpha * gov->GetColour().Get()[2], 0.);
+          alpha * gov->GetColour().Get()[2],
+          0.f);
       RingShader::Draw(to, OUTER, INNER, colour);
     }
     
@@ -289,7 +291,7 @@ void MapPanel::DrawMiniMap(const PlayerInfo &player, double alpha, const System 
   Point unit = (to - from).Unit();
   from += LINK_OFFSET * unit;
   to -= LINK_OFFSET * unit;
-  Colour bright(2. * alpha, 0.);
+  Colour bright(2.f * alpha, 0.f);
   // Non-hyperspace jumps are drawn with a dashed directional arrow.
   if(!isLink)
   {
@@ -486,10 +488,10 @@ Colour MapPanel::GovernmentColour(const Government *government)
     return UninhabitedColour();
   
   return Colour(
-    .6 * government->GetColour().Get()[0],
-    .6 * government->GetColour().Get()[1],
-    .6 * government->GetColour().Get()[2],
-    .4);
+    .6f * government->GetColour().Get()[0],
+    .6f * government->GetColour().Get()[1],
+    .6f * government->GetColour().Get()[2],
+    .4f);
 }
 
 
@@ -885,7 +887,7 @@ void MapPanel::DrawTravelPlan()
     Point from = Zoom() * (next->Position() + centre);
     Point to = Zoom() * (previous->Position() + centre);
     Point unit = (from - to).Unit() * LINK_OFFSET;
-    LineShader::Draw(from - unit, to + unit, 3., drawColour);
+    LineShader::Draw(from - unit, to + unit, 3.f, drawColour);
     
     previous = next;
   }
@@ -915,7 +917,7 @@ void MapPanel::DrawEscorts()
     if(player.HasSeen(squad.first) || squad.first == specialSystem)
     {
       Point pos = zoom * (squad.first->Position() + centre);
-      RingShader::Draw(pos, INNER - 1., 0., squad.second.first ? active : parked);
+      RingShader::Draw(pos, INNER - 1.f, 0.f, squad.second.first ? active : parked);
     }
 }
 
@@ -1094,8 +1096,8 @@ void MapPanel::DrawMissions()
     // The special system pointer is larger than the others.
     Angle a = (angle[specialSystem] += Angle(30.));
     Point pos = Zoom() * (specialSystem->Position() + centre);
-    PointerShader::Draw(pos, a.Unit(), 20., 27., -4., black);
-    PointerShader::Draw(pos, a.Unit(), 11.5, 21.5, -6., specialColour);
+    PointerShader::Draw(pos, a.Unit(), 20.f, 27.f, -4.f, black);
+    PointerShader::Draw(pos, a.Unit(), 11.5f, 21.5f, -6.f, specialColour);
   }
 }
 
@@ -1159,6 +1161,7 @@ void MapPanel::DrawPointer(Point position, Angle &angle, const Colour &colour, b
 {
   angle += Angle(30.);
   if(drawBack)
-    PointerShader::Draw(position, angle.Unit(), 14. + bigger, 19. + 2 * bigger, -4., black);
-  PointerShader::Draw(position, angle.Unit(), 8. + bigger, 15. + 2 * bigger, -6., colour);
+    PointerShader::Draw(position, angle.Unit(), 14.f + bigger, 19.f + 2 * bigger, -4.f, black);
+  PointerShader::Draw(position, angle.Unit(), 8.f + bigger, 15.f + 2 * bigger, -6.f, colour);
 }
+

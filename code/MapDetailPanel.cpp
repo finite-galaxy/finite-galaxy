@@ -418,7 +418,7 @@ void MapDetailPanel::DrawInfo()
   font.Draw(gov, uiPoint + Point(-90., 13.), (commodity == SHOW_GOVERNMENT) ? medium : dim);
   if(commodity == SHOW_GOVERNMENT)
     PointerShader::Draw(uiPoint + Point(-90., 23.), Point(1., 0.),
-      10., 10., 0., medium);
+      10.f, 10.f, 0.f, medium);
   
   uiPoint.Y() += 115.;
   
@@ -455,21 +455,21 @@ void MapDetailPanel::DrawInfo()
           planet->IsInhabited() ? medium : faint);
         if(commodity == SHOW_REPUTATION)
           PointerShader::Draw(uiPoint + Point(-60., -25.), Point(1., 0.),
-            10., 10., 0., medium);
+            10.f, 10.f, 0.f, medium);
         
         font.Draw("Shipyard",
           uiPoint + Point(-60., -15.),
           planet->HasShipyard() ? medium : faint);
         if(commodity == SHOW_SHIPYARD)
           PointerShader::Draw(uiPoint + Point(-60., -5.), Point(1., 0.),
-            10., 10., 0., medium);
+            10.f, 10.f, 0.f, medium);
         
         font.Draw("Outfitter",
           uiPoint + Point(-60., 5.),
           planet->HasOutfitter() ? medium : faint);
         if(commodity == SHOW_OUTFITTER)
           PointerShader::Draw(uiPoint + Point(-60., 15.), Point(1., 0.),
-            10., 10., 0., medium);
+            10.f, 10.f, 0.f, medium);
         
         bool hasVisited = player.HasVisited(planet);
         font.Draw(hasVisited ? "(has been visited)" : "(not yet visited)",
@@ -477,7 +477,7 @@ void MapDetailPanel::DrawInfo()
           dim);
         if(commodity == SHOW_VISITED)
           PointerShader::Draw(uiPoint + Point(-70., 35.), Point(1., 0.),
-            10., 10., 0., medium);
+            10.f, 10.f, 0.f, medium);
         
         uiPoint.Y() += 130.;
       }
@@ -532,7 +532,7 @@ void MapDetailPanel::DrawInfo()
     font.Draw(price, pos, colour);
     
     if(isSelected)
-      PointerShader::Draw(uiPoint + Point(0., 10.), Point(1., 0.), 10., 10., 0., colour);
+      PointerShader::Draw(uiPoint + Point(0., 10.), Point(1., 0.), 10.f, 10.f, 0.f, colour);
     
     uiPoint.Y() += 20.;
   }
@@ -543,8 +543,8 @@ void MapDetailPanel::DrawInfo()
     static const int X_OFFSET = 240;
     static const int WIDTH = 500;
     const Sprite *panelSprite = SpriteSet::Get("ui/description panel");
-    Point pos(Screen::Right() - X_OFFSET - .5 * panelSprite->Width(),
-      Screen::Top() + .5 * panelSprite->Height());
+    Point pos(Screen::Right() - X_OFFSET - .5f * panelSprite->Width(),
+      Screen::Top() + .5f * panelSprite->Height());
     SpriteShader::Draw(panelSprite, pos);
     
     WrappedText text(font);
@@ -627,8 +627,8 @@ void MapDetailPanel::DrawOrbits()
     
     const float *rgb = Radar::GetColour(object.RadarType(player.Flagship())).Get();
     // Darken and saturate the colour, and make it opaque.
-    Colour colour(max(0., rgb[0] * 1.2 - .2), max(0., rgb[1] * 1.2 - .2), max(0., rgb[2] * 1.2 - .2), 1.);
-    RingShader::Draw(pos, object.Radius() * scale + 1., 0., colour);
+    Colour colour(max(0.f, rgb[0] * 1.2f - .2f), max(0.f, rgb[1] * 1.2f - .2f), max(0.f, rgb[2] * 1.2f - .2f), 1.);
+    RingShader::Draw(pos, object.Radius() * scale + 1., 0.f, colour);
   }
   
   // Draw the selection ring on top of everything else.

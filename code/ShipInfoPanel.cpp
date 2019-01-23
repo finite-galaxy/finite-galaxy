@@ -401,7 +401,7 @@ void ShipInfoPanel::DrawWeapons(const Rectangle &bounds)
   
   // Draw the ship, using the black silhouette swizzle.
   SpriteShader::Draw(sprite, bounds.Centre(), scale, 63);
-  OutlineShader::Draw(sprite, bounds.Centre(), scale * Point(sprite->Width(), sprite->Height()), Colour(.5));
+  OutlineShader::Draw(sprite, bounds.Centre(), scale * Point(sprite->Width(), sprite->Height()), Colour(.5f));
   
   // Figure out how tall each part of the weapon listing will be.
   int gunRows = max(count[0][0], count[1][0]);
@@ -443,10 +443,10 @@ void ShipInfoPanel::DrawWeapons(const Rectangle &bounds)
     zones.emplace_back(zoneCentre, LINE_SIZE, index);
     
     // Determine what colour to use for the line.
-    double high = (index == hoverIndex ? .8 : .5);
-    Colour colour(high, .75 * high, 0., 1.);
+    float high = (index == hoverIndex ? .8f : .5f);
+    Colour colour(high, .75f * high, 0.f, 1.f);
     if(isTurret)
-      colour = Colour(0., .75 * high, high, 1.);
+      colour = Colour(0.f, .75f * high, high, 1.f);
     
     // Draw the line.
     Point from(fromX[isRight], zoneCentre.Y());
@@ -582,13 +582,13 @@ void ShipInfoPanel::DrawCargo(const Rectangle &bounds)
 
 void ShipInfoPanel::DrawLine(const Point &from, const Point &to, const Colour &colour) const
 {
-  Colour black(0., 1.);
+  Colour black(0.f, 1.f);
   Point mid(to.X(), from.Y());
   
-  LineShader::Draw(from, mid, 3.5, black);
-  LineShader::Draw(mid, to, 3.5, black);
-  LineShader::Draw(from, mid, 1.5, colour);
-  LineShader::Draw(mid, to, 1.5, colour);
+  LineShader::Draw(from, mid, 3.5f, black);
+  LineShader::Draw(mid, to, 3.5f, black);
+  LineShader::Draw(from, mid, 1.5f, colour);
+  LineShader::Draw(mid, to, 1.5f, colour);
 }
 
 

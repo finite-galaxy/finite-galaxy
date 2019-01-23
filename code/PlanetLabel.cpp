@@ -14,6 +14,7 @@
 #include "StellarObject.h"
 #include "System.h"
 
+#include <algorithm>
 #include <cmath>
 
 using namespace std;
@@ -35,21 +36,21 @@ PlanetLabel::PlanetLabel(const Point &position, const StellarObject &object, con
   const Planet &planet = *object.GetPlanet();
   name = planet.Name();
   if(planet.IsWormhole())
-    colour = Colour(.8, .3, 1., 1.);
+    colour = Colour(.8f, .3f, 1.f, 1.f);
   else if(planet.GetGovernment())
   {
     government = "(" + planet.GetGovernment()->GetName() + ")";
     colour = planet.GetGovernment()->GetColour();
-    colour = Colour(colour.Get()[0] * .5 + .3, colour.Get()[1] * .5 + .3, colour.Get()[2] * .5 + .3);
+    colour = Colour(colour.Get()[0] * .5f + .3f, colour.Get()[1] * .5f + .3f, colour.Get()[2] * .5f + .3f);
     if(!planet.CanLand())
       hostility = 3 + 2 * planet.GetGovernment()->IsEnemy();
   }
   else
   {
-    colour = Colour(.3, .3, .3, 1.);
+    colour = Colour(.3f, .3f, .3f, 1.f);
     government = "(No government)";
   }
-  double alpha = min(.5, max(0., .6 - (position.Length() - radius) * .001 * zoom));
+  float alpha = static_cast<float>(min(.5, max(0., .6 - (position.Length() - radius) * .001 * zoom)));
   colour = Colour(colour.Get()[0] * alpha, colour.Get()[1] * alpha, colour.Get()[2] * alpha, 0.);
   
   if(!system)
@@ -106,14 +107,14 @@ void PlanetLabel::Draw() const
   double innerAngle = LINE_ANGLE[direction];
   double outerAngle = innerAngle - 360. * GAP / (2. * PI * radius);
   Point unit = Angle(innerAngle).Unit();
-  RingShader::Draw(position, radius + INNER_SPACE, 2.3, .9, colour, 0., innerAngle);
-  RingShader::Draw(position, radius + INNER_SPACE + GAP, 1.3, .6, colour, 0., outerAngle);
+  RingShader::Draw(position, radius + INNER_SPACE, 2.3f, .9f, colour, 0.f, innerAngle);
+  RingShader::Draw(position, radius + INNER_SPACE + GAP, 1.3f, .6f, colour, 0.f, outerAngle);
   
   if(!name.empty())
   {
     Point from = position + (radius + INNER_SPACE + LINE_GAP) * unit;
     Point to = from + LINE_LENGTH * unit;
-    LineShader::Draw(from, to, 1.3, colour);
+    LineShader::Draw(from, to, 1.3f, colour);
     
     double nameX = to.X() + (direction < 2 ? 2. : -bigFont.Width(name) - 2.);
     bigFont.DrawAliased(name, nameX, to.Y() - .5 * bigFont.Height(), colour);
@@ -125,7 +126,7 @@ void PlanetLabel::Draw() const
   for(int i = 0; i < hostility; ++i)
   {
     barbAngle += Angle(800. / (radius + 25.));
-    PointerShader::Draw(position, barbAngle.Unit(), 15., 15., radius + 25., colour);
+    PointerShader::Draw(position, barbAngle.Unit(), 15.f, 15.f, radius + 25., colour);
   }
 }
 

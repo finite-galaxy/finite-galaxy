@@ -13,6 +13,7 @@
 #include "Sprite.h"
 #include "SpriteSet.h"
 
+#include <algorithm>
 #include <cmath>
 #include <numeric>
 
