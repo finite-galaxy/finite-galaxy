@@ -17,7 +17,99 @@ shipyard "Navy Variants"
   "Venus (Mark III)"
   "Venus (Surveillance)"
 
+# needs entry in ship_overview.txt when properly tuned
+ship "Jupiter"
+  sprite "ship/jupiter"
+  thumbnail "thumbnail/jupiter"
+  attributes
+    category "Battleship"
+#    manufacturer "Navy"
+    licences
+      #Jupiter
+    "cost" 45300000
+    "shields" 24400
+    "hull" 9300
+    "required crew" 122
+    "bunks" 28
+    "mass" 3150
+    "drag" 18.9
+    "heat dissipation" .3
+    "cargo space" 130
+    "outfit space" 1250
+    "core space" 500
+    "engine space" 250
+    "weapon space" 500
+    weapon
+      "blast radius" 423
+      "shield damage" 2010
+      "random shield damage" 2510
+      "hull damage" 3030
+      "random hull damage" 3415
+      "heat damage" 56600
+      "random heat damage" 68500
+      "hit force" 4750
+      "random hit force" 5725
+  outfits
+    "D94-YV Shield Generator"
+    "Fusion Reactor"
+    "Dwarf Core"
+    "Hyperdrive"
 
+    "A860 Atomic Thruster"
+    "A525 Atomic Steering"
+
+    "Sidewinder Missile" 108
+    "Sidewinder Missile Rack" 36
+    "Sidewinder Missile Launcher" 4
+    "Electron Turret" 4
+    "Heavy Anti-Missile" 2
+    "Electron Cannon" 2
+
+    "LP144a Battery Pack" 4
+    "Liquid Helium Cooler"
+    "Fuel Pod" 184
+    "Large Radar Jammer"
+    "Ramscoop"
+    "Tactical Scanner" 25
+    "Fragmentation Grenades" 80
+    "Laser Rifle" 160
+    "Security Station" 4
+  engine 72 226.5 1
+  engine -72 226.5 1
+  turret 44 -38 "Particle Turret"
+  turret 56 -38 "Particle Turret"
+  turret 69 -38 "Heavy Anti-Missile"
+  gun 48.5 -198 "Sidewinder Missile Launcher"
+  gun 37.5 -215 "Sidewinder Missile Launcher"
+  gun 25.5 -229 "Sidewinder Missile Launcher"
+  turret -44 -38 "Particle Turret"
+  turret -56 -38 "Particle Turret"
+  turret -69 -38 "Heavy Anti-Missile"
+  gun -48.5 -198 "Sidewinder Missile Launcher"
+  gun -37.5 -215 "Particle Cannon"
+  gun -25.5 -229 "Particle Cannon"
+  fighter 110 -30 over
+  fighter 147 -30 over
+  fighter 183 -30 over
+  fighter 183 25 over back
+  fighter 147 25 over back
+  fighter 110 25 over back
+  fighter -110 -30 over
+  fighter -147 -30 over
+  fighter -183 -30 over
+  fighter -183 25 over back
+  fighter -147 25 over back
+  fighter -110 25 over back
+  leak "leak" 30 50
+  leak "flame" 30 80
+  leak "big leak" 30 30
+  explode "tiny explosion" 20
+  explode "small explosion" 45
+  explode "medium explosion" 55
+  explode "large explosion" 30
+  explode "huge explosion" 15
+  "final explode" "final explosion huge"
+  description "The Jupyter is much more than just a warship: it is practically a mobile space station armed to the teeth with a total of 6 guns, a total of 6 turrets, and 6 fighter bays on each side ready to engage any enemy in the vast mysterious expanse of the universe."
 
 ship "Mars"
   sprite "ship/mars"
@@ -686,95 +778,3 @@ ship "Venus" "Venus (Surveillance)"
     "Fragmentation Grenades" 60
     "Laser Rifle" 120
     "Security Station" 3
-
-ship "Jupyter"
-  sprite "ship/jupyter"
-  thumbnail "thumbnail/jupyter"
-  attributes
-    category "Battleship"
-#    manufacturer "Navy"
-    licences
-      #Jupyter
-    "cost" 45300000
-    "shields" 24400
-    "hull" 9300
-    "required crew" 122
-    "bunks" 204
-    "mass" 1030
-    "drag" 18.9
-    "heat dissipation" .4
-    "cargo space" 120
-    "outfit space" 1200
-    "core space" 450
-    "engine space" 250
-    "weapon space" 500
-    weapon
-      "blast radius" 423
-      "shield damage" 2010
-      "random shield damage" 2510
-      "hull damage" 3030
-      "random hull damage" 3415
-      "heat damage" 56600
-      "random heat damage" 68500
-      "hit force" 4750
-      "random hit force" 5725
-  outfits
-    "D94-YV Shield Generator"
-    "Fusion Reactor"
-    "Dwarf Core"
-    "Hyperdrive"
-
-    "A860 Atomic Thruster"
-    "A525 Atomic Steering"
-
-    "Sidewinder Missile" 108
-    "Sidewinder Missile Rack" 36
-    "Sidewinder Missile Launcher" 4
-    "Particle Turret" 2
-    "Heavy Anti-Missile" 2
-
-    "LP144a Battery Pack"
-    "Liquid Helium Cooler"
-    "Fuel Pod" 184
-    "Large Radar Jammer"
-    "Ramscoop"
-    "Tactical Scanner" 25
-    "Fragmentation Grenades" 80
-    "Laser Rifle" 160
-    "Security Station" 4
-    turret 44 -38
-  turret 56 -38
-  turret 69 -38
-  gun 48.5 -198
-  gun 37.5 -215
-  gun 25.5 -229
-  engine 72 226.5
-  turret -44 -38
-  turret -56 -38
-  turret -69 -38
-  gun -48.5 -198
-  gun -37.5 -215
-  gun -25.5 -229
-  engine -72 226.5
-  fighter 110 -60 under
-  fighter 147 -60 under
-  fighter 183 -60 under
-  fighter 183 50 under back
-  fighter 147 50 under back
-  fighter 110 50 under back
-  fighter -110 -60 under
-  fighter -147 -60 under
-  fighter -183 -60 under
-  fighter -183 50 under back
-  fighter -147 50 under back
-  fighter -110 50 under back
-  leak "leak" 30 50
-  leak "flame" 30 80
-  leak "big leak" 30 30
-  explode "tiny explosion" 20
-  explode "small explosion" 45
-  explode "medium explosion" 55
-  explode "large explosion" 30
-  explode "huge explosion" 15
-  "final explode" "final explosion huge"
-  description "The Jupyter is much more than just a warship: it is practically a mobile space station armed to the teeth with a total of 6 guns, a total of 6 turrets, and 6 fighter bays on each side ready to engage any enemy in the vast mysterious expanse of the universe."
