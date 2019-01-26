@@ -1,4 +1,6 @@
 shipyard "Navy Variants"
+  "Jupiter"
+  "Jupiter (Mark II)"
   "Mars"
   "Mars (Mark II)"
   "Mars (Mark III)"
@@ -31,7 +33,7 @@ ship "Jupiter"
     "hull" 9300
     "required crew" 122
     "bunks" 208
-    "mass" 1150
+    "mass" 2150
     "drag" 18.9
     "heat dissipation" .3
     "cargo space" 130
@@ -72,22 +74,22 @@ ship "Jupiter"
     "Ramscoop"
     "Tactical Scanner" 25
     "Fragmentation Grenades" 80
-    "Laser Rifle" 160
+    "Laser Rifle" 200
     "Security Station" 4
   engine 72 226.5 1
   engine -72 226.5 1
-  turret 44 -38 "Particle Turret"
-  turret 56 -38 "Particle Turret"
+  turret 44 -38 "Electron Turret"
+  turret 56 -38 "Electron Turret"
   turret 69 -38 "Heavy Anti-Missile"
   gun 48.5 -198 "Sidewinder Missile Launcher"
   gun 37.5 -215 "Sidewinder Missile Launcher"
-  gun 25.5 -229 "Sidewinder Missile Launcher"
-  turret -44 -38 "Particle Turret"
-  turret -56 -38 "Particle Turret"
+  gun 25.5 -229 "Electron Cannon"
+  turret -44 -38 "Electron Turret"
+  turret -56 -38 "Electron Turret"
   turret -69 -38 "Heavy Anti-Missile"
   gun -48.5 -198 "Sidewinder Missile Launcher"
-  gun -37.5 -215 "Particle Cannon"
-  gun -25.5 -229 "Particle Cannon"
+  gun -37.5 -215 "Sidewinder Missile Launcher"
+  gun -25.5 -229 "Electron Cannon"
   fighter 110 -30 over
   fighter 147 -30 over
   fighter 183 -30 over
@@ -110,6 +112,37 @@ ship "Jupiter"
   explode "huge explosion" 15
   "final explode" "final explosion huge"
   description "The Jupyter is much more than just a warship: it is practically a mobile space station armed to the teeth with a total of 6 guns, a total of 6 turrets, and 6 fighter bays on each side ready to engage any enemy in the vast mysterious expanse of the universe."
+
+ship "Jupiter" "Jupiter (Mark II)"
+  outfits
+    "D94-YV Shield Generator"
+    "Fusion Reactor"
+    "Dwarf Core" 2
+    "Hyperdrive"
+
+    "A860 Atomic Thruster"
+    "A525 Atomic Steering"
+
+    "Electron Turret" 4
+    "Heavy Anti-Missile" 2
+    "Electron Cannon" 6
+
+    "LP144a Battery Pack" 3
+    "Liquid Helium Cooler" 2
+    "Fuel Pod" 184
+    "Large Radar Jammer"
+    "Ramscoop"
+    "Tactical Scanner" 25
+    "Fragmentation Grenades" 80
+    "Laser Rifle" 160
+    "Security Station" 4
+  gun 48.5 -198 "Electron Cannon"
+  gun 37.5 -215 "Electron Cannon"
+  gun 25.5 -229 "Electron Cannon"
+  gun -48.5 -198 "Electron Cannon"
+  gun -37.5 -215 "Electron Cannon"
+  gun -25.5 -229 "Electron Cannon"
+
 
 ship "Mars"
   sprite "ship/mars"
