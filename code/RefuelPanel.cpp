@@ -23,6 +23,7 @@
 #include "UI.h"
 
 #include <algorithm>
+#include <iostream>
 #include <string>
 
 using namespace std;
@@ -31,6 +32,9 @@ namespace {
   const int MIN_X = -310;
   
   const int FIRST_Y = 80;
+  
+  // Determines what ratio is used to refuel ships.
+  double ratio = 1;
 }
 
 
@@ -39,6 +43,8 @@ RefuelPanel::RefuelPanel(PlayerInfo &player)
   : player(player), system(*player.GetSystem())
 {
   SetTrapAllEvents(false);
+  fuel = 0;
+  RefreshUI();
 }
 
 
@@ -52,39 +58,40 @@ void RefuelPanel::Step()
 
 void RefuelPanel::Draw()
 {
-  double ramscoop = Preferences::GetMaxRamscoopFactor();
-  if(ramscoop < 0)
-  	ramscoop = 1;
-  double price = Preferences::GetMaxPrice();
-  string priceText;
-  if(price == 10)
-    priceText = "Refuel independently of the price.";
-  else if(price == 0)
-    priceText = "Only refuel if it is for free.";
-  else
-    priceText = "Only refuel if price is less than " + Format::Number(price) + " credits per unit.";
-  price /= 10;
-  string localPrice = "The fuel price on this planet is " + Format::Number(player.GetPlanet()->GetFuelPrice()) + " credits per unit of fuel.";
-  string ramscoopText;
-  if(ramscoop == 1)
-    ramscoopText = "Refuel independently of ramscoop value of the ship";
-  else if(ramscoop == 0)
-    ramscoopText = "Only refuel if it is for free.";
-  else
-    ramscoopText = "Only refuel ships where ramscoop per jump fuel is less than " + Format::Number(ramscoop) + ".";
   
+  string localPrice = "The fuel price on this planet is " + Format::Number(player.GetPlanet()->GetFuelPrice()) + " credits per unit of fuel.";
   
   const Font &font = FontSet::Get(14);
   const Colour &colour = *GameData::Colours().Get("bright");
+  Information info;
+  
+  
+  if(fuel)
+  {
+    string price1 = "To refuel all your ships to " + Format::Round(ratio*100) + "% which will take " + Format::Round(fuel) + " units of fuel";
+    string price2 = "you would need to pay " + Format::Round(refuelPrice) + " credits.";
+    font.Draw(price1, Point(MIN_X+10, FIRST_Y+120), colour);
+    font.Draw(price2, Point(MIN_X+10, FIRST_Y+140), colour);
+    info.SetCondition("can refuel");
+  }
+  else if(ratio == 1)
+  {
+    string message1 = "Your fleet is fully refueled.";
+    font.Draw(message1, Point(MIN_X+10, FIRST_Y+100), colour);
+  }
+  else
+  {
+    string message1 = "Your fleet is at least " + Format::Round(ratio*100) + "% filled.";
+    font.Draw(message1, Point(MIN_X+10, FIRST_Y+100), colour);
+  }
+    
+  
+  
   
   font.Draw(localPrice, Point(MIN_X+10, FIRST_Y), colour);
-  font.Draw(priceText, Point(MIN_X+10, FIRST_Y+80), colour);
-  font.Draw(ramscoopText, Point(MIN_X+10, FIRST_Y+160), colour);
   
+  info.SetBar("ratio", ratio);
   const Interface *interface = GameData::Interfaces().Get("refuel");
-  Information info;
-  info.SetBar("refuel behaviour", price);
-  info.SetBar("ramscoop behaviour", ramscoop);
   interface->Draw(info, this);
 }
 
@@ -93,10 +100,11 @@ void RefuelPanel::Draw()
 // Only override the ones you need; the default action is to return false.
 bool RefuelPanel::KeyDown(SDL_Keycode key, Uint16 mod, const Command &command)
 {
-  // Refuels all ships.
+  // Refuel the defined ratios.
   if(key == 'r')
   {
-    player.Refuel(true);
+    player.RefuelRatio(ratio);
+    RefreshUI();
     return true;
   }
   return false;
@@ -106,28 +114,27 @@ bool RefuelPanel::KeyDown(SDL_Keycode key, Uint16 mod, const Command &command)
 
 bool RefuelPanel::Click(int x, int y, int clicks)
 {
-  // Checks if one of the bars is clicked on.
-  if(x >= -280 && x < -75 && y >= 135 && y < 165)
+  // Checks if the bar is clicked on.
+  if(x >= -285 && x < -75 && y >= 135 && y < 165)
   {
-    double max = (x+280)/20.;
-    if(max > 10)
-      max = 10;
-    Preferences::SetMaxPrice(max);
-    Audio::Play(Audio::Get("warder"));
-    return true;
-  }
-  if(x >= -280 && x < -75 && y >= 215 && y < 245)
-  {
-    double max = (x+280)/200.;
-    if(max > 1)
-      max = 1;
-    if(max == 1)
-      Preferences::SetMaxRamscoopFactor(-1);
-    else
-      Preferences::SetMaxRamscoopFactor(max);
+    ratio = (x+280)/200.;
+    if(ratio > 1)
+      ratio = 1;
+    if(ratio < 0)
+      ratio = 0;
+    RefreshUI();
     Audio::Play(Audio::Get("warder"));
     return true;
   }
   
   return false;
+}
+
+
+
+void RefuelPanel::RefreshUI()
+{
+  fuel = player.FuelNeeded(ratio);
+  double price = player.GetPlanet()->GetFuelPrice();
+  refuelPrice = fuel*price;
 }

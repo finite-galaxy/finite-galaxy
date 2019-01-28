@@ -253,6 +253,10 @@ public:
   double JumpDriveFuel() const;
   // Get the amount of fuel missing for the next jump (smart refuelling)
   double JumpFuelMissing() const;
+  // Get the amount of fuel missing to the given ratio.
+  double FuelMissing(double ratio) const;
+  // Refuels the ship to a given ratio.
+  double Refuel(double ratio);
   // Get the heat level at idle.
   double IdleHeat() const;
   // Get the heat dissipation, in heat units per heat unit per frame.

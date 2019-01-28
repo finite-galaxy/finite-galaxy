@@ -136,6 +136,10 @@ public:
   void LoadFighters();
   // Refuels all playerships that are currently on the same planet as the flagship.
   void Refuel(bool overridePrefs = false);
+  // Refuels for 1 jump.
+  void RefuelRatio(double ratio);
+  // Returns the fuel that is needed to perform n jumps.
+  double FuelNeeded(double ratio);
   
   // Get the player's logbook.
   const std::multimap<Date, std::string> &Logbook() const;

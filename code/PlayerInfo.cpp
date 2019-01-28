@@ -1365,8 +1365,7 @@ void PlayerInfo::Refuel(bool overridePrefs)
     {
       if(ship->GetSystem() == system)
       {
-        // Only recharges the fuel of the ship if ramscoop preferences are met.
-        rechargedFuel += ship->Recharge(hasSpaceport, rechargesFuel && (overridePrefs || ship->Attributes().Get("ramscoop")/ship->Mass() < Preferences::GetMaxRamscoopFactor()));
+        rechargedFuel += ship->Recharge(hasSpaceport, rechargesFuel);
         ship->Cargo().TransferAll(cargo);
         ship->SetPlanet(planet);
       }
@@ -1383,6 +1382,46 @@ void PlayerInfo::Refuel(bool overridePrefs)
     Messages::Add(out.str());
     accounts.AddCredits(-fuelPrice);
   }
+}
+
+
+
+// Accessed with refuel for n jumps button.
+void PlayerInfo::RefuelRatio(double ratio)
+{
+  double price = planet->GetFuelPrice();
+  int rechargedFuel = 0;
+  for(const shared_ptr<Ship> &ship : ships)
+    if(!ship->IsDisabled() && ship->GetSystem() == system)
+      // This function is only accessed by planets with refuel services.
+      rechargedFuel += ship->Refuel(ratio);
+  
+  // Pays the fuel and messages the price that was paid.
+  if(rechargedFuel && price > 0)
+  {
+    int fuelPrice = rechargedFuel*price;
+    ostringstream out;
+    out << "You paid " << fuelPrice << " credits to buy " << rechargedFuel << " units of fuel.";
+    Messages::Add(out.str());
+    accounts.AddCredits(-fuelPrice);
+  }
+}
+
+
+
+double PlayerInfo::FuelNeeded(double ratio)
+{ // Simulates a cargo and fighter load.
+  LoadCargo();
+  LoadFighters();
+  
+  double neededFuel = 0;
+  for(const shared_ptr<Ship> &ship : ships)
+    if(!ship->IsDisabled() && ship->GetSystem() == system)
+      neededFuel += ship->FuelMissing(ratio);
+      
+  UnLoadCargo();
+  
+  return neededFuel;
 }
 
 

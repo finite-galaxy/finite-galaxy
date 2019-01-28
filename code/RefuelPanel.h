@@ -27,8 +27,16 @@ protected:
   
   
 private:
+  void RefreshUI();
+  
+  
+private:
   PlayerInfo &player;
   const System &system;
+  
+  // Data about the fuel that might be needed in the refuel-panel.
+  double fuel;
+  double refuelPrice;
 };
 
 

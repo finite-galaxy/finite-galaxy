@@ -2481,6 +2481,30 @@ double Ship::JumpFuelMissing() const
 
 
 
+double Ship::FuelMissing(double ratio) const
+{
+  double maxFuel = attributes.Get("fuel capacity");
+  double neededFuel = ratio*maxFuel;
+  if(fuel > neededFuel)
+    return 0.;
+  return neededFuel - fuel;
+}
+
+
+
+double Ship::Refuel(double ratio)
+{
+  double maxFuel = attributes.Get("fuel capacity");
+  double neededFuel = ratio*maxFuel;
+  if(fuel > neededFuel)
+    return 0.;
+  maxFuel = neededFuel-fuel;
+  fuel = neededFuel;
+  return maxFuel;
+}
+
+
+
 // Get the heat level at idle.
 double Ship::IdleHeat() const
 {
