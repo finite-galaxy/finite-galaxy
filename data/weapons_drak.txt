@@ -18,9 +18,9 @@ outfit "Antimatter Cannon"
     "hit effect" "nuke explosion"
     "safe"
     "reload" 187
+    "blast radius" 100
     "firing energy" 5610
     "firing heat" 1870
-    "blast radius" 100
     "hit force" 1000
   description "This is the Drak's ultimate weapon."
 
@@ -36,10 +36,10 @@ outfit "Antimatter Fragment"
     "safe"
     "inaccuracy" 1
     "lifetime" 499
-    "hit force" 1000
+    "blast radius" 100
     "shield damage" 5610
     "hull damage" 5610
-    "blast radius" 100
+    "hit force" 1000
 
 effect "antimatter spark"
   sprite "effect/antimatter spark"
@@ -148,9 +148,9 @@ outfit "Draining Field"
     "firing energy" 20
     "firing heat" 5
     "firing force" 30
-    "hit force" 60
     "shield damage" 50
     "ion damage" .5
+    "hit force" 60
   description "This device produces a field that drains energy from any ship within it."
 
 

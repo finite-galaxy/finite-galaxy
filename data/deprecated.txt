@@ -382,9 +382,9 @@ outfit "Drak Antimatter Cannon"
     "hit effect" "nuke explosion"
     "safe"
     "reload" 187
+    "blast radius" 100
     "firing energy" 5610
     "firing heat" 1870
-    "blast radius" 100
     "hit force" 1000
 
 outfit "Drak Antimatter Fragment"
@@ -399,10 +399,10 @@ outfit "Drak Antimatter Fragment"
     "safe"
     "inaccuracy" 1
     "lifetime" 499
-    "hit force" 1000
+    "blast radius" 100
     "shield damage" 5610
     "hull damage" 5610
-    "blast radius" 100
+    "hit force" 1000
 
 outfit "Drak Anti-Missile Field"
   category "Deprecated"
@@ -464,9 +464,9 @@ outfit "Drak Draining Field"
     "firing energy" 20
     "firing heat" 5
     "firing force" 30
-    "hit force" 60
     "shield damage" 50
     "ion damage" .5
+    "hit force" 60
 
 outfit "Drak Turret"
   category "Deprecated"
@@ -653,10 +653,10 @@ outfit "Hai Tracker Pod"
     "homing" 4
     "optical tracking" .8
     "infrared tracking" .4
+    "missile strength" 16
     "shield damage" 200
     "hull damage" 160
     "hit force" 350
-    "missile strength" 16
 
 outfit "Hai Valley Batteries"
   plural "Hai Valley Batteries"
@@ -758,12 +758,12 @@ outfit "Heavy Rocket Launcher"
     "firing heat" 250
     "acceleration" .8
     "drag" .1
+    "missile strength" 16
     "trigger radius" 30
     "blast radius" 50
     "shield damage" 850
     "hull damage" 720
     "hit force" 600
-    "missile strength" 16
 
 outfit "Heavy Rocket Rack"
   category "Deprecated"
@@ -796,9 +796,9 @@ outfit "Heliarch Attractor"
     "reload" 1
     "firing energy" 4.8
     "firing heat" 4.5
+    "firing force" -30
     "shield damage" 5.4
     "hull damage" 4.2
-    "firing force" -30
     "hit force" -30
 
 outfit "Heliarch Repulsor"
@@ -823,11 +823,11 @@ outfit "Heliarch Repulsor"
     "reload" 1
     "firing energy" 5.9
     "firing heat" 1.2
+    "firing force" 60
     "shield damage" 3.6
     "hull damage" 5.8
-    "firing force" 60
-    "hit force" 60
     "slowing damage" .1
+    "hit force" 60
 
 
 outfit "Korath Ark'parat Steering"
@@ -902,14 +902,14 @@ outfit "Korath Detainer"
     "reload" 60
     "burst reload" 10
     "burst count" 2
+    "blast radius" 20
     "firing energy" 756
-    "firing force" 40
     "firing heat" 400
-    "hit force" 80
+    "firing force" 40
     "shield damage" 320
     "hull damage" 240
     "slowing damage" 40
-    "blast radius" 20
+    "hit force" 80
 
 outfit "Korath Disruptor"
   category "Deprecated"
@@ -1094,10 +1094,10 @@ outfit "Korath Mine Submunition"
     "velocity" 2
     "random velocity" 5
     "drag" .05
+    "missile strength" 22
     "shield damage" 350
     "hull damage" 280
     "hit force" 200
-    "missile strength" 22
 
 outfit "Korath Piercer"
   category "Deprecated"
@@ -1138,11 +1138,11 @@ outfit "Korath Piercer Launcher"
     "turn" 1.6
     "homing" 4
     "infrared tracking" .9
+    "missile strength" 73
     "shield damage" 290
     "hull damage" 440
-    "piercing" .2
     "hit force" 300
-    "missile strength" 73
+    "piercing" .2
     "stream"
 
 outfit "Korath Piercer Rack"
@@ -1467,9 +1467,9 @@ outfit "Proton Fragment"
     "hit effect" "proton impact"
     "inaccuracy" 2
     "lifetime" 24
-    "hit force" 6
     "shield damage" 8.4
     "hull damage" 7
+    "hit force" 6
 
 outfit "Proton Gun"
   category "Deprecated"
@@ -1598,11 +1598,11 @@ outfit "Pug Gridfire Turret"
     "lifetime" 1
     "reload" 20
     "turret turn" 20
+    "blast radius" 40
     "firing energy" 800
     "firing heat" 400
     "shield damage" 600
     "hull damage" 600
-    "blast radius" 40
     "piercing" .3
 
 outfit "Pug Lohmar Steering"
@@ -1656,10 +1656,10 @@ outfit "Pug Seeker"
     "turn" 4
     "homing" 5
     "tracking" .5
+    "missile strength" 40
     "shield damage" 24
     "hull damage" 13
     "hit force" 2
-    "missile strength" 40
 
 outfit "Pug Zapper"
   category "Deprecated"
@@ -1834,13 +1834,13 @@ outfit "rslug"
       "frame rate" 30
     "live effect" "rail sparks" 5
     "hit effect" "bullet impact"
-    "shield damage" 65
-    "hull damage" 95
+    "turn" .3
     "homing" 1
     "optical tracking" .4
-    "turn" .3
-    "hit force" 44
     "missile strength" 14
+    "shield damage" 65
+    "hull damage" 95
+    "hit force" 44
     "piercing" .1
 
 
@@ -1869,10 +1869,10 @@ outfit "Thunderhead"
     "homing" 4
     "optical tracking" .9
     "radar tracking" .6
+    "missile strength" 3
     "shield damage" 110
     "hull damage" 80
     "hit force" 150
-    "missile strength" 3
 
 outfit "Thunderhead Launcher"
   category "Deprecated"
@@ -1899,8 +1899,6 @@ outfit "Thunderhead Launcher"
     "velocity" 4
     "lifetime" 400
     "reload" 75
-    "firing energy" 18
-    "firing heat" 36
     "acceleration" 1.1
     "drag" .1
     "turn" 2
@@ -1908,6 +1906,8 @@ outfit "Thunderhead Launcher"
     "infrared tracking" .9
     "radar tracking" .6
     "missile strength" 12
+    "firing energy" 18
+    "firing heat" 36
 
 outfit "Thunderhead Missile"
   category "Deprecated"
@@ -2003,10 +2003,10 @@ outfit "Torpedo Launcher"
     "turn" 1.5
     "homing" 3
     "optical tracking" .8
+    "missile strength" 30
     "shield damage" 680
     "hull damage" 680
     "hit force" 300
-    "missile strength" 30
 
 outfit "Torpedo Storage Rack"
   category "Deprecated"
@@ -2053,10 +2053,10 @@ outfit "Typhoon Launcher"
     "turn" 1.5
     "homing" 4
     "optical tracking" .9
+    "missile strength" 40
     "shield damage" 880
     "hull damage" 880
     "hit force" 450
-    "missile strength" 40
 
 outfit "Typhoon Storage Tube"
   category "Deprecated"

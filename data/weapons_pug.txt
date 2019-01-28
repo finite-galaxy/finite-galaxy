@@ -84,10 +84,10 @@ outfit "Seeker"
     "turn" 4
     "homing" 5
     "tracking" .5
+    "missile strength" 40
     "shield damage" 24
     "hull damage" 13
     "hit force" 2
-    "missile strength" 40
   description "You have no idea how this weapon works. It requires no ammunition, but its energy-based projectiles have the ability to home in on a target ship."
 
 effect "seeker impact"
@@ -120,12 +120,12 @@ outfit "Gridfire Turret"
     "velocity" 1764
     "lifetime" 1
     "reload" 20
+    "blast radius" 40
     "firing energy" 800
     "firing heat" 400
     "random shield damage" 1200
     "random hull damage" 1200
     "random heat damage" 1200
-    "blast radius" 40
     "piercing" .3
 
 effect "gridfire fire"

@@ -118,6 +118,7 @@ outfit "Sidewinder Missile Launcher"
     "turn" 3.0
     "homing" 4
     "radar tracking" .9
+    "missile strength" 12
     "blast radius" 3
     "shield damage" 180
     "random shield damage" 45
@@ -125,7 +126,6 @@ outfit "Sidewinder Missile Launcher"
     "random hull damage" 30
     "hit force" 160
     "random hit force" 40
-    "missile strength" 12
   description "The Sidewinder Missile is designed by Lovelace Labs, which is ironically also the designer of the Heavy Anti-Missile turret. Rumours say that the two engineering teams at Lovelace who make the missiles and the anti-missiles are locked in furious competition with each other: the result has been generation after generation of smarter missiles and then smarter turrets to fend them off."
   description "  Although not as powerful or cheap as the popular Meteor missiles, Sidewinders have several advantages, including their superior manoeuvrability, better tracking systems, and protective casings that make them much harder for anti-missile systems to destroy."
 
@@ -155,11 +155,11 @@ outfit "Particle Cannon"
     "lifetime" 32
     "reload" 20
     "firing energy" 35
-    "firing force" 10
     "firing heat" 120
-    "hit force" 80
+    "firing force" 10
     "shield damage" 58
     "hull damage" 52
+    "hit force" 80
   description "The Particle Cannon works by accelerating a short burst of particles to near-relativistic speeds. When mounted on a ship that can turn fast enough to keep it trained on approaching ships, it becomes a nearly unbeatable weapon, capable of destroying smaller ships before they can even approach close enough for their comparatively short-ranged weapons to be effective."
 
 effect "particle impact"
@@ -193,11 +193,11 @@ outfit "Particle Turret"
     "lifetime" 32
     "reload" 10
     "firing energy" 35
-    "firing force" 10
     "firing heat" 120
-    "hit force" 80
+    "firing force" 10
     "shield damage" 58
     "hull damage" 52
+    "hit force" 80
   description "The Particle Turret is a huge turret designed to be used on the largest Navy warships, to allow them to bombard opponents from a distance."
 
 

@@ -62,11 +62,11 @@ outfit "Active Finisher"
     "homing" 4
     "radar tracking" .8
     "optical tracking" .5
+    "missile strength" 50
     "blast radius" 25
     "shield damage" 1500
     "hull damage" 1900
     "hit force" 750
-    "missile strength" 50
 
 effect "finisher sparks"
   sprite "effect/finisher sparks"
@@ -245,9 +245,9 @@ outfit "Attractor"
     "reload" 1
     "firing energy" 4.8
     "firing heat" 4.5
+    "firing force" -30
     "shield damage" 5.4
     "hull damage" 4.2
-    "firing force" -30
     "hit force" -30
   description "When battling the Quarg, the Heliarch learned that the Quarg would not engage in a battle that their ships might be unable to escape. In response, they focused on building weapons that would keep a ship from being able to come to a stop and activate its jump drive."
 
@@ -288,11 +288,11 @@ outfit "Repulsor"
     "reload" 1
     "firing energy" 5.9
     "firing heat" 1.2
+    "firing force" 60
     "shield damage" 3.6
     "hull damage" 5.8
-    "firing force" 60
-    "hit force" 60
     "slowing damage" .1
+    "hit force" 60
   description "This beam turret allows a Heliarch ship to hold its enemies far enough away that they cannot make use of their short-range weapons."
 
 effect "repulsor impact"

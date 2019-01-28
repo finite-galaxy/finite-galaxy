@@ -38,16 +38,16 @@ outfit "Javelin Pod"
     "reload" 15
     "burst count" 15
     "burst reload" 2
+    "missile strength" 2
+    "blast radius" 1
     "firing energy" .2
     "firing heat" 12
-    "blast radius" 1
     "shield damage" 57
     "random shield damage" 14
     "hull damage" 36
     "random hull damage" 9
     "hit force" 50
     "random hit force" 12
-    "missile strength" 2
   description "The Javelin Pod fires rapid, unguided missiles in bursts of up to 15, after which it needs to cool down and reload. This allows it to overwhelm anti-missile systems, but also means it can not fire for a relatively longer time after each burst. A Javelin Pod does far more damage than any gun of a comparable size, and has a longer range as well, but once a ship has fired off all its ammunition it must leave combat and find a planet where it can buy more, which makes Javelins less useful in protracted battles. As a result, they are very popular with pirates as a way to quickly disable a small target."
 
 
@@ -84,6 +84,7 @@ outfit "Nuclear Missile"
     "homing" 4
     "radar tracking" .5
     "optical tracking" 1
+    "missile strength" 200
     "trigger radius" 30
     "blast radius" 150
     "shield damage" 8000
@@ -92,7 +93,6 @@ outfit "Nuclear Missile"
     "random hull damage" 1500
     "hit force" 4000
     "random hit force" 1000
-    "missile strength" 200
   description "It has been centuries since the last nuclear war was fought, and until very recently, most people in the galaxy assumed that that era of chaos and destruction was forever behind us..."
   description "  [Nuclear missiles are a one-shot weapon: each missile occupies a gun slot, and after it is fired, the slot it was in is left empty.]"
 
@@ -286,10 +286,10 @@ outfit "Plasma Cannon"
     "reload" 18
     "firing energy" 30
     "firing heat" 180
-    "hit force" 30
     "shield damage" 63
     "hull damage" 21
     "heat damage" 360
+    "hit force" 30
   description "The Plasma Cannon fires bursts of superheated plasma. In addition to damaging your target, these plasma bursts impart a significant amount of heat, especially to a target whose shields are down."
 
 effect "plasma explosion"
@@ -326,9 +326,9 @@ outfit "Plasma Turret"
     "reload" 9
     "firing energy" 30
     "firing heat" 180
-    "hit force" 30
     "shield damage" 63
     "hull damage" 21
     "heat damage" 360
+    "hit force" 30
   description "The Plasma Turret is a pair of plasma cannons mounted on a turret so that they can fire in any direction. It is a fearsome weapon, but only the largest of ships have the space and the energy that it requires."
 

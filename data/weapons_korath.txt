@@ -70,11 +70,11 @@ outfit "Mine Submunition"
     "velocity" 2
     "random velocity" 5
     "drag" .05
+    "missile strength" 22
     "blast radius" 7
     "shield damage" 350
     "hull damage" 280
     "hit force" 200
-    "missile strength" 22
 
 effect "minelayer fire"
   sprite "effect/minelayer split"
@@ -149,12 +149,12 @@ outfit "Piercer Launcher"
     "turn" 1.6
     "homing" 4
     "infrared tracking" .9
+    "missile strength" 73
     "blast radius" 6
     "shield damage" 290
     "hull damage" 440
-    "piercing" .2
     "hit force" 300
-    "missile strength" 73
+    "piercing" .2
     "stream"
   description "Piercer missiles carry a pair of warheads. The first, a smaller one in the very tip of the missile, explodes on impact to blast a hole in the ship's shields to allow some of the subsequent, larger explosion to pierce through."
 
@@ -216,8 +216,8 @@ outfit "Banisher"
     "firing heat" 4.9
     "shield damage" 2.8
     "hull damage" .9
-    "hit force" 40
     "heat damage" 4.0
+    "hit force" 40
   description "The Korath like to keep their enemies close... but not too close."
 
 effect "banisher impact"
@@ -250,14 +250,14 @@ outfit "Detainer"
     "reload" 60
     "burst reload" 10
     "burst count" 2
+    "blast radius" 20
     "firing energy" 756
-    "firing force" 40
     "firing heat" 400
-    "hit force" 80
+    "firing force" 40
     "shield damage" 320
     "hull damage" 240
     "slowing damage" 40
-    "blast radius" 20
+    "hit force" 80
   description "Although not the most damaging weapon of its size, the Detainer is feared for two reasons: its exceptionally long range, and its ability to interfere with the propulsion systems of any ship it strikes."
 
 effect "detainer sparks"

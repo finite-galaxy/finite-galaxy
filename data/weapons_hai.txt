@@ -49,11 +49,11 @@ outfit "Tracker Launcher"
     "homing" 4
     "optical tracking" .8
     "infrared tracking" .4
+    "missile strength" 16
     "blast radius" 4
     "shield damage" 200
     "hull damage" 160
     "hit force" 350
-    "missile strength" 16
   description "Trackers are fast, powerful, and accurate homing weapons. Their only weakness is their large turning radius: if a Tracker misses its target, it takes a long time to turn around."
 
 effect "tracker fire"
@@ -165,16 +165,16 @@ outfit "Ion Cannon"
     "lifetime" 60
     "reload" 60
     "firing energy" 120
-    "firing force" 10
     "firing heat" 150
-    "hit force" 120
-    "random hit force" 30
+    "firing force" 10
     "shield damage" 147
     "random shield damage" 42
     "hull damage" 54
     "random hull damage" 15
     "ion damage" 5
     "random ion damage" 1
+    "hit force" 120
+    "random hit force" 30
   description "Ion cannons do not inflict as much damage as some other weapons, but they disrupt the electrical systems on any ship they hit, draining its energy. If a ship has sizable battery reserves, this may not have any effect, but for a ship running at near its energy generation capacity an ion strike can take it out of the battle for a few seconds while it recovers."
 
 effect "ion impact"
