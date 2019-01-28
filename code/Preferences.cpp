@@ -27,7 +27,6 @@ namespace {
   const double VOLUME_SCALE = .25;
   // refuel preferences, standard value: always refuel(-1)
   double maxRefuelPrice = 10;
-  double maxRefuelRamscoop = -1;
 }
 
 
@@ -65,8 +64,6 @@ void Preferences::Load()
       zoomIndex = node.Value(1);
     else if(node.Token(0) == "max refuel price" && node.Size() >= 2)
       maxRefuelPrice = node.Value(1);
-    else if(node.Token(0) == "max refuel ramscoop/mass" && node.Size() >= 2)
-      maxRefuelRamscoop = node.Value(1);
     else
       settings[node.Token(0)] = (node.Size() == 1 || node.Value(1));
   }
@@ -84,7 +81,6 @@ void Preferences::Save()
   out.Write("scroll speed", scrollSpeed);
   out.Write("view zoom", zoomIndex);
   out.Write("max refuel price", maxRefuelPrice);
-  out.Write("max refuel ramscoop/mass", maxRefuelRamscoop);
   
   for(const auto &it : settings)
     out.Write(it.first, it.second);
@@ -179,18 +175,4 @@ double Preferences::GetMaxPrice()
 void Preferences::SetMaxPrice(double price)
 {
   maxRefuelPrice = price;
-}
-
-
-
-double Preferences::GetMaxRamscoopFactor()
-{
-  return maxRefuelRamscoop;
-}
-
-
-
-void Preferences::SetMaxRamscoopFactor(double factor)
-{
-  maxRefuelRamscoop = factor;
 }
