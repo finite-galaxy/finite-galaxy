@@ -6,7 +6,6 @@
   * replaced tabs with two spaces
   * changed font to Linux Libertine Display
   * move ship and outfit categories to data files (@Hadron1776)
-  * introduce new fuel attributes (@Nescio0)
   * hyperjump fuel is equal to the ship's effective mass (including cargo and carried ships) plus best outfit fuel
     * include cargo and fighter mass to estimate route when on planet (@IntegratedQuantum)
   * introduced core space, used by energy generators and some other outfits
@@ -469,6 +468,11 @@
   * remove unused `step` parameter from AF::Collide (@tehhowch)
   * remove some -Wuseless-cast warnings (@tehhowch)
   * using float v. double in some cases of -Wdouble-promotion (@tehhowch)
+  * explicitly track "failed" and "declined" mission statuses (@Fzzr)
+  * reduce duplicated checks in PlanetPanel::Draw (@tehhowch)
+  * reorder PlanetPanel::KeyDown checks (@tehhowch)
+  * remove trailing whitespace in payment failure message (@tehhowch)
+  * introduce new fuel-based Outfit attributes (@Nescio0)
 
 
 
