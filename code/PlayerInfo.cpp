@@ -1003,7 +1003,7 @@ void PlayerInfo::Land(UI *ui)
   // Ships that are landed with you on the planet should fully recharge
   // and pool all their cargo together. Those in remote systems restore
   // what they can without landing. Fuel is also refilled.
-  Refuel(false);
+  Refuel();
   // Adjust cargo cost basis for any cargo lost due to a ship being destroyed.
   for(const auto &it : lostCargo)
     AdjustBasis(it.first, -(costBasis[it.first] * it.second) / (cargo.Get(it.first) + it.second));
@@ -1352,12 +1352,12 @@ void PlayerInfo::LoadFighters()
 
 
 
-void PlayerInfo::Refuel(bool overridePrefs)
+void PlayerInfo::Refuel()
 {
   double price = planet->GetFuelPrice();
   // Refuels only if the price is in the preferred range or 0 or the player is overriding
   // the preferences using the "Refuel All"-button.
-  bool rechargesFuel = (price < Preferences::GetMaxPrice() || !price || overridePrefs) && price > 0;
+  bool rechargesFuel = (price < Preferences::GetMaxPrice() || !price) && price >= 0;
   int rechargedFuel = 0;
   bool hasSpaceport = planet->HasSpaceport() && planet->CanUseServices();
   for(const shared_ptr<Ship> &ship : ships)
@@ -1365,7 +1365,9 @@ void PlayerInfo::Refuel(bool overridePrefs)
     {
       if(ship->GetSystem() == system)
       {
-        rechargedFuel += ship->Recharge(hasSpaceport, rechargesFuel);
+        ship->Recharge(hasSpaceport);
+        if(rechargesFuel)
+          rechargedFuel += ship->Refuel(1);
         ship->Cargo().TransferAll(cargo);
         ship->SetPlanet(planet);
       }
@@ -1386,7 +1388,7 @@ void PlayerInfo::Refuel(bool overridePrefs)
 
 
 
-// Accessed with refuel for n jumps button.
+// Accessed with refuel button.
 void PlayerInfo::RefuelRatio(double ratio)
 {
   double price = planet->GetFuelPrice();

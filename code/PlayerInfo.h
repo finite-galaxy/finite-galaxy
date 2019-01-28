@@ -135,10 +135,10 @@ public:
   void UnLoadCargo();
   void LoadFighters();
   // Refuels all playerships that are currently on the same planet as the flagship.
-  void Refuel(bool overridePrefs = false);
-  // Refuels for 1 jump.
+  void Refuel();
+  // Refuels to a given ratio.
   void RefuelRatio(double ratio);
-  // Returns the fuel that is needed to perform n jumps.
+  // Returns the fuel that is needed to reach a certain ratio.
   double FuelNeeded(double ratio);
   
   // Get the player's logbook.

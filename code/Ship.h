@@ -222,8 +222,11 @@ public:
   void Restore();
   // Check if this ship has been destroyed.
   bool IsDestroyed() const;
-  // Recharge and repair this ship (e.g. because it has landed). Returns recharged fuel.
-  int Recharge(bool atSpaceport = true, bool rechargeFuel = true);
+  // Recharge and repair this ship (e.g. because it has landed).
+  void Recharge(bool atSpaceport);
+  void Recharge();
+  // Refuels the ship to a given ratio.
+  double Refuel(double ratio);
   // Check if this ship is able to give the given ship enough fuel to jump.
   bool CanRefuel(const Ship &other) const;
   // Give the other ship enough fuel for it to jump.
@@ -255,8 +258,6 @@ public:
   double JumpFuelMissing() const;
   // Get the amount of fuel missing to the given ratio.
   double FuelMissing(double ratio) const;
-  // Refuels the ship to a given ratio.
-  double Refuel(double ratio);
   // Get the heat level at idle.
   double IdleHeat() const;
   // Get the heat dissipation, in heat units per heat unit per frame.

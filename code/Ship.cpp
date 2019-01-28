@@ -2210,22 +2210,14 @@ bool Ship::IsDestroyed() const
 
 
 // Recharge and repair this ship (e.g. because it has landed).
-int Ship::Recharge(bool atSpaceport, bool rechargeFuel)
+void Ship::Recharge(bool atSpaceport)
 {
-  int fuelRecharge = 0;
   if(IsDestroyed())
-    return fuelRecharge;
+    return;
   
   if(atSpaceport)
   {
     crew = min<int>(max(crew, RequiredCrew()), attributes.Get("bunks"));
-    if(rechargeFuel)
-    {
-      // Calculates the amount of fuel that was recharged.
-      fuelRecharge = fuel;
-      fuel = attributes.Get("fuel capacity");
-      fuelRecharge = fuel-fuelRecharge;
-    }
   }
   pilotError = 0;
   pilotOkay = 0;
@@ -2241,7 +2233,42 @@ int Ship::Recharge(bool atSpaceport, bool rechargeFuel)
   ionization = 0.;
   disruption = 0.;
   slowness = 0.;
-  return fuelRecharge;
+}
+
+
+
+// Recharge, refuel and repair this ship (e.g. because it has landed).
+void Ship::Recharge()
+{
+  if(IsDestroyed())
+    return;
+  
+  crew = min<int>(max(crew, RequiredCrew()), attributes.Get("bunks"));
+  fuel = attributes.Get("fuel capacity");
+  pilotError = 0;
+  pilotOkay = 0;
+  
+  shields = attributes.Get("shields");
+  hull = attributes.Get("hull");
+  energy = attributes.Get("energy capacity");
+  
+  heat = IdleHeat();
+  ionization = 0.;
+  disruption = 0.;
+  slowness = 0.;
+}
+
+
+
+double Ship::Refuel(double ratio)
+{
+  double maxFuel = attributes.Get("fuel capacity");
+  double neededFuel = ratio*maxFuel;
+  if(fuel > neededFuel)
+    return 0.;
+  maxFuel = neededFuel-fuel;
+  fuel = neededFuel;
+  return maxFuel;
 }
 
 
@@ -2488,19 +2515,6 @@ double Ship::FuelMissing(double ratio) const
   if(fuel > neededFuel)
     return 0.;
   return neededFuel - fuel;
-}
-
-
-
-double Ship::Refuel(double ratio)
-{
-  double maxFuel = attributes.Get("fuel capacity");
-  double neededFuel = ratio*maxFuel;
-  if(fuel > neededFuel)
-    return 0.;
-  maxFuel = neededFuel-fuel;
-  fuel = neededFuel;
-  return maxFuel;
 }
 
 
