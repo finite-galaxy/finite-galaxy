@@ -817,22 +817,17 @@ interface "bank"
 
 
 interface "refuel"
+  active if "can refuel"
   sprite "ui/dialogue cancel"
     centre 140 355
-  button r "_Refuel All"
+  button r "_Refuel"
     centre 140 355
     dimensions 80 40
+  
   sprite "ui/empty bar"
     centre -180 150
-  sprite "ui/empty bar"
-    centre -180 230
-  bar "refuel behaviour"
+  bar "ratio"
     from -280 150
-    dimensions -200 0
-    colour "fuel"
-    size 3
-  bar "ramscoop behaviour"
-    from -280 230
     dimensions -200 0
     colour "fuel"
     size 3
