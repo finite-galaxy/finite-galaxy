@@ -9,7 +9,7 @@ shipyard "Pug Variants"
 ship "Arfecta"
   sprite "ship/arfecta"
   attributes
-    category "Frigate"
+    category "Destroyer"
 #    manufacturer "Pug"
     licences
       Pug
@@ -18,12 +18,12 @@ ship "Arfecta"
     "hull" 80000
     "required crew" 36
     "bunks" 46
-    "mass" 630
+    "mass" 670
     "drag" 7.5
     "heat dissipation" .8
     "cargo space" 64
-    "outfit space" 790
-    "core space" 180
+    "outfit space" 840
+    "core space" 230
     "engine space" 220
     "weapon space" 390
 # miscellaneous stats
@@ -38,15 +38,15 @@ ship "Arfecta"
     "scan interference" 12
     "tactical scan power" 237
     weapon
-      "blast radius" 297
-      "shield damage" 1260
-      "random shield damage" 1708
-      "hull damage" 1890
-      "random hull damage" 2562
-      "heat damage" 37800
-      "random heat damage" 51240
-      "hit force" 3150
-      "random hit force" 4270
+      "blast radius" 315
+      "shield damage" 1340
+      "random shield damage" 1808
+      "hull damage" 2010
+      "random hull damage" 2712
+      "heat damage" 40200
+      "random heat damage" 54240
+      "hit force" 3350
+      "random hit force" 4520
   outfits
     "Cloaking Device"
     "Jump Drive"
@@ -145,7 +145,7 @@ ship "Enfolta"
 ship "Maboro"
   sprite "ship/maboro"
   attributes
-    category "Destroyer"
+    category "Frigate"
 #    manufacturer "Pug"
     licences
       Pug
@@ -154,7 +154,7 @@ ship "Maboro"
     "hull" 2700
     "required crew" 54
     "bunks" 87
-    "mass" 940
+    "mass" 780
     "drag" 9.8
     "heat dissipation" .6
     "cargo space" 70
@@ -172,14 +172,14 @@ ship "Maboro"
     "scan interference" 9
     "tactical scan power" 42
     weapon
-      "blast radius" 330
-      "shield damage" 1880
+      "blast radius" 298
+      "shield damage" 1560
       "random shield damage" 1420
-      "hull damage" 2820
+      "hull damage" 2340
       "random hull damage" 2130
-      "heat damage" 56400
+      "heat damage" 46800
       "random heat damage" 42600
-      "hit force" 4700
+      "hit force" 3900
       "random hit force" 3550
   outfits
     "Jump Drive"
