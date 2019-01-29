@@ -14,21 +14,22 @@ ship "Arfecta"
     licences
       Pug
     "cost" 90000000
-    "shields" 98000
+    "shields" 96000
     "hull" 80000
     "required crew" 36
     "bunks" 46
-    "mass" 670
+    "mass" 760
     "drag" 7.5
     "heat dissipation" .8
     "cargo space" 64
-    "outfit space" 840
-    "core space" 230
+    "outfit space" 690
+    "core space" 80
     "engine space" 220
     "weapon space" 390
 # miscellaneous stats
+    "fuel capacity" 15200
     "fuel generation" 2.0
-    "energy capacity" 13400
+    "energy capacity" 15200
     "energy generation" 200
     "heat generation" 10
     "shield generation" 32
@@ -38,15 +39,15 @@ ship "Arfecta"
     "scan interference" 12
     "tactical scan power" 237
     weapon
-      "blast radius" 315
-      "shield damage" 1340
-      "random shield damage" 1808
-      "hull damage" 2010
-      "random hull damage" 2712
-      "heat damage" 40200
-      "random heat damage" 54240
-      "hit force" 3350
-      "random hit force" 4520
+      "blast radius" 303
+      "shield damage" 1520
+      "random shield damage" 1508
+      "hull damage" 2280
+      "random hull damage" 2262
+      "heat damage" 45600
+      "random heat damage" 45240
+      "hit force" 3800
+      "random hit force" 3770
   outfits
     "Cloaking Device"
     "Jump Drive"
@@ -57,7 +58,6 @@ ship "Arfecta"
     "Ceasefire Anti-Missile" 2
     "Gridfire Turret" 3
 
-    "Fuel Pod" 155
     "Biodefences" 12
   engine -15 164
   engine 15 164
@@ -91,11 +91,12 @@ ship "Enfolta"
     "drag" 5.9
     "heat dissipation" .7
     "cargo space" 40
-    "outfit space" 416
-    "core space" 126
+    "outfit space" 360
+    "core space" 70
     "engine space" 106
     "weapon space" 184
 # miscellaneous stats
+    "fuel capacity" 5430
     "fuel generation" 1.0
     "energy capacity" 4100
     "energy generation" 22
@@ -109,13 +110,13 @@ ship "Enfolta"
     weapon
       "blast radius" 173
       "shield damage" 820
-      "random shield damage" 912
+      "random shield damage" 800
       "hull damage" 1230
-      "random hull damage" 1368
+      "random hull damage" 1200
       "heat damage" 24600
-      "random heat damage" 27360
+      "random heat damage" 24000
       "hit force" 2050
-      "random hit force" 2280
+      "random hit force" 2000
   outfits
     "Jump Drive"
 
@@ -126,7 +127,6 @@ ship "Enfolta"
     "Zapper Cannon" 2
     "Zapper Turret"
 
-    "Fuel Pod" 56
     "Biodefences" 6
   engine -11 68
   engine 11 68
@@ -156,17 +156,18 @@ ship "Maboro"
     "hull" 2700
     "required crew" 54
     "bunks" 87
-    "mass" 780
+    "mass" 840
     "drag" 9.8
     "heat dissipation" .6
     "cargo space" 70
-    "outfit space" 640
-    "core space" 183
+    "outfit space" 560
+    "core space" 103
     "engine space" 148
     "weapon space" 309
 # miscellaneous stats
+    "fuel capacity" 7410
     "fuel generation" 1.5
-    "energy capacity" 7800
+    "energy capacity" 8400
     "energy generation" 32
     "heat generation" 48
     "shield generation" 10
@@ -176,15 +177,15 @@ ship "Maboro"
     "scan interference" 9
     "tactical scan power" 42
     weapon
-      "blast radius" 298
-      "shield damage" 1560
-      "random shield damage" 1420
-      "hull damage" 2340
-      "random hull damage" 2130
-      "heat damage" 46800
-      "random heat damage" 42600
-      "hit force" 3900
-      "random hit force" 3550
+      "blast radius" 294
+      "shield damage" 1680
+      "random shield damage" 1260
+      "hull damage" 2520
+      "random hull damage" 1890
+      "heat damage" 50400
+      "random heat damage" 37800
+      "hit force" 4200
+      "random hit force" 3150
   outfits
     "Jump Drive"
 
@@ -195,7 +196,6 @@ ship "Maboro"
     "Zapper Turret" 2
     "Pug Anti-Missile"
 
-    "Fuel Pod" 75
     "Biodefences" 8
   engine -20 136
   engine 20 136
@@ -231,13 +231,14 @@ ship "Zibruka"
     "drag" 3.1
     "heat dissipation" .8
     "cargo space" 20
-    "outfit space" 225
-    "core space" 81
+    "outfit space" 180
+    "core space" 36
     "engine space" 76
     "weapon space" 68
 # miscellaneous stats
-    "energy capacity" 2400
+    "fuel capacity" 4320
     "fuel generation" 0.5
+    "energy capacity" 2400
     "energy generation" 10
     "heat generation" 20
     "shield generation" 6
@@ -247,15 +248,15 @@ ship "Zibruka"
     "scan interference" 3
     "tactical scan power" 16
     weapon
-      "blast radius" 97
+      "blast radius" 88
       "shield damage" 480
-      "random shield damage" 490
+      "random shield damage" 400
       "hull damage" 720
-      "random hull damage" 735
+      "random hull damage" 600
       "heat damage" 14400
-      "random heat damage" 14700
+      "random heat damage" 12000
       "hit force" 1200
-      "random hit force" 1225
+      "random hit force" 1000
   outfits
     "Jump Drive"
 
@@ -264,7 +265,6 @@ ship "Zibruka"
 
     "Zapper Cannon" 2
 
-    "Fuel Pod" 45
     "Biodefences" 4
   engine -7 35
   engine 7 35
