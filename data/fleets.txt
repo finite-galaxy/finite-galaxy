@@ -181,7 +181,7 @@ fleet "Hired Guns"
     "Firebird"
   variant 1
     "Leviathan (North)"
-    "Splinter (Laser)"
+    "Splinter (Impact)"
   variant 1
     "Falcon (Laser)"
     "Marauder Argosy" 2
@@ -194,7 +194,7 @@ fleet "Hired Guns"
     "Firebird"
   variant 1
     "Falcon (Laser)"
-    "Splinter (Laser)"
+    "Splinter (Impact)"
   variant 1
     "Vanguard (Anti-Missile)"
     "Marauder Argosy" 2
@@ -207,7 +207,7 @@ fleet "Hired Guns"
     "Firebird"
   variant 1
     "Vanguard (Anti-Missile)"
-    "Splinter (Laser)"
+    "Splinter (Impact)"
   variant 1
     "Vanguard (Anti-Missile)"
     "Splinter"
@@ -226,7 +226,7 @@ fleet "Hired Guns"
   variant 1
     "Bactrian (Hired Gun)"
     "Dagger" 3
-    "Splinter (Laser)"
+    "Splinter (Impact)"
   variant 1
     "Bactrian (Hired Gun)"
     "Dagger" 3
@@ -440,15 +440,15 @@ fleet "Deep Large"
   variant 1
     "Aerie (Mark II)" 2
     "Dagger" 4
-    "Argosy (Impact)"
+    "Splinter (Impact)"
     "Warrior (Mark II)"
   variant 1
     "Aerie (Mark II)"
     "Dagger" 4
-    "Argosy (Impact)" 2
+    "Splinter (Impact)" 2
     "Warrior (Mark II)" 2
   variant 1
-    "Argosy (Impact)" 3
+    "Splinter (Impact)" 3
     "Warrior (Mark II)" 3
 
 fleet "Deep Small"
@@ -463,7 +463,7 @@ fleet "Deep Small"
     "Aerie (Mark II)"
     "Dagger" 2
   variant 1
-    "Argosy (Impact)"
+    "Splinter (Impact)"
     "Warrior (Mark II)"
   variant 3
     "Warrior (Mark II)" 3
@@ -1346,14 +1346,10 @@ fleet "Merchants Deep Small"
     confusion 30
     timid frugal appeasing
   # total: 100
-  variant 21
-    "Argosy"
-  variant 3
-    "Argosy (Blaster)"
-  variant 3
-    "Argosy (Laser)"
-  variant 3
-    "Argosy (Impact)"
+  variant 20
+    "Splinter"
+  variant 10
+    "Splinter (Impact)"
   variant 20
     "Arrow"
   variant 40
@@ -1581,6 +1577,10 @@ fleet "Merchants Hai Large"
     confusion 30
     timid frugal appeasing
   # total: 100
+  variant 7
+    "Argosy"
+  variant 3
+    "Argosy (Laser)"
   variant 4
     "Behemoth"
   variant 1
@@ -1638,12 +1638,6 @@ fleet "Merchants Hai Large"
     "Protector (Hai)"
   variant 1
     "Protector (Laser)"
-  variant 6
-    "Splinter"
-  variant 2
-    "Splinter (Hai)"
-  variant 2
-    "Splinter (Laser)"
   variant 3
     "Star Freighter" 2
   variant 3
@@ -1760,9 +1754,39 @@ fleet "Merchants North Large"
     confusion 30
     timid frugal appeasing
   # total: 100
+  variant 3
+    "Argosy"
+  variant 2
+    "Argosy"
+    "Star Freighter"
+  variant 5
+    "Argosy"
+    "Star Freighter" 2
+  variant 3
+    "Argosy"
+    "Star Freighter" 3
+  variant 1
+    "Argosy" 2
+  variant 1
+    "Argosy" 2
+    "Star Freighter"
+  variant 1
+    "Argosy" 2
+    "Star Freighter" 2
+  variant 1
+    "Argosy" 2
+    "Star Freighter" 3
+  variant 1
+    "Argosy" 3
+  variant 1
+    "Argosy" 3
+    "Star Freighter"
+  variant 1
+    "Argosy" 3
+    "Star Freighter" 2
   variant 10
     "Bulk Freighter"
-  variant 1
+  variant 2
     "Bulk Freighter"
     "Manta"
   variant 2
@@ -1771,9 +1795,6 @@ fleet "Merchants North Large"
   variant 2
     "Bulk Freighter"
     "Quicksilver" 2
-  variant 1
-    "Bulk Freighter"
-    "Splinter"
   variant 1
     "Bulk Freighter"
     "Thunderbolt"
@@ -1838,36 +1859,6 @@ fleet "Merchants North Large"
   variant 1
     "Protector (Laser)"
     "Star Freighter" 4
-  variant 3
-    "Splinter"
-  variant 2
-    "Splinter"
-    "Star Freighter"
-  variant 5
-    "Splinter"
-    "Star Freighter" 2
-  variant 3
-    "Splinter"
-    "Star Freighter" 3
-  variant 1
-    "Splinter" 2
-  variant 1
-    "Splinter" 2
-    "Star Freighter"
-  variant 1
-    "Splinter" 2
-    "Star Freighter" 2
-  variant 1
-    "Splinter" 2
-    "Star Freighter" 3
-  variant 1
-    "Splinter" 3
-  variant 1
-    "Splinter" 3
-    "Star Freighter"
-  variant 1
-    "Splinter" 3
-    "Star Freighter" 2
   variant 2
     "Star Freighter" 2
   variant 5
@@ -2318,12 +2309,6 @@ fleet "Merchants West Small"
     confusion 40
     timid frugal appeasing
   # total 100
-  variant 3
-    "Argosy"
-  variant 1
-    "Argosy (Blaster)"
-  variant 1
-    "Argosy (Laser)"
   variant 10
     "Bounder"
   variant 6
@@ -2336,6 +2321,10 @@ fleet "Merchants West Small"
     "Heavy Shuttle"
   variant 30
     "Light Shuttle"
+  variant 4
+    "Splinter"
+  variant 1
+    "Splinter (Impact)"
   variant 20
     "Star Barge"
   variant 12
@@ -3081,7 +3070,7 @@ fleet "Pirates North Large"
     plunders harvests
   # total: 5
   variant 4
-    "Splinter"
+    "Argosy"
   variant 1
     "Vanguard"
 
@@ -3152,15 +3141,9 @@ fleet "Pirates West Large"
   personality
     plunders harvests
   # total: 20
-  variant 1
+  variant 5
     "Aerie"
     "Dagger" 2
-  variant 5
-    "Argosy"
-  variant 4
-    "Argosy (Blaster)"
-  variant 3
-    "Argosy (Laser)"
   variant 2
     "Bastion"
   variant 2
@@ -3171,6 +3154,10 @@ fleet "Pirates West Large"
     "Leviathan (Heavy)"
   variant 1
     "Leviathan (South)"
+  variant 5
+    "Splinter"
+  variant 3
+    "Splinter (Impact)"
 
 fleet "Pirates West Small"
   government "Pirate"
@@ -3197,12 +3184,10 @@ fleet "pirate raid"
   personality
     nemesis plunders harvests
     confusion 20
-  variant 3
-    "Argosy (Blaster)"
+  variant 5
+    "Argosy"
   variant 2
     "Argosy (Laser)"
-  variant 2
-    "Argosy (Impact)"
   variant 1
     "Marauder Argosy"
   variant 1
@@ -3219,14 +3204,11 @@ fleet "pirate raid"
     "Warrior"
   variant 6
     "Warrior" 3
-  variant 1
-    "Argosy (Blaster)"
+  variant 2
+    "Argosy"
     "Warrior"
   variant 1
     "Argosy (Laser)"
-    "Warrior"
-  variant 1
-    "Argosy (Impact)"
     "Warrior"
   variant 1
     "Marauder Argosy (Heavy)"
@@ -3248,7 +3230,7 @@ fleet "pirate raid"
     "Splinter"
     "Quicksilver (Plasma)"
   variant 3
-    "Splinter (Laser)"
+    "Splinter (Impact)"
     "Quicksilver"
   variant 3
     "Splinter"
@@ -3260,7 +3242,7 @@ fleet "pirate raid"
   variant 2
     "Splinter" 2
   variant 1
-    "Splinter (Laser)" 2
+    "Splinter (Impact)" 2
   variant 1
     "Splinter" 2
   variant 2
@@ -3634,10 +3616,10 @@ fleet "Syndicate Invasion"
     heroic
   # total: 1
   variant 1
+    "Argosy" 4
     "Class C Freighter"
     "Mark I Drone" 12
     "Protector" 2
-    "Splinter" 4
     "Vanguard" 3
 
 fleet "Syndicate Large"
@@ -3648,12 +3630,12 @@ fleet "Syndicate Large"
   personality
     heroic
   # total: 10
+  variant 5
+    "Argosy" 2
   variant 3
     "Protector"
   variant 2
     "Vanguard"
-  variant 5
-    "Splinter" 2
 
 fleet "Syndicate Patrol"
   government "Syndicate"
@@ -3664,7 +3646,7 @@ fleet "Syndicate Patrol"
   # total: 1
   variant 1
     "Vanguard"
-    "Splinter" 2
+    "Argosy" 2
 
 fleet "Syndicate Small"
   government "Syndicate"

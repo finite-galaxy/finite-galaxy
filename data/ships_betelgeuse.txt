@@ -1,11 +1,11 @@
 shipyard "Betelgeuse Variants"
+  "Argosy"
+  "Argosy (Laser)"
   "Bulk Freighter"
   "Bulk Freighter (Blaster)"
   "Bulk Freighter (Hai)"
   "Bulk Freighter (Laser)"
   "Class C Freighter"
-  "Flivver"
-  "Flivver (Hai)"
   "Hero"
   "Hero (Gatling)"
   "Hero (Patrol)"
@@ -13,14 +13,92 @@ shipyard "Betelgeuse Variants"
   "Protector (Hai)"
   "Protector (Laser)"
   "Protector (Mark II)"
-  "Splinter"
-  "Splinter (Hai)"
-  "Splinter (Laser)"
-  "Splinter (Mark II)"
   "Vanguard"
   "Vanguard (Anti-Missile)"
   "Vanguard (Hai)"
   "Vanguard (Mark II)"
+
+
+
+ship "Argosy"
+  plural "Argosies"
+  sprite "ship/argosy"
+  thumbnail "thumbnail/argosy"
+  attributes
+    category "Corvette"
+#    manufacturer "Betelgeuse"
+    licences
+      Pilot
+    "cost" 1960000
+    "shields" 4200
+    "hull" 2600
+    "required crew" 4
+    "bunks" 14
+    "mass" 330
+    "drag" 5.9
+    "heat dissipation" .7
+    "cargo space" 120
+    "outfit space" 300
+    "core space" 130
+    "engine space" 80
+    "weapon space" 90
+    weapon
+      "blast radius" 150
+      "shield damage" 660
+      "random shield damage" 840
+      "hull damage" 990
+      "random hull damage" 1260
+      "heat damage" 19800
+      "random heat damage" 25200
+      "hit force" 1650
+      "random hit force" 2100
+  outfits
+    "D41-HY Shield Generator"
+    "RT-I Radiothermal"
+    "Hyperdrive"
+
+    "IT-3700 Ion Thruster"
+    "IS-3200 Ion Steering"
+
+    "Meteor Missile" 36
+    "Meteor Missile Box"
+    "Meteor Missile Launcher" 2
+    "X4 Blaster Turret" 2
+
+    "LP036a Battery Pack"
+    "Fuel Pod" 30
+    "Tactical Scanner" 3
+  engine -20 91
+  engine 20 91
+  gun -22 -37 "Meteor Missile Launcher"
+  gun 22 -37 "Meteor Missile Launcher"
+  turret 0 -12 "X4 Blaster Turret"
+  turret 0 8 "X4 Blaster Turret"
+  leak "leak" 60 50
+  leak "flame" 60 80
+  explode "tiny explosion" 10
+  explode "small explosion" 25
+  explode "medium explosion" 25
+  explode "large explosion" 10
+  "final explode" "final explosion medium"
+  description "The Argosy from Vortex Shipyards is very popular with merchants not because of its capacity, which is actually slightly smaller than the Star Freighter, but because it can hold its own in combat against pirate interceptors."
+  description "  The Argosy is also a very easy ship to upgrade with faster engines or more powerful weapons as needed, so many privately owned Argosies have very different capabilities than the stock model."
+
+
+ship "Argosy" "Argosy (Laser)"
+  outfits
+    "D41-HY Shield Generator"
+    "RT-I Radiothermal"
+    "Hyperdrive"
+
+    "IT-3700 Ion Thruster"
+    "IS-3200 Ion Steering"
+
+    "Heavy Laser Turret" 2
+
+    "LP036a Battery Pack"
+    "Fuel Pod" 30
+    "Tactical Scanner" 3
 
 
 
@@ -221,74 +299,6 @@ ship "Bulk Freighter" "Class C Freighter"
   drone -66 135 left
   drone 66 135 right
   description `The Class C "Star Freighter" is a stealth warship designed by Betelgeuse for baiting pirates with the offer of a seemingly helpless, ordinary bulk freighter. Inside, its cargo space has all been converted into drone bays, allowing it to carry a dozen combat drones.`
-
-
-
-ship "Flivver"
-  sprite "ship/flivver"
-  thumbnail "thumbnail/flivver"
-  attributes
-    category "Interceptor"
-#    manufacturer "Betelgeuse"
-    licences
-      Pilot
-    "cost" 180000
-    "shields" 1400
-    "hull" 200
-    "required crew" 1
-    "bunks" 2
-    "mass" 40
-    "drag" 1.0
-    "heat dissipation" .9
-    "cargo space" 5
-    "outfit space" 140
-    "core space" 80
-    "engine space" 45
-    "weapon space" 15
-    weapon
-      "blast radius" 37
-      "shield damage" 80
-      "random shield damage" 290
-      "hull damage" 120
-      "random hull damage" 435
-      "heat damage" 2400
-      "random heat damage" 8700
-      "hit force" 200
-      "random hit force" 725
-  outfits
-    "D14-RN Shield Generator"
-    "Dwarf Core"
-    "Hyperdrive"
-
-    "A120 Atomic Thruster"
-    "A125 Atomic Steering"
-
-    "Supercapacitor"
-    "Fuel Pod" 10
-    "Tactical Scanner" 1
-  engine -16 27
-  engine 16 27
-  gun -6 -31
-  gun 6 -31
-  leak "leak" 60 50
-  explode "tiny explosion" 10
-  explode "small explosion" 10
-  description "The Flivver is the fastest ship for sale, designed to outspeed anything else. As a consequence, it has space for neither cargo nor passengers nor heavy weaponry. Flivvers are sold mostly to wealthy individuals who want to be able to travel the stars without needing to share a bunk room on a merchant transport with common people, and to rich youths obsessed with racing."
-
-
-ship "Flivver" "Flivver (Hai)"
-  outfits
-    "Corundum Regenerator"
-    "Pebble Core"
-    "Hyperdrive"
-
-    "Benga Atomic Thruster"
-    "Basrem Atomic Steering"
-
-    "Chasm Batteries"
-    "Williwaw Cooling"
-    "Fuel Pod" 10
-    "Yoloy Scanner"
 
 
 
@@ -524,140 +534,6 @@ ship "Protector" "Protector (Mark II)"
   turret
   turret
   turret "Electron Turret"
-  turret "Electron Turret"
-
-
-
-ship "Splinter"
-  sprite "ship/splinter"
-  thumbnail "thumbnail/splinter"
-  attributes
-    category "Corvette"
-#    manufacturer "Vortex"
-    licences
-      Pilot
-    "cost" 3100000
-    "shields" 5200
-    "hull" 1700
-    "required crew" 7
-    "bunks" 21
-    "mass" 250
-    "drag" 4.0
-    "heat dissipation" .7
-    "cargo space" 90
-    "outfit space" 450
-    "core space" 200
-    "engine space" 100
-    "weapon space" 150
-    weapon
-      "blast radius" 158
-      "shield damage" 500
-      "random shield damage" 1080
-      "hull damage" 750
-      "random hull damage" 1620
-      "heat damage" 15000
-      "random heat damage" 32400
-      "hit force" 1250
-      "random hit force" 2700
-  outfits
-    "D41-HY Shield Generator"
-    "RT-I Radiothermal"
-    "Hyperdrive"
-
-    "IT-3700 Ion Thruster"
-    "IS-3200 Ion Steering"
-
-    "Meteor Missile" 72
-    "Meteor Missile Box" 2
-    "Meteor Missile Launcher" 2
-    "X6 Blaster Turret" 2
-    "Heavy Anti-Missile"
-
-    "LP288a Battery Pack"
-    "Fuel Pod" 48
-    "Tactical Scanner" 4
-  engine -15 115
-  engine 15 115
-  gun -15 -80 "Meteor Missile Launcher"
-  gun 15 -80 "Meteor Missile Launcher"
-  turret -17 -28 "X6 Blaster Turret"
-  turret 0 -28 "Heavy Anti-Missile"
-  turret 17 -28 "X6 Blaster Turret"
-  leak "leak" 60 50
-  leak "flame" 40 80
-  leak "big leak" 90 30
-  explode "tiny explosion" 18
-  explode "small explosion" 36
-  explode "medium explosion" 24
-  explode "large explosion" 8
-  "final explode" "final explosion medium"
-  description "The Splinter is designed to be faster and more manoeuvrable than other ships of a similar size, in order to serve as a heavy escort ship or as part of a planetary defence and patrol fleet. Because of its intended use in merchant convoys, it also has a fair amount of cargo space."
-
-
-ship "Splinter" "Splinter (Hai)"
-  outfits
-    "Corundum Regenerator" 2
-    "Geode Reactor"
-    "Hyperdrive"
-
-    "Biroo Atomic Thruster"
-    "Biroo Atomic Steering"
-
-    "Tracker" 112
-    "Tracker Storage Pod" 2
-    "Tracker Launcher" 2
-    "Pulse Turret" 2
-    "Chameleon Anti-Missile"
-
-    "Fissure Batteries"
-    "Williwaw Cooling"
-    "Fuel Pod" 48
-    "Yoloy Scanner"
-  turret "Pulse Turret"
-  turret "Chameleon Anti-Missile"
-  turret "Pulse Turret"
-
-
-ship "Splinter" "Splinter (Laser)"
-  outfits
-    "D41-HY Shield Generator"
-    "RT-I Radiothermal"
-    "Hyperdrive"
-
-    "IT-3700 Ion Thruster"
-    "IS-3200 Ion Steering"
-
-    "Heavy Laser Cannon" 2
-    "Heavy Laser Turret" 2
-    "Heavy Anti-Missile"
-
-    "LP144a Battery Pack"
-    "Fuel Pod" 48
-    "Tactical Scanner" 4
-  turret "Heavy Laser Turret"
-  turret "Heavy Anti-Missile"
-  turret "Heavy Laser Turret"
-
-
-ship "Splinter" "Splinter (Mark II)"
-  outfits
-    "D41-HY Shield Generator"
-    "Fission Reactor"
-    "Hyperdrive"
-
-    "A370 Atomic Thruster"
-    "A375 Atomic Steering"
-
-    "Electron Turret" 2
-    "Heavy Anti-Missile"
-
-    "LP144a Battery Pack"
-    "Liquid Water Cooler"
-    "Fuel Pod" 48
-    "Tactical Scanner" 4
-    "Laser Rifle" 20
-  turret "Electron Turret"
-  turret "Heavy Anti-Missile"
   turret "Electron Turret"
 
 
