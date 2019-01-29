@@ -824,6 +824,7 @@ interface "refuel"
     centre 140 355
     dimensions 80 40
   
+  visible if "empty"
   sprite "ui/empty bar"
     centre -180 150
   bar "ratio"
