@@ -124,11 +124,13 @@ bool PreferencesPanel::Click(int x, int y, int clicks)
     return true;
   }
   
-  if(page == 's' && x >= -230 && x < -25 && y >= 95 && y < 125)
+  if(page == 's' && x >= 25 && x < 235 && y >= 95 && y < 125)
   {
-    double max = (x+230)/20.;
+    double max = (x-30)/20.;
     if(max > 10)
       max = 10;
+    if(max < 0)
+      max = 0;
     Preferences::SetMaxPrice(max);
     Audio::SetVolume((20 - y) / 200.);
     Audio::Play(Audio::Get("warder"));
@@ -437,9 +439,6 @@ void PreferencesPanel::DrawSettings()
     EXPEND_AMMO,
     FIGHTER_REPAIR,
     TURRET_TRACKING,
-    "",
-    "Automatic refuel behaviour",
-    // If you add anything in here be careful not to conflict with the "refuel behaviour"-bar.
     "\n",
     "Performance",
     "Show CPU / GPU load",
@@ -456,6 +455,7 @@ void PreferencesPanel::DrawSettings()
     SCROLL_SPEED,
     "Show escort systems on map",
     "Warning siren"
+    // If you add anything in here be careful not to conflict with the "refuel behaviour"-bar.
   };
   bool isCategory = true;
   for(const string &setting : SETTINGS)
@@ -567,9 +567,11 @@ void PreferencesPanel::DrawSettings()
   }
   else
     refuelText = "Only refuel if it is for free.";
-  table.DrawAt(Point(-130, 130));
+  table.DrawAt(Point(130, 80));
+  table.Draw("Automatic refuel behaviour", medium);
+  table.DrawAt(Point(130, 120));
   table.Draw(refuelText, medium);
-  table.DrawAt(Point(-130, 150));
+  table.DrawAt(Point(130, 140));
   table.Draw(refuelText2, medium);
 }
 
