@@ -177,8 +177,8 @@ ship "Marauder Arrow"
     "Heavy Laser Cannon" 2
     "X4 Blaster Turret"
 
-    "LP072a Battery Pack"
-    "Cooling Ducts"
+    "LP036a Battery Pack"
+    "Liquid Water Cooler"
     "Fuel Pod" 17
     "Tactical Scanner" 4
     "Interference Plating"
@@ -208,12 +208,10 @@ ship "Marauder Arrow" "Marauder Arrow (Engines)"
     "A370 Atomic Thruster"
     "A375 Atomic Steering"
 
-    "Gatling Round" 3000
-    "Gatling Bullet Boxes" 2
-    "Gatling Gun" 2
     "Heavy Anti-Missile"
 
-    "Supercapacitor"
+    "Supercapacitor" 2
+    "Liquid Water Cooler"
     "Fuel Pod" 17
     "Tactical Scanner" 4
     "Interference Plating"
@@ -239,7 +237,7 @@ ship "Marauder Arrow" "Marauder Arrow (Weapons)"
     "K1 Blaster Cannon" 4
     "Heavy Laser Turret"
 
-    "Supercapacitor" 4
+    "Supercapacitor" 2
     "Liquid Water Cooler"
     "Fuel Pod" 17
     "Tactical Scanner" 4
@@ -326,12 +324,12 @@ ship "Marauder Bounder" "Marauder Bounder (Engines)"
     "A370 Atomic Thruster"
     "A375 Atomic Steering"
 
-    "Gatling Round" 1500
-    "Gatling Bullet Boxes"
+    "Gatling Round" 3000
+    "Gatling Bullet Boxes" 2
     "Gatling Gun"
     "X4 Blaster Turret" 2
 
-    "LP072a Battery Pack"
+    "LP036a Battery Pack"
     "Liquid Water Cooler"
     "Fuel Pod" 41
     "Tactical Scanner" 4
@@ -366,7 +364,7 @@ ship "Marauder Bounder" "Marauder Bounder (Weapons)"
     "Fuel Pod" 41
     "Tactical Scanner" 4
     "Interference Plating"
-    "Laser Rifle" 18
+#    "Laser Rifle" 18
   engine -15 44
   engine 15 44
   gun -7 -77 "Gatling Gun"
@@ -420,7 +418,7 @@ ship "Marauder Falcon"
     "LP288a Battery Pack"
     "Liquid Helium Cooler"
     "Fuel Pod" 76
-    "Large Radar Jammer" 2
+    "Large Radar Jammer"
     "Tactical Scanner" 4
     "Interference Plating" 3
     "Laser Rifle" 69
@@ -445,8 +443,8 @@ ship "Marauder Falcon"
 ship "Marauder Falcon" "Marauder Falcon (Engines)"
   sprite "ship/falcon_e"
   add attributes
-    "core space" -50
-    "engine space" 50
+    "core space" -60
+    "engine space" 60
   outfits
     "S-970 Regenerator"
     "Fusion Reactor"
@@ -461,7 +459,7 @@ ship "Marauder Falcon" "Marauder Falcon (Engines)"
     "LP144a Battery Pack"
     "Liquid Helium Cooler"
     "Fuel Pod" 76
-    "Large Radar Jammer" 2
+    "Large Radar Jammer"
     "Tactical Scanner" 4
     "Interference Plating" 3
     "Laser Rifle" 69
@@ -498,7 +496,7 @@ ship "Marauder Falcon" "Marauder Falcon (Weapons)"
     "LP144a Battery Pack"
     "Liquid Helium Cooler"
     "Fuel Pod" 76
-    "Large Radar Jammer" 2
+    "Large Radar Jammer"
     "Tactical Scanner" 4
     "Interference Plating" 3
     "Laser Rifle" 69
@@ -559,8 +557,9 @@ ship "Marauder Firebird"
     "Heavy Laser Turret"
     "Heavy Anti-Missile"
 
-    "Supercapacitor"
-    "Liquid Helium Cooler"
+    "Supercapacitor" 3
+    "Liquid Nitrogen Cooler"
+    "Liquid Water Cooler"
     "Fuel Pod" 35
     "Tactical Scanner" 4
     "Interference Plating" 2
@@ -677,7 +676,7 @@ ship "Marauder Leviathan"
 
     "A370 Atomic Thruster"
     "A525 Atomic Steering"
-    "Ionic Afterburner"
+    "Afterburner"
 
     "Plasma Cannon" 4
     "K4 Blaster Turret" 2
@@ -711,8 +710,8 @@ ship "Marauder Leviathan"
 ship "Marauder Leviathan" "Marauder Leviathan (Engines)"
   sprite "ship/leviathan_e"
   add attributes
-    "core space" -80
-    "engine space" 80
+    "core space" -90
+    "engine space" 90
   outfits
     "S-970 Regenerator"
     "Fusion Reactor"
@@ -726,7 +725,6 @@ ship "Marauder Leviathan" "Marauder Leviathan (Engines)"
 
     "LP144a Battery Pack"
     "Liquid Helium Cooler"
-    "Liquid Water Cooler"
     "Fuel Pod" 71
     "Large Radar Jammer" 2
     "Tactical Scanner" 4
@@ -749,7 +747,7 @@ ship "Marauder Leviathan" "Marauder Leviathan (Weapons)"
 
     "A370 Atomic Thruster"
     "A525 Atomic Steering"
-    "Ionic Afterburner"
+    "Afterburner"
 
     "Plasma Cannon" 4
     "Heavy Laser Turret" 4
@@ -811,12 +809,13 @@ ship "Marauder Manta"
     "A525 Atomic Steering"
 
     "Sidewinder Missile" 36
-    "Sidewinder Missile Rack" 12
+    "Sidewinder Missile Rack" 8
     "Sidewinder Missile Launcher" 2
     "Plasma Cannon" 4
     "X4 Blaster Turret"
 
-    "LP144a Battery Pack"
+    "LP072a Battery Pack"
+    "LP036a Battery Pack"
     "Liquid Nitrogen Cooler"
     "Fuel Pod" 25
     "Tactical Scanner" 4
@@ -857,7 +856,8 @@ ship "Marauder Manta" "Marauder Manta (Engines)"
     "Plasma Cannon" 2
     "X4 Blaster Turret"
 
-    "LP144a Battery Pack"
+    "LP072a Battery Pack"
+    "LP036a Battery Pack"
     "Liquid Nitrogen Cooler"
     "Fuel Pod" 25
     "Tactical Scanner" 4
@@ -895,7 +895,7 @@ ship "Marauder Manta" "Marauder Manta (Weapons)"
     "Plasma Cannon" 4
     "X4 Blaster Turret"
 
-    "LP072a Battery Pack"
+    "Supercapacitor" 3
     "Liquid Nitrogen Cooler"
     "Fuel Pod" 25
     "Tactical Scanner" 4
@@ -954,7 +954,7 @@ ship "Marauder Quicksilver"
     "Heavy Laser Cannon" 2
     "Heavy Anti-Missile"
 
-    "LP036a Battery Pack"
+    "Supercapacitor" 3
     "Liquid Nitrogen Cooler"
     "Fuel Pod" 18
     "Tactical Scanner" 4
@@ -985,9 +985,9 @@ ship "Marauder Quicksilver" "Marauder Quicksilver (Engines)"
     "A375 Atomic Steering"
 
     "Heavy Laser Cannon" 2
-    "AM5 Anti-Missile"
+    "AM3 Anti-Missile"
 
-    "Supercapacitor"
+    "Supercapacitor" 2
     "Liquid Nitrogen Cooler"
     "Fuel Pod" 18
     "Tactical Scanner" 4
@@ -1068,7 +1068,7 @@ ship "Marauder Raven"
     "Heavy Laser Cannon" 4
     "Heavy Laser Turret"
 
-    "LP036a Battery Pack"
+    "Supercapacitor" 3
     "Liquid Nitrogen Cooler"
     "Fuel Pod" 27
     "Tactical Scanner" 4
@@ -1105,12 +1105,12 @@ ship "Marauder Raven" "Marauder Raven (Engines)"
     "Heavy Laser Cannon" 4
     "Heavy Laser Turret"
 
-    "Supercapacitor" 3
+    "Supercapacitor"
     "Liquid Nitrogen Cooler"
     "Fuel Pod" 27
     "Tactical Scanner" 4
     "Interference Plating" 2
-    "Laser Rifle" 14
+#    "Laser Rifle" 14
   engine -12 45 .7
   engine 0 43
   engine 12 45 .7
@@ -1133,7 +1133,7 @@ ship "Marauder Raven" "Marauder Raven (Weapons)"
     "Plasma Cannon" 4
     "X2 Blaster Turret"
 
-    "Supercapacitor" 4
+    "Supercapacitor" 2
     "Liquid Nitrogen Cooler"
     "Fuel Pod" 27
     "Tactical Scanner" 4
@@ -1222,7 +1222,6 @@ ship "Marauder Splinter" "Marauder Splinter (Engines)"
 
     "A370 Atomic Thruster"
     "A525 Atomic Steering"
-    "Afterburner"
 
     "Plasma Cannon" 2
     "X4 Blaster Turret" 2

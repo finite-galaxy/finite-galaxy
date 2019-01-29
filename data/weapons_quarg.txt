@@ -1,6 +1,6 @@
 outfit "Skylance"
   category "Turrets"
-  thumbnail "outfit/unknown"
+  thumbnail "outfit/skylance"
   licences
     Quarg
   cost 18000000
@@ -14,6 +14,8 @@ outfit "Skylance"
   weapon
     sprite "projectile/skylance"
       "frame rate" 1
+    "hardpoint sprite" "hardpoint/skylance"
+    "hardpoint offset" 6.
     sound "skylance"
     "hit effect" "skylance impact"
     "inaccuracy" .4
@@ -37,9 +39,9 @@ effect "skylance impact"
 
 
 
-outfit "Quarg Anti-Missile"
+outfit "Point Defence"
   category "Anti-Missile"
-  thumbnail "outfit/unknown"
+  thumbnail "outfit/point_defence"
   licences
     Quarg
   cost 6000000
@@ -50,18 +52,34 @@ outfit "Quarg Anti-Missile"
   "turret mounts" -1
   "radar jamming" 10
   weapon
-    "hit effect" "quarg anti-missile"
+    "hardpoint sprite" "hardpoint/point_defence"
+    "fire effect" "point defence fire"
+    "hit effect" "point defence hit"
+    "die effect" "point defence die"
     "anti-missile" 25
     "velocity" 333
     "lifetime" 1
     "reload" 6
     "firing energy" 50
 
-effect "quarg anti-missile"
-  sprite "effect/anti-missile/quarg"
+effect "point defence die"
+  sprite "effect/anti-missile/point_defence_die"
+    "frame rate" 20
     "no repeat"
-    "frame rate" 3
-  sound "quarg anti-missile"
-  "lifetime" 21
-  "velocity scale" 1
+  lifetime 15
+  "velocity scale" .2
+
+effect "point defence fire"
+  sprite "effect/anti-missile/point_defence_fire"
+    "frame rate" 17
+    "no repeat"
+  lifetime 10
+  "velocity scale" .5
+
+effect "point defence hit"
+  sprite "effect/anti-missile/point_defence_hit"
+    "frame rate" 13
+    "no repeat"
+  lifetime 10
+  "velocity scale" .2
 

@@ -6,9 +6,20 @@
 # "Anti-Missile Turret"
 # "AR120 Reverse Thruster"
 # "Armageddon Core"
+# `"Baellie" Atomic Engines`
+# `"Basrem" Atomic Steering`
+# `"Basrem" Atomic Thruster`
 # "Beam Laser"
+# `"Benga" Atomic Thruster`
+# `"Benga" Atomic Steering`
 # effect "big explosion"
+# `"Biroo" Atomic Steering`
+# `"Biroo" Atomic Thruster`
 # "Blaster Turret"
+# `"Bondir" Atomic Steering`
+# `"Bondir" Atomic Thruster`
+# `"Bufaer" Atomic Steering`
+# `"Bufaer" Atomic Thruster`
 # "Bullfrog Anti-Missile"
 # "Bullfrog Anti-Missile Turret"
 # "Bullet Boxes"
@@ -105,6 +116,8 @@
 # "Pug Zapper"
 # "Pug Zapper Turret"
 # "Quad Blaster Turret"
+# "Quarg Anti-Missile"
+# effect "quarg anti-missile"
 # "Quarg Skylance"
 # "Railgun"
 # "Railgun Slug"
@@ -128,6 +141,8 @@
 # "Typhoon Launcher"
 # "Typhoon Storage Tube"
 # "Typhoon Torpedo"
+# "Tyrant Plasma Steering"
+# "Tyrant Plasma Thruster"
 # "Wanderer Heat Sink"
 # "Wanderer License"
 # "Wanderer Military License"
@@ -194,6 +209,49 @@ outfit "Armageddon Core"
   "heat generation" 75
 
 
+outfit `"Baellie" Atomic Engines`
+  plural `"Baellie" Atomic Engines`
+  category "Deprecated"
+  thumbnail "outfit/unknown"
+  "cost" 240000
+  "mass" 24
+  "outfit space" -24
+  "engine capacity" -24
+  "turn" 250
+  "turning energy" .6
+  "turning heat" 1.3
+  "thrust" 10.1
+  "thrusting energy" 1.2
+  "thrusting heat" 2.4
+  "flare sprite" "effect/flare/atomic_tiny"
+    "frame rate" 14
+  "flare sound" "atomic tiny"
+
+outfit `"Basrem" Atomic Steering`
+  category "Deprecated"
+  thumbnail "outfit/unknown"
+  "cost" 120000
+  "mass" 12
+  "outfit space" -12
+  "engine capacity" -12
+  "turn" 309
+  "turning energy" .7
+  "turning heat" 1.6
+
+outfit `"Basrem" Atomic Thruster`
+  category "Deprecated"
+  thumbnail "outfit/unknown"
+  "cost" 150000
+  "mass" 18
+  "outfit space" -18
+  "engine capacity" -18
+  "thrust" 13.2
+  "thrusting energy" 1.5
+  "thrusting heat" 2.9
+  "flare sprite" "effect/flare/atomic_tiny"
+    "frame rate" 14
+  "flare sound" "atomic tiny"
+
 outfit "Beam Laser"
   category "Deprecated"
   thumbnail "outfit/unknown"
@@ -216,6 +274,31 @@ outfit "Beam Laser"
     "shield damage" 1
     "hull damage" 1.3
 
+outfit `"Benga" Atomic Thruster`
+  category "Deprecated"
+  thumbnail "outfit/unknown"
+  "cost" 300000
+  "mass" 28
+  "outfit space" -28
+  "engine capacity" -28
+  "thrust" 23.6
+  "thrusting energy" 2.6
+  "thrusting heat" 5.0
+  "flare sprite" "effect/flare/atomic_tiny"
+    "frame rate" 14
+  "flare sound" "atomic tiny"
+
+outfit `"Benga" Atomic Steering`
+  category "Deprecated"
+  thumbnail "outfit/unknown"
+  "cost" 250000
+  "mass" 20
+  "outfit space" -20
+  "engine capacity" -20
+  "turn" 577
+  "turning energy" 1.1
+  "turning heat" 2.8
+
 effect "big explosion"
   sprite "effect/explosion/large"
     "no repeat"
@@ -227,6 +310,31 @@ effect "big explosion"
   "random spin" 4
   "random velocity" .8
   "velocity scale" .4
+
+outfit `"Biroo" Atomic Steering`
+  category "Deprecated"
+  thumbnail "outfit/unknown"
+  "cost" 530000
+  "mass" 32
+  "outfit space" -32
+  "engine capacity" -32
+  "turn" 1054
+  "turning energy" 2.0
+  "turning heat" 5.1
+
+outfit `"Biroo" Atomic Thruster`
+  category "Deprecated"
+  thumbnail "outfit/unknown"
+  "cost" 610000
+  "mass" 44
+  "outfit space" -44
+  "engine capacity" -44
+  "thrust" 41.5
+  "thrusting energy" 4.2
+  "thrusting heat" 8.6
+  "flare sprite" "effect/flare/atomic_small"
+    "frame rate" 13
+  "flare sound" "atomic small"
 
 outfit "Blaster Turret"
   category "Deprecated"
@@ -250,6 +358,56 @@ outfit "Blaster Turret"
     "firing heat" 30
     "shield damage" 9.6
     "hull damage" 6
+
+outfit `"Bondir" Atomic Steering`
+  category "Deprecated"
+  thumbnail "outfit/unknown"
+  "cost" 950000
+  "mass" 49
+  "outfit space" -49
+  "engine capacity" -49
+  "turn" 1758
+  "turning energy" 3.2
+  "turning heat" 8.2
+
+outfit `"Bondir" Atomic Thruster`
+  category "Deprecated"
+  thumbnail "outfit/unknown"
+  "cost" 1100000
+  "mass" 63
+  "outfit space" -63
+  "engine capacity" -63
+  "thrust" 66.1
+  "thrusting energy" 6.4
+  "thrusting heat" 13.4
+  "flare sprite" "effect/flare/atomic_medium"
+    "frame rate" 12
+  "flare sound" "atomic medium"
+
+outfit `"Bufaer" Atomic Steering`
+  category "Deprecated"
+  thumbnail "outfit/unknown"
+  "cost" 2100000
+  "mass" 76
+  "outfit space" -76
+  "engine capacity" -76
+  "turn" 3043
+  "turning energy" 5.2
+  "turning heat" 13.8
+
+outfit `"Bufaer" Atomic Thruster`
+  category "Deprecated"
+  thumbnail "outfit/unknown"
+  "cost" 2400000
+  "mass" 104
+  "outfit space" -104
+  "engine capacity" -104
+  "thrust" 120.1
+  "thrusting energy" 10.9
+  "thrusting heat" 23.8
+  "flare sprite" "effect/flare/atomic_large"
+    "frame rate" 11
+  "flare sound" "atomic large"
 
 outfit "Bullfrog Anti-Missile"
   category "Deprecated"
@@ -1741,6 +1899,30 @@ outfit "Quad Blaster Turret"
     "shield damage" 9.6
     "hull damage" 6
 
+outfit "Quarg Anti-Missile"
+  category "Deprecated"
+  thumbnail "outfit/unknown"
+  cost 6000000
+  "mass" 40
+  "outfit space" -40
+  "weapon capacity" -40
+  "turret mounts" -1
+  weapon
+    "hit effect" "quarg anti-missile"
+    "anti-missile" 25
+    "velocity" 500
+    "lifetime" 1
+    "reload" 10
+    "firing energy" 50
+
+effect "quarg anti-missile"
+  sprite "effect/anti-missile/quarg"
+    "no repeat"
+    "frame rate" 3
+  sound "quarg anti-missile"
+  "lifetime" 21
+  "velocity scale" 1
+
 outfit "Quarg Skylance"
   category "Deprecated"
   thumbnail "outfit/unknown"
@@ -2074,6 +2256,31 @@ outfit "Typhoon Torpedo"
   cost 2700
   "mass" .5
   "typhoon capacity" -1
+
+outfit "Tyrant Plasma Steering"
+  category "Deprecated"
+  thumbnail "outfit/unknown"
+  "cost" 382000
+  "mass" 125
+  "outfit space" -125
+  "engine capacity" -125
+  "turn" 3479
+  "turning energy" 5.2
+  "turning heat" 14.7
+
+outfit "Tyrant Plasma Thruster"
+  category "Deprecated"
+  thumbnail "outfit/unknown"
+  "cost" 478000
+  "mass" 167
+  "outfit space" -167
+  "engine capacity" -167
+  "thrust" 130.5
+  "thrusting energy" 10.5
+  "thrusting heat" 23.5
+  "flare sprite" "effect/flare/plasma_huge"
+    "frame rate" 9
+  "flare sound" "plasma huge"
 
 
 outfit "Wanderer Heat Sink"

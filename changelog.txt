@@ -239,7 +239,7 @@
       * Archon: cost from 1000 000 000 to 1234 567 890; +200 mass, +50 core space; +400 tactical scan power
       * Arfecta: +200 core space; removed cloaking fuel; +3400 energy capacity, +2.0 fuel generation, +3 hull repair rate, +3 hull energy, +12 scan interference, +237 tactical scan power
       * Argosy: +30 core space
-      * Arrow: −0.5 drag, +10 core space
+      * Arrow: −0.5 drag, +5 core space, +5 engine space
       * Autumn Leaf: +77 core space
       * Bactrian: +190 core space
       * Bastion: +60 core space
@@ -300,11 +300,12 @@
       * Marauder Bounder: +65 core space, –5 engine space
         * (Engines) variant +5 engine space
       * Marauder Falcon: −11 bunks, +110 core space, +5 engine space, –5 weapon space
-        * (Engines) variant –5 engine space
+        * (Engines) variant +5 engine space
         * (Weapons) variant +5 weapon space
       * Marauder Firebird: +45 core space, +5 weapon space
         * (Weapons) variant –5 weapon space
       * Marauder Leviathan: +11 bunks, +45 core space, +5 weapon space
+        * (Engines) variant +10 engine space
         * (Weapons) variant +5 weapon space
       * Marauder Manta: +25 core space, +5 weapon space
       * Marauder Quicksilver: –5 core space, +15 engine space, +5 weapon space
@@ -393,7 +394,8 @@
   * hardpoint:
     * modified_blaster_quad_turret (@Pointedstick)
     * ares, athena, hypnos, poseidon (@comnom)
-  * icon: —
+  * icon:
+    * artemis (@comnom)
   * label: —
   * land: —
   * _menu: —
@@ -427,14 +429,14 @@
     * Kestrel has twelve guns instead of six
     * Hawk has four guns instead of two (@MCOfficer)
     * harpy_m* (@KiLEdEnNis)
-    * include Eternals images (@comnom)
+    * ao, bixi, chilong, colony_ship, craterustig, excalibur, gladius, harrier, hatchling, hourglass, ivoryhatchling, ladon, longinus, myrmex, myrmidon, pollaxe, scorpion, steelscorpion, swordbreaker, tianlong, twincrescent, typhon, wingedserpent, yisnith (@comnom)
   * star: —
   * thumbnail:
     * Hawk has four guns instead of two (@MCOfficer)
-    * include Eternals images (@comnom)
+    * ao, excalibur, gladius, ivoryhatchling, longinus, myrmex, pollaxe, steelscorpion, swordbreaker, tianlong, twincrescent, typhon, wingedserpent (@comnom)
   * ui: —
 * sounds:
-  * ares~.wav, artemis.wav, athena.wav, dragonsfire.wav, dragonsice.wav, hermes_large~.wav, hermes_medium~.wav, hermes_small~.wav, hermes_tiny~.wav, poseidon.wav, poseidon_double.wav, spit.wav (@comnom)
+  * ares~.wav, artemis.wav, athena.wav, delta_large~.wav, delta_medium~.wav, delta_small~.wav, delta_tiny~.wav, dragonsfire.wav, dragonsice.wav, poseidon.wav, poseidon_double.wav, spit.wav (@comnom)
 * added several scripts and configuration files (@tehhowch): test_parse.ps1, test_parse.sh, .appveyor.yml, .editorconfig, .travis.yml, .winmake
 
 

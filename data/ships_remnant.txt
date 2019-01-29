@@ -118,8 +118,7 @@ ship "Shadow"
     "Forge-Class Thruster"
     "Forge-Class Steering"
 
-    "Inhibitor Cannon" 3
-    "Point Defence"
+    "Inhibitor Cannon" 5
 
     "Heat Sink" 2
     "Emergency Ramscoop"
@@ -130,9 +129,9 @@ ship "Shadow"
   gun 0 -99 "Inhibitor Cannon"
   gun -12 -72 "Inhibitor Cannon"
   gun 12 -72 "Inhibitor Cannon"
-  gun -18 -49
-  gun 18 -49
-  turret 0 2 "Point Defence"
+  gun -18 -49 "Inhibitor Cannon"
+  gun 18 -49 "Inhibitor Cannon"
+  turret 0 2
   explode "tiny explosion" 40
   explode "small explosion" 20
   explode "medium explosion" 10
@@ -150,7 +149,6 @@ ship "Shadow" "Shadow (Heavy)"
     "Forge-Class Steering"
 
     "Thrasher Cannon" 5
-    "Point Defence"
 
     "Heat Sink" 2
     "Emergency Ramscoop"
@@ -287,9 +285,8 @@ ship "Twilight"
     "Smelter-Class Thruster"
     "Smelter-Class Steering"
 
-    "Inhibitor Cannon" 6
+    "Inhibitor Cannon" 7
     "Thrasher Turret" 2
-    "Point Defence"
 
     "Heat Sink" 6
     "Emergency Ramscoop"
@@ -297,7 +294,7 @@ ship "Twilight"
   engine -28 155 .8
   engine 28 155 .8
   engine 0 184 .9
-  gun 0 -190
+  gun 0 -190 "Inhibitor Cannon"
   gun -9 -177 "Inhibitor Cannon"
   gun 9 -177 "Inhibitor Cannon"
   gun -14 -162 "Inhibitor Cannon"
@@ -308,7 +305,7 @@ ship "Twilight"
   turret 23 -34 "Thrasher Turret"
   turret -74 62
   turret 74 62
-  turret 0 77 "Point Defence"
+  turret 0 77
   explode "small explosion" 30
   explode "medium explosion" 60
   explode "large explosion" 40
@@ -360,7 +357,6 @@ ship "Twilight" "Twilight (Sniper)"
     "EMP Torpedo" 18
     "EMP Torpedo Bay" 2
     "Inhibitor Cannon" 5
-    "Point Defence" 3
 
     "Heat Sink" 6
     "Emergency Ramscoop"
@@ -372,11 +368,6 @@ ship "Twilight" "Twilight (Sniper)"
   gun "Inhibitor Cannon"
   gun "EMP Torpedo Bay"
   gun "EMP Torpedo Bay"
-  turret "Point Defence"
-  turret "Point Defence"
-  turret
-  turret
-  turret "Point Defence"
 
 
 ship "Twilight" "Twilight (Turret)"
@@ -388,7 +379,6 @@ ship "Twilight" "Twilight (Turret)"
     "Smelter-Class Steering"
 
     "Thrasher Turret" 4
-    "Point Defence"
 
     "Heat Sink" 6
     "Emergency Ramscoop"
@@ -397,5 +387,5 @@ ship "Twilight" "Twilight (Turret)"
   turret "Thrasher Turret"
   turret "Thrasher Turret"
   turret "Thrasher Turret"
-  turret "Point Defence"
+  turret
 
