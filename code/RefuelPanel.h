@@ -37,6 +37,8 @@ private:
   // Data about the fuel that might be needed in the refuel-panel.
   double fuel;
   double refuelPrice;
+  // Determines wether the the fleet isn't fully refueled.
+  bool empty;
 };
 
 

@@ -23,7 +23,6 @@
 #include "UI.h"
 
 #include <algorithm>
-#include <iostream>
 #include <string>
 
 using namespace std;
@@ -65,7 +64,6 @@ void RefuelPanel::Draw()
   const Colour &colour = *GameData::Colours().Get("bright");
   Information info;
   
-  
   if(fuel)
   {
     string price1 = "To refuel all your ships to " + Format::Round(ratio*100) + "% which will take " + Format::Round(fuel) + " units of fuel";
@@ -73,8 +71,9 @@ void RefuelPanel::Draw()
     font.Draw(price1, Point(MIN_X+10, FIRST_Y+120), colour);
     font.Draw(price2, Point(MIN_X+10, FIRST_Y+140), colour);
     info.SetCondition("can refuel");
+    info.SetCondition("empty");
   }
-  else if(ratio == 1)
+  else if(!empty)
   {
     string message1 = "Your fleet is fully refueled.";
     font.Draw(message1, Point(MIN_X+10, FIRST_Y+100), colour);
@@ -83,6 +82,7 @@ void RefuelPanel::Draw()
   {
     string message1 = "Your fleet is at least " + Format::Round(ratio*100) + "% filled.";
     font.Draw(message1, Point(MIN_X+10, FIRST_Y+100), colour);
+    info.SetCondition("empty");
   }
     
   
@@ -134,7 +134,11 @@ bool RefuelPanel::Click(int x, int y, int clicks)
 
 void RefuelPanel::RefreshUI()
 {
-  fuel = player.FuelNeeded(ratio);
-  double price = player.GetPlanet()->GetFuelPrice();
-  refuelPrice = fuel*price;
+  empty = player.FuelNeeded(1);
+  if(empty)
+  {
+    fuel = player.FuelNeeded(ratio);
+    double price = player.GetPlanet()->GetFuelPrice();
+    refuelPrice = fuel*price;
+  }
 }
