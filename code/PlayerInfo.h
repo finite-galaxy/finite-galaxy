@@ -133,7 +133,6 @@ public:
   // Load or unload cargo while landed to simulate the effective mass in space.
   void LoadCargo();
   void UnLoadCargo();
-  void LoadFighters();
   // Refuels all playerships that are currently on the same planet as the flagship.
   void Refuel();
   // Refuels to a given ratio.
