@@ -3,27 +3,14 @@
 #include "RefuelPanel.h"
 
 #include "Audio.h"
-#include "Colour.h"
-#include "Command.h"
-#include "FillShader.h"
 #include "Font.h"
 #include "FontSet.h"
 #include "Format.h"
 #include "GameData.h"
-#include "Government.h"
 #include "Information.h"
 #include "Interface.h"
-#include "MapDetailPanel.h"
-#include "Messages.h"
-#include "Outfit.h"
 #include "Planet.h"
 #include "PlayerInfo.h"
-#include "Preferences.h"
-#include "System.h"
-#include "UI.h"
-
-#include <algorithm>
-#include <string>
 
 using namespace std;
 
