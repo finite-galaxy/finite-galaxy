@@ -20,11 +20,8 @@ shipyard "Southbound Variants"
   "Hauler III (Hai)"
   "Hauler III (Miner)"
   "Nest"
-  "Nest (Sidewinder)"
   "Roost"
-  "Roost (Sidewinder)"
   "Skein"
-  "Skein (Sidewinder)"
   "Stymphalian"
 
 
@@ -489,10 +486,12 @@ ship "Hauler I"
     "Greyhound Plasma Thruster"
     "Impala Plasma Steering"
 
-    "X4 Blaster Turret" 4
+    "Javelin" 128
+    "Javelin Storage Crate" 2
+    "Javelin Pod" 2
+    "Bolt Turret" 4
 
     "LP144a Battery Pack"
-    "Liquid Water Cooler"
     "Fuel Pod" 32
     "Tactical Scanner" 4
   engine -45 122
@@ -591,20 +590,22 @@ ship "Hauler II"
     "Greyhound Plasma Thruster"
     "Impala Plasma Steering"
 
-    "X4 Blaster Turret" 4
+    "Javelin" 128
+    "Javelin Storage Crate" 2
+    "Javelin Pod" 2
+    "Bolt Turret" 4
 
     "LP144a Battery Pack"
-    "Liquid Water Cooler"
     "Fuel Pod" 42
     "Tactical Scanner" 4
   engine -45 160
   engine 45 160
   gun -15 -128
   gun 15 -128
-  turret -26 -85 "X4 Blaster Turret"
-  turret 26 -85 "X4 Blaster Turret"
-  turret -19 115 "X4 Blaster Turret"
-  turret 19 115 "X4 Blaster Turret"
+  turret -26 -85 "Bolt Turret"
+  turret 26 -85 "Bolt Turret"
+  turret -19 115 "Bolt Turret"
+  turret 19 115 "Bolt Turret"
   leak "leak" 60 50
   leak "flame" 40 80
   leak "big leak" 80 30
@@ -693,20 +694,22 @@ ship "Hauler III"
     "Greyhound Plasma Thruster"
     "Impala Plasma Steering"
 
-    "X4 Blaster Turret" 4
+    "Javelin" 128
+    "Javelin Storage Crate" 2
+    "Javelin Pod" 2
+    "Bolt Turret" 4
 
     "LP144a Battery Pack"
-    "Liquid Water Cooler"
     "Fuel Pod" 53
     "Tactical Scanner" 4
   engine -45 196
   engine 45 196
   gun -15 -165
   gun 15 -165
-  turret -26 -122 "X4 Blaster Turret"
-  turret 26 -122 "X4 Blaster Turret"
-  turret -19 151 "X4 Blaster Turret"
-  turret 19 151 "X4 Blaster Turret"
+  turret -26 -122 "Bolt Turret"
+  turret 26 -122 "Bolt Turret"
+  turret -19 151 "Bolt Turret"
+  turret 19 151 "Bolt Turret"
   leak "leak" 50 50
   leak "flame" 40 80
   leak "big leak" 80 30
@@ -796,10 +799,12 @@ ship "Nest"
     "Greyhound Plasma Thruster"
     "Impala Plasma Steering"
 
-    "X4 Blaster Turret" 4
+    "Javelin" 128
+    "Javelin Storage Crate" 2
+    "Javelin Pod" 2
+    "Bolt Turret" 4
 
     "LP144a Battery Pack"
-    "Liquid Water Cooler"
     "Fuel Pod" 42
     "Large Radar Jammer"
     "Tactical Scanner" 4
@@ -807,10 +812,10 @@ ship "Nest"
   engine 45 122
   gun -15 -91
   gun 15 -91
-  turret -26 -50 "X4 Blaster Turret"
-  turret 26 -50 "X4 Blaster Turret"
-  turret -18 75 "X4 Blaster Turret"
-  turret 18 75 "X4 Blaster Turret"
+  turret -26 -50 "Bolt Turret"
+  turret 26 -50 "Bolt Turret"
+  turret -18 75 "Bolt Turret"
+  turret 18 75 "Bolt Turret"
   fighter -47 12 under
   fighter 47 12 under
   leak "leak" 60 50
@@ -822,26 +827,6 @@ ship "Nest"
   explode "large explosion" 5
   "final explode" "final explosion medium"
   description `Southbound Shipyards quickly answered the Free Worlds' call for a carrier by building modified cargo containers for Haulers - adding a pair of Fighter docking arms, some additional outfit space, and even a couple of bunks. Access to the fighters from within the ship is so inconvenient that most pilots opt to just stay aboard their fighters when in flight. While the technical name for this ship is "Hauler I: Type F", Southbound assembly workers started calling the single container variant the "Nest" due to its complement of Hag Fighters, and the name stuck.`
-
-
-ship "Nest" "Nest (Sidewinder)"
-  outfits
-    "D94-YV Shield Generator"
-    "S3 Thermionic"
-    "Hyperdrive"
-
-    "Greyhound Plasma Thruster"
-    "Impala Plasma Steering"
-
-    "Sidewinder Missile" 54
-    "Sidewinder Missile Rack" 18
-    "Sidewinder Missile Launcher" 2
-    "X4 Blaster Turret" 2
-    "Heavy Anti-Missile" 2
-
-    "LP144a Battery Pack"
-    "Fuel Pod" 42
-    "Tactical Scanner" 4
 
 
 
@@ -884,10 +869,12 @@ ship "Roost"
     "Greyhound Plasma Thruster"
     "Impala Plasma Steering"
 
-    "X4 Blaster Turret" 4
+    "Javelin" 128
+    "Javelin Storage Crate" 2
+    "Javelin Pod" 2
+    "Bolt Turret" 4
 
     "LP144a Battery Pack"
-    "Liquid Water Cooler"
     "Fuel Pod" 62
     "Large Radar Jammer"
     "Tactical Scanner" 4
@@ -895,10 +882,10 @@ ship "Roost"
   engine 45 159
   gun -15 -128
   gun 15 -128
-  turret -26 -85 "X4 Blaster Turret"
-  turret 26 -85 "X4 Blaster Turret"
-  turret -18 114 "X4 Blaster Turret"
-  turret 18 114 "X4 Blaster Turret"
+  turret -26 -85 "Bolt Turret"
+  turret 26 -85 "Bolt Turret"
+  turret -18 114 "Bolt Turret"
+  turret 18 114 "Bolt Turret"
   fighter -47 -24 under
   fighter 47 -24 under
   fighter -47 50 under
@@ -912,26 +899,6 @@ ship "Roost"
   explode "large explosion" 15
   "final explode" "final explosion medium"
   description `Southbound Shipyards' new fighter-carrying containers have created a new use for what many considered an outdated design. Four external fighter bays make this the biggest civilian carrier on the market, if a little awkward as a warship. After Southbound assembly workers successfully named the "Nest", "Hauler II: Type F" was quickly dubbed the "Roost" to continue the theme.`
-
-
-ship "Roost" "Roost (Sidewinder)"
-  outfits
-    "D94-YV Shield Generator" 2
-    "S3 Thermionic"
-    "Hyperdrive"
-
-    "Greyhound Plasma Thruster"
-    "Impala Plasma Steering"
-
-    "Sidewinder Missile" 54
-    "Sidewinder Missile Rack" 18
-    "Sidewinder Missile Launcher" 2
-    "X4 Blaster Turret" 2
-    "Heavy Anti-Missile" 2
-
-    "LP144a Battery Pack"
-    "Fuel Pod" 62
-    "Tactical Scanner" 4
 
 
 
@@ -974,10 +941,12 @@ ship "Skein"
     "Greyhound Plasma Thruster"
     "Impala Plasma Steering"
 
-    "X4 Blaster Turret" 4
+    "Javelin" 128
+    "Javelin Storage Crate" 2
+    "Javelin Pod" 2
+    "Bolt Turret" 4
 
     "LP144a Battery Pack"
-    "Liquid Water Cooler"
     "Fuel Pod" 83
     "Large Radar Jammer"
     "Tactical Scanner" 4
@@ -985,10 +954,10 @@ ship "Skein"
   engine 45 197
   gun -15 -165
   gun 15 -165
-  turret -26 -123 "X4 Blaster Turret"
-  turret 26 -123 "X4 Blaster Turret"
-  turret -18.5 154 "X4 Blaster Turret"
-  turret 18.5 154 "X4 Blaster Turret"
+  turret -26 -123 "Bolt Turret"
+  turret 26 -123 "Bolt Turret"
+  turret -18.5 154 "Bolt Turret"
+  turret 18.5 154 "Bolt Turret"
   fighter -47 -61 under
   fighter 47 -61 under
   fighter -47 14 under
@@ -1004,26 +973,6 @@ ship "Skein"
   explode "huge explosion" 5
   "final explode" "final explosion large"
   description `This particular cockpit and engine set has found itself attached to three of Southbound Shipyards' new "Type F" Fighter-carrier pods. When the Free Worlds asked for a carrier, they did not expect one that would be able to carry more fighters than even the heaviest Navy warships. Given this fact, the Free Worlds have asked Southbound and Tarazed to restrict sale of the "Hauler III: Type F", "Skein" to its Militia only.`
-
-
-ship "Skein" "Skein (Sidewinder)"
-  outfits
-    "D94-YV Shield Generator" 3
-    "S3 Thermionic"
-    "Hyperdrive"
-
-    "Greyhound Plasma Thruster"
-    "Impala Plasma Steering"
-
-    "Sidewinder Missile" 54
-    "Sidewinder Missile Rack" 18
-    "Sidewinder Missile Launcher" 2
-    "X4 Blaster Turret" 2
-    "Heavy Anti-Missile" 2
-
-    "LP144a Battery Pack"
-    "Fuel Pod" 83
-    "Tactical Scanner" 4
 
 
 
