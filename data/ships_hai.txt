@@ -7,7 +7,6 @@ shipyard "Hai Variants"
   "Lightning Bug (Unfettered, Pulse)"
   "Mosquito"
   "Pond Strider"
-  "Pond Strider (Jump)"
   "Shield Beetle"
   "Shield Beetle (Thruster)"
   "Shield Beetle (Unfettered)"
@@ -53,7 +52,7 @@ ship "Aphid"
       "random hit force" 1095
   outfits
     "Corundum Regenerator"
-    "Pebble Core"
+    "Millennium Cell"
     "Hyperdrive"
 
     "Basrem Atomic Thruster"
@@ -106,7 +105,7 @@ ship "Flea"
       "hit force" 105
       "random hit force" 300
   outfits
-    "Sand Cell"
+    "Century Cell"
 
     "Baellie Atomic Engines"
 
@@ -151,7 +150,7 @@ ship "Lightning Bug"
       "random hit force" 1955
   outfits
     "Corundum Regenerator" 2
-    "Pebble Core" 2
+    "Epoch Cell"
     "Hyperdrive"
 
     "Biroo Atomic Thruster"
@@ -181,7 +180,7 @@ ship "Lightning Bug"
 ship "Lightning Bug" "Lightning Bug (Pulse)"
   outfits
     "Corundum Regenerator" 2
-    "Pebble Core" 2
+    "Epoch Cell"
     "Hyperdrive"
 
     "Biroo Atomic Thruster"
@@ -202,7 +201,7 @@ ship "Lightning Bug" "Lightning Bug (Pulse)"
 ship "Lightning Bug" "Lightning Bug (Unfettered)"
   outfits
     "S-270 Regenerator" 2
-    "Pebble Core" 2
+    "Epoch Cell"
     "Hyperdrive"
 
     "Diroo Atomic Thruster"
@@ -215,14 +214,14 @@ ship "Lightning Bug" "Lightning Bug (Unfettered)"
     "Fuel Pod" 35
     "Quantum Keystone"
     "Yoloy Scanner"
-    "Extra Outfit Space" 2
+    "Extra Outfit Space"
     "Force Field"
 
 
 ship "Lightning Bug" "Lightning Bug (Unfettered, Pulse)"
   outfits
     "S-270 Regenerator" 2
-    "Pebble Core" 2
+    "Epoch Cell"
     "Hyperdrive"
 
     "Diroo Atomic Thruster"
@@ -236,7 +235,7 @@ ship "Lightning Bug" "Lightning Bug (Unfettered, Pulse)"
     "Gorge Batteries"
     "Fuel Pod" 35
     "Yoloy Scanner"
-    "Extra Outfit Space" 3
+    "Extra Outfit Space" 2
     "Force Field"
 
 
@@ -273,7 +272,7 @@ ship "Mosquito"
       "hit force" 150
       "random hit force" 495
   outfits
-    "Pebble Core"
+    "Millennium Cell"
 
     "Dasrem Atomic Steering"
     "Dasrem Atomic Thruster"
@@ -282,7 +281,6 @@ ship "Mosquito"
     "Tracker Launcher"
 
     "Chasm Batteries"
-    "Williwaw Cooling"
   engine -15 30
   engine 15 30
   gun 0 -31 "Tracker Launcher"
@@ -326,7 +324,7 @@ ship "Pond Strider"
       "random hit force" 2310
   outfits
     "Diamond Regenerator"
-    "Geode Reactor"
+    "Epoch Cell"
     "Hyperdrive"
 
     "Benga Atomic Thruster"
@@ -335,12 +333,12 @@ ship "Pond Strider"
     "Pulse Turret" 2
     "Chameleon Anti-Missile" 
 
-    "Fissure Batteries"
+    "Ravine Batteries"
     "Williwaw Cooling" 2
     "Fuel Pod" 38
     "Quantum Keystone"
     "Yoloy Scanner"
-    "Force Field" 2
+    "Force Field" 3
   engine -23 80
   engine 23 80
   gun 0 -76
@@ -364,25 +362,6 @@ ship "Pond Strider"
   explode "huge explosion" 10
   "final explode" "final explosion large"
   description "This short range drone carrier was built by the increasingly powerful Unfettered, as a cheaper alternative to their new Solifuge and Mosquito ships. The Hai's greater value for life is evident in the remotely-piloted robotic fighter craft, preferring to keep valuable pilots out of harm's way."
-
-ship "Pond Strider" "Pond Strider (Jump)"
-  outfits
-    "Diamond Regenerator"
-    "Geode Reactor"
-    "Jump Drive"
-
-    "Benga Atomic Thruster"
-    "Benga Atomic Steering"
-
-    "Pulse Turret" 2
-    "Chameleon Anti-Missile" 
-
-    "Fissure Batteries"
-    "Williwaw Cooling" 2
-    "Fuel Pod" 38
-    "Quantum Keystone"
-    "Yoloy Scanner"
-    "Force Field" 2
 
 
 
@@ -419,6 +398,7 @@ ship "Shield Beetle"
       "random hit force" 5210
   outfits
     "Diamond Regenerator" 2
+    "Aeon Cell"
     "Hyperdrive"
 
     "Bondir Atomic Thruster"
@@ -431,7 +411,7 @@ ship "Shield Beetle"
     "Pulse Turret" 2
     "Chameleon Anti-Missile" 2
 
-    "Ravine Batteries"
+    "Gorge Batteries"
     "Williwaw Cooling" 2
     "Fuel Pod" 84
     "Quantum Keystone"
@@ -463,6 +443,7 @@ ship "Shield Beetle"
 ship "Shield Beetle" "Shield Beetle (Thruster)"
   outfits
     "Diamond Regenerator" 2
+    "Aeon Cell"
     "Jump Drive"
 
     "Bufaer Atomic Thruster"
@@ -475,11 +456,12 @@ ship "Shield Beetle" "Shield Beetle (Thruster)"
     "Pulse Turret" 2
     "Chameleon Anti-Missile" 2
 
-    "Ravine Batteries"
+    "Gorge Batteries"
     "Williwaw Cooling" 2
     "Fuel Pod" 84
     "Quantum Keystone"
     "Yoloy Scanner"
+    "Extra Outfit Space" 2
     "Force Field" 4
   gun "Ion Cannon"
   gun "Ion Cannon"
@@ -494,6 +476,7 @@ ship "Shield Beetle" "Shield Beetle (Thruster)"
 ship "Shield Beetle" "Shield Beetle (Unfettered)"
   outfits
     "S-970 Regenerator" 2
+    "Aeon Cell"
     "Jump Drive"
 
     "Dondir Atomic Thruster"
@@ -506,7 +489,8 @@ ship "Shield Beetle" "Shield Beetle (Unfettered)"
     "Pulse Turret" 2
     "Chameleon Anti-Missile" 2
 
-    "Ravine Batteries"
+    "Gorge Batteries"
+    "Fissure Batteries"
     "Williwaw Cooling" 2
     "Fuel Pod" 84
     "Quantum Keystone"
@@ -525,6 +509,7 @@ ship "Shield Beetle" "Shield Beetle (Unfettered)"
 ship "Shield Beetle" "Shield Beetle (Unfettered, Jump)"
   outfits
     "S-970 Regenerator" 2
+    "Aeon Cell"
     "Jump Drive"
 
     "Dondir Atomic Thruster"
@@ -537,7 +522,8 @@ ship "Shield Beetle" "Shield Beetle (Unfettered, Jump)"
     "Pulse Turret" 2
     "Chameleon Anti-Missile" 2
 
-    "Ravine Batteries"
+    "Gorge Batteries"
+    "Fissure Batteries"
     "Williwaw Cooling" 2
     "Fuel Pod" 84
     "Quantum Keystone"
@@ -570,9 +556,9 @@ ship "Solifuge"
     "mass" 925
     "drag" 15.4
     "heat dissipation" .4
-    "cargo space" 142
-    "outfit space" 999
-    "core space" 445
+    "cargo space" 52
+    "outfit space" 1111
+    "core space" 557
     "engine space" 142
     "weapon space" 412
     weapon
@@ -587,6 +573,7 @@ ship "Solifuge"
       "random hit force" 5705
   outfits
     "S-970 Regenerator" 3
+    "Aeon Cell" 2
     "Hyperdrive"
 
     "Dondir Atomic Thruster"
@@ -596,9 +583,9 @@ ship "Solifuge"
     "Pulse Turret" 4
     "Chameleon Anti-Missile" 3
 
-    "Ravine Batteries"
+    "Gorge Batteries"
     "Williwaw Cooling" 3
-    "Fuel Pod" 171
+    "Fuel Pod" 172
     "Quantum Keystone"
     "Yoloy Scanner"
     "Force Field" 6
@@ -665,18 +652,19 @@ ship "Water Bug"
       "random hit force" 3095
   outfits
     "Diamond Regenerator"
-    "Geode Reactor"
+    "Epoch Cell"
     "Hyperdrive"
 
     "Benga Atomic Thruster"
     "Benga Atomic Steering"
 
-    "Tracker" 56
+    "Tracker" 112
+    "Tracker Storage Pod" 2
     "Tracker Launcher" 2
     "Pulse Turret"
     "Chameleon Anti-Missile" 2
 
-    "Fissure Batteries"
+    "Gorge Batteries"
     "Williwaw Cooling"
     "Fuel Pod" 54
     "Quantum Keystone"
@@ -699,40 +687,41 @@ ship "Water Bug"
 ship "Water Bug" "Water Bug (Pulse)"
   outfits
     "Diamond Regenerator"
-    "Geode Reactor"
+    "Epoch Cell"
     "Hyperdrive"
 
     "Benga Atomic Thruster"
     "Benga Atomic Steering"
 
-    "Tracker" 56
+    "Tracker" 112
+    "Tracker Storage Pod" 2
     "Tracker Launcher" 2
     "Pulse Turret" 3
 
-    "Fissure Batteries"
-    "Chasm Batteries"
+    "Gorge Batteries"
     "Williwaw Cooling"
     "Fuel Pod" 54
     "Quantum Keystone"
     "Yoloy Scanner"
-    "Extra Outfit Space" 3
+    "Extra Outfit Space" 2
 
 
 ship "Water Bug" "Water Bug (Unfettered)"
   outfits
     "S-970 Regenerator"
-    "Geode Reactor"
+    "Epoch Cell"
     "Hyperdrive"
 
     "Denga Atomic Thruster"
     "Denga Atomic Steering"
 
-    "Tracker" 56
+    "Tracker" 112
+    "Tracker Storage Pod" 2
     "Tracker Launcher" 2
     "Pulse Turret" 2
     "Chameleon Anti-Missile"
 
-    "Fissure Batteries"
+    "Gorge Batteries"
     "Williwaw Cooling"
     "Fuel Pod" 54
     "Quantum Keystone"
@@ -747,18 +736,19 @@ ship "Water Bug" "Water Bug (Unfettered)"
 ship "Water Bug" "Water Bug (Unfettered, Jump)"
   outfits
     "S-970 Regenerator"
-    "Geode Reactor"
+    "Epoch Cell"
     "Jump Drive"
 
     "Denga Atomic Thruster"
     "Denga Atomic Steering"
 
-    "Tracker" 56
+    "Tracker" 112
+    "Tracker Storage Pod" 2
     "Tracker Launcher" 2
     "Pulse Turret" 2
     "Chameleon Anti-Missile"
 
-    "Fissure Batteries"
+    "Gorge Batteries"
     "Williwaw Cooling"
     "Fuel Pod" 54
     "Quantum Keystone"
