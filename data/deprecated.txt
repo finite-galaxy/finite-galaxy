@@ -2,6 +2,8 @@
 # but are no longer used in Finite Galaxy. They are listed to preserve history.
 # (It used to be in case anyone installed one of them while they were available.)
 #
+# "A860 Atomic Thruster"
+# "A865 Atomic Steering"
 # "Aluminum"
 # "Anti-Missile Turret"
 # "AR120 Reverse Thruster"
@@ -141,8 +143,6 @@
 # "Typhoon Launcher"
 # "Typhoon Storage Tube"
 # "Typhoon Torpedo"
-# "Tyrant Plasma Steering"
-# "Tyrant Plasma Thruster"
 # "Wanderer Heat Sink"
 # "Wanderer License"
 # "Wanderer Military License"
@@ -161,6 +161,31 @@
 # "X5700 Ion Thruster"
 
 
+
+outfit "A860 Atomic Thruster"
+  category "Deprecated"
+  thumbnail "outfit/unknown"
+  "cost" 2240000
+  "mass" 127
+  "outfit space" -127
+  "engine space" -127
+  "thrust" 139.7
+  "thrusting energy" 13.3
+  "thrusting heat" 29.1
+  "flare sprite" "effect/flare/atomic_huge"
+    "frame rate" 10
+  "flare sound" "atomic huge"
+
+outfit "A865 Atomic Steering"
+  category "Deprecated"
+  thumbnail "outfit/unknown"
+  "cost" 1920000
+  "mass" 92
+  "outfit space" -92
+  "engine space" -92
+  "turn" 3509
+  "turning energy" 6.6
+  "turning heat" 17.5
 
 outfit "Aluminum"
   plural "Aluminum"
@@ -216,7 +241,7 @@ outfit `"Baellie" Atomic Engines`
   "cost" 240000
   "mass" 24
   "outfit space" -24
-  "engine capacity" -24
+  "engine space" -24
   "turn" 250
   "turning energy" .6
   "turning heat" 1.3
@@ -233,7 +258,7 @@ outfit `"Basrem" Atomic Steering`
   "cost" 120000
   "mass" 12
   "outfit space" -12
-  "engine capacity" -12
+  "engine space" -12
   "turn" 309
   "turning energy" .7
   "turning heat" 1.6
@@ -244,7 +269,7 @@ outfit `"Basrem" Atomic Thruster`
   "cost" 150000
   "mass" 18
   "outfit space" -18
-  "engine capacity" -18
+  "engine space" -18
   "thrust" 13.2
   "thrusting energy" 1.5
   "thrusting heat" 2.9
@@ -280,7 +305,7 @@ outfit `"Benga" Atomic Thruster`
   "cost" 300000
   "mass" 28
   "outfit space" -28
-  "engine capacity" -28
+  "engine space" -28
   "thrust" 23.6
   "thrusting energy" 2.6
   "thrusting heat" 5.0
@@ -294,7 +319,7 @@ outfit `"Benga" Atomic Steering`
   "cost" 250000
   "mass" 20
   "outfit space" -20
-  "engine capacity" -20
+  "engine space" -20
   "turn" 577
   "turning energy" 1.1
   "turning heat" 2.8
@@ -317,7 +342,7 @@ outfit `"Biroo" Atomic Steering`
   "cost" 530000
   "mass" 32
   "outfit space" -32
-  "engine capacity" -32
+  "engine space" -32
   "turn" 1054
   "turning energy" 2.0
   "turning heat" 5.1
@@ -328,7 +353,7 @@ outfit `"Biroo" Atomic Thruster`
   "cost" 610000
   "mass" 44
   "outfit space" -44
-  "engine capacity" -44
+  "engine space" -44
   "thrust" 41.5
   "thrusting energy" 4.2
   "thrusting heat" 8.6
@@ -365,7 +390,7 @@ outfit `"Bondir" Atomic Steering`
   "cost" 950000
   "mass" 49
   "outfit space" -49
-  "engine capacity" -49
+  "engine space" -49
   "turn" 1758
   "turning energy" 3.2
   "turning heat" 8.2
@@ -376,7 +401,7 @@ outfit `"Bondir" Atomic Thruster`
   "cost" 1100000
   "mass" 63
   "outfit space" -63
-  "engine capacity" -63
+  "engine space" -63
   "thrust" 66.1
   "thrusting energy" 6.4
   "thrusting heat" 13.4
@@ -390,7 +415,7 @@ outfit `"Bufaer" Atomic Steering`
   "cost" 2100000
   "mass" 76
   "outfit space" -76
-  "engine capacity" -76
+  "engine space" -76
   "turn" 3043
   "turning energy" 5.2
   "turning heat" 13.8
@@ -401,7 +426,7 @@ outfit `"Bufaer" Atomic Thruster`
   "cost" 2400000
   "mass" 104
   "outfit space" -104
-  "engine capacity" -104
+  "engine space" -104
   "thrust" 120.1
   "thrusting energy" 10.9
   "thrusting heat" 23.8
@@ -415,7 +440,7 @@ outfit "Bullfrog Anti-Missile"
   cost 55000
   "mass" 10
   "outfit space" -10
-  "weapon capacity" -10
+  "weapon space" -10
   "turret mounts" -1
   weapon
     "hit effect" "small anti-missile"
@@ -839,7 +864,7 @@ outfit "Heavy Anti-Missile Turret"
   cost 150000
   "mass" 30
   "outfit space" -30
-  "weapon capacity" -30
+  "weapon space" -30
   "turret mounts" -1
   weapon
     "hit effect" "large anti-missile"
@@ -897,7 +922,7 @@ outfit "Heavy Rocket Launcher"
   cost 40000
   "mass" 10
   "outfit space" -20
-  "weapon capacity" -20
+  "weapon space" -20
   "gun ports" -1
   "rocket capacity" 20
   weapon
@@ -1512,7 +1537,7 @@ outfit "Modified Blaster"
   cost 35000
   "mass" 6
   "outfit space" -6
-  "weapon capacity" -6
+  "weapon space" -6
   "gun ports" -1
   weapon
     sprite "projectile/mod blaster"
@@ -1533,7 +1558,7 @@ outfit "Modified Blaster Turret"
   cost 170000
   "mass" 18
   "outfit space" -18
-  "weapon capacity" -18
+  "weapon space" -18
   "turret mounts" -1
   "required crew" 1
   weapon
@@ -1635,7 +1660,7 @@ outfit "Proton Gun"
   cost 150000
   "mass" 28
   "outfit space" -28
-  "weapon capacity" -28
+  "weapon space" -28
   "gun ports" -1
   weapon
     sprite "projectile/proton"
@@ -1664,7 +1689,7 @@ outfit "Proton Turret"
   cost 260000
   "mass" 34
   "outfit space" -34
-  "weapon capacity" -34
+  "weapon space" -34
   "turret mounts" -1
   "required crew" 1
   weapon
@@ -1905,7 +1930,7 @@ outfit "Quarg Anti-Missile"
   cost 6000000
   "mass" 40
   "outfit space" -40
-  "weapon capacity" -40
+  "weapon space" -40
   "turret mounts" -1
   weapon
     "hit effect" "quarg anti-missile"
@@ -1955,7 +1980,7 @@ outfit "Railgun"
   cost 20000
   "mass" 4
   "outfit space" -7
-  "weapon capacity" -7
+  "weapon space" -7
   "gun ports" -1
   "railgun slug capacity" 150
   weapon
@@ -2062,7 +2087,7 @@ outfit "Thunderhead Launcher"
   cost 450000
   "mass" 14
   "outfit space" -26
-  "weapon capacity" -26
+  "weapon space" -26
   "gun ports" -1
   "thunderhead capacity" 40
   weapon
@@ -2113,7 +2138,7 @@ outfit "Tier 3 Anti-Missile"
   cost 12000000
   "mass" 67
   "outfit space" -67
-  "weapon capacity" -67
+  "weapon space" -67
   "turret mounts" -1
   weapon
     "fire effect" "tier 3 anti-missile fire"
@@ -2161,7 +2186,7 @@ outfit "Torpedo Launcher"
   cost 80000
   "mass" 13
   "outfit space" -25
-  "weapon capacity" -25
+  "weapon space" -25
   "gun ports" -1
   "torpedo capacity" 30
   weapon
@@ -2211,7 +2236,7 @@ outfit "Typhoon Launcher"
   cost 260000
   "mass" 20
   "outfit space" -35
-  "weapon capacity" -35
+  "weapon space" -35
   "gun ports" -1
   "typhoon capacity" 30
   weapon
@@ -2257,31 +2282,6 @@ outfit "Typhoon Torpedo"
   "mass" .5
   "typhoon capacity" -1
 
-outfit "Tyrant Plasma Steering"
-  category "Deprecated"
-  thumbnail "outfit/unknown"
-  "cost" 382000
-  "mass" 125
-  "outfit space" -125
-  "engine capacity" -125
-  "turn" 3479
-  "turning energy" 5.2
-  "turning heat" 14.7
-
-outfit "Tyrant Plasma Thruster"
-  category "Deprecated"
-  thumbnail "outfit/unknown"
-  "cost" 478000
-  "mass" 167
-  "outfit space" -167
-  "engine capacity" -167
-  "thrust" 130.5
-  "thrusting energy" 10.5
-  "thrusting heat" 23.5
-  "flare sprite" "effect/flare/plasma_huge"
-    "frame rate" 9
-  "flare sound" "plasma huge"
-
 
 outfit "Wanderer Heat Sink"
   category "Deprecated"
@@ -2315,7 +2315,7 @@ outfit "X1050 Ion Engines"
   "cost" 20000
   "mass" 20
   "outfit space" -20
-  "engine capacity" -20
+  "engine space" -20
   "turn" 110
   "turning energy" .25
   "turning heat" .5
@@ -2332,7 +2332,7 @@ outfit "X1200 Ion Steering"
   "cost" 10000
   "mass" 12
   "outfit space" -12
-  "engine capacity" -12
+  "engine space" -12
   "turn" 160
   "turning energy" .3
   "turning heat" .6
@@ -2343,7 +2343,7 @@ outfit "X1700 Ion Thruster"
   "cost" 12000
   "mass" 16
   "outfit space" -16
-  "engine capacity" -16
+  "engine space" -16
   "thrust" 6.0
   "thrusting energy" .6
   "thrusting heat" .9
@@ -2357,7 +2357,7 @@ outfit "X2200 Ion Steering"
   "cost" 21000
   "mass" 20
   "outfit space" -20
-  "engine capacity" -20
+  "engine space" -20
   "turn" 307
   "turning energy" .6
   "turning heat" 1.1
@@ -2368,7 +2368,7 @@ outfit "X2700 Ion Thruster"
   "cost" 26000
   "mass" 27
   "outfit space" -27
-  "engine capacity" -27
+  "engine space" -27
   "thrust" 11.5
   "thrusting energy" 1.1
   "thrusting heat" 1.7
@@ -2382,7 +2382,7 @@ outfit "X3200 Ion Steering"
   "cost" 46000
   "mass" 35
   "outfit space" -35
-  "engine capacity" -35
+  "engine space" -35
   "turn" 590
   "turning energy" 1.1
   "turning heat" 2.0
@@ -2393,7 +2393,7 @@ outfit "X3700 Ion Thruster"
   "cost" 58000
   "mass" 46
   "outfit space" -46
-  "engine capacity" -46
+  "engine space" -46
   "thrust" 22.1
   "thrusting energy" 1.9
   "thrusting heat" 3.2
@@ -2407,7 +2407,7 @@ outfit "X4200 Ion Steering"
   "cost" 102000
   "mass" 59
   "outfit space" -59
-  "engine capacity" -59
+  "engine space" -59
   "turn" 1132
   "turning energy" 1.9
   "turning heat" 3.9
@@ -2418,7 +2418,7 @@ outfit "X4700 Ion Thruster"
   "cost" 128000
   "mass" 79
   "outfit space" -79
-  "engine capacity" -79
+  "engine space" -79
   "thrust" 42.5
   "thrusting energy" 3.5
   "thrusting heat" 6.2
@@ -2432,7 +2432,7 @@ outfit "X5200 Ion Steering"
   "cost" 225000
   "mass" 100
   "outfit space" -100
-  "engine capacity" -100
+  "engine space" -100
   "turn" 2174
   "turning energy" 3.5
   "turning heat" 7.3
@@ -2443,7 +2443,7 @@ outfit "X5700 Ion Thruster"
   "cost" 281000
   "mass" 134
   "outfit space" -134
-  "engine capacity" -134
+  "engine space" -134
   "thrust" 81.5
   "thrusting energy" 6.3
   "thrusting heat" 11.7

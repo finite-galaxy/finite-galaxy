@@ -418,7 +418,6 @@ ship "Marauder Falcon"
     "LP288a Battery Pack"
     "Liquid Helium Cooler"
     "Fuel Pod" 76
-    "Large Radar Jammer"
     "Tactical Scanner" 4
     "Interference Plating" 3
     "Laser Rifle" 69
@@ -443,15 +442,15 @@ ship "Marauder Falcon"
 ship "Marauder Falcon" "Marauder Falcon (Engines)"
   sprite "ship/falcon_e"
   add attributes
-    "core space" -60
-    "engine space" 60
+    "core space" -70
+    "engine space" 70
   outfits
     "S-970 Regenerator"
     "Fusion Reactor"
     "Hyperdrive"
 
-    "A860 Atomic Thruster"
-    "A865 Atomic Steering"
+    "A520 Atomic Thruster" 2
+    "A525 Atomic Steering"
 
     "Heavy Laser Cannon" 4
     "K2 Blaster Turret" 4
@@ -459,7 +458,6 @@ ship "Marauder Falcon" "Marauder Falcon (Engines)"
     "LP144a Battery Pack"
     "Liquid Helium Cooler"
     "Fuel Pod" 76
-    "Large Radar Jammer"
     "Tactical Scanner" 4
     "Interference Plating" 3
     "Laser Rifle" 69
@@ -496,7 +494,6 @@ ship "Marauder Falcon" "Marauder Falcon (Weapons)"
     "LP144a Battery Pack"
     "Liquid Helium Cooler"
     "Fuel Pod" 76
-    "Large Radar Jammer"
     "Tactical Scanner" 4
     "Interference Plating" 3
     "Laser Rifle" 69
@@ -653,9 +650,9 @@ ship "Marauder Leviathan"
     "mass" 640
     "drag" 7.6
     "heat dissipation" .5
-    "cargo space" 40
-    "outfit space" 730
-    "core space" 320
+    "cargo space" 50
+    "outfit space" 720
+    "core space" 310
     "engine space" 140
     "weapon space" 270
     "self destruct" .15
@@ -679,8 +676,7 @@ ship "Marauder Leviathan"
     "Afterburner"
 
     "Plasma Cannon" 4
-    "K4 Blaster Turret" 2
-    "Heavy Laser Turret" 2
+    "Heavy Laser Turret" 4
 
     "LP144a Battery Pack"
     "Liquid Helium Cooler"
@@ -695,8 +691,8 @@ ship "Marauder Leviathan"
   gun 38 -34 "Plasma Cannon"
   gun -50 -23 "Plasma Cannon"
   gun 50 -23 "Plasma Cannon"
-  turret -15 -50 "K4 Blaster Turret"
-  turret 15 -50 "K4 Blaster Turret"
+  turret -15 -50 "Heavy Laser Turret"
+  turret 15 -50 "Heavy Laser Turret"
   turret -25 10 "Heavy Laser Turret"
   turret 25 10 "Heavy Laser Turret"
   explode "tiny explosion" 18
@@ -710,18 +706,19 @@ ship "Marauder Leviathan"
 ship "Marauder Leviathan" "Marauder Leviathan (Engines)"
   sprite "ship/leviathan_e"
   add attributes
-    "core space" -90
-    "engine space" 90
+    "core space" -40
+    "engine space" 40
   outfits
     "S-970 Regenerator"
     "Fusion Reactor"
     "Hyperdrive"
 
-    "A860 Atomic Thruster"
-    "A865 Atomic Steering"
+    "A520 Atomic Thruster"
+    "A525 Atomic Steering"
+    "Ionic Afterburner"
 
     "Plasma Cannon" 4
-    "K2 Blaster Turret" 4
+    "Laser Turret" 4
 
     "LP144a Battery Pack"
     "Liquid Helium Cooler"
