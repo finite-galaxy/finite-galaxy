@@ -292,9 +292,9 @@ ship "Mark I Drone"
     "drag" .6
     "heat dissipation" .9
     "outfit space" 75
-    "core space" 32
-    "engine space" 28
-    "weapon space" 15
+    "core space" 45
+    "engine space" 22
+    "weapon space" 8
     weapon
       "blast radius" 19
       "shield damage" 40
@@ -306,19 +306,21 @@ ship "Mark I Drone"
       "hit force" 100
       "random hit force" 375
   outfits
-    "nGVF-BB Fuel Cell"
+    "nGVF-CC Fuel Cell"
 
-    "IT-1700 Ion Thruster"
-    "IS-1200 Ion Steering"
+    "A120 Atomic Thruster"
+    "A125 Atomic Steering"
 
-    "Heavy Laser Cannon"
+    "Laser Cannon"
 
     "Supercapacitor" 3
+    "Small Radar Jammer"
   engine -9 29
   engine 9 29
-  gun 0 -29 "Heavy Laser Cannon"
+  gun 0 -29 "Laser Cannon"
   explode "tiny explosion" 15
-  description "The Mark I Drone is a pilotless attack ship used exclusively by the Republic Navy. Although very weak and easy to destroy, they can be quite effective in large numbers. Because drones do not need to accomodate life support systems, a cockpit, bunks, cargo space, or shield emitters, they can have similar firepower and a stronger hull than larger fighters or interceptors."
+  description "The Mark I Drone is a very fast, pilotless attack ship, designed at the request of the Navy, to reduce their fighter pilot death rate. Although the Mark I Drone is still for sale, the Navy now uses its newer incranations."
+
 
 
 ship "Mark II Drone"
@@ -337,9 +339,9 @@ ship "Mark II Drone"
     "drag" .6
     "heat dissipation" .9
     "outfit space" 75
-    "core space" 32
-    "engine space" 20
-    "weapon space" 23
+    "core space" 38
+    "engine space" 22
+    "weapon space" 15
     weapon
       "blast radius" 19
       "shield damage" 40
@@ -353,14 +355,62 @@ ship "Mark II Drone"
   outfits
     "nGVF-BB Fuel Cell"
 
-    "IC-900 Ion Engines"
+    "A120 Atomic Thruster"
+    "A125 Atomic Steering"
+
+    "Heavy Laser Cannon"
+
+    "Supercapacitor" 5
+    "Small Radar Jammer"
+  engine -9 29
+  engine 9 29
+  gun 0 -29 "Heavy Laser Cannon"
+  explode "tiny explosion" 15
+  description "The Mark II Drone is used exclusively by the Republic Navy. Although very weak and easy to destroy, they can be quite effective in large numbers. Because drones do not need to accomodate life support systems, a cockpit, bunks, cargo space, or shield emitters, they can have similar firepower and a stronger hull than larger fighters or interceptors."
+
+
+ship "Mark III Drone"
+  sprite "ship/drone"
+  thumbnail "thumbnail/drone"
+  attributes
+    category "Drone"
+#    manufacturer "Centaur"
+    licences
+      Navy
+    "carried" 1
+    "cost" 83000
+    "hull" 700
+    "automaton" 1
+    "mass" 20
+    "drag" .6
+    "heat dissipation" .9
+    "outfit space" 75
+    "core space" 31
+    "engine space" 22
+    "weapon space" 22
+    weapon
+      "blast radius" 19
+      "shield damage" 40
+      "random shield damage" 150
+      "hull damage" 60
+      "random hull damage" 225
+      "heat damage" 1200
+      "random heat damage" 4500
+      "hit force" 100
+      "random hit force" 375
+  outfits
+    "nGVF-BB Fuel Cell"
+
+    "A120 Atomic Thruster"
+    "A125 Atomic Steering"
 
     "Electron Cannon"
 
-    "Supercapacitor" 3
+    "Supercapacitor" 2
+    "Small Radar Jammer"
   engine -9 29
   engine 9 29
   gun 0 -29 "Electron Cannon"
   explode "tiny explosion" 15
-  description "The Mark II Drone is externally identical to its predecessor, but internally it has reduced engine space to increase its weapon space, sacrificing speed to accomodate a larger cannon."
+  description "The Mark III Drone is externally identical to its predecessors, but internally it has reduced core space to increase its weapon space, sacrificing energy to accomodate a larger cannon."
 
