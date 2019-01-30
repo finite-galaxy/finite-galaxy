@@ -64,7 +64,7 @@ ship "Blackbird"
     "Impala Plasma Thruster"
     "Impala Plasma Steering"
 
-    "X4 Blaster Turret" 2
+    "Bolt Turret" 2
 
     "LP144a Battery Pack"
     "Liquid Water Cooler"
@@ -72,8 +72,8 @@ ship "Blackbird"
     "Tactical Scanner" 5
   engine -40 55
   engine 40 55
-  turret -18 0 "X4 Blaster Turret"
-  turret 18 0 "X4 Blaster Turret"
+  turret -18 0 "Bolt Turret"
+  turret 18 0 "Bolt Turret"
   leak "leak" 50 50
   leak "flame" 70 80
   explode "tiny explosion" 15
@@ -102,20 +102,20 @@ ship "Falcon"
     "drag" 6.7
     "heat dissipation" .7
     "cargo space" 80
-    "outfit space" 620
-    "core space" 230
+    "outfit space" 600
+    "core space" 210
     "engine space" 150
     "weapon space" 240
     weapon
       "blast radius" 236
       "shield damage" 960
-      "random shield damage" 1400
+      "random shield damage" 1360
       "hull damage" 1440
-      "random hull damage" 2100
+      "random hull damage" 2040
       "heat damage" 28800
-      "random heat damage" 42000
+      "random heat damage" 40800
       "hit force" 2400
-      "random hit force" 3500
+      "random hit force" 3400
   outfits
     "D94-YV Shield Generator"
     "Breeder Reactor"
@@ -126,7 +126,7 @@ ship "Falcon"
     "Ionic Afterburner"
 
     "Plasma Cannon" 2
-    "X4 Blaster Turret" 4
+    "Bolt Turret" 4
 
     "LP144a Battery Pack"
     "Liquid Nitrogen Cooler"
@@ -136,10 +136,10 @@ ship "Falcon"
   engine 17 143
   gun -17 -88 "Plasma Cannon"
   gun 17 -88 "Plasma Cannon"
-  turret -16 -24 "X4 Blaster Turret"
-  turret 16 -24 "X4 Blaster Turret"
-  turret -57 40 "X4 Blaster Turret"
-  turret 57 40 "X4 Blaster Turret"
+  turret -16 -24 "Bolt Turret"
+  turret 16 -24 "Bolt Turret"
+  turret -57 40 "Bolt Turret"
+  turret 57 40 "Bolt Turret"
   leak "leak" 30 50
   leak "flame" 50 80
   leak "big leak" 60 30
@@ -169,7 +169,7 @@ ship "Falcon" "Falcon (Heavy)"
     "Liquid Water Cooler"
     "Fuel Pod" 71
     "Tactical Scanner" 5
-    "Extra Outfit Space" 3
+    "Extra Outfit Space" 5
 
 
 ship "Falcon" "Falcon (Laser)"
@@ -189,6 +189,7 @@ ship "Falcon" "Falcon (Laser)"
     "Liquid Nitrogen Cooler"
     "Fuel Pod" 71
     "Tactical Scanner" 5
+    "Extra Outfit Space"
 
 
 ship "Falcon" "Falcon (Plasma)"
@@ -203,10 +204,10 @@ ship "Falcon" "Falcon (Plasma)"
     "Plasma Turret" 4
 
     "LP144a Battery Pack"
-    "Liquid Nitrogen Cooler"
+    "Liquid Helium Cooler"
     "Fuel Pod" 71
     "Tactical Scanner" 5
-    "Extra Outfit Space" 2
+    "Extra Outfit Space" 7
 
 
 
@@ -249,19 +250,19 @@ ship "Hawk"
     "Greyhound Plasma Thruster"
     "Greyhound Plasma Steering"
 
-    "Plasma Cannon" 2
+    "Bolt Cannon" 4
 
-    "LP036a Battery Pack"
+    "LP072a Battery Pack"
     "Liquid Water Cooler"
     "Fuel Pod" 18
     "Tactical Scanner" 5
   engine -16 47
   engine 16 47
-  gun -12 -27 "Plasma Cannon"
-  gun 12 -27 "Plasma Cannon"
-  gun -17 -18 
-  gun 17 -18 
-  turret 0 9 
+  gun -12 -27 "Bolt Cannon"
+  gun 12 -27 "Bolt Cannon"
+  gun -17 -18 "Bolt Cannon"
+  gun 17 -18 "Bolt Cannon"
+  turret 0 9
   leak "leak" 60 50
   leak "flame" 80 80
   explode "tiny explosion" 20
@@ -344,9 +345,9 @@ ship "Kestrel"
     "heat dissipation" .6
     "cargo space" 100
     "outfit space" 900
-    "core space" 300
+    "core space" 330
     "engine space" 210
-    "weapon space" 390
+    "weapon space" 360
     weapon
       "blast radius" 348
       "shield damage" 1480
@@ -364,33 +365,33 @@ ship "Kestrel"
 
     "Orca Plasma Thruster"
     "Orca Plasma Steering"
+    "Ionic Afterburner"
 
-    "Plasma Cannon" 6
-    "X4 Blaster Turret" 4
+    "Plasma Cannon" 12
 
-    "LP144a Battery Pack"
     "LP072a Battery Pack"
+    "LP036a Battery Pack"
     "Liquid Helium Cooler"
     "Fuel Pod" 87
     "Tactical Scanner" 5
   engine -14 177
   engine 14 177
-  gun -86 55
-  gun 86 55
+  gun -86 55 "Plasma Cannon"
+  gun 86 55 "Plasma Cannon"
   gun -75 57 "Plasma Cannon"
   gun 75 57 "Plasma Cannon"
-  gun -64 59
-  gun 64 59
+  gun -64 59 "Plasma Cannon"
+  gun 64 59 "Plasma Cannon"
   gun -53 61 "Plasma Cannon"
   gun 53 61 "Plasma Cannon"
-  gun -42 63
-  gun 42 63
+  gun -42 63 "Plasma Cannon"
+  gun 42 63 "Plasma Cannon"
   gun -31 65 "Plasma Cannon"
   gun 31 65 "Plasma Cannon"
-  turret -7 -4 "X4 Blaster Turret"
-  turret 7 -4 "X4 Blaster Turret"
-  turret -23 14 "X4 Blaster Turret"
-  turret 23 14 "X4 Blaster Turret"
+  turret -7 -4
+  turret 7 -4
+  turret -23 14
+  turret 23 14
   explode "small explosion" 25
   explode "medium explosion" 35
   explode "large explosion" 45
@@ -413,8 +414,8 @@ ship "Kestrel" "Kestrel (Shields)"
 
 ship "Kestrel" "Kestrel (Weapons)"
   add attributes
-    "core space" -40
-    "weapon space" 40
+    "core space" -60
+    "weapon space" 60
 
 
 
@@ -458,7 +459,7 @@ ship "Osprey"
     "Impala Plasma Steering"
 
     "Plasma Cannon" 4
-    "X2 Blaster Turret" 2
+    "Bolt Turret" 2
 
     "LP072a Battery Pack"
     "Liquid Nitrogen Cooler"
@@ -470,8 +471,8 @@ ship "Osprey"
   gun 8 -100 "Plasma Cannon"
   gun -26 -53 "Plasma Cannon"
   gun 26 -53 "Plasma Cannon"
-  turret -16 -16 "X2 Blaster Turret"
-  turret 16 -16 "X2 Blaster Turret"
+  turret -16 -16 "Bolt Turret"
+  turret 16 -16 "Bolt Turret"
   leak "leak" 40 50
   leak "flame" 80 80
   leak "big leak" 80 30
@@ -514,7 +515,7 @@ ship "Osprey" "Osprey (Javelin)"
     "Javelin" 256
     "Javelin Storage Crate" 4
     "Javelin Pod" 4
-    "X4 Blaster Turret" 2
+    "Bolt Turret" 2
 
     "LP072a Battery Pack"
     "Liquid Nitrogen Cooler"
@@ -613,7 +614,7 @@ ship "Raven" "Raven (Afterburner)"
 
     "Greyhound Plasma Thruster"
     "Greyhound Plasma Steering"
-    "Afterburner"
+    "Ionic Afterburner"
 
     "Javelin" 128
     "Javelin Storage Crate" 2
@@ -624,7 +625,7 @@ ship "Raven" "Raven (Afterburner)"
     "Liquid Water Cooler"
     "Fuel Pod" 24
     "Tactical Scanner" 5
-    "Extra Outfit Space"
+    "Extra Outfit Space" 2
 
 
 ship "Raven" "Raven (Javelin)"
@@ -700,9 +701,9 @@ ship "Unknown Ship Type"
     "heat dissipation" .6
     "cargo space" 100
     "outfit space" 900
-    "core space" 300
+    "core space" 330
     "engine space" 210
-    "weapon space" 390
+    "weapon space" 360
     weapon
       "blast radius" 348
       "shield damage" 1480
@@ -714,40 +715,43 @@ ship "Unknown Ship Type"
       "hit force" 3700
       "random hit force" 5000
   outfits
-    "D94-YV Shield Generator" 2
+    "D94-YV Shield Generator" 3
     "Fusion Reactor"
     "Hyperdrive"
 
-    "Orca Plasma Thruster"
-    "Orca Plasma Steering"
+    "A520 Atomic Thruster"
+    "A525 Atomic Steering"
+    "Ionic Afterburner"
 
-    "Plasma Cannon" 6
-    "X4 Blaster Turret" 4
+    "Bolt Cannon" 12
+    "Bolt Turret" 4
 
     "LP144a Battery Pack"
+    "LP072a Battery Pack"
     "Liquid Helium Cooler"
     "Fuel Pod" 87
-    "Interference Plating" 12
+    "Interference Plating" 6
+    "Large Radar Jammer" 2
     "Tactical Scanner" 5
     "Measurement Systems" 20
   engine -14 177
   engine 14 177
-  gun -86 55
-  gun 86 55
-  gun -75 57 "Plasma Cannon"
-  gun 75 57 "Plasma Cannon"
-  gun -64 59
-  gun 64 59
-  gun -53 61 "Plasma Cannon"
-  gun 53 61 "Plasma Cannon"
-  gun -42 63
-  gun 42 63
-  gun -31 65 "Plasma Cannon"
-  gun 31 65 "Plasma Cannon"
-  turret -7 -4 "X4 Blaster Turret"
-  turret 7 -4 "X4 Blaster Turret"
-  turret -23 14 "X4 Blaster Turret"
-  turret 23 14 "X4 Blaster Turret"
+  gun -86 55 "Bolt Cannon"
+  gun 86 55 "Bolt Cannon"
+  gun -75 57 "Bolt Cannon"
+  gun 75 57 "Bolt Cannon"
+  gun -64 59 "Bolt Cannon"
+  gun 64 59 "Bolt Cannon"
+  gun -53 61 "Bolt Cannon"
+  gun 53 61 "Bolt Cannon"
+  gun -42 63 "Bolt Cannon"
+  gun 42 63 "Bolt Cannon"
+  gun -31 65 "Bolt Cannon"
+  gun 31 65 "Bolt Cannon"
+  turret -7 -4 "Bolt Turret"
+  turret 7 -4 "Bolt Turret"
+  turret -23 14 "Bolt Turret"
+  turret 23 14 "Bolt Turret"
   explode "small explosion" 25
   explode "medium explosion" 35
   explode "large explosion" 45
