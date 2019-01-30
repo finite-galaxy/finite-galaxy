@@ -597,53 +597,48 @@ fleet "Hai Large"
   personality
     disables opportunistic
   # total: 27
+  variant 1
+    "Shield Beetle"
+    "Aphid" 4
+  variant 1
+    "Shield Beetle (Thruster)"
+    "Aphid" 4
+  variant 2
+    "Shield Beetle"
+    "Lightning Bug" 2
   variant 2
     "Shield Beetle"
     "Lightning Bug (Pulse)" 2
+  variant 3
+    "Shield Beetle"
+    "Lightning Bug (Pulse)"
+    "Water Bug"
+    "Water Bug (Pulse)"
+  variant 3
+    "Shield Beetle"
+    "Water Bug"
+    "Water Bug (Pulse)"
+  variant 3
+    "Shield Beetle"
+    "Lightning Bug" 2
+    "Water Bug"
   variant 2
-    "Shield Beetle (Ion)"
-    "Lightning Bug" 2
-  variant 1
     "Shield Beetle"
-    "Lightning Bug (Pulse)"
-    "Aphid" 4
-  variant 1
-    "Shield Beetle (Ion)"
-    "Lightning Bug"
-    "Aphid" 4
-  variant 3
-    "Shield Beetle"
-    "Lightning Bug (Pulse)"
-    "Water Bug"
-    "Water Bug (Pulse)"
-  variant 3
-    "Shield Beetle"
-    "Water Bug"
-    "Water Bug (Pulse)"
-  variant 3
-    "Shield Beetle (Ion)"
-    "Lightning Bug" 2
-    "Water Bug"
-  variant 3
-    "Shield Beetle (Ion)"
     "Water Bug" 3
-  variant 3
-    "Shield Beetle (Pulse)"
-    "Lightning Bug (Pulse)" 2
   variant 2
-    "Shield Beetle (Pulse)"
     "Shield Beetle"
-  variant 2
-    "Shield Beetle (Pulse)"
-    "Shield Beetle (Ion)"
-  variant 1
-    "Shield Beetle (Pulse)"
-    "Shield Beetle"
-    "Lightning Bug (Pulse)" 2
-  variant 1
-    "Shield Beetle (Pulse)"
-    "Shield Beetle (Ion)"
     "Lightning Bug" 2
+  variant 2
+    "Shield Beetle"
+    "Lightning Bug (Pulse)" 2
+  variant 4
+    "Shield Beetle" 2
+  variant 1
+    "Shield Beetle" 2
+    "Lightning Bug" 2
+  variant 1
+    "Shield Beetle" 2
+    "Lightning Bug (Pulse)" 2
 
 fleet "Hai Small"
   government "Hai"
@@ -3696,44 +3691,34 @@ fleet "Unfettered Large"
   personality
     disables plunders
   # total: 21
-  variant 2
-    "Shield Beetle"
-    "Lightning Bug (Pulse)" 2
-  variant 2
-    "Shield Beetle (Ion)"
-    "Lightning Bug" 2
-  variant 1
-    "Shield Beetle"
-    "Lightning Bug (Pulse)"
-  variant 1
-    "Shield Beetle (Ion)"
-    "Lightning Bug"
   variant 3
-    "Shield Beetle (Ion)"
-    "Shield Beetle"
+    "Lightning Bug (Unfettered)" 5
+  variant 8
+    "Shield Beetle (Unfettered)" 2
   variant 1
-    "Shield Beetle (Ion)" 2
+    "Shield Beetle (Unfettered)"
+    "Lightning Bug (Unfettered)"
   variant 1
-    "Shield Beetle" 2
-  variant 1
-    "Lightning Bug" 5
-  variant 3
-    "Shield Beetle (Pulse)"
-    "Lightning Bug (Pulse)" 2
+    "Shield Beetle (Unfettered)"
+    "Lightning Bug (Unfettered, Pulse)"
   variant 2
-    "Shield Beetle (Pulse)"
-    "Shield Beetle"
+    "Shield Beetle (Unfettered)"
+    "Lightning Bug (Unfettered)" 2
   variant 2
-    "Shield Beetle (Pulse)"
-    "Shield Beetle (Ion)"
+    "Shield Beetle (Unfettered)"
+    "Lightning Bug (Unfettered, Pulse)" 2
   variant 1
-    "Shield Beetle (Pulse)"
-    "Shield Beetle"
-    "Lightning Bug (Pulse)" 2
+    "Shield Beetle (Unfettered)"
+    "Lightning Bug (Unfettered)" 3
   variant 1
-    "Shield Beetle (Pulse)"
-    "Shield Beetle (Ion)"
-    "Lightning Bug" 2
+    "Shield Beetle (Unfettered)"
+    "Lightning Bug (Unfettered, Pulse)" 3
+  variant 1
+    "Shield Beetle (Unfettered)" 2
+    "Lightning Bug (Unfettered)" 2
+  variant 1
+    "Shield Beetle (Unfettered)" 2
+    "Lightning Bug (Unfettered, Pulse)" 2
 
 fleet "Unfettered Raid"
   government "Hai (Unfettered)"
@@ -3742,34 +3727,8 @@ fleet "Unfettered Raid"
   personality
     disables plunders
   # total: 10
-  variant 1
-    "Shield Beetle (Jump)" 3
-  variant 1
-    "Shield Beetle (Jump)" 2
-    "Shield Beetle (Pulse, Jump)"
-  variant 1
-    "Shield Beetle (Jump)" 2
-    "Shield Beetle (Ion, Jump)"
-  variant 1
-    "Shield Beetle (Jump)"
-    "Shield Beetle (Pulse, Jump)" 2
-  variant 1
-    "Shield Beetle (Jump)"
-    "Shield Beetle (Ion, Jump)" 2
-  variant 1
-    "Shield Beetle (Jump)"
-    "Shield Beetle (Pulse, Jump)"
-    "Shield Beetle (Ion, Jump)"
-  variant 1
-    "Shield Beetle (Pulse, Jump)" 3
-  variant 1
-    "Shield Beetle (Pulse, Jump)" 2
-    "Shield Beetle (Ion, Jump)"
-  variant 1
-    "Shield Beetle (Pulse, Jump)"
-    "Shield Beetle (Ion, Jump)" 2
-  variant 1
-    "Shield Beetle (Ion, Jump)" 3
+  variant 10
+    "Shield Beetle (Unfettered, Jump)" 3
 
 fleet "Unfettered Small"
   government "Hai (Unfettered)"
@@ -3779,16 +3738,16 @@ fleet "Unfettered Small"
     disables plunders
   # total: 11
   variant 3
-    "Lightning Bug" 2
+    "Lightning Bug (Unfettered)" 2
   variant 3
-    "Lightning Bug"
-    "Lightning Bug (Pulse)"
+    "Lightning Bug (Unfettered)"
+    "Lightning Bug (Unfettered, Pulse)"
   variant 3
-    "Lightning Bug (Pulse)" 2
+    "Lightning Bug (Unfettered, Pulse)" 2
   variant 1
-    "Lightning Bug"
+    "Lightning Bug (Unfettered)"
   variant 1
-    "Lightning Bug (Pulse)"
+    "Lightning Bug (Unfettered, Pulse)"
 
 
 

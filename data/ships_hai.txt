@@ -3,24 +3,20 @@ shipyard "Hai Variants"
   "Flea"
   "Lightning Bug"
   "Lightning Bug (Pulse)"
+  "Lightning Bug (Unfettered)"
+  "Lightning Bug (Unfettered, Pulse)"
   "Mosquito"
-  "Mosquito (Tracker)"
   "Pond Strider"
   "Pond Strider (Jump)"
   "Shield Beetle"
-  "Shield Beetle (Ion)"
-  "Shield Beetle (Ion, Jump)"
-  "Shield Beetle (Jump)"
-  "Shield Beetle (Pulse)"
-  "Shield Beetle (Pulse, Jump)"
+  "Shield Beetle (Thruster)"
+  "Shield Beetle (Unfettered)"
+  "Shield Beetle (Unfettered, Jump)"
   "Solifuge"
-  "Solifuge (Jump)"
-  "Solifuge (Tracker)"
-  "Solifuge (Tracker, Jump)"
   "Water Bug"
-  "Water Bug (Jump)"
   "Water Bug (Pulse)"
-  "Water Bug (Pulse, Jump)"
+  "Water Bug (Unfettered)"
+  "Water Bug (Unfettered, Jump)"
 
 
 
@@ -140,8 +136,8 @@ ship "Lightning Bug"
     "heat dissipation" .85
     "cargo space" 43
     "outfit space" 348
-    "core space" 168
-    "engine space" 83
+    "core space" 158
+    "engine space" 93
     "weapon space" 97
     weapon
       "blast radius" 116
@@ -197,10 +193,50 @@ ship "Lightning Bug" "Lightning Bug (Pulse)"
     "Pulse Turret" 2
 
     "Gorge Batteries"
-    "Williwaw Cooling"
     "Fuel Pod" 35
     "Yoloy Scanner"
+    "Extra Outfit Space"
+    "Force Field"
+
+
+ship "Lightning Bug" "Lightning Bug (Unfettered)"
+  outfits
+    "S-270 Regenerator" 2
+    "Pebble Core" 2
+    "Hyperdrive"
+
+    "Diroo Atomic Thruster"
+    "Diroo Atomic Steering"
+
+    "Ion Cannon"
+    "Chameleon Anti-Missile" 2
+
+    "Gorge Batteries"
+    "Fuel Pod" 35
+    "Quantum Keystone"
+    "Yoloy Scanner"
     "Extra Outfit Space" 2
+    "Force Field"
+
+
+ship "Lightning Bug" "Lightning Bug (Unfettered, Pulse)"
+  outfits
+    "S-270 Regenerator" 2
+    "Pebble Core" 2
+    "Hyperdrive"
+
+    "Diroo Atomic Thruster"
+    "Diroo Atomic Steering"
+
+    "Tracker" 56
+    "Tracker Storage Pod"
+    "Tracker Launcher"
+    "Pulse Turret" 2
+
+    "Gorge Batteries"
+    "Fuel Pod" 35
+    "Yoloy Scanner"
+    "Extra Outfit Space" 3
     "Force Field"
 
 
@@ -219,53 +255,41 @@ ship "Mosquito"
     "hull" 1200
     "required crew" 1
     "bunks" 1
-    "mass" 31
+    "mass" 30
     "drag" 0.9
     "heat dissipation" .7
-    "outfit space" 98
+    "outfit space" 99
     "core space" 42
-    "engine space" 30
-    "weapon space" 26
+    "engine space" 38
+    "weapon space" 19
     weapon
       "blast radius" 26
-      "shield damage" 62
-      "random shield damage" 196
-      "hull damage" 93
-      "random hull damage" 294
-      "heat damage" 1860
-      "random heat damage" 5880
-      "hit force" 155
-      "random hit force" 490
+      "shield damage" 60
+      "random shield damage" 198
+      "hull damage" 90
+      "random hull damage" 297
+      "heat damage" 1800
+      "random heat damage" 5940
+      "hit force" 150
+      "random hit force" 495
   outfits
     "Pebble Core"
 
-    "Basrem Atomic Steering"
-    "Basrem Atomic Thruster"
-
-    "Pulse Cannon"
-
-    "Chasm Batteries"
-    "Williwaw Cooling"
-  engine -15 30
-  engine 15 30
-  gun 0 -31 "Pulse Cannon"
-  turret 0 5
-  explode "tiny explosion" 15
-  explode "small explosion" 5
-  description "The Hai fighter is equipped with what most humans would consider the greatest technology available, but all of that high tech comes at a cost."
-
-ship "Mosquito" "Mosquito (Tracker)"
-  outfits
-    "Pebble Core"
-
-    "Basrem Atomic Steering"
-    "Basrem Atomic Thruster"
+    "Dasrem Atomic Steering"
+    "Dasrem Atomic Thruster"
 
     "Tracker" 28
     "Tracker Launcher"
 
     "Chasm Batteries"
     "Williwaw Cooling"
+  engine -15 30
+  engine 15 30
+  gun 0 -31 "Tracker Launcher"
+  turret 0 5
+  explode "tiny explosion" 15
+  explode "small explosion" 5
+  description "The Hai fighter is equipped with what most humans would consider the greatest technology available, but all of that high tech comes at a cost."
 
 
 
@@ -379,10 +403,10 @@ ship "Shield Beetle"
     "drag" 8.8
     "heat dissipation" .60
     "cargo space" 142
-    "outfit space" 882
-    "core space" 399
-    "engine space" 150
-    "weapon space" 333
+    "outfit space" 888
+    "core space" 375
+    "engine space" 156
+    "weapon space" 357
     weapon
       "blast radius" 335
       "shield damage" 1300
@@ -395,19 +419,19 @@ ship "Shield Beetle"
       "random hit force" 5210
   outfits
     "Diamond Regenerator" 2
-    "Boulder Reactor"
     "Hyperdrive"
 
     "Bondir Atomic Thruster"
     "Bufaer Atomic Steering"
 
-    "Tracker" 448
-    "Tracker Storage Pod" 8
-    "Tracker Launcher" 8
+    "Tracker" 224
+    "Tracker Storage Pod" 4
+    "Tracker Launcher" 4
+    "Ion Cannon" 4
     "Pulse Turret" 2
     "Chameleon Anti-Missile" 2
 
-    "Fissure Batteries"
+    "Ravine Batteries"
     "Williwaw Cooling" 2
     "Fuel Pod" 84
     "Quantum Keystone"
@@ -415,14 +439,14 @@ ship "Shield Beetle"
     "Force Field" 4
   engine -44 133
   engine 44 133
-  gun -22 -102 "Tracker Launcher"
-  gun 22 -102 "Tracker Launcher"
+  gun -22 -102 "Ion Cannon"
+  gun 22 -102 "Ion Cannon"
   gun -34 -68 "Tracker Launcher"
   gun 34 -68 "Tracker Launcher"
-  gun -49 -38 "Tracker Launcher"
-  gun 49 -38 "Tracker Launcher"
+  gun -49 -38 "Ion Cannon"
+  gun 49 -38 "Ion Cannon"
   gun -61 -14 "Tracker Launcher"
-  gun 61 -14 "Tracker Launcher"z
+  gun 61 -14 "Tracker Launcher"
   turret -39 48 "Pulse Turret"
   turret 39 48 "Pulse Turret"
   turret -57 75 "Chameleon Anti-Missile"
@@ -436,135 +460,97 @@ ship "Shield Beetle"
   description "This ship was first built millenia ago, near the end of a more violent time in Hai history. Since then, it has served as the only heavy warship at the disposal of the Hai. The Shield Beetle is a versatile warship used by the Hai to guard their merchant convoys, or by the Unfettered to attack those very same convoys."
 
 
-ship "Shield Beetle" "Shield Beetle (Ion)"
+ship "Shield Beetle" "Shield Beetle (Thruster)"
   outfits
     "Diamond Regenerator" 2
-    "Boulder Reactor"
-    "Geode Reactor"
-    "Hyperdrive"
+    "Jump Drive"
 
-    "Bondir Atomic Thruster"
-    "Bufaer Atomic Steering"
+    "Bufaer Atomic Thruster"
+    "Bondir Atomic Steering"
 
+    "Tracker" 224
+    "Tracker Storage Pod" 4
+    "Tracker Launcher" 4
     "Ion Cannon" 4
     "Pulse Turret" 2
     "Chameleon Anti-Missile" 2
 
-    "Fissure Batteries"
-    "Williwaw Cooling" 5
-    "Fuel Pod" 84
-    "Quantum Keystone"
-    "Yoloy Scanner"
-    "Extra Outfit Space" 10
-    "Force Field" 4
-  gun "Ion Cannon"
-  gun "Ion Cannon"
-  gun
-  gun
-  gun "Ion Cannon"
-  gun "Ion Cannon"
-  gun
-  gun
-
-
-ship "Shield Beetle" "Shield Beetle (Ion, Jump)"
-  outfits
-    "Diamond Regenerator" 2
-    "Boulder Reactor"
-    "Geode Reactor"
-    "Jump Drive"
-
-    "Bondir Atomic Thruster"
-    "Bufaer Atomic Steering"
-
-    "Ion Cannon" 4
-    "Pulse Turret" 2
-    "Chameleon Anti-Missile" 2
-
-    "Fissure Batteries"
-    "Williwaw Cooling" 5
-    "Fuel Pod" 84
-    "Quantum Keystone"
-    "Yoloy Scanner"
-    "Extra Outfit Space" 10
-    "Force Field" 4
-  gun "Ion Cannon"
-  gun "Ion Cannon"
-  gun
-  gun
-  gun "Ion Cannon"
-  gun "Ion Cannon"
-  gun
-  gun
-
-
-ship "Shield Beetle" "Shield Beetle (Jump)"
-  outfits
-    "Diamond Regenerator" 2
-    "Boulder Reactor"
-    "Jump Drive"
-
-    "Bondir Atomic Thruster"
-    "Bufaer Atomic Steering"
-
-    "Tracker" 448
-    "Tracker Storage Pod" 8
-    "Tracker Launcher" 8
-    "Pulse Turret" 2
-    "Chameleon Anti-Missile" 2
-
-    "Fissure Batteries"
+    "Ravine Batteries"
     "Williwaw Cooling" 2
     "Fuel Pod" 84
     "Quantum Keystone"
     "Yoloy Scanner"
     "Force Field" 4
+  gun "Ion Cannon"
+  gun "Ion Cannon"
+  gun "Tracker Launcher"
+  gun "Tracker Launcher"
+  gun "Ion Cannon"
+  gun "Ion Cannon"
+  gun "Tracker Launcher"
+  gun "Tracker Launcher"
 
 
-ship "Shield Beetle" "Shield Beetle (Pulse)"
+ship "Shield Beetle" "Shield Beetle (Unfettered)"
   outfits
-    "Diamond Regenerator" 2
-    "Boulder Reactor"
-    "Pebble Core"
-    "Hyperdrive"
-
-    "Bondir Atomic Thruster"
-    "Bufaer Atomic Steering"
-
-    "Pulse Cannon" 8
-    "Pulse Turret" 2
-    "Chameleon Anti-Missile" 2
-
-    "Fissure Batteries"
-    "Williwaw Cooling" 5
-    "Fuel Pod" 84
-    "Quantum Keystone"
-    "Yoloy Scanner"
-    "Extra Outfit Space" 4
-    "Force Field" 4
-
-
-ship "Shield Beetle" "Shield Beetle (Pulse, Jump)"
-  outfits
-    "Diamond Regenerator" 2
-    "Boulder Reactor"
-    "Pebble Core"
+    "S-970 Regenerator" 2
     "Jump Drive"
 
-    "Bondir Atomic Thruster"
-    "Bufaer Atomic Steering"
+    "Dondir Atomic Thruster"
+    "Dondir Atomic Steering"
 
-    "Pulse Cannon" 8
+    "Tracker" 224
+    "Tracker Storage Pod" 4
+    "Tracker Launcher" 4
+    "Ion Cannon" 4
     "Pulse Turret" 2
     "Chameleon Anti-Missile" 2
 
-    "Fissure Batteries"
-    "Williwaw Cooling" 5
+    "Ravine Batteries"
+    "Williwaw Cooling" 2
     "Fuel Pod" 84
     "Quantum Keystone"
     "Yoloy Scanner"
-    "Extra Outfit Space" 4
     "Force Field" 4
+  gun "Ion Cannon"
+  gun "Ion Cannon"
+  gun "Tracker Launcher"
+  gun "Tracker Launcher"
+  gun "Ion Cannon"
+  gun "Ion Cannon"
+  gun "Tracker Launcher"
+  gun "Tracker Launcher"
+
+
+ship "Shield Beetle" "Shield Beetle (Unfettered, Jump)"
+  outfits
+    "S-970 Regenerator" 2
+    "Jump Drive"
+
+    "Dondir Atomic Thruster"
+    "Dondir Atomic Steering"
+
+    "Tracker" 224
+    "Tracker Storage Pod" 4
+    "Tracker Launcher" 4
+    "Ion Cannon" 4
+    "Pulse Turret" 2
+    "Chameleon Anti-Missile" 2
+
+    "Ravine Batteries"
+    "Williwaw Cooling" 2
+    "Fuel Pod" 84
+    "Quantum Keystone"
+    "Yoloy Scanner"
+    "Force Field" 4
+  gun "Ion Cannon"
+  gun "Ion Cannon"
+  gun "Tracker Launcher"
+  gun "Tracker Launcher"
+  gun "Ion Cannon"
+  gun "Ion Cannon"
+  gun "Tracker Launcher"
+  gun "Tracker Launcher"
 
 
 
@@ -586,9 +572,9 @@ ship "Solifuge"
     "heat dissipation" .4
     "cargo space" 142
     "outfit space" 999
-    "core space" 491
-    "engine space" 166
-    "weapon space" 342
+    "core space" 445
+    "engine space" 142
+    "weapon space" 412
     weapon
       "blast radius" 413
       "shield damage" 1850
@@ -600,18 +586,17 @@ ship "Solifuge"
       "hit force" 4625
       "random hit force" 5705
   outfits
-    "Diamond Regenerator" 2
-    "Boulder Reactor"
+    "S-970 Regenerator" 3
     "Hyperdrive"
 
-    "Bufaer Atomic Thruster"
-    "Bondir Atomic Steering"
+    "Dondir Atomic Thruster"
+    "Dondir Atomic Steering"
 
     "Ion Cannon" 5
-    "Chameleon Anti-Missile" 4
+    "Pulse Turret" 4
+    "Chameleon Anti-Missile" 3
 
-    "Gorge Batteries"
-    "Fissure Batteries"
+    "Ravine Batteries"
     "Williwaw Cooling" 3
     "Fuel Pod" 171
     "Quantum Keystone"
@@ -624,13 +609,13 @@ ship "Solifuge"
   gun 11.5 -138.5 "Ion Cannon"
   gun -9.5 -101 "Ion Cannon"
   gun 9.5 -101 "Ion Cannon"
-  turret 0 -109.5
-  turret 54.5 -48.5 "Chameleon Anti-Missile"
-  turret -54.5 -48.5 "Chameleon Anti-Missile"
-  turret 55 1
-  turret -55 1
-  turret 54.5 50.5 "Chameleon Anti-Missile"
-  turret -54.5 50.5 "Chameleon Anti-Missile"
+  turret 0 -109.5 "Chameleon Anti-Missile"
+  turret 54.5 -48.5 "Pulse Turret"
+  turret -54.5 -48.5 "Pulse Turret"
+  turret 55 1 "Chameleon Anti-Missile"
+  turret -55 1 "Chameleon Anti-Missile"
+  turret 54.5 50.5 "Pulse Turret"
+  turret -54.5 50.5 "Pulse Turret"
   fighter -51.5 -71 under
   fighter 51.5 -71 under
   fighter -58.5 2 under
@@ -644,96 +629,6 @@ ship "Solifuge"
   explode "huge explosion" 20
   "final explode" "final explosion large"
   description "Impressed by the Alpha's 'Giftbringer', the Unfettered endeavoured to build their own fighter carrier to take more advantage of their supply of jump drives."
-
-
-ship "Solifuge" "Solifuge (Jump)"
-  outfits
-    "Diamond Regenerator" 2
-    "Boulder Reactor"
-    "Jump Drive"
-
-    "Bufaer Atomic Thruster"
-    "Bondir Atomic Steering"
-
-    "Ion Cannon" 5
-    "Chameleon Anti-Missile" 4
-
-    "Gorge Batteries"
-    "Fissure Batteries"
-    "Williwaw Cooling" 3
-    "Fuel Pod" 171
-    "Quantum Keystone"
-    "Yoloy Scanner"
-    "Force Field" 6
-  turret 
-  turret "Chameleon Anti-Missile"
-  turret "Chameleon Anti-Missile"
-  turret
-  turret
-  turret "Chameleon Anti-Missile"
-  turret "Chameleon Anti-Missile"
-
-
-ship "Solifuge" "Solifuge (Tracker)"
-  outfits
-    "Diamond Regenerator" 2
-    "Boulder Reactor"
-    "Hyperdrive"
-
-    "Bufaer Atomic Thruster"
-    "Bondir Atomic Steering"
-
-    "Tracker" 280
-    "Tracker Storage Pod" 5
-    "Tracker Launcher" 5
-    "Pulse Turret" 5
-    "Chameleon Anti-Missile" 2
-
-    "Gorge Batteries"
-    "Williwaw Cooling" 4
-    "Fuel Pod" 171
-    "Quantum Keystone"
-    "Yoloy Scanner"
-    "Extra Outfit Space" 4
-    "Force Field" 6
-  turret "Pulse Turret"
-  turret "Pulse Turret"
-  turret "Pulse Turret"
-  turret "Chameleon Anti-Missile"
-  turret "Chameleon Anti-Missile"
-  turret "Pulse Turret"
-  turret "Pulse Turret"
-
-
-ship "Solifuge" "Solifuge (Tracker, Jump)"
-  outfits
-    "Diamond Regenerator" 2
-    "Boulder Reactor"
-    "Jump Drive"
-
-    "Bufaer Atomic Thruster"
-    "Bondir Atomic Steering"
-
-    "Tracker" 280
-    "Tracker Storage Pod" 5
-    "Tracker Launcher" 5
-    "Pulse Turret" 5
-    "Chameleon Anti-Missile" 2
-
-    "Gorge Batteries"
-    "Williwaw Cooling" 4
-    "Fuel Pod" 171
-    "Quantum Keystone"
-    "Yoloy Scanner"
-    "Extra Outfit Space" 4
-    "Force Field" 6
-  turret "Pulse Turret"
-  turret "Pulse Turret"
-  turret "Pulse Turret"
-  turret "Chameleon Anti-Missile"
-  turret "Chameleon Anti-Missile"
-  turret "Pulse Turret"
-  turret "Pulse Turret"
 
 
 
@@ -801,27 +696,6 @@ ship "Water Bug"
   description "The design of the Water Bug is almost as old as the Aphid, but until recently it never saw much use. A spike in aggression from the Unfettered Hai has lead the tougher and more well-defended Water Bug to see an increase in popularity over its little brother, the Aphid. The Water Bug is now the most widely used Hai freighter, comprising the bulk of all Hai merchant fleets."
 
 
-ship "Water Bug" "Water Bug (Jump)"
-  outfits
-    "Diamond Regenerator"
-    "Geode Reactor"
-    "Jump Drive"
-
-    "Benga Atomic Thruster"
-    "Benga Atomic Steering"
-
-    "Tracker" 56
-    "Tracker Launcher" 2
-    "Pulse Turret"
-    "Chameleon Anti-Missile" 2
-
-    "Fissure Batteries"
-    "Williwaw Cooling"
-    "Fuel Pod" 54
-    "Quantum Keystone"
-    "Yoloy Scanner"
-
-
 ship "Water Bug" "Water Bug (Pulse)"
   outfits
     "Diamond Regenerator"
@@ -844,24 +718,54 @@ ship "Water Bug" "Water Bug (Pulse)"
     "Extra Outfit Space" 3
 
 
-ship "Water Bug" "Water Bug (Pulse, Jump)"
+ship "Water Bug" "Water Bug (Unfettered)"
   outfits
-    "Diamond Regenerator"
+    "S-970 Regenerator"
     "Geode Reactor"
-    "Jump Drive"
+    "Hyperdrive"
 
-    "Benga Atomic Thruster"
-    "Benga Atomic Steering"
+    "Denga Atomic Thruster"
+    "Denga Atomic Steering"
 
     "Tracker" 56
     "Tracker Launcher" 2
-    "Pulse Turret" 3
+    "Pulse Turret" 2
+    "Chameleon Anti-Missile"
 
     "Fissure Batteries"
-    "Chasm Batteries"
     "Williwaw Cooling"
     "Fuel Pod" 54
     "Quantum Keystone"
     "Yoloy Scanner"
-    "Extra Outfit Space" 3
+    "Extra Outfit Space"
+    "Force Field" 2
+  turret "Chameleon Anti-Missile"
+  turret "Pulse Turret"
+  turret "Pulse Turret"
+
+
+ship "Water Bug" "Water Bug (Unfettered, Jump)"
+  outfits
+    "S-970 Regenerator"
+    "Geode Reactor"
+    "Jump Drive"
+
+    "Denga Atomic Thruster"
+    "Denga Atomic Steering"
+
+    "Tracker" 56
+    "Tracker Launcher" 2
+    "Pulse Turret" 2
+    "Chameleon Anti-Missile"
+
+    "Fissure Batteries"
+    "Williwaw Cooling"
+    "Fuel Pod" 54
+    "Quantum Keystone"
+    "Yoloy Scanner"
+    "Extra Outfit Space"
+    "Force Field" 2
+  turret "Chameleon Anti-Missile"
+  turret "Pulse Turret"
+  turret "Pulse Turret"
 

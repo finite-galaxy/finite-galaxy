@@ -431,7 +431,7 @@ mission "Wanderers: Defend Vara Ke'sok"
     fleet
       names "hai"
       variant
-        "Shield Beetle (Jump)" 4
+        "Shield Beetle (Unfettered, Jump)" 4
   npc
     government "Wanderer"
     personality waiting heroic uninterested
@@ -566,9 +566,7 @@ fleet "Unfettered Tribute"
   names "hai"
   cargo 3
   variant
-    "Water Bug (Jump)"
-  variant
-    "Water Bug (Pulse, Jump)"
+    "Water Bug (Unfettered, Jump)"
 
 
 
@@ -1385,11 +1383,8 @@ mission "Wanderers Invaded 1B"
     fleet
       names "hai"
       variant
-        "Shield Beetle"
-        "Shield Beetle (Ion)"
-        "Shield Beetle (Pulse)"
-        "Water Bug" 3
-        "Water Bug (Pulse)" 4
+        "Shield Beetle (Unfettered)" 3
+        "Water Bug (Unfettered)" 7
   
   npc accompany save
     government "Wanderer"
@@ -1442,11 +1437,8 @@ mission "Wanderers Invaded 2"
     fleet
       names "hai"
       variant
-        "Shield Beetle" 2
-        "Shield Beetle (Ion)" 2
-        "Shield Beetle (Pulse)" 3
-        "Water Bug" 4
-        "Water Bug (Pulse)" 7
+        "Shield Beetle (Unfettered)" 7
+        "Water Bug (Unfettered)" 11
   npc
     personality heroic escort
     government "Wanderer"
@@ -1790,10 +1782,8 @@ mission "Wanderers Solifuge Recon 2"
     fleet
       names "hai"
       variant
-        "Solifuge"
-        "Solifuge (Tracker)"
-        "Mosquito" 6
-        "Mosquito (Tracker)" 6
+        "Solifuge" 2
+        "Mosquito" 12
     dialogue "That was the last of the new Unfettered ships. You can now report back to Tele'ek on <planet>."
   on complete
     conversation
@@ -1922,22 +1912,16 @@ mission "Wanderers Defend Sich'ka'ara"
     fleet
       names "hai"
       variant
-        "Shield Beetle" 2
-        "Shield Beetle (Ion)" 1
-        "Shield Beetle (Pulse)" 2
-        "Water Bug" 3
-        "Water Bug (Pulse)" 4
+        "Shield Beetle (Unfettered)" 5
+        "Water Bug (Unfettered)" 7
   npc evade
     personality entering coward
     government "Hai (Unfettered)"
     fleet
       names "hai"
       variant
-        "Shield Beetle" 1
-        "Shield Beetle (Ion)" 3
-        "Shield Beetle (Pulse)" 2
-        "Water Bug" 7
-        "Water Bug (Pulse)" 2
+        "Shield Beetle (Unfettered)" 6
+        "Water Bug (Unfettered)" 9
   npc
     personality heroic
     government "Wanderer"
@@ -1998,7 +1982,7 @@ mission "Wanderers Rescue 1"
     fleet
       names "hai"
       variant
-        "Shield Beetle (Ion)" 5
+        "Shield Beetle (Unfettered)" 5
   on visit
     dialogue
       "You have reached <planet>, but you will need to take off again and wait for both the Wanderer warships to be in-system as well."
@@ -2029,7 +2013,8 @@ mission "Wanderers Rescue 1B"
     fleet
       names "hai"
       variant
-        "Lightning Bug" 12
+        "Lightning Bug (Unfettered)" 7
+        "Lightning Bug (Unfettered, Pulse)" 5
   on visit
     dialogue
       "You have reached <planet>, but you will need to take off again and wait for both the Wanderer warships to be in-system as well."
@@ -2226,11 +2211,8 @@ mission "Wanderers Ap'arak 2"
     fleet
       names "hai"
       variant
-        "Shield Beetle" 2
-        "Shield Beetle (Pulse)" 2
-        "Shield Beetle (Ion)" 1
-        "Water Bug" 3
-        "Water Bug (Pulse)" 2
+        "Shield Beetle (Unfettered)" 5
+        "Water Bug (Unfettered)" 7
   npc evade
     personality heroic
     system "Sich'ka'ara"
@@ -2238,10 +2220,8 @@ mission "Wanderers Ap'arak 2"
     fleet
       names "hai"
       variant
-        "Solifuge" 2
-        "Solifuge (Tracker)" 3
-        "Mosquito" 15
-        "Mosquito (Tracker)" 15
+        "Solifuge" 5
+        "Mosquito" 30
   npc evade
     personality heroic
     system "Chy'chra"
@@ -2249,15 +2229,10 @@ mission "Wanderers Ap'arak 2"
     fleet
       names "hai"
       variant
-        "Shield Beetle" 1
-        "Shield Beetle (Pulse)" 1
-        "Shield Beetle (Ion)" 1
-        "Water Bug" 3
-        "Water Bug (Pulse)" 3
-        "Solifuge" 2
-        "Solifuge (Tracker)" 2
-        "Mosquito" 12
-        "Mosquito (Tracker)" 12
+        "Solifuge" 4
+        "Mosquito" 24
+        "Shield Beetle (Unfettered)" 3
+        "Water Bug (Unfettered)" 6
   npc
     personality heroic
     government "Wanderer"
