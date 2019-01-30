@@ -52,7 +52,7 @@ ship "Aphid"
       "random hit force" 1095
   outfits
     "Corundum Regenerator"
-    "Millennium Cell"
+    "Century Cell"
     "Hyperdrive"
 
     "Basrem Atomic Thruster"
@@ -61,6 +61,7 @@ ship "Aphid"
     "Chameleon Anti-Missile"
 
     "Chasm Batteries"
+    "Williwaw Cooling"
     "Fuel Pod" 13
     "Quantum Keystone"
     "Yoloy Scanner"
@@ -90,26 +91,27 @@ ship "Flea"
     "mass" 21
     "drag" .5
     "heat dissipation" .75
-    "outfit space" 60
-    "core space" 27
+    "outfit space" 64
+    "core space" 31
     "engine space" 24
     "weapon space" 9
     weapon
       "blast radius" 16
       "shield damage" 42
-      "random shield damage" 120
+      "random shield damage" 128
       "hull damage" 63
-      "random hull damage" 180
+      "random hull damage" 192
       "heat damage" 1260
-      "random heat damage" 3600
+      "random heat damage" 3840
       "hit force" 105
-      "random hit force" 300
+      "random hit force" 320
   outfits
     "Century Cell"
 
     "Baellie Atomic Engines"
 
     "Chasm Batteries"
+    "Williwaw Cooling"
   engine 0 27
   gun 0 -27
   explode "tiny explosion" 15
@@ -150,7 +152,7 @@ ship "Lightning Bug"
       "random hit force" 1955
   outfits
     "Corundum Regenerator" 2
-    "Epoch Cell"
+    "Millennium Cell"
     "Hyperdrive"
 
     "Biroo Atomic Thruster"
@@ -160,6 +162,7 @@ ship "Lightning Bug"
     "Chameleon Anti-Missile" 2
 
     "Gorge Batteries"
+    "Williwaw Cooling" 2
     "Fuel Pod" 35
     "Quantum Keystone"
     "Yoloy Scanner"
@@ -180,7 +183,7 @@ ship "Lightning Bug"
 ship "Lightning Bug" "Lightning Bug (Pulse)"
   outfits
     "Corundum Regenerator" 2
-    "Epoch Cell"
+    "Millennium Cell"
     "Hyperdrive"
 
     "Biroo Atomic Thruster"
@@ -192,6 +195,7 @@ ship "Lightning Bug" "Lightning Bug (Pulse)"
     "Pulse Turret" 2
 
     "Gorge Batteries"
+    "Williwaw Cooling" 2
     "Fuel Pod" 35
     "Yoloy Scanner"
     "Extra Outfit Space"
@@ -201,7 +205,7 @@ ship "Lightning Bug" "Lightning Bug (Pulse)"
 ship "Lightning Bug" "Lightning Bug (Unfettered)"
   outfits
     "S-270 Regenerator" 2
-    "Epoch Cell"
+    "Millennium Cell"
     "Hyperdrive"
 
     "Diroo Atomic Thruster"
@@ -211,6 +215,7 @@ ship "Lightning Bug" "Lightning Bug (Unfettered)"
     "Chameleon Anti-Missile" 2
 
     "Gorge Batteries"
+    "Williwaw Cooling" 2
     "Fuel Pod" 35
     "Quantum Keystone"
     "Yoloy Scanner"
@@ -221,7 +226,7 @@ ship "Lightning Bug" "Lightning Bug (Unfettered)"
 ship "Lightning Bug" "Lightning Bug (Unfettered, Pulse)"
   outfits
     "S-270 Regenerator" 2
-    "Epoch Cell"
+    "Millennium Cell"
     "Hyperdrive"
 
     "Diroo Atomic Thruster"
@@ -233,6 +238,7 @@ ship "Lightning Bug" "Lightning Bug (Unfettered, Pulse)"
     "Pulse Turret" 2
 
     "Gorge Batteries"
+    "Williwaw Cooling" 2
     "Fuel Pod" 35
     "Yoloy Scanner"
     "Extra Outfit Space" 2
@@ -272,7 +278,7 @@ ship "Mosquito"
       "hit force" 150
       "random hit force" 495
   outfits
-    "Millennium Cell"
+    "Century Cell"
 
     "Dasrem Atomic Steering"
     "Dasrem Atomic Thruster"
@@ -281,6 +287,7 @@ ship "Mosquito"
     "Tracker Launcher"
 
     "Chasm Batteries"
+    "Williwaw Cooling"
   engine -15 30
   engine 15 30
   gun 0 -31 "Tracker Launcher"
@@ -324,7 +331,7 @@ ship "Pond Strider"
       "random hit force" 2310
   outfits
     "Diamond Regenerator"
-    "Epoch Cell"
+    "Millennium Cell"
     "Hyperdrive"
 
     "Benga Atomic Thruster"
@@ -381,21 +388,21 @@ ship "Shield Beetle"
     "mass" 650
     "drag" 8.8
     "heat dissipation" .60
-    "cargo space" 142
-    "outfit space" 888
-    "core space" 375
+    "cargo space" 32
+    "outfit space" 999
+    "core space" 486
     "engine space" 156
     "weapon space" 357
     weapon
       "blast radius" 335
       "shield damage" 1300
-      "random shield damage" 2084
+      "random shield damage" 2062
       "hull damage" 1950
-      "random hull damage" 3126
+      "random hull damage" 3093
       "heat damage" 39000
-      "random heat damage" 61440
+      "random heat damage" 61860
       "hit force" 3250
-      "random hit force" 5210
+      "random hit force" 5155
   outfits
     "Diamond Regenerator" 2
     "Aeon Cell"
@@ -412,7 +419,7 @@ ship "Shield Beetle"
     "Chameleon Anti-Missile" 2
 
     "Gorge Batteries"
-    "Williwaw Cooling" 2
+    "Williwaw Cooling" 8
     "Fuel Pod" 84
     "Quantum Keystone"
     "Yoloy Scanner"
@@ -457,11 +464,10 @@ ship "Shield Beetle" "Shield Beetle (Thruster)"
     "Chameleon Anti-Missile" 2
 
     "Gorge Batteries"
-    "Williwaw Cooling" 2
+    "Williwaw Cooling" 8
     "Fuel Pod" 84
     "Quantum Keystone"
     "Yoloy Scanner"
-    "Extra Outfit Space" 2
     "Force Field" 4
   gun "Ion Cannon"
   gun "Ion Cannon"
@@ -489,9 +495,8 @@ ship "Shield Beetle" "Shield Beetle (Unfettered)"
     "Pulse Turret" 2
     "Chameleon Anti-Missile" 2
 
-    "Gorge Batteries"
-    "Fissure Batteries"
-    "Williwaw Cooling" 2
+    "Ravine Batteries"
+    "Williwaw Cooling" 8
     "Fuel Pod" 84
     "Quantum Keystone"
     "Yoloy Scanner"
@@ -522,9 +527,8 @@ ship "Shield Beetle" "Shield Beetle (Unfettered, Jump)"
     "Pulse Turret" 2
     "Chameleon Anti-Missile" 2
 
-    "Gorge Batteries"
-    "Fissure Batteries"
-    "Williwaw Cooling" 2
+    "Ravine Batteries"
+    "Williwaw Cooling" 8
     "Fuel Pod" 84
     "Quantum Keystone"
     "Yoloy Scanner"
@@ -573,7 +577,7 @@ ship "Solifuge"
       "random hit force" 5705
   outfits
     "S-970 Regenerator" 3
-    "Aeon Cell" 2
+    "Aeon Cell"
     "Hyperdrive"
 
     "Dondir Atomic Thruster"
@@ -583,8 +587,8 @@ ship "Solifuge"
     "Pulse Turret" 4
     "Chameleon Anti-Missile" 3
 
-    "Gorge Batteries"
-    "Williwaw Cooling" 3
+    "Chasm Batteries" 4
+    "Williwaw Cooling" 10
     "Fuel Pod" 172
     "Quantum Keystone"
     "Yoloy Scanner"
@@ -635,9 +639,9 @@ ship "Water Bug"
     "mass" 270
     "drag" 5.9
     "heat dissipation" .75
-    "cargo space" 197
-    "outfit space" 422
-    "core space" 213
+    "cargo space" 192
+    "outfit space" 427
+    "core space" 218
     "engine space" 64
     "weapon space" 145
     weapon
@@ -664,8 +668,8 @@ ship "Water Bug"
     "Pulse Turret"
     "Chameleon Anti-Missile" 2
 
-    "Gorge Batteries"
-    "Williwaw Cooling"
+    "Fissure Batteries"
+    "Williwaw Cooling" 3
     "Fuel Pod" 54
     "Quantum Keystone"
     "Yoloy Scanner"
@@ -698,12 +702,12 @@ ship "Water Bug" "Water Bug (Pulse)"
     "Tracker Launcher" 2
     "Pulse Turret" 3
 
-    "Gorge Batteries"
-    "Williwaw Cooling"
+    "Fissure Batteries"
+    "Williwaw Cooling" 3
     "Fuel Pod" 54
     "Quantum Keystone"
     "Yoloy Scanner"
-    "Extra Outfit Space" 2
+    "Extra Outfit Space" 3
 
 
 ship "Water Bug" "Water Bug (Unfettered)"
@@ -721,12 +725,12 @@ ship "Water Bug" "Water Bug (Unfettered)"
     "Pulse Turret" 2
     "Chameleon Anti-Missile"
 
-    "Gorge Batteries"
-    "Williwaw Cooling"
+    "Fissure Batteries"
+    "Williwaw Cooling" 3
     "Fuel Pod" 54
     "Quantum Keystone"
     "Yoloy Scanner"
-    "Extra Outfit Space"
+    "Extra Outfit Space" 2
     "Force Field" 2
   turret "Chameleon Anti-Missile"
   turret "Pulse Turret"
@@ -748,12 +752,12 @@ ship "Water Bug" "Water Bug (Unfettered, Jump)"
     "Pulse Turret" 2
     "Chameleon Anti-Missile"
 
-    "Gorge Batteries"
-    "Williwaw Cooling"
+    "Fissure Batteries"
+    "Williwaw Cooling" 3
     "Fuel Pod" 54
     "Quantum Keystone"
     "Yoloy Scanner"
-    "Extra Outfit Space"
+    "Extra Outfit Space" 2
     "Force Field" 2
   turret "Chameleon Anti-Missile"
   turret "Pulse Turret"

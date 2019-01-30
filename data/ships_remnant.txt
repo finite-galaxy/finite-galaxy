@@ -32,8 +32,8 @@ ship "Gascraft"
     "drag" 1.7
     "heat dissipation" 0.9
     "cargo space" 8
-    "outfit space" 109
-    "core space" 75
+    "outfit space" 106
+    "core space" 72
     "engine space" 34
 # miscellaneous stats
     "shield generation" 0.6
@@ -46,13 +46,13 @@ ship "Gascraft"
     weapon
       "blast radius" 39
       "shield damage" 160
-      "random shield damage" 234
+      "random shield damage" 228
       "hull damage" 240
-      "random hull damage" 351
+      "random hull damage" 342
       "heat damage" 4800
-      "random heat damage" 7020
+      "random heat damage" 6840
       "hit force" 400
-      "random hit force" 585
+      "random hit force" 570
   outfits
     "Pebble Core"
     "Hyperdrive"
@@ -120,7 +120,7 @@ ship "Shadow"
 
     "Inhibitor Cannon" 5
 
-    "Heat Sink" 2
+    "Heat Sink"
     "Emergency Ramscoop"
     "Fuel Pod" 62
   engine -16 82 0.7
@@ -150,7 +150,7 @@ ship "Shadow" "Shadow (Heavy)"
 
     "Thrasher Cannon" 5
 
-    "Heat Sink" 2
+    "Heat Sink"
     "Emergency Ramscoop"
     "Fuel Pod" 62
 
@@ -168,7 +168,7 @@ ship "Shadow" "Shadow (Hunter)"
     "EMP Torpedo Bay"
     "Thrasher Turret"
 
-    "Heat Sink" 2
+    "Heat Sink"
     "Emergency Ramscoop"
     "Fuel Pod" 62
 
@@ -185,7 +185,7 @@ ship "Shadow" "Shadow (Sniper)"
     "EMP Torpedo Bay"
     "Inhibitor Cannon" 4
 
-    "Heat Sink" 2
+    "Heat Sink"
     "Emergency Ramscoop"
     "Fuel Pod" 62
 
@@ -200,10 +200,9 @@ ship "Shadow" "Shadow (Steering)"
 
     "Inhibitor Cannon" 5
 
-    "Heat Sink" 3
+    "Heat Sink" 2
     "Emergency Ramscoop"
     "Fuel Pod" 62
-    "Extra Outfit Space" 3
 
 
 ship "Shadow" "Shadow (Thrasher)"
@@ -218,10 +217,9 @@ ship "Shadow" "Shadow (Thrasher)"
     "Thrasher Cannon" 3
     "Thrasher Turret"
 
-    "Heat Sink" 2
+    "Heat Sink"
     "Emergency Ramscoop"
     "Fuel Pod" 62
-    "Extra Outfit Space"
 
 ship "Shadow" "Shadow (Thruster)"
   outfits
@@ -233,10 +231,9 @@ ship "Shadow" "Shadow (Thruster)"
 
     "Inhibitor Cannon" 5
 
-    "Heat Sink" 3
+    "Heat Sink" 2
     "Emergency Ramscoop"
     "Fuel Pod" 62
-    "Extra Outfit Space" 3
 
 
 
@@ -258,9 +255,9 @@ ship "Twilight"
     "heat dissipation" 0.6
     "cargo space" 124
     "outfit space" 698
-    "core space" 320
+    "core space" 310
     "engine space" 142
-    "weapon space" 236
+    "weapon space" 246
 # miscellaneous stats
     "shield generation" 5.2
     "shield energy" 4.6
@@ -378,7 +375,7 @@ ship "Twilight" "Twilight (Turret)"
     "Smelter-Class Thruster"
     "Smelter-Class Steering"
 
-    "Thrasher Turret" 4
+    "Thrasher Turret" 5
 
     "Heat Sink" 6
     "Emergency Ramscoop"
@@ -387,5 +384,4 @@ ship "Twilight" "Twilight (Turret)"
   turret "Thrasher Turret"
   turret "Thrasher Turret"
   turret "Thrasher Turret"
-  turret
-
+  turret "Thrasher Turret"

@@ -164,6 +164,17 @@ outfit "NT-200 Nucleovoltaic"
 
 outfit "Dwarf Core"
   category "Energy Generation"
+  thumbnail "outfit/reactor_dwarf_b"
+  cost 1050000
+  "mass" 32
+  "outfit space" -32
+  "core space" -32
+  "energy generation" 4.5
+  "heat generation" 11.9
+  description "A Dwarf Core is a miniaturized nuclear reactor, small enough to be comfortably installed in any interceptor. It was designed by Deep Sky to be paired with their power-hungry atomic engines."
+
+outfit "Dwarf Core A"
+  category "Energy Generation"
   thumbnail "outfit/reactor_dwarf"
   cost 800000
   "mass" 36
@@ -171,7 +182,18 @@ outfit "Dwarf Core"
   "core space" -36
   "energy generation" 4.8
   "heat generation" 14
-  description "A Dwarf Core is a miniaturized nuclear reactor, small enough to be comfortably installed in any interceptor. It was designed by Deep Sky to be paired with their power-hungry atomic engines."
+  description "."
+
+outfit "Ogre Core"
+  category "Energy Generation"
+  thumbnail "outfit/reactor_fission_b"
+  cost 1750000
+  "mass" 58
+  "outfit space" -58
+  "core space" -58
+  "energy generation" 8.9
+  "heat generation" 21.2
+  description "."
 
 outfit "Fission Reactor"
   category "Energy Generation"
@@ -194,6 +216,17 @@ outfit "Breeder Reactor"
   "energy generation" 12.8
   "heat generation" 35
   description "A breeder reactor is a more efficient fission reactor that captures some of the neutron radiation produced by the reactor and uses it to enrich more fuel. They are also, of course, bigger and more expensive as a result."
+
+outfit "Cyclops Core"
+  category "Energy Generation"
+  thumbnail "outfit/reactor_fusion_b"
+  cost 5750000
+  "mass" 90
+  "outfit space" -90
+  "core space" -90
+  "energy generation" 17.3
+  "heat generation" 34
+  description "."
 
 outfit "Fusion Reactor"
   category "Energy Generation"
