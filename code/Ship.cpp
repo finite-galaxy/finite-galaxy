@@ -1262,7 +1262,8 @@ void Ship::Move(vector<Visual> &visuals, list<shared_ptr<Flotsam>> &flotsam)
       {
         // If this is not a special ship, it ceases to exist when it
         // lands on a true planet. If this is a wormhole, the ship is
-        // instantly transported.
+        // instantly transported. If the ship is an escort the player
+        // has to pay the fuel price.
         if(landingPlanet->IsWormhole())
         {
           currentSystem = landingPlanet->WormholeDestination(currentSystem);
@@ -1277,13 +1278,25 @@ void Ship::Move(vector<Visual> &visuals, list<shared_ptr<Flotsam>> &flotsam)
           MarkForRemoval();
           return;
         }
+        else if(government->IsEscort() && landingPlanet->GetFuelPrice() > 0 && GetParent() && GetParent()->GetPlanet() != landingPlanet)
+        {
+          int amount = attributes.Get("fuel capacity")-fuel;
+          int price = amount*landingPlanet->GetFuelPrice();
+          if(price || !price)
+          {
+            ostringstream out;
+            out << "You paid " << price << " credits to buy " << amount << " units of fuel.";
+            Messages::Add(out.str());
+            player->AddCredits(price);
+          }
+        }
         
         zoom = 0.;
       }
     }
-    // Only refuel if this planet has a spaceport.
+    // Only refuel if this planet has a refuel service.
     else if(fuel >= attributes.Get("fuel capacity")
-        || !landingPlanet || !landingPlanet->HasSpaceport())
+        || !landingPlanet || landingPlanet->GetFuelPrice() < 0)
     {
       zoom = min(1., zoom + .02);
       SetTargetStellar(nullptr);
@@ -2289,7 +2302,6 @@ double Ship::TransferFuel(double amount, Ship *to)
     to->fuel += amount;
     if(!to->IsDisabled() && to->GetGovernment()->IsEscort() && player && !government->IsEscort())
     {
-      // The price for refueling in space is twice as high as usual.
       int price = amount*government->GetFuelPrice();
       if(price)
       {
