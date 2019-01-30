@@ -6,12 +6,10 @@ shipyard "Southbound Variants"
   "Fury"
   "Fury (Doombat)"
   "Fury (Flamethrower)"
-  "Fury (Gatling)"
   "Fury (Javelin)"
   "Fury (Laser)"
   "Hag"
   "Harpy"
-  "Harpy (Gatling)"
   "Hauler I"
   "Hauler I (Hai)"
   "Hauler I (Miner)"
@@ -239,23 +237,24 @@ ship "Fury"
   outfits
     "D23-QP Shield Generator"
     "nGVF-BB Fuel Cell"
-    "nGVF-AA Fuel Cell"
     "Hyperdrive"
 
     "Greyhound Plasma Thruster"
     "Greyhound Plasma Steering"
 
-    "K1 Blaster Cannon" 4
+    "Gatling Round" 12000
+    "Gatling Bullet Boxes" 8
+    "Gatling Gun" 4
 
     "LP036a Battery Pack"
     "Fuel Pod" 14
     "Tactical Scanner" 2
   engine -10 45
   engine 10 45
-  gun -20 12 "K1 Blaster Cannon"
-  gun 20 12 "K1 Blaster Cannon"
-  gun -44 10 "K1 Blaster Cannon"
-  gun 44 10 "K1 Blaster Cannon"
+  gun -20 12 "Gatling Gun"
+  gun 20 12 "Gatling Gun"
+  gun -44 10 "Gatling Gun"
+  gun 44 10 "Gatling Gun"
   leak "leak" 60 50
   leak "flame" 80 80
   explode "tiny explosion" 10
@@ -301,24 +300,6 @@ ship "Fury" "Fury (Flamethrower)"
     "Tactical Scanner" 2
 
 
-ship "Fury" "Fury (Gatling)"
-  outfits
-    "D23-QP Shield Generator"
-    "nGVF-BB Fuel Cell"
-    "Hyperdrive"
-
-    "Greyhound Plasma Thruster"
-    "Greyhound Plasma Steering"
-
-    "Gatling Round" 12000
-    "Gatling Bullet Boxes" 8
-    "Gatling Gun" 4
-
-    "LP036a Battery Pack"
-    "Fuel Pod" 14
-    "Tactical Scanner" 2
-
-
 ship "Fury" "Fury (Javelin)"
   outfits
     "D23-QP Shield Generator"
@@ -331,7 +312,7 @@ ship "Fury" "Fury (Javelin)"
     "Javelin" 128
     "Javelin Storage Crate" 2
     "Javelin Pod" 2
-    "K1 Blaster Cannon" 2
+    "Gatling Gun" 2
 
     "LP036a Battery Pack"
     "Fuel Pod" 14
@@ -393,14 +374,16 @@ ship "Hag"
     "Chipmunk Plasma Thruster"
     "Chipmunk Plasma Steering"
 
-    "K1 Blaster Cannon" 2
+    "Gatling Round" 6000
+    "Gatling Bullet Boxes" 4
+    "Gatling Gun" 2
 
     "LP036a Battery Pack"
     "Tactical Scanner"
   engine -5 32
   engine 5 32
-  gun -7 -14 "K1 Blaster Cannon"
-  gun 7 -14 "K1 Blaster Cannon"
+  gun -7 -14 "Gatling Gun"
+  gun 7 -14 "Gatling Gun"
   leak "flame" 60 80
   explode "tiny explosion" 15
   explode "small explosion" 5
@@ -448,31 +431,6 @@ ship "Harpy"
     "Chipmunk Plasma Thruster"
     "Chipmunk Plasma Steering"
 
-    "K1 Blaster Cannon" 2
-
-    "LP036a Battery Pack"
-    "Fuel Pod" 6
-    "Tactical Scanner"
-  engine -5 35
-  engine 5 35
-  gun -7 -10 "K1 Blaster Cannon"
-  gun 7 -10 "K1 Blaster Cannon"
-  leak "flame" 60 80
-  explode "tiny explosion" 15
-  explode "small explosion" 5
-  description "Classified as an interceptor rather than a fighter because it has its own "Hyperdrive" instead of needing to be carried inside a larger ship, the Southbound Harpy is the smallest and cheapest combat ship available. Because of its limited cargo and passenger space, the primary way for a Harpy pilot to pay the bills is by hunting pirates... or by becoming one. In either case, it is a perilous way to earn a living."
-  description "  Insurance reports indicate that as many as two out of every three first-time ship buyers who choose to pilot a Harpy lose their ship (and often, their life as well) within the first month of owning it."
-
-
-ship "Harpy" "Harpy (Gatling)"
-  outfits
-    "D14-RN Shield Generator"
-    "nGVF-BB Fuel Cell"
-    "Hyperdrive"
-
-    "Chipmunk Plasma Thruster"
-    "Chipmunk Plasma Steering"
-
     "Gatling Round" 6000
     "Gatling Bullet Boxes" 4
     "Gatling Gun" 2
@@ -480,6 +438,15 @@ ship "Harpy" "Harpy (Gatling)"
     "LP036a Battery Pack"
     "Fuel Pod" 6
     "Tactical Scanner"
+  engine -5 35
+  engine 5 35
+  gun -7 -10 "Gatling Gun"
+  gun 7 -10 "Gatling Gun"
+  leak "flame" 60 80
+  explode "tiny explosion" 15
+  explode "small explosion" 5
+  description "Classified as an interceptor rather than a fighter because it has its own "Hyperdrive" instead of needing to be carried inside a larger ship, the Southbound Harpy is the smallest and cheapest combat ship available. Because of its limited cargo and passenger space, the primary way for a Harpy pilot to pay the bills is by hunting pirates... or by becoming one. In either case, it is a perilous way to earn a living."
+  description "  Insurance reports indicate that as many as two out of every three first-time ship buyers who choose to pilot a Harpy lose their ship (and often, their life as well) within the first month of owning it."
 
 
 
@@ -1102,7 +1069,6 @@ ship "Stymphalian"
     "Javelin" 256
     "Javelin Storage Crate" 4
     "Javelin Pod" 4
-    "K1 Blaster Cannon" 2
 
     "LP036a Battery Pack"
     "Fuel Pod" 28
