@@ -167,28 +167,25 @@ ship "Kar Ik Vot 349"
     "Thruster (Planetary Class)"
     "Steering (Stellar Class)"
 
-    "Piercer" 124
-    "Piercer Rack" 2
-    "Piercer Launcher" 2
     "Detainer" 2
-    "Repeater Turret" 6
+    "Repeater Turret" 8
     "Warder" 2
 
-    "Large Heat Shunt" 5
+    "Large Heat Shunt" 6
   engine -24 237
   engine 24 237
   gun -8 -212 "Detainer"
   gun 8 -212 "Detainer"
-  gun -16 -158 "Piercer Launcher"
-  gun 16 -158 "Piercer Launcher"
+  gun -16 -158
+  gun 16 -158
   turret -36 -150 "Repeater Turret"
   turret 36 -150 "Repeater Turret"
   turret -38 -132 "Repeater Turret"
   turret 38 -132 "Repeater Turret"
   turret -40 -111 "Repeater Turret"
   turret 40 -111 "Repeater Turret"
-  turret -42 -90
-  turret 42 -90
+  turret -42 -90 "Repeater Turret"
+  turret 42 -90 "Repeater Turret"
   turret -102 188 "Warder"
   turret 102 188 "Warder"
   explode "tiny explosion" 120
@@ -254,12 +251,12 @@ ship "Kar Ik Vot 349" "Kar Ik Vot 349 (Defender)"
 
     "Large Heat Shunt" 4
     "Extra Outfit Space" 3
-  turret "Banisher"
-  turret "Banisher"
-  turret "Grab-Striker"
-  turret "Grab-Striker"
   turret "Repeater Turret"
   turret "Repeater Turret"
+  turret "Grab-Striker"
+  turret "Grab-Striker"
+  turret "Banisher"
+  turret "Banisher"
   turret
   turret
   turret "Warder"
@@ -277,22 +274,19 @@ ship "Kar Ik Vot 349" "Kar Ik Vot 349 (Jump)"
     "Thruster (Planetary Class)"
     "Steering (Stellar Class)"
 
-    "Piercer" 124
-    "Piercer Rack" 2
-    "Piercer Launcher" 2
     "Detainer" 2
-    "Repeater Turret" 6
+    "Repeater Turret" 8
     "Warder" 2
 
-    "Large Heat Shunt" 5
+    "Large Heat Shunt" 6
   turret "Repeater Turret"
   turret "Repeater Turret"
   turret "Repeater Turret"
   turret "Repeater Turret"
   turret "Repeater Turret"
   turret "Repeater Turret"
-  turret
-  turret
+  turret "Repeater Turret"
+  turret "Repeater Turret"
   turret "Warder"
   turret "Warder"
 
