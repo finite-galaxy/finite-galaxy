@@ -1,17 +1,17 @@
-# Miscellanious content:
-#   Asteroid
-#   Hallucination
-#   Lampyrid
-#   Nanobots
-#   Science Drone
-#   Test Dummy
-#   Timer Ship
-#   Void Sprite
+shipyard "Miscellaneous Variants"
+  "Asteroid"
+  "Hallucination"
+  "Lampyrid"
+  "Nanobot"
+  "Science Drone"
+  "Timer Ship"
+  "Void Sprite"
+  "Void Sprite (Infant)"
 
 
 
 # Asteroid
-ship Asteroid
+ship "Asteroid"
   sprite "asteroid/medium rock/spin"
     "frame rate" 10
   attributes
@@ -58,34 +58,6 @@ ship "Hallucination"
   outfits
     "Imaginary Weapon" 1
   gun 0 0
-
-
-outfit "Imaginary Weapon"
-  category "Cannons"
-  "gun ports" -1
-  weapon
-    sprite "projectile/rainbow"
-      "frame rate" 12
-      "random start frame"
-    "hit effect" "puff"
-    "die effect" "puff"
-    "inaccuracy" 20
-    "velocity" 12
-    "lifetime" 60
-    "reload" 10
-    "acceleration" 1.2
-    "drag" .1
-    "turn" 3
-    "homing" 4
-    "tracking" 1. 
-
-effect "puff"
-  sprite "effect/puff"
-    "no repeat"
-    "frame rate" 10
-  "lifetime" 20
-  "random angle" 360
-  "velocity scale" -.005
 
 
 
@@ -165,43 +137,6 @@ ship "Nanobot"
   engine 17 35
   gun 0 0
 
-
-outfit "Nano Strike"
-  category "Cannons"
-  "mass" 5
-  "outfit space" -5
-  "weapon space" -5
-  "gun ports" -1
-  weapon
-    "hit effect" "nano spark"
-    "die effect" "nano spark"
-    "inaccuracy" 10
-    "velocity" 200
-    "lifetime" 1
-    "reload" 10
-    "firing energy" 5
-    "shield damage" 10
-    "hull damage" 10
-
-effect "nano spark"
-  sprite "effect/nano spark"
-    "no repeat"
-    "frame rate" 10
-  "lifetime" 30
-  "random angle" 360
-  "random spin" 30
-  "random velocity" 2
-  "velocity scale" -.005
-
-
-fleet "Nanobots"
-  government "Korath Nanobots"
-  personality
-    heroic
-    vindictive
-  variant
-    "Nanobot" 10
-
   
 
 # Science Drone
@@ -218,29 +153,6 @@ ship "Science Drone"
 
 
 
-# Test Dummy
-ship "Hero" "Hero Test Dummy"
-  add attributes
-    "automaton" 1
-    "self destruct" 1
-
-ship "Quicksilver" "Quicksilver Test Dummy"
-  add attributes
-    "automaton" 1
-    "self destruct" 1
-
-ship "Splinter" "Splinter Test Dummy"
-  add attributes
-    "automaton" 1
-    "self destruct" 1
-
-ship "Vanguard" "Vanguard Test Dummy"
-  add attributes
-    "automaton" 1
-    "self destruct" 1
-
-
-
 # Timer Ship
 ship "Timer Ship"
   attributes
@@ -254,18 +166,6 @@ ship "Timer Ship"
   outfits
     "Timer Weapon"
   gun 0 0
-
-
-outfit "Timer Weapon"
-  category "Cannons"
-  "gun ports" -1
-  weapon
-    "velocity" 10
-    "lifetime" 20
-    "reload" 100
-    "trigger radius" 200
-    "blast radius" 20
-    "hull damage" .1
 
 
 
@@ -290,7 +190,7 @@ ship "Void Sprite"
     "inscrutable" 1
     "gaslining" 1
   outfits
-    Mouthparts? 2
+    "Mouthparts?" 2
   gun -4 -111
   gun 6 -111
   leak "blood" 40 40
@@ -315,7 +215,8 @@ effect "void sprite adult death"
   "velocity scale" .01
 
 
-ship "Void Sprite" "Void Sprite (Infant)"
+ship "Void Sprite (Infant)"
+  noun "creature"
   sprite "ship/void_sprite_infant"
     "frame rate" 7.4
     rewind
@@ -334,7 +235,7 @@ ship "Void Sprite" "Void Sprite (Infant)"
     "inscrutable" 1
     "gaslining" 1
   outfits
-    Mouthparts?
+    "Mouthparts?"
   gun 4 -41
   leak "blood" 60 50
   explode "blood" 25
@@ -346,50 +247,4 @@ effect "void sprite infant death"
     "frame rate" 15
   "lifetime" 21
   "velocity scale" .01
-
-
-outfit Mouthparts?
-  category "Cannons"
-  "gun ports" -1
-  weapon
-    sound "crunch"
-    "hit effect" "void sprite chewing"
-    "inaccuracy" 180
-    "velocity" 10
-    "lifetime" 1
-    "reload" 70
-    "burst reload" 35
-    "burst count" 3
-    "cluster"
-    "shield damage" 300
-    "hull damage" 300
-
-effect "void sprite chewing"
-  sprite "effect/smoke"
-    "no repeat"
-    "frame rate" 15
-  "lifetime" 29
-  "random angle" 360
-  "random frame rate" 5
-  "random spin" 2
-  "random velocity" .4
-  "velocity scale" .0001
-
-
-fleet "Void Sprites"
-  government "Indigenous Lifeform"
-  cargo 0
-  personality
-    timid mining harvests mute
-  variant
-    "Void Sprite"
-  variant
-    "Void Sprite"
-    "Void Sprite (Infant)"
-  variant
-    "Void Sprite"
-    "Void Sprite (Infant)" 2
-  variant
-    "Void Sprite"
-    "Void Sprite (Infant)" 3
 

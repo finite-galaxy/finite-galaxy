@@ -73,7 +73,7 @@ mission "Liberate Kornephoros"
     fleet
       names "free worlds capital"
       variant
-        "Falcon"
+        "Lance"
         "Osprey" 2
       variant
         "Bastion"
@@ -81,7 +81,7 @@ mission "Liberate Kornephoros"
       variant
         "Clipper"
         "Hawk" 2
-        "Hawk (Javelin)" 1
+        "Hawk (Laser)" 1
   npc
     personality heroic disables
     government "Free Worlds"
@@ -89,7 +89,7 @@ mission "Liberate Kornephoros"
     fleet
       names "free worlds capital"
       variant
-        "Falcon (Heavy)"
+        "Osprey"
         "Hawk" 2
     fleet
       names "free worlds small"
@@ -99,19 +99,19 @@ mission "Liberate Kornephoros"
     fleet
       names "free worlds small"
       variant
-        "Hawk (Javelin)"
+        "Hawk (Laser)"
         "Fury (Javelin)" 2
     fleet
       names "free worlds capital"
       variant
         "Osprey"
-        "Osprey (Javelin)"
+        "Osprey (Laser)"
     fleet
       names "free worlds capital"
       variant
-        "Falcon"
+        "Lance"
         "Osprey"
-        "Osprey (Laser)"
+        "Osprey (Particle)"
         "Hawk" 3
         "Harpy" 5
     fleet
@@ -199,9 +199,9 @@ mission "FW Prisoner Parole"
   npc accompany save
     government "Free Worlds"
     personality timid escort
-    ship "Falcon (Heavy)" "F.W.S. Starry Warrior"
-    ship "Blackbird" "F.W.S. Flight of Fancy"
-    ship "Blackbird" "F.W.S. Southern Luxury"
+    ship "Lance" "F.W.S. Starry Warrior"
+    ship "Blackbird (Anti-Missile)" "F.W.S. Flight of Fancy"
+    ship "Blackbird (Anti-Missile)" "F.W.S. Southern Luxury"
   
   on visit
     dialogue "You have reached <planet>, but you left part of your convoy behind! Better depart and wait for them to arrive in this star system."
@@ -239,9 +239,9 @@ mission "FW Prisoner Parole 2"
   npc accompany save
     government "Free Worlds"
     personality timid escort
-    ship "Falcon (Heavy)" "F.W.S. Starry Warrior"
-    ship "Blackbird" "F.W.S. Flight of Fancy"
-    ship "Blackbird" "F.W.S. Southern Luxury"
+    ship "Lance" "F.W.S. Starry Warrior"
+    ship "Blackbird (Anti-Missile)" "F.W.S. Flight of Fancy"
+    ship "Blackbird (Anti-Missile)" "F.W.S. Southern Luxury"
   
   on visit
     dialogue "You have reached <planet>, but you left part of your convoy behind! Better depart and wait for them to arrive in this star system."
@@ -700,12 +700,12 @@ mission "FW Plasma Testing 1B"
   npc accompany save
     government "Free Worlds"
     personality heroic escort
-    ship "Falcon (Plasma)" "Walloping Window-Blind"
+    ship "Lance (Plasma)" "Walloping Window-Blind"
   npc kill
     government "Pirate"
     personality plunders staying target
     system "Ildaria"
-    ship "Leviathan (South)" "Red Nile"
+    ship "Leviathan" "Red Nile"
     dialogue `The <npc> has been eliminated. Time to return to <destination> and report to Barmy Edward.`
   
   on visit
@@ -758,7 +758,7 @@ mission "FW Plasma Testing 1B"
       label plan
       `  "So, where do I come in?" you ask.`
       `  "Well, the Council says no testing against the Navy yet. No point in provoking a fight just to try out an untested weapon. So I asked them what other target they could suggest, and they mentioned this pirate ship by the name of Red Nile, that's been haunting the <waypoints> system, sniping on merchants that take a wrong turn and end up there."`
-      `  With a grand gesture, he indicates an aging Tarazed Falcon parked in the far corner of the hangar. It's a little rusty, and the paint is flaking, but a Falcon is an impressive ship under any circumstances. "We packed four of our prototypes into our department's very own test ship, the Walloping Window-Blind. We can't let you fly her, of course," he says, "on account of she's dearer to us than our own children. So the plan is, the Window-Blind will accompany you to <waypoints>, and you fight the pirates together, taking careful note of how the guns perform. Sound like fun?`
+      `  With a grand gesture, he indicates an aging Tarazed Lance parked in the far corner of the hangar. It's a little rusty, and the paint is flaking, but a Lance is an impressive ship under any circumstances. "We packed four of our prototypes into our department's very own test ship, the Walloping Window-Blind. We can't let you fly her, of course," he says, "on account of she's dearer to us than our own children. So the plan is, the Window-Blind will accompany you to <waypoints>, and you fight the pirates together, taking careful note of how the guns perform. Sound like fun?`
       choice
         `  "You bet!"`
           accept
@@ -1228,7 +1228,7 @@ mission "FW Pirates 3"
   npc accompany save
     personality timid escort
     government "Free Worlds"
-    ship "Falcon" "F.W.S. Terebinth"
+    ship "Lance" "F.W.S. Terebinth"
   
   on offer
     log "Given orders by the Free Worlds Senate to escort a diplomatic mission to the anarchist planet Thule. Tomek is not happy about bargaining with the pirates instead of fighting them."
@@ -1293,7 +1293,7 @@ mission "FW Pirates 3.1"
       `  "Absolutely," says Tomek. "The Senate doesn't know what's best for them. Perhaps we should save them from their own stupidity and make sure the right thing gets done."`
       `  "Tomek," says Freya, "this is a democracy. We follow the Senate's orders."`
       label plan
-      `  JJ says, "Captain <last>, the Senate wants you to travel to Thule and deliver their ultimatum. You will be given a single Falcon as an escort: not enough for a battle fleet, just enough to keep you safe. You are to avoid engaging any pirates you meet, if possible."`
+      `  JJ says, "Captain <last>, the Senate wants you to travel to Thule and deliver their ultimatum. You will be given a single Lance as an escort: not enough for a battle fleet, just enough to keep you safe. You are to avoid engaging any pirates you meet, if possible."`
       `  "I'll introduce you to your escort," says Tomek, and he leads you out of the bar. Once you are outside, he pulls you aside and says, "If by any chance you are attacked by pirates along the way, and if you have any reason to suspect that they originate from the <system> system, you would be totally justified in attacking that system instead of following your initial orders. I could even supply you with a backup fleet, if that happened."`
       choice
         `  "You're asking me to go against the Senate's decision?"`
@@ -1337,7 +1337,7 @@ mission "FW Pirates 3.2"
       `  Just then, JJ walks out of the bar and sees you talking with Tomek. "Tomek," he says, "what are you doing? Freya and I are waiting inside." He beckons you into the bar.`
       `  Inside, Freya is sitting at a table looking at Tomek's battered and whisky-stained galactic map. As you all sit down, JJ explains, "We've been asked to deliver an ultimatum to each pirate world, starting with the ruling authorities on Thule, in the Men system. The Free Worlds maintains the right to attack any ships engaged in piracy. Any world that continues to support piracy, slavery, or illegal weapons manufacture will be a valid military target for us. But first, we are to offer each world the opportunity to become truly autonomous and free from outside intervention, if they will pledge to cease those activities."`
       `  Freya says, "The thing is, just like any other world, most people on the 'pirate' planets are just ordinary farmers, or factory workers, or whatever. The only difference is, they want no off-world government telling them how to live. So that's what we're going to offer them."`
-      `  JJ says, "Captain <last>, the Senate wants you to travel to Thule and deliver their ultimatum. You will be given a single Falcon as an escort: not enough for a battle fleet, just enough to keep you safe. You are to avoid engaging any pirates you meet, if possible. Understood?"`
+      `  JJ says, "Captain <last>, the Senate wants you to travel to Thule and deliver their ultimatum. You will be given a single Lance as an escort: not enough for a battle fleet, just enough to keep you safe. You are to avoid engaging any pirates you meet, if possible. Understood?"`
       choice
         `  "Understood."`
           goto leave
@@ -1460,8 +1460,8 @@ mission "FW Pirates 4"
   npc evade
     personality plunders entering
     government "Pirate"
-    ship "Leviathan (Heavy)" "Red Dawn"
-    ship "Leviathan (South)" "Bleak Omen"
+    ship "Leviathan" "Red Dawn"
+    ship "Leviathan" "Bleak Omen"
   
   npc
     personality heroic
@@ -1481,9 +1481,9 @@ mission "FW Pirates 4"
     personality heroic
     government "Free Worlds"
     system "Sabik"
-    ship "Falcon (Plasma)" "F.W.S. White Oak"
-    ship "Falcon (Plasma)" "F.W.S. Larch"
-    ship "Falcon (Plasma)" "F.W.S. Ironwood"
+    ship "Lance (Plasma)" "F.W.S. White Oak"
+    ship "Lance (Plasma)" "F.W.S. Larch"
+    ship "Lance (Plasma)" "F.W.S. Ironwood"
   
   on offer
     conversation
@@ -1516,7 +1516,7 @@ mission "FW Pirates 4B"
   npc accompany save
     personality timid escort
     government "Free Worlds"
-    ship "Falcon" "F.W.S. Terebinth"
+    ship "Lance" "F.W.S. Terebinth"
   
   on visit
     dialogue "You have reached <planet>, but you left the <npc> behind! Better depart and wait for them to arrive in this star system."

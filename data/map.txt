@@ -1859,6 +1859,7 @@ system "Achernar"
   fleet "Pirates East Small" 1200
   fleet "Republic Large" 600
   fleet "Republic Small" 500
+  fleet "Vortex Large" 2000
   object
     sprite star/g5
     period 10
@@ -2115,6 +2116,7 @@ system "Al Dhanab"
   fleet "Pirates East Large" 3000
   fleet "Republic Small" 1000
   fleet "Republic Large" 800
+  fleet "Vortex Large" 6000
   object
     sprite star/g0
     period 10
@@ -3722,6 +3724,7 @@ system "Alpha Hydri"
   fleet "Pirates East Large" 6000
   fleet "Republic Small" 4000
   fleet "Republic Large" 9000
+  fleet "Vortex Large" 6000
   fleet "Korath Raid" 40000
   object
     sprite star/g0
@@ -5045,6 +5048,7 @@ system "Bellatrix"
   trade "Plastic" 274
   fleet "Merchants North Small" 800
   fleet "Merchants North Large" 1500
+  fleet "Megaparsec Small" 3000
   fleet "Navy Patrol" 7200
   fleet "Republic Small" 1000
   fleet "Republic Large" 2000
@@ -15407,6 +15411,7 @@ system "Menkar"
   fleet "Merchants North Small" 800
   fleet "Merchants North Large" 1000
   fleet "Merchant Miners North" 2000
+  fleet "Megaparsec Small" 3000
   fleet "Navy Patrol" 7200
   fleet "Republic Small" 1500
   fleet "Republic Large" 2000
@@ -16064,6 +16069,8 @@ system "Mirfak"
   fleet "Merchants East Large" 3000
   fleet "Merchants North Small" 500
   fleet "Merchants North Large" 700
+  fleet "Megaparsec Small" 1500
+  fleet "Megaparsec Large" 4500
   fleet "Navy Patrol" 3600
   fleet "Republic Small" 1200
   fleet "Republic Large" 2400
@@ -18080,6 +18087,7 @@ system "Polaris"
   fleet "Pirates East Small" 1500
   fleet "Republic Small" 1000
   fleet "Republic Large" 2000
+  fleet "Vortex Large" 6000
   fleet "Korath Raid" 50000
   object
     sprite star/k5
@@ -22372,6 +22380,7 @@ system "Tarazed"
   trade "Plastic" 315
   fleet "Merchants South Small" 500
   fleet "Merchants South Large" 1200
+  fleet "Tarazed Large" 3000
   fleet "Pirates South Large" 8000
   fleet "Quarg Small" 7000
   object
@@ -24608,9 +24617,10 @@ planet "Ada"
   outfitter "Fuel Pod"
   outfitter "Common Outfits"
   outfitter "Lovelace Advanced"
+  outfitter "Tinker Basics"
   shipyard "Centaur Basics"
   shipyard "Megaparsec Basics"
-  shipyard "Vortex Basics"
+  shipyard "Vortex Intermediate"
   "required reputation" 2
   bribe 0.1
   security 0.9
@@ -24759,7 +24769,6 @@ planet "Arahas"
   outfitter "Pilot Licence"
   outfitter "Fuel Pod"
   outfitter "Basic Outfits"
-  outfitter "Sisensis Basics"
   security 0.05
 #  fuel 1.2
 #  tribute 400
@@ -24968,7 +24977,6 @@ planet "Bod"
   outfitter "Pilot Licence"
   outfitter "Fuel Pod"
   outfitter "Basic Outfits"
-  outfitter "Sisensis Intermediate"
   security 0.1
 #  fuel 0.9
 #  tribute 700
@@ -24996,8 +25004,7 @@ planet "Bounty"
   outfitter "Map"
   outfitter "Pilot Licence"
   outfitter "Fuel Pod"
-  outfitter "Basic Outfits"
-  outfitter "Sisensis Basics"
+  outfitter "Common Outfits"
   security 0.1
 #  fuel 0.8
 #  tribute 700
@@ -25197,9 +25204,11 @@ planet "Chiron"
   outfitter "Common Outfits"
   outfitter "Earth Intermediate"
   outfitter "Lovelace Intermediate"
-  outfitter "Sisensis Intermediate"
   outfitter "Syndicate Intermediate"
+  outfitter "Tinker Intermediate"
   shipyard "Centaur Advanced"
+  shipyard "Flivver"
+  shipyard "Sisensis Intermediate"
   shipyard "Star Intermediate"
   shipyard "Vortex Basics"
   bribe 0.02
@@ -25583,12 +25592,14 @@ planet "Earth"
   outfitter "Common Outfits"
   outfitter "Earth Advanced"
   outfitter "Lovelace Intermediate"
-  outfitter "Sisensis Intermediate"
   outfitter "Syndicate Intermediate"
+  outfitter "Tinker Intermediate"
   shipyard "Centaur Intermediate"
+  shipyard "Flivver"
   shipyard "Megaparsec Basics"
+  shipyard "Sisensis Intermediate"
   shipyard "Star Intermediate"
-  shipyard "Vortex Intermediate"
+  shipyard "Vortex Basics"
   "required reputation" 2
   bribe 0.03
   security 0.3
@@ -25871,6 +25882,8 @@ planet "Foundry"
   outfitter "Earth Basics"
   outfitter "Lovelace Intermediate"
   outfitter "Syndicate Intermediate"
+  outfitter "Tinker Intermediate"
+  shipyard "Navy Basics"
   shipyard "Vortex Advanced"
   bribe 0.1
   security 0.5
@@ -25947,6 +25960,7 @@ planet "Geminus"
   outfitter "Common Outfits"
   outfitter "Earth Basics"
   outfitter "Syndicate Intermediate"
+  outfitter "Tinker Basics"
   shipyard "Star Advanced"
   bribe 0.1
   security 0.9
@@ -25985,7 +25999,7 @@ planet "Geyser"
   outfitter "Pilot Licence"
   outfitter "Fuel Pod"
   outfitter "Basic Outfits"
-  outfitter "Sisensis Basics"
+  outfitter "Tinker Basics"
   security 0.3
 #  fuel 0.8
 #  tribute 1300
@@ -26042,8 +26056,8 @@ planet "Glory"
   outfitter "Fuel Pod"
   outfitter "Basic Outfits"
   outfitter "Lovelace Basics"
-  outfitter "Sisensis Basics"
   outfitter "Syndicate Basics"
+  outfitter "Tinker Basics"
   bribe 0.05
   security 0.6
 #  fuel 0.7
@@ -26212,7 +26226,6 @@ planet "Heartland"
   outfitter "Pilot Licence"
   outfitter "Fuel Pod"
   outfitter "Basic Outfits"
-  outfitter "Sisensis Basics"
   security 0.2
 #  fuel 0.7
 #  tribute 900
@@ -26254,10 +26267,11 @@ planet "Hephaestus"
   outfitter "Common Outfits"
   outfitter "Earth Intermediate"
   outfitter "Lovelace Intermediate"
-  outfitter "Sisensis Intermediate"
   outfitter "Syndicate Advanced"
+  outfitter "Tinker Intermediate"
   shipyard "Betelgeuse Intermediate"
-  shipyard "Megaparsec Intermediate"
+  shipyard "Flivver"
+  shipyard "Megaparsec Basics"
   shipyard "Star Intermediate"
   bribe 0.1
   security 0.7
@@ -26277,6 +26291,7 @@ planet "Hermes"
   outfitter "Fuel Pod"
   outfitter "Basic Outfits"
   outfitter "Syndicate Intermediate"
+  outfitter "Tinker Basics"
   security 0.4
 #  fuel 1.0
 #  tribute 1700
@@ -26569,16 +26584,17 @@ planet "Little Garden"
   attributes "near earth" bank urban
   landscape land/city12
   description `In the very early days of hyperspace travel, most settlers chose to put down roots within a few jumps of Earth, because until more fuel depots were built, colonies farther out would seldom be visited by cargo ships. As a result, a lot of effort was put into terraforming and developing worlds that would have been passed over by most colonists today. Little Garden is one such world, and it is now overpopulated, and poor enough that maintaining the terraforming equipment and climate requires almost a third of the planetary government's tax income.`
-  description `  Little Garden is also home to Sisensis Systems, manufacturer of crude but effective outfits, popular with marauders, merchants, and militia alike.`
+  description `  Little Garden is also home to Sisensis Shipyards.`
   spaceport `The "new port" here was built several centuries ago, when the grand but impractical spaceport built by the original settlers had deteriorated to the point where it was no longer usable. This port is much simpler by comparison: just a ring of landing pads of various sizes around a large central building with ten levels of warehouse space accessible by freight elevator.`
   spaceport `  There are always locals hanging around the port, some of them mere children, who are trying to find a cheap ride off-planet.`
   outfitter "Map"
   outfitter "Pilot Licence"
   outfitter "Fuel Pod"
   outfitter "Common Outfits"
-  outfitter "Sisensis Advanced"
-  shipyard "Centaur Intermediate"
+  outfitter "Tinker Basics"
+  shipyard "Centaur Basics"
   shipyard "Star Basics"
+  shipyard "Sisensis Advanced"
   security 0.1
 #  fuel 0.9
 #  tribute 1400
@@ -26659,6 +26675,7 @@ planet "Mainsail"
   outfitter "Basic Outfits"
   outfitter "Syndicate Basics"
   shipyard "Betelgeuse Basics"
+  shipyard "Flivver"
   shipyard "Star Basics"
   bribe 0.06
   security 0.5
@@ -26735,6 +26752,7 @@ planet "Martini"
   outfitter "Fuel Pod"
   outfitter "Common Outfits"
   outfitter "Syndicate Basics"
+  outfitter "Tinker Basics"
   bribe 0.1
   security 0.5
 #  fuel 1.0
@@ -26849,6 +26867,7 @@ planet "Millrace"
   outfitter "Fuel Pod"
   outfitter "Common Outfits"
   outfitter "Syndicate Basics"
+  outfitter "Tinker Basics"
   security 0.2
 #  fuel 1.0
 #  tribute 1400
@@ -27147,7 +27166,6 @@ planet "Porringer"
   outfitter "Pilot Licence"
   outfitter "Fuel Pod"
   outfitter "Basic Outfits"
-  outfitter "Sisensis Basics"
   security 0.2
 #  fuel 0.6
 #  tribute 400
@@ -27311,10 +27329,11 @@ planet "Reunion"
   outfitter "Fuel Pod"
   outfitter "Common Outfits"
   outfitter "Lovelace Basics"
-  outfitter "Sisensis Basics"
   outfitter "Syndicate Basics"
+  outfitter "Tinker Basics"
   shipyard "Centaur Basics"
   shipyard "Megaparsec Basics"
+  shipyard "Sisensis Basics"
   shipyard "Star Basics"
   shipyard "Vortex Basics"
   security 0.3
@@ -27677,6 +27696,7 @@ planet "Shroud"
   outfitter "Common Outfits"
   outfitter "Syndicate Basics"
   shipyard "Betelgeuse Intermediate"
+  shipyard "Flivver"
   bribe 0.04
   security 0.8
 #  fuel 1.0
@@ -27929,6 +27949,7 @@ planet "Sunracer"
   outfitter "Lovelace Intermediate"
   outfitter "Syndicate Intermediate"
   shipyard "Megaparsec Advanced"
+  shipyard "Navy Basics"
   bribe 0.06
   security 0.7
 #  fuel 0.7
@@ -27973,7 +27994,6 @@ planet "Thrall"
   outfitter "Pilot Licence"
   outfitter "Fuel Pod"
   outfitter "Basic Outfits"
-  outfitter "Sisensis Basics"
   bribe 0.04
   security 0.5
 #  fuel 0.7
@@ -28034,10 +28054,11 @@ planet "Tinker"
   outfitter "Fuel Pod"
   outfitter "Common Outfits"
   outfitter "Lovelace Intermediate"
-  outfitter "Sisensis Intermediate"
   outfitter "Syndicate Intermediate"
+  outfitter "Tinker Advanced"
   shipyard "Megaparsec Basics"
-  shipyard "Centaur Intermediate"
+  shipyard "Centaur Basics"
+  shipyard "Sisensis Basics"
   shipyard "Star Basics"
   shipyard "Vortex Basics"
   bribe 0.04

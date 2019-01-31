@@ -1,26 +1,25 @@
 shipyard "Tarazed Variants"
   "Blackbird"
-  "Falcon"
-  "Falcon (Heavy)"
-  "Falcon (Laser)"
-  "Falcon (Plasma)"
+  "Blackbird (Anti-Missile)"
+  "Blackbird (Laser)"
+  "Goose"
+  "Goose (Laser)"
   "Hawk"
-  "Hawk (Blaster)"
-  "Hawk (Javelin)"
+  "Hawk (Laser)"
   "Hawk (Nuclear)"
   "Kestrel"
   "Kestrel (Engines)"
   "Kestrel (Shields)"
   "Kestrel (Weapons)"
   "Osprey"
-  "Osprey (Hai)"
-  "Osprey (Javelin)"
+  "Osprey (Electron)"
+  "Osprey (Ion)"
   "Osprey (Laser)"
+  "Osprey (Particle)"
   "Raven"
-  "Raven (Afterburner)"
-  "Raven (Javelin)"
-  "Raven (Mark II)"
-  "Raven (Plasma)"
+  "Raven (Electron)"
+  "Raven (Laser)"
+  "Raven (Particle)"
   "Unknown Ship Type"
 
 
@@ -58,7 +57,7 @@ ship "Blackbird"
       "random hit force" 2300
   outfits
     "D41-HY Shield Generator"
-    "S3 Thermionic"
+    "NT-200 Nucleovoltaic"
     "Hyperdrive"
 
     "Impala Plasma Thruster"
@@ -67,13 +66,12 @@ ship "Blackbird"
     "Bolt Turret" 2
 
     "LP144a Battery Pack"
-    "Liquid Water Cooler"
     "Fuel Pod" 48
-    "Tactical Scanner" 5
+    "Tactical Scanner" 6
   engine -40 55
   engine 40 55
-  turret -18 0 "Bolt Turret"
-  turret 18 0 "Bolt Turret"
+  turret -18 0
+  turret 18 0
   leak "leak" 50 50
   leak "flame" 70 80
   explode "tiny explosion" 15
@@ -84,130 +82,118 @@ ship "Blackbird"
   description "The Tarazed Blackbird is a high-class passenger transport, designed to move large numbers of people across the galaxy with speed and safety. Although not equipped with much weaponry, a Blackbird is well armoured and fast enough to evade pirate attacks, and its cargo capacity is high enough to allow the captain to take courier missions on the side."
 
 
+ship "Blackbird" "Blackbird (Anti-Missile)"
+  outfits
+    "D41-HY Shield Generator"
+    "NT-200 Nucleovoltaic"
+    "Hyperdrive"
 
-ship "Falcon"
-  sprite "ship/falcon"
-  thumbnail "thumbnail/falcon"
+    "Impala Plasma Thruster"
+    "Impala Plasma Steering"
+
+    "Heavy Anti-Missile Turret" 2
+
+    "LP144a Battery Pack"
+    "Fuel Pod" 48
+    "Tactical Scanner" 6
+
+
+ship "Blackbird" "Blackbird (Laser)"
+  outfits
+    "D41-HY Shield Generator"
+    "NT-200 Nucleovoltaic"
+    "Hyperdrive"
+
+    "Impala Plasma Thruster"
+    "Impala Plasma Steering"
+
+    "Heavy Laser Turret" 2
+
+    "LP144a Battery Pack"
+    "Fuel Pod" 48
+    "Tactical Scanner" 6
+
+
+
+ship "Goose"
+  sprite "ship/goose"
+  thumbnail "thumbnail/goose"
   attributes
-    category "Frigate"
+    category "Corvette"
 #    manufacturer "Tarazed"
     licences
       Pilot
-    "cost" 9800000
-    "shields" 12000
-    "hull" 4000
-    "required crew" 32
-    "bunks" 64
-    "mass" 480
-    "drag" 6.7
+    "cost" 3100000
+    "shields" 5200
+    "hull" 1700
+    "required crew" 8
+    "bunks" 16
+    "mass" 250
+    "drag" 4.0
     "heat dissipation" .7
-    "cargo space" 80
-    "outfit space" 600
-    "core space" 210
-    "engine space" 150
-    "weapon space" 240
+    "cargo space" 150
+    "outfit space" 400
+    "core space" 150
+    "engine space" 100
+    "weapon space" 150
     weapon
-      "blast radius" 236
-      "shield damage" 960
-      "random shield damage" 1360
-      "hull damage" 1440
-      "random hull damage" 2040
-      "heat damage" 28800
-      "random heat damage" 40800
-      "hit force" 2400
-      "random hit force" 3400
+      "blast radius" 160
+      "shield damage" 500
+      "random shield damage" 1100
+      "hull damage" 750
+      "random hull damage" 1650
+      "heat damage" 15000
+      "random heat damage" 33000
+      "hit force" 1250
+      "random hit force" 2750
   outfits
-    "D94-YV Shield Generator"
-    "Breeder Reactor"
+    "D41-HY Shield Generator"
+    "NT-200 Nucleovoltaic"
     "Hyperdrive"
 
-    "Impala Plasma Thruster"
+    "Greyhound Plasma Thruster"
     "Impala Plasma Steering"
-    "Ionic Afterburner"
 
-    "Plasma Cannon" 2
-    "Bolt Turret" 4
+    "Bolt Cannon" 2
+    "Bolt Turret" 3
 
     "LP144a Battery Pack"
-    "Liquid Nitrogen Cooler"
-    "Fuel Pod" 71
-    "Tactical Scanner" 5
-  engine -17 143
-  engine 17 143
-  gun -17 -88 "Plasma Cannon"
-  gun 17 -88 "Plasma Cannon"
-  turret -16 -24 "Bolt Turret"
-  turret 16 -24 "Bolt Turret"
-  turret -57 40 "Bolt Turret"
-  turret 57 40 "Bolt Turret"
-  leak "leak" 30 50
-  leak "flame" 50 80
-  leak "big leak" 60 30
-  explode "tiny explosion" 40
-  explode "small explosion" 55
-  explode "medium explosion" 60
-  explode "large explosion" 40
+    "Fuel Pod" 48
+    "Tactical Scanner" 6
+  engine -15 115
+  engine 15 115
+  gun -15 -80
+  gun 15 -80
+  turret -17 -28
+  turret 0 -28
+  turret 17 -28
+  leak "leak" 60 50
+  leak "flame" 40 80
+  leak "big leak" 90 30
+  explode "tiny explosion" 18
+  explode "small explosion" 36
+  explode "medium explosion" 24
+  explode "large explosion" 8
   "final explode" "final explosion medium"
-  description "The Tarazed Falcon is one of the most powerful warships that civilians can buy, a sleeker and more manoeuvrable alternative to the venerable and somewhat outdated Leviathan."
+  description "The Goose is designed to be faster and more manoeuvrable than other ships of a similar size, in order to serve as a heavy escort ship or as part of a planetary defence and patrol fleet. Because of its intended use in merchant convoys, it also has a fair amount of cargo space."
 
 
-ship "Falcon" "Falcon (Heavy)"
+ship "Goose" "Goose (Laser)"
   outfits
-    "D94-YV Shield Generator"
-    "Fusion Reactor"
+    "D41-HY Shield Generator"
+    "NT-200 Nucleovoltaic"
     "Hyperdrive"
 
-    "A520 Atomic Thruster"
-    "A525 Atomic Steering"
-
-    "Impact Missile" 48
-    "Impact Missile Rack" 12
-    "Impact Missile Launcher" 2
-    "Heavy Laser Turret" 4
-
-    "LP036a Battery Pack"
-    "Liquid Water Cooler"
-    "Fuel Pod" 71
-    "Tactical Scanner" 5
-    "Extra Outfit Space" 5
-
-
-ship "Falcon" "Falcon (Laser)"
-  outfits
-    "D94-YV Shield Generator"
-    "Breeder Reactor"
-    "Hyperdrive"
-
-    "Impala Plasma Thruster"
+    "Greyhound Plasma Thruster"
     "Impala Plasma Steering"
-    "Ionic Afterburner"
 
     "Heavy Laser Cannon" 2
-    "Heavy Laser Turret" 4
+    "Heavy Laser Turret" 3
 
     "LP144a Battery Pack"
-    "Liquid Nitrogen Cooler"
-    "Fuel Pod" 71
-    "Tactical Scanner" 5
-    "Extra Outfit Space"
-
-
-ship "Falcon" "Falcon (Plasma)"
-  outfits
-    "D94-YV Shield Generator"
-    "Breeder Reactor"
-    "Hyperdrive"
-
-    "Impala Plasma Thruster"
-    "Impala Plasma Steering"
-
-    "Plasma Turret" 4
-
-    "LP144a Battery Pack"
-    "Liquid Helium Cooler"
-    "Fuel Pod" 71
-    "Tactical Scanner" 5
-    "Extra Outfit Space" 7
+    "Fuel Pod" 48
+    "Tactical Scanner" 6
+    "Extra Outfit Space" 4
 
 
 
@@ -229,9 +215,9 @@ ship "Hawk"
     "heat dissipation" .8
     "cargo space" 40
     "outfit space" 260
-    "core space" 140
+    "core space" 130
     "engine space" 70
-    "weapon space" 50
+    "weapon space" 60
     weapon
       "blast radius" 84
       "shield damage" 240
@@ -244,24 +230,24 @@ ship "Hawk"
       "random hit force" 1500
   outfits
     "D23-QP Shield Generator"
-    "S3 Thermionic"
+    "NT-200 Nucleovoltaic"
     "Hyperdrive"
 
     "Greyhound Plasma Thruster"
     "Greyhound Plasma Steering"
 
     "Bolt Cannon" 4
+    "Bolt Turret"
 
-    "LP072a Battery Pack"
-    "Liquid Water Cooler"
+    "LP036a Battery Pack"
     "Fuel Pod" 18
-    "Tactical Scanner" 5
+    "Tactical Scanner" 6
   engine -16 47
   engine 16 47
-  gun -12 -27 "Bolt Cannon"
-  gun 12 -27 "Bolt Cannon"
-  gun -17 -18 "Bolt Cannon"
-  gun 17 -18 "Bolt Cannon"
+  gun -12 -27
+  gun 12 -27
+  gun -17 -18
+  gun 17 -18
   turret 0 9
   leak "leak" 60 50
   leak "flame" 80 80
@@ -272,58 +258,37 @@ ship "Hawk"
   description "The Tarazed Hawk is an interceptor-class warship often used as an escort for freighters or in a planetary militia's patrol squadron. Hawks are fast enough to chase down most smaller ships, but are capable of mounting much more weapons, including a turret. They are also, of course, a favorite ship of pirate captains who have earned enough money to afford one."
 
 
-ship "Hawk" "Hawk (Blaster)"
+ship "Hawk" "Hawk (Laser)"
   outfits
     "D23-QP Shield Generator"
-    "S3 Thermionic"
+    "NT-200 Nucleovoltaic"
     "Hyperdrive"
 
     "Greyhound Plasma Thruster"
     "Greyhound Plasma Steering"
 
-    "X1 Blaster Cannon" 4
-    "X2 Blaster Turret"
-
-    "LP072a Battery Pack"
-    "Liquid Water Cooler"
-    "Fuel Pod" 18
-    "Tactical Scanner" 5
-
-
-ship "Hawk" "Hawk (Javelin)"
-  outfits
-    "D23-QP Shield Generator"
-    "S3 Thermionic"
-    "Hyperdrive"
-
-    "Greyhound Plasma Thruster"
-    "Greyhound Plasma Steering"
-
-    "Javelin" 256
-    "Javelin Storage Crate" 4
-    "Javelin Pod" 4
+    "Heavy Laser Cannon" 4
 
     "LP036a Battery Pack"
     "Fuel Pod" 18
-    "Tactical Scanner" 5
+    "Tactical Scanner" 6
 
 
 ship "Hawk" "Hawk (Nuclear)"
   outfits
     "D67-TM Shield Generator"
-    "S3 Thermionic"
+    "RT-I Radiothermal"
     "Hyperdrive"
 
-    "A250 Atomic Thruster"
-    "A255 Atomic Steering"
+    "Greyhound Plasma Thruster"
+    "Greyhound Plasma Steering"
 
     "Nuclear Missile" 4
 
     "LP036a Battery Pack"
     "Fuel Pod" 18
     "Large Radar Jammer"
-    "Tactical Scanner" 5
-    "Extra Outfit Space"
+    "Tactical Scanner" 6
 
 
 
@@ -373,21 +338,21 @@ ship "Kestrel"
     "LP036a Battery Pack"
     "Liquid Helium Cooler"
     "Fuel Pod" 87
-    "Tactical Scanner" 5
+    "Tactical Scanner" 6
   engine -14 177
   engine 14 177
-  gun -86 55 "Plasma Cannon"
-  gun 86 55 "Plasma Cannon"
-  gun -75 57 "Plasma Cannon"
-  gun 75 57 "Plasma Cannon"
-  gun -64 59 "Plasma Cannon"
-  gun 64 59 "Plasma Cannon"
-  gun -53 61 "Plasma Cannon"
-  gun 53 61 "Plasma Cannon"
-  gun -42 63 "Plasma Cannon"
-  gun 42 63 "Plasma Cannon"
-  gun -31 65 "Plasma Cannon"
-  gun 31 65 "Plasma Cannon"
+  gun -86 55
+  gun 86 55
+  gun -75 57
+  gun 75 57
+  gun -64 59
+  gun 64 59
+  gun -53 61
+  gun 53 61
+  gun -42 63
+  gun 42 63
+  gun -31 65
+  gun 31 65
   turret -7 -4
   turret 7 -4
   turret -23 14
@@ -464,15 +429,15 @@ ship "Osprey"
     "LP072a Battery Pack"
     "Liquid Nitrogen Cooler"
     "Fuel Pod" 49
-    "Tactical Scanner" 5
+    "Tactical Scanner" 6
   engine -40 67
   engine 40 67
-  gun -8 -100 "Plasma Cannon"
-  gun 8 -100 "Plasma Cannon"
-  gun -26 -53 "Plasma Cannon"
-  gun 26 -53 "Plasma Cannon"
-  turret -16 -16 "Bolt Turret"
-  turret 16 -16 "Bolt Turret"
+  gun -8 -100
+  gun 8 -100
+  gun -26 -53
+  gun 26 -53
+  turret -16 -16
+  turret 16 -16
   leak "leak" 40 50
   leak "flame" 80 80
   leak "big leak" 80 30
@@ -484,26 +449,7 @@ ship "Osprey"
   description "After the Blackbird gained surprising popularity as an agile light warship despite its original design as a transport, Tarazed decided to produce a new design specifically intended as a warship. The Osprey was the result. Although it is considered overpriced by most savvy pilots, it is nevertheless a perennial favourite among those who have the extra cash to spend on it."
 
 
-ship "Osprey" "Osprey (Hai)"
-  outfits
-    "Diamond Regenerator"
-    "Geode Reactor"
-    "Hyperdrive"
-
-    "Bondir Atomic Thruster"
-    "Bondir Atomic Steering"
-
-    "Pulse Cannon" 4
-    "Chameleon Anti-Missile" 2
-
-    "Fissure Batteries"
-    "Williwaw Cooling" 3
-    "Fuel Pod" 49
-    "Yoloy Scanner"
-    "Extra Outfit Space" 3
-
-
-ship "Osprey" "Osprey (Javelin)"
+ship "Osprey" "Osprey (Electron)"
   outfits
     "D67-TM Shield Generator"
     "Breeder Reactor"
@@ -512,15 +458,30 @@ ship "Osprey" "Osprey (Javelin)"
     "Impala Plasma Thruster"
     "Impala Plasma Steering"
 
-    "Javelin" 256
-    "Javelin Storage Crate" 4
-    "Javelin Pod" 4
+    "Electron Cannon" 4
     "Bolt Turret" 2
 
     "LP072a Battery Pack"
-    "Liquid Nitrogen Cooler"
+    "Liquid Water Cooler"
     "Fuel Pod" 49
-    "Tactical Scanner" 5
+    "Tactical Scanner" 6
+
+
+ship "Osprey" "Osprey (Ion)"
+  outfits
+    "D67-TM Shield Generator"
+    "Breeder Reactor"
+    "Hyperdrive"
+
+    "Impala Plasma Thruster"
+    "Impala Plasma Steering"
+
+    "Ion Cannon" 4
+
+    "LP072a Battery Pack"
+    "Liquid Water Cooler"
+    "Fuel Pod" 49
+    "Tactical Scanner" 6
 
 
 ship "Osprey" "Osprey (Laser)"
@@ -536,9 +497,27 @@ ship "Osprey" "Osprey (Laser)"
     "Heavy Laser Turret" 2
 
     "LP072a Battery Pack"
-    "Liquid Nitrogen Cooler"
+    "Liquid Water Cooler"
     "Fuel Pod" 49
-    "Tactical Scanner" 5
+    "Tactical Scanner" 6
+
+
+ship "Osprey" "Osprey (Particle)"
+  outfits
+    "D67-TM Shield Generator"
+    "Breeder Reactor"
+    "Hyperdrive"
+
+    "Impala Plasma Thruster"
+    "Impala Plasma Steering"
+
+    "Particle Cannon" 4
+    "Bolt Turret" 2
+
+    "LP072a Battery Pack"
+    "Liquid Water Cooler"
+    "Fuel Pod" 49
+    "Tactical Scanner" 6
 
 
 
@@ -546,7 +525,7 @@ ship "Raven"
   sprite "ship/raven"
   thumbnail "thumbnail/raven"
   attributes
-    category "Interceptor"
+    category "Corvette"
 #    manufacturer "Tarazed"
     licences
       Pilot
@@ -555,45 +534,42 @@ ship "Raven"
     "hull" 1500
     "required crew" 4
     "bunks" 8
-    "mass" 130
+    "mass" 170
     "drag" 3.7
     "heat dissipation" .8
-    "cargo space" 30
-    "outfit space" 320
-    "core space" 130
+    "cargo space" 20
+    "outfit space" 330
+    "core space" 120
     "engine space" 90
-    "weapon space" 100
+    "weapon space" 120
     weapon
-      "blast radius" 96
-      "shield damage" 260
+      "blast radius" 104
+      "shield damage" 340
       "random shield damage" 700
-      "hull damage" 390
-      "random hull damage" 350
-      "heat damage" 7800
+      "hull damage" 510
+      "random hull damage" 1050
+      "heat damage" 10200
       "random heat damage" 21000
-      "hit force" 650
-      "random hit force" 1050
+      "hit force" 850
+      "random hit force" 1750
   outfits
     "D41-HY Shield Generator"
-    "S3 Thermionic"
+    "NT-200 Nucleovoltaic"
     "Hyperdrive"
 
     "Greyhound Plasma Thruster"
     "Greyhound Plasma Steering"
 
-    "Javelin" 128
-    "Javelin Storage Crate" 2
-    "Javelin Pod" 2
-    "Plasma Cannon" 2
+    "Plasma Cannon" 4
 
-    "LP072a Battery Pack"
+    "LP036a Battery Pack"
     "Liquid Water Cooler"
     "Fuel Pod" 24
-    "Tactical Scanner" 5
+    "Tactical Scanner" 6
   engine -12 43
   engine 12 43
-  gun -10 -33 "Plasma Cannon"
-  gun 10 -33 "Plasma Cannon"
+  gun -10 -33
+  gun 10 -33
   gun -16 -28
   gun 16 -28
   leak "leak" 60 50
@@ -606,51 +582,10 @@ ship "Raven"
   description "The Tarazed Raven is their most popular warship, an agile and elegant vessel that can nevertheless deal out and absorb considerable damage. Ravens are a favourite ship for bounty hunters, because they are more than a match for pirate interceptors and can be used by a skilled pilot to take down much larger ships as well."
 
 
-ship "Raven" "Raven (Afterburner)"
+ship "Raven" "Raven (Electron)"
   outfits
     "D41-HY Shield Generator"
-    "S3 Thermionic"
-    "Hyperdrive"
-
-    "Greyhound Plasma Thruster"
-    "Greyhound Plasma Steering"
-    "Ionic Afterburner"
-
-    "Javelin" 128
-    "Javelin Storage Crate" 2
-    "Javelin Pod" 2
-    "Plasma Cannon" 2
-
-    "LP072a Battery Pack"
-    "Liquid Water Cooler"
-    "Fuel Pod" 24
-    "Tactical Scanner" 5
-    "Extra Outfit Space" 2
-
-
-ship "Raven" "Raven (Javelin)"
-  outfits
-    "D41-HY Shield Generator"
-    "S3 Thermionic"
-    "Hyperdrive"
-
-    "Greyhound Plasma Thruster"
-    "Greyhound Plasma Steering"
-
-    "Javelin" 452
-    "Javelin Storage Crate" 8
-    "Javelin Pod" 4
-
-    "LP036a Battery Pack"
-    "Liquid Water Cooler"
-    "Fuel Pod" 24
-    "Tactical Scanner" 5
-
-
-ship "Raven" "Raven (Mark II)"
-  outfits
-    "D41-HY Shield Generator"
-    "S3 Thermionic"
+    "NT-200 Nucleovoltaic"
     "Hyperdrive"
 
     "Greyhound Plasma Thruster"
@@ -658,28 +593,45 @@ ship "Raven" "Raven (Mark II)"
 
     "Electron Cannon" 4
 
-    "LP072a Battery Pack"
+    "LP036a Battery Pack"
     "Liquid Water Cooler"
     "Fuel Pod" 24
-    "Tactical Scanner" 5
+    "Tactical Scanner" 6
 
 
-ship "Raven" "Raven (Plasma)"
+ship "Raven" "Raven (Laser)"
   outfits
     "D41-HY Shield Generator"
-    "S3 Thermionic"
+    "NT-200 Nucleovoltaic"
     "Hyperdrive"
 
     "Greyhound Plasma Thruster"
     "Greyhound Plasma Steering"
 
-    "Plasma Cannon" 4
+    "Heavy Laser Cannon" 4
 
-    "LP072a Battery Pack"
+    "LP036a Battery Pack"
     "Liquid Water Cooler"
     "Fuel Pod" 24
-    "Tactical Scanner" 5
-    "Extra Outfit Space"
+    "Tactical Scanner" 6
+
+
+ship "Raven" "Raven (Particle)"
+  outfits
+    "D41-HY Shield Generator"
+    "NT-200 Nucleovoltaic"
+    "Hyperdrive"
+
+    "Greyhound Plasma Thruster"
+    "Greyhound Plasma Steering"
+
+    "Particle Cannon" 4
+
+    "LP036a Battery Pack"
+    "Liquid Water Cooler"
+    "Fuel Pod" 24
+    "Tactical Scanner" 6
+    "Extra Outfit Space" 2
 
 
 
@@ -726,32 +678,32 @@ ship "Unknown Ship Type"
     "Bolt Cannon" 12
     "Bolt Turret" 4
 
-    "LP144a Battery Pack"
-    "LP072a Battery Pack"
+    "LP288a Battery Pack"
     "Liquid Helium Cooler"
     "Fuel Pod" 87
     "Interference Plating" 6
     "Large Radar Jammer" 2
-    "Tactical Scanner" 5
+    "Tactical Scanner" 6
     "Measurement Systems" 20
+    "Extra Outfit Space" 3
   engine -14 177
   engine 14 177
-  gun -86 55 "Bolt Cannon"
-  gun 86 55 "Bolt Cannon"
-  gun -75 57 "Bolt Cannon"
-  gun 75 57 "Bolt Cannon"
-  gun -64 59 "Bolt Cannon"
-  gun 64 59 "Bolt Cannon"
-  gun -53 61 "Bolt Cannon"
-  gun 53 61 "Bolt Cannon"
-  gun -42 63 "Bolt Cannon"
-  gun 42 63 "Bolt Cannon"
-  gun -31 65 "Bolt Cannon"
-  gun 31 65 "Bolt Cannon"
-  turret -7 -4 "Bolt Turret"
-  turret 7 -4 "Bolt Turret"
-  turret -23 14 "Bolt Turret"
-  turret 23 14 "Bolt Turret"
+  gun -86 55
+  gun 86 55
+  gun -75 57
+  gun 75 57
+  gun -64 59
+  gun 64 59
+  gun -53 61
+  gun 53 61
+  gun -42 63
+  gun 42 63
+  gun -31 65
+  gun 31 65
+  turret -7 -4
+  turret 7 -4
+  turret -23 14
+  turret 23 14
   explode "small explosion" 25
   explode "medium explosion" 35
   explode "large explosion" 45

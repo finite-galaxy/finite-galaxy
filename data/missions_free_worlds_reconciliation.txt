@@ -178,8 +178,8 @@ mission "FW Reconciliation 1B"
     personality heroic staying nemesis
     system Gienah
     government "Syndicate"
-    ship "Splinter (Impact)" "Silence"
-    ship "Manta (Mark II)" "Morning Star"
+    ship "Argosy" "Silence"
+    ship "Argosy" "Morning Star"
     ship "Quicksilver (Mark II)" "Light-Bearer"
   
   on complete
@@ -462,23 +462,23 @@ mission "FW Defend Farpoint"
     fleet
       names "pirate"
       variant
-        "Leviathan (Heavy)"
+        "Leviathan"
         "Firebird (Laser)" 2
-        "Hawk (Javelin)" 2
+        "Hawk (Laser)" 2
     fleet
       names "pirate"
       variant
         "Leviathan"
-        "Raven (Afterburner)" 2
+        "Raven" 2
     fleet
       names "pirate"
       variant
-        "Leviathan (North)"
+        "Leviathan"
         "Firebird" 3
     fleet
       names "pirate"
       variant
-        "Splinter (Impact)"
+        "Argosy"
         "Manta" 2
         "Quicksilver" 5
   
@@ -649,7 +649,7 @@ mission "FW Embassy 1C"
     fleet
       names "pirate"
       variant
-        "Raven (Afterburner)" 6
+        "Raven" 6
   
   npc
     government "Pirate"
@@ -658,13 +658,13 @@ mission "FW Embassy 1C"
     fleet
       names "pirate"
       variant
-        "Leviathan (Heavy)"
-        "Firebird (Laser)" 2
+        "Leviathan"
+        "Firebird" 2
     fleet
       names "pirate"
       variant
         "Leviathan"
-        "Firebird" 2
+        "Firebird (Laser)" 2
   
   npc
     government "Pirate"
@@ -673,7 +673,7 @@ mission "FW Embassy 1C"
     fleet
       names "pirate"
       variant
-        "Splinter (Impact)" 2
+        "Argosy" 2
         "Manta" 3
         "Quicksilver" 6
 
@@ -713,9 +713,9 @@ mission "FW Syndicate Capture 1"
   npc accompany save
     personality escort heroic waiting
     government "Deep"
-    ship "Leviathan (Heavy)" "D.D.S. Unbreakable"
-    ship "Aerie (Mark II)" "D.D.S. Eagle Eye"
-    ship "Aerie (Mark II)" "D.D.S. Sharp Beak"
+    ship "Lance" "D.D.S. Unbreakable"
+    ship "Aerie" "D.D.S. Eagle Eye"
+    ship "Aerie" "D.D.S. Sharp Beak"
 
 
 
@@ -757,9 +757,9 @@ mission "FW Syndicate Capture 1B"
   npc
     personality escort heroic waiting
     government "Deep"
-    ship "Leviathan (Heavy)" "D.D.S. Unbreakable"
-    ship "Aerie (Mark II)" "D.D.S. Eagle Eye"
-    ship "Aerie (Mark II)" "D.D.S. Sharp Beak"
+    ship "Lance" "D.D.S. Unbreakable"
+    ship "Aerie" "D.D.S. Eagle Eye"
+    ship "Aerie" "D.D.S. Sharp Beak"
     ship "Dagger" "Autumn One"
     ship "Dagger" "Autumn Two"
     ship "Dagger" "Autumn Three"
@@ -771,8 +771,8 @@ mission "FW Syndicate Capture 1B"
     fleet
       names "syndicate capital"
       variant
-        "Splinter (Impact)" 2
-        "Manta (Mark II)" 3
+        "Argosy" 2
+        "Argosy" 3
         "Quicksilver (Mark II)" 4
   npc
     system Ruchbah
@@ -1851,8 +1851,8 @@ mission "FW Pug 4B: Reinforcements"
     fleet
       names "syndicate capital"
       variant
-        "Splinter (Impact)"
-        "Manta (Mark II)" 2
+        "Argosy"
+        "Argosy" 2
         "Quicksilver (Mark II)" 4
     fleet
       names "syndicate capital"
@@ -2122,8 +2122,8 @@ mission "FW Pug 6"
     fleet 2
       names "syndicate capital"
       variant
-        "Splinter (Impact)"
-        "Manta (Mark II)" 2
+        "Argosy"
+        "Argosy" 2
         "Quicksilver (Mark II)" 4
     fleet 2
       names "syndicate capital"
@@ -2354,8 +2354,7 @@ mission "FW Syndicate Extremists 1B"
     fleet 2
       names "syndicate capital"
       variant
-        "Splinter"
-        "Quicksilver" 3
+        "Vanguard" 2
   
   npc
     government "Navy (Oathkeeper)"

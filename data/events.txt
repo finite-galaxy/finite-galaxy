@@ -119,7 +119,7 @@ event "plasma turret available"
     "Plasma Turret"
   fleet "Free Worlds Large"
     add variant 3
-      "Falcon (Plasma)"
+      "Lance (Plasma)"
 
 
 event "stack core available"
@@ -1190,16 +1190,16 @@ event "fw safe passage end"
 
 
 event "navy using mark ii ships"
-  shipyard "Centaur Advanced"
+  shipyard "Sisensis Advanced"
     "Mark III Drone"
-  shipyard "Centaur Intermediate"
+  shipyard "Sisensis Intermediate"
     "Mark III Drone"
-  shipyard "Centaur Basics"
+  shipyard "Sisensis Basics"
     "Mark III Drone"
   
   fleet "Navy Cargo"
     add variant 1
-      "Behemoth (Mark II)" 5
+      "Behemoth (Navy)" 5
       "Venus (Mark II)"
       "Mark III Drone" 4
       "Mars (Mark II)" 2
@@ -2338,7 +2338,7 @@ event "navy done with alcyone"
 event "navy using mark iii ships"
   fleet "Navy Cargo"
     add variant 1
-      "Behemoth (Mark III)" 5
+      "Behemoth (Navy)" 5
       "Venus (Mark III)"
       "Mark III Drone" 4
       "Mars (Mark III)" 2

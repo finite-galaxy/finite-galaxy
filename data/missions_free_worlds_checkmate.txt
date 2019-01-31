@@ -137,17 +137,17 @@ mission "FWC Attack Kaus Borealis"
       names "free worlds capital"
       variant
         "Dreadnought"
-        "Falcon (Heavy)"
-    fleet
-      names "free worlds capital"
-      variant
-        "Dreadnought"
-        "Falcon (Plasma)"
+        "Lance (Plasma)"
     fleet
       names "free worlds capital"
       variant
         "Dreadnought"
         "Osprey"
+    fleet
+      names "free worlds capital"
+      variant
+        "Dreadnought"
+        "Raven"
   
   npc evade
     personality staying heroic
@@ -286,7 +286,7 @@ mission "FWC Cebalrai 1B"
       names "free worlds capital"
       variant
         "Dreadnought"
-        "Falcon (Heavy)"
+        "Lance (Plasma)"
         "Hawk" 2
     fleet
       names "free worlds capital"
@@ -652,7 +652,7 @@ mission "FWC Checkmate 1"
       names "free worlds capital"
       variant
         "Dreadnought"
-        "Falcon (Heavy)"
+        "Lance (Plasma)"
         "Hawk" 2
     fleet
       names "free worlds capital"
@@ -672,7 +672,7 @@ mission "FWC Checkmate 1"
       names "free worlds capital"
       variant
         "Dreadnought"
-        "Falcon (Laser)"
+        "Lance (Plasma)"
   
   npc evade
     personality staying heroic
@@ -751,12 +751,12 @@ mission "FWC Checkmate 1"
       names "free worlds capital"
       variant
         "Dreadnought"
-        "Falcon"
+        "Lance"
     fleet
       names "free worlds capital"
       variant
         "Dreadnought"
-        "Falcon (Plasma)"
+        "Lance (Plasma)"
   
   npc
     personality heroic
@@ -773,17 +773,17 @@ mission "FWC Checkmate 1"
       names "free worlds capital"
       variant
         "Dreadnought"
-        "Falcon (Heavy)"
+        "Lance (Plasma)"
     fleet
       names "free worlds capital"
       variant
         "Dreadnought"
-        "Falcon (Plasma)"
+        "Osprey"
     fleet
       names "free worlds capital"
       variant
         "Dreadnought"
-        "Osprey (Javelin)"
+        "Osprey (Laser)"
   
   on complete
     log "Defended Tundra against a major Navy counter-offensive. From here, the only recourse available to the Free Worlds seems to be to push deep into Republic territory and capture the Sol system, forcing the Navy to surrender. Nuclear weapons are now for sale on Solace to aid in the final assault."
@@ -869,12 +869,12 @@ mission "FWC Checkmate 1B"
       names "free worlds capital"
       variant
         "Dreadnought"
-        "Falcon (Plasma)"
+        "Lance (Plasma)"
     fleet
       names "free worlds capital"
       variant
         "Dreadnought"
-        "Osprey (Javelin)"
+        "Osprey (Laser)"
   
   npc
     personality staying heroic uninterested disables
@@ -984,18 +984,18 @@ mission "FWC Checkmate Escorts"
         "Skein"
         "Hag" 6
         "Dreadnought"
-        "Falcon (Plasma)"
+        "Osprey"
     fleet
       names "free worlds capital"
       variant
         "Dreadnought"
-        "Falcon (Laser)"
-        "Osprey (Laser)"
+        "Lance (Plasma)"
+        "Osprey"
     fleet
       names "free worlds capital"
       variant
-        "Falcon (Heavy)"
-        "Osprey (Laser)"
+        "Lance (Plasma)"
+        "Osprey"
         "Stymphalian"
 
 
@@ -1054,9 +1054,7 @@ mission "FWC Pug 1"
       variant
         "Skein"
         "Hag" 6
-        "Hawk"
-        "Hawk (Blaster)"
-        "Hawk (Javelin)"
+        "Fury" 4
     fleet 4
       names "free worlds small"
       variant
@@ -1065,10 +1063,7 @@ mission "FWC Pug 1"
       names "free worlds small"
       variant
         "Bastion (Laser)"
-        "Argosy"
-        "Stymphalian"
-        "Stymphalian"
-        "Stymphalian"
+        "Stymphalian" 3
   
   npc evade
     personality staying disables heroic
@@ -1688,14 +1683,14 @@ mission "FWC Pug 3D: Reinforcements"
       fighters "free worlds fighter"
       variant
         "Dreadnought"
-        "Falcon (Plasma)"
+        "Lance (Plasma)"
         "Skein" 
         "Hag" 6
     fleet
       names "free worlds capital"
       variant
-        "Falcon (Heavy)"
-        "Osprey (Laser)"
+        "Lance (Plasma)"
+        "Osprey (Particle)"
         "Stymphalian"
 
 
@@ -2236,20 +2231,20 @@ mission "FWC Pug 6"
       fighters "free worlds fighter"
       variant
         "Dreadnought"
-        "Falcon (Plasma)"
+        "Lance (Plasma)"
         "Skein"
         "Hag" 6
     fleet
       names "free worlds capital"
       variant
         "Dreadnought"
-        "Falcon (Laser)"
-        "Osprey (Laser)"
+        "Lance (Plasma)"
+        "Osprey (Particle)"
     fleet
       names "free worlds capital"
       variant
-        "Falcon (Heavy)"
-        "Osprey (Laser)"
+        "Lance (Plasma)"
+        "Osprey (Particle)"
         "Stymphalian"
   
   on complete

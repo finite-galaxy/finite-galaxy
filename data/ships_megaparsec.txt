@@ -1,14 +1,9 @@
 shipyard "Megaparsec Variants"
-  "Flivver"
-  "Flivver (Hai)"
-  "Manta"
-  "Manta (Mark II)"
-  "Manta (Nuclear)"
-  "Manta (Plasma)"
   "Quicksilver"
   "Quicksilver (Mark II)"
   "Quicksilver (Patrol)"
   "Quicksilver (Plasma)"
+  "Quicksilver Test Dummy"
   "Scout"
   "Scout (Afterburner)"
   "Scout (Hai)"
@@ -16,199 +11,6 @@ shipyard "Megaparsec Variants"
   "Scout (Miner)"
   "Scout (Speedy)"
   "Thunderbolt"
-
-
-
-ship "Flivver"
-  sprite "ship/flivver"
-  thumbnail "thumbnail/flivver"
-  attributes
-    category "Interceptor"
-#    manufacturer "Betelgeuse"
-    licences
-      Pilot
-    "cost" 180000
-    "shields" 1400
-    "hull" 200
-    "required crew" 1
-    "bunks" 2
-    "mass" 40
-    "drag" 1.0
-    "heat dissipation" .9
-    "cargo space" 5
-    "outfit space" 140
-    "core space" 80
-    "engine space" 45
-    "weapon space" 15
-    weapon
-      "blast radius" 37
-      "shield damage" 80
-      "random shield damage" 290
-      "hull damage" 120
-      "random hull damage" 435
-      "heat damage" 2400
-      "random heat damage" 8700
-      "hit force" 200
-      "random hit force" 725
-  outfits
-    "D14-RN Shield Generator"
-    "Dwarf Core"
-    "Hyperdrive"
-
-    "A120 Atomic Thruster"
-    "A125 Atomic Steering"
-
-    "Supercapacitor"
-    "Fuel Pod" 10
-    "Tactical Scanner" 1
-  engine -16 27
-  engine 16 27
-  gun -6 -31
-  gun 6 -31
-  leak "leak" 60 50
-  explode "tiny explosion" 10
-  explode "small explosion" 10
-  description "The Flivver is the fastest ship for sale, designed to outspeed anything else. As a consequence, it has space for neither cargo nor passengers nor heavy weaponry. Flivvers are sold mostly to wealthy individuals who want to be able to travel the stars without needing to share a bunk room on a merchant transport with common people, and to rich youths obsessed with racing."
-
-
-ship "Flivver" "Flivver (Hai)"
-  outfits
-    "Corundum Regenerator"
-    "Pebble Core"
-    "Hyperdrive"
-
-    "Benga Atomic Thruster"
-    "Basrem Atomic Steering"
-
-    "Chasm Batteries"
-    "Williwaw Cooling"
-    "Fuel Pod" 10
-    "Yoloy Scanner"
-
-
-
-ship "Manta"
-  sprite "ship/manta"
-  thumbnail "thumbnail/manta"
-  attributes
-    category "Corvette"
-#    manufacturer "Megaparsec"
-    licences
-      Pilot
-    "cost" 3400000
-    "shields" 5900
-    "hull" 1500
-    "required crew" 6
-    "bunks" 10
-    "mass" 170
-    "drag" 4.7
-    "heat dissipation" .8
-    "cargo space" 20
-    "outfit space" 370
-    "core space" 150
-    "engine space" 100
-    "weapon space" 120
-    weapon
-      "blast radius" 112
-      "shield damage" 340
-      "random shield damage" 780
-      "hull damage" 510
-      "random hull damage" 1170
-      "heat damage" 10200
-      "random heat damage" 41400
-      "hit force" 850
-      "random hit force" 1950
-  outfits
-    "D41-HY Shield Generator"
-    "RT-I Radiothermal"
-    "Hyperdrive"
-
-    "IT-3700 Ion Thruster"
-    "IS-3200 Ion Steering"
-
-    "Particle Cannon" 4
-
-    "LP144a Battery Pack"
-    "Cooling Ducts"
-    "Fuel Pod" 23
-    "Tactical Scanner" 4
-  engine -33 38
-  engine 33 38
-  gun -21 -35 "Particle Cannon"
-  gun 21 -35 "Particle Cannon"
-  gun -27 -35 "Particle Cannon"
-  gun 27 -35 "Particle Cannon"
-  leak "leak" 60 50
-  leak "flame" 40 80
-  explode "tiny explosion" 10
-  explode "small explosion" 20
-  explode "medium explosion" 15
-  "final explode" "final explosion small"
-  description "After their Quicksilver light warship with its armament of particle cannons became a large success with convoy escorts and planetary defence forces, Megaparsec decided to develop a larger ship with similar manoeuvrability but heavier firepower. The Manta is the result: a ship with enough long-range firepower that fleeing from a battle with it is almost impossible."
-
-
-ship "Manta" "Manta (Mark II)"
-  outfits
-    "D41-HY Shield Generator"
-    "Fission Reactor"
-    "Hyperdrive"
-
-    "A370 Atomic Thruster"
-    "A375 Atomic Steering"
-
-    "Electron Cannon" 4
-
-    "LP072a Battery Pack"
-    "Liquid Nitrogen Cooler"
-    "Fuel Pod" 23
-    "Tactical Scanner" 4
-    "Laser Rifle" 10
-
-
-ship "Manta" "Manta (Nuclear)"
-  add attributes
-    "core space" -20
-    "weapon space" 20
-  outfits
-    "S-270 Regenerator"
-    "Fission Reactor"
-    "Hyperdrive"
-
-    "A370 Atomic Thruster"
-    "A375 Atomic Steering"
-
-    "Nuclear Missile" 2
-    "Particle Cannon" 2
-    "Plasma Cannon" 2
-
-    "LP072a Battery Pack"
-    "Liquid Nitrogen Cooler"
-    "Fuel Pod" 23
-    "Extra Outfit Space" 2
-    "Laser Rifle" 10
-  gun -21 -35 "Plasma Cannon"
-  gun 21 -35 "Plasma Cannon"
-  gun -27 -35 "Particle Cannon"
-  gun 27 -35 "Particle Cannon"
-  gun -66 -32 "Nuclear Missile"
-  gun 66 -32 "Nuclear Missile"
-
-
-ship "Manta" "Manta (Plasma)"
-  outfits
-    "D41-HY Shield Generator"
-    "RT-I Radiothermal"
-    "Hyperdrive"
-
-    "IT-3700 Ion Thruster"
-    "IS-3200 Ion Steering"
-
-    "Plasma Cannon" 4
-
-    "LP144a Battery Pack"
-    "Liquid Nitrogen Cooler"
-    "Fuel Pod" 23
-    "Tactical Scanner" 4
 
 
 
@@ -259,8 +61,8 @@ ship "Quicksilver"
     "Tactical Scanner" 4
   engine -17 54
   engine 17 54
-  gun -6 -38 "Particle Cannon"
-  gun 6 -38 "Particle Cannon"
+  gun -6 -38
+  gun 6 -38
   leak "leak" 50 50
   explode "tiny explosion" 12
   explode "small explosion" 16
@@ -323,13 +125,19 @@ ship "Quicksilver" "Quicksilver (Plasma)"
     "Tactical Scanner" 4
 
 
+ship "Quicksilver" "Quicksilver Test Dummy"
+  add attributes
+    "automaton" 1
+    "self destruct" 1
+
+
 
 ship "Scout"
   sprite "ship/scout"
   thumbnail "thumbnail/scout"
   attributes
     category "Interceptor"
-#    manufacturer "Lionheart"
+#    manufacturer "Megaparsec"
     licences
       Pilot
     "cost" 850000
@@ -372,9 +180,9 @@ ship "Scout"
     "Tactical Scanner" 4
   engine -8 46
   engine 8 46
-  gun -20 -7 "X1 Blaster Cannon"
-  gun 20 -7 "X1 Blaster Cannon"
-  turret 0 -7 "AM5 Anti-Missile"
+  gun -20 -7
+  gun 20 -7
+  turret 0 -7
   explode "tiny explosion" 10
   explode "small explosion" 20
   explode "medium explosion" 15
@@ -530,12 +338,12 @@ ship "Thunderbolt"
     "Tactical Scanner" 4
   engine -11 118
   engine 11 118
-  gun -12 -68 "Sidewinder Missile Launcher"
-  gun 12 -68 "Sidewinder Missile Launcher"
-  gun -14 -60 "Sidewinder Missile Launcher"
-  gun 14 -60 "Sidewinder Missile Launcher"
-  turret 0 -11 "X8 Blaster Turret"
-  turret 0 74 "Heavy Anti-Missile"
+  gun -12 -68
+  gun 12 -68
+  gun -14 -60
+  gun 14 -60
+  turret 0 -11
+  turret 0 74
   leak "leak" 40 50
   leak "flame" 50 80
   leak "big leak" 90 30

@@ -270,20 +270,18 @@ ship "Star Queen"
 
     "IT-3700 Ion Thruster"
     "IS-3200 Ion Steering"
+    "IR-3700 Ion Reverse"
 
-    "Meteor Missile" 108
-    "Meteor Missile Box" 3
-    "Meteor Missile Launcher" 3
     "Heavy Anti-Missile" 2
 
-    "LP036a Battery Pack"
+    "LP072a Battery Pack"
     "Fuel Pod" 36
     "Tactical Scanner" 5
   engine -18 116
   engine 18 116
-  gun 0 -116 "Meteor Missile Launcher"
-  gun -22 -80 "Meteor Missile Launcher"
-  gun 22 -80 "Meteor Missile Launcher"
+  gun 0 -116
+  gun -22 -80
+  gun 22 -80
   turret -28 -9 "Heavy Anti-Missile"
   turret 28 -9 "Heavy Anti-Missile"
   leak "leak" 50 50

@@ -1840,7 +1840,7 @@ mission "FW Bounty 3"
     personality heroic staying nemesis target
     government Bounty
     system "Shaula"
-    ship "Osprey (Hai)" "Silverhawk"
+    ship "Osprey (Ion)" "Silverhawk"
     dialogue `The <npc> has been eliminated. You can claim the bounty payment by returning to <destination>.`
   
   on complete
@@ -2065,7 +2065,7 @@ mission "Defend Sabik"
     fleet
       names "free worlds capital"
       variant
-        "Falcon"
+        "Lance"
         "Hawk" 2
     fleet
       names "free worlds small"
@@ -2084,7 +2084,7 @@ mission "Defend Sabik"
     fleet
       names "free worlds capital"
       variant
-        "Falcon"
+        "Lance"
         "Osprey" 2
         "Hawk" 3
         "Harpy" 5
@@ -2110,7 +2110,7 @@ mission "Defend Sabik"
     fleet
       names "free worlds capital"
       variant
-        "Falcon" 2
+        "Lance" 2
   npc
     personality heroic waiting disables
     government "Free Worlds"

@@ -1,416 +1,425 @@
 shipyard "Centaur Variants"
-  "Bastion"
-  "Bastion (Heavy)"
-  "Bastion (Laser)"
-  "Bastion (Patrol)"
-  "Clipper"
-  "Clipper (Javelin)"
-  "Clipper (Miner)"
-  "Clipper (Particle)"
-  "Clipper (Speedy)"
-  "Mark I Drone"
-  "Mark II Drone"
+  "Bactrian"
+  "Bactrian (Hired Gun)"
+  "Foxhound"
+  "Mongrel"
+  "Mongrel (Anti-Missile)"
+  "Mongrel (Electron)"
+  "Mongrel (Particle)"
+  "Mongrel (Plasma)"
+  "Mule"
+  "Mule (Hai)"
+  "Mule (Heavy)"
+  "Watch Dog"
 
 
 
-ship "Bastion"
-  sprite "ship/bastion"
-  thumbnail "thumbnail/bastion"
+ship "Bactrian"
+  sprite "ship/bactrian"
+  thumbnail "thumbnail/bactrian"
   attributes
-    category "Frigate"
+    category "Cruiser"
 #    manufacturer "Centaur"
     licences
-      Pilot
-    "cost" 3560000
-    "shields" 6700
-    "hull" 4200
-    "required crew" 17
-    "bunks" 40
-    "mass" 580
-    "drag" 10.3
-    "heat dissipation" .5
-    "cargo space" 110
-    "outfit space" 530
-    "core space" 230
-    "engine space" 120
-    "weapon space" 180
+      Bactrian
+    "cost" 17600000
+    "shields" 17500
+    "hull" 8600
+    "required crew" 70
+    "bunks" 245
+    "mass" 940
+    "drag" 16.1
+    "heat dissipation" .4
+    "cargo space" 530
+    "outfit space" 930
+    "core space" 450
+    "engine space" 180
+    "weapon space" 300
     weapon
-      "blast radius" 244
-      "shield damage" 1160
-      "random shield damage" 1280
-      "hull damage" 1740
-      "random hull damage" 1920
-      "heat damage" 34800
-      "random heat damage" 38400
-      "hit force" 2900
-      "random hit force" 3200
-  outfits
-    "D67-TM Shield Generator"
-    "Fission Reactor"
-    "Hyperdrive"
-
-    "IT-3700 Ion Thruster"
-    "IS-4200 Ion Steering"
-
-    "Particle Cannon" 2
-    "X6 Blaster Turret" 2
-    "Heavy Anti-Missile"
-
-    "LP144a Battery Pack"
-    "Liquid Water Cooler"
-    "Fuel Pod" 61
-    "Large Radar Jammer"
-    "Tactical Scanner" 4
-  engine -28 85
-  engine 28 85
-  gun -54 -14 "Particle Cannon"
-  gun 54 -14 "Particle Cannon"
-  turret 0 0 "Heavy Anti-Missile"
-  turret -30 14 "X6 Blaster Turret"
-  turret 30 14 "X6 Blaster Turret"
-  leak "leak" 40 50
-  leak "flame" 40 80
-  leak "big leak" 70 30
-  explode "tiny explosion" 5
-  explode "small explosion" 15
-  explode "medium explosion" 30
-  explode "large explosion" 20
-  "final explode" "final explosion medium"
-  description "The Centaur Bastion is designed as a heavy defence platform to accompany freighter convoys, in addition to having enough cargo capacity to serve as a freighter in its own right. Because of its heavy armament, it is classified as a warship rather than a freighter."
-
-
-ship "Bastion" "Bastion (Heavy)"
+      "blast radius" 480
+      "shield damage" 1880
+      "random shield damage" 2920
+      "hull damage" 2820
+      "random hull damage" 4380
+      "heat damage" 56400
+      "random heat damage" 87600
+      "hit force" 4700
+      "random hit force" 7300
   outfits
     "D94-YV Shield Generator"
     "Fusion Reactor"
     "Hyperdrive"
 
-    "IT-3700 Ion Thruster"
-    "IS-4200 Ion Steering"
-    "Afterburner"
+    "IT-4700 Ion Thruster"
+    "IS-5200 Ion Steering"
 
-    "Sidewinder Missile" 60
-    "Sidewinder Missile Rack" 20
-    "Sidewinder Missile Launcher" 2
-    "X6 Blaster Turret" 3
+    "Sidewinder Missile" 90
+    "Sidewinder Missile Rack" 30
+    "Sidewinder Missile Launcher" 3
+    "X6 Blaster Turret" 4
+    "Heavy Anti-Missile" 2
 
-    "Supercapacitor" 2
+    "LP144a Battery Pack"
     "Liquid Nitrogen Cooler"
-    "Fuel Pod" 61
-    "Large Radar Jammer"
-    "Tactical Scanner" 4
-    "Extra Outfit Space" 3
+    "Fuel Pod" 196
+    "Large Radar Jammer" 2
+    "Ramscoop" 2
+    "Tactical Scanner" 6
+  engine -18 230
+  engine 18 230
+  gun 0 -232
+  gun -15 -226
+  gun 15 -226
+  turret -22 -148 "X6 Blaster Turret"
+  turret 26 -80 "Heavy Anti-Missile"
+  turret -41 -20 "X6 Blaster Turret"
+  turret 32 -7 "X6 Blaster Turret"
+  turret 53 82 "X6 Blaster Turret"
+  turret -37 186 "Heavy Anti-Missile"
+  fighter -38 -26
+  fighter 35 36
+  fighter -47 97
+  leak "leak" 30 50
+  leak "flame" 30 80
+  leak "big leak" 50 30
+  explode "small explosion" 25
+  explode "medium explosion" 35
+  explode "large explosion" 45
+  explode "huge explosion" 30
+  "final explode" "final explosion large"
+  description "The Centaur Bactrian is the last of the great city-ships, a design hearkening back to the early days of space colonization when a long-distance vessel needed to be a self-contained world, able to survive for weeks at a time without encountering an inhabited planet. It is not only a freighter, but a carrier, and a capable warship either at short range or at a distance. Naturally, this versatility also makes it extremely expensive, and the Bactrian is not normally for sale to ordinary citizens."
 
 
-ship "Bastion" "Bastion (Laser)"
+ship "Bactrian" "Bactrian (Hired Gun)"
   outfits
-    "D67-TM Shield Generator"
+    "S-970 Regenerator" 2
+    "Fusion Reactor"
     "Fission Reactor"
     "Hyperdrive"
 
-    "IT-3700 Ion Thruster"
-    "IS-4200 Ion Steering"
+    "A520 Atomic Thruster"
+    "A525 Atomic Steering"
 
-    "Heavy Laser Cannon" 2
-    "Heavy Laser Turret" 3
+    "Impact Missile" 60
+    "Impact Missile Rack" 15
+    "Impact Missile Launcher" 3
+    "Heavy Laser Turret" 6
 
-    "LP144a Battery Pack"
-    "Liquid Water Cooler"
-    "Fuel Pod" 61
-    "Tactical Scanner" 4
-
-
-ship "Bastion" "Bastion (Patrol)"
-  outfits
-    "D67-TM Shield Generator"
-    "Fission Reactor"
-    "Hyperdrive"
-
-    "IT-3700 Ion Thruster"
-    "IS-4200 Ion Steering"
-
-    "Particle Cannon" 2
-    "X6 Blaster Turret" 2
-    "Heavy Anti-Missile"
-
-    "LP144a Battery Pack"
-    "Liquid Water Cooler"
-    "Cargo Scanner"
-    "Fuel Pod" 61
-    "Large Radar Jammer"
-    "Outfit Scanner"
-    "Tactical Scanner" 4
+    "LP036a Battery Pack"
+    "Liquid Helium Cooler"
+    "Liquid Nitrogen Cooler"
+    "Fuel Pod" 196
+    "Tactical Scanner" 6
+    "Extra Outfit Space" 9
+    "Laser Rifle" 240
 
 
 
-ship "Clipper"
-  sprite "ship/clipper"
-  thumbnail "thumbnail/clipper"
+ship "Foxhound"
+  sprite "ship/foxhound"
+  thumbnail "thumbnail/foxhound"
   attributes
-    category "Corvette"
+    category "Fighter"
+#    manufacturer "Centaur"
+    "carried" 2
+    "cost" 93000
+    "shields" 800
+    "hull" 400
+    "required crew" 1
+    "bunks" 1
+    "mass" 30
+    "drag" .7
+    "heat dissipation" .8
+    "outfit space" 90
+    "core space" 45
+    "engine space" 31
+    "weapon space" 14
+    weapon
+      "blast radius" 24
+      "shield damage" 60
+      "random shield damage" 180
+      "hull damage" 90
+      "random hull damage" 270
+      "heat damage" 1800
+      "random heat damage" 5400
+      "hit force" 150
+      "random hit force" 450
+  outfits
+    "D14-RN Shield Generator"
+    "nGVF-BB Fuel Cell"
+
+    "IT-1700 Ion Thruster"
+    "IS-1200 Ion Steering"
+
+    "X1 Blaster Cannon" 2
+
+    "LP036a Battery Pack"
+    "Small Radar Jammer"
+    "Tactical Scanner"
+    "Laser Rifle"
+  engine -15 30
+  engine 15 30
+  gun -14 -10
+  gun 14 -10
+  explode "tiny explosion" 15
+  explode "small explosion" 5
+  description "The Foxhound is the primary fighter used by the Republic Navy. As with all fighters, it is weak by itself but very effective as part of a larger squadron."
+
+
+
+ship "Mongrel"
+  sprite "ship/mongrel"
+  thumbnail "thumbnail/mongrel"
+  attributes
+    category "Bomber"
 #    manufacturer "Centaur"
     licences
       Pilot
-    "cost" 900000
-    "shields" 2700
-    "hull" 800
-    "required crew" 3
-    "bunks" 9
-    "mass" 150
-    "drag" 3.7
-    "heat dissipation" .8
-    "cargo space" 70
-    "outfit space" 290
-    "core space" 150
-    "engine space" 80
-    "weapon space" 60
+    "carried" 3
+    "cost" 50000
+    "shields" 700
+    "hull" 300
+    "required crew" 1
+    "bunks" 2
+    "mass" 40
+    "drag" .8
+    "heat dissipation" .75
+    "outfit space" 90
+    "core space" 40
+    "engine space" 20
+    "weapon space" 30
     weapon
-      "blast radius" 102
-      "shield damage" 300
-      "random shield damage" 720
-      "hull damage" 450
-      "random hull damage" 1080
-      "heat damage" 9000
-      "random heat damage" 21600
-      "hit force" 750
-      "random hit force" 1800
+      "blast radius" 26
+      "shield damage" 80
+      "random shield damage" 180
+      "hull damage" 120
+      "random hull damage" 270
+      "heat damage" 2400
+      "random heat damage" 5400
+      "hit force" 200
+      "random hit force" 450
   outfits
-    "D41-HY Shield Generator"
-    "RT-I Radiothermal"
-    "Hyperdrive"
+    "D14-RN Shield Generator"
+    "nGVF-AA Fuel Cell"
 
-    "IT-3700 Ion Thruster"
-    "IS-3200 Ion Steering"
+    "IC-900 Ion Engines"
 
-    "X1 Blaster Cannon" 4
+    "X1 Blaster Cannon"
+    "X2 Blaster Turret"
 
-    "LP036a Battery Pack"
-    "Fuel Pod" 26
-    "Small Radar Jammer"
-    "Tactical Scanner"
-  engine -20 45
-  engine 20 45
-  gun -23 -19 "X1 Blaster Cannon"
-  gun 23 -19 "X1 Blaster Cannon"
-  gun -12 -7 "X1 Blaster Cannon"
-  gun 12 -7 "X1 Blaster Cannon"
+    "LP072a Battery Pack"
+  engine -10 28
+  engine 9 28
+  gun -9 -29
+  turret 8 6
   leak "leak" 60 50
-  leak "flame" 50 80
   explode "tiny explosion" 15
-  explode "small explosion" 20
-  explode "medium explosion" 10
-  "final explode" "final explosion small"
-  description "The Clipper is the smaller sister ship to the venerable Centaur Bastion. Although not able to carry as much cargo, Clippers are versatile ships that can be used as passenger transports, couriers, or even warships in a pinch, and they come with enough free space to be customized based on an individual captain's needs."
+  explode "small explosion" 5
+  description "The design of the Mongrel seems to be a Mule condensed to the level of a Dagger, and as you look at the cockpit nestled between the massive gun port and turret mount, you wonder where the power systems are supposed to go. Needless to say, there is no room for a hyperdrive, fuel barrels, or cargo. The Mongrel is categorized as a bomber rather than a fighter, because of its relatively high weapon space, and because its awkward shape makes it unable to fit into ordinary fighter bays. Though its operation range is currently rather limited, it seems flexible enough to become a dangerous addition to warfleets, if ever any bomber carriers will be designed."
 
 
-ship "Clipper" "Clipper (Javelin)"
+ship "Mongrel" "Mongrel (Anti-Missile)"
   outfits
-    "D41-HY Shield Generator"
-    "RT-I Radiothermal"
-    "Hyperdrive"
+    "D14-RN Shield Generator"
+    "nGVF-AA Fuel Cell"
 
-    "IT-3700 Ion Thruster"
-    "IS-3200 Ion Steering"
+    "IC-900 Ion Engines"
 
-    "Javelin" 256
-    "Javelin Storage Crate" 4
-    "Javelin Pod" 4
+    "Heavy Anti-Missile"
 
     "LP036a Battery Pack"
-    "Fuel Pod" 26
-    "Small Radar Jammer"
-    "Tactical Scanner"
 
 
-ship "Clipper" "Clipper (Miner)"
+ship "Mongrel" "Mongrel (Electron)"
   outfits
-    "D41-HY Shield Generator"
-    "RT-I Radiothermal"
-    "Hyperdrive"
+    "D14-RN Shield Generator"
+    "nGVF-AA Fuel Cell"
 
-    "IT-3700 Ion Thruster"
-    "IS-3200 Ion Steering"
+    "IC-900 Ion Engines"
 
-    "Heavy Laser Cannon" 4
+    "Electron Cannon"
 
     "LP036a Battery Pack"
-    "Asteroid Scanner"
-    "Fuel Pod" 26
-    "Ramscoop"
-    "Tactical Scanner"
 
 
-ship "Clipper" "Clipper (Particle)"
+ship "Mongrel" "Mongrel (Particle)"
   outfits
-    "D41-HY Shield Generator"
-    "RT-I Radiothermal"
-    "Hyperdrive"
+    "D14-RN Shield Generator"
+    "nGVF-AA Fuel Cell"
 
-    "IT-3700 Ion Thruster"
-    "IS-3200 Ion Steering"
+    "IC-900 Ion Engines"
 
-    "Particle Cannon" 2
+    "Particle Cannon"
 
     "LP036a Battery Pack"
-    "Fuel Pod" 26
-    "Small Radar Jammer"
-    "Tactical Scanner"
 
 
-ship "Clipper" "Clipper (Speedy)"
+ship "Mongrel" "Mongrel (Plasma)"
+  outfits
+    "D14-RN Shield Generator"
+    "nGVF-AA Fuel Cell"
+
+    "IC-900 Ion Engines"
+
+    "Plasma Cannon"
+
+    "LP036a Battery Pack"
+
+
+
+ship "Mule"
+  sprite "ship/mule"
+  thumbnail "thumbnail/mule"
+  attributes
+    category "Frigate"
+#    manufacturer "Centaur"
+    licences
+      Pilot
+    "cost" 4580000
+    "shields" 5400
+    "hull" 4400
+    "required crew" 6
+    "bunks" 43
+    "mass" 320
+    "drag" 5.7
+    "heat dissipation" .5
+    "cargo space" 270
+    "outfit space" 520
+    "core space" 200
+    "engine space" 110
+    "weapon space" 210
+    weapon
+      "blast radius" 222
+      "shield damage" 640
+      "random shield damage" 1580
+      "hull damage" 960
+      "random hull damage" 2370
+      "heat damage" 19200
+      "random heat damage" 47400
+      "hit force" 1600
+      "random hit force" 3950
   outfits
     "D41-HY Shield Generator"
     "Fission Reactor"
     "Hyperdrive"
 
-    "A250 Atomic Thruster"
-    "A255 Atomic Steering"
+    "IT-3700 Ion Thruster"
+    "IS-4200 Ion Steering"
 
-    "Heavy Laser Cannon" 4
+    "Sidewinder Missile" 30
+    "Sidewinder Missile Rack" 10
+    "Sidewinder Missile Launcher"
+    "X4 Blaster Turret" 3
+    "Heavy Anti-Missile"
+
+    "Liquid Nitrogen Cooler"
+    "LP144a Battery Pack"
+    "Fuel Pod" 75
+    "Large Radar Jammer"
+    "Ramscoop"
+    "Tactical Scanner" 4
+  engine -12 123
+  engine 12 123
+  gun 0 -123
+  turret 22 -65 "X4 Blaster Turret"
+  turret -37 -21 "X4 Blaster Turret"
+  turret 39 35 "X4 Blaster Turret"
+  turret -9 59 "Heavy Anti-Missile"
+  fighter -16 -9
+  leak "leak" 50 50
+  leak "flame" 80 80
+  leak "big leak" 80 30
+  explode "tiny explosion" 10
+  explode "small explosion" 30
+  explode "medium explosion" 20
+  "final explode" "final explosion medium"
+  description "The Mule is as much of a hodgepodge as its looks suggest. The Centaur ship designers combined a good deal of cargo space with a decent amount of weaponry and even a fighter bay, and ended up with a ship that is mostly used as a freighter but must be classified as a warship because of its heavy armament and shields."
+
+
+ship "Mule" "Mule (Hai)"
+  outfits
+    "Diamond Regenerator"
+    "Geode Reactor"
+    "Hyperdrive"
+
+    "Bondir Atomic Thruster"
+    "Biroo Atomic Steering"
+
+    "Tracker" 56
+    "Tracker Storage Pod"
+    "Tracker Launcher"
+    "Pulse Turret" 3
+    "Chameleon Anti-Missile"
+
+    "Gorge Batteries"
+    "Williwaw Cooling" 2
+    "Fuel Pod" 75
+    "Ramscoop"
+    "Yoloy Scanner"
+    "Extra Outfit Space" 4
+
+
+ship "Mule" "Mule (Heavy)"
+  outfits
+    "D94-YV Shield Generator"
+    "NT-200 Nucleovoltaic"
+    "Dwarf Core"
+    "Hyperdrive"
+
+    "A370 Atomic Thruster"
+    "A375 Atomic Steering"
+
+    "Impact Missile" 20
+    "Impact Missile Rack" 5
+    "Impact Missile Launcher"
+    "Heavy Laser Turret" 4
 
     "LP036a Battery Pack"
-    "Liquid Water Cooler"
-    "Fuel Pod" 26
-    "Small Radar Jammer"
-    "Tactical Scanner" 2
+    "Liquid Nitrogen Cooler"
+    "Fuel Pod" 75
+    "Ramscoop"
+    "Tactical Scanner" 4
+    "Extra Outfit Space" 8
+    "Laser Rifle" 40
 
 
 
-ship "Mark I Drone"
-  sprite "ship/drone"
-  thumbnail "thumbnail/drone"
+ship "Watch Dog"
+  sprite "ship/watch_dog"
+  thumbnail "thumbnail/watch_dog"
   attributes
     category "Drone"
 #    manufacturer "Centaur"
     licences
       Navy
     "carried" 1
-    "cost" 83000
-    "hull" 700
+    "cost" 50000
+    "hull" 300
     "automaton" 1
-    "mass" 20
-    "drag" .6
+    "mass" 15
+    "drag" .5
     "heat dissipation" .9
-    "outfit space" 75
-    "core space" 45
-    "engine space" 22
-    "weapon space" 8
+    "outfit space" 60
+    "core space" 40
+    "engine space" 20
     weapon
-      "blast radius" 19
-      "shield damage" 40
-      "random shield damage" 150
-      "hull damage" 60
-      "random hull damage" 225
-      "heat damage" 1200
-      "random heat damage" 4500
-      "hit force" 100
-      "random hit force" 375
+      "blast radius" 15
+      "shield damage" 30
+      "random shield damage" 120
+      "hull damage" 45
+      "random hull damage" 180
+      "heat damage" 900
+      "random heat damage" 3600
+      "hit force" 75
+      "random hit force" 300
   outfits
-    "nGVF-CC Fuel Cell"
+    "IC-900 Ion Engines"
 
-    "A120 Atomic Thruster"
-    "A125 Atomic Steering"
-
-    "Laser Cannon"
-
-    "Supercapacitor" 3
-    "Small Radar Jammer"
-  engine -9 29
-  engine 9 29
-  gun 0 -29 "Laser Cannon"
+    "KP-6 Photovoltaic Array"
+    "LP036a Battery Pack"
+    "Surveillance Pod"
+  engine -5 29
+  engine 5 29
   explode "tiny explosion" 15
-  description "The Mark I Drone is a very fast, pilotless attack ship, designed at the request of the Navy, to reduce their fighter pilot death rate. Although the Mark I Drone is still for sale, the Navy now uses its newer incranations."
-
-
-
-ship "Mark II Drone"
-  sprite "ship/drone"
-  thumbnail "thumbnail/drone"
-  attributes
-    category "Drone"
-#    manufacturer "Centaur"
-    licences
-      Navy
-    "carried" 1
-    "cost" 83000
-    "hull" 700
-    "automaton" 1
-    "mass" 20
-    "drag" .6
-    "heat dissipation" .9
-    "outfit space" 75
-    "core space" 38
-    "engine space" 22
-    "weapon space" 15
-    weapon
-      "blast radius" 19
-      "shield damage" 40
-      "random shield damage" 150
-      "hull damage" 60
-      "random hull damage" 225
-      "heat damage" 1200
-      "random heat damage" 4500
-      "hit force" 100
-      "random hit force" 375
-  outfits
-    "nGVF-BB Fuel Cell"
-
-    "A120 Atomic Thruster"
-    "A125 Atomic Steering"
-
-    "Heavy Laser Cannon"
-
-    "Supercapacitor" 5
-    "Small Radar Jammer"
-  engine -9 29
-  engine 9 29
-  gun 0 -29 "Heavy Laser Cannon"
-  explode "tiny explosion" 15
-  description "The Mark II Drone is used exclusively by the Republic Navy. Although very weak and easy to destroy, they can be quite effective in large numbers. Because drones do not need to accomodate life support systems, a cockpit, bunks, cargo space, or shield emitters, they can have similar firepower and a stronger hull than larger fighters or interceptors."
-
-
-ship "Mark III Drone"
-  sprite "ship/drone"
-  thumbnail "thumbnail/drone"
-  attributes
-    category "Drone"
-#    manufacturer "Centaur"
-    licences
-      Navy
-    "carried" 1
-    "cost" 83000
-    "hull" 700
-    "automaton" 1
-    "mass" 20
-    "drag" .6
-    "heat dissipation" .9
-    "outfit space" 75
-    "core space" 31
-    "engine space" 22
-    "weapon space" 22
-    weapon
-      "blast radius" 19
-      "shield damage" 40
-      "random shield damage" 150
-      "hull damage" 60
-      "random hull damage" 225
-      "heat damage" 1200
-      "random heat damage" 4500
-      "hit force" 100
-      "random hit force" 375
-  outfits
-    "nGVF-BB Fuel Cell"
-
-    "A120 Atomic Thruster"
-    "A125 Atomic Steering"
-
-    "Electron Cannon"
-
-    "Supercapacitor" 2
-    "Small Radar Jammer"
-  engine -9 29
-  engine 9 29
-  gun 0 -29 "Electron Cannon"
-  explode "tiny explosion" 15
-  description "The Mark III Drone is externally identical to its predecessors, but internally it has reduced core space to increase its weapon space, sacrificing energy to accomodate a larger cannon."
+  description "Watch Dogs are unarmed drones used by the Republic navy to scan ships and planets in a star system."
 
