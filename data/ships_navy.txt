@@ -1,4 +1,5 @@
 shipyard "Navy Variants"
+  "Jupiter"
   "Mars"
   "Mars (Mark II)"
   "Mars (Mark III)"
@@ -16,6 +17,65 @@ shipyard "Navy Variants"
   "Venus (Mark II)"
   "Venus (Mark III)"
   "Venus (Surveillance)"
+
+
+
+ship "Jupiter"
+  sprite "ship/colony_ship"
+#  thumbnail "thumbnail/jupiter"
+  attributes
+    category "Battleship"
+#    manufacturer "Navy"
+    licences
+      Jupiter
+    "cost" 26200000
+    "shields" 42000
+    "hull" 17000
+    "required crew" 210
+    "bunks" 375
+    "mass" 2100
+    "drag" 27.5
+    "heat dissipation" .3
+    "cargo space" 140
+    "outfit space" 1650
+    "core space" 900
+    "engine space" 250
+    "weapon space" 500
+    weapon
+      "blast radius" 778
+      "shield damage" 4200
+      "random shield damage" 3580
+      "hull damage" 6300
+      "random hull damage" 5370
+      "heat damage" 126000
+      "random heat damage" 107400
+      "hit force" 10500
+      "random hit force" 8950
+  outfits
+    "D94-YV Shield Generator" 2
+    "Fusion Reactor" 2
+    "Hyperdrive"
+
+    "A520 Atomic Thruster"
+    "A525 Atomic Steering"
+    "A370 Atomic Thruster"
+    "A375 Atomic Steering"
+
+    "Impact Missile" 120
+    "Impact Missile Rack" 30
+    "Impact Missile Launcher" 6
+    "Particle Turret" 4
+    "Heavy Anti-Missile" 2
+
+    "LP144a Battery Pack"
+    "Liquid Helium Cooler" 2
+    "Fuel Pod" 320
+    "Catalytic Ramscoop" 2
+    "Large Radar Jammer" 2
+    "Tactical Scanner" 36
+    "Fragmentation Grenades" 150
+    "Laser Rifle" 300
+# six guns, six turrets, twelve fighter bays
 
 
 
@@ -278,8 +338,8 @@ ship "Saturn"
     licences
       Saturn
     "cost" 15200000
-    "shields" 21400
-    "hull" 8300
+    "shields" 23400
+    "hull" 9300
     "required crew" 111
     "bunks" 184
     "mass" 910
@@ -303,7 +363,7 @@ ship "Saturn"
   outfits
     "D94-YV Shield Generator"
     "Fusion Reactor"
-    "Dwarf Core"
+    "Midget Reactor"
     "Hyperdrive"
 
     "A520 Atomic Thruster"
@@ -389,7 +449,7 @@ ship "Saturn" "Saturn (Jump)"
   outfits
     "D94-YV Shield Generator"
     "Fusion Reactor"
-    "Dwarf Core"
+    "Midget Reactor"
     "Jump Drive"
 
     "A520 Atomic Thruster"
@@ -421,7 +481,7 @@ ship "Saturn" "Saturn (Mark II)"
   outfits
     "D94-YV Shield Generator"
     "Fusion Reactor"
-    "Dwarf Core"
+    "Midget Reactor"
     "Hyperdrive"
 
     "A520 Atomic Thruster"
@@ -453,7 +513,7 @@ ship "Saturn" "Saturn (Mark III)"
   outfits
     "D94-YV Shield Generator"
     "Fusion Reactor"
-    "Dwarf Core"
+    "Midget Reactor"
     "Hyperdrive"
 
     "A520 Atomic Thruster"
