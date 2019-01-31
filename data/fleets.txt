@@ -453,58 +453,42 @@ fleet "Free Worlds Large"
   cargo 1
   personality
     heroic disables opportunistic
-  # total: 72
-  variant 10
-    "Bastion"
-  variant 5
-    "Bastion (Heavy)"
-  variant 5
-    "Bastion (Laser)"
+  # total: 50
   variant 8
     "Osprey"
-    "Fury"
   variant 4
-    "Osprey (Laser)"
-    "Fury (Javelin)"
-  variant 4
-    "Osprey (Particle)"
-    "Fury (Laser)"
+    "Osprey" 2
   variant 6
-    "Bastion"
     "Osprey"
+    "Raven"
+  variant 4
+    "Osprey"
+    "Stymphalian"
   variant 3
-    "Bastion (Heavy)"
-    "Osprey (Laser)"
+    "Osprey"
+    "Stymphalian" 2
+  variant 2
+    "Osprey"
+    "Stymphalian" 3
+  variant 1
+    "Osprey"
+    "Stymphalian" 4
+  variant 8
+    "Raven"
+  variant 4
+    "Raven" 2
+  variant 4
+    "Raven"
+    "Stymphalian"
   variant 3
-    "Bastion (Laser)"
-    "Osprey (Particle)"
-  variant 4
-    "Bastion"
-    "Harpy" 2
+    "Raven"
+    "Stymphalian" 2
   variant 2
-    "Bastion (Heavy)"
-    "Harpy" 2
-  variant 2
-    "Bastion (Laser)"
-    "Harpy" 2
-  variant 4
-    "Lance"
-  variant 4
-    "Lance"
-    "Hawk" 2
-    "Harpy" 3
-  variant 4
-    "Lance"
-    "Bastion"
-    "Hawk"
-  variant 2
-    "Lance"
-    "Bastion (Heavy)"
-    "Hawk (Laser)"
-  variant 2
-    "Lance"
-    "Bastion (Laser)"
-    "Hawk (Laser)"
+    "Raven"
+    "Stymphalian" 3
+  variant 1
+    "Raven"
+    "Stymphalian" 4
 
 fleet "Free Worlds Small"
   government "Free Worlds"
@@ -512,45 +496,42 @@ fleet "Free Worlds Small"
   cargo 1
   personality
     heroic disables opportunistic
-  # total: 48
+  # total: 50
   variant 8
-    "Hawk"
-    "Harpy"
-  variant 4
-    "Hawk"
     "Fury"
-  variant 2
-    "Hawk"
-    "Fury (Javelin)"
-  variant 2
-    "Hawk"
-    "Fury (Laser)"
   variant 4
     "Fury" 2
-  variant 2
-    "Fury (Laser)"
-    "Fury (Javelin)"
-  variant 10
+  variant 4
+    "Fury"
+    "Harpy"
+  variant 3
+    "Fury"
     "Harpy" 2
   variant 2
+    "Fury"
+    "Harpy" 3
+  variant 1
+    "Fury"
+    "Harpy" 4
+  variant 8
     "Hawk"
-  variant 1
-    "Hawk (Laser)"
-  variant 1
-    "Hawk (Laser)"
-  variant 2
-    "Harpy"
-  variant 2
-    "Osprey"
+  variant 4
+    "Hawk" 2
+  variant 6
+    "Hawk"
+    "Fury"
   variant 4
     "Hawk"
+    "Harpy"
+  variant 3
+    "Hawk"
     "Harpy" 2
   variant 2
-    "Hawk (Laser)"
-    "Harpy" 2
-  variant 2
-    "Hawk (Laser)"
-    "Harpy" 2
+    "Hawk"
+    "Harpy" 3
+  variant 1
+    "Hawk"
+    "Harpy" 4
 
 
 
@@ -1963,7 +1944,7 @@ fleet "Merchants South Large"
   personality
     confusion 30
     timid frugal appeasing
-  # total: 85
+  # total: 100
   variant 3
     "Bastion"
   variant 1
@@ -1982,15 +1963,15 @@ fleet "Merchants South Large"
   variant 5
     "Bulk Freighter"
     "Raven"
-  variant 3
-    "Lance"
-    "Star Freighter" 2
+  variant 8
+    "Goose"
   variant 4
-    "Lance"
-    "Star Freighter" 3
-  variant 3
-    "Lance"
-    "Star Freighter" 4
+    "Goose" 2
+  variant 2
+    "Goose" 3
+  variant 1
+    "Goose"
+    "Raven"
   variant 2
     "Hauler I"
     "Hauler II"
@@ -2036,21 +2017,30 @@ fleet "Merchants South Large"
     "Hauler III"
   variant 3
     "Osprey"
-    "Star Freighter"
-  variant 5
-    "Osprey"
     "Star Freighter" 2
   variant 4
     "Osprey"
     "Star Freighter" 3
+  variant 3
+    "Osprey"
+    "Star Freighter" 4
+  variant 3
+    "Raven"
+    "Star Freighter"
+  variant 5
+    "Raven"
+    "Star Freighter" 2
+  variant 4
+    "Raven"
+    "Star Freighter" 3
   variant 1
-    "Osprey (Particle)"
+    "Raven (Particle)"
     "Star Freighter"
   variant 1
-    "Osprey (Particle)"
+    "Raven (Particle)"
     "Star Freighter" 2
   variant 1
-    "Osprey (Particle)"
+    "Raven (Particle)"
     "Star Freighter" 3
   variant 3
     "Star Freighter" 2
@@ -2234,46 +2224,13 @@ fleet "Militia Large"
   personality
     heroic frugal
     confusion 20
-  # total: 64
-  variant 10
+  # total: 90
+  variant 30
     "Bastion"
-  variant 5
-    "Bastion (Heavy)"
-  variant 5
-    "Bastion (Laser)"
-  variant 8
+  variant 20
     "Osprey"
-    "Fury"
-  variant 4
-    "Osprey (Laser)"
-    "Fury (Javelin)"
-  variant 4
-    "Osprey (Particle)"
-    "Fury (Laser)"
-  variant 6
-    "Bastion"
-    "Osprey"
-  variant 3
-    "Bastion (Heavy)"
-    "Osprey (Laser)"
-  variant 3
-    "Bastion (Laser)"
-    "Osprey (Particle)"
-  variant 4
-    "Bastion"
-    "Harpy" 2
-  variant 2
-    "Bastion (Heavy)"
-    "Harpy" 2
-  variant 2
-    "Bastion (Laser)"
-    "Harpy" 2
-  variant 4
-    "Lance"
-  variant 4
-    "Lance"
-    "Hawk" 2
-    "Harpy" 3
+  variant 40
+    "Raven"
 
 fleet "Militia Small"
   government "Militia"
@@ -2283,57 +2240,27 @@ fleet "Militia Small"
     heroic frugal
     confusion 20
   # total: 100
-  variant 3
-    "Clipper"
-  variant 1
-    "Clipper (Particle)"
-  variant 1
-    "Clipper (Speedy)"
   variant 5
+    "Clipper"
+  variant 10
     "Fury" 2
-  variant 1
-    "Fury (Laser)" 2
-  variant 1
-    "Fury (Javelin)" 2
-  variant 2
-    "Fury"
-    "Fury (Laser)"
-  variant 2
-    "Fury"
-    "Fury (Javelin)"
-  variant 1
-    "Fury (Laser)"
-    "Fury (Javelin)"
   variant 10
     "Fury"
     "Harpy"
-  variant 4
-    "Fury (Javelin)"
-    "Harpy"
-  variant 4
-    "Fury (Laser)"
-    "Harpy"
+  variant 10
+    "Fury"
+    "Harpy" 2
   variant 30
     "Harpy" 2
-  variant 15
+  variant 20
     "Harpy" 3
-  variant 7
+  variant 15
     "Hawk"
-  variant 4
-    "Hawk (Laser)"
-  variant 4
-    "Hawk (Laser)"
-  variant 3
-    "Raven"
-  variant 1
-    "Raven (Laser)"
-  variant 1
-    "Raven (Particle)"
 
 
 fleet "Megaparsec Large"
   government "Militia"
-  names "civilian"
+  names "militia"
   cargo 0
   personality
     heroic opportunistic
@@ -2347,7 +2274,7 @@ fleet "Megaparsec Large"
 
 fleet "Megaparsec Small"
   government "Militia"
-  names "civilian"
+  names "militia"
   cargo 0
   personality
     heroic opportunistic
@@ -2376,7 +2303,7 @@ fleet "Tarazed Large"
 
 fleet "Tarazed Small"
   government "Militia"
-  names "tarazed"
+  names "militia"
   cargo 0
   personality
     heroic opportunistic
@@ -2391,7 +2318,7 @@ fleet "Tarazed Small"
 
 fleet "Vortex Large"
   government "Militia"
-  names "civilian"
+  names "militia"
   cargo 0
   personality
     heroic opportunistic
@@ -2405,7 +2332,7 @@ fleet "Vortex Large"
 
 fleet "Vortex Small"
   government "Militia"
-  names "civilian"
+  names "militia"
   cargo 0
   personality
     heroic opportunistic

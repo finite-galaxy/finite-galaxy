@@ -259,9 +259,9 @@
       * Arrow: −0.5 drag, +5 core space, +5 engine space
       * Autumn Leaf: +77 core space
       * Bactrian: +190 core space
-      * Bastion: +60 core space
+      * Bastion: +60 core space, +3 required crew
       * Behemoth: +1800 hull, +60 core space
-      * Blackbird: cost from 2230 000 to 2900 000; −400 shields, +1100 hull, −1 bunk, +50 core space
+      * Blackbird: cost from 2230 000 to 2900 000; −400 shields, +1100 hull, +3 required crew, +14 bunks, +50 core space
       * Bounder: +1 required crew, +65 core space, −20 engine space, −5 weapon space
       * Boxwing: +0.71 drag, +0.23 heat dissipation, −40 cargo space, +3 core space, +7 engine space
       * Briar: +34 core space
@@ -276,7 +276,6 @@
       * Dreadnought: +1.0 drag, –10 cargo space, +120 core space, –10 weapon space
       * Earth Shaper: +20 mass, +31 core space, −5 engine space
       * Enfolta: +2100 energy capacity, +5430 fuel capacity, +1.0 fuel generation, +4 hull repair rate, +4 hull energy, +6 scan interference, +30 tactical scan power
-      * Lance: −20 required crew, −11 bunks, −10 mass, −40 cargo space, +100 core space, +10 weapon space
       * Far Lek 14: +1 core space; self destruct from 0.60 to 0.9
       * Far Osk 27: +1 core space; self destruct from 0.60 to 0.9
       * Firebird: +40 core space
@@ -304,6 +303,7 @@
         * (Shields) variant: −500 hull
         * (Weapons) variant: +30 weapon space; removed extra gun ports
       * Lampyrid: +70 core space
+      * Lance: −12 required crew, −15 bunks, −10 mass, −40 cargo space, +100 core space, +10 weapon space
       * Leviathan: –1900 shields, +1400 hull, +7 required crew, +11 bunks, +120 mass, +20 core space, +20 engine space
       * Lightning Bug: –30 mass, –20 cargo space, +60 core space, +10 weapon space
       * Light Shuttle: +10 core space
@@ -1793,7 +1793,7 @@ Version 0.8.9:
     * Tiny escort missions, available to new pilots. (@Pointedstick)
     * Added a "Medium Warship" category.
     * Price increases for the Headhunter and Bactrian.
-    * Made the Lance faster compared to the Leviathan.
+    * Made the Falcon faster compared to the Leviathan.
     * Reduced the bonuses for the new jumbo missions.
     * Changed the world-ship sprite to something less tacky, with three variants.
     * The intro interceptor missions no longer create an autosave.

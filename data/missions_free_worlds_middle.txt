@@ -398,26 +398,26 @@ mission "FW Southern Battle 2"
     fleet
       names "free worlds capital"
       variant
-        "Lance (Plasma)"
+        "Bastion (Plasma)"
         "Osprey" 2
     fleet
       names "free worlds capital"
       variant
-        "Lance (Plasma)"
+        "Bastion (Plasma)"
         "Osprey (Laser)" 2
     fleet
       names "free worlds capital"
       variant
-        "Lance (Plasma)"
+        "Bastion (Plasma)"
         "Osprey (Particle)" 2
     fleet
       names "free worlds capital"
       variant
-        "Lance (Plasma)"
+        "Bastion (Plasma)"
     fleet
       names "free worlds capital"
       variant
-        "Bastion" 2
+        "Bastion (Plasma)" 2
     fleet
       names "free worlds capital"
       fighters "free worlds fighter"
@@ -1120,7 +1120,7 @@ mission "FW Alphas 1.1"
     government "Free Worlds"
     personality heroic escort
     ship "Lance (Plasma)" "F.W.S. Alder"
-    ship "Lance" "F.W.S. Starry Warrior"
+    ship "Lance (Plasma)" "F.W.S. Starry Warrior"
   npc kill
     government "Pirate"
     personality heroic staying target
@@ -1209,9 +1209,9 @@ mission "FW Alphas 1.2"
   npc accompany save
     government "Free Worlds"
     personality heroic escort
-    ship "Lance (Plasma)" "F.W.S. Oak"
     ship "Lance (Plasma)" "F.W.S. Alder"
-    ship "Lance" "F.W.S. Starry Warrior"
+    ship "Lance (Plasma)" "F.W.S. Oak"
+    ship "Lance (Plasma)" "F.W.S. Starry Warrior"
   npc kill
     government "Pirate"
     personality heroic staying target
@@ -1531,7 +1531,7 @@ mission "FW Bloodsea 1.2A"
       variant
         "Firebird (Laser)"
         "Raven" 2
-        "Hawk (Laser)" 2
+        "Hawk" 2
         "Fury (Flamethrower)" 3
         Harpy 5
     ship "Leviathan" "Freedom"
@@ -1751,7 +1751,7 @@ mission "FW Rand 1"
     personality heroic disables escort
     ship "Dreadnought" "F.W.S. Elder"
     ship "Lance (Plasma)" "F.W.S. Reliant"
-    ship "Bastion" "F.W.S. Bismark"
+    ship "Bastion (Plasma)" "F.W.S. Bismark"
     ship "Skein" "F.W.S. Lapwing"
     ship "Hag" "Orange 8-4"
     ship "Hag" "Orange 0-9"
@@ -1759,7 +1759,7 @@ mission "FW Rand 1"
     ship "Hag" "Orange 3-1"
     ship "Hag" "Orange 1-5"
     ship "Hag" "Orange 9-1"
-    ship "Hawk (Laser)" "F.W.S. Echo"
+    ship "Hawk" "F.W.S. Echo"
     ship "Hawk" "F.W.S. Shadow"
   npc
     government "Free Worlds"
@@ -2053,12 +2053,12 @@ mission "FW Liberate Delta Sagittarii"
     fleet
       names "free worlds capital"
       variant
-        "Lance (Plasma)"
+        "Bastion (Plasma)"
         "Osprey"
     fleet
       names "free worlds capital"
       variant
-        "Lance (Plasma)"
+        "Bastion (Plasma)"
     fleet
       names "free worlds capital"
       fighters "free worlds fighter"

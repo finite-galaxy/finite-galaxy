@@ -118,8 +118,17 @@ event "plasma turret available"
   outfitter "Delta V Advanced"
     "Plasma Turret"
   fleet "Free Worlds Large"
+    add variant 4
+      "Bastion (Plasma)"
     add variant 3
-      "Lance (Plasma)"
+      "Bastion (Plasma)"
+      "Stymphalian"
+    add variant 2
+      "Bastion (Plasma)"
+      "Stymphalian" 2
+    add variant 1
+      "Bastion (Plasma)"
+      "Stymphalian" 3
 
 
 event "stack core available"
@@ -316,6 +325,7 @@ event "initial deployment 1"
     fleet "Pirates South Small" 3000
     fleet "Republic Small" 3000
     fleet "Republic Large" 4000
+    fleet "Tarazed Small" 6000
   system "Zeta Aquilae"
     fleet "Merchants South Small" 1000
     fleet "Merchants South Large" 3000
@@ -666,17 +676,17 @@ event "southern carriers 1"
 
   fleet "Free Worlds Large"
     fighters "free worlds fighter"
+    add variant 4
+      "Nest"
+      "Hag" 2
+    add variant 3
+      "Nest"
+      "Hag" 2
+      "Stymphalian"
     add variant 2
       "Nest"
       "Hag" 2
-    add variant 1
-      "Nest"
-      "Hag" 2
-      "Fury"
-    add variant 1
-      "Nest"
-      "Hag" 2
-      "Fury" 2
+      "Stymphalian" 2
     add variant 1
       "Nest" 2
       "Hag" 4
@@ -690,17 +700,17 @@ event "southern carriers 2"
 
   fleet "Free Worlds Large"
     fighters "free worlds fighter"
+    add variant 4
+      "Roost"
+      "Hag" 4
+    add variant 3
+      "Roost"
+      "Hag" 4
+      "Stymphalian"
     add variant 2
       "Roost"
       "Hag" 4
-    add variant 1
-      "Roost"
-      "Hag" 4
-      "Fury"
-    add variant 1
-      "Roost"
-      "Hag" 4
-      "Fury" 2
+      "Stymphalian" 2
     add variant 1
       "Roost" 2
       "Hag" 8
@@ -714,17 +724,17 @@ event "southern carriers 3"
 
   fleet "Free Worlds Large"
     fighters "free worlds fighter"
+    add variant 4
+      "Skein"
+      "Hag" 6
+    add variant 3
+      "Skein"
+      "Hag" 6
+      "Stymphalian"
     add variant 2
       "Skein"
       "Hag" 6
-    add variant 1
-      "Skein"
-      "Hag" 6
-      "Fury"
-    add variant 1
-      "Skein"
-      "Hag" 6
-      "Fury" 2
+      "Stymphalian" 2
     add variant 1
       "Skein" 2
       "Hag" 12
@@ -1482,13 +1492,15 @@ event "dreadnought deployment"
       heroic
     add variant 4
       "Dreadnought"
+    add variant 3
+      "Dreadnought"
+      "Stymphalian"
     add variant 2
       "Dreadnought"
-      "Bastion"
-    add variant 2
+      "Stymphalian" 2
+    add variant 1
       "Dreadnought"
-      "Argosy"
-      "Brig"
+      "Stymphalian" 3
 
 
 event "battle for bloodsea"
@@ -2886,6 +2898,7 @@ event "free worlds end"
     fleet "Navy Surveillance" 5400
     fleet "Pirates South Small" 4000
     fleet "Pirates South Large" 10000
+    fleet "Tarazed Small" 6000
   system "Kaus Australis"
     government "Republic"
     fleet "Merchants South Small" 2000
@@ -2894,6 +2907,7 @@ event "free worlds end"
     fleet "Pirates South Small" 4000
     fleet "Pirates South Large" 8000
     fleet "Quarg Small" 10000
+    fleet "Tarazed Small" 6000
   system "Dabih"
     government "Republic"
     fleet "Merchants South Small" 500
@@ -2901,6 +2915,7 @@ event "free worlds end"
     fleet "Navy Surveillance" 5400
     fleet "Pirates South Large" 10000
     fleet "Quarg Small" 4000
+    fleet "Tarazed Small" 6000
   system "Tarazed"
     government "Republic"
     fleet "Merchants South Small" 500
@@ -2908,6 +2923,8 @@ event "free worlds end"
     fleet "Navy Surveillance" 5400
     fleet "Pirates South Large" 8000
     fleet "Quarg Small" 7000
+    fleet "Tarazed Small" 6000
+    fleet "Tarazed Large" 3000
   system "Umbral"
     government "Republic"
     fleet "Merchants South Small" 4000
