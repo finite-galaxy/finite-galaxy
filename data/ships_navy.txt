@@ -67,43 +67,43 @@ ship "Jupiter"
     "Tactical Scanner" 36
     "Fragmentation Grenades" 150
     "Laser Rifle" 300
-  engine 114 514 1
-  engine 182 495 1
-  engine -114 514 1
-  engine -182 495 1
-  gun 55 -450
-  gun -55 -450
-  gun 81 -426
-  gun -81 -426
-  gun 108 -400
-  gun -108 -400
-  turret 0 -170
-  turret 0 -78
-  turret 0 10
-  turret 0 98
-  turret 0 186
-  turret 0 274
-  fighter 200 -179 under right
-  fighter -200 -179 under left
-  fighter 200 -87 under right
-  fighter -200 -87 under left
-  fighter 200 9 under right
-  fighter -200 9 under left
-  fighter 200 99 under right
-  fighter -200 99 under left
-  fighter 200 186 under right
-  fighter -200 186 under left
-  fighter 200 274 under right
-  fighter -200 274 under left
-  leak leak 30 50
-  leak flame 30 80
+  engine 182 500 .9
+  engine -182 500 .9
+  engine 114 518 .4
+  engine -114 518 .4
+  gun 55 -457
+  gun -55 -457
+  gun 81 -427
+  gun -81 -427
+  gun 108 -402
+  gun -108 -402
+  turret 0 -168
+  turret 0 -80 "Heavy Anti-Missile"
+  turret 0 8
+  turret 0 96 "Heavy Anti-Missile"
+  turret 0 184
+  turret 0 272 "Heavy Anti-Missile"
+  fighter 200 -168 right
+  fighter -200 -168 left
+  fighter 200 -80 right
+  fighter -200 -80 left
+  fighter 200 8 right
+  fighter -200 8 left
+  fighter 200 96 right
+  fighter -200 96 left
+  fighter 200 184 right
+  fighter -200 184 left
+  fighter 200 272 right
+  fighter -200 272 left
+  leak "leak" 30 50
+  leak "flame" 30 80
   leak "big leak" 30 30
   explode "tiny explosion" 20
   explode "small explosion" 45
   explode "medium explosion" 55
   explode "large explosion" 30
   explode "huge explosion" 15
-  "final explode" "final explosion large" 1
+  "final explode" "final explosion large"
   description "The Jupiter is much more than just a warship: it is practically a moving battle station armed to the teeth with a numerous powerful cannons and turrets, and a dozen fighter bays ready to challenge practically any vessel in the vast universe."
 
 
