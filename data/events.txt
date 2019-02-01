@@ -167,6 +167,10 @@ event "dreadnought available"
   shipyard "Southbound Advanced"
     "Dreadnought"
 
+event "jupiter available"
+  shipyard "Navy Advanced"
+    "Jupiter"
+
 event "kestrel available: more engines"
   set "kestrel available"
   shipyard "Tarazed Advanced"
@@ -182,7 +186,7 @@ event "kestrel available: more weapons"
   shipyard "Tarazed Advanced"
     "Kestrel (Weapons)"
 
-# Should possibly be a Jupiter available here and a Jupiter deployment somewhere else to actually add them to the fleets
+
 
 # dated events
 
@@ -1203,13 +1207,6 @@ event "navy using mark ii ships"
     "Mark III Drone"
   shipyard "Sisensis Basics"
     "Mark III Drone"
-  
-  fleet "Navy Cargo"
-    add variant 1
-      "Behemoth (Navy)" 5
-      "Venus (Mark II)"
-      "Mark III Drone" 4
-      "Mars (Mark II)" 2
   
   fleet "Republic Large"
     add variant 2

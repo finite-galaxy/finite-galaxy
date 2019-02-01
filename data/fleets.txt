@@ -110,6 +110,7 @@
 #   "Republic Large"
 #   "Republic Small"
 #   "Gunboat Only"
+#   "Jupiter"
 #   "Navy Cargo"
 #   "Navy Patrol"
 #   "Navy Surveillance"
@@ -3330,6 +3331,20 @@ fleet "Gunboat Only"
     "Mercury (Mark II)"
 
 
+fleet "Jupiter"
+  government "Republic"
+  names "republic"
+  fighters "republic fighter"
+  cargo 0
+  personality
+    heroic opportunistic
+  # total: 1
+  variant 1
+    "Jupiter"
+    "Foxhound" 12
+    "Mars" 4
+
+
 fleet "Navy Cargo"
   government "Republic"
   names "republic"
@@ -3340,9 +3355,8 @@ fleet "Navy Cargo"
   # total: 1
   variant 1
     "Behemoth (Navy)" 5
-    "Venus"
-    "Mark II Drone" 4
-    "Mars" 2
+    "Mars"
+    "Mercury" 2
 
 
 fleet "Navy Patrol"

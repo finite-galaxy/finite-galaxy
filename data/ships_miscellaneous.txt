@@ -56,7 +56,7 @@ ship "Hallucination"
     "turn" 500
     "energy generation" 1
   outfits
-    "Imaginary Weapon" 1
+    "Imaginary Weapon"
   gun 0 0
 
 
@@ -132,7 +132,6 @@ ship "Nanobot"
     "thrusting energy" .3
   outfits
     "Nano Strike"
-  
   engine -17 35
   engine 17 35
   gun 0 0
@@ -197,23 +196,6 @@ ship "Void Sprite"
   explode "blood" 40
   "final explode" "void sprite adult death"
 
-effect "blood"
-  sprite "effect/blood"
-    "no repeat"
-    "frame rate" 10
-    "random start frame"
-  "lifetime" 61
-  "random angle" 20
-  "random spin" 5
-  "random velocity" 1
-
-effect "void sprite adult death"
-  sprite "effect/void_sprite/adult_death"
-    "no repeat"
-    "frame rate" 20
-  "lifetime" 16
-  "velocity scale" .01
-
 
 ship "Void Sprite (Infant)"
   noun "creature"
@@ -240,11 +222,4 @@ ship "Void Sprite (Infant)"
   leak "blood" 60 50
   explode "blood" 25
   "final explode" "void sprite infant death"
-
-effect "void sprite infant death"
-  sprite "effect/void_sprite/infant_death"
-    "no repeat"
-    "frame rate" 15
-  "lifetime" 21
-  "velocity scale" .01
 
