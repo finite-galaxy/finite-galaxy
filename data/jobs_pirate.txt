@@ -1652,10 +1652,10 @@ mission "Escort Stolen Vessel (Extra Large, North, Dangerous Path)"
     fleet
       names "pirate"
       variant 5
-        "Leviathan (Heavy)"
+        "Leviathan"
         "Star Freighter" 2
       variant 3
-        "Leviathan (North)"
+        "Leviathan"
         "Mule"
       variant 4
         "Leviathan"
@@ -1748,10 +1748,6 @@ mission "Escort Illegal Cargo (Large, Core, Dangerous Path)"
         "Manta"
       variant 2
         "Manta (Plasma)"
-      variant 1
-        "Splinter" 2
-      variant 1
-        "Splinter (Laser)" 2
   on complete
     payment 240000
     dialogue "The captain of the <npc> thanks you for escorting them safely, and pays you <payment>."
@@ -1797,13 +1793,13 @@ mission "Escort Stolen Vessel (Extra Large, Core, Dangerous Path)"
         "Firebird (Impact)"
         "Quicksilver"
       variant 2
-        "Falcon"
+        "Lance"
         "Star Freighter"
       variant 2
-        "Falcon (Laser)"
-        "Star Freighter"
+        "Lance"
+        "Star Barge"
       variant 1
-        "Falcon (Heavy)"
+        "Lance"
         "Heavy Shuttle"
   on complete
     payment 375000
@@ -1934,7 +1930,7 @@ mission "Escort Stolen Vessel (Extra Large, South, Dangerous Path)"
       names "pirate"
       variant 4
         "Bastion"
-        "Blackbird"
+        "Blackbird (Laser)"
       variant 4
         "Bastion (Laser)"
         "Clipper"
@@ -1942,13 +1938,13 @@ mission "Escort Stolen Vessel (Extra Large, South, Dangerous Path)"
         "Bastion (Heavy)"
         "Bounder"
       variant 2
-        "Falcon"
+        "Lance"
         "Hauler I"
       variant 2
-        "Falcon (Laser)"
+        "Lance"
         "Star Freighter"
       variant 1
-        "Falcon (Heavy)"
+        "Lance"
         "Heavy Shuttle"
   on complete
     payment 375000
@@ -2341,13 +2337,13 @@ mission "Cargo Theft (North)"
       names "civilian"
       variant
         "Star Freighter (Secret Cargo)"
-        "Splinter" 2
+        "Argosy" 2
       variant
         "Star Freighter (Secret Cargo)"
-        "Firebird" 2
+        "Protector"
       variant
         "Star Freighter (Secret Cargo)"
-        "Leviathan"
+        "Vanguard"
   on visit
     dialogue "You land on <planet>, but you don't have the secret cargo! Return to the <npc> and bring the cargo back to <planet>."
   on complete
@@ -2375,13 +2371,13 @@ mission "Cargo Theft (Core)"
       names "civilian"
       variant
         "Star Freighter (Secret Cargo)"
-        "Quicksilver" 2
+        "Firebird" 2
       variant
         "Star Freighter (Secret Cargo)"
-        "Splinter" 2
+        "Leviathan"
       variant
         "Star Freighter (Secret Cargo)"
-        "Vanguard"
+        "Quicksilver" 3
   on visit
     dialogue "You land on <planet>, but you don't have the secret cargo! Return to the <npc> and bring the cargo back to <planet>."
   on complete
@@ -2409,13 +2405,13 @@ mission "Cargo Theft (South)"
       names "civilian"
       variant
         "Star Freighter (Secret Cargo)"
-        "Bastion" 2
-      variant
-        "Star Freighter (Secret Cargo)"
         "Blackbird" 2
       variant
         "Star Freighter (Secret Cargo)"
-        "Falcon"
+        "Osprey"
+      variant
+        "Star Freighter (Secret Cargo)"
+        "Raven" 2
   on visit
     dialogue "You land on <planet>, but you don't have the secret cargo! Return to the <npc> and bring the cargo back to <planet>."
   on complete

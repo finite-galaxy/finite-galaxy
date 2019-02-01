@@ -46,6 +46,7 @@ outfit "Impact Missile Launcher"
     "turn" 1.25
     "homing" 3
     "optical tracking" .8
+    "missile strength" 30
     "blast radius" 20
     "shield damage" 720
     "random shield damage" 180
@@ -53,7 +54,6 @@ outfit "Impact Missile Launcher"
     "random hull damage" 150
     "hit force" 300
     "random hit force" 75
-    "missile strength" 30
   description "Impact missiles are the most powerful homing weapon, but they move slowly enough that fast ships can simply outrun them, making them most useful against large targets or against small ships at times when they are too distracted to dodge. Impact launchers are also much larger than other missile systems, so they are most often found in capital ships."
 
 effect "impact hit"
@@ -103,7 +103,7 @@ outfit "Laser Turret"
   "weapon space" -22
   "turret mounts" -1
   weapon
-    sprite "projectile/2x laser"
+    sprite "projectile/2x_laser"
       "frame rate" 1
     "hardpoint sprite" "hardpoint/laser_turret"
     "hardpoint offset" 7.
@@ -121,7 +121,7 @@ outfit "Laser Turret"
   description "Laser Turrets are hated by fighter pilots because it is nearly impossible to dodge them once you are within their reach. This turret carries a pair of lasers and can swivel almost instantly to fire on new targets as they approach. Laser Turrets are especially useful when mounted on slow-moving freighters to fend off packs of small pirate vessels."
 
 effect "beam laser impact"
-  sprite "effect/laser impact"
+  sprite "effect/impact/laser"
     "no repeat"
     "frame rate" 30
   "lifetime" 5
@@ -139,7 +139,7 @@ outfit "Heavy Laser Cannon"
   "weapon space" -15
   "gun ports" -1
   weapon
-    sprite "projectile/heavy laser"
+    sprite "projectile/heavy_laser"
       "frame rate" 1
     sound "heavy laser"
     "hit effect" "heavy laser impact"
@@ -163,7 +163,7 @@ outfit "Heavy Laser Turret"
   "weapon space" -38
   "turret mounts" -1
   weapon
-    sprite "projectile/2x heavy laser"
+    sprite "projectile/2x_heavy_laser"
       "frame rate" 1
     "hardpoint sprite" "hardpoint/heavy_laser_turret"
     "hardpoint offset" 8.
@@ -181,7 +181,7 @@ outfit "Heavy Laser Turret"
   description "For ships with enough space to install one, the Heavy Laser Turret is a powerful weapon, equally useful for driving off fighters and for bombarding larger targets with continuous fire without having to worry about pointing your ship in the right direction."
 
 effect "heavy laser impact"
-  sprite "effect/heavy laser impact"
+  sprite "effect/impact/heavy_laser"
     "no repeat"
     "frame rate" 30
   "lifetime" 5
@@ -224,7 +224,7 @@ outfit "Electron Turret"
   "weapon space" -54
   "turret mounts" -1
   weapon
-    sprite "projectile/2x electron"
+    sprite "projectile/2x_electron"
       "frame rate" 60
     "hardpoint sprite" "hardpoint/electron_turret"
     "hardpoint offset" 8.
@@ -242,7 +242,7 @@ outfit "Electron Turret"
   description "This turret places two of Deep Sky's recently developed electron beam weapons onto a rotating turret, providing unsurpassed accuracy and power for shooting down fast-moving targets."
 
 effect "electron impact"
-  sprite "effect/electron impact"
+  sprite "effect/impact_electron"
     "no repeat"
     "frame rate" 30
   "lifetime" 5

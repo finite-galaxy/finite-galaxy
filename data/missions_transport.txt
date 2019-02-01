@@ -256,19 +256,19 @@ mission "Deep Archaeology 3"
   npc
     personality waiting
     government "Republic"
-    ship "Raven (Afterburner)" "D.P.S. Wyrd"
+    ship "Raven" "D.P.S. Wyrd"
   
   npc
     personality waiting
     system Aspidiske
     government "Republic"
-    ship "Raven (Afterburner)" "D.P.S. Skuld"
+    ship "Raven" "D.P.S. Skuld"
   
   npc
     personality waiting
     system "Gomeisa"
     government "Republic"
-    ship "Raven (Afterburner)" "D.P.S. Verthandi"
+    ship "Raven" "D.P.S. Verthandi"
   
   on complete
     payment 200000
@@ -346,9 +346,9 @@ mission "Deep Archaeology 5"
   npc
     personality heroic
     government "Deep"
-    ship "Raven (Afterburner)" "D.P.S. Wyrd"
-    ship "Raven (Afterburner)" "D.P.S. Skuld"
-    ship "Raven (Afterburner)" "D.P.S. Verthandi"
+    ship "Raven" "D.P.S. Wyrd"
+    ship "Raven" "D.P.S. Skuld"
+    ship "Raven" "D.P.S. Verthandi"
   
   on complete
     payment 300000
@@ -946,7 +946,7 @@ mission "Rim Archaeology 3B"
   npc evade
     government "Independent"
     personality waiting
-    ship "Marauder Falcon (Engines)" "Oxyrhynchus"
+    ship "Marauder Lance (Engines)" "Oxyrhynchus"
   
   on visit
     dialogue
@@ -1033,8 +1033,8 @@ mission "Rim Archaeology 5A"
   npc evade
     government "Pirate"
     personality heroic waiting
-    ship "Marauder Falcon (Weapons)" "Akhetaten"
-    ship "Marauder Splinter (Weapons)" "Itjtawy"
+    ship "Marauder Lance (Weapons)" "Akhetaten"
+    ship "Marauder Goose (Weapons)" "Itjtawy"
     ship "Marauder Firebird (Weapons)" "Tanis"
     ship "Marauder Leviathan (Weapons)" "Buhen"
     ship "Marauder Manta (Weapons)" "Athribis"
@@ -1264,7 +1264,7 @@ mission "Terminus exploration"
   npc assist
     system "Terminus"
     government "Uninhabited"
-    personality derelict target
+    personality derelict target pacifist mute
     ship "Science Drone" "Beagle"
     dialogue `You board the science drone and discover that the pirates have stripped just about everything of value from it: the engines, the sensors, and the fuel cell that powered it. But the computer system is either too deeply integrated into the drone, or too specialized, to be of any value to the pirates. You transfer enough power to the drone's batteries to reactivate it, and are able to retrieve the data that the scientist was looking for. But it's clear that this drone, or what's left of it, is not going anywhere. You'll have to leave it behind.`
   npc
@@ -1687,7 +1687,7 @@ mission "There Might Be Riots part 3B"
     personality waiting heroic
     fleet
       variant
-        "Mark I Drone" 20
+        "Mark I Drone" 25
   npc
     government "Team Blue"
     personality waiting heroic

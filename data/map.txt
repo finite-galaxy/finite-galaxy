@@ -1859,6 +1859,7 @@ system "Achernar"
   fleet "Pirates East Small" 1200
   fleet "Republic Large" 600
   fleet "Republic Small" 500
+  fleet "Vortex Large" 2000
   object
     sprite star/g5
     period 10
@@ -2115,6 +2116,7 @@ system "Al Dhanab"
   fleet "Pirates East Large" 3000
   fleet "Republic Small" 1000
   fleet "Republic Large" 800
+  fleet "Vortex Large" 6000
   object
     sprite star/g0
     period 10
@@ -2246,10 +2248,9 @@ system "Albireo"
   trade "Plastic" 387
   fleet "Merchants South Small" 800
   fleet "Merchants South Large" 1200
+  fleet "Militia Small" 2000
   fleet "Pirates South Small" 1000
   fleet "Pirates South Large" 1400
-  fleet "Militia Small" 1800
-  fleet "Militia Large" 3000
   fleet "Quarg Small" 2000
   object
     sprite star/g5
@@ -3722,6 +3723,7 @@ system "Alpha Hydri"
   fleet "Pirates East Large" 6000
   fleet "Republic Small" 4000
   fleet "Republic Large" 9000
+  fleet "Vortex Large" 6000
   fleet "Korath Raid" 40000
   object
     sprite star/g0
@@ -4612,8 +4614,8 @@ system "Ascella"
   fleet "Merchant Miners South" 1600
   fleet "Merchants South Small" 600
   fleet "Merchants South Large" 1000
-  fleet "Militia Small" 4000
   fleet "Pirates South Small" 3000
+  fleet "Tarazed Small" 6000
   object
     sprite star/k5
     distance 43.5
@@ -5045,6 +5047,7 @@ system "Bellatrix"
   trade "Plastic" 274
   fleet "Merchants North Small" 800
   fleet "Merchants North Large" 1500
+  fleet "Megaparsec Small" 3000
   fleet "Navy Patrol" 7200
   fleet "Republic Small" 1000
   fleet "Republic Large" 2000
@@ -7334,9 +7337,9 @@ system "Dabih"
   trade "Plastic" 312
   fleet "Merchants South Small" 500
   fleet "Merchants South Large" 800
-  fleet "Militia Small" 6000
   fleet "Pirates South Large" 10000
   fleet "Quarg Small" 4000
+  fleet "Tarazed Small" 6000
   object
     sprite star/k0
     distance 30.7164
@@ -10622,6 +10625,8 @@ system "Girtab"
   trade "Plastic" 301
   fleet "Merchants South Small" 700
   fleet "Merchants South Large" 1700
+  fleet "Militia Small" 1800
+  fleet "Militia Large" 3000
   fleet "Pirates South Small" 2000
   fleet "Pirates South Large" 3000
   object
@@ -12872,6 +12877,7 @@ system "Kaus Australis"
   fleet "Pirates South Small" 4000
   fleet "Pirates South Large" 8000
   fleet "Quarg Small" 10000
+  fleet "Tarazed Small" 6000
   object
     sprite star/k5
     period 10
@@ -14558,8 +14564,8 @@ system "Lurata"
   trade "Plastic" 358
   fleet "Merchants South Small" 1000
   fleet "Merchants South Large" 3000
-  fleet "Quarg Small" 7000
   fleet "Militia Small" 9000
+  fleet "Quarg Small" 7000
   fleet "Pirates South Large" 4000
   object
     sprite star/k0
@@ -15407,6 +15413,7 @@ system "Menkar"
   fleet "Merchants North Small" 800
   fleet "Merchants North Large" 1000
   fleet "Merchant Miners North" 2000
+  fleet "Megaparsec Small" 3000
   fleet "Navy Patrol" 7200
   fleet "Republic Small" 1500
   fleet "Republic Large" 2000
@@ -16064,6 +16071,8 @@ system "Mirfak"
   fleet "Merchants East Large" 3000
   fleet "Merchants North Small" 500
   fleet "Merchants North Large" 700
+  fleet "Megaparsec Small" 1500
+  fleet "Megaparsec Large" 4500
   fleet "Navy Patrol" 3600
   fleet "Republic Small" 1200
   fleet "Republic Large" 2400
@@ -16530,7 +16539,6 @@ system "Naper"
   fleet "Merchant Miners South" 3000
   fleet "Merchants South Small" 1500
   fleet "Merchants South Large" 3000
-  fleet "Militia Small" 5000
   fleet "Pirates South Small" 1000
   object
     sprite star/f5
@@ -17342,9 +17350,9 @@ system "Peacock"
   fleet "Merchant Miners South" 3000
   fleet "Merchants South Small" 2000
   fleet "Merchants South Large" 5000
-  fleet "Militia Small" 8000
   fleet "Pirates South Small" 4000
   fleet "Pirates South Large" 10000
+  fleet "Tarazed Small" 6000
   object
     sprite star/m0
     period 10
@@ -18080,6 +18088,7 @@ system "Polaris"
   fleet "Pirates East Small" 1500
   fleet "Republic Small" 1000
   fleet "Republic Large" 2000
+  fleet "Vortex Large" 6000
   fleet "Korath Raid" 50000
   object
     sprite star/k5
@@ -18855,6 +18864,7 @@ system "Rastaban"
   trade "Plastic" 314
   fleet "Merchants South Small" 800
   fleet "Merchants South Large" 1600
+  fleet "Militia Small" 4000
   fleet "Pirates South Small" 3000
   fleet "Pirates South Large" 5000
   object
@@ -22180,7 +22190,6 @@ system "Tais"
   trade "Plastic" 339
   fleet "Merchants South Small" 1500
   fleet "Merchants South Large" 4000
-  fleet "Militia Small" 9000
   fleet "Pirates South Small" 3000
   fleet "Pirates South Large" 7000
   fleet "Quarg Small" 15000
@@ -22374,6 +22383,8 @@ system "Tarazed"
   fleet "Merchants South Large" 1200
   fleet "Pirates South Large" 8000
   fleet "Quarg Small" 7000
+  fleet "Tarazed Small" 6000
+  fleet "Tarazed Large" 3000
   object
     sprite star/g0
     distance 11
@@ -24608,9 +24619,10 @@ planet "Ada"
   outfitter "Fuel Pod"
   outfitter "Common Outfits"
   outfitter "Lovelace Advanced"
+  outfitter "Tinker Basics"
   shipyard "Centaur Basics"
   shipyard "Megaparsec Basics"
-  shipyard "Vortex Basics"
+  shipyard "Vortex Intermediate"
   "required reputation" 2
   bribe 0.1
   security 0.9
@@ -24740,7 +24752,7 @@ planet "Antipode"
 planet "Arachne Station"
   attributes south station
   landscape land/sivael0
-  music ambient/machinery
+  music machinery
   description `Arachne Station is privately owned by Tarazed Corporation, and there are no services available here for people who are not Tarazed employees.`
   "required reputation" 20
   bribe 0.05
@@ -24759,7 +24771,6 @@ planet "Arahas"
   outfitter "Pilot Licence"
   outfitter "Fuel Pod"
   outfitter "Basic Outfits"
-  outfitter "Sisensis Basics"
   security 0.05
 #  fuel 1.2
 #  tribute 400
@@ -24968,7 +24979,6 @@ planet "Bod"
   outfitter "Pilot Licence"
   outfitter "Fuel Pod"
   outfitter "Basic Outfits"
-  outfitter "Sisensis Intermediate"
   security 0.1
 #  fuel 0.9
 #  tribute 700
@@ -24996,8 +25006,7 @@ planet "Bounty"
   outfitter "Map"
   outfitter "Pilot Licence"
   outfitter "Fuel Pod"
-  outfitter "Basic Outfits"
-  outfitter "Sisensis Basics"
+  outfitter "Common Outfits"
   security 0.1
 #  fuel 0.8
 #  tribute 700
@@ -25136,7 +25145,7 @@ planet "Carbuncle"
 planet "Catoblepas Station"
   attributes paradise station research
   landscape land/sivael4
-  music ambient/machinery
+  music machinery
   description `Catoblepas is a tiny station owned and operated by the Syndicate. You assume that like most such stations, it is primarily a deuterium refinery, but aside from the docking bay the rest of the station is closed off to visitors. Given the reputation of the Syndicate for secret research, there could be almost anything beyond those sealed-off bulkheads.`
   "required reputation" 100
   bribe 0.05
@@ -25163,7 +25172,7 @@ planet "Celestial Third"
 planet "Charon Station"
   attributes south station
   landscape land/sivael6
-  music ambient/machinery
+  music machinery
   description `Charon Station provides hyperspace fuel for much of the southern galactic rim. It is a tiny, cramped, and aging station, with twice as many workers here as it was originally designed for. Centuries ago, before much of the Dirt Belt was settled, this was the first spot below Algorel where merchant caravan fleets from the Deep could stop over on their way to the worlds farther up the Rim.`
   description `  The close quarters have fostered an extreme scrupulosity about personal space. It is unnerving to walk down a densely crowded hallway and fail to make eye contact with anyone.`
 #  spaceport `The refinery here operates in shifts, non-stop, so there are always people coming and going in the hallways and docking bays. The cafeteria is so crowded that many workers are just standing up against the walls eating off their trays instead of trying to find a place to sit. Every few minutes, light flashes in through one of the windows from welders outside in space suits trying to keep the aging hull in perfect shape. Others drift around outside checking up on the solar panels and replacing burnt-out modules.`
@@ -25175,7 +25184,7 @@ planet "Charon Station"
 planet "Charybdis Station"
   attributes core station
   landscape land/sivael8
-  music ambient/machinery
+  music machinery
   description `Charybdis Station is privately owned by Vortex Shipyards. It is a massive deuterium refinery, with harvester drones constantly flying in and out to scoop hydrogen gas out of the upper atmosphere of the planet below. If you need to repair or refuel in this system, you will need to visit the neighbouring world of Delve, instead of this station.`
   "required reputation" 20
   bribe 0.05
@@ -25197,9 +25206,12 @@ planet "Chiron"
   outfitter "Common Outfits"
   outfitter "Earth Intermediate"
   outfitter "Lovelace Intermediate"
-  outfitter "Sisensis Intermediate"
   outfitter "Syndicate Intermediate"
+  outfitter "Tinker Intermediate"
   shipyard "Centaur Advanced"
+  shipyard "Flivver"
+  shipyard "Navy Intermediate"
+  shipyard "Sisensis Intermediate"
   shipyard "Star Intermediate"
   shipyard "Vortex Basics"
   bribe 0.02
@@ -25374,8 +25386,8 @@ planet "Darkcloak"
   spaceport `  It is likely that most of the goods available for trade here were stolen from one of the nearby Hai systems.`
   outfitter "Map"
   outfitter "Fuel Pod"
-  outfitter "Hai Advanced"
-  shipyard "Hai Advanced"
+  outfitter "Hai Unfettered"
+  shipyard "Hai Unfettered"
 #  fuel 1.8
 
 planet "Darkmetal"
@@ -25583,12 +25595,14 @@ planet "Earth"
   outfitter "Common Outfits"
   outfitter "Earth Advanced"
   outfitter "Lovelace Intermediate"
-  outfitter "Sisensis Intermediate"
   outfitter "Syndicate Intermediate"
+  outfitter "Tinker Intermediate"
   shipyard "Centaur Intermediate"
+  shipyard "Flivver"
   shipyard "Megaparsec Basics"
+  shipyard "Sisensis Intermediate"
   shipyard "Star Intermediate"
-  shipyard "Vortex Intermediate"
+  shipyard "Vortex Basics"
   "required reputation" 2
   bribe 0.03
   security 0.3
@@ -25787,7 +25801,7 @@ planet "Fek Rembatu"
 planet "Fenrir Station"
   attributes deep station
   landscape land/sivael1
-  music ambient/machinery
+  music machinery
   description `Fenrir Station is a bustling refinery, and from the way the foremen looked at you when you stepped off your ship, they seem to be eager for new recruits. In addition to harvesting deuterium, this is one of the few refinery stations in human space which also collects helium-3, an isotope with some exotic uses in medical imaging and in energy research.`
   description `  The diversity of isotopes found here is partly due to the station being a relatively new construction and benefiting from modern technology. But the gas giant which the station harvests from also has a composition unlike any other known planet. One theory is that it is on the cusp of becoming a brown dwarf star, in which case the isotopes now being stirred into the upper atmosphere by convection will eventually be depleted by fusion.`
 #  spaceport `This station is composed of two rings, one containing the refinery, the other the living quarters and cafeteria for the workers, in addition to a docking bay for visiting freighters. The workers all seem to be very busy, and few of them pay any attention to you.`
@@ -25871,6 +25885,8 @@ planet "Foundry"
   outfitter "Earth Basics"
   outfitter "Lovelace Intermediate"
   outfitter "Syndicate Intermediate"
+  outfitter "Tinker Intermediate"
+  shipyard "Navy Basics"
   shipyard "Vortex Advanced"
   bribe 0.1
   security 0.5
@@ -25947,6 +25963,7 @@ planet "Geminus"
   outfitter "Common Outfits"
   outfitter "Earth Basics"
   outfitter "Syndicate Intermediate"
+  outfitter "Tinker Basics"
   shipyard "Star Advanced"
   bribe 0.1
   security 0.9
@@ -25985,7 +26002,7 @@ planet "Geyser"
   outfitter "Pilot Licence"
   outfitter "Fuel Pod"
   outfitter "Basic Outfits"
-  outfitter "Sisensis Basics"
+  outfitter "Tinker Basics"
   security 0.3
 #  fuel 0.8
 #  tribute 1300
@@ -26042,8 +26059,8 @@ planet "Glory"
   outfitter "Fuel Pod"
   outfitter "Basic Outfits"
   outfitter "Lovelace Basics"
-  outfitter "Sisensis Basics"
   outfitter "Syndicate Basics"
+  outfitter "Tinker Basics"
   bribe 0.05
   security 0.6
 #  fuel 0.7
@@ -26212,7 +26229,6 @@ planet "Heartland"
   outfitter "Pilot Licence"
   outfitter "Fuel Pod"
   outfitter "Basic Outfits"
-  outfitter "Sisensis Basics"
   security 0.2
 #  fuel 0.7
 #  tribute 900
@@ -26254,10 +26270,11 @@ planet "Hephaestus"
   outfitter "Common Outfits"
   outfitter "Earth Intermediate"
   outfitter "Lovelace Intermediate"
-  outfitter "Sisensis Intermediate"
   outfitter "Syndicate Advanced"
+  outfitter "Tinker Intermediate"
   shipyard "Betelgeuse Intermediate"
-  shipyard "Megaparsec Intermediate"
+  shipyard "Flivver"
+  shipyard "Megaparsec Basics"
   shipyard "Star Intermediate"
   bribe 0.1
   security 0.7
@@ -26277,6 +26294,7 @@ planet "Hermes"
   outfitter "Fuel Pod"
   outfitter "Basic Outfits"
   outfitter "Syndicate Intermediate"
+  outfitter "Tinker Basics"
   security 0.4
 #  fuel 1.0
 #  tribute 1700
@@ -26338,7 +26356,7 @@ planet "Hopper"
 planet "Huginn Station"
   attributes deep station
   landscape land/sivael2
-  music ambient/machinery
+  music machinery
   description `Huginn and Muninn stations, together, are the gateway to the Deep, the region of space north of here. The Deep was the first large region of space to have a democratic government, predating the Republic by nearly two centuries.`
   description `  Huginn Station is a prison station where convicted pirates must work at harvesting and refining deuterium to atone for their crimes against humanity. There are no services available for you here and the security guards, surprised by your visit and wondering at your motives, watch you closely.`
   "required reputation" 20
@@ -26362,7 +26380,7 @@ planet "Humanica"
 planet "Hydra Station"
   attributes "dirt belt" station
   landscape land/sivael5
-  music ambient/machinery
+  music machinery
   description `This station is so run down that most of the workers carry oxygen masks in case a meteorite punctures the hull, and a few of them are even dressed in full space suits. The deuterium refinery here is barely operating, the number of workers is minimal, and nearly half of them seem to be busy just welding patches onto the hull to hold the station together. At the moment there are no repair or refueling services available here.`
   security 0.3
 #  tribute 100
@@ -26504,7 +26522,7 @@ planet "Kort Vek'kri"
 planet "Kraken Station"
   attributes "near earth" station
   landscape land/sivael7
-  music ambient/machinery
+  music machinery
   description `Kraken Station is seven centuries old; it was the first space station built outside of the Sol system. The station has been modified and repaired so often since that time that in all likelihood not a single deck panel or bulkhead that was part of the original station remains. Four centuries ago it was nearly destroyed by an asteroid impact, but other than that it has been a working deuterium refinery for its entire lifetime.`
   description `  The main ring of the station consists of three different levels, with living quarters, repair shops, a few small cafeterias, and even a barber. The lower levels also house some of the refinery equipment, but much of the harvesting is done automatically by robotic drones. For a station that is so old, everything feels surprisingly sturdy; the bolts and beams that make up the station are much thicker than they probably need to be.`
   security 0.3
@@ -26541,7 +26559,7 @@ planet "Laki Nemparu"
 planet "Leviathan Station"
   attributes deep station
   landscape land/sivael3
-  music ambient/machinery
+  music machinery
   description `Leviathan Station is the Deep's most productive deuterium harvesting station. Built nearly four hundred years ago, the station was one of the first to fuel the massive cargo caravans sent out from the Deep back when this was one of the only regions of the galaxy with a prosperous economy and a democratic government. Today it remains under government control, because the citizens of the Deep are wary of any private corporation controlling the industry that makes interstellar travel possible.`
   description `  This is a refinery, not a tourist destination. You were allowed to dock here, and the massive cafeteria used by the local workers is available to you if you want to eat, but beyond that no one seems particularly interested in entertaining you or interacting with you.`
 #  spaceport `  On the other hand, you get some small satisfaction from knowing that you refueled your ship with deuterium that just yesterday was most likely still floating around in the upper cloud banks of the gas giant below.`
@@ -26569,16 +26587,18 @@ planet "Little Garden"
   attributes "near earth" bank urban
   landscape land/city12
   description `In the very early days of hyperspace travel, most settlers chose to put down roots within a few jumps of Earth, because until more fuel depots were built, colonies farther out would seldom be visited by cargo ships. As a result, a lot of effort was put into terraforming and developing worlds that would have been passed over by most colonists today. Little Garden is one such world, and it is now overpopulated, and poor enough that maintaining the terraforming equipment and climate requires almost a third of the planetary government's tax income.`
-  description `  Little Garden is also home to Sisensis Systems, manufacturer of crude but effective outfits, popular with marauders, merchants, and militia alike.`
+  description `  Little Garden is also home to Sisensis Shipyards.`
   spaceport `The "new port" here was built several centuries ago, when the grand but impractical spaceport built by the original settlers had deteriorated to the point where it was no longer usable. This port is much simpler by comparison: just a ring of landing pads of various sizes around a large central building with ten levels of warehouse space accessible by freight elevator.`
   spaceport `  There are always locals hanging around the port, some of them mere children, who are trying to find a cheap ride off-planet.`
   outfitter "Map"
   outfitter "Pilot Licence"
   outfitter "Fuel Pod"
   outfitter "Common Outfits"
-  outfitter "Sisensis Advanced"
-  shipyard "Centaur Intermediate"
+  outfitter "Tinker Basics"
+  shipyard "Centaur Basics"
+  shipyard "Navy Basics"
   shipyard "Star Basics"
+  shipyard "Sisensis Advanced"
   security 0.1
 #  fuel 0.9
 #  tribute 1400
@@ -26659,6 +26679,7 @@ planet "Mainsail"
   outfitter "Basic Outfits"
   outfitter "Syndicate Basics"
   shipyard "Betelgeuse Basics"
+  shipyard "Flivver"
   shipyard "Star Basics"
   bribe 0.06
   security 0.5
@@ -26735,6 +26756,7 @@ planet "Martini"
   outfitter "Fuel Pod"
   outfitter "Common Outfits"
   outfitter "Syndicate Basics"
+  outfitter "Tinker Basics"
   bribe 0.1
   security 0.5
 #  fuel 1.0
@@ -26849,6 +26871,7 @@ planet "Millrace"
   outfitter "Fuel Pod"
   outfitter "Common Outfits"
   outfitter "Syndicate Basics"
+  outfitter "Tinker Basics"
   security 0.2
 #  fuel 1.0
 #  tribute 1400
@@ -26882,7 +26905,7 @@ planet "Moonshake"
 planet "Muninn Station"
   attributes deep station military
   landscape land/sivael6
-  music ambient/machinery
+  music machinery
   description `Muninn Station, along with its brother station Huginn, serves as the gateway to the region of space known as the Deep. They both harvest and refine deuterium for use as rocket fuel, and in addition Muninn Station is used as a military base for the local defence fleets.`
   description `  Most of the station is closed off to you, but you are told that if you want you may visit the large military mess hall, where hundreds of Deep Defence personnel sit and eat or watch the news videos. You would normally expect a military mess hall to be a noisy, rowdy place, but this one is almost eerily silent, with a few quiet conversations going on in the corners but otherwise no noise except the video screens.`
   "required reputation" 10
@@ -27009,7 +27032,7 @@ planet "Oasis"
 planet "Oberon Station"
   attributes core station military
   landscape land/sivael0
-  music ambient/machinery
+  music machinery
   description `Oberon Station serves both as a refinery for hyperspace fuel, and as a garrison for ships of the Republic Navy. Patrol ships are constantly landing here and then taking off to scour the surrounding systems for pirates. Although pirates are not unusual in this part of space, it seems like a very tedious job.`
   description `  The mess hall is empty except for one table where some Navy officers are playing a card game. They are sitting right under a ventilation duct, and the cards keep blowing off the table; the station's low simulated gravity is not enough to hold them there.`
   "required reputation" 10
@@ -27071,7 +27094,7 @@ planet "Pearl"
 planet "Phoenix Station"
   attributes deep station
   landscape land/sivael4
-  music ambient/machinery
+  music machinery
   description `As with all refineries in the Deep, Phoenix Station is government-owned. You cannot imagine who would want to live here; despite reflective hull plating and active cooling systems, the station is uncomfortably hot. Nearly all the work is done by robots and computers, with only a skeleton crew of people supervising. Every time the station's orbit brings it through the planet's shadow, the temperature drops briefly and the entire station creaks ominously as it cools.`
   "required reputation" 10
   bribe 0.07
@@ -27147,7 +27170,6 @@ planet "Porringer"
   outfitter "Pilot Licence"
   outfitter "Fuel Pod"
   outfitter "Basic Outfits"
-  outfitter "Sisensis Basics"
   security 0.2
 #  fuel 0.6
 #  tribute 400
@@ -27311,10 +27333,11 @@ planet "Reunion"
   outfitter "Fuel Pod"
   outfitter "Common Outfits"
   outfitter "Lovelace Basics"
-  outfitter "Sisensis Basics"
   outfitter "Syndicate Basics"
+  outfitter "Tinker Basics"
   shipyard "Centaur Basics"
   shipyard "Megaparsec Basics"
+  shipyard "Sisensis Basics"
   shipyard "Star Basics"
   shipyard "Vortex Basics"
   security 0.3
@@ -27677,6 +27700,7 @@ planet "Shroud"
   outfitter "Common Outfits"
   outfitter "Syndicate Basics"
   shipyard "Betelgeuse Intermediate"
+  shipyard "Flivver"
   bribe 0.04
   security 0.8
 #  fuel 1.0
@@ -27929,6 +27953,7 @@ planet "Sunracer"
   outfitter "Lovelace Intermediate"
   outfitter "Syndicate Intermediate"
   shipyard "Megaparsec Advanced"
+  shipyard "Navy Basics"
   bribe 0.06
   security 0.7
 #  fuel 0.7
@@ -27973,7 +27998,6 @@ planet "Thrall"
   outfitter "Pilot Licence"
   outfitter "Fuel Pod"
   outfitter "Basic Outfits"
-  outfitter "Sisensis Basics"
   bribe 0.04
   security 0.5
 #  fuel 0.7
@@ -28034,10 +28058,11 @@ planet "Tinker"
   outfitter "Fuel Pod"
   outfitter "Common Outfits"
   outfitter "Lovelace Intermediate"
-  outfitter "Sisensis Intermediate"
   outfitter "Syndicate Intermediate"
+  outfitter "Tinker Advanced"
   shipyard "Megaparsec Basics"
-  shipyard "Centaur Intermediate"
+  shipyard "Centaur Basics"
+  shipyard "Sisensis Basics"
   shipyard "Star Basics"
   shipyard "Vortex Basics"
   bribe 0.04
@@ -28067,7 +28092,7 @@ planet "Trinket"
 planet "Triton Station"
   attributes north station
   landscape land/sivael9
-  music ambient/machinery
+  music machinery
   description `Triton Station is a deuterium refinery owned and operated by the Syndicate, and aside from a few docking bays for visiting ships to use in an emergency, the rest of the station is sealed off to non-employees.`
   "required reputation" 10
   bribe 0.03
@@ -28130,7 +28155,7 @@ planet "Twinstar"
 planet "Typhon Station"
   attributes rim station
   landscape land/sivael1
-  music ambient/machinery
+  music machinery
   description `Typhon Station is one of the major fuel refining stations in the galactic Rim. It is privately owned by Southbound Shipyards, and all the fuel produced here is shipped directly to them rather than being made available to visiting ships.`
   security 0.3
 #  tribute 500
@@ -28501,7 +28526,7 @@ planet "Winter"
 planet "Wyvern Station"
   attributes rim station
   landscape land/sivael7
-  music ambient/machinery
+  music machinery
   description `Wyvern Station was once one of the end destinations for the merchant caravans travelling along the Rim, back in the days before the Republic existed when most systems were not policed and the only way to avoid being plundered by pirates was for ships to travel in large convoys. It has also been a continuously operating hyperspace fuel refinery for more than three centuries.`
   description `  This station is old, and some parts are dirty and in need of repair, but it is at least structurally sound, and the workers here seem optimistic and energetic. The cafeteria is loud and raucous, and the repair shop is more than willing to work on starships as a break from the tedium of repairing the harvester drones that dip into the planet's atmosphere to bring back pressurized tanks full of hydrogen gas.`
   security 0.4

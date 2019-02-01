@@ -1382,7 +1382,7 @@ void Ship::Move(vector<Visual> &visuals, list<shared_ptr<Flotsam>> &flotsam)
     if(applyAfterburner)
     {
       thrust = attributes.Get("afterburner thrust");
-       double fuelCost = attributes.Get("afterburner fuel"); 
+      double fuelCost = attributes.Get("afterburner fuel"); 
       double energyCost = attributes.Get("afterburner energy");
        if(thrust && fuel >= fuelCost && energy >= energyCost) 
       {

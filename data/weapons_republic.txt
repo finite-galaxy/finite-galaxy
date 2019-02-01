@@ -61,7 +61,7 @@ outfit "gbullet"
     "hit effect" "bullet impact"
 
 effect "bullet impact"
-  sprite "effect/bullet impact"
+  sprite "effect/impact/bullet"
     "no repeat"
     "frame rate" 60
   "lifetime" 8
@@ -118,6 +118,7 @@ outfit "Sidewinder Missile Launcher"
     "turn" 3.0
     "homing" 4
     "radar tracking" .9
+    "missile strength" 12
     "blast radius" 3
     "shield damage" 180
     "random shield damage" 45
@@ -125,7 +126,6 @@ outfit "Sidewinder Missile Launcher"
     "random hull damage" 30
     "hit force" 160
     "random hit force" 40
-    "missile strength" 12
   description "The Sidewinder Missile is designed by Lovelace Labs, which is ironically also the designer of the Heavy Anti-Missile turret. Rumours say that the two engineering teams at Lovelace who make the missiles and the anti-missiles are locked in furious competition with each other: the result has been generation after generation of smarter missiles and then smarter turrets to fend them off."
   description "  Although not as powerful or cheap as the popular Meteor missiles, Sidewinders have several advantages, including their superior manoeuvrability, better tracking systems, and protective casings that make them much harder for anti-missile systems to destroy."
 
@@ -147,7 +147,7 @@ outfit "Particle Cannon"
   "weapon space" -30
   "gun ports" -1
   weapon
-    sprite "projectile/particle beam"
+    sprite "projectile/particle"
     sound "particle"
     "hit effect" "particle impact"
     "inaccuracy" .5
@@ -155,15 +155,15 @@ outfit "Particle Cannon"
     "lifetime" 32
     "reload" 20
     "firing energy" 35
-    "firing force" 10
     "firing heat" 120
-    "hit force" 80
+    "firing force" 10
     "shield damage" 58
     "hull damage" 52
+    "hit force" 80
   description "The Particle Cannon works by accelerating a short burst of particles to near-relativistic speeds. When mounted on a ship that can turn fast enough to keep it trained on approaching ships, it becomes a nearly unbeatable weapon, capable of destroying smaller ships before they can even approach close enough for their comparatively short-ranged weapons to be effective."
 
 effect "particle impact"
-  sprite "effect/particle impact"
+  sprite "effect/impact/particle"
     "no repeat"
     "frame rate" 30
   sound "explosion small"
@@ -172,33 +172,73 @@ effect "particle impact"
   "random spin" 10
   "velocity scale" -.05
 
-outfit "Particle Turret"
+
+outfit "Pulse Cannon"
+  category "Cannons"
+  cost 390000
+  thumbnail "outfit/pulse_cannon"
+  licences
+    Navy
+  "mass" 40
+  "outfit space" -40
+  "weapon space" -40
+  "gun ports" -1
+  weapon
+    sprite "projectile/pulse"
+      "frame rate" 5
+    sound "pulse"
+    "hit effect" "pulse impact"
+    "inaccuracy" 1
+    "velocity" 20
+    "lifetime" 60
+    "reload" 60
+    "firing energy" 270
+    "firing heat" 420
+    "firing force" 60
+    "shield damage" 300
+    "hull damage" 240
+    "hit force" 120
+  description "."
+
+outfit "Pulse Turret"
   category "Turrets"
-  thumbnail "outfit/particle_turret"
-  cost 590000
-  "mass" 70
-  "drag" .70
-  "outfit space" -70
-  "weapon space" -70
+  cost 520000
+  thumbnail "outfit/pulse_turret"
+  licences
+    Navy
+  "mass" 50
+  "drag" .50
+  "outfit space" -50
+  "weapon space" -50
   "turret mounts" -1
   weapon
-    sprite "projectile/particle beam"
-    "hardpoint sprite" "hardpoint/particle_turret"
-    "hardpoint offset" 7.
-    sound "particle"
-    "hit effect" "particle impact"
-    "inaccuracy" .5
-    "turret turn" 0.86
-    "velocity" 30
-    "lifetime" 32
-    "reload" 10
-    "firing energy" 35
-    "firing force" 10
-    "firing heat" 120
-    "hit force" 80
-    "shield damage" 58
-    "hull damage" 52
-  description "The Particle Turret is a huge turret designed to be used on the largest Navy warships, to allow them to bombard opponents from a distance."
+    sprite "projectile/pulse"
+      "frame rate" 5
+    "hardpoint sprite" "hardpoint/pulse_turret"
+    "hardpoint offset" 14.
+    sound "pulse"
+    "hit effect" "pulse impact"
+    "inaccuracy" 1
+    "turret turn" 1.20
+    "velocity" 20
+    "lifetime" 60
+    "reload" 60
+    "firing energy" 270
+    "firing heat" 420
+    "firing force" 120
+    "shield damage" 300
+    "hull damage" 240
+    "hit force" 360
+  description "."
+
+effect "pulse impact"
+  sprite "effect/impact/pulse"
+    "no repeat"
+    "frame rate" 15
+  "lifetime" 30
+  "random angle" 2
+  "random spin" 1
+  "velocity scale" -.003
 
 
 

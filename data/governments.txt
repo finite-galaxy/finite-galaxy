@@ -68,6 +68,8 @@ government "Bounty Hunter"
 government "Coalition"
   swizzle 5
   colour 1 .6 .7
+  "crew attack" 2
+  "crew defence" 3
   language "Coalition"
   "player reputation" 1
   "attitude toward"
@@ -115,7 +117,7 @@ government "Free Worlds"
   raid "pirate raid"
 
 government "Hai"
-  swizzle 0
+  swizzle 3
   colour .8 .4 .8
   "player reputation" 0
   "attitude toward"
@@ -127,7 +129,7 @@ government "Hai"
   "hostile hail" "hostile hai"
 
 government "Hai (Unfettered)"
-  swizzle 4
+  swizzle 1
   colour .8 .3 .4
   "player reputation" -1000
   "attitude toward"
@@ -144,6 +146,8 @@ government "Hai (Unfettered)"
 government "Heliarch"
   swizzle 0
   colour .5 .3 .7
+  "crew attack" 2
+  "crew defence" 3
   "player reputation" 1
   "friendly hail" "friendly heliarch"
   "hostile hail" "hostile heliarch"
@@ -298,7 +302,7 @@ government "Pirate"
   raid "pirate raid"
 
 government "Pug"
-  swizzle 0
+  swizzle 5
   colour 1 .8 .5
   "player reputation" 1
   "attitude toward"

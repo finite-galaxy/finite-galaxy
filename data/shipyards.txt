@@ -30,39 +30,49 @@ shipyard "Basic Ships"
 
 # Prime (Betelgeuse)
 shipyard "Betelgeuse Advanced"
-  "Bulk Freighter"
-  "Flivver"
+  "Aerie"
+  "Argosy"
+  "Dagger"
   "Hero"
   "Protector"
-  "Splinter"
   "Vanguard"
 
 shipyard "Betelgeuse Intermediate"
-  "Flivver"
+  "Aerie"
+  "Argosy"
+  "Dagger"
   "Hero"
-  "Splinter"
 
 shipyard "Betelgeuse Basics"
-  "Flivver"
+  "Dagger"
   "Hero"
 
 
 
 # Chiron (Alpha Centauri)
 shipyard "Centaur Advanced"
-  "Bastion"
-  "Clipper"
-  "Mark I Drone"
-#  "Mark II Drone"
+  "Bactrian"
+  "Foxhound"
+  "Mongrel"
+  "Mule"
+  "Watch Dog"
 
 shipyard "Centaur Intermediate"
-  "Clipper"
-  "Mark I Drone"
-#  "Mark II Drone"
+  "Foxhound"
+  "Mongrel"
+  "Mule"
+  "Watch Dog"
 
 shipyard "Centaur Basics"
-  "Mark I Drone"
-#  "Mark II Drone"
+  "Foxhound"
+  "Mongrel"
+  "Watch Dog"
+
+
+
+# 
+shipyard "Flivver"
+  "Flivver"
 
 
 
@@ -76,26 +86,32 @@ shipyard "Coalition Basics"
 
 # Hai-home (Ya Hai)
 shipyard "Hai Advanced"
+#  "Flea"
   "Aphid"
   "Lightning Bug"
+#  "Pond Strider"
   "Shield Beetle"
   "Water Bug"
 
 shipyard "Hai Intermediate"
+#  "Flea"
   "Aphid"
   "Lightning Bug"
+#  "Pond Strider"
   "Water Bug"
 
 shipyard "Hai Basics"
+#  "Flea"
   "Aphid"
-  "Lightning Bug"
 
 
 shipyard "Hai Unfettered"
-#  "Flea"
-  "Mosquito"
-#  "Pond Strider"
-  "Solifuge"
+  "Aphid (Unfettered)"
+  "Lightning Bug (Unfettered)"
+#  "Mosquito"
+  "Shield Beetle (Unfettered)"
+#  "Solifuge"
+  "Water Bug (Unfettered)"
 
 
 
@@ -184,40 +200,33 @@ shipyard "Kor Sestor Basics"
 
 # Valhalla (Algenubi)
 shipyard "Lionheart Advanced"
-  "Aerie"
-  "Argosy"
   "Arrow"
-  "Behemoth"
   "Bounder"
-  "Dagger"
-  "Leviathan"
+  "Bulk Freighter"
+  "Lance"
+  "Manta"
   "Warrior"
 
 shipyard "Lionheart Intermediate"
-  "Aerie"
-  "Argosy"
   "Arrow"
   "Bounder"
-  "Dagger"
+  "Manta"
   "Warrior"
 
 shipyard "Lionheart Basics"
   "Arrow"
   "Bounder"
-  "Dagger"
   "Warrior"
 
 
 
 # Sunracer (Mirfak)
 shipyard "Megaparsec Advanced"
-  "Manta"
   "Quicksilver"
   "Scout"
   "Thunderbolt"
 
 shipyard "Megaparsec Intermediate"
-  "Manta"
   "Quicksilver"
   "Scout"
   "Thunderbolt"
@@ -254,22 +263,24 @@ shipyard "Pirate Covert"
   "Wasp"
 
 shipyard "Pirate Freedom"
+  "Argosy"
   "Hero"
-  "Splinter"
 
 shipyard "Pirate Greenrock"
   "Fury"
   "Harpy"
   "Hawk"
   "Raven"
+  "Stymphalian"
 
 shipyard "Pirate Haven"
+  "Argosy"
   "Hero"
-  "Splinter"
 
 shipyard "Pirate Smuggler's Den"
   "Fury"
   "Harpy"
+  "Stymphalian"
 
 
 
@@ -316,6 +327,27 @@ shipyard "Saryd Basics"
   "Runabout"
   "Traveller"
   "Visitor"
+
+
+
+# Little Garden (Merak)
+shipyard "Sisensis Advanced"
+  "Bastion"
+  "Clipper"
+  "Mark I Drone"
+  "Mark II Drone"
+#  "Mark III Drone"
+
+shipyard "Sisensis Intermediate"
+  "Clipper"
+  "Mark I Drone"
+  "Mark II Drone"
+#  "Mark III Drone"
+
+shipyard "Sisensis Basics"
+  "Mark I Drone"
+  "Mark II Drone"
+#  "Mark III Drone"
 
 
 
@@ -367,7 +399,7 @@ shipyard "Star Basics"
 # Wayfarer (Tarazed)
 shipyard "Tarazed Advanced"
   "Blackbird"
-  "Falcon"
+  "Goose"
   "Hawk"
 #  "Kestrel"
   "Osprey"
@@ -375,42 +407,35 @@ shipyard "Tarazed Advanced"
 
 shipyard "Tarazed Intermediate"
   "Blackbird"
+  "Goose"
   "Hawk"
   "Osprey"
   "Raven"
 
 shipyard "Tarazed Basics"
   "Hawk"
-  "Raven"
 
 
 
 # Foundry (Achernar)
 shipyard "Vortex Advanced"
-  "Bactrian"
+  "Behemoth"
   "Firebird"
-  "Foxhound"
   "Heavy Shuttle"
+  "Leviathan"
   "Light Shuttle"
-  "Mongrel"
-  "Mule"
   "Wasp"
-  "Watch Dog"
 
 shipyard "Vortex Intermediate"
   "Firebird"
-  "Foxhound"
   "Heavy Shuttle"
   "Light Shuttle"
   "Wasp"
-  "Watch Dog"
 
 shipyard "Vortex Basics"
-  "Foxhound"
   "Heavy Shuttle"
   "Light Shuttle"
   "Wasp"
-  "Watch Dog"
 
 
 
@@ -458,7 +483,6 @@ shipyard "All Ships"
   "Dreadnought"
   "Earth Shaper"
   "Enfolta"
-  "Falcon"
   "Far Lek 14"
   "Far Osk 27"
   "Firebird"
@@ -468,6 +492,7 @@ shipyard "All Ships"
   "Foxhound"
   "Fury"
   "Gascraft"
+  "Goose"
   "Hag"
   "Harpy"
   "Hauler I"
@@ -483,6 +508,7 @@ shipyard "All Ships"
   "Kar Ik Vot 349"
   "Kestrel"
   "Lampyrid"
+  "Lance"
   "Leviathan"
   "Lightning Bug"
   "Light Shuttle"
@@ -490,6 +516,7 @@ shipyard "All Ships"
   "Manta"
   "Mark I Drone"
   "Mark II Drone"
+  "Mark III Drone"
   "Mars"
   "Mercury"
   "Met Par Tek 53"
@@ -524,7 +551,6 @@ shipyard "All Ships"
   "Solifuge"
   "Spindle"
   "Spire"
-  "Splinter"
   "Star Barge"
   "Star Freighter"
   "Star Queen"

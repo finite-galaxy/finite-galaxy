@@ -33,7 +33,7 @@ outfit "Mine Launcher"
       "no repeat"
     sound "minelayer"
     ammo "Mine"
-    icon "icon/minelayer"
+    icon "icon/mine"
     "fire effect" "minelayer fire"
     "hit effect" "huge explosion"
     "die effect" "minelayer split" 5
@@ -70,11 +70,11 @@ outfit "Mine Submunition"
     "velocity" 2
     "random velocity" 5
     "drag" .05
+    "missile strength" 22
     "blast radius" 7
     "shield damage" 350
     "hull damage" 280
     "hit force" 200
-    "missile strength" 22
 
 effect "minelayer fire"
   sprite "effect/minelayer split"
@@ -149,12 +149,12 @@ outfit "Piercer Launcher"
     "turn" 1.6
     "homing" 4
     "infrared tracking" .9
+    "missile strength" 73
     "blast radius" 6
     "shield damage" 290
     "hull damage" 440
-    "piercing" .2
     "hit force" 300
-    "missile strength" 73
+    "piercing" .2
     "stream"
   description "Piercer missiles carry a pair of warheads. The first, a smaller one in the very tip of the missile, explodes on impact to blast a hole in the ship's shields to allow some of the subsequent, larger explosion to pierce through."
 
@@ -216,11 +216,12 @@ outfit "Banisher"
     "firing heat" 4.9
     "shield damage" 2.8
     "hull damage" .9
+    "heat damage" 4.0
     "hit force" 40
   description "The Korath like to keep their enemies close... but not too close."
 
 effect "banisher impact"
-  sprite "effect/banisher impact"
+  sprite "effect/impact/banisher"
     "random start frame"
     "frame rate" 60
   "lifetime" 2
@@ -249,14 +250,14 @@ outfit "Detainer"
     "reload" 60
     "burst reload" 10
     "burst count" 2
+    "blast radius" 20
     "firing energy" 756
-    "firing force" 40
     "firing heat" 400
-    "hit force" 80
+    "firing force" 40
     "shield damage" 320
     "hull damage" 240
     "slowing damage" 40
-    "blast radius" 20
+    "hit force" 80
   description "Although not the most damaging weapon of its size, the Detainer is feared for two reasons: its exceptionally long range, and its ability to interfere with the propulsion systems of any ship it strikes."
 
 effect "detainer sparks"
@@ -269,7 +270,7 @@ effect "detainer sparks"
   "velocity scale" .5
 
 effect "detainer impact"
-  sprite "effect/detainer impact"
+  sprite "effect/impact/detainer"
     "no repeat"
     "frame rate" 40
   "lifetime" 13
@@ -318,7 +319,7 @@ outfit "Disruptor"
   description "Disruptors interfere with a ship's shields, allowing a ship's hull to be damaged even when shields are up. However, they do very little hull damage by themselves."
 
 effect "disruptor impact"
-  sprite "effect/static"
+  sprite "effect/impact/disruptor"
     "no repeat"
     "frame rate" 30
   "lifetime" 13
@@ -354,7 +355,7 @@ outfit "Fire-Lance"
   description "The Fire-Lance is a medium-range beam weapon designed to be used by their fighters."
 
 effect "fire-lance impact"
-  sprite "effect/fire-lance impact"
+  sprite "effect/impact/fire-lance"
     "no repeat"
     "frame rate" 20
   "lifetime" 10
@@ -373,14 +374,14 @@ outfit "Grab-Striker"
   "energy capacity" 100
   "turret mounts" -1
   weapon
-    sprite "projectile/grab-strike"
+    sprite "projectile/grab-striker"
       "frame rate" 25
       "random start frame"
     "hardpoint sprite" "hardpoint/grab-striker"
     "hardpoint offset" 7.
     sound "grab-strike"
-    "hit effect" "grab-strike impact"
-    "die effect" "grab-strike impact"
+    "hit effect" "grab-striker impact"
+    "die effect" "grab-striker impact"
     "inaccuracy" 1
     "turret turn" 1.05
     "velocity" 11
@@ -398,8 +399,8 @@ outfit "Grab-Striker"
     "hit force" -160
   description "Grab-Striker projectiles are designed to pull a target closer to the Korath ship, to keep it from escaping."
 
-effect "grab-strike impact"
-  sprite "effect/grab-strike impact"
+effect "grab-striker impact"
+  sprite "effect/impact/grab-striker"
     "no repeat"
     "frame rate" 20
   "lifetime" 15
@@ -436,7 +437,7 @@ outfit "Repeater Cannon"
   description "This is the smallest and simplest Korath projectile weapon, designed mostly for use on fighters and drones. As with most Korath technology, it generates a large amount of heat, enough that the gun must pause briefly after every few shots to cool down."
 
 effect "repeater impact"
-  sprite "effect/repeater impact"
+  sprite "effect/impact/repeater"
     "no repeat"
     "frame rate" 12
   "lifetime" 21
@@ -508,7 +509,7 @@ outfit "Slicer"
   description "This turret fires a tightly focused energy beam that is particularly effective against hull armour. When paired with a Disruptor, it is a deadly combination."
 
 effect "slicer impact"
-  sprite "effect/slicer impact"
+  sprite "effect/impact/slicer"
     "no repeat"
     "frame rate" 10
   "lifetime" 19

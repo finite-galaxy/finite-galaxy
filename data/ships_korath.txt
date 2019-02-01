@@ -28,7 +28,7 @@ ship "Chaser"
     "hull" 1500
     "required crew" 2
     "bunks" 3
-    "mass" 50
+    "mass" 70
     "drag" .9
     "heat dissipation" .9
     "outfit space" 125
@@ -36,14 +36,14 @@ ship "Chaser"
     "engine space" 30
     "weapon space" 25
     weapon
-      "blast radius" 35
-      "shield damage" 100
+      "blast radius" 39
+      "shield damage" 140
       "random shield damage" 390
-      "hull damage" 150
+      "hull damage" 210
       "random hull damage" 585
-      "heat damage" 3000
+      "heat damage" 4200
       "random heat damage" 7500
-      "hit force" 250
+      "hit force" 350
       "random hit force" 975
   outfits
     "Systems Core (Small)"
@@ -75,9 +75,9 @@ ship "Raider"
     "cost" 16570000
     "shields" 27000
     "hull" 9000
-    "required crew" 145
+    "required crew" 150
     "bunks" 250
-    "mass" 720
+    "mass" 920
     "drag" 12
     "heat dissipation" .5
     "cargo space" 175
@@ -86,17 +86,17 @@ ship "Raider"
     "engine space" 159
     "weapon space" 284
 # miscellaneous stats
-    "fuel capacity" 11884
+    "fuel capacity" 12824
     "ramscoop" 5
     weapon
-      "blast radius" 323
-      "shield damage" 1440
+      "blast radius" 363
+      "shield damage" 1840
       "random shield damage" 1792
-      "hull damage" 2160
+      "hull damage" 2760
       "random hull damage" 2688
-      "heat damage" 43200
+      "heat damage" 55200
       "random heat damage" 53760
-      "hit force" 3600
+      "hit force" 4600
       "random hit force" 4480
   outfits
     "Systems Core (Medium)"
@@ -114,10 +114,10 @@ ship "Raider"
     "Repeater Rifle" 200
   engine -20 130
   engine 20 130
-  turret -8 -145 "Grab-Striker"
-  turret 8 -145 "Grab-Striker"
-  turret -34 -143 "Grab-Striker"
-  turret 34 -143 "Grab-Striker"
+  turret -8 -145
+  turret 8 -145
+  turret -34 -143
+  turret 34 -143
   turret 0 35 "Banisher"
   turret 0 90 "Warder"
   fighter -75 100
@@ -163,7 +163,7 @@ ship "World-Ship A"
     hull 29000
     "required crew" 814
     "bunks" 1472
-    "mass" 1835
+    "mass" 2035
     "drag" 21
     "heat dissipation" .4
     "cargo space" 244
@@ -172,17 +172,17 @@ ship "World-Ship A"
     "engine space" 173
     "weapon space" 328
 # miscellaneous stats
-    "fuel capacity" 30200
+    "fuel capacity" 25656
     "ramscoop" 5
     weapon
-      "blast radius" 601
-      "shield damage" 3670
+      "blast radius" 641
+      "shield damage" 4070
       "random shield damage" 2344
-      "hull damage" 5505
+      "hull damage" 6105
       "random hull damage" 3516
-      "heat damage" 110100
+      "heat damage" 122100
       "random heat damage" 70320
-      "hit force" 9175
+      "hit force" 10175
       "random hit force" 5860
   outfits
     "Systems Core (Large)"
@@ -278,7 +278,7 @@ ship "World-Ship B"
     hull 34000
     "required crew" 804
     "bunks" 1482
-    "mass" 1935
+    "mass" 2135
     "drag" 21
     "heat dissipation" .4
     "cargo space" 264
@@ -287,17 +287,17 @@ ship "World-Ship B"
     "engine space" 173
     "weapon space" 328
 # miscellaneous stats
-    "fuel capacity" 31400
+    "fuel capacity" 26616
     "ramscoop" 5
     weapon
-      "blast radius" 625
-      "shield damage" 3870
+      "blast radius" 665
+      "shield damage" 4270
       "random shield damage" 2384
-      "hull damage" 5805
+      "hull damage" 6405
       "random hull damage" 3576
-      "heat damage" 116100
+      "heat damage" 128100
       "random heat damage" 71520
-      "hit force" 9675
+      "hit force" 10675
       "random hit force" 5960
   outfits
     "Systems Core (Large)"
@@ -400,7 +400,7 @@ ship "World-Ship C"
     hull 39000
     "required crew" 794
     "bunks" 1492
-    "mass" 2035
+    "mass" 2235
     "drag" 21
     "heat dissipation" .4
     "cargo space" 284
@@ -409,17 +409,17 @@ ship "World-Ship C"
     "engine space" 173
     "weapon space" 328
 # miscellaneous stats
-    "fuel capacity" 32600
+    "fuel capacity" 27576
     "ramscoop" 5
     weapon
-      "blast radius" 649
-      "shield damage" 4070
+      "blast radius" 689
+      "shield damage" 4470
       "random shield damage" 2424
-      "hull damage" 6105
+      "hull damage" 6705
       "random hull damage" 3636
-      "heat damage" 122100
+      "heat damage" 134100
       "random heat damage" 72720 
-      "hit force" 10175
+      "hit force" 11175
       "random hit force" 6060
   outfits
     "Systems Core (Large)"

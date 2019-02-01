@@ -7,7 +7,7 @@ shipyard "Quarg Variants"
 ship "Skylark"
   sprite "ship/skylark"
   attributes
-    category "Frigate"
+    category "Destroyer"
 #    manufacturer "Quarg"
     licences
       Quarg
@@ -19,21 +19,21 @@ ship "Skylark"
     "mass" 500
     "drag" 12.3
     "heat dissipation" .7
-    "cargo space" 200
+    "cargo space" 300
     "outfit space" 700
     "core space" 400
     "engine space" 100
     "weapon space" 200
     weapon
-      "blast radius" 280
+      "blast radius" 300
       "shield damage" 1000
-      "random shield damage" 1800
+      "random shield damage" 2000
       "hull damage" 1500
-      "random hull damage" 2700
+      "random hull damage" 3000
       "heat damage" 30000
-      "random heat damage" 54000
+      "random heat damage" 60000
       "hit force" 2500
-      "random hit force" 4500
+      "random hit force" 5000
   outfits
     "Quantum Shield Generator"
     "Quantum Hull Repair"

@@ -18,9 +18,9 @@ outfit "Antimatter Cannon"
     "hit effect" "nuke explosion"
     "safe"
     "reload" 187
+    "blast radius" 100
     "firing energy" 5610
     "firing heat" 1870
-    "blast radius" 100
     "hit force" 1000
   description "This is the Drak's ultimate weapon."
 
@@ -36,10 +36,10 @@ outfit "Antimatter Fragment"
     "safe"
     "inaccuracy" 1
     "lifetime" 499
-    "hit force" 1000
+    "blast radius" 100
     "shield damage" 5610
     "hull damage" 5610
-    "blast radius" 100
+    "hit force" 1000
 
 effect "antimatter spark"
   sprite "effect/antimatter spark"
@@ -61,7 +61,7 @@ effect "antimatter dust"
   "velocity scale" .1
 
 
-outfit "Bolt Turret"
+outfit "Jolt Turret"
   category "Turrets"
   thumbnail "outfit/unknown"
   licences
@@ -73,10 +73,10 @@ outfit "Bolt Turret"
   "weapon space" -48
   "turret mounts" -1
   weapon
-    sprite "projectile/drak bolt"
+    sprite "projectile/jolt"
       "frame rate" 13.318
       "random start frame"
-    "hit effect" "drak bolt impact"
+    "hit effect" "jolt impact"
     "inaccuracy" 1
     "turret turn" 12
     "velocity" 36
@@ -89,8 +89,8 @@ outfit "Bolt Turret"
     "hit force" 120
   description "This is a turret based cannon with significant range and accuracy."
 
-effect "drak bolt impact"
-  sprite "effect/drak bolt impact"
+effect "jolt impact"
+  sprite "effect/impact/jolt"
     "no repeat"
     "frame rate" 30
   sound "explosion small"
@@ -148,9 +148,9 @@ outfit "Draining Field"
     "firing energy" 20
     "firing heat" 5
     "firing force" 30
-    "hit force" 60
     "shield damage" 50
     "ion damage" .5
+    "hit force" 60
   description "This device produces a field that drains energy from any ship within it."
 
 

@@ -398,26 +398,26 @@ mission "FW Southern Battle 2"
     fleet
       names "free worlds capital"
       variant
-        "Falcon (Plasma)"
+        "Bastion (Plasma)"
         "Osprey" 2
     fleet
       names "free worlds capital"
       variant
-        "Falcon (Plasma)"
-        "Osprey (Javelin)" 2
-    fleet
-      names "free worlds capital"
-      variant
-        "Falcon (Heavy)"
+        "Bastion (Plasma)"
         "Osprey (Laser)" 2
     fleet
       names "free worlds capital"
       variant
-        "Falcon (Plasma)"
+        "Bastion (Plasma)"
+        "Osprey (Particle)" 2
     fleet
       names "free worlds capital"
       variant
-        "Bastion" 2
+        "Bastion (Plasma)"
+    fleet
+      names "free worlds capital"
+      variant
+        "Bastion (Plasma)" 2
     fleet
       names "free worlds capital"
       fighters "free worlds fighter"
@@ -427,7 +427,7 @@ mission "FW Southern Battle 2"
     fleet
       names "free worlds capital"
       variant
-        "Falcon" 2
+        "Lance" 2
   
   npc evade
     system Rastaban
@@ -437,15 +437,15 @@ mission "FW Southern Battle 2"
       names "republic"
       fighters "republic fighter"
       variant
-        "Saturn (Mark II)"
+        "Saturn"
         "Foxhound" 4
-        "Mark II Drone" 6
+        "Mark III Drone" 6
     fleet 3
       names "republic"
       fighters "republic fighter"
       variant
         "Venus (Mark II)"
-        "Mark II Drone" 4
+        "Mark III Drone" 4
     fleet 2
       names "republic"
       variant
@@ -556,11 +556,11 @@ mission "FW Southern Prisoners - Release"
   npc accompany save
     government "Escort"
     personality timid escort
-    ship "Blackbird" "F.W.S. Charity"
-    ship "Blackbird" "F.W.S. Good Hope"
-    ship "Blackbird" "F.W.S. Stoutheart"
-    ship "Blackbird" "F.W.S. Nightingale"
-    ship "Blackbird" "F.W.S. Turtledove"
+    ship "Blackbird (Anti-Missile)" "F.W.S. Charity"
+    ship "Blackbird (Anti-Missile)" "F.W.S. Good Hope"
+    ship "Blackbird (Anti-Missile)" "F.W.S. Stoutheart"
+    ship "Blackbird (Anti-Missile)" "F.W.S. Nightingale"
+    ship "Blackbird (Anti-Missile)" "F.W.S. Turtledove"
   npc
     government "Republic"
     personality staying uninterested
@@ -620,11 +620,11 @@ mission "FW Southern Prisoners - Released"
   npc accompany save
     government "Escort"
     personality timid escort
-    ship "Blackbird" "F.W.S. Charity"
-    ship "Blackbird" "F.W.S. Good Hope"
-    ship "Blackbird" "F.W.S. Stoutheart"
-    ship "Blackbird" "F.W.S. Nightingale"
-    ship "Blackbird" "F.W.S. Turtledove"
+    ship "Blackbird (Anti-Missile)" "F.W.S. Charity"
+    ship "Blackbird (Anti-Missile)" "F.W.S. Good Hope"
+    ship "Blackbird (Anti-Missile)" "F.W.S. Stoutheart"
+    ship "Blackbird (Anti-Missile)" "F.W.S. Nightingale"
+    ship "Blackbird (Anti-Missile)" "F.W.S. Turtledove"
   npc
     government "Republic"
     personality staying uninterested
@@ -1109,7 +1109,7 @@ mission "FW Alphas 1.1"
       `  Alondo explains, "It's only one Venus, an 'Oathkeeper' ship, sworn to take no part in our war. The Free Worlds have almost no troops trained for ground combat, so without the Navy's help we would be unlikely to be able to eliminate the Alphas."`
       `  The Navy ship lands, and a man steps off who you recognize immediately: Admiral William Danforth, who is something of a folk hero throughout human space, and who you have heard is the commander of the entire Oathkeepers regiment. With him is a man who he introduces as Commander Aaron Nguyen of the Navy Humanitarian Corps. As Nguyen shakes your hand, you are struck by the fact that although he is your enemy, you see no trace of hostility in his eyes - in fact, his expression is surprisingly warm and affectionate.`
       `  "We have no room for error," says Danforth. "These Alphas must be eliminated, and they must not be allowed to escape. On that, at least, we can all agree."`
-      `  Freya says, "Captain <last> will lead the attack." She beckons to two of the Free Worlds captains. "Marco, Emily, you will join them with your Falcons. Destroy any pirate ships in orbit, then land and secure the facility. Understood?" You nod, and prepare to take off for the <system> system.`
+      `  Freya says, "Captain <last> will lead the attack." She beckons to two of the Free Worlds captains. "Marco, Emily, you will join them with your Lances. Destroy any pirate ships in orbit, then land and secure the facility. Understood?" You nod, and prepare to take off for the <system> system.`
         accept
   
   npc accompany save
@@ -1119,17 +1119,17 @@ mission "FW Alphas 1.1"
   npc
     government "Free Worlds"
     personality heroic escort
-    ship "Falcon (Plasma)" "F.W.S. Alder"
-    ship "Falcon" "F.W.S. Starry Warrior"
+    ship "Lance (Plasma)" "F.W.S. Alder"
+    ship "Lance (Plasma)" "F.W.S. Starry Warrior"
   npc kill
     government "Pirate"
     personality heroic staying target
     system "Graffias"
-    ship "Leviathan (Heavy)" "Dread Lord"
-    ship "Leviathan (South)" "Dominator"
-    ship "Firebird (Laser)" "Vengeance"
-    ship "Firebird (Impact)" "Revenant"
+    ship "Leviathan" "Dominator"
+    ship "Leviathan" "Dread Lord"
     ship "Firebird" "Draugbreath"
+    ship "Firebird (Impact)" "Revenant"
+    ship "Firebird (Laser)" "Vengeance"
   
   on visit
     dialogue "You have reached <planet>, but the battle is not over - you've either failed to kill one of the pirates, or left one of your ships behind in a different system."
@@ -1209,18 +1209,18 @@ mission "FW Alphas 1.2"
   npc accompany save
     government "Free Worlds"
     personality heroic escort
-    ship "Falcon (Plasma)" "F.W.S. Oak"
-    ship "Falcon (Plasma)" "F.W.S. Alder"
-    ship "Falcon" "F.W.S. Starry Warrior"
+    ship "Lance (Plasma)" "F.W.S. Alder"
+    ship "Lance (Plasma)" "F.W.S. Oak"
+    ship "Lance (Plasma)" "F.W.S. Starry Warrior"
   npc kill
     government "Pirate"
     personality heroic staying target
     system Graffias
-    ship "Leviathan (Heavy)" "Dread Lord"
-    ship "Leviathan (South)" "Dominator"
-    ship "Firebird (Laser)" "Vengeance"
-    ship "Firebird (Impact)" "Revenant"
+    ship "Leviathan" "Dominator"
+    ship "Leviathan" "Dread Lord"
     ship "Firebird" "Draugbreath"
+    ship "Firebird (Impact)" "Revenant"
+    ship "Firebird (Laser)" "Vengeance"
   
   on visit
     dialogue "You have reached <planet>, but the battle is not over - you've either failed to kill one of the pirates, or left one of your ships behind in a different system."
@@ -1461,7 +1461,7 @@ mission "FW Bloodsea 1.1B"
     fleet
       names pirate
       variant
-        "Raven (Afterburner)" 2
+        "Raven" 2
         "Hawk" 2
         "Fury (Flamethrower)" 3
         "Harpy" 5
@@ -1519,8 +1519,8 @@ mission "FW Bloodsea 1.2A"
     government "Free Worlds"
     personality heroic escort
     ship "Dreadnought" "F.W.S. Bombastic"
-    ship "Falcon (Plasma)" "F.W.S. Equalizer"
-    ship "Falcon (Plasma)" "F.W.S. Enforcer"
+    ship "Lance (Plasma)" "F.W.S. Equalizer"
+    ship "Lance (Plasma)" "F.W.S. Enforcer"
   
   npc evade
     personality heroic staying
@@ -1530,11 +1530,11 @@ mission "FW Bloodsea 1.2A"
       names pirate
       variant
         "Firebird (Laser)"
-        "Raven (Afterburner)" 2
-        "Hawk (Javelin)" 2
+        "Raven" 2
+        "Hawk" 2
         "Fury (Flamethrower)" 3
         Harpy 5
-    ship "Leviathan (South)" "Freedom"
+    ship "Leviathan" "Freedom"
     ship "Manta" "Lucifer"
     ship "Bastion (Heavy)" "Punisher"
   
@@ -1750,8 +1750,8 @@ mission "FW Rand 1"
     government "Free Worlds"
     personality heroic disables escort
     ship "Dreadnought" "F.W.S. Elder"
-    ship "Falcon (Plasma)" "F.W.S. Reliant"
-    ship "Falcon (Heavy)" "F.W.S. Bismark"
+    ship "Lance (Plasma)" "F.W.S. Reliant"
+    ship "Bastion (Plasma)" "F.W.S. Bismark"
     ship "Skein" "F.W.S. Lapwing"
     ship "Hag" "Orange 8-4"
     ship "Hag" "Orange 0-9"
@@ -1759,7 +1759,7 @@ mission "FW Rand 1"
     ship "Hag" "Orange 3-1"
     ship "Hag" "Orange 1-5"
     ship "Hag" "Orange 9-1"
-    ship "Hawk (Javelin)" "F.W.S. Echo"
+    ship "Hawk" "F.W.S. Echo"
     ship "Hawk" "F.W.S. Shadow"
   npc
     government "Free Worlds"
@@ -1815,7 +1815,7 @@ mission "FW Rand 1B"
     personality staying timid
     system "Tarazed"
     ship "Dreadnought" "F.W.S. Holly"
-    ship "Falcon (Plasma)" "F.W.S. Nebula"
+    ship "Lance (Plasma)" "F.W.S. Nebula"
     ship "Skein" "F.W.S. Larkspur"
     ship "Hag" "Cyan 6-2"
     ship "Hag" "Cyan 0-9"
@@ -1907,14 +1907,14 @@ mission "FW Defend Bod"
     fleet
       names "syndicate capital"
       variant
-        "Splinter (Mark II)" 2
-        "Manta (Mark II)" 3
-        "Quicksilver (Mark II)" 5
+        "Vanguard" 2
+        "Argosy" 3
+        "Hero" 5
   npc
     government "Free Worlds"
     personality heroic escort disables
     ship "Dreadnought" "F.W.S. Holly"
-    ship "Falcon (Plasma)" "F.W.S. Nebula"
+    ship "Lance (Plasma)" "F.W.S. Nebula"
     ship "Skein" "F.W.S. Larkspur"
     ship "Hag" "Cyan 6-2"
     ship "Hag" "Cyan 0-9"
@@ -2053,12 +2053,12 @@ mission "FW Liberate Delta Sagittarii"
     fleet
       names "free worlds capital"
       variant
-        "Falcon (Plasma)"
+        "Bastion (Plasma)"
         "Osprey"
     fleet
       names "free worlds capital"
       variant
-        "Falcon (Heavy)"
+        "Bastion (Plasma)"
     fleet
       names "free worlds capital"
       fighters "free worlds fighter"
@@ -2078,16 +2078,16 @@ mission "FW Liberate Delta Sagittarii"
       names "republic"
       fighters "republic fighter"
       variant
-        "Saturn (Mark II)"
+        "Saturn"
         "Foxhound" 4
-        "Mark II Drone" 6
+        "Mark III Drone" 6
         "Mercury (Mark II)" 4
     fleet
       names "republic"
       fighters "republic fighter"
       variant
         "Venus (Mark II)"
-        "Mark II Drone" 4
+        "Mark III Drone" 4
         "Mercury (Mark II)" 4
   
   npc
@@ -2098,7 +2098,7 @@ mission "FW Liberate Delta Sagittarii"
       names "republic"
       fighters "republic fighter"
       variant
-        "Saturn (Mark II)"
+        "Saturn"
         "Mars" 2
     fleet
       names "republic"

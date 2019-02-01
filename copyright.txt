@@ -2,62 +2,156 @@ Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
 Upstream-Name: finite-galaxy
 Upstream-Contact: Finite Galaxy <finite-galaxy@mail.com>
 Source: https://github.com/finite-galaxy/finite-galaxy/
+License: GPL-3+
+
 
 
 Files:
- *
-Copyright: Derived from works by Michael Zahniser <mzahniser@gmail.com> (under the same license)
-Licence: GPL-3+
+ code/*
+ data/*
+Copyright: Derived from works by Michael Zahniser <mzahniser@gmail.com> (https://github.com/endless-sky), under the same license
+License: GPL-3+
 
 
 Files:
  icon.png
  icons/*
-Copyright: Adam Evans
-Licence: CC-BY-2.0
+Copyright: Adam Evans (https://www.flickr.com/photos/8269775@N05)
+License: CC-BY-2.0
+Comment: Taken from Wikimedia commons. Cropped and edited.
 
 
 Files:
- images/*
-Copyright: Michael Zahniser <mzahniser@gmail.com>, unless otherwise stated below.
-Licence: CC-BY-SA-4.0
+ images/asteroid/*
+Copyright: Michael Zahniser <mzahniser@gmail.com> (https://github.com/endless-sky)
+License: CC-BY-SA-4.0
+
 
 Files:
- images/effect/bullet?impact*
-Copyright: Iaz Poolar
-Licence: CC-BY-SA-4.0
+ images/effect/*
+Copyright: Michael Zahniser <mzahniser@gmail.com> (https://github.com/endless-sky)
+License: CC-BY-SA-4.0
+
+Files:
+ images/effect/anti-missile/athena*
+ images/effect/flare/unused*
+ images/effect/impact/2x_poseidon*
+ images/effect/impact/ares*
+ images/effect/impact/hypnos*
+ images/effect/impact/hypnos_sub*
+ images/effect/impact/poseidon*
+ images/effect/impact/pulse*
+ images/effect/artemis_fire*
+ images/effect/dragonf_die*
+ images/effect/dragonf_fire*
+ images/effect/dragonf_impact*
+ images/effect/dragonf_live*
+ images/effect/dragoni_impact*
+Copyright: Frederick Goy IV <fredgoy2003@gmail.com> (https://github.com/comnom)
+License: CC-BY-SA-4.0
+
+Files:
+ images/effect/impact/bullet*
+Copyright: Iaz Poolar <iaz.poolar@gmail.com> (https://github.com/LocalGod79)
+License: CC-BY-SA-4.0
 Comment: Derived from works by Jonathan Steck derived from works by Michael Zahniser (under the same license).
 
 Files:
  images/effect/railspark*
-Copyright: Iaz Poolar
-Licence: CC-BY-SA-4.0
+Copyright: Iaz Poolar <iaz.poolar@gmail.com> (https://github.com/LocalGod79)
+License: CC-BY-SA-4.0
 Comment: Derived from works by Michael Zahniser (under the same license).
 
+
 Files:
- images/hardpoint/modified_blaster_quad_turret*
- images/hardpoint/proton_turret*
-Copyright: Nate Graham <pointedstick@zoho.com>
-Licence: CC-BY-SA-4.0
+ images/hardpoint/anti-missile_chameleon*
+ images/hardpoint/anti-missile_heavy*
+ images/hardpoint/anti-missile_small*
+ images/hardpoint/anti-missile_tiny*
+ images/hardpoint/anti-missile_wanderer*
+ images/hardpoint/attractor*
+ images/hardpoint/banisher*
+ images/hardpoint/blaster_turret*
+ images/hardpoint/blaster_quad_turret*
+ images/hardpoint/bombardment_turret*
+ images/hardpoint/disruptor*
+ images/hardpoint/electron_turret*
+ images/hardpoint/grab-striker*
+ images/hardpoint/heavy_laser_turret*
+ images/hardpoint/laser_turret*
+ images/hardpoint/moonbeam_turret*
+ images/hardpoint/particle_turret*
+ images/hardpoint/plasma_turret*
+ images/hardpoint/point_defence*
+ images/hardpoint/repeater_turret*
+ images/hardpoint/repulsor*
+ images/hardpoint/slicer*
+ images/hardpoint/sunbeam_dual_turret*
+ images/hardpoint/sunbeam_turret*
+ images/hardpoint/thrasher_turret*
+ images/hardpoint/unused_turret_a*
+ images/hardpoint/warder*
+Copyright: Michael Zahniser <mzahniser@gmail.com> (https://github.com/endless-sky)
+License: CC-BY-SA-4.0
+
+Files:
+ images/hardpoint/anti-missile_pug*
+ images/hardpoint/bolt*
+ images/hardpoint/skylance*
+ images/hardpoint/unused_turret_b*
+ images/hardpoint/unused_turret_c*
+ images/hardpoint/zapper_turret*
+Copyright: Frederick Goy IV <fredgoy2003@gmail.com> (https://github.com/comnom)
+License: CC-BY-SA-4.0
+
+Files:
+ images/hardpoint/pulse_turret*
+ images/hardpoint/unused_quad_turret_a*
+Copyright: Nate Graham <pointedstick@zoho.com> (https://github.com/Pointedstick)
+License: CC-BY-SA-4.0
+
+
+Files:
+ images/icon/emp*
+ images/icon/finisher*
+ images/icon/flamethrower*
+ images/icon/impact*
+ images/icon/javelin*
+ images/icon/meteor*
+ images/icon/mine*
+ images/icon/nuke*
+ images/icon/piercer*
+ images/icon/sidewinder*
+ images/icon/thunderhead*
+ images/icon/thunderstorm*
+ images/icon/tornado*
+ images/icon/tracker*
+Copyright: Michael Zahniser <mzahniser@gmail.com> (https://github.com/endless-sky)
+License: CC-BY-SA-4.0
 
 Files:
  images/icon/gat*
-Copyright: Jonathan Steck
-Licence: CC-BY-SA-4.0
+Copyright: Jonathan Steck (https://github.com/Amazinite)
+License: CC-BY-SA-4.0
 Comment: Derived from works by Maximilian Korber (under the same license).
 
 Files:
- images/icon/rail?gun*
-Copyright: Jonathan Steck
-Licence: CC-BY-SA-4.0
+ images/icon/rail*
+Copyright: Jonathan Steck (https://github.com/Amazinite)
+License: CC-BY-SA-4.0
 Comment: Derived from works by Matthew Smestad (under the same license).
+
+Files:
+ images/icon/unused*
+Copyright: Frederick Goy IV <fredgoy2003@gmail.com> (https://github.com/comnom)
+License: CC-BY-SA-4.0
+
 
 Files:
  images/land/*
 Copyright: Various
-Licence: public-domain
- Taken from morgue-file.com, a collection of photographs that have been donated
- and placed in the public domain. (Exceptions noted below.)
+License: public-domain
+Comment: Taken from morgue-file.com, a collection of photographs that have been donated and placed in the public domain. (Exceptions noted below.)
 
 Files:
  images/land/badlands0*
@@ -148,14 +242,13 @@ Files:
  images/land/water4*
  images/land/water8*
 Copyright: Various
-Licence: public-domain
- Taken from unsplash.com, a collection of photographs that have been donated and
- placed in the public domain.
+License: public-domain
+Comment: Taken from unsplash.com, a collection of photographs that have been donated and placed in the public domain.
 
 Files:
  images/land/bwerner*
 Copyright: Berthold Werner (commons.wikimedia.org/wiki/User:Berthold_Werner)
-Licence: CC-BY-SA-3.0
+License: CC-BY-SA-3.0
 Comment: Taken from Wikimedia commons. Cropped and edited.
 
 Files:
@@ -168,114 +261,416 @@ Files:
  images/land/station3*
  images/land/station4*
 Copyright: NASA
-Licence: public-domain
- From NASA, and therefore in the public domain because they were created by
- government employees while doing work for the government.
+License: public-domain
+Comment: From NASA, and therefore in the public domain because they were created by government employees while doing work for the government.
 
 Files:
  images/land/dmottl*
 Copyright: Dmitry A. Mottl (commons.wikimedia.org/wiki/User:Dmottl)
-Licence: CC-BY-SA-3.0
+License: CC-BY-SA-3.0
 Comment: Taken from Wikimedia commons. Cropped and edited.
 
 Files:
  images/land/lava0*
 Copyright: USGS
-Licence: public-domain
- From the USGS, and therefore in the public domain because they were created by
- government employees while doing work for the government.
+License: public-domain
+Comment: From the USGS, and therefore in the public domain because they were created by government employees while doing work for the government.
 
 Files:
  images/land/lava5*
-Copyright: Michael Zahniser <mzahniser@gmail.com>
-Licence: CC-BY-SA-4.0
+Copyright: Michael Zahniser <mzahniser@gmail.com> (https://github.com/endless-sky)
+License: CC-BY-SA-4.0
 
 Files:
  images/land/mfield*
 Copyright: Matthew Field (commons.wikimedia.org/wiki/User:Mfield)
-Licence: CC-BY-SA-3.0
+License: CC-BY-SA-3.0
 Comment: Taken from Wikimedia commons. Cropped and edited.
 
 Files:
  images/land/myrabella*
 Copyright: Myrabella (commons.wikimedia.org/wiki/User:Myrabella)
-Licence: CC-BY-SA-3.0
+License: CC-BY-SA-3.0
 Comment: Taken from Wikimedia commons. Cropped and edited.
 
 Files:
  images/land/sea3.jpg
  images/land/sky2.jpg
 Copyright: Emily Mell <hasmidas@gmail.com>
-Licence: public domain
+License: public domain
 
 Files:
  images/land/sivael*
 Copyright: Tymoteusz Kapuściński (Sivael)
-Licence: CC-BY-SA-4.0
-Comment: Screenshots of environments created with assets purchased by Tymoteusz
- Kapuściński from the Unity Asset Store. Post-processing applied by Michael
- Zahniser to make the images look less artificial.
+License: CC-BY-SA-4.0
+Comment: Screenshots of environments created with assets purchased by Tymoteusz Kapuściński from the Unity Asset Store. Post-processing applied by Michael Zahniser to make the images look less artificial.
 
 Files:
  images/land/*-harro*
-Copyright: @harro.eu (copyright@harro.eu)
-Licence: CC-BY-SA-4.0
+Copyright: @harro.eu <copyright@harro.eu>
+License: CC-BY-SA-4.0
 
 Files:
  images/land/*-iridium*
-Copyright: @Iridium Ore (blueajp@gmail.com)
-Licence: CC-BY-SA-4.0
+Copyright: @Iridium Ore <blueajp@gmail.com>
+License: CC-BY-SA-4.0
 
 Files:
  images/land/*-sfiera*
 Copyright: Chris Pickel (sfiera.net)
-Licence: CC-BY-SA-4.0
+License: CC-BY-SA-4.0
 
 Files:
  images/land/*-spfld*
-Copyright: Eric Denni (spfldsatellite@gmail.com)
-Licence: CC-BY-SA-4.0
+Copyright: Eric Denni <spfldsatellite@gmail.com>
+License: CC-BY-SA-4.0
 
 Files:
  images/land/*-striker*
-Copyright: Michael Wilso (sixfootplus@gmail.com)
-Licence: CC-BY-SA-4.0
+Copyright: Michael Wilso <sixfootplus@gmail.com>
+License: CC-BY-SA-4.0
+
 
 Files:
- images/outfit/anti-missile_bullfrog*
+ images/_menu/*
+Copyright: Michael Zahniser <mzahniser@gmail.com> (https://github.com/endless-sky)
+License: CC-BY-SA-4.0
+
+
+Files:
+ images/outfit/afterburner*
+ images/outfit/afterburner_ionic*
+ images/outfit/anti-missile_heavy*
+ images/outfit/anti_missile_tiny*
+ images/outfit/anti-missile_wanderer*
+ images/outfit/attractor*
+ images/outfit/banisher*
+ images/outfit/battery_coalition_large*
+ images/outfit/battery_coalition_small*
+ images/outfit/battery_huge_a*
+ images/outfit/battery_large_a*
+ images/outfit/battery_medium_a*
+ images/outfit/battery_small_a*
+ images/outfit/battery_tiny_a*
+ images/outfit/blaster_cannon*
+ images/outfit/blaster_quad_turret*
+ images/outfit/blaster_turret*
+ images/outfit/bombardment_cannon*
+ images/outfit/bombardment_turret*
+ images/outfit/command_centre*
+ images/outfit/control_transceiver*
+ images/outfit/cooling_coalition*
+ images/outfit/cooling_korath_large*
+ images/outfit/cooling_korath_small*
+ images/outfit/cooling_large*
+ images/outfit/cooling_medium*
+ images/outfit/cooling_small*
+ images/outfit/cooling_tiny*
+ images/outfit/cooling_wanderer*
+ images/outfit/detainer*
+ images/outfit/disruptor*
+ images/outfit/drive_jump*
+ images/outfit/drive_scram*
+ images/outfit/electron_cannon*
+ images/outfit/electron_turret*
+ images/outfit/emp*
+ images/outfit/emp_launcher*
+ images/outfit/finisher*
+ images/outfit/finisher_launcher*
+ images/outfit/fire-lance*
+ images/outfit/flamethrower*
+ images/outfit/fragmentation_grenades*
+ images/outfit/fuel_pod*
+ images/outfit/grab-striker*
+ images/outfit/heavy_laser_cannon*
+ images/outfit/heavy_laser_turret*
+ images/outfit/impact*
+ images/outfit/impact_launcher*
+ images/outfit/inhibitor_cannon*
+ images/outfit/interference_plating*
+ images/outfit/ion_cannon*
+ images/outfit/ion_rain*
+ images/outfit/javelin*
+ images/outfit/javelin_launcher*
+ images/outfit/laser_cannon*
+ images/outfit/map*
+ images/outfit/meteor*
+ images/outfit/meteor_launcher*
+ images/outfit/mine*
+ images/outfit/mine_launcher*
+ images/outfit/moonbeam_cannon*
+ images/outfit/moonbeam_turret*
+ images/outfit/nerve_gas*
+ images/outfit/nuke*
+ images/outfit/particle_cannon*
+ images/outfit/particle_turret*
+ images/outfit/piercer*
+ images/outfit/piercer_launcher*
+ images/outfit/plasma_cannon*
+ images/outfit/plasma_turret*
+ images/outfit/point_defence*
+ images/outfit/pulse_cannon*
+ images/outfit/radar_jammer_large*
+ images/outfit/radar_jammer_small*
+ images/outfit/ramscoop*
+ images/outfit/ramscoop_catalytic*
+ images/outfit/ramscoop_emergency*
+ images/outfit/ramscoop_wanderer*
+ images/outfit/reactor_biochemical_large*
+ images/outfit/reactor_biochemical_small*
+ images/outfit/reactor_boulder*
+ images/outfit/reactor_breeder*
+ images/outfit/reactor_candle*
+ images/outfit/reactor_coalition_large*
+ images/outfit/reactor_coalition_small*
+ images/outfit/reactor_dwarf*
+ images/outfit/reactor_fission*
+ images/outfit/reactor_fuel_huge*
+ images/outfit/reactor_fuel_large*
+ images/outfit/reactor_fuel_medium*
+ images/outfit/reactor_fuel_small*
+ images/outfit/reactor_fuel_tiny*
+ images/outfit/reactor_furnace*
+ images/outfit/reactor_fusion*
+ images/outfit/reactor_geode*
+ images/outfit/reactor_inferno*
+ images/outfit/reactor_nucleovoltaic*
+ images/outfit/reactor_pebble*
+ images/outfit/reactor_plasma_double*
+ images/outfit/reactor_plasma_single*
+ images/outfit/reactor_plasma_triple*
+ images/outfit/reactor_radiothermal*
+ images/outfit/reactor_remnant*
+ images/outfit/reactor_sand*
+ images/outfit/reactor_stack*
+ images/outfit/reactor_sun_blue*
+ images/outfit/reactor_sun_red*
+ images/outfit/reactor_sun_white*
+ images/outfit/reactor_sun_yellow*
+ images/outfit/reactor_thermionic*
+ images/outfit/reasoning_node*
+ images/outfit/repair_coalition_large*
+ images/outfit/repair_coalition_small*
+ images/outfit/repeater_cannon*
+ images/outfit/repeater_turret*
+ images/outfit/repulsor*
+ images/outfit/rifle_human*
+ images/outfit/scanner_asteroid*
+ images/outfit/scanner_cargo*
+ images/outfit/scanner_outfit*
+ images/outfit/scanner_surveillance*
+ images/outfit/scanner_tactical*
+ images/outfit/security_station*
+ images/outfit/shield_coalition_large*
+ images/outfit/shield_coalition_small*
+ images/outfit/shield_hai_large*
+ images/outfit/shield_hai_small*
+ images/outfit/shield_huge*
+ images/outfit/shield_large*
+ images/outfit/shield_medium*
+ images/outfit/shield_small*
+ images/outfit/shield_tiny*
+ images/outfit/shield_unfettered_large*
+ images/outfit/shield_unfettered_small*
+ images/outfit/shield_wanderer_large*
+ images/outfit/shield_wanderer_small*
+ images/outfit/sidewinder*
+ images/outfit/sidewinder_launcher*
+ images/outfit/slicer*
+ images/outfit/solar_coalition_large*
+ images/outfit/solar_coalition_small*
+ images/outfit/sunbeam_cannon*
+ images/outfit/sunbeam_dual_turret*
+ images/outfit/sunbeam_turret*
+ images/outfit/supercapacitor*
+ images/outfit/steering_coalition_large*
+ images/outfit/steering_coalition_small*
+ images/outfit/steering_deep_huge*
+ images/outfit/steering_deep_large*
+ images/outfit/steering_deep_medium*
+ images/outfit/steering_deep_small*
+ images/outfit/steering_deep_tiny*
+ images/outfit/steering_korath_huge*
+ images/outfit/steering_korath_large*
+ images/outfit/steering_korath_medium*
+ images/outfit/steering_korath_small*
+ images/outfit/steering_korath_tiny*
+ images/outfit/steering_remnant_large*
+ images/outfit/steering_remnant_medium*
+ images/outfit/steering_remnant_small*
+ images/outfit/steering_syndicate_huge*
+ images/outfit/steering_syndicate_large*
+ images/outfit/steering_syncicate_medium*
+ images/outfit/steering_syndicate_small*
+ images/outfit/steering_syndicate_tiny*
+ images/outfit/steering_unfettered_huge*
+ images/outfit/steering_unfettered_large*
+ images/outfit/steering_unfettered_medium*
+ images/outfit/steering_unfettered_small*
+ images/outfit/steering_unfettered_tiny*
+ images/outfit/steering_wanderer_large*
+ images/outfit/steering_wanderer_medium*
+ images/outfit/steering_wanderer_small*
+ images/outfit/steering_wanderer_tiny*
+ images/outfit/systems_core_large*
+ images/outfit/systems_core_medium*
+ images/outfit/systems_core_small*
+ images/outfit/thrasher_cannon*
+ images/outfit/thrasher_turret*
+ images/outfit/thruster_coalition_large*
+ images/outfit/thruster_coalition_small*
+ images/outfit/thruster_deep_huge*
+ images/outfit/thruster_deep_large*
+ images/outfit/thruster_deep_medium*
+ images/outfit/thruster_deep_small*
+ images/outfit/thruster_deep_tiny*
+ images/outfit/thruster_korath_huge*
+ images/outfit/thruster_korath_large*
+ images/outfit/thruster_korath_medium*
+ images/outfit/thruster_korath_small*
+ images/outfit/thruster_korath_tiny*
+ images/outfit/thruster_remnant_large*
+ images/outfit/thruster_remnant_medium*
+ images/outfit/thruster_remnant_small*
+ images/outfit/thruster_syndicate_huge*
+ images/outfit/thruster_syndicate_large*
+ images/outfit/thruster_syncicate_medium*
+ images/outfit/thruster_syndicate_small*
+ images/outfit/thruster_syndicate_tiny*
+ images/outfit/thruster_unfettered_huge*
+ images/outfit/thruster_unfettered_large*
+ images/outfit/thruster_unfettered_medium*
+ images/outfit/thruster_unfettered_small*
+ images/outfit/thruster_unfettered_tiny*
+ images/outfit/thruster_wanderer_large*
+ images/outfit/thruster_wanderer_medium*
+ images/outfit/thruster_wanderer_small*
+ images/outfit/thruster_wanderer_tiny*
+ images/outfit/thunderstorm*
+ images/outfit/thunderstorm_launcher*
+ images/outfit/tornado*
+ images/outfit/tornado_launcher*
+ images/outfit/tracker*
+ images/outfit/tracker_launcher*
+ images/outfit/unknown*
+ images/outfit/unused_android*
+ images/outfit/unused_cannon_c*
+ images/outfit/unused_cannon_a*
+ images/outfit/unused_miscellaneous_a*
+ images/outfit/unused_miscellaneous_c*
+ images/outfit/unused_missile_b*
+ images/outfit/unused_missile_b_launcher*
+ images/outfit/unused_turret_a*
+ images/outfit/warder*
+Copyright: Michael Zahniser <mzahniser@gmail.com> (https://github.com/endless-sky)
+License: CC-BY-SA-4.0
+
+Files:
  images/outfit/anti-missile_chameleon*
- images/outfit/battery_*_hai*
- images/outfit/cooling?ducts?hai*
- images/outfit/reactor_aeon*
- images/outfit/reactor_epoch*
- images/outfit/reactor_millennium*
-Copyright: Maximilian Korber
-Licence: CC-BY-SA-4.0
+ images/outfit/anti-missile_small*
+ images/outfit/battery_huge_b*
+ images/outfit/battery_large_b*
+ images/outfit/battery_medium_b*
+ images/outfit/battery_small_b*
+ images/outfit/battery_tiny_b*
+ images/outfit/cooling_tiny_b*
+ images/outfit/reactor_fusion_b*
+ images/outfit/reactor_fission_b*
+ images/outfit/reactor_dwarf_b*
+Copyright: Maximilian Korber (https://github.com/Wrzlprnft)
+License: CC-BY-SA-4.0
 Comment: Derived from works by Michael Zahniser (under the same license).
 
 Files:
  images/outfit/anti-missile_pug*
+ images/outfit/battery_hai_huge*
+ images/outfit/battery_hai_large*
+ images/outfit/battery_hai_small*
+ images/outfit/battery_hai_tiny*
+ images/outfit/battery_quarg*
  images/outfit/biodefences*
+ images/outfit/bolt_cannon*
+ images/outfit/bolt_turret*
+ images/outfit/cooling_hai*
+ images/outfit/cooling_quarg*
+ images/outfit/dragon_fire*
+ images/outfit/dragon_ice*
+ images/outfit/force_field*
+ images/outfit/fuel_pod_quarg*
+ images/outfit/ramscoop_quarg*
+ images/outfit/reactor_aeon*
+ images/outfit/reactor_century*
+ images/outfit/reactor_epoch*
+ images/outfit/reactor_millennium*
+ images/outfit/reactor_quarg*
+ images/outfit/repair_quarg*
+ images/outfit/scanner_hai*
  images/outfit/seeker*
- images/outfit/steering_pug*
- images/outfit/thruster_pug*
+ images/outfit/shield_quarg*
+ images/outfit/skylance*
+ images/outfit/steering_delta_large*
+ images/outfit/steering_delta_medium*
+ images/outfit/steering_delta_small*
+ images/outfit/steering_delta_tiny*
+ images/outfit/steering_pug_large*
+ images/outfit/steering_pug_medium*
+ images/outfit/steering_pug_small*
+ images/outfit/thruster_delta_large*
+ images/outfit/thruster_delta_medium*
+ images/outfit/thruster_delta_small*
+ images/outfit/thruster_delta_tiny*
+ images/outfit/thruster_pug_large*
+ images/outfit/thruster_pug_medium*
+ images/outfit/thruster_pug_small*
+ images/outfit/unused_cannon_b*
+ images/outfit/unused_missile_a*
+ images/outfit/unused_missile_a_launcher*
+ images/outfit/unused_missile_a_storage*
+ images/outfit/unused_turret_b*
+ images/outfit/unused_turret_c*
  images/outfit/zapper_cannon*
  images/outfit/zapper_turret*
-Copyright: Frederick Goy IV (https://github.com/comnom)
-Licence: CC-BY-SA-4.0
+Copyright: Frederick Goy IV <fredgoy2003@gmail.com> (https://github.com/comnom)
+License: CC-BY-SA-4.0
+
+Files:
+ images/outfit/drive_hyper*
+ images/outfit/unused_steering_large*
+ images/outfit/unused_steering_medium*
+ images/outfit/unused_steering_small*
+ images/outfit/unused_thruster_large*
+ images/outfit/unused_thruster_medium*
+ images/outfit/unused_thruster_small*
+Copyright: Evan Fluharty <evanfluharty@gmail.com> (https://github.com/Brick63)
+License: CC-BY-SA-4.0
 
 Files:
  images/outfit/bullet*
-Copyright: Maximilian Korber
-Licence: CC-BY-SA-4.0
+ images/outfit/bullet_launcher*
+Copyright: Maximilian Korber (https://github.com/Wrzlprnft)
+License: CC-BY-SA-4.0
 
 Files:
- images/outfit/engines_hai*
+ images/outfit/bullet_storage*
+Copyright: Jonathan Steck (https://github.com/Amazinite)
+License: CC-BY-SA-4.0
+Comment: Derived from works by Maximilian Korber (under the same license).
+
+Files:
+ images/outfit/engines_hai_tiny*
  images/outfit/engines_syndicate_tiny*
- images/outfit/steering_hai*
- images/outfit/thruster_hai*
-Copyright: Iaz Poolar
-Licence: CC-BY-SA-4.0
+ images/outfit/steering_hai_huge*
+ images/outfit/steering_hai_large*
+ images/outfit/steering_hai_medium*
+ images/outfit/steering_hai_small*
+ images/outfit/steering_hai_tiny*
+ images/outfit/thruster_hai_huge*
+ images/outfit/thruster_hai_large*
+ images/outfit/thruster_hai_medium*
+ images/outfit/thruster_hai_small*
+ images/outfit/thruster_hai_tiny*
+Copyright: Iaz Poolar <iaz.poolar@gmail.com> (https://github.com/LocalGod79)
+License: CC-BY-SA-4.0
 Comment: Derived from works by Michael Zahniser (under the same license).
 
 Files:
@@ -286,8 +681,8 @@ Files:
  images/outfit/harvested_titanium*
  images/outfit/harvested_tungsten*
  images/outfit/harvested_uranium*
-Copyright: Michael Zahniser (mzahniser@gmail.com)
-Licence: CC-BY-SA-4.0
+Copyright: Michael Zahniser <mzahniser@gmail.com> (https://github.com/endless-sky)
+License: CC-BY-SA-4.0
 Comment: Incorporating photos by Rob Lavinsky, under the CC-BY-SA-3.0 license.
 
 Files:
@@ -295,63 +690,69 @@ Files:
  images/outfit/harvested_iron*
  images/outfit/harvested_platinum*
  images/outfit/harvested_silver*
-Copyright: Michael Zahniser (mzahniser@gmail.com)
-Licence: CC-BY-SA-4.0
+Copyright: Michael Zahniser <mzahniser@gmail.com> (https://github.com/endless-sky)
+License: CC-BY-SA-4.0
 Comment: Incorporating photos by James St. John, under the CC-BY-2.0 license.
 
 Files:
  images/outfit/harvested_gold*
-Copyright: Michael Zahniser (mzahniser@gmail.com)
-Licence: CC-BY-SA-4.0
+Copyright: Michael Zahniser <mzahniser@gmail.com> (https://github.com/endless-sky)
+License: CC-BY-SA-4.0
 Comment: Incorporating a photo by Aram Dulyan, under the CC-BY-2.0 license.
+
+Files:
+ images/outfit/impact_storage*
+ images/outfit/javelin_storage*
+ images/outfit/meteor_storage*
+ images/outfit/mine_storage*
+ images/outfit/piercer_storage*
+ images/outfit/sidewinder_storage*
+ images/outfit/thunderstorm_storage*
+ images/outfit/tornado_storage*
+ images/outfit/tracker_storage*
+ images/outfit/unused_missile_b_storage*
+Copyright: Jonathan Steck (https://github.com/Amazinite)
+License: CC-BY-SA-4.0
+Comment: Derived from works by Michael Zahniser (under the same license).
 
 Files:
  images/outfit/laser_turret*
  images/outfit/rifle_heliarch*
  images/outfit/rifle_korath*
- images/outfit/unused_ramscoop*
- images/outfit/unused_two*
-Copyright: Evan Fluharty (Evanfluharty@gmail.com)
-Licence: CC-BY-SA-4.0
-Comment: Derived from works by Michael Zahniser (from under the same license).
-
- images/outfit/unused_steering_large*
- images/outfit/unused_steering_medium*
- images/outfit/unused_steering_small*
- images/outfit/unused_thruster_large*
- images/outfit/unused_thruster_medium*
- images/outfit/unused_thruster_small*
-Copyright: Evan Fluharty (Evanfluharty@gmail.com)
-Licence: CC-BY-SA-4.0
+ images/outfit/unused_miscellaneous_b*
+ images/outfit/unused_miscellaneous_d*
+Copyright: Evan Fluharty <evanfluharty@gmail.com> (https://github.com/Brick63)
+License: CC-BY-SA-4.0
+Comment: Derived from works by Michael Zahniser (under the same license).
 
 Files:
- images/outfit/modified_blaster_quad_turret*
+ images/outfit/photovoltaic_small*
+ images/outfit/photovoltaic_tiny*
+Copyright: Nick Barry (https://github.com/itsnickbarry)
+License: CC-BY-SA-3.0
+Comment: Derived from works by Michael Zahniser and David Monniaux (commons.wikimedia.org/wiki/User:David.Monniaux)
+
+Files:
  images/outfit/pulse_turret*
-Copyright: Nate Graham <pointedstick@zoho.com>
-Licence: CC-BY-SA-4.0
-
-Files:
- images/outfit/photovoltaic*
-Copyright: Nick Barry (github.com/itsnickbarry)
-Licence: CC-BY-SA-3.0
-Comment: Derived from works by Michael Zahniser <mzahniser@gmail.com> and
- David Monniaux (commons.wikimedia.org/wiki/User:David.Monniaux)
-
-Files:
- images/outfit/railgun*
-Copyright: Matthew Smestad
-Licence: CC-BY-SA-4.0
+ images/outfit/unused_quad_turret_a*
+Copyright: Nate Graham <pointedstick@zoho.com> (https://github.com/Pointedstick)
+License: CC-BY-SA-4.0
  
 Files:
  images/outfit/scanner_tactical*
 Copyright: Zachary Siple
-Licence: CC-BY-SA-4.0
+License: CC-BY-SA-4.0
 
 Files:
- images/outfit/*storage*
-Copyright: Jonathan Steck
-Licence: CC-BY-SA-4.0
-Comment: Derived from works by Michael Zahniser and Maximilian Korber (under the same license).
+ images/outfit/unused_railgun*
+Copyright: Matthew Smestad (https://github.com/mdsmestad)
+License: CC-BY-SA-4.0
+
+
+Files:
+ images/planet/*
+Copyright: Michael Zahniser <mzahniser@gmail.com> (https://github.com/endless-sky)
+License: CC-BY-SA-4.0
 
 Files:
  images/planet/callisto*
@@ -372,102 +773,265 @@ Files:
  images/planet/uranus*
  images/planet/venus*
 Copyright: NASA
-Licence: public-domain
- From NASA, and therefore in the public domain because they were created by
- government employees while doing work for the government.
+License: public-domain
+Comment: From NASA, and therefore in the public domain because they were created by government employees while doing work for the government.
 
 Files:
  images/planet/*-b*
-Copyright: Frederick Goy IV (https://github.com/comnom)
-Licence: CC-BY-SA-4.0
+ images/planet/cloud9*
+ images/planet/gas18*
+ images/planet/gas19*
+ images/planet/gas20*
+ images/planet/gas21*
+ images/planet/gas22*
+ images/planet/gas23*
+ images/planet/gas24*
+ images/planet/gas25*
+ images/planet/gas26*
+ images/planet/gas27*
+ images/planet/gas28*
+ images/planet/gas29*
+ images/planet/gas30*
+ images/planet/gas31*
+ images/planet/gas32*
+ images/planet/gas33*
+ images/planet/gas34*
+ images/planet/gas35*
+ images/planet/gas36*
+ images/planet/gas37*
+ images/planet/gas38*
+ images/planet/gas39
+ images/planet/icegiant*
+ images/planet/lava8
+ images/planet/lava9
+ images/planet/lava10
+ images/planet/lava11
+ images/planet/moon*
+ images/planet/station1e*
+ images/planet/terrestial*
+ images/planet/urban*
+Copyright: Frederick Goy IV <fredgoy2003@gmail.com> (https://github.com/comnom)
+License: CC-BY-SA-4.0
+
 
 Files:
- images/projectile/tinyflare*
-Copyright: Iaz Poolar
-Licence: CC-BY-SA-4.0
-Comment: Derived from works by Michael Zahniser (under the same license).
+ images/projectile/2x_ares*
+ images/projectile/2x_poseidon*
+ images/projectile/ares*
+ images/projectile/artemis*
+ images/projectile/dragonfparticle*
+ images/projectile/dragonsice*
+ images/projectile/hypnos*
+ images/projectile/hypnosmain*
+ images/projectile/hypnossub*
+ images/projectile/poseidon*
+ images/projectile/pulse*
+Copyright: Frederick Goy IV <fredgoy2003@gmail.com> (https://github.com/comnom)
+License: CC-BY-SA-4.0
+
+Files:
+ images/projectile/2x_electron*
+ images/projectile/2x_heavy_laser*
+ images/projectile/2x_laser*
+ images/projectile/2x_sunbeam*
+ images/projectile/attractor*
+ images/projectile/banisher*
+ images/projectile/blaster*
+ images/projectile/bolt*
+ images/projectile/bombardment*
+ images/projectile/detainer*
+ images/projectile/disruptor*
+ images/projectile/electron*
+ images/projectile/emp*
+ images/projectile/finisher*
+ images/projectile/fire-lance*
+ images/projectile/flamethrower*
+ images/projectile/grab-strike*
+ images/projectile/heavy_laser*
+ images/projectile/impact*
+ images/projectile/inhibitor*
+ images/projectile/ion*
+ images/projectile/ion_rain*
+ images/projectile/javelin*
+ images/projectile/jolt*
+ images/projectile/laser*
+ images/projectile/lightning*
+ images/projectile/mine*
+ images/projectile/minelayer*
+ images/projectile/moonbeam*
+ images/projectile/particle*
+ images/projectile/piercer*
+ images/projectile/plasma*
+ images/projectile/proton*
+ images/projectile/rainbow*
+ images/projectile/repeater*
+ images/projectile/repulsor*
+ images/projectile/seeker*
+ images/projectile/sidewinder*
+ images/projectile/skylance*
+ images/projectile/slicer*
+ images/projectile/sunbeam*
+ images/projectile/thrasher*
+ images/projectile/thunderhead*
+ images/projectile/thunderstorm*
+ images/projectile/tornado*
+ images/projectile/tracker*
+Copyright: Michael Zahniser <mzahniser@gmail.com> (https://github.com/endless-sky)
+License: CC-BY-SA-4.0
 
 Files:
  images/projectile/bullet*
-Copyright: Iaz Poolar
-Licence: CC-BY-SA-4.0
+Copyright: Iaz Poolar <iaz.poolar@gmail.com> (https://github.com/LocalGod79)
+License: CC-BY-SA-4.0
 Comment: Derived from works by Jonathan Steck derived from works by Michael Zahniser (under the same license).
 
 Files:
  images/projectile/rail?slug*
-Copyright: Matthew Smestad
-Licence: CC-BY-SA-4.0
+Copyright: Matthew Smestad (https://github.com/mdsmestad)
+License: CC-BY-SA-4.0
 
 Files:
- images/ship/barb*
+ images/projectile/tinyflare*
+Copyright: Iaz Poolar <iaz.poolar@gmail.com> (https://github.com/LocalGod79)
+License: CC-BY-SA-4.0
+Comment: Derived from works by Michael Zahniser (under the same license).
+
+
+Files:
+ images/ship/*
+ images/thumbnail/*
+Copyright: Michael Zahniser <mzahniser@gmail.com> (https://github.com/endless-sky)
+License: CC-BY-SA-4.0
+
+Files:
+ images/ship/ao*
+ images/ship/bixi*
+ images/ship/chilong*
+ images/ship/colony_ship*
+ images/ship/craterustig-*
+ images/ship/excalibur*
+ images/ship/gladius*
+ images/ship/harrier*
+ images/ship/hatchling*
+ images/ship/hourglass*
+ images/ship/ivoryhatchling*
+ images/ship/ladon*
+ images/ship/longinus*
+ images/ship/myrmex*
+ images/ship/myrmidon*
+ images/ship/pollaxe*
+ images/ship/scorpion*
+ images/ship/steelscorpion*
+ images/ship/swordbreaker*
+ images/ship/tianlong*
+ images/ship/twincrescent*
+ images/ship/typhon*
+ images/ship/wingedserpent*
+ images/ship/yisnith*
+ images/thumbnail/ao*
+ images/thumbnail/excalibur*
+ images/thumbnail/gladius*
+ images/thumbnail/ivoryhatchling*
+ images/thumbnail/longinus*
+ images/thumbnail/myrmex*
+ images/thumbnail/pollaxe*
+ images/thumbnail/steelscorpion*
+ images/thumbnail/swordbreaker*
+ images/thumbnail/tianlong*
+ images/thumbnail/twincrescent*
+ images/thumbnail/typhon*
+ images/thumbnail/wingedserpent*
+Copyright: Frederick Goy IV <fredgoy2003@gmail.com> (https://github.com/comnom)
+License: CC-BY-SA-4.0
+
+Files:
+ images/ship/arrow_*
+ images/ship/bounder_*
+ images/ship/firebird_*
+ images/ship/goose_*
+ images/ship/hero_*
+ images/ship/lance_*
+ images/ship/leviathan_*
+ images/ship/manta_*
+ images/ship/quicksilver_*
+ images/ship/raven_*
+Copyright: Maximilian Korber (https://github.com/Wrzlprnft)
+License: CC-BY-SA-4.0
+Comment: Derived from works by Michael Zahniser (under the same license).
+
+Files:
  images/ship/boxwing*
- images/ship/hai?pond?strider*
-Copyright: Iaz Poolar
-Licence: CC-BY-SA-4.0
+ images/ship/mongrel*
+ images/ship/pond_strider*
+Copyright: Iaz Poolar <iaz.poolar@gmail.com> (https://github.com/LocalGod79)
+License: CC-BY-SA-4.0
 
 Files:
- images/ship/finch*
+ images/ship/flea*
+Copyright: Matthew Smestad (https://github.com/mdsmestad)
+License: CC-BY-SA-4.0
+
+Files:
+ images/ship/hag*
  images/ship/nest*
  images/ship/roost*
  images/ship/skein*
-Copyright: Iaz Poolar
-Licence: CC-BY-SA-4.0
+Copyright: Iaz Poolar <iaz.poolar@gmail.com> (https://github.com/LocalGod79)
+License: CC-BY-SA-4.0
 Comment: Derived from works by Michael Zahniser (under the same license).
 
 Files:
- images/ship/hai?flea*
-Copyright: Matthew Smestad
-Licence: CC-BY-SA-4.0
+ images/ship/harpy_*
+Copyright: Dennis van Anrooij <kiledenneus@gmail.com> (https://github.com/KiLEdEnNis)
+License: CC-BY-SA-4.0
+Comment: Derived from works by Michael Zahniser (under the same license).
 
 Files:
- images/ship/hai?solifuge*
-Copyright: Maximilian Korber
-Licence: CC-BY-SA-4.0
+ images/ship/hawk*
+ images/thumbnail/hawk*
+Copyright: MCOfficer (https://github.com/MCOfficer)
+License: CC-BY-SA-4.0
+Comment: Derived from works by Michael Zahniser (under the same license).
 
 Files:
- images/ship/hai?violin?spider*
-Copyright: Maximilian Korber
-Licence: CC-BY-SA-4.0
+ images/ship/mosquito*
+Copyright: Maximilian Korber (https://github.com/Wrzlprnft)
+License: CC-BY-SA-4.0
 Comment: Derived from works by Christian Rhodes (under the same license).
 
 Files:
- images/ship/marrow*
- images/ship/mbounder*
- images/ship/mfalcon*
- images/ship/mfirebird*
- images/ship/mfury*
- images/ship/mleviathan*
- images/ship/mmanta*
- images/ship/mquicksilver*
- images/ship/mraven*
- images/ship/msplinter*
-Copyright: Maximilian Korber
-Licence: CC-BY-SA-4.0
-Comment: Derived from works by Michael Zahniser (under the same license).
-
-Files:
- images/ship/mheadhunter*
- images/thumbnail/mheadhunter*
-Copyright: MCOfficer (https://github.com/mcofficer)
-Licence: CC-BY-SA-4.0
-Comment: Derived from works by Michael Zahniser (under the same license).
-
-Files:
- images/ship/mosprey*
+ images/ship/osprey_m*
 Copyright: tehhowch (https://github.com/tehhowch)
-Licence: CC-BY-SA-4.0
+License: CC-BY-SA-4.0
 Comment: Derived from works by Michael Zahniser (under the same license).
 
 Files:
- images/ship/pointedstick_vanguard*
-Copyright: Maximilian Korber
-Licence: CC-BY-SA-4.0
-Comment: Derived from works by Nate Graham (under the same license).
+ images/ship/solifuge*
+Copyright: Maximilian Korber (https://github.com/Wrzlprnft)
+License: CC-BY-SA-4.0
 
 Files:
  images/ship/vanguard*
-Copyright: Nate Graham <pointedstick@zoho.com>
-Licence: CC-BY-SA-4.0
+Copyright: Nate Graham <pointedstick@zoho.com> (https://github.com/Pointedstick)
+License: CC-BY-SA-4.0
+
+Files:
+ images/ship/vanguard_m*
+Copyright: Maximilian Korber (https://github.com/Wrzlprnft)
+License: CC-BY-SA-4.0
+Comment: Derived from works by Nate Graham (under the same license).
+
+
+Files:
+ images/star/*
+Copyright: Michael Zahniser <mzahniser@gmail.com> (https://github.com/endless-sky)
+License: CC-BY-SA-4.0
+
+
+Files:
+ images/ui/*
+Copyright: Michael Zahniser <mzahniser@gmail.com> (https://github.com/endless-sky)
+License: CC-BY-SA-4.0
 
 Files:
  images/ship/jupiter*
@@ -479,53 +1043,72 @@ License CC-BY-SA-4.0
 Files:
  images/ui/galaxy*
 Copyright: NASA
-Licence: public-domain
- From NASA, and therefore in the public domain because they were created by
- government employees while doing work for the government.
+License: public-domain
+Comment: From NASA, and therefore in the public domain because they were created by government employees while doing work for the government.
 
 
 Files:
  sounds/*
 Copyright: Various
-Licence: public-domain
- Based on public domain sounds taken from freesound.org.
+License: public-domain
+Comment: Based on public domain sounds taken from freesound.org.
+
+Files:
+ sounds/ares~.wav
+ sounds/artemis.wav
+ sounds/athena.wav
+ sounds/dragon_fire.wav
+ sounds/dragon_ice.wav
+ sounds/poseidon.wav
+ sounds/poseidon_double.wav
+ sounds/spit.wav
+ sounds/unused_large~.wav
+ sounds/unused_medium~.wav
+ sounds/unused_small~.wav
+ sounds/unused_tiny~.wav
+Copyright: Frederick Goy IV <fredgoy2003@gmail.com> (https://github.com/comnom)
+License: CC-BY-SA-4.0
 
 Files:
  sounds/heavy?rocket?hit.wav
-Copyright: Copyright Mike Koenig
-Licence: CC-BY-SA-3.0
+Copyright: Mike Koenig
+License: CC-BY-SA-3.0
 Comment: Taken from http://soundbible.com/1467-Grenade-Explosion.html
 
 Files:
  sounds/explosion?huge.wav
-Copyright: Copyright Mike Koenig
-Licence: CC-BY-SA-3.0
+Copyright: Mike Koenig
+License: CC-BY-SA-3.0
 Comment: Taken from http://soundbible.com/1151-Grenade.html
 
 Files:
  sounds/meteor.wav
-Copyright: Copyright "18hiltc"
-Licence: CC-BY-SA-3.0
+Copyright: "18hiltc"
+License: CC-BY-SA-3.0
 Comment: Taken from https://freesound.org/people/18hiltc/sounds/202725/
 
 Files:
  sounds/missile?hit.wav
-Copyright: Copyright "Nbs Dark"
-Licence: public-domain
+Copyright: "Nbs Dark"
+License: public-domain
 Comment: Taken from https://freesound.org/people/Nbs%20Dark/sounds/94185/
 
 Files:
  sounds/sidewinder.wav
-Licence: public-domain
+License: public-domain
 Comment: Taken from https://freesound.org/people/NHMWretched/sounds/151858/
+
+Files: sounds/thrasher.wav
+Copyright: Lineth (https://github.com/Lineth)
+License: CC-BY-SA-4.0
 
 Files:
  sounds/torpedo?hit.wav
-Licence: public-domain
+License: public-domain
 
 
 
-Licence: CC-BY-SA-4.0
+License: CC-BY-SA-4.0
  By exercising the Licensed Rights (defined below), You accept and agree
  to be bound by the terms and conditions of this Creative Commons
  Attribution-ShareAlike 4.0 International Public License ("Public
@@ -867,7 +1450,7 @@ Licence: CC-BY-SA-4.0
 
 
 
-Licence: CC-BY-4.0
+License: CC-BY-4.0
  By exercising the Licensed Rights (defined below), You accept and agree
  to be bound by the terms and conditions of this Creative Commons
  Attribution 4.0 International Public License ("Public
@@ -1179,7 +1762,7 @@ Licence: CC-BY-4.0
 
 
 
-Licence: CC-BY-SA-3.0
+License: CC-BY-SA-3.0
  CREATIVE COMMONS CORPORATION IS NOT A LAW FIRM AND DOES NOT PROVIDE
  LEGAL SERVICES. DISTRIBUTION OF THIS LICENSE DOES NOT CREATE AN
  ATTORNEY-CLIENT RELATIONSHIP. CREATIVE COMMONS PROVIDES THIS

@@ -49,11 +49,11 @@ outfit "Tracker Launcher"
     "homing" 4
     "optical tracking" .8
     "infrared tracking" .4
+    "missile strength" 16
     "blast radius" 4
     "shield damage" 200
     "hull damage" 160
     "hit force" 350
-    "missile strength" 16
   description "Trackers are fast, powerful, and accurate homing weapons. Their only weakness is their large turning radius: if a Tracker misses its target, it takes a long time to turn around."
 
 effect "tracker fire"
@@ -88,43 +88,43 @@ effect "tracker cloud"
 
 
 
-outfit "Pulse Cannon"
+outfit "Proton Cannon"
   category "Cannons"
-  thumbnail "outfit/pulse_cannon"
-  cost 520000
-  "mass" 26
-  "outfit space" -26
-  "weapon space" -26
+  thumbnail "outfit/proton_cannon"
+  cost 260000
+  "mass" 13
+  "outfit space" -13
+  "weapon space" -13
   "gun ports" -1
   weapon
-    sprite "projectile/pulse"
-    sound "pulse"
-    "hit effect" "pulse impact"
+    sprite "projectile/proton"
+    sound "proton"
+    "hit effect" "proton impact"
     "inaccuracy" 1
     "velocity" 19
     "lifetime" 30
-    "reload" 10
+    "reload" 20
     "firing energy" 27
     "firing heat" 72
     "shield damage" 43
     "hull damage" 34
   description "Like most examples of Hai engineering that you have seen, the Pulse Cannon does not stand out as a particularly advanced or elegant technology, but it has a reputation for being efficient, reliable, and well-balanced."
 
-outfit "Pulse Turret"
+outfit "Proton Turret"
   category "Turrets"
-  thumbnail "outfit/pulse_turret"
-  cost 680000
+  thumbnail "outfit/proton_turret"
+  cost 590000
   "mass" 34
   "drag" .34
   "outfit space" -34
   "weapon space" -34
   "turret mounts" -1
   weapon
-    sprite "projectile/pulse"
-    "hardpoint sprite" "hardpoint/pulse_turret"
-    "hardpoint offset" 14.
-    sound "pulse"
-    "hit effect" "pulse impact"
+    sprite "projectile/proton"
+    "hardpoint sprite" "hardpoint/proton_turret"
+    "hardpoint offset" 7.
+    sound "proton"
+    "hit effect" "proton impact"
     "inaccuracy" 1
     "turret turn" 1.76
     "velocity" 19
@@ -136,14 +136,14 @@ outfit "Pulse Turret"
     "hull damage" 34
   description "Pulse Cannons are the primary offensive weapon used by Hai ships. This turret mounts one pulse cannon and allows it to rotate and track even the fastest-moving of targets."
 
-effect "pulse impact"
-  sprite "effect/pulse impact"
+effect "proton impact"
+  sprite "effect/impact/proton"
     "no repeat"
     "frame rate" 10
   "lifetime" 20
   "random angle" 360
-  "random velocity" .6
   "random spin" 4
+  "random velocity" .6
   "velocity scale" -.1
 
 
@@ -151,12 +151,12 @@ outfit "Ion Cannon"
   category "Cannons"
   thumbnail "outfit/ion_cannon"
   cost 490000
-  "mass" 47
-  "outfit space" -47
-  "weapon space" -47
+  "mass" 42
+  "outfit space" -42
+  "weapon space" -42
   "gun ports" -1
   weapon
-    sprite "projectile/ion bolt"
+    sprite "projectile/ion"
       "frame rate" 5
     sound "ion"
     "hit effect" "ion impact" 2
@@ -165,20 +165,20 @@ outfit "Ion Cannon"
     "lifetime" 60
     "reload" 60
     "firing energy" 120
-    "firing force" 10
     "firing heat" 150
-    "hit force" 120
-    "random hit force" 30
+    "firing force" 10
     "shield damage" 147
     "random shield damage" 42
     "hull damage" 54
     "random hull damage" 15
     "ion damage" 5
     "random ion damage" 1
+    "hit force" 120
+    "random hit force" 30
   description "Ion cannons do not inflict as much damage as some other weapons, but they disrupt the electrical systems on any ship they hit, draining its energy. If a ship has sizable battery reserves, this may not have any effect, but for a ship running at near its energy generation capacity an ion strike can take it out of the battle for a few seconds while it recovers."
 
 effect "ion impact"
-  sprite "effect/ion impact"
+  sprite "effect/impact/ion"
     "no repeat"
     "frame rate" 30
   sound "ion impact"

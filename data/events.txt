@@ -109,17 +109,21 @@ event "nuclear missiles available"
     "Nuclear Missile"
 
 
-event "particle turret available"
-  outfitter "Lovelace Advanced"
-    "Particle Turret"
-
-
 event "plasma turret available"
   outfitter "Delta V Advanced"
     "Plasma Turret"
   fleet "Free Worlds Large"
+    add variant 4
+      "Bastion (Plasma)"
     add variant 3
-      "Falcon (Plasma)"
+      "Bastion (Plasma)"
+      "Stymphalian"
+    add variant 2
+      "Bastion (Plasma)"
+      "Stymphalian" 2
+    add variant 1
+      "Bastion (Plasma)"
+      "Stymphalian" 3
 
 
 event "stack core available"
@@ -316,6 +320,7 @@ event "initial deployment 1"
     fleet "Pirates South Small" 3000
     fleet "Republic Small" 3000
     fleet "Republic Large" 4000
+    fleet "Tarazed Small" 6000
   system "Zeta Aquilae"
     fleet "Merchants South Small" 1000
     fleet "Merchants South Large" 3000
@@ -666,17 +671,17 @@ event "southern carriers 1"
 
   fleet "Free Worlds Large"
     fighters "free worlds fighter"
+    add variant 4
+      "Nest"
+      "Hag" 2
+    add variant 3
+      "Nest"
+      "Hag" 2
+      "Stymphalian"
     add variant 2
       "Nest"
       "Hag" 2
-    add variant 1
-      "Nest"
-      "Hag" 2
-      "Fury"
-    add variant 1
-      "Nest"
-      "Hag" 2
-      "Fury" 2
+      "Stymphalian" 2
     add variant 1
       "Nest" 2
       "Hag" 4
@@ -690,17 +695,17 @@ event "southern carriers 2"
 
   fleet "Free Worlds Large"
     fighters "free worlds fighter"
+    add variant 4
+      "Roost"
+      "Hag" 4
+    add variant 3
+      "Roost"
+      "Hag" 4
+      "Stymphalian"
     add variant 2
       "Roost"
       "Hag" 4
-    add variant 1
-      "Roost"
-      "Hag" 4
-      "Fury"
-    add variant 1
-      "Roost"
-      "Hag" 4
-      "Fury" 2
+      "Stymphalian" 2
     add variant 1
       "Roost" 2
       "Hag" 8
@@ -714,17 +719,17 @@ event "southern carriers 3"
 
   fleet "Free Worlds Large"
     fighters "free worlds fighter"
+    add variant 4
+      "Skein"
+      "Hag" 6
+    add variant 3
+      "Skein"
+      "Hag" 6
+      "Stymphalian"
     add variant 2
       "Skein"
       "Hag" 6
-    add variant 1
-      "Skein"
-      "Hag" 6
-      "Fury"
-    add variant 1
-      "Skein"
-      "Hag" 6
-      "Fury" 2
+      "Stymphalian" 2
     add variant 1
       "Skein" 2
       "Hag" 12
@@ -827,6 +832,8 @@ event "southern carriers 3"
 event "southern carriers 4"
   shipyard "Southbound Advanced"
     "Boxwing"
+  shipyard "Southbound Intermediate"
+    "Nest"
   shipyard "Vortex Advanced"
     "Mongrel"
 
@@ -1190,72 +1197,72 @@ event "fw safe passage end"
 
 
 event "navy using mark ii ships"
-  shipyard "Centaur Advanced"
-    "Mark II Drone"
-  shipyard "Centaur Intermediate"
-    "Mark II Drone"
-  shipyard "Centaur Basics"
-    "Mark II Drone"
+  shipyard "Sisensis Advanced"
+    "Mark III Drone"
+  shipyard "Sisensis Intermediate"
+    "Mark III Drone"
+  shipyard "Sisensis Basics"
+    "Mark III Drone"
   
   fleet "Navy Cargo"
     add variant 1
-      "Behemoth (Mark II)" 5
+      "Behemoth (Navy)" 5
       "Venus (Mark II)"
-      "Mark II Drone" 4
+      "Mark III Drone" 4
       "Mars (Mark II)" 2
   
   fleet "Republic Large"
     add variant 2
-      "Saturn (Mark II)"
+      "Saturn"
       "Foxhound" 4
-      "Mark II Drone" 6
+      "Mark III Drone" 6
     add variant 1
-      "Saturn (Mark II)"
+      "Saturn"
       "Foxhound" 4
-      "Mark II Drone" 6
+      "Mark III Drone" 6
       "Mars"
     add variant 1
-      "Saturn (Mark II)"
+      "Saturn"
       "Foxhound" 4
-      "Mark II Drone" 6
+      "Mark III Drone" 6
       "Mercury (Mark II)"
     add variant 1
-      "Saturn (Mark II)"
+      "Saturn"
       "Foxhound" 4
-      "Mark II Drone" 6
+      "Mark III Drone" 6
       "Mercury (Mark II)" 2
     add variant 3
       "Venus (Mark II)"
-      "Mark II Drone" 4
+      "Mark III Drone" 4
     add variant 2
       "Venus (Mark II)"
-      "Mark II Drone" 4
+      "Mark III Drone" 4
       "Mars (Mark II)"
     add variant 1
       "Venus (Mark II)"
-      "Mark II Drone" 4
+      "Mark III Drone" 4
       "Mars (Mark II)" 2
     add variant 1
       "Venus (Mark II)"
-      "Mark II Drone" 4
+      "Mark III Drone" 4
       "Mars (Mark II)"
       "Mercury (Mark II)"
     add variant 1
       "Venus (Mark II)"
-      "Mark II Drone" 4
+      "Mark III Drone" 4
       "Mars (Mark II)"
       "Mercury (Mark II)" 2
     add variant 1
       "Venus (Mark II)"
-      "Mark II Drone" 4
+      "Mark III Drone" 4
       "Mercury (Mark II)"
     add variant 1
       "Venus (Mark II)"
-      "Mark II Drone" 4
+      "Mark III Drone" 4
       "Mercury (Mark II)" 2
     add variant 1
       "Venus (Mark II)"
-      "Mark II Drone" 4
+      "Mark III Drone" 4
       "Mercury (Mark II)" 3
     add variant 5
       "Mars (Mark II)" 2
@@ -1482,13 +1489,15 @@ event "dreadnought deployment"
       heroic
     add variant 4
       "Dreadnought"
+    add variant 3
+      "Dreadnought"
+      "Stymphalian"
     add variant 2
       "Dreadnought"
-      "Bastion"
-    add variant 2
+      "Stymphalian" 2
+    add variant 1
       "Dreadnought"
-      "Argosy"
-      "Brig"
+      "Stymphalian" 3
 
 
 event "battle for bloodsea"
@@ -2333,90 +2342,6 @@ event "navy done with alcyone"
 
 
 
-
-
-event "navy using mark iii ships"
-  fleet "Navy Cargo"
-    add variant 1
-      "Behemoth (Mark III)" 5
-      "Venus (Mark III)"
-      "Mark II Drone" 4
-      "Mars (Mark III)" 2
-  
-  fleet "Republic Large"
-    add variant 2
-      "Saturn (Mark III)"
-      "Foxhound" 4
-      "Mark II Drone" 6
-    add variant 1
-      "Saturn (Mark III)"
-      "Foxhound" 4
-      "Mark II Drone" 6
-      "Mars"
-    add variant 1
-      "Saturn (Mark III)"
-      "Foxhound" 4
-      "Mark II Drone" 6
-      "Mercury (Mark II)"
-    add variant 1
-      "Saturn (Mark III)"
-      "Foxhound" 4
-      "Mark II Drone" 6
-      "Mercury (Mark III)" 2
-    add variant 3
-      "Venus (Mark III)"
-      "Mark II Drone" 4
-    add variant 2
-      "Venus (Mark III)"
-      "Mark II Drone" 4
-      "Mars (Mark III)"
-    add variant 1
-      "Venus (Mark III)"
-      "Mark II Drone" 4
-      "Mars (Mark III)" 2
-    add variant 1
-      "Venus (Mark III)"
-      "Mark II Drone" 4
-      "Mars (Mark III)"
-      "Mercury (Mark III)"
-    add variant 1
-      "Venus (Mark III)"
-      "Mark II Drone" 4
-      "Mars (Mark III)"
-      "Mercury (Mark III)" 2
-    add variant 1
-      "Venus (Mark III)"
-      "Mark II Drone" 4
-      "Mercury (Mark III)"
-    add variant 1
-      "Venus (Mark III)"
-      "Mark II Drone" 4
-      "Mercury (Mark III)" 2
-    add variant 1
-      "Venus (Mark III)"
-      "Mark II Drone" 4
-      "Mercury (Mark III)" 3
-    add variant 5
-      "Mars (Mark III)" 2
-    add variant 3
-      "Mars (Mark III)"
-      "Mercury (Mark III)" 2
-    add variant 1
-      "Mars (Mark III)"
-      "Mercury (Mark III)" 3
-
-  fleet "Republic Small"
-    add variant 5
-      "Mars (Mark III)"
-    add variant 10
-      "Mercury (Mark III)"
-    add variant 6
-      "Mercury (Mark III)" 2
-    add variant 4
-      "Mercury (Mark III)" 3
-
-
-
 # free worlds checkmate events
 
 event "fwc attack kaus borealis"
@@ -2886,6 +2811,7 @@ event "free worlds end"
     fleet "Navy Surveillance" 5400
     fleet "Pirates South Small" 4000
     fleet "Pirates South Large" 10000
+    fleet "Tarazed Small" 6000
   system "Kaus Australis"
     government "Republic"
     fleet "Merchants South Small" 2000
@@ -2894,6 +2820,7 @@ event "free worlds end"
     fleet "Pirates South Small" 4000
     fleet "Pirates South Large" 8000
     fleet "Quarg Small" 10000
+    fleet "Tarazed Small" 6000
   system "Dabih"
     government "Republic"
     fleet "Merchants South Small" 500
@@ -2901,6 +2828,7 @@ event "free worlds end"
     fleet "Navy Surveillance" 5400
     fleet "Pirates South Large" 10000
     fleet "Quarg Small" 4000
+    fleet "Tarazed Small" 6000
   system "Tarazed"
     government "Republic"
     fleet "Merchants South Small" 500
@@ -2908,6 +2836,8 @@ event "free worlds end"
     fleet "Navy Surveillance" 5400
     fleet "Pirates South Large" 8000
     fleet "Quarg Small" 7000
+    fleet "Tarazed Small" 6000
+    fleet "Tarazed Large" 3000
   system "Umbral"
     government "Republic"
     fleet "Merchants South Small" 4000
@@ -3134,9 +3064,12 @@ event "wanderers: unfettered invasion starts"
     description `Varu K'est is a spare, ancient planet of arid plateaus and deep, meandering canyons, with too little rainfall to support any but the hardiest of shrubs. Before the Unfettered invaded, the only Wanderer settlements remaining here were the military bases they had set up to defend their frontier. Now, it is home to an ever-growing number of Unfettered settlements, including many civilians who have come here just for the chance to live on a world that is not overcrowded and polluted.`
     spaceport `The Unfettered are using the few jump drives they have to ferry more and more of their people into Wanderer space. When each wave of ships arrives here in the spaceport, technicians carefully remove the jump drives from all but a few of them. A few well guarded jump-capable ships then carry those spare jump drives back to Unfettered space, where they are used to bring more ships and people.`
     remove outfitter "Wanderer Intermediate"
-    outfitter "Hai Intermediate"
+    outfitter "Hai Unfettered"
     remove shipyard "Wanderer Basics"
     shipyard "Hai Unfettered"
+  shipyard "Hai Unfettered"
+    "Solifuge"
+    "Mosquito"
 
 
 event "battle for ik'kara'ka"
@@ -3233,50 +3166,16 @@ event "battle for sich'ka'ara end"
     attributes "unfettered"
     spaceport `The Unfettered clearly do not know quite what to make of the Wanderer research station here that they have recently captured. Animals that were once part of various experiments are now wandering loose, and the Unfettered are making only sporadic efforts to keep them well-fed. Every once in a while one of them, driven by sheer hunger, tries to smash its way into one of the crates of military rations that the Unfettered have stacked up in the shade near the main landing pad.`
   fleet "Unfettered Large"
-    add variant 3
+    add variant 6
       "Solifuge"
-      "Mosquito" 3
-      "Mosquito (Tracker)" 3
-    add variant 3
-      "Solifuge (Tracker)"
-      "Mosquito" 3
-      "Mosquito (Tracker)" 3
-      "Lightning Bug" 2
-    add variant 3
-      "Solifuge"
-      "Solifuge (Tracker)"
       "Mosquito" 6
-      "Mosquito (Tracker)" 6
-    add variant 1
+    add variant 3
+      "Solifuge" 2
+      "Mosquito" 12
+    add variant 6
+      "Solifuge"
+      "Mosquito" 6
       "Shield Beetle"
-      "Solifuge"
-      "Mosquito" 3
-      "Mosquito (Tracker)" 3
-    add variant 1
-      "Shield Beetle"
-      "Solifuge (Tracker)"
-      "Mosquito" 3
-      "Mosquito (Tracker)" 3
-    add variant 1
-      "Shield Beetle (Ion)"
-      "Solifuge"
-      "Mosquito" 3
-      "Mosquito (Tracker)" 3
-    add variant 1
-      "Shield Beetle (Ion)"
-      "Solifuge (Tracker)"
-      "Mosquito" 3
-      "Mosquito (Tracker)" 3
-    add variant 1
-      "Shield Beetle (Pulse)"
-      "Solifuge"
-      "Mosquito" 3
-      "Mosquito (Tracker)" 3
-    add variant 1
-      "Shield Beetle (Pulse)"
-      "Solifuge (Tracker)"
-      "Mosquito" 3
-      "Mosquito (Tracker)" 3
 
 
 event "wanderers: more systems lost"

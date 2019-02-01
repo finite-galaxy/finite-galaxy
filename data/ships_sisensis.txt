@@ -1,0 +1,458 @@
+shipyard "Sisensis Variants"
+  "Bastion"
+  "Bastion (Electron)"
+  "Bastion (Heavy)"
+  "Bastion (Laser)"
+  "Bastion (Plasma)"
+  "Bastion (Patrol)"
+  "Clipper"
+  "Clipper (Javelin)"
+  "Clipper (Miner)"
+  "Clipper (Particle)"
+  "Clipper (Speedy)"
+  "Mark I Drone"
+  "Mark II Drone"
+  "Mark III Drone"
+
+
+
+ship "Bastion"
+  sprite "ship/bastion"
+  thumbnail "thumbnail/bastion"
+  attributes
+    category "Frigate"
+#    manufacturer "Sisensis"
+    licences
+      Pilot
+    "cost" 3560000
+    "shields" 6700
+    "hull" 4200
+    "required crew" 20
+    "bunks" 40
+    "mass" 580
+    "drag" 10.3
+    "heat dissipation" .5
+    "cargo space" 110
+    "outfit space" 530
+    "core space" 230
+    "engine space" 120
+    "weapon space" 180
+    weapon
+      "blast radius" 244
+      "shield damage" 1160
+      "random shield damage" 1280
+      "hull damage" 1740
+      "random hull damage" 1920
+      "heat damage" 34800
+      "random heat damage" 38400
+      "hit force" 2900
+      "random hit force" 3200
+  outfits
+    "D67-TM Shield Generator"
+    "Fission Reactor"
+    "Hyperdrive"
+
+    "IT-3700 Ion Thruster"
+    "IS-4200 Ion Steering"
+
+    "Particle Cannon" 2
+    "X6 Blaster Turret" 2
+    "Heavy Anti-Missile"
+
+    "LP144a Battery Pack"
+    "Liquid Water Cooler"
+    "Fuel Pod" 61
+    "Large Radar Jammer"
+    "Tactical Scanner" 6
+  engine -28 85
+  engine 28 85
+  gun -54 -14
+  gun 54 -14
+  turret 0 0 "Heavy Anti-Missile"
+  turret -30 14 "X6 Blaster Turret"
+  turret 30 14 "X6 Blaster Turret"
+  leak "leak" 40 50
+  leak "flame" 40 80
+  leak "big leak" 70 30
+  explode "tiny explosion" 5
+  explode "small explosion" 15
+  explode "medium explosion" 30
+  explode "large explosion" 20
+  "final explode" "final explosion medium"
+  description "The Sisensis Bastion is designed as a heavy defence platform to accompany freighter convoys, in addition to having enough cargo capacity to serve as a freighter in its own right. Because of its heavy armament, it is classified as a warship rather than a freighter."
+
+
+ship "Bastion" "Bastion (Electron)"
+  outfits
+    "D67-TM Shield Generator"
+    "Fission Reactor"
+    "Hyperdrive"
+
+    "IT-3700 Ion Thruster"
+    "IS-4200 Ion Steering"
+
+    "Electron Turret" 3
+
+    "LP144a Battery Pack"
+    "Liquid Water Cooler"
+    "Fuel Pod" 61
+    "Large Radar Jammer"
+    "Tactical Scanner" 6
+
+
+ship "Bastion" "Bastion (Heavy)"
+  outfits
+    "D94-YV Shield Generator"
+    "Fusion Reactor"
+    "Hyperdrive"
+
+    "IT-3700 Ion Thruster"
+    "IS-4200 Ion Steering"
+    "Afterburner"
+
+    "Impact Missile" 32
+    "Impact Missile Rack" 8
+    "Impact Missile Launcher" 2
+    "X6 Blaster Turret" 3
+
+    "Supercapacitor"
+    "Liquid Nitrogen Cooler"
+    "Fuel Pod" 61
+    "Large Radar Jammer"
+    "Tactical Scanner" 6
+    "Extra Outfit Space" 4
+
+
+ship "Bastion" "Bastion (Laser)"
+  outfits
+    "D67-TM Shield Generator"
+    "Fission Reactor"
+    "Hyperdrive"
+
+    "IT-3700 Ion Thruster"
+    "IS-4200 Ion Steering"
+
+    "Heavy Laser Cannon" 2
+    "Heavy Laser Turret" 3
+
+    "LP144a Battery Pack"
+    "Liquid Water Cooler"
+    "Fuel Pod" 61
+    "Large Radar Jammer"
+    "Tactical Scanner" 6
+
+
+ship "Bastion" "Bastion (Patrol)"
+  outfits
+    "D67-TM Shield Generator"
+    "Fission Reactor"
+    "Hyperdrive"
+
+    "IT-3700 Ion Thruster"
+    "IS-4200 Ion Steering"
+
+    "Particle Cannon" 2
+    "X6 Blaster Turret" 2
+    "Heavy Anti-Missile"
+
+    "LP144a Battery Pack"
+    "Liquid Water Cooler"
+    "Cargo Scanner"
+    "Fuel Pod" 61
+    "Large Radar Jammer"
+    "Outfit Scanner"
+    "Tactical Scanner" 6
+
+
+ship "Bastion" "Bastion (Plasma)"
+  outfits
+    "D67-TM Shield Generator"
+    "Fission Reactor"
+    "Hyperdrive"
+
+    "Impala Plasma Thruster"
+    "Impala Plasma Steering"
+
+    "Plasma Turret" 3
+
+    "LP144a Battery Pack"
+    "Liquid Nitrogen Cooler"
+    "Fuel Pod" 61
+    "Large Radar Jammer"
+    "Tactical Scanner" 6
+    "Extra Outfit Space" 2
+
+
+
+ship "Clipper"
+  sprite "ship/clipper"
+  thumbnail "thumbnail/clipper"
+  attributes
+    category "Corvette"
+#    manufacturer "Sisensis"
+    licences
+      Pilot
+    "cost" 900000
+    "shields" 2700
+    "hull" 800
+    "required crew" 3
+    "bunks" 9
+    "mass" 150
+    "drag" 3.7
+    "heat dissipation" .8
+    "cargo space" 70
+    "outfit space" 290
+    "core space" 150
+    "engine space" 80
+    "weapon space" 60
+    weapon
+      "blast radius" 102
+      "shield damage" 300
+      "random shield damage" 720
+      "hull damage" 450
+      "random hull damage" 1080
+      "heat damage" 9000
+      "random heat damage" 21600
+      "hit force" 750
+      "random hit force" 1800
+  outfits
+    "D41-HY Shield Generator"
+    "RT-I Radiothermal"
+    "Hyperdrive"
+
+    "IT-3700 Ion Thruster"
+    "IS-3200 Ion Steering"
+
+    "Meteor Missile" 144
+    "Meteor Missile Box" 4
+    "Meteor Missile Launcher" 4
+
+    "LP036a Battery Pack"
+    "Fuel Pod" 26
+    "Tactical Scanner"
+  engine -20 45
+  engine 20 45
+  gun -23 -19
+  gun 23 -19
+  gun -12 -7
+  gun 12 -7
+  leak "leak" 60 50
+  leak "flame" 50 80
+  explode "tiny explosion" 15
+  explode "small explosion" 20
+  explode "medium explosion" 10
+  "final explode" "final explosion small"
+  description "The Clipper is the smaller sister ship to the venerable Sisensis Bastion. Although not able to carry as much cargo, Clippers are versatile ships that can be used as passenger transports, couriers, or even warships in a pinch, and they come with enough free space to be customized based on an individual captain's needs."
+
+
+ship "Clipper" "Clipper (Javelin)"
+  outfits
+    "D41-HY Shield Generator"
+    "RT-I Radiothermal"
+    "Hyperdrive"
+
+    "IT-3700 Ion Thruster"
+    "IS-3200 Ion Steering"
+
+    "Javelin" 256
+    "Javelin Storage Crate" 4
+    "Javelin Pod" 4
+
+    "LP036a Battery Pack"
+    "Fuel Pod" 26
+    "Tactical Scanner"
+
+
+ship "Clipper" "Clipper (Miner)"
+  outfits
+    "D41-HY Shield Generator"
+    "RT-I Radiothermal"
+    "Hyperdrive"
+
+    "IT-3700 Ion Thruster"
+    "IS-3200 Ion Steering"
+
+    "Heavy Laser Cannon" 4
+
+    "LP036a Battery Pack"
+    "Asteroid Scanner"
+    "Fuel Pod" 26
+    "Ramscoop"
+    "Tactical Scanner"
+
+
+ship "Clipper" "Clipper (Particle)"
+  outfits
+    "D41-HY Shield Generator"
+    "RT-I Radiothermal"
+    "Hyperdrive"
+
+    "IT-3700 Ion Thruster"
+    "IS-3200 Ion Steering"
+
+    "Particle Cannon" 2
+
+    "LP036a Battery Pack"
+    "Fuel Pod" 26
+    "Tactical Scanner"
+
+
+ship "Clipper" "Clipper (Speedy)"
+  outfits
+    "D41-HY Shield Generator"
+    "Fission Reactor"
+    "Hyperdrive"
+
+    "A250 Atomic Thruster"
+    "A255 Atomic Steering"
+
+    "Meteor Missile" 144
+    "Meteor Missile Box" 4
+    "Meteor Missile Launcher" 4
+
+    "LP036a Battery Pack"
+    "Liquid Water Cooler"
+    "Fuel Pod" 26
+    "Tactical Scanner" 2
+    "Extra Outfit Space" 2
+
+
+
+ship "Mark I Drone"
+  sprite "ship/drone"
+  thumbnail "thumbnail/drone"
+  attributes
+    category "Drone"
+#    manufacturer "Sisensis"
+    licences
+      Navy
+    "carried" 1
+    "cost" 83000
+    "hull" 700
+    "automaton" 1
+    "mass" 20
+    "drag" .6
+    "heat dissipation" .9
+    "outfit space" 75
+    "core space" 45
+    "engine space" 22
+    "weapon space" 8
+    weapon
+      "blast radius" 19
+      "shield damage" 40
+      "random shield damage" 150
+      "hull damage" 60
+      "random hull damage" 225
+      "heat damage" 1200
+      "random heat damage" 4500
+      "hit force" 100
+      "random hit force" 375
+  outfits
+    "nGVF-CC Fuel Cell"
+
+    "A120 Atomic Thruster"
+    "A125 Atomic Steering"
+
+    "Laser Cannon"
+
+    "Supercapacitor" 3
+    "Small Radar Jammer"
+  engine -9 29
+  engine 9 29
+  gun 0 -29 "Laser Cannon"
+  explode "tiny explosion" 15
+  description "The Mark I Drone is a very fast, pilotless attack ship, designed at the request of the Navy, to reduce their fighter pilot death rate. Although the Mark I Drone is still for sale, the Navy now uses its newer incranations."
+
+
+
+ship "Mark II Drone"
+  sprite "ship/drone"
+  thumbnail "thumbnail/drone"
+  attributes
+    category "Drone"
+#    manufacturer "Sisensis"
+    licences
+      Navy
+    "carried" 1
+    "cost" 83000
+    "hull" 700
+    "automaton" 1
+    "mass" 20
+    "drag" .6
+    "heat dissipation" .9
+    "outfit space" 75
+    "core space" 38
+    "engine space" 22
+    "weapon space" 15
+    weapon
+      "blast radius" 19
+      "shield damage" 40
+      "random shield damage" 150
+      "hull damage" 60
+      "random hull damage" 225
+      "heat damage" 1200
+      "random heat damage" 4500
+      "hit force" 100
+      "random hit force" 375
+  outfits
+    "nGVF-BB Fuel Cell"
+
+    "A120 Atomic Thruster"
+    "A125 Atomic Steering"
+
+    "Heavy Laser Cannon"
+
+    "Supercapacitor" 5
+    "Small Radar Jammer"
+  engine -9 29
+  engine 9 29
+  gun 0 -29 "Heavy Laser Cannon"
+  explode "tiny explosion" 15
+  description "The Mark II Drone is used exclusively by the Republic Navy. Although very weak and easy to destroy, they can be quite effective in large numbers. Because drones do not need to accomodate life support systems, a cockpit, bunks, cargo space, or shield emitters, they can have similar firepower and a stronger hull than larger fighters or interceptors."
+
+
+ship "Mark III Drone"
+  sprite "ship/drone"
+  thumbnail "thumbnail/drone"
+  attributes
+    category "Drone"
+#    manufacturer "Sisensis"
+    licences
+      Navy
+    "carried" 1
+    "cost" 83000
+    "hull" 700
+    "automaton" 1
+    "mass" 20
+    "drag" .6
+    "heat dissipation" .9
+    "outfit space" 75
+    "core space" 31
+    "engine space" 22
+    "weapon space" 22
+    weapon
+      "blast radius" 19
+      "shield damage" 40
+      "random shield damage" 150
+      "hull damage" 60
+      "random hull damage" 225
+      "heat damage" 1200
+      "random heat damage" 4500
+      "hit force" 100
+      "random hit force" 375
+  outfits
+    "nGVF-BB Fuel Cell"
+
+    "A120 Atomic Thruster"
+    "A125 Atomic Steering"
+
+    "Electron Cannon"
+
+    "Supercapacitor" 2
+    "Small Radar Jammer"
+  engine -9 29
+  engine 9 29
+  gun 0 -29 "Electron Cannon"
+  explode "tiny explosion" 15
+  description "The Mark III Drone is externally identical to its predecessors, but internally it has reduced core space to increase its weapon space, sacrificing energy to accomodate a larger cannon."
+

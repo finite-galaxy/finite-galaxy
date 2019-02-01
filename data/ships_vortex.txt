@@ -1,127 +1,143 @@
 shipyard "Vortex Variants"
-  "Bactrian"
-  "Bactrian (Hired Gun)"
+  "Behemoth"
+  "Behemoth (Free Worlds)"
+  "Behemoth (Navy)"
   "Firebird"
-  "Firebird (Hai)"
   "Firebird (Impact)"
   "Firebird (Laser)"
-  "Foxhound"
   "Heavy Shuttle"
   "Heavy Shuttle (Blaster)"
+  "Leviathan"
   "Light Shuttle"
   "Light Shuttle (Blaster)"
-  "Mongrel"
-  "Mongrel (Anti-Missile)"
-  "Mongrel (Particle)"
-  "Mongrel (Plasma)"
-  "Mule"
-  "Mule (Hai)"
-  "Mule (Heavy)"
   "Wasp"
   "Wasp (Miner)"
-  "Watch Dog"
 
 
 
-ship "Bactrian"
-  sprite "ship/bactrian"
-  thumbnail "thumbnail/bactrian"
+ship "Behemoth"
+  sprite "ship/behemoth"
+  thumbnail "thumbnail/behemoth"
   attributes
-    category "Cruiser"
+    category "Destroyer"
 #    manufacturer "Vortex"
     licences
-      Bactrian
-    "cost" 17600000
-    "shields" 17500
-    "hull" 8600
-    "required crew" 70
-    "bunks" 245
-    "mass" 940
-    "drag" 16.1
+      Pilot
+    "cost" 10800000
+    "shields" 7600
+    "hull" 8100
+    "required crew" 12
+    "bunks" 30
+    "mass" 540
+    "drag" 11.7
     "heat dissipation" .4
-    "cargo space" 530
-    "outfit space" 930
-    "core space" 450
-    "engine space" 180
-    "weapon space" 300
+    "cargo space" 490
+    "outfit space" 570
+    "core space" 200
+    "engine space" 90
+    "weapon space" 280
     weapon
-      "blast radius" 480
-      "shield damage" 1880
-      "random shield damage" 2920
-      "hull damage" 2820
-      "random hull damage" 4380
-      "heat damage" 56400
-      "random heat damage" 87600
-      "hit force" 4700
-      "random hit force" 7300
+      "blast radius" 320
+      "shield damage" 1080
+      "random shield damage" 2120
+      "hull damage" 1620
+      "random hull damage" 3180
+      "heat damage" 32400
+      "random heat damage" 63600
+      "hit force" 2700
+      "random hit force" 5300
   outfits
-    "D94-YV Shield Generator"
-    "Fusion Reactor"
+    "D41-HY Shield Generator"
+    "RT-I Radiothermal"
     "Hyperdrive"
 
-    "IT-4700 Ion Thruster"
-    "IS-5200 Ion Steering"
+    "IT-3700 Ion Thruster"
+    "IS-3200 Ion Steering"
 
-    "Sidewinder Missile" 90
-    "Sidewinder Missile Rack" 30
-    "Sidewinder Missile Launcher" 3
+    "Sidewinder Missile" 60
+    "Sidewinder Missile Rack" 20
+    "Sidewinder Missile Launcher" 2
     "X6 Blaster Turret" 4
     "Heavy Anti-Missile" 2
 
     "LP144a Battery Pack"
     "Liquid Nitrogen Cooler"
-    "Fuel Pod" 196
-    "Large Radar Jammer" 2
-    "Ramscoop" 2
-    "Tactical Scanner" 6
-  engine -18 230
-  engine 18 230
-  gun 0 -232 "Sidewinder Missile Launcher"
-  gun -15 -226 "Sidewinder Missile Launcher"
-  gun 15 -226 "Sidewinder Missile Launcher"
-  turret -22 -148 "X6 Blaster Turret"
-  turret 26 -80 "Heavy Anti-Missile"
-  turret -41 -20 "X6 Blaster Turret"
-  turret 32 -7 "X6 Blaster Turret"
-  turret 53 82 "X6 Blaster Turret"
-  turret -37 186 "Heavy Anti-Missile"
-  fighter -38 -26
-  fighter 35 36
-  fighter -47 97
+    "Fuel Pod" 64
+    "Tactical Scanner" 4
+    "Security Station" 2
+  engine -34 154
+  engine 34 154
+  gun -27 -83
+  gun 27 -83
+  turret -34 -64
+  turret 34 -64
+  turret -58 11 "Heavy Anti-Missile"
+  turret 58 11 "Heavy Anti-Missile"
+  turret -24 78
+  turret 24 78
   leak "leak" 30 50
   leak "flame" 30 80
   leak "big leak" 50 30
-  explode "small explosion" 25
-  explode "medium explosion" 35
-  explode "large explosion" 45
-  explode "huge explosion" 30
+  explode "small explosion" 15
+  explode "medium explosion" 25
+  explode "large explosion" 35
+  explode "huge explosion" 20
   "final explode" "final explosion large"
-  description "The Vortex Bactrian is the last of the great city-ships, a design hearkening back to the early days of space colonization when a long-distance vessel needed to be a self-contained world, able to survive for weeks at a time without encountering an inhabited planet. It is not only a freighter, but a carrier, and a capable warship either at short range or at a distance. Naturally, this versatility also makes it extremely expensive, and the Bactrian is not normally for sale to ordinary citizens."
+  description "The Behemoth is a relatively recent ship design from Vortex Shipyards, designed as an alternative to the Vortex Bulk Freighter. Although its cargo capacity is somewhat lower, it is also more manoeuvrable, and packs a heavier armament by default."
 
 
-ship "Bactrian" "Bactrian (Hired Gun)"
+ship "Behemoth" "Behemoth (Free Worlds)"
   outfits
-    "S-970 Regenerator" 2
-    "Fusion Reactor"
+    "D94-YV Shield Generator"
+    "Breeder Reactor"
+    "Hyperdrive"
+
+    "Greyhound Plasma Thruster"
+    "Impala Plasma Steering"
+
+    "Javelin" 128
+    "Javelin Storage Crate" 2
+    "Javelin Pod" 2
+    "Bolt Turret" 4
+    "Heavy Anti-Missile" 2
+
+    "LP144a Battery Pack"
+    "Liquid Nitrogen Cooler"
+    "Fuel Pod" 64
+    "Tactical Scanner" 4
+    "Security Station" 2
+  turret "Bolt Turret"
+  turret "Bolt Turret"
+  turret "Heavy Anti-Missile"
+  turret "Heavy Anti-Missile"
+  turret "Bolt Turret"
+  turret "Bolt Turret"
+
+
+ship "Behemoth" "Behemoth (Navy)"
+  outfits
+    "D67-TM Shield Generator"
     "Fission Reactor"
     "Hyperdrive"
 
-    "A520 Atomic Thruster"
-    "A525 Atomic Steering"
+    "A250 Atomic Thruster"
+    "A375 Atomic Steering"
 
-    "Impact Missile" 60
-    "Impact Missile Rack" 15
-    "Impact Missile Launcher" 3
-    "Heavy Laser Turret" 6
+    "Pulse Turret" 4
+    "Heavy Anti-Missile" 2
 
-    "LP036a Battery Pack"
-    "Liquid Helium Cooler"
+    "LP144a Battery Pack"
     "Liquid Nitrogen Cooler"
-    "Fuel Pod" 196
-    "Large Radar Jammer"
-    "Tactical Scanner" 6
-    "Extra Outfit Space" 9
-    "Laser Rifle" 240
+    "Fuel Pod" 64
+    "Tactical Scanner" 4
+    "Security Station" 2
+    "Extra Outfit Space" 4
+  turret "Pulse Turret"
+  turret "Pulse Turret"
+  turret "Heavy Anti-Missile"
+  turret "Heavy Anti-Missile"
+  turret "Pulse Turret"
+  turret "Pulse Turret"
 
 
 
@@ -175,12 +191,12 @@ ship "Firebird"
     "Tactical Scanner" 4
   engine -33 65
   engine 33 65
-  gun -28 -27 "Particle Cannon"
-  gun 28 -27 "Particle Cannon"
-  gun -39 -13 "Particle Cannon"
-  gun 39 -13 "Particle Cannon"
-  turret -5 3 "X2 Blaster Turret"
-  turret 5 3 "X2 Blaster Turret"
+  gun -28 -27
+  gun 28 -27
+  gun -39 -13
+  gun 39 -13
+  turret -5 3
+  turret 5 3
   leak "leak" 50 50
   leak "flame" 30 80
   explode "tiny explosion" 18
@@ -189,25 +205,6 @@ ship "Firebird"
   explode "large explosion" 8
   "final explode" "final explosion medium"
   description "The Vortex Shipyards Firebird is a warship with a long and storied past; Firebirds fought on both sides of the Alpha Wars over half a millennium ago, and although the equipment and systems have been upgraded continuously since then, the basic design remains almost the same. The Firebird is also a very rugged ship and easy to repair; supposedly a few of the Firebirds that fought in those wars are still in service today."
-
-
-ship "Firebird" "Firebird (Hai)"
-  outfits
-    "Diamond Regenerator"
-    "Geode Reactor"
-    "Hyperdrive"
-
-    `"Biroo" Atomic Thruster`
-    `"Biroo" Atomic Steering`
-
-    "Pulse Cannon" 4
-    "Chameleon Anti-Missile" 2
-
-    "Fissure Batteries"
-    "Williwaw Cooling" 2
-    "Fuel Pod" 32
-    "Yoloy Scanner"
-    "Extra Outfit Space" 4
 
 
 ship "Firebird" "Firebird (Impact)"
@@ -253,60 +250,6 @@ ship "Firebird" "Firebird (Laser)"
 
 
 
-ship "Foxhound"
-  sprite "ship/foxhound"
-  thumbnail "thumbnail/foxhound"
-  attributes
-    category "Fighter"
-#    manufacturer "Vortex"
-    "carried" 2
-    "cost" 93000
-    "shields" 800
-    "hull" 400
-    "required crew" 1
-    "bunks" 1
-    "mass" 30
-    "drag" .7
-    "heat dissipation" .8
-    "outfit space" 90
-    "core space" 45
-    "engine space" 31
-    "weapon space" 14
-    weapon
-      "blast radius" 24
-      "shield damage" 60
-      "random shield damage" 180
-      "hull damage" 90
-      "random hull damage" 270
-      "heat damage" 1800
-      "random heat damage" 5400
-      "hit force" 150
-      "random hit force" 450
-  outfits
-    "D14-RN Shield Generator"
-    "nGVF-AA Fuel Cell"
-
-    "IT-1700 Ion Thruster"
-    "IS-1200 Ion Steering"
-
-    "Gatling Round" 3000
-    "Gatling Bullet Boxes" 2
-    "Gatling Gun" 2
-
-    "LP036a Battery Pack"
-    "Small Radar Jammer"
-    "Tactical Scanner"
-    "Laser Rifle"
-  engine -15 30
-  engine 15 30
-  gun -14 -10 "Gatling Gun"
-  gun 14 -10 "Gatling Gun"
-  explode "tiny explosion" 15
-  explode "small explosion" 5
-  description "The Foxhound is the primary fighter used by the Republic Navy. As with all fighters, it is weak by itself but very effective as part of a larger squadron."
-
-
-
 ship "Heavy Shuttle"
   sprite "ship/shuttle_heavy"
   thumbnail "thumbnail/shuttle_heavy"
@@ -348,7 +291,6 @@ ship "Heavy Shuttle"
 
     "LP036a Battery Pack"
     "Fuel Pod" 14
-    "Small Radar Jammer"
   engine 6 30
   engine -6 30
   gun -7 -37
@@ -372,6 +314,75 @@ ship "Heavy Shuttle" "Heavy Shuttle (Blaster)"
 
     "LP036a Battery Pack"
     "Fuel Pod" 14
+
+
+
+ship "Leviathan"
+  sprite "ship/leviathan"
+  thumbnail "thumbnail/leviathan"
+  attributes
+    category "Frigate"
+#    manufacturer "Vortex"
+    licences
+      Pilot
+    "cost" 9800000
+    "shields" 12500
+    "hull" 6400
+    "required crew" 50
+    "bunks" 75
+    "mass" 600
+    "drag" 7.6
+    "heat dissipation" .5
+    "cargo space" 80
+    "outfit space" 660
+    "core space" 280
+    "engine space" 140
+    "weapon space" 240
+    weapon
+      "blast radius" 268
+      "shield damage" 1200
+      "random shield damage" 1480
+      "hull damage" 1800
+      "random hull damage" 2220
+      "heat damage" 36000
+      "random heat damage" 44400
+      "hit force" 3000
+      "random hit force" 3700
+  outfits
+    "D94-YV Shield Generator"
+    "Fusion Reactor"
+    "Hyperdrive"
+
+    "IT-4700 Ion Thruster"
+    "IS-4200 Ion Steering"
+
+    "Particle Cannon" 4
+    "X4 Blaster Turret" 4
+
+    "LP072a Battery Pack"
+    "Liquid Nitrogen Cooler"
+    "Large Radar Jammer"
+    "Fuel Pod" 67
+    "Tactical Scanner" 4
+  engine -25 125
+  engine 25 125
+  gun -39 -33
+  gun 39 -33
+  gun -51 -21
+  gun 51 -21
+  turret -15 -50
+  turret 15 -50
+  turret -25 10
+  turret 25 10
+  leak "leak" 50 50
+  leak "flame" 30 80
+  leak "big leak" 60 30
+  explode "tiny explosion" 18
+  explode "small explosion" 36
+  explode "medium explosion" 24
+  explode "large explosion" 8
+  "final explode" "final explosion large"
+  description "The Vortex Leviathan has been in service since long before the Republic existed. Although considered today to be an outdated and clunky model, it is still a force to be reckoned with."
 
 
 
@@ -419,7 +430,6 @@ ship "Light Shuttle"
 
     "LP036a Battery Pack"
     "Fuel Pod" 10
-    "Small Radar Jammer"
   engine 6 30
   engine -6 30
   gun 0 -30
@@ -427,7 +437,7 @@ ship "Light Shuttle"
   explode "tiny explosion" 10
   explode "small explosion" 5
   description "Although Vortex Shipyards produces other ship models as well, the majority of their profits come from sales of the Light Shuttle. This versatile ship serves equally well as a passenger transport or a cargo courier. It also happens to be the cheapest ship you can buy which is capable of hyperspace travel."
-  description `  Shuttles are not designed to withstand combat of any sort, but they are fast and manoeuvrable enough to get out of harm's way if attacked by a larger, slower ship. Although they are typically unarmed, they have enough space for one weapon, which is the origin of the popular phrase, "as useless as a blaster cannon on a shuttlecraft."`
+  description "  Shuttles are not designed to withstand combat of any sort, but they are fast and manoeuvrable enough to get out of harm's way if attacked by a larger, slower ship. Although they are typically unarmed, they have enough space for one weapon, which is the origin of the popular phrase, 'as useless as a blaster cannon on a shuttlecraft.'"
 
 
 ship "Light Shuttle" "Light Shuttle (Blaster)"
@@ -443,212 +453,6 @@ ship "Light Shuttle" "Light Shuttle (Blaster)"
 
     "LP036a Battery Pack"
     "Fuel Pod" 10
-
-
-
-ship "Mongrel"
-  sprite "ship/mongrel"
-  thumbnail "thumbnail/mongrel"
-  attributes
-    category "Bomber"
-#    manufacturer "Vortex"
-    licences
-      Pilot
-    "carried" 3
-    "cost" 50000
-    "shields" 700
-    "hull" 300
-    "required crew" 1
-    "bunks" 2
-    "mass" 40
-    "drag" .8
-    "heat dissipation" .75
-    "outfit space" 90
-    "core space" 40
-    "engine space" 20
-    "weapon space" 30
-    weapon
-      "blast radius" 26
-      "shield damage" 80
-      "random shield damage" 180
-      "hull damage" 120
-      "random hull damage" 270
-      "heat damage" 2400
-      "random heat damage" 5400
-      "hit force" 200
-      "random hit force" 450
-  outfits
-    "D14-RN Shield Generator"
-    "nGVF-AA Fuel Cell"
-
-    "IC-900 Ion Engines"
-
-    "X1 Blaster Cannon"
-    "X2 Blaster Turret"
-
-    "LP072a Battery Pack"
-  engine -10 28
-  engine 9 28
-  gun -9 -29 "X1 Blaster Cannon"
-  turret 8 6 "X2 Blaster Turret"
-  leak "leak" 60 50
-  explode "tiny explosion" 15
-  explode "small explosion" 5
-  description `The design of the Mongrel seems to be a Mule condensed to the level of a Dagger, and as you look at the cockpit nestled between the massive gun port and turret mount, you wonder where the power systems are supposed to go. Needless to say, there is no room for a hyperdrive, fuel barrels, or cargo. The Mongrel is categorized as a bomber rather than a fighter, because of its relatively high weapon space, and because its awkward shape makes it unable to fit into ordinary fighter bays. Though its operation range is currently rather limited, it seems flexible enough to become a dangerous addition to warfleets, if ever any bomber carriers will be designed.`
-
-
-ship "Mongrel" "Mongrel (Anti-Missile)"
-  outfits
-    "D14-RN Shield Generator"
-    "nGVF-AA Fuel Cell"
-
-    "IC-900 Ion Engines"
-
-    "Heavy Anti-Missile"
-
-    "LP036a Battery Pack"
-
-
-ship "Mongrel" "Mongrel (Particle)"
-  outfits
-    "D14-RN Shield Generator"
-    "nGVF-AA Fuel Cell"
-
-    "IC-900 Ion Engines"
-
-    "Particle Cannon"
-
-    "LP036a Battery Pack"
-
-
-ship "Mongrel" "Mongrel (Plasma)"
-  outfits
-    "D14-RN Shield Generator"
-    "nGVF-AA Fuel Cell"
-
-    "IC-900 Ion Engines"
-
-    "Plasma Cannon"
-
-    "LP036a Battery Pack"
-
-
-
-ship "Mule"
-  sprite "ship/mule"
-  thumbnail "thumbnail/mule"
-  attributes
-    category "Frigate"
-#    manufacturer "Vortex"
-    licences
-      Pilot
-    "cost" 4580000
-    "shields" 5400
-    "hull" 4400
-    "required crew" 6
-    "bunks" 43
-    "mass" 320
-    "drag" 5.7
-    "heat dissipation" .5
-    "cargo space" 270
-    "outfit space" 520
-    "core space" 200
-    "engine space" 110
-    "weapon space" 210
-    weapon
-      "blast radius" 222
-      "shield damage" 640
-      "random shield damage" 1580
-      "hull damage" 960
-      "random hull damage" 2370
-      "heat damage" 19200
-      "random heat damage" 47400
-      "hit force" 1600
-      "random hit force" 3950
-  outfits
-    "D41-HY Shield Generator"
-    "Fission Reactor"
-    "Hyperdrive"
-
-    "IT-3700 Ion Thruster"
-    "IS-4200 Ion Steering"
-
-    "Sidewinder Missile" 30
-    "Sidewinder Missile Rack" 10
-    "Sidewinder Missile Launcher"
-    "X4 Blaster Turret" 3
-    "Heavy Anti-Missile"
-
-    "Liquid Nitrogen Cooler"
-    "LP144a Battery Pack"
-    "Fuel Pod" 75
-    "Large Radar Jammer"
-    "Ramscoop"
-    "Tactical Scanner" 4
-  engine -12 123
-  engine 12 123
-  gun 0 -123 "Sidewinder Missile Launcher"
-  turret 22 -65 "X4 Blaster Turret"
-  turret -37 -21 "X4 Blaster Turret"
-  turret 39 35 "X4 Blaster Turret"
-  turret -9 59 "Heavy Anti-Missile"
-  fighter -16 -9
-  leak "leak" 50 50
-  leak "flame" 80 80
-  leak "big leak" 80 30
-  explode "tiny explosion" 10
-  explode "small explosion" 30
-  explode "medium explosion" 20
-  "final explode" "final explosion medium"
-  description "The Mule is as much of a hodgepodge as its looks suggest. The Vortex ship designers combined a good deal of cargo space with a decent amount of weaponry and even a fighter bay, and ended up with a ship that is mostly used as a freighter but must be classified as a warship because of its heavy armament and shields."
-
-
-ship "Mule" "Mule (Hai)"
-  outfits
-    "Diamond Regenerator"
-    "Geode Reactor"
-    "Hyperdrive"
-
-    `"Bondir" Atomic Thruster`
-    `"Biroo" Atomic Steering`
-
-    "Tracker" 56
-    "Tracker Storage Pod"
-    "Tracker Launcher"
-    "Pulse Turret" 3
-    "Chameleon Anti-Missile"
-
-    "Gorge Batteries"
-    "Williwaw Cooling" 2
-    "Fuel Pod" 75
-    "Ramscoop"
-    "Yoloy Scanner"
-    "Extra Outfit Space" 4
-
-
-ship "Mule" "Mule (Heavy)"
-  outfits
-    "D94-YV Shield Generator"
-    "NT-200 Nucleovoltaic"
-    "Dwarf Core"
-    "Hyperdrive"
-
-    "A370 Atomic Thruster"
-    "A375 Atomic Steering"
-
-    "Impact Missile" 20
-    "Impact Missile Rack" 5
-    "Impact Missile Launcher"
-    "Heavy Laser Turret" 4
-
-    "LP036a Battery Pack"
-    "Liquid Nitrogen Cooler"
-    "Fuel Pod" 75
-    "Large Radar Jammer"
-    "Ramscoop"
-    "Tactical Scanner" 4
-    "Extra Outfit Space" 8
-    "Laser Rifle" 40
 
 
 
@@ -698,7 +502,7 @@ ship "Wasp"
     "Supercapacitor"
     "Fuel Pod" 10
     "Small Radar Jammer"
-    "Tactical Scanner"
+    "Tactical Scanner" 2
   engine -6 33
   engine 6 33
   gun 0 -38 "Gatling Gun"
@@ -725,46 +529,5 @@ ship "Wasp" "Wasp (Miner)"
     "Fuel Pod" 10
     "Asteroid Scanner"
     "Small Radar Jammer"
-    "Tactical Scanner"
-
-
-
-ship "Watch Dog"
-  sprite "ship/watch_dog"
-  thumbnail "thumbnail/watch_dog"
-  attributes
-    category "Drone"
-#    manufacturer "Vortex"
-    licences
-      Navy
-    "carried" 1
-    "cost" 50000
-    "hull" 300
-    "automaton" 1
-    "mass" 15
-    "drag" .5
-    "heat dissipation" .9
-    "outfit space" 60
-    "core space" 40
-    "engine space" 20
-    weapon
-      "blast radius" 15
-      "shield damage" 30
-      "random shield damage" 120
-      "hull damage" 45
-      "random hull damage" 180
-      "heat damage" 900
-      "random heat damage" 3600
-      "hit force" 75
-      "random hit force" 300
-  outfits
-    "IC-900 Ion Engines"
-
-    "KP-6 Photovoltaic Array"
-    "LP036a Battery Pack"
-    "Surveillance Pod"
-  engine -5 29
-  engine 5 29
-  explode "tiny explosion" 15
-  description "Watch Dogs are unarmed drones used by the Republic navy to scan ships and planets in a star system."
+    "Tactical Scanner" 2
 

@@ -2,13 +2,26 @@
 # but are no longer used in Finite Galaxy. They are listed to preserve history.
 # (It used to be in case anyone installed one of them while they were available.)
 #
+# "A860 Atomic Thruster"
+# "A865 Atomic Steering"
 # "Aluminum"
 # "Anti-Missile Turret"
 # "AR120 Reverse Thruster"
 # "Armageddon Core"
+# `"Baellie" Atomic Engines`
+# `"Basrem" Atomic Steering`
+# `"Basrem" Atomic Thruster`
 # "Beam Laser"
+# `"Benga" Atomic Thruster`
+# `"Benga" Atomic Steering`
 # effect "big explosion"
+# `"Biroo" Atomic Steering`
+# `"Biroo" Atomic Thruster`
 # "Blaster Turret"
+# `"Bondir" Atomic Steering`
+# `"Bondir" Atomic Thruster`
+# `"Bufaer" Atomic Steering`
+# `"Bufaer" Atomic Thruster`
 # "Bullfrog Anti-Missile"
 # "Bullfrog Anti-Missile Turret"
 # "Bullet Boxes"
@@ -84,15 +97,11 @@
 # "NDR-114 Android"
 # "Outfits Expansion"
 # "Pilot's License"
+# effect "plasma explosion"
 # effect "point defense die"
 # effect "point defense fire"
 # effect "point defense hit"
 # "Point Defense Turret"
-# "Proton Fragment"
-# "Proton Gun"
-# effect "proton impact"
-# "Proton Turret"
-# "Pulse Rifle"
 # "Pug Akfar Steering"
 # "Pug Akfar Thruster"
 # "Pug Biodefenses"
@@ -104,7 +113,10 @@
 # "Pug Seeker"
 # "Pug Zapper"
 # "Pug Zapper Turret"
+# "Pulse Rifle"
 # "Quad Blaster Turret"
+# "Quarg Anti-Missile"
+# effect "quarg anti-missile"
 # "Quarg Skylance"
 # "Railgun"
 # "Railgun Slug"
@@ -146,6 +158,31 @@
 # "X5700 Ion Thruster"
 
 
+
+outfit "A860 Atomic Thruster"
+  category "Deprecated"
+  thumbnail "outfit/unknown"
+  "cost" 2240000
+  "mass" 127
+  "outfit space" -127
+  "engine space" -127
+  "thrust" 139.7
+  "thrusting energy" 13.3
+  "thrusting heat" 29.1
+  "flare sprite" "effect/flare/atomic_huge"
+    "frame rate" 10
+  "flare sound" "atomic huge"
+
+outfit "A865 Atomic Steering"
+  category "Deprecated"
+  thumbnail "outfit/unknown"
+  "cost" 1920000
+  "mass" 92
+  "outfit space" -92
+  "engine space" -92
+  "turn" 3509
+  "turning energy" 6.6
+  "turning heat" 17.5
 
 outfit "Aluminum"
   plural "Aluminum"
@@ -194,6 +231,49 @@ outfit "Armageddon Core"
   "heat generation" 75
 
 
+outfit `"Baellie" Atomic Engines`
+  plural `"Baellie" Atomic Engines`
+  category "Deprecated"
+  thumbnail "outfit/unknown"
+  "cost" 240000
+  "mass" 24
+  "outfit space" -24
+  "engine space" -24
+  "turn" 250
+  "turning energy" .6
+  "turning heat" 1.3
+  "thrust" 10.1
+  "thrusting energy" 1.2
+  "thrusting heat" 2.4
+  "flare sprite" "effect/flare/atomic_tiny"
+    "frame rate" 14
+  "flare sound" "atomic tiny"
+
+outfit `"Basrem" Atomic Steering`
+  category "Deprecated"
+  thumbnail "outfit/unknown"
+  "cost" 120000
+  "mass" 12
+  "outfit space" -12
+  "engine space" -12
+  "turn" 309
+  "turning energy" .7
+  "turning heat" 1.6
+
+outfit `"Basrem" Atomic Thruster`
+  category "Deprecated"
+  thumbnail "outfit/unknown"
+  "cost" 150000
+  "mass" 18
+  "outfit space" -18
+  "engine space" -18
+  "thrust" 13.2
+  "thrusting energy" 1.5
+  "thrusting heat" 2.9
+  "flare sprite" "effect/flare/atomic_tiny"
+    "frame rate" 14
+  "flare sound" "atomic tiny"
+
 outfit "Beam Laser"
   category "Deprecated"
   thumbnail "outfit/unknown"
@@ -216,6 +296,31 @@ outfit "Beam Laser"
     "shield damage" 1
     "hull damage" 1.3
 
+outfit `"Benga" Atomic Thruster`
+  category "Deprecated"
+  thumbnail "outfit/unknown"
+  "cost" 300000
+  "mass" 28
+  "outfit space" -28
+  "engine space" -28
+  "thrust" 23.6
+  "thrusting energy" 2.6
+  "thrusting heat" 5.0
+  "flare sprite" "effect/flare/atomic_tiny"
+    "frame rate" 14
+  "flare sound" "atomic tiny"
+
+outfit `"Benga" Atomic Steering`
+  category "Deprecated"
+  thumbnail "outfit/unknown"
+  "cost" 250000
+  "mass" 20
+  "outfit space" -20
+  "engine space" -20
+  "turn" 577
+  "turning energy" 1.1
+  "turning heat" 2.8
+
 effect "big explosion"
   sprite "effect/explosion/large"
     "no repeat"
@@ -227,6 +332,31 @@ effect "big explosion"
   "random spin" 4
   "random velocity" .8
   "velocity scale" .4
+
+outfit `"Biroo" Atomic Steering`
+  category "Deprecated"
+  thumbnail "outfit/unknown"
+  "cost" 530000
+  "mass" 32
+  "outfit space" -32
+  "engine space" -32
+  "turn" 1054
+  "turning energy" 2.0
+  "turning heat" 5.1
+
+outfit `"Biroo" Atomic Thruster`
+  category "Deprecated"
+  thumbnail "outfit/unknown"
+  "cost" 610000
+  "mass" 44
+  "outfit space" -44
+  "engine space" -44
+  "thrust" 41.5
+  "thrusting energy" 4.2
+  "thrusting heat" 8.6
+  "flare sprite" "effect/flare/atomic_small"
+    "frame rate" 13
+  "flare sound" "atomic small"
 
 outfit "Blaster Turret"
   category "Deprecated"
@@ -251,13 +381,63 @@ outfit "Blaster Turret"
     "shield damage" 9.6
     "hull damage" 6
 
+outfit `"Bondir" Atomic Steering`
+  category "Deprecated"
+  thumbnail "outfit/unknown"
+  "cost" 950000
+  "mass" 49
+  "outfit space" -49
+  "engine space" -49
+  "turn" 1758
+  "turning energy" 3.2
+  "turning heat" 8.2
+
+outfit `"Bondir" Atomic Thruster`
+  category "Deprecated"
+  thumbnail "outfit/unknown"
+  "cost" 1100000
+  "mass" 63
+  "outfit space" -63
+  "engine space" -63
+  "thrust" 66.1
+  "thrusting energy" 6.4
+  "thrusting heat" 13.4
+  "flare sprite" "effect/flare/atomic_medium"
+    "frame rate" 12
+  "flare sound" "atomic medium"
+
+outfit `"Bufaer" Atomic Steering`
+  category "Deprecated"
+  thumbnail "outfit/unknown"
+  "cost" 2100000
+  "mass" 76
+  "outfit space" -76
+  "engine space" -76
+  "turn" 3043
+  "turning energy" 5.2
+  "turning heat" 13.8
+
+outfit `"Bufaer" Atomic Thruster`
+  category "Deprecated"
+  thumbnail "outfit/unknown"
+  "cost" 2400000
+  "mass" 104
+  "outfit space" -104
+  "engine space" -104
+  "thrust" 120.1
+  "thrusting energy" 10.9
+  "thrusting heat" 23.8
+  "flare sprite" "effect/flare/atomic_large"
+    "frame rate" 11
+  "flare sound" "atomic large"
+
 outfit "Bullfrog Anti-Missile"
   category "Deprecated"
   thumbnail "outfit/unknown"
   cost 55000
   "mass" 10
   "outfit space" -10
-  "weapon capacity" -10
+  "weapon space" -10
   "turret mounts" -1
   weapon
     "hit effect" "small anti-missile"
@@ -382,9 +562,9 @@ outfit "Drak Antimatter Cannon"
     "hit effect" "nuke explosion"
     "safe"
     "reload" 187
+    "blast radius" 100
     "firing energy" 5610
     "firing heat" 1870
-    "blast radius" 100
     "hit force" 1000
 
 outfit "Drak Antimatter Fragment"
@@ -399,10 +579,10 @@ outfit "Drak Antimatter Fragment"
     "safe"
     "inaccuracy" 1
     "lifetime" 499
-    "hit force" 1000
+    "blast radius" 100
     "shield damage" 5610
     "hull damage" 5610
-    "blast radius" 100
+    "hit force" 1000
 
 outfit "Drak Anti-Missile Field"
   category "Deprecated"
@@ -421,7 +601,7 @@ outfit "Drak Anti-Missile Field"
     "anti-missile" 100
 
 effect "drak bolt impact"
-  sprite "effect/drak bolt impact"
+  sprite "effect/impact/jolt"
     "no repeat"
     "frame rate" 30
   sound "explosion small"
@@ -464,9 +644,9 @@ outfit "Drak Draining Field"
     "firing energy" 20
     "firing heat" 5
     "firing force" 30
-    "hit force" 60
     "shield damage" 50
     "ion damage" .5
+    "hit force" 60
 
 outfit "Drak Turret"
   category "Deprecated"
@@ -653,10 +833,10 @@ outfit "Hai Tracker Pod"
     "homing" 4
     "optical tracking" .8
     "infrared tracking" .4
+    "missile strength" 16
     "shield damage" 200
     "hull damage" 160
     "hit force" 350
-    "missile strength" 16
 
 outfit "Hai Valley Batteries"
   plural "Hai Valley Batteries"
@@ -681,7 +861,7 @@ outfit "Heavy Anti-Missile Turret"
   cost 150000
   "mass" 30
   "outfit space" -30
-  "weapon capacity" -30
+  "weapon space" -30
   "turret mounts" -1
   weapon
     "hit effect" "large anti-missile"
@@ -739,7 +919,7 @@ outfit "Heavy Rocket Launcher"
   cost 40000
   "mass" 10
   "outfit space" -20
-  "weapon capacity" -20
+  "weapon space" -20
   "gun ports" -1
   "rocket capacity" 20
   weapon
@@ -758,12 +938,12 @@ outfit "Heavy Rocket Launcher"
     "firing heat" 250
     "acceleration" .8
     "drag" .1
+    "missile strength" 16
     "trigger radius" 30
     "blast radius" 50
     "shield damage" 850
     "hull damage" 720
     "hit force" 600
-    "missile strength" 16
 
 outfit "Heavy Rocket Rack"
   category "Deprecated"
@@ -796,9 +976,9 @@ outfit "Heliarch Attractor"
     "reload" 1
     "firing energy" 4.8
     "firing heat" 4.5
+    "firing force" -30
     "shield damage" 5.4
     "hull damage" 4.2
-    "firing force" -30
     "hit force" -30
 
 outfit "Heliarch Repulsor"
@@ -823,11 +1003,11 @@ outfit "Heliarch Repulsor"
     "reload" 1
     "firing energy" 5.9
     "firing heat" 1.2
+    "firing force" 60
     "shield damage" 3.6
     "hull damage" 5.8
-    "firing force" 60
-    "hit force" 60
     "slowing damage" .1
+    "hit force" 60
 
 
 outfit "Korath Ark'parat Steering"
@@ -902,14 +1082,14 @@ outfit "Korath Detainer"
     "reload" 60
     "burst reload" 10
     "burst count" 2
+    "blast radius" 20
     "firing energy" 756
-    "firing force" 40
     "firing heat" 400
-    "hit force" 80
+    "firing force" 40
     "shield damage" 320
     "hull damage" 240
     "slowing damage" 40
-    "blast radius" 20
+    "hit force" 80
 
 outfit "Korath Disruptor"
   category "Deprecated"
@@ -971,12 +1151,12 @@ outfit "Korath Grab-Strike"
   "turret mounts" -1
   "required crew" 1
   weapon
-    sprite "projectile/grab-strike"
+    sprite "projectile/grab-striker"
       "frame rate" 25
       "random start frame"
-    sound "grab-strike"
-    "hit effect" "grab-strike impact"
-    "die effect" "grab-strike impact"
+    sound "grab-striker"
+    "hit effect" "grab-striker impact"
+    "die effect" "grab-striker impact"
     "inaccuracy" 1
     "turret turn" 1.9
     "velocity" 10
@@ -1049,7 +1229,7 @@ outfit "Korath Minelayer"
       "no repeat"
     sound "minelayer"
     ammo "Korath Mine"
-    icon "icon/minelayer"
+    icon "icon/mine"
     "fire effect" "minelayer fire"
     "hit effect" "huge explosion"
     "die effect" "minelayer split" 5
@@ -1094,10 +1274,10 @@ outfit "Korath Mine Submunition"
     "velocity" 2
     "random velocity" 5
     "drag" .05
+    "missile strength" 22
     "shield damage" 350
     "hull damage" 280
     "hit force" 200
-    "missile strength" 22
 
 outfit "Korath Piercer"
   category "Deprecated"
@@ -1138,11 +1318,11 @@ outfit "Korath Piercer Launcher"
     "turn" 1.6
     "homing" 4
     "infrared tracking" .9
+    "missile strength" 73
     "shield damage" 290
     "hull damage" 440
-    "piercing" .2
     "hit force" 300
-    "missile strength" 73
+    "piercing" .2
     "stream"
 
 outfit "Korath Piercer Rack"
@@ -1354,7 +1534,7 @@ outfit "Modified Blaster"
   cost 35000
   "mass" 6
   "outfit space" -6
-  "weapon capacity" -6
+  "weapon space" -6
   "gun ports" -1
   weapon
     sprite "projectile/mod blaster"
@@ -1375,7 +1555,7 @@ outfit "Modified Blaster Turret"
   cost 170000
   "mass" 18
   "outfit space" -18
-  "weapon capacity" -18
+  "weapon space" -18
   "turret mounts" -1
   "required crew" 1
   weapon
@@ -1418,6 +1598,17 @@ outfit "Outfits Expansion"
 outfit "Pilot's License"
   category "Deprecated"
 
+effect "plasma explosion"
+  sprite "effect/impact/plasma"
+    "no repeat"
+    "frame rate" 20
+  sound "explosion tiny"
+  "lifetime" 21
+  "random angle" 360
+  "random spin" 4
+  "random velocity" .1
+  "velocity scale" -.05
+
 effect "point defense die"
   sprite "effect/anti-missile/point_defence_die"
     "frame rate" 20
@@ -1458,70 +1649,6 @@ outfit "Point Defense Turret"
     "reload" 10
     "firing energy" 62
     "firing heat" 18
-
-outfit "Proton Fragment"
-  weapon
-    sprite "projectile/proton fragment"
-      "no repeat"
-      "frame rate" 2
-    "hit effect" "proton impact"
-    "inaccuracy" 2
-    "lifetime" 24
-    "hit force" 6
-    "shield damage" 8.4
-    "hull damage" 7
-
-outfit "Proton Gun"
-  category "Deprecated"
-  thumbnail "outfit/unknown"
-  cost 150000
-  "mass" 28
-  "outfit space" -28
-  "weapon capacity" -28
-  "gun ports" -1
-  weapon
-    sprite "projectile/proton"
-    sound "proton"
-    "hit effect" "proton impact" 3
-    "inaccuracy" 4
-    "submunition" "Proton Fragment" 3
-    "velocity" 24
-    "lifetime" 2
-    "reload" 8
-    "firing energy" 15
-    "firing force" 2
-    "firing heat" 60
-
-effect "proton impact"
-  sprite "effect/proton impact"
-    "no repeat"
-    "frame rate" 30
-  "lifetime" 20
-  "random angle" 2
-  "velocity scale" -.005
-
-outfit "Proton Turret"
-  category "Deprecated"
-  thumbnail "outfit/unknown"
-  cost 260000
-  "mass" 34
-  "outfit space" -34
-  "weapon capacity" -34
-  "turret mounts" -1
-  "required crew" 1
-  weapon
-    sprite "projectile/proton"
-    sound "proton"
-    "hit effect" "proton impact" 3
-    "inaccuracy" 4
-    "turret turn" 2.0
-    "submunition" "Proton Fragment" 3
-    "velocity" 24
-    "lifetime" 2
-    "reload" 8
-    "firing energy" 15
-    "firing force" 2
-    "firing heat" 60
 
 outfit "Pug Akfar Steering"
   category "Deprecated"
@@ -1598,11 +1725,11 @@ outfit "Pug Gridfire Turret"
     "lifetime" 1
     "reload" 20
     "turret turn" 20
+    "blast radius" 40
     "firing energy" 800
     "firing heat" 400
     "shield damage" 600
     "hull damage" 600
-    "blast radius" 40
     "piercing" .3
 
 outfit "Pug Lohmar Steering"
@@ -1656,10 +1783,10 @@ outfit "Pug Seeker"
     "turn" 4
     "homing" 5
     "tracking" .5
+    "missile strength" 40
     "shield damage" 24
     "hull damage" 13
     "hit force" 2
-    "missile strength" 40
 
 outfit "Pug Zapper"
   category "Deprecated"
@@ -1741,6 +1868,30 @@ outfit "Quad Blaster Turret"
     "shield damage" 9.6
     "hull damage" 6
 
+outfit "Quarg Anti-Missile"
+  category "Deprecated"
+  thumbnail "outfit/unknown"
+  cost 6000000
+  "mass" 40
+  "outfit space" -40
+  "weapon space" -40
+  "turret mounts" -1
+  weapon
+    "hit effect" "quarg anti-missile"
+    "anti-missile" 25
+    "velocity" 500
+    "lifetime" 1
+    "reload" 10
+    "firing energy" 50
+
+effect "quarg anti-missile"
+  sprite "effect/anti-missile/quarg"
+    "no repeat"
+    "frame rate" 3
+  sound "quarg anti-missile"
+  "lifetime" 21
+  "velocity scale" 1
+
 outfit "Quarg Skylance"
   category "Deprecated"
   thumbnail "outfit/unknown"
@@ -1773,7 +1924,7 @@ outfit "Railgun"
   cost 20000
   "mass" 4
   "outfit space" -7
-  "weapon capacity" -7
+  "weapon space" -7
   "gun ports" -1
   "railgun slug capacity" 150
   weapon
@@ -1834,13 +1985,13 @@ outfit "rslug"
       "frame rate" 30
     "live effect" "rail sparks" 5
     "hit effect" "bullet impact"
-    "shield damage" 65
-    "hull damage" 95
+    "turn" .3
     "homing" 1
     "optical tracking" .4
-    "turn" .3
-    "hit force" 44
     "missile strength" 14
+    "shield damage" 65
+    "hull damage" 95
+    "hit force" 44
     "piercing" .1
 
 
@@ -1869,10 +2020,10 @@ outfit "Thunderhead"
     "homing" 4
     "optical tracking" .9
     "radar tracking" .6
+    "missile strength" 3
     "shield damage" 110
     "hull damage" 80
     "hit force" 150
-    "missile strength" 3
 
 outfit "Thunderhead Launcher"
   category "Deprecated"
@@ -1880,7 +2031,7 @@ outfit "Thunderhead Launcher"
   cost 450000
   "mass" 14
   "outfit space" -26
-  "weapon capacity" -26
+  "weapon space" -26
   "gun ports" -1
   "thunderhead capacity" 40
   weapon
@@ -1899,8 +2050,6 @@ outfit "Thunderhead Launcher"
     "velocity" 4
     "lifetime" 400
     "reload" 75
-    "firing energy" 18
-    "firing heat" 36
     "acceleration" 1.1
     "drag" .1
     "turn" 2
@@ -1908,6 +2057,8 @@ outfit "Thunderhead Launcher"
     "infrared tracking" .9
     "radar tracking" .6
     "missile strength" 12
+    "firing energy" 18
+    "firing heat" 36
 
 outfit "Thunderhead Missile"
   category "Deprecated"
@@ -1931,7 +2082,7 @@ outfit "Tier 3 Anti-Missile"
   cost 12000000
   "mass" 67
   "outfit space" -67
-  "weapon capacity" -67
+  "weapon space" -67
   "turret mounts" -1
   weapon
     "fire effect" "tier 3 anti-missile fire"
@@ -1979,7 +2130,7 @@ outfit "Torpedo Launcher"
   cost 80000
   "mass" 13
   "outfit space" -25
-  "weapon capacity" -25
+  "weapon space" -25
   "gun ports" -1
   "torpedo capacity" 30
   weapon
@@ -2003,10 +2154,10 @@ outfit "Torpedo Launcher"
     "turn" 1.5
     "homing" 3
     "optical tracking" .8
+    "missile strength" 30
     "shield damage" 680
     "hull damage" 680
     "hit force" 300
-    "missile strength" 30
 
 outfit "Torpedo Storage Rack"
   category "Deprecated"
@@ -2029,7 +2180,7 @@ outfit "Typhoon Launcher"
   cost 260000
   "mass" 20
   "outfit space" -35
-  "weapon capacity" -35
+  "weapon space" -35
   "gun ports" -1
   "typhoon capacity" 30
   weapon
@@ -2053,10 +2204,10 @@ outfit "Typhoon Launcher"
     "turn" 1.5
     "homing" 4
     "optical tracking" .9
+    "missile strength" 40
     "shield damage" 880
     "hull damage" 880
     "hit force" 450
-    "missile strength" 40
 
 outfit "Typhoon Storage Tube"
   category "Deprecated"
@@ -2108,7 +2259,7 @@ outfit "X1050 Ion Engines"
   "cost" 20000
   "mass" 20
   "outfit space" -20
-  "engine capacity" -20
+  "engine space" -20
   "turn" 110
   "turning energy" .25
   "turning heat" .5
@@ -2125,7 +2276,7 @@ outfit "X1200 Ion Steering"
   "cost" 10000
   "mass" 12
   "outfit space" -12
-  "engine capacity" -12
+  "engine space" -12
   "turn" 160
   "turning energy" .3
   "turning heat" .6
@@ -2136,7 +2287,7 @@ outfit "X1700 Ion Thruster"
   "cost" 12000
   "mass" 16
   "outfit space" -16
-  "engine capacity" -16
+  "engine space" -16
   "thrust" 6.0
   "thrusting energy" .6
   "thrusting heat" .9
@@ -2150,7 +2301,7 @@ outfit "X2200 Ion Steering"
   "cost" 21000
   "mass" 20
   "outfit space" -20
-  "engine capacity" -20
+  "engine space" -20
   "turn" 307
   "turning energy" .6
   "turning heat" 1.1
@@ -2161,7 +2312,7 @@ outfit "X2700 Ion Thruster"
   "cost" 26000
   "mass" 27
   "outfit space" -27
-  "engine capacity" -27
+  "engine space" -27
   "thrust" 11.5
   "thrusting energy" 1.1
   "thrusting heat" 1.7
@@ -2175,7 +2326,7 @@ outfit "X3200 Ion Steering"
   "cost" 46000
   "mass" 35
   "outfit space" -35
-  "engine capacity" -35
+  "engine space" -35
   "turn" 590
   "turning energy" 1.1
   "turning heat" 2.0
@@ -2186,7 +2337,7 @@ outfit "X3700 Ion Thruster"
   "cost" 58000
   "mass" 46
   "outfit space" -46
-  "engine capacity" -46
+  "engine space" -46
   "thrust" 22.1
   "thrusting energy" 1.9
   "thrusting heat" 3.2
@@ -2200,7 +2351,7 @@ outfit "X4200 Ion Steering"
   "cost" 102000
   "mass" 59
   "outfit space" -59
-  "engine capacity" -59
+  "engine space" -59
   "turn" 1132
   "turning energy" 1.9
   "turning heat" 3.9
@@ -2211,7 +2362,7 @@ outfit "X4700 Ion Thruster"
   "cost" 128000
   "mass" 79
   "outfit space" -79
-  "engine capacity" -79
+  "engine space" -79
   "thrust" 42.5
   "thrusting energy" 3.5
   "thrusting heat" 6.2
@@ -2225,7 +2376,7 @@ outfit "X5200 Ion Steering"
   "cost" 225000
   "mass" 100
   "outfit space" -100
-  "engine capacity" -100
+  "engine space" -100
   "turn" 2174
   "turning energy" 3.5
   "turning heat" 7.3
@@ -2236,7 +2387,7 @@ outfit "X5700 Ion Thruster"
   "cost" 281000
   "mass" 134
   "outfit space" -134
-  "engine capacity" -134
+  "engine space" -134
   "thrust" 81.5
   "thrusting energy" 6.3
   "thrusting heat" 11.7

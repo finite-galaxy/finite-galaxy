@@ -22,7 +22,7 @@ outfit "EMP Torpedo Bay"
   "gun ports" -1
   "emp torpedo capacity" 9
   weapon
-    sprite "projectile/emp torpedo"
+    sprite "projectile/emp"
       "frame rate" 2
       "no repeat"
     sound "torpedo"
@@ -46,13 +46,13 @@ outfit "EMP Torpedo Bay"
     "homing" 3
     "infrared tracking" .7
     "radar tracking" .8
+    "missile strength" 80
     "trigger radius" 50
     "blast radius" 200
     "shield damage" 700
     "hull damage" 100
     "ion damage" 48
     "hit force" 90
-    "missile strength" 80
   description "Electromagnetic pulse weapons were developed by the Remnant during the early days of their colony, when they were living in fear that the Alphas would overrun human space and expand beyond it."
 
 effect "emp torpedo fire"
@@ -102,7 +102,7 @@ outfit "Thrasher Cannon"
       "frame rate" 10
       "random start frame"
       "no repeat"
-    sound "particle"
+    sound "thrasher"
     "hit effect" "thrasher impact"
     "inaccuracy" 9
     "velocity" 10
@@ -115,7 +115,7 @@ outfit "Thrasher Cannon"
   description "This weapon was originally developed in an attempt to reverse engineer a long-range energy projectile favoured by an alien species that the Remnant encountered nearby. In the process they discovered that by adding more energy to the projectiles they could do a lot more damage in exchange for shorter range, and the Thrasher Cannon was born."
 
 effect "thrasher impact"
-  sprite "effect/thrasher impact"
+  sprite "effect/impact/thrasher"
     "frame rate" 30
     "no repeat"
   "lifetime" 11
@@ -142,7 +142,7 @@ outfit "Thrasher Turret"
       "no repeat"
     "hardpoint sprite" "hardpoint/thrasher_turret"
     "hardpoint offset" 6.
-    sound "particle"
+    sound "thrasher"
     "hit effect" "thrasher impact"
     "inaccuracy" 6
     "turret turn" 1.22
@@ -188,7 +188,7 @@ outfit "Inhibitor Cannon"
   description `Nearly a century ago, a Remnant scout exploring space north of the Ember Waste came under fire from an alien fleet armed with weapons that interfered with the scout's engines. The story says that the Remnant captain calmly told her crew, "We aren't going home until we steal that weapon." That alien technology became the basis of the Inhibitor Cannon.`
 
 effect "inhibitor impact"
-  sprite "effect/inhibitor impact"
+  sprite "effect/impact/inhibitor"
     "frame rate" 30
     "no repeat"
   "lifetime" 11
@@ -196,51 +196,4 @@ effect "inhibitor impact"
   "random frame rate" 15
   "random velocity" 6
   "velocity scale" -.05
-
-
-
-outfit "Point Defence"
-  category "Anti-Missile"
-  thumbnail "outfit/point_defence"
-  licences
-    Remnant
-  cost 1120000
-  "mass" 33
-  "drag" .33
-  "outfit space" -33
-  "weapon space" -33
-  "turret mounts" -1
-  weapon
-    "hardpoint sprite" "hardpoint/point_defence"
-    "fire effect" "point defence fire"
-    "hit effect" "point defence hit"
-    "die effect" "point defence die"
-    "anti-missile" 42
-    "velocity" 270
-    "lifetime" 1
-    "reload" 10
-    "firing energy" 62
-    "firing heat" 18
-  description "Not long after the Remnant settled on Aventine, they began to discover caches of alien technology in vaults deep under the mountains, guarded by ancient but still-functioning point-defence systems. The Remnant learned how to duplicate those defence systems, and they are now considered to be much more useful than most of the items that they were guarding."
-
-effect "point defence die"
-  sprite "effect/anti-missile/point_defence_die"
-    "frame rate" 20
-    "no repeat"
-  lifetime 15
-  "velocity scale" .2
-
-effect "point defence fire"
-  sprite "effect/anti-missile/point_defence_fire"
-    "frame rate" 17
-    "no repeat"
-  lifetime 10
-  "velocity scale" .5
-
-effect "point defence hit"
-  sprite "effect/anti-missile/point_defence_hit"
-    "frame rate" 13
-    "no repeat"
-  lifetime 10
-  "velocity scale" .2
 

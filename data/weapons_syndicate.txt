@@ -48,6 +48,7 @@ outfit "Meteor Missile Launcher"
     "turn" 1.5
     "homing" 3
     "infrared tracking" .8
+    "missile strength" 4
     "blast radius" 5
     "shield damage" 260
     "random shield damage" 65
@@ -55,7 +56,6 @@ outfit "Meteor Missile Launcher"
     "random hull damage" 40
     "hit force" 220
     "random hit force" 55
-    "missile strength" 4
   description "The Meteor Missile is the cheapest and simplest homing weapon available in human space. Meteors are quickly destroyed by anti-missile systems, and their infrared tracking systems have trouble homing in on targets with low heat levels. Nevertheless, their large warheads can spell doom for poorly-defended targets when the missiles are fired in great numbers."
 
 effect "meteor fire"
@@ -90,7 +90,7 @@ outfit "X1 Blaster Cannon"
   description "Although not the most accurate or damaging of weapons, the X1 Blaster Cannon is popular because it is small enough to be installed on even the tiniest of ships. One blaster is not enough to do appreciable damage to anything larger than a fighter, but a ship equipped with several of them becomes a force to be reckoned with."
 
 effect "blaster impact"
-  sprite "effect/blaster impact"
+  sprite "effect/impact/blaster"
     "no repeat"
     "frame rate" 30
   "lifetime" 7

@@ -1,238 +1,20 @@
 shipyard "Lionheart Variants"
-  "Aerie"
-  "Aerie (Mark II)"
-  "Argosy"
-  "Argosy (Blaster)"
-  "Argosy (Impact)"
-  "Argosy (Laser)"
   "Arrow"
   "Arrow (Anti-Missile)"
-  "Arrow (Hai)"
-  "Behemoth"
-  "Behemoth (Free Worlds)"
-  "Behemoth (Hai)"
-  "Behemoth (Mark II)"
-  "Behemoth (Mark III)"
   "Bounder"
-  "Bounder (Hai)"
   "Bounder (Laser)"
   "Bounder (Miner)"
-  "Dagger"
-  "Leviathan"
-  "Leviathan (Hai)"
-  "Leviathan (Heavy)"
-  "Leviathan (Mark II)"
-  "Leviathan (North)"
-  "Leviathan (South)"
+  "Bulk Freighter"
+  "Class C Freighter"
+  "Lance"
+  "Lance (Electron)"
+  "Lance (Plasma)"
+  "Manta"
+  "Manta (Nuclear)"
+  "Manta (Particle)"
+  "Manta (Plasma)"
   "Warrior"
-  "Warrior (Mark II)"
-
-
-
-ship "Aerie"
-  sprite "ship/aerie"
-  thumbnail "thumbnail/aerie"
-  attributes
-    category "Corvette"
-#    manufacturer "Lionheart"
-    licences
-      Pilot
-    "cost" 3500000
-    "shields" 5700
-    "hull" 1900
-    "required crew" 10
-    "bunks" 28
-    "mass" 130
-    "drag" 4.1
-    "heat dissipation" .7
-    "cargo space" 50
-    "outfit space" 430
-    "core space" 190
-    "engine space" 90
-    "weapon space" 150
-    weapon
-      "blast radius" 122
-      "shield damage" 260
-      "random shield damage" 960
-      "hull damage" 390
-      "random hull damage" 1440
-      "heat damage" 7800
-      "random heat damage" 28800
-      "hit force" 650
-      "random hit force" 2400
-  outfits
-    "D67-TM Shield Generator"
-    "NT-200 Nucleovoltaic"
-    "Hyperdrive"
-
-    "A250 Atomic Thruster"
-    "A255 Atomic Steering"
-
-    "Heavy Laser Cannon" 2
-    "Heavy Laser Turret" 2
-    "Heavy Anti-Missile"
-
-    "LP144a Battery Pack"
-    "Fuel Pod" 42
-    "Tactical Scanner" 4
-  engine -10 91
-  engine 10 91
-  gun -13 -79 "Heavy Laser Cannon"
-  gun 13 -79 "Heavy Laser Cannon"
-  turret 0 0 "Heavy Anti-Missile"
-  turret -17 14 "Heavy Laser Turret"
-  turret 17 14 "Heavy Laser Turret"
-  fighter -42 -2
-  fighter 42 2
-  leak "leak" 50 50
-  leak "flame" 50 80
-  leak "big leak" 90 30
-  explode "tiny explosion" 10
-  explode "small explosion" 25
-  explode "medium explosion" 25
-  explode "large explosion" 10
-  "final explode" "final explosion medium"
-  description "The Aerie is a light carrier, designed to be just big enough for two fighter bays plus a decent armament of its own. Variations on this same ship design have been in use in the Deep for almost half a millennium, but this model comes with the very latest in generator and weapon technology."
-
-
-ship "Aerie" "Aerie (Mark II)"
-  outfits
-    "D67-TM Shield Generator"
-    "NT-200 Nucleovoltaic"
-    "Hyperdrive"
-
-    "A250 Atomic Thruster"
-    "A255 Atomic Steering"
-
-    "Electron Turret" 2
-    "Heavy Anti-Missile"
-
-    "LP144a Battery Pack"
-    "Fuel Pod" 42
-    "Tactical Scanner" 4
-    "Laser Rifle" 28
-
-
-
-ship "Argosy"
-  plural "Argosies"
-  sprite "ship/argosy"
-  thumbnail "thumbnail/argosy"
-  attributes
-    category "Corvette"
-#    manufacturer "Lionheart"
-    licences
-      Pilot
-    "cost" 1960000
-    "shields" 4200
-    "hull" 2600
-    "required crew" 4
-    "bunks" 14
-    "mass" 330
-    "drag" 5.9
-    "heat dissipation" .7
-    "cargo space" 120
-    "outfit space" 300
-    "core space" 130
-    "engine space" 80
-    "weapon space" 90
-    weapon
-      "blast radius" 150
-      "shield damage" 660
-      "random shield damage" 840
-      "hull damage" 990
-      "random hull damage" 1260
-      "heat damage" 19800
-      "random heat damage" 25200
-      "hit force" 1650
-      "random hit force" 2100
-  outfits
-    "D41-HY Shield Generator"
-    "NT-200 Nucleovoltaic"
-    "Hyperdrive"
-
-    "A250 Atomic Thruster"
-    "A255 Atomic Steering"
-
-    "Laser Cannon" 2
-    "Laser Turret" 2
-
-    "LP072a Battery Pack"
-    "Fuel Pod" 30
-    "Small Radar Jammer"
-    "Tactical Scanner" 3
-  engine -20 91
-  engine 20 91
-  gun -22 -37 "Laser Cannon"
-  gun 22 -37 "Laser Cannon"
-  turret 0 -12 "Laser Turret"
-  turret 0 8 "Laser Turret"
-  leak "leak" 60 50
-  leak "flame" 60 80
-  explode "tiny explosion" 10
-  explode "small explosion" 25
-  explode "medium explosion" 25
-  explode "large explosion" 10
-  "final explode" "final explosion medium"
-  description "The Argosy from Vortex Shipyards is very popular with merchants not because of its capacity, which is actually slightly smaller than the Star Freighter, but because it can hold its own in combat against pirate interceptors."
-  description "  The Argosy is also a very easy ship to upgrade with faster engines or more powerful weapons as needed, so many privately owned Argosies have very different capabilities than the stock model."
-
-
-ship "Argosy" "Argosy (Blaster)"
-  outfits
-    "D41-HY Shield Generator"
-    "NT-200 Nucleovoltaic"
-    "Hyperdrive"
-
-    "A250 Atomic Thruster"
-    "A255 Atomic Steering"
-
-    "X1 Blaster Cannon" 2
-    "X4 Blaster Turret" 2
-
-    "LP072a Battery Pack"
-    "Fuel Pod" 30
-    "Small Radar Jammer"
-    "Tactical Scanner" 3
-
-
-ship "Argosy" "Argosy (Impact)"
-  outfits
-    "D41-HY Shield Generator"
-    "NT-200 Nucleovoltaic"
-    "Hyperdrive"
-
-    "A250 Atomic Thruster"
-    "A255 Atomic Steering"
-
-    "Impact Missile" 32
-    "Impact Missile Rack" 8
-    "Impact Missile Launcher" 2
-    "Heavy Laser Turret"
-
-    "LP036a Battery Pack"
-    "Fuel Pod" 30
-    "Small Radar Jammer"
-    "Tactical Scanner" 3
-    "Extra Outfit Space" 2
-
-
-ship "Argosy" "Argosy (Laser)"
-  outfits
-    "D41-HY Shield Generator"
-    "NT-200 Nucleovoltaic"
-    "Hyperdrive"
-
-    "A250 Atomic Thruster"
-    "A255 Atomic Steering"
-
-    "Heavy Laser Turret" 2
-
-    "LP072a Battery Pack"
-    "Fuel Pod" 30
-    "Small Radar Jammer"
-    "Tactical Scanner" 3
-    "Extra Outfit Space"
+  "Warrior (Electron)"
 
 
 
@@ -254,8 +36,8 @@ ship "Arrow"
     "heat dissipation" .85
     "cargo space" 10
     "outfit space" 190
-    "core space" 80
-    "engine space" 60
+    "core space" 75
+    "engine space" 65
     "weapon space" 50
     weapon
       "blast radius" 66
@@ -275,10 +57,9 @@ ship "Arrow"
     "A250 Atomic Thruster"
     "A255 Atomic Steering"
 
-    "LP036a Battery Pack"
+    "DS-05 Battery Pack"
     "Cooling Ducts"
     "Fuel Pod" 14
-    "Small Radar Jammer"
     "Tactical Scanner"
   engine -10 60
   engine 10 60
@@ -304,198 +85,10 @@ ship "Arrow" "Arrow (Anti-Missile)"
 
     "Heavy Anti-Missile"
 
-    "LP036a Battery Pack"
+    "DS-05 Battery Pack"
     "Cooling Ducts"
     "Fuel Pod" 14
-    "Small Radar Jammer"
     "Tactical Scanner"
-
-
-ship "Arrow" "Arrow (Hai)"
-  outfits
-    "Corundum Regenerator"
-    "Pebble Core"
-    "Hyperdrive"
-
-    `"Benga" Atomic Thruster`
-    `"Biroo" Atomic Steering`
-
-    "Chameleon Anti-Missile"
-
-    "Chasm Batteries"
-    "Fuel Pod" 14
-    "Yoloy Scanner"
-
-
-
-ship "Behemoth"
-  sprite "ship/behemoth"
-  thumbnail "thumbnail/behemoth"
-  attributes
-    category "Destroyer"
-#    manufacturer "Lionheart"
-    licences
-      Pilot
-    "cost" 10800000
-    "shields" 7600
-    "hull" 8100
-    "required crew" 12
-    "bunks" 30
-    "mass" 540
-    "drag" 11.7
-    "heat dissipation" .4
-    "cargo space" 490
-    "outfit space" 570
-    "core space" 200
-    "engine space" 90
-    "weapon space" 280
-    weapon
-      "blast radius" 320
-      "shield damage" 1080
-      "random shield damage" 2120
-      "hull damage" 1620
-      "random hull damage" 3180
-      "heat damage" 32400
-      "random heat damage" 63600
-      "hit force" 2700
-      "random hit force" 5300
-  outfits
-    "D41-HY Shield Generator"
-    "NT-200 Nucleovoltaic"
-    "Hyperdrive"
-
-    "A250 Atomic Thruster"
-    "A375 Atomic Steering"
-
-    "Impact Missile" 24
-    "Impact Missile Rack" 6
-    "Impact Missile Launcher" 2
-    "Heavy Laser Turret" 4
-    "Heavy Anti-Missile" 2
-
-    "LP144a Battery Pack"
-    "Fuel Pod" 64
-    "Tactical Scanner" 4
-  engine -34 154
-  engine 34 154
-  gun -27 -83 "Impact Missile Launcher"
-  gun 27 -83 "Impact Missile Launcher"
-  turret -34 -64 "Heavy Laser Turret"
-  turret 34 -64 "Heavy Laser Turret"
-  turret -58 11 "Heavy Anti-Missile"
-  turret 58 11 "Heavy Anti-Missile"
-  turret -24 78 "Heavy Laser Turret"
-  turret 24 78 "Heavy Laser Turret"
-  leak "leak" 30 50
-  leak "flame" 30 80
-  leak "big leak" 50 30
-  explode "small explosion" 15
-  explode "medium explosion" 25
-  explode "large explosion" 35
-  explode "huge explosion" 20
-  "final explode" "final explosion large"
-  description "The Behemoth is a relatively recent ship design from Lionheart Shipyards, designed as an alternative to the Betelgeuse Bulk Freighter. Although its cargo capacity is somewhat lower, it is also more manoeuvrable, and packs a heavier armament by default."
-
-
-ship "Behemoth" "Behemoth (Free Worlds)"
-  outfits
-    "D94-YV Shield Generator"
-    "Breeder Reactor"
-    "Hyperdrive"
-
-    "Greyhound Plasma Thruster"
-    "Impala Plasma Steering"
-
-    "K4 Blaster Turret" 4
-    "Heavy Anti-Missile" 2
-
-    "LP144a Battery Pack"
-    "Liquid Nitrogen Cooler"
-    "Fuel Pod" 64
-    "Tactical Scanner" 4
-  turret "K4 Blaster Turret"
-  turret "K4 Blaster Turret"
-  turret "Heavy Anti-Missile"
-  turret "Heavy Anti-Missile"
-  turret "K4 Blaster Turret"
-  turret "K4 Blaster Turret"
-
-
-ship "Behemoth" "Behemoth (Hai)"
-  outfits
-    "Diamond Regenerator"
-    "Geode Reactor"
-    "Hyperdrive"
-
-    `"Benga" Atomic Thruster`
-    `"Biroo" Atomic Steering`
-    `"Benga" Atomic Steering`
-
-    "Tracker" 112
-    "Tracker Storage Pod" 2
-    "Tracker Launcher" 2
-    "Pulse Turret" 4
-    "Chameleon Anti-Missile" 2
-
-    "Gorge Batteries"
-    "Williwaw Cooling" 2
-    "Fuel Pod" 64
-    "Yoloy Scanner"
-    "Extra Outfit Space" 4
-  turret "Pulse Turret"
-  turret "Pulse Turret"
-  turret "Chameleon Anti-Missile"
-  turret "Chameleon Anti-Missile"
-  turret "Pulse Turret"
-  turret "Pulse Turret"
-
-
-ship "Behemoth" "Behemoth (Mark II)"
-  outfits
-    "D41-HY Shield Generator"
-    "NT-200 Nucleovoltaic"
-    "Hyperdrive"
-
-    "A250 Atomic Thruster"
-    "A375 Atomic Steering"
-    "Electron Turret" 4
-    "Heavy Anti-Missile" 2
-
-    "LP144a Battery Pack"
-    "Fuel Pod" 64
-    "Ramscoop"
-    "Tactical Scanner" 4
-    "Extra Outfit Space"
-  turret "Electron Turret"
-  turret "Electron Turret"
-  turret "Heavy Anti-Missile"
-  turret "Heavy Anti-Missile"
-  turret "Electron Turret"
-  turret "Electron Turret"
-
-
-ship "Behemoth" "Behemoth (Mark III)"
-  outfits
-    "D41-HY Shield Generator"
-    "NT-200 Nucleovoltaic"
-    "Hyperdrive"
-
-    "A250 Atomic Thruster"
-    "A375 Atomic Steering"
-    "Electron Turret" 4
-    "Heavy Anti-Missile" 2
-
-    "LP144a Battery Pack"
-    "Catalytic Ramscoop"
-    "Fuel Pod" 64
-    "Tactical Scanner" 4
-    "Extra Outfit Space" 2
-  turret "Electron Turret"
-  turret "Electron Turret"
-  turret "Heavy Anti-Missile"
-  turret "Heavy Anti-Missile"
-  turret "Electron Turret"
-  turret "Electron Turret"
 
 
 
@@ -504,7 +97,7 @@ ship "Bounder"
   thumbnail "thumbnail/bounder"
   attributes
     category "Interceptor"
-#    manufacturer "Megaparsec"
+#    manufacturer "Lionheart"
     licences
       Pilot
     "cost" 1140000
@@ -540,36 +133,19 @@ ship "Bounder"
 
     "AM5 Anti-Missile" 2
 
-    "LP036a Battery Pack"
+    "DS-23 Battery Pack"
     "Fuel Pod" 39
     "Tactical Scanner"
   engine -12 44
   engine 12 44
-  turret -37 4 "AM5 Anti-Missile"
-  turret 37 4 "AM5 Anti-Missile"
+  turret -37 4
+  turret 37 4
   leak "leak" 60 50
   explode "tiny explosion" 10
   explode "small explosion" 20
   explode "medium explosion" 15
   "final explode" "final explosion small"
   description "The Lionheart Bounder was designed back in the days when the galaxy was more sparsely populated, and ships prospecting for habitable worlds or worlds rich in resources would often travel far away from any habitable ports where they would be able to refuel. Although the galaxy has now been much more thoroughly explored, the Bounder remains a popular ship for long-distance travel."
-
-
-ship "Bounder" "Bounder (Hai)"
-  outfits
-    "Corundum Regenerator"
-    "Pebble Core"
-    "Hyperdrive"
-
-    `"Biroo" Atomic Steering`
-    `"Biroo" Atomic Thruster`
-
-    "Chameleon Anti-Missile" 2
-
-    "Gorge Batteries"
-    "Fuel Pod" 39
-    "Quantum Keystone"
-    "Yoloy Scanner"
 
 
 ship "Bounder" "Bounder (Laser)"
@@ -583,7 +159,7 @@ ship "Bounder" "Bounder (Laser)"
 
     "Laser Turret" 2
 
-    "LP036a Battery Pack"
+    "DS-23 Battery Pack"
     "Fuel Pod" 39
     "Tactical Scanner"
 
@@ -599,7 +175,7 @@ ship "Bounder" "Bounder (Miner)"
 
     "Laser Turret" 2
 
-    "LP036a Battery Pack"
+    "DS-23 Battery Pack"
     "Asteroid Scanner"
     "Fuel Pod" 39
     "Ramscoop"
@@ -607,228 +183,338 @@ ship "Bounder" "Bounder (Miner)"
 
 
 
-ship "Dagger"
-  sprite "ship/dagger"
-  thumbnail "thumbnail/dagger"
+ship "Bulk Freighter"
+  sprite "ship/bulk_freighter"
+  thumbnail "thumbnail/bulk_freighter"
   attributes
-    category "Fighter"
+    category "Cruiser"
 #    manufacturer "Lionheart"
     licences
       Pilot
-    "carried" 2
-    "cost" 129000
-    "shields" 1000
-    "hull" 300
-    "required crew" 1
-    "bunks" 1
-    "mass" 20
-    "drag" .6
-    "heat dissipation" .9
-    "outfit space" 85
-    "core space" 40
-    "engine space" 29
-    "weapon space" 16
+    "cost" 9000000
+    "shields" 3000
+    "hull" 9000
+    "required crew" 6
+    "bunks" 18
+    "mass" 900
+    "drag" 16
+    "heat dissipation" .5
+    "cargo space" 750
+    "outfit space" 500
+    "core space" 200
+    "engine space" 100
+    "weapon space" 200
     weapon
-      "blast radius" 21
-      "shield damage" 40
-      "random shield damage" 170
-      "hull damage" 60
-      "random hull damage" 255
-      "heat damage" 1200
-      "random heat damage" 5100
-      "hit force" 100
-      "random hit force" 425
+      "blast radius" 406
+      "shield damage" 1800
+      "random shield damage" 2320
+      "hull damage" 2700
+      "random hull damage" 3480
+      "heat damage" 54000
+      "random heat damage" 69600
+      "hit force" 4500
+      "random hit force" 5800
   outfits
-    "D14-RN Shield Generator"
-    "nGVF-BB Fuel Cell"
+    "D41-HY Shield Generator"
+    "Ogre Core"
+    "Hyperdrive"
 
-    "IT-1700 Ion Thruster"
-    "IS-1200 Ion Steering"
+    "A370 Atomic Thruster"
+    "A375 Atomic Steering"
 
-    "Laser Cannon" 2
+    "Heavy Laser Turret" 4
+    "Heavy Anti-Missile"
 
-    "Supercapacitor"
-    "Tactical Scanner"
-  engine -15 30
-  engine 15 30
-  gun -14 -10 "Laser Cannon"
-  gun 14 -10 "Laser Cannon"
-  leak "leak" 60 50
-  explode "tiny explosion" 15
-  explode "small explosion" 5
-  description "The Dagger is a fighter designed by Lionheart Industries, intended to be carried by their Aerie warship, although other ships have been known to carry them, as well. As with many Lionheart ships, its chassis is largely composed of lightweight composite materials, making it considerably faster than other fighters."
+    "DS-11 Battery Pack"
+    "Fuel Pod" 86
+    "Tactical Scanner" 5
+  engine -22 198
+  engine 22 198
+  turret -12 -155
+  turret 12 -155
+  turret 0 5 "Heavy Anti-Missile"
+  turret -30 175
+  turret 30 175
+  leak "leak" 40 50
+  leak "flame" 30 80
+  leak "big leak" 50 30
+  explode "small explosion" 15
+  explode "medium explosion" 25
+  explode "large explosion" 35
+  explode "huge explosion" 20
+  "final explode" "final explosion large"
+  description "The Bulk Freighter is the ultimate freighter, able to carry more cargo than any other human ship. It is also, however, an incredibly slow ship and difficult to manoeuvre, especially when fully loaded. Some freight caravans use multiple smaller freighters instead of bulk freighters just to avoid the hassle of constantly having to wait for the Bulk Freighter to properly align itself for hyperspace travel."
+
+
+ship "Bulk Freighter" "Class C Freighter"
+  add attributes
+    "cost" 3000000
+    "shields" 10000
+    "required crew" 12
+    "cargo space" -600
+    "outfit space" 60
+    weapon
+      "random shield damage" -900
+      "random hull damage" -1350
+      "random heat damage" -27000
+      "random hit force" -2250
+  outfits
+    "D94-YV Shield Generator"
+    "Fusion Reactor"
+    "Hyperdrive"
+
+    "A370 Atomic Thruster"
+    "A375 Atomic Steering"
+
+    "X4 Blaster Turret" 4
+    "Heavy Anti-Missile"
+
+    "DS-11 Battery Pack"
+    "Liquid Nitrogen Cooler"
+    "Fuel Pod" 86
+    "Large Radar Jammer"
+    "Ramscoop"
+    "Tactical Scanner" 12
+    "Extra Bunks" 9
+    "Fragmentation Grenades" 15
+    "Laser Rifle" 30
+  turret "X4 Blaster Turret"
+  turret "X4 Blaster Turret"
+  turret "Heavy Anti-Missile"
+  turret "X4 Blaster Turret"
+  turret "X4 Blaster Turret"
+  drone -66 -115 left
+  drone 66 -115 right
+  drone -66 -65 left
+  drone 66 -65 right
+  drone -66 -15 left
+  drone 66 -15 right
+  drone -66 35 left
+  drone 66 35 right
+  drone -66 85 left
+  drone 66 85 right
+  drone -66 135 left
+  drone 66 135 right
+  description `The Class C "Star Freighter" is a stealth warship designed by Lionheart for baiting pirates with the offer of a seemingly helpless, ordinary bulk freighter. Inside, its cargo space has all been converted into drone bays, allowing it to carry a dozen combat drones.`
 
 
 
-ship "Leviathan"
-  sprite "ship/leviathan"
-  thumbnail "thumbnail/leviathan"
+ship "Lance"
+  sprite "ship/lance"
+  thumbnail "thumbnail/lance"
   attributes
     category "Frigate"
 #    manufacturer "Lionheart"
     licences
       Pilot
     "cost" 9800000
-    "shields" 12500
-    "hull" 6400
-    "required crew" 50
-    "bunks" 75
+    "shields" 12800
+    "hull" 3700
+    "required crew" 40
+    "bunks" 60
     "mass" 500
-    "drag" 7.6
-    "heat dissipation" .5
-    "cargo space" 100
-    "outfit space" 660
-    "core space" 290
-    "engine space" 120
+    "drag" 6.7
+    "heat dissipation" .7
+    "cargo space" 50
+    "outfit space" 650
+    "core space" 250
+    "engine space" 150
     "weapon space" 250
     weapon
-      "blast radius" 252
-      "shield damage" 1000
-      "random shield damage" 1520
-      "hull damage" 1500
-      "random hull damage" 2280
-      "heat damage" 30000
-      "random heat damage" 45600
-      "hit force" 2500
-      "random hit force" 3800
+      "blast radius" 236
+      "shield damage" 960
+      "random shield damage" 1360
+      "hull damage" 1440
+      "random hull damage" 2040
+      "heat damage" 28800
+      "random heat damage" 40800
+      "hit force" 2400
+      "random hit force" 3400
   outfits
     "D94-YV Shield Generator"
-    "Fusion Reactor"
+    "Cyclops Core"
     "Hyperdrive"
 
-    "A370 Atomic Thruster"
+    "A520 Atomic Thruster"
     "A525 Atomic Steering"
 
-    "Heavy Laser Cannon" 4
+    "Impact Missile" 48
+    "Impact Missile Rack" 12
+    "Impact Missile Launcher" 2
     "Heavy Laser Turret" 4
 
-    "LP144a Battery Pack"
-    "Liquid Helium Cooler"
-    "Fuel Pod" 63
-    "Large Radar Jammer"
-    "Tactical Scanner" 4
-  engine -25 125
-  engine 25 125
-  gun -39 -33 "Heavy Laser Cannon"
-  gun 39 -33 "Heavy Laser Cannon"
-  gun -51 -21 "Heavy Laser Cannon"
-  gun 51 -21 "Heavy Laser Cannon"
-  turret -15 -50 "Heavy Laser Turret"
-  turret 15 -50 "Heavy Laser Turret"
-  turret -25 10 "Heavy Laser Turret"
-  turret 25 10 "Heavy Laser Turret"
-  leak "leak" 50 50
-  leak "flame" 30 80
-  leak "big leak" 60 30
-  explode "tiny explosion" 18
-  explode "small explosion" 36
-  explode "medium explosion" 24
-  explode "large explosion" 8
-  "final explode" "final explosion large"
-  description "The Lionheart Leviathan has been in service since long before the Republic existed. Although considered today to be an outdated and clunky model, it is still a force to be reckoned with."
-
-
-ship "Leviathan" "Leviathan (Hai)"
-  outfits
-    "Diamond Regenerator"
-    "Boulder Reactor"
-    "Hyperdrive"
-
-    `"Bondir" Atomic Thruster`
-    `"Bondir" Atomic Steering`
-
-    "Pulse Cannon" 4
-    "Pulse Turret" 2
-    "Chameleon Anti-Missile" 2
-
-    "Fissure Batteries"
-    "Williwaw Cooling" 4
-    "Fuel Pod" 63
-    "Yoloy Scanner"
-    "Extra Outfit Space" 2
-
-
-ship "Leviathan" "Leviathan (Heavy)"
-  outfits
-    "D94-YV Shield Generator"
-    "Fusion Reactor"
-    "Hyperdrive"
-
-    "A370 Atomic Thruster"
-    "A525 Atomic Steering"
-
-    "Impact Missile" 64
-    "Impact Missile Rack" 16
-    "Impact Missile Launcher" 4
-    "Heavy Laser Turret" 4
-
-    "LP072a Battery Pack"
+    "DS-11 Battery Pack"
     "Liquid Nitrogen Cooler"
-    "Fuel Pod" 63
-    "Large Radar Jammer"
-    "Tactical Scanner" 4
-    "Extra Outfit Space" 2
-    "Laser Rifle" 75
+    "Fuel Pod" 72
+    "Tactical Scanner" 5
+  engine -17 143
+  engine 17 143
+  gun -17 -88
+  gun 17 -88
+  turret -16 -24
+  turret 16 -24
+  turret -57 40
+  turret 57 40
+  leak "leak" 30 50
+  leak "flame" 50 80
+  leak "big leak" 60 30
+  explode "tiny explosion" 40
+  explode "small explosion" 55
+  explode "medium explosion" 60
+  explode "large explosion" 40
+  "final explode" "final explosion medium"
+  description "The Lionheart Lance is one of the most powerful warships that civilians can buy, a sleeker and more manoeuvrable alternative to the venerable and somewhat outdated Leviathan."
 
 
-ship "Leviathan" "Leviathan (Mark II)"
+ship "Lance" "Lance (Electron)"
   outfits
     "D94-YV Shield Generator"
-    "Fusion Reactor"
+    "Cyclops Core"
     "Hyperdrive"
 
-    "A370 Atomic Thruster"
+    "A520 Atomic Thruster"
     "A525 Atomic Steering"
 
     "Electron Turret" 4
 
-    "LP144a Battery Pack"
-    "Liquid Helium Cooler"
-    "Fuel Pod" 63
-    "Large Radar Jammer"
-    "Tactical Scanner" 4
-    "Extra Outfit Space"
-    "Laser Rifle" 75
+    "DS-11 Battery Pack"
+    "Liquid Nitrogen Cooler"
+    "Fuel Pod" 72
+    "Tactical Scanner" 5
 
 
-ship "Leviathan" "Leviathan (North)"
+ship "Lance" "Lance (Plasma)"
   outfits
     "D94-YV Shield Generator"
-    "Fusion Reactor"
+    "Cyclops Core"
+    "Hyperdrive"
+
+    "Impala Plasma Thruster"
+    "Impala Plasma Steering"
+
+    "Plasma Turret" 4
+
+    "LP144a Battery Pack"
+    "Liquid Helium Cooler"
+    "Fuel Pod" 72
+    "Tactical Scanner" 5
+    "Extra Outfit Space" 2
+
+
+
+ship "Manta"
+  sprite "ship/manta"
+  thumbnail "thumbnail/manta"
+  attributes
+    category "Corvette"
+#    manufacturer "Lionheart"
+    licences
+      Pilot
+    "cost" 3400000
+    "shields" 5900
+    "hull" 1500
+    "required crew" 6
+    "bunks" 10
+    "mass" 170
+    "drag" 4.7
+    "heat dissipation" .8
+    "cargo space" 20
+    "outfit space" 370
+    "core space" 150
+    "engine space" 100
+    "weapon space" 120
+    weapon
+      "blast radius" 112
+      "shield damage" 340
+      "random shield damage" 780
+      "hull damage" 510
+      "random hull damage" 1170
+      "heat damage" 10200
+      "random heat damage" 41400
+      "hit force" 850
+      "random hit force" 1950
+  outfits
+    "D41-HY Shield Generator"
+    "Ogre Core"
+    "Hyperdrive"
+
+    "A250 Atomic Thruster"
+    "A255 Atomic Steering"
+
+    "Heavy Laser Cannon" 8
+
+    "DS-23 Battery Pack"
+    "Liquid Water Cooler"
+    "Fuel Pod" 23
+    "Tactical Scanner" 5
+  engine -33 38
+  engine 33 38
+  gun -21 -35
+  gun 21 -35
+  gun -27 -35
+  gun 27 -35
+  gun -44 -35
+  gun 44 -35
+  gun -50 -35
+  gun 50 -35
+  leak "leak" 60 50
+  leak "flame" 40 80
+  explode "tiny explosion" 10
+  explode "small explosion" 20
+  explode "medium explosion" 15
+  "final explode" "final explosion small"
+  description "The Lionheart Manta is a manoeuvrable, light-weight warship, designed for taking down interceptors in close combat. Unlike similar-sized ships, the Manta does not have any turret mounts nor long range cannons. Instead, its designers decided to give it eight gun ports, far more than comparable ships."
+
+
+ship "Manta" "Manta (Nuclear)"
+  outfits
+    "D41-HY Shield Generator"
+    "Ogre Core"
     "Hyperdrive"
 
     "A370 Atomic Thruster"
-    "A525 Atomic Steering"
+    "A375 Atomic Steering"
+
+    "Nuclear Missile" 8
+
+    "DS-23 Battery Pack"
+    "Liquid Water Cooler"
+    "Fuel Pod" 23
+    "Tactical Scanner" 5
+
+
+ship "Manta" "Manta (Particle)"
+  outfits
+    "D41-HY Shield Generator"
+    "Ogre Core"
+    "Hyperdrive"
+
+    "A250 Atomic Thruster"
+    "A255 Atomic Steering"
 
     "Particle Cannon" 4
-    "X4 Blaster Turret" 4
 
-    "LP144a Battery Pack"
-    "Liquid Helium Cooler"
-    "Fuel Pod" 63
-    "Large Radar Jammer"
-    "Tactical Scanner" 4
-    "Extra Outfit Space" 2
+    "DS-23 Battery Pack"
+    "Liquid Water Cooler"
+    "Fuel Pod" 23
+    "Tactical Scanner" 5
 
 
-ship "Leviathan" "Leviathan (South)"
+ship "Manta" "Manta (Plasma)"
   outfits
-    "D94-YV Shield Generator"
-    "Fusion Reactor"
+    "D41-HY Shield Generator"
+    "Ogre Core"
     "Hyperdrive"
 
-    "A370 Atomic Thruster"
-    "A525 Atomic Steering"
+    "A250 Atomic Thruster"
+    "A255 Atomic Steering"
 
     "Plasma Cannon" 4
-    "K4 Blaster Turret" 4
 
-    "LP144a Battery Pack"
-    "Liquid Helium Cooler"
-    "Fuel Pod" 63
-    "Large Radar Jammer"
-    "Tactical Scanner" 4
-    "Extra Outfit Space" 2
+    "DS-23 Battery Pack"
+    "Liquid Nitrogen Cooler"
+    "Fuel Pod" 23
+    "Tactical Scanner" 5
 
 
 
@@ -873,14 +559,13 @@ ship "Warrior"
 
     "Heavy Laser Cannon" 2
 
-    "LP072a Battery Pack"
+    "DS-11 Battery Pack"
     "Fuel Pod" 12
-    "Small Radar Jammer"
-    "Tactical Scanner" 4
+    "Tactical Scanner" 5
   engine -24 41
   engine 24 41
-  gun -9 -17 "Heavy Laser Cannon"
-  gun 9 -17 "Heavy Laser Cannon"
+  gun -9 -17
+  gun 9 -17
   leak "leak" 60 50
   explode "tiny explosion" 15
   explode "small explosion" 5
@@ -888,7 +573,7 @@ ship "Warrior"
   description "The Warrior is one of the most affordable ships designed by Lionheart: a versatile ship that can serve equally well for escorting freighters or for bounty hunting. As with many of Lionheart's designs, the hull is mostly composite fiber rather than metal, sacrificing armour strength for the sake of lighter weight and faster movement."
 
 
-ship "Warrior" "Warrior (Mark II)"
+ship "Warrior" "Warrior (Electron)"
   outfits
     "D23-QP Shield Generator"
     "Dwarf Core"
@@ -899,12 +584,10 @@ ship "Warrior" "Warrior (Mark II)"
 
     "Electron Cannon" 2
 
-    "LP072a Battery Pack"
+    "DS-11 Battery Pack"
     "Cargo Scanner"
     "Fuel Pod" 12
     "Outfit Scanner"
-    "Small Radar Jammer"
-    "Tactical Scanner" 4
-    "Extra Outfit Space" 2
-    "Laser Rifle" 4
+    "Tactical Scanner" 5
+    "Extra Outfit Space"
 
