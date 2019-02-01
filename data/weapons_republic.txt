@@ -185,7 +185,7 @@ outfit "Pulse Cannon"
   "gun ports" -1
   weapon
     sprite "projectile/pulse"
-      "frame rate" 15
+      "frame rate" 5
     sound "pulse"
     "hit effect" "pulse impact"
     "inaccuracy" 1
@@ -213,7 +213,7 @@ outfit "Pulse Turret"
   "turret mounts" -1
   weapon
     sprite "projectile/pulse"
-      "frame rate" 15
+      "frame rate" 5
     "hardpoint sprite" "hardpoint/pulse_turret"
     "hardpoint offset" 14.
     sound "pulse"
@@ -235,16 +235,7 @@ effect "pulse impact"
   sprite "effect/impact/pulse"
     "no repeat"
     "frame rate" 15
-  "lifetime" 20
-  "random angle" 2
-  "random spin" 1
-  "velocity scale" -.003
-
-effect "dual pulse impact"
-  sprite "effect/impact/2x_pulse"
-    "no repeat"
-    "frame rate" 15
-  "lifetime" 20
+  "lifetime" 30
   "random angle" 2
   "random spin" 1
   "velocity scale" -.003
