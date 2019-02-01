@@ -1,5 +1,6 @@
 shipyard "Hai Variants"
   "Aphid"
+  "Aphid (Unfettered)"
   "Flea"
   "Lightning Bug"
   "Lightning Bug (Proton)"
@@ -73,6 +74,23 @@ ship "Aphid"
   explode "medium explosion" 15
   description "The Aphid is the lightest freighter used by the Hai and was for many millennia the backbone of the Hai inter-planetary economy. Because of how peaceful Hai space has been for much of its history, Aphids are unarmed and mainly rely on larger Hai ships for protection."
 
+ship "Aphid" "Aphid (Unfettered)"
+  outfits
+    "S-270 Regenerator"
+    "Century Cell"
+    "Hyperdrive"
+
+    "Dasrem Atomic Thruster"
+    "Dasrem Atomic Steering"
+
+    "Chameleon Anti-Missile"
+
+    "Chasm Batteries"
+    "Williwaw Cooling"
+    "Fuel Pod" 13
+    "Quantum Keystone"
+    "Yoloy Scanner"
+    "Extra Hull Armour"
 
 
 ship "Flea"
@@ -91,24 +109,26 @@ ship "Flea"
     "mass" 21
     "drag" .5
     "heat dissipation" .75
-    "outfit space" 64
-    "core space" 31
+    "outfit space" 77
+    "core space" 40
     "engine space" 24
-    "weapon space" 9
+    "weapon space" 13
     weapon
-      "blast radius" 16
+      "blast radius" 20
       "shield damage" 42
-      "random shield damage" 128
+      "random shield damage" 154
       "hull damage" 63
-      "random hull damage" 192
+      "random hull damage" 231
       "heat damage" 1260
-      "random heat damage" 3840
+      "random heat damage" 4620
       "hit force" 105
-      "random hit force" 320
+      "random hit force" 385
   outfits
     "Century Cell"
 
     "Baellie Atomic Engines"
+
+    "Proton Cannon"
 
     "Chasm Batteries"
     "Williwaw Cooling"
@@ -219,6 +239,7 @@ ship "Lightning Bug" "Lightning Bug (Unfettered)"
     "Fuel Pod" 35
     "Quantum Keystone"
     "Yoloy Scanner"
+    "Extra Hull Armour" 2
     "Extra Outfit Space"
     "Force Field"
 
@@ -241,6 +262,7 @@ ship "Lightning Bug" "Lightning Bug (Unfettered, Proton)"
     "Williwaw Cooling" 2
     "Fuel Pod" 35
     "Yoloy Scanner"
+    "Extra Hull Armour" 2
     "Extra Outfit Space" 2
     "Force Field"
 
@@ -501,6 +523,7 @@ ship "Shield Beetle" "Shield Beetle (Unfettered)"
     "Quantum Keystone"
     "Yoloy Scanner"
     "Force Field" 4
+    "Extra Hull Armour" 4
   gun "Ion Cannon"
   gun "Ion Cannon"
   gun "Tracker Launcher"
@@ -533,6 +556,7 @@ ship "Shield Beetle" "Shield Beetle (Unfettered, Jump)"
     "Quantum Keystone"
     "Yoloy Scanner"
     "Force Field" 4
+    "Extra Hull Armour" 4
   gun "Ion Cannon"
   gun "Ion Cannon"
   gun "Tracker Launcher"
@@ -593,6 +617,7 @@ ship "Solifuge"
     "Quantum Keystone"
     "Yoloy Scanner"
     "Force Field" 6
+    "Extra Hull Armour" 6
   engine -28 135.5
   engine 28 135.5
   gun 0 -140 "Ion Cannon"
@@ -730,6 +755,7 @@ ship "Water Bug" "Water Bug (Unfettered)"
     "Fuel Pod" 54
     "Quantum Keystone"
     "Yoloy Scanner"
+    "Extra Hull Armour" 3
     "Extra Outfit Space" 2
     "Force Field" 2
   turret "Chameleon Anti-Missile"
@@ -758,6 +784,7 @@ ship "Water Bug" "Water Bug (Unfettered, Jump)"
     "Quantum Keystone"
     "Yoloy Scanner"
     "Extra Outfit Space" 2
+    "Extra Hull Armour" 3
     "Force Field" 2
   turret "Chameleon Anti-Missile"
   turret "Proton Turret"
