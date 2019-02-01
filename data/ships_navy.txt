@@ -15,11 +15,11 @@ shipyard "Navy Variants"
 
 
 ship "Jupiter"
-  sprite "ship/colony_ship"
+  sprite "ship/jupiter"
 #  thumbnail "thumbnail/jupiter"
   attributes
     category "Battleship"
-#    manufacturer "Navy"
+    manufacturer "Navy"
     licences
       Jupiter
     "cost" 26200000
@@ -67,9 +67,44 @@ ship "Jupiter"
     "Tactical Scanner" 36
     "Fragmentation Grenades" 150
     "Laser Rifle" 300
-# six guns, six turrets, twelve fighter bays
-
-
+  engine 114 514 1
+  engine 182 495 1
+  engine -114 514 1
+  engine -182 495 1
+  turret 0 274 "Particle Turret"
+  turret 0 186 "Particle Turret"
+  turret 0 98 "Heavy Anti-Missile"
+  gun 108 -400 "Particle Cannon"
+  gun 81 -426 "Sidewinder Missile Launcher"
+  gun 55 -450 "Particle Cannon"
+  turret 0 -170 "Particle Turret"
+  turret 0 -78 "Particle Turret"
+  turret 0 10 "Heavy Anti-Missile"
+  gun -108 -400 "Particle Cannon"
+  gun -81 -426 "Sidewinder Missile Launcher"
+  gun -55 -450 "Particle Cannon"
+  fighter 200 -179 under right
+  fighter 200 -87 under right
+  fighter 200 9 under right
+  fighter 200 99 under right
+  fighter 200 186 under right
+  fighter 200 274 under right
+  fighter -200 -179 under left
+  fighter -200 -87 under left
+  fighter -200 9 under left
+  fighter -200 99 under left
+  fighter -200 186 under left
+  fighter -200 274 under left
+  leak leak 30 50
+  leak flame 30 80
+  leak "big leak" 30 30
+  explode "tiny explosion" 20
+  explode "small explosion" 45
+  explode "medium explosion" 55
+  explode "large explosion" 30
+  explode "huge explosion" 15
+  "final explode" "final explosion large" 1
+  description "The Jupiter is much more than just a warship: it is practically a full mobile battle station armed to the teeth with a total of 6 guns, a total of 6 turrets, and 6 fighter bays on each side ready to engage any enemy in the vast expanse of the universe."
 
 ship "Mars"
   sprite "ship/mars"
@@ -260,6 +295,7 @@ ship "Mercury" "Mercury (Mark II)"
     "Outfit Scanner"
     "Ramscoop"
     "Tactical Scanner" 4
+    "Extra Outfit Space"
     "Fragmentation Grenades" 5
     "Laser Rifle" 10
 #    "Security Station"
