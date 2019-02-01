@@ -55,36 +55,6 @@ outfit "EMP Torpedo Bay"
     "hit force" 90
   description "Electromagnetic pulse weapons were developed by the Remnant during the early days of their colony, when they were living in fear that the Alphas would overrun human space and expand beyond it."
 
-effect "emp torpedo fire"
-  sprite "effect/emp torpedo fire"
-    "no repeat"
-    "frame rate" 10
-  "lifetime" 31
-  "random angle" 10
-  "random frame rate" 10
-  "random spin" 2
-  "random velocity" 7
-
-effect "emp ring"
-  sprite "effect/emp ring"
-    "no repeat"
-    "frame rate" 12
-  "lifetime" 60
-  "random angle" 360
-  "random frame rate" 6
-  "random velocity" 4
-  "velocity scale" 0.1
-
-effect "emp spark"
-  sprite "effect/emp spark"
-    "no repeat"
-    "frame rate" 8
-  "lifetime" 45
-  "random angle" 360
-  "random frame rate" 6
-  "random velocity" 7
-  "velocity scale" 0.1
-
 
 
 outfit "Thrasher Cannon"
@@ -113,16 +83,6 @@ outfit "Thrasher Cannon"
     "shield damage" 38
     "hull damage" 46
   description "This weapon was originally developed in an attempt to reverse engineer a long-range energy projectile favoured by an alien species that the Remnant encountered nearby. In the process they discovered that by adding more energy to the projectiles they could do a lot more damage in exchange for shorter range, and the Thrasher Cannon was born."
-
-effect "thrasher impact"
-  sprite "effect/impact/thrasher"
-    "frame rate" 30
-    "no repeat"
-  "lifetime" 11
-  "random angle" 360
-  "random spin" 30
-  "random velocity" 3
-  "velocity scale" -.1
 
 outfit "Thrasher Turret"
   category "Turrets"
@@ -186,14 +146,4 @@ outfit "Inhibitor Cannon"
     "hit force" 39
     "slowing damage" .5
   description `Nearly a century ago, a Remnant scout exploring space north of the Ember Waste came under fire from an alien fleet armed with weapons that interfered with the scout's engines. The story says that the Remnant captain calmly told her crew, "We aren't going home until we steal that weapon." That alien technology became the basis of the Inhibitor Cannon.`
-
-effect "inhibitor impact"
-  sprite "effect/impact/inhibitor"
-    "frame rate" 30
-    "no repeat"
-  "lifetime" 11
-  "random angle" 360
-  "random frame rate" 15
-  "random velocity" 6
-  "velocity scale" -.05
 

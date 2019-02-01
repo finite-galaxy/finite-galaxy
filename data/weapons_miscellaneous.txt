@@ -25,14 +25,6 @@ outfit "Imaginary Weapon"
     "homing" 4
     "tracking" 1. 
 
-effect "puff"
-  sprite "effect/puff"
-    "no repeat"
-    "frame rate" 10
-  "lifetime" 20
-  "random angle" 360
-  "velocity scale" -.005
-
 
 
 outfit "Mouthparts?"
@@ -50,17 +42,6 @@ outfit "Mouthparts?"
     "cluster"
     "shield damage" 300
     "hull damage" 300
-
-effect "void sprite chewing"
-  sprite "effect/smoke"
-    "no repeat"
-    "frame rate" 15
-  "lifetime" 29
-  "random angle" 360
-  "random frame rate" 5
-  "random spin" 2
-  "random velocity" .4
-  "velocity scale" .0001
 
 
 
@@ -80,16 +61,6 @@ outfit "Nano Strike"
     "firing energy" 5
     "shield damage" 10
     "hull damage" 10
-
-effect "nano spark"
-  sprite "effect/nano spark"
-    "no repeat"
-    "frame rate" 10
-  "lifetime" 30
-  "random angle" 360
-  "random spin" 30
-  "random velocity" 2
-  "velocity scale" -.005
 
 
 

@@ -41,38 +41,7 @@ outfit "Nuclear Missile"
     "hit force" 4000
     "random hit force" 1000
   description "It has been centuries since the last nuclear war was fought, and until very recently, most people in the galaxy assumed that that era of chaos and destruction was forever behind us..."
-  description "  [Nuclear missiles are a one-shot weapon: each missile occupies a gun slot, and after it is fired, the slot it was in is left empty.]"
-
-effect "nuke explosion"
-  sprite "effect/explosion/nuke"
-    "no repeat"
-    "frame rate" 30
-  sound "explosion nuke"
-  "lifetime" 15
-  "random angle" 360
-  "random spin" 5
-  "random velocity" 1
-  "velocity scale" .4
-
-effect "nuke residue fast"
-  sprite "effect/explosion/huge"
-    "no repeat"
-    "frame rate" 15
-  "lifetime" 36
-  "random angle" 360
-  "random spin" 5
-  "random velocity" 8
-  "velocity scale" 0.1
-
-effect "nuke residue slow"
-  sprite "effect/explosion/huge"
-    "no repeat"
-    "frame rate" 10
-  "lifetime" 60
-  "random angle" 360
-  "random spin" 5
-  "random velocity" 5
-  "velocity scale" 0.1
+  description "  Nuclear missiles are a one-shot weapon: each missile occupies a gun slot, and after it is fired, the slot it was in is left empty."
 
 
 outfit "Plasma Cannon"
@@ -87,7 +56,7 @@ outfit "Plasma Cannon"
     sprite "projectile/plasma"
       "frame rate" 3
     sound "plasma"
-    "hit effect" "plasma explosion"
+    "hit effect" "plasma impact"
     "inaccuracy" 2
     "velocity" 16
     "lifetime" 40
@@ -99,17 +68,6 @@ outfit "Plasma Cannon"
     "heat damage" 360
     "hit force" 30
   description "The Plasma Cannon fires bursts of superheated plasma. In addition to damaging your target, these plasma bursts impart a significant amount of heat, especially to a target whose shields are down."
-
-effect "plasma impact"
-  sprite "effect/impact/plasma"
-    "no repeat"
-    "frame rate" 20
-  sound "explosion tiny"
-  "lifetime" 21
-  "random angle" 360
-  "random spin" 4
-  "random velocity" .1
-  "velocity scale" -.05
 
 outfit "Plasma Turret"
   category "Turrets"

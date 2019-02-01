@@ -20,15 +20,6 @@ outfit "Bolt Cannon"
     "hull damage" 18
   description "The Tarazed Bolt Cannon fires high velocity energy bolts, which are quite effective at reducing ship shields, but not very good at damaging the hull."
 
-effect "bolt impact"
-  sprite "effect/impact/bolt"
-    "no repeat"
-    "frame rate" 30
-  sound "explosion small"
-  "lifetime" 20
-  "random angle" 2
-  "velocity scale" -.005
-
 outfit "Bolt Turret"
   category "Turrets"
   thumbnail "outfit/bolt_turret"

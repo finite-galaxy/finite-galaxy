@@ -90,14 +90,6 @@ outfit "Seeker"
     "hit force" 2
   description "You have no idea how this weapon works. It requires no ammunition, but its energy-based projectiles have the ability to home in on a target ship."
 
-effect "seeker impact"
-  sprite "effect/impact/seeker"
-    "no repeat"
-    "frame rate" 10
-  "lifetime" 31
-  "random angle" 360
-  "random spin" 360
-  "velocity scale" 0.
 
 
 outfit "Gridfire Turret"
@@ -128,32 +120,6 @@ outfit "Gridfire Turret"
     "random heat damage" 1200
     "piercing" .3
 
-effect "gridfire fire"
-  sprite "effect/gridfire fire"
-    "no repeat"
-    "frame rate" 20
-  "lifetime" 7
-  "random angle" 360
-  "random spin" 20
-  "velocity scale" 1
-
-effect "gridfire hit"
-  sprite "effect/gridfire hit"
-    "no repeat"
-    "frame rate" 10
-  "lifetime" 25
-  "random angle" 360
-  "velocity scale" .00001
-
-effect "gridfire cloud"
-  sprite "effect/gridfire cloud"
-    "no repeat"
-    "frame rate" 2
-  "lifetime" 61
-  "random angle" 360
-  "random spin" 10
-  "velocity scale" .00001
-
 
 
 outfit "Pug Anti-Missile"
@@ -170,7 +136,7 @@ outfit "Pug Anti-Missile"
   weapon
     "hardpoint sprite" "hardpoint/anti-missile_pug"
     "hardpoint offset" 6.
-    "hit effect" "pug anti-missile"
+    "hit effect" "anti-missile pug"
     "anti-missile" 5
     "velocity" 190
     "lifetime" 1
@@ -178,15 +144,6 @@ outfit "Pug Anti-Missile"
     "firing energy" 8
     "firing heat" 2
   description "This anti-missile system designed by the Pug draws a lot of energy, but its fast firing rate makes it twice as effective as anything that Lovelace Labs has been able to come up with. A ship with one of these turrets will be very difficult to hit with missiles."
-
-effect "pug anti-missile"
-  sprite "effect/anti-missile/large"
-    "no repeat"
-    "frame rate" 6
-  sound "pug anti-missile"
-  "lifetime" 11
-  "velocity scale" 1
-
 
 outfit "Ceasefire Anti-Missile"
   category "Anti-Missile"
@@ -200,28 +157,12 @@ outfit "Ceasefire Anti-Missile"
   "weapon space" -67
   "turret mounts" -1
   weapon
-    "fire effect" "ceasefire anti-missile fire"
-    "die effect" "ceasefire anti-missile die" 2
+    "fire effect" "anti-missile ceasefire fire"
+    "die effect" "anti-missile ceasefire die" 2
     "anti-missile" 100
     "velocity" 570
     "lifetime" 1
     "reload" 6
     "firing energy" 80
     "firing heat" 10
-
-effect "ceasefire anti-missile fire"
-  sprite "effect/anti-missile/ceasefire_fire"
-    "no repeat"
-    "frame rate" 20
-  "lifetime" 3
-  "random angle" 360
-  "velocity scale" 1
-
-effect "ceasefire anti-missile die"
-  sprite "effect/anti-missile/ceasefire_die"
-    "no repeat"
-    "frame rate" 10
-  "lifetime" 31
-  "random angle" 360
-  "velocity scale" .4
 

@@ -58,13 +58,6 @@ outfit "Meteor Missile Launcher"
     "random hit force" 55
   description "The Meteor Missile is the cheapest and simplest homing weapon available in human space. Meteors are quickly destroyed by anti-missile systems, and their infrared tracking systems have trouble homing in on targets with low heat levels. Nevertheless, their large warheads can spell doom for poorly-defended targets when the missiles are fired in great numbers."
 
-effect "meteor fire"
-  sprite "effect/meteor fire"
-    "no repeat"
-    "frame rate" 30
-  "lifetime" 12
-  "random velocity" 10
-
 
 
 outfit "X1 Blaster Cannon"
@@ -88,14 +81,6 @@ outfit "X1 Blaster Cannon"
     "shield damage" 9
     "hull damage" 6
   description "Although not the most accurate or damaging of weapons, the X1 Blaster Cannon is popular because it is small enough to be installed on even the tiniest of ships. One blaster is not enough to do appreciable damage to anything larger than a fighter, but a ship equipped with several of them becomes a force to be reckoned with."
-
-effect "blaster impact"
-  sprite "effect/impact/blaster"
-    "no repeat"
-    "frame rate" 30
-  "lifetime" 7
-  "random angle" 40
-  "velocity scale" -.05
 
 outfit "X2 Blaster Turret"
   category "Turrets"
@@ -215,7 +200,7 @@ outfit "AM3 Anti-Missile"
   weapon
     "hardpoint sprite" "hardpoint/anti-missile_tiny"
     "hardpoint offset" 3.
-    "hit effect" "small anti-missile"
+    "hit effect" "anti-missile small"
     "anti-missile" 3
     "velocity" 120
     "lifetime" 1
@@ -236,7 +221,7 @@ outfit "AM5 Anti-Missile"
   weapon
     "hardpoint sprite" "hardpoint/anti-missile_small"
     "hardpoint offset" 4.
-    "hit effect" "small anti-missile"
+    "hit effect" "anti-missile small"
     "anti-missile" 5
     "velocity" 160
     "lifetime" 1
@@ -244,12 +229,4 @@ outfit "AM5 Anti-Missile"
     "firing energy" 5
     "firing heat" 3
   description "The Syndicate AM5 is clearly better than the AM3. Although it is certainly weaker than the Lovelace Heavy Anti-Missile turret, it is also cheaper and much smaller, thus a suitable option for many small ships."
-
-effect "small anti-missile"
-  sprite "effect/anti-missile/small"
-    "no repeat"
-    "frame rate" 3
-  sound "anti-missile"
-  "lifetime" 21
-  "velocity scale" 1
 
