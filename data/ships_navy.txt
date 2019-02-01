@@ -1,6 +1,7 @@
 shipyard "Navy Variants"
   "Jupiter"
   "Jupiter (Mark II)"
+  "Jupiter (Mark II Electron)"
   "Mars"
   "Mars (Mark II)"
   "Mars (Mark III)"
@@ -27,7 +28,7 @@ ship "Jupiter"
     category "Battleship"
 #    manufacturer "Navy"
     licences
-      #Jupiter
+      Jupiter
     "cost" 45300000
     "shields" 24400
     "hull" 9300
@@ -54,7 +55,7 @@ ship "Jupiter"
   outfits
     "D94-YV Shield Generator"
     "Fusion Reactor"
-    "Dwarf Core"
+    "Dwarf Core" 2
     "Hyperdrive"
 
     "A860 Atomic Thruster"
@@ -62,10 +63,10 @@ ship "Jupiter"
 
     "Sidewinder Missile" 108
     "Sidewinder Missile Rack" 36
-    "Sidewinder Missile Launcher" 4
-    "Electron Turret" 4
+    "Sidewinder Missile Launcher" 2
+    "Particle Turret" 4
     "Heavy Anti-Missile" 2
-    "Electron Cannon" 2
+    "Particle Cannon" 4
 
     "LP144a Battery Pack" 4
     "Liquid Helium Cooler"
@@ -76,44 +77,89 @@ ship "Jupiter"
     "Fragmentation Grenades" 80
     "Laser Rifle" 200
     "Security Station" 4
-  engine 72 226.5 1
-  engine -72 226.5 1
-  turret 44 -38 "Electron Turret"
-  turret 56 -38 "Electron Turret"
-  turret 69 -38 "Heavy Anti-Missile"
-  gun 48.5 -198 "Sidewinder Missile Launcher"
-  gun 37.5 -215 "Sidewinder Missile Launcher"
-  gun 25.5 -229 "Electron Cannon"
-  turret -44 -38 "Electron Turret"
-  turret -56 -38 "Electron Turret"
-  turret -69 -38 "Heavy Anti-Missile"
-  gun -48.5 -198 "Sidewinder Missile Launcher"
-  gun -37.5 -215 "Sidewinder Missile Launcher"
-  gun -25.5 -229 "Electron Cannon"
-  fighter 110 -30 over
-  fighter 147 -30 over
-  fighter 183 -30 over
-  fighter 183 25 over back
-  fighter 147 25 over back
-  fighter 110 25 over back
-  fighter -110 -30 over
-  fighter -147 -30 over
-  fighter -183 -30 over
-  fighter -183 25 over back
-  fighter -147 25 over back
-  fighter -110 25 over back
-  leak "leak" 30 50
-  leak "flame" 30 80
+  engine 114 514 1
+  engine 182 495 1
+  engine -114 514 1
+  engine -182 495 1
+  turret 0 274 "Particle Turret"
+  turret 0 186 "Particle Turret"
+  turret 0 98 "Heavy Anti-Missile"
+  gun 108 -400 "Particle Cannon"
+  gun 81 -426 "Sidewinder Missile Launcher"
+  gun 55 -450 "Particle Cannon"
+  turret 0 -170 "Particle Turret"
+  turret 0 -78 "Particle Turret"
+  turret 0 10 "Heavy Anti-Missile"
+  gun -108 -400 "Particle Cannon"
+  gun -81 -426 "Sidewinder Missile Launcher"
+  gun -55 -450 "Particle Cannon"
+  fighter 200 -179 under right
+  fighter 200 -87 under right
+  fighter 200 9 under right
+  fighter 200 99 under right
+  fighter 200 186 under right
+  fighter 200 274 under right
+  fighter -200 -179 under left
+  fighter -200 -87 under left
+  fighter -200 9 under left
+  fighter -200 99 under left
+  fighter -200 186 under left
+  fighter -200 274 under left
+  leak leak 30 50
+  leak flame 30 80
   leak "big leak" 30 30
   explode "tiny explosion" 20
   explode "small explosion" 45
   explode "medium explosion" 55
   explode "large explosion" 30
   explode "huge explosion" 15
-  "final explode" "final explosion huge"
-  description "The Jupyter is much more than just a warship: it is practically a mobile space station armed to the teeth with a total of 6 guns, a total of 6 turrets, and 6 fighter bays on each side ready to engage any enemy in the vast mysterious expanse of the universe."
+  "final explode" "final explosion large" 1
+  description "The Jupyter is much more than just a warship: it is practically a full mobile battle station armed to the teeth with a total of 6 guns, a total of 6 turrets, and 6 fighter bays on each side ready to engage any enemy in the vast expanse of the universe."
 
 ship "Jupiter" "Jupiter (Mark II)"
+  outfits
+    "D94-YV Shield Generator"
+    "Fusion Reactor"
+    "Dwarf Core"
+    "Hyperdrive"
+
+    "A860 Atomic Thruster"
+    "A525 Atomic Steering"
+
+    "Sidewinder Missile" 108
+    "Sidewinder Missile Rack" 36
+    "Sidewinder Missile Launcher" 2
+    "Electron Turret" 4
+    "Heavy Anti-Missile" 2
+    "Electron Cannon" 4
+
+    "LP144a Battery Pack" 4
+    "Liquid Helium Cooler"
+    "Fuel Pod" 184
+    "Large Radar Jammer"
+    "Ramscoop"
+    "Tactical Scanner" 25
+    "Fragmentation Grenades" 80
+    "Laser Rifle" 200
+    "Security Station" 4
+  engine 114 514 1
+  engine 182 495 1
+  engine -114 514 1
+  engine -182 495 1
+  turret 0 274 "Electron Turret"
+  turret 0 186 "Electron Turret"
+  turret 0 98 "Heavy Anti-Missile"
+  gun 108 -400 "Electron Cannon"
+  gun 81 -426 "Sidewinder Missile Launcher"
+  gun 55 -450 "Electron Cannon"
+  turret 0 -170 "Electron Turret"
+  turret 0 -78 "Electron Turret"
+  turret 0 10 "Heavy Anti-Missile"
+  gun -108 -400 "Electron Cannon"
+  gun -81 -426 "Sidewinder Missile Launcher"
+  gun -55 -450 "Electron Cannon"
+
+ship "Jupiter" "Jupiter (Electron)"
   outfits
     "D94-YV Shield Generator"
     "Fusion Reactor"
@@ -136,13 +182,22 @@ ship "Jupiter" "Jupiter (Mark II)"
     "Fragmentation Grenades" 80
     "Laser Rifle" 160
     "Security Station" 4
-  gun 48.5 -198 "Electron Cannon"
-  gun 37.5 -215 "Electron Cannon"
-  gun 25.5 -229 "Electron Cannon"
-  gun -48.5 -198 "Electron Cannon"
-  gun -37.5 -215 "Electron Cannon"
-  gun -25.5 -229 "Electron Cannon"
-
+  engine 114 514
+  engine 182 495
+  engine -114 514
+  engine -182 495
+  turret 0 274 "Electron Turret"
+  turret 0 186 "Electron Turret"
+  turret 0 98 "Electron Turret"
+  gun 108 -400 "Electron Cannon"
+  gun 81 -426 "Electron Cannon"
+  gun 55 -450 "Electron Cannon"
+  turret 0 -170 "Electron Turret"
+  turret 0 -78 "Electron Turret"
+  turret 0 10 "Electron Cannon"
+  gun -108 -400 "Electron Cannon"
+  gun -81 -426 "Electron Cannon"
+  gun -55 -450 "Electron Cannon"
 
 ship "Mars"
   sprite "ship/mars"
