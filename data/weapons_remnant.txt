@@ -22,7 +22,7 @@ outfit "EMP Torpedo Bay"
   "gun ports" -1
   "emp torpedo capacity" 9
   weapon
-    sprite "projectile/emp torpedo"
+    sprite "projectile/emp"
       "frame rate" 2
       "no repeat"
     sound "torpedo"
@@ -102,7 +102,7 @@ outfit "Thrasher Cannon"
       "frame rate" 10
       "random start frame"
       "no repeat"
-    sound "particle"
+    sound "thrasher"
     "hit effect" "thrasher impact"
     "inaccuracy" 9
     "velocity" 10
@@ -115,7 +115,7 @@ outfit "Thrasher Cannon"
   description "This weapon was originally developed in an attempt to reverse engineer a long-range energy projectile favoured by an alien species that the Remnant encountered nearby. In the process they discovered that by adding more energy to the projectiles they could do a lot more damage in exchange for shorter range, and the Thrasher Cannon was born."
 
 effect "thrasher impact"
-  sprite "effect/thrasher impact"
+  sprite "effect/impact/thrasher"
     "frame rate" 30
     "no repeat"
   "lifetime" 11
@@ -142,7 +142,7 @@ outfit "Thrasher Turret"
       "no repeat"
     "hardpoint sprite" "hardpoint/thrasher_turret"
     "hardpoint offset" 6.
-    sound "particle"
+    sound "thrasher"
     "hit effect" "thrasher impact"
     "inaccuracy" 6
     "turret turn" 1.22
@@ -188,7 +188,7 @@ outfit "Inhibitor Cannon"
   description `Nearly a century ago, a Remnant scout exploring space north of the Ember Waste came under fire from an alien fleet armed with weapons that interfered with the scout's engines. The story says that the Remnant captain calmly told her crew, "We aren't going home until we steal that weapon." That alien technology became the basis of the Inhibitor Cannon.`
 
 effect "inhibitor impact"
-  sprite "effect/inhibitor impact"
+  sprite "effect/impact/inhibitor"
     "frame rate" 30
     "no repeat"
   "lifetime" 11

@@ -157,7 +157,7 @@ mission "FWC Attack Kaus Borealis"
       names "republic"
       fighters "republic fighter"
       variant
-        "Saturn (Mark II)"
+        "Saturn"
         "Foxhound" 4
         "Mark III Drone" 6
     fleet 3
@@ -175,7 +175,7 @@ mission "FWC Attack Kaus Borealis"
       names "republic"
       fighters "republic fighter"
       variant
-        "Saturn (Mark II)"
+        "Saturn"
         "Mars" 2
     fleet
       names "republic"
@@ -242,7 +242,7 @@ mission "FWC Cebalrai 1"
       names "republic"
       fighters "republic fighter"
       variant
-        "Saturn (Mark II)"
+        "Saturn"
         "Foxhound" 4
         "Mark III Drone" 6
         "Mercury (Mark II)" 2
@@ -302,7 +302,7 @@ mission "FWC Cebalrai 1B"
       names "republic"
       fighters "republic fighter"
       variant
-        "Saturn (Mark II)"
+        "Saturn"
         "Foxhound" 4
         "Mark III Drone" 6
         "Mars (Mark II)" 2
@@ -583,7 +583,7 @@ mission "FWC Diplomacy 1C"
       names "republic"
       fighters "republic fighter"
       variant
-        "Saturn (Mark II)"
+        "Saturn"
         "Foxhound" 4
         "Mark III Drone" 6
     fleet 2
@@ -601,7 +601,7 @@ mission "FWC Diplomacy 1C"
       names "republic"
       fighters "republic fighter"
       variant
-        "Saturn (Mark II)"
+        "Saturn"
         "Foxhound" 4
         "Mark III Drone" 6
     fleet 2
@@ -692,7 +692,7 @@ mission "FWC Checkmate 1"
       names "republic"
       fighters "republic fighter"
       variant
-        "Saturn (Mark II)"
+        "Saturn"
         "Foxhound" 4
         "Mark III Drone" 6
     fleet 2
@@ -710,7 +710,7 @@ mission "FWC Checkmate 1"
       names "republic"
       fighters "republic fighter"
       variant
-        "Saturn (Mark II)"
+        "Saturn"
         "Foxhound" 4
         "Mark III Drone" 6
     fleet 3
@@ -728,7 +728,7 @@ mission "FWC Checkmate 1"
       names "republic"
       fighters "republic fighter"
       variant
-        "Saturn (Mark II)"
+        "Saturn"
         "Foxhound" 4
         "Mark III Drone" 6
     fleet 2
@@ -893,7 +893,7 @@ mission "FWC Checkmate 1B"
       names "republic"
       fighters "republic fighter"
       variant
-        "Saturn (Mark II)"
+        "Saturn"
         "Foxhound" 4
         "Mark III Drone" 6
     fleet 2
@@ -911,7 +911,7 @@ mission "FWC Checkmate 1B"
       names "republic"
       fighters "republic fighter"
       variant
-        "Saturn (Mark II)"
+        "Saturn"
         "Mars (Mark II)" 2
         "Mercury (Mark II)" 1
     fleet
@@ -1646,7 +1646,7 @@ mission "FWC Pug 3D: Reinforcements"
       names "republic"
       fighters "republic fighter"
       variant
-        "Saturn (Mark II)"
+        "Saturn"
         "Foxhound" 4
         "Mark III Drone" 6
         "Mercury (Mark II)" 3
@@ -2099,7 +2099,7 @@ mission "FWC Pug 5B"
       names "republic"
       fighters "republic fighter"
       variant
-        "Saturn (Mark II)"
+        "Saturn"
         "Foxhound" 4
         "Mark III Drone" 6
         "Venus (Mark II)"
@@ -2138,7 +2138,7 @@ mission "FWC Pug 5C"
       names "republic"
       fighters "republic fighter"
       variant
-        "Saturn (Mark II)"
+        "Saturn"
         "Foxhound" 4
         "Mark III Drone" 6
         "Venus (Mark II)"
@@ -2188,7 +2188,7 @@ mission "FWC Pug 6"
       names "republic"
       fighters "republic fighter"
       variant
-        "Saturn (Mark II)"
+        "Saturn"
         "Foxhound" 4
         "Mark III Drone" 6
         "Venus (Mark II)"
@@ -2210,7 +2210,7 @@ mission "FWC Pug 6"
       names "republic"
       fighters "republic fighter"
       variant
-        "Saturn (Mark II)"
+        "Saturn"
         "Foxhound" 4
         "Mark III Drone" 6
         "Mercury (Mark II)" 3
@@ -2337,9 +2337,7 @@ mission "FWC End"
     event "fwc conquests returned"
     event "electron beams available"
     event "free worlds end"
-    event "particle turret available" 30
-    event "luna rebuilt" 60
-    event "navy using mark iii ships" 90
+    event "luna rebuilt" 30
     set "free worlds plot completed"
     set "main plot completed"
     conversation

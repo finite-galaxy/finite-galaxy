@@ -362,7 +362,7 @@
       * Raven: cost from 1800 000 to 2400 000; −200 shields, +100 hull, −2 required crew, −5 bunks, +40 mass, −10 cargo space, +40 core space, −10 engine space, +20 weapon space
       * Roost: cost from 3000 000 to 4000 000; +1 required crew, –0.7 heat dissipation, +60 mass, –30 cargo space, +80 core space
       * Runabout: +15 core space
-      * Saturn: +2000 shields, +1000 hull; +1.2 drag, −0.05 heat dissipation, +5 cargo space, +160 core space, −10 engine space, +30 weapon space
+      * Saturn: +2000 shields, +1000 hull; −0.05 heat dissipation, +5 cargo space, +160 core space, −10 engine space, +30 weapon space
       * Scout: +30 core space
       * Shadow: +62 core space; +2 scan interference, +25 tactical scan power
       * Shield Beetle: –110 cargo space, +171 core space, +6 engine capacity, +24 weapon space
@@ -389,7 +389,7 @@
       * Traveller: +61 core space
       * Twilight: +30 core space, +10 weapon space; +4 scan interference, +81 tactical scan power
       * Vanguard: +60 core space, −10 weapon space
-      * Venus: −0.3 drag, +15 cargo space, +180 core space, −20 engine space, −20 weapon space
+      * Venus: +15 cargo space, +180 core space, −20 engine space, −20 weapon space
       * Visitor: +29 core space
       * Wagon: +55 core space
       * Wardragon: −95 bunks, −100 required crew, −60 mass, +220 core space, −20 engine space; removed energy generation, hull energy, hull repair rate, and ramscoop
@@ -455,6 +455,7 @@
   * ui: —
 * sounds:
   * ares~.wav, artemis.wav, athena.wav, dragonsfire.wav, dragonsice.wav, poseidon.wav, poseidon_double.wav, spit.wav, unused_large~.wav, unused_medium~.wav, unused_small~.wav, unused_tiny~.wav (@comnom)
+  * thrasher (@Lineth)
 * added several scripts and configuration files (@tehhowch): test_parse.ps1, test_parse.sh, .appveyor.yml, .editorconfig, .travis.yml, .winmake
 
 

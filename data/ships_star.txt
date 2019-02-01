@@ -3,11 +3,9 @@ shipyard "Star Variants"
   "Star Barge (Miner)"
   "Star Freighter"
   "Star Freighter (Fancy)"
-  "Star Freighter (Hai)"
   "Star Freighter (Miner)"
   "Star Freighter (Secret Cargo)"
   "Star Queen"
-  "Star Queen (Hai)"
 
 
 
@@ -168,26 +166,6 @@ ship "Star Freighter" "Star Freighter (Fancy)"
   turret "Laser Turret"
 
 
-ship "Star Freighter" "Star Freighter (Hai)"
-  outfits
-    "Corundum Regenerator"
-    "Pebble Core" 2
-    "Hyperdrive"
-
-    "Benga Atomic Steering"
-    "Benga Atomic Thruster"
-
-    "Pulse Turret"
-    "Chameleon Anti-Missile" 2
-
-    "Fissure Batteries"
-    "Fuel Pod" 29
-    "Yoloy Scanner"
-  turret "Chameleon Anti-Missile"
-  turret "Pulse Turret"
-  turret "Chameleon Anti-Missile"
-
-
 ship "Star Freighter" "Star Freighter (Miner)"
   outfits
     "D23-QP Shield Generator"
@@ -290,25 +268,4 @@ ship "Star Queen"
   explode "large explosion" 10
   "final explode" "final explosion medium"
   description "The Star Queen is a relic of a more peaceful period of galactic history: a luxury liner for high-end tourists. Every cabin has its own mini-bar, and the bathrooms have marble tile and showers that use actual hot water instead of chemicals or sonic vibrations."
-
-
-ship "Star Queen" "Star Queen (Hai)"
-  outfits
-    "Diamond Regenerator"
-    "Geode Reactor"
-    "Hyperdrive"
-
-    "Biroo Atomic Steering"
-    "Biroo Atomic Thruster"
-
-    "Tracker" 168
-    "Tracker Storage Pod" 3
-    "Tracker Launcher" 3
-    "Chameleon Anti-Missile" 2
-
-    "Chasm Batteries"
-    "Fuel Pod" 36
-    "Quantum Keystone"
-    "Yoloy Scanner"
-    "Extra Outfit Space" 3
 

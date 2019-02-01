@@ -11,13 +11,10 @@ shipyard "Southbound Variants"
   "Hag"
   "Harpy"
   "Hauler I"
-  "Hauler I (Hai)"
   "Hauler I (Miner)"
   "Hauler II"
-  "Hauler II (Hai)"
   "Hauler II (Miner)"
   "Hauler III"
-  "Hauler III (Hai)"
   "Hauler III (Miner)"
   "Nest"
   "Roost"
@@ -513,24 +510,6 @@ ship "Hauler I"
   description "Several centuries ago, in the early days of the Republic, the sudden increase in commerce and space travel led to high demand for cargo ships. Haulers were first created simply by bolting a cockpit and engine block onto a cargo container, and the basic design has not changed much since then."
 
 
-ship "Hauler I" "Hauler I (Hai)"
-  outfits
-    "Corundum Regenerator"
-    "Geode Reactor"
-    "Hyperdrive"
-
-    "Biroo Atomic Thruster"
-    "Biroo Atomic Steering"
-
-    "Pulse Turret" 2
-    "Chameleon Anti-Missile" 2
-
-    "Gorge Batteries"
-    "Williwaw Cooling"
-    "Fuel Pod" 32
-    "Yoloy Scanner"
-
-
 ship "Hauler I" "Hauler I (Miner)"
   outfits
     "D41-HY Shield Generator"
@@ -617,24 +596,6 @@ ship "Hauler II"
   description "This is a mid-sized freighter, designed for a balance between cargo capacity and defensive capability. Centuries ago, various Hauler models made up nearly half of the merchant vessels in service, but today the design is considered somewhat outdated."
 
 
-ship "Hauler II" "Hauler II (Hai)"
-  outfits
-    "Corundum Regenerator"
-    "Geode Reactor"
-    "Hyperdrive"
-
-    "Biroo Atomic Thruster"
-    "Biroo Atomic Steering"
-
-    "Pulse Turret" 2
-    "Chameleon Anti-Missile" 2
-
-    "Gorge Batteries"
-    "Williwaw Cooling"
-    "Fuel Pod" 42
-    "Yoloy Scanner"
-
-
 ship "Hauler II" "Hauler II (Miner)"
   outfits
     "D41-HY Shield Generator"
@@ -719,24 +680,6 @@ ship "Hauler III"
   explode "huge explosion" 5
   "final explode" "final explosion large"
   description "Considered by many to be outdated, there are nonetheless many Haulers still in service due to their combination of comparatively low price and simple construction. This large version of the Hauler provides the best tradeoff between price and cargo space."
-
-
-ship "Hauler III" "Hauler III (Hai)"
-  outfits
-    "Corundum Regenerator"
-    "Geode Reactor"
-    "Hyperdrive"
-
-    "Biroo Atomic Thruster"
-    "Biroo Atomic Steering"
-
-    "Pulse Turret" 2
-    "Chameleon Anti-Missile" 2
-
-    "Gorge Batteries"
-    "Williwaw Cooling"
-    "Fuel Pod" 53
-    "Yoloy Scanner"
 
 
 ship "Hauler III" "Hauler III (Miner)"

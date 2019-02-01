@@ -97,14 +97,11 @@
 # "NDR-114 Android"
 # "Outfits Expansion"
 # "Pilot's License"
+# effect "plasma explosion"
 # effect "point defense die"
 # effect "point defense fire"
 # effect "point defense hit"
 # "Point Defense Turret"
-# "Proton Fragment"
-# "Proton Gun"
-# effect "proton impact"
-# "Proton Turret"
 # "Pug Akfar Steering"
 # "Pug Akfar Thruster"
 # "Pug Biodefenses"
@@ -604,7 +601,7 @@ outfit "Drak Anti-Missile Field"
     "anti-missile" 100
 
 effect "drak bolt impact"
-  sprite "effect/drak bolt impact"
+  sprite "effect/impact/jolt"
     "no repeat"
     "frame rate" 30
   sound "explosion small"
@@ -1154,12 +1151,12 @@ outfit "Korath Grab-Strike"
   "turret mounts" -1
   "required crew" 1
   weapon
-    sprite "projectile/grab-strike"
+    sprite "projectile/grab-striker"
       "frame rate" 25
       "random start frame"
-    sound "grab-strike"
-    "hit effect" "grab-strike impact"
-    "die effect" "grab-strike impact"
+    sound "grab-striker"
+    "hit effect" "grab-striker impact"
+    "die effect" "grab-striker impact"
     "inaccuracy" 1
     "turret turn" 1.9
     "velocity" 10
@@ -1601,6 +1598,17 @@ outfit "Outfits Expansion"
 outfit "Pilot's License"
   category "Deprecated"
 
+effect "plasma explosion"
+  sprite "effect/impact/plasma"
+    "no repeat"
+    "frame rate" 20
+  sound "explosion tiny"
+  "lifetime" 21
+  "random angle" 360
+  "random spin" 4
+  "random velocity" .1
+  "velocity scale" -.05
+
 effect "point defense die"
   sprite "effect/anti-missile/point_defence_die"
     "frame rate" 20
@@ -1641,70 +1649,6 @@ outfit "Point Defense Turret"
     "reload" 10
     "firing energy" 62
     "firing heat" 18
-
-outfit "Proton Fragment"
-  weapon
-    sprite "projectile/proton fragment"
-      "no repeat"
-      "frame rate" 2
-    "hit effect" "proton impact"
-    "inaccuracy" 2
-    "lifetime" 24
-    "shield damage" 8.4
-    "hull damage" 7
-    "hit force" 6
-
-outfit "Proton Gun"
-  category "Deprecated"
-  thumbnail "outfit/unknown"
-  cost 150000
-  "mass" 28
-  "outfit space" -28
-  "weapon space" -28
-  "gun ports" -1
-  weapon
-    sprite "projectile/proton"
-    sound "proton"
-    "hit effect" "proton impact" 3
-    "inaccuracy" 4
-    "submunition" "Proton Fragment" 3
-    "velocity" 24
-    "lifetime" 2
-    "reload" 8
-    "firing energy" 15
-    "firing force" 2
-    "firing heat" 60
-
-effect "proton impact"
-  sprite "effect/proton impact"
-    "no repeat"
-    "frame rate" 30
-  "lifetime" 20
-  "random angle" 2
-  "velocity scale" -.005
-
-outfit "Proton Turret"
-  category "Deprecated"
-  thumbnail "outfit/unknown"
-  cost 260000
-  "mass" 34
-  "outfit space" -34
-  "weapon space" -34
-  "turret mounts" -1
-  "required crew" 1
-  weapon
-    sprite "projectile/proton"
-    sound "proton"
-    "hit effect" "proton impact" 3
-    "inaccuracy" 4
-    "turret turn" 2.0
-    "submunition" "Proton Fragment" 3
-    "velocity" 24
-    "lifetime" 2
-    "reload" 8
-    "firing energy" 15
-    "firing force" 2
-    "firing heat" 60
 
 outfit "Pug Akfar Steering"
   category "Deprecated"

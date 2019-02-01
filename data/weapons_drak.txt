@@ -73,10 +73,10 @@ outfit "Jolt Turret"
   "weapon space" -48
   "turret mounts" -1
   weapon
-    sprite "projectile/drak bolt"
+    sprite "projectile/jolt"
       "frame rate" 13.318
       "random start frame"
-    "hit effect" "drak bolt impact"
+    "hit effect" "jolt impact"
     "inaccuracy" 1
     "turret turn" 12
     "velocity" 36
@@ -89,8 +89,8 @@ outfit "Jolt Turret"
     "hit force" 120
   description "This is a turret based cannon with significant range and accuracy."
 
-effect "drak bolt impact"
-  sprite "effect/drak bolt impact"
+effect "jolt impact"
+  sprite "effect/impact/jolt"
     "no repeat"
     "frame rate" 30
   sound "explosion small"

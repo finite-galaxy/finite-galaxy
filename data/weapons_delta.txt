@@ -100,8 +100,8 @@ outfit "Plasma Cannon"
     "hit force" 30
   description "The Plasma Cannon fires bursts of superheated plasma. In addition to damaging your target, these plasma bursts impart a significant amount of heat, especially to a target whose shields are down."
 
-effect "plasma explosion"
-  sprite "effect/plasma explosion"
+effect "plasma impact"
+  sprite "effect/impact/plasma"
     "no repeat"
     "frame rate" 20
   sound "explosion tiny"
@@ -126,7 +126,7 @@ outfit "Plasma Turret"
     "hardpoint sprite" "hardpoint/plasma_turret"
     "hardpoint offset" 15.
     sound "plasma"
-    "hit effect" "plasma explosion"
+    "hit effect" "plasma impact"
     "inaccuracy" 2
     "turret turn" 1.00
     "velocity" 16

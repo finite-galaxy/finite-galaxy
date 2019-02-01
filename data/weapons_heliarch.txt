@@ -166,7 +166,7 @@ outfit "Bombardment Turret"
   description `A Bombardment Turret is not one of the most dangerous Heliarch weapons, but it has the advantage that it can hit targets a considerable distance away.`
 
 effect "bombardment impact"
-  sprite "effect/bombardment impact"
+  sprite "effect/impact/bombardment"
     "no repeat"
     "frame rate" 40
   "lifetime" 7
@@ -187,7 +187,7 @@ outfit "Ion Rain Gun"
   "weapon space" -17
   "gun ports" -1
   weapon
-    sprite "projectile/ion rain"
+    sprite "projectile/ion_rain"
       "frame rate" 7
       "random start frame"
     sound "ion rain"
@@ -209,7 +209,7 @@ outfit "Ion Rain Gun"
   description "Heliarch ships primarily serve as a police force. This weapon is designed to neutralize a target's offensive capabilities until more Heliarch ships can join the fray."
 
 effect "ion rain impact"
-  sprite "effect/ion rain impact"
+  sprite "effect/impact/ion_rain"
     "no repeat"
     "frame rate" 60
   "lifetime" 5
@@ -252,7 +252,7 @@ outfit "Attractor"
   description "When battling the Quarg, the Heliarch learned that the Quarg would not engage in a battle that their ships might be unable to escape. In response, they focused on building weapons that would keep a ship from being able to come to a stop and activate its jump drive."
 
 effect "attractor impact"
-  sprite "effect/attractor impact"
+  sprite "effect/impact/attractor"
     "no repeat"
     "frame rate" 20
   "lifetime" 13
@@ -296,7 +296,7 @@ outfit "Repulsor"
   description "This beam turret allows a Heliarch ship to hold its enemies far enough away that they cannot make use of their short-range weapons."
 
 effect "repulsor impact"
-  sprite "effect/repulsor impact"
+  sprite "effect/impact/repulsor"
     "no repeat"
     "frame rate" 10
   "lifetime" 20

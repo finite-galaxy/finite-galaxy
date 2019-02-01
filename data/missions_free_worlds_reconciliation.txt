@@ -1604,8 +1604,8 @@ mission "FW Pug 3C"
     government "Republic"
     ship "Venus (Mark II)" "R.N.S. Everest"
     ship "Venus (Mark II)" "R.N.S. Denali"
-    ship "Saturn (Mark II)" "R.N.S. Vesuvius"
-    ship "Saturn (Mark II)" "R.N.S. Haleakala"
+    ship "Saturn" "R.N.S. Vesuvius"
+    ship "Saturn" "R.N.S. Haleakala"
   
   on visit
     dialogue "You have reached <planet>, but part of your fleet is not here yet. Better depart and wait for them to arrive in this star system."
@@ -1652,12 +1652,12 @@ mission "FW Pug 4: Escorts"
     ship "Mark III Drone" "Phi Eight"
     ship "Mark III Drone" "Phi Nine"
     ship "Mark III Drone" "Phi Ten"
-    ship "Venus (Jump)" "R.N.S. Denali"
+    ship "Venus (Mark II, Jump)" "R.N.S. Denali"
     ship "Mark III Drone" "Delta One"
     ship "Mark III Drone" "Delta Two"
     ship "Mark III Drone" "Delta Three"
     ship "Mark III Drone" "Delta Four"
-    ship "Venus (Jump)" "R.N.S. Everest"
+    ship "Venus (Mark II, Jump)" "R.N.S. Everest"
     ship "Mark III Drone" "Epsilon One"
     ship "Mark III Drone" "Epsilon Two"
     ship "Mark III Drone" "Epsilon Three"
@@ -1987,7 +1987,7 @@ mission "FW Pug 5A"
       names "republic"
       fighters "republic fighter"
       variant
-        "Saturn (Mark II)"
+        "Saturn"
         "Foxhound" 4
         "Mark III Drone" 6
         "Mercury (Mark II)" 3
@@ -2028,7 +2028,7 @@ mission "FW Pug 5B"
       names "republic"
       fighters "republic fighter"
       variant
-        "Saturn (Mark II)"
+        "Saturn"
         "Foxhound" 4
         "Mark III Drone" 6
         "Mercury (Mark II)" 3
@@ -2092,7 +2092,7 @@ mission "FW Pug 6"
       names "republic"
       fighters "republic fighter"
       variant
-        "Saturn (Mark II)"
+        "Saturn"
         "Foxhound" 4
         "Mark III Drone" 6
         "Mercury (Mark II)" 3
@@ -2362,7 +2362,7 @@ mission "FW Syndicate Extremists 1B"
       names "republic"
       fighters "republic fighter"
       variant
-        "Saturn (Mark II)" 3
+        "Saturn" 3
         "Foxhound" 12
         "Mark III Drone" 18
         "Venus (Mark II)" 3
@@ -2407,9 +2407,7 @@ mission "FW Syndicate Extremists 1C"
     log "Received an official commendation from Parliament and a promise that the war with the Free Worlds is officially over. Humanity is at peace once more, but new challenges may await in the star systems out beyond human space that are accessible only by jump drive."
     payment 5000000
     event "free worlds end"
-    event "particle turret available" 30
-    event "luna rebuilt" 60
-    event "navy using mark iii ships" 90
+    event "luna rebuilt" 30
     set "free worlds plot completed"
     set "main plot completed"
     conversation

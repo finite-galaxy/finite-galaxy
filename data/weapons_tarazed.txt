@@ -8,7 +8,7 @@ outfit "Bolt Cannon"
   "gun ports" -1
   weapon
     sprite "projectile/bolt"
-    sound "proton"
+    sound "bolt"
     "hit effect" "bolt impact"
     "inaccuracy" 1
     "velocity" 12
@@ -21,14 +21,13 @@ outfit "Bolt Cannon"
   description "The Tarazed Bolt Cannon fires high velocity energy bolts, which are quite effective at reducing ship shields, but not very good at damaging the hull."
 
 effect "bolt impact"
-  sprite "effect/particle impact"
+  sprite "effect/impact/bolt"
     "no repeat"
     "frame rate" 30
   sound "explosion small"
   "lifetime" 20
   "random angle" 2
-  "random spin" 10
-  "velocity scale" -.05
+  "velocity scale" -.005
 
 outfit "Bolt Turret"
   category "Turrets"
@@ -43,7 +42,7 @@ outfit "Bolt Turret"
     sprite "projectile/bolt"
     "hardpoint sprite" "hardpoint/bolt_turret"
     "hardpoint offset" 10.
-    sound "proton"
+    sound "bolt"
     "hit effect" "bolt impact"
     "inaccuracy" 1
     "turret turn" 2.5

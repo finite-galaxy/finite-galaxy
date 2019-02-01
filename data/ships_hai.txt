@@ -2,9 +2,9 @@ shipyard "Hai Variants"
   "Aphid"
   "Flea"
   "Lightning Bug"
-  "Lightning Bug (Pulse)"
+  "Lightning Bug (Proton)"
   "Lightning Bug (Unfettered)"
-  "Lightning Bug (Unfettered, Pulse)"
+  "Lightning Bug (Unfettered, Proton)"
   "Mosquito"
   "Pond Strider"
   "Shield Beetle"
@@ -13,7 +13,7 @@ shipyard "Hai Variants"
   "Shield Beetle (Unfettered, Jump)"
   "Solifuge"
   "Water Bug"
-  "Water Bug (Pulse)"
+  "Water Bug (Proton)"
   "Water Bug (Unfettered)"
   "Water Bug (Unfettered, Jump)"
 
@@ -180,7 +180,7 @@ ship "Lightning Bug"
   description "The Lightning Bug is a small defensive ship, mostly used by the Hai as a convoy escort. The Lightning Bug, as with many insects, works best in a swarm: even a small number of Lightning Bugs can manage to leave the largest of ships helpless with their stock-fitted ion cannons."
 
 
-ship "Lightning Bug" "Lightning Bug (Pulse)"
+ship "Lightning Bug" "Lightning Bug (Proton)"
   outfits
     "Corundum Regenerator" 2
     "Millennium Cell"
@@ -192,7 +192,7 @@ ship "Lightning Bug" "Lightning Bug (Pulse)"
     "Tracker" 56
     "Tracker Storage Pod"
     "Tracker Launcher"
-    "Pulse Turret" 2
+    "Proton Turret" 2
 
     "Gorge Batteries"
     "Williwaw Cooling" 2
@@ -223,7 +223,7 @@ ship "Lightning Bug" "Lightning Bug (Unfettered)"
     "Force Field"
 
 
-ship "Lightning Bug" "Lightning Bug (Unfettered, Pulse)"
+ship "Lightning Bug" "Lightning Bug (Unfettered, Proton)"
   outfits
     "S-270 Regenerator" 2
     "Millennium Cell"
@@ -235,7 +235,7 @@ ship "Lightning Bug" "Lightning Bug (Unfettered, Pulse)"
     "Tracker" 56
     "Tracker Storage Pod"
     "Tracker Launcher"
-    "Pulse Turret" 2
+    "Proton Turret" 2
 
     "Gorge Batteries"
     "Williwaw Cooling" 2
@@ -337,7 +337,7 @@ ship "Pond Strider"
     "Benga Atomic Thruster"
     "Benga Atomic Steering"
 
-    "Pulse Turret" 2
+    "Proton Turret" 2
     "Chameleon Anti-Missile" 
 
     "Ravine Batteries"
@@ -351,8 +351,8 @@ ship "Pond Strider"
   gun 0 -76
   gun -15 -72
   gun 15 -72
-  turret -18 -65 "Pulse Turret"
-  turret 18 -65 "Pulse Turret"
+  turret -18 -65 "Proton Turret"
+  turret 18 -65 "Proton Turret"
   turret 0 26 "Chameleon Anti-Missile"
   drone -70 -45 left under
   drone 70 -45 right under
@@ -415,7 +415,7 @@ ship "Shield Beetle"
     "Tracker Storage Pod" 4
     "Tracker Launcher" 4
     "Ion Cannon" 4
-    "Pulse Turret" 2
+    "Proton Turret" 2
     "Chameleon Anti-Missile" 2
 
     "Gorge Batteries"
@@ -434,8 +434,8 @@ ship "Shield Beetle"
   gun 49 -38 "Ion Cannon"
   gun -61 -14 "Tracker Launcher"
   gun 61 -14 "Tracker Launcher"
-  turret -39 48 "Pulse Turret"
-  turret 39 48 "Pulse Turret"
+  turret -39 48 "Proton Turret"
+  turret 39 48 "Proton Turret"
   turret -57 75 "Chameleon Anti-Missile"
   turret 57 75 "Chameleon Anti-Missile"
   explode "tiny explosion" 50
@@ -460,7 +460,7 @@ ship "Shield Beetle" "Shield Beetle (Thruster)"
     "Tracker Storage Pod" 4
     "Tracker Launcher" 4
     "Ion Cannon" 4
-    "Pulse Turret" 2
+    "Proton Turret" 2
     "Chameleon Anti-Missile" 2
 
     "Gorge Batteries"
@@ -492,7 +492,7 @@ ship "Shield Beetle" "Shield Beetle (Unfettered)"
     "Tracker Storage Pod" 4
     "Tracker Launcher" 4
     "Ion Cannon" 4
-    "Pulse Turret" 2
+    "Proton Turret" 2
     "Chameleon Anti-Missile" 2
 
     "Ravine Batteries"
@@ -524,7 +524,7 @@ ship "Shield Beetle" "Shield Beetle (Unfettered, Jump)"
     "Tracker Storage Pod" 4
     "Tracker Launcher" 4
     "Ion Cannon" 4
-    "Pulse Turret" 2
+    "Proton Turret" 2
     "Chameleon Anti-Missile" 2
 
     "Ravine Batteries"
@@ -584,7 +584,7 @@ ship "Solifuge"
     "Dondir Atomic Steering"
 
     "Ion Cannon" 5
-    "Pulse Turret" 4
+    "Proton Turret" 4
     "Chameleon Anti-Missile" 3
 
     "Chasm Batteries" 4
@@ -601,12 +601,12 @@ ship "Solifuge"
   gun -9.5 -101 "Ion Cannon"
   gun 9.5 -101 "Ion Cannon"
   turret 0 -109.5 "Chameleon Anti-Missile"
-  turret 54.5 -48.5 "Pulse Turret"
-  turret -54.5 -48.5 "Pulse Turret"
+  turret 54.5 -48.5 "Proton Turret"
+  turret -54.5 -48.5 "Proton Turret"
   turret 55 1 "Chameleon Anti-Missile"
   turret -55 1 "Chameleon Anti-Missile"
-  turret 54.5 50.5 "Pulse Turret"
-  turret -54.5 50.5 "Pulse Turret"
+  turret 54.5 50.5 "Proton Turret"
+  turret -54.5 50.5 "Proton Turret"
   fighter -51.5 -71 under
   fighter 51.5 -71 under
   fighter -58.5 2 under
@@ -665,7 +665,7 @@ ship "Water Bug"
     "Tracker" 112
     "Tracker Storage Pod" 2
     "Tracker Launcher" 2
-    "Pulse Turret"
+    "Proton Turret"
     "Chameleon Anti-Missile" 2
 
     "Fissure Batteries"
@@ -677,7 +677,7 @@ ship "Water Bug"
   engine 50 33
   gun -24 -53 "Tracker Launcher"
   gun 24 -53 "Tracker Launcher"
-  turret 0 -10 "Pulse Turret"
+  turret 0 -10 "Proton Turret"
   turret -17 17 "Chameleon Anti-Missile"
   turret 17 17 "Chameleon Anti-Missile"
   explode "small explosion" 15
@@ -688,7 +688,7 @@ ship "Water Bug"
   description "The design of the Water Bug is almost as old as the Aphid, but until recently it never saw much use. A spike in aggression from the Unfettered Hai has lead the tougher and more well-defended Water Bug to see an increase in popularity over its little brother, the Aphid. The Water Bug is now the most widely used Hai freighter, comprising the bulk of all Hai merchant fleets."
 
 
-ship "Water Bug" "Water Bug (Pulse)"
+ship "Water Bug" "Water Bug (Proton)"
   outfits
     "Diamond Regenerator"
     "Epoch Cell"
@@ -700,7 +700,7 @@ ship "Water Bug" "Water Bug (Pulse)"
     "Tracker" 112
     "Tracker Storage Pod" 2
     "Tracker Launcher" 2
-    "Pulse Turret" 3
+    "Proton Turret" 3
 
     "Fissure Batteries"
     "Williwaw Cooling" 3
@@ -722,7 +722,7 @@ ship "Water Bug" "Water Bug (Unfettered)"
     "Tracker" 112
     "Tracker Storage Pod" 2
     "Tracker Launcher" 2
-    "Pulse Turret" 2
+    "Proton Turret" 2
     "Chameleon Anti-Missile"
 
     "Fissure Batteries"
@@ -733,8 +733,8 @@ ship "Water Bug" "Water Bug (Unfettered)"
     "Extra Outfit Space" 2
     "Force Field" 2
   turret "Chameleon Anti-Missile"
-  turret "Pulse Turret"
-  turret "Pulse Turret"
+  turret "Proton Turret"
+  turret "Proton Turret"
 
 
 ship "Water Bug" "Water Bug (Unfettered, Jump)"
@@ -749,7 +749,7 @@ ship "Water Bug" "Water Bug (Unfettered, Jump)"
     "Tracker" 112
     "Tracker Storage Pod" 2
     "Tracker Launcher" 2
-    "Pulse Turret" 2
+    "Proton Turret" 2
     "Chameleon Anti-Missile"
 
     "Fissure Batteries"
@@ -760,6 +760,6 @@ ship "Water Bug" "Water Bug (Unfettered, Jump)"
     "Extra Outfit Space" 2
     "Force Field" 2
   turret "Chameleon Anti-Missile"
-  turret "Pulse Turret"
-  turret "Pulse Turret"
+  turret "Proton Turret"
+  turret "Proton Turret"
 

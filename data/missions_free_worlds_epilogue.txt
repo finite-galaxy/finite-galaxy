@@ -5,7 +5,6 @@
 # "FW Epilogue: Freya"
 # "FW Epilogue: Ijs and Katya"
 # "Pug Cease Hostilities"
-# "particle turret available"
 
 
 
@@ -215,17 +214,4 @@ mission "Pug Cease Hostilities"
   on offer
     "reputation: Pug" >?= 1
     fail
-
-
-
-mission "Particle turret available"
-  landing
-  source
-    near "Markab" 100
-  to offer
-    has "event: particle turret available"
-  on offer
-    conversation
-      `Your ship is targetted by advertisements, informing you Lovelace Labs started selling their Particle Turret to everyone. Hithereto it was available to the Republic Navy only. They probably felt compelled to compete with Deep Sky's Electron Turret and Delta V's Plasma Turret, although the fact that Navy Mark II vessels are no longer using Lovelace's Particle Turret might have something to do with it as well.`
-        decline
 
