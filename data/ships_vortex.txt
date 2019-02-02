@@ -5,9 +5,15 @@ shipyard "Vortex Variants"
   "Firebird"
   "Firebird (Impact)"
   "Firebird (Laser)"
+  "Marauder Firebird (Engines)"
+  "Marauder Firebird (Shields)"
+  "Marauder Firebird (Weapons)"
   "Heavy Shuttle"
   "Heavy Shuttle (Blaster)"
   "Leviathan"
+  "Marauder Leviathan (Engines)"
+  "Marauder Leviathan (Shields)"
+  "Marauder Leviathan (Weapons)"
   "Light Shuttle"
   "Light Shuttle (Blaster)"
   "Wasp"
@@ -249,6 +255,159 @@ ship "Firebird" "Firebird (Laser)"
     "Tactical Scanner" 4
 
 
+ship "Firebird" "Marauder Firebird (Engines)"
+  sprite "ship/firebird_e"
+  add attributes
+    "cost" 400000
+    "shields" 600
+    "hull" 200
+    "required crew" 3
+    "bunks" 3
+    "mass" 60
+    "cargo space" -30
+    "outfit space" 60
+    "core space" 10
+    "engine space" 30
+    "weapon space" 20
+    "self destruct" .25
+    weapon
+      "blast radius" 172
+      "shield damage" 120
+      "random shield damage" 60
+      "hull damage" 180
+      "random hull damage" 90
+      "heat damage" 3600
+      "random heat damage" 1800
+      "hit force" 300
+      "random hit force" 150
+  outfits
+    "S-970 Regenerator"
+    "Fusion Reactor"
+    "Hyperdrive"
+
+    "A370 Atomic Thruster"
+    "A525 Atomic Steering"
+
+    "Plasma Cannon" 4
+    "X2 Blaster Turret" 2
+
+    "LP036a Battery Pack"
+    "Liquid Helium Cooler"
+    "Fuel Pod" 35
+    "Tactical Scanner" 4
+    "Interference Plating" 2
+    "Laser Rifle" 25
+  engine -34 62
+  engine 0 74
+  engine 34 62
+  gun -26.5 -33
+  gun 26.5 -33
+  gun -38 -18
+  gun 38 -18
+  turret -5 3
+  turret 5 3
+  description "One of the biggest complaints about the venerable classic from younger pilots is that it's heavy and slow. A previous owner of this ship also believed so, and has fitted another engine port, in addition to setting aside more space for outfits and giving the old ship some new hull plating and shield emitters."
+
+
+ship "Firebird" "Marauder Firebird (Shields)"
+  sprite "ship/firebird_s"
+  add attributes
+    "cost" 400000
+    "shields" 600
+    "hull" 200
+    "required crew" 3
+    "bunks" 3
+    "mass" 60
+    "cargo space" -30
+    "outfit space" 60
+    "core space" 30
+    "engine space" 10
+    "weapon space" 20
+    "self destruct" .25
+    weapon
+      "blast radius" 172
+      "shield damage" 120
+      "random shield damage" 60
+      "hull damage" 180
+      "random hull damage" 90
+      "heat damage" 3600
+      "random heat damage" 1800
+      "hit force" 300
+      "random hit force" 150
+  outfits
+    "S-970 Regenerator"
+    "Fusion Reactor"
+    "Hyperdrive"
+
+    "A250 Atomic Thruster"
+    "A525 Atomic Steering"
+
+    "Plasma Cannon" 4
+    "Heavy Laser Turret"
+    "Heavy Anti-Missile"
+
+    "Supercapacitor" 3
+    "Liquid Nitrogen Cooler"
+    "Liquid Water Cooler"
+    "Fuel Pod" 35
+    "Tactical Scanner" 4
+    "Interference Plating" 2
+    "Laser Rifle" 25
+  engine -32 62
+  engine 32 62
+  gun -27 -32
+  gun 27 -32
+  gun -38 -18
+  gun 38 -18
+  turret -5 3
+  turret 5 3
+  description "By the looks of the modification that have taken place, you suspect that this ship contains no original parts. With extra shield emitters, hull plating, and outfit space, this half-millennium young ship is finding new life with its heavy modification."
+
+
+ship "Firebird" "Marauder Firebird (Weapons)"
+  sprite "ship/firebird_w"
+  add attributes
+    "cost" 400000
+    "shields" 600
+    "hull" 200
+    "required crew" 3
+    "bunks" 3
+    "mass" 60
+    "cargo space" -30
+    "outfit space" 60
+    "engine space" 10
+    "weapon space" 50
+    "self destruct" .25
+    weapon
+      "blast radius" 172
+      "shield damage" 120
+      "random shield damage" 60
+      "hull damage" 180
+      "random hull damage" 90
+      "heat damage" 3600
+      "random heat damage" 1800
+      "hit force" 300
+      "random hit force" 150
+  outfits
+    "S-970 Regenerator"
+    "Fusion Reactor"
+    "Hyperdrive"
+
+    "A250 Atomic Thruster"
+    "A525 Atomic Steering"
+
+    "Plasma Cannon" 4
+    "X4 Blaster Turret" 2
+
+    "LP036a Battery Pack"
+    "Liquid Helium Cooler"
+    "Fuel Pod" 35
+    "Tactical Scanner" 4
+    "Interference Plating" 2
+    "Laser Rifle" 25
+  description "This warship with one of the heaviest armaments possible just got heavier. With more outfit space, giant gun ports, extra hull plating, and more shield emitters - this blast from the past will make its targets history."
+
+
 
 ship "Heavy Shuttle"
   sprite "ship/shuttle_heavy"
@@ -383,6 +542,172 @@ ship "Leviathan"
   explode "large explosion" 8
   "final explode" "final explosion large"
   description "The Vortex Leviathan has been in service since long before the Republic existed. Although considered today to be an outdated and clunky model, it is still a force to be reckoned with."
+
+
+ship "Leviathan" "Marauder Leviathan (Engines)"
+  sprite "ship/leviathan_e"
+  add attributes
+    "cost" 1000000
+    "shields" 3500
+    "hull" -900
+    "bunks" 5
+    "mass" 40
+    "cargo space" -30
+    "outfit space" 60
+    "core space" -10
+    "engine space" 40
+    "weapon space" 30
+    "self destruct" .15
+    weapon
+      "blast radius" 282
+      "shield damage" 1280
+      "random shield damage" 1540
+      "hull damage" 1920
+      "random hull damage" 2310
+      "heat damage" 38400
+      "random heat damage" 46200
+      "hit force" 3200
+      "random hit force" 3850
+  outfits
+    "S-970 Regenerator"
+    "Fusion Reactor"
+    "Hyperdrive"
+
+    "A520 Atomic Thruster"
+    "A525 Atomic Steering"
+    "Ionic Afterburner"
+
+    "Plasma Cannon" 4
+    "Laser Turret" 4
+
+    "LP144a Battery Pack"
+    "Liquid Helium Cooler"
+    "Fuel Pod" 71
+    "Large Radar Jammer" 2
+    "Tactical Scanner" 4
+    "Interference Plating" 3
+    "Laser Rifle" 80
+  engine -25 125
+  engine 25 125
+  gun -38 -34
+  gun 38 -34
+  gun -50 -23
+  gun 50 -23
+  turret -15 -50
+  turret 15 -50
+  turret -25 10
+  turret 25 10
+  description "As if the Leviathan isn't a terrifying enough ship already, this one has been heavily modified with special attention paid to the engine space, enabling it to bring its guns to bear even faster."
+
+
+ship "Leviathan" "Marauder Leviathan (Shields)"
+  sprite "ship/leviathan_s"
+  add attributes
+    "cost" 1000000
+    "shields" 3500
+    "hull" -900
+    "bunks" 5
+    "mass" 40
+    "cargo space" -30
+    "outfit space" 60
+    "core space" 30
+    "weapon space" 30
+    "self destruct" .15
+    weapon
+      "blast radius" 282
+      "shield damage" 1280
+      "random shield damage" 1540
+      "hull damage" 1920
+      "random hull damage" 2310
+      "heat damage" 38400
+      "random heat damage" 46200
+      "hit force" 3200
+      "random hit force" 3850
+  outfits
+    "S-970 Regenerator"
+    "Fusion Reactor"
+    "Hyperdrive"
+
+    "A370 Atomic Thruster"
+    "A525 Atomic Steering"
+    "Afterburner"
+
+    "Plasma Cannon" 4
+    "Heavy Laser Turret" 4
+
+    "LP144a Battery Pack"
+    "Liquid Helium Cooler"
+    "Fuel Pod" 71
+    "Large Radar Jammer" 2
+    "Tactical Scanner" 4
+    "Interference Plating" 3
+    "Laser Rifle" 80
+  engine -25 120
+  engine 25 120
+  gun -38 -34
+  gun 38 -34
+  gun -50 -23
+  gun 50 -23
+  turret -15 -50
+  turret 15 -50
+  turret -25 10
+  turret 25 10
+  description "The Leviathan has been in service for a long time, and captains have had some very interesting ideas about how to modify them for optimum performance. This one has had the hull surface completely stripped off and replaced with a surface containing more shield projectors per square meter."
+
+
+ship "Leviathan" "Marauder Leviathan (Weapons)"
+  sprite "ship/leviathan_w"
+  add attributes
+    "cost" 1000000
+    "shields" 3500
+    "hull" -900
+    "bunks" 5
+    "mass" 40
+    "cargo space" -30
+    "outfit space" 60
+    "core space" -10
+    "weapon space" 70
+    "self destruct" .15
+    weapon
+      "blast radius" 282
+      "shield damage" 1280
+      "random shield damage" 1540
+      "hull damage" 1920
+      "random hull damage" 2310
+      "heat damage" 38400
+      "random heat damage" 46200
+      "hit force" 3200
+      "random hit force" 3850
+  outfits
+    "S-970 Regenerator"
+    "Fusion Reactor"
+    "Hyperdrive"
+
+    "A370 Atomic Thruster"
+    "A525 Atomic Steering"
+    "Afterburner"
+
+    "Plasma Cannon" 4
+    "Heavy Laser Turret" 4
+
+    "LP144a Battery Pack"
+    "Liquid Helium Cooler"
+    "Fuel Pod" 71
+    "Large Radar Jammer" 2
+    "Tactical Scanner" 4
+    "Interference Plating" 3
+    "Laser Rifle" 80
+  engine -25 120
+  engine 25 120
+  gun -38 -55
+  gun 38 -55
+  gun -50 -44
+  gun 50 -44
+  turret -15 -50
+  turret 15 -50
+  turret -25 10
+  turret 25 10
+  description "This Leviathan once belonged to an infamous pirate captain whose name has been lost to the ages. It's had so much custom work done to it that can hardly even be considered the same ship. The weapons capacity, in particular has been massively increased."
 
 
 

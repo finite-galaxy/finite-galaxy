@@ -3,6 +3,7 @@ shipyard "Betelgeuse Variants"
   "Argosy"
   "Argosy (Laser)"
   "Argosy Test Dummy"
+  "Marauder Argosy"
   "Dagger"
   "Hero"
   "Hero (Gatling)"
@@ -174,6 +175,37 @@ ship "Argosy" "Argosy Test Dummy"
   add attributes
     "automaton" 1
     "self destruct" 1
+
+
+ship "Argosy" "Marauder Argosy"
+  sprite "ship/argosy_m"
+  add attributes
+    "shields" 600
+    "hull" 700
+    "required crew" 1
+    "drag" .3
+    "heat dissipation" -.1
+    "cargo space" -60
+    "outfit space" 60
+    "core space" 20
+    "weapon space" 40
+  outfits
+    "S-270 Regenerator"
+    "NT-200 Nucleovoltaic"
+    "Hyperdrive"
+
+    "A250 Atomic Thruster"
+    "A375 Atomic Steering"
+
+    "Heavy Laser Cannon" 2
+    "Heavy Laser Turret" 2
+
+    "LP072a Battery Pack"
+    "Fuel Pod" 27
+    "Tactical Scanner" 4
+    "Interference Plating" 2
+    "Laser Rifle" 12
+  description "The Argosy has long been a favourite ship for pirates, who have come up with many tricks for modifying them to be more suitable as warships."
 
 
 

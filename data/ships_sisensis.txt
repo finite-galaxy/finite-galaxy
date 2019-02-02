@@ -10,6 +10,7 @@ shipyard "Sisensis Variants"
   "Clipper (Miner)"
   "Clipper (Particle)"
   "Clipper (Speedy)"
+  "Combat Drone"
   "Mark I Drone"
   "Mark II Drone"
   "Mark III Drone"
@@ -318,7 +319,7 @@ ship "Clipper" "Clipper (Speedy)"
 
 
 
-ship "Mark I Drone"
+ship "Combat Drone"
   sprite "ship/drone"
   thumbnail "thumbnail/drone"
   attributes
@@ -334,9 +335,9 @@ ship "Mark I Drone"
     "drag" .6
     "heat dissipation" .9
     "outfit space" 75
-    "core space" 45
+    "core space" 41
     "engine space" 22
-    "weapon space" 8
+    "weapon space" 12
     weapon
       "blast radius" 19
       "shield damage" 40
@@ -347,6 +348,16 @@ ship "Mark I Drone"
       "random heat damage" 4500
       "hit force" 100
       "random hit force" 375
+  engine -9 29
+  engine 9 29
+  gun 0 -29
+  explode "tiny explosion" 15
+
+
+ship "Combat Drone" "Mark I Drone"
+  add attributes
+    "core space" 4
+    "weapon space" -4
   outfits
     "nGVF-CC Fuel Cell"
 
@@ -357,43 +368,13 @@ ship "Mark I Drone"
 
     "Supercapacitor" 3
     "Small Radar Jammer"
-  engine -9 29
-  engine 9 29
-  gun 0 -29 "Laser Cannon"
-  explode "tiny explosion" 15
   description "The Mark I Drone is a very fast, pilotless attack ship, designed at the request of the Navy, to reduce their fighter pilot death rate. Although the Mark I Drone is still for sale, the Navy now uses its newer incranations."
 
 
-
-ship "Mark II Drone"
-  sprite "ship/drone"
-  thumbnail "thumbnail/drone"
-  attributes
-    category "Drone"
-#    manufacturer "Sisensis"
-    licences
-      Navy
-    "carried" 1
-    "cost" 83000
-    "hull" 700
-    "automaton" 1
-    "mass" 20
-    "drag" .6
-    "heat dissipation" .9
-    "outfit space" 75
-    "core space" 38
-    "engine space" 22
-    "weapon space" 15
-    weapon
-      "blast radius" 19
-      "shield damage" 40
-      "random shield damage" 150
-      "hull damage" 60
-      "random hull damage" 225
-      "heat damage" 1200
-      "random heat damage" 4500
-      "hit force" 100
-      "random hit force" 375
+ship "Combat Drone" "Mark II Drone"
+  add attributes
+    "core space" -3
+    "weapon space" 3
   outfits
     "nGVF-BB Fuel Cell"
 
@@ -404,42 +385,13 @@ ship "Mark II Drone"
 
     "Supercapacitor" 5
     "Small Radar Jammer"
-  engine -9 29
-  engine 9 29
-  gun 0 -29 "Heavy Laser Cannon"
-  explode "tiny explosion" 15
   description "The Mark II Drone is used exclusively by the Republic Navy. Although very weak and easy to destroy, they can be quite effective in large numbers. Because drones do not need to accomodate life support systems, a cockpit, bunks, cargo space, or shield emitters, they can have similar firepower and a stronger hull than larger fighters or interceptors."
 
 
-ship "Mark III Drone"
-  sprite "ship/drone"
-  thumbnail "thumbnail/drone"
-  attributes
-    category "Drone"
-#    manufacturer "Sisensis"
-    licences
-      Navy
-    "carried" 1
-    "cost" 83000
-    "hull" 700
-    "automaton" 1
-    "mass" 20
-    "drag" .6
-    "heat dissipation" .9
-    "outfit space" 75
-    "core space" 31
-    "engine space" 22
-    "weapon space" 22
-    weapon
-      "blast radius" 19
-      "shield damage" 40
-      "random shield damage" 150
-      "hull damage" 60
-      "random hull damage" 225
-      "heat damage" 1200
-      "random heat damage" 4500
-      "hit force" 100
-      "random hit force" 375
+ship "Combat Drone" "Mark III Drone"
+  add attributes
+    "core space" -10
+    "weapon space" 10
   outfits
     "nGVF-BB Fuel Cell"
 
@@ -450,9 +402,5 @@ ship "Mark III Drone"
 
     "Supercapacitor" 2
     "Small Radar Jammer"
-  engine -9 29
-  engine 9 29
-  gun 0 -29 "Electron Cannon"
-  explode "tiny explosion" 15
   description "The Mark III Drone is externally identical to its predecessors, but internally it has reduced core space to increase its weapon space, sacrificing energy to accomodate a larger cannon."
 

@@ -24,7 +24,6 @@ Both games can be installed alongside and played independently of each other. Al
 
 
 ## Introduction
-
 Why did I start this project? Why not contribute to Endless Sky instead?
 * Although I like Endless Sky as a whole, it also contains things I don't like. Conversation scenes, news and portraits, tribute, and plundering of installed outfits are just a few examples.
 * The pace of development seemed to slow down: there were only nine commits in September 2018 and zero in October. (I started Finite Galaxy on October 18.)
@@ -74,13 +73,12 @@ Open your terminal and enter:
 * `scons` to compile the game
 * `./finite-galaxy` to run the game
 
-For more help, consult the man page (the finite-galaxy.6 file).
+For more help, consult the man page (the `finite-galaxy.6` file).
 
 [(return to top)](https://github.com/finite-galaxy/finite-galaxy#finite-galaxy)
 
 
 ### Apple Mac OS X
-
 *If you have trouble compiling or encounter errors, please post* [here](https://github.com/finite-galaxy/finite-galaxy/issues/18).
 
 To build Finite Galaxy, you will first need to download Xcode from the App Store.
@@ -113,7 +111,6 @@ sudo install_name_tool -id "@rpath/libSDL2-2.0.0.dylib" /usr/local/lib/libSDL2-2
 
 
 ### Microsoft Windows
-
 *If you have trouble compiling or encounter errors, please post* [here](https://github.com/finite-galaxy/finite-galaxy/issues/17).
 
 You will need the Code::Blocks IDE and g++ 4.8 or higher. Code::Blocks is available here:
@@ -158,6 +155,7 @@ You will also need libmingw32.a and libopengl32.a. Those should be included in t
 * Ship info display shows more stats
 * Redistributed most human ships and many outfits to have more regional specialization
 * Removed tribute from planets (relevant code is still present for plug-ins)
+* Removed news and portraits (relevant code is still present for plug-ins)
 * Distances from planets to the sytem's centre are trebled; as a result space feels larger, thrusters are more desirable, and players won't always land immediately in the middle of a space fight
 * Non-missile weapons have their weapon range increased by about a third
 * Exploding ships are significantly more dangerous
@@ -190,7 +188,6 @@ See `changelog.txt`, `ship_overview.txt`, and https://github.com/finite-galaxy/f
 * Separate fleet overview column in outfitter and shipyard from ship info display
 * Sort outfits and ships by cost, size, or mass instead of alphabetically
 * https://github.com/endless-sky/endless-sky/wiki/DevelopmentRoadmap
-* Content: introduce a Navy Battleship with 250 engine space, 500 weapon space, six guns, six turrets, and twelve fighter bays
 
 [(return to top)](https://github.com/finite-galaxy/finite-galaxy#finite-galaxy)
 
@@ -220,9 +217,7 @@ Furthermore, there is still that wormhole with a large Quarg fleet on one end an
 Contributions are welcome; anyone can contribute; feel free to open issues or make pull requests.
 
 ### Posting issues
-
 The [issues page](https://github.com/finite-galaxy/finite-galaxy/issues) on GitHub is for tracking bugs and for art, content, and feature requests. When posting a new issue, please:
-
 * Be polite and always assume good faith.
 * Check to make sure it's not a duplicate of an existing issue.
 * Create a separate “issue” for each bug, problem, question, or request.
@@ -235,9 +230,7 @@ If you believe your issue has been resolved, you can close the issue yourself.
 
 
 ### Posting pull requests
-
 If you are posting a pull request, please:
-
 * Do not combine multiple unrelated changes into a single pull.
 * Check the diff and make sure the pull request does not contain unintended changes.
 * If proposing a major pull request, start by posting an issue and discussing the best way to implement it. Often the first strategy that occurs to you will not be the cleanest or most effective way to implement a new feature.
@@ -261,24 +254,27 @@ If you are posting a pull request, please:
     * ü → ue
     * İ/ı → I/i
     * ç → c
+    * č, ć, ċ → ch
+    * š, ś, ş → sh
     * ñ → nh
     * ß → ss
+  * repeatedly check and double check any new or changed strings to avoid unnecessary typos; e.g. mind the difference between it's (cf. he's, she's) and its (cf. his, her).
 * `images/`:
   * file names are lower case and use underscores instead of spaces
   * add both normal and @2x versions
-  * for ships, also create [thumbnails](https://github.com/endless-sky/endless-sky/wiki/CreatingShips#shipyard-thumbnails)
+    * for ships, also create [thumbnails](https://github.com/endless-sky/endless-sky/wiki/CreatingShips#shipyard-thumbnails)
+    * for turrets, also create hardpoints
   * insert yourself in the copyright.txt file
   * include all assets (Blender, GIMP, other files) in the opening post
 * `sounds/`:
   * file names are lower case and use underscores instead of spaces
-  * insert yourself in the copyright.txt file
+  * insert yourself in the `copyright.txt` file
 
 [(return to top)](https://github.com/finite-galaxy/finite-galaxy#finite-galaxy)
 
 
 
 ## Reveal entire map
-
 Part of the fun of the game is travelling around and exploring. However, if you don't have time for that and simply want to reveal everything in the entire galaxy, then open your save game, find `# What you know:` and insert the following lines directly afterwards:
 
 ```

@@ -1,18 +1,30 @@
 shipyard "Lionheart Variants"
   "Arrow"
   "Arrow (Anti-Missile)"
+  "Marauder Arrow (Engines)"
+  "Marauder Arrow (Shields)"
+  "Marauder Arrow (Weapons)"
   "Bounder"
   "Bounder (Laser)"
   "Bounder (Miner)"
+  "Marauder Bounder (Engines)"
+  "Marauder Bounder (Shields)"
+  "Marauder Bounder (Weapons)"
   "Bulk Freighter"
   "Class C Freighter"
   "Lance"
   "Lance (Electron)"
   "Lance (Plasma)"
+  "Marauder Lance (Engines)"
+  "Marauder Lance (Shields)"
+  "Marauder Lance (Weapons)"
   "Manta"
   "Manta (Nuclear)"
   "Manta (Particle)"
   "Manta (Plasma)"
+  "Marauder Lance (Engines)"
+  "Marauder Lance (Shields)"
+  "Marauder Lance (Weapons)"
   "Warrior"
   "Warrior (Electron)"
 
@@ -89,6 +101,157 @@ ship "Arrow" "Arrow (Anti-Missile)"
     "Cooling Ducts"
     "Fuel Pod" 14
     "Tactical Scanner"
+
+
+ship "Arrow" "Marauder Arrow (Engines)"
+  sprite "ship/arrow_e"
+  add attributes
+    "cost" 120000
+    "shields" 300
+    "hull" 100
+    "required crew" 1
+    "mass" 15
+    "drag" .5
+    "cargo space" -5
+    "outfit space" 40
+    "core space" -5
+    "engine space" 35
+    "weapon space" 10
+    "self destruct" .25
+    weapon
+      "blast radius" 10
+      "shield damage" 30
+      "random shield damage" 70
+      "hull damage" 45
+      "random hull damage" 105
+      "heat damage" 900
+      "random heat damage" 2100
+      "hit force" 75
+      "random hit force" 175
+  outfits
+    "S-270 Regenerator"
+    "Dwarf Core"
+    "Hyperdrive"
+
+    "A370 Atomic Thruster"
+    "A375 Atomic Steering"
+
+    "Heavy Anti-Missile"
+
+    "Supercapacitor" 2
+    "Liquid Water Cooler"
+    "Fuel Pod" 17
+    "Tactical Scanner" 4
+    "Interference Plating"
+    "Laser Rifle" 5
+  engine -10 57
+  engine 10 57
+  gun -6 -36
+  gun 6 -36
+  turret 0 15
+  description "With a third engine mount, you remark that this Arrow seems more like a missile. The beefed-up engines, a little extra outfit capacity, extra shield emitters, and thicker hull plating make this vessel a very competent Interceptor."
+
+
+ship "Arrow" "Marauder Arrow (Shields)"
+  sprite "ship/arrow_s"
+  add attributes
+    "cost" 120000
+    "shields" 300
+    "hull" 100
+    "required crew" 1
+    "mass" 15
+    "drag" .5
+    "cargo space" -5
+    "outfit space" 40
+    "core space" 15
+    "engine space" 15
+    "weapon space" 10
+    "self destruct" .25
+    weapon
+      "blast radius" 10
+      "shield damage" 30
+      "random shield damage" 70
+      "hull damage" 45
+      "random hull damage" 105
+      "heat damage" 900
+      "random heat damage" 2100
+      "hit force" 75
+      "random hit force" 175
+  outfits
+    "S-270 Regenerator"
+    "Dwarf Core"
+    "Hyperdrive"
+
+    "A250 Atomic Thruster"
+    "A255 Atomic Steering"
+
+    "Heavy Laser Cannon" 2
+    "X4 Blaster Turret"
+
+    "LP036a Battery Pack"
+    "Liquid Water Cooler"
+    "Fuel Pod" 17
+    "Tactical Scanner" 4
+    "Interference Plating"
+    "Laser Rifle" 5
+  engine -8 57
+  engine 8 57
+  gun -6 -36
+  gun 6 -36
+  turret 0 15
+  description "This Arrow has had numerous modifications to its hull and internal systems to make more room for outfits - mostly with combat in mind. More shields, weapons, engines, outfit space, and a turret mount nearly push this ship into the Corvette category, and definitely make it one of the heaviest Interceptors you're likely to find."
+
+
+ship "Arrow" "Marauder Arrow (Weapons)"
+  sprite "ship/arrow_w"
+  add attributes
+    "cost" 120000
+    "shields" 300
+    "hull" 100
+    "required crew" 1
+    "mass" 15
+    "drag" .5
+    "cargo space" -5
+    "outfit space" 40
+    "core space" 5
+    "engine space" 15
+    "weapon space" 20
+    "self destruct" .25
+    weapon
+      "blast radius" 10
+      "shield damage" 30
+      "random shield damage" 70
+      "hull damage" 45
+      "random hull damage" 105
+      "heat damage" 900
+      "random heat damage" 2100
+      "hit force" 75
+      "random hit force" 175
+  outfits
+    "S-270 Regenerator"
+    "Dwarf Core"
+    "Hyperdrive"
+
+    "A250 Atomic Thruster"
+    "A255 Atomic Steering"
+
+    "X1 Blaster Cannon" 4
+    "Heavy Laser Turret"
+
+    "Supercapacitor" 2
+    "Liquid Water Cooler"
+    "Fuel Pod" 17
+    "Tactical Scanner" 4
+    "Interference Plating"
+    "Laser Rifle" 5
+  engine -8 57
+  engine 8 57
+  gun -6 -36
+  gun 6 -36
+  gun -7 -34
+  gun 7 -34
+  turret 0 15 "Heavy Laser Turret"
+  description "The weapons systems on this Arrow have been enhanced almost to the point of competing with Lionheart's Argosy. The ship can still outrun all but the fastest ships, if things get a little too hairy."
 
 
 
@@ -180,6 +343,155 @@ ship "Bounder" "Bounder (Miner)"
     "Fuel Pod" 39
     "Ramscoop"
     "Tactical Scanner"
+
+
+ship "Bounder" "Marauder Bounder (Engines)"
+  sprite "ship/bounder_e"
+  add attributes
+    "cost" 110000
+    "shields" 300
+    "mass" 15
+    "cargo space" -20
+    "outfit space" 40
+    "core space" -35
+    "engine space" 40
+    "weapon space" 35
+    "self destruct" .25
+    weapon
+      "blast radius" 7
+      "shield damage" 30
+      "random shield damage" 40
+      "hull damage" 45
+      "random hull damage" 60
+      "heat damage" 900
+      "random heat damage" 1200
+      "hit force" 75
+      "random hit force" 100
+  outfits
+    "S-270 Regenerator"
+    "Dwarf Core"
+    "Hyperdrive"
+
+    "A370 Atomic Thruster"
+    "A375 Atomic Steering"
+
+    "Gatling Round" 3000
+    "Gatling Bullet Boxes" 2
+    "Gatling Gun"
+    "X4 Blaster Turret" 2
+
+    "LP036a Battery Pack"
+    "Liquid Water Cooler"
+    "Fuel Pod" 41
+    "Tactical Scanner" 4
+    "Interference Plating"
+    "Laser Rifle" 18
+  engine -12 58 .7
+  engine 0 51
+  engine 12 58 .7
+  gun 0 -85
+  turret -38 7
+  turret 38 7
+  description "The previous owner of this Bounder has modified an already fast courier-scout into an even faster heavy escort Interceptor with some truly enormous engines, making it incredibly fast for its size."
+
+
+ship "Bounder" "Marauder Bounder (Shields)"
+  sprite "ship/bounder_s"
+  add attributes
+    "cost" 110000
+    "shields" 300
+    "mass" 15
+    "cargo space" -20
+    "outfit space" 40
+    "core space" -15
+    "engine space" 20
+    "weapon space" 35
+    "self destruct" .25
+    weapon
+      "blast radius" 7
+      "shield damage" 30
+      "random shield damage" 40
+      "hull damage" 45
+      "random hull damage" 60
+      "heat damage" 900
+      "random heat damage" 1200
+      "hit force" 75
+      "random hit force" 100
+  outfits
+    "S-270 Regenerator"
+    "Dwarf Core"
+    "Hyperdrive"
+
+    "A250 Atomic Thruster"
+    "A255 Atomic Steering"
+    "Afterburner"
+
+    "Plasma Cannon"
+    "X4 Blaster Turret" 2
+
+    "LP072a Battery Pack"
+    "Liquid Water Cooler"
+    "Fuel Pod" 41
+    "Tactical Scanner" 4
+    "Interference Plating"
+    "Laser Rifle" 18
+  engine -12 44
+  engine 12 44
+  gun 0 -85
+  turret -38 7
+  turret 38 7
+  description "This Megaparsec Bounder has been modified from a courier-scout into a heavy escort Interceptor - currently the largest in the class. A little extra outfit space, reinforced turret mounts, a new gun port in front of the pilot, and additional shield emitters bring this former Transport into combat with fearsome speed and armament."
+
+
+ship "Bounder" "Marauder Bounder (Weapons)"
+  sprite "ship/bounder_w"
+  add attributes
+    "cost" 110000
+    "shields" 300
+    "mass" 15
+    "cargo space" -20
+    "outfit space" 40
+    "core space" -35
+    "engine space" 20
+    "weapon space" 55
+    "self destruct" .25
+    weapon
+      "blast radius" 7
+      "shield damage" 30
+      "random shield damage" 40
+      "hull damage" 45
+      "random hull damage" 60
+      "heat damage" 900
+      "random heat damage" 1200
+      "hit force" 75
+      "random hit force" 100
+  outfits
+    "S-270 Regenerator"
+    "Dwarf Core"
+    "Hyperdrive"
+
+    "A250 Atomic Thruster"
+    "A255 Atomic Steering"
+
+    "Gatling Round" 3000
+    "Gatling Bullet Boxes" 2
+    "Gatling Gun" 2
+    "Heavy Laser Turret" 2
+
+    "LP072a Battery Pack"
+    "Liquid Water Cooler"
+    "Fuel Pod" 41
+    "Tactical Scanner" 4
+    "Interference Plating"
+#    "Laser Rifle" 18
+  engine -15 44
+  engine 15 44
+  gun -7 -77
+  gun 7 -77
+  turret -37 4
+  turret 37 4
+  description "Simultaneously the deadliest and most graceful Interceptor in the galaxy, this once Bounder courier-scout has been equipped with incredibly powerful weapons for a ship of its size."
+
 
 
 
@@ -321,15 +633,15 @@ ship "Lance"
     "engine space" 150
     "weapon space" 250
     weapon
-      "blast radius" 236
-      "shield damage" 960
-      "random shield damage" 1360
-      "hull damage" 1440
-      "random hull damage" 2040
-      "heat damage" 28800
-      "random heat damage" 40800
-      "hit force" 2400
-      "random hit force" 3400
+      "blast radius" 240
+      "shield damage" 1000
+      "random shield damage" 1400
+      "hull damage" 1500
+      "random hull damage" 2100
+      "heat damage" 30000
+      "random heat damage" 42000
+      "hit force" 2500
+      "random hit force" 3500
   outfits
     "D94-YV Shield Generator"
     "Cyclops Core"
@@ -401,6 +713,171 @@ ship "Lance" "Lance (Plasma)"
     "Extra Outfit Space" 2
 
 
+ship "Lance" "Marauder Lance (Engines)"
+  sprite "ship/lance_e"
+  add attributes
+    "cost" 5100000
+    "shields" 1300
+    "hull" 400
+    "required crew" 3
+    "bunks" 9
+    "mass" 60
+    "heat dissipation" .1
+    "cargo space" 10
+    "outfit space" 40
+    "core space" -60
+    "engine space" 90
+    "weapon space" 10
+    "self destruct" .15
+    weapon
+      "blast radius" 22
+      "shield damage" 120
+      "random shield damage" 100
+      "hull damage" 180
+      "random hull damage" 150
+      "heat damage" 3600
+      "random heat damage" 3000
+      "hit force" 300
+      "random hit force" 250
+  outfits
+    "S-970 Regenerator"
+    "Fusion Reactor"
+    "Hyperdrive"
+
+    "A520 Atomic Thruster" 2
+    "A525 Atomic Steering"
+
+    "Heavy Laser Cannon" 2
+    "X2 Blaster Turret" 4
+
+    "LP144a Battery Pack"
+    "Liquid Helium Cooler"
+    "Fuel Pod" 76
+    "Tactical Scanner" 4
+    "Interference Plating" 3
+    "Laser Rifle" 69
+  engine -21 138 .7
+  engine 0 144
+  engine 21 138 .7
+  gun -16 -88
+  gun 16 -88
+  turret -16 -24
+  turret 16 -24
+  turret -57 32.5
+  turret 57 32.5
+  description "Whoever modified this Lance clearly valued speed above all else. Major sections of the hull have been reconfigured to accommodate the largest possible engines. If hot-rodding across the galaxy in a 1000 ton warship that handles like a Flivver is your dream, look no further."
+
+
+ship "Lance" "Marauder Lance (Shields)"
+  sprite "ship/lance_s"
+  add attributes
+    "cost" 5100000
+    "shields" 1300
+    "hull" 400
+    "required crew" 3
+    "bunks" 9
+    "mass" 60
+    "heat dissipation" .1
+    "cargo space" 10
+    "outfit space" 40
+    "core space" 10
+    "engine space" 20
+    "weapon space" 10
+    "self destruct" .15
+    weapon
+      "blast radius" 22
+      "shield damage" 120
+      "random shield damage" 100
+      "hull damage" 180
+      "random hull damage" 150
+      "heat damage" 3600
+      "random heat damage" 3000
+      "hit force" 300
+      "random hit force" 250
+  outfits
+    "S-970 Regenerator"
+    "Fusion Reactor"
+    "Hyperdrive"
+
+    "A520 Atomic Thruster"
+    "A525 Atomic Steering"
+
+    "Plasma Cannon" 2
+    "X2 Blaster Turret" 4
+
+    "LP288a Battery Pack"
+    "Liquid Helium Cooler"
+    "Fuel Pod" 76
+    "Tactical Scanner" 4
+    "Interference Plating" 3
+    "Laser Rifle" 69
+  engine -16 143
+  engine 16 143
+  gun -16 -89
+  gun 16 -89
+  turret -16 -25
+  turret 16 -25
+  turret -57 32.5
+  turret 57 32.5
+  description "This Lionheart Lance has been heavily modified by some very dedicated craftsmen. The hull is riddled with extra shield emitters and expanded equipment bays, adding bulk and definitely voiding the warranty."
+
+
+ship "Lance" "Marauder Lance (Weapons)"
+  sprite "ship/lance_w"
+  add attributes
+    "cost" 5100000
+    "shields" 1300
+    "hull" 400
+    "required crew" 3
+    "bunks" 9
+    "mass" 60
+    "heat dissipation" .1
+    "cargo space" 10
+    "outfit space" 40
+    "core space" -30
+    "engine space" 20
+    "weapon space" 50
+    "self destruct" .15
+    weapon
+      "blast radius" 22
+      "shield damage" 120
+      "random shield damage" 100
+      "hull damage" 180
+      "random hull damage" 150
+      "heat damage" 3600
+      "random heat damage" 3000
+      "hit force" 300
+      "random hit force" 250
+  outfits
+    "S-970 Regenerator"
+    "Fusion Reactor"
+    "Hyperdrive"
+
+    "A370 Atomic Thruster"
+    "A525 Atomic Steering"
+
+    "Plasma Cannon" 4
+    "X2 Blaster Turret" 4
+
+    "LP144a Battery Pack"
+    "Liquid Helium Cooler"
+    "Fuel Pod" 76
+    "Tactical Scanner" 4
+    "Interference Plating" 3
+    "Laser Rifle" 69
+  engine -16 142
+  engine 16 142
+  gun -18.5 -88
+  gun 18.5 -88
+  gun -21.5 -77
+  gun 21.5 -77
+  turret -16 -25
+  turret 16 -25
+  turret -57 32.5
+  turret 57 32.5
+  description "Whoever modified this Lance clearly believed that firepower was everything. Two additional gun ports have been integrated into the hull, and the ship's interior space has been reconfigured to accommodate nearly any set of weapons you can imagine."
+
+
 
 ship "Manta"
   sprite "ship/manta"
@@ -430,7 +907,7 @@ ship "Manta"
       "hull damage" 510
       "random hull damage" 1170
       "heat damage" 10200
-      "random heat damage" 41400
+      "random heat damage" 23400
       "hit force" 850
       "random hit force" 1950
   outfits
@@ -515,6 +992,176 @@ ship "Manta" "Manta (Plasma)"
     "Liquid Nitrogen Cooler"
     "Fuel Pod" 23
     "Tactical Scanner" 5
+
+
+ship "Manta" "Marauder Manta (Engines)"
+  sprite "ship/manta_e"
+  add attributes
+    "cost" 340000
+    "shields" 600
+    "hull" 250
+    "required crew" 1
+    "mass" 25
+    "cargo space" -10
+    "outfit space" 50
+    "core space" -20
+    "engine space" 30
+    "weapon space" 40
+    "self destruct" .25
+    weapon
+      "blast radius" 13
+      "shield damage" 50
+      "random shield damage" 80
+      "hull damage" 75
+      "random hull damage" 120
+      "heat damage" 1500
+      "random heat damage" 2400
+      "hit force" 125
+      "random hit force" 200
+  outfits
+    "S-270 Regenerator"
+    "Dwarf Core"
+    "Hyperdrive"
+
+    "A370 Atomic Thruster"
+    "A525 Atomic Steering"
+
+    "Meteor Missile" 108
+    "Meteor Missile Box" 3
+    "Meteor Missile Launcher" 4
+    "Plasma Cannon" 2
+    "X4 Blaster Turret"
+
+    "LP072a Battery Pack"
+    "LP036a Battery Pack"
+    "Liquid Nitrogen Cooler"
+    "Fuel Pod" 25
+    "Tactical Scanner" 4
+    "Interference Plating" 2
+    "Laser Rifle" 11
+  engine -33.5 38
+  engine 0 76
+  engine 33.5 38
+  gun -66 -30
+  gun 66 -30
+  gun -27 -30
+  gun 27 -30
+  gun -20 -30
+  gun 20 -30
+  turret 0 -29
+  description `A previous owner of this Manta has gone to great lengths to make sure they could bring all six gun ports to bear in a hurry and chase down smaller warships. Style was not lost on that captain, and a forked tail yielded a little more space for shield projectors in an area that would have been destabilized by engine exhaust.`
+
+
+ship "Manta" "Marauder Manta (Shields)"
+  sprite "ship/manta_s"
+  add attributes
+    "cost" 340000
+    "shields" 600
+    "hull" 250
+    "required crew" 1
+    "mass" 25
+    "cargo space" -10
+    "outfit space" 50
+    "engine space" 10
+    "weapon space" 40
+    "self destruct" .25
+    weapon
+      "blast radius" 13
+      "shield damage" 50
+      "random shield damage" 80
+      "hull damage" 75
+      "random hull damage" 120
+      "heat damage" 1500
+      "random heat damage" 2400
+      "hit force" 125
+      "random hit force" 200
+  outfits
+    "S-270 Regenerator"
+    "Dwarf Core"
+    "Hyperdrive"
+
+    "A250 Atomic Thruster"
+    "A525 Atomic Steering"
+
+    "Sidewinder Missile" 36
+    "Sidewinder Missile Rack" 8
+    "Sidewinder Missile Launcher" 2
+    "Plasma Cannon" 4
+    "X4 Blaster Turret"
+
+    "LP072a Battery Pack"
+    "LP036a Battery Pack"
+    "Liquid Nitrogen Cooler"
+    "Fuel Pod" 25
+    "Tactical Scanner" 4
+    "Interference Plating" 2
+    "Laser Rifle" 11
+  engine -33 38
+  engine 33 38
+  gun -66 -30
+  gun 66 -30
+  gun -27 -30
+  gun 27 -30
+  gun -20 -30
+  gun 20 -30
+  turret 0 -29
+  description `After the Syndicate released their Vanguard, the Manta fell somewhat out of favour, lacking the ability to mount any anti-missile systems. The owner of this Manta rectified that, added some extra armour plating and shield emitters, and rearranged some of the internals to yield a little more outfit space.`
+
+
+ship "Manta" "Marauder Manta (Weapons)"
+  sprite "ship/manta_w"
+  add attributes
+    "cost" 340000
+    "shields" 600
+    "hull" 250
+    "required crew" 1
+    "mass" 25
+    "cargo space" -10
+    "outfit space" 50
+    "core space" -20
+    "engine space" 10
+    "weapon space" 60
+    "self destruct" .25
+    weapon
+      "blast radius" 13
+      "shield damage" 50
+      "random shield damage" 80
+      "hull damage" 75
+      "random hull damage" 120
+      "heat damage" 1500
+      "random heat damage" 2400
+      "hit force" 125
+      "random hit force" 200
+  outfits
+    "S-270 Regenerator"
+    "Fission Reactor"
+    "Hyperdrive"
+
+    "A250 Atomic Thruster"
+    "A375 Atomic Steering"
+
+    "Impact Missile" 32
+    "Impact Missile Rack" 8
+    "Impact Missile Launcher" 2
+    "Plasma Cannon" 4
+    "X4 Blaster Turret"
+
+    "Supercapacitor" 3
+    "Liquid Nitrogen Cooler"
+    "Fuel Pod" 25
+    "Tactical Scanner" 4
+    "Interference Plating" 2
+    "Laser Rifle" 11
+  engine -33.5 38
+  engine 33.5 38
+  gun -66 -34
+  gun 66 -34
+  gun -27 -35
+  gun 27 -35
+  gun -20 -35
+  gun 20 -35
+  turret 0 -29
+  description `This Manta has undergone extensive modification, featuring extra gun ports, hull plating, and shield emitters. You wonder where the modifier intended the power systems to go, but you're sure you'll find space for them somewhere.`
 
 
 

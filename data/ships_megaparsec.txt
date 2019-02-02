@@ -4,6 +4,9 @@ shipyard "Megaparsec Variants"
   "Quicksilver (Patrol)"
   "Quicksilver (Plasma)"
   "Quicksilver Test Dummy"
+  "Marauder Quicksilver (Engines)"
+  "Marauder Quicksilver (Shields)"
+  "Marauder Quicksilver (Weapons)"
   "Scout"
   "Scout (Afterburner)"
   "Scout (Hai)"
@@ -38,7 +41,7 @@ ship "Quicksilver"
     weapon
       "blast radius" 80
       "shield damage" 240
-      "random shield damage" 50
+      "random shield damage" 560
       "hull damage" 360
       "random hull damage" 840
       "heat damage" 7200
@@ -129,6 +132,157 @@ ship "Quicksilver" "Quicksilver Test Dummy"
   add attributes
     "automaton" 1
     "self destruct" 1
+
+
+ship "Quicksilver" "Marauder Quicksilver (Engines)"
+  sprite "ship/quicksilver_e"
+  add attributes
+    "cost" 110000
+    "shields" 500
+    "hull" 100
+    "required crew" 1
+    "bunks" 1
+    "mass" 20
+    "cargo space" -5
+    "outfit space" 10
+    "core space" -30
+    "engine space" 30
+    "weapon space" 10
+    "self destruct" .25
+    weapon
+      "blast radius" 5
+      "shield damage" 40
+      "random shield damage" 10
+      "hull damage" 60
+      "random hull damage" 15
+      "heat damage" 1200
+      "random heat damage" 300
+      "hit force" 100
+      "random hit force" 25
+  outfits
+    "S-270 Regenerator"
+    "Fission Reactor"
+    "Hyperdrive"
+
+    "A370 Atomic Thruster"
+    "A375 Atomic Steering"
+
+    "Heavy Laser Cannon" 2
+    "AM3 Anti-Missile"
+
+    "Supercapacitor" 2
+    "Liquid Nitrogen Cooler"
+    "Fuel Pod" 18
+    "Tactical Scanner" 4
+    "Interference Plating"
+    "Laser Rifle" 7
+  engine -16 52
+  engine 0 52
+  engine 16 52
+  gun -7 -39
+  gun 7 -39
+  turret 0 15
+  description "This Quicksilver has even more space available for engine use - and even another thruster port! It's also got a few extra shield projectors, more hull plating and another bunk. This aftermarket model also features a turret mount, perhaps in response to Tarazed's Hawk. Whoever modified this ship wanted to chase their prey down with vicious speed."
+
+
+ship "Quicksilver" "Marauder Quicksilver (Shields)"
+  sprite "ship/quicksilver_s"
+  add attributes
+    "cost" 110000
+    "shields" 500
+    "hull" 100
+    "required crew" 1
+    "bunks" 1
+    "mass" 20
+    "cargo space" -5
+    "outfit space" 10
+    "core space" -10
+    "engine space" 10
+    "weapon space" 10
+    "self destruct" .25
+    weapon
+      "blast radius" 5
+      "shield damage" 40
+      "random shield damage" 10
+      "hull damage" 60
+      "random hull damage" 15
+      "heat damage" 1200
+      "random heat damage" 300
+      "hit force" 100
+      "random hit force" 25
+  outfits
+    "S-270 Regenerator"
+    "Fission Reactor"
+    "Hyperdrive"
+
+    "A250 Atomic Thruster"
+    "A375 Atomic Steering"
+
+    "Heavy Laser Cannon" 2
+    "Heavy Anti-Missile"
+
+    "Supercapacitor" 3
+    "Liquid Nitrogen Cooler"
+    "Fuel Pod" 18
+    "Tactical Scanner" 4
+    "Interference Plating"
+    "Laser Rifle" 7
+  engine -16 52
+  engine 16 52
+  gun -7 -39
+  gun 7 -39
+  turret 0 15
+  description "This Megaparsec Quicksilver is a bit of a Hotrod, being a little faster, with extra shield projectors, hull plating, and an extra bunk. This aftermarket model also features a turret mount, perhaps in an answer to Tarazed's Hawk. The shop that built this ship is sure to see more customers."
+
+
+ship "Quicksilver" "Marauder Quicksilver (Weapons)"
+  sprite "ship/quicksilver_w"
+  add attributes
+    "cost" 110000
+    "shields" 500
+    "hull" 100
+    "required crew" 1
+    "bunks" 1
+    "mass" 20
+    "cargo space" -5
+    "outfit space" 10
+    "core space" -20
+    "engine space" 10
+    "weapon space" 20
+    "self destruct" .25
+    weapon
+      "blast radius" 5
+      "shield damage" 40
+      "random shield damage" 10
+      "hull damage" 60
+      "random hull damage" 15
+      "heat damage" 1200
+      "random heat damage" 300
+      "hit force" 100
+      "random hit force" 25
+  outfits
+    "S-270 Regenerator"
+    "Fission Reactor"
+    "Hyperdrive"
+
+    "A250 Atomic Thruster"
+    "A255 Atomic Steering"
+
+    "Heavy Laser Cannon" 2
+    "Heavy Laser Turret"
+
+    "LP036a Battery Pack"
+    "Liquid Nitrogen Cooler"
+    "Fuel Pod" 18
+    "Tactical Scanner" 4
+    "Interference Plating"
+    "Laser Rifle" 7
+  engine -17 54
+  engine 17 54
+  gun -7 -39
+  gun 7 -39
+  turret 0 15
+  description "This Quicksilver has even bigger gun ports. It's also got a few extra shield emitters, more hull plating, and an extra bunk. Outfitted right, this aftermarket model could be even faster than a stock model, bringing a couple of extra cannons and a turret to the fight, to mimic Tarazed's Hawk perhaps a little more menacingly."
 
 
 
