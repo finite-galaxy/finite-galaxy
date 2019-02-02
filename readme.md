@@ -225,7 +225,7 @@ The [issues page](https://github.com/finite-galaxy/finite-galaxy/issues) on GitH
 
 * Be polite and always assume good faith.
 * Check to make sure it's not a duplicate of an existing issue.
-* Create a separate “issue” for each bug and each request.
+* Create a separate “issue” for each bug, problem, question, or request.
 
 If requesting a new feature, first ask yourself: will this make the game more fun or interesting? Remember that this is a game, not a simulator. Changes will not be made purely for the sake of realism, especially if they introduce needless complexity or aggravation.
 
@@ -240,14 +240,38 @@ If you are posting a pull request, please:
 
 * Do not combine multiple unrelated changes into a single pull.
 * Check the diff and make sure the pull request does not contain unintended changes.
-* If changing the C++ code, follow the [coding standard](http://endless-sky.github.io/styleguide/styleguide.xml).
-* In C++ code, make numbers with many digits easier to read for humans by inserting `'`
-  * (decimal numbers) at intervals of three digits if there are more than four in a row.
-  * (hexadecimal numbers) at intervals of four digits if there are more than six in a row.
-* Do not use tabs; use two spaces instead.
-* Use Oxford spelling (the variant of English used by many scientific journals and international organizations such as the United Nations), instead of American, British, Canadian, or other national varieties.
-
-If proposing a major pull request, start by posting an issue and discussing the best way to implement it. Often the first strategy that occurs to you will not be the cleanest or most effective way to implement a new feature.
+* If proposing a major pull request, start by posting an issue and discussing the best way to implement it. Often the first strategy that occurs to you will not be the cleanest or most effective way to implement a new feature.
+* `code/`:
+  * follow the [coding standard](http://endless-sky.github.io/styleguide/styleguide.xml).
+  * C++14
+  * do not use tabs; use two spaces instead
+  * make numbers with many digits easier to read for humans by inserting `'`
+    * (decimal numbers) at intervals of three digits if there are more than four in a row
+    * (hexadecimal numbers) at intervals of four digits if there are more than six in a row
+  * use Oxford English
+* `data/`:
+  * do not use tabs; use two spaces instead
+  * use Oxford spelling (the variant of English used by many scientific journals and international organizations such as the United Nations), instead of American, British, Canadian, or other national varieties.
+  * avoid abbreviations (e.g., i.e., etc.); contractions (isn't) are fine
+  * no diacritics:
+    * á, à, â → a; same for other vowels
+    * å → aa
+    * æ, ä → ae
+    * œ, ø, ö → oe
+    * ü → ue
+    * İ/ı → I/i
+    * ç → c
+    * ñ → nh
+    * ß → ss
+* `images/`:
+  * file names are lower case and use underscores instead of spaces
+  * add both normal and @2x versions
+  * for ships, also create [thumbnails](https://github.com/endless-sky/endless-sky/wiki/CreatingShips#shipyard-thumbnails)
+  * insert yourself in the copyright.txt file
+  * include all assets (Blender, GIMP, other files) in the opening post
+* `sounds/`:
+  * file names are lower case and use underscores instead of spaces
+  * insert yourself in the copyright.txt file
 
 [(return to top)](https://github.com/finite-galaxy/finite-galaxy#finite-galaxy)
 
