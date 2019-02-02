@@ -20,6 +20,17 @@
 using namespace std;
 
 namespace {
+  // Generate an offset magnitude that will sample from an annulus (planets)
+  // or a circle (systems without inhabited planets).
+  double OffsetFrom(pair<Point, double> &centre)
+  {
+    // If the centre has a radius, then position ships further away.
+    double minimumOffset = centre.second ? 1. : 0.;
+    // Since it is sensible that ships would be nearer to the object of
+    // interest on average, do not apply the sqrt(rand) correction.
+    return (Random::Real() + minimumOffset) * 400. + 2. * centre.second;
+  }
+
   // Construct a list of all outfits for sale in this system and its linked neighbours.
   Sale<Outfit> GetOutfitsForSale(const System *here)
   {
@@ -350,7 +361,7 @@ void Fleet::Enter(const System &system, list<shared_ptr<Ship>> &ships, const Pla
 
 
 
-// Place a fleet in the given system, already "in action."
+// Place one of the variants in the given system, already "in action."
 void Fleet::Place(const System &system, list<shared_ptr<Ship>> &ships, bool carried) const
 {
   if(!total || variants.empty())
@@ -362,7 +373,7 @@ void Fleet::Place(const System &system, list<shared_ptr<Ship>> &ships, bool carr
     return;
   
   // Determine where the fleet is going to or coming from.
-  Point centre = ChooseCentre(system);
+  auto centre = ChooseCentre(system);
   
   // Place all the ships in the chosen fleet variant.
   shared_ptr<Ship> flagship;
@@ -374,7 +385,7 @@ void Fleet::Place(const System &system, list<shared_ptr<Ship>> &ships, bool carr
       continue;
     
     Angle angle = Angle::Random();
-    Point pos = centre + Angle::Random().Unit() * Random::Real() * 400.;
+    Point pos = centre.first + Angle::Random().Unit() * OffsetFrom(centre);
     double velocity = Random::Real() * ship->MaxVelocity();
     
     ships.push_front(ship);
@@ -425,10 +436,11 @@ const System *Fleet::Enter(const System &system, Ship &ship, const System *sourc
 
 void Fleet::Place(const System &system, Ship &ship)
 {
-  // Move out a random distance from that object, facing toward it or away.
-  Point pos = ChooseCentre(system) + Angle::Random().Unit() * Random::Real() * 400.;
-  
-  double velocity = Random::Real() * ship.MaxVelocity();
+  // Choose a random inhabited object in the system to spawn around.
+  auto centre = ChooseCentre(system);
+  Point pos = centre.first + Angle::Random().Unit() * OffsetFrom(centre);
+
+  double velocity = ship.IsDisabled() ? 0. : Random::Real() * ship.MaxVelocity();
   
   ship.SetSystem(&system);
   Angle angle = Angle::Random();
@@ -436,7 +448,7 @@ void Fleet::Place(const System &system, Ship &ship)
 }
 
 
-  
+
 int64_t Fleet::Strength() const
 {
   int64_t sum = 0;
@@ -483,15 +495,17 @@ const Fleet::Variant &Fleet::ChooseVariant() const
 
 
 
-Point Fleet::ChooseCentre(const System &system)
+// Obtain a positional reference and the radius of the object at that position (e.g. a planet).
+// Spaceport status can be modified during normal gameplay, so this information is not 
+pair<Point, double> Fleet::ChooseCentre(const System &system)
 {
-  vector<Point> centres;
+  auto centres = vector<pair<Point, double>>();
   for(const StellarObject &object : system.Objects())
     if(object.GetPlanet() && object.GetPlanet()->HasSpaceport())
-      centres.push_back(object.Position());
+      centres.emplace_back(object.Position(), object.Radius());
   
   if(centres.empty())
-    return Point();
+    return {Point(), 0.};
   return centres[Random::Int(centres.size())];
 }
 

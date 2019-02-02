@@ -40,6 +40,9 @@ PlanetPanel::PlanetPanel(PlayerInfo &player, function<void()> callback)
   bank.reset(new BankPanel(player));
   spaceport.reset(new SpaceportPanel(player));
   hiring.reset(new HiringPanel(player));
+
+  // Only show one news item per day.
+  spaceport->UpdateNews();
   
   text.SetFont(FontSet::Get(14));
   text.SetAlignment(WrappedText::JUSTIFIED);
@@ -170,7 +173,6 @@ bool PlanetPanel::KeyDown(SDL_Keycode key, Uint16 mod, const Command &command)
   else if(key == 'p' && hasAccess && flagship && planet.HasSpaceport())
   {
     selectedPanel = spaceport.get();
-    spaceport->UpdateNews();
     GetUI()->Push(spaceport);
   }
   else if(key == 'h' && hasAccess && flagship && planet.HasSpaceport() && planet.IsInhabited())
