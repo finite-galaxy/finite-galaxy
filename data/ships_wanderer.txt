@@ -19,6 +19,7 @@ shipyard "Wanderer Variants"
   "Hurricane"
   "Hurricane (Tough)"
   "Hurricane (Turret)"
+  "Mistral"
   "Strong Wind"
   "Summer Leaf"
   "Tempest"
@@ -658,6 +659,28 @@ ship "Hurricane" "Hurricane (Turret)"
     "Fuel Pod" 97
     "Wanderer Ramscoop" 2
     "Extra Outfit Space" 4
+
+
+
+ship "Mistral"
+  sprite "ship/mistral"
+  thumbnail "thumbnail/mistral"
+  attributes
+#    manufacturer "Wanderer"
+    licences
+      Wanderer
+    "mass" 1
+  engine -30 165
+  engine 30 165
+  turret 0 -28
+  turret -40 110
+  turret 40 110
+  drone -57 120
+  drone 57 120
+  explode "small explosion" 60
+  explode "medium explosion" 40
+  explode "large explosion" 20
+  "final explode" "final explosion medium"
 
 
 

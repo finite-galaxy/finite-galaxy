@@ -1,0 +1,401 @@
+shipyard "Eternals Variants"
+  "Ao"
+  "Modified Ao"
+  "Chilong"
+  "Colony Ship"
+  "Craterustig"
+  "Excalibur"
+  "Gladius"
+  "Harrier"
+  "Hatchling"
+  "Modified Hatchling"
+  "Hourglass"
+  "Longinus"
+  "Myrmex"
+  "Myrmidon"
+  "Pollaxe"
+  "Scorpion"
+  "Modified Scorpion"
+  "Swordbreaker"
+  "Tianlong"
+  "Twin Crescent"
+  "Typhon"
+  "Modified Typhon"
+  "Winged Serpent"
+  "Yisnith"
+
+
+
+ship "Ao"
+  sprite "ship/ao"
+  thumbnail "thumbnail/ao"
+  attributes
+#    manufacturer "Eternals"
+    "mass" 1
+  engine -16 147
+  engine 16 147
+  gun -81 -85
+  gun 81 -85
+  turret -33 -65
+  turret 33 -65
+  drone -58 102 left
+  drone 58 -102 right
+  explode "small explosion" 25
+  explode "medium explosion" 35
+  explode "large explosion" 45
+  explode "huge explosion" 30
+
+
+ship "Ao" "Modified Ao"
+  sprite "ship/ao_m"
+  attributes
+#    manufacturer "Eternals"
+    "mass" 1
+
+
+
+ship "Chilong"
+  sprite "ship/chilong"
+  attributes
+#    manufacturer "Eternals"
+    "mass" 1
+  engine -10 9
+  engine 10 9
+  gun -13 -17
+  gun 13 -17
+  explode "tiny explosion" 15
+  explode "small explosion" 5
+
+
+
+ship "Colony Ship"
+  sprite "ship/colony_ship"
+  attributes
+#    manufacturer "Eternals"
+    "mass" 1
+  explode "tiny explosion" 30
+  explode "small explosion" 45
+  explode "medium explosion" 50
+  explode "large explosion" 40
+  explode "huge explosion" 50
+
+
+
+ship "Craterustig"
+  sprite "ship/craterustig"
+  attributes
+#    manufacturer "Eternals"
+    "mass" 1
+  gun 0 -35
+  explode "tiny explosion" 15
+  explode "small explosion" 5
+
+
+
+ship "Excalibur"
+  sprite "ship/excalibur"
+  thumbnail "thumbnail/excalibur"
+  attributes
+#    manufacturer "Eternals"
+    "mass" 1
+  engine -30 228 .6
+  engine -18 222 .4
+  engine 0 235
+  engine 30 228 .6
+  engine 18 222 .4
+  gun -37 -123
+  gun 37 -123
+  gun -47 -73
+  gun 47 -73
+  turret -15 -115
+  turret 15 -115
+  turret -24 -56
+  turret 24 -56
+  turret -30 0
+  turret 30 0
+  fighter -37 101 over
+  fighter 37 101 over
+  fighter -64 120 left
+  fighter 64 120 right
+  fighter -60 154 left
+  fighter 60 154 right
+  explode "small explosion" 25
+  explode "medium explosion" 35
+  explode "large explosion" 45
+  explode "huge explosion" 30
+
+
+
+ship "Gladius"
+  sprite "ship/gladius"
+  thumbnail "thumbnail/gladius"
+  attributes
+#    manufacturer "Eternals"
+    "mass" 1
+  engine -16 28 .4
+  engine 0 39
+  engine 16 28 .4
+  gun -7 -38
+  gun 7 -38
+  explode "tiny explosion" 15
+  explode "small explosion" 5
+
+
+
+ship "Harrier"
+  sprite "ship/harrier"
+  attributes
+#    manufacturer "Eternals"
+    "mass" 1
+
+
+
+ship "Hatchling"
+  sprite "ship/hatchling"
+  thumbnail "thumbnail/hatchling"
+  attributes
+#    manufacturer "Eternals"
+    "mass" 1
+  engine 0 26
+  gun 0 -28
+  explode "tiny explosion" 20
+  explode "small explosion" 10
+
+
+ship "Hatchling" "Modified Hatchling"
+  sprite "ship/hatchling_m"
+  attributes
+#    manufacturer "Eternals"
+    "mass" 1
+
+
+
+ship "Hourglass"
+  sprite "ship/hourglass"
+  attributes
+#    manufacturer "Eternals"
+    "mass" 1
+
+
+
+ship "Longinus"
+  sprite "ship/longinus"
+  thumbnail "thumbnail/longinus"
+  attributes
+#    manufacturer "Eternals"
+    "mass" 1
+  engine -12 153
+  engine 12 153
+  gun -40 -50
+  gun 40 -50
+  gun -50 -14
+  gun 50 -14
+  turret -29 130
+  turret 29 130
+  explode "tiny explosion" 10
+  explode "small explosion" 25
+  explode "medium explosion" 25
+  explode "large explosion" 10
+
+
+
+ship "Myrmex"
+  sprite "ship/myrmex"
+  thumbnail "thumbnail/myrmex"
+  attributes
+#    manufacturer "Eternals"
+    "mass" 1
+  engine -35 -18
+  engine 35 -18
+  gun -12 -131
+  gun 12 -131
+  explode "small explosion" 15
+  explode "medium explosion" 30
+  explode "large explosion" 20
+  explode "huge explosion" 5
+
+
+
+ship "Myrmidon"
+  sprite "ship/myrmidon"
+  attributes
+#    manufacturer "Eternals"
+    "mass" 1
+  engine -30 48
+  engine 30 48
+  gun -10 -52
+  gun 10 -52
+  explode "small explosion" 15
+  explode "medium explosion" 30
+  explode "large explosion" 20
+  explode "huge explosion" 5
+
+
+
+ship "Pollaxe"
+  sprite "ship/pollaxe"
+  thumbnail "thumbnail/pollaxe"
+  attributes
+#    manufacturer "Eternals"
+    "mass" 1
+  engine -10 210
+  engine 10 210
+  gun -20 -133
+  gun 20 -133
+  gun 0 -133
+  gun -25 42
+  gun 25 42
+  gun 0 42
+  turret -82 72
+  turret -55 116
+  turret -55 166
+  turret -82 208
+  explode "small explosion" 25
+  explode "medium explosion" 35
+  explode "large explosion" 45
+  explode "huge explosion" 30
+
+
+
+ship "Scorpion"
+  sprite "ship/scorpion"
+  thumbnail "thumbnail/scorpion"
+  attributes
+#    manufacturer "Eternals"
+    "mass" 1
+  engine -20 92
+  engine 20 92
+  gun -40 -128
+  gun 40 -128
+  gun -4 16
+  gun 4 16
+  turret -46 -77
+  turret 46 -77
+  fighter -1 -1 under
+  fighter 0 0 under
+  fighter 1 1 under
+  fighter 2 2 under
+  explode "tiny explosion" 18
+  explode "small explosion" 36
+  explode "medium explosion" 24
+  explode "large explosion" 8
+
+
+ship "Scorpion" "Modified Scorpion"
+  sprite "ship/scorpion_m"
+  attributes
+#    manufacturer "Eternals"
+    "mass" 1
+
+
+
+ship "Swordbreaker"
+  sprite "ship/swordbreaker"
+  thumbnail "thumbnail/swordbreaker"
+  attributes
+#    manufacturer "Eternals"
+    "mass" 1
+  engine -12 147
+  engine 12 147
+  turret 0 -94
+  turret 0 0
+  fighter 0 -1
+  fighter 0 1
+  explode "tiny explosion" 10
+  explode "small explosion" 25
+  explode "medium explosion" 30
+  explode "large explosion" 15
+
+
+
+ship "Tianlong"
+  sprite "ship/tianlong"
+  thumbnail "thumbnail/tianlong"
+  attributes
+#    manufacturer "Eternals"
+    "mass" 1
+  engine -10 9
+  engine 10 9
+  gun -13 -17
+  gun 13 -17
+  explode "tiny explosion" 15
+  explode "small explosion" 5
+
+
+
+ship "Twin Crescent"
+  sprite "ship/twin_crescent"
+  thumbnail "thumbnail/twin_crescent"
+  attributes
+#    manufacturer "Eternals"
+    "mass" 1
+  engine -10 55
+  engine 10 55
+  gun -42 -55
+  gun 42 -55
+  gun 0 -40
+  explode "tiny explosion" 15
+  explode "small explosion" 5
+
+
+
+ship "Typhon"
+  sprite "ship/typhon"
+  thumbnail "thumbnail/typhon"
+  attributes
+#    manufacturer "Eternals"
+    "mass" 1
+  engine -28 102
+  engine 28 102
+  gun 0 -170
+  gun -130 -128
+  gun -113 -110
+  gun -36 -92
+  gun 130 -128
+  gun 113 -110
+  gun 36 -92
+  turret 0 -50
+  turret 0 50
+  fighter 0 0 under
+  fighter 1 1 under
+  fighter -1 -1 under
+  fighter 2 2 under
+  fighter -2 -2 under
+  explode "small explosion" 25
+  explode "medium explosion" 35
+  explode "large explosion" 45
+  explode "huge explosion" 30
+
+
+ship "Typhon" "Modified Typhon"
+  sprite "ship/typhon_m"
+  attributes
+#    manufacturer "Eternals"
+    "mass" 1
+
+
+
+ship "Winged Serpent"
+  sprite "ship/winged_serpent"
+  thumbnail "thumbnail/winged_serpent"
+  attributes
+#    manufacturer "Eternals"
+    "mass" 1
+  engine -32 164
+  engine 32 164
+  gun -23 -198
+  gun 23 -198
+  explode "small explosion" 15
+  explode "medium explosion" 30
+  explode "large explosion" 20
+  explode "huge explosion" 5
+
+
+
+ship "Yisnith"
+  sprite "ship/yisnith"
+  attributes
+#    manufacturer "Eternals"
+    "mass" 1
+
+
