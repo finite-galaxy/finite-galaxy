@@ -1,6 +1,7 @@
 shipyard "Flivver Variants"
   "Flivver"
   "Flivver (Hai)"
+  "Modified Flivver"
 
 
 
@@ -69,4 +70,16 @@ ship "Flivver" "Flivver (Hai)"
     "Williwaw Cooling"
     "Fuel Pod" 10
     "Yoloy Scanner"
+
+
+ship "Flivver" "Modified Flivver"
+  sprite "ship/flivver_m"
+  add attributes
+    "engine space" 15
+    "weapon space" -15
+  engine -12 20 .8
+  engine 12 20 .8
+  explode "small explosion" 15
+  explode "tiny explosion" 10
+
 

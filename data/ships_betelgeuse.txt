@@ -3,12 +3,13 @@ shipyard "Betelgeuse Variants"
   "Argosy"
   "Argosy (Laser)"
   "Argosy Test Dummy"
-  "Marauder Argosy"
+  "Modified Argosy"
   "Dagger"
   "Hero"
   "Hero (Gatling)"
   "Hero (Patrol)"
   "Hero Test Dummy"
+  "Modified Hero"
   "Protector"
   "Protector (Electron)"
   "Protector (Laser)"
@@ -16,6 +17,7 @@ shipyard "Betelgeuse Variants"
   "Vanguard (Anti-Missile)"
   "Vanguard (Electron)"
   "Vanguard Test Dummy"
+  "Modified Vanguard"
 
 
 
@@ -177,7 +179,7 @@ ship "Argosy" "Argosy Test Dummy"
     "self destruct" 1
 
 
-ship "Argosy" "Marauder Argosy"
+ship "Argosy" "Modified Argosy"
   sprite "ship/argosy_m"
   add attributes
     "shields" 600
@@ -363,6 +365,23 @@ ship "Hero" "Hero Test Dummy"
   add attributes
     "automaton" 1
     "self destruct" 1
+
+
+ship "Hero" "Modified Hero"
+  plural "Modified Heroes"
+  sprite "ship/hero_m"
+  engine -21 42
+  engine 21 42
+  engine 0 48
+  gun -12 -33
+  gun 12 -33
+  gun -20 -25
+  gun 20 -25
+  gun -43.5 2
+  gun 43.5 2
+  explode "tiny explosion" 10
+  explode "small explosion" 20
+  "final explode" "final explosion small"
 
 
 
@@ -598,4 +617,23 @@ ship "Vanguard" "Vanguard Test Dummy"
   add attributes
     "automaton" 1
     "self destruct" 1
+
+ship "Vanguard" "Modified Vanguard"
+  sprite "ship/vanguard_m"
+  engine -31 128 .7
+  engine 31 128 .7
+  engine 0 130
+  gun 0 -132
+  gun -22 -122
+  gun 22 -122
+  gun -21 -45
+  gun 21 -45
+  gun -31 -45
+  gun 31 -45
+  turret 0 42
+  explode "tiny explosion" 18
+  explode "small explosion" 36
+  explode "medium explosion" 24
+  explode "large explosion" 8
+  "final explode" "final explosion large"
 

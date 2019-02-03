@@ -1,30 +1,30 @@
 shipyard "Lionheart Variants"
   "Arrow"
   "Arrow (Anti-Missile)"
-  "Marauder Arrow (Engines)"
-  "Marauder Arrow (Shields)"
-  "Marauder Arrow (Weapons)"
+  "Modified Arrow (Engines)"
+  "Modified Arrow (Shields)"
+  "Modified Arrow (Weapons)"
   "Bounder"
   "Bounder (Laser)"
   "Bounder (Miner)"
-  "Marauder Bounder (Engines)"
-  "Marauder Bounder (Shields)"
-  "Marauder Bounder (Weapons)"
+  "Modified Bounder (Engines)"
+  "Modified Bounder (Shields)"
+  "Modified Bounder (Weapons)"
   "Bulk Freighter"
   "Class C Freighter"
   "Lance"
   "Lance (Electron)"
   "Lance (Plasma)"
-  "Marauder Lance (Engines)"
-  "Marauder Lance (Shields)"
-  "Marauder Lance (Weapons)"
+  "Modified Lance (Engines)"
+  "Modified Lance (Shields)"
+  "Modified Lance (Weapons)"
   "Manta"
   "Manta (Nuclear)"
   "Manta (Particle)"
   "Manta (Plasma)"
-  "Marauder Lance (Engines)"
-  "Marauder Lance (Shields)"
-  "Marauder Lance (Weapons)"
+  "Modified Lance (Engines)"
+  "Modified Lance (Shields)"
+  "Modified Lance (Weapons)"
   "Warrior"
   "Warrior (Electron)"
 
@@ -103,7 +103,7 @@ ship "Arrow" "Arrow (Anti-Missile)"
     "Tactical Scanner"
 
 
-ship "Arrow" "Marauder Arrow (Engines)"
+ship "Arrow" "Modified Arrow (Engines)"
   sprite "ship/arrow_e"
   add attributes
     "cost" 120000
@@ -152,7 +152,7 @@ ship "Arrow" "Marauder Arrow (Engines)"
   description "With a third engine mount, you remark that this Arrow seems more like a missile. The beefed-up engines, a little extra outfit capacity, extra shield emitters, and thicker hull plating make this vessel a very competent Interceptor."
 
 
-ship "Arrow" "Marauder Arrow (Shields)"
+ship "Arrow" "Modified Arrow (Shields)"
   sprite "ship/arrow_s"
   add attributes
     "cost" 120000
@@ -202,7 +202,7 @@ ship "Arrow" "Marauder Arrow (Shields)"
   description "This Arrow has had numerous modifications to its hull and internal systems to make more room for outfits - mostly with combat in mind. More shields, weapons, engines, outfit space, and a turret mount nearly push this ship into the Corvette category, and definitely make it one of the heaviest Interceptors you're likely to find."
 
 
-ship "Arrow" "Marauder Arrow (Weapons)"
+ship "Arrow" "Modified Arrow (Weapons)"
   sprite "ship/arrow_w"
   add attributes
     "cost" 120000
@@ -345,7 +345,7 @@ ship "Bounder" "Bounder (Miner)"
     "Tactical Scanner"
 
 
-ship "Bounder" "Marauder Bounder (Engines)"
+ship "Bounder" "Modified Bounder (Engines)"
   sprite "ship/bounder_e"
   add attributes
     "cost" 110000
@@ -395,7 +395,7 @@ ship "Bounder" "Marauder Bounder (Engines)"
   description "The previous owner of this Bounder has modified an already fast courier-scout into an even faster heavy escort Interceptor with some truly enormous engines, making it incredibly fast for its size."
 
 
-ship "Bounder" "Marauder Bounder (Shields)"
+ship "Bounder" "Modified Bounder (Shields)"
   sprite "ship/bounder_s"
   add attributes
     "cost" 110000
@@ -443,7 +443,7 @@ ship "Bounder" "Marauder Bounder (Shields)"
   description "This Megaparsec Bounder has been modified from a courier-scout into a heavy escort Interceptor - currently the largest in the class. A little extra outfit space, reinforced turret mounts, a new gun port in front of the pilot, and additional shield emitters bring this former Transport into combat with fearsome speed and armament."
 
 
-ship "Bounder" "Marauder Bounder (Weapons)"
+ship "Bounder" "Modified Bounder (Weapons)"
   sprite "ship/bounder_w"
   add attributes
     "cost" 110000
@@ -713,7 +713,7 @@ ship "Lance" "Lance (Plasma)"
     "Extra Outfit Space" 2
 
 
-ship "Lance" "Marauder Lance (Engines)"
+ship "Lance" "Modified Lance (Engines)"
   sprite "ship/lance_e"
   add attributes
     "cost" 5100000
@@ -768,7 +768,7 @@ ship "Lance" "Marauder Lance (Engines)"
   description "Whoever modified this Lance clearly valued speed above all else. Major sections of the hull have been reconfigured to accommodate the largest possible engines. If hot-rodding across the galaxy in a 1000 ton warship that handles like a Flivver is your dream, look no further."
 
 
-ship "Lance" "Marauder Lance (Shields)"
+ship "Lance" "Modified Lance (Shields)"
   sprite "ship/lance_s"
   add attributes
     "cost" 5100000
@@ -822,7 +822,7 @@ ship "Lance" "Marauder Lance (Shields)"
   description "This Lionheart Lance has been heavily modified by some very dedicated craftsmen. The hull is riddled with extra shield emitters and expanded equipment bays, adding bulk and definitely voiding the warranty."
 
 
-ship "Lance" "Marauder Lance (Weapons)"
+ship "Lance" "Modified Lance (Weapons)"
   sprite "ship/lance_w"
   add attributes
     "cost" 5100000
@@ -994,7 +994,7 @@ ship "Manta" "Manta (Plasma)"
     "Tactical Scanner" 5
 
 
-ship "Manta" "Marauder Manta (Engines)"
+ship "Manta" "Modified Manta (Engines)"
   sprite "ship/manta_e"
   add attributes
     "cost" 340000
@@ -1052,7 +1052,7 @@ ship "Manta" "Marauder Manta (Engines)"
   description `A previous owner of this Manta has gone to great lengths to make sure they could bring all six gun ports to bear in a hurry and chase down smaller warships. Style was not lost on that captain, and a forked tail yielded a little more space for shield projectors in an area that would have been destabilized by engine exhaust.`
 
 
-ship "Manta" "Marauder Manta (Shields)"
+ship "Manta" "Modified Manta (Shields)"
   sprite "ship/manta_s"
   add attributes
     "cost" 340000
@@ -1108,7 +1108,7 @@ ship "Manta" "Marauder Manta (Shields)"
   description `After the Syndicate released their Vanguard, the Manta fell somewhat out of favour, lacking the ability to mount any anti-missile systems. The owner of this Manta rectified that, added some extra armour plating and shield emitters, and rearranged some of the internals to yield a little more outfit space.`
 
 
-ship "Manta" "Marauder Manta (Weapons)"
+ship "Manta" "Modified Manta (Weapons)"
   sprite "ship/manta_w"
   add attributes
     "cost" 340000
