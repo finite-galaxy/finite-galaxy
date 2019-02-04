@@ -328,7 +328,7 @@ void OutfitInfoDisplay::UpdateAttributes(const Outfit &outfit)
         {
           attributeLabels.emplace_back("    " + VALUE_NAMES[i] + ":");
           attributeValues.emplace_back(Format::Number(values[i]) 
-            + "-" + Format::Number(values[i] + randomValues[i]) 
+            + "–" + Format::Number(values[i] + randomValues[i]) 
             + " / " + Format::Number(60. * (values[i] + 0.5 * randomValues[i]) / reload));
           attributesHeight += 20;
         }
@@ -336,7 +336,7 @@ void OutfitInfoDisplay::UpdateAttributes(const Outfit &outfit)
         {
           attributeLabels.emplace_back("    " + VALUE_NAMES[i] + ":");
           attributeValues.emplace_back(Format::Number(0) 
-            + "-" + Format::Number(randomValues[i]) 
+            + "–" + Format::Number(randomValues[i]) 
             + " / " + Format::Number(60. * 0.5 * randomValues[i] / reload));
           attributesHeight += 20;
         }
@@ -388,7 +388,7 @@ void OutfitInfoDisplay::UpdateAttributes(const Outfit &outfit)
   if(turretTurn)
   {
     attributeLabels.emplace_back("turret turn rate:");
-    attributeValues.emplace_back(Format::Number(turretTurn));
+    attributeValues.emplace_back(Format::Number(turretTurn) + "°");
     attributesHeight += 20;
   }
   int homing = outfit.Homing();

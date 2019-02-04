@@ -531,8 +531,8 @@ bool Interface::TextElement::ParseLine(const DataNode &node)
 Point Interface::TextElement::NativeDimensions(const Information &info, int state) const
 {
   const Font &font = FontSet::Get(fontSize);
-  string text = GetString(info);
-  return Point(font.Width(text), font.Height());
+  const auto text = GetString(info);
+  return Point(font.Width(text.first, &text.second), font.Height());
 }
 
 
@@ -544,7 +544,8 @@ void Interface::TextElement::Draw(const Rectangle &rect, const Information &info
   if(!colour[state])
     return;
   
-  FontSet::Get(fontSize).Draw(GetString(info), rect.TopLeft(), *colour[state]);
+  const auto text = GetString(info);
+  FontSet::Get(fontSize).Draw(text.first, rect.TopLeft(), *colour[state], &text.second);
 }
 
 
@@ -559,9 +560,9 @@ void Interface::TextElement::Place(const Rectangle &bounds, Panel *panel) const
 
 
 
-string Interface::TextElement::GetString(const Information &info) const
+pair<string, Font::Layout> Interface::TextElement::GetString(const Information &info) const
 {
-  return (isDynamic ? info.GetString(str) : str);
+  return (isDynamic ? info.GetString(str) : make_pair(str, Font::Layout()));
 }
 
 

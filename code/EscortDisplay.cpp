@@ -58,7 +58,7 @@ void EscortDisplay::Draw(const Rectangle &bounds) const
   static const Set<Colour> &colours = GameData::Colours();
   
   // Draw escort status.
-  const Font &font = FontSet::Get(14);
+  const Font &font = FontSet::Get(18);
   // Top left corner of the current escort icon.
   Point corner = Point(bounds.Left(), bounds.Bottom());
   const Colour &elsewhereColour = *colours.Get("escort elsewhere");

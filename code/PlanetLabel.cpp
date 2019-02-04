@@ -57,7 +57,7 @@ PlanetLabel::PlanetLabel(const Point &position, const StellarObject &object, con
     return;
   
   // Figure out how big the label has to be.
-  double width = max(FontSet::Get(18).Width(name), FontSet::Get(14).Width(government)) + 8.;
+  double width = max(FontSet::Get(24).Width(name), FontSet::Get(18).Width(government)) + 8.;
   for(int d = 0; d < 4; ++d)
   {
     bool overlaps = false;
@@ -99,8 +99,8 @@ PlanetLabel::PlanetLabel(const Point &position, const StellarObject &object, con
 void PlanetLabel::Draw() const
 {
   // Draw any active planet labels.
-  const Font &font = FontSet::Get(14);
-  const Font &bigFont = FontSet::Get(18);
+  const Font &font = FontSet::Get(18);
+  const Font &bigFont = FontSet::Get(24);
   
   // The angle of the outer ring should be reduced by just enough that the
   // circumference is reduced by 6 pixels.

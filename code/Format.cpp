@@ -155,7 +155,7 @@ string Format::Decimal(double value, int places)
 
 
 // Convert a string into a number. As with the output of Number(), the
-// string can have suffixes like "M", "B", etc.
+// string can have suffixes such as "B", "T", "Q".
 double Format::Parse(const string &str)
 {
   double place = 1.;
@@ -198,6 +198,8 @@ double Format::Parse(const string &str)
       value *= 1e9;
     else if(*it == 't' || *it == 'T')
       value *= 1e12;
+    else if(*it == 'q' || *it == 'Q')
+      value *= 1e15;
   }
   
   return value;

@@ -8,6 +8,7 @@
 #include "Effect.h"
 #include "Files.h"
 #include "Flotsam.h"
+#include "Font.h"
 #include "Format.h"
 #include "GameData.h"
 #include "Government.h"
@@ -125,7 +126,8 @@ void Ship::Load(const DataNode &node)
     else if(child.Token(0) == "thumbnail" && child.Size() >= 2)
       thumbnail = SpriteSet::Get(child.Token(1));
     else if(key == "name" && child.Size() >= 2)
-      name = child.Token(1);
+      // A ship name may contain wrong markups when loading an old save file.
+			name = Font::EscapeMarkupHasError(child.Token(1));
     else if(key == "plural" && child.Size() >= 2)
       pluralModelName = child.Token(1);
     else if(key == "noun" && child.Size() >= 2)

@@ -87,7 +87,7 @@ void TradingPanel::Draw()
   if(selectedRow >= 0 && selectedRow < COMMODITY_COUNT)
     FillShader::Fill(Point(-60., FIRST_Y + 20 * selectedRow + 33), Point(480., 20.), back);
   
-  const Font &font = FontSet::Get(14);
+  const Font &font = FontSet::Get(18);
   const Colour &unselected = *GameData::Colours().Get("medium");
   const Colour &selected = *GameData::Colours().Get("bright");
   

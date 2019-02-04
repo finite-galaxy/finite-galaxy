@@ -3,6 +3,7 @@
 #include "ImageBuffer.h"
 
 #include "File.h"
+#include "Files.h"
 
 #include <png.h>
 #include <jpeglib.h>
@@ -141,10 +142,10 @@ bool ImageBuffer::Read(const string &path, int frame)
   // First, make sure this is a JPG or PNG file.
   if(path.length() < 4)
     return false;
-  
-  string extension = path.substr(path.length() - 4);
-  bool isPNG = (extension == ".png" || extension == ".PNG");
-  bool isJPG = (extension == ".jpg" || extension == ".JPG");
+
+  string extension = Files::Extension(path);
+  bool isPNG = (extension.compare(".png") == 0 || extension.compare(".PNG") == 0);
+  bool isJPG = (extension.compare(".jpg") == 0 || extension.compare(".JPG") == 0);
   if(!isPNG && !isJPG)
     return false;
   

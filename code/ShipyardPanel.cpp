@@ -37,7 +37,7 @@ namespace {
       randomPos = cancelPos - Point(80., 0.);
       SpriteShader::Draw(SpriteSet::Get("ui/dialogue cancel"), randomPos);
 
-      const Font &font = FontSet::Get(14);
+      const Font &font = FontSet::Get(18);
       static const string label = "Random";
       Point labelPos = randomPos - .5 * Point(font.Width(label), font.Height());
       font.Draw(label, labelPos, *GameData::Colours().Get("medium"));
@@ -229,12 +229,10 @@ bool ShipyardPanel::CanSell(bool toCargo) const
 void ShipyardPanel::Sell(bool toCargo)
 {
   static const int MAX_LIST = 20;
-  static const int MAX_NAME_WIDTH = 250 - 30;
   
   int count = playerShips.size();
   int initialCount = count;
   string message = "Sell ";
-  const Font &font = FontSet::Get(14);
   if(count == 1)
     message += playerShip->Name();
   else if(count <= MAX_LIST)
@@ -248,7 +246,7 @@ void ShipyardPanel::Sell(bool toCargo)
     else
     {
       while(count-- > 1)
-        message += ",\n" + font.TruncateMiddle((*it++)->Name(), MAX_NAME_WIDTH);
+        message += ",\n" + (*it++)->Name();
       message += ",\nand ";
     }
     message += (*it)->Name();
@@ -258,7 +256,7 @@ void ShipyardPanel::Sell(bool toCargo)
     auto it = playerShips.begin();
     message += (*it++)->Name() + ",\n";
     for(int i = 1; i < MAX_LIST - 1; ++i)
-      message += font.TruncateMiddle((*it++)->Name(), MAX_NAME_WIDTH) + ",\n";
+      message += (*it++)->Name() + ",\n";
     
     message += "and " + to_string(count - (MAX_LIST - 1)) + " other ships";
   }
@@ -270,7 +268,7 @@ void ShipyardPanel::Sell(bool toCargo)
   int64_t total = player.FleetDepreciation().Value(toSell, day);
   
   message += ((initialCount > 2) ? "\nfor " : " for ") + Format::Credits(total) + " credits?";
-  GetUI()->Push(new Dialogue(this, &ShipyardPanel::SellShip, message));
+  GetUI()->Push(new Dialogue(this, &ShipyardPanel::SellShip, message, Font::TRUNC_MIDDLE));
 }
 
 

@@ -188,7 +188,7 @@ void MapSalesPanel::DrawKey() const
   
   Colour bright(.6f, .6f);
   Colour dim(.3f, .3f);
-  const Font &font = FontSet::Get(14);
+  const Font &font = FontSet::Get(18);
   
   Point pos(Screen::Left() + 50. + WIDTH, Screen::Top() + 12.);
   Point textOff(10., -.5 * font.Height());
@@ -305,7 +305,7 @@ bool MapSalesPanel::DrawHeader(Point &corner, const string &category)
   SpriteShader::Draw(arrow, corner + Point(15., 20.));
   
   const Colour &textColour = *GameData::Colours().Get(hide ? "medium" : "bright");
-  const Font &bigFont = FontSet::Get(18);
+  const Font &bigFont = FontSet::Get(24);
   bigFont.Draw(category, corner + Point(30., 10.), textColour);
   AddZone(Rectangle::FromCorner(corner, Point(WIDTH, 40.)), [this, category](){ ClickCategory(category); });
   corner.Y() += 40.;
@@ -330,7 +330,7 @@ void MapSalesPanel::DrawSprite(const Point &corner, const Sprite *sprite) const
 void MapSalesPanel::Draw(Point &corner, const Sprite *sprite, bool isForSale, bool isSelected,
     const string &name, const string &price, const string &info)
 {
-  const Font &font = FontSet::Get(14);
+  const Font &font = FontSet::Get(18);
   Colour selectionColour(0.f, .3f);
   
   Point nameOffset(ICON_HEIGHT, .5 * ICON_HEIGHT - PAD - 1.5 * font.Height());

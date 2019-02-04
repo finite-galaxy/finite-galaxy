@@ -277,7 +277,7 @@ void MapDetailPanel::DrawKey()
 {
   const Colour &dim = *GameData::Colours().Get("dim");
   const Colour &medium = *GameData::Colours().Get("medium");
-  const Font &font = FontSet::Get(14);
+  const Font &font = FontSet::Get(18);
   
   Point pos = Screen::TopRight() + Point(-110., 310.);
   Point headerOff(-5., -.5 * font.Height());
@@ -407,7 +407,7 @@ void MapDetailPanel::DrawInfo()
   const Sprite *systemSprite = SpriteSet::Get("ui/map system");
   SpriteShader::Draw(systemSprite, uiPoint);
   
-  const Font &font = FontSet::Get(14);
+  const Font &font = FontSet::Get(18);
   string systemName = player.KnowsName(selectedSystem) ?
     selectedSystem->Name() : "Unexplored System";
   font.Draw(systemName, uiPoint + Point(-90., -7.), medium);
@@ -548,7 +548,7 @@ void MapDetailPanel::DrawInfo()
     SpriteShader::Draw(panelSprite, pos);
     
     WrappedText text(font);
-    text.SetAlignment(WrappedText::JUSTIFIED);
+    text.SetAlignment(Font::JUSTIFIED);
     text.SetWrapWidth(WIDTH - 20);
     text.Wrap(selectedPlanet->Description());
     text.Draw(Point(Screen::Right() - X_OFFSET - WIDTH, Screen::Top() + 20), medium);
@@ -569,7 +569,7 @@ void MapDetailPanel::DrawOrbits()
   if(!selectedSystem || !player.HasVisited(selectedSystem))
     return;
   
-  const Font &font = FontSet::Get(14);
+  const Font &font = FontSet::Get(18);
   
   // Figure out what the largest orbit in this system is.
   double maxDistance = 0.;

@@ -101,7 +101,7 @@ void ShopPanel::Draw()
     static const int WIDTH = 250;
     static const int PAD = 10;
     const string &text = GameData::Tooltip(warningType);
-    WrappedText wrap(FontSet::Get(14));
+    WrappedText wrap(FontSet::Get(18));
     wrap.SetWrapWidth(WIDTH - 2 * PAD);
     wrap.Wrap(text);
     
@@ -141,7 +141,7 @@ void ShopPanel::Draw()
 
 void ShopPanel::DrawSidebar()
 {
-  const Font &font = FontSet::Get(14);
+  const Font &font = FontSet::Get(18);
   const Colour &bright = *GameData::Colours().Get("bright");
   sideDetailHeight = 0;
   
@@ -258,7 +258,7 @@ void ShopPanel::DrawButtons()
     Point(Screen::Right() - SIDE_WIDTH / 2, Screen::Bottom() - BUTTON_HEIGHT),
     Point(SIDE_WIDTH, 1), *GameData::Colours().Get("shop side panel footer"));
   
-  const Font &font = FontSet::Get(14);
+  const Font &font = FontSet::Get(18);
   const Colour &bright = *GameData::Colours().Get("bright");
   const Colour &dim = *GameData::Colours().Get("medium");
   const Colour &back = *GameData::Colours().Get("panel background");
@@ -279,7 +279,7 @@ void ShopPanel::DrawButtons()
   Point right(Screen::Right() - font.Width(space) - 10, point.Y());
   font.Draw(space, right, bright);
   
-  const Font &bigFont = FontSet::Get(18);
+  const Font &bigFont = FontSet::Get(24);
   const Colour &hover = *GameData::Colours().Get("hover");
   const Colour &active = *GameData::Colours().Get("active");
   const Colour &inactive = *GameData::Colours().Get("inactive");
@@ -320,7 +320,7 @@ void ShopPanel::DrawButtons()
 
 void ShopPanel::DrawMain()
 {
-  const Font &bigFont = FontSet::Get(18);
+  const Font &bigFont = FontSet::Get(24);
   const Colour &dim = *GameData::Colours().Get("medium");
   const Colour &bright = *GameData::Colours().Get("bright");
   mainDetailHeight = 0;
@@ -455,10 +455,11 @@ void ShopPanel::DrawShip(const Ship &ship, const Point &centre, bool isSelected)
   SpriteShader::Draw(back, centre);
   
   // Draw the ship name.
-  const Font &font = FontSet::Get(14);
-  const string &name = ship.Name().empty() ? ship.ModelName() : font.TruncateMiddle(ship.Name(), SIDE_WIDTH - 61);
-  Point offset(-.5f * font.Width(name), -.5f * SHIP_SIZE + 10.f);
-  font.Draw(name, centre + offset, *GameData::Colours().Get("bright"));
+  const Font &font = FontSet::Get(18);
+  const Font::Layout layout(Font::TRUNC_MIDDLE, SIDE_WIDTH - 61);
+  const string &name = ship.Name().empty() ? ship.ModelName() : ship.Name();
+  Point offset(-.5f * font.Width(name, &layout), -.5f * SHIP_SIZE + 10.f);
+  font.Draw(name, centre + offset, *GameData::Colours().Get("bright"), &layout);
   
   const Sprite *thumbnail = ship.Thumbnail();
   const Sprite *sprite = ship.GetSprite();

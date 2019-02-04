@@ -168,7 +168,7 @@ mission "Wanderers: Diplomacy"
       `  She laughs, in the Hai manner: a rapid chittering sound. "Yes, the humans and the Hai both worried that too many humans would emigrate all at once if they knew of our peaceful lands. So we agreed that the Hai would be a secret, always here for the adventurous to discover, but difficult to find, so that the human immigration would be slow enough for us to gradually adjust to it."`
       `  "Are you the translator who will travel with me?" you ask.`
       label travel
-      `  "Yes," she says. "If these aliens will provide a place for me, I mean to live with them permanently, an ambassador between their people and ours. I am old, and in need of a great novelty like this to make my life interesting once more." You note that the fur on her face, especially on the snout, has turned from brown to silvery grey - a sign of age in terrestrial creatures, and perhaps in the Hai as well.`
+      `  "Yes," she says. "If these aliens will provide a place for me, I mean to live with them permanently, an ambassador between their people and ours. I am old, and in need of a great novelty like this to make my life interesting once more." You note that the fur on her face, especially on the snout, has turned from brown to silvery grey – a sign of age in terrestrial creatures, and perhaps in the Hai as well.`
       choice
         `  "I'm glad to have the company of such a distinguished ambassador. Let's go visit these aliens immediately!"`
           accept
@@ -245,11 +245,11 @@ mission "Human Cultural Archives"
           goto money
       
       label need
-      `  He says, "The human immigrants tell me that in the region of your space they call the Deep is a space station, a library that houses human cultural artifacts and a database of human literature and history. Bring me a copy of that database, and I will give you a speaking machine."`
+      `  He says, "The human immigrants tell me that in the region of your space they call the Deep is a space station, a library that houses human cultural artefacts and a database of human literature and history. Bring me a copy of that database, and I will give you a speaking machine."`
         goto end
       
       label money
-      `  "Money?" he says, with a dismissive gesture. "What use is money? No, from you I desire something far more valuable. The human immigrants tell me that in the region of your space they call the Deep is a space station, a library that houses human cultural artifacts and a database of human literature and history. Bring me a copy of that database, and I will give you a speaking machine."`
+      `  "Money?" he says, with a dismissive gesture. "What use is money? No, from you I desire something far more valuable. The human immigrants tell me that in the region of your space they call the Deep is a space station, a library that houses human cultural artefacts and a database of human literature and history. Bring me a copy of that database, and I will give you a speaking machine."`
         goto end
       
       label end
@@ -590,7 +590,7 @@ mission "Wanderers: Unfettered Diplomacy 1C"
     conversation
       `When you return to <planet>, Iktat Rek meets with Ambassador Sayari and a few of the Wanderer elders. The elders thank you for the role that you played in negotiating a temporary peace, and Rek says, "We will [reward, honour] you by allowing you to purchase our largest ship, the Deep River, but not our [ships of war, battleships]."`
       `  The elders seem to agree that this is only a temporary solution. The Unfettered cannot be granted a base in Wanderer territory: they would use their few jump drives to move a few warships at a time to that base until they had a fleet too strong for the Wanderers to defeat. Sooner or later, the Unfettered will grow tired of demanding such a base and will return to open warfare.`
-      `  In the meantime, the only way to defuse the situation would be to get all the jump drives out of the hands of the Unfettered - and that means discovering and stopping whoever is supplying those drives to them.`
+      `  In the meantime, the only way to defuse the situation would be to get all the jump drives out of the hands of the Unfettered – and that means discovering and stopping whoever is supplying those drives to them.`
 
 
 
@@ -1583,7 +1583,7 @@ mission "Wanderers Invaded 3C (Pug)"
     conversation
       branch revisiting
         has "Pug in Wanderer Space: offered"
-      `This world is populated by the Pug, the same enigmatic species that recently invaded human space - and left without giving you any clear answers about why they did so. You already know that the Pug have the ability to control wormholes, so it's quite likely that they have something to do with the "Eye" wormhole that the Wanderers hope will open soon.`
+      `This world is populated by the Pug, the same enigmatic species that recently invaded human space – and left without giving you any clear answers about why they did so. You already know that the Pug have the ability to control wormholes, so it's quite likely that they have something to do with the "Eye" wormhole that the Wanderers hope will open soon.`
         goto opening
       label revisiting
       `You return to this Pug world hoping to get a few more answers than they offered to you last time. As before, they seem peaceful enough, but most of them are acting as if you do not exist.`
@@ -1738,7 +1738,7 @@ mission "Wanderers Solifuge Recon 1"
       choice
         `  "What is happening to you? Are you ill?"`
         `  "Are you molting?"`
-      `  Rek says wearily, "The doctors believe it is what you would call a cancer, what my people would call a [premature, non-viable] molt. If so it will kill me. But I hope it may be the true Molt, come earlier than the [stories, myths] claim is possible - for the Eye is not yet open."`
+      `  Rek says wearily, "The doctors believe it is what you would call a cancer, what my people would call a [premature, non-viable] molt. If so it will kill me. But I hope it may be the true Molt, come earlier than the [stories, myths] claim is possible – for the Eye is not yet open."`
       choice
         `  "You can't tell the difference between a cancer and the Molt?"`
       `  "They are the same thing," he says. "Only the [outcome, result] is different. The Molt is a cancer so [successful, virulent] that it [consumes? displaces?] every cell in one's body. But since the first Unfettered attacks a [decade] ago, hundreds of Wanderers have undergone a false Molt. All of them have died. I may be a fool to hope that I might survive."`
@@ -1803,11 +1803,11 @@ mission "Wanderers Evacuation 1"
       has "Wanderers Pond Strider Recon 2: done"
   on offer
     conversation
-      `Four Wanderer transports - perhaps, in fact, the same four you escorted before - are parked here. One of the captains approaches you and says, "We are evacuating the worlds that will be [isolated, trapped] if the Unfettered gain more territory. Will you escort us to <planet>, and from there to the capital?"`
+      `Four Wanderer transports – perhaps, in fact, the same four you escorted before – are parked here. One of the captains approaches you and says, "We are evacuating the worlds that will be [isolated, trapped] if the Unfettered gain more territory. Will you escort us to <planet>, and from there to the capital?"`
       choice
         `  "I would be glad to."`
           accept
-        `  "Not now - I will come back when I am ready."`
+        `  "Not now – I will come back when I am ready."`
           defer
   npc accompany save
     government "Wanderer"
@@ -1870,7 +1870,7 @@ mission "Wanderers Evacuation 1C"
         `  (Check in on Iktat Rek.)`
         `  (No, I can always visit him next time I'm here.)`
           goto end
-      `  You contact Rek, and he invites you to come visit him in the house where he is staying - a Wanderer tree house near the outskirts of the city. He looks even more tired than before, and the bare patches of skin are spreading. In a few places a new set of black, oily feathers seem to be growing in, but they are thin and hairlike - not enough even to cover his skin, let alone to allow him to fly.`
+      `  You contact Rek, and he invites you to come visit him in the house where he is staying – a Wanderer tree house near the outskirts of the city. He looks even more tired than before, and the bare patches of skin are spreading. In a few places a new set of black, oily feathers seem to be growing in, but they are thin and hairlike – not enough even to cover his skin, let alone to allow him to fly.`
       `  You sit and talk with him for a while. He is moving and speaking more slowly, but you are glad to see that his mind is as sharp as ever, and to pass the time he asks you all sorts of questions about human culture and history, which you answer as best you can. Eventually, you say goodbye and return to the spaceport.`
       label end
       `  The transports finish unloading the last of the passengers, and get ready to follow you back to <planet>.`

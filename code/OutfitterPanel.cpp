@@ -122,7 +122,7 @@ void OutfitterPanel::DrawItem(const string &name, const Point &point, int scroll
   bool isLicence = IsLicence(name);
   int mapSize = outfit->Get("map");
   
-  const Font &font = FontSet::Get(14);
+  const Font &font = FontSet::Get(18);
   const Colour &bright = *GameData::Colours().Get("bright");
   if(playerShip || isLicence || mapSize)
   {
@@ -624,7 +624,7 @@ void OutfitterPanel::DrawKey()
   const Sprite *back = SpriteSet::Get("ui/outfitter key");
   SpriteShader::Draw(back, Screen::BottomLeft() + .5 * Point(back->Width(), -back->Height()));
   
-  Font font = FontSet::Get(14);
+  const Font &font = FontSet::Get(18);
   Colour colour[2] = {*GameData::Colours().Get("medium"), *GameData::Colours().Get("bright")};
   const Sprite *box[2] = {SpriteSet::Get("ui/unchecked"), SpriteSet::Get("ui/checked")};
   
@@ -716,7 +716,7 @@ void OutfitterPanel::DrawOutfit(const Outfit &outfit, const Point &centre, bool 
   
   // Draw the outfit name.
   const string &name = outfit.Name();
-  const Font &font = FontSet::Get(14);
+  const Font &font = FontSet::Get(18);
   Point offset(-.5f * font.Width(name), -.5f * OUTFIT_SIZE + 10.f);
   font.Draw(name, centre + offset, Colour((isSelected | isOwned) ? .8 : .5, 0.));
 }

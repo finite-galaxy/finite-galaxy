@@ -102,9 +102,9 @@ MapPanel::MapPanel(PlayerInfo &player, int commodity, const System *special)
     TallyEscorts(player.Ships(), escortSystems);
   
   // Initialize a centred tooltip.
-  hoverText.SetFont(FontSet::Get(14));
+  hoverText.SetFont(FontSet::Get(18));
   hoverText.SetWrapWidth(150);
-  hoverText.SetAlignment(WrappedText::LEFT);
+  hoverText.SetAlignment(Font::LEFT);
   
   if(selectedSystem)
     CentreOnSystem(selectedSystem, true);
@@ -162,7 +162,7 @@ void MapPanel::Draw()
   {
     static const string UNAVAILABLE = "You have no available route to this system.";
     static const string UNKNOWN = "You have not yet mapped a route to this system.";
-    const Font &font = FontSet::Get(18);
+    const Font &font = FontSet::Get(24);
     
     const string &message = player.HasVisited(selectedSystem) ? UNAVAILABLE : UNKNOWN;
     Point point(-font.Width(message) / 2, Screen::Top() + 40);
@@ -193,7 +193,7 @@ void MapPanel::DrawButtons(const string &condition)
 
 void MapPanel::DrawMiniMap(const PlayerInfo &player, float alpha, const System *const jump[2], int step)
 {
-  const Font &font = FontSet::Get(14);
+  const Font &font = FontSet::Get(18);
   Colour lineColour(alpha, 0.f);
   Point centre = .5 * (jump[0]->Position() + jump[1]->Position());
   const Point &drawPos = GameData::Interfaces().Get("hud")->GetPoint("mini-map");

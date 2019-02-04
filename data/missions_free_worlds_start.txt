@@ -255,7 +255,7 @@ mission "FW Prisoner Parole 2"
           goto exchange
       
       label exchange
-      `  "I know," he says. "That's what a lot of our people are saying now. But what we did, a pure good-faith gesture with nothing demanded in return - we may come to be glad of that. My hope was to set a precedent, to shape the character of whatever conflict comes out of this, and I still think that was the right thing to do."`
+      `  "I know," he says. "That's what a lot of our people are saying now. But what we did, a pure good-faith gesture with nothing demanded in return – we may come to be glad of that. My hope was to set a precedent, to shape the character of whatever conflict comes out of this, and I still think that was the right thing to do."`
       `  "So, what do we do now?" you ask.`
       
       label next
@@ -706,7 +706,7 @@ mission "FW Plasma Testing 1B"
     dialogue `The <npc> has been eliminated. Time to return to <destination> and report to Barmy Edward.`
   
   on visit
-    dialogue "You have reached <planet>, but your mission is not complete - either the Red Nile is not destroyed, or you have left the Walloping Window-Blind behind."
+    dialogue "You have reached <planet>, but your mission is not complete – either the Red Nile is not destroyed, or you have left the Walloping Window-Blind behind."
   
   on offer
     log "People" "Edward Tivrusky" `Barmy Edward is the Chief Offensive Engineer at Kraz Cybernetics, known for his inventive and sometimes impractical weapon designs. Supposedly, his engineers gave him the "Barmy" sobriquet after an incident where an experimental epoxy cannon he was working on exploded and glued him to the ceiling.`
@@ -960,7 +960,7 @@ mission "FW Pirates 1A"
         `  "How so?"`
         `  "Naturally."`
           goto continue
-      `  "For starters, we both wear black all the time," he says, grinning. "And more to the point, we're both seeking to build an alternative community according to our own ideals. Historically, monasticism can actually be seen as a form of utopic anarchism - 'Fear none but God' and all that."`
+      `  "For starters, we both wear black all the time," he says, grinning. "And more to the point, we're both seeking to build an alternative community according to our own ideals. Historically, monasticism can actually be seen as a form of utopic anarchism – 'Fear none but God' and all that."`
       choice
         `  "Of course."`
         `  "That makes absolutely no sense. Are you joking around with me?"`

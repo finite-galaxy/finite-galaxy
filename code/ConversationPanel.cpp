@@ -95,7 +95,7 @@ void ConversationPanel::Draw()
   }
   
   // Get the font and colours we'll need for drawing everything.
-  const Font &font = FontSet::Get(14);
+  const Font &font = FontSet::Get(18);
   const Colour &selectionColour = *GameData::Colours().Get("faint");
   const Colour &dim = *GameData::Colours().Get("dim");
   const Colour &grey = *GameData::Colours().Get("medium");
@@ -126,6 +126,7 @@ void ConversationPanel::Draw()
   {
     // This conversation node is prompting the player to enter their name.
  		Point fieldSize(150, 20);
+    const Font::Layout layout(Font::TRUNC_FRONT, fieldSize.X() - 10);
     for(int side = 0; side < 2; ++side)
     {
       Point centre = point + Point(side ? 420 : 190, 7);
@@ -139,16 +140,15 @@ void ConversationPanel::Draw()
       // Fill in whichever entry box is active right now.
       FillShader::Fill(centre, fieldSize, selectionColour);
       // Draw the text cursor.
- 			string displayedText = font.TruncateFront(choice ? lastName : firstName, fieldSize.X() - 5);
-      centre.X() += font.Width(displayedText) - 67;
+      centre.X() += font.Width(choice ? lastName : firstName, &layout) - 67;
       FillShader::Fill(centre, Point(1., 16.), dim);
     }
     
-    font.Draw("First name:", point + Point(40, 0), dim);
- 		font.Draw(font.TruncateFront(firstName, fieldSize.X() - 5), point + Point(120, 0), choice ? grey : bright);
+    font.Draw("First name:", point + Point(30, 0), dim);
+ 		font.Draw(firstName, point + Point(90, 0), choice ? grey : bright, &layout);
     
     font.Draw("Last name:", point + Point(270, 0), dim);
- 		font.Draw(font.TruncateFront(lastName, fieldSize.X() - 5), point + Point(350, 0), choice ? bright : grey);
+ 		font.Draw(lastName, point + Point(350, 0), choice ? bright : grey, &layout);
     
     // Draw the OK button, and remember its location.
     static const string ok = "[ok]";
@@ -399,9 +399,9 @@ void ConversationPanel::ClickChoice(int index)
 ConversationPanel::Paragraph::Paragraph(const string &text, const Sprite *scene, bool isFirst)
   : scene(scene), isFirst(isFirst)
 {
-  wrap.SetAlignment(WrappedText::JUSTIFIED);
+  wrap.SetAlignment(Font::JUSTIFIED);
   wrap.SetWrapWidth(WIDTH);
-  wrap.SetFont(FontSet::Get(14));
+  wrap.SetFont(FontSet::Get(18));
   
   wrap.Wrap(text);
 }

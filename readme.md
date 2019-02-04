@@ -159,6 +159,7 @@ You will also need libmingw32.a and libopengl32.a. Those should be included in t
 * Distances from planets to the sytem's centre are trebled; as a result space feels larger, thrusters are more desirable, and players won't always land immediately in the middle of a space fight
 * Non-missile weapons have their weapon range increased by about a third
 * Exploding ships are significantly more dangerous
+* Add support for Unicode and different writing directions
 
 [(return to top)](https://github.com/finite-galaxy/finite-galaxy#finite-galaxy)
 
@@ -170,8 +171,6 @@ See `changelog.txt`, `ship_overview.txt`, and https://github.com/finite-galaxy/f
 
 
 ### Not yet implemented ideas
-* Add support for Unicode and different writing directions
-* Add ligatures
 * Add quotation mark preference
 * Add “Licences” tab in player info panel
 * Add “Tribute” tab in player info panel
@@ -245,8 +244,7 @@ If you are posting a pull request, please:
 * `data/`:
   * do not use tabs; use two spaces instead
   * use Oxford spelling (the variant of English used by many scientific journals and international organizations such as the United Nations), instead of American, British, Canadian, or other national varieties.
-  * avoid abbreviations (e.g., i.e., etc.); contractions (isn't) are fine
-  * no diacritics:
+  * no diacritics in English:
     * á, à, â → a; same for other vowels
     * å → aa
     * æ, ä → ae
@@ -258,6 +256,14 @@ If you are posting a pull request, please:
     * š, ś, ş → sh
     * ñ → nh
     * ß → ss
+  * text strings (descriptions, dialogues, tooltips, etc.):
+    * avoid abbreviations (e.g., i.e., etc.); contractions (isn't) are fine
+    * use an Oxford comma when giving more than two items (e.g. one, two, and three; *not* one, two and three)
+    * use U+2013 – en-dash for number ranges (e.g. 10–12) and for parenthetical expressions – like this – instead of parentheses, em-dashes, or hyphens
+    * use U+202F   narrow non-breaking space as a thousands separator for numbers with five or more digits (e.g. 12 345)
+    * use U+2212 − minus sign for negative numbers, substractions, and deductions
+    <!-- 0°1′2″3‴4⁗ -->
+    * use the " quote for direct speech and ' apostrophe within direct speech; the source code replaces these with proper “primary” and ‘secondary’ opening and closing quotation marks; surround such strings with ` backticks
   * repeatedly check and double check any new or changed strings to avoid unnecessary typos; e.g. mind the difference between it's (cf. he's, she's) and its (cf. his, her).
 * `images/`:
   * file names are lower case and use underscores instead of spaces

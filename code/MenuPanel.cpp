@@ -79,18 +79,19 @@ void MenuPanel::Draw()
 {
   glClear(GL_COLOR_BUFFER_BIT);
   GameData::Background().Draw(Point(), Point());
-  const Font &font = FontSet::Get(14);
+  const Font &font = FontSet::Get(18);
   
   Information info;
+  const Font::Layout layout(Font::TRUNC_MIDDLE, 165);
   if(player.IsLoaded() && !player.IsDead())
   {
     info.SetCondition("pilot loaded");
-    info.SetString("pilot", font.TruncateMiddle(player.FirstName() + " " + player.LastName(), 165));
+    info.SetString("pilot", player.FirstName() + " " + player.LastName(), layout);
     if(player.Flagship())
     {
       const Ship &flagship = *player.Flagship();
       info.SetSprite("ship sprite", flagship.GetSprite());
-      info.SetString("ship", font.TruncateMiddle(flagship.Name(), 165));
+      info.SetString("ship", flagship.Name(), layout);
     }
     if(player.GetSystem())
       info.SetString("system", player.GetSystem()->Name());
@@ -102,7 +103,7 @@ void MenuPanel::Draw()
   else if(player.IsLoaded())
   {
     info.SetCondition("no pilot loaded");
-    info.SetString("pilot", font.TruncateMiddle(player.FirstName() + " " + player.LastName(), 165));
+    info.SetString("pilot", player.FirstName() + " " + player.LastName(), layout);
     info.SetString("ship", "You have died.");
   }
   else

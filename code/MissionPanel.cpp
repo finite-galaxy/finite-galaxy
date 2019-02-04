@@ -67,8 +67,8 @@ MissionPanel::MissionPanel(PlayerInfo &player)
     ++acceptedIt;
   
   wrap.SetWrapWidth(380);
-  wrap.SetFont(FontSet::Get(14));
-  wrap.SetAlignment(WrappedText::JUSTIFIED);
+  wrap.SetFont(FontSet::Get(18));
+  wrap.SetAlignment(Font::JUSTIFIED);
   
   // Select the first available or accepted mission in the currently selected
   // system, or along the travel plan.
@@ -107,8 +107,8 @@ MissionPanel::MissionPanel(const MapPanel &panel)
     ++acceptedIt;
   
   wrap.SetWrapWidth(380);
-  wrap.SetFont(FontSet::Get(14));
-  wrap.SetAlignment(WrappedText::JUSTIFIED);
+  wrap.SetFont(FontSet::Get(18));
+  wrap.SetAlignment(Font::JUSTIFIED);
 
   // Select the first available or accepted mission in the currently selected
   // system, or along the travel plan.
@@ -426,7 +426,7 @@ void MissionPanel::DrawKey() const
   const Sprite *back = SpriteSet::Get("ui/mission key");
   SpriteShader::Draw(back, Screen::BottomLeft() + .5 * Point(back->Width(), -back->Height()));
   
-  const Font &font = FontSet::Get(14);
+  const Font &font = FontSet::Get(18);
   Point angle = Point(1., 1.).Unit();
   
   const int ROWS = 5;
@@ -494,7 +494,7 @@ void MissionPanel::DrawSelectedSystem() const
   else if(jumps > 0)
     text += " (" + to_string(jumps) + " jumps away)";
   
-  const Font &font = FontSet::Get(14);
+  const Font &font = FontSet::Get(18);
   Point pos(-.5 * font.Width(text), Screen::Top() + .5 * (30. - font.Height()));
   font.Draw(text, pos, *GameData::Colours().Get("bright"));
 }
@@ -560,7 +560,7 @@ Point MissionPanel::DrawPanel(Point pos, const string &label, int entries) const
     edgePos.Y() -= dy;
   }
   
-  const Font &font = FontSet::Get(14);
+  const Font &font = FontSet::Get(18);
   pos += Point(10., 10. + (20. - font.Height()) * .5);
   font.Draw(label, pos, selected);
   FillShader::Fill(
@@ -576,7 +576,7 @@ Point MissionPanel::DrawPanel(Point pos, const string &label, int entries) const
 
 Point MissionPanel::DrawList(const list<Mission> &list, Point pos) const
 {
-  const Font &font = FontSet::Get(14);
+  const Font &font = FontSet::Get(18);
   const Colour &highlight = *GameData::Colours().Get("faint");
   const Colour &unselected = *GameData::Colours().Get("medium");
   const Colour &selected = *GameData::Colours().Get("bright");

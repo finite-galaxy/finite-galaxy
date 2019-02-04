@@ -85,7 +85,7 @@ void LogbookPanel::Draw()
   }
   
   // Colours to be used for drawing the log.
-  const Font &font = FontSet::Get(14);
+  const Font &font = FontSet::Get(18);
   const Colour &dim = *GameData::Colours().Get("dim");
   const Colour &medium = *GameData::Colours().Get("medium");
   const Colour &bright = *GameData::Colours().Get("bright");
@@ -111,7 +111,7 @@ void LogbookPanel::Draw()
   
   // Parameters for drawing the main text:
   WrappedText wrap(font);
-  wrap.SetAlignment(WrappedText::JUSTIFIED);
+  wrap.SetAlignment(Font::JUSTIFIED);
   wrap.SetWrapWidth(TEXT_WIDTH - 2. * PAD);
   
   // Draw the main text.

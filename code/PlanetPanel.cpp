@@ -44,8 +44,8 @@ PlanetPanel::PlanetPanel(PlayerInfo &player, function<void()> callback)
   // Only show one news item per day.
   spaceport->UpdateNews();
   
-  text.SetFont(FontSet::Get(14));
-  text.SetAlignment(WrappedText::JUSTIFIED);
+  text.SetFont(FontSet::Get(18));
+  text.SetAlignment(Font::JUSTIFIED);
   text.SetWrapWidth(480);
   text.Wrap(planet.Description());
   

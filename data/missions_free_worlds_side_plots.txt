@@ -49,11 +49,11 @@ mission "FW Conservatory 1"
         not "FW Katya 1: done"
  
       label "met andersons"
-      `When you meet Ijs in the spaceport, he has Lynn and Henry Anderson with him, the friends of Katya who you transported from Glory months ago. Ijs is beaming - his meeting must have gone really well. "Guess what, Captain?" he says. "We've got a location for the Conservatory! The government of Winter has offered a community centre for our use."`
+      `When you meet Ijs in the spaceport, he has Lynn and Henry Anderson with him, the friends of Katya who you transported from Glory months ago. Ijs is beaming – his meeting must have gone really well. "Guess what, Captain?" he says. "We've got a location for the Conservatory! The government of Winter has offered a community centre for our use."`
         goto continue
 
       label "not met andersons"
-      `When you meet Ijs in the spaceport, he has a man and a woman with him which he introduces as Lynn and Henry Anderson. Ijs is beaming - his meeting must have gone really well. "Guess what, Captain?" he says. "We've got a location for the Conservatory! The government of Winter has offered a community centre for our use."`
+      `When you meet Ijs in the spaceport, he has a man and a woman with him which he introduces as Lynn and Henry Anderson. Ijs is beaming – his meeting must have gone really well. "Guess what, Captain?" he says. "We've got a location for the Conservatory! The government of Winter has offered a community centre for our use."`
         goto continue
 
       label continue
@@ -384,7 +384,7 @@ mission "FW Wolf Pack 2A"
         `  "I'd be glad to join you. That does sound like a much quicker solution than our current policies that the Senate and the Council support."`
           goto join
         `  "You're trying to starve the Republic into submission? Won't that just just add more brutality to a war that has already been far too bloody?"`
-      `  "In the short run, perhaps," says Rex. "But think how many lives will be saved - how many bloody battles will be averted - by forcing them to end this war quickly rather than dragging it out across years of time."`
+      `  "In the short run, perhaps," says Rex. "But think how many lives will be saved – how many bloody battles will be averted – by forcing them to end this war quickly rather than dragging it out across years of time."`
       choice
         `  "I don't buy your argument. If we use such reprehensible tactics to build our new society, the society we build will be as corrupt as the old one."`
         `  "Okay, you've convinced me. What do you want me to do?"`

@@ -74,9 +74,9 @@ namespace {
 
 // Dialogue that has no callback (information only). In this form, there is
 // only an "ok" button, not a "cancel" button.
-Dialogue::Dialogue(const string &text)
+Dialogue::Dialogue(const string &text, Font::Truncate trunc)
 {
-  Init(text, false);
+  Init(text, false, false, trunc);
 }
 
 
@@ -120,7 +120,7 @@ void Dialogue::Draw()
   }
   
   // Draw the bottom section.
-  const Font &font = FontSet::Get(14);
+  const Font &font = FontSet::Get(18);
   pos.Y() += bottom->Height() * .5;
   SpriteShader::Draw(bottom, pos);
   pos.Y() += bottom->Height() * .5 - 25.;
@@ -157,10 +157,11 @@ void Dialogue::Draw()
     Point stringPos(
       inputPos.X() - (WIDTH - 20) * .5 + 5.,
       inputPos.Y() - .5 * font.Height());
-    string truncated = font.TruncateFront(input, WIDTH - 30);
-    font.Draw(truncated, stringPos, bright);
+    const Font::Layout layout(Font::TRUNC_FRONT, WIDTH - 30);
+    const string validatedInput(Font::EscapeMarkupHasError(input));
+    font.Draw(validatedInput, stringPos, bright, &layout);
     
-    Point barPos(stringPos.X() + font.Width(truncated) + 2., inputPos.Y());
+    Point barPos(stringPos.X() + font.Width(validatedInput, &layout) + 2., inputPos.Y());
     FillShader::Fill(barPos, Point(1., 16.), dim);
   }
 }
@@ -245,15 +246,16 @@ bool Dialogue::Click(int x, int y, int clicks)
 
 
 // Common code from all three constructors:
-void Dialogue::Init(const string &message, bool canCancel, bool isMission)
+void Dialogue::Init(const string &message, bool canCancel, bool isMission, Font::Truncate trunc)
 {
   this->isMission = isMission;
   this->canCancel = canCancel;
   okIsActive = true;
   
-  text.SetAlignment(WrappedText::JUSTIFIED);
+  text.SetAlignment(Font::JUSTIFIED);
   text.SetWrapWidth(WIDTH - 20);
-  text.SetFont(FontSet::Get(14));
+  text.SetTruncate(trunc);
+  text.SetFont(FontSet::Get(18));
   
   text.Wrap(message);
   
@@ -294,7 +296,7 @@ void Dialogue::DoCallback() const
   }
   
   if(stringFun)
-    stringFun(input);
+    stringFun(Font::EscapeMarkupHasError(input));
   
   if(voidFun)
     voidFun();

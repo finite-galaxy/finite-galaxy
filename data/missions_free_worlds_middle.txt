@@ -9,10 +9,10 @@
 # "FW Southern Battle 1B"
 # "FW Southern Battle 2"
 # "FW Southern Battle 3"
-# "FW Southern Prisoners - Release"
-# "FW Southern Prisoners - Keep"
-# "FW Southern Prisoners - Released"
-# "FW Southern Prisoners - Kept"
+# "FW Southern Prisoners – Release"
+# "FW Southern Prisoners – Keep"
+# "FW Southern Prisoners – Released"
+# "FW Southern Prisoners – Kept"
 # "FW Southern Break"
 # "FW Southern Break Ends"
 # "FW Northern 1"
@@ -520,7 +520,7 @@ mission "FW Southern Battle 3"
 
 
 
-mission "FW Southern Prisoners - Release"
+mission "FW Southern Prisoners – Release"
   name "Return Navy Prisoners"
   description "As a goodwill gesture, return the Navy prisoners to <destination> rather than imprisoning them on Clink. Your safe passage ends on <day>."
   source "Dancer"
@@ -529,7 +529,7 @@ mission "FW Southern Prisoners - Release"
   to offer
     has "FW Southern Battle 3: done"
   to fail
-    has "FW Southern Prisoners - Keep: done"
+    has "FW Southern Prisoners – Keep: done"
   deadline 7
   
   on offer
@@ -577,7 +577,7 @@ mission "FW Southern Prisoners - Release"
 
 
 
-mission "FW Southern Prisoners - Keep"
+mission "FW Southern Prisoners – Keep"
   name "Keep Navy Prisoners"
   description "Rather than releasing the Navy prisoners, deliver them to the mines on <planet>, to be held until Katya is returned to you."
   source "Dancer"
@@ -585,7 +585,7 @@ mission "FW Southern Prisoners - Keep"
   to offer
     has "FW Southern Battle 3: done"
   to fail
-    has "FW Southern Prisoners - Release: done"
+    has "FW Southern Prisoners – Release: done"
   
   on complete
     karma --
@@ -595,14 +595,14 @@ mission "FW Southern Prisoners - Keep"
 
 
 
-mission "FW Southern Prisoners - Released"
+mission "FW Southern Prisoners – Released"
   landing
   name "Report to <planet>"
   description "Report back to Freya and Alondo on <planet> that you chose to release the prisoners."
   source "Clear Sky"
   destination "Dancer"
   to offer
-    has "FW Southern Prisoners - Release: done"
+    has "FW Southern Prisoners – Release: done"
   on fail
     dialogue `You have failed an essential Free Worlds mission. If you want to complete the story line, revert to the autosave or another earlier snapshot of the game.`
   
@@ -636,14 +636,14 @@ mission "FW Southern Prisoners - Released"
 
 
 
-mission "FW Southern Prisoners - Kept"
+mission "FW Southern Prisoners – Kept"
   landing
   name "Report to <planet>"
   description "Report back to Freya and Alondo on <planet> that you chose to keep the prisoners on <origin>."
   source "Clink"
   destination "Dancer"
   to offer
-    has "FW Southern Prisoners - Keep: done"
+    has "FW Southern Prisoners – Keep: done"
   on fail
     dialogue `You have failed an essential Free Worlds mission. If you want to complete the story line, revert to the autosave or another earlier snapshot of the game.`
   
@@ -666,7 +666,7 @@ mission "FW Southern Break"
     event "fw occupying the north" 50
     conversation
       `You land on <origin> and report to Alondo and Freya that the prisoner transfer is complete. "What do we do now?" you ask.`
-      `  Freya says, "Well, I hope we're done with fighting for a while, now. We'll stay here to hold this system against any Navy retaliation. And, we'll keep hoping that Parliament might come to their senses and agree to a diplomatic end to this conflict. In the meantime I suggest you spend some time doing whatever it is you do to earn money on the side - carrying passengers or freight or hunting pirates. We'll contact you when things begin to move forward again."`
+      `  Freya says, "Well, I hope we're done with fighting for a while, now. We'll stay here to hold this system against any Navy retaliation. And, we'll keep hoping that Parliament might come to their senses and agree to a diplomatic end to this conflict. In the meantime I suggest you spend some time doing whatever it is you do to earn money on the side – carrying passengers or freight or hunting pirates. We'll contact you when things begin to move forward again."`
       choice
         `  "Sounds good. I'll hope to hear from you soon."`
           decline
@@ -762,14 +762,14 @@ mission "FW Northern 2"
       choice
         `  "Is everything okay?"`
         `  "Did they agree to join us?"`
-      `  "Yes, yes, of course," he says. "But taking on six more worlds all of a sudden - I just hope it's not more than we can handle. When the Navy recovers from the battle at Rastaban and strikes back, now we have much less idea where that strike will fall."`
+      `  "Yes, yes, of course," he says. "But taking on six more worlds all of a sudden – I just hope it's not more than we can handle. When the Navy recovers from the battle at Rastaban and strikes back, now we have much less idea where that strike will fall."`
       `  "So, what do we do next?" you ask.`
       `  "We need to move more of our fleet up here to the front," he says, "but I'd be willing to bet that the Navy has installed surveillance equipment on Hope, and maybe a few other planets in this sector too. Which I should have thought of before, because in order to be sure we've tracked every last one down, we need Freya's expertise in signals and sensors. So, I'm sending you to meet up with her on <planet>."`
       choice
         `  "No problem. Don't worry, we'll be able to handle this just fine."`
           accept
         `  "Aren't you afraid the Navy will strike while I'm off fetching her?"`
-      `  "Of course," he says. "But I talked with JJ, and he thinks they're still recovering from the last battle. And if their sensors all go dark, that will be a big deterrent to keep them from attacking - certainly more of a deterrent than you could add by staying here with our fleet."`
+      `  "Of course," he says. "But I talked with JJ, and he thinks they're still recovering from the last battle. And if their sensors all go dark, that will be a big deterrent to keep them from attacking – certainly more of a deterrent than you could add by staying here with our fleet."`
       `  "Understood," you say. "I'll go get Freya."`
         accept
 
@@ -841,7 +841,7 @@ mission "FW Northern 2C"
       label guns
       `  "Now, now," she says, "we just convinced this world to join us, let's not go blowing up their whole factory district. I don't see any human heat signatures, but you can bring your weapons anyway just in case."`
       label destroy
-      `  Warily, you approach the sensor installation, kicking down the door to an old abandoned warehouse. Freya is right - it's not guarded. She shuts down the transmitter, then asks for your help bringing some of the sensors and other equipment back to your ship. "I always love having a chance to look at Navy technology," she says. "Now, let's head to <planet>."`
+      `  Warily, you approach the sensor installation, kicking down the door to an old abandoned warehouse. Freya is right – it's not guarded. She shuts down the transmitter, then asks for your help bringing some of the sensors and other equipment back to your ship. "I always love having a chance to look at Navy technology," she says. "Now, let's head to <planet>."`
         accept
 
 
@@ -1107,7 +1107,7 @@ mission "FW Alphas 1.1"
         `  "Are you insane? You're letting the Navy come here?"`
         `  "We're going to work side by side with the Navy right after that awful battle?"`
       `  Alondo explains, "It's only one Venus, an 'Oathkeeper' ship, sworn to take no part in our war. The Free Worlds have almost no troops trained for ground combat, so without the Navy's help we would be unlikely to be able to eliminate the Alphas."`
-      `  The Navy ship lands, and a man steps off who you recognize immediately: Admiral William Danforth, who is something of a folk hero throughout human space, and who you have heard is the commander of the entire Oathkeepers regiment. With him is a man who he introduces as Commander Aaron Nguyen of the Navy Humanitarian Corps. As Nguyen shakes your hand, you are struck by the fact that although he is your enemy, you see no trace of hostility in his eyes - in fact, his expression is surprisingly warm and affectionate.`
+      `  The Navy ship lands, and a man steps off who you recognize immediately: Admiral William Danforth, who is something of a folk hero throughout human space, and who you have heard is the commander of the entire Oathkeepers regiment. With him is a man who he introduces as Commander Aaron Nguyen of the Navy Humanitarian Corps. As Nguyen shakes your hand, you are struck by the fact that although he is your enemy, you see no trace of hostility in his eyes – in fact, his expression is surprisingly warm and affectionate.`
       `  "We have no room for error," says Danforth. "These Alphas must be eliminated, and they must not be allowed to escape. On that, at least, we can all agree."`
       `  Freya says, "Captain <last> will lead the attack." She beckons to two of the Free Worlds captains. "Marco, Emily, you will join them with your Lances. Destroy any pirate ships in orbit, then land and secure the facility. Understood?" You nod, and prepare to take off for the <system> system.`
         accept
@@ -1132,7 +1132,7 @@ mission "FW Alphas 1.1"
     ship "Firebird (Laser)" "Vengeance"
   
   on visit
-    dialogue "You have reached <planet>, but the battle is not over - you've either failed to kill one of the pirates, or left one of your ships behind in a different system."
+    dialogue "You have reached <planet>, but the battle is not over – you've either failed to kill one of the pirates, or left one of your ships behind in a different system."
 
   on complete
     event "liberation of Poisonwood"
@@ -1223,7 +1223,7 @@ mission "FW Alphas 1.2"
     ship "Firebird (Laser)" "Vengeance"
   
   on visit
-    dialogue "You have reached <planet>, but the battle is not over - you've either failed to kill one of the pirates, or left one of your ships behind in a different system."
+    dialogue "You have reached <planet>, but the battle is not over – you've either failed to kill one of the pirates, or left one of your ships behind in a different system."
 
 
 
@@ -1292,7 +1292,7 @@ mission "FW Death of Nguyen"
   
   on offer
     conversation
-      `Soon after landing on <origin>, you receive an encoded message from Admiral Danforth, the leader of the Oathkeepers. "Captain <last>," he says, "I would like to thank you once again for allowing us to assist you on Poisonwood. Unfortunately, I have bad news that may concern you. Commander Nguyen, who was with you when one of the Alphas was apprehended, has been assassinated, shot in the head at point blank range. His attacker has not been found. We fear that this may be retribution for his part in the action on Poisonwood, and we urge you and your crew to be cautious. With deepest regards - Danforth."`
+      `Soon after landing on <origin>, you receive an encoded message from Admiral Danforth, the leader of the Oathkeepers. "Captain <last>," he says, "I would like to thank you once again for allowing us to assist you on Poisonwood. Unfortunately, I have bad news that may concern you. Commander Nguyen, who was with you when one of the Alphas was apprehended, has been assassinated, shot in the head at point blank range. His attacker has not been found. We fear that this may be retribution for his part in the action on Poisonwood, and we urge you and your crew to be cautious. With deepest regards – Danforth."`
         decline
 
 
@@ -1731,7 +1731,7 @@ mission "FW Rand 1"
     event "battle for zeta aquilae"
     conversation
       `When you land on <origin>, Freya has just received some exciting news. "It turns out taking out Bartlett had some unexpected side effects," she says. "Bartlett has been hounding the systems on the Tarazed routes for years, and had a lot of enemies. The governments of Hamlet and Sinter are so grateful to you for eliminating him that they've reached out to us to begin the process of joining the Free Worlds! And several other worlds in that region might become interested now, too."`
-      `  JJ frowns. "That's really awful timing," he says, "and would put us in a really bad tactical position - spread out, and with the Navy right in the middle."`
+      `  JJ frowns. "That's really awful timing," he says, "and would put us in a really bad tactical position – spread out, and with the Navy right in the middle."`
       choice
         `  "Are you saying we shouldn't let them join, even though they want to?"`
         `  "Well, I say, if they want to join us, we should let them. Who knows if they'll be this enthusiastic about the Free Worlds later if we let them down now."`
@@ -1967,7 +1967,7 @@ mission "FW Defend Bod"
         `  "Very well, we'll wait outside."`
       `  "No!" says JJ. "We're staying here."`
       label present
-      `  She hesitates for a long moment. This is probably going against whatever orders she is following. But finally she says, "Very well." The monks step aside. She approaches the defector, and reaches out her hands to him. Hesitantly, he takes her hands. It's an oddly intimate scene, the two of them quietly holding hands and locking eyes - not like any interrogation you have seen before. "Now," she says, "tell me your story."`
+      `  She hesitates for a long moment. This is probably going against whatever orders she is following. But finally she says, "Very well." The monks step aside. She approaches the defector, and reaches out her hands to him. Hesitantly, he takes her hands. It's an oddly intimate scene, the two of them quietly holding hands and locking eyes – not like any interrogation you have seen before. "Now," she says, "tell me your story."`
       `  "My name is Sawyer," says the man. "I'm a physicist, a Syndicate employee. We had a secret project on Mutiny, a planet in a pirate system. We were developing nuclear weapons." He hesitates, and looks away for a second, then says, "They told me it was for fighting the pirates. I didn't realize otherwise until--"`
       `  "That is a lie," says Raven, calmly.`
       `  He seems flustered. "Okay, they didn't tell me what the weapons were for, and I didn't ask."`
@@ -1981,7 +1981,7 @@ mission "FW Defend Bod"
       `  He says, "It was when I heard that there had been another major battle. Up until then I had been telling myself that the worst of the damage was done. But after that battle, I knew that millions more could die because of our crime, and that I had the power to stop it."`
       `  Raven continues to ask questions: who was involved, how the facility was hidden, where the raw materials came from. At one point, JJ pulls you aside and says, "She must be a Questioner. How they operate is a tightly kept secret. I'd always assumed their methods were... a bit more medieval."`
       `  Finally, Raven is satisfied, and radios her ship. "He's telling the truth," she tells them. "Send word to the admirals at once. And, release the captive."`
-      `  The door of her ship slides open, and another woman steps out - shakily, hesitantly, shielding her eyes against the sunlight. It takes you a few seconds to realize that it's Katya.`
+      `  The door of her ship slides open, and another woman steps out – shakily, hesitantly, shielding her eyes against the sunlight. It takes you a few seconds to realize that it's Katya.`
       `  As you all rush over to greet Katya, Raven taps your shoulder and says quietly, "Meet me in the main spaceport in a few hours and we'll figure out what's going to happen next." She returns to her ship.`
 
 
