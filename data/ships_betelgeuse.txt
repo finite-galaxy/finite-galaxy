@@ -4,17 +4,16 @@ shipyard "Betelgeuse Variants"
   "Argosy (Laser)"
   "Argosy Test Dummy"
   "Modified Argosy"
+  "Berserker"
+  "Berserker (Gatling)"
+  "Berserker (Miner)"
+  "Berserker (Patrol)"
+  "Berserker Test Dummy"
   "Dagger"
-  "Hero"
-  "Hero (Gatling)"
-  "Hero (Patrol)"
-  "Hero Test Dummy"
-  "Modified Hero"
   "Protector"
   "Protector (Electron)"
   "Protector (Laser)"
   "Vanguard"
-  "Vanguard (Anti-Missile)"
   "Vanguard (Electron)"
   "Vanguard Test Dummy"
   "Modified Vanguard"
@@ -69,7 +68,6 @@ ship "Aerie"
     "LP072a Battery Pack"
     "Liquid Nitrogen Cooler"
     "Fuel Pod" 42
-    "Large Radar Jammer"
     "Tactical Scanner" 3
   engine -10 91
   engine 10 91
@@ -101,7 +99,7 @@ ship "Argosy"
 #    manufacturer "Betelgeuse"
     licences
       Pilot
-    "cost" 1960000
+    "cost" 2400000
     "shields" 4200
     "hull" 2600
     "required crew" 4
@@ -211,6 +209,133 @@ ship "Argosy" "Modified Argosy"
 
 
 
+ship "Berserker"
+  sprite "ship/berserker"
+  thumbnail "thumbnail/berserker"
+  attributes
+    category "Interceptor"
+#    manufacturer "Betelgeuse"
+    licences
+      Pilot
+    "cost" 520000
+    "shields" 2200
+    "hull" 500
+    "required crew" 1
+    "bunks" 2
+    "mass" 110
+    "drag" 2.2
+    "heat dissipation" .85
+    "cargo space" 10
+    "outfit space" 200
+    "core space" 100
+    "engine space" 65
+    "weapon space" 35
+    weapon
+      "blast radius" 64
+      "shield damage" 220
+      "random shield damage" 420
+      "hull damage" 330
+      "random hull damage" 630
+      "heat damage" 6600
+      "random heat damage" 12600
+      "hit force" 550
+      "random hit force" 1050
+  outfits
+    "D23-QP Shield Generator"
+    "nGVF-CC Fuel Cell"
+    "Hyperdrive"
+
+    "IT-2700 Ion Thruster"
+    "IS-2200 Ion Steering"
+
+    "Meteor Missile" 36
+    "Meteor Missile Box"
+    "Meteor Missile Launcher" 2
+    "X1 Blaster Cannon" 2
+
+    "LP036a Battery Pack"
+    "Fuel Pod" 14
+    "Tactical Scanner" 2
+  engine -10 45
+  engine 10 45
+  gun -44 10
+  gun 44 10
+  gun -20 12
+  gun 20 12
+  leak "leak" 60 50
+  leak "flame" 80 80
+  explode "tiny explosion" 10
+  explode "small explosion" 15
+  "final explode" "final explosion small"
+  description "The Berserker is Betelgeuse Shipyard's popular design of escort ship. They have greater firepower than most other interceptor-class vessels, meaning that any pirate flying solo will think twice before attacking a convoy that is accompanied by a Berserker. However, Berserkers are also less manoeuvrable than other small ships."
+
+
+ship "Berserker" "Berserker (Gatling)"
+  outfits
+    "D23-QP Shield Generator"
+    "nGVF-CC Fuel Cell"
+    "Hyperdrive"
+
+    "IT-2700 Ion Thruster"
+    "IS-2200 Ion Steering"
+    "Afterburner"
+
+    "Gatling Round" 6000
+    "Gatling Bullet Boxes" 4
+    "Gatling Gun" 4
+
+    "LP036a Battery Pack"
+    "Fuel Pod" 14
+    "Tactical Scanner" 2
+
+
+ship "Berserker" "Berserker (Miner)"
+  outfits
+    "D23-QP Shield Generator"
+    "nGVF-CC Fuel Cell"
+    "Hyperdrive"
+
+    "IT-2700 Ion Thruster"
+    "IS-2200 Ion Steering"
+
+    "Laser Cannon" 4
+
+    "LP036a Battery Pack"
+    "Asteroid Scanner"
+    "Fuel Pod" 14
+    "Tactical Scanner" 2
+
+
+ship "Berserker" "Berserker (Patrol)"
+  outfits
+    "D23-QP Shield Generator"
+    "nGVF-CC Fuel Cell"
+    "Hyperdrive"
+
+    "IT-2700 Ion Thruster"
+    "IS-2200 Ion Steering"
+
+    "Meteor Missile" 36
+    "Meteor Missile Box"
+    "Meteor Missile Launcher" 2
+    "X1 Blaster Cannon" 2
+
+    "LP036a Battery Pack"
+    "Cargo Scanner"
+    "Fuel Pod" 14
+    "Outfit Scanner"
+    "Small Radar Jammer"
+    "Tactical Scanner" 4
+    "Laser Rifle"
+
+
+ship "Berserker" "Berserker Test Dummy"
+  add attributes
+    "automaton" 1
+    "self destruct" 1
+
+
+
 ship "Dagger"
   sprite "ship/dagger"
   thumbnail "thumbnail/dagger"
@@ -229,9 +354,9 @@ ship "Dagger"
     "drag" .6
     "heat dissipation" .9
     "outfit space" 85
-    "core space" 40
-    "engine space" 29
-    "weapon space" 16
+    "core space" 45
+    "engine space" 30
+    "weapon space" 10
     weapon
       "blast radius" 21
       "shield damage" 40
@@ -260,128 +385,7 @@ ship "Dagger"
   leak "leak" 60 50
   explode "tiny explosion" 15
   explode "small explosion" 5
-  description "The Dagger is a fighter designed by Betelgeuse, intended to be carried by their Aerie warship, although other ships have been known to carry them, as well. As with many Betelgeuse ships, its chassis is largely composed of lightweight composite materials, making it considerably faster than other fighters."
-
-
-
-ship "Hero"
-  plural "Heroes"
-  sprite "ship/hero"
-  thumbnail "thumbnail/hero"
-  attributes
-    category "Interceptor"
-#    manufacturer "Vortex"
-    licences
-      Pilot
-    "cost" 490000
-    "shields" 2000
-    "hull" 400
-    "required crew" 1
-    "bunks" 3
-    "mass" 70
-    "drag" 1.6
-    "heat dissipation" .9
-    "cargo space" 15
-    "outfit space" 180
-    "core space" 90
-    "engine space" 60
-    "weapon space" 30
-    weapon
-      "blast radius" 53
-      "shield damage" 140
-      "random shield damage" 390
-      "hull damage" 210
-      "random hull damage" 585
-      "heat damage" 4200
-      "random heat damage" 11700
-      "hit force" 350
-      "random hit force" 975
-  outfits
-    "D23-QP Shield Generator"
-    "nGVF-CC Fuel Cell"
-    "Hyperdrive"
-
-    "IT-2700 Ion Thruster"
-    "IS-2200 Ion Steering"
-
-    "X1 Blaster Cannon" 4
-
-    "LP036a Battery Pack"
-    "Small Radar Jammer"
-    "Tactical Scanner" 3
-    "Fuel Pod" 16
-  engine -17 35
-  engine 17 35
-  gun -10 -26
-  gun 10 -26
-  gun -16 -20
-  gun 16 -20
-  leak "flame" 50 80
-  explode "tiny explosion" 10
-  explode "small explosion" 20
-  description "Once one of the most popular interceptor-class ships, the Hero's popularity is now waning in favour of more modern and versatile ships like the Hawk. Although large numbers are still produced by Betelgeuse Shipyards, many other Heroes that are in service today are more than half a century old."
-
-
-ship "Hero" "Hero (Gatling)"
-  outfits
-    "D23-QP Shield Generator"
-    "nGVF-CC Fuel Cell"
-    "Hyperdrive"
-
-    "IT-2700 Ion Thruster"
-    "IS-2200 Ion Steering"
-
-    "Gatling Round" 6000
-    "Gatling Bullet Boxes" 4
-    "Gatling Gun" 4
-
-    "Supercapacitor"
-    "Small Radar Jammer"
-    "Tactical Scanner" 3
-    "Fuel Pod" 18
-    "Extra Outfit Space"
-
-
-ship "Hero" "Hero (Patrol)"
-  outfits
-    "D23-QP Shield Generator"
-    "nGVF-CC Fuel Cell"
-    "Hyperdrive"
-
-    "IT-2700 Ion Thruster"
-    "IS-2200 Ion Steering"
-
-    "X1 Blaster Cannon" 4
-
-    "LP036a Battery Pack"
-    "Cargo Scanner"
-    "Fuel Pod" 18
-    "Outfit Scanner"
-    "Small Radar Jammer"
-    "Tactical Scanner" 3
-
-
-ship "Hero" "Hero Test Dummy"
-  add attributes
-    "automaton" 1
-    "self destruct" 1
-
-
-ship "Hero" "Modified Hero"
-  plural "Modified Heroes"
-  sprite "ship/hero_m"
-  engine -21 42
-  engine 21 42
-  engine 0 48
-  gun -12 -33
-  gun 12 -33
-  gun -20 -25
-  gun 20 -25
-  gun -43.5 2
-  gun 43.5 2
-  explode "tiny explosion" 10
-  explode "small explosion" 20
-  "final explode" "final explosion small"
+  description "The Dagger is a fighter designed by Betelgeuse, intended to be carried by their Aerie warship, although other ships could carry them as well. Unlike many Betelgeuse ships, its chassis is largely composed of lightweight composite materials, making it considerably faster than other fighters."
 
 
 
@@ -393,28 +397,28 @@ ship "Protector"
 #    manufacturer "Betelgeuse"
     licences
       Pilot
-    "cost" 5500000
+    "cost" 6000000
     "shields" 9500
     "hull" 6500
-    "required crew" 30
-    "bunks" 69
-    "mass" 500
+    "required crew" 36
+    "bunks" 63
+    "mass" 540
     "drag" 10.3
     "heat dissipation" .6
-    "cargo space" 50
-    "outfit space" 640
-    "core space" 310
+    "cargo space" 40
+    "outfit space" 650
+    "core space" 290
     "engine space" 100
-    "weapon space" 230
+    "weapon space" 260
     weapon
-      "blast radius" 238
-      "shield damage" 1000
+      "blast radius" 246
+      "shield damage" 1080
       "random shield damage" 1380
-      "hull damage" 1500
+      "hull damage" 1620
       "random hull damage" 2070
       "heat damage" 30000
       "random heat damage" 41400
-      "hit force" 2500
+      "hit force" 2700
       "random hit force" 3450
   outfits
     "D67-TM Shield Generator"
@@ -425,18 +429,18 @@ ship "Protector"
     "IS-3200 Ion Steering"
 
     "X6 Blaster Turret" 6
+    "Heavy Anti-Missile"
 
     "LP288a Battery Pack"
     "Liquid Nitrogen Cooler"
     "Fuel Pod" 48
-    "Large Radar Jammer" 2
     "Tactical Scanner" 6
-    "Laser Rifle" 60
   engine -11 125
   engine 11 125
   turret -54 -54
   turret 54 -54
   turret -73 0
+  turret 0 0 "Heavy Anti-Missile"
   turret 73 0
   turret -54 54
   turret 54 54
@@ -460,16 +464,16 @@ ship "Protector" "Protector (Electron)"
     "IS-3200 Ion Steering"
 
     "Electron Turret" 4
+    "Heavy Anti-Missile"
 
     "LP288a Battery Pack"
     "Liquid Nitrogen Cooler"
     "Fuel Pod" 48
-    "Large Radar Jammer" 2
     "Tactical Scanner" 6
-    "Laser Rifle" 60
   turret "Electron Turret"
   turret "Electron Turret"
   turret
+  turret "Heavy Anti-Missile"
   turret
   turret "Electron Turret"
   turret "Electron Turret"
@@ -485,14 +489,20 @@ ship "Protector" "Protector (Laser)"
     "IS-3200 Ion Steering"
 
     "Heavy Laser Turret" 6
+    "Heavy Anti-Missile"
 
     "LP288a Battery Pack"
     "Liquid Nitrogen Cooler"
     "Fuel Pod" 48
-    "Large Radar Jammer" 2
     "Tactical Scanner" 6
     "Extra Outfit Space"
-    "Laser Rifle" 60
+  turret
+  turret
+  turret
+  turret "Heavy Anti-Missile"
+  turret
+  turret
+  turret
 
 
 
@@ -514,9 +524,9 @@ ship "Vanguard"
     "heat dissipation" .6
     "cargo space" 50
     "outfit space" 610
-    "core space" 280
+    "core space" 250
     "engine space" 120
-    "weapon space" 210
+    "weapon space" 240
     weapon
       "blast radius" 232
       "shield damage" 1000
@@ -536,13 +546,12 @@ ship "Vanguard"
     "IS-4200 Ion Steering"
 
     "Particle Cannon" 7
+    "Heavy Anti-Missile"
 
-    "LP144a Battery Pack"
+    "LP072a Battery Pack"
     "Liquid Nitrogen Cooler"
     "Fuel Pod" 47
-    "Large Radar Jammer" 2
     "Tactical Scanner" 7
-    "Laser Rifle" 40
   engine -15 130
   engine 15 130
   gun 0 -132
@@ -563,36 +572,6 @@ ship "Vanguard"
   description "The Vanguard is Betelgeuse's newest warship intended for the heavy anti-pirate defence market. Vanguards offer an unusual feature set, focusing on powerful fixed guns and featuring Syndicated Systems' latest automation technologies, resulting in an atypically low crew complement for a ship its size. Few capital ships will endure for long under the withering fusillade of gunfire that it can unleash against those in front of it."
 
 
-ship "Vanguard" "Vanguard (Anti-Missile)"
-  outfits
-    "D67-TM Shield Generator"
-    "Fusion Reactor"
-    "Hyperdrive"
-
-    "IT-3700 Ion Thruster"
-    "IS-4200 Ion Steering"
-
-    "Sidewinder Missile" 120
-    "Sidewinder Missile Rack" 40
-    "Sidewinder Missile Launcher" 4
-    "Particle Cannon" 3
-    "Heavy Anti-Missile"
-
-    "LP144a Battery Pack"
-    "Liquid Nitrogen Cooler"
-    "Fuel Pod" 47
-    "Large Radar Jammer" 
-    "Tactical Scanner" 7
-    "Laser Rifle" 40
-  gun "Particle Cannon"
-  gun "Particle Cannon"
-  gun "Particle Cannon"
-  gun "Sidewinder Missile Launcher"
-  gun "Sidewinder Missile Launcher"
-  gun "Sidewinder Missile Launcher"
-  gun "Sidewinder Missile Launcher"
-
-
 ship "Vanguard" "Vanguard (Electron)"
   outfits
     "D67-TM Shield Generator"
@@ -605,12 +584,10 @@ ship "Vanguard" "Vanguard (Electron)"
     "Electron Cannon" 7
     "Electron Turret"
 
-    "LP144a Battery Pack"
+    "LP072a Battery Pack"
     "Liquid Nitrogen Cooler"
     "Fuel Pod" 47
-    "Large Radar Jammer" 2
     "Tactical Scanner" 7
-    "Laser Rifle" 40
 
 
 ship "Vanguard" "Vanguard Test Dummy"
@@ -620,6 +597,41 @@ ship "Vanguard" "Vanguard Test Dummy"
 
 ship "Vanguard" "Modified Vanguard"
   sprite "ship/vanguard_m"
+  add attributes
+    "hull" 600
+    "required crew" 4
+    "mass" 50
+    "cargo space" -10
+    "outfit space" 60
+    "core space" 30
+    "engine space" 30
+    weapon
+      "blast radius" 20
+      "shield damage" 100
+      "random shield damage" 100
+      "hull damage" 150
+      "random hull damage" 150
+      "heat damage" 3000
+      "random heat damage" 3000
+      "hit force" 250
+      "random hit force" 250
+  outfits
+    "D67-TM Shield Generator"
+    "Fusion Reactor"
+    "Hyperdrive"
+
+    "A520 Atomic Thruster"
+    "A525 Atomic Steering"
+
+    "Particle Cannon" 7
+    "Heavy Anti-Missile"
+
+    "LP144a Battery Pack"
+    "Liquid Nitrogen Cooler"
+    "Fuel Pod" 47
+    "Tactical Scanner" 7
+    "Fragmentation Grenades" 20
+    "Laser Rifle" 40
   engine -31 128 .7
   engine 31 128 .7
   engine 0 130

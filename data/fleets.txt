@@ -143,8 +143,7 @@ fleet "Bounty Hunters"
     nemesis waiting heroic
   # total: 24
   variant 5
-    "Fury" 2
-    "Fury (Javelin)" 2
+    "Berserker" 4
   variant 5
     "Hawk" 2
     "Hawk (Laser)" 2
@@ -153,25 +152,25 @@ fleet "Bounty Hunters"
     "Hawk"
   variant 3
     "Raven"
-    "Fury (Javelin)" 2
+    "Berserker" 2
   variant 1
     "Firebird"
-    "Fury (Javelin)"
+    "Berserker"
   variant 1
     "Aerie"
-    "Fury (Javelin)"
+    "Berserker"
   variant 1
     "Firebird"
-    "Fury (Javelin)"
+    "Berserker"
   variant 1
     "Osprey"
-    "Fury (Javelin)"
+    "Berserker"
   variant 1
     "Manta"
-    "Fury (Javelin)"
+    "Berserker"
   variant 1
     "Goose"
-    "Fury (Javelin)"
+    "Berserker"
 
 
 fleet "Hired Guns"
@@ -201,17 +200,17 @@ fleet "Hired Guns"
     "Lance"
     "Firebird"
   variant 1
-    "Vanguard (Anti-Missile)"
+    "Modified Vanguard"
     "Modified Argosy" 2
   variant 1
-    "Vanguard (Anti-Missile)"
+    "Modified Vanguard"
     "Mule (Heavy)"
     "Dagger"
   variant 1
-    "Vanguard (Anti-Missile)"
+    "Modified Vanguard"
     "Firebird"
   variant 2
-    "Vanguard (Anti-Missile)"
+    "Modified Vanguard"
     "Goose"
   variant 1
     "Bactrian (Hired Gun)"
@@ -499,20 +498,20 @@ fleet "Free Worlds Small"
     heroic disables opportunistic
   # total: 50
   variant 8
-    "Fury"
+    "Berserker"
   variant 4
-    "Fury" 2
+    "Berserker" 2
   variant 4
-    "Fury"
+    "Berserker"
     "Harpy"
   variant 3
-    "Fury"
+    "Berserker"
     "Harpy" 2
   variant 2
-    "Fury"
+    "Berserker"
     "Harpy" 3
   variant 1
-    "Fury"
+    "Berserker"
     "Harpy" 4
   variant 8
     "Hawk"
@@ -520,7 +519,7 @@ fleet "Free Worlds Small"
     "Hawk" 2
   variant 6
     "Hawk"
-    "Fury"
+    "Berserker"
   variant 4
     "Hawk"
     "Harpy"
@@ -721,21 +720,13 @@ fleet "Independent Small"
     plunders
     confusion 20
   # total: 39
-  variant 8
+  variant 12
     "Harpy"
-  variant 3
+  variant 8
     "Hawk"
-  variant 2
+  variant 4
     "Hawk (Laser)"
-  variant 2
-    "Hawk (Laser)"
-  variant 5
-    "Fury"
-  variant 2
-    "Fury (Laser)"
-  variant 1
-    "Fury (Javelin)"
-  variant 2
+  variant 3
     "Harpy" 2
   variant 1
     "Hawk"
@@ -744,19 +735,15 @@ fleet "Independent Small"
     "Hawk (Laser)"
     "Harpy"
   variant 1
-    "Fury" 3
-  variant 1
-    "Fury (Javelin)" 3
-  variant 1
-    "Fury"
+    "Berserker"
     "Hawk"
   variant 1
     "Hawk"
-    "Fury"
+    "Berserker"
     "Harpy"
   variant 1
     "Hawk (Laser)"
-    "Fury (Javelin)"
+    "Berserker"
     "Harpy"
   variant 1
     "Harpy" 3
@@ -1203,6 +1190,8 @@ fleet "Merchant Miners Deep"
   # total: 1
   variant 1
     "Bounder (Miner)"
+  variant 2
+    "Wasp (Miner)"
 
 fleet "Merchant Miners East"
   government "Merchant"
@@ -1212,12 +1201,14 @@ fleet "Merchant Miners East"
     confusion 20
     timid frugal mining harvests
   # total: 6
+  variant 1
+    "Berserker (Miner)"
   variant 2
     "Scout (Miner)"
+  variant 2
+    "Star Barge (Miner)"
   variant 1
     "Star Freighter (Miner)"
-  variant 2
-    "Wasp (Miner)"
 
 fleet "Merchant Miners North"
   government "Merchant"
@@ -1226,11 +1217,13 @@ fleet "Merchant Miners North"
   personality
     confusion 20
     timid frugal mining harvests
-  # total: 4
-  variant 1
-    "Star Freighter (Miner)"
+  # total: 6
+  variant 2
+    "Berserker (Miner)"
   variant 3
     "Star Barge (Miner)"
+  variant 1
+    "Star Freighter (Miner)"
 
 fleet "Merchant Miners Rim"
   government "Merchant"
@@ -1269,11 +1262,13 @@ fleet "Merchant Miners West"
   personality
     confusion 20
     timid frugal mining harvests
-  # total: 3
-  variant 2
+  # total: 6
+  variant 3
     "Clipper (Miner)"
   variant 1
     "Star Freighter (Miner)"
+  variant 2
+    "Wasp (Miner)"
 
 
 fleet "Merchants Deep Large"
@@ -1571,10 +1566,8 @@ fleet "Merchants Hai Large"
     "Star Freighter (Fancy)" 3
   variant 10
     "Star Queen"
-  variant 4
+  variant 5
     "Vanguard"
-  variant 1
-    "Vanguard (Anti-Missile)"
 
 fleet "Merchants Hai Small"
   government "Merchant"
@@ -1597,9 +1590,9 @@ fleet "Merchants Hai Small"
   variant 5
     "Heavy Shuttle"
   variant 8
-    "Hero"
+    "Fury"
   variant 2
-    "Hero (Gatling)"
+    "Fury (Gatling)"
   variant 15
     "Light Shuttle"
   variant 5
@@ -1674,34 +1667,34 @@ fleet "Merchants North Large"
     "Thunderbolt"
   variant 1
     "Bulk Freighter"
-    "Hero"
+    "Fury"
   variant 1
     "Bulk Freighter"
-    "Hero"
-    "Hero (Gatling)"
+    "Fury"
+    "Fury (Gatling)"
   variant 1
     "Bulk Freighter"
-    "Hero"
-    "Hero (Gatling)" 2
+    "Fury"
+    "Fury (Gatling)" 2
   variant 1
     "Bulk Freighter"
-    "Hero" 2
+    "Fury" 2
   variant 1
     "Bulk Freighter"
-    "Hero" 2
-    "Hero (Gatling)"
+    "Fury" 2
+    "Fury (Gatling)"
   variant 1
     "Bulk Freighter"
-    "Hero" 3
+    "Fury" 3
   variant 1
     "Bulk Freighter"
-    "Hero (Gatling)"
+    "Fury (Gatling)"
   variant 1
     "Bulk Freighter"
-    "Hero (Gatling)" 2
+    "Fury (Gatling)" 2
   variant 1
     "Bulk Freighter"
-    "Hero (Gatling)" 3
+    "Fury (Gatling)" 3
   variant 2
     "Manta"
     "Star Freighter"
@@ -1744,23 +1737,14 @@ fleet "Merchants North Large"
   variant 3
     "Thunderbolt"
     "Star Freighter" 3
-  variant 2
-    "Vanguard"
-    "Star Freighter" 2
   variant 3
     "Vanguard"
-    "Star Freighter" 3
-  variant 2
-    "Vanguard"
-    "Star Freighter" 4
-  variant 1
-    "Vanguard (Anti-Missile)"
     "Star Freighter" 2
-  variant 1
-    "Vanguard (Anti-Missile)"
+  variant 4
+    "Vanguard"
     "Star Freighter" 3
-  variant 1
-    "Vanguard (Anti-Missile)"
+  variant 3
+    "Vanguard"
     "Star Freighter" 4
 
 
@@ -1773,46 +1757,46 @@ fleet "Merchants North Small"
     timid frugal appeasing
   # total: 100
   variant 4
-    "Hero"
+    "Fury"
   variant 2
-    "Hero" 2
+    "Fury" 2
   variant 2
-    "Hero" 3
+    "Fury" 3
   variant 2
-    "Hero"
+    "Fury"
     "Star Barge"
   variant 4
-    "Hero"
+    "Fury"
     "Star Barge" 2
   variant 2
-    "Hero" 2
+    "Fury" 2
     "Star Barge" 2
   variant 2
-    "Hero"
+    "Fury"
     "Star Barge" 3
   variant 2
-    "Hero" 2
+    "Fury" 2
     "Star Barge" 3
   variant 2
-    "Hero (Gatling)"
+    "Fury (Gatling)"
   variant 1
-    "Hero (Gatling)" 2
+    "Fury (Gatling)" 2
   variant 1
-    "Hero (Gatling)" 3
+    "Fury (Gatling)" 3
   variant 1
-    "Hero (Gatling)"
+    "Fury (Gatling)"
     "Star Barge"
   variant 2
-    "Hero (Gatling)"
+    "Fury (Gatling)"
     "Star Barge" 2
   variant 1
-    "Hero (Gatling)" 2
+    "Fury (Gatling)" 2
     "Star Barge" 2
   variant 1
-    "Hero (Gatling)"
+    "Fury (Gatling)"
     "Star Barge" 3
   variant 1
-    "Hero (Gatling)" 2
+    "Fury (Gatling)" 2
     "Star Barge" 3
   variant 2
     "Quicksilver"
@@ -2026,10 +2010,10 @@ fleet "Merchants South Small"
   variant 2
     "Clipper (Speedy)"
   variant 3
-    "Fury"
+    "Berserker"
     "Star Barge"
   variant 5
-    "Fury"
+    "Berserker"
     "Star Barge" 2
   variant 3
     "Harpy"
@@ -2205,12 +2189,12 @@ fleet "Militia Small"
   variant 5
     "Clipper"
   variant 10
-    "Fury" 2
+    "Berserker" 2
   variant 10
-    "Fury"
+    "Berserker"
     "Harpy"
   variant 10
-    "Fury"
+    "Berserker"
     "Harpy" 2
   variant 30
     "Harpy" 2
@@ -2797,7 +2781,7 @@ fleet "Pirate Miners East"
     timid frugal mining harvests
   # total: 1
   variant 1
-    "Wasp (Miner)"
+    "Scout (Miner)"
 
 fleet "Pirate Miners North"
   government "Pirate"
@@ -2808,7 +2792,7 @@ fleet "Pirate Miners North"
     timid frugal mining harvests
   # total: 1
   variant 1
-    "Star Barge (Miner)"
+    "Berserker (Miner)"
 
 fleet "Pirate Miners South"
   government "Pirate"
@@ -2819,7 +2803,7 @@ fleet "Pirate Miners South"
     timid frugal mining harvests
   # total: 1
   variant 1
-    "Hauler I (Miner)"
+    "Star Barge (Miner)"
 
 fleet "Pirate Miners West"
   government "Pirate"
@@ -2830,7 +2814,7 @@ fleet "Pirate Miners West"
     timid frugal mining harvests
   # total: 1
   variant 1
-    "Clipper (Miner)"
+    "Wasp (Miner)"
 
 
 fleet "Pirates East Large"
@@ -2854,13 +2838,29 @@ fleet "Pirates East Small"
   personality
     plunders harvests
     confusion 20
-  # total: 10
+  # total: 20
   variant 5
-    "Wasp"
-  variant 3
-    "Wasp" 2
+    "Fury"
+  variant 5
+    "Fury (Gatling)"
   variant 2
-    "Wasp" 3
+    "Fury" 2
+  variant 2
+    "Fury"
+    "Fury (Gatling)"
+  variant 2
+    "Fury (Gatling)" 2
+  variant 1
+    "Fury" 3
+  variant 1
+    "Fury" 2
+    "Fury (Gatling)"
+  variant 1
+    "Fury"
+    "Fury (Gatling)" 2
+  variant 1
+    "Fury"
+    "Fury (Gatling)" 3
 
 
 fleet "Pirates North Large"
@@ -2886,17 +2886,17 @@ fleet "Pirates North Small"
     confusion 20
   # total: 20
   variant 5
-    "Hero"
+    "Berserker"
   variant 5
-    "Hero (Gatling)"
+    "Berserker (Gatling)"
   variant 3
-    "Hero" 2
+    "Berserker" 2
   variant 3
-    "Hero (Gatling)" 2
+    "Berserker (Gatling)" 2
   variant 2
-    "Hero" 3
+    "Berserker" 3
   variant 2
-    "Hero (Gatling)" 3
+    "Berserker (Gatling)" 3
 
 
 fleet "Pirates South Large"
@@ -2922,7 +2922,7 @@ fleet "Pirates South Small"
     confusion 20
   # total: 25
   variant 8
-    "Fury"
+    "Berserker"
   variant 12
     "Harpy"
   variant 3
@@ -2939,8 +2939,10 @@ fleet "Pirates West Large"
     plunders harvests
   # total: 10
   variant 1
+    "Bastion"
+  variant 1
     "Lance"
-  variant 7
+  variant 6
     "Manta"
   variant 2
     "Manta" 2 
@@ -2952,13 +2954,33 @@ fleet "Pirates West Small"
   personality
     plunders harvests
     confusion 20
-  # total: 10
+  # total: 25
+  variant 4
+    "Clipper"
   variant 5
     "Warrior"
   variant 3
-    "Warrior" 2
+    "Wasp"
+  variant 3
+    "Wasp (Gatling)"
   variant 2
-    "Warrior" 3
+    "Wasp" 2
+  variant 2
+    "Wasp"
+    "Wasp (Gatling)"
+  variant 2
+    "Wasp (Gatling)" 2
+  variant 1
+    "Wasp" 3
+  variant 1
+    "Wasp" 2
+    "Wasp (Gatling)"
+  variant 1
+    "Wasp"
+    "Wasp (Gatling)" 2
+  variant 1
+    "Wasp"
+    "Wasp (Gatling)" 3
 
 
 fleet "pirate raid"
@@ -3029,10 +3051,10 @@ fleet "pirate raid"
     "Firebird (Laser)"
   variant 2
     "Firebird"
-    "Hero" 2
+    "Fury" 2
   variant 1
     "Firebird (Laser)"
-    "Fury (Javelin)"
+    "Berserker"
   variant 8
     "Raven" 2
   variant 2
@@ -3046,11 +3068,11 @@ fleet "pirate raid"
     "Leviathan"
     "Firebird (Laser)"
   variant 1
-    "Hero" 3
+    "Fury" 3
   variant 8
-    "Hero (Gatling)" 3
+    "Fury (Gatling)" 3
   variant 2
-    "Hero (Gatling)" 2
+    "Fury (Gatling)" 2
 
 
 
@@ -3437,7 +3459,7 @@ fleet "Syndicate Small"
   variant 4
     "Quicksilver (Patrol)" 3
   variant 6
-    "Hero (Patrol)" 5
+    "Berserker (Patrol)" 5
 
 
 

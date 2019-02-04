@@ -27,6 +27,9 @@ shipyard "Lionheart Variants"
   "Modified Lance (Weapons)"
   "Warrior"
   "Warrior (Electron)"
+  "Wasp"
+  "Wasp (Gatling)"
+  "Wasp (Miner)"
 
 
 
@@ -1237,4 +1240,95 @@ ship "Warrior" "Warrior (Electron)"
     "Outfit Scanner"
     "Tactical Scanner" 5
     "Extra Outfit Space"
+
+
+
+ship "Wasp"
+  sprite "ship/wasp"
+  thumbnail "thumbnail/wasp"
+  attributes
+    category "Interceptor"
+#    manufacturer "Lionheart"
+    licences
+      Pilot
+    "cost" 400000
+    "shields" 1500
+    "hull" 500
+    "required crew" 1
+    "bunks" 2
+    "mass" 60
+    "drag" 1.2
+    "heat dissipation" .8
+    "cargo space" 20
+    "outfit space" 150
+    "core space" 100
+    "engine space" 25
+    "weapon space" 25
+    weapon
+      "blast radius" 46
+      "shield damage" 120
+      "random shield damage" 340
+      "hull damage" 180
+      "random hull damage" 510
+      "heat damage" 3600
+      "random heat damage" 10200
+      "hit force" 300
+      "random hit force" 850
+  outfits
+    "D14-RN Shield Generator"
+    "nGVF-CC Fuel Cell"
+    "Hyperdrive"
+
+    "A120 Atomic Thruster"
+    "A125 Atomic Steering"
+
+    "Laser Cannon" 3
+
+    "DS-11 Battery Pack"
+    "Fuel Pod" 10
+    "Tactical Scanner"
+  engine -6 33
+  engine 6 33
+  gun 0 -38
+  gun -13 -31
+  gun 13 -31
+  leak "leak" 60 50
+  explode "tiny explosion" 20
+  explode "small explosion" 10
+  description "The Wasp is a lightweight interceptor, designed by Vortex Shipyards primarily for asteroid mining. Like most Vortex ships, it is not particularly pretty, but it is reliable and serves the purpose it was made for."
+
+
+ship "Wasp" "Wasp (Gatling)"
+  outfits
+    "D14-RN Shield Generator"
+    "nGVF-CC Fuel Cell"
+    "Hyperdrive"
+
+    "A120 Atomic Thruster"
+    "A125 Atomic Steering"
+
+    "Gatling Round" 4500
+    "Gatling Bullet Boxes" 3
+    "Gatling Gun" 3
+
+    "DS-11 Battery Pack"
+    "Fuel Pod" 10
+    "Tactical Scanner"
+
+
+ship "Wasp" "Wasp (Miner)"
+  outfits
+    "D14-RN Shield Generator"
+    "nGVF-CC Fuel Cell"
+    "Hyperdrive"
+
+    "A120 Atomic Thruster"
+    "A125 Atomic Steering"
+
+    "Laser Cannon" 3
+
+    "DS-11 Battery Pack"
+    "Fuel Pod" 10
+    "Asteroid Scanner"
+    "Tactical Scanner"
 

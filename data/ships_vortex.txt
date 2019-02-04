@@ -8,6 +8,9 @@ shipyard "Vortex Variants"
   "Modified Firebird (Engines)"
   "Modified Firebird (Shields)"
   "Modified Firebird (Weapons)"
+  "Fury"
+  "Fury (Gatling)"
+  "Modified Fury"
   "Heavy Shuttle"
   "Heavy Shuttle (Blaster)"
   "Leviathan"
@@ -16,8 +19,6 @@ shipyard "Vortex Variants"
   "Modified Leviathan (Weapons)"
   "Light Shuttle"
   "Light Shuttle (Blaster)"
-  "Wasp"
-  "Wasp (Miner)"
 
 
 
@@ -409,6 +410,102 @@ ship "Firebird" "Modified Firebird (Weapons)"
 
 
 
+ship "Fury"
+  plural "Furies"
+  sprite "ship/fury"
+  thumbnail "thumbnail/fury"
+  attributes
+    category "Interceptor"
+#    manufacturer "Vortex"
+    licences
+      Pilot
+    "cost" 490000
+    "shields" 2000
+    "hull" 400
+    "required crew" 1
+    "bunks" 3
+    "mass" 70
+    "drag" 1.6
+    "heat dissipation" .9
+    "cargo space" 15
+    "outfit space" 180
+    "core space" 80
+    "engine space" 60
+    "weapon space" 40
+    weapon
+      "blast radius" 53
+      "shield damage" 140
+      "random shield damage" 390
+      "hull damage" 210
+      "random hull damage" 585
+      "heat damage" 4200
+      "random heat damage" 11700
+      "hit force" 350
+      "random hit force" 975
+  outfits
+    "D23-QP Shield Generator"
+    "nGVF-CC Fuel Cell"
+    "Hyperdrive"
+
+    "IT-2700 Ion Thruster"
+    "IS-2200 Ion Steering"
+
+    "X1 Blaster Cannon" 4
+
+    "LP036a Battery Pack"
+    "Small Radar Jammer"
+    "Tactical Scanner" 3
+    "Fuel Pod" 16
+  engine -17 35
+  engine 17 35
+  gun -10 -26
+  gun 10 -26
+  gun -16 -20
+  gun 16 -20
+  leak "flame" 50 80
+  explode "tiny explosion" 10
+  explode "small explosion" 20
+  description "Once one of the most popular interceptor-class ships, the Fury's popularity is now waning in favour of more modern and versatile ships like the Hawk. Although large numbers are still produced by Vortex Shipyards, many other Furies that are in service today are more than half a century old."
+
+
+ship "Fury" "Fury (Gatling)"
+  outfits
+    "D23-QP Shield Generator"
+    "nGVF-CC Fuel Cell"
+    "Hyperdrive"
+
+    "IT-2700 Ion Thruster"
+    "IS-2200 Ion Steering"
+
+    "Gatling Round" 6000
+    "Gatling Bullet Boxes" 4
+    "Gatling Gun" 4
+
+    "Supercapacitor"
+    "Small Radar Jammer"
+    "Tactical Scanner" 3
+    "Fuel Pod" 18
+    "Extra Outfit Space"
+
+
+ship "Fury" "Modified Fury"
+  plural "Modified Furies"
+  sprite "ship/fury_m"
+  engine -21 42
+  engine 21 42
+  engine 0 48
+  gun -12 -33
+  gun 12 -33
+  gun -20 -25
+  gun 20 -25
+  gun -43.5 2
+  gun 43.5 2
+  explode "tiny explosion" 10
+  explode "small explosion" 20
+  "final explode" "final explosion small"
+
+
+
 ship "Heavy Shuttle"
   sprite "ship/shuttle_heavy"
   thumbnail "thumbnail/shuttle_heavy"
@@ -778,81 +875,4 @@ ship "Light Shuttle" "Light Shuttle (Blaster)"
 
     "LP036a Battery Pack"
     "Fuel Pod" 10
-
-
-
-ship "Wasp"
-  sprite "ship/wasp"
-  thumbnail "thumbnail/wasp"
-  attributes
-    category "Interceptor"
-#    manufacturer "Vortex"
-    licences
-      Pilot
-    "cost" 400000
-    "shields" 1500
-    "hull" 500
-    "required crew" 1
-    "bunks" 2
-    "mass" 60
-    "drag" 1.2
-    "heat dissipation" .8
-    "cargo space" 10
-    "outfit space" 160
-    "core space" 85
-    "engine space" 50
-    "weapon space" 25
-    weapon
-      "blast radius" 46
-      "shield damage" 120
-      "random shield damage" 340
-      "hull damage" 180
-      "random hull damage" 510
-      "heat damage" 3600
-      "random heat damage" 10200
-      "hit force" 300
-      "random hit force" 850
-  outfits
-    "D14-RN Shield Generator"
-    "nGVF-BB Fuel Cell"
-    "Hyperdrive"
-
-    "IT-2700 Ion Thruster"
-    "IS-2200 Ion Steering"
-
-    "Gatling Round" 9000
-    "Gatling Bullet Boxes" 6
-    "Gatling Gun" 3
-
-    "Supercapacitor"
-    "Fuel Pod" 10
-    "Small Radar Jammer"
-    "Tactical Scanner" 2
-  engine -6 33
-  engine 6 33
-  gun 0 -38 "Gatling Gun"
-  gun -13 -31 "Gatling Gun"
-  gun 13 -31 "Gatling Gun"
-  leak "leak" 60 50
-  explode "tiny explosion" 20
-  explode "small explosion" 10
-  description "The Wasp is a medium-strength interceptor, designed by Vortex Shipyards to serve as an escort for cargo vessels. Like most Vortex ships, it is not particularly pretty, but it is reliable and serves the purpose it was made for."
-
-
-ship "Wasp" "Wasp (Miner)"
-  outfits
-    "D14-RN Shield Generator"
-    "nGVF-BB Fuel Cell"
-    "Hyperdrive"
-
-    "IT-2700 Ion Thruster"
-    "IS-2200 Ion Steering"
-
-    "Laser Cannon" 3
-
-    "LP036a Battery Pack"
-    "Fuel Pod" 10
-    "Asteroid Scanner"
-    "Small Radar Jammer"
-    "Tactical Scanner" 2
 

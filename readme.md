@@ -261,7 +261,7 @@ If you are posting a pull request, please:
     * use an Oxford comma when giving more than two items (e.g. one, two, and three; *not* one, two and three)
     * use U+2013 – en-dash for number ranges (e.g. 10–12) and for parenthetical expressions – like this – instead of parentheses, em-dashes, or hyphens
     * use U+202F   narrow non-breaking space as a thousands separator for numbers with five or more digits (e.g. 12 345)
-    * use U+2212 − minus sign for negative numbers, substractions, and deductions
+    * use U+2212 − minus sign for negative numbers, subtractions, and deductions
     <!-- 0°1′2″3‴4⁗ -->
     * use the " quote for direct speech and ' apostrophe within direct speech; the source code replaces these with proper “primary” and ‘secondary’ opening and closing quotation marks; surround such strings with ` backticks
   * repeatedly check and double check any new or changed strings to avoid unnecessary typos; e.g. mind the difference between it's (cf. he's, she's) and its (cf. his, her).

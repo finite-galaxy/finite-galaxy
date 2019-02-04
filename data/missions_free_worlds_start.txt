@@ -116,7 +116,7 @@ mission "Liberate Kornephoros"
       variant
         "Bastion" 2
         "Stymphalian" 4
-        "Fury" 6
+        "Berserker" 6
   
   npc evade
     personality staying heroic
@@ -1102,7 +1102,7 @@ mission "FW Flamethrower 2"
   npc save disable
     personality disables heroic staying
     government "Test Dummy"
-    ship "Fury (Doombat)" "Doombat"
+    ship "Harpy (Doombat)" "Doombat"
   
   on complete
     event "flamethrower available" 30

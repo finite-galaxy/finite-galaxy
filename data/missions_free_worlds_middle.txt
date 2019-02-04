@@ -340,11 +340,11 @@ mission "FW Southern Battle 1B"
     ship "Dreadnought" "F.W.S. Sequoia"
     ship "Dreadnought" "F.W.S. Sitka"
     ship "Dreadnought" "F.W.S. Rosewood"
-    ship "Fury (Flamethrower)" "F.W.S. Montag"
-    ship "Fury (Flamethrower)" "F.W.S. Faber"
-    ship "Fury (Flamethrower)" "F.W.S. Beatty"
-    ship "Fury (Flamethrower)" "F.W.S. Mildred"
-    ship "Fury (Flamethrower)" "F.W.S. Clarisse"
+    ship "Stymphalian (Flamethrower)" "F.W.S. Montag"
+    ship "Stymphalian (Flamethrower)" "F.W.S. Faber"
+    ship "Stymphalian (Flamethrower)" "F.W.S. Beatty"
+    ship "Stymphalian (Flamethrower)" "F.W.S. Mildred"
+    ship "Stymphalian (Flamethrower)" "F.W.S. Clarisse"
   
   on visit
     dialogue "You have reached <planet>, but you left part of your convoy behind! Better depart and wait for them to arrive in this star system."
@@ -385,11 +385,11 @@ mission "FW Southern Battle 2"
     ship "Dreadnought" "F.W.S. Rosewood"
     ship "Dreadnought" "F.W.S. Sequoia"
     ship "Dreadnought" "F.W.S. Sitka"
-    ship "Fury (Flamethrower)" "F.W.S. Beatty"
-    ship "Fury (Flamethrower)" "F.W.S. Faber"
-    ship "Fury (Flamethrower)" "F.W.S. Clarisse"
-    ship "Fury (Flamethrower)" "F.W.S. Mildred"
-    ship "Fury (Flamethrower)" "F.W.S. Montag"
+    ship "Stymphalian (Flamethrower)" "F.W.S. Beatty"
+    ship "Stymphalian (Flamethrower)" "F.W.S. Faber"
+    ship "Stymphalian (Flamethrower)" "F.W.S. Clarisse"
+    ship "Stymphalian (Flamethrower)" "F.W.S. Mildred"
+    ship "Stymphalian (Flamethrower)" "F.W.S. Montag"
   
   npc
     system "Rastaban"
@@ -1463,7 +1463,7 @@ mission "FW Bloodsea 1.1B"
       variant
         "Raven" 2
         "Hawk" 2
-        "Fury (Flamethrower)" 3
+        "Stymphalian (Flamethrower)" 3
         "Harpy" 5
   
   on complete
@@ -1532,7 +1532,7 @@ mission "FW Bloodsea 1.2A"
         "Firebird (Laser)"
         "Raven" 2
         "Hawk" 2
-        "Fury (Flamethrower)" 3
+        "Stymphalian (Flamethrower)" 3
         Harpy 5
     ship "Leviathan" "Freedom"
     ship "Manta" "Lucifer"
@@ -1909,7 +1909,7 @@ mission "FW Defend Bod"
       variant
         "Vanguard" 2
         "Argosy" 3
-        "Hero" 5
+        "Fury" 5
   npc
     government "Free Worlds"
     personality heroic escort disables
