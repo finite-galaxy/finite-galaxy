@@ -1201,14 +1201,12 @@ fleet "Merchant Miners East"
     confusion 20
     timid frugal mining harvests
   # total: 6
-  variant 1
-    "Berserker (Miner)"
-  variant 2
-    "Scout (Miner)"
-  variant 2
-    "Star Barge (Miner)"
+  variant 3
+    "Clipper (Miner)"
   variant 1
     "Star Freighter (Miner)"
+  variant 2
+    "Wasp (Miner)"
 
 fleet "Merchant Miners North"
   government "Merchant"
@@ -1263,12 +1261,14 @@ fleet "Merchant Miners West"
     confusion 20
     timid frugal mining harvests
   # total: 6
-  variant 3
-    "Clipper (Miner)"
+  variant 1
+    "Berserker (Miner)"
+  variant 2
+    "Scout (Miner)"
+  variant 2
+    "Star Barge (Miner)"
   variant 1
     "Star Freighter (Miner)"
-  variant 2
-    "Wasp (Miner)"
 
 
 fleet "Merchants Deep Large"
@@ -1303,206 +1303,109 @@ fleet "Merchants East Large"
   names "civilian"
   cargo 4
   personality
-    confusion 20
+    confusion 30
     timid frugal appeasing
   # total: 100
-  variant 1
-    "Bactrian"
-    "Foxhound" 3
+  variant 6
+    "Argosy" 2
+  variant 4
+    "Argosy" 3
+  variant 6
+    "Bastion"
+  variant 2
+    "Bastion" 2
   variant 3
     "Bastion"
-  variant 1
-    "Bastion" 2
-  variant 2
-    "Bastion"
     "Star Freighter"
-  variant 2
+  variant 5
     "Bastion"
     "Star Freighter" 2
-  variant 2
+  variant 4
     "Bastion"
     "Star Freighter" 3
-  variant 5
+  variant 10
     "Behemoth"
   variant 10
     "Bulk Freighter"
+  variant 6
+    "Bulk Freighter"
+    "Clipper"
+  variant 2
+    "Bulk Freighter"
+    "Clipper (Particle)"
+  variant 2
+    "Bulk Freighter"
+    "Clipper (Speedy)"
+  variant 5
+    "Bulk Freighter"
+    "Clipper" 2
   variant 1
     "Bulk Freighter"
-    "Bastion"
+    "Clipper (Particle)" 2
+  variant 1
+    "Bulk Freighter"
+    "Clipper (Speedy)" 2
   variant 1
     "Bulk Freighter"
     "Clipper"
+    "Clipper (Particle)"
   variant 1
     "Bulk Freighter"
-    "Clipper" 2
-  variant 3
-    "Bulk Freighter"
-    "Firebird"
+    "Clipper"
+    "Clipper (Speedy)"
   variant 1
     "Bulk Freighter"
-    "Manta"
-  variant 3
-    "Bulk Freighter"
-    "Quicksilver"
-  variant 3
-    "Bulk Freighter"
-    "Quicksilver" 2
-  variant 1
-    "Bulk Freighter"
-    "Thunderbolt"
-  variant 1
-    "Bulk Freighter"
-    "Wasp"
-  variant 1
-    "Bulk Freighter"
-    "Wasp" 2
-  variant 1
-    "Bulk Freighter"
-    "Wasp" 3
-  variant 1
-    "Bulk Freighter"
-    "Wasp" 4
-  variant 1
-    "Bulk Freighter"
-    "Wasp" 5
-  variant 6
-    "Firebird"
-  variant 8
-    "Firebird"
-    "Star Freighter"
-  variant 4
-    "Firebird"
-    "Star Freighter" 2
-  variant 15
-    "Mule"
-    "Foxhound"
-  variant 4
-    "Star Freighter" 2
+    "Clipper (Particle)"
+    "Clipper (Speedy)"
   variant 5
+    "Bulk Freighter"
+    "Warrior"
+  variant 5
+    "Bulk Freighter"
+    "Warrior" 2
+  variant 2
+    "Leviathan"
+    "Star Freighter" 2
+  variant 3
+    "Leviathan"
     "Star Freighter" 3
   variant 3
+    "Leviathan"
     "Star Freighter" 4
-  variant 1
-    "Star Freighter" 5
-  variant 3
-    "Star Freighter"
-    "Thunderbolt"
-  variant 4
-    "Star Freighter" 2
-    "Thunderbolt"
   variant 2
-    "Thunderbolt"
+    "Leviathan"
+    "Star Freighter" 5
+  variant 10
+    "Star Freighter" 3
 
 fleet "Merchants East Small"
   government "Merchant"
   names "civilian"
   cargo 3
   personality
-    confusion 30
+    confusion 40
     timid frugal appeasing
-  # total: 100
-  variant 4
+  # total 100
+  variant 10
+    "Bounder"
+  variant 6
     "Clipper"
-  variant 1
+  variant 2
     "Clipper (Particle)"
-  variant 1
+  variant 2
     "Clipper (Speedy)"
-  variant 3
+  variant 10
     "Heavy Shuttle"
-  variant 2
-    "Heavy Shuttle" 2
-  variant 1
-    "Heavy Shuttle" 3
-  variant 1
-    "Heavy Shuttle"
+  variant 30
     "Light Shuttle"
-  variant 1
-    "Heavy Shuttle" 2
-    "Light Shuttle"
-  variant 1
-    "Heavy Shuttle"
-    "Light Shuttle" 2
-  variant 1
-    "Heavy Shuttle"
-    "Light Shuttle"
-    "Wasp" 2
-  variant 2
-    "Heavy Shuttle"
-    "Wasp"
-  variant 1
-    "Heavy Shuttle" 2
-    "Wasp"
-  variant 1
-    "Heavy Shuttle"
-    "Wasp" 2
-  variant 12
-    "Light Shuttle"
-  variant 6
-    "Light Shuttle" 2
-  variant 3
-    "Light Shuttle" 3
-  variant 6
-    "Light Shuttle"
-    "Wasp"
-  variant 3
-    "Light Shuttle" 2
-    "Wasp"
-  variant 3
-    "Light Shuttle"
-    "Wasp" 2
-  variant 4
-    "Quicksilver"
-  variant 3
-    "Scout"
-  variant 1
-    "Scout (Afterburner)"
-  variant 1
-    "Scout (Javelin)"
-  variant 1
-    "Scout (Speedy)"
-  variant 3
-    "Star Barge"
-  variant 2
-    "Star Barge" 2
-  variant 2
-    "Star Barge"
-    "Wasp"
-  variant 1
-    "Star Barge" 3
-  variant 1
-    "Star Barge" 2
-    "Wasp"
-  variant 1
-    "Star Barge"
-    "Wasp" 2
-  variant 6
-    "Star Freighter"
-  variant 2
-    "Star Freighter"
-    "Quicksilver"
-  variant 2
-    "Star Freighter"
-    "Wasp"
-  variant 2
-    "Star Freighter"
-    "Wasp" 2
-  variant 3
-    "Star Freighter (Fancy)"
-  variant 1
-    "Star Freighter (Fancy)"
-    "Quicksilver"
-  variant 1
-    "Star Freighter (Fancy)"
-    "Wasp"
-  variant 1
-    "Star Freighter (Fancy)"
-    "Wasp" 2
   variant 5
-    "Wasp"
+    "Goose"
+  variant 20
+    "Star Barge"
+  variant 12
+    "Star Freighter"
   variant 3
-    "Wasp" 2
-  variant 1
-    "Wasp" 3
+    "Star Freighter (Fancy)"
 
 
 fleet "Merchants Hai Large"
@@ -1746,7 +1649,6 @@ fleet "Merchants North Large"
   variant 3
     "Vanguard"
     "Star Freighter" 4
-
 
 fleet "Merchants North Small"
   government "Merchant"
@@ -2056,109 +1958,206 @@ fleet "Merchants West Large"
   names "civilian"
   cargo 4
   personality
-    confusion 30
+    confusion 20
     timid frugal appeasing
   # total: 100
-  variant 6
-    "Argosy" 2
-  variant 4
-    "Argosy" 3
-  variant 6
-    "Bastion"
-  variant 2
-    "Bastion" 2
+  variant 1
+    "Bactrian"
+    "Foxhound" 3
   variant 3
     "Bastion"
+  variant 1
+    "Bastion" 2
+  variant 2
+    "Bastion"
     "Star Freighter"
-  variant 5
+  variant 2
     "Bastion"
     "Star Freighter" 2
-  variant 4
+  variant 2
     "Bastion"
     "Star Freighter" 3
-  variant 10
+  variant 5
     "Behemoth"
   variant 10
     "Bulk Freighter"
-  variant 6
+  variant 1
+    "Bulk Freighter"
+    "Bastion"
+  variant 1
     "Bulk Freighter"
     "Clipper"
-  variant 2
-    "Bulk Freighter"
-    "Clipper (Particle)"
-  variant 2
-    "Bulk Freighter"
-    "Clipper (Speedy)"
-  variant 5
+  variant 1
     "Bulk Freighter"
     "Clipper" 2
+  variant 3
+    "Bulk Freighter"
+    "Firebird"
   variant 1
     "Bulk Freighter"
-    "Clipper (Particle)" 2
+    "Manta"
+  variant 3
+    "Bulk Freighter"
+    "Quicksilver"
+  variant 3
+    "Bulk Freighter"
+    "Quicksilver" 2
   variant 1
     "Bulk Freighter"
-    "Clipper (Speedy)" 2
+    "Thunderbolt"
   variant 1
     "Bulk Freighter"
-    "Clipper"
-    "Clipper (Particle)"
+    "Wasp"
   variant 1
     "Bulk Freighter"
-    "Clipper"
-    "Clipper (Speedy)"
+    "Wasp" 2
   variant 1
     "Bulk Freighter"
-    "Clipper (Particle)"
-    "Clipper (Speedy)"
-  variant 5
+    "Wasp" 3
+  variant 1
     "Bulk Freighter"
-    "Warrior"
-  variant 5
+    "Wasp" 4
+  variant 1
     "Bulk Freighter"
-    "Warrior" 2
-  variant 2
-    "Leviathan"
+    "Wasp" 5
+  variant 6
+    "Firebird"
+  variant 8
+    "Firebird"
+    "Star Freighter"
+  variant 4
+    "Firebird"
     "Star Freighter" 2
-  variant 3
-    "Leviathan"
+  variant 15
+    "Mule"
+    "Foxhound"
+  variant 4
+    "Star Freighter" 2
+  variant 5
     "Star Freighter" 3
   variant 3
-    "Leviathan"
     "Star Freighter" 4
-  variant 2
-    "Leviathan"
+  variant 1
     "Star Freighter" 5
-  variant 10
-    "Star Freighter" 3
+  variant 3
+    "Star Freighter"
+    "Thunderbolt"
+  variant 4
+    "Star Freighter" 2
+    "Thunderbolt"
+  variant 2
+    "Thunderbolt"
 
 fleet "Merchants West Small"
   government "Merchant"
   names "civilian"
   cargo 3
   personality
-    confusion 40
+    confusion 30
     timid frugal appeasing
-  # total 100
-  variant 10
-    "Bounder"
-  variant 6
+  # total: 100
+  variant 4
     "Clipper"
-  variant 2
+  variant 1
     "Clipper (Particle)"
-  variant 2
+  variant 1
     "Clipper (Speedy)"
-  variant 10
+  variant 3
     "Heavy Shuttle"
-  variant 30
+  variant 2
+    "Heavy Shuttle" 2
+  variant 1
+    "Heavy Shuttle" 3
+  variant 1
+    "Heavy Shuttle"
     "Light Shuttle"
-  variant 5
-    "Goose"
-  variant 20
-    "Star Barge"
+  variant 1
+    "Heavy Shuttle" 2
+    "Light Shuttle"
+  variant 1
+    "Heavy Shuttle"
+    "Light Shuttle" 2
+  variant 1
+    "Heavy Shuttle"
+    "Light Shuttle"
+    "Wasp" 2
+  variant 2
+    "Heavy Shuttle"
+    "Wasp"
+  variant 1
+    "Heavy Shuttle" 2
+    "Wasp"
+  variant 1
+    "Heavy Shuttle"
+    "Wasp" 2
   variant 12
+    "Light Shuttle"
+  variant 6
+    "Light Shuttle" 2
+  variant 3
+    "Light Shuttle" 3
+  variant 6
+    "Light Shuttle"
+    "Wasp"
+  variant 3
+    "Light Shuttle" 2
+    "Wasp"
+  variant 3
+    "Light Shuttle"
+    "Wasp" 2
+  variant 4
+    "Quicksilver"
+  variant 3
+    "Scout"
+  variant 1
+    "Scout (Afterburner)"
+  variant 1
+    "Scout (Javelin)"
+  variant 1
+    "Scout (Speedy)"
+  variant 3
+    "Star Barge"
+  variant 2
+    "Star Barge" 2
+  variant 2
+    "Star Barge"
+    "Wasp"
+  variant 1
+    "Star Barge" 3
+  variant 1
+    "Star Barge" 2
+    "Wasp"
+  variant 1
+    "Star Barge"
+    "Wasp" 2
+  variant 6
     "Star Freighter"
+  variant 2
+    "Star Freighter"
+    "Quicksilver"
+  variant 2
+    "Star Freighter"
+    "Wasp"
+  variant 2
+    "Star Freighter"
+    "Wasp" 2
   variant 3
     "Star Freighter (Fancy)"
+  variant 1
+    "Star Freighter (Fancy)"
+    "Quicksilver"
+  variant 1
+    "Star Freighter (Fancy)"
+    "Wasp"
+  variant 1
+    "Star Freighter (Fancy)"
+    "Wasp" 2
+  variant 5
+    "Wasp"
+  variant 3
+    "Wasp" 2
+  variant 1
+    "Wasp" 3
 
 
 
@@ -2781,7 +2780,7 @@ fleet "Pirate Miners East"
     timid frugal mining harvests
   # total: 1
   variant 1
-    "Scout (Miner)"
+    "Wasp (Miner)"
 
 fleet "Pirate Miners North"
   government "Pirate"
@@ -2814,7 +2813,7 @@ fleet "Pirate Miners West"
     timid frugal mining harvests
   # total: 1
   variant 1
-    "Wasp (Miner)"
+    "Scout (Miner)"
 
 
 fleet "Pirates East Large"
@@ -2825,11 +2824,13 @@ fleet "Pirates East Large"
     plunders harvests
   # total: 10
   variant 1
-    "Leviathan"
-  variant 7
-    "Firebird"
+    "Bastion"
+  variant 1
+    "Lance"
+  variant 6
+    "Manta"
   variant 2
-    "Firebird" 2
+    "Manta" 2 
 
 fleet "Pirates East Small"
   government "Pirate"
@@ -2838,29 +2839,33 @@ fleet "Pirates East Small"
   personality
     plunders harvests
     confusion 20
-  # total: 20
+  # total: 25
+  variant 4
+    "Clipper"
   variant 5
-    "Fury"
-  variant 5
-    "Fury (Gatling)"
+    "Warrior"
+  variant 3
+    "Wasp"
+  variant 3
+    "Wasp (Gatling)"
   variant 2
-    "Fury" 2
+    "Wasp" 2
   variant 2
-    "Fury"
-    "Fury (Gatling)"
+    "Wasp"
+    "Wasp (Gatling)"
   variant 2
-    "Fury (Gatling)" 2
+    "Wasp (Gatling)" 2
   variant 1
-    "Fury" 3
+    "Wasp" 3
   variant 1
-    "Fury" 2
-    "Fury (Gatling)"
+    "Wasp" 2
+    "Wasp (Gatling)"
   variant 1
-    "Fury"
-    "Fury (Gatling)" 2
+    "Wasp"
+    "Wasp (Gatling)" 2
   variant 1
-    "Fury"
-    "Fury (Gatling)" 3
+    "Wasp"
+    "Wasp (Gatling)" 3
 
 
 fleet "Pirates North Large"
@@ -2939,13 +2944,11 @@ fleet "Pirates West Large"
     plunders harvests
   # total: 10
   variant 1
-    "Bastion"
-  variant 1
-    "Lance"
-  variant 6
-    "Manta"
+    "Leviathan"
+  variant 7
+    "Firebird"
   variant 2
-    "Manta" 2 
+    "Firebird" 2
 
 fleet "Pirates West Small"
   government "Pirate"
@@ -2954,33 +2957,29 @@ fleet "Pirates West Small"
   personality
     plunders harvests
     confusion 20
-  # total: 25
-  variant 4
-    "Clipper"
+  # total: 20
   variant 5
-    "Warrior"
-  variant 3
-    "Wasp"
-  variant 3
-    "Wasp (Gatling)"
+    "Fury"
+  variant 5
+    "Fury (Gatling)"
   variant 2
-    "Wasp" 2
+    "Fury" 2
   variant 2
-    "Wasp"
-    "Wasp (Gatling)"
+    "Fury"
+    "Fury (Gatling)"
   variant 2
-    "Wasp (Gatling)" 2
+    "Fury (Gatling)" 2
   variant 1
-    "Wasp" 3
+    "Fury" 3
   variant 1
-    "Wasp" 2
-    "Wasp (Gatling)"
+    "Fury" 2
+    "Fury (Gatling)"
   variant 1
-    "Wasp"
-    "Wasp (Gatling)" 2
+    "Fury"
+    "Fury (Gatling)" 2
   variant 1
-    "Wasp"
-    "Wasp (Gatling)" 3
+    "Fury"
+    "Fury (Gatling)" 3
 
 
 fleet "pirate raid"

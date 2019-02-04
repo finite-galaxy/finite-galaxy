@@ -335,46 +335,46 @@ event "initial deployment 1"
     fleet "Republic Large" 4000
 
   system "Fala"
-    fleet "Merchants West Small" 1900
-    fleet "Merchants West Large" 3500
-    fleet "Pirates West Small" 4000
-    fleet "Pirates West Large" 8000
+    fleet "Merchants East Small" 1900
+    fleet "Merchants East Large" 3500
+    fleet "Pirates East Small" 4000
+    fleet "Pirates East Large" 8000
     fleet "Republic Small" 600
     fleet "Republic Large" 400
     fleet "Navy Surveillance" 1800
   system "Tania Australis"
-    fleet "Merchants West Small" 1400
-    fleet "Merchants West Large" 2900
+    fleet "Merchants East Small" 1400
+    fleet "Merchants East Large" 2900
     fleet "Republic Small" 600
     fleet "Republic Large" 400
     fleet "Navy Surveillance" 1800
   system "Mora"
-    fleet "Merchants West Small" 2800
-    fleet "Merchants West Large" 5000
+    fleet "Merchants East Small" 2800
+    fleet "Merchants East Large" 5000
     fleet "Pirates South Small" 3000
     fleet "Pirates South Large" 4000
     fleet "Republic Small" 1000
     fleet "Republic Large" 2000
     fleet "Navy Surveillance" 1800
   system "Delta Velorum"
-    fleet "Merchants West Small" 1000
-    fleet "Merchants West Large" 3000
+    fleet "Merchants East Small" 1000
+    fleet "Merchants East Large" 3000
     fleet "Pirates South Small" 2000
     fleet "Pirates South Large" 5000
     fleet "Republic Small" 1600
     fleet "Republic Large" 2400
     fleet "Navy Surveillance" 1800
   system "Turais"
-    fleet "Merchants West Small" 2000
-    fleet "Merchants West Large" 6000
+    fleet "Merchants East Small" 2000
+    fleet "Merchants East Large" 6000
     fleet "Pirates South Small" 3000
     fleet "Pirates South Large" 7000
     fleet "Republic Small" 1000
     fleet "Republic Large" 1800
     fleet "Navy Surveillance" 1800
   system "Algorel"
-    fleet "Merchants West Small" 800
-    fleet "Merchants West Large" 1200
+    fleet "Merchants East Small" 800
+    fleet "Merchants East Large" 1200
     fleet "Pirates South Small" 2500
     fleet "Pirates South Large" 8000
     fleet "Republic Small" 700
@@ -446,55 +446,55 @@ event "initial deployment 2"
     fleet "Republic Large" 600
 
   system "Arcturus"
-    fleet "Merchants West Small" 700
-    fleet "Merchants West Large" 3000
+    fleet "Merchants East Small" 700
+    fleet "Merchants East Large" 3000
     fleet "Navy Surveillance" 1800
-    fleet "Pirates West Small" 4000
+    fleet "Pirates East Small" 4000
     fleet "Republic Small" 2000
     fleet "Republic Large" 3000
   system "Mizar"
-    fleet "Merchants West Small" 1400
-    fleet "Merchants West Large" 4500
+    fleet "Merchants East Small" 1400
+    fleet "Merchants East Large" 4500
     fleet "Navy Surveillance" 1800
-    fleet "Pirates West Small" 9000
+    fleet "Pirates East Small" 9000
     fleet "Republic Small" 1000
     fleet "Republic Large" 1400
   system "Gacrux"
-    fleet "Merchants West Small" 2000
-    fleet "Merchants West Large" 5000
+    fleet "Merchants East Small" 2000
+    fleet "Merchants East Large" 5000
     fleet "Navy Surveillance" 1800
-    fleet "Pirates West Small" 2000
-    fleet "Pirates West Large" 4000
+    fleet "Pirates East Small" 2000
+    fleet "Pirates East Large" 4000
     fleet "Republic Small" 2000
     fleet "Republic Large" 3000
   system "Cor Caroli"
-    fleet "Merchants West Small" 700
-    fleet "Merchants West Large" 1300
+    fleet "Merchants East Small" 700
+    fleet "Merchants East Large" 1300
     fleet "Navy Surveillance" 1800
-    fleet "Pirates West Small" 2000
+    fleet "Pirates East Small" 2000
     fleet "Republic Small" 1200
     fleet "Republic Large" 1800
   system "Muhlifain"
-    fleet "Merchants West Small" 1000
-    fleet "Merchants West Large" 3500
+    fleet "Merchants East Small" 1000
+    fleet "Merchants East Large" 3500
     fleet "Navy Surveillance" 1800
-    fleet "Pirates West Small" 6000
+    fleet "Pirates East Small" 6000
     fleet "Republic Small" 3000
     fleet "Republic Large" 4000
   system "Vindemiatrix"
-    fleet "Merchants West Small" 600
-    fleet "Merchants West Large" 3000
+    fleet "Merchants East Small" 600
+    fleet "Merchants East Large" 3000
     fleet "Navy Surveillance" 1800
-    fleet "Pirates West Small" 2000
-    fleet "Pirates West Large" 4000
+    fleet "Pirates East Small" 2000
+    fleet "Pirates East Large" 4000
     fleet "Republic Small" 2000
     fleet "Republic Large" 3000
   system "Sarin"
-    fleet "Merchants West Small" 1000
-    fleet "Merchants West Large" 3000
+    fleet "Merchants East Small" 1000
+    fleet "Merchants East Large" 3000
     fleet "Navy Surveillance" 1800
-    fleet "Pirates West Small" 2000
-    fleet "Pirates West Large" 6000
+    fleet "Pirates East Small" 2000
+    fleet "Pirates East Large" 6000
     fleet "Republic Small" 8000
     fleet "Republic Large" 15000
 
@@ -1124,8 +1124,8 @@ event "fw abandoned Greenrock"
     government "Pirate"
     fleet "Pirates South Small" 500
     fleet "Pirates South Large" 800
-    fleet "Pirates East Small" 4000
-    fleet "Pirates East Large" 7000
+    fleet "Pirates West Small" 4000
+    fleet "Pirates West Large" 7000
     fleet "Pirates North Small" 5000
     fleet "Pirates North Large" 9000
     fleet "Militia Large" 9000
@@ -1831,13 +1831,13 @@ event "wolf pack mizar end"
 
 event "fw empty gienah"
   system "Gienah"
-    fleet "Pirates East Small" 5000
+    fleet "Pirates West Small" 5000
 
 
 event "fw restore gienah"
   system "Gienah"
-    fleet "Pirates East Small" 500
-    fleet "Pirates East Large" 800
+    fleet "Pirates West Small" 500
+    fleet "Pirates West Large" 800
     fleet "Republic Large" 5000
 
 
@@ -1911,8 +1911,8 @@ event "syndicate occupies sol"
     fleet "Merchants North Large" 700
     fleet "Republic Small" 800
     fleet "Republic Large" 1200
-    fleet "Merchants East Small" 900
-    fleet "Merchants East Large" 1400
+    fleet "Merchants West Small" 900
+    fleet "Merchants West Large" 1400
     fleet "Syndicate Small" 400
     fleet "Syndicate Large" 600
 
@@ -1968,16 +1968,16 @@ event "pug invasion 2"
     fleet "Pug Large" 1200
   system "Altair"
     government "Pug"
-    fleet "Merchants East Small" 400
-    fleet "Merchants East Large" 600
+    fleet "Merchants West Small" 400
+    fleet "Merchants West Large" 600
     fleet "Merchants North Small" 1000
     fleet "Merchants North Large" 3000
     fleet "Pug Small" 700
     fleet "Pug Large" 900
   system "Fomalhaut"
     government "Pug"
-    fleet "Merchants East Small" 1000
-    fleet "Merchants East Large" 1200
+    fleet "Merchants West Small" 1000
+    fleet "Merchants West Large" 1200
     fleet "Pug Small" 1400
     fleet "Pug Large" 2000
   system "Nocte"
@@ -2007,14 +2007,14 @@ event "pug invasion 3"
   unvisit "Delta Capricorni"
   system "Delta Capricorni"
     government "Pug"
-    fleet "Merchants East Small" 700
-    fleet "Merchants East Large" 800
+    fleet "Merchants West Small" 700
+    fleet "Merchants West Large" 800
     fleet "Pug Small" 800
     fleet "Pug Large" 1100
   system "Alderamin"
     government "Pug"
-    fleet "Merchants East Small" 2000
-    fleet "Merchants East Large" 3200
+    fleet "Merchants West Small" 2000
+    fleet "Merchants West Large" 3200
     fleet "Pug Small" 1200
     fleet "Pug Large" 2500
   planet "Maker"
@@ -2039,18 +2039,18 @@ event "pug invasion 4"
     fleet "Merchants North Large" 500
     fleet "Republic Small" 600
     fleet "Republic Large" 900
-    fleet "Merchants East Small" 1000
-    fleet "Merchants East Large" 2000
+    fleet "Merchants West Small" 1000
+    fleet "Merchants West Large" 2000
   system "Diphda"
     government "Pug"
-    fleet "Merchants East Small" 2000
-    fleet "Merchants East Large" 600
+    fleet "Merchants West Small" 2000
+    fleet "Merchants West Large" 600
     fleet "Pug Small" 1000
     fleet "Pug Large" 1500
   system "Caph"
     government "Pug"
-    fleet "Merchants East Small" 500
-    fleet "Merchants East Large" 600
+    fleet "Merchants West Small" 500
+    fleet "Merchants West Large" 600
     fleet "Merchant Miners East" 2000
     fleet "Pug Small" 700
     fleet "Pug Large" 1000
@@ -2069,8 +2069,8 @@ event "fw syndicate welcoming"
     bribe .08
   system "Alcyone"
     government "Syndicate (Extremist)"
-    fleet "Pirates East Small" 1500
-    fleet "Pirates East Large" 2000
+    fleet "Pirates West Small" 1500
+    fleet "Pirates West Large" 2000
     fleet "Syndicate Extremists" 200
 
 
@@ -2083,7 +2083,7 @@ event "at war with the pug"
       "Syndicate" -.01
       "Syndicate (Extremist)" -.01
   system "Delta Capricorni"
-    fleet "Merchants East Small" 1500
+    fleet "Merchants West Small" 1500
 
 
 event "battle for delta capricorni"
@@ -2094,8 +2094,8 @@ event "battle for delta capricorni"
 event "reconnected delta capricorni"
   link "Delta Capricorni" Markab
   system "Delta Capricorni"
-    fleet "Merchants East Small" 1500
-    fleet "Merchants East Large" 3000
+    fleet "Merchants West Small" 1500
+    fleet "Merchants West Large" 3000
     fleet "Merchant Miners East" 3000
     fleet "Pug Small" 2000
     fleet "Republic Large" 400
@@ -2103,14 +2103,14 @@ event "reconnected delta capricorni"
 
 event "battle for altair"
   system "Altair"
-    fleet "Merchants East Small" 1500
+    fleet "Merchants West Small" 1500
 
 
 event "liberation of altair"
   system "Altair"
     government "Republic"
-    fleet "Merchants East Small" 1000
-    fleet "Merchants East Large" 2000
+    fleet "Merchants West Small" 1000
+    fleet "Merchants West Large" 2000
     fleet "Pug Small" 2000
     fleet "Republic Large" 800
 
@@ -2119,8 +2119,8 @@ event "reconnected altair"
   link Altair Sol
   system "Altair"
     government "Republic"
-    fleet "Merchants East Small" 800
-    fleet "Merchants East Large" 1200
+    fleet "Merchants West Small" 800
+    fleet "Merchants West Large" 1200
 
 
 event "pug flee"
@@ -2141,35 +2141,35 @@ event "pug flee"
     fleet "Republic Small" 800
     fleet "Republic Large" 1200
   system "Altair"
-    fleet "Merchants East Small" 400
-    fleet "Merchants East Large" 600
+    fleet "Merchants West Small" 400
+    fleet "Merchants West Large" 600
     fleet "Merchants North Small" 1000
     fleet "Merchants North Large" 3000
     fleet "Republic Small" 700
     fleet "Republic Large" 900
   system "Fomalhaut"
-    fleet "Merchants East Small" 1000
-    fleet "Merchants East Large" 1200
+    fleet "Merchants West Small" 1000
+    fleet "Merchants West Large" 1200
     fleet "Republic Small" 1600
     fleet "Republic Large" 3000
   system "Delta Capricorni"
-    fleet "Merchants East Small" 700
-    fleet "Merchants East Large" 800
+    fleet "Merchants West Small" 700
+    fleet "Merchants West Large" 800
     fleet "Republic Small" 500
     fleet "Republic Large" 600
   system "Alderamin"
-    fleet "Merchants East Small" 2000
-    fleet "Merchants East Large" 3200
+    fleet "Merchants West Small" 2000
+    fleet "Merchants West Large" 3200
     fleet "Republic Small" 700
     fleet "Republic Large" 900
   system "Diphda"
-    fleet "Merchants East Small" 2000
-    fleet "Merchants East Large" 600
+    fleet "Merchants West Small" 2000
+    fleet "Merchants West Large" 600
     fleet "Republic Small" 1600
     fleet "Republic Large" 3000
   system "Caph"
-    fleet "Merchants East Small" 500
-    fleet "Merchants East Large" 600
+    fleet "Merchants West Small" 500
+    fleet "Merchants West Large" 600
     fleet "Republic Small" 1600
     fleet "Republic Large" 3000
   system "Nocte"
@@ -2184,7 +2184,7 @@ event "pug flee"
     fleet "Pirates South Small" 1000
     fleet "Pirates South Large" 3000
   system "Deneb"
-    fleet "Merchants East Small" 5000
+    fleet "Merchants West Small" 5000
     object
       sprite star/g5
       period 10
@@ -2241,8 +2241,8 @@ event "pug territory liberated"
     government "Republic"
   system "Deneb"
     government "Republic"
-    fleet "Merchants East Small" 400
-    fleet "Merchants East Large" 600
+    fleet "Merchants West Small" 400
+    fleet "Merchants West Large" 600
     fleet "Merchants South Small" 1000
     fleet "Merchants South Large" 3000
     fleet "Republic Small" 700
@@ -2327,13 +2327,13 @@ event "navy occupies alcyone"
 event "navy done with alcyone"
   system "Alcyone"
     government "Pirate"
-    fleet "Pirates East Small" 400
-    fleet "Pirates East Large" 600
+    fleet "Pirates West Small" 400
+    fleet "Pirates West Large" 600
     fleet "Republic Large" 1200
   system "Durax"
     government "Pirate"
-    fleet "Pirates East Small" 600
-    fleet "Pirates East Large" 900
+    fleet "Pirates West Small" 600
+    fleet "Pirates West Large" 900
     fleet "Republic Large" 2500
     fleet "Korath Raid" 5000
 
@@ -2533,8 +2533,8 @@ event "fwc pug invasion"
     fleet "Pug Large" 9000
   system "Altair"
     government "Pug"
-    fleet "Merchants East Small" 400
-    fleet "Merchants East Large" 600
+    fleet "Merchants West Small" 400
+    fleet "Merchants West Large" 600
     fleet "Merchants North Small" 1000
     fleet "Merchants North Large" 3000
     fleet "Pug Small" 700
@@ -2543,14 +2543,14 @@ event "fwc pug invasion"
     government "Free Worlds"
   system "Delta Capricorni"
     government "Pug"
-    fleet "Merchants East Small" 700
-    fleet "Merchants East Large" 800
+    fleet "Merchants West Small" 700
+    fleet "Merchants West Large" 800
     fleet "Pug Small" 800
     fleet "Pug Large" 1100
   system "Alderamin"
     government "Pug"
-    fleet "Merchants East Small" 2000
-    fleet "Merchants East Large" 3200
+    fleet "Merchants West Small" 2000
+    fleet "Merchants West Large" 3200
     fleet "Pug Small" 1200
     fleet "Pug Large" 2500
   system "Nocte"
@@ -2682,16 +2682,16 @@ event "fwc liberation of rasalhague"
     fleet "Merchants South Small" 1500
     fleet "Merchants South Large" 2000
   system "Altair"
-    fleet "Merchants East Small" 400
-    fleet "Merchants East Large" 600
+    fleet "Merchants West Small" 400
+    fleet "Merchants West Large" 600
   system "Delta Capricorni"
-    fleet "Merchants East Small" 700
-    fleet "Merchants East Large" 800
+    fleet "Merchants West Small" 700
+    fleet "Merchants West Large" 800
   system "Alderamin"
-    fleet "Merchants East Small" 2000
-    fleet "Merchants East Large" 3200
+    fleet "Merchants West Small" 2000
+    fleet "Merchants West Large" 3200
   system "Deneb"
-    fleet "Merchants East Small" 10000
+    fleet "Merchants West Small" 10000
     fleet "Pug Small" 100
     fleet "Pug Large" 100
 
@@ -2739,8 +2739,8 @@ event "fwc pug defeated"
     government "Republic"
   system "Deneb"
     government "Republic"
-    fleet "Merchants East Small" 400
-    fleet "Merchants East Large" 600
+    fleet "Merchants West Small" 400
+    fleet "Merchants West Large" 600
     fleet "Merchants South Small" 1000
     fleet "Merchants South Large" 3000
     fleet "Republic Small" 700
