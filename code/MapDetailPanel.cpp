@@ -512,7 +512,7 @@ void MapDetailPanel::DrawInfo()
       // thus has no prices to compare to.
       bool noCompare = (!player.GetSystem() || !player.GetSystem()->IsInhabited(player.Flagship()));
       if(!value)
-        price = "----";
+        price = "—";
       else if(noCompare || player.GetSystem() == selectedSystem || !localValue)
         price = to_string(value);
       else

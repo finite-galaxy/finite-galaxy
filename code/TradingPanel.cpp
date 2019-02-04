@@ -181,7 +181,7 @@ void TradingPanel::Draw()
     }
     else
     {
-      font.Draw("----", Point(PRICE_X, y), colour);
+      font.Draw("—", Point(PRICE_X, y), colour);
       font.Draw("(not for sale)", Point(LEVEL_X, y), colour);
     }
     
