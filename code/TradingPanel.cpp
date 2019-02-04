@@ -97,7 +97,7 @@ void TradingPanel::Draw()
   font.Draw("Commodity", Point(NAME_X, y), selected);
   font.Draw("Price", Point(PRICE_X, y), selected);
   
-  string mod = "x " + to_string(Modifier());
+  string mod = "× " + to_string(Modifier());
   font.Draw(mod, Point(BUY_X, y), unselected);
   font.Draw(mod, Point(SELL_X, y), unselected);
   

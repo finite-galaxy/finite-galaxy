@@ -77,7 +77,7 @@ void HiringPanel::Draw()
   
   int modifier = Modifier();
   if(modifier > 1)
-    info.SetString("modifier", "x " + to_string(modifier));
+    info.SetString("modifier", "× " + to_string(modifier));
   
   maxFire = max(flagshipExtra, 0);
   maxHire = max(min(flagshipUnused, fleetUnused - passengers), 0);
