@@ -256,7 +256,7 @@ If you are posting a pull request, please:
     * š, ś, ş → sh
     * ñ → nh
     * ß → ss
-  * text strings (descriptions, dialogues, tooltips, etc.):
+  * text strings (conversations, descriptions, mission dialogues, tooltips, etc.):
     * avoid abbreviations (e.g., i.e., etc.); contractions (isn't) are fine
     * use an Oxford comma when giving more than two items (e.g. one, two, and three; *not* one, two and three)
     * use U+2013 – en-dash for number ranges (e.g. 10–12) and for parenthetical expressions – like this – instead of parentheses, em-dashes, or hyphens

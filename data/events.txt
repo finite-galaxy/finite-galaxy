@@ -207,6 +207,8 @@ event "war begins"
     description `Martini is a world of exotic beaches and perfect weather. The Republic's galactic stock exchange was previously headquartered here, before a terrorist attack destroyed them and a large portion of the capital city as well.`
     "required reputation" 100
     security .9
+  planet "Bourne"
+    remove shipyard "Basic Ships"
 
   system "Sabik"
     government "Free Worlds"
@@ -501,10 +503,10 @@ event "initial deployment 2"
 
 event "initial deployment 3"
   date 29 8 3019
-  planet "Bundok"
-    description `Bundok is a cloudy planet orbiting a dim star; the only reason it is not completely frozen is because of the heat trapped by its upper atmosphere. There are only a handful of towns here, and nothing big enough to warrant being called a city. Most of the settlers are subsistence farmers who can only dream about life on other worlds. Many houses here do not even have running water or personal computers.`
+  planet "Palapa"
+    description `Palapa is a cloudy planet orbiting a dim star; the only reason it is not completely frozen is because of the heat trapped by its upper atmosphere. There are only a handful of towns here, and nothing big enough to warrant being called a city. Most of the settlers are subsistence farmers who can only dream about life on other worlds. Many houses here do not even have running water or personal computers.`
     description `  Some of the farms near the spaceport are planted with different crops forming abstract patterns visible from the air. Such a whimsical extravagance seems particularly odd when you consider that the owners will never be able to afford to see their fields from that angle. But perhaps that is precisely the point.`
-    description `  The Navy has planted a base on Bundok: so far, just a densely packed cluster of prefabricated barracks and infirmary buildings on the outskirts of one of the larger towns.`
+    description `  The Navy has planted a base on Palapa: so far, just a densely packed cluster of prefabricated barracks and infirmary buildings on the outskirts of one of the larger towns.`
 
   system "Algedi"
     fleet "Merchants South Small" 700
@@ -2846,8 +2848,8 @@ event "free worlds end"
     description `Alapia is an uncomfortably hot and humid world of deserts, savanna, and a few small and scattered rainforests. Large herds of bison-like animals roam the plains, providing the locals with a steady source of food. Occasional stampedes, involving tens of thousands of these animals, have been known to level entire towns here.`
     description `  Aside from hunting, most of the industry takes the form of harvesting and refining petrochemicals to make plastics, polymers, and oils. In some parts of Alapia, the pumpjacks outnumber the people a hundred to one.`
     description `  The planet is now also home to a Navy base.`
-  planet "Bundok"
-    description `Bundok is a cloudy planet orbiting a dim star; the only reason it is not completely frozen is because of the heat trapped by its upper atmosphere. There are only a handful of towns here, and nothing big enough to warrant being called a city. Most of the settlers are subsistence farmers who can only dream about life on other worlds. Many houses here do not even have running water or personal computers.`
+  planet "Palapa"
+    description `Palapa is a cloudy planet orbiting a dim star; the only reason it is not completely frozen is because of the heat trapped by its upper atmosphere. There are only a handful of towns here, and nothing big enough to warrant being called a city. Most of the settlers are subsistence farmers who can only dream about life on other worlds. Many houses here do not even have running water or personal computers.`
     description `  Some of the farms near the spaceport are planted with different crops forming abstract patterns visible from the air. Such a whimsical extravagance seems particularly odd when you consider that the owners will never be able to afford to see their fields from that angle. But perhaps that is precisely the point.`
   planet "Clear Sky"
     description `Clear Sky is a perpetually hazy volcanic world, with a slightly caustic atmosphere but enough reserves of metal and petrochemicals to draw a large number of settlers. Some of those settlers also make a living as farmers, and a few well-developed factory towns produce goods for export to other worlds.`

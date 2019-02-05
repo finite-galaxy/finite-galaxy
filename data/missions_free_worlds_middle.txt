@@ -93,7 +93,7 @@ mission "FW Diplomacy 1B"
   
   on offer
     conversation
-      `You meet up with Alondo, who insists on not telling you anything until you are safely back aboard your own ship. Once you have brought him to his room, he says, "Here's the deal. The Senate has been secretly reaching out to other worlds, and three of them have decided to join us: Bundok, Dancer, and Harmony."`
+      `You meet up with Alondo, who insists on not telling you anything until you are safely back aboard your own ship. Once you have brought him to his room, he says, "Here's the deal. The Senate has been secretly reaching out to other worlds, and three of them have decided to join us: Palapa, Dancer, and Harmony."`
       choice
         `  "That's great news!"`
         `  "Why haven't I heard of this yet?"`
@@ -480,7 +480,7 @@ mission "FW Southern Battle 3"
     dialogue `You have failed an essential Free Worlds mission. If you want to complete the story line, revert to the autosave or another earlier snapshot of the game.`
   
   on offer
-    log "The Navy has been driven out of the Rastaban system. That will allow the people on Bundok, Dancer, and Harmony to join the Free Worlds."
+    log "The Navy has been driven out of the Rastaban system. That will allow the people on Palapa, Dancer, and Harmony to join the Free Worlds."
     conversation
       `As soon as you land on <origin>, you contact Freya and let her know that the system is yours. "That's great news," she says. "Now we need to make sure they've pulled back from the neighbouring systems, too. Take a few ships and sweep through Delta Sagittarii and Albaldah and make sure they're clear. Leave the rest of the fleet on <origin> to handle the prisoners and repairs."`
       choice
@@ -682,7 +682,7 @@ mission "FW Southern Break Ends"
   landing
   source
     near Rastaban 1 100
-  destination "Bundok"
+  destination "Palapa"
   to offer
     has "event: fw occupying the north"
     not "FW Northern 1: offered"
@@ -699,7 +699,7 @@ mission "FW Northern 1"
   name "Northern Expansion"
   description "Take a fleet to <destination> (visiting <waypoints> along the way), securing those systems to allow them to defect to the Free Worlds."
   autosave
-  source "Bundok"
+  source "Palapa"
   destination "Blubber"
   waypoint "Seginus"
   clearance
@@ -749,7 +749,7 @@ mission "FW Northern 2"
   name "Meet With Freya"
   description "Now that the northern star systems are secured, go back to <planet> to meet with Freya and work with her to remove any surveillance equipment the Navy installed in the Eber system or elsewhere."
   source "Blubber"
-  destination "Bundok"
+  destination "Palapa"
   to offer
     has "FW Northern 1: done"
   on fail
@@ -779,7 +779,7 @@ mission "FW Northern 2A"
   landing
   name "Sweep Hope"
   description "Bring Freya to <planet> and destroy any Navy sensor emplacements that she finds there."
-  source "Bundok"
+  source "Palapa"
   destination "Hope"
   to offer
     has "FW Northern 2: done"
@@ -851,7 +851,7 @@ mission "FW Northern 2D"
   name "Return to <planet>"
   description "Bring Freya to <planet> to meet up with Alondo."
   source "Blubber"
-  destination "Bundok"
+  destination "Palapa"
   to offer
     has "FW Northern 2C: done"
   passengers 1
@@ -869,7 +869,7 @@ mission "FW Northern 3"
   landing
   name "Freya to Zuq"
   description "Bring Freya to <destination> to help with ramping up Dreadnought production."
-  source "Bundok"
+  source "Palapa"
   destination "Zuq"
   to offer
     has "FW Northern 2C: done"
@@ -1390,7 +1390,7 @@ mission "FW Bloodsea 1.1"
         goto attack
       label attack
       `  "So, we attack them?" you ask.`
-      `  "You're on the Council now," he says. "I'll leave it up to you. Option one is, we bring them the supplies and workers, in merchant ships, but use very heavily armed merchant ships in case they double cross us. Option two is, we go to Bundok and see if JJ can lend us an invasion fleet."`
+      `  "You're on the Council now," he says. "I'll leave it up to you. Option one is, we bring them the supplies and workers, in merchant ships, but use very heavily armed merchant ships in case they double cross us. Option two is, we go to Palapa and see if JJ can lend us an invasion fleet."`
         accept
 
 
@@ -1484,7 +1484,7 @@ mission "FW Bloodsea 1.2"
   name "Invasion Fleet"
   description "Rather than pursuing a diplomatic agreement, meet up with JJ on <planet> and gather a fleet to invade and subjugate <origin>."
   source "Bloodsea"
-  destination "Bundok"
+  destination "Palapa"
   to offer
     has "FW Bloodsea 1: done"
   to fail
@@ -1496,7 +1496,7 @@ mission "FW Bloodsea 1.2A"
   landing
   name "Capture Bloodsea"
   description "Take a Free Worlds fleet to invade the <system> system and eliminate any pirate resistance, then land on <planet>."
-  source "Bundok"
+  source "Palapa"
   destination "Bloodsea"
   clearance
   to offer
@@ -1572,7 +1572,7 @@ mission "FW Albatross 1"
   description "Bring Freya to <planet>, to meet up with JJ and make plans for convincing Albatross to give up piracy and join the Free Worlds."
   autosave
   source "Zuq"
-  destination "Bundok"
+  destination "Palapa"
   to offer
     has "FW Dreadnoughts Ready: done"
   passengers 1
@@ -1616,7 +1616,7 @@ mission "FW Albatross 2"
   name "Visit Albatross"
   description "Bring JJ to <planet> to negotiate with the local leaders and perhaps convince them to join the Free Worlds and give up their support of piracy."
   autosave
-  source "Bundok"
+  source "Palapa"
   destination "Albatross"
   clearance
   to offer
@@ -1693,7 +1693,7 @@ mission "FW Albatross 2B"
   description "Return to <planet> with JJ, and meet up with Freya."
   autosave
   source "Albatross"
-  destination "Bundok"
+  destination "Palapa"
   clearance
   to offer
     has "FW Albatross 2A: done"
@@ -1716,7 +1716,7 @@ mission "FW Rand 1"
   name "Occupy <system>"
   description "Take a Free Worlds fleet to <system>, drive away whatever Navy ships are there, and then land on <planet>, which has decided to join the Free Worlds."
   autosave
-  source "Bundok"
+  source "Palapa"
   destination "Sinter"
   clearance
   passengers 2
@@ -1737,7 +1737,7 @@ mission "FW Rand 1"
         `  "Well, I say, if they want to join us, we should let them. Who knows if they'll be this enthusiastic about the Free Worlds later if we let them down now."`
       `  JJ thinks about that for a moment, then says, "Well, I guess we should let them join. It will mean we may need to launch an assault to drive the Navy off Clear Sky. But if we do that, our tactical position shifts from one that's worse than what we have now, to something much better. Freya, is there any sign the Navy has gotten word of this?"`
       `  "It's possible," she says, "But the bulk of the Navy fleet is still to the north and east of here."`
-      `  JJ says, "Okay Captain, here's what I propose. We'll leave the bulk of our fleet here to defend Bundok and Dancer, but take a few of our best ships to <system> and drive out the Navy. Freya and I will travel with you so that if we need to make any decisions, we'll have most of the Council there in person. How does that sound?"`
+      `  JJ says, "Okay Captain, here's what I propose. We'll leave the bulk of our fleet here to defend Palapa and Dancer, but take a few of our best ships to <system> and drive out the Navy. Freya and I will travel with you so that if we need to make any decisions, we'll have most of the Council there in person. How does that sound?"`
       choice
         `  "It sounds like a good plan. Let's do it!"`
           accept
@@ -2004,7 +2004,7 @@ mission "FW Liberate Delta Sagittarii"
   name "Liberate <system>"
   description "Lead a Free Worlds fleet to drive the Navy out of <system>. Another fleet ought to be arriving from the Rim at about the same time."
   source "Wayfarer"
-  destination "Bundok"
+  destination "Palapa"
   clearance
   passengers 2
   to offer

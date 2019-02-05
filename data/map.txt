@@ -7665,7 +7665,7 @@ system "Delta Sagittarii"
   object
     sprite star/k5
     period 10
-  object "Bundok"
+  object "Palapa"
     sprite planet/ocean6
     distance 259.64
     period 93.5497
@@ -19313,7 +19313,7 @@ system "Rutilicus"
     sprite planet/rock6
     distance 158.61
     period 31.9607
-  object "Endless Sky"
+  object "Bundok"
     sprite planet/cloud6
     distance 513.86
     period 186.375
@@ -25026,6 +25026,7 @@ planet "Bourne"
   outfitter "Fuel Pod"
   outfitter "Common Outfits"
   outfitter "Kraz Intermediate"
+  shipyard "Basic Ships"
   shipyard "Southbound Intermediate"
   security 0.4
 #  fuel 1.1
@@ -25071,16 +25072,19 @@ planet "Buccaneer Bay"
 #    fleet "Pirates West Large" 9
 
 planet "Bundok"
-  attributes south bank farming
-  landscape land/sky3
-  description `Bundok is a cloudy planet orbiting a dim star; the only reason it is not completely frozen is because of the heat trapped by its upper atmosphere. There are only a handful of towns here, and nothing big enough to warrant being called a city. Most of the settlers are subsistence farmers who can only dream about life on other worlds. Many houses here do not even have running water or personal computers.`
-  description `  Some of the farms near the spaceport are planted with different crops forming abstract patterns visible from the air. Such a whimsical extravagance seems particularly odd when you consider that the owners will never be able to afford to see their fields from that angle. But perhaps that is precisely the point.`
-  spaceport `The largest town on Bundok has set aside a landing area for ships, but it is barely what could be called a spaceport. Aside from the refueling station and a few sheds, there are no other buildings, just an open field of packed gravel, with grass and weeds peeking up in places where it has avoided the blast from landing spacecraft. A few farmers have parked wagons here and are trading food and other goods with the visiting ships.`
+  attributes "dirt belt" bank textiles farming
+  landscape land/water2
+  description `Bundok is a completely unremarkable world. Most of the land is wet and marshy, and the coastal regions are prone to flooding. Some food crops are grown here, but most of the farmers instead plant flax and jute, which grow well in wet soil and are used to make linen and burlap cloth. The textile mills are hot and poorly ventilated, but they offer higher and more reliable income than farming.`
+  spaceport `Some day Bundok may be a prosperous enough planet to afford a better spaceport, but not yet. Many of the concrete landing pads have sunk into the muddy soil over the years since they were poured, and are now tilted and uneven. The market where ship captains buy and sell cargo is a large tent rather than a permanent building, but it is sturdy enough to keep off the rain, and high enough for loads to be brought in and out by trucks and the occasional hovercraft. And, some enterprising local mechanics have set up a repair shop and outfitter.`
+  outfitter "Map"
+  outfitter "Pilot Licence"
+  outfitter "Fuel Pod"
+  outfitter "Basic Outfits"
   security 0.05
-#  fuel 1.0
-#  tribute 200
-#    threshold 2000
-#    fleet "Militia Small" 12
+#  fuel 1.1
+#  tribute 300
+#    threshold 2500
+#    fleet "Militia Small" 23
 
 planet "Burthen"
   attributes core bank mining
@@ -25640,22 +25644,6 @@ planet "Ember Wormhole"
   attributes "requires: quantum keystone"
   description ""
   government "None"
-
-planet "Endless Sky"
-  attributes "dirt belt" bank textiles farming
-  landscape land/water2
-  description `Endless Sky is a completely unremarkable world... except, of course, for the fact that you happen to have been born here. Most of the land is wet and marshy, and the coastal regions are prone to flooding. Some food crops are grown here, but most of the farmers instead plant flax and jute, which grow well in wet soil and are used to make linen and burlap cloth. The textile mills are hot and poorly ventilated, but they offer higher and more reliable income than farming.`
-  spaceport `Some day Endless Sky may be a prosperous enough planet to afford a better spaceport, but not yet. Many of the concrete landing pads have sunk into the muddy soil over the years since they were poured, and are now tilted and uneven. The market where ship captains buy and sell cargo is a large tent rather than a permanent building, but it is sturdy enough to keep off the rain, and high enough for loads to be brought in and out by trucks and the occasional hovercraft. And, some enterprising local mechanics have set up not only a repair shop and outfitter, but also a shipyard with several small, refurbished ships for sale.`
-  outfitter "Map"
-  outfitter "Pilot Licence"
-  outfitter "Fuel Pod"
-  outfitter "Basic Outfits"
-  shipyard "Basic Ships"
-  security 0.05
-#  fuel 1.1
-#  tribute 300
-#    threshold 2500
-#    fleet "Militia Small" 23
 
 planet "Esayaku Fen"
   attributes korath uninhabited
@@ -27077,6 +27065,18 @@ planet "Ovis"
 #  tribute 300
 #    threshold 2500
 #    fleet "Militia Small" 22
+
+planet "Palapa"
+  attributes south bank farming
+  landscape land/sky3
+  description `Palapa is a cloudy planet orbiting a dim star; the only reason it is not completely frozen is because of the heat trapped by its upper atmosphere. There are only a handful of towns here, and nothing big enough to warrant being called a city. Most of the settlers are subsistence farmers who can only dream about life on other worlds. Many houses here do not even have running water or personal computers.`
+  description `  Some of the farms near the spaceport are planted with different crops forming abstract patterns visible from the air. Such a whimsical extravagance seems particularly odd when you consider that the owners will never be able to afford to see their fields from that angle. But perhaps that is precisely the point.`
+  spaceport `The largest town on Palapa has set aside a landing area for ships, but it is barely what could be called a spaceport. Aside from the refueling station and a few sheds, there are no other buildings, just an open field of packed gravel, with grass and weeds peeking up in places where it has avoided the blast from landing spacecraft. A few farmers have parked wagons here and are trading food and other goods with the visiting ships.`
+  security 0.05
+#  fuel 1.0
+#  tribute 200
+#    threshold 2000
+#    fleet "Militia Small" 12
 
 planet "Pearl"
   attributes paradise tourism
