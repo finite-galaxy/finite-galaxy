@@ -35,8 +35,9 @@ HailPanel::HailPanel(PlayerInfo &player, const shared_ptr<Ship> &ship)
   SetInterruptible(false);
   
   const Government *gov = ship->GetGovernment();
+  const Font &font = FontSet::Get(14);
   if(!ship->Name().empty())
-    header = gov->GetName() + " " + ship->Noun() + " \"" + ship->Name() + "\":";
+    header = font.Truncate(gov->GetName() + " " + ship->Noun() + " \"" + ship->Name(), 328) + "\":";
   else
     header = ship->ModelName() + " (" + gov->GetName() + "): ";
   // Drones are always unpiloted, so they never respond to hails.
@@ -93,10 +94,11 @@ HailPanel::HailPanel(PlayerInfo &player, const shared_ptr<Ship> &ship)
     {
       message = "Looks like you've gotten yourself into a bit of trouble. "
         "Would you like us to ";
+      string sellMessage = "We could sell you fuel for " + Format::Number(ship->GetGovernment()->GetFuelPrice()) + " credits per unit of fuel.";
       if(canGiveFuel && canRepair)
-        message += "patch you up and give you some fuel?";
+        message += "patch you up and give you some fuel?"+sellMessage;
       else if(canGiveFuel)
-        message += "give you some fuel?";
+        message += "give you some fuel?"+sellMessage;
       else if(canRepair)
         message += "patch you up?";
     }
@@ -151,8 +153,7 @@ void HailPanel::Draw()
   DrawBackdrop();
   
   Information info;
-  const Font::Layout layout(Font::TRUNC_BACK, 330);
-  info.SetString("header", header, layout);
+  info.SetString("header", header);
   if(ship)
   {
     info.SetCondition("show assist");
@@ -182,7 +183,7 @@ void HailPanel::Draw()
   interface->Draw(info, this);
   
   // Draw the sprite, rotated, scaled, and swizzled as necessary.
-  float zoom = min(2., 400. / max(sprite->Width(), sprite->Height()));
+  double zoom = min(2., 400. / max(sprite->Width(), sprite->Height()));
   Point centre(-170., -10.);
   
   DrawList draw;
@@ -209,9 +210,9 @@ void HailPanel::Draw()
   
   // Draw the current message.
   WrappedText wrap;
-  wrap.SetAlignment(Font::JUSTIFIED);
+  wrap.SetAlignment(WrappedText::JUSTIFIED);
   wrap.SetWrapWidth(330);
-  wrap.SetFont(FontSet::Get(18));
+  wrap.SetFont(FontSet::Get(14));
   wrap.Wrap(message);
   wrap.Draw(Point(-50., -50.), *GameData::Colours().Get("medium"));
 }
