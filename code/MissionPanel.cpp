@@ -564,7 +564,7 @@ Point MissionPanel::DrawPanel(Point pos, const string &label, int entries) const
   pos += Point(10., 10. + (20. - font.Height()) * .5);
   font.Draw(label, pos, selected);
   FillShader::Fill(
-    pos + Point(.5 * size.X() - 5., 15.),
+    pos + Point(.5 * size.X() - 5., 20.),
     Point(size.X() - 10., 1.),
     unselected);
   pos.Y() += 5.;
