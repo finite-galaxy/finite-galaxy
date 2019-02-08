@@ -140,14 +140,14 @@ void ConversationPanel::Draw()
       // Fill in whichever entry box is active right now.
       FillShader::Fill(centre, fieldSize, selectionColour);
       // Draw the text cursor.
-      centre.X() += font.Width(choice ? lastName : firstName, &layout) - 67;
+      centre.X() += font.Width(choice ? lastName : firstName, &layout) - 70;
       FillShader::Fill(centre, Point(1., 16.), dim);
     }
     
-    font.Draw("First name:", point + Point(30, 0), dim);
- 		font.Draw(firstName, point + Point(90, 0), choice ? grey : bright, &layout);
+    font.Draw("First name:", point + Point(35, 0), dim);
+ 		font.Draw(firstName, point + Point(120, 0), choice ? grey : bright, &layout);
     
-    font.Draw("Last name:", point + Point(270, 0), dim);
+    font.Draw("Last name:", point + Point(265, 0), dim);
  		font.Draw(lastName, point + Point(350, 0), choice ? bright : grey, &layout);
     
     // Draw the OK button, and remember its location.
