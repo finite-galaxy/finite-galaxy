@@ -386,6 +386,7 @@ void AI::UpdateEvents(const list<ShipEvent> &events)
 }
 
 
+
 // Remove records of what happened in the previous system, now that
 // the player has entered a new one.
 void AI::Clean()
