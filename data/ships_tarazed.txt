@@ -19,6 +19,7 @@ shipyard "Tarazed Variants"
   "Osprey (Ion)"
   "Osprey (Laser)"
   "Osprey (Particle)"
+  "Modified Osprey"
   "Raven"
   "Raven (Electron)"
   "Raven (Laser)"
@@ -122,6 +123,7 @@ ship "Blackbird" "Blackbird (Laser)"
 
 
 ship "Goose"
+  plural "Geese"
   sprite "ship/goose"
   thumbnail "thumbnail/goose"
   attributes
@@ -661,25 +663,55 @@ ship "Osprey" "Osprey (Particle)"
 
 ship "Osprey" "Modified Osprey"
   sprite "ship/osprey_m"
-  engine -46 67
-  engine 46 67
-  engine -17 105.5 .0
-  engine 17 105.5 .0
-  gun 0 -108
+  add attributes
+    "cargo space" -30
+    "outfit space" 130
+    "core space" 70
+    "engine space" 30
+    "weapon space" 30
+    weapon
+      "blast radius" 20
+      "random shield damage" 200
+      "random hull damage" 300
+      "random heat damage" 6000
+      "random hit force" 500
+  outfits
+    "D67-TM Shield Generator"
+    "Fusion Reactor"
+    "Hyperdrive"
+
+    "A520 Atomic Thruster"
+    "A525 Atomic Steering"
+
+    "Sidewinder Missile" 90
+    "Sidewinder Missile Rack" 30
+    "Sidewinder Missile Launcher" 6
+    "X2 Blaster Turret" 6
+    "Heavy Anti-Missile"
+    
+    "DS-11 Battery Pack"
+    "Liquid Water Cooler"
+    "Fuel Pod" 49
+    "Tactical Scanner" 6
+  engine -46 67 .7
+  engine 46 67 .7
+  engine -17 105.5 .7
+  engine 17 105.5 .7
+#  gun 0 -108
   gun -9 -99
   gun 9 -99
   gun -21 -61
   gun 21 -61
   gun -26.5 -53
   gun 26.5 -53
-  gun -60 17
-  gun 60 17
+#  gun -60 17
+#  gun 60 17
   turret 0 -91
   turret -19.5 -16
   turret 19.5 -16
   turret -60 17
   turret 60 17
-  turret 0 29
+  turret 0 29 "Heavy Anti-Missile"
   turret 0 89.5
   explode "medium explosion" 24
   explode "large explosion" 16
