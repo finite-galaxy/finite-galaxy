@@ -571,8 +571,10 @@ ship "Osprey"
     "Liquid Nitrogen Cooler"
     "Fuel Pod" 49
     "Tactical Scanner" 6
-  engine -40 67
-  engine 40 67
+  engine -46 67 .7
+  engine 46 67 .7
+  engine -17 106 .7
+  engine 17 106 .7
   gun -8 -100
   gun 8 -100
   gun -26 -53
@@ -664,11 +666,10 @@ ship "Osprey" "Osprey (Particle)"
 ship "Osprey" "Modified Osprey"
   sprite "ship/osprey_m"
   add attributes
-    "cargo space" -30
+    "cargo space" -20
     "outfit space" 130
     "core space" 70
-    "engine space" 30
-    "weapon space" 30
+    "weapon space" 60
     weapon
       "blast radius" 20
       "random shield damage" 200
@@ -680,13 +681,13 @@ ship "Osprey" "Modified Osprey"
     "Fusion Reactor"
     "Hyperdrive"
 
-    "A520 Atomic Thruster"
+    "A370 Atomic Thruster"
     "A525 Atomic Steering"
 
     "Sidewinder Missile" 90
     "Sidewinder Missile Rack" 30
     "Sidewinder Missile Launcher" 6
-    "X2 Blaster Turret" 6
+    "Bolt Turret" 5
     "Heavy Anti-Missile"
     
     "DS-11 Battery Pack"
@@ -695,24 +696,24 @@ ship "Osprey" "Modified Osprey"
     "Tactical Scanner" 6
   engine -46 67 .7
   engine 46 67 .7
-  engine -17 105.5 .7
-  engine 17 105.5 .7
+  engine -17 106 .7
+  engine 17 106 .7
 #  gun 0 -108
   gun -9 -99
   gun 9 -99
   gun -21 -61
   gun 21 -61
-  gun -26.5 -53
-  gun 26.5 -53
+  gun -26 -53
+  gun 26 -53
 #  gun -60 17
 #  gun 60 17
-  turret 0 -91
-  turret -19.5 -16
-  turret 19.5 -16
+#  turret 0 -91
+  turret -20 -16
+  turret 20 -16
   turret -60 17
   turret 60 17
   turret 0 29 "Heavy Anti-Missile"
-  turret 0 89.5
+  turret 0 90
   explode "medium explosion" 24
   explode "large explosion" 16
   explode "small explosion" 40
