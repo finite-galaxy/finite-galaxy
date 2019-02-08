@@ -115,7 +115,7 @@ namespace {
   }
   
   // Determine if the ship with the given travel plan should refuel in
-  // its current system, or if it should keep traveling.
+  // its current system, or if it should keep travelling.
   bool ShouldRefuel(const Ship &ship, const DistanceMap &route, double fuelCapacity = 0.)
   {
     if(!fuelCapacity)
@@ -124,8 +124,8 @@ namespace {
     const System *from = ship.GetSystem();
     const bool systemHasFuel = from->HasFuelFor(ship) && fuelCapacity;
     // If there is no fuel capacity in this ship, no fuel in this
-    // system, if it is fully fueled, or its drive doesn't require
-    // fuel, then it should not refuel before traveling.
+    // system, if it is fully fuelled, or its drive doesn't require
+    // fuel, then it should not refuel before travelling.
     if(!systemHasFuel || ship.Fuel() == 1. || !ship.JumpFuel())
       return false;
     
@@ -156,7 +156,7 @@ namespace {
     else
     {
       // If no direct jump route, or the target system has no
-      // fuel, perform a more elaborate refueling check.
+      // fuel, perform a more elaborate refuelling check.
       return ShouldRefuel(ship, DistanceMap(ship, to), fuelCapacity);
     }
   }
@@ -222,7 +222,7 @@ namespace {
     ship.SetTargetStellar(nullptr);
   }
   
-  const double MAX_DISTANCE_FROM_CENTRE = 10000.;
+  const double MAX_DISTANCE_FROM_CENTRE = 10'000.;
   // Constants for the invisible fence timer.
   const int FENCE_DECAY = 4;
   const int FENCE_MAX = 600;
@@ -386,14 +386,14 @@ void AI::UpdateEvents(const list<ShipEvent> &events)
 }
 
 
-
+// Remove records of what happened in the previous system, now that
+// the player has entered a new one.
 void AI::Clean()
 {
   actions.clear();
   notoriety.clear();
   governmentActions.clear();
   playerActions.clear();
-  helperList.clear();
   swarmCount.clear();
   fenceCount.clear();
   miningAngle.clear();
@@ -406,10 +406,11 @@ void AI::Clean()
 
 
 
-// Clear ship orders. This should be done when the player lands on a planet,
-// but not when they jump from one system to another.
+// Clear ship orders and assistance request. This should be done when
+// the player lands on a planet, but not when they jump from one system to another.
 void AI::ClearOrders()
 {
+  helperList.clear();
   orders.clear();
 }
 
@@ -643,14 +644,14 @@ void AI::Step(const PlayerInfo &player)
       continue;
     }
     
-    // Ships that harvest flotsam prioritize it over stopping to be refueled.
+    // Ships that harvest flotsam prioritize it over stopping to be refuelled.
     if(isPresent && personality.Harvests() && DoHarvesting(*it, command))
     {
       it->SetCommands(command);
       continue;
     }
     
-    // Attacking a hostile ship and stopping to be refueled are more important than mining.
+    // Attacking a hostile ship and stopping to be refuelled are more important than mining.
     if(isPresent && personality.IsMining() && !target && !isStranded && maxMinerCount)
     {
       // Miners with free cargo space and available mining time should mine. Mission NPCs
@@ -749,7 +750,7 @@ void AI::Step(const PlayerInfo &player)
     // Construct movement / navigation commands as appropriate for the ship.
     if(mustRecall || isStranded)
     {
-      // Stopping to let fighters board or to be refueled takes priority
+      // Stopping to let fighters board or to be refuelled takes priority
       // even over following orders from the player.
       if(it->Velocity().Length() > .001 || !target)
         Stop(*it, command);
@@ -766,7 +767,7 @@ void AI::Step(const PlayerInfo &player)
     // escort behaviour when in a different system from you. Otherwise,
     // the behaviour depends on what the parent is doing, whether there
     // are hostile targets nearby, and whether the escort has any
-    // immediate needs (like refueling).
+    // immediate needs (like refuelling).
     else if(!parent)
       MoveIndependent(*it, command);
     else if(parent->GetSystem() != it->GetSystem())
@@ -878,11 +879,13 @@ void AI::AskForHelp(Ship &ship, bool &isStranded, const Ship *flagship)
       if(helper.get() == &ship)
         continue;
       
-      // If any enemies of this ship are in its system, it cannot call for help.
+      // If any able enemies of this ship are in its system, it cannot call for help.
       const System *system = ship.GetSystem();
       if(helper->GetGovernment()->IsEnemy(gov) && flagship && system == flagship->GetSystem())
       {
-        hasEnemy |= (system == helper->GetSystem() && !helper->IsDisabled());
+        // Disabled, overheated, or otherwise untargetable ships pose no threat.
+        bool harmless = helper->IsDisabled() || (helper->IsOverheated() && helper->Heat() >= 1.1) || !helper->IsTargetable();
+        hasEnemy |= (system == helper->GetSystem() && !harmless);
         if(hasEnemy)
           break;
       }
@@ -1479,7 +1482,7 @@ void AI::MoveEscort(Ship &ship, Command &command) const
 
 
 
-// Prefer your parent's target planet for refueling, but if it and your current
+// Prefer your parent's target planet for refuelling, but if it and your current
 // target planet can't fuel you, try to find one that can.
 void AI::Refuel(Ship &ship, Command &command)
 {
@@ -1858,10 +1861,20 @@ void AI::KeepStation(Ship &ship, Command &command, const Ship &target)
   double targetAngle = Angle(facingGoal).Degrees() - currentAngle;
   if(abs(targetAngle) > 180.)
     targetAngle += (targetAngle < 0. ? 360. : -360.);
-  if(abs(targetAngle) < turn)
-    command.SetTurn(targetAngle / turn);
+  // Avoid "turn jitter" when position & velocity are well-matched.
+  bool changedDirection = (signbit(ship.Commands().Turn()) != signbit(targetAngle));
+  double targetTurn = abs(targetAngle / turn);
+  double lastTurn = abs(ship.Commands().Turn());
+  if(lastTurn && (changedDirection || (lastTurn < 1. && targetTurn > lastTurn)))
+  {
+    // Keep the desired turn direction, but damp the per-frame turn rate increase.
+    double dampedTurn = (changedDirection ? 0. : lastTurn) + min(.025, targetTurn);
+    command.SetTurn(copysign(dampedTurn, targetAngle));
+  }
+  else if(targetTurn < 1.)
+    command.SetTurn(copysign(targetTurn, targetAngle));
   else
-    command.SetTurn(targetAngle < 0. ? -1. : 1.);
+    command.SetTurn(targetAngle);
   
   // Determine whether to apply thrust.
   Point drag = ship.Velocity() * (ship.Attributes().Get("drag") / mass);
@@ -2006,7 +2019,7 @@ void AI::PickUp(Ship &ship, Command &command, const Body &target)
   // Use the afterburner if it will not cause you to miss your target.
   double squareDistance = p.LengthSquared();
   if(command.Has(Command::FORWARD) && ShouldUseAfterburner(ship))
-    if(dp > max(.9, min(.9999, 1. - squareDistance / 10000000.)))
+    if(dp > max(.9, min(.9999, 1. - squareDistance / 10'000'000.)))
       command |= Command::AFTERBURNER;
 }
 
@@ -2169,7 +2182,7 @@ void AI::DoSurveillance(Ship &ship, Command &command, shared_ptr<Ship> &target) 
         if(!object.IsStar() && !object.IsStation())
           targetPlanets.push_back(&object);
     
-    // If this ship can jump away, consider traveling to a nearby system.
+    // If this ship can jump away, consider travelling to a nearby system.
     vector<const System *> targetSystems;
     if(ship.JumpsRemaining())
     {
@@ -2341,7 +2354,7 @@ bool AI::DoCloak(Ship &ship, Command &command)
     }
     
     // Otherwise, always cloak if you are in imminent danger.
-    static const double MAX_RANGE = 10000.;
+    static const double MAX_RANGE = 10'000.;
     double range = MAX_RANGE;
     shared_ptr<const Ship> nearestEnemy;
     for(const auto &other : ships)
@@ -2925,7 +2938,7 @@ double AI::RendezvousTime(const Point &p, const Point &v, double vp)
 
   discriminant = sqrt(discriminant);
 
-  // The solutions are b +- discriminant.
+  // The solutions are b ± discriminant.
   // But it's not a solution if it's negative.
   double r1 = (-b + discriminant) / (2. * a);
   double r2 = (-b - discriminant) / (2. * a);
@@ -3199,7 +3212,7 @@ void AI::MovePlayer(Ship &ship, const PlayerInfo &player)
             double distance = ship.Position().Distance(object.Position());
             const Planet *planet = object.GetPlanet();
             if((!planet->CanLand() || !planet->HasSpaceport()) && !planet->IsWormhole())
-              distance += 10000.;
+              distance += 10'000.;
           
             if(distance < closest)
             {
@@ -3579,7 +3592,7 @@ void AI::IssueOrders(const PlayerInfo &player, const Orders &newOrders, const st
   }
   // If this is a move command, make sure the fleet is bunched together
   // enough that each ship takes up no more than about 30,000 square pixels.
-  double maxSquadOffset = sqrt(10000. * squadCount);
+  double maxSquadOffset = sqrt(10'000. * squadCount);
   
   // Now, go through all the given ships and set their orders to the new
   // orders. But, if it turns out that they already had the given orders,
