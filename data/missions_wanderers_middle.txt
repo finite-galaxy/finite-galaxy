@@ -2559,6 +2559,8 @@ mission "Wanderers: Sestor: Return to Wanderers"
     conversation
       `Danforth breathes a sigh of relief when you tell him that the last of the Kor Sestor drones have been destroyed. "I am grateful for your help, Captain <last>," he says. "And now that we have finished with that battle, the public relations nightmare over what we did to Zenith begins. We don't need you to get involved in that, though; perhaps you should return to Wanderer space until things cool down a bit around here."`
         accept
+  on complete
+    event "jupiter available" 500
 
 
 
@@ -2588,7 +2590,7 @@ mission "Wanderers: Sestor Alt: Alnilam 1"
 mission "Wanderers: Sestor Alt: Alnilam 2"
   landing
   name "Attack Alpha base"
-  description "Travel to the <system> system with these Oathkeeper Venuss to eliminate the Alpha base on <planet>."
+  description "Travel to the <system> system with these Oathkeeper Venuses to eliminate the Alpha base on <planet>."
   source "Farpoint"
   destination "Zenith"
   clearance
@@ -2622,7 +2624,7 @@ mission "Wanderers: Sestor Alt: Alnilam 2"
 mission "Wanderers: Sestor Alt: Alnilam 3"
   landing
   name "Return to <planet>"
-  description "Escort the Oathkeeper Venuss back to <destination>."
+  description "Escort the Oathkeeper Venuses back to <destination>."
   source "Zenith"
   destination "Farpoint"
   to offer
@@ -2657,6 +2659,8 @@ mission "Wanderers: Sestor Alt: Return to Wanderers"
       `The Navy officers report the results of the battle on Zenith's surface to Danforth. "So it's over," he says. "Captain <last>, thank you for your assistance. This battle would have gone very differently if you were not here."`
       `  Now that the Kor Sestor fleet has been dealt with, you should probably return and see how things are going for the Wanderers in Korath space.`
         accept
+  on complete
+    event "jupiter available" 500
 
 
 
@@ -3032,4 +3036,27 @@ mission "Wanderers: Sestor: Patch"
   on offer
     event "wanderers: sestor planets unrestricted"
     fail
+
+mission "Navy Jupiter"
+  landing
+  invisible
+  to offer
+    has "event: jupiter available"
+  npc kill
+    government "Republic"
+    personality heroic opportunistic staying
+    system "Sol"
+    ship "Jupiter" "R.N.S. Mediterranean"
+    ship "Foxhound" "Mu One"
+    ship "Foxhound" "Mu Two"
+    ship "Foxhound" "Mu Three"
+    ship "Foxhound" "Mu Four"
+    ship "Foxhound" "Mu Five"
+    ship "Foxhound" "Mu Six"
+    ship "Foxhound" "Mu Seven"
+    ship "Foxhound" "Mu Eight"
+    ship "Foxhound" "Mu Nine"
+    ship "Foxhound" "Mu Ten"
+    ship "Foxhound" "Mu Eleven"
+    ship "Foxhound" "Mu Twelve"
 
