@@ -14,10 +14,6 @@
 # "Drak guarding Korath space"
 # "Drak guarding Sayaiban"
 # "Drak guarding Void Sprites"
-# "Permanent Deep fleets"
-# "Permanent Militia fleets"
-# "Permanent Republic fleets"
-# "Permanent Syndicate fleets"
 
 
 mission "Discovered Coalition Space"
@@ -140,8 +136,8 @@ mission "Discovered Wanderer Space"
 
 
 mission "Drak guarding Korath space"
-  invisible
   landing
+  invisible
   npc kill
     government "Drak"
     personality heroic vindictive staying
@@ -159,8 +155,8 @@ mission "Drak guarding Korath space"
     ship "Archon" "Snows of Far Door Nai"
 
 mission "Drak guarding Sayaiban"
-  invisible
   landing
+  invisible
   npc kill
     government "Drak"
     personality heroic vindictive staying
@@ -211,71 +207,11 @@ mission "Drak guarding Sayaiban"
         decline
 
 mission "Drak guarding Void Sprites"
-  invisible
   landing
+  invisible
   npc kill
     government "Drak"
     personality heroic vindictive staying
     system Nenia
     ship "Archon (Cloaked)" "Sleeping Dragon"
-
-
-
-mission "Permanent Deep fleets"
-  invisible
-  landing
-  npc kill
-    government "Deep"
-    personality heroic vindictive staying
-    system "Zosma"
-    ship "Leviathan (Mark II)" "D.D.S. Autumn"
-    ship "Leviathan (Mark II)" "D.D.S. Spring"
-    ship "Leviathan (Mark II)" "D.D.S. Summer"
-    ship "Leviathan (Mark II)" "D.D.S. Winter"
-
-mission "Permanent Militia fleets"
-  invisible
-  landing
-  npc kill
-    government "Militia"
-    personality heroic vindictive staying
-    system "Tarazed"
-    ship "Falcon" "I.M.S. Boreas"
-    ship "Falcon" "I.M.S. Eurus"
-    ship "Falcon" "I.M.S. Notus"
-    ship "Falcon" "I.M.S. Zephyrus"
-
-mission "Permanent Republic fleets"
-  invisible
-  landing
-  npc kill
-    government "Republic"
-    personality heroic vindictive staying
-    system "Sol"
-    ship "Saturn (Particle)" "R.N.S. Oceanus"
-
-mission "Permanent Syndicate fleets"
-  invisible
-  landing
-  npc kill
-    government "Syndicate"
-    personality heroic vindictive staying
-    system "Alphard"
-    ship "Splinter" "S.S.S. Aello"
-    ship "Splinter" "S.S.S. Ocypete"
-    ship "Splinter" "S.S.S. Podarge"
-  npc kill
-    government "Syndicate"
-    personality heroic vindictive staying
-    system "Betelgeuse"
-    ship "Protector" "S.S.S. Euryale"
-    ship "Protector" "S.S.S. Medusa"
-    ship "Protector" "S.S.S. Stheno"
-  npc kill
-    government "Syndicate"
-    personality heroic vindictive staying
-    system "Nihal"
-    ship "Vanguard" "S.S.S. Arges"
-    ship "Vanguard" "S.S.S. Brontes"
-    ship "Vanguard" "S.S.S. Steropes"
 

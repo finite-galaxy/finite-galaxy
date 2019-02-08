@@ -292,7 +292,7 @@ void PreferencesPanel::DrawControls()
   const Colour &bright = *GameData::Colours().Get("bright");
   
   // Check for conflicts.
-  Colour red(.3, 0., 0., .3);
+  Colour red(.3f, 0.f, 0.f, .3f);
   
   Table table;
   table.AddColumn(-115, Table::LEFT);
@@ -398,7 +398,7 @@ void PreferencesPanel::DrawControls()
   shiftTable.DrawAt(Point(-400, 52));
   
   shiftTable.DrawUnderline(medium);
-  shiftTable.Draw("With <shift> key", bright);
+  shiftTable.Draw("With &lt;shift&gt; key", bright);
   shiftTable.DrawGap(5);
   shiftTable.Draw("Select nearest ship", medium);
   shiftTable.Draw("Select next escort", medium);
@@ -594,7 +594,7 @@ void PreferencesPanel::DrawPlugins()
   table.DrawGap(5);
   
   const int MAX_TEXT_WIDTH = 230;
-  const Font &font = FontSet::Get(14);
+  const Font &font = FontSet::Get(18);
   for(const pair<string, string> &plugin : GameData::PluginAboutText())
   {
     pluginZones.emplace_back(table.GetCentrePoint(), table.GetRowSize(), plugin.first);
@@ -602,7 +602,8 @@ void PreferencesPanel::DrawPlugins()
     bool isSelected = (plugin.first == selectedPlugin);
     if(isSelected || plugin.first == hoverPlugin)
       table.DrawHighlight(back);
-    table.Draw(font.TruncateMiddle(plugin.first, MAX_TEXT_WIDTH), isSelected ? bright : medium);
+    const Font::Layout layout(Font::TRUNC_MIDDLE, MAX_TEXT_WIDTH);
+    table.Draw(plugin.first, isSelected ? bright : medium, &layout);
     
     if(isSelected)
     {

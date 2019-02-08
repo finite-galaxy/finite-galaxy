@@ -1,6 +1,6 @@
 outfit "Corundum Regenerator"
   category "Core Systems"
-  thumbnail "outfit/small regenerator hai"
+  thumbnail "outfit/shield_hai_small"
   cost 300000
   "mass" 16
   "outfit space" -16
@@ -13,7 +13,7 @@ outfit "Corundum Regenerator"
 
 outfit "Diamond Regenerator"
   category "Core Systems"
-  thumbnail "outfit/large regenerator hai"
+  thumbnail "outfit/shield_hai_large"
   cost 1150000
   "mass" 49
   "outfit space" -49
@@ -24,49 +24,75 @@ outfit "Diamond Regenerator"
   "energy consumption" .9
   description "The Hai Diamond Shield Regenerator is an advanced type of shield recharging technology. Unfortunately, its power needs are quite high, and the shifts it makes to your shield matrix causes intense heat at the regenerator when your shields are charging. The Hai usually employ Williwaw Cooling when they use this regenerator."
 
+outfit "S-270 Regenerator"
+  category "Core Systems"
+  thumbnail "outfit/shield_unfettered_small"
+  cost 220000
+  "mass" 12
+  "outfit space" -12
+  "core space" -12
+  "shield generation" .6
+  "shield energy" .6
+  "energy consumption" .3
+  "heat generation" 2
+  description "A shield regenerator works by subtly modifying the geometry of your shield matrix in order to make your shields more malleable and therefore much easier to recharge. Unfortunately, this causes your shields to also become less efficient, which draws energy away from your other systems, even when not charging shields, and creates heat."
+
+outfit "S-970 Regenerator"
+  category "Core Systems"
+  thumbnail "outfit/shield_unfettered_large"
+  cost 800000
+  "mass" 37
+  "outfit space" -37
+  "core space" -37
+  "shield generation" 2.3
+  "shield energy" 2.3
+  "energy consumption" .9
+  "heat generation" 6
+  description "The S-970 Shield Regenerator is an advanced type of shield recharging technology. Unfortunately, its power needs are rather high, and the shifts it makes in your shield configuration also result in some feedback that causes heat to build up in the regenerator, even when your shields are at full strength."
 
 
-outfit "Sand Cell"
+
+outfit "Century Cell"
   category "Energy Generation"
-  thumbnail "outfit/reactor_sand"
-  cost 45000
-  "mass" 24
-  "outfit space" -24
-  "core space" -24
-  "energy generation" 1.55
-  "heat generation" 2.4
-  description "The Sand Cell is the smallest Hai generator. It was designed by the Unfettered to fit into their drones."
+  thumbnail "outfit/reactor_century"
+  cost 1630000
+  "mass" 27
+  "outfit space" -27
+  "core space" -27
+  "energy generation" 4.7
+  "heat generation" 11.7
+  description "The Century Cell is the smallest Hai generator. It was designed by the Unfettered to fit into their drones."
 
-outfit "Pebble Core"
+outfit "Millennium Cell"
   category "Energy Generation"
-  thumbnail "outfit/reactor_pebble"
-  cost 553000
-  "mass" 29
-  "outfit space" -29
-  "core space" -29
-  "energy generation" 3.6
-  "heat generation" 6.0
-  description "This quite compact radiothermal generator uses isotopes so radioactive, and so tightly packed together, that it could almost be classified as a nuclear reactor."
+  thumbnail "outfit/reactor_millennium"
+  cost 3368000
+  "mass" 43
+  "outfit space" -43
+  "core space" -43
+  "energy generation" 8.5
+  "heat generation" 23
+  description "A Millennium Cell is a miniaturized nuclear reactor, small enough to be installed in any ship larger than a fighter. The Hai developed this model for their smaller ships."
 
-outfit "Geode Reactor"
+outfit "Epoch Cell"
   category "Energy Generation"
-  thumbnail "outfit/reactor_geode"
-  cost 2123000
-  "mass" 98
-  "outfit space" -98
-  "core space" -98
-  "energy generation" 12.7
-  "heat generation" 19.8
-  description "Efficient Hai technology ensures that nearly all the heat produced by this generator's radioisotopes is converted into electricity instead of becoming waste heat."
+  thumbnail "outfit/reactor_epoch"
+  cost 7500800
+  "mass" 74
+  "outfit space" -74
+  "core space" -74
+  "energy generation" 15.8
+  "heat generation" 46.5
+  description "Fission reactors are considered a rudimentary technology among interstellar species. Nonetheless, it remains a proven and safe technology that the Hai use fairly regularly."
 
-outfit "Boulder Reactor"
+outfit "Aeon Cell"
   category "Energy Generation"
-  thumbnail "outfit/reactor_boulder"
-  cost 4384000
-  "mass" 160
-  "outfit space" -160
-  "core space" -160
-  "energy generation" 21.9
-  "heat generation" 31.5
-  description "The early Hai engineers did not trust the finicky and unpredictable nuclear reactors that were then in use in human space, so they instead focused on perfecting the art of radioisotope thermoelectric power."
+  thumbnail "outfit/reactor_aeon"
+  cost 16467200
+  "mass" 135
+  "outfit space" -135
+  "core space" -135
+  "energy generation" 31.3
+  "heat generation" 99.5
+  description "The Hai perfected these miniaturized fusion generators to power their largest ships and weapons, to be able to defend their territory against raids."
 

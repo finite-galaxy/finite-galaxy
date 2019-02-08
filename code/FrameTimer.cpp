@@ -21,7 +21,7 @@ FrameTimer::FrameTimer()
 // _unless_ a frame takes too long by at least the given lag, in which case
 // the next frame happens immediately but no "catch-up" is done.
 FrameTimer::FrameTimer(int fps, int maxLagMsec)
-  : step(chrono::nanoseconds(1000000000 / fps)),
+  : step(chrono::nanoseconds(1000'000'000 / fps)),
   maxLag(chrono::milliseconds(maxLagMsec))
 {
   next = chrono::steady_clock::now();
@@ -62,7 +62,7 @@ void FrameTimer::Wait()
 double FrameTimer::Time() const
 {
   chrono::steady_clock::time_point now = chrono::steady_clock::now();
-  return chrono::duration_cast<chrono::nanoseconds>(now - next).count() * .000000001;
+  return chrono::duration_cast<chrono::nanoseconds>(now - next).count() * .000'000'001;
 }
 
 
@@ -70,7 +70,7 @@ double FrameTimer::Time() const
 // Change the frame rate (for viewing in slow motion).
 void FrameTimer::SetFrameRate(int fps)
 {
-  step = chrono::nanoseconds(1000000000 / fps);
+  step = chrono::nanoseconds(1000'000'000 / fps);
 }
 
 

@@ -607,7 +607,8 @@ const Planet *PlayerInfo::GetPlanet() const
 
 
 
-// If the player is landed, return the stellar object they are on.
+// If the player is landed, return the stellar object they are on. Some planets
+// (e.g. ringworlds) may include multiple stellar objects in the same system.
 const StellarObject *PlayerInfo::GetStellarObject() const
 {
   if(!system || !planet)
@@ -1004,6 +1005,21 @@ void PlayerInfo::Land(UI *ui)
   // and pool all their cargo together. Those in remote systems restore
   // what they can without landing. Fuel is also refilled.
   Refuel();
+  bool hasSpaceport = planet->HasSpaceport() && planet->CanUseServices();
+  UpdateCargoCapacities();
+  for(const shared_ptr<Ship> &ship : ships)
+    if(!ship->IsParked() && !ship->IsDisabled())
+    {
+      if(ship->GetSystem() == system)
+      {
+        ship->Recharge(hasSpaceport);
+        ship->Cargo().TransferAll(cargo);
+        if(!ship->GetPlanet())
+          ship->SetPlanet(planet);
+      }
+      else
+        ship->Recharge(false);
+    }
   // Adjust cargo cost basis for any cargo lost due to a ship being destroyed.
   for(const auto &it : lostCargo)
     AdjustBasis(it.first, -(costBasis[it.first] * it.second) / (cargo.Get(it.first) + it.second));
@@ -1319,10 +1335,10 @@ void PlayerInfo::LoadCargo()
 }
 
 
-// Also unloads fighters.
-void PlayerInfo::UnLoadCargo()
+
+// Unloads all cargo.
+void PlayerInfo::UnloadCargo()
 {
-  // Unloads all cargo.
   for(const shared_ptr<Ship> &ship : ships)
     if(!ship->IsDisabled() && ship->GetSystem() == system)
       ship->Cargo().TransferAll(cargo);
@@ -1385,10 +1401,9 @@ void PlayerInfo::RefuelRatio(double ratio)
     out << "You paid " << fuelPrice << " credits to buy " << rechargedFuel << " units of fuel.";
     Messages::Add(out.str());
     accounts.AddCredits(-fuelPrice);
-  }
-}
 
 
+    
 
 double PlayerInfo::FuelNeeded(double ratio)
 {
@@ -1398,6 +1413,32 @@ double PlayerInfo::FuelNeeded(double ratio)
       neededFuel += ship->FuelMissing(ratio);
   
   return neededFuel;
+
+
+
+
+void PlayerInfo::LoadFighters()
+{
+  for(const shared_ptr<Ship> &ship : ships)
+  {
+    if(ship->IsParked() || ship->IsDisabled())
+      continue;
+    const string &category = ship->Attributes().Category();
+    if(category == "Fighter" || category == "Drone")
+      for(shared_ptr<Ship> &parent : ships)
+        if(parent->GetSystem() == ship->GetSystem() && !parent->IsParked()
+            && !parent->IsDisabled() && parent->Carry(ship))
+          break;
+  }
+}
+
+
+  
+// Unloads all fighters.
+void PlayerInfo::UnloadFighters()
+{
+  for(const shared_ptr<Ship> &ship : ships)
+    ship->UnloadBays();
 }
 
 
@@ -1696,8 +1737,8 @@ void PlayerInfo::HandleEvent(const ShipEvent &event, UI *ui)
     if((event.Type() & ShipEvent::DISABLE) && event.Target())
     {
       int &rating = conditions["combat rating"];
-      static const int64_t maxRating = 2000000000;
-      rating = min(maxRating, rating + (event.Target()->Cost() + 250000) / 500000);
+      static const int64_t maxRating = 2000'000'000;
+      rating = min(maxRating, rating + (event.Target()->Cost() + 250'000) / 500'000);
     }
   
   for(Mission &mission : missions)
@@ -2262,7 +2303,7 @@ void PlayerInfo::ApplyChanges()
   {
     if(!ship->GetSystem() || ship->GetSystem()->Name().empty())
       ship->SetSystem(system);
-    if(ship->GetSystem() == system)
+    if(ship->GetSystem() == system && (!ship->GetPlanet() || ship->GetPlanet()->Name().empty()))
       ship->SetPlanet(planet);
   }
   
@@ -2315,7 +2356,7 @@ void PlayerInfo::ApplyChanges()
 void PlayerInfo::UpdateAutoConditions(bool isBoarding)
 {
   // Set a condition for the player's net worth. Limit it to the range of a 32-bit int.
-  static const int64_t limit = 2000000000;
+  static const int64_t limit = 2000'000'000;
   conditions["net worth"] = min(limit, max(-limit, accounts.NetWorth()));
   conditions["credits"] = min(limit, accounts.Credits());
   conditions["unpaid mortgages"] = min(limit, accounts.TotalDebt("Mortgage"));
@@ -2729,7 +2770,7 @@ void PlayerInfo::Fine(UI *ui)
           + LastName()
           + ", we detect highly illegal material on your ship.\""
           "\n\tYou are sentenced to lifetime imprisonment on a penal colony."
-          " Your days of traveling the stars have come to an end.";
+          " Your days of travelling the stars have come to an end.";
         ui->Push(new Dialogue(message));
       }
       // All ships belonging to the player should be removed.

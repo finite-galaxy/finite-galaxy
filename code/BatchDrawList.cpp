@@ -43,7 +43,7 @@ void BatchDrawList::SetCentre(const Point &centre)
 
 
 // Add an object based on the Body class.
-bool BatchDrawList::Add(const Body &body, double clip)
+bool BatchDrawList::Add(const Body &body, float clip)
 {
   Point position = (body.Position() + .5 * body.Velocity() - centre) * zoom;
   if(Cull(body, position))
@@ -63,7 +63,7 @@ bool BatchDrawList::Add(const Body &body, double clip)
   Point topLeft = position - (uw + uh);
   // Scale the vectors and apply clipping to the "height" of the sprite.
   uw *= 2.;
-  uh *= 2. * clip;
+  uh *= 2.f * clip;
   
   // Calculate the other three corners.
   Point topRight = topLeft + uw;

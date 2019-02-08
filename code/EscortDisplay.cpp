@@ -58,7 +58,7 @@ void EscortDisplay::Draw(const Rectangle &bounds) const
   static const Set<Colour> &colours = GameData::Colours();
   
   // Draw escort status.
-  const Font &font = FontSet::Get(14);
+  const Font &font = FontSet::Get(18);
   // Top left corner of the current escort icon.
   Point corner = Point(bounds.Left(), bounds.Bottom());
   const Colour &elsewhereColour = *colours.Get("escort elsewhere");
@@ -102,7 +102,7 @@ void EscortDisplay::Draw(const Rectangle &bounds) const
       colour = hereColour;
     
     // Figure out what scale should be applied to the ship sprite.
-    double scale = min(ICON_SIZE / escort.sprite->Width(), ICON_SIZE / escort.sprite->Height());
+    float scale = min(ICON_SIZE / escort.sprite->Width(), ICON_SIZE / escort.sprite->Height());
     Point size(escort.sprite->Width() * scale, escort.sprite->Height() * scale);
     OutlineShader::Draw(escort.sprite, pos, size, colour);
     zones.push_back(pos);
@@ -140,12 +140,12 @@ void EscortDisplay::Draw(const Rectangle &bounds) const
         const Colour &colour = (isSplit ? halfColour : fullColour)[i];
         
         Point to = from + Point(width * min(1., escort.high[i]), 0.);
-        LineShader::Draw(from, to, 1.5, colour);
+        LineShader::Draw(from, to, 1.5f, colour);
         
         if(isSplit)
         {
           Point to = from + Point(width * max(0., escort.low[i]), 0.);
-          LineShader::Draw(from, to, 1.5, colour);
+          LineShader::Draw(from, to, 1.5f, colour);
         }
       }
       from.Y() += 4.;

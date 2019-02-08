@@ -132,13 +132,16 @@ public:
   bool TakeOff(UI *ui);
   // Load or unload cargo while landed to simulate the effective mass in space.
   void LoadCargo();
-  void UnLoadCargo();
-  // Refuels all playerships that are currently on the same planet as the flagship.
   void Refuel();
   // Refuels to a given ratio.
   void RefuelRatio(double ratio);
   // Returns the fuel that is needed to reach a certain ratio.
   double FuelNeeded(double ratio);
+
+  void UnloadCargo();
+  // Load or unload fighters while landed to simulate the effective mass in space.
+  void LoadFighters();
+  void UnloadFighters();
   
   // Get the player's logbook.
   const std::multimap<Date, std::string> &Logbook() const;

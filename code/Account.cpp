@@ -123,7 +123,7 @@ string Account::Step(int64_t assets, int64_t salaries)
   
   // Keep track of what payments were made and whether any could not be made.
   salariesOwed += salaries;
-  bool paid = true;
+  bool missedPayment = false;
   
   // Crew salaries take highest priority.
   int64_t salariesPaid = salariesOwed;
@@ -136,8 +136,8 @@ string Account::Step(int64_t assets, int64_t salaries)
       salariesPaid = max<int64_t>(credits, 0);
       salariesOwed -= salariesPaid;
       credits -= salariesPaid;
-      paid = false;
-      out << "You could not pay all your crew salaries. ";
+      missedPayment = true;
+      out << "You could not pay all your crew salaries.";
     }
     else
     {
@@ -156,9 +156,9 @@ string Account::Step(int64_t assets, int64_t salaries)
     if(payment > credits)
     {
       mortgage.MissPayment();
-      if(paid)
-        out << "You missed a mortgage payment. ";
-      paid = false;
+      if(!missedPayment)
+        out << "You missed a mortgage payment.";
+      missedPayment = true;
     }
     else
     {
@@ -189,11 +189,13 @@ string Account::Step(int64_t assets, int64_t salaries)
   // If you failed to pay any debt, your credit score drops. Otherwise, even
   // if you have no debts, it increases. (Because, having no debts at all
   // makes you at least as credit-worthy as someone who pays debts on time.)
-  creditScore = max(200, min(800, creditScore + (paid ? 1 : -5)));
+  creditScore = max(200, min(800, creditScore + (missedPayment ? -5 : 1)));
   
   // If you didn't make any payments, no need to continue further.
   if(!(salariesPaid + mortgagesPaid + finesPaid))
     return out.str();
+  else if(missedPayment)
+    out << " ";
   
   out << "You paid ";
   
@@ -276,7 +278,7 @@ int64_t Account::Prequalify() const
   // their net worth, to avoid absurd mortgages being offered when the player
   // has just captured some very lucrative ships.
   return max<int64_t>(0, min(
-    NetWorth() / 3 + 500000 - liabilities,
+    NetWorth() / 3 + 500'000 - liabilities,
     Mortgage::Maximum(YearlyRevenue(), creditScore, payments)));
 }
 

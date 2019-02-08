@@ -15,9 +15,9 @@ using namespace std;
 namespace {
   // Suppose you want to be able to turn 360 degrees in one second. Then you are
   // turning 6 degrees per time step. If the Angle lookup is 2^16 steps, then 6
-  // degrees is 1092 steps, and your turn speed is accurate to +- 0.05%. That seems
+  // degrees is 1092 steps, and your turn speed is accurate to ±0.05%. That seems
   // plenty accurate to me. At that step size, the lookup table is exactly 1 MB.
-  const int32_t STEPS = 0x10000;
+  const int32_t STEPS = 0x10'000;
   const int32_t MASK = STEPS - 1;
   const double DEG_TO_STEP = STEPS / 360.;
   const double STEP_TO_RAD = PI / (STEPS / 2);

@@ -235,6 +235,7 @@ void Engine::Place()
     Place(mission.NPCs(), flagship); 
   
   // Get the coordinates of the planet the player is leaving.
+  const Planet *planet = player.GetPlanet();
   Point planetPos;
   double planetRadius = 0.;
   const StellarObject *object = player.GetStellarObject();
@@ -248,31 +249,39 @@ void Engine::Place()
   for (const shared_ptr<Ship> &ship : ships)
   {
     Point pos;
-    Angle angle = Angle::Random(360.);
-    Point velocity = angle.Unit();
+    Angle angle = Angle::Random();
     // Any ships in the same system as the player should be either
-    // taking off from the player's planet or nearby.
-    bool isHere = (ship->GetSystem() == player.GetSystem());
-    if(isHere)
-      pos = planetPos;
-    // Check whether this ship should take off with you. "Launching" ships can always take
-    // off, otherwise they must be able to land and also not be flagged to stay in space.
-    if(isHere && !ship->IsDisabled() && (ship->GetPersonality().IsLaunching()
-        || ((player.GetPlanet()->CanLand(*ship) || ship->IsYours())
-        && !(ship->GetPersonality().IsStaying() || ship->GetPersonality().IsWaiting()))))
+     // taking off from a specific planet or nearby.
+    if(ship->GetSystem() == player.GetSystem() && !ship->IsDisabled())
     {
-      if(player.GetPlanet())
-        ship->SetPlanet(player.GetPlanet());
-      pos += angle.Unit() * Random::Real() * planetRadius;
+      const Personality &person = ship->GetPersonality();
+      bool hasOwnPlanet = ship->GetPlanet();
+      bool launchesWithPlayer = (ship->IsYours() || planet->CanLand(*ship))
+          && !(person.IsStaying() || person.IsWaiting() || hasOwnPlanet);
+      const StellarObject *object = hasOwnPlanet ?
+          ship->GetSystem()->FindStellar(ship->GetPlanet()) : nullptr;
+      // Default to the player's planet in the case of data definition errors.
+      if(person.IsLaunching() || launchesWithPlayer || (hasOwnPlanet && !object))
+      {
+        if(planet)
+          ship->SetPlanet(planet);
+        pos = planetPos + angle.Unit() * Random::Real() * planetRadius;
+      }
+      else if(hasOwnPlanet)
+        pos = object->Position() + angle.Unit() * Random::Real() * object->Radius();
     }
-    else
+    // If the position is still (0, 0), the special ship is in a different
+    // system, disabled, or otherwise unable to land on viable planets in
+    // the player's system: place it "in flight".
+    if(!pos)
     {
       ship->SetPlanet(nullptr);
-      pos = planetPos + Angle::Random().Unit() * ((Random::Real() + 1.) * 400. + 2. * planetRadius);
-      velocity *= Random::Real() * ship->MaxVelocity();
+       Fleet::Place(*ship->GetSystem(), *ship);
     }
     
-    ship->Place(pos, ship->IsDisabled() ? Point() : velocity, angle);
+    // This ship is taking off from a planet.
+    else
+      ship->Place(pos, angle.Unit(), angle);
   }
   // Move any ships that were randomly spawned into the main list, now
   // that all special ships have been repositioned.
@@ -635,11 +644,11 @@ void Engine::Step(bool isActive)
   }
   else
   {
-    const Font &font = FontSet::Get(14);
     if(target->GetSystem() == player.GetSystem() && target->Cloaking() < 1.)
       targetUnit = target->Facing().Unit();
     info.SetSprite("target sprite", target->GetSprite(), targetUnit, target->GetFrame(step));
-    info.SetString("target name", font.TruncateMiddle(target->Name(), 150));
+    const Font::Layout layout(Font::TRUNC_MIDDLE, 150);
+    info.SetString("target name", target->Name(), layout);
     info.SetString("target type", target->ModelName());
     if(!target->GetGovernment())
       info.SetString("target government", "No Government");
@@ -819,10 +828,10 @@ void Engine::Draw() const
     Point pos = it.position * zoom;
     double radius = it.radius * zoom;
     if(it.outer > 0.)
-      RingShader::Draw(pos, radius + 3., 1.5, it.outer, colour[it.type], 0., it.angle);
+      RingShader::Draw(pos, radius + 3., 1.5f, it.outer, colour[it.type], 0.f, it.angle);
     double dashes = (it.type >= 2) ? 0. : 20. * min(1., zoom);
     if(it.inner > 0.)
-      RingShader::Draw(pos, radius, 1.5, it.inner, colour[3 + it.type], dashes, it.angle);
+      RingShader::Draw(pos, radius, 1.5f, it.inner, colour[3 + it.type], dashes, it.angle);
   }
   
   // Draw the flagship highlight, if any.
@@ -839,7 +848,7 @@ void Engine::Draw() const
   
   // Draw messages. Draw the most recent messages first, as some messages
   // may be wrapped onto multiple lines.
-  const Font &font = FontSet::Get(14);
+  const Font &font = FontSet::Get(18);
   const vector<Messages::Entry> &messages = Messages::Get(step);
   Rectangle messageBox = interface->GetBox("messages");
   WrappedText messageLine(font);
@@ -853,7 +862,7 @@ void Engine::Draw() const
     if(messagePoint.Y() < messageBox.Top())
       break;
     float alpha = (it->step + 1000 - step) * .001f;
-    Colour colour(alpha, 0.);
+    Colour colour(alpha, 0.f);
     messageLine.Draw(messagePoint, colour);
   }
   
@@ -865,7 +874,7 @@ void Engine::Draw() const
     
     for(int i = 0; i < target.count; ++i)
     {
-      PointerShader::Draw(target.centre * zoom, a.Unit(), 12., 14., -target.radius * zoom,
+      PointerShader::Draw(target.centre * zoom, a.Unit(), 12.f, 14.f, -target.radius * zoom,
         Radar::GetColour(target.type));
       a += da;
     }
@@ -885,13 +894,13 @@ void Engine::Draw() const
   {
     Point centre = interface->GetPoint("target");
     double radius = interface->GetValue("target radius");
-    PointerShader::Draw(centre, targetVector.Unit(), 10., 10., radius, Colour(1.));
+    PointerShader::Draw(centre, targetVector.Unit(), 10.f, 10.f, radius, Colour(1.));
   }
   
   // Draw the faction markers.
   if(targetSwizzle >= 0 && interface->HasPoint("faction markers"))
   {
-    int width = font.Width(info.GetString("target government"));
+    int width = font.Width(info.GetString("target government").first);
     Point centre = interface->GetPoint("faction markers");
     
     const Sprite *mark[2] = {SpriteSet::Get("ui/faction left"), SpriteSet::Get("ui/faction right")};
@@ -901,7 +910,7 @@ void Engine::Draw() const
       SpriteShader::Draw(mark[i], centre + Point(dx[i], 0.), 1., targetSwizzle);
   }
   if(jumpCount && Preferences::Has("Show mini-map"))
-    MapPanel::DrawMiniMap(player, .5 * min(1., jumpCount / 30.), jumpInProgress, step);
+    MapPanel::DrawMiniMap(player, .5f * min(1.f, jumpCount / 30.f), jumpInProgress, step);
   
   // Draw ammo status.
   static const double ICON_SIZE = 30.;
@@ -1361,7 +1370,13 @@ void Engine::MoveShip(const shared_ptr<Ship> &ship)
     // Make sure this ship's destruction was recorded, even if it died from
     // self-destruct.
     if(ship->IsDestroyed())
+    {
       eventQueue.emplace_back(nullptr, ship, ShipEvent::DESTROY);
+      // Any still-docked ships' destruction must be recorded as well.
+      for(const auto &bay : ship->Bays())
+        if(bay.ship)
+          eventQueue.emplace_back(nullptr, bay.ship, ShipEvent::DESTROY);
+    }
     return;
   }
   
@@ -1691,7 +1706,7 @@ void Engine::DoCollisions(Projectile &projectile)
     // ship that they have hit.
     if(!projectile.GetWeapon().IsPhasing())
     {
-      Body *asteroid = asteroids.Collide(projectile, step, &closestHit);
+      Body *asteroid = asteroids.Collide(projectile, &closestHit);
       if(asteroid)
       {
         hitVelocity = asteroid->Velocity();

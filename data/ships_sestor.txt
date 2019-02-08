@@ -9,12 +9,12 @@ shipyard "Sestor Variants"
   "Met Par Tek 53"
   "Met Par Tek 53 (Jump)"
   "Met Par Tek 53 (Sniper)"
-  "Tek Far 71 - Lek"
-  "Tek Far 71 - Lek (Close Quarters)"
-  "Tek Far 71 - Lek (Jump)"
-  "Tek Far 78 - Osk"
-  "Tek Far 78 - Osk (Close Quarters)"
-  "Tek Far 78 - Osk (Jump)"
+  "Tek Far 71 Lek"
+  "Tek Far 71 Lek (Close Quarters)"
+  "Tek Far 71 Lek (Jump)"
+  "Tek Far 78 Osk"
+  "Tek Far 78 Osk (Close Quarters)"
+  "Tek Far 78 Osk (Jump)"
   "Tek Far 109"
   "Tek Far 109 (Jump)"
 
@@ -43,10 +43,15 @@ ship "Far Lek 14"
 # miscellaneous stats
     "self destruct" .9
     weapon
-      "blast radius" 5
-      "shield damage" 50
-      "hull damage" 25
-      "hit force" 75
+      "blast radius" 18
+      "shield damage" 52
+      "random shield damage" 132
+      "hull damage" 78
+      "random hull damage" 198
+      "heat damage" 1560
+      "random heat damage" 3960
+      "hit force" 130
+      "random hit force" 330
   outfits
     "Control Transceiver"
     "Generator (Candle Class)"
@@ -89,10 +94,15 @@ ship "Far Osk 27"
 # miscellaneous stats
     "self destruct" .9
     weapon
-      "blast radius" 12
-      "shield damage" 120
-      "hull damage" 60
-      "hit force" 180
+      "blast radius" 27
+      "shield damage" 68
+      "random shield damage" 200
+      "hull damage" 102
+      "random hull damage" 300
+      "heat damage" 2040
+      "random heat damage" 6000
+      "hit force" 170
+      "random hit force" 500
   outfits
     "Control Transceiver"
     "Generator (Furnace Class)"
@@ -135,13 +145,18 @@ ship "Kar Ik Vot 349"
     "weapon space" 447
 # miscellaneous stats
     "fuel capacity" 9964
-    "ramscoop" 3
+    "ramscoop" 5
     "self destruct" .9
     weapon
-      "blast radius" 450
-      "shield damage" 6400
-      "hull damage" 3200
-      "hit force" 9600
+      "blast radius" 498
+      "shield damage" 2700
+      "random shield damage" 2282
+      "hull damage" 4050
+      "random hull damage" 3423
+      "heat damage" 81000
+      "random heat damage" 68460
+      "hit force" 6750
+      "random hit force" 5705
   outfits
     "Control Transceiver"
     "Systems Core (Large)"
@@ -152,26 +167,25 @@ ship "Kar Ik Vot 349"
     "Thruster (Planetary Class)"
     "Steering (Stellar Class)"
 
-    "Piercer" 124
-    "Piercer Rack" 2
-    "Piercer Launcher" 2
     "Detainer" 2
-    "Repeater Turret" 6
+    "Repeater Turret" 8
     "Warder" 2
 
-    "Large Heat Shunt" 5
+    "Large Heat Shunt" 6
   engine -24 237
   engine 24 237
   gun -8 -212 "Detainer"
   gun 8 -212 "Detainer"
-  gun -16 -158 "Piercer Launcher"
-  gun 16 -158 "Piercer Launcher"
-  turret -37 -150 "Repeater Turret"
-  turret 37 -150 "Repeater Turret"
+  gun -16 -158
+  gun 16 -158
+  turret -36 -150 "Repeater Turret"
+  turret 36 -150 "Repeater Turret"
   turret -38 -132 "Repeater Turret"
   turret 38 -132 "Repeater Turret"
   turret -40 -111 "Repeater Turret"
   turret 40 -111 "Repeater Turret"
+  turret -42 -90 "Repeater Turret"
+  turret 42 -90 "Repeater Turret"
   turret -102 188 "Warder"
   turret 102 188 "Warder"
   explode "tiny explosion" 120
@@ -209,6 +223,8 @@ ship "Kar Ik Vot 349" "Kar Ik Vot 349 (Attacker)"
   turret "Repeater Turret"
   turret "Repeater Turret"
   turret "Repeater Turret"
+  turret
+  turret
   turret "Grab-Striker"
   turret "Grab-Striker"
 
@@ -235,12 +251,14 @@ ship "Kar Ik Vot 349" "Kar Ik Vot 349 (Defender)"
 
     "Large Heat Shunt" 4
     "Extra Outfit Space" 3
-  turret "Banisher"
-  turret "Banisher"
-  turret "Grab-Striker"
-  turret "Grab-Striker"
   turret "Repeater Turret"
   turret "Repeater Turret"
+  turret "Grab-Striker"
+  turret "Grab-Striker"
+  turret "Banisher"
+  turret "Banisher"
+  turret
+  turret
   turret "Warder"
   turret "Warder"
 
@@ -256,14 +274,21 @@ ship "Kar Ik Vot 349" "Kar Ik Vot 349 (Jump)"
     "Thruster (Planetary Class)"
     "Steering (Stellar Class)"
 
-    "Piercer" 124
-    "Piercer Rack" 2
-    "Piercer Launcher" 2
     "Detainer" 2
-    "Repeater Turret" 6
+    "Repeater Turret" 8
     "Warder" 2
 
-    "Large Heat Shunt" 5
+    "Large Heat Shunt" 6
+  turret "Repeater Turret"
+  turret "Repeater Turret"
+  turret "Repeater Turret"
+  turret "Repeater Turret"
+  turret "Repeater Turret"
+  turret "Repeater Turret"
+  turret "Repeater Turret"
+  turret "Repeater Turret"
+  turret "Warder"
+  turret "Warder"
 
 
 ship "Kar Ik Vot 349" "Kar Ik Vot 349 (Trapper)"
@@ -284,6 +309,8 @@ ship "Kar Ik Vot 349" "Kar Ik Vot 349 (Trapper)"
 
     "Large Heat Shunt" 4
     "Extra Outfit Space" 3
+  turret
+  turret
   turret
   turret
   turret
@@ -317,13 +344,18 @@ ship "Met Par Tek 53"
     "weapon space" 213
 # miscellaneous stats
     "fuel capacity" 4224
-    "ramscoop" 2
+    "ramscoop" 5
     "self destruct" .9
     weapon
-      "blast radius" 250
-      "shield damage" 3200
-      "hull damage" 1600
-      "hit force" 4800
+      "blast radius" 211
+      "shield damage" 840
+      "random shield damage" 1272
+      "hull damage" 1260
+      "random hull damage" 1908
+      "heat damage" 25200
+      "random heat damage" 38160
+      "hit force" 2100
+      "random hit force" 3180
   outfits
     "Control Transceiver"
     "Systems Core (Medium)"
@@ -403,7 +435,7 @@ ship "Met Par Tek 53" "Met Par Tek 53 (Sniper)"
 
 
 
-ship "Tek Far 71 - Lek"
+ship "Tek Far 71 Lek"
   sprite "ship/tek_far_71_lek"
   thumbnail "thumbnail/tek_far_71_lek"
   attributes
@@ -425,13 +457,18 @@ ship "Tek Far 71 - Lek"
     "weapon space" 210
 # miscellaneous stats
     "fuel capacity" 8396
-    "ramscoop" 3
+    "ramscoop" 5
     "self destruct" .9
     weapon
-      "blast radius" 320
-      "shield damage" 4000
-      "hull damage" 2000
-      "hit force" 6000
+      "blast radius" 236
+      "shield damage" 1220
+      "random shield damage" 1138
+      "hull damage" 1830
+      "random hull damage" 1707
+      "heat damage" 36600
+      "random heat damage" 34140
+      "hit force" 3050
+      "random hit force" 2845
   outfits
     "Control Transceiver"
     "Systems Core (Medium)"
@@ -476,7 +513,7 @@ ship "Tek Far 71 - Lek"
   description "The Kor Sestor war fleets rely heavily on small, powerful fighters and drones. This ship can carry up to ten of their drones, clamped to the exterior of its hull."
 
 
-ship "Tek Far 71 - Lek" "Tek Far 71 - Lek (Jump)"
+ship "Tek Far 71 Lek" "Tek Far 71 Lek (Jump)"
   outfits
     "Control Transceiver"
     "Systems Core (Medium)"
@@ -502,7 +539,7 @@ ship "Tek Far 71 - Lek" "Tek Far 71 - Lek (Jump)"
   turret "Warder"
 
 
-ship "Tek Far 71 - Lek" "Tek Far 71 - Lek (Close Quarters)"
+ship "Tek Far 71 Lek" "Tek Far 71 Lek (Close Quarters)"
   outfits
     "Control Transceiver"
     "Systems Core (Medium)"
@@ -526,7 +563,7 @@ ship "Tek Far 71 - Lek" "Tek Far 71 - Lek (Close Quarters)"
 
 
 
-ship "Tek Far 78 - Osk"
+ship "Tek Far 78 Osk"
   sprite "ship/tek_far_78_osk"
   thumbnail "thumbnail/tek_far_78_osk"
   attributes
@@ -548,13 +585,18 @@ ship "Tek Far 78 - Osk"
     "weapon space" 271
 # miscellaneous stats
     "fuel capacity" 10280
-    "ramscoop" 3
+    "ramscoop" 5
     "self destruct" .9
     weapon
-      "blast radius" 340
-      "shield damage" 4400
-      "hull damage" 2200
-      "hit force" 6600
+      "blast radius" 273
+      "shield damage" 1380
+      "random shield damage" 1348
+      "hull damage" 2070
+      "random hull damage" 2022
+      "heat damage" 41400
+      "random heat damage" 40440
+      "hit force" 3450
+      "random hit force" 3370
   outfits
     "Control Transceiver"
     "Systems Core (Medium)"
@@ -601,7 +643,7 @@ ship "Tek Far 78 - Osk"
   description "This carrier is equipped with docking clamps for up to nine fighters. When loaded with a full complement of the powerful Kor Sestor robotic fighters, it is a formidable opponent."
 
 
-ship "Tek Far 78 - Osk" "Tek Far 78 - Osk (Jump)"
+ship "Tek Far 78 Osk" "Tek Far 78 Osk (Jump)"
   outfits
     "Control Transceiver"
     "Systems Core (Medium)"
@@ -630,7 +672,7 @@ ship "Tek Far 78 - Osk" "Tek Far 78 - Osk (Jump)"
   turret "Warder"
 
 
-ship "Tek Far 78 - Osk" "Tek Far 78 - Osk (Close Quarters)"
+ship "Tek Far 78 Osk" "Tek Far 78 Osk (Close Quarters)"
   outfits
     "Control Transceiver"
     "Systems Core (Medium)"
@@ -665,7 +707,7 @@ ship "Tek Far 109"
     "shields" 17900
     "hull" 15800
     "automaton" 1
-    "mass" 540
+    "mass" 740
     "drag" 9.1
     "heat dissipation" .65
     "cargo space" 31
@@ -674,14 +716,19 @@ ship "Tek Far 109"
     "engine space" 98
     "weapon space" 217
 # miscellaneous stats
-    "fuel capacity" 11352
-    "ramscoop" 3
+    "fuel capacity" 12152
+    "ramscoop" 5
     "self destruct" .9
     weapon
-      "blast radius" 280
-      "shield damage" 3200
-      "hull damage" 1600
-      "hit force" 4800
+      "blast radius" 254
+      "shield damage" 1480
+      "random shield damage" 1064
+      "hull damage" 2220
+      "random hull damage" 1596
+      "heat damage" 44400
+      "random heat damage" 31920
+      "hit force" 3700
+      "random hit force" 2660
   outfits
     "Control Transceiver"
     "Systems Core (Medium)"

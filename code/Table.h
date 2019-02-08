@@ -4,6 +4,7 @@
 #define TABLE_H_
 
 #include "Colour.h"
+#include "Font.h"
 #include "Point.h"
 
 #include <string>
@@ -53,10 +54,10 @@ public:
   void Advance(int fields = 1) const;
   
   // Draw a single text field, and move on to the next one.
-  void Draw(const std::string &text) const;
-  // If a colour is given, this field is drawn using that colour, but the
-  // previously set colour will be used for future fields.
-  void Draw(const std::string &text, const Colour &colour) const;
+  void Draw(const std::string &text, const Font::Layout *layout = nullptr) const;
+  // If a colour is given, this field is drawn using that colour, 
+  // but the previously set colour will be used for future fields.
+  void Draw(const std::string &text, const Colour &colour, const Font::Layout *layout = nullptr) const;
   void Draw(double value) const;
   void Draw(double value, const Colour &colour) const;
   

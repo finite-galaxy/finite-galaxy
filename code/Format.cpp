@@ -17,7 +17,7 @@ namespace {
     int places = 0;
     do {
       if(places && !(places % 3) && (value >= 10))
-        result += ',';
+        result += ' ';
       ++places;
       
       result += static_cast<char>('0' + value % 10);
@@ -41,8 +41,8 @@ string Format::Credits(int64_t value)
   bool isNegative = (value < 0);
   int64_t absolute = abs(value);
   
-  // If the value is above one quadrillion, show it in scientific notation.
-  if(absolute > 1000000000000000ll)
+  // If the value is above one quintillion (short scale), show it in scientific notation.
+  if(absolute > 1000'000'000'000'000'000ll)
   {
     ostringstream out;
     out.precision(3);
@@ -50,13 +50,13 @@ string Format::Credits(int64_t value)
     return out.str();
   }
   
-  // Reserve enough space for something like "-123.456 M".
+  // Reserve enough space for something like "-123.456 T".
   string result;
   result.reserve(8);
   
-  // Handle numbers bigger than a million.
-  static const vector<char> SUFFIX = {'T', 'B', 'M'};
-  static const vector<int64_t> THRESHOLD = {1000000000000ll, 1000000000ll, 1000000ll};
+  // Handle numbers bigger than a billion (short scale).
+  static const vector<char> SUFFIX = {'Q', 'T', 'B'};
+  static const vector<int64_t> THRESHOLD = {1000'000'000'000'000ll, 1000'000'000'000ll, 1000'000'000ll};
   for(size_t i = 0; i < SUFFIX.size(); ++i)
     if(absolute > THRESHOLD[i])
     {
@@ -155,7 +155,7 @@ string Format::Decimal(double value, int places)
 
 
 // Convert a string into a number. As with the output of Number(), the
-// string can have suffixes like "M", "B", etc.
+// string can have suffixes such as "B", "T", "Q".
 double Format::Parse(const string &str)
 {
   double place = 1.;
@@ -198,6 +198,8 @@ double Format::Parse(const string &str)
       value *= 1e9;
     else if(*it == 't' || *it == 'T')
       value *= 1e12;
+    else if(*it == 'q' || *it == 'Q')
+      value *= 1e15;
   }
   
   return value;

@@ -22,7 +22,7 @@ public:
   void SetCentre(const Point &centre);
   
   // Add an object based on the Body class.
-  bool Add(const Body &body, double clip = 1.);
+  bool Add(const Body &body, float clip = 1.);
   
   // Draw all the items in this list.
   void Draw() const;

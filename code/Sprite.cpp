@@ -45,7 +45,7 @@ void Sprite::AddFrames(ImageBuffer &buffer, bool is2x)
   }
   
   // Check whether this sprite is large enough to require size reduction.
-  if(Preferences::Has("Reduce large graphics") && buffer.Width() * buffer.Height() >= 1000000)
+  if(Preferences::Has("Reduce large graphics") && buffer.Width() * buffer.Height() >= 1000'000)
     buffer.ShrinkToHalfSize();
   
   // Upload the images as a single array texture.

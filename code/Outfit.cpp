@@ -14,7 +14,7 @@
 using namespace std;
 
 namespace {
-  const double EPS = 0.0000000001;
+  const double EPS = 0.000'000'0001;
 }
 
 

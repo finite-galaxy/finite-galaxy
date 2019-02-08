@@ -236,7 +236,7 @@ bool PlayerInfoPanel::KeyDown(SDL_Keycode key, Uint16 mod, const Command &comman
       
       // Clamp the destination index to the end of the ships list.
       size_t moved = allSelected.size();
-      toIndex = min(player.Ships().size() - moved, static_cast<size_t>(toIndex));
+      toIndex = min(player.Ships().size() - moved, toIndex);
       selectedIndex = player.ReorderShips(allSelected, toIndex);
       // If the move accessed invalid indices, no moves are done
       // but the selectedIndex is set to -1.
@@ -550,7 +550,7 @@ void PlayerInfoPanel::DrawFleet(const Rectangle &bounds)
   Colour dim = *GameData::Colours().Get("medium");
   Colour bright = *GameData::Colours().Get("bright");
   Colour elsewhere = *GameData::Colours().Get("dim");
-  Colour dead(.4, 0., 0., 0.);
+  Colour dead(.4f, 0.f, 0.f, 0.f);
   
   // Table attributes.
   Table table;
@@ -583,7 +583,6 @@ void PlayerInfoPanel::DrawFleet(const Rectangle &bounds)
   // Loop through all the player's ships.
   int index = scroll;
   auto sit = player.Ships().begin() + scroll;
-  const Font &font = FontSet::Get(14);
   for( ; sit < player.Ships().end(); ++sit)
   {
     // Bail out if we've used out the whole drawing area.
@@ -605,7 +604,8 @@ void PlayerInfoPanel::DrawFleet(const Rectangle &bounds)
     zones.emplace_back(table.GetCentrePoint(), table.GetRowSize(), index);
     
     // Indent the ship name if it is a drone, fighter, or bomber.
-    table.Draw(font.TruncateMiddle(ship.CanBeCarried() ? "    " + ship.Name() : ship.Name(), 217));
+    const Font::Layout layout(Font::TRUNC_MIDDLE, 217);
+    table.Draw(ship.CanBeCarried() ? "    " + ship.Name() : ship.Name(), &layout);
     table.Draw(ship.ModelName());
     
     const System *system = ship.GetSystem();
@@ -640,7 +640,7 @@ void PlayerInfoPanel::DrawFleet(const Rectangle &bounds)
   // Re-ordering ships in your fleet.
   if(isDragging)
   {
-    const Font &font = FontSet::Get(14);
+    const Font &font = FontSet::Get(18);
     Point pos(hoverPoint.X(), hoverPoint.Y());
     for(int i : allSelected)
     {

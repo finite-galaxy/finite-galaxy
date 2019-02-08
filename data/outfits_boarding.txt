@@ -4,11 +4,20 @@ outfit "Biodefences"
   licences
     Pug
   thumbnail "outfit/biodefences"
-  cost 100000
-  "mass" 1
-  "outfit space" -1
+  cost 500000
+  "mass" 5
+  "outfit space" -5
   "capture defence" 250
   description "This defence system is designed to release a suite of toxins that are lethal to human beings (and probably to some other species, as well) but which have no effect at all on the Pug."
+
+outfit "Force Field"
+  category "Boarding"
+  thumbnail "outfit/force_field"
+  cost 100000
+  "mass" 2
+  "outfit space" -2
+  "capture defence" 10
+  description "This device can generate a screen of pulsating energy to block intruders and projectiles."
 
 outfit "Fragmentation Grenades"
   plural "Fragmentation Grenades"
@@ -29,7 +38,7 @@ outfit "Intrusion Countermeasures"
     Quarg
   "mass" 1
   "outfit space" -1
-  "capture defence" 180
+  "capture defence" 100
   description "Quarg ships are outfitted with special systems for repelling boarders. Because no one wants to be caught by the Quarg with stolen technology, these systems are pretty much worthless on the open market."
 
 outfit "Ion Rifle"
@@ -83,7 +92,7 @@ outfit "Security Station"
   thumbnail "outfit/security_station"
   cost 24000
   "mass" 5
-  "cargo space" -5
+  "outfit space" -5
   "capture defence" 6.5
   description "This is a specially designed barricade, which can be installed in the hallways of your ship as a powerful defence against anyone who boards you in an attempt to take over your ship."
 

@@ -1,0 +1,131 @@
+shipyard "Trin Variants"
+  "Antiarch"
+  "Cachalot"
+  "Chimaera"
+  "Mako"
+  "Marlin"
+  "Piranha"
+  "Raja"
+
+
+
+ship "Antiarch"
+  sprite "ship/antiarch"
+  attributes
+#    manufacturer "Trin"
+    "mass" 1
+  engine -52 304
+  engine 0 325
+  engine 52 304
+  gun 0 -335
+  gun -59 -135
+  gun 59 -135
+  gun -59 -145
+  gun 59 -145
+  turret -30 -170
+  turret 30 -170
+  turret -55 35
+  turret 55 35
+  turret 0 100
+  fighter -75 50
+  fighter 75 50
+  fighter -75 100
+  fighter 75 100
+  fighter -75 150
+  fighter 75 150
+  fighter -75 200
+  fighter 75 200
+  fighter -75 250
+  fighter 75 250
+
+
+
+ship "Cachalot"
+  sprite "ship/cachalot"
+  attributes
+#    manufacturer "Trin"
+    "mass" 1
+  engine 0 235
+  gun -34 -143
+  gun 34 -143
+  gun -8 -145
+  gun 8 -145
+  turret -17 -70
+  turret 17 -70
+  turret 0 -20
+
+
+
+ship "Chimaera"
+  sprite "ship/chimaera"
+  attributes
+#    manufacturer "Trin"
+    "mass" 1
+  engine -9 124
+  engine 9 124
+  engine -20 118
+  engine 20 118
+  gun -27 -96
+  gun 27 -96
+  gun -39 -76
+  gun 39 -76
+  gun -52 -86
+  gun 52 -86
+  turret 0 -108
+  turret -41 -39
+  turret 41 -39
+
+
+
+ship "Mako"
+  sprite "ship/mako"
+  attributes
+#    manufacturer "Trin"
+    "mass" 1
+  engine 0 222
+  engine 36 196
+  engine -36 196
+  gun -53 -91
+  gun 53 -91
+  gun -75 -82
+  gun 75 -82
+  turret 0 -95
+  turret -40 -45
+  turret 40 -45
+  turret 0 -6
+
+
+
+ship "Marlin"
+  sprite "ship/marlin"
+  attributes
+#    manufacturer "Trin"
+    "mass" 1
+  engine 0 110
+  gun -13 -74
+  gun 13 -74
+  turret 0 -25
+  turret 0 30
+
+
+
+ship "Piranha"
+  sprite "ship/piranha"
+  attributes
+#    manufacturer "Trin"
+    "mass" 1
+  engine 0 42
+  gun 0 -44
+
+
+
+ship "Raja"
+  sprite "ship/raja"
+  attributes
+#    manufacturer "Trin"
+    "mass" 1
+  engine -18 45
+  engine 18 45
+  gun 13 -48
+  gun -13 -48
+

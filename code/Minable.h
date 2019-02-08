@@ -65,7 +65,7 @@ private:
   // The object's mass can be ignored, because it is a constant.
   double angularMomentum;
   // Scale of the orbit. This is the orbital radius when theta is 90 degrees.
-  // The periapsis and apoapsis radii are scale / (1 +- eccentricity).
+  // The periapsis and apoapsis radii are scale / (1 ± eccentricity).
   double scale;
   // Rotation of the orbit - that is, the angle of periapsis - in radians.
   double rotation;

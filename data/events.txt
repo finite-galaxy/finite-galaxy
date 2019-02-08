@@ -20,59 +20,59 @@
 
 event "label coalition space"
   galaxy "label arachi"
-    sprite "label/arachi"
+    sprite "map/arachi"
   galaxy "label kimek"
-    sprite "label/kimek"
+    sprite "map/kimek"
   galaxy "label saryd"
-    sprite "label/saryd"
+    sprite "map/saryd"
 
 event "label core"
   galaxy "label core"
-    sprite "label/core"
+    sprite "map/core"
 
 event "label deep"
   galaxy "label deep"
-    sprite "label/deep"
+    sprite "map/deep"
 
 event "label dirt belt"
   galaxy "label dirt belt"
-    sprite "label/dirt_belt"
+    sprite "map/dirt_belt"
 
 event "label earth"
   galaxy "label earth"
-    sprite "label/earth"
+    sprite "map/earth"
 
 event "label ember waste"
   galaxy "label ember waste"
-    sprite label/ember_waste
+    sprite "map/ember_waste"
 
 event "label hai space"
   galaxy "label hai"
-    sprite "label/hai"
+    sprite "map/hai"
 
 event "label korath space"
   galaxy "label korath"
-    sprite "label/korath"
+    sprite "map/korath"
 
 event "label north"
   galaxy "label north"
-    sprite "label/north"
+    sprite "map/north"
 
 event "label paradise"
   galaxy "label paradise"
-    sprite "label/paradise"
+    sprite "map/paradise"
 
 event "label rim"
   galaxy "label rim"
-    sprite "label/rim"
+    sprite "map/rim"
 
 event "label south"
   galaxy "label south"
-    sprite "label/south"
+    sprite "map/south"
 
 event "label wanderer space"
   galaxy "label wanderers"
-    sprite "label/wanderers"
+    sprite "map/wanderers"
 
 
 
@@ -109,17 +109,21 @@ event "nuclear missiles available"
     "Nuclear Missile"
 
 
-event "particle turret available"
-  outfitter "Lovelace Advanced"
-    "Particle Turret"
-
-
 event "plasma turret available"
   outfitter "Delta V Advanced"
     "Plasma Turret"
   fleet "Free Worlds Large"
+    add variant 4
+      "Bastion (Plasma)"
     add variant 3
-      "Falcon (Plasma)"
+      "Bastion (Plasma)"
+      "Stymphalian"
+    add variant 2
+      "Bastion (Plasma)"
+      "Stymphalian" 2
+    add variant 1
+      "Bastion (Plasma)"
+      "Stymphalian" 3
 
 
 event "stack core available"
@@ -163,6 +167,10 @@ event "dreadnought available"
   shipyard "Southbound Advanced"
     "Dreadnought"
 
+event "jupiter available"
+  shipyard "Navy Advanced"
+    "Jupiter"
+
 event "kestrel available: more engines"
   set "kestrel available"
   shipyard "Tarazed Advanced"
@@ -199,6 +207,8 @@ event "war begins"
     description `Martini is a world of exotic beaches and perfect weather. The Republic's galactic stock exchange was previously headquartered here, before a terrorist attack destroyed them and a large portion of the capital city as well.`
     "required reputation" 100
     security .9
+  planet "Bourne"
+    remove shipyard "Basic Ships"
 
   system "Sabik"
     government "Free Worlds"
@@ -316,6 +326,7 @@ event "initial deployment 1"
     fleet "Pirates South Small" 3000
     fleet "Republic Small" 3000
     fleet "Republic Large" 4000
+    fleet "Tarazed Small" 6000
   system "Zeta Aquilae"
     fleet "Merchants South Small" 1000
     fleet "Merchants South Large" 3000
@@ -326,46 +337,46 @@ event "initial deployment 1"
     fleet "Republic Large" 4000
 
   system "Fala"
-    fleet "Merchants West Small" 1900
-    fleet "Merchants West Large" 3500
-    fleet "Pirates West Small" 4000
-    fleet "Pirates West Large" 8000
+    fleet "Merchants East Small" 1900
+    fleet "Merchants East Large" 3500
+    fleet "Pirates East Small" 4000
+    fleet "Pirates East Large" 8000
     fleet "Republic Small" 600
     fleet "Republic Large" 400
     fleet "Navy Surveillance" 1800
   system "Tania Australis"
-    fleet "Merchants West Small" 1400
-    fleet "Merchants West Large" 2900
+    fleet "Merchants East Small" 1400
+    fleet "Merchants East Large" 2900
     fleet "Republic Small" 600
     fleet "Republic Large" 400
     fleet "Navy Surveillance" 1800
   system "Mora"
-    fleet "Merchants West Small" 2800
-    fleet "Merchants West Large" 5000
+    fleet "Merchants East Small" 2800
+    fleet "Merchants East Large" 5000
     fleet "Pirates South Small" 3000
     fleet "Pirates South Large" 4000
     fleet "Republic Small" 1000
     fleet "Republic Large" 2000
     fleet "Navy Surveillance" 1800
   system "Delta Velorum"
-    fleet "Merchants West Small" 1000
-    fleet "Merchants West Large" 3000
+    fleet "Merchants East Small" 1000
+    fleet "Merchants East Large" 3000
     fleet "Pirates South Small" 2000
     fleet "Pirates South Large" 5000
     fleet "Republic Small" 1600
     fleet "Republic Large" 2400
     fleet "Navy Surveillance" 1800
   system "Turais"
-    fleet "Merchants West Small" 2000
-    fleet "Merchants West Large" 6000
+    fleet "Merchants East Small" 2000
+    fleet "Merchants East Large" 6000
     fleet "Pirates South Small" 3000
     fleet "Pirates South Large" 7000
     fleet "Republic Small" 1000
     fleet "Republic Large" 1800
     fleet "Navy Surveillance" 1800
   system "Algorel"
-    fleet "Merchants West Small" 800
-    fleet "Merchants West Large" 1200
+    fleet "Merchants East Small" 800
+    fleet "Merchants East Large" 1200
     fleet "Pirates South Small" 2500
     fleet "Pirates South Large" 8000
     fleet "Republic Small" 700
@@ -437,65 +448,65 @@ event "initial deployment 2"
     fleet "Republic Large" 600
 
   system "Arcturus"
-    fleet "Merchants West Small" 700
-    fleet "Merchants West Large" 3000
+    fleet "Merchants East Small" 700
+    fleet "Merchants East Large" 3000
     fleet "Navy Surveillance" 1800
-    fleet "Pirates West Small" 4000
+    fleet "Pirates East Small" 4000
     fleet "Republic Small" 2000
     fleet "Republic Large" 3000
   system "Mizar"
-    fleet "Merchants West Small" 1400
-    fleet "Merchants West Large" 4500
+    fleet "Merchants East Small" 1400
+    fleet "Merchants East Large" 4500
     fleet "Navy Surveillance" 1800
-    fleet "Pirates West Small" 9000
+    fleet "Pirates East Small" 9000
     fleet "Republic Small" 1000
     fleet "Republic Large" 1400
   system "Gacrux"
-    fleet "Merchants West Small" 2000
-    fleet "Merchants West Large" 5000
+    fleet "Merchants East Small" 2000
+    fleet "Merchants East Large" 5000
     fleet "Navy Surveillance" 1800
-    fleet "Pirates West Small" 2000
-    fleet "Pirates West Large" 4000
+    fleet "Pirates East Small" 2000
+    fleet "Pirates East Large" 4000
     fleet "Republic Small" 2000
     fleet "Republic Large" 3000
   system "Cor Caroli"
-    fleet "Merchants West Small" 700
-    fleet "Merchants West Large" 1300
+    fleet "Merchants East Small" 700
+    fleet "Merchants East Large" 1300
     fleet "Navy Surveillance" 1800
-    fleet "Pirates West Small" 2000
+    fleet "Pirates East Small" 2000
     fleet "Republic Small" 1200
     fleet "Republic Large" 1800
   system "Muhlifain"
-    fleet "Merchants West Small" 1000
-    fleet "Merchants West Large" 3500
+    fleet "Merchants East Small" 1000
+    fleet "Merchants East Large" 3500
     fleet "Navy Surveillance" 1800
-    fleet "Pirates West Small" 6000
+    fleet "Pirates East Small" 6000
     fleet "Republic Small" 3000
     fleet "Republic Large" 4000
   system "Vindemiatrix"
-    fleet "Merchants West Small" 600
-    fleet "Merchants West Large" 3000
+    fleet "Merchants East Small" 600
+    fleet "Merchants East Large" 3000
     fleet "Navy Surveillance" 1800
-    fleet "Pirates West Small" 2000
-    fleet "Pirates West Large" 4000
+    fleet "Pirates East Small" 2000
+    fleet "Pirates East Large" 4000
     fleet "Republic Small" 2000
     fleet "Republic Large" 3000
   system "Sarin"
-    fleet "Merchants West Small" 1000
-    fleet "Merchants West Large" 3000
+    fleet "Merchants East Small" 1000
+    fleet "Merchants East Large" 3000
     fleet "Navy Surveillance" 1800
-    fleet "Pirates West Small" 2000
-    fleet "Pirates West Large" 6000
+    fleet "Pirates East Small" 2000
+    fleet "Pirates East Large" 6000
     fleet "Republic Small" 8000
     fleet "Republic Large" 15000
 
 
 event "initial deployment 3"
   date 29 8 3019
-  planet "Bundok"
-    description `Bundok is a cloudy planet orbiting a dim star; the only reason it is not completely frozen is because of the heat trapped by its upper atmosphere. There are only a handful of towns here, and nothing big enough to warrant being called a city. Most of the settlers are subsistence farmers who can only dream about life on other worlds. Many houses here do not even have running water or personal computers.`
+  planet "Palapa"
+    description `Palapa is a cloudy planet orbiting a dim star; the only reason it is not completely frozen is because of the heat trapped by its upper atmosphere. There are only a handful of towns here, and nothing big enough to warrant being called a city. Most of the settlers are subsistence farmers who can only dream about life on other worlds. Many houses here do not even have running water or personal computers.`
     description `  Some of the farms near the spaceport are planted with different crops forming abstract patterns visible from the air. Such a whimsical extravagance seems particularly odd when you consider that the owners will never be able to afford to see their fields from that angle. But perhaps that is precisely the point.`
-    description `  The Navy has planted a base on Bundok: so far, just a densely packed cluster of prefabricated barracks and infirmary buildings on the outskirts of one of the larger towns.`
+    description `  The Navy has planted a base on Palapa: so far, just a densely packed cluster of prefabricated barracks and infirmary buildings on the outskirts of one of the larger towns.`
 
   system "Algedi"
     fleet "Merchants South Small" 700
@@ -666,17 +677,17 @@ event "southern carriers 1"
 
   fleet "Free Worlds Large"
     fighters "free worlds fighter"
+    add variant 4
+      "Nest"
+      "Hag" 2
+    add variant 3
+      "Nest"
+      "Hag" 2
+      "Stymphalian"
     add variant 2
       "Nest"
       "Hag" 2
-    add variant 1
-      "Nest"
-      "Hag" 2
-      "Fury"
-    add variant 1
-      "Nest"
-      "Hag" 2
-      "Fury" 2
+      "Stymphalian" 2
     add variant 1
       "Nest" 2
       "Hag" 4
@@ -690,17 +701,17 @@ event "southern carriers 2"
 
   fleet "Free Worlds Large"
     fighters "free worlds fighter"
+    add variant 4
+      "Roost"
+      "Hag" 4
+    add variant 3
+      "Roost"
+      "Hag" 4
+      "Stymphalian"
     add variant 2
       "Roost"
       "Hag" 4
-    add variant 1
-      "Roost"
-      "Hag" 4
-      "Fury"
-    add variant 1
-      "Roost"
-      "Hag" 4
-      "Fury" 2
+      "Stymphalian" 2
     add variant 1
       "Roost" 2
       "Hag" 8
@@ -714,17 +725,17 @@ event "southern carriers 3"
 
   fleet "Free Worlds Large"
     fighters "free worlds fighter"
+    add variant 4
+      "Skein"
+      "Hag" 6
+    add variant 3
+      "Skein"
+      "Hag" 6
+      "Stymphalian"
     add variant 2
       "Skein"
       "Hag" 6
-    add variant 1
-      "Skein"
-      "Hag" 6
-      "Fury"
-    add variant 1
-      "Skein"
-      "Hag" 6
-      "Fury" 2
+      "Stymphalian" 2
     add variant 1
       "Skein" 2
       "Hag" 12
@@ -737,11 +748,11 @@ event "southern carriers 3"
     add variant 2
       "Nest"
       "Hag" 2
-      "Fury"
+      "Berserker"
     add variant 2
       "Nest"
       "Hag" 2
-      "Fury" 2
+      "Berserker" 2
     add variant 2
       "Nest" 2
       "Hag" 4
@@ -754,11 +765,11 @@ event "southern carriers 3"
     add variant 2
       "Nest"
       "Hag" 2
-      "Fury"
+      "Berserker"
     add variant 2
       "Nest"
       "Hag" 2
-      "Fury" 2
+      "Berserker" 2
     add variant 2
       "Nest" 2
       "Hag" 4
@@ -771,11 +782,11 @@ event "southern carriers 3"
     add variant 1
       "Nest"
       "Hag" 2
-      "Fury"
+      "Berserker"
     add variant 1
       "Nest"
       "Hag" 2
-      "Fury" 2
+      "Berserker" 2
     add variant 1
       "Nest" 2
       "Hag" 4
@@ -827,6 +838,8 @@ event "southern carriers 3"
 event "southern carriers 4"
   shipyard "Southbound Advanced"
     "Boxwing"
+  shipyard "Southbound Intermediate"
+    "Nest"
   shipyard "Vortex Advanced"
     "Mongrel"
 
@@ -1113,8 +1126,8 @@ event "fw abandoned Greenrock"
     government "Pirate"
     fleet "Pirates South Small" 500
     fleet "Pirates South Large" 800
-    fleet "Pirates East Small" 4000
-    fleet "Pirates East Large" 7000
+    fleet "Pirates West Small" 4000
+    fleet "Pirates West Large" 7000
     fleet "Pirates North Small" 5000
     fleet "Pirates North Large" 9000
     fleet "Militia Large" 9000
@@ -1190,72 +1203,65 @@ event "fw safe passage end"
 
 
 event "navy using mark ii ships"
-  shipyard "Centaur Advanced"
-    "Mark II Drone"
-  shipyard "Centaur Intermediate"
-    "Mark II Drone"
-  shipyard "Centaur Basics"
-    "Mark II Drone"
-  
-  fleet "Navy Cargo"
-    add variant 1
-      "Behemoth (Mark II)" 5
-      "Venus (Mark II)"
-      "Mark II Drone" 4
-      "Mars (Mark II)" 2
+  shipyard "Sisensis Advanced"
+    "Mark III Drone"
+  shipyard "Sisensis Intermediate"
+    "Mark III Drone"
+  shipyard "Sisensis Basics"
+    "Mark III Drone"
   
   fleet "Republic Large"
     add variant 2
-      "Saturn (Mark II)"
+      "Saturn"
       "Foxhound" 4
-      "Mark II Drone" 6
+      "Mark III Drone" 6
     add variant 1
-      "Saturn (Mark II)"
+      "Saturn"
       "Foxhound" 4
-      "Mark II Drone" 6
+      "Mark III Drone" 6
       "Mars"
     add variant 1
-      "Saturn (Mark II)"
+      "Saturn"
       "Foxhound" 4
-      "Mark II Drone" 6
+      "Mark III Drone" 6
       "Mercury (Mark II)"
     add variant 1
-      "Saturn (Mark II)"
+      "Saturn"
       "Foxhound" 4
-      "Mark II Drone" 6
+      "Mark III Drone" 6
       "Mercury (Mark II)" 2
     add variant 3
       "Venus (Mark II)"
-      "Mark II Drone" 4
+      "Mark III Drone" 4
     add variant 2
       "Venus (Mark II)"
-      "Mark II Drone" 4
+      "Mark III Drone" 4
       "Mars (Mark II)"
     add variant 1
       "Venus (Mark II)"
-      "Mark II Drone" 4
+      "Mark III Drone" 4
       "Mars (Mark II)" 2
     add variant 1
       "Venus (Mark II)"
-      "Mark II Drone" 4
+      "Mark III Drone" 4
       "Mars (Mark II)"
       "Mercury (Mark II)"
     add variant 1
       "Venus (Mark II)"
-      "Mark II Drone" 4
+      "Mark III Drone" 4
       "Mars (Mark II)"
       "Mercury (Mark II)" 2
     add variant 1
       "Venus (Mark II)"
-      "Mark II Drone" 4
+      "Mark III Drone" 4
       "Mercury (Mark II)"
     add variant 1
       "Venus (Mark II)"
-      "Mark II Drone" 4
+      "Mark III Drone" 4
       "Mercury (Mark II)" 2
     add variant 1
       "Venus (Mark II)"
-      "Mark II Drone" 4
+      "Mark III Drone" 4
       "Mercury (Mark II)" 3
     add variant 5
       "Mars (Mark II)" 2
@@ -1482,13 +1488,15 @@ event "dreadnought deployment"
       heroic
     add variant 4
       "Dreadnought"
+    add variant 3
+      "Dreadnought"
+      "Stymphalian"
     add variant 2
       "Dreadnought"
-      "Bastion"
-    add variant 2
+      "Stymphalian" 2
+    add variant 1
       "Dreadnought"
-      "Argosy"
-      "Brig"
+      "Stymphalian" 3
 
 
 event "battle for bloodsea"
@@ -1825,13 +1833,13 @@ event "wolf pack mizar end"
 
 event "fw empty gienah"
   system "Gienah"
-    fleet "Pirates East Small" 5000
+    fleet "Pirates West Small" 5000
 
 
 event "fw restore gienah"
   system "Gienah"
-    fleet "Pirates East Small" 500
-    fleet "Pirates East Large" 800
+    fleet "Pirates West Small" 500
+    fleet "Pirates West Large" 800
     fleet "Republic Large" 5000
 
 
@@ -1905,8 +1913,8 @@ event "syndicate occupies sol"
     fleet "Merchants North Large" 700
     fleet "Republic Small" 800
     fleet "Republic Large" 1200
-    fleet "Merchants East Small" 900
-    fleet "Merchants East Large" 1400
+    fleet "Merchants West Small" 900
+    fleet "Merchants West Large" 1400
     fleet "Syndicate Small" 400
     fleet "Syndicate Large" 600
 
@@ -1962,16 +1970,16 @@ event "pug invasion 2"
     fleet "Pug Large" 1200
   system "Altair"
     government "Pug"
-    fleet "Merchants East Small" 400
-    fleet "Merchants East Large" 600
+    fleet "Merchants West Small" 400
+    fleet "Merchants West Large" 600
     fleet "Merchants North Small" 1000
     fleet "Merchants North Large" 3000
     fleet "Pug Small" 700
     fleet "Pug Large" 900
   system "Fomalhaut"
     government "Pug"
-    fleet "Merchants East Small" 1000
-    fleet "Merchants East Large" 1200
+    fleet "Merchants West Small" 1000
+    fleet "Merchants West Large" 1200
     fleet "Pug Small" 1400
     fleet "Pug Large" 2000
   system "Nocte"
@@ -2001,14 +2009,14 @@ event "pug invasion 3"
   unvisit "Delta Capricorni"
   system "Delta Capricorni"
     government "Pug"
-    fleet "Merchants East Small" 700
-    fleet "Merchants East Large" 800
+    fleet "Merchants West Small" 700
+    fleet "Merchants West Large" 800
     fleet "Pug Small" 800
     fleet "Pug Large" 1100
   system "Alderamin"
     government "Pug"
-    fleet "Merchants East Small" 2000
-    fleet "Merchants East Large" 3200
+    fleet "Merchants West Small" 2000
+    fleet "Merchants West Large" 3200
     fleet "Pug Small" 1200
     fleet "Pug Large" 2500
   planet "Maker"
@@ -2033,18 +2041,18 @@ event "pug invasion 4"
     fleet "Merchants North Large" 500
     fleet "Republic Small" 600
     fleet "Republic Large" 900
-    fleet "Merchants East Small" 1000
-    fleet "Merchants East Large" 2000
+    fleet "Merchants West Small" 1000
+    fleet "Merchants West Large" 2000
   system "Diphda"
     government "Pug"
-    fleet "Merchants East Small" 2000
-    fleet "Merchants East Large" 600
+    fleet "Merchants West Small" 2000
+    fleet "Merchants West Large" 600
     fleet "Pug Small" 1000
     fleet "Pug Large" 1500
   system "Caph"
     government "Pug"
-    fleet "Merchants East Small" 500
-    fleet "Merchants East Large" 600
+    fleet "Merchants West Small" 500
+    fleet "Merchants West Large" 600
     fleet "Merchant Miners East" 2000
     fleet "Pug Small" 700
     fleet "Pug Large" 1000
@@ -2063,8 +2071,8 @@ event "fw syndicate welcoming"
     bribe .08
   system "Alcyone"
     government "Syndicate (Extremist)"
-    fleet "Pirates East Small" 1500
-    fleet "Pirates East Large" 2000
+    fleet "Pirates West Small" 1500
+    fleet "Pirates West Large" 2000
     fleet "Syndicate Extremists" 200
 
 
@@ -2077,7 +2085,7 @@ event "at war with the pug"
       "Syndicate" -.01
       "Syndicate (Extremist)" -.01
   system "Delta Capricorni"
-    fleet "Merchants East Small" 1500
+    fleet "Merchants West Small" 1500
 
 
 event "battle for delta capricorni"
@@ -2088,8 +2096,8 @@ event "battle for delta capricorni"
 event "reconnected delta capricorni"
   link "Delta Capricorni" Markab
   system "Delta Capricorni"
-    fleet "Merchants East Small" 1500
-    fleet "Merchants East Large" 3000
+    fleet "Merchants West Small" 1500
+    fleet "Merchants West Large" 3000
     fleet "Merchant Miners East" 3000
     fleet "Pug Small" 2000
     fleet "Republic Large" 400
@@ -2097,14 +2105,14 @@ event "reconnected delta capricorni"
 
 event "battle for altair"
   system "Altair"
-    fleet "Merchants East Small" 1500
+    fleet "Merchants West Small" 1500
 
 
 event "liberation of altair"
   system "Altair"
     government "Republic"
-    fleet "Merchants East Small" 1000
-    fleet "Merchants East Large" 2000
+    fleet "Merchants West Small" 1000
+    fleet "Merchants West Large" 2000
     fleet "Pug Small" 2000
     fleet "Republic Large" 800
 
@@ -2113,8 +2121,8 @@ event "reconnected altair"
   link Altair Sol
   system "Altair"
     government "Republic"
-    fleet "Merchants East Small" 800
-    fleet "Merchants East Large" 1200
+    fleet "Merchants West Small" 800
+    fleet "Merchants West Large" 1200
 
 
 event "pug flee"
@@ -2135,35 +2143,35 @@ event "pug flee"
     fleet "Republic Small" 800
     fleet "Republic Large" 1200
   system "Altair"
-    fleet "Merchants East Small" 400
-    fleet "Merchants East Large" 600
+    fleet "Merchants West Small" 400
+    fleet "Merchants West Large" 600
     fleet "Merchants North Small" 1000
     fleet "Merchants North Large" 3000
     fleet "Republic Small" 700
     fleet "Republic Large" 900
   system "Fomalhaut"
-    fleet "Merchants East Small" 1000
-    fleet "Merchants East Large" 1200
+    fleet "Merchants West Small" 1000
+    fleet "Merchants West Large" 1200
     fleet "Republic Small" 1600
     fleet "Republic Large" 3000
   system "Delta Capricorni"
-    fleet "Merchants East Small" 700
-    fleet "Merchants East Large" 800
+    fleet "Merchants West Small" 700
+    fleet "Merchants West Large" 800
     fleet "Republic Small" 500
     fleet "Republic Large" 600
   system "Alderamin"
-    fleet "Merchants East Small" 2000
-    fleet "Merchants East Large" 3200
+    fleet "Merchants West Small" 2000
+    fleet "Merchants West Large" 3200
     fleet "Republic Small" 700
     fleet "Republic Large" 900
   system "Diphda"
-    fleet "Merchants East Small" 2000
-    fleet "Merchants East Large" 600
+    fleet "Merchants West Small" 2000
+    fleet "Merchants West Large" 600
     fleet "Republic Small" 1600
     fleet "Republic Large" 3000
   system "Caph"
-    fleet "Merchants East Small" 500
-    fleet "Merchants East Large" 600
+    fleet "Merchants West Small" 500
+    fleet "Merchants West Large" 600
     fleet "Republic Small" 1600
     fleet "Republic Large" 3000
   system "Nocte"
@@ -2178,7 +2186,7 @@ event "pug flee"
     fleet "Pirates South Small" 1000
     fleet "Pirates South Large" 3000
   system "Deneb"
-    fleet "Merchants East Small" 5000
+    fleet "Merchants West Small" 5000
     object
       sprite star/g5
       period 10
@@ -2235,8 +2243,8 @@ event "pug territory liberated"
     government "Republic"
   system "Deneb"
     government "Republic"
-    fleet "Merchants East Small" 400
-    fleet "Merchants East Large" 600
+    fleet "Merchants West Small" 400
+    fleet "Merchants West Large" 600
     fleet "Merchants South Small" 1000
     fleet "Merchants South Large" 3000
     fleet "Republic Small" 700
@@ -2321,99 +2329,15 @@ event "navy occupies alcyone"
 event "navy done with alcyone"
   system "Alcyone"
     government "Pirate"
-    fleet "Pirates East Small" 400
-    fleet "Pirates East Large" 600
+    fleet "Pirates West Small" 400
+    fleet "Pirates West Large" 600
     fleet "Republic Large" 1200
   system "Durax"
     government "Pirate"
-    fleet "Pirates East Small" 600
-    fleet "Pirates East Large" 900
+    fleet "Pirates West Small" 600
+    fleet "Pirates West Large" 900
     fleet "Republic Large" 2500
     fleet "Korath Raid" 5000
-
-
-
-
-
-event "navy using mark iii ships"
-  fleet "Navy Cargo"
-    add variant 1
-      "Behemoth (Mark III)" 5
-      "Venus (Mark III)"
-      "Mark II Drone" 4
-      "Mars (Mark III)" 2
-  
-  fleet "Republic Large"
-    add variant 2
-      "Saturn (Mark III)"
-      "Foxhound" 4
-      "Mark II Drone" 6
-    add variant 1
-      "Saturn (Mark III)"
-      "Foxhound" 4
-      "Mark II Drone" 6
-      "Mars"
-    add variant 1
-      "Saturn (Mark III)"
-      "Foxhound" 4
-      "Mark II Drone" 6
-      "Mercury (Mark II)"
-    add variant 1
-      "Saturn (Mark III)"
-      "Foxhound" 4
-      "Mark II Drone" 6
-      "Mercury (Mark III)" 2
-    add variant 3
-      "Venus (Mark III)"
-      "Mark II Drone" 4
-    add variant 2
-      "Venus (Mark III)"
-      "Mark II Drone" 4
-      "Mars (Mark III)"
-    add variant 1
-      "Venus (Mark III)"
-      "Mark II Drone" 4
-      "Mars (Mark III)" 2
-    add variant 1
-      "Venus (Mark III)"
-      "Mark II Drone" 4
-      "Mars (Mark III)"
-      "Mercury (Mark III)"
-    add variant 1
-      "Venus (Mark III)"
-      "Mark II Drone" 4
-      "Mars (Mark III)"
-      "Mercury (Mark III)" 2
-    add variant 1
-      "Venus (Mark III)"
-      "Mark II Drone" 4
-      "Mercury (Mark III)"
-    add variant 1
-      "Venus (Mark III)"
-      "Mark II Drone" 4
-      "Mercury (Mark III)" 2
-    add variant 1
-      "Venus (Mark III)"
-      "Mark II Drone" 4
-      "Mercury (Mark III)" 3
-    add variant 5
-      "Mars (Mark III)" 2
-    add variant 3
-      "Mars (Mark III)"
-      "Mercury (Mark III)" 2
-    add variant 1
-      "Mars (Mark III)"
-      "Mercury (Mark III)" 3
-
-  fleet "Republic Small"
-    add variant 5
-      "Mars (Mark III)"
-    add variant 10
-      "Mercury (Mark III)"
-    add variant 6
-      "Mercury (Mark III)" 2
-    add variant 4
-      "Mercury (Mark III)" 3
 
 
 
@@ -2611,8 +2535,8 @@ event "fwc pug invasion"
     fleet "Pug Large" 9000
   system "Altair"
     government "Pug"
-    fleet "Merchants East Small" 400
-    fleet "Merchants East Large" 600
+    fleet "Merchants West Small" 400
+    fleet "Merchants West Large" 600
     fleet "Merchants North Small" 1000
     fleet "Merchants North Large" 3000
     fleet "Pug Small" 700
@@ -2621,14 +2545,14 @@ event "fwc pug invasion"
     government "Free Worlds"
   system "Delta Capricorni"
     government "Pug"
-    fleet "Merchants East Small" 700
-    fleet "Merchants East Large" 800
+    fleet "Merchants West Small" 700
+    fleet "Merchants West Large" 800
     fleet "Pug Small" 800
     fleet "Pug Large" 1100
   system "Alderamin"
     government "Pug"
-    fleet "Merchants East Small" 2000
-    fleet "Merchants East Large" 3200
+    fleet "Merchants West Small" 2000
+    fleet "Merchants West Large" 3200
     fleet "Pug Small" 1200
     fleet "Pug Large" 2500
   system "Nocte"
@@ -2760,16 +2684,16 @@ event "fwc liberation of rasalhague"
     fleet "Merchants South Small" 1500
     fleet "Merchants South Large" 2000
   system "Altair"
-    fleet "Merchants East Small" 400
-    fleet "Merchants East Large" 600
+    fleet "Merchants West Small" 400
+    fleet "Merchants West Large" 600
   system "Delta Capricorni"
-    fleet "Merchants East Small" 700
-    fleet "Merchants East Large" 800
+    fleet "Merchants West Small" 700
+    fleet "Merchants West Large" 800
   system "Alderamin"
-    fleet "Merchants East Small" 2000
-    fleet "Merchants East Large" 3200
+    fleet "Merchants West Small" 2000
+    fleet "Merchants West Large" 3200
   system "Deneb"
-    fleet "Merchants East Small" 10000
+    fleet "Merchants West Small" 10000
     fleet "Pug Small" 100
     fleet "Pug Large" 100
 
@@ -2817,8 +2741,8 @@ event "fwc pug defeated"
     government "Republic"
   system "Deneb"
     government "Republic"
-    fleet "Merchants East Small" 400
-    fleet "Merchants East Large" 600
+    fleet "Merchants West Small" 400
+    fleet "Merchants West Large" 600
     fleet "Merchants South Small" 1000
     fleet "Merchants South Large" 3000
     fleet "Republic Small" 700
@@ -2886,6 +2810,7 @@ event "free worlds end"
     fleet "Navy Surveillance" 5400
     fleet "Pirates South Small" 4000
     fleet "Pirates South Large" 10000
+    fleet "Tarazed Small" 6000
   system "Kaus Australis"
     government "Republic"
     fleet "Merchants South Small" 2000
@@ -2894,6 +2819,7 @@ event "free worlds end"
     fleet "Pirates South Small" 4000
     fleet "Pirates South Large" 8000
     fleet "Quarg Small" 10000
+    fleet "Tarazed Small" 6000
   system "Dabih"
     government "Republic"
     fleet "Merchants South Small" 500
@@ -2901,6 +2827,7 @@ event "free worlds end"
     fleet "Navy Surveillance" 5400
     fleet "Pirates South Large" 10000
     fleet "Quarg Small" 4000
+    fleet "Tarazed Small" 6000
   system "Tarazed"
     government "Republic"
     fleet "Merchants South Small" 500
@@ -2908,6 +2835,8 @@ event "free worlds end"
     fleet "Navy Surveillance" 5400
     fleet "Pirates South Large" 8000
     fleet "Quarg Small" 7000
+    fleet "Tarazed Small" 6000
+    fleet "Tarazed Large" 3000
   system "Umbral"
     government "Republic"
     fleet "Merchants South Small" 4000
@@ -2919,8 +2848,8 @@ event "free worlds end"
     description `Alapia is an uncomfortably hot and humid world of deserts, savanna, and a few small and scattered rainforests. Large herds of bison-like animals roam the plains, providing the locals with a steady source of food. Occasional stampedes, involving tens of thousands of these animals, have been known to level entire towns here.`
     description `  Aside from hunting, most of the industry takes the form of harvesting and refining petrochemicals to make plastics, polymers, and oils. In some parts of Alapia, the pumpjacks outnumber the people a hundred to one.`
     description `  The planet is now also home to a Navy base.`
-  planet "Bundok"
-    description `Bundok is a cloudy planet orbiting a dim star; the only reason it is not completely frozen is because of the heat trapped by its upper atmosphere. There are only a handful of towns here, and nothing big enough to warrant being called a city. Most of the settlers are subsistence farmers who can only dream about life on other worlds. Many houses here do not even have running water or personal computers.`
+  planet "Palapa"
+    description `Palapa is a cloudy planet orbiting a dim star; the only reason it is not completely frozen is because of the heat trapped by its upper atmosphere. There are only a handful of towns here, and nothing big enough to warrant being called a city. Most of the settlers are subsistence farmers who can only dream about life on other worlds. Many houses here do not even have running water or personal computers.`
     description `  Some of the farms near the spaceport are planted with different crops forming abstract patterns visible from the air. Such a whimsical extravagance seems particularly odd when you consider that the owners will never be able to afford to see their fields from that angle. But perhaps that is precisely the point.`
   planet "Clear Sky"
     description `Clear Sky is a perpetually hazy volcanic world, with a slightly caustic atmosphere but enough reserves of metal and petrochemicals to draw a large number of settlers. Some of those settlers also make a living as farmers, and a few well-developed factory towns produce goods for export to other worlds.`
@@ -3134,9 +3063,12 @@ event "wanderers: unfettered invasion starts"
     description `Varu K'est is a spare, ancient planet of arid plateaus and deep, meandering canyons, with too little rainfall to support any but the hardiest of shrubs. Before the Unfettered invaded, the only Wanderer settlements remaining here were the military bases they had set up to defend their frontier. Now, it is home to an ever-growing number of Unfettered settlements, including many civilians who have come here just for the chance to live on a world that is not overcrowded and polluted.`
     spaceport `The Unfettered are using the few jump drives they have to ferry more and more of their people into Wanderer space. When each wave of ships arrives here in the spaceport, technicians carefully remove the jump drives from all but a few of them. A few well guarded jump-capable ships then carry those spare jump drives back to Unfettered space, where they are used to bring more ships and people.`
     remove outfitter "Wanderer Intermediate"
-    outfitter "Hai Intermediate"
+    outfitter "Hai Unfettered"
     remove shipyard "Wanderer Basics"
     shipyard "Hai Unfettered"
+  shipyard "Hai Unfettered"
+    "Solifuge"
+    "Mosquito"
 
 
 event "battle for ik'kara'ka"
@@ -3233,50 +3165,16 @@ event "battle for sich'ka'ara end"
     attributes "unfettered"
     spaceport `The Unfettered clearly do not know quite what to make of the Wanderer research station here that they have recently captured. Animals that were once part of various experiments are now wandering loose, and the Unfettered are making only sporadic efforts to keep them well-fed. Every once in a while one of them, driven by sheer hunger, tries to smash its way into one of the crates of military rations that the Unfettered have stacked up in the shade near the main landing pad.`
   fleet "Unfettered Large"
-    add variant 3
+    add variant 6
       "Solifuge"
-      "Mosquito" 3
-      "Mosquito (Tracker)" 3
-    add variant 3
-      "Solifuge (Tracker)"
-      "Mosquito" 3
-      "Mosquito (Tracker)" 3
-      "Lightning Bug" 2
-    add variant 3
-      "Solifuge"
-      "Solifuge (Tracker)"
       "Mosquito" 6
-      "Mosquito (Tracker)" 6
-    add variant 1
+    add variant 3
+      "Solifuge" 2
+      "Mosquito" 12
+    add variant 6
+      "Solifuge"
+      "Mosquito" 6
       "Shield Beetle"
-      "Solifuge"
-      "Mosquito" 3
-      "Mosquito (Tracker)" 3
-    add variant 1
-      "Shield Beetle"
-      "Solifuge (Tracker)"
-      "Mosquito" 3
-      "Mosquito (Tracker)" 3
-    add variant 1
-      "Shield Beetle (Ion)"
-      "Solifuge"
-      "Mosquito" 3
-      "Mosquito (Tracker)" 3
-    add variant 1
-      "Shield Beetle (Ion)"
-      "Solifuge (Tracker)"
-      "Mosquito" 3
-      "Mosquito (Tracker)" 3
-    add variant 1
-      "Shield Beetle (Pulse)"
-      "Solifuge"
-      "Mosquito" 3
-      "Mosquito (Tracker)" 3
-    add variant 1
-      "Shield Beetle (Pulse)"
-      "Solifuge (Tracker)"
-      "Mosquito" 3
-      "Mosquito (Tracker)" 3
 
 
 event "wanderers: more systems lost"
@@ -3835,16 +3733,16 @@ event "wanderers: exiles have drones"
     add variant 3
       "Met Par Tek 53 (Sniper)" 3
     add variant 2
-      "Tek Far 71 - Lek"
+      "Tek Far 71 Lek"
       "Far Lek 14" 10
     add variant 2
-      "Tek Far 71 - Lek (Close Quarters)"
+      "Tek Far 71 Lek (Close Quarters)"
       "Far Lek 14" 10
     add variant 2
-      "Tek Far 78 - Osk"
+      "Tek Far 78 Osk"
       "Far Osk 27" 9
     add variant 2
-      "Tek Far 78 - Osk (Close Quarters)"
+      "Tek Far 78 Osk (Close Quarters)"
       "Far Osk 27" 9
     add variant 4
       "Tek Far 109"

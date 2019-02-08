@@ -38,10 +38,15 @@ ship "Archon"
     "heat generation" 17
     "tactical scan power" 400
     weapon
-      "blast radius" 200
-      "shield damage" 20000
-      "hull damage" 10000
-      "hit force" 30000
+      "blast radius" 420
+      "shield damage" 2400
+      "random shield damage" 1800
+      "hull damage" 3600
+      "random hull damage" 2700
+      "heat damage" 72000
+      "random heat damage" 54000
+      "hit force" 6000
+      "random hit force" 4500
   outfits
     "Hyperdrive"
     "Jump Drive"
@@ -49,21 +54,21 @@ ship "Archon"
     "Graviton Engines" 2
 
     "Antimatter Cannon"
-    "Bolt Turret" 3
+    "Jolt Turret" 3
     "Draining Field"
     "Distancer" 2
     "Anti-Missile Field" 2
   engine -17 92
   engine 17 92
   gun 0 -74 "Antimatter Cannon"
-  turret -40 -13 "Bolt Turret"
-  turret 40 -13 "Bolt Turret"
+  turret -40 -13 "Jolt Turret"
+  turret 40 -13 "Jolt Turret"
   turret -10 -10 "Anti-Missile Field"
   turret 0 -10 "Draining Field"
   turret 10 -10 "Anti-Missile Field"
   turret -55 16 "Distancer"
   turret 55 16 "Distancer"
-  turret 0 81 "Bolt Turret"
+  turret 0 81 "Jolt Turret"
   explode "nuke explosion" 3
   "final explode" "final explosion large"
 
@@ -73,12 +78,12 @@ ship "Archon" "Archon (Cloaked)"
   add attributes
     "cloak" .04
   gun "Antimatter Cannon"
-  turret "Bolt Turret"
-  turret "Bolt Turret"
+  turret "Jolt Turret"
+  turret "Jolt Turret"
   turret "Anti-Missile Field"
   turret "Draining Field"
   turret "Anti-Missile Field"
   turret "Distancer"
   turret "Distancer"
-  turret "Bolt Turret"
+  turret "Jolt Turret"
 

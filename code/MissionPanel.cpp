@@ -67,8 +67,8 @@ MissionPanel::MissionPanel(PlayerInfo &player)
     ++acceptedIt;
   
   wrap.SetWrapWidth(380);
-  wrap.SetFont(FontSet::Get(14));
-  wrap.SetAlignment(WrappedText::JUSTIFIED);
+  wrap.SetFont(FontSet::Get(18));
+  wrap.SetAlignment(Font::JUSTIFIED);
   
   // Select the first available or accepted mission in the currently selected
   // system, or along the travel plan.
@@ -107,8 +107,8 @@ MissionPanel::MissionPanel(const MapPanel &panel)
     ++acceptedIt;
   
   wrap.SetWrapWidth(380);
-  wrap.SetFont(FontSet::Get(14));
-  wrap.SetAlignment(WrappedText::JUSTIFIED);
+  wrap.SetFont(FontSet::Get(18));
+  wrap.SetAlignment(Font::JUSTIFIED);
 
   // Select the first available or accepted mission in the currently selected
   // system, or along the travel plan.
@@ -137,7 +137,7 @@ void MissionPanel::Draw()
 {
   MapPanel::Draw();
   
-  Colour routeColour(.2, .1, 0., 0.);
+  Colour routeColour(.2f, .1f, 0.f, 0.f);
   const System *system = selectedSystem;
   while(distance.Days(system) > 0)
   {
@@ -149,7 +149,7 @@ void MissionPanel::Draw()
     from -= unit;
     to += unit;
     
-    LineShader::Draw(from, to, 5., routeColour);
+    LineShader::Draw(from, to, 5.f, routeColour);
     
     system = next;
   }
@@ -426,7 +426,7 @@ void MissionPanel::DrawKey() const
   const Sprite *back = SpriteSet::Get("ui/mission key");
   SpriteShader::Draw(back, Screen::BottomLeft() + .5 * Point(back->Width(), -back->Height()));
   
-  const Font &font = FontSet::Get(14);
+  const Font &font = FontSet::Get(18);
   Point angle = Point(1., 1.).Unit();
   
   const int ROWS = 5;
@@ -459,7 +459,7 @@ void MissionPanel::DrawKey() const
   
   for(int i = 0; i < ROWS; ++i)
   {
-    PointerShader::Draw(pos + pointerOff, angle, 10., 18., 0., COLOUR[i]);
+    PointerShader::Draw(pos + pointerOff, angle, 10.f, 18.f, 0.f, COLOUR[i]);
     font.Draw(LABEL[i], pos + textOff, i == selected ? bright : dim);
     pos.Y() += 20.;
   }
@@ -471,7 +471,7 @@ void MissionPanel::DrawKey() const
 void MissionPanel::DrawSelectedSystem() const
 {
   const Sprite *sprite = SpriteSet::Get("ui/selected system");
-  SpriteShader::Draw(sprite, Point(0., Screen::Top() + .5 * sprite->Height()));
+  SpriteShader::Draw(sprite, Point(0., Screen::Top() + .5f * sprite->Height()));
   
   string text;
   if(!selectedSystem)
@@ -494,7 +494,7 @@ void MissionPanel::DrawSelectedSystem() const
   else if(jumps > 0)
     text += " (" + to_string(jumps) + " jumps away)";
   
-  const Font &font = FontSet::Get(14);
+  const Font &font = FontSet::Get(18);
   Point pos(-.5 * font.Width(text), Screen::Top() + .5 * (30. - font.Height()));
   font.Draw(text, pos, *GameData::Colours().Get("bright"));
 }
@@ -507,23 +507,25 @@ void MissionPanel::DrawMissionSystem(const Mission &mission, const Colour &colou
 {
   const Colour &waypoint = *GameData::Colours().Get("waypoint back");
   const Colour &visited = *GameData::Colours().Get("faint");
+  const float MISSION_OUTER = 22.f;
+  const float MISSION_INNER = 20.5f;
   
   double zoom = Zoom();
   // Draw a coloured ring around the destination system.
   Point pos = zoom * (mission.Destination()->GetSystem()->Position() + centre);
-  RingShader::Draw(pos, 22., 20.5, colour);
+  RingShader::Draw(pos, MISSION_OUTER, MISSION_INNER, colour);
   
   // Draw bright rings around systems that still need to be visited.
   for(const System *system : mission.Waypoints())
-    RingShader::Draw(zoom * (system->Position() + centre), 22., 20.5, waypoint);
+    RingShader::Draw(zoom * (system->Position() + centre), MISSION_OUTER, MISSION_INNER, waypoint);
   for(const Planet *planet : mission.Stopovers())
-    RingShader::Draw(zoom * (planet->GetSystem()->Position() + centre), 22., 20.5, waypoint);
+    RingShader::Draw(zoom * (planet->GetSystem()->Position() + centre), MISSION_OUTER, MISSION_INNER, waypoint);
   
   // Draw faint rings around systems already visited for this mission.
   for(const System *system : mission.VisitedWaypoints())
-    RingShader::Draw(zoom * (system->Position() + centre), 22., 20.5, visited);
+    RingShader::Draw(zoom * (system->Position() + centre), MISSION_OUTER, MISSION_INNER, visited);
   for(const Planet *planet : mission.VisitedStopovers())
-    RingShader::Draw(zoom * (planet->GetSystem()->Position() + centre), 22., 20.5, visited);
+    RingShader::Draw(zoom * (planet->GetSystem()->Position() + centre), MISSION_OUTER, MISSION_INNER, visited);
 }
 
 
@@ -558,11 +560,11 @@ Point MissionPanel::DrawPanel(Point pos, const string &label, int entries) const
     edgePos.Y() -= dy;
   }
   
-  const Font &font = FontSet::Get(14);
+  const Font &font = FontSet::Get(18);
   pos += Point(10., 10. + (20. - font.Height()) * .5);
   font.Draw(label, pos, selected);
   FillShader::Fill(
-    pos + Point(.5 * size.X() - 5., 15.),
+    pos + Point(.5 * size.X() - 5., 20.),
     Point(size.X() - 10., 1.),
     unselected);
   pos.Y() += 5.;
@@ -574,7 +576,7 @@ Point MissionPanel::DrawPanel(Point pos, const string &label, int entries) const
 
 Point MissionPanel::DrawList(const list<Mission> &list, Point pos) const
 {
-  const Font &font = FontSet::Get(14);
+  const Font &font = FontSet::Get(18);
   const Colour &highlight = *GameData::Colours().Get("faint");
   const Colour &unselected = *GameData::Colours().Get("medium");
   const Colour &selected = *GameData::Colours().Get("bright");

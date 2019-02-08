@@ -272,7 +272,6 @@ void ShipInfoPanel::DrawShipStats(const Rectangle &bounds)
   Colour dim = *GameData::Colours().Get("medium");
   Colour bright = *GameData::Colours().Get("bright");
   const Ship &ship = **shipIt;
-  const Font &font = FontSet::Get(14);
   
   // Table attributes.
   Table table;
@@ -283,7 +282,8 @@ void ShipInfoPanel::DrawShipStats(const Rectangle &bounds)
   
   // Draw the ship information.
   table.Draw("ship:", dim);
-  table.Draw(font.TruncateMiddle(ship.Name(), WIDTH - 50), bright);
+  const Font::Layout layout(Font::TRUNC_MIDDLE, WIDTH - 50);
+  table.Draw(ship.Name(), bright, &layout);
   
   table.Draw("model:", dim);
   table.Draw(ship.ModelName(), bright);
@@ -371,7 +371,7 @@ void ShipInfoPanel::DrawWeapons(const Rectangle &bounds)
   // Colours to draw with.
   Colour dim = *GameData::Colours().Get("medium");
   Colour bright = *GameData::Colours().Get("bright");
-  const Font &font = FontSet::Get(14);
+  const Font &font = FontSet::Get(18);
   const Ship &ship = **shipIt;
   
   // Figure out how much to scale the sprite by.
@@ -401,7 +401,7 @@ void ShipInfoPanel::DrawWeapons(const Rectangle &bounds)
   
   // Draw the ship, using the black silhouette swizzle.
   SpriteShader::Draw(sprite, bounds.Centre(), scale, 63);
-  OutlineShader::Draw(sprite, bounds.Centre(), scale * Point(sprite->Width(), sprite->Height()), Colour(.5));
+  OutlineShader::Draw(sprite, bounds.Centre(), scale * Point(sprite->Width(), sprite->Height()), Colour(.5f));
   
   // Figure out how tall each part of the weapon listing will be.
   int gunRows = max(count[0][0], count[1][0]);
@@ -426,27 +426,28 @@ void ShipInfoPanel::DrawWeapons(const Rectangle &bounds)
   Point topTo;
   Colour topColour;
   bool hasTop = false;
+  const Font::Layout layout(Font::TRUNC_BACK, 150);
   for(const Hardpoint &hardpoint : ship.Weapons())
   {
     string name = "[empty]";
     if(hardpoint.GetOutfit())
-      name = font.Truncate(hardpoint.GetOutfit()->Name(), 150);
+      name = hardpoint.GetOutfit()->Name();
     
     bool isRight = (hardpoint.GetPoint().X() >= 0.);
     bool isTurret = hardpoint.IsTurret();
     
     double &y = nextY[isRight][isTurret];
-    double x = centreX + (isRight ? LABEL_DX : (-LABEL_DX - font.Width(name)));
+    double x = centreX + (isRight ? LABEL_DX : (-LABEL_DX - font.Width(name, &layout)));
     bool isHover = (index == hoverIndex);
-    font.Draw(name, Point(x, y + TEXT_OFF), isHover ? bright : dim);
+    font.Draw(name, Point(x, y + TEXT_OFF), isHover ? bright : dim, &layout);
     Point zoneCentre(labelCentre[isRight], y + .5 * LINE_HEIGHT);
     zones.emplace_back(zoneCentre, LINE_SIZE, index);
     
     // Determine what colour to use for the line.
-    double high = (index == hoverIndex ? .8 : .5);
-    Colour colour(high, .75 * high, 0., 1.);
+    float high = (index == hoverIndex ? .8f : .5f);
+    Colour colour(high, .75f * high, 0.f, 1.f);
     if(isTurret)
-      colour = Colour(0., .75 * high, high, 1.);
+      colour = Colour(0.f, .75f * high, high, 1.f);
     
     // Draw the line.
     Point from(fromX[isRight], zoneCentre.Y());
@@ -582,13 +583,13 @@ void ShipInfoPanel::DrawCargo(const Rectangle &bounds)
 
 void ShipInfoPanel::DrawLine(const Point &from, const Point &to, const Colour &colour) const
 {
-  Colour black(0., 1.);
+  Colour black(0.f, 1.f);
   Point mid(to.X(), from.Y());
   
-  LineShader::Draw(from, mid, 3.5, black);
-  LineShader::Draw(mid, to, 3.5, black);
-  LineShader::Draw(from, mid, 1.5, colour);
-  LineShader::Draw(mid, to, 1.5, colour);
+  LineShader::Draw(from, mid, 3.5f, black);
+  LineShader::Draw(mid, to, 3.5f, black);
+  LineShader::Draw(from, mid, 1.5f, colour);
+  LineShader::Draw(mid, to, 1.5f, colour);
 }
 
 

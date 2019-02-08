@@ -16,11 +16,12 @@ opts.Add(PathVariable("PREFIX", "Directory to install under", "/usr/local", Path
 opts.Add(PathVariable("DESTDIR", "Destination root directory", "", PathVariable.PathAccept))
 opts.Add(EnumVariable("mode", "Compilation mode", "release", allowed_values=("release", "debug", "profile")))
 opts.Add(PathVariable("BUILDDIR", "Build directory", "build", PathVariable.PathIsDirCreate))
+opts.Add(PathVariable("PKG_CONFIG_PATH", "Path to the pkg-config binary", "pkg-config", PathVariable.PathAccept))
 opts.Update(env)
 
 Help(opts.GenerateHelpText(env))
 
-flags = ["-std=c++11", "-Wall"]
+flags = ["-std=c++14", "-Wall"]
 if env["mode"] != "debug":
 	flags += ["-O3"]
 if env["mode"] == "debug":
@@ -41,6 +42,8 @@ env.Append(LIBS = [
 	"openal",
 	"pthread"
 ]);
+# font libraries
+env.ParseConfig("$PKG_CONFIG_PATH --cflags --libs pangocairo --libs fontconfig")
 # libmad is not in the Steam runtime, so link it statically:
 if 'SCHROOT_CHROOT_NAME' in os.environ and 'steamrt_scout_i386' in os.environ['SCHROOT_CHROOT_NAME']:
 	env.Append(LIBS = File("/usr/lib/i386-linux-gnu/libmad.a"))
@@ -62,7 +65,7 @@ env.Install("$DESTDIR$PREFIX/games", sky)
 # Install the desktop file:
 env.Install("$DESTDIR$PREFIX/share/applications", "finite-galaxy.desktop")
 
-# Install app center metadata:
+# Install app centre metadata:
 env.Install("$DESTDIR$PREFIX/share/appdata", "finite-galaxy.appdata.xml")
 
 # Install icons, keeping track of all the paths.

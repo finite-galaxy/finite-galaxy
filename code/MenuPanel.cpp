@@ -28,11 +28,13 @@
 
 #include "gl_header.h"
 
+#include <algorithm>
+
 using namespace std;
 
 namespace {
   bool isReady = false;
-  float alpha = 1.;
+  float alpha = 1.f;
   const int scrollSpeed = 2;
 }
 
@@ -50,7 +52,7 @@ MenuPanel::MenuPanel(PlayerInfo &player, UI &gamePanels)
 
 void MenuPanel::Step()
 {
-  if(GetUI()->IsTop(this) && alpha < 1.)
+  if(GetUI()->IsTop(this) && alpha < 1.f)
   {
     ++scroll;
     if(scroll >= (20 * credits.size() + 300) * scrollSpeed)
@@ -77,18 +79,19 @@ void MenuPanel::Draw()
 {
   glClear(GL_COLOR_BUFFER_BIT);
   GameData::Background().Draw(Point(), Point());
-  const Font &font = FontSet::Get(14);
+  const Font &font = FontSet::Get(18);
   
   Information info;
+  const Font::Layout layout(Font::TRUNC_MIDDLE, 165);
   if(player.IsLoaded() && !player.IsDead())
   {
     info.SetCondition("pilot loaded");
-    info.SetString("pilot", font.TruncateMiddle(player.FirstName() + " " + player.LastName(), 165));
+    info.SetString("pilot", player.FirstName() + " " + player.LastName(), layout);
     if(player.Flagship())
     {
       const Ship &flagship = *player.Flagship();
       info.SetSprite("ship sprite", flagship.GetSprite());
-      info.SetString("ship", font.TruncateMiddle(flagship.Name(), 165));
+      info.SetString("ship", flagship.Name(), layout);
     }
     if(player.GetSystem())
       info.SetString("system", player.GetSystem()->Name());
@@ -100,7 +103,7 @@ void MenuPanel::Draw()
   else if(player.IsLoaded())
   {
     info.SetCondition("no pilot loaded");
-    info.SetString("pilot", font.TruncateMiddle(player.FirstName() + " " + player.LastName(), 165));
+    info.SetString("pilot", player.FirstName() + " " + player.LastName(), layout);
     info.SetString("ship", "You have died.");
   }
   else
@@ -121,8 +124,8 @@ void MenuPanel::Draw()
     Angle a(0.);
     for(int i = 0; i < progress; ++i)
     {
-      Colour colour(.5 * alpha, 0.f);
-      PointerShader::Draw(Point(), a.Unit(), 8., 20., 140. * alpha, colour);
+      Colour colour(.5f * alpha, 0.f);
+      PointerShader::Draw(Point(), a.Unit(), 8.f, 20.f, 140.f * alpha, colour);
       a += da;
     }
   }
@@ -137,7 +140,7 @@ void MenuPanel::Draw()
       fade = max(0.f, (115 - y) / 20.f);
     if(fade)
     {
-      Colour colour(((line.empty() || line[0] == ' ') ? .2 : .4) * fade, 0.);
+      Colour colour(((line.empty() || line[0] == ' ') ? .2f : .4f) * fade, 0.f);
       font.Draw(line, Point(-470., y), colour);
     }
     y += 20;

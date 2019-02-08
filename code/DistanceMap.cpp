@@ -248,7 +248,7 @@ bool DistanceMap::Propagate(Edge edge, bool useJump)
   for(const System *link : (useJump ? edge.next->Neighbours() : edge.next->Links()))
   {
     // Find out whether we already have a better path to this system, and
-    // check whether this link can be traveled. If this route is being
+    // check whether this link can be travelled. If this route is being
     // selected by the player, they are constrained to known routes.
     if(HasBetter(link, edge) || !CheckLink(edge.next, link, useJump))
       continue;

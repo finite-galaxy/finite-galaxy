@@ -270,6 +270,21 @@ void OutfitInfoDisplay::UpdateAttributes(const Outfit &outfit)
     outfit.FiringForce()
   };
   
+  vector<double> randomValues = {
+    outfit.RandomShieldDamage(),
+    outfit.RandomHullDamage(),
+    outfit.RandomDisruptionDamage() * 100.,
+    outfit.RandomFuelDamage(),
+    outfit.RandomIonDamage() * 100.,
+    outfit.RandomHeatDamage(),
+    outfit.RandomSlowingDamage() * 100.,
+    outfit.RandomHitForce(),
+    0,
+    0,
+    0,
+    0
+  };
+  
   double reload = outfit.Reload();
   bool isContinuous = (reload <= 1);
   // Add any per shot and per second values to the table.
@@ -281,12 +296,26 @@ void OutfitInfoDisplay::UpdateAttributes(const Outfit &outfit)
       attributeValues.emplace_back(" ");
       attributesHeight += 10;
       for(unsigned i = 0; i < values.size(); ++i)
-        if(values[i])
+      {
+        if(randomValues[i] && values[i])
+        {
+          attributeLabels.emplace_back("    " + VALUE_NAMES[i] + ":");
+          attributeValues.emplace_back(Format::Number(60. * (values[i] + 0.5 * randomValues[i]) / reload));
+          attributesHeight += 20;
+        }
+        else if(randomValues[i])
+        {
+          attributeLabels.emplace_back("    " + VALUE_NAMES[i] + ":");
+          attributeValues.emplace_back(Format::Number(60. * 0.5 * randomValues[i] / reload));
+          attributesHeight += 20;
+        }
+        else if(values[i])
         {
           attributeLabels.emplace_back("    " + VALUE_NAMES[i] + ":");
           attributeValues.emplace_back(Format::Number(60. * values[i] / reload));
           attributesHeight += 20;
         }
+      }
     }
     else
     {
@@ -294,12 +323,31 @@ void OutfitInfoDisplay::UpdateAttributes(const Outfit &outfit)
       attributeValues.emplace_back(" ");
       attributesHeight += 10;
       for(unsigned i = 0; i < values.size(); ++i)
-        if(values[i])
+      {
+        if(randomValues[i] && values[i])
         {
           attributeLabels.emplace_back("    " + VALUE_NAMES[i] + ":");
-          attributeValues.emplace_back(Format::Number(values[i]) + " / " + Format::Number(60. * values[i] / reload));
+          attributeValues.emplace_back(Format::Number(values[i]) 
+            + "–" + Format::Number(values[i] + randomValues[i]) 
+            + " / " + Format::Number(60. * (values[i] + 0.5 * randomValues[i]) / reload));
           attributesHeight += 20;
         }
+        else if(randomValues[i])
+        {
+          attributeLabels.emplace_back("    " + VALUE_NAMES[i] + ":");
+          attributeValues.emplace_back(Format::Number(0) 
+            + "–" + Format::Number(randomValues[i]) 
+            + " / " + Format::Number(60. * 0.5 * randomValues[i] / reload));
+          attributesHeight += 20;
+        }
+        else if(values[i])
+        {
+          attributeLabels.emplace_back("    " + VALUE_NAMES[i] + ":");
+          attributeValues.emplace_back(Format::Number(values[i]) 
+            + " / " + Format::Number(60. * values[i] / reload));
+          attributesHeight += 20;
+        }
+      }
     }
   }
   
@@ -340,7 +388,7 @@ void OutfitInfoDisplay::UpdateAttributes(const Outfit &outfit)
   if(turretTurn)
   {
     attributeLabels.emplace_back("turret turn rate:");
-    attributeValues.emplace_back(Format::Number(turretTurn));
+    attributeValues.emplace_back(Format::Number(turretTurn) + "°");
     attributesHeight += 20;
   }
   int homing = outfit.Homing();

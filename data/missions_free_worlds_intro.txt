@@ -264,7 +264,7 @@ mission "Pact Questioning"
       label free
       `  "Thank you," he says. "Am I correct that you performed some missions for the Southern Defence Pact, back before they became the Free Worlds?"`
       label start
-      `  His voice is very friendly, and he is not armed or accompanied by any other officers that you can see, so it doesn't seem like you are in trouble or in danger of being arrested - especially since your work for the Pact was perfectly legal.`
+      `  His voice is very friendly, and he is not armed or accompanied by any other officers that you can see, so it doesn't seem like you are in trouble or in danger of being arrested – especially since your work for the Pact was perfectly legal.`
       choice
         `  "I don't know what you are talking about."`
         `  "I did take a few jobs helping out the local militias, yes."`
@@ -419,7 +419,7 @@ mission "FW Recon 1"
       `  You cut the comlink and breathe a sigh of relief that the conversation is over.`
   
   on complete
-    dialogue `Soon after you land, the militia officer comes to your ship and pays you <payment> in exchange for your sensor logs regarding <npc>. He says, "If you would be interested in continuing to work for us, meet me in the spaceport bar in an hour."`
+    dialogue `Soon after you land, the militia officer comes to your ship and pays you <payment> in exchange for your sensor logs regarding the <npc>. He says, "If you would be interested in continuing to work for us, meet me in the spaceport bar in an hour."`
     payment 10000
 
 
@@ -438,7 +438,7 @@ mission "FW Recon 2"
   on offer
     conversation
       `You meet up with the militia officer in the spaceport bar. "Glad you showed up," he says, "I'm Jean-Jacques, by the way, but you can call me JJ."`
-      `  You introduce yourself in return, and he continues. "Here's the deal. I'm the commander of the militia on Glaze. So far, we and the Navy are not shooting at each other, because no one wants to fire the first shot. But if they're getting ready to change that, they'll start refitting their Venuss with heavy weaponry instead of surveillance equipment. So, I need to know how many more of their ships are equipped like the one you just scanned."`
+      `  You introduce yourself in return, and he continues. "Here's the deal. I'm the commander of the militia on Glaze. So far, we and the Navy are not shooting at each other, because no one wants to fire the first shot. But if they're getting ready to change that, they'll start refitting their Venuses with heavy weaponry instead of surveillance equipment. So, I need to know how many more of their ships are equipped like the one you just scanned."`
       `  He continues, "I'd like you to go to <waypoints>, where they're building some sort of secret base. Scan any ships you think match the one we just saw, then bring your scanner logs back here for me to look at."`
       choice
         `  "Sure, I'd be glad to do that."`
@@ -536,7 +536,7 @@ mission "FW Recon 3B"
         "Mercury"
   
   on visit
-    dialogue `A minute after you land, a Republic Navy Mercury, <npc>, lands directly next to you. JJ does not approach you. You notice from your ship's logs that this gunboat has been following you ever since you left <origin>; before you can hand over the information, you will need to escape its pursuit.`
+    dialogue `A minute after you land, a Republic Navy Mercury, the <npc>, lands directly next to you. JJ does not approach you. You notice from your ship's logs that this gunboat has been following you ever since you left <origin>; before you can hand over the information, you will need to escape its pursuit.`
   
   on complete
     "assisted free worlds" ++
@@ -605,7 +605,7 @@ mission "FW Katya 1"
           decline
   
       label `more`
-      `  "Okay, here's the deal. We need some cargo carried from <planet> to Skymoot. It's just medical supplies - no bombs, no contraband. But we'll load it onto your ship in the dead of night, trying our best to avoid any notice. But the Reps have the sharpest eyes in the galaxy, so you'll get noticed anyway. And since anything done in the dead of night is likely to arouse their suspicions, you'll get boarded and searched. Meanwhile, the real cargo will have been loaded onto one of our ships in broad daylight, and will pass through Republic space entirely unnoticed."`
+      `  "Okay, here's the deal. We need some cargo carried from <planet> to Skymoot. It's just medical supplies – no bombs, no contraband. But we'll load it onto your ship in the dead of night, trying our best to avoid any notice. But the Reps have the sharpest eyes in the galaxy, so you'll get noticed anyway. And since anything done in the dead of night is likely to arouse their suspicions, you'll get boarded and searched. Meanwhile, the real cargo will have been loaded onto one of our ships in broad daylight, and will pass through Republic space entirely unnoticed."`
       choice
         `  "I like the way you think. Count me in."`
           goto `details`
@@ -615,7 +615,7 @@ mission "FW Katya 1"
         decline
   
       label `details`
-      `  "Great," she says, grinning even more broadly. "My name's Katya Reynolds, by the way. Glad we'll be working together." She starts to walk away, then seems to remember something. "One last thing - some friends of mine on <planet>, tourists, need a lift off that rock, and I owe them a favour. Would you mind saving two bunks for them?"`
+      `  "Great," she says, grinning even more broadly. "My name's Katya Reynolds, by the way. Glad we'll be working together." She starts to walk away, then seems to remember something. "One last thing – some friends of mine on <planet>, tourists, need a lift off that rock, and I owe them a favour. Would you mind saving two bunks for them?"`
       choice
         `  "Sure, no problem."`
   
@@ -837,7 +837,7 @@ mission "FW Katya 2B"
   npc
     government "Pirate"
     personality nemesis plunders waiting
-    fleet "Pirates East Small" 2
+    fleet "Pirates West Small" 2
   to offer
     has "FW Katya 2: done"
   to fail
@@ -1749,9 +1749,9 @@ mission "FW Bounty 1"
     ship "Hawk" "Cluny"
     ship "Warrior" "Ferret"
     ship "Harpy" "Rat"
-    ship "Fury" "Stoat"
+    ship "Berserker" "Stoat"
     ship "Wasp" "Vixen"
-    ship "Hero" "Weasel"
+    ship "Fury" "Weasel"
     dialogue `The "Rat Pack" has been eliminated. You can claim the bounty payment by returning to <destination>.`
   
   on complete
@@ -1840,7 +1840,7 @@ mission "FW Bounty 3"
     personality heroic staying nemesis target
     government Bounty
     system "Shaula"
-    ship "Osprey (Hai)" "Silverhawk"
+    ship "Osprey (Ion)" "Silverhawk"
     dialogue `The <npc> has been eliminated. You can claim the bounty payment by returning to <destination>.`
   
   on complete
@@ -2041,7 +2041,7 @@ mission "Defend Sabik"
       variant
         "Saturn"
         "Foxhound" 4
-        "Mark I Drone" 6
+        "Mark II Drone" 6
         "Mars" 2
         "Mercury" 5
       
@@ -2055,7 +2055,7 @@ mission "Defend Sabik"
       variant
         "Saturn"
         "Foxhound" 4
-        "Mark I Drone" 6
+        "Mark II Drone" 6
         "Mars" 2
         "Mercury" 5
   
@@ -2065,7 +2065,7 @@ mission "Defend Sabik"
     fleet
       names "free worlds capital"
       variant
-        "Falcon"
+        "Lance"
         "Hawk" 2
     fleet
       names "free worlds small"
@@ -2076,7 +2076,7 @@ mission "Defend Sabik"
       names "free worlds small"
       variant
         "Hawk"
-        "Fury" 2
+        "Berserker" 2
   npc
     personality heroic disables
     government "Free Worlds"
@@ -2084,7 +2084,7 @@ mission "Defend Sabik"
     fleet
       names "free worlds capital"
       variant
-        "Falcon"
+        "Lance"
         "Osprey" 2
         "Hawk" 3
         "Harpy" 5
@@ -2097,7 +2097,7 @@ mission "Defend Sabik"
       variant
         "Bastion" 2
         "Argosy" 4
-        "Fury" 6
+        "Berserker" 6
     fleet
       names "free worlds capital"
       variant
@@ -2110,7 +2110,7 @@ mission "Defend Sabik"
     fleet
       names "free worlds capital"
       variant
-        "Falcon" 2
+        "Lance" 2
   npc
     personality heroic waiting disables
     government "Free Worlds"

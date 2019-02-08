@@ -1,0 +1,77 @@
+outfitter "Miscellaneous"
+  "Imaginary Weapon"
+  "Mouthparts?"
+  "Nano Strike"
+  "Timer Weapon"
+
+
+
+outfit "Imaginary Weapon"
+  category "Cannons"
+  "gun ports" -1
+  weapon
+    sprite "projectile/rainbow"
+      "frame rate" 12
+      "random start frame"
+    "hit effect" "puff"
+    "die effect" "puff"
+    "inaccuracy" 20
+    "velocity" 12
+    "lifetime" 60
+    "reload" 10
+    "acceleration" 1.2
+    "drag" .1
+    "turn" 3
+    "homing" 4
+    "tracking" 1. 
+
+
+
+outfit "Mouthparts?"
+  category "Cannons"
+  "gun ports" -1
+  weapon
+    sound "crunch"
+    "hit effect" "void sprite chewing"
+    "inaccuracy" 180
+    "velocity" 10
+    "lifetime" 1
+    "reload" 70
+    "burst reload" 35
+    "burst count" 3
+    "cluster"
+    "shield damage" 300
+    "hull damage" 300
+
+
+
+outfit "Nano Strike"
+  category "Cannons"
+  "mass" 5
+  "outfit space" -5
+  "weapon space" -5
+  "gun ports" -1
+  weapon
+    "hit effect" "nano spark"
+    "die effect" "nano spark"
+    "inaccuracy" 10
+    "velocity" 200
+    "lifetime" 1
+    "reload" 10
+    "firing energy" 5
+    "shield damage" 10
+    "hull damage" 10
+
+
+
+outfit "Timer Weapon"
+  category "Cannons"
+  "gun ports" -1
+  weapon
+    "velocity" 10
+    "lifetime" 20
+    "reload" 100
+    "trigger radius" 200
+    "blast radius" 20
+    "hull damage" .1
+

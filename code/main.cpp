@@ -1,6 +1,7 @@
 // main.cpp
 
 #include "Audio.h"
+#include "Cache.h"
 #include "Command.h"
 #include "Conversation.h"
 #include "ConversationPanel.h"
@@ -344,6 +345,7 @@ int main(int argc, char *argv[])
         SpriteShader::Draw(SpriteSet::Get("ui/fast forward"), Screen::TopLeft() + Point(10., 10.));
       
       SDL_GL_SwapWindow(window);
+      CacheBase::Step();
       timer.Wait();
     }
     
@@ -415,7 +417,7 @@ void SetIcon(SDL_Window *window)
   
   // Convert the icon to an SDL surface.
   SDL_Surface *surface = SDL_CreateRGBSurfaceFrom(buffer.Pixels(), buffer.Width(), buffer.Height(),
-    32, 4 * buffer.Width(), 0x00FF0000, 0x0000FF00, 0x000000FF, 0xFF000000);
+    32, 4 * buffer.Width(), 0x00FF'0000, 0x0000'FF00, 0x0000'00FF, 0xFF00'0000);
   if(surface)
   {
     SDL_SetWindowIcon(window, surface);
@@ -469,8 +471,8 @@ int DoError(string message, SDL_Window *window, SDL_GLContext context)
     message += "\")";
   }
   
-  // Print the error message in the terminal.
-  cerr << message << endl;
+  // Print the error message in the terminal and the error file.
+  Files::LogError(message);
   
   // Show the error message both in a message box and in the terminal.
   SDL_MessageBoxData box;

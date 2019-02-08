@@ -3,326 +3,130 @@
 #include "Font.h"
 
 #include "Colour.h"
+#include "Files.h"
 #include "ImageBuffer.h"
-#include "Point.h"
 #include "Screen.h"
+
+#include "gl_header.h"
 
 #include <algorithm>
 #include <cmath>
-#include <cstdlib>
-#include <cstring>
+#include <string>
+#include <vector>
 
 using namespace std;
 
 namespace {
   bool showUnderlines = false;
+  const int TOTAL_TAB_STOPS = 8;
+  const Font::Layout defaultParams;
   
-  const char *vertexCode =
-    // "scale" maps pixel coordinates to GL coordinates (-1 to 1).
-    "uniform vec2 scale;\n"
-    // The (x, y) coordinates of the top left corner of the glyph.
-    "uniform vec2 position;\n"
-    // The glyph to draw. (ASCII value - 32).
-    "uniform int glyph;\n"
-    // Aspect ratio of rendered glyph (unity by default).
-    "uniform float aspect = 1.f;\n"
-    
-    // Inputs from the VBO.
-    "in vec2 vert;\n"
-    "in vec2 corner;\n"
-    
-    // Output to the fragment shader.
-    "out vec2 texCoord;\n"
-    
-    // Pick the proper glyph out of the texture.
-    "void main() {\n"
-    "  texCoord = vec2((glyph + corner.x) / 110.f, corner.y);\n"
-    "  gl_Position = vec4((aspect * vert.x + position.x) * scale.x, (vert.y + position.y) * scale.y, 0, 1);\n"
-    "}\n";
-  
-  const char *fragmentCode =
-    // The user must supply a texture and a colour (white by default).
-    "uniform sampler2D tex;\n"
-    "uniform vec4 colour = vec4(1, 1, 1, 1);\n"
-    
-    // This comes from the vertex shader.
-    "in vec2 texCoord;\n"
-    
-    // Output colour.
-    "out vec4 finalColour;\n"
-    
-    // Multiply the texture by the user-specified colour (including alpha).
-    "void main() {\n"
-    "  finalColour = texture(tex, texCoord).a * colour;\n"
-    "}\n";
-  
-  const int KERN = 2;
+  // 95 and x5f means "_".
+  const vector<string> acceptableCharacterReferences{ "gt;", "lt;", "amp;", "#95;", "#x5f;", "#x5F;" };
+
+  // Convert from PANGO to pixel scale.
+  int PixelFromPangoCeil(int pangoScale)
+  {
+    return (pangoScale + PANGO_SCALE - 1) / PANGO_SCALE;
+  }
 }
 
 
 
 Font::Font()
-  : texture(0), vao(0), vbo(0), colourI(0), scaleI(0), glyphI(0), aspectI(0),
-    positionI(0), height(0), space(0), screenWidth(0), screenHeight(0)
+  : shader(), vao(0), vbo(0), scaleI(0), centreI(0), sizeI(0), colourI(0),
+  screenWidth(1), screenHeight(1), viewWidth(1), viewHeight(1), cr(nullptr),
+  fontDescName(), refDescName(), context(nullptr), layout(nullptr), lang(nullptr),
+  pixelSize(0), fontViewHeight(0), surfaceWidth(256), surfaceHeight(64), cache()
 {
+  lang = pango_language_from_string("en");
+  SetUpShader();
+  UpdateSurfaceSize();
+
+  cache.SetUpdateInterval(3600);
 }
 
 
 
-Font::Font(const string &imagePath)
-  : Font()
+Font::~Font()
 {
-  Load(imagePath);
+  if(cr)
+    cairo_destroy(cr);
+  if(layout)
+    g_object_unref(layout);
 }
 
 
 
-void Font::Load(const string &imagePath)
+void Font::SetFontDescription(const std::string &desc)
 {
-  // Load the texture.
-  ImageBuffer image;
-  if(!image.Read(imagePath))
-    return;
-  
-  LoadTexture(image);
-  CalculateAdvances(image);
-  SetUpShader(image.Width() / GLYPHS, image.Height());
+  fontDescName = desc;
+  UpdateFontDesc();
 }
 
 
 
-void Font::Draw(const string &str, const Point &point, const Colour &colour) const
+ void Font::SetLayoutReference(const std::string &desc)
 {
-  DrawAliased(str, round(point.X()), round(point.Y()), colour);
+  refDescName = desc;
+  UpdateFontDesc();
 }
 
 
 
-void Font::DrawAliased(const string &str, double x, double y, const Colour &colour) const
+void Font::SetPixelSize(int size)
 {
-  glUseProgram(shader.Object());
-  glBindTexture(GL_TEXTURE_2D, texture);
-  glBindVertexArray(vao);
-  
-  glUniform4fv(colourI, 1, colour.Get());
-  
-  // Update the scale, only if the screen size has changed.
-  if(Screen::Width() != screenWidth || Screen::Height() != screenHeight)
-  {
-    screenWidth = Screen::Width();
-    screenHeight = Screen::Height();
-    GLfloat scale[2] = {2.f / screenWidth, -2.f / screenHeight};
-    glUniform2fv(scaleI, 1, scale);
-  }
-  
-  GLfloat textPos[2] = {
-    static_cast<float>(x - 1.),
-    static_cast<float>(y)};
-  int previous = 0;
-  bool isAfterSpace = true;
-  bool underlineChar = false;
-  const int underscoreGlyph = max(0, min(GLYPHS - 1, '_' - 32));
-  
-  for(char c : str)
-  {
-    if(c == '_')
-    {
-      underlineChar = showUnderlines;
-      continue;
-    }
-    
-    int glyph = Glyph(c, isAfterSpace);
-    if(c != '"' && c != '\'')
-      isAfterSpace = !glyph;
-    if(!glyph)
-    {
-      textPos[0] += space;
-      continue;
-    }
-    
-    glUniform1i(glyphI, glyph);
-    glUniform1f(aspectI, 1.f);
-    
-    textPos[0] += advance[previous * GLYPHS + glyph] + KERN;
-    glUniform2fv(positionI, 1, textPos);
-    
-    glDrawArrays(GL_TRIANGLE_STRIP, 0, 4);
-    
-    if(underlineChar)
-    {
-      glUniform1i(glyphI, underscoreGlyph);
-      glUniform1f(aspectI, static_cast<float>(advance[glyph * GLYPHS] + KERN)
-        / (advance[underscoreGlyph * GLYPHS] + KERN));
-      
-      glUniform2fv(positionI, 1, textPos);
-      
-      glDrawArrays(GL_TRIANGLE_STRIP, 0, 4);
-      underlineChar = false;
-    }
-    
-    previous = glyph;
-  }
-  
-  glBindVertexArray(0);
-  glUseProgram(0);
+  pixelSize = size;
+  UpdateFontDesc();
 }
 
 
 
-int Font::Width(const string &str, char after) const
+void Font::SetLanguage(const std::string &langCode)
 {
-  return Width(str.c_str(), after);
+  lang = pango_language_from_string(langCode.c_str());
+  UpdateFontDesc();
 }
 
 
 
-int Font::Width(const char *str, char after) const
+void Font::Draw(const std::string &str, const Point &point, const Colour &colour, const Layout *params) const
 {
-  int width = 0;
-  int previous = 0;
-  bool isAfterSpace = true;
-  
-  for( ; *str; ++str)
-  {
-    if(*str == '_')
-      continue;
-    
-    int glyph = Glyph(*str, isAfterSpace);
-    if(*str != '"' && *str != '\'')
-      isAfterSpace = !glyph;
-    if(!glyph)
-      width += space;
-    else
-    {
-      width += advance[previous * GLYPHS + glyph] + KERN;
-      previous = glyph;
-    }
-  }
-  width += advance[previous * GLYPHS + max(0, min(GLYPHS - 1, after - 32))];
-  
-  return width;
+  DrawCommon(str, point.X(), point.Y(), colour, params, true);
 }
 
 
 
-string Font::Truncate(const string &str, int width) const
+void Font::DrawAliased(const std::string &str, double x, double y, const Colour &colour, const Layout *params) const
 {
-  int prevChars = str.size();
-  int prevWidth = Width(str);
-  if(prevWidth <= width)
-    return str;
-  
-  width -= Width("...");
-  // As a safety against infinite loops (even though they won't be possible if
-  // this implementation is correct) limit the number of loops to the number
-  // of characters in the string.
-  for(size_t i = 0; i < str.length(); ++i)
-  {
-    // Loop until the previous width we tried was too long and this one is
-    // too short, or vice versa. Each time, the next string length we try is
-    // interpolated from the previous width.
-    int nextChars = (prevChars * width) / prevWidth;
-    bool isSame = (nextChars == prevChars);
-    bool prevWorks = (prevWidth <= width);
-    nextChars += (prevWorks ? isSame : -isSame);
-    
-    int nextWidth = Width(str.substr(0, nextChars), '.');
-    bool nextWorks = (nextWidth <= width);
-    if(prevWorks != nextWorks && abs(nextChars - prevChars) == 1)
-      return str.substr(0, min(prevChars, nextChars)) + "...";
-    
-    prevChars = nextChars;
-    prevWidth = nextWidth;
-  }
-  return str;
+  DrawCommon(str, x, y, colour, params, false);
 }
 
 
 
-string Font::TruncateFront(const string &str, int width) const
+int Font::Height(const std::string &str, const Layout *params) const
 {
-  int prevChars = str.size();
-  int prevWidth = Width(str);
-  if(prevWidth <= width)
-    return str;
-  
-  width -= Width("...");
-  // As a safety against infinite loops (even though they won't be possible if
-  // this implementation is correct) limit the number of loops to the number
-  // of characters in the string.
-  for(size_t i = 0; i < str.length(); ++i)
-  {
-    // Loop until the previous width we tried was too long and this one is
-    // too short, or vice versa. Each time, the next string length we try is
-    // interpolated from the previous width.
-    int nextChars = (prevChars * width) / prevWidth;
-    bool isSame = (nextChars == prevChars);
-    bool prevWorks = (prevWidth <= width);
-    nextChars += (prevWorks ? isSame : -isSame);
-    
-    int nextWidth = Width(str.substr(str.size() - nextChars));
-    bool nextWorks = (nextWidth <= width);
-    if(prevWorks != nextWorks && abs(nextChars - prevChars) == 1)
-      return "..." + str.substr(str.size() - min(prevChars, nextChars));
-    
-    prevChars = nextChars;
-    prevWidth = nextWidth;
-  }
-  return str;
+  if(str.empty())
+    return 0;
+
+  const RenderedText &text = Render(str, params);
+  if(!text.texture)
+    return 0;
+  return TextFromViewCeilY(text.height);
 }
 
 
 
-string Font::TruncateMiddle(const string &str, int width) const
+int Font::Width(const std::string &str, const Layout *params) const
 {
-  int prevChars = str.size();
-  int prevWidth = Width(str);
-  if(prevWidth <= width)
-    return str;
-  
-  width -= Width("...");
-  // As a safety against infinite loops (even though they won't be possible if
-  // this implementation is correct), limit the number of loops to the number
-  // of characters in the string.
-  for(size_t i = 0; i < str.length(); ++i)
-  {
-    // Loop until the previous width we tried was too long and this one is
-    // too short, or vice versa. Each time, the next string length we try is
-    // interpolated from the previous width.
-    int nextChars = (prevChars * width) / prevWidth;
-    bool isSame = (nextChars == prevChars);
-    bool prevWorks = (prevWidth <= width);
-    nextChars += (prevWorks ? isSame : -isSame);
-    
-    int leftChars = nextChars / 2;
-    int rightChars = nextChars - leftChars;
-    int nextWidth = Width(str.substr(0, leftChars) + str.substr(str.size() - rightChars));
-    bool nextWorks = (nextWidth <= width);
-    if(prevWorks != nextWorks && abs(nextChars - prevChars) == 1)
-    {
-      leftChars = min(prevChars,nextChars) / 2;
-      rightChars = min(prevChars, nextChars) - leftChars;
-      return str.substr(0, leftChars) + "..." + str.substr(str.size() - rightChars);
-    }
-    
-    prevChars = nextChars;
-    prevWidth = nextWidth;
-  }
-  return str;
+    return TextFromViewCeilX(ViewWidth(str, params));
 }
 
 
 
 int Font::Height() const
 {
-  return height;
-}
-
-
-
-int Font::Space() const
-{
-  return space;
+  return TextFromViewCeilY(fontViewHeight);
 }
 
 
@@ -334,121 +138,511 @@ void Font::ShowUnderlines(bool show)
 
 
 
-int Font::Glyph(char c, bool isAfterSpace)
+string Font::EscapeMarkupHasError(const string &str)
 {
-/*
-  // Interpunct
-  if(c == '·')
-    return 96;
+  const string text = ReplaceCharacters(str);
+  if(pango_parse_markup(text.c_str(), -1, '_', nullptr, nullptr, nullptr, nullptr))
+    return str;
+  else
+  {
+    string result;
+    for(const auto &c : text)
+    {
+      if(c == '<')
+        result += "&lt;";
+      else if(c == '>')
+        result += "&gt;";
+      else
+        result += c;
+    }
 
-  // Degrees, minutes, seconds
-  if(c == '°')
-    return 97;
-  if(c == '′')
-    return 98;
-  if(c == '″')
-    return 99;
-*/
-
-  // Curly quotes
-  if(c == '"' && isAfterSpace)
-    return 102;
-  if(c == '"' && !isAfterSpace)
-    return 104;
-  if(c == '\'' && isAfterSpace)
-    return 103;
-  if(c == '\'' && !isAfterSpace)
-    return 105;
-  
-  return max(0, min(GLYPHS - 3, c - 32));
+     return result;
+  }
 }
 
 
 
-void Font::LoadTexture(ImageBuffer &image)
+void Font::UpdateSurfaceSize() const
 {
-  glGenTextures(1, &texture);
-  glBindTexture(GL_TEXTURE_2D, texture);
+  if(cr)
+    cairo_destroy(cr);
+
+  cairo_surface_t *sf = cairo_image_surface_create(CAIRO_FORMAT_ARGB32, surfaceWidth, surfaceHeight);
+  cr = cairo_create(sf);
+  cairo_surface_destroy(sf);
+
+  if(layout)
+    g_object_unref(layout);
+  layout = pango_cairo_create_layout(cr);
+  context = pango_layout_get_context(layout);
+
+  pango_layout_set_wrap(layout, PANGO_WRAP_WORD);
+
+  UpdateFontDesc();
+}
+
+
+
+void Font::UpdateFontDesc() const
+{
+  if(pixelSize <= 0)
+    return;
+
+  // Get font descriptions.
+  PangoFontDescription *fontDesc = pango_font_description_from_string(fontDescName.c_str());
+  PangoFontDescription *refDesc = pango_font_description_from_string(refDescName.c_str());
+
+  // Set the pixel size.
+  const int fontSize = ViewFromTextFloorY(pixelSize) * PANGO_SCALE;
+  pango_font_description_set_absolute_size(fontDesc, fontSize);
+  pango_font_description_set_absolute_size(refDesc, fontSize);
+
+  // Update the context.
+  pango_context_set_language(context, lang);
+
+  // Update the layout.
+  pango_layout_set_font_description(layout, fontDesc);
+
+  // Update layout parameters.
+  PangoFontMetrics *metrics = pango_context_get_metrics(context, refDesc, lang);
+  const int ascent = pango_font_metrics_get_ascent(metrics);
+  const int descent = pango_font_metrics_get_descent(metrics);
+  fontViewHeight = PixelFromPangoCeil(ascent + descent);
+
+  // Clean up.
+  pango_font_metrics_unref(metrics);
+  pango_font_description_free(fontDesc);
+  pango_font_description_free(refDesc);
+  cache.Clear();
+
+  // Tab Stop
+  space = ViewWidth(" ");
+  const int tabSize = 4 * space * PANGO_SCALE;
+  PangoTabArray *tb = pango_tab_array_new(TOTAL_TAB_STOPS, FALSE);
+  for(int i = 0; i < TOTAL_TAB_STOPS; ++i)
+    pango_tab_array_set_tab(tb, i, PANGO_TAB_LEFT, i * tabSize);
+  pango_layout_set_tabs(layout, tb);
+  pango_tab_array_free(tb);
+}
+
+
+
+// Replaces straight quotation marks with curly ones,
+// and escapes "&" except for minimum necessaries because a pilot name may
+// contain "&" and that representation should be the same as the old version.
+string Font::ReplaceCharacters(const string &str)
+{
+  string buf;
+  buf.reserve(str.length());
+  bool isAfterWhitespace = true;
+  bool isAfterAccel = false;
+  bool isTag = false;
+  const size_t len = str.length();
+  for(size_t pos = 0; pos < len; ++pos)
+  {
+    if(isTag)
+    {
+      if(str[pos] == '>')
+        isTag = false;
+      buf.append(1, str[pos]);
+    }
+    else
+    {
+      // U+2018 LEFT_SINGLE_QUOTATION_MARK
+      // U+2019 RIGHT_SINGLE_QUOTATION_MARK
+      // U+201C LEFT_DOUBLE_QUOTATION_MARK
+      // U+201D RIGHT_DOUBLE_QUOTATION_MARK
+      if(str[pos] == '\'')
+        buf.append(isAfterWhitespace ? "\xE2\x80\x98" : "\xE2\x80\x99");
+      else if(str[pos] == '"')
+        buf.append(isAfterWhitespace ? "\xE2\x80\x9C" : "\xE2\x80\x9D");
+      else if(isAfterAccel && str[pos] == '_')
+        // Remove an extra underbar.
+        ;
+      else if(str[pos] == '&')
+      {
+        buf.append(1, '&');
+        bool hit = false;
+        for(const auto &s : acceptableCharacterReferences)
+        {
+          const size_t slen = s.length();
+          if(len - pos > slen && !str.compare(pos + 1, slen, s))
+          {
+            hit = true;
+            break;
+          }
+        }
+        if(!hit)
+          buf.append("amp;");
+      }
+      else
+        buf.append(1, str[pos]);
+      isAfterWhitespace = (str[pos] == ' ');
+      isAfterAccel = (str[pos] == '_');
+      isTag = (str[pos] == '<');
+    }
+  }
+  return buf;
+}
+
+
+
+string Font::RemoveAccelerator(const string &str)
+{
+  string dest;
+  bool isTag = false;
+  for(char c : str)
+  {
+    if(isTag)
+    {
+      dest += c;
+      isTag = (c != '>');
+    }
+    else if(c == '<')
+    {
+      dest += c;
+      isTag = true;
+    }
+    else if(c != '_')
+      dest += c;
+  }
+  return dest;
+}
+
+
+
+void Font::DrawCommon(const std::string &str, double x, double y, const Colour &colour, const Layout *params, bool alignToDot) const
+{
+  if(str.empty())
+    return;
+
+  const bool screenChanged = Screen::Width() != screenWidth || Screen::Height() != screenHeight;
+  if(screenChanged)
+  {
+    screenWidth = Screen::Width();
+    screenHeight = Screen::Height();
+    GLint xyhw[4];
+    glGetIntegerv(GL_VIEWPORT, xyhw);
+    viewWidth = xyhw[2];
+    viewHeight = xyhw[3];
+
+    UpdateFontDesc();
+  }
+
+  const RenderedText &text = Render(str, params);
+  if(!text.texture)
+    return;
+
+  glUseProgram(shader.Object());
+  glBindVertexArray(vao);
+
+  // Update the texture.
+  glBindTexture(GL_TEXTURE_2D, text.texture);
+
+  // Update the scale, only if the screen size has changed.
+  if(screenChanged)
+  {
+    GLfloat scale[2] = {2.f / viewWidth, -2.f / viewHeight};
+    glUniform2fv(scaleI, 1, scale);
+
+  }
+
+  // Update the centre.
+  Point centre = Point(ViewFromTextX(x), ViewFromTextY(y));
+  if(alignToDot)
+    centre = Point(round(centre.X()), round(centre.Y()));
+  centre += text.centre;
+  glUniform2f(centreI, centre.X(), centre.Y());
+
+  // Update the size.
+  glUniform2f(sizeI, text.width, text.height);
+
+  // Update the colour.
+  glUniform4fv(colourI, 1, colour.Get());
+
+  glDrawArrays(GL_TRIANGLE_STRIP, 0, 4);
+
+  glBindTexture(GL_TEXTURE_2D, 0);
+  glBindVertexArray(0);
+  glUseProgram(0);
+}
+
+
+
+// Render the text.
+const Font::RenderedText &Font::Render(const string &str, const Layout *params) const
+{
+    if(!params)
+    params = &defaultParams;
+
+  // Return if already cached.
+  const CacheKey key(str, *params, showUnderlines);
+  auto cached = cache.Use(key);
+  if(cached.second)
+    return *cached.first;
+
+  // Convert to viewport coodinates.
+  Layout viewParams(*params);
+  if(params->width > 0)
+    viewParams.width = ViewFromTextX(params->width);
+  if(params->lineHeight != DEFAULT_LINE_HEIGHT)
+    viewParams.lineHeight = ViewFromTextFloorY(params->lineHeight);
+  if(params->paragraphBreak != 0)
+    viewParams.paragraphBreak = ViewFromTextFloorY(params->paragraphBreak);
+
+  // Truncate
+  const int layoutWidth = viewParams.width < 0 ? -1 : viewParams.width * PANGO_SCALE;
+  pango_layout_set_width(layout, layoutWidth);
+  PangoEllipsizeMode ellipsize;
+  switch(viewParams.truncate)
+  {
+  case TRUNC_NONE:
+    ellipsize = PANGO_ELLIPSIZE_NONE;
+    break;
+  case TRUNC_FRONT:
+    ellipsize = PANGO_ELLIPSIZE_START;
+    break;
+  case TRUNC_MIDDLE:
+    ellipsize = PANGO_ELLIPSIZE_MIDDLE;
+    break;
+  case TRUNC_BACK:
+    ellipsize = PANGO_ELLIPSIZE_END;
+    break;
+  default:
+    ellipsize = PANGO_ELLIPSIZE_NONE;
+  }
+  pango_layout_set_ellipsize(layout, ellipsize);
+
+  // Align and justification
+  PangoAlignment align;
+  gboolean justify;
+  switch(viewParams.align)
+  {
+  case LEFT:
+    align = PANGO_ALIGN_LEFT;
+    justify = FALSE;
+    break;
+  case CENTRE:
+    align = PANGO_ALIGN_CENTER;
+    justify = FALSE;
+    break;
+  case RIGHT:
+    align = PANGO_ALIGN_RIGHT;
+    justify = FALSE;
+    break;
+  case JUSTIFIED:
+    align = PANGO_ALIGN_LEFT;
+    justify = TRUE;
+    break;
+  default:
+    align = PANGO_ALIGN_LEFT;
+    justify = FALSE;
+  }
+  pango_layout_set_justify(layout, justify);
+  pango_layout_set_alignment(layout, align);
+
+  // Replaces straight quotation marks with curly ones.
+  const string text = ReplaceCharacters(str);
   
+  // Keyboard accelerator
+  char *removeMarkupText;
+  const char *rawText;
+  PangoAttrList *al = nullptr;
+  GError *error = nullptr;
+  const char accel = showUnderlines ? '_' : '\0';
+  const string &nonAccelText = RemoveAccelerator(text);
+  const string &parseText = showUnderlines ? text : nonAccelText;
+  if(pango_parse_markup(parseText.c_str(), -1, accel, &al, &removeMarkupText, 0, &error))
+    rawText = removeMarkupText;
+  else
+  {
+    if(error->message)
+      Files::LogError(error->message);
+    rawText = nonAccelText.c_str();
+  }
+
+  // Set the text and attributes to layout.
+  pango_layout_set_text(layout, rawText, -1);
+  pango_layout_set_attributes(layout, al);
+  pango_attr_list_unref(al);
+
+  // Check the image buffer size.
+  int textWidth;
+  int textHeight;
+  pango_layout_get_pixel_size(layout, &textWidth, &textHeight);
+  // Pango draws a PANGO_UNDERLINE_LOW under the logical rectangle,
+  // and an underline may be longer than a text width.
+  PangoRectangle ink_rect;
+  pango_layout_get_pixel_extents(layout, &ink_rect, nullptr);
+  textHeight = max(textHeight, ink_rect.y + ink_rect.height);
+  textWidth = max(textWidth, ink_rect.x + ink_rect.width);
+  // Check this surface has enough width.
+  if(surfaceWidth < textWidth)
+  {
+    surfaceWidth *= (textWidth / surfaceWidth) + 1;
+    UpdateSurfaceSize();
+    return Render(str, params);
+  }
+
+  // Render
+  const bool isDefaultLineHeight = viewParams.lineHeight == DEFAULT_LINE_HEIGHT;
+  const bool isDefaultSkip = isDefaultLineHeight && viewParams.paragraphBreak == 0;
+  cairo_set_source_rgb(cr, 1.0, 1.0, 1.0);
+  if(isDefaultSkip)
+  {
+    cairo_move_to(cr, 0, 0);
+    pango_cairo_show_layout(cr, layout);
+  }
+  else
+  {
+    // Control line skips and paragraph breaks manually.
+    const char *layoutText = pango_layout_get_text(layout);
+    PangoLayoutIter *it = pango_layout_get_iter(layout);
+    int y0 = pango_layout_iter_get_baseline(it);
+    int baselineY = PixelFromPangoCeil(y0);
+    int sumExtraY = 0;
+    PangoRectangle logical_rect;
+    pango_layout_iter_get_line_extents(it, nullptr, &logical_rect);
+    cairo_move_to(cr, PixelFromPangoCeil(logical_rect.x), baselineY);
+    pango_cairo_update_layout(cr, layout);
+    PangoLayoutLine *line = pango_layout_iter_get_line_readonly(it);
+    pango_cairo_show_layout_line(cr, line);
+    while(pango_layout_iter_next_line(it))
+    {
+      const int y1 = pango_layout_iter_get_baseline(it);
+      const int index = pango_layout_iter_get_index(it);
+      const int diffY = PixelFromPangoCeil(y1 - y0);
+      if(layoutText[index] == '\0')
+      {
+        sumExtraY -= diffY;
+        break;
+      }
+      int add = isDefaultLineHeight ? diffY : viewParams.lineHeight;
+      if(layoutText[index-1] == '\n')
+        add += viewParams.paragraphBreak;
+      baselineY += add;
+      sumExtraY += add - diffY;
+      pango_layout_iter_get_line_extents(it, nullptr, &logical_rect);
+      cairo_move_to(cr, PixelFromPangoCeil(logical_rect.x), baselineY);
+      pango_cairo_update_layout(cr, layout);
+      line = pango_layout_iter_get_line_readonly(it);
+      pango_cairo_show_layout_line(cr, line);
+      y0 = y1;
+    }
+    textHeight += sumExtraY + viewParams.paragraphBreak;
+    pango_layout_iter_free(it);
+  }
+
+  // Check this surface has enough height.
+  if(surfaceHeight < textHeight)
+  {
+    surfaceHeight *= (textHeight / surfaceHeight) + 1;
+    UpdateSurfaceSize();
+    return Render(str, params);
+  }
+
+  // Copy to image buffer and clear the surface.
+  cairo_surface_t *sf = cairo_get_target(cr);
+  cairo_surface_flush(sf);
+  ImageBuffer image;
+  image.Allocate(textWidth, textHeight);
+  uint32_t *src = reinterpret_cast<uint32_t*>(cairo_image_surface_get_data(sf));
+  uint32_t *dest = image.Pixels();
+  const int stride = surfaceWidth - textWidth;
+  for(int y = 0; y < textHeight; ++y)
+  {
+    for(int x = 0; x < textWidth; ++x)
+    {
+      *dest = *src;
+      *src = 0;
+      ++dest;
+      ++src;
+    }
+    src += stride;
+  }
+  cairo_surface_mark_dirty(sf);
+
+  // Try to reuse an old texture.
+  GLuint texture = 0;
+  auto recycled = cache.Recycle();
+  if(recycled.second)
+    texture = recycled.first.texture;
+
+  // Record rendered text.
+  RenderedText &renderedText = recycled.first;
+  renderedText.texture = texture;
+  renderedText.width = textWidth;
+  renderedText.height = textHeight;
+  renderedText.centre.X() = .5 * textWidth;
+  renderedText.centre.Y() = .5 * textHeight;
+
+  // Upload the image as a texture.
+  if(!renderedText.texture)
+    glGenTextures(1, &renderedText.texture);
+  glBindTexture(GL_TEXTURE_2D, renderedText.texture);
+  const auto &cachedText = cache.New(key, move(renderedText));
+  
+  // Use linear interpolation and no wrapping.
   glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
   glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
   glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_CLAMP_TO_EDGE);
   glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_CLAMP_TO_EDGE);
-  
-  glTexImage2D(GL_TEXTURE_2D, 0, GL_RGBA8, image.Width(), image.Height(), 0,
-    GL_BGRA, GL_UNSIGNED_BYTE, image.Pixels());
+
+  // Upload the image data (target, mipmap level, internal format, width, height, border, input format, data type, data).
+  glTexImage2D(GL_TEXTURE_2D, 0, GL_RGBA8, textWidth, textHeight, 0, GL_BGRA, GL_UNSIGNED_BYTE, image.Pixels());
+
+  // Unbind the texture.
+  glBindTexture(GL_TEXTURE_2D, 0);
+
+  return cachedText;
 }
 
 
 
-void Font::CalculateAdvances(ImageBuffer &image)
+void Font::SetUpShader()
 {
-  // Get the format and size of the surface.
-  int width = image.Width() / GLYPHS;
-  height = image.Height();
-  unsigned mask = 0xFF000000;
-  unsigned half = 0xC0000000;
-  int pitch = image.Width();
-  
-  // advance[previous * GLYPHS + next] is the x advance for each glyph pair.
-  // There is no advance if the previous value is 0, i.e. we are at the very
-  // start of a string.
-  memset(advance, 0, GLYPHS * sizeof(advance[0]));
-  for(int previous = 1; previous < GLYPHS; ++previous)
-    for(int next = 0; next < GLYPHS; ++next)
-    {
-      int maxD = 0;
-      int glyphWidth = 0;
-      uint32_t *begin = reinterpret_cast<uint32_t *>(image.Pixels());
-      for(int y = 0; y < height; ++y)
-      {
-        // Find the last non-empty pixel in the previous glyph.
-        uint32_t *pend = begin + previous * width;
-        uint32_t *pit = pend + width;
-        while(pit != pend && (*--pit & mask) < half) {}
-        int distance = (pit - pend) + 1;
-        glyphWidth = max(distance, glyphWidth);
-        
-        // Special case: if "next" is zero (i.e. end of line of text),
-        // calculate the full width of this character. Otherwise:
-        if(next)
-        {
-          // Find the first non-empty pixel in this glyph.
-          uint32_t *nit = begin + next * width;
-          uint32_t *nend = nit + width;
-          while(nit != nend && (*nit++ & mask) < half) {}
-          
-          // How far apart do you want these glyphs drawn? If drawn at
-          // an advance of "width", there would be:
-          // pend + width - pit   <- pixels after the previous glyph.
-          // nit - (nend - width) <- pixels before the next glyph.
-          // So for zero kerning distance, you would want:
-          distance += 1 - (nit - (nend - width));
-        }
-        maxD = max(maxD, distance);
-        
-        // Update the pointer to point to the beginning of the next row.
-        begin += pitch;
-      }
-      // This is a fudge factor to avoid over-kerning, especially for the
-      // underscore and for glyph combinations like AV.
-      advance[previous * GLYPHS + next] = max(maxD, glyphWidth - 4) / 2;
-    }
-  
-  // Set the space size based on the character width.
-  width /= 2;
-  height /= 2;
-  space = (width + 3) / 6 + 1;
-}
+  static const char *vertexCode =
+    // Parameter: Convert pixel coordinates to GL coordinates (-1 to 1).
+    "uniform vec2 scale;\n"
+    // Parameter: Position of the top left corner of the texture in pixels.
+    "uniform vec2 centre;\n"
+    // Parameter: Size of the texture in pixels.
+    "uniform vec2 size;\n"
 
+    // Input: Coordinate from the VBO.
+    "in vec2 vert;\n"
 
+    // Output: Texture coordinate for the fragment shader.
+    "out vec2 texCoord;\n"
 
-void Font::SetUpShader(float glyphW, float glyphH)
-{
-  glyphW *= .5f;
-  glyphH *= .5f;
+    "void main() {\n"
+    "  gl_Position = vec4((centre + vert * size) * scale, 0, 1);\n"
+    "  texCoord = vert + vec2(.5, .5);\n"
+    "}\n";
+
+  static const char *fragmentCode =
+    // Parameter: Texture with the text.
+    "uniform sampler2D tex;\n"
+    // Parameter: Colour to apply to the text.
+    "uniform vec4 colour = vec4(1, 1, 1, 1);\n"
+
+    // Input: Texture coordinate from the vertex shader.
+    "in vec2 texCoord;\n"
+
+    // Output: Colour for the screen.
+    "out vec4 finalColour;\n"
+
+    "void main() {\n"
+    "  finalColour = colour * texture(tex, texCoord);\n"
+    "}\n";
   
   shader = Shader(vertexCode, fragmentCode);
+  scaleI = shader.Uniform("scale");
+  centreI = shader.Uniform("centre");
+  sizeI = shader.Uniform("size");
+  colourI = shader.Uniform("colour");
+
+  // The texture always comes from texture unit 0.
   glUseProgram(shader.Object());
   glUniform1i(shader.Uniform("tex"), 0);
   glUseProgram(0);
@@ -460,32 +654,150 @@ void Font::SetUpShader(float glyphW, float glyphH)
   glGenBuffers(1, &vbo);
   glBindBuffer(GL_ARRAY_BUFFER, vbo);
   
-  GLfloat vertices[] = {
-       0.f,    0.f, 0.f, 0.f,
-       0.f, glyphH, 0.f, 1.f,
-    glyphW,    0.f, 1.f, 0.f,
-    glyphW, glyphH, 1.f, 1.f
+  // Triangle strip.
+  GLfloat vertexData[] = {
+    -.5f, -.5f,
+    -.5f,  .5f,
+     .5f, -.5f,
+     .5f,  .5f
   };
-  glBufferData(GL_ARRAY_BUFFER, sizeof(vertices), vertices, GL_STATIC_DRAW);
+  glBufferData(GL_ARRAY_BUFFER, sizeof(vertexData), vertexData, GL_STATIC_DRAW);
   
-  // connect the xy to the "vert" attribute of the vertex shader
   glEnableVertexAttribArray(shader.Attrib("vert"));
-  glVertexAttribPointer(shader.Attrib("vert"), 2, GL_FLOAT, GL_FALSE, 4 * sizeof(GLfloat), nullptr);
+  glVertexAttribPointer(shader.Attrib("vert"), 2, GL_FLOAT, GL_FALSE, 2 * sizeof(GLfloat), nullptr);
   
-  glEnableVertexAttribArray(shader.Attrib("corner"));
-  glVertexAttribPointer(shader.Attrib("corner"), 2, GL_FLOAT, GL_FALSE,
-    4 * sizeof(GLfloat), (const GLvoid*)(2 * sizeof(GLfloat)));
-  
+  // Unbind the VBO and VAO.
   glBindBuffer(GL_ARRAY_BUFFER, 0);
   glBindVertexArray(0);
   
   // We must update the screen size next time we draw.
-  screenWidth = 0;
-  screenHeight = 0;
-  
-  colourI = shader.Uniform("colour");
-  scaleI = shader.Uniform("scale");
-  glyphI = shader.Uniform("glyph");
-  aspectI = shader.Uniform("aspect");
-  positionI = shader.Uniform("position");
+  screenWidth = 1;
+  screenHeight = 1;
+  viewWidth = 1;
+  viewHeight = 1;
 }
+
+
+
+int Font::ViewWidth(const std::string &str, const Layout *params) const
+{
+  if(str.empty())
+    return 0;
+const RenderedText &text = Render(str, params);
+  if(!text.texture)
+    return 0;
+  return text.width;
+}
+
+
+
+double Font::ViewFromTextX(double x) const
+{
+  return x * viewWidth / screenWidth;
+}
+
+
+
+double Font::ViewFromTextY(double y) const
+{
+  return y * viewHeight / screenHeight;
+}
+
+
+
+int Font::ViewFromTextX(int x) const
+{
+  return (x * viewWidth + screenWidth/2) / screenWidth;
+}
+
+
+
+int Font::ViewFromTextY(int y) const
+{
+  return (y * viewHeight + screenHeight/2) / screenHeight;
+}
+
+
+
+int Font::ViewFromTextCeilX(int x) const
+{
+  return (x * viewWidth + screenWidth - 1) / screenWidth;
+}
+
+
+
+int Font::ViewFromTextCeilY(int y) const
+{
+  return (y * viewHeight + screenHeight - 1) / screenHeight;
+}
+
+
+
+int Font::ViewFromTextFloorX(int x) const
+{
+  return (x * viewWidth) / screenWidth;
+}
+
+
+
+int Font::ViewFromTextFloorY(int y) const
+{
+  return (y * viewHeight) / screenHeight;
+}
+
+
+
+double Font::TextFromViewX(double x) const
+{
+  return x * screenWidth / viewWidth;
+}
+
+
+
+double Font::TextFromViewY(double y) const
+{
+  return y * screenHeight / viewHeight;
+}
+
+
+
+int Font::TextFromViewX(int x) const
+{
+  return (x * screenWidth + viewWidth/2) / viewWidth;
+}
+
+
+
+int Font::TextFromViewY(int y) const
+{
+  return (y * screenHeight + viewHeight/2) / viewHeight;
+}
+
+
+
+int Font::TextFromViewCeilX(int x) const
+{
+  return (x * screenWidth + viewWidth - 1) / viewWidth;
+}
+
+
+
+int Font::TextFromViewCeilY(int y) const
+{
+  return (y * screenHeight + viewHeight - 1) / viewHeight;
+}
+
+
+
+int Font::TextFromViewFloorX(int x) const
+{
+  return (x * screenWidth) / viewWidth;
+}
+
+
+
+int Font::TextFromViewFloorY(int y) const
+{
+  return (y * screenHeight) / viewHeight;
+}
+

@@ -24,11 +24,18 @@
 #include "SpriteShader.h"
 #include "UI.h"
 
+#if defined _WIN32
+#include "Files.h"
+#endif
+
 #include <iterator>
 
 using namespace std;
 
 namespace {
+#if defined _WIN32
+	size_t PATH_LENGTH;
+#endif
   // Width of the conversation text.
   const int WIDTH = 540;
   // Margin on either side of the text.
@@ -41,6 +48,9 @@ namespace {
 ConversationPanel::ConversationPanel(PlayerInfo &player, const Conversation &conversation, const System *system, const shared_ptr<Ship> &ship)
   : player(player), conversation(conversation), scroll(0.), system(system), ship(ship)
 {
+#if defined _WIN32
+	PATH_LENGTH = Files::Saves().size();
+#endif
   // These substitutions need to be applied on the fly as each paragraph of
   // text is prepared for display.
   subs["<first>"] = player.FirstName();
@@ -85,7 +95,7 @@ void ConversationPanel::Draw()
   }
   
   // Get the font and colours we'll need for drawing everything.
-  const Font &font = FontSet::Get(14);
+  const Font &font = FontSet::Get(18);
   const Colour &selectionColour = *GameData::Colours().Get("faint");
   const Colour &dim = *GameData::Colours().Get("dim");
   const Colour &grey = *GameData::Colours().Get("medium");
@@ -115,29 +125,30 @@ void ConversationPanel::Draw()
   else if(choices.empty())
   {
     // This conversation node is prompting the player to enter their name.
+ 		Point fieldSize(150, 20);
+    const Font::Layout layout(Font::TRUNC_FRONT, fieldSize.X() - 10);
     for(int side = 0; side < 2; ++side)
     {
       Point centre = point + Point(side ? 420 : 190, 7);
-      Point size(150, 20);
       // Handle mouse clicks in whatever field is not selected.
       if(side != choice)
       {
-        AddZone(Rectangle(centre, size), [this, side](){ this->ClickName(side); });
+        AddZone(Rectangle(centre, fieldSize), [this, side](){ this->ClickName(side); });
         continue;
       }
       
       // Fill in whichever entry box is active right now.
-      FillShader::Fill(centre, size, selectionColour);
+      FillShader::Fill(centre, fieldSize, selectionColour);
       // Draw the text cursor.
-      centre.X() += font.Width(choice ? lastName : firstName) - 67;
+      centre.X() += font.Width(choice ? lastName : firstName, &layout) - 70;
       FillShader::Fill(centre, Point(1., 16.), dim);
     }
     
-    font.Draw("First name:", point + Point(40, 0), dim);
-    font.Draw(firstName, point + Point(120, 0), choice ? grey : bright);
+    font.Draw("First name:", point + Point(35, 0), dim);
+ 		font.Draw(firstName, point + Point(120, 0), choice ? grey : bright, &layout);
     
-    font.Draw("Last name:", point + Point(270, 0), dim);
-    font.Draw(lastName, point + Point(350, 0), choice ? bright : grey);
+    font.Draw("Last name:", point + Point(265, 0), dim);
+ 		font.Draw(lastName, point + Point(350, 0), choice ? bright : grey, &layout);
     
     // Draw the OK button, and remember its location.
     static const string ok = "[ok]";
@@ -208,7 +219,13 @@ bool ConversationPanel::KeyDown(SDL_Keycode key, Uint16 mod, const Command &comm
         c += 'A' - 'a';
       // Don't allow characters that can't be used in a file name.
       static const string FORBIDDEN = "/\\?*:|\"<>~";
-      if(FORBIDDEN.find(c) == string::npos)
+			// Prevent the name from being so large that it cannot be saved.
+			// Most path components can be at most 255 bytes.
+			size_t MAX_NAME_LENGTH = 250;
+#if defined _WIN32
+			MAX_NAME_LENGTH -= PATH_LENGTH;
+#endif
+			if(FORBIDDEN.find(c) == string::npos && (name.size() + otherName.size()) < MAX_NAME_LENGTH)
         name += c;
     }
     else if((key == SDLK_DELETE || key == SDLK_BACKSPACE) && !name.empty())
@@ -382,9 +399,9 @@ void ConversationPanel::ClickChoice(int index)
 ConversationPanel::Paragraph::Paragraph(const string &text, const Sprite *scene, bool isFirst)
   : scene(scene), isFirst(isFirst)
 {
-  wrap.SetAlignment(WrappedText::JUSTIFIED);
+  wrap.SetAlignment(Font::JUSTIFIED);
   wrap.SetWrapWidth(WIDTH);
-  wrap.SetFont(FontSet::Get(14));
+  wrap.SetFont(FontSet::Get(18));
   
   wrap.Wrap(text);
 }

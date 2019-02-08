@@ -21,8 +21,8 @@ SpaceportPanel::SpaceportPanel(PlayerInfo &player)
 {
   SetTrapAllEvents(false);
   
-  text.SetFont(FontSet::Get(14));
-  text.SetAlignment(WrappedText::JUSTIFIED);
+  text.SetFont(FontSet::Get(18));
+  text.SetAlignment(Font::JUSTIFIED);
   text.SetWrapWidth(480);
   text.Wrap(player.GetPlanet()->SpaceportDescription());
   
@@ -30,7 +30,7 @@ SpaceportPanel::SpaceportPanel(PlayerInfo &player)
   // TODO: Allow Interface to handle wrapped text directly.
   const Interface *interface = GameData::Interfaces().Get("news");
   newsMessage.SetWrapWidth(interface->GetBox("message").Width());
-  newsMessage.SetFont(FontSet::Get(14));
+  newsMessage.SetFont(FontSet::Get(18));
 }
 
 

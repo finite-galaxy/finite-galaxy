@@ -5,7 +5,6 @@
 # "FW Epilogue: Freya"
 # "FW Epilogue: Ijs and Katya"
 # "Pug Cease Hostilities"
-# "particle turret available"
 
 
 
@@ -138,7 +137,7 @@ mission "FW Epilogue: Freya"
       
       label next
       `  "What have you found out about the Pug?" you ask.`
-      `  "Not much," she says. "The wormhole doesn't seem to lead to their real home; it's just another red herring. The real breakthrough, of course, would be if we could find some hints in the stuff they left behind about how to build more jump drives of our own. But so far, we can't even figure out how to create new hyperspace links where there wasn't one originally. I'm starting to think that those graviton transmitters we used were just one more game - a toy, not the real thing. Not what created the links in the first place, I mean, unless they were created by someone with the patience to wait a million years for them to work."`
+      `  "Not much," she says. "The wormhole doesn't seem to lead to their real home; it's just another red herring. The real breakthrough, of course, would be if we could find some hints in the stuff they left behind about how to build more jump drives of our own. But so far, we can't even figure out how to create new hyperspace links where there wasn't one originally. I'm starting to think that those graviton transmitters we used were just one more game – a toy, not the real thing. Not what created the links in the first place, I mean, unless they were created by someone with the patience to wait a million years for them to work."`
       choice
         `  "Have you found any other interesting technology?"`
           goto technology
@@ -146,11 +145,11 @@ mission "FW Epilogue: Freya"
           goto pug
       
       label technology
-      `  "Some," she says. "Everything they left behind is like, well... an educational toy. Like some absent parent left behind a super-advanced chemistry set for their kids to play with. That's how all the artifacts we find here feel - not like the real thing that the Pug would have used, but like a simplified model that they gave us to help us figure it out. Everything they left behind, I'm convinced they left intentionally, because it could teach us something they wanted us to know, while keeping all their true secrets secret. The rest of you moved on, and I'm still here playing their game."`
+      `  "Some," she says. "Everything they left behind is like, well... an educational toy. Like some absent parent left behind a super-advanced chemistry set for their kids to play with. That's how all the artefacts we find here feel – not like the real thing that the Pug would have used, but like a simplified model that they gave us to help us figure it out. Everything they left behind, I'm convinced they left intentionally, because it could teach us something they wanted us to know, while keeping all their true secrets secret. The rest of you moved on, and I'm still here playing their game."`
         goto end
       
       label pug
-      `  "Not much," she says. "This world - it feels like when you're visiting a friend's house, and they spent the whole day cleaning up for you. It's not like a person's home is when you drop by unannounced. Nothing's out of place. Everything that's lying out somewhere, is something they wanted you to see. There's some weird technology they left behind, but all of it is like toys, puzzles... I don't know, like an educational game they designed for us to play. The rest of you moved on, and I'm still here playing their game."`
+      `  "Not much," she says. "This world – it feels like when you're visiting a friend's house, and they spent the whole day cleaning up for you. It's not like a person's home is when you drop by unannounced. Nothing's out of place. Everything that's lying out somewhere, is something they wanted you to see. There's some weird technology they left behind, but all of it is like toys, puzzles... I don't know, like an educational game they designed for us to play. The rest of you moved on, and I'm still here playing their game."`
         goto end
       
       label end
@@ -215,17 +214,4 @@ mission "Pug Cease Hostilities"
   on offer
     "reputation: Pug" >?= 1
     fail
-
-
-
-mission "Particle turret available"
-  landing
-  source
-    near "Markab" 100
-  to offer
-    has "event: particle turret available"
-  on offer
-    conversation
-      `Your ship is targetted by advertisements, informing you Lovelace Labs started selling their Particle Turret to everyone. Hithereto it was available to the Republic Navy only. They probably felt compelled to compete with Deep Sky's Electron Turret and Delta V's Plasma Turret, although the fact that Navy Mark II vessels are no longer using Lovelace's Particle Turret might have something to do with it as well.`
-        decline
 

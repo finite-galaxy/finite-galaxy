@@ -21,6 +21,7 @@ void Weapon::LoadWeapon(const DataNode &node)
   isWeapon = true;
   bool isClustered = false;
   calculatedDamage = false;
+  calculatedRandomDamage = false;
   doesDamage = false;
   
   for(const DataNode &child : node)
@@ -101,7 +102,18 @@ void Weapon::LoadWeapon(const DataNode &node)
       else if(key == "drag")
         drag = value;
       else if(key == "hardpoint offset")
-        hardpointOffset = value;
+      {
+        // A single value specifies the y-offset, while two values
+        // specifies an x & y offset, e.g. for an asymmetric hardpoint.
+        // The point is specified in traditional XY orientation, but must
+        // be inverted along the y-dimension for internal use.
+        if(child.Size() == 2)
+          hardpointOffset = Point(0., -value);
+        else if(child.Size() == 3)
+          hardpointOffset = Point(value, -child.Value(2));
+        else
+          child.PrintTrace("Unsupported \"" + key + "\" specification:");
+      }
       else if(key == "turn")
         turn = value;
       else if(key == "inaccuracy")
@@ -146,6 +158,22 @@ void Weapon::LoadWeapon(const DataNode &node)
         damage[SLOWING_DAMAGE] = value;
       else if(key == "hit force")
         damage[HIT_FORCE] = value;
+      else if(key == "random shield damage")
+        randomDamage[SHIELD_DAMAGE] = value;
+      else if(key == "random hull damage")
+        randomDamage[HULL_DAMAGE] = value;
+      else if(key == "random fuel damage")
+        randomDamage[FUEL_DAMAGE] = value;
+      else if(key == "random heat damage")
+        randomDamage[HEAT_DAMAGE] = value;
+      else if(key == "random ion damage")
+        randomDamage[ION_DAMAGE] = value;
+      else if(key == "random disruption damage")
+        randomDamage[DISRUPTION_DAMAGE] = value;
+      else if(key == "random slowing damage")
+        randomDamage[SLOWING_DAMAGE] = value;
+      else if(key == "random hit force")
+        randomDamage[HIT_FORCE] = value;
       else if(key == "piercing")
         piercing = max(0., min(1., value));
       else
@@ -164,10 +192,10 @@ void Weapon::LoadWeapon(const DataNode &node)
   
   // Support legacy missiles with no tracking type defined:
   if(homing && !tracking && !opticalTracking && !infraredTracking && !radarTracking)
-	{
-		tracking = 1.;
-		node.PrintTrace("Warning: Deprecated use of \"homing\" without use of \"[optical|infrared|radar] tracking.\"");
-	}
+  {
+    tracking = 1.;
+    node.PrintTrace("Warning: Deprecated use of \"homing\" without use of \"[optical|infrared|radar] tracking.\"");
+  }
   
   // Convert the "live effect" counts from occurrences per projectile lifetime
   // into chance of occurring per frame.
@@ -310,4 +338,22 @@ double Weapon::TotalDamage(int index) const
     calculatedDamage = true;
   }
   return damage[index];
+}
+
+
+
+double Weapon::TotalRandomDamage(int index) const
+{
+  if(!calculatedRandomDamage)
+  {
+    for(int i = 0; i < DAMAGE_TYPES; ++i)
+    {
+      for(const auto &it : submunitions)
+        randomDamage[i] += it.first->TotalRandomDamage(i) * it.second;
+      doesDamage |= (randomDamage[i] > 0.);
+    }
+    
+    calculatedRandomDamage = true;
+  }
+  return randomDamage[index];
 }

@@ -54,18 +54,12 @@ outfit "Thunderstorm Launcher"
     "homing" 3
     "optical tracking" .8
     "radar tracking" .5
+    "missile strength" 27
     "blast radius" 30
     "shield damage" 550
     "hull damage" 400
     "hit force" 750
-    "missile strength" 27
   description "Thunderstorm Torpedoes are powerful, long range Wanderer missiles, useful against large targets or against clusters of small ships at times when they are too distracted to dodge."
-
-effect "thunderstorm fire"
-  sprite "effect/thunderstorm fire"
-    "no repeat"
-    "frame rate" 10
-  "lifetime" 15
 
 
 outfit "Tornado Torpedo"
@@ -124,31 +118,12 @@ outfit "Tornado Launcher"
     "homing" 4
     "optical tracking" .9
     "radar tracking" .6
+    "missile strength" 42
     "blast radius" 50
     "shield damage" 880
     "hull damage" 640
     "hit force" 1200
-    "missile strength" 42
   description "Typhoon Torpedoes are an improved Wanderer torpedo technology; they do considerably more damage than Thunderstorms. However, they are also slower, because they are intended mostly for use against large and slow-moving capital ships. As a result, sufficiently skilled pilots can often dodge around them."
-
-effect "tornado fire"
-  sprite "effect/tornado fire"
-    "no repeat"
-    "frame rate" 10
-  "lifetime" 15
-
-
-effect "torpedo hit"
-  sprite "effect/explosion/large"
-    "no repeat"
-    "frame rate" 15
-  sound "torpedo hit"
-  "lifetime" 32
-  "random angle" 360
-  "random frame rate" 5
-  "random spin" 4
-  "random velocity" .8
-  "velocity scale" .4
 
 
 
@@ -177,21 +152,6 @@ outfit "Moonbeam"
     "shield damage" 3.2
     "hull damage" 5.6
   description "Because their Sunbeams are not very effective against the heavy plating of the Korath drones, the Wanderers have developed a new beam weapon that is considerably more effective against hull armour."
-
-effect "moonbeam fleck"
-  sprite "effect/moonbeam fleck"
-    "frame rate" 10
-  "lifetime" 7
-  "random velocity" 30
-  "velocity scale" 1
-
-effect "moonbeam impact"
-  sprite "effect/moonbeam impact"
-    "frame rate" 30
-  "lifetime" 7
-  "random angle" 360
-  "random velocity" 2
-  "velocity scale" -.002
 
 outfit "Moonbeam Turret"
   category "Turrets"
@@ -251,16 +211,6 @@ outfit "Sunbeam"
     "heat damage" 12.1
   description "The Wanderers do not devote much time to developing weapon technology, preferring to focus their attention on more constructive endeavours. However, the few weapons they have created are efficient and deadly."
 
-effect "sunbeam impact"
-  sprite "effect/sunbeam impact"
-    "frame rate" 30
-    "random start frame"
-  "lifetime" 3
-  "random angle" 360
-  "random spin" 360
-  "random velocity" 4
-  "velocity scale" -.0001
-
 outfit "Sunbeam Turret"
   category "Turrets"
   thumbnail "outfit/sunbeam_turret"
@@ -305,7 +255,7 @@ outfit "Dual Sunbeam Turret"
   "turret mounts" -1
   "required crew" 2
   weapon
-    sprite "projectile/2x sunbeam"
+    sprite "projectile/2x_sunbeam"
       "frame rate" 1.3
       "random start frame"
     "hardpoint sprite" "hardpoint/sunbeam_dual_turret"
@@ -340,7 +290,7 @@ outfit "Wanderer Anti-Missile"
   weapon
     "hardpoint sprite" "hardpoint/anti-missile_wanderer"
     "hardpoint offset" 6.
-    "hit effect" "wanderer anti-missile"
+    "hit effect" "anti-missile wanderer"
     "anti-missile" 40
     "velocity" 360
     "lifetime" 1
@@ -348,12 +298,4 @@ outfit "Wanderer Anti-Missile"
     "firing energy" 50
     "firing heat" 12
   description "As a defence against the tracker pods used by the Unfettered Hai, the Wanderers have developed a hard-hitting anti-missile system that can knock almost any missile out of the sky with a single shot."
-
-effect "wanderer anti-missile"
-  sprite "effect/anti-missile/wanderer"
-    "no repeat"
-    "frame rate" 6
-  sound "heavy anti-missile"
-  "lifetime" 31
-  "velocity scale" 1
 

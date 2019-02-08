@@ -178,8 +178,8 @@ mission "FW Reconciliation 1B"
     personality heroic staying nemesis
     system Gienah
     government "Syndicate"
-    ship "Splinter (Mark II)" "Silence"
-    ship "Manta (Mark II)" "Morning Star"
+    ship "Argosy" "Silence"
+    ship "Argosy" "Morning Star"
     ship "Quicksilver (Mark II)" "Light-Bearer"
   
   on complete
@@ -408,7 +408,7 @@ mission "FW Reconciliation 2C"
     conversation
       `You land near one of the small villages on Stormhold, and after handing out a few small bribes from the money Danforth gave you, finally one of the villagers recalls that a local gang of pirates is led by a former Syndicate manager. With some trepidation, you fly to his stronghold, and he agrees to "do business" with you.`
       `  Katya shows him Sawyer's list of names. "So, these are the bad boys, huh?" he says. Clearly the news of Sawyer's revelations has spread even to this remote world. He looks through the list, and is able to tell you where three of the five men live. "I'd love to see all these bastards taken down," he says.`
-      `  You give him the rest of Danforth's money and thank him for helping you - and ask that he keep your visit secret. "No problem," he says. As you are leaving, he adds, "Also, Mister Springborn... you're my hero, man. Glad you're still finding ways to pester the Syndicate." Ijs seems pleasantly surprised to be recognized.`
+      `  You give him the rest of Danforth's money and thank him for helping you – and ask that he keep your visit secret. "No problem," he says. As you are leaving, he adds, "Also, Mister Springborn... you're my hero, man. Glad you're still finding ways to pester the Syndicate." Ijs seems pleasantly surprised to be recognized.`
         accept
 
 
@@ -443,16 +443,16 @@ mission "FW Defend Farpoint"
       variant
         "Saturn"
         "Foxhound" 4
-        "Mark II Drone" 6
+        "Mark III Drone" 6
         "Venus"
-        "Mark II Drone" 4
+        "Mark III Drone" 4
         "Mercury" 2
     fleet
       names "republic"
       fighters "republic fighter"
       variant
         "Venus (Mark II)"
-        "Mark II Drone" 4
+        "Mark III Drone" 4
         "Mercury (Mark II)" 3
   
   npc disable
@@ -462,25 +462,23 @@ mission "FW Defend Farpoint"
     fleet
       names "pirate"
       variant
-        "Leviathan (Heavy)"
-        "Firebird (Laser)" 2
-        "Hawk (Javelin)" 2
+        "Leviathan"
+        "Firebird"
     fleet
       names "pirate"
       variant
         "Leviathan"
-        "Raven (Afterburner)" 2
+        "Firebird" 2
     fleet
       names "pirate"
       variant
-        "Leviathan (North)"
+        "Leviathan"
         "Firebird" 3
     fleet
       names "pirate"
       variant
-        "Splinter (Laser)"
-        "Manta" 2
-        "Quicksilver" 5
+        "Leviathan"
+        "Quicksilver" 4
   
   on complete
     payment 1000000
@@ -581,7 +579,7 @@ mission "FW Reconciliation Break"
         goto wait
       
       label wait
-      `  Alondo says, "We should use this time of peace well, to prepare for another battle ahead. Those Syndicate ships on Bod had equipment I've never seen before, and who knows what else the Syndicate has up their sleeves - especially if they've begun producing nuclear weapons. Captain <last>, you should take this time to make sure your ship is as well armed as possible for our next strike. Ijs and Katya, what will you do with this time?"`
+      `  Alondo says, "We should use this time of peace well, to prepare for another battle ahead. Those Syndicate ships on Bod had equipment I've never seen before, and who knows what else the Syndicate has up their sleeves – especially if they've begun producing nuclear weapons. Captain <last>, you should take this time to make sure your ship is as well armed as possible for our next strike. Ijs and Katya, what will you do with this time?"`
       `  Katya glances at Ijs and then says, "I would certainly welcome a small sabbatical, and a chance to spend time together and catch up on all we've missed. Professor Springborn, do you think the Conservatory would extend your leave of absence long enough for us to make a trip to <planet>?"`
       `  Ijs laughs. "That sounds wonderful, Councillor," he says. "<first>, do you think you could bring us there on your way to wherever you go next?"`
       `  You tell him you would be glad to, and you all get ready for yet another journey together.`
@@ -630,7 +628,7 @@ mission "FW Embassy 1C"
     conversation
       `When you land on Bourne you discover that Katya and Ijs have already been back there for a week. Alondo is with them, too. "We just couldn't stay away from the action for long," says Ijs.`
       `  The Star Queen luxury liner that brought the Earth ambassadors to Bourne is still parked in a somewhat out-of-the-way hangar. "Don't worry, Captain," says Katya, "there's no way our ambassadors would travel in something as gaudy as that. They've requisitioned a Dreadnought instead. A good ship to remind the people of Earth that we have a strong fleet of our own."`
-      `  "Not to mention," says Ijs, "a good ship to take part in our strike against the Syndicate."`
+      `  "Not to mention," says Ijs, "a good ship to take part in our strike against the Syndicate. And we also get a Roost to 'escort' us."`
       `  Alondo introduces you to the Free Worlds ambassadors who will be returning to Earth. "I've already contacted Governor Flint and Admiral Danforth," he says. "Their ships will be arriving in the Sol system about the same time as yours. Good luck, Captain." You help Ijs and Katya load their luggage onto your ship, and tell the Dreadnought carrying the ambassadors to be ready to follow you.`
         accept
   
@@ -638,6 +636,7 @@ mission "FW Embassy 1C"
     government "Free Worlds"
     personality escort heroic
     ship "Dreadnought" "F.W.S. Gibraltar"
+    ship "Roost" "F.W.S. Eagle Eye"
   
   on visit
     dialogue "You have reached <planet>, but you left the ambassadors behind! Better depart and wait for them to arrive in this star system."
@@ -649,7 +648,7 @@ mission "FW Embassy 1C"
     fleet
       names "pirate"
       variant
-        "Raven (Afterburner)" 6
+        "Raven" 6
   
   npc
     government "Pirate"
@@ -658,13 +657,13 @@ mission "FW Embassy 1C"
     fleet
       names "pirate"
       variant
-        "Leviathan (Heavy)"
-        "Firebird (Laser)" 2
+        "Leviathan"
+        "Firebird" 2
     fleet
       names "pirate"
       variant
         "Leviathan"
-        "Firebird" 2
+        "Firebird (Laser)" 2
   
   npc
     government "Pirate"
@@ -673,7 +672,7 @@ mission "FW Embassy 1C"
     fleet
       names "pirate"
       variant
-        "Splinter (Laser)" 2
+        "Argosy" 2
         "Manta" 3
         "Quicksilver" 6
 
@@ -696,14 +695,15 @@ mission "FW Syndicate Capture 1"
   on offer
     log "Preparing to invade Syndicate space with a joint strike force made up of Free Worlds, Deep Defence, and Oathkeeper ships. The plan is to capture one of the Syndicate executives and bring him to trial."
     conversation
-      `You land on Earth and make a show of being very busy ensuring that the Free Worlds ambassadors are comfortable and well cared for, until finally you receive a secure message from Edricka. She tells you that the convoy from the Deep is landing on Mars right now, and an Oathkeeper Venus is visiting the shipyard on Luna. As soon as you are ready, you can take off, and travel together into the heart of Syndicate space.`
+      `You land on Earth and make a show of being very busy ensuring that the Free Worlds ambassadors are comfortable and well cared for, until finally you receive a secure message from Edricka. She tells you that the warship from the Deep is landing on Mars right now, and an Oathkeeper Venus is visiting the shipyard on Luna. As soon as you are ready, you can take off, and travel together into the heart of Syndicate space.`
       `  You make an excuse to depart, and return to your ship. "Well," says Ijs, "this is it. If we're lucky, they won't see us coming, but no matter what, getting back out of Syndicate space will be a nightmare. Good luck, all."`
         accept
   
   npc accompany save
     personality escort heroic
-    ship "Dreadnought" "F.W.S. Gibraltar"
     government "Free Worlds"
+    ship "Dreadnought" "F.W.S. Gibraltar"
+    ship "Roost" "F.W.S. Eagle Eye"
   
   npc accompany save
     personality escort heroic waiting
@@ -713,9 +713,7 @@ mission "FW Syndicate Capture 1"
   npc accompany save
     personality escort heroic waiting
     government "Deep"
-    ship "Leviathan (Heavy)" "D.D.S. Unbreakable"
-    ship "Aerie (Mark II)" "D.D.S. Eagle Eye"
-    ship "Aerie (Mark II)" "D.D.S. Sharp Beak"
+    ship "Lance" "D.D.S. Unbreakable"
 
 
 
@@ -735,8 +733,8 @@ mission "FW Syndicate Capture 1B"
     event "fw syndicate capture begin"
     conversation
       `As you approach the planet, your ships spread out and begin scanning the ocean surface for a yacht matching the description you were given. After a few tense moments of wondering if Soylent is off-world at the moment, you find the ship.`
-      `  With neither deflector shields nor any weaponry that you can see, the yacht clearly poses no threat to an armed starship. The Aeries that Edricka sent launches their fighters; when they land on the yacht's deck, armed police officers emerge. Meanwhile your fleet is ready to open fire at the first sign of resistance.`
-      `  The officers soon radio you that they have found Soylent, and they bring him aboard your ship. Amid all the confusion, you notice a figure in diving gear who jumps off the rear of the yacht and disappears beneath the waves - one of Soylent's men, trying to escape. But since his leader is now in your custody, and your mission is accomplished, you see no reason to chase after him.`
+      `  With neither deflector shields nor any weaponry that you can see, the yacht clearly poses no threat to an armed starship. The Roost sent by the Free Worlds launches its fighters and transports; when they land on the yacht's deck, armed police officers emerge. Meanwhile your fleet is ready to open fire at the first sign of resistance.`
+      `  The officers soon radio you that they have found Soylent, and they bring him aboard your ship. Amid all the confusion, you notice a figure in diving gear who jumps off the rear of the yacht and disappears beneath the waves – one of Soylent's men, trying to escape. But since his leader is now in your custody, and your mission is accomplished, you see no reason to chase after him.`
       `  The Oathkeeper captain sends you a brief message: "Your first priority is to reach the Deep with the prisoner. Our crew is prepared to serve as a rearguard, staying behind if necessary to ensure that you survive. Good luck, Captain."`
         accept
   on complete
@@ -744,26 +742,25 @@ mission "FW Syndicate Capture 1B"
   
   npc
     personality escort heroic
-    ship "Dreadnought" "F.W.S. Gibraltar"
     government "Free Worlds"
+    ship "Dreadnought" "F.W.S. Gibraltar"
+    ship "Roost" "F.W.S. Eagle Eye"
+    ship "Hag" "Maroon 1-1"
+    ship "Hag" "Maroon 1-2"
+    ship "Boxwing (Transport)" "Maroon 2-1"
+    ship "Boxwing (Transport)" "Maroon 2-2"
   npc
     personality escort heroic waiting
     government "Navy (Oathkeeper)"
     ship "Venus (Mark II)" "R.N.S. Hand of Justice"
-    ship "Mark II Drone" "Eta One"
-    ship "Mark II Drone" "Eta Two"
-    ship "Mark II Drone" "Eta Three"
-    ship "Mark II Drone" "Eta Four"
+    ship "Mark III Drone" "Eta One"
+    ship "Mark III Drone" "Eta Two"
+    ship "Mark III Drone" "Eta Three"
+    ship "Mark III Drone" "Eta Four"
   npc
     personality escort heroic waiting
     government "Deep"
-    ship "Leviathan (Heavy)" "D.D.S. Unbreakable"
-    ship "Aerie (Mark II)" "D.D.S. Eagle Eye"
-    ship "Aerie (Mark II)" "D.D.S. Sharp Beak"
-    ship "Dagger" "Autumn One"
-    ship "Dagger" "Autumn Two"
-    ship "Dagger" "Autumn Three"
-    ship "Dagger" "Autumn Four"
+    ship "Lance" "D.D.S. Unbreakable"
   
   npc
     government "Syndicate"
@@ -771,8 +768,8 @@ mission "FW Syndicate Capture 1B"
     fleet
       names "syndicate capital"
       variant
-        "Splinter (Mark II)" 2
-        "Manta (Mark II)" 3
+        "Argosy" 2
+        "Argosy" 3
         "Quicksilver (Mark II)" 4
   npc
     system Ruchbah
@@ -891,7 +888,7 @@ mission "FW Syndicate Capture 1C"
     event "syndicate occupies sol"
     conversation
       `Edricka meets you soon after you land, and oversees the transfer of your captive to a local, well-defended jail. You tell her about your narrow escape from Syndicate space, and the fact that the Syndicate used nuclear weapons against your fleet, in violation of the rules of war that humankind has abided by for centuries.`
-      `  "Unfortunately," says Edricka, "all the other witnesses to that event were allied with the Syndicate, so people will believe whatever they want to believe. Already the Syndicate is spreading stories about a renegade fleet of rebels and extremists that attacked one of their worlds in an assassination attempt on one of their leaders. Worse, they've taken this as an excuse to send a massive Syndicate fleet to the Sol system - to defend Earth from attack, they say."`
+      `  "Unfortunately," says Edricka, "all the other witnesses to that event were allied with the Syndicate, so people will believe whatever they want to believe. Already the Syndicate is spreading stories about a renegade fleet of rebels and extremists that attacked one of their worlds in an assassination attempt on one of their leaders. Worse, they've taken this as an excuse to send a massive Syndicate fleet to the Sol system – to defend Earth from attack, they say."`
       choice
         `  "Sounds more like the goal is to intimidate Parliament into siding with the Syndicate."`
           goto intimidate
@@ -1013,7 +1010,7 @@ mission "FW Pug 2"
   on offer
     log "The Syndicate may be cutting off the hyperspace links that join their territory to the rest of human space, in order to escape being punished for their crimes. People are worried that they will try to take over even more territory, including Earth itself."
     conversation
-      `By the time you arrive, Alondo and Freya have joined JJ and Katya on Bod; the entire Council is present. "Here's the story," says JJ. "A few weeks ago, hyperspace links on the edge of Syndicate space began collapsing. We weren't sure why. Then, more recently, the Syndicate fleet that had been occupying the Sol system retreated to Syndicate space - and the moment the last of their ships left, the hyperspace link disappeared behind them. We think the Syndicate has found a way to alter hyperspace links and is using it to wall themselves in, to escape retribution from the rest of humanity now that their guilt is so conclusively proven."`
+      `By the time you arrive, Alondo and Freya have joined JJ and Katya on Bod; the entire Council is present. "Here's the story," says JJ. "A few weeks ago, hyperspace links on the edge of Syndicate space began collapsing. We weren't sure why. Then, more recently, the Syndicate fleet that had been occupying the Sol system retreated to Syndicate space – and the moment the last of their ships left, the hyperspace link disappeared behind them. We think the Syndicate has found a way to alter hyperspace links and is using it to wall themselves in, to escape retribution from the rest of humanity now that their guilt is so conclusively proven."`
       choice
         `  "Why don't we just let them go, then?"`
           goto go
@@ -1021,7 +1018,7 @@ mission "FW Pug 2"
           goto republic
       
       label go
-      `  Freya says, "Somehow, they managed to annex several of our systems in the process of walling themselves off - our two best suppliers of heavy metals. That suggests that any of our systems on the border with the Syndicate may be taken over, and made completely inaccessible to us, at any time. That's not a risk we can take."`
+      `  Freya says, "Somehow, they managed to annex several of our systems in the process of walling themselves off – our two best suppliers of heavy metals. That suggests that any of our systems on the border with the Syndicate may be taken over, and made completely inaccessible to us, at any time. That's not a risk we can take."`
       `  "And it's not just that," says Katya. "Think of how many workers are on Syndicate worlds right now, having left their families on a different planet in order to go earn money in a Syndicate factory for a few years. Imagine a future where those families are forever divided."`
         goto communications
       
@@ -1037,7 +1034,7 @@ mission "FW Pug 2"
           accept
         `  "How do we know the Syndicate is really behind this?"`
       
-      `  "We don't," says JJ, "but this all certainly plays out very well for them; their section of the galaxy has suddenly become a very defensible enclave. And the timing of that fleet leaving, and then the link closing - it's too much to be a coincidence. But we can't learn anything for sure by staying here talking; you must go to Earth."`
+      `  "We don't," says JJ, "but this all certainly plays out very well for them; their section of the galaxy has suddenly become a very defensible enclave. And the timing of that fleet leaving, and then the link closing – it's too much to be a coincidence. But we can't learn anything for sure by staying here talking; you must go to Earth."`
         accept
   
   npc
@@ -1135,7 +1132,7 @@ mission "FW Pug 2B"
     dialogue `You have failed an essential Free Worlds mission. If you want to complete the story line, revert to the autosave or another earlier snapshot of the game.`
   
   on offer
-    log "The Syndicate CEO claims that the disappearing hyperspace links are not their doing, and that in fact they are under attack by aliens. In fact, they say that the Syndicate has had contact with two different alien species in this region - raiders and scavengers known as the Korath coming from the galactic core, and an enigmatic and irrational species named the Pug who occupy the system adjacent to the ones that recently got cut off from human space."
+    log "The Syndicate CEO claims that the disappearing hyperspace links are not their doing, and that in fact they are under attack by aliens. In fact, they say that the Syndicate has had contact with two different alien species in this region – raiders and scavengers known as the Korath coming from the galactic core, and an enigmatic and irrational species named the Pug who occupy the system adjacent to the ones that recently got cut off from human space."
     log "By plundering the Korath raiders, the Syndicate has acquired some jump drives, which allow a ship to travel between systems that are not connected by hyperspace links. They are willing to part with one of these jump drives in order to prove the truth of their story to the rest of humanity."
     conversation
       `As you are coming in for a landing you announce yourselves to the spaceport authorities as diplomatic representatives of the Free Worlds and the Republic. The moment you have landed, a Syndicate employee meets you and escorts you to their headquarters, to the incredibly fancy corner office of Alastair Korban, the CEO of the entire Syndicate Corporation. "I'm very glad you've come," says Alastair. "It seems unlikely that we can defeat this attack unless we work together."`
@@ -1463,7 +1460,7 @@ mission "FW Pug 3: Quarg"
         `  "Can you give us information about the Pug?"`
           goto info
       
-      `  "No," it says. Several stripes of skin on its grey face turn a dull red; you have heard that this might indicate sadness, or embarrassment, or possibly anger - one more thing about the Quarg that no one understands well. "Long ago we tried to resist the Pug," it says. "In retribution, they broke one of our rings." It points out the window of the station at the half-finished ringworld. "This ring is half complete, and it has taken a thousand of your years to build. The rings are our most precious creations, nearly impossible to destroy, but the Pug know how to twist and cut the fabric of space itself."`
+      `  "No," it says. Several stripes of skin on its grey face turn a dull red; you have heard that this might indicate sadness, or embarrassment, or possibly anger – one more thing about the Quarg that no one understands well. "Long ago we tried to resist the Pug," it says. "In retribution, they broke one of our rings." It points out the window of the station at the half-finished ringworld. "This ring is half complete, and it has taken a thousand of your years to build. The rings are our most precious creations, nearly impossible to destroy, but the Pug know how to twist and cut the fabric of space itself."`
       `  "So you've encountered the Pug before?" asks Alondo.`
       
       label info
@@ -1606,8 +1603,8 @@ mission "FW Pug 3C"
     government "Republic"
     ship "Venus (Mark II)" "R.N.S. Everest"
     ship "Venus (Mark II)" "R.N.S. Denali"
-    ship "Saturn (Mark II)" "R.N.S. Vesuvius"
-    ship "Saturn (Mark II)" "R.N.S. Haleakala"
+    ship "Saturn" "R.N.S. Vesuvius"
+    ship "Saturn" "R.N.S. Haleakala"
   
   on visit
     dialogue "You have reached <planet>, but part of your fleet is not here yet. Better depart and wait for them to arrive in this star system."
@@ -1637,33 +1634,33 @@ mission "FW Pug 4: Escorts"
     ship "Foxhound" "Alpha Two"
     ship "Foxhound" "Alpha Three"
     ship "Foxhound" "Alpha Four"
-    ship "Mark II Drone" "Alpha Five"
-    ship "Mark II Drone" "Alpha Six"
-    ship "Mark II Drone" "Alpha Seven"
-    ship "Mark II Drone" "Alpha Eight"
-    ship "Mark II Drone" "Alpha Nine"
-    ship "Mark II Drone" "Alpha Ten"
+    ship "Mark III Drone" "Alpha Five"
+    ship "Mark III Drone" "Alpha Six"
+    ship "Mark III Drone" "Alpha Seven"
+    ship "Mark III Drone" "Alpha Eight"
+    ship "Mark III Drone" "Alpha Nine"
+    ship "Mark III Drone" "Alpha Ten"
     ship "Saturn (Jump)" "R.N.S. Vesuvius"
     ship "Foxhound" "Phi One"
     ship "Foxhound" "Phi Two"
     ship "Foxhound" "Phi Three"
     ship "Foxhound" "Phi Four"
-    ship "Mark II Drone" "Phi Five"
-    ship "Mark II Drone" "Phi Six"
-    ship "Mark II Drone" "Phi Seven"
-    ship "Mark II Drone" "Phi Eight"
-    ship "Mark II Drone" "Phi Nine"
-    ship "Mark II Drone" "Phi Ten"
-    ship "Venus (Jump)" "R.N.S. Denali"
-    ship "Mark II Drone" "Delta One"
-    ship "Mark II Drone" "Delta Two"
-    ship "Mark II Drone" "Delta Three"
-    ship "Mark II Drone" "Delta Four"
-    ship "Venus (Jump)" "R.N.S. Everest"
-    ship "Mark II Drone" "Epsilon One"
-    ship "Mark II Drone" "Epsilon Two"
-    ship "Mark II Drone" "Epsilon Three"
-    ship "Mark II Drone" "Epsilon Four"
+    ship "Mark III Drone" "Phi Five"
+    ship "Mark III Drone" "Phi Six"
+    ship "Mark III Drone" "Phi Seven"
+    ship "Mark III Drone" "Phi Eight"
+    ship "Mark III Drone" "Phi Nine"
+    ship "Mark III Drone" "Phi Ten"
+    ship "Venus (Mark II, Jump)" "R.N.S. Denali"
+    ship "Mark III Drone" "Delta One"
+    ship "Mark III Drone" "Delta Two"
+    ship "Mark III Drone" "Delta Three"
+    ship "Mark III Drone" "Delta Four"
+    ship "Venus (Mark II, Jump)" "R.N.S. Everest"
+    ship "Mark III Drone" "Epsilon One"
+    ship "Mark III Drone" "Epsilon Two"
+    ship "Mark III Drone" "Epsilon Three"
+    ship "Mark III Drone" "Epsilon Four"
 
 
 
@@ -1760,7 +1757,7 @@ mission "FW Pug 4A"
     system Rasalhague
     government "Pug"
     personality disables
-    dialogue `You receive a message from Freya: "Captain, I think I've figured out the transmitter, and there is indeed a chance that we can reopen the hyperspace links. Meet me back down on the planet as soon as possible - I'll need you to take some equipment back to Hephaestus and set it up there."`
+    dialogue `You receive a message from Freya: "Captain, I think I've figured out the transmitter, and there is indeed a chance that we can reopen the hyperspace links. Meet me back down on the planet as soon as possible – I'll need you to take some equipment back to Hephaestus and set it up there."`
     fleet
       names "pug"
       variant
@@ -1851,8 +1848,8 @@ mission "FW Pug 4B: Reinforcements"
     fleet
       names "syndicate capital"
       variant
-        "Splinter (Mark II)"
-        "Manta (Mark II)" 2
+        "Argosy"
+        "Argosy" 2
         "Quicksilver (Mark II)" 4
     fleet
       names "syndicate capital"
@@ -1983,15 +1980,15 @@ mission "FW Pug 5A"
       fighters "republic fighter"
       variant
         "Venus (Mark II)"
-        "Mark II Drone" 4
+        "Mark III Drone" 4
         "Mars (Mark II)" 2
     fleet
       names "republic"
       fighters "republic fighter"
       variant
-        "Saturn (Mark II)"
+        "Saturn"
         "Foxhound" 4
-        "Mark II Drone" 6
+        "Mark III Drone" 6
         "Mercury (Mark II)" 3
 
 
@@ -2024,15 +2021,15 @@ mission "FW Pug 5B"
       fighters "republic fighter"
       variant
         "Venus (Mark II)"
-        "Mark II Drone" 4
+        "Mark III Drone" 4
         "Mars (Mark II)" 2
     fleet
       names "republic"
       fighters "republic fighter"
       variant
-        "Saturn (Mark II)"
+        "Saturn"
         "Foxhound" 4
-        "Mark II Drone" 6
+        "Mark III Drone" 6
         "Mercury (Mark II)" 3
   
   npc evade
@@ -2088,15 +2085,15 @@ mission "FW Pug 6"
       fighters "republic fighter"
       variant
         "Venus (Mark II)"
-        "Mark II Drone" 4
+        "Mark III Drone" 4
         "Mars (Mark II)" 2
     fleet 2
       names "republic"
       fighters "republic fighter"
       variant
-        "Saturn (Mark II)"
+        "Saturn"
         "Foxhound" 4
-        "Mark II Drone" 6
+        "Mark III Drone" 6
         "Mercury (Mark II)" 3
   npc
     government "Republic"
@@ -2106,7 +2103,7 @@ mission "FW Pug 6"
       fighters "republic fighter"
       variant
         "Venus"
-        "Mark II Drone" 4
+        "Mark III Drone" 4
         "Mars" 2
     fleet 2
       names "republic"
@@ -2114,7 +2111,7 @@ mission "FW Pug 6"
       variant
         "Saturn"
         "Foxhound" 4
-        "Mark II Drone" 6
+        "Mark III Drone" 6
         "Mercury" 3
   npc
     personality disables waiting
@@ -2122,8 +2119,8 @@ mission "FW Pug 6"
     fleet 2
       names "syndicate capital"
       variant
-        "Splinter (Mark II)"
-        "Manta (Mark II)" 2
+        "Argosy"
+        "Argosy" 2
         "Quicksilver (Mark II)" 4
     fleet 2
       names "syndicate capital"
@@ -2182,7 +2179,7 @@ mission "FW Pug 6"
         `  "No, it's just an ordinary electric outlet."`
         `  "Everything here is odd. The city, the holograms, all of it."`
       `  She says, "It's an ordinary, human style electrical outlet. Human. In an alien city. And the steps we came up to get here: the Pug have legs half again as long as ours. But the tread spacing was at the normal human height. This building wasn't made for the Pug. It was made for us."`
-      `  Reports begin coming in as the Navy explores the rest of the planet, and they are all finding the same thing: the cities are abandoned, many of them with signs that they were never inhabited in the first place. The first time you visited this planet, you thought it must have a billion inhabitants, but now it seems that its true population was less than a million - all of whom have apparently departed to somewhere beyond the wormhole.`
+      `  Reports begin coming in as the Navy explores the rest of the planet, and they are all finding the same thing: the cities are abandoned, many of them with signs that they were never inhabited in the first place. The first time you visited this planet, you thought it must have a billion inhabitants, but now it seems that its true population was less than a million – all of whom have apparently departed to somewhere beyond the wormhole.`
       `  Freya says, "Let's get back to the spaceport and meet up with the admirals."`
 
 
@@ -2354,8 +2351,7 @@ mission "FW Syndicate Extremists 1B"
     fleet 2
       names "syndicate capital"
       variant
-        "Splinter"
-        "Quicksilver" 3
+        "Vanguard" 2
   
   npc
     government "Navy (Oathkeeper)"
@@ -2365,11 +2361,11 @@ mission "FW Syndicate Extremists 1B"
       names "republic"
       fighters "republic fighter"
       variant
-        "Saturn (Mark II)" 3
+        "Saturn" 3
         "Foxhound" 12
-        "Mark II Drone" 18
+        "Mark III Drone" 18
         "Venus (Mark II)" 3
-        "Mark II Drone" 12
+        "Mark III Drone" 12
 
 
 
@@ -2410,9 +2406,7 @@ mission "FW Syndicate Extremists 1C"
     log "Received an official commendation from Parliament and a promise that the war with the Free Worlds is officially over. Humanity is at peace once more, but new challenges may await in the star systems out beyond human space that are accessible only by jump drive."
     payment 5000000
     event "free worlds end"
-    event "particle turret available" 30
-    event "luna rebuilt" 60
-    event "navy using mark iii ships" 90
+    event "luna rebuilt" 30
     set "free worlds plot completed"
     set "main plot completed"
     conversation

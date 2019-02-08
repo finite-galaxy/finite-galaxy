@@ -1,12 +1,12 @@
 shipyard "Megaparsec Variants"
-  "Manta"
-  "Manta (Mark II)"
-  "Manta (Nuclear)"
-  "Manta (Plasma)"
   "Quicksilver"
   "Quicksilver (Mark II)"
   "Quicksilver (Patrol)"
   "Quicksilver (Plasma)"
+  "Quicksilver Test Dummy"
+  "Modified Quicksilver (Engines)"
+  "Modified Quicksilver (Shields)"
+  "Modified Quicksilver (Weapons)"
   "Scout"
   "Scout (Afterburner)"
   "Scout (Hai)"
@@ -14,127 +14,6 @@ shipyard "Megaparsec Variants"
   "Scout (Miner)"
   "Scout (Speedy)"
   "Thunderbolt"
-
-
-
-ship "Manta"
-  sprite "ship/manta"
-  thumbnail "thumbnail/manta"
-  attributes
-    category "Corvette"
-#    manufacturer "Megaparsec"
-    licences
-      Pilot
-    "cost" 3400000
-    "shields" 5900
-    "hull" 1500
-    "required crew" 6
-    "bunks" 10
-    "mass" 170
-    "drag" 4.7
-    "heat dissipation" .8
-    "cargo space" 20
-    "outfit space" 370
-    "core space" 150
-    "engine space" 100
-    "weapon space" 120
-    weapon
-      "blast radius" 80
-      "shield damage" 800
-      "hull damage" 400
-      "hit force" 1200
-  outfits
-    "D41-HY Shield Generator"
-    "RT-I Radiothermal"
-    "Hyperdrive"
-
-    "IT-3700 Ion Thruster"
-    "IS-3200 Ion Steering"
-
-    "Particle Cannon" 4
-
-    "LP144a Battery Pack"
-    "Cooling Ducts"
-    "Fuel Pod" 23
-    "Tactical Scanner" 4
-  engine -33 38
-  engine 33 38
-  gun -21 -35 "Particle Cannon"
-  gun 21 -35 "Particle Cannon"
-  gun -27 -35 "Particle Cannon"
-  gun 27 -35 "Particle Cannon"
-  leak "leak" 60 50
-  leak "flame" 40 80
-  explode "tiny explosion" 10
-  explode "small explosion" 20
-  explode "medium explosion" 15
-  "final explode" "final explosion small"
-  description "After their Quicksilver light warship with its armament of particle cannons became a large success with convoy escorts and planetary defence forces, Megaparsec decided to develop a larger ship with similar manoeuvrability but heavier firepower. The Manta is the result: a ship with enough long-range firepower that fleeing from a battle with it is almost impossible."
-
-
-ship "Manta" "Manta (Mark II)"
-  outfits
-    "D41-HY Shield Generator"
-    "Fission Reactor"
-    "Hyperdrive"
-
-    "A370 Atomic Thruster"
-    "A375 Atomic Steering"
-
-    "Electron Cannon" 4
-
-    "LP072a Battery Pack"
-    "Liquid Nitrogen Cooler"
-    "Fuel Pod" 23
-    "Tactical Scanner" 4
-    "Laser Rifle" 10
-
-
-ship "Manta" "Manta (Nuclear)"
-  add attributes
-    "core space" -20
-    "weapon space" 20
-  outfits
-    "S-270 Regenerator"
-    "Fission Reactor"
-    "Hyperdrive"
-
-    "A370 Atomic Thruster"
-    "A375 Atomic Steering"
-
-    "Nuclear Missile" 2
-    "Particle Cannon" 2
-    "Plasma Cannon" 2
-
-    "LP072a Battery Pack"
-    "Liquid Nitrogen Cooler"
-    "Fuel Pod" 23
-    "Tactical Scanner"
-    "Extra Outfit Space" 2
-    "Laser Rifle" 10
-  gun -21 -35 "Plasma Cannon"
-  gun 21 -35 "Plasma Cannon"
-  gun -27 -35 "Particle Cannon"
-  gun 27 -35 "Particle Cannon"
-  gun -66 -32 "Nuclear Missile"
-  gun 66 -32 "Nuclear Missile"
-
-
-ship "Manta" "Manta (Plasma)"
-  outfits
-    "D41-HY Shield Generator"
-    "RT-I Radiothermal"
-    "Hyperdrive"
-
-    "IT-3700 Ion Thruster"
-    "IS-3200 Ion Steering"
-
-    "Plasma Cannon" 4
-
-    "LP144a Battery Pack"
-    "Liquid Nitrogen Cooler"
-    "Fuel Pod" 23
-    "Tactical Scanner" 4
 
 
 
@@ -160,10 +39,15 @@ ship "Quicksilver"
     "engine space" 80
     "weapon space" 60
     weapon
-      "blast radius" 40
-      "shield damage" 400
-      "hull damage" 200
+      "blast radius" 80
+      "shield damage" 240
+      "random shield damage" 560
+      "hull damage" 360
+      "random hull damage" 840
+      "heat damage" 7200
+      "random heat damage" 16800
       "hit force" 600
+      "random hit force" 1400
   outfits
     "D23-QP Shield Generator"
     "RT-I Radiothermal"
@@ -180,8 +64,8 @@ ship "Quicksilver"
     "Tactical Scanner" 4
   engine -17 54
   engine 17 54
-  gun -6 -38 "Particle Cannon"
-  gun 6 -38 "Particle Cannon"
+  gun -6 -38
+  gun 6 -38
   leak "leak" 50 50
   explode "tiny explosion" 12
   explode "small explosion" 16
@@ -244,13 +128,170 @@ ship "Quicksilver" "Quicksilver (Plasma)"
     "Tactical Scanner" 4
 
 
+ship "Quicksilver" "Quicksilver Test Dummy"
+  add attributes
+    "automaton" 1
+    "self destruct" 1
+
+
+ship "Quicksilver" "Modified Quicksilver (Engines)"
+  sprite "ship/quicksilver_e"
+  add attributes
+    "cost" 110000
+    "shields" 500
+    "hull" 100
+    "required crew" 1
+    "bunks" 1
+    "mass" 20
+    "cargo space" -5
+    "outfit space" 10
+    "core space" -30
+    "engine space" 30
+    "weapon space" 10
+    "self destruct" .25
+    weapon
+      "blast radius" 5
+      "shield damage" 40
+      "random shield damage" 10
+      "hull damage" 60
+      "random hull damage" 15
+      "heat damage" 1200
+      "random heat damage" 300
+      "hit force" 100
+      "random hit force" 25
+  outfits
+    "S-270 Regenerator"
+    "Fission Reactor"
+    "Hyperdrive"
+
+    "A370 Atomic Thruster"
+    "A375 Atomic Steering"
+
+    "Heavy Laser Cannon" 2
+    "AM3 Anti-Missile"
+
+    "Supercapacitor" 2
+    "Liquid Nitrogen Cooler"
+    "Fuel Pod" 18
+    "Tactical Scanner" 4
+    "Interference Plating"
+    "Laser Rifle" 7
+  engine -16 52
+  engine 0 52
+  engine 16 52
+  gun -7 -39
+  gun 7 -39
+  turret 0 15
+  description "This Quicksilver has even more space available for engine use – and even another thruster port! It's also got a few extra shield projectors, more hull plating and another bunk. This aftermarket model also features a turret mount, perhaps in response to Tarazed's Hawk. Whoever modified this ship wanted to chase their prey down with vicious speed."
+
+
+ship "Quicksilver" "Modified Quicksilver (Shields)"
+  sprite "ship/quicksilver_s"
+  add attributes
+    "cost" 110000
+    "shields" 500
+    "hull" 100
+    "required crew" 1
+    "bunks" 1
+    "mass" 20
+    "cargo space" -5
+    "outfit space" 10
+    "core space" -10
+    "engine space" 10
+    "weapon space" 10
+    "self destruct" .25
+    weapon
+      "blast radius" 5
+      "shield damage" 40
+      "random shield damage" 10
+      "hull damage" 60
+      "random hull damage" 15
+      "heat damage" 1200
+      "random heat damage" 300
+      "hit force" 100
+      "random hit force" 25
+  outfits
+    "S-270 Regenerator"
+    "Fission Reactor"
+    "Hyperdrive"
+
+    "A250 Atomic Thruster"
+    "A375 Atomic Steering"
+
+    "Heavy Laser Cannon" 2
+    "Heavy Anti-Missile"
+
+    "Supercapacitor" 3
+    "Liquid Nitrogen Cooler"
+    "Fuel Pod" 18
+    "Tactical Scanner" 4
+    "Interference Plating"
+    "Laser Rifle" 7
+  engine -16 52
+  engine 16 52
+  gun -7 -39
+  gun 7 -39
+  turret 0 15
+  description "This Megaparsec Quicksilver is a bit of a Hotrod, being a little faster, with extra shield projectors, hull plating, and an extra bunk. This aftermarket model also features a turret mount, perhaps in an answer to Tarazed's Hawk. The shop that built this ship is sure to see more customers."
+
+
+ship "Quicksilver" "Modified Quicksilver (Weapons)"
+  sprite "ship/quicksilver_w"
+  add attributes
+    "cost" 110000
+    "shields" 500
+    "hull" 100
+    "required crew" 1
+    "bunks" 1
+    "mass" 20
+    "cargo space" -5
+    "outfit space" 10
+    "core space" -20
+    "engine space" 10
+    "weapon space" 20
+    "self destruct" .25
+    weapon
+      "blast radius" 5
+      "shield damage" 40
+      "random shield damage" 10
+      "hull damage" 60
+      "random hull damage" 15
+      "heat damage" 1200
+      "random heat damage" 300
+      "hit force" 100
+      "random hit force" 25
+  outfits
+    "S-270 Regenerator"
+    "Fission Reactor"
+    "Hyperdrive"
+
+    "A250 Atomic Thruster"
+    "A255 Atomic Steering"
+
+    "Heavy Laser Cannon" 2
+    "Heavy Laser Turret"
+
+    "LP036a Battery Pack"
+    "Liquid Nitrogen Cooler"
+    "Fuel Pod" 18
+    "Tactical Scanner" 4
+    "Interference Plating"
+    "Laser Rifle" 7
+  engine -17 54
+  engine 17 54
+  gun -7 -39
+  gun 7 -39
+  turret 0 15
+  description "This Quicksilver has even bigger gun ports. It's also got a few extra shield emitters, more hull plating, and an extra bunk. Outfitted right, this aftermarket model could be even faster than a stock model, bringing a couple of extra cannons and a turret to the fight, to mimic Tarazed's Hawk perhaps a little more menacingly."
+
+
 
 ship "Scout"
   sprite "ship/scout"
   thumbnail "thumbnail/scout"
   attributes
     category "Interceptor"
-#    manufacturer "Lionheart"
+#    manufacturer "Megaparsec"
     licences
       Pilot
     "cost" 850000
@@ -267,10 +308,15 @@ ship "Scout"
     "engine space" 100
     "weapon space" 40
     weapon
-      "blast radius" 16
-      "shield damage" 160
-      "hull damage" 80
-      "hit force" 240
+      "blast radius" 83
+      "shield damage" 220
+      "random shield damage" 610
+      "hull damage" 330
+      "random hull damage" 915
+      "heat damage" 6600
+      "random heat damage" 18300
+      "hit force" 550
+      "random hit force" 1525
   outfits
     "D14-RN Shield Generator"
     "RT-I Radiothermal"
@@ -288,9 +334,9 @@ ship "Scout"
     "Tactical Scanner" 4
   engine -8 46
   engine 8 46
-  gun -20 -7 "X1 Blaster Cannon"
-  gun 20 -7 "X1 Blaster Cannon"
-  turret 0 -7 "AM5 Anti-Missile"
+  gun -20 -7
+  gun 20 -7
+  turret 0 -7
   explode "tiny explosion" 10
   explode "small explosion" 20
   explode "medium explosion" 15
@@ -326,8 +372,8 @@ ship "Scout" "Scout (Hai)"
     "Pebble Core" 2
     "Hyperdrive"
 
-    `"Biroo" Atomic Thruster`
-    `"Biroo" Atomic Steering`
+    "Biroo Atomic Thruster"
+    "Biroo Atomic Steering"
 
     "Chameleon Anti-Missile"
 
@@ -389,7 +435,7 @@ ship "Scout" "Scout (Speedy)"
     "A375 Atomic Steering"
 
     "LP036a Battery Pack"
-    "Liquid Water Cooler"
+    "Cooling Ducts"
     "Fuel Pod" 34
     "Tactical Scanner" 4
 
@@ -417,10 +463,15 @@ ship "Thunderbolt"
     "engine space" 100
     "weapon space" 150
     weapon
-      "blast radius" 80
-      "shield damage" 800
-      "hull damage" 400
-      "hit force" 1200
+      "blast radius" 128
+      "shield damage" 300
+      "random shield damage" 980
+      "hull damage" 450
+      "random hull damage" 1470
+      "heat damage" 9000
+      "random heat damage" 29400
+      "hit force" 750
+      "random hit force" 2450
   outfits
     "D67-TM Shield Generator"
     "RT-I Radiothermal"
@@ -441,12 +492,12 @@ ship "Thunderbolt"
     "Tactical Scanner" 4
   engine -11 118
   engine 11 118
-  gun -12 -68 "Sidewinder Missile Launcher"
-  gun 12 -68 "Sidewinder Missile Launcher"
-  gun -14 -60 "Sidewinder Missile Launcher"
-  gun 14 -60 "Sidewinder Missile Launcher"
-  turret 0 -11 "X8 Blaster Turret"
-  turret 0 74 "Heavy Anti-Missile"
+  gun -12 -68
+  gun 12 -68
+  gun -14 -60
+  gun 14 -60
+  turret 0 -11
+  turret 0 74
   leak "leak" 40 50
   leak "flame" 50 80
   leak "big leak" 90 30

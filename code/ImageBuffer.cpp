@@ -3,6 +3,7 @@
 #include "ImageBuffer.h"
 
 #include "File.h"
+#include "Files.h"
 
 #include <png.h>
 #include <jpeglib.h>
@@ -141,10 +142,10 @@ bool ImageBuffer::Read(const string &path, int frame)
   // First, make sure this is a JPG or PNG file.
   if(path.length() < 4)
     return false;
-  
-  string extension = path.substr(path.length() - 4);
-  bool isPNG = (extension == ".png" || extension == ".PNG");
-  bool isJPG = (extension == ".jpg" || extension == ".JPG");
+
+  string extension = Files::Extension(path);
+  bool isPNG = (extension.compare(".png") == 0 || extension.compare(".PNG") == 0);
+  bool isJPG = (extension.compare(".jpg") == 0 || extension.compare(".JPG") == 0);
   if(!isPNG && !isJPG)
     return false;
   
@@ -229,6 +230,8 @@ namespace {
       png_set_gray_to_rgb(png);
     if(colourType & PNG_COLOR_MASK_COLOR)
       png_set_bgr(png);
+    // Let libpng handle any interlaced image decoding.
+    png_set_interlace_handling(png);
     png_read_update_info(png, info);
     
     // Read the file.
@@ -299,7 +302,7 @@ namespace {
       for(uint32_t *end = it + buffer.Width(); it != end; ++it)
       {
         uint64_t value = *it;
-        uint64_t alpha = (value & 0xFF000000) >> 24;
+        uint64_t alpha = (value & 0xFF00'0000) >> 24;
         
         uint64_t red = (((value & 0xFF0000) * alpha) / 255) & 0xFF0000;
         uint64_t green = (((value & 0xFF00) * alpha) / 255) & 0xFF00;

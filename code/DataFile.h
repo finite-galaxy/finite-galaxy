@@ -33,7 +33,7 @@ public:
   
   
 private:
-  void Load(const char *it, const char *end);
+  void LoadData(const std::string &data);
   
   
 private:

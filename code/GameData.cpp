@@ -35,8 +35,6 @@
 #include "Politics.h"
 #include "Random.h"
 #include "RingShader.h"
-#include "Sale.h"
-#include "Set.h"
 #include "Ship.h"
 #include "Sprite.h"
 #include "SpriteQueue.h"
@@ -163,6 +161,10 @@ bool GameData::BeginLoad(const char * const *argv)
   
   // Generate a catalogue of music files.
   Music::Init(sources);
+
+	// Add font and config files.
+	for(const string &source : sources)
+		FontSet::Add(source + "fonts/");
   
   for(const string &source : sources)
   {
@@ -243,6 +245,9 @@ void GameData::CheckReferences()
     if(!it.second.Category().empty() && !knownOutfitCategories.count(it.second.Category()))
       Files::LogError("Warning: outfit \"" + it.first + "\" has category \"" + it.second.Category() + "\", which is not among known outfit categories.");
   }
+  for(const auto &it : outfitSales)
+    if(it.second.empty())
+      Files::LogError("Warning: outfitter \"" + it.first + "\" is referred to, but has no outfits.");
   for(const auto &it : phrases)
     if(it.second.Name().empty())
       Files::LogError("Warning: phrase \"" + it.first + "\" is referred to, but never defined.");
@@ -256,6 +261,9 @@ void GameData::CheckReferences()
     if(!it.second.Attributes().Category().empty() && !knownShipCategories.count(it.second.Attributes().Category()))
       Files::LogError("Warning: ship \"" + it.first + "\" has category \"" + it.second.Attributes().Category() + "\", which is not among known ship categories.");
   }
+  for(const auto &it : shipSales)
+    if(it.second.empty())
+      Files::LogError("Warning: shipyard \"" + it.first + "\" is referred to, but has no ships.");
   for(const auto &it : systems)
     if(it.second.Name().empty())
       Files::LogError("Warning: system \"" + it.first + "\" is referred to, but never defined.");
@@ -265,13 +273,6 @@ void GameData::CheckReferences()
 
 void GameData::LoadShaders()
 {
-  FontSet::Add(Files::Images() + "font/LinuxLibertineDisplay10.png", 10);
-  FontSet::Add(Files::Images() + "font/LinuxLibertineDisplay12.png", 12);
-  FontSet::Add(Files::Images() + "font/LinuxLibertineDisplay14.png", 14);
-  FontSet::Add(Files::Images() + "font/LinuxLibertineDisplay16.png", 16);
-  FontSet::Add(Files::Images() + "font/LinuxLibertineDisplay18.png", 18);
-  FontSet::Add(Files::Images() + "font/LinuxLibertineDisplay20.png", 20);
-
   // Load the key settings.
   Command::LoadSettings(Files::Resources() + "keys.txt");
   Command::LoadSettings(Files::Config() + "keys.txt");
@@ -515,7 +516,7 @@ void GameData::Change(const DataNode &node)
   else if(node.Token(0) == "outfitter" && node.Size() >= 2)
     outfitSales.Get(node.Token(1))->Load(node, outfits);
   else if(node.Token(0) == "planet" && node.Size() >= 2)
-    planets.Get(node.Token(1))->Load(node, shipSales, outfitSales);
+    planets.Get(node.Token(1))->Load(node);
   else if(node.Token(0) == "shipyard" && node.Size() >= 2)
     shipSales.Get(node.Token(1))->Load(node, ships);
   else if(node.Token(0) == "system" && node.Size() >= 2)
@@ -640,6 +641,13 @@ const Set<Outfit> &GameData::Outfits()
 
 
 
+const Set<Sale<Outfit>> &GameData::Outfitters()
+{
+  return outfitSales;
+}
+
+
+
 const Set<Person> &GameData::Persons()
 {
   return persons;
@@ -664,6 +672,13 @@ const Set<Planet> &GameData::Planets()
 const Set<Ship> &GameData::Ships()
 {
   return ships;
+}
+
+
+
+const Set<Sale<Ship>> &GameData::Shipyards()
+{
+  return shipSales;
 }
 
 
@@ -925,7 +940,7 @@ void GameData::LoadFile(const string &path, bool debugMode)
     else if(key == "phrase" && node.Size() >= 2)
       phrases.Get(node.Token(1))->Load(node);
     else if(key == "planet" && node.Size() >= 2)
-      planets.Get(node.Token(1))->Load(node, shipSales, outfitSales);
+      planets.Get(node.Token(1))->Load(node);
     else if(key == "ship" && node.Size() >= 2)
     {
       // Allow multiple named variants of the same ship model.

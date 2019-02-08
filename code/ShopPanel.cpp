@@ -26,12 +26,14 @@
 #include "gl_header.h"
 #include <SDL2/SDL.h>
 
+#include <algorithm>
+
 using namespace std;
 
 namespace {
   const int ICON_TILE = 48;
   const int ICON_COLS = 5;
-  const double ICON_SIZE = ICON_TILE - 8;
+  const float ICON_SIZE = ICON_TILE - 8;
 }
 
 
@@ -99,7 +101,7 @@ void ShopPanel::Draw()
     static const int WIDTH = 250;
     static const int PAD = 10;
     const string &text = GameData::Tooltip(warningType);
-    WrappedText wrap(FontSet::Get(14));
+    WrappedText wrap(FontSet::Get(18));
     wrap.SetWrapWidth(WIDTH - 2 * PAD);
     wrap.Wrap(text);
     
@@ -115,9 +117,9 @@ void ShopPanel::Draw()
   
   if(dragShip && dragShip->GetSprite())
   {
-    static const Colour selected(.8, 1.);
+    static const Colour selected(.8f, 1.f);
     const Sprite *sprite = dragShip->GetSprite();
-    double scale = ICON_SIZE / max(sprite->Width(), sprite->Height());
+    float scale = ICON_SIZE / max(sprite->Width(), sprite->Height());
     Point size(sprite->Width() * scale, sprite->Height() * scale);
     OutlineShader::Draw(sprite, dragPoint, size, selected);
   }
@@ -139,7 +141,7 @@ void ShopPanel::Draw()
 
 void ShopPanel::DrawSidebar()
 {
-  const Font &font = FontSet::Get(14);
+  const Font &font = FontSet::Get(18);
   const Colour &bright = *GameData::Colours().Get("bright");
   sideDetailHeight = 0;
   
@@ -189,8 +191,8 @@ void ShopPanel::DrawSidebar()
   Point mouse = GetUI()->GetMouse();
   warningType.clear();
   
-  static const Colour selected(.8, 1.);
-  static const Colour unselected(.4, 1.);
+  static const Colour selected(.8f, 1.f);
+  static const Colour unselected(.4f, 1.f);
   for(const shared_ptr<Ship> &ship : player.Ships())
   {
     // Skip any ships that are "absent" for whatever reason.
@@ -214,7 +216,7 @@ void ShopPanel::DrawSidebar()
     const Sprite *sprite = ship->GetSprite();
     if(sprite)
     {
-      double scale = ICON_SIZE / max(sprite->Width(), sprite->Height());
+      float scale = ICON_SIZE / max(sprite->Width(), sprite->Height());
       Point size(sprite->Width() * scale, sprite->Height() * scale);
       OutlineShader::Draw(sprite, point, size, isSelected ? selected : unselected);
     }
@@ -240,9 +242,9 @@ void ShopPanel::DrawSidebar()
   maxSideScroll = max(0., point.Y() - 10 + sideScroll - Screen::Bottom() + BUTTON_HEIGHT);
   
   PointerShader::Draw(Point(Screen::Right() - 10, Screen::Top() + 10),
-    Point(0., -1.), 10., 10., 5., Colour(sideScroll > 0 ? .8 : .2, 0.));
+    Point(0., -1.), 10.f, 10.f, 5.f, Colour(sideScroll > 0 ? .8f : .2f, 0.f));
   PointerShader::Draw(Point(Screen::Right() - 10, Screen::Bottom() - 80),
-    Point(0., 1.), 10., 10., 5., Colour(sideScroll < maxSideScroll ? .8 : .2, 0.));
+    Point(0., 1.), 10.f, 10.f, 5.f, Colour(sideScroll < maxSideScroll ? .8f : .2f, 0.f));
 }
 
 
@@ -256,7 +258,7 @@ void ShopPanel::DrawButtons()
     Point(Screen::Right() - SIDE_WIDTH / 2, Screen::Bottom() - BUTTON_HEIGHT),
     Point(SIDE_WIDTH, 1), *GameData::Colours().Get("shop side panel footer"));
   
-  const Font &font = FontSet::Get(14);
+  const Font &font = FontSet::Get(18);
   const Colour &bright = *GameData::Colours().Get("bright");
   const Colour &dim = *GameData::Colours().Get("medium");
   const Colour &back = *GameData::Colours().Get("panel background");
@@ -277,7 +279,7 @@ void ShopPanel::DrawButtons()
   Point right(Screen::Right() - font.Width(space) - 10, point.Y());
   font.Draw(space, right, bright);
   
-  const Font &bigFont = FontSet::Get(18);
+  const Font &bigFont = FontSet::Get(24);
   const Colour &hover = *GameData::Colours().Get("hover");
   const Colour &active = *GameData::Colours().Get("active");
   const Colour &inactive = *GameData::Colours().Get("inactive");
@@ -306,7 +308,7 @@ void ShopPanel::DrawButtons()
   int modifier = Modifier();
   if(modifier > 1)
   {
-    string mod = "x " + to_string(modifier);
+    string mod = "× " + to_string(modifier);
     int modWidth = font.Width(mod);
     font.Draw(mod, buyCentre + Point(-.5 * modWidth, 10.), dim);
     if(CanSellMultiple())
@@ -318,7 +320,7 @@ void ShopPanel::DrawButtons()
 
 void ShopPanel::DrawMain()
 {
-  const Font &bigFont = FontSet::Get(18);
+  const Font &bigFont = FontSet::Get(24);
   const Colour &dim = *GameData::Colours().Get("medium");
   const Colour &bright = *GameData::Colours().Get("bright");
   mainDetailHeight = 0;
@@ -375,15 +377,15 @@ void ShopPanel::DrawMain()
       
       if(isSelected)
       {
-        Colour colour(.2, 0.);
+        Colour colour(.2f, 0.f);
         int dy = DividerOffset();
         
         float before = point.X() - TILE_SIZE / 2 - Screen::Left();
-        FillShader::Fill(Point(Screen::Left() + .5 * before, point.Y() + dy),
+        FillShader::Fill(Point(Screen::Left() + .5f * before, point.Y() + dy),
           Point(before, 1.), colour);
         
-        float after = endX - (point.X() + TILE_SIZE / 2);
-        FillShader::Fill(Point(endX - .5 * after, point.Y() + dy),
+        float after = endX - (static_cast<float>(point.X()) + TILE_SIZE / 2);
+        FillShader::Fill(Point(endX - .5f * after, point.Y() + dy),
           Point(after, 1.), colour);
         
         // The centre of the display needs to be between these two values:
@@ -439,9 +441,9 @@ void ShopPanel::DrawMain()
   maxMainScroll = max(0., nextY + mainScroll - Screen::Height() / 2 - TILE_SIZE / 2 + 40.);
   
   PointerShader::Draw(Point(Screen::Right() - 10 - SIDE_WIDTH, Screen::Top() + 10),
-    Point(0., -1.), 10., 10., 5., Colour(mainScroll > 0 ? .8 : .2, 0.));
+    Point(0., -1.), 10.f, 10.f, 5.f, Colour(mainScroll > 0 ? .8f : .2f, 0.f));
   PointerShader::Draw(Point(Screen::Right() - 10 - SIDE_WIDTH, Screen::Bottom() - 10),
-    Point(0., 1.), 10., 10., 5., Colour(mainScroll < maxMainScroll ? .8 : .2, 0.));
+    Point(0., 1.), 10.f, 10.f, 5.f, Colour(mainScroll < maxMainScroll ? .8f : .2f, 0.f));
 }
 
 
@@ -453,10 +455,11 @@ void ShopPanel::DrawShip(const Ship &ship, const Point &centre, bool isSelected)
   SpriteShader::Draw(back, centre);
   
   // Draw the ship name.
-  const Font &font = FontSet::Get(14);
-  const string &name = ship.Name().empty() ? ship.ModelName() : font.TruncateMiddle(ship.Name(), SIDE_WIDTH - 61);
-  Point offset(-.5f * font.Width(name), -.5f * SHIP_SIZE + 10.f);
-  font.Draw(name, centre + offset, *GameData::Colours().Get("bright"));
+  const Font &font = FontSet::Get(18);
+  const Font::Layout layout(Font::TRUNC_MIDDLE, SIDE_WIDTH - 61);
+  const string &name = ship.Name().empty() ? ship.ModelName() : ship.Name();
+  Point offset(-.5f * font.Width(name, &layout), -.5f * SHIP_SIZE + 10.f);
+  font.Draw(name, centre + offset, *GameData::Colours().Get("bright"), &layout);
   
   const Sprite *thumbnail = ship.Thumbnail();
   const Sprite *sprite = ship.GetSprite();

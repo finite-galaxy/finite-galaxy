@@ -1,0 +1,85 @@
+shipyard "Flivver Variants"
+  "Flivver"
+  "Flivver (Hai)"
+  "Modified Flivver"
+
+
+
+ship "Flivver"
+  sprite "ship/flivver"
+  thumbnail "thumbnail/flivver"
+  attributes
+    category "Interceptor"
+#    manufacturer "Betelgeuse"
+    licences
+      Pilot
+    "cost" 180000
+    "shields" 1400
+    "hull" 200
+    "required crew" 1
+    "bunks" 2
+    "mass" 40
+    "drag" 1.0
+    "heat dissipation" .9
+    "cargo space" 5
+    "outfit space" 140
+    "core space" 80
+    "engine space" 45
+    "weapon space" 15
+    weapon
+      "blast radius" 37
+      "shield damage" 80
+      "random shield damage" 290
+      "hull damage" 120
+      "random hull damage" 435
+      "heat damage" 2400
+      "random heat damage" 8700
+      "hit force" 200
+      "random hit force" 725
+  outfits
+    "D14-RN Shield Generator"
+    "Midget Reactor"
+    "Hyperdrive"
+
+    "A120 Atomic Thruster"
+    "A125 Atomic Steering"
+
+    "Supercapacitor"
+    "Fuel Pod" 10
+    "Tactical Scanner" 1
+  engine -16 27
+  engine 16 27
+  gun -6 -31
+  gun 6 -31
+  leak "leak" 60 50
+  explode "tiny explosion" 10
+  explode "small explosion" 10
+  description "The Flivver is the fastest ship for sale, designed to outspeed anything else. As a consequence, it has space for neither cargo nor passengers nor heavy weaponry. Flivvers are sold mostly to wealthy individuals who want to be able to travel the stars without needing to share a bunk room on a merchant transport with common people, and to rich youths obsessed with racing."
+
+
+ship "Flivver" "Flivver (Hai)"
+  outfits
+    "Corundum Regenerator"
+    "Pebble Core"
+    "Hyperdrive"
+
+    "Benga Atomic Thruster"
+    "Basrem Atomic Steering"
+
+    "Chasm Batteries"
+    "Williwaw Cooling"
+    "Fuel Pod" 10
+    "Yoloy Scanner"
+
+
+ship "Flivver" "Modified Flivver"
+  sprite "ship/flivver_m"
+  add attributes
+    "engine space" 15
+    "weapon space" -15
+  engine -12 20 .8
+  engine 12 20 .8
+  explode "small explosion" 15
+  explode "tiny explosion" 10
+
+

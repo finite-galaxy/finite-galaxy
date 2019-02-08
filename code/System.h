@@ -100,7 +100,7 @@ public:
   double HabitableZone() const;
   // Get the radius of the asteroid belt.
   double AsteroidBelt() const;
-  // Get the rate of solar collection and ramscoop refueling.
+  // Get the rate of solar collection and ramscoop refuelling.
   double SolarPower() const;
   double SolarWind() const;
   // Check if this system is inhabited.

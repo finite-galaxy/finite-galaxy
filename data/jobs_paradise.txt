@@ -177,7 +177,7 @@ mission "Transport partiers [2]"
     attributes tourism
   on complete
     payment 3000 140
-    dialogue "You bid goodbye to the students, who behaved surprisingly well during the journey - yielding many fascinating conversations on subjects as diverse as philosophy, microfluidics, and intergalactic economics. Their proud parents send you your payment of <payment>."
+    dialogue "You bid goodbye to the students, who behaved surprisingly well during the journey – yielding many fascinating conversations on subjects as diverse as philosophy, microfluidics, and intergalactic economics. Their proud parents send you your payment of <payment>."
 
 mission "Food donations to <planet>"
   job
@@ -274,7 +274,7 @@ mission "Party goods to <planet>"
 mission "Estate assets to <planet>"
   job
   repeat
-  description "Trustees are seeking starship captains willing to deliver individual portions of a recently deceased upstanding citizen's estate - <cargo> - to the upcoming estate sale on <destination>. Payment is <payment>."
+  description "Trustees are seeking starship captains willing to deliver individual portions of a recently deceased upstanding citizen's estate – <cargo> – to the upcoming estate sale on <destination>. Payment is <payment>."
   cargo "Luxury Goods" 18 2 .15
   to offer
     random < 10

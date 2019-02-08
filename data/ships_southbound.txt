@@ -1,33 +1,23 @@
 shipyard "Southbound Variants"
   "Boxwing"
+  "Boxwing (Transport)"
   "Dreadnought"
   "Dreadnought (Javelin)"
   "Dreadnought (Jump)"
-  "Fury"
-  "Fury (Doombat)"
-  "Fury (Flamethrower)"
-  "Fury (Gatling)"
-  "Fury (Javelin)"
-  "Fury (Laser)"
   "Hag"
   "Harpy"
-  "Harpy (Gatling)"
+  "Harpy (Doombat)"
   "Hauler I"
-  "Hauler I (Hai)"
   "Hauler I (Miner)"
   "Hauler II"
-  "Hauler II (Hai)"
   "Hauler II (Miner)"
   "Hauler III"
-  "Hauler III (Hai)"
   "Hauler III (Miner)"
   "Nest"
-  "Nest (Sidewinder)"
   "Roost"
-  "Roost (Sidewinder)"
   "Skein"
-  "Skein (Sidewinder)"
   "Stymphalian"
+  "Stymphalian (Flamethrower)"
 
 
 
@@ -39,24 +29,29 @@ ship "Boxwing"
 #    manufacturer "Southbound"
     licences
       Pilot
-    "carried" 3
+    "carried" 2
     "cost" 369000
     "shields" 400
     "hull" 800
     "required crew" 1
     "bunks" 1
     "mass" 45
-    "drag" 1.3
+    "drag" 1.4
     "heat dissipation" .5
     "cargo space" 40
     "outfit space" 55
     "core space" 20
     "engine space" 35
     weapon
-      "blast radius" 12
-      "shield damage" 120
-      "hull damage" 60
-      "hit force" 180
+      "blast radius" 28
+      "shield damage" 90
+      "random shield damage" 190
+      "hull damage" 135
+      "random hull damage" 285
+      "heat damage" 2700
+      "random heat damage" 5700
+      "hit force" 225
+      "random hit force" 475
   outfits
     "nGVF-AA Fuel Cell"
 
@@ -70,7 +65,19 @@ ship "Boxwing"
   leak "flame" 50 80
   explode "tiny explosion" 15
   explode "small explosion" 5
-  description `After introducing the "Type F" cargo pod for the Hauler, it became apparent to merchant captains that the new carriers could offer more flexibility within their fleet, if there were a cargo box they could attach to the fighter arms. Enter the "F6-C: Boxwing", the bomber that doesn't fight, but carries cargo instead. Cargo preservation equipment gives the Boxwing much more mass and very poor heat dissipation characteristics compared to other fighters. That it cannot carry any weapons is only part of the reason jocks call it "Flying Coffin" amongst themselves; besides the ship resembling one and being very sluggish, the pilot "seat" doubles as a bunk, and is cramped beyond the comfort level of most. The interactive panoramic window H.U.D. is the only thing that keeps claustrophobic episodes from becoming a major problem.`
+  description `After introducing the "Type F" cargo pod for the Hauler, it became apparent to merchant captains that the new carriers could offer more flexibility within their fleet, if there were a cargo box they could attach to the fighter arms. Enter the "F6-C: Boxwing", the fighter that doesn't fight, but carries cargo instead. Cargo preservation equipment gives the Boxwing much more mass and very poor heat dissipation characteristics compared to other fighters. That it cannot carry any weapons is only part of the reason jocks call it "Flying Coffin" amongst themselves; besides the ship resembling one and being very sluggish, the pilot "seat" doubles as a bunk, and is cramped beyond the comfort level of most. The interactive panoramic window H.U.D. is the only thing that keeps claustrophobic episodes from becoming a major problem.`
+
+
+ship "Boxwing" "Boxwing (Transport)"
+  outfits
+    "nGVF-AA Fuel Cell"
+
+    "Chipmunk Plasma Thruster"
+    "Chipmunk Plasma Steering"
+
+    "Small Radar Jammer"
+    "Extra Bunks" 4
+    "Laser Rifle" 8
 
 
 
@@ -92,14 +99,19 @@ ship "Dreadnought"
     "heat dissipation" .65
     "cargo space" 90
     "outfit space" 900
-    "core space" 360
+    "core space" 370
     "engine space" 180
-    "weapon space" 360
+    "weapon space" 350
     weapon
-      "blast radius" 260
-      "shield damage" 2600
-      "hull damage" 1300
-      "hit force" 3900
+      "blast radius" 324
+      "shield damage" 1260
+      "random shield damage" 1980
+      "hull damage" 1890
+      "random hull damage" 2970
+      "heat damage" 37800
+      "random heat damage" 59400
+      "hit force" 3150
+      "random hit force" 4950
   outfits
     "D67-TM Shield Generator"
     "Stack Core"
@@ -114,7 +126,7 @@ ship "Dreadnought"
     "Liquid Helium Cooler"
     "Catalytic Ramscoop"
     "Fuel Pod" 98
-    "Large Radar Jammer"
+    "Large Radar Jammer" 2
     "Tactical Scanner" 6
     "Fragmentation Grenades" 50
     "Laser Rifle" 100
@@ -124,11 +136,11 @@ ship "Dreadnought"
   gun 10 -167
   gun -20 -151
   gun 20 -151
-  turret 0 -94 "Plasma Turret"
-  turret -38 -56 "Plasma Turret"
-  turret 38 -56 "Plasma Turret"
-  turret -44 118 "Plasma Turret"
-  turret 44 118 "Plasma Turret"
+  turret 0 -94
+  turret -38 -56
+  turret 38 -56
+  turret -44 118
+  turret 44 118
   leak "leak" 40 50
   leak "flame" 20 80
   leak "big leak" 80 30
@@ -166,10 +178,10 @@ ship "Dreadnought" "Dreadnought (Javelin)"
     "Laser Rifle" 100
     "Extra Outfit Space" 4
   turret "Heavy Anti-Missile"
-  turret "Plasma Turret"
-  turret "Plasma Turret"
-  turret "Plasma Turret"
-  turret "Plasma Turret"
+  turret
+  turret
+  turret
+  turret
 
 
 ship "Dreadnought" "Dreadnought (Jump)"
@@ -187,156 +199,10 @@ ship "Dreadnought" "Dreadnought (Jump)"
     "Liquid Helium Cooler"
     "Catalytic Ramscoop"
     "Fuel Pod" 98
-    "Large Radar Jammer"
+    "Large Radar Jammer" 2
     "Tactical Scanner" 6
     "Fragmentation Grenades" 50
     "Laser Rifle" 100
-
-
-
-ship "Fury"
-  plural "Furies"
-  sprite "ship/fury"
-  thumbnail "thumbnail/fury"
-  attributes
-    category "Interceptor"
-#    manufacturer "Southbound"
-    licences
-      Pilot
-    "cost" 520000
-    "shields" 2200
-    "hull" 500
-    "required crew" 1
-    "bunks" 2
-    "mass" 110
-    "drag" 2.2
-    "heat dissipation" .85
-    "cargo space" 10
-    "outfit space" 200
-    "core space" 100
-    "engine space" 60
-    "weapon space" 40
-    weapon
-      "blast radius" 30
-      "shield damage" 300
-      "hull damage" 150
-      "hit force" 450
-  outfits
-    "D23-QP Shield Generator"
-    "nGVF-BB Fuel Cell"
-    "nGVF-AA Fuel Cell"
-    "Hyperdrive"
-
-    "Greyhound Plasma Thruster"
-    "Greyhound Plasma Steering"
-
-    "K1 Blaster Cannon" 4
-
-    "LP036a Battery Pack"
-    "Fuel Pod" 14
-    "Tactical Scanner" 2
-  engine -10 45
-  engine 10 45
-  gun -20 12 "K1 Blaster Cannon"
-  gun 20 12 "K1 Blaster Cannon"
-  gun -44 10 "K1 Blaster Cannon"
-  gun 44 10 "K1 Blaster Cannon"
-  leak "leak" 60 50
-  leak "flame" 80 80
-  explode "tiny explosion" 10
-  explode "small explosion" 15
-  "final explode" "final explosion small"
-  description "The Fury is Southbound Shipyard's most popular design of escort ship. They have greater firepower than most other interceptor-class vessels, meaning that any pirate flying solo will think twice before attacking a convoy that is accompanied by a Fury. However, Furies are also less manoeuvrable than other small ships."
-
-
-ship "Fury" "Fury (Doombat)"
-  add attributes
-    "self destruct" 1
-  outfits
-    "D23-QP Shield Generator"
-    "nGVF-BB Fuel Cell"
-    "Hyperdrive"
-
-    "Greyhound Plasma Thruster"
-    "Greyhound Plasma Steering"
-
-    "Flamethrower" 4
-
-    "LP036a Battery Pack"
-    "Fuel Pod" 14
-    "Ramscoop"
-    "Tactical Scanner" 2
-    "Measurement Systems"
-
-
-ship "Fury" "Fury (Flamethrower)"
-  outfits
-    "D23-QP Shield Generator"
-    "nGVF-BB Fuel Cell"
-    "Hyperdrive"
-
-    "Greyhound Plasma Thruster"
-    "Greyhound Plasma Steering"
-
-    "Flamethrower" 4
-
-    "LP036a Battery Pack"
-    "Fuel Pod" 14
-    "Ramscoop"
-    "Tactical Scanner" 2
-
-
-ship "Fury" "Fury (Gatling)"
-  outfits
-    "D23-QP Shield Generator"
-    "nGVF-BB Fuel Cell"
-    "Hyperdrive"
-
-    "Greyhound Plasma Thruster"
-    "Greyhound Plasma Steering"
-
-    "Gatling Round" 12000
-    "Gatling Bullet Boxes" 8
-    "Gatling Gun" 4
-
-    "LP036a Battery Pack"
-    "Fuel Pod" 14
-    "Tactical Scanner" 2
-
-
-ship "Fury" "Fury (Javelin)"
-  outfits
-    "D23-QP Shield Generator"
-    "nGVF-BB Fuel Cell"
-    "Hyperdrive"
-
-    "Greyhound Plasma Thruster"
-    "Greyhound Plasma Steering"
-
-    "Javelin" 128
-    "Javelin Storage Crate" 2
-    "Javelin Pod" 2
-    "K1 Blaster Cannon" 2
-
-    "LP036a Battery Pack"
-    "Fuel Pod" 14
-    "Tactical Scanner" 2
-
-
-ship "Fury" "Fury (Laser)"
-  outfits
-    "D23-QP Shield Generator"
-    "nGVF-CC Fuel Cell"
-    "Hyperdrive"
-
-    "Greyhound Plasma Thruster"
-    "Greyhound Plasma Steering"
-
-    "Heavy Laser Cannon" 2
-
-    "LP036a Battery Pack"
-    "Fuel Pod" 14
-    "Tactical Scanner" 2
 
 
 
@@ -348,24 +214,29 @@ ship "Hag"
 #    manufacturer "Southbound"
     licences
       Pilot
-    "carried" 3
+    "carried" 2
     "cost" 126000
     "shields" 900
     "hull" 300
     "required crew" 1
     "bunks" 1
     "mass" 40
-    "drag" .9
+    "drag" 1.1
     "heat dissipation" .85
-    "outfit space" 110
-    "core space" 50
+    "outfit space" 100
+    "core space" 40
     "engine space" 40
     "weapon space" 20
     weapon
-      "blast radius" 12
-      "shield damage" 120
-      "hull damage" 60
-      "hit force" 180
+      "blast radius" 30
+      "shield damage" 80
+      "random shield damage" 220
+      "hull damage" 120
+      "random hull damage" 330
+      "heat damage" 2400
+      "random heat damage" 6600
+      "hit force" 200
+      "random hit force" 550
   outfits
     "D14-RN Shield Generator"
     "nGVF-BB Fuel Cell"
@@ -373,24 +244,26 @@ ship "Hag"
     "Chipmunk Plasma Thruster"
     "Chipmunk Plasma Steering"
 
-    "K1 Blaster Cannon" 2
+    "Gatling Round" 6000
+    "Gatling Bullet Boxes" 4
+    "Gatling Gun" 2
 
-    "LP036a Battery Pack"
-    "Tactical Scanner"
+    "Supercapacitor"
+    "Tactical Scanner" 2
   engine -5 32
   engine 5 32
-  gun -7 -14 "K1 Blaster Cannon"
-  gun 7 -14 "K1 Blaster Cannon"
+  gun -7 -14 "Gatling Gun"
+  gun 7 -14 "Gatling Gun"
   leak "flame" 60 80
   explode "tiny explosion" 15
   explode "small explosion" 5
-  description "When the Free Worlds started requesting a carrier solution from its local shipyards, Southbound Shipyards quickly saw that a few modifications could make their entry level interceptor into a top tier fighter. Over 85% of the parts that make up the Hag are shared with the Harpy assembly line, so it's no surprise that even trimmed down to fit into a bomber bay, the Hag bears strong resemblance to its hyperspace-faring cousin."
+  description "When the Free Worlds started requesting a carrier solution from its local shipyards, Southbound Shipyards quickly saw that a few modifications could make their entry level interceptor into a top tier fighter. Numerous parts that make up the Hag are shared with the Harpy assembly line, so it's no surprise that even trimmed down to fit into a fighter bay, the Hag bears strong resemblance to its hyperspace-faring cousin."
 
 
 
 ship "Harpy"
   plural "Harpies"
-  sprite "ship/harpy"
+  sprite "ship/harpy_m"
   thumbnail "thumbnail/harpy"
   attributes
     category "Interceptor"
@@ -403,43 +276,23 @@ ship "Harpy"
     "required crew" 1
     "bunks" 2
     "mass" 50
-    "drag" 1.0
+    "drag" 1.3
     "heat dissipation" .8
     "cargo space" 10
     "outfit space" 140
-    "core space" 80
+    "core space" 70
     "engine space" 40
-    "weapon space" 20
+    "weapon space" 30
     weapon
-      "blast radius" 16
-      "shield damage" 160
-      "hull damage" 80
-      "hit force" 240
-  outfits
-    "D14-RN Shield Generator"
-    "nGVF-BB Fuel Cell"
-    "Hyperdrive"
-
-    "Chipmunk Plasma Thruster"
-    "Chipmunk Plasma Steering"
-
-    "K1 Blaster Cannon" 2
-
-    "LP036a Battery Pack"
-    "Fuel Pod" 6
-    "Tactical Scanner"
-  engine -5 35
-  engine 5 35
-  gun -7 -10 "K1 Blaster Cannon"
-  gun 7 -10 "K1 Blaster Cannon"
-  leak "flame" 60 80
-  explode "tiny explosion" 15
-  explode "small explosion" 5
-  description "Classified as an interceptor rather than a fighter because it has its own "Hyperdrive" instead of needing to be carried inside a larger ship, the Southbound Harpy is the smallest and cheapest combat ship available. Because of its limited cargo and passenger space, the primary way for a Harpy pilot to pay the bills is by hunting pirates... or by becoming one. In either case, it is a perilous way to earn a living."
-  description "  Insurance reports indicate that as many as two out of every three first-time ship buyers who choose to pilot a Harpy lose their ship (and often, their life as well) within the first month of owning it."
-
-
-ship "Harpy" "Harpy (Gatling)"
+      "blast radius" 40
+      "shield damage" 100
+      "random shield damage" 300
+      "hull damage" 150
+      "random hull damage" 450
+      "heat damage" 3000
+      "random heat damage" 9000
+      "hit force" 250
+      "random hit force" 750
   outfits
     "D14-RN Shield Generator"
     "nGVF-BB Fuel Cell"
@@ -450,11 +303,47 @@ ship "Harpy" "Harpy (Gatling)"
 
     "Gatling Round" 6000
     "Gatling Bullet Boxes" 4
-    "Gatling Gun" 2
+    "Gatling Gun" 4
+
+    "Supercapacitor"
+    "Fuel Pod" 6
+    "Tactical Scanner" 2
+  engine -5 35
+  engine 5 35
+  gun -7 -10
+  gun 7 -10
+  gun -13 -10
+  gun 13 -10
+  leak "flame" 60 80
+  explode "tiny explosion" 15
+  explode "small explosion" 5
+  description "Classified as an interceptor rather than a fighter because it has its own "Hyperdrive" instead of needing to be carried inside a larger ship, the Southbound Harpy is the smallest and cheapest combat ship available. Because of its limited cargo and passenger space, the primary way for a Harpy pilot to pay the bills is by hunting pirates... or by becoming one. In either case, it is a perilous way to earn a living."
+  description "  Insurance reports indicate that as many as two out of every three first-time ship buyers who choose to pilot a Harpy lose their ship (and often, their life as well) within the first month of owning it."
+
+
+ship "Harpy" "Harpy (Doombat)"
+  add attributes
+    "automaton" 1
+    "required crew" -1
+    "bunks" -2
+    "outfit space" 15
+    "cargo space" -5
+    "weapon space" 10
+    "self destruct" 1
+  outfits
+    "D14-RN Shield Generator"
+    "nGVF-BB Fuel Cell"
+    "Hyperdrive"
+
+    "Chipmunk Plasma Thruster"
+    "Chipmunk Plasma Steering"
+
+    "Flamethrower" 4
 
     "LP036a Battery Pack"
-    "Fuel Pod" 6
+    "Fuel Pod" 14
     "Tactical Scanner"
+    "Measurement Systems"
 
 
 
@@ -480,10 +369,15 @@ ship "Hauler I"
     "engine space" 80
     "weapon space" 140
     weapon
-      "blast radius" 60
-      "shield damage" 600
-      "hull damage" 300
-      "hit force" 900
+      "blast radius" 158
+      "shield damage" 500
+      "random shield damage" 1080
+      "hull damage" 750
+      "random hull damage" 1620
+      "heat damage" 15000
+      "random heat damage" 32400
+      "hit force" 1250
+      "random hit force" 2700
   outfits
     "D41-HY Shield Generator"
     "S3 Thermionic"
@@ -492,11 +386,14 @@ ship "Hauler I"
     "Greyhound Plasma Thruster"
     "Impala Plasma Steering"
 
-    "K4 Blaster Turret" 4
+    "Javelin" 128
+    "Javelin Storage Crate" 2
+    "Javelin Pod" 2
+    "Bolt Turret" 4
 
     "LP144a Battery Pack"
-    "Liquid Water Cooler"
     "Fuel Pod" 32
+    "Large Radar Jammer"
     "Tactical Scanner" 4
   engine -45 122
   engine 45 122
@@ -517,24 +414,6 @@ ship "Hauler I"
   description "Several centuries ago, in the early days of the Republic, the sudden increase in commerce and space travel led to high demand for cargo ships. Haulers were first created simply by bolting a cockpit and engine block onto a cargo container, and the basic design has not changed much since then."
 
 
-ship "Hauler I" "Hauler I (Hai)"
-  outfits
-    "Corundum Regenerator"
-    "Geode Reactor"
-    "Hyperdrive"
-
-    `"Biroo" Atomic Thruster`
-    `"Biroo" Atomic Steering`
-
-    "Pulse Turret" 2
-    "Chameleon Anti-Missile" 2
-
-    "Gorge Batteries"
-    "Williwaw Cooling"
-    "Fuel Pod" 32
-    "Yoloy Scanner"
-
-
 ship "Hauler I" "Hauler I (Miner)"
   outfits
     "D41-HY Shield Generator"
@@ -551,6 +430,7 @@ ship "Hauler I" "Hauler I (Miner)"
     "Asteroid Scanner"
     "Fuel Pod" 32
     "Ramscoop"
+    "Small Radar Jammer" 2
     "Tactical Scanner" 4
 
 
@@ -577,10 +457,15 @@ ship "Hauler II"
     "engine space" 80
     "weapon space" 140
     weapon
-      "blast radius" 80
-      "shield damage" 800
-      "hull damage" 400
-      "hit force" 1200
+      "blast radius" 210
+      "shield damage" 720
+      "random shield damage" 1380
+      "hull damage" 1080
+      "random hull damage" 2070
+      "heat damage" 21600
+      "random heat damage" 41400
+      "hit force" 1800
+      "random hit force" 3450
   outfits
     "D41-HY Shield Generator"
     "S3 Thermionic"
@@ -589,20 +474,23 @@ ship "Hauler II"
     "Greyhound Plasma Thruster"
     "Impala Plasma Steering"
 
-    "K4 Blaster Turret" 4
+    "Javelin" 128
+    "Javelin Storage Crate" 2
+    "Javelin Pod" 2
+    "Bolt Turret" 4
 
     "LP144a Battery Pack"
-    "Liquid Water Cooler"
     "Fuel Pod" 42
+    "Large Radar Jammer"
     "Tactical Scanner" 4
   engine -45 160
   engine 45 160
   gun -15 -128
   gun 15 -128
-  turret -26 -85 "K4 Blaster Turret"
-  turret 26 -85 "K4 Blaster Turret"
-  turret -19 115 "K4 Blaster Turret"
-  turret 19 115 "K4 Blaster Turret"
+  turret -26 -85 "Bolt Turret"
+  turret 26 -85 "Bolt Turret"
+  turret -19 115 "Bolt Turret"
+  turret 19 115 "Bolt Turret"
   leak "leak" 60 50
   leak "flame" 40 80
   leak "big leak" 80 30
@@ -612,24 +500,6 @@ ship "Hauler II"
   explode "large explosion" 15
   "final explode" "final explosion medium"
   description "This is a mid-sized freighter, designed for a balance between cargo capacity and defensive capability. Centuries ago, various Hauler models made up nearly half of the merchant vessels in service, but today the design is considered somewhat outdated."
-
-
-ship "Hauler II" "Hauler II (Hai)"
-  outfits
-    "Corundum Regenerator"
-    "Geode Reactor"
-    "Hyperdrive"
-
-    `"Biroo" Atomic Thruster`
-    `"Biroo" Atomic Steering`
-
-    "Pulse Turret" 2
-    "Chameleon Anti-Missile" 2
-
-    "Gorge Batteries"
-    "Williwaw Cooling"
-    "Fuel Pod" 42
-    "Yoloy Scanner"
 
 
 ship "Hauler II" "Hauler II (Miner)"
@@ -648,6 +518,7 @@ ship "Hauler II" "Hauler II (Miner)"
     "Asteroid Scanner"
     "Fuel Pod" 42
     "Ramscoop"
+    "Small Radar Jammer" 2
     "Tactical Scanner" 4
 
 
@@ -674,10 +545,15 @@ ship "Hauler III"
     "engine space" 80
     "weapon space" 140
     weapon
-      "blast radius" 100
-      "shield damage" 1000
-      "hull damage" 500
-      "hit force" 1500
+      "blast radius" 262
+      "shield damage" 940
+      "random shield damage" 1680
+      "hull damage" 1410
+      "random hull damage" 2520
+      "heat damage" 28200
+      "random heat damage" 50400
+      "hit force" 2350
+      "random hit force" 4200
   outfits
     "D41-HY Shield Generator"
     "S3 Thermionic"
@@ -686,20 +562,23 @@ ship "Hauler III"
     "Greyhound Plasma Thruster"
     "Impala Plasma Steering"
 
-    "K4 Blaster Turret" 4
+    "Javelin" 128
+    "Javelin Storage Crate" 2
+    "Javelin Pod" 2
+    "Bolt Turret" 4
 
     "LP144a Battery Pack"
-    "Liquid Water Cooler"
     "Fuel Pod" 53
+    "Large Radar Jammer"
     "Tactical Scanner" 4
   engine -45 196
   engine 45 196
   gun -15 -165
   gun 15 -165
-  turret -26 -122 "K4 Blaster Turret"
-  turret 26 -122 "K4 Blaster Turret"
-  turret -19 151 "K4 Blaster Turret"
-  turret 19 151 "K4 Blaster Turret"
+  turret -26 -122 "Bolt Turret"
+  turret 26 -122 "Bolt Turret"
+  turret -19 151 "Bolt Turret"
+  turret 19 151 "Bolt Turret"
   leak "leak" 50 50
   leak "flame" 40 80
   leak "big leak" 80 30
@@ -709,24 +588,6 @@ ship "Hauler III"
   explode "huge explosion" 5
   "final explode" "final explosion large"
   description "Considered by many to be outdated, there are nonetheless many Haulers still in service due to their combination of comparatively low price and simple construction. This large version of the Hauler provides the best tradeoff between price and cargo space."
-
-
-ship "Hauler III" "Hauler III (Hai)"
-  outfits
-    "Corundum Regenerator"
-    "Geode Reactor"
-    "Hyperdrive"
-
-    `"Biroo" Atomic Thruster`
-    `"Biroo" Atomic Steering`
-
-    "Pulse Turret" 2
-    "Chameleon Anti-Missile" 2
-
-    "Gorge Batteries"
-    "Williwaw Cooling"
-    "Fuel Pod" 53
-    "Yoloy Scanner"
 
 
 ship "Hauler III" "Hauler III (Miner)"
@@ -745,6 +606,7 @@ ship "Hauler III" "Hauler III (Miner)"
     "Asteroid Scanner"
     "Fuel Pod" 53
     "Ramscoop"
+    "Small Radar Jammer" 2
     "Tactical Scanner" 4
 
 
@@ -758,12 +620,12 @@ ship "Nest"
 #    manufacturer "Southbound"
     licences
       Nest
-    "cost" 2500000
+    "cost" 3000000
     "shields" 2500
     "hull" 3700
     "required crew" 6
     "bunks" 14
-    "mass" 250
+    "mass" 280
     "drag" 10.5
     "heat dissipation" .6
     "cargo space" 30
@@ -772,10 +634,15 @@ ship "Nest"
     "engine space" 80
     "weapon space" 140
     weapon
-      "blast radius" 60
-      "shield damage" 600
-      "hull damage" 300
-      "hit force" 900
+      "blast radius" 152
+      "shield damage" 560
+      "random shield damage" 960
+      "hull damage" 840
+      "random hull damage" 1440
+      "heat damage" 16800
+      "random heat damage" 28800
+      "hit force" 1400
+      "random hit force" 2400
   outfits
     "D41-HY Shield Generator" 2
     "S3 Thermionic"
@@ -784,21 +651,23 @@ ship "Nest"
     "Greyhound Plasma Thruster"
     "Impala Plasma Steering"
 
-    "K4 Blaster Turret" 4
+    "Javelin" 128
+    "Javelin Storage Crate" 2
+    "Javelin Pod" 2
+    "Bolt Turret" 4
 
     "LP144a Battery Pack"
-    "Liquid Water Cooler"
-    "Fuel Pod" 42
+    "Fuel Pod" 43
     "Large Radar Jammer"
     "Tactical Scanner" 4
   engine -45 122
   engine 45 122
   gun -15 -91
   gun 15 -91
-  turret -26 -50 "K4 Blaster Turret"
-  turret 26 -50 "K4 Blaster Turret"
-  turret -18 75 "K4 Blaster Turret"
-  turret 18 75 "K4 Blaster Turret"
+  turret -26 -50 "Bolt Turret"
+  turret 26 -50 "Bolt Turret"
+  turret -18 75 "Bolt Turret"
+  turret 18 75 "Bolt Turret"
   fighter -47 12 under
   fighter 47 12 under
   leak "leak" 60 50
@@ -809,27 +678,7 @@ ship "Nest"
   explode "medium explosion" 20
   explode "large explosion" 5
   "final explode" "final explosion medium"
-  description `Southbound Shipyards quickly answered the Free Worlds' call for a carrier by building modified cargo containers for Haulers - adding a pair of Fighter docking arms, some additional outfit space, and even a couple of bunks. Access to the fighters from within the ship is so inconvenient that most pilots opt to just stay aboard their fighters when in flight. While the technical name for this ship is "Hauler I: Type F", Southbound assembly workers started calling the single container variant the "Nest" due to its complement of Hag Fighters, and the name stuck.`
-
-
-ship "Nest" "Nest (Sidewinder)"
-  outfits
-    "D94-YV Shield Generator"
-    "S3 Thermionic"
-    "Hyperdrive"
-
-    "Greyhound Plasma Thruster"
-    "Impala Plasma Steering"
-
-    "Sidewinder Missile" 54
-    "Sidewinder Missile Rack" 18
-    "Sidewinder Missile Launcher" 2
-    "X4 Blaster Turret" 2
-    "Heavy Anti-Missile" 2
-
-    "LP144a Battery Pack"
-    "Fuel Pod" 42
-    "Tactical Scanner" 4
+  description `Southbound Shipyards quickly answered the Free Worlds' call for a carrier by building modified cargo containers for Haulers – adding a pair of Fighter docking arms, some additional outfit space, and even a couple of bunks. Access to the fighters from within the ship is so inconvenient that most pilots opt to just stay aboard their fighters when in flight. While the technical name for this ship is "Hauler I: Type F", Southbound assembly workers started calling the single container variant the "Nest" due to its complement of Hag Fighters, and the name stuck.`
 
 
 
@@ -838,15 +687,15 @@ ship "Roost"
   thumbnail "thumbnail/roost"
 #    manufacturer "Southbound"
   attributes
-    category "Corvette"
+    category "Frigate"
     licences
       Roost
-    "cost" 3000000
+    "cost" 4000000
     "shields" 2900
     "hull" 5200
     "required crew" 8
     "bunks" 16
-    "mass" 360
+    "mass" 420
     "drag" 11.5
     "heat dissipation" .6
     "cargo space" 60
@@ -855,10 +704,15 @@ ship "Roost"
     "engine space" 80
     "weapon space" 140
     weapon
-      "blast radius" 80
-      "shield damage" 800
-      "hull damage" 400
-      "hit force" 1200
+      "blast radius" 202
+      "shield damage" 840
+      "random shield damage" 1180
+      "hull damage" 1260
+      "random hull damage" 1770
+      "heat damage" 25200
+      "random heat damage" 35400
+      "hit force" 2100
+      "random hit force" 2950
   outfits
     "D41-HY Shield Generator" 4
     "S3 Thermionic"
@@ -867,21 +721,23 @@ ship "Roost"
     "Greyhound Plasma Thruster"
     "Impala Plasma Steering"
 
-    "K4 Blaster Turret" 4
+    "Javelin" 128
+    "Javelin Storage Crate" 2
+    "Javelin Pod" 2
+    "Bolt Turret" 4
 
     "LP144a Battery Pack"
-    "Liquid Water Cooler"
-    "Fuel Pod" 62
+    "Fuel Pod" 65
     "Large Radar Jammer"
     "Tactical Scanner" 4
   engine -45 159
   engine 45 159
   gun -15 -128
   gun 15 -128
-  turret -26 -85 "K4 Blaster Turret"
-  turret 26 -85 "K4 Blaster Turret"
-  turret -18 114 "K4 Blaster Turret"
-  turret 18 114 "K4 Blaster Turret"
+  turret -26 -85 "Bolt Turret"
+  turret 26 -85 "Bolt Turret"
+  turret -18 114 "Bolt Turret"
+  turret 18 114 "Bolt Turret"
   fighter -47 -24 under
   fighter 47 -24 under
   fighter -47 50 under
@@ -897,26 +753,6 @@ ship "Roost"
   description `Southbound Shipyards' new fighter-carrying containers have created a new use for what many considered an outdated design. Four external fighter bays make this the biggest civilian carrier on the market, if a little awkward as a warship. After Southbound assembly workers successfully named the "Nest", "Hauler II: Type F" was quickly dubbed the "Roost" to continue the theme.`
 
 
-ship "Roost" "Roost (Sidewinder)"
-  outfits
-    "D94-YV Shield Generator" 2
-    "S3 Thermionic"
-    "Hyperdrive"
-
-    "Greyhound Plasma Thruster"
-    "Impala Plasma Steering"
-
-    "Sidewinder Missile" 54
-    "Sidewinder Missile Rack" 18
-    "Sidewinder Missile Launcher" 2
-    "X4 Blaster Turret" 2
-    "Heavy Anti-Missile" 2
-
-    "LP144a Battery Pack"
-    "Fuel Pod" 62
-    "Tactical Scanner" 4
-
-
 
 ship "Skein"
   sprite "ship/skein"
@@ -926,12 +762,12 @@ ship "Skein"
 #    manufacturer "Southbound"
     licences
       Skein
-    "cost" 3500000
+    "cost" 5000000
     "shields" 3300
     "hull" 6700
     "required crew" 10
     "bunks" 18
-    "mass" 470
+    "mass" 560
     "drag" 12.5
     "heat dissipation" .6
     "cargo space" 90
@@ -940,10 +776,15 @@ ship "Skein"
     "engine space" 80
     "weapon space" 140
     weapon
-      "blast radius" 100
-      "shield damage" 1000
-      "hull damage" 500
-      "hit force" 1500
+      "blast radius" 252
+      "shield damage" 1120
+      "random shield damage" 1400
+      "hull damage" 1680
+      "random hull damage" 2100
+      "heat damage" 33600
+      "random heat damage" 42000
+      "hit force" 2800
+      "random hit force" 3500
   outfits
     "D41-HY Shield Generator" 6
     "S3 Thermionic"
@@ -952,21 +793,23 @@ ship "Skein"
     "Greyhound Plasma Thruster"
     "Impala Plasma Steering"
 
-    "K4 Blaster Turret" 4
+    "Javelin" 128
+    "Javelin Storage Crate" 2
+    "Javelin Pod" 2
+    "Bolt Turret" 4
 
     "LP144a Battery Pack"
-    "Liquid Water Cooler"
-    "Fuel Pod" 83
+    "Fuel Pod" 87
     "Large Radar Jammer"
     "Tactical Scanner" 4
   engine -45 197
   engine 45 197
   gun -15 -165
   gun 15 -165
-  turret -26 -123 "K4 Blaster Turret"
-  turret 26 -123 "K4 Blaster Turret"
-  turret -18.5 154 "K4 Blaster Turret"
-  turret 18.5 154 "K4 Blaster Turret"
+  turret -26 -123 "Bolt Turret"
+  turret 26 -123 "Bolt Turret"
+  turret -18.5 154 "Bolt Turret"
+  turret 18.5 154 "Bolt Turret"
   fighter -47 -61 under
   fighter 47 -61 under
   fighter -47 14 under
@@ -981,27 +824,7 @@ ship "Skein"
   explode "large explosion" 20
   explode "huge explosion" 5
   "final explode" "final explosion large"
-  description `This particular cockpit and engine set has found itself attached to three of Southbound Shipyards' new "Type F" Fighter-carrier pods. When the Free Worlds asked for a carrier, they did not expect one that would be able to carry more fighters than even the heaviest Navy warships. Given this fact, the Free Worlds have asked Southbound and Tarazed to restrict sale of the "Hauler III: Type F", "Skein" to its Militia only.`
-
-
-ship "Skein" "Skein (Sidewinder)"
-  outfits
-    "D94-YV Shield Generator" 3
-    "S3 Thermionic"
-    "Hyperdrive"
-
-    "Greyhound Plasma Thruster"
-    "Impala Plasma Steering"
-
-    "Sidewinder Missile" 54
-    "Sidewinder Missile Rack" 18
-    "Sidewinder Missile Launcher" 2
-    "X4 Blaster Turret" 2
-    "Heavy Anti-Missile" 2
-
-    "LP144a Battery Pack"
-    "Fuel Pod" 83
-    "Tactical Scanner" 4
+  description `This particular cockpit and engine set has found itself attached to three of Southbound Shipyards' new "Type F" Fighter-carrier pods. When the Free Worlds asked for a carrier, they did not expect one that would be able to carry more fighters than even the heaviest Navy warships. Given this fact, the Free Worlds have asked Southbound to restrict sale of the "Hauler III: Type F", "Skein" to its military only.`
 
 
 
@@ -1022,30 +845,35 @@ ship "Stymphalian"
     "drag" 3.8
     "heat dissipation" .8
     "cargo space" 25
-    "outfit space" 260
-    "core space" 150
-    "engine space" 50
+    "outfit space" 250
+    "core space" 130
+    "engine space" 60
     "weapon space" 60
     weapon
-      "blast radius" 40
-      "shield damage" 400
-      "hull damage" 200
-      "hit force" 600
+      "blast radius" 91
+      "shield damage" 360
+      "random shield damage" 550
+      "hull damage" 540
+      "random hull damage" 825
+      "heat damage" 10800
+      "random heat damage" 16500
+      "hit force" 900
+      "random hit force" 1375
   outfits
     "D23-QP Shield Generator"
     "nGVF-CC Fuel Cell"
     "Hyperdrive"
 
-    "Chipmunk Plasma Thruster"
+    "Greyhound Plasma Thruster"
     "Greyhound Plasma Steering"
 
     "Javelin" 256
     "Javelin Storage Crate" 4
     "Javelin Pod" 4
-    "K1 Blaster Cannon" 2
 
     "LP036a Battery Pack"
-    "Fuel Pod" 28
+    "Fuel Pod" 23
+    "Large Radar Jammer"
     "Tactical Scanner" 3
   engine -8 46
   engine 8 46
@@ -1061,4 +889,22 @@ ship "Stymphalian"
   explode "medium explosion" 15
   "final explode" "final explosion small"
   description "The Stymphalian is a missile boat and comes equipped with four missile launchers and enough ammunition to destroy ships many times its size. Because of their lack of manoeuvrability and relatively light shielding, Stymphalians serve best in hit-and-run attack waves. Once their missile supply is spent, they are relatively useless in combat."
+
+
+ship "Stymphalian" "Stymphalian (Flamethrower)"
+  outfits
+    "D23-QP Shield Generator"
+    "nGVF-CC Fuel Cell"
+    "Hyperdrive"
+
+    "Greyhound Plasma Thruster"
+    "Greyhound Plasma Steering"
+
+    "Flamethrower" 6
+
+    "LP036a Battery Pack"
+    "Fuel Pod" 23
+    "Catalytic Ramscoop"
+    "Large Radar Jammer"
+    "Tactical Scanner" 3
 

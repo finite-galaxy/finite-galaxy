@@ -1,0 +1,48 @@
+outfit "Bolt Cannon"
+  category "Cannons"
+  thumbnail "outfit/bolt_cannon"
+  cost 53000
+  "mass" 9
+  "outfit space" -9
+  "weapon space" -9
+  "gun ports" -1
+  weapon
+    sprite "projectile/bolt"
+    sound "bolt"
+    "hit effect" "bolt impact"
+    "inaccuracy" 1
+    "velocity" 13
+    "lifetime" 53
+    "reload" 30
+    "firing energy" 27
+    "firing heat" 36
+    "shield damage" 42
+    "hull damage" 18
+  description "The Tarazed Bolt Cannon fires high velocity energy bolts, which are quite effective at reducing ship shields, but not very good at damaging the hull."
+
+outfit "Bolt Turret"
+  category "Turrets"
+  thumbnail "outfit/bolt_turret"
+  cost 270000
+  "mass" 24
+  "drag" .24
+  "outfit space" -24
+  "weapon space" -24
+  "turret mounts" -1
+  weapon
+    sprite "projectile/bolt"
+    "hardpoint sprite" "hardpoint/bolt_turret"
+    "hardpoint offset" 10.
+    sound "bolt"
+    "hit effect" "bolt impact"
+    "inaccuracy" 1
+    "turret turn" 2.5
+    "velocity" 13
+    "lifetime" 53
+    "reload" 15
+    "firing energy" 27
+    "firing heat" 36
+    "shield damage" 42
+    "hull damage" 18
+  description "This is the turreted version of Tarazed's Bolt Cannon. The engineers claim it was 'inspired by' Quarg technology, although it is unclear how exactly."
+

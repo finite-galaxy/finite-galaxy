@@ -87,7 +87,7 @@ void TradingPanel::Draw()
   if(selectedRow >= 0 && selectedRow < COMMODITY_COUNT)
     FillShader::Fill(Point(-60., FIRST_Y + 20 * selectedRow + 33), Point(480., 20.), back);
   
-  const Font &font = FontSet::Get(14);
+  const Font &font = FontSet::Get(18);
   const Colour &unselected = *GameData::Colours().Get("medium");
   const Colour &selected = *GameData::Colours().Get("bright");
   
@@ -97,7 +97,7 @@ void TradingPanel::Draw()
   font.Draw("Commodity", Point(NAME_X, y), selected);
   font.Draw("Price", Point(PRICE_X, y), selected);
   
-  string mod = "x " + to_string(Modifier());
+  string mod = "× " + to_string(Modifier());
   font.Draw(mod, Point(BUY_X, y), unselected);
   font.Draw(mod, Point(SELL_X, y), unselected);
   
@@ -181,7 +181,7 @@ void TradingPanel::Draw()
     }
     else
     {
-      font.Draw("----", Point(PRICE_X, y), colour);
+      font.Draw("—", Point(PRICE_X, y), colour);
       font.Draw("(not for sale)", Point(LEVEL_X, y), colour);
     }
     
@@ -218,7 +218,7 @@ bool TradingPanel::KeyDown(SDL_Keycode key, Uint16 mod, const Command &command)
   else if(key == '-' || key == SDLK_BACKSPACE || key == SDLK_DELETE)
     Buy(-1);
   else if(key == 'B' || (key == 'b' && (mod & KMOD_SHIFT)))
-    Buy(1000000000);
+    Buy(1000'000'000);
   else if(key == 'S' || (key == 's' && (mod & KMOD_SHIFT)))
   {
     for(const auto &it : GameData::Commodities())

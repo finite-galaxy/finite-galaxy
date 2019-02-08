@@ -19,7 +19,7 @@ namespace {
   // whether it should be lost on this try.
   inline bool Check(double probability, double base)
   {
-    return (Random::Real() < base * pow(probability, .2));
+    return (Random::Real() < base * pow(probability, .04));
   }
 }
 
@@ -35,7 +35,7 @@ Projectile::Projectile(const Ship &parent, Point position, Angle angle, const We
   if(parent.IsBoarding() || parent.Commands().Has(Command::BOARD))
     targetShip.reset();
   
-  cachedTarget = targetShip.lock().get();
+  cachedTarget = TargetPtr().get();
   if(cachedTarget)
     targetGovernment = cachedTarget->GetGovernment();
   double inaccuracy = weapon->Inaccuracy();
@@ -58,7 +58,7 @@ Projectile::Projectile(const Projectile &parent, const Weapon *weapon)
   government = parent.government;
   targetGovernment = parent.targetGovernment;
   
-  cachedTarget = targetShip.lock().get();
+  cachedTarget = TargetPtr().get();
   double inaccuracy = weapon->Inaccuracy();
   if(inaccuracy)
   {
@@ -117,7 +117,7 @@ void Projectile::Move(vector<Visual> &visuals, vector<Projectile> &projectiles)
   const Ship *target = cachedTarget;
   if(target)
   {
-    target = targetShip.lock().get();
+    target = TargetPtr().get();
     if(!target || !target->IsTargetable() || target->GetGovernment() != targetGovernment)
     {
       targetShip.reset();
@@ -129,7 +129,7 @@ void Projectile::Move(vector<Visual> &visuals, vector<Projectile> &projectiles)
   double turn = weapon->Turn();
   double accel = weapon->Acceleration();
   int homing = weapon->Homing();
-  if(target && homing && !Random::Int(60))
+  if(target && homing && !Random::Int(12))
     CheckLock(*target);
   if(target && homing && hasLock)
   {
@@ -281,8 +281,8 @@ void Projectile::CheckLock(const Ship &target)
   hasLock = false;
   
   // For each tracking type, calculate the probability that a lock will be
-  // lost in a given five-second period. Then, since this check is done every
-  // second, test against the fifth root of that probability.
+  // lost in a given five-second period. Then, since this check is done about
+  // every 0.2 second (twelve frames), test against the 25th root of the probability.
   if(weapon->Tracking())
     hasLock |= Check(weapon->Tracking(), base);
   
@@ -290,7 +290,7 @@ void Projectile::CheckLock(const Ship &target)
   if(weapon->OpticalTracking())
   {
     double weight = target.Mass() * target.Mass();
-    double probability = weapon->OpticalTracking() * weight / (200000. + weight);
+    double probability = weapon->OpticalTracking() * weight / (200'000. + weight);
     hasLock |= Check(probability, base);
   }
   

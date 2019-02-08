@@ -18,9 +18,9 @@ outfit "Antimatter Cannon"
     "hit effect" "nuke explosion"
     "safe"
     "reload" 187
+    "blast radius" 100
     "firing energy" 5610
     "firing heat" 1870
-    "blast radius" 100
     "hit force" 1000
   description "This is the Drak's ultimate weapon."
 
@@ -36,32 +36,13 @@ outfit "Antimatter Fragment"
     "safe"
     "inaccuracy" 1
     "lifetime" 499
-    "hit force" 1000
+    "blast radius" 100
     "shield damage" 5610
     "hull damage" 5610
-    "blast radius" 100
-
-effect "antimatter spark"
-  sprite "effect/antimatter spark"
-    "frame rate" 3
-  "lifetime" 40
-  "random angle" 1
-  "random spin" .1
-  "random velocity" 8
-  "velocity scale" .6
-
-effect "antimatter dust"
-  sprite "effect/smoke"
-    "no repeat"
-    "frame rate" 30
-  "lifetime" 13
-  "random angle" 30
-  "random spin" 50
-  "random velocity" 12
-  "velocity scale" .1
+    "hit force" 1000
 
 
-outfit "Bolt Turret"
+outfit "Jolt Turret"
   category "Turrets"
   thumbnail "outfit/unknown"
   licences
@@ -73,10 +54,10 @@ outfit "Bolt Turret"
   "weapon space" -48
   "turret mounts" -1
   weapon
-    sprite "projectile/drak bolt"
+    sprite "projectile/jolt"
       "frame rate" 13.318
       "random start frame"
-    "hit effect" "drak bolt impact"
+    "hit effect" "jolt impact"
     "inaccuracy" 1
     "turret turn" 12
     "velocity" 36
@@ -88,16 +69,6 @@ outfit "Bolt Turret"
     "hull damage" 256
     "hit force" 120
   description "This is a turret based cannon with significant range and accuracy."
-
-effect "drak bolt impact"
-  sprite "effect/drak bolt impact"
-    "no repeat"
-    "frame rate" 30
-  sound "explosion small"
-  "lifetime" 20
-  "random angle" 20
-  "random spin" 10
-  "velocity scale" -.05
 
 
 outfit "Distancer"
@@ -122,12 +93,6 @@ outfit "Distancer"
     "firing force" 60
   description "This is a thruster that can produce force in any direction, allowing a Drak ship to keep a safe distance away from its target."
 
-effect "distancer flare"
-  sprite "effect/distancer"
-    "frame rate" 1.618
-  "lifetime" 0
-  "velocity scale" 1
-
 
 outfit "Draining Field"
   category "Turrets"
@@ -148,9 +113,9 @@ outfit "Draining Field"
     "firing energy" 20
     "firing heat" 5
     "firing force" 30
-    "hit force" 60
     "shield damage" 50
     "ion damage" .5
+    "hit force" 60
   description "This device produces a field that drains energy from any ship within it."
 
 

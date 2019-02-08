@@ -4,11 +4,13 @@
 #define INTERFACE_H_
 
 #include "Colour.h"
+#include "Font.h"
 #include "Point.h"
 #include "Rectangle.h"
 
 #include <map>
 #include <string>
+#include <utility>
 #include <vector>
 
 class DataNode;
@@ -149,14 +151,14 @@ private:
     virtual void Place(const Rectangle &bounds, Panel *panel) const override;
     
   private:
-    std::string GetString(const Information &info) const;
+    std::pair<std::string, Font::Layout> GetString(const Information &info) const;
   
   private:
     // The string may either be a name of a dynamic string, or static text.
     std::string str;
     // Colour for inactive, active, and hover states.
     const Colour *colour[3] = {nullptr, nullptr, nullptr};
-    int fontSize = 14;
+    int fontSize = 18;
     char buttonKey = '\0';
     bool isDynamic = false;
   };

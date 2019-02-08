@@ -32,8 +32,8 @@ ship "Gascraft"
     "drag" 1.7
     "heat dissipation" 0.9
     "cargo space" 8
-    "outfit space" 109
-    "core space" 75
+    "outfit space" 106
+    "core space" 72
     "engine space" 34
 # miscellaneous stats
     "shield generation" 0.6
@@ -43,8 +43,18 @@ ship "Gascraft"
     "scan interference" 1
     "tactical scan power" 1
     "gaslining" 1
+    weapon
+      "blast radius" 39
+      "shield damage" 160
+      "random shield damage" 228
+      "hull damage" 240
+      "random hull damage" 342
+      "heat damage" 4800
+      "random heat damage" 6840
+      "hit force" 400
+      "random hit force" 570
   outfits
-    "Millennium Cell"
+    "Pebble Core"
     "Hyperdrive"
 
     "Crucible-Class Thruster"
@@ -92,21 +102,25 @@ ship "Shadow"
     "scan interference" 2
     "tactical scan power" 25
     weapon
-      "blast radius" 80
-      "shield damage" 800
-      "hull damage" 400
-      "hit force" 1200
+      "blast radius" 136
+      "shield damage" 540
+      "random shield damage" 820
+      "hull damage" 810
+      "random hull damage" 1230
+      "heat damage" 16200
+      "random heat damage" 24600
+      "hit force" 1350
+      "random hit force" 2050
   outfits
-    "Epoch Cell" 2
+    "Geode Reactor"
     "Hyperdrive"
 
     "Forge-Class Thruster"
     "Forge-Class Steering"
 
-    "Inhibitor Cannon" 3
-    "Point Defence"
+    "Inhibitor Cannon" 5
 
-    "Heat Sink" 2
+    "Heat Sink"
     "Emergency Ramscoop"
     "Fuel Pod" 62
   engine -16 82 0.7
@@ -115,9 +129,9 @@ ship "Shadow"
   gun 0 -99 "Inhibitor Cannon"
   gun -12 -72 "Inhibitor Cannon"
   gun 12 -72 "Inhibitor Cannon"
-  gun -18 -49
-  gun 18 -49
-  turret 0 2 "Point Defence"
+  gun -18 -49 "Inhibitor Cannon"
+  gun 18 -49 "Inhibitor Cannon"
+  turret 0 2
   explode "tiny explosion" 40
   explode "small explosion" 20
   explode "medium explosion" 10
@@ -128,23 +142,22 @@ ship "Shadow"
 
 ship "Shadow" "Shadow (Heavy)"
   outfits
-    "Epoch Cell" 2
+    "Geode Reactor"
     "Hyperdrive"
 
     "Forge-Class Thruster"
     "Forge-Class Steering"
 
     "Thrasher Cannon" 5
-    "Point Defence"
 
-    "Heat Sink" 2
+    "Heat Sink"
     "Emergency Ramscoop"
     "Fuel Pod" 62
 
 
 ship "Shadow" "Shadow (Hunter)"
   outfits
-    "Epoch Cell" 2
+    "Geode Reactor"
     "Hyperdrive"
 
     "Forge-Class Thruster"
@@ -155,14 +168,14 @@ ship "Shadow" "Shadow (Hunter)"
     "EMP Torpedo Bay"
     "Thrasher Turret"
 
-    "Heat Sink" 2
+    "Heat Sink"
     "Emergency Ramscoop"
     "Fuel Pod" 62
 
 
 ship "Shadow" "Shadow (Sniper)"
   outfits
-    "Epoch Cell" 2
+    "Geode Reactor"
     "Hyperdrive"
 
     "Forge-Class Thruster"
@@ -172,14 +185,14 @@ ship "Shadow" "Shadow (Sniper)"
     "EMP Torpedo Bay"
     "Inhibitor Cannon" 4
 
-    "Heat Sink" 2
+    "Heat Sink"
     "Emergency Ramscoop"
     "Fuel Pod" 62
 
 
 ship "Shadow" "Shadow (Steering)"
   outfits
-    "Epoch Cell" 2
+    "Geode Reactor"
     "Hyperdrive"
 
     "Forge-Class Thruster"
@@ -187,15 +200,14 @@ ship "Shadow" "Shadow (Steering)"
 
     "Inhibitor Cannon" 5
 
-    "Heat Sink" 3
+    "Heat Sink" 2
     "Emergency Ramscoop"
     "Fuel Pod" 62
-    "Extra Outfit Space" 3
 
 
 ship "Shadow" "Shadow (Thrasher)"
   outfits
-    "Epoch Cell" 2
+    "Geode Reactor"
     "Hyperdrive"
 
     "Forge-Class Thruster"
@@ -205,14 +217,13 @@ ship "Shadow" "Shadow (Thrasher)"
     "Thrasher Cannon" 3
     "Thrasher Turret"
 
-    "Heat Sink" 2
+    "Heat Sink"
     "Emergency Ramscoop"
     "Fuel Pod" 62
-    "Extra Outfit Space"
 
 ship "Shadow" "Shadow (Thruster)"
   outfits
-    "Epoch Cell" 2
+    "Geode Reactor"
     "Hyperdrive"
 
     "Smelter-Class Thruster"
@@ -220,10 +231,9 @@ ship "Shadow" "Shadow (Thruster)"
 
     "Inhibitor Cannon" 5
 
-    "Heat Sink" 3
+    "Heat Sink" 2
     "Emergency Ramscoop"
     "Fuel Pod" 62
-    "Extra Outfit Space" 3
 
 
 
@@ -240,14 +250,14 @@ ship "Twilight"
     "hull" 12600
     "required crew" 44
     "bunks" 75
-    "cargo space" 124
     "mass" 610
     "drag" 8.6
     "heat dissipation" 0.6
+    "cargo space" 124
     "outfit space" 698
-    "core space" 320
+    "core space" 310
     "engine space" 142
-    "weapon space" 236
+    "weapon space" 246
 # miscellaneous stats
     "shield generation" 5.2
     "shield energy" 4.6
@@ -256,20 +266,24 @@ ship "Twilight"
     "scan interference" 4
     "tactical scan power" 81
     weapon
-      "blast radius" 360
-      "shield damage" 3600
-      "hull damage" 1800
-      "hit force" 5400
+      "blast radius" 286
+      "shield damage" 1220
+      "random shield damage" 1644
+      "hull damage" 1830
+      "random hull damage" 2466
+      "heat damage" 36600
+      "random heat damage" 49320
+      "hit force" 3050
+      "random hit force" 4110
   outfits
-    "Aeon Cell" 2
+    "Boulder Reactor"
     "Hyperdrive"
 
     "Smelter-Class Thruster"
     "Smelter-Class Steering"
 
-    "Inhibitor Cannon" 6
+    "Inhibitor Cannon" 7
     "Thrasher Turret" 2
-    "Point Defence"
 
     "Heat Sink" 6
     "Emergency Ramscoop"
@@ -277,7 +291,7 @@ ship "Twilight"
   engine -28 155 .8
   engine 28 155 .8
   engine 0 184 .9
-  gun 0 -190
+  gun 0 -190 "Inhibitor Cannon"
   gun -9 -177 "Inhibitor Cannon"
   gun 9 -177 "Inhibitor Cannon"
   gun -14 -162 "Inhibitor Cannon"
@@ -288,7 +302,7 @@ ship "Twilight"
   turret 23 -34 "Thrasher Turret"
   turret -74 62
   turret 74 62
-  turret 0 77 "Point Defence"
+  turret 0 77
   explode "small explosion" 30
   explode "medium explosion" 60
   explode "large explosion" 40
@@ -299,7 +313,7 @@ ship "Twilight"
 
 ship "Twilight" "Twilight (Heavy)"
   outfits
-    "Aeon Cell" 2
+    "Boulder Reactor"
     "Hyperdrive"
 
     "Forge-Class Thruster"
@@ -329,7 +343,7 @@ ship "Twilight" "Twilight (Heavy)"
 
 ship "Twilight" "Twilight (Sniper)"
   outfits
-    "Aeon Cell" 2
+    "Boulder Reactor"
     "Hyperdrive"
 
     "Forge-Class Thruster"
@@ -340,7 +354,6 @@ ship "Twilight" "Twilight (Sniper)"
     "EMP Torpedo" 18
     "EMP Torpedo Bay" 2
     "Inhibitor Cannon" 5
-    "Point Defence" 3
 
     "Heat Sink" 6
     "Emergency Ramscoop"
@@ -352,23 +365,17 @@ ship "Twilight" "Twilight (Sniper)"
   gun "Inhibitor Cannon"
   gun "EMP Torpedo Bay"
   gun "EMP Torpedo Bay"
-  turret "Point Defence"
-  turret "Point Defence"
-  turret
-  turret
-  turret "Point Defence"
 
 
 ship "Twilight" "Twilight (Turret)"
   outfits
-    "Aeon Cell" 2
+    "Boulder Reactor"
     "Hyperdrive"
 
     "Smelter-Class Thruster"
     "Smelter-Class Steering"
 
-    "Thrasher Turret" 4
-    "Point Defence"
+    "Thrasher Turret" 5
 
     "Heat Sink" 6
     "Emergency Ramscoop"
@@ -377,5 +384,4 @@ ship "Twilight" "Twilight (Turret)"
   turret "Thrasher Turret"
   turret "Thrasher Turret"
   turret "Thrasher Turret"
-  turret "Point Defence"
-
+  turret "Thrasher Turret"

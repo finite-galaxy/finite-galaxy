@@ -409,7 +409,7 @@ void ShipInfoDisplay::UpdateAttributes(const Ship &ship, const Depreciation &dep
     attributeValues.push_back(Format::Round(60. * turning / fullMass));
   else
     attributeValues.push_back(Format::Round(60. * turning / fullMass)
-      + " / " + Format::Round(60. * turning / emptyMass));
+      + "° / " + Format::Round(60. * turning / emptyMass) + "°");
   attributesHeight += 20;
   if(!canBeCarried && (attributes.Get("hyperdrive") || attributes.Get("jump drive")))
   {

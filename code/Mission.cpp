@@ -784,9 +784,15 @@ bool Mission::Do(Trigger trigger, PlayerInfo &player, UI *ui, const shared_ptr<S
     ++player.Conditions()[name + ": active"];
   }
   else if(trigger == DECLINE)
+  {
     ++player.Conditions()[name + ": offered"];
+    ++player.Conditions()[name + ": declined"];
+  }
   else if(trigger == FAIL)
+  {
     --player.Conditions()[name + ": active"];
+    ++player.Conditions()[name + ": failed"];
+  }
   else if(trigger == COMPLETE)
   {
     --player.Conditions()[name + ": active"];
@@ -1006,7 +1012,7 @@ Mission Mission::Instantiate(const PlayerInfo &player, const shared_ptr<Ship> &b
   
   // Estimate how far the player will have to travel to visit all the waypoints
   // and stopovers and then to land on the destination planet. Rather than a
-  // full traveling salesman path, just calculate a greedy approximation.
+  // full travelling salesman path, just calculate a greedy approximation.
   const System *path = source;
   list<const System *> destinations;
   for(const System *system : result.waypoints)

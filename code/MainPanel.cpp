@@ -97,7 +97,7 @@ void MainPanel::Step()
     shared_ptr<Ship> target = flagship->GetTargetShip();
     if(isActive && target && target->IsDisabled() && !target->GetGovernment()->IsEnemy())
       isActive = !DoHelp("friendly disabled");
-    if(isActive && !flagship->IsHyperspacing() && flagship->Position().Length() > 10000.
+    if(isActive && !flagship->IsHyperspacing() && flagship->Position().Length() > 10'000.
         && player.GetDate() <= GameData::Start().GetDate() + 4)
     {
       ++lostness;
@@ -143,10 +143,10 @@ void MainPanel::Draw()
     if(canDrag)
     {
       const Colour &dragColour = *GameData::Colours().Get("drag select");
-      LineShader::Draw(dragSource, Point(dragSource.X(), dragPoint.Y()), .8, dragColour);
-      LineShader::Draw(Point(dragSource.X(), dragPoint.Y()), dragPoint, .8, dragColour);
-      LineShader::Draw(dragPoint, Point(dragPoint.X(), dragSource.Y()), .8, dragColour);
-      LineShader::Draw(Point(dragPoint.X(), dragSource.Y()), dragSource, .8, dragColour);
+      LineShader::Draw(dragSource, Point(dragSource.X(), dragPoint.Y()), .8f, dragColour);
+      LineShader::Draw(Point(dragSource.X(), dragPoint.Y()), dragPoint, .8f, dragColour);
+      LineShader::Draw(dragPoint, Point(dragPoint.X(), dragSource.Y()), .8f, dragColour);
+      LineShader::Draw(Point(dragPoint.X(), dragSource.Y()), dragSource, .8f, dragColour);
     }
     else
       isDragging = false;
@@ -156,7 +156,7 @@ void MainPanel::Draw()
   {
     string loadString = to_string(lround(load * 100.)) + "% GPU";
     const Colour &colour = *GameData::Colours().Get("medium");
-    FontSet::Get(14).Draw(loadString, Point(10., Screen::Height() * -.5 + 5.), colour);
+    FontSet::Get(18).Draw(loadString, Point(10., Screen::Height() * -.5 + 5.), colour);
   
     loadSum += loadTimer.Time();
     if(++loadCount == 60)

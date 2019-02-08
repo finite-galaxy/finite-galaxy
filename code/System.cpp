@@ -26,7 +26,7 @@ namespace {
   // Standard deviation of the daily production of each commodity:
   const double VOLUME = 2000.;
   // Above this supply amount, price differences taper off:
-  const double LIMIT = 20000.;
+  const double LIMIT = 20'000.;
 }
 
 const double System::NEIGHBOR_DISTANCE = 100.;
@@ -497,7 +497,7 @@ double System::AsteroidBelt() const
 
 
 
-// Get the rate of solar collection and ramscoop refueling.
+// Get the rate of solar collection and ramscoop refuelling.
 double System::SolarPower() const
 {
   return solarPower;

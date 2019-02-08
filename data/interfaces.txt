@@ -479,7 +479,7 @@ interface "planet"
   button t "_Trading"
     centre -400 90
     dimensions 140 40
-    size 18
+    size 24
     align left
     pad 10 0
 
@@ -489,7 +489,7 @@ interface "planet"
   button h "_Hire Crew"
     centre -400 145
     dimensions 140 40
-    size 18
+    size 24
     align left
     pad 10 0
   
@@ -499,7 +499,7 @@ interface "planet"
   button j "_Job Board"
     centre -400 200
     dimensions 140 40
-    size 18
+    size 24
     align left
     pad 10 0
   
@@ -509,7 +509,7 @@ interface "planet"
   button p "Space_port"
     centre -400 310
     dimensions 140 40
-    size 18
+    size 24
     align left
     pad 10 0
   
@@ -529,7 +529,7 @@ interface "planet"
   button s "_Shipyard"
     centre 280 90
     dimensions 140 40
-    size 18
+    size 24
     align right
     pad 10 0
   
@@ -539,7 +539,7 @@ interface "planet"
   button o "_Outfitter"
     centre 280 145
     dimensions 140 40
-    size 18
+    size 24
     align right
     pad 10 0
   
@@ -549,7 +549,7 @@ interface "planet"
   button b "_Bank"
     centre 280 200
     dimensions 140 40
-    size 18
+    size 24
     align right
     pad 10 0
   
@@ -559,7 +559,7 @@ interface "planet"
   button d "_Depart"
     centre 280 310
     dimensions 140 40
-    size 18
+    size 24
     align right
     pad 10 0
 
@@ -901,11 +901,11 @@ interface "map buttons" bottom right
   active if "!max zoom"
   button + "_+"
     from -10 -50 to -40 -80
-    size 18
+    size 24
   active if "!min zoom"
   button - "_-"
     from -50 -50 to -80 -80
-    size 18
+    size 24
 
 
 

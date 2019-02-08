@@ -4,6 +4,7 @@
 #define WEAPON_H_
 
 #include "Body.h"
+#include "Point.h"
 
 #include <map>
 
@@ -59,7 +60,7 @@ public:
   double RandomVelocity() const;
   double Acceleration() const;
   double Drag() const;
-  double HardpointOffset() const;
+  const Point &HardpointOffset() const;
   
   double Turn() const;
   double Inaccuracy() const;
@@ -79,6 +80,7 @@ public:
   double TriggerRadius() const;
   double BlastRadius() const;
   double HitForce() const;
+  double RandomHitForce() const;
   
   // A "safe" weapon hits only hostile ships (even if it has a blast radius).
   // A "phasing" weapon hits only its intended target; it passes through
@@ -97,6 +99,13 @@ public:
   double IonDamage() const;
   double DisruptionDamage() const;
   double SlowingDamage() const;
+  double RandomShieldDamage() const;
+  double RandomHullDamage() const;
+  double RandomFuelDamage() const;
+  double RandomHeatDamage() const;
+  double RandomIonDamage() const;
+  double RandomDisruptionDamage() const;
+  double RandomSlowingDamage() const;
   // Check if this weapon does damage. If not, attacking a ship with this
   // weapon is not a provocation (even if you push or pull it).
   bool DoesDamage() const;
@@ -117,6 +126,7 @@ protected:
   
 private:
   double TotalDamage(int index) const;
+  double TotalRandomDamage(int index) const;
   
   
 private:
@@ -155,7 +165,7 @@ private:
   double randomVelocity = 0.;
   double acceleration = 0.;
   double drag = 0.;
-  double hardpointOffset = 0.;
+  Point hardpointOffset = {0., 0.};
   
   double turn = 0.;
   double inaccuracy = 0.;
@@ -185,11 +195,13 @@ private:
   static const int SLOWING_DAMAGE = 6;
   static const int HIT_FORCE = 7;
   mutable double damage[DAMAGE_TYPES] = {0., 0., 0., 0., 0., 0., 0., 0.};
+  mutable double randomDamage[DAMAGE_TYPES] = {0., 0., 0., 0., 0., 0., 0., 0.};
   
   double piercing = 0.;
   
   // Cache the calculation of these values, for faster access.
   mutable bool calculatedDamage = true;
+  mutable bool calculatedRandomDamage = true;
   mutable bool doesDamage = false;
   mutable double totalLifetime = -1.;
 };
@@ -212,7 +224,7 @@ inline double Weapon::Velocity() const { return velocity; }
 inline double Weapon::RandomVelocity() const { return randomVelocity; }
 inline double Weapon::Acceleration() const { return acceleration; }
 inline double Weapon::Drag() const { return drag; }
-inline double Weapon::HardpointOffset() const { return hardpointOffset; }
+inline const Point &Weapon::HardpointOffset() const { return hardpointOffset; }
 
 inline double Weapon::Turn() const { return turn; }
 inline double Weapon::Inaccuracy() const { return inaccuracy; }
@@ -234,6 +246,7 @@ inline double Weapon::SplitRange() const { return splitRange; }
 inline double Weapon::TriggerRadius() const { return triggerRadius; }
 inline double Weapon::BlastRadius() const { return blastRadius; }
 inline double Weapon::HitForce() const { return TotalDamage(HIT_FORCE); }
+inline double Weapon::RandomHitForce() const { return TotalRandomDamage(HIT_FORCE); }
 
 inline bool Weapon::IsSafe() const { return isSafe; }
 inline bool Weapon::IsPhasing() const { return isPhasing; }
@@ -246,6 +259,14 @@ inline double Weapon::HeatDamage() const { return TotalDamage(HEAT_DAMAGE); }
 inline double Weapon::IonDamage() const { return TotalDamage(ION_DAMAGE); }
 inline double Weapon::DisruptionDamage() const { return TotalDamage(DISRUPTION_DAMAGE); }
 inline double Weapon::SlowingDamage() const { return TotalDamage(SLOWING_DAMAGE); }
+
+inline double Weapon::RandomShieldDamage() const { return TotalRandomDamage(SHIELD_DAMAGE); }
+inline double Weapon::RandomHullDamage() const { return TotalRandomDamage(HULL_DAMAGE); }
+inline double Weapon::RandomFuelDamage() const { return TotalRandomDamage(FUEL_DAMAGE); }
+inline double Weapon::RandomHeatDamage() const { return TotalRandomDamage(HEAT_DAMAGE); }
+inline double Weapon::RandomIonDamage() const { return TotalRandomDamage(ION_DAMAGE); }
+inline double Weapon::RandomDisruptionDamage() const { return TotalRandomDamage(DISRUPTION_DAMAGE); }
+inline double Weapon::RandomSlowingDamage() const { return TotalRandomDamage(SLOWING_DAMAGE); }
 
 inline bool Weapon::DoesDamage() const { if(!calculatedDamage) TotalDamage(0); return doesDamage; }
 

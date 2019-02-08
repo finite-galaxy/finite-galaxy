@@ -3,6 +3,7 @@
 #ifndef GAME_DATA_H_
 #define GAME_DATA_H_
 
+#include "Sale.h"
 #include "Set.h"
 #include "Trade.h"
 
@@ -91,10 +92,12 @@ public:
   static const Set<Minable> &Minables();
   static const Set<Mission> &Missions();
   static const Set<Outfit> &Outfits();
+  static const Set<Sale<Outfit>> &Outfitters();
   static const Set<Person> &Persons();
   static const Set<Phrase> &Phrases();
   static const Set<Planet> &Planets();
   static const Set<Ship> &Ships();
+  static const Set<Sale<Ship>> &Shipyards();
   static const Set<System> &Systems();
   
   static const Government *PlayerGovernment();
@@ -117,7 +120,7 @@ public:
   
   // Strings for combat rating levels, etc.
   static const std::string &Rating(const std::string &type, int level);
-   static const std::vector<std::string> &Categories(const std::string &type); 
+  static const std::vector<std::string> &Categories(const std::string &type); 
   
   static const StarField &Background();
   static void SetHaze(const Sprite *sprite);
