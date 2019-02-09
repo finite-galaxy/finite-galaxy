@@ -1041,7 +1041,6 @@ void PlayerInfo::Land(UI *ui)
   
   // Hire extra crew back if any were lost in-flight (i.e. boarding) or
   // some bunks were freed up upon landing (i.e. completed missions).
-  bool hasSpaceport = planet->HasSpaceport() && planet->CanUseServices();
   if(Preferences::Has("Rehire extra crew when lost") && hasSpaceport && flagship)
   {
     int added = desiredCrew - flagship->Crew();
@@ -1401,9 +1400,10 @@ void PlayerInfo::RefuelRatio(double ratio)
     out << "You paid " << fuelPrice << " credits to buy " << rechargedFuel << " units of fuel.";
     Messages::Add(out.str());
     accounts.AddCredits(-fuelPrice);
+  }
+}
 
 
-    
 
 double PlayerInfo::FuelNeeded(double ratio)
 {
@@ -1413,7 +1413,7 @@ double PlayerInfo::FuelNeeded(double ratio)
       neededFuel += ship->FuelMissing(ratio);
   
   return neededFuel;
-
+}
 
 
 
