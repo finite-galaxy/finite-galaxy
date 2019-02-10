@@ -88,7 +88,7 @@ void Planet::Load(const DataNode &node)
         security = 0.;
       else if(key == "tribute")
         tribute = 0;
-      else if(key == "fuel price")
+      else if(key == "fuel")
         fuelPrice = -1;
       
       // If not in "overwrite" mode, move on to the next node.
@@ -183,7 +183,7 @@ void Planet::Load(const DataNode &node)
           grand.PrintTrace("Skipping unrecognized tribute attribute:");
       }
     }
-    else if(key == "fuel price")
+    else if(key == "fuel")
       fuelPrice = child.Value(valueIndex);
     else
       child.PrintTrace("Skipping unrecognized attribute:");

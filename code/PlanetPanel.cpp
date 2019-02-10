@@ -186,6 +186,7 @@ bool PlanetPanel::KeyDown(SDL_Keycode key, Uint16 mod, const Command &command)
   }
   else if(key == 'r' && flagship && planet.GetFuelPrice() >= 0)
   {
+    refuel.get()->RefreshUI();
     selectedPanel = refuel.get();
     GetUI()->Push(refuel);
   }

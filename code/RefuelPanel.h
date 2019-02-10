@@ -19,15 +19,13 @@ public:
   virtual void Step() override;
   virtual void Draw() override;
   
+  void RefreshUI();
+  
   
 protected:
   // Only override the ones you need; the default action is to return false.
   virtual bool KeyDown(SDL_Keycode key, Uint16 mod, const Command &command) override;
   virtual bool Click(int x, int y, int clicks) override;
-  
-  
-private:
-  void RefreshUI();
   
   
 private:

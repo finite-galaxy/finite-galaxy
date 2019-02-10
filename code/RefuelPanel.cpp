@@ -47,7 +47,7 @@ void RefuelPanel::Draw()
   
   string localPrice = "The fuel price on this planet is " + Format::Number(player.GetPlanet()->GetFuelPrice()) + " credits per unit of fuel.";
   
-  const Font &font = FontSet::Get(14);
+  const Font &font = FontSet::Get(18);
   const Colour &colour = *GameData::Colours().Get("bright");
   Information info;
   
@@ -84,6 +84,19 @@ void RefuelPanel::Draw()
 
 
 
+void RefuelPanel::RefreshUI()
+{
+  empty = player.FuelNeeded(1);
+  if(empty)
+  {
+    fuel = player.FuelNeeded(ratio);
+    double price = player.GetPlanet()->GetFuelPrice();
+    refuelPrice = fuel*price;
+  }
+}
+
+
+
 // Only override the ones you need; the default action is to return false.
 bool RefuelPanel::KeyDown(SDL_Keycode key, Uint16 mod, const Command &command)
 {
@@ -115,17 +128,4 @@ bool RefuelPanel::Click(int x, int y, int clicks)
   }
   
   return false;
-}
-
-
-
-void RefuelPanel::RefreshUI()
-{
-  empty = player.FuelNeeded(1);
-  if(empty)
-  {
-    fuel = player.FuelNeeded(ratio);
-    double price = player.GetPlanet()->GetFuelPrice();
-    refuelPrice = fuel*price;
-  }
 }
