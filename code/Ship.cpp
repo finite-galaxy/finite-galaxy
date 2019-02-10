@@ -504,7 +504,7 @@ void Ship::FinishLoading(bool isNewInstance)
   // If this ship is being instantiated for the first time, make sure its
   // crew, fuel, etc. are all refilled.
   if(isNewInstance)
-    Recharge(true);
+    Recharge();
 
   // Add a default "launch effect" to any internal bays if this ship is crewed (i.e. pressurized).
   for(Bay &bay : bays)
@@ -2220,7 +2220,7 @@ void Ship::Restore()
   explosionCount = 0;
   explosionRate = 0;
   UnmarkForRemoval();
-  Recharge(true);
+  Recharge();
 }
 
 
