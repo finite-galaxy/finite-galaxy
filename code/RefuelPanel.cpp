@@ -51,7 +51,7 @@ void RefuelPanel::Draw()
   const Colour &colour = *GameData::Colours().Get("bright");
   Information info;
   
-  if(fuel)
+  if(fuel && empty)
   {
     string price1 = "To refuel all your ships to " + Format::Round(ratio*100) + "% which will take " + Format::Round(fuel) + " units of fuel";
     string price2 = "you would need to pay " + Format::Round(refuelPrice) + " credits.";
