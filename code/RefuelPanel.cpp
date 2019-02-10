@@ -48,7 +48,7 @@ void RefuelPanel::Draw()
   string localPrice = "The fuel price on this planet is " + Format::Number(player.GetPlanet()->GetFuelPrice()) + " credits per unit of fuel.";
   
   const Font &font = FontSet::Get(18);
-  const Colour &colour = *GameData::Colours().Get("bright");
+  const Colour &colour = *GameData::Colours().Get("medium");
   Information info;
   
   if(fuel && empty)

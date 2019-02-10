@@ -1284,7 +1284,7 @@ void Ship::Move(vector<Visual> &visuals, list<shared_ptr<Flotsam>> &flotsam)
           if(price || !price)
           {
             ostringstream out;
-            out << "You paid " << price << " credits to buy " << amount << " units of fuel.";
+            out << "You paid " << price << " credits to buy " << Format::Number(amount) << " units of fuel for your escort on " << landingPlanet->Name() << ".";
             Messages::Add(out.str());
             player->AddCredits(price);
           }
@@ -2317,7 +2317,7 @@ double Ship::TransferFuel(double amount, Ship *to)
       if(price)
       {
         ostringstream out;
-        out << "You paid " << price << " credits to buy " << amount << " units of fuel.";
+        out << "You paid " << name << " " << price << " credits to buy " << Format::Number(amount) << " units of fuel.";
         Messages::Add(out.str());
         player->AddCredits(price);
       }
