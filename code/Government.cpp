@@ -263,14 +263,6 @@ bool Government::IsPlayer() const
 
 
 
-// Check if this is the player government or the players escort.
-bool Government::IsEscort() const
-{
-  return IsPlayer() || name == "Escort";
-}
-
-
-
 // Commit the given "offence" against this government (which may not
 // actually consider it to be an offence). This may result in temporary
 // hostilities (if the even type is PROVOKE), or a permanent change to your

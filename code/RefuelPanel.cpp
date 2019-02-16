@@ -47,11 +47,11 @@ void RefuelPanel::Draw()
   
   string localPrice = "The fuel price on this planet is " + Format::Number(player.GetPlanet()->GetFuelPrice()) + " credits per unit of fuel.";
   
-  const Font &font = FontSet::Get(18);
+  const Font &font = FontSet::Get(14);
   const Colour &colour = *GameData::Colours().Get("medium");
   Information info;
   
-  if(fuel && empty)
+  if(fuel)
   {
     string price1 = "To refuel all your ships to " + Format::Round(ratio*100) + "% which will take " + Format::Round(fuel) + " units of fuel";
     string price2 = "you would need to pay " + Format::Round(refuelPrice) + " credits.";
@@ -80,19 +80,6 @@ void RefuelPanel::Draw()
   info.SetBar("ratio", ratio);
   const Interface *interface = GameData::Interfaces().Get("refuel");
   interface->Draw(info, this);
-}
-
-
-
-void RefuelPanel::RefreshUI()
-{
-  empty = player.FuelNeeded(1);
-  if(empty)
-  {
-    fuel = player.FuelNeeded(ratio);
-    double price = player.GetPlanet()->GetFuelPrice();
-    refuelPrice = fuel*price;
-  }
 }
 
 
@@ -128,4 +115,17 @@ bool RefuelPanel::Click(int x, int y, int clicks)
   }
   
   return false;
+}
+
+
+
+void RefuelPanel::RefreshUI()
+{
+  empty = player.FuelNeeded(1);
+  if(empty)
+  {
+    fuel = player.FuelNeeded(ratio);
+    double price = player.GetPlanet()->GetFuelPrice();
+    refuelPrice = fuel*price;
+  }
 }
