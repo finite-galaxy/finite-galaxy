@@ -145,6 +145,7 @@ You will also need libmingw32.a and libopengl32.a. Those should be included in t
 
 ### Major changes
 * Hyperjump fuel is based on your ship's effective mass (including cargo and carried ships)
+* Hyperjump fuel is no longer free, its price depends on the planet (when landing) or the government (when hailing ships in space)
 * Ship categories are based on total mass
   * `ship mass = hull mass + outfit space + cargo space`
 * Introduced core space, reserved for energy generators, shields and hull systems, and hyperdrives
@@ -175,7 +176,6 @@ See `changelog.txt`, `ship_overview.txt`, and https://github.com/finite-galaxy/f
 * Add “Licences” tab in player info panel
 * Add “Tribute” tab in player info panel
 * Add “Manufacturer” to ships
-* Add fuel cost, one credit per fuel at spaceports, twice that when hailing ships in space
 * Add functionality to deposit credits at the bank for a fixed time (e.g. one year), receiving either the sum plus interest when it expires, or the sum minus a penalty when you claim it beforehand
 * Add planet landing fees support
 * Allow friendly fire
