@@ -167,20 +167,21 @@ namespace {
     const System *system = ship.GetSystem();
     if(system)
     {
-      // Determine which, if any, planet with fuel is closest.
-      double closest = numeric_limits<double>::infinity();
-      const Point &p = ship.Position();
+      // Determine which, if any, planet with fuel is cheapest.
+      double cheapest = numeric_limits<double>::infinity();
       for(const StellarObject &object : system->Objects())
         if(object.GetPlanet() && object.GetPlanet()->HasFuelFor(ship))
         {
-          double distance = p.Distance(object.Position());
-          if(distance < closest)
+          double price = object.GetPlanet()->GetFuelPrice();
+          if(price < cheapest)
           {
             target = &object;
-            closest = distance;
+            cheapest = price;
           }
         }
     }
+    if(target->GetPlanet()->GetFuelPrice() > Preferences::GetMaxPrice() && ship.IsYours())
+      return nullptr;
     return target;
   }
   
@@ -1400,8 +1401,12 @@ void AI::MoveEscort(Ship &ship, Command &command) const
   // If an escort is out of fuel, they should refuel without waiting for the
   // "parent" to land (because the parent may not be planning on landing).
   if(systemHasFuel && !ship.JumpsRemaining())
+  {
     Refuel(ship, command);
-  else if(!parentIsHere && !isStaying)
+    if(ship.GetTargetStellar())
+      return;
+  }
+  if(!parentIsHere && !isStaying)
   {
     if(ship.GetTargetStellar())
     {
@@ -1510,6 +1515,9 @@ bool AI::CanRefuel(const Ship &ship, const StellarObject *target)
     return false;
   
   if(!planet->HasFuelFor(ship))
+    return false;
+  
+  if(planet->GetFuelPrice() >= Preferences::GetMaxPrice())
     return false;
   
   return true;

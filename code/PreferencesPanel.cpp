@@ -8,6 +8,7 @@
 #include "Files.h"
 #include "Font.h"
 #include "FontSet.h"
+#include "Format.h"
 #include "GameData.h"
 #include "Information.h"
 #include "Interface.h"
@@ -67,6 +68,8 @@ void PreferencesPanel::Draw()
   info.SetBar("volume", Audio::Volume());
   GameData::Interfaces().Get("menu background")->Draw(info, this);
   string pageName = (page == 'c' ? "controls" : page == 's' ? "settings" : "plugins");
+  if(page == 's')
+    info.SetBar("refuel behaviour", Preferences::GetMaxPrice()/10);
   GameData::Interfaces().Get(pageName)->Draw(info, this);
   GameData::Interfaces().Get("preferences")->Draw(info, this);
   
@@ -116,6 +119,19 @@ bool PreferencesPanel::Click(int x, int y, int clicks)
   
   if(x >= 265 && x < 295 && y >= -220 && y < 70)
   {
+    Audio::SetVolume((20 - y) / 200.);
+    Audio::Play(Audio::Get("warder"));
+    return true;
+  }
+  
+  if(page == 's' && x >= 25 && x < 235 && y >= 95 && y < 125)
+  {
+    double max = (x-30)/20.;
+    if(max > 10)
+      max = 10;
+    if(max < 0)
+      max = 0;
+    Preferences::SetMaxPrice(max);
     Audio::SetVolume((20 - y) / 200.);
     Audio::Play(Audio::Get("warder"));
     return true;
@@ -439,6 +455,7 @@ void PreferencesPanel::DrawSettings()
     SCROLL_SPEED,
     "Show escort systems on map",
     "Warning siren"
+    // If you add anything in here be careful not to conflict with the "refuel behaviour"-bar.
   };
   bool isCategory = true;
   for(const string &setting : SETTINGS)
@@ -536,6 +553,26 @@ void PreferencesPanel::DrawSettings()
     table.Draw(setting, isOn ? medium : dim);
     table.Draw(text, isOn ? bright : medium);
   }
+  
+  // Draw the text under the refuel bar.
+  string refuelText;
+  string refuelText2 = "";
+  double maxPrice = Preferences::GetMaxPrice();
+  if(maxPrice == 10)
+    refuelText = "Always refuel";
+  else if(maxPrice)
+  {
+    refuelText = "Only refuel if the price is less than ";
+    refuelText2 = Format::Number(maxPrice)+" credits per unit.";
+  }
+  else
+    refuelText = "Only refuel if it is for free.";
+  table.DrawAt(Point(130, 80));
+  table.Draw("Automatic refuel behaviour", medium);
+  table.DrawAt(Point(130, 120));
+  table.Draw(refuelText, medium);
+  table.DrawAt(Point(130, 140));
+  table.Draw(refuelText2, medium);
 }
 
 

@@ -13,6 +13,7 @@
 class Interface;
 class Planet;
 class PlayerInfo;
+class RefuelPanel;
 class SpaceportPanel;
 class System;
 
@@ -52,6 +53,7 @@ private:
   std::shared_ptr<Panel> bank;
   std::shared_ptr<SpaceportPanel> spaceport;
   std::shared_ptr<Panel> hiring;
+  std::shared_ptr<RefuelPanel> refuel;
   Panel *selectedPanel = nullptr;
   
   WrappedText text;

@@ -89,7 +89,7 @@ int64_t Account::Credits() const
 
 
 
-// Give the player credits (or pass  negative number to subtract). If subtracting,
+// Give the player credits (or pass  negative number to subtract). TODO: When subtracting,
 // the calling function needs to check that this will not result in negative credits.
 void Account::AddCredits(int64_t value)
 {

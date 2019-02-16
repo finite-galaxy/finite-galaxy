@@ -25,6 +25,8 @@ namespace {
   const vector<double> ZOOMS = {.06, .09, .13, .18, .25, .35, .50, .71, 1.00, 1.41, 2.00};
   int zoomIndex = 4;
   const double VOLUME_SCALE = .25;
+  // refuel preferences, standard value: always refuel(-1)
+  double maxRefuelPrice = 10;
 }
 
 
@@ -60,6 +62,8 @@ void Preferences::Load()
       scrollSpeed = node.Value(1);
     else if(node.Token(0) == "view zoom")
       zoomIndex = node.Value(1);
+    else if(node.Token(0) == "max refuel price" && node.Size() >= 2)
+      maxRefuelPrice = node.Value(1);
     else
       settings[node.Token(0)] = (node.Size() == 1 || node.Value(1));
   }
@@ -76,6 +80,7 @@ void Preferences::Save()
   out.Write("zoom", Screen::Zoom());
   out.Write("scroll speed", scrollSpeed);
   out.Write("view zoom", zoomIndex);
+  out.Write("max refuel price", maxRefuelPrice);
   
   for(const auto &it : settings)
     out.Write(it.first, it.second);
@@ -156,4 +161,18 @@ bool Preferences::ZoomViewOut()
   
   --zoomIndex;
   return true;
+}
+
+
+
+double Preferences::GetMaxPrice()
+{
+  return maxRefuelPrice;
+}
+
+
+
+void Preferences::SetMaxPrice(double price)
+{
+  maxRefuelPrice = price;
 }

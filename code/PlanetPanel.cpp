@@ -18,6 +18,7 @@
 #include "Planet.h"
 #include "PlayerInfo.h"
 #include "PlayerInfoPanel.h"
+#include "RefuelPanel.h"
 #include "Ship.h"
 #include "ShipyardPanel.h"
 #include "SpaceportPanel.h"
@@ -40,6 +41,7 @@ PlanetPanel::PlanetPanel(PlayerInfo &player, function<void()> callback)
   bank.reset(new BankPanel(player));
   spaceport.reset(new SpaceportPanel(player));
   hiring.reset(new HiringPanel(player));
+  refuel.reset(new RefuelPanel(player));
 
   // Only show one news item per day.
   spaceport->UpdateNews();
@@ -124,6 +126,8 @@ void PlanetPanel::Draw()
           info.SetCondition("has trade");
       }
     }
+    if(planet.GetFuelPrice() > 0)
+      info.SetCondition("has fuel");
   }
   
   ui.Draw(info, this);
@@ -179,6 +183,12 @@ bool PlanetPanel::KeyDown(SDL_Keycode key, Uint16 mod, const Command &command)
   {
     selectedPanel = hiring.get();
     GetUI()->Push(hiring);
+  }
+  else if(key == 'r' && flagship && planet.GetFuelPrice() >= 0)
+  {
+    refuel.get()->RefreshUI();
+    selectedPanel = refuel.get();
+    GetUI()->Push(refuel);
   }
   else if(key == 'j' && hasAccess && flagship && planet.HasSpaceport() && planet.IsInhabited())
   {

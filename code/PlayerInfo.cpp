@@ -86,6 +86,7 @@ void PlayerInfo::New()
   SetSystem(start.GetSystem());
   SetPlanet(start.GetPlanet());
   accounts = start.GetAccounts();
+  Ship::player = &accounts;
   start.GetConditions().Apply(conditions);
   UpdateAutoConditions();
   
@@ -290,6 +291,8 @@ void PlayerInfo::Load(const string &path)
   
   // Modify the game data with any changes that were loaded from this file.
   ApplyChanges();
+  
+  Ship::player = &accounts;
 }
 
 
@@ -1000,7 +1003,8 @@ void PlayerInfo::Land(UI *ui)
   
   // Ships that are landed with you on the planet should fully recharge
   // and pool all their cargo together. Those in remote systems restore
-  // what they can without landing.
+  // what they can without landing. Fuel is also refilled.
+  Refuel();
   bool hasSpaceport = planet->HasSpaceport() && planet->CanUseServices();
   UpdateCargoCapacities();
   for(const shared_ptr<Ship> &ship : ships)
@@ -1112,17 +1116,16 @@ bool PlayerInfo::TakeOff(UI *ui)
   LoadCargo();
   
   // Recharge any ships that can be recharged, and determines the free bunk space.
-  bool hasSpaceport = planet->HasSpaceport() && planet->CanUseServices();
   for(const shared_ptr<Ship> &ship : ships)
     if(!ship->IsParked() && !ship->IsDisabled())
     {
+      ship->Recharge(false);
       if(ship->GetSystem() != system)
       {
-        ship->Recharge(false);
+        if(ship->GetPlanet())
+          ship->Refuel(1);
         continue;
       }
-      else
-        ship->Recharge(hasSpaceport);
       
       if(ship != flagship)
         ship->Cargo().SetBunks(ship->Attributes().Get("bunks") - ship->RequiredCrew());
@@ -1342,6 +1345,78 @@ void PlayerInfo::UnloadCargo()
 
 
 
+
+void PlayerInfo::Refuel()
+{
+  double price = planet->GetFuelPrice();
+  // Refuels only if the price is in the preferred range or 0 or the player is overriding
+  // the preferences using the "Refuel All"-button.
+  bool rechargesFuel = (price < Preferences::GetMaxPrice() || !price) && price >= 0;
+  int rechargedFuel = 0;
+  bool hasSpaceport = planet->HasSpaceport() && planet->CanUseServices();
+  for(const shared_ptr<Ship> &ship : ships)
+    if(!ship->IsDisabled())
+    {
+      if(ship->GetSystem() == system)
+      {
+        ship->Recharge(hasSpaceport);
+        if(rechargesFuel)
+          rechargedFuel += ship->Refuel(1);
+        ship->Cargo().TransferAll(cargo);
+        ship->SetPlanet(planet);
+      }
+      else
+        ship->Recharge(false);
+    }
+  
+  // Pays the fuel and messages the price that was paid.
+  if(rechargedFuel && price > 0)
+  {
+    int fuelPrice = rechargedFuel*price;
+    ostringstream out;
+    out << "You paid " << fuelPrice << " credits to buy " << rechargedFuel << " units of fuel.";
+    Messages::Add(out.str());
+    accounts.AddCredits(-fuelPrice);
+  }
+}
+
+
+
+// Accessed with refuel button.
+void PlayerInfo::RefuelRatio(double ratio)
+{
+  double price = planet->GetFuelPrice();
+  int rechargedFuel = 0;
+  for(const shared_ptr<Ship> &ship : ships)
+    if(!ship->IsDisabled() && ship->GetSystem() == system)
+      // This function is only accessed by planets with refuel services.
+      rechargedFuel += ship->Refuel(ratio);
+  
+  // Pays the fuel and messages the price that was paid.
+  if(rechargedFuel && price > 0)
+  {
+    int fuelPrice = rechargedFuel*price;
+    ostringstream out;
+    out << "You paid " << fuelPrice << " credits to buy " << rechargedFuel << " units of fuel.";
+    Messages::Add(out.str());
+    accounts.AddCredits(-fuelPrice);
+  }
+}
+
+
+
+double PlayerInfo::FuelNeeded(double ratio)
+{
+  double neededFuel = 0;
+  for(const shared_ptr<Ship> &ship : ships)
+    if(!ship->IsDisabled() && ship->GetSystem() == system)
+      neededFuel += ship->FuelMissing(ratio);
+  
+  return neededFuel;
+}
+
+
+
 void PlayerInfo::LoadFighters()
 {
   for(const shared_ptr<Ship> &ship : ships)
@@ -1358,7 +1433,7 @@ void PlayerInfo::LoadFighters()
 }
 
 
-
+  
 // Unloads all fighters.
 void PlayerInfo::UnloadFighters()
 {

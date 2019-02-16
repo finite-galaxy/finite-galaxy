@@ -2,6 +2,7 @@
 
 #include "Ship.h"
 
+#include "Account.h"
 #include "Audio.h"
 #include "DataNode.h"
 #include "DataWriter.h"
@@ -503,7 +504,7 @@ void Ship::FinishLoading(bool isNewInstance)
   // If this ship is being instantiated for the first time, make sure its
   // crew, fuel, etc. are all refilled.
   if(isNewInstance)
-    Recharge(true);
+    Recharge();
 
   // Add a default "launch effect" to any internal bays if this ship is crewed (i.e. pressurized).
   for(Bay &bay : bays)
@@ -1260,7 +1261,8 @@ void Ship::Move(vector<Visual> &visuals, list<shared_ptr<Flotsam>> &flotsam)
       {
         // If this is not a special ship, it ceases to exist when it
         // lands on a true planet. If this is a wormhole, the ship is
-        // instantly transported.
+        // instantly transported. If the ship is an escort the player
+        // has to pay the fuel price.
         if(landingPlanet->IsWormhole())
         {
           currentSystem = landingPlanet->WormholeDestination(currentSystem);
@@ -1275,13 +1277,25 @@ void Ship::Move(vector<Visual> &visuals, list<shared_ptr<Flotsam>> &flotsam)
           MarkForRemoval();
           return;
         }
+        else if(isYours && landingPlanet->GetFuelPrice() > 0 && GetParent() && GetParent()->GetPlanet() != landingPlanet)
+        {
+          int amount = attributes.Get("fuel capacity")-fuel;
+          int price = amount*landingPlanet->GetFuelPrice();
+          if(price || !price)
+          {
+            ostringstream out;
+            out << "You paid " << price << " credits to buy " << Format::Round(amount) << " units of fuel for your escort on " << landingPlanet->Name() << ".";
+            Messages::Add(out.str());
+            player->AddCredits(price);
+          }
+        }
         
         zoom = 0.f;
       }
     }
-    // Only refuel if this planet has a spaceport.
+    // Only refuel if this planet has a refuel service.
     else if(fuel >= attributes.Get("fuel capacity")
-        || !landingPlanet || !landingPlanet->HasSpaceport())
+        || !landingPlanet || landingPlanet->GetFuelPrice() < 0)
     {
       zoom = min(1.f, zoom + .02f);
       SetTargetStellar(nullptr);
@@ -1386,7 +1400,7 @@ void Ship::Move(vector<Visual> &visuals, list<shared_ptr<Flotsam>> &flotsam)
       thrust = attributes.Get("afterburner thrust");
       double fuelCost = attributes.Get("afterburner fuel"); 
       double energyCost = attributes.Get("afterburner energy");
-       if(thrust && fuel >= fuelCost && energy >= energyCost) 
+      if(thrust && fuel >= fuelCost && energy >= energyCost) 
       {
         heat += attributes.Get("afterburner heat");
         fuel -= fuelCost; 
@@ -2206,7 +2220,7 @@ void Ship::Restore()
   explosionCount = 0;
   explosionRate = 0;
   UnmarkForRemoval();
-  Recharge(true);
+  Recharge();
 }
 
 
@@ -2228,7 +2242,6 @@ void Ship::Recharge(bool atSpaceport)
   if(atSpaceport)
   {
     crew = min<int>(max(crew, RequiredCrew()), attributes.Get("bunks"));
-    fuel = attributes.Get("fuel capacity");
   }
   pilotError = 0;
   pilotOkay = 0;
@@ -2247,10 +2260,46 @@ void Ship::Recharge(bool atSpaceport)
 }
 
 
+// Recharge, refuel and repair this ship (e.g. because it has landed).
+void Ship::Recharge()
+{
+  if(IsDestroyed())
+    return;
+
+  crew = min<int>(max(crew, RequiredCrew()), attributes.Get("bunks"));
+  fuel = attributes.Get("fuel capacity");
+  pilotError = 0;
+  pilotOkay = 0;
+
+  shields = attributes.Get("shields");
+  hull = attributes.Get("hull");
+  energy = attributes.Get("energy capacity");
+
+  heat = IdleHeat();
+  ionization = 0.;
+  disruption = 0.;
+  slowness = 0.;
+}
+
+
+
+double Ship::Refuel(double ratio)
+{
+  double maxFuel = attributes.Get("fuel capacity");
+  double neededFuel = ratio*maxFuel;
+  if(fuel > neededFuel)
+    return 0.;
+  maxFuel = neededFuel-fuel;
+  fuel = neededFuel;
+  return maxFuel;
+}
+
+
 
 bool Ship::CanRefuel(const Ship &other) const
 {
-  return (fuel - JumpFuel(targetSystem) >= other.JumpFuelMissing());
+  // Only refuels escorts if this ship sells the fuel for less than the player specified max price.
+  return (fuel - JumpFuel(targetSystem) >= other.JumpFuelMissing()) && (!other.isYours || isYours || government->GetFuelPrice() <= Preferences::GetMaxPrice());
 }
 
 
@@ -2262,6 +2311,17 @@ double Ship::TransferFuel(double amount, Ship *to)
   {
     amount = min(to->attributes.Get("fuel capacity") - to->fuel, amount);
     to->fuel += amount;
+    if(!to->IsDisabled() && to->isYours && player && !isYours)
+    {
+      int price = amount*government->GetFuelPrice();
+      if(price)
+      {
+        ostringstream out;
+        out << "You paid " << name << " " << price << " credits to buy " << Format::Round(amount) << " units of fuel.";
+        Messages::Add(out.str());
+        player->AddCredits(price);
+      }
+    }
   }
   fuel -= amount;
   return amount;
@@ -2467,6 +2527,18 @@ double Ship::JumpFuelMissing() const
     return 0.;
   
   return jumpFuel - fuel;
+}
+
+
+
+
+double Ship::FuelMissing(double ratio) const
+{
+  double maxFuel = attributes.Get("fuel capacity");
+  double neededFuel = ratio*maxFuel;
+  if(fuel > neededFuel)
+    return 0.;
+  return neededFuel - fuel;
 }
 
 
@@ -3221,3 +3293,7 @@ void Ship::CreateSparks(vector<Visual> &visuals, const string &name, double amou
       visuals.emplace_back(*effect, angle.Rotate(point) + position, velocity, angle);
   }
 }
+
+
+
+Account *Ship::player = nullptr;

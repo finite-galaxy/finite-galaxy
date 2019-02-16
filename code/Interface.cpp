@@ -629,8 +629,9 @@ void Interface::BarElement::Draw(const Rectangle &rect, const Information &info,
   {
     // Figue out where the line should be drawn from and to.
     // Note: this assumes that the bottom of the rectangle is the start.
-    Point start = rect.BottomRight();
-    Point dimensions = -rect.Dimensions();
+    Point start = rect.BottomLeft();
+    Point dimensions = rect.Dimensions();
+    dimensions.Set(dimensions.X(), -dimensions.Y());
     double length = dimensions.Length();
     
     // We will have (segments - 1) gaps between the segments.
