@@ -6,6 +6,7 @@
 #include "ConditionSet.h"
 #include "Conversation.h"
 #include "LocationFilter.h"
+#include "Phrase.h"
 
 #include <map>
 #include <memory>
@@ -63,6 +64,8 @@ private:
   std::map<std::string, std::map<std::string, std::string>> specialLogText;
   
   std::string dialogueText;
+  const Phrase *stockDialoguePhrase = nullptr;
+  Phrase dialoguePhrase;
   
   const Conversation *stockConversation = nullptr;
   Conversation conversation;

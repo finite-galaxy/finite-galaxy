@@ -143,24 +143,34 @@ void MissionAction::Load(const DataNode &node, const string &missionName)
     const string &key = child.Token(0);
     bool hasValue = (child.Size() >= 2);
     
-    if(key == "log" || key == "dialogue")
+    if(key == "log")
     {
-      bool isSpecial = (key == "log" && child.Size() >= 3);
-      string &text = (key == "dialogue" ? dialogueText :
-        isSpecial ? specialLogText[child.Token(1)][child.Token(2)] : logText);
-      for(int i = isSpecial ? 3 : 1; i < child.Size(); ++i)
+            bool isSpecial = (child.Size() >= 3);
+      string &text = (isSpecial ?
+        specialLogText[child.Token(1)][child.Token(2)] : logText);
+      Dialogue::ParseTextNode(child, isSpecial ? 3 : 1, text);
+    }
+    else if(key == "dialogue")
+    {
+      // Dialogue text may be supplied from a stock named phrase, a
+      // private unnamed phrase, or directly specified.
+      if(hasValue && child.Token(1) == "phrase")
       {
-        if(!text.empty())
-          text += "\n\t";
-        text += child.Token(i);
+        if(!child.HasChildren() && child.Size() == 3)
+          stockDialoguePhrase = GameData::Phrases().Get(child.Token(2));
+        else
+          child.PrintTrace("Skipping unsupported dialogue phrase syntax:");
       }
-      for(const DataNode &grand : child)
-        for(int i = 0; i < grand.Size(); ++i)
-        {
-          if(!text.empty())
-            text += "\n\t";
-          text += grand.Token(i);
-        }
+      else if(!hasValue && child.HasChildren() && (*child.begin()).Token(0) == "phrase")
+      {
+        const DataNode &firstGrand = (*child.begin());
+        if(firstGrand.Size() == 1 && firstGrand.HasChildren())
+          dialoguePhrase.Load(firstGrand);
+        else
+          firstGrand.PrintTrace("Skipping unsupported dialogue phrase syntax:");
+      }
+      else
+        Dialogue::ParseTextNode(child, 1, dialogueText);
     }
     else if(key == "conversation" && child.HasChildren())
       conversation.Load(child);
@@ -476,6 +486,10 @@ MissionAction MissionAction::Instantiate(map<string, string> &subs, const System
     for(const auto &eit : it.second)
       result.specialLogText[it.first][eit.first] = Format::Replace(eit.second, subs);
   
+  // Create any associated dialogue text from phrases, or use the directly specified text.
+  string dialogueText = stockDialoguePhrase ? stockDialoguePhrase->Get()
+    : (!dialoguePhrase.Name().empty() ? dialoguePhrase.Get()
+    : this->dialogueText);
   if(!dialogueText.empty())
     result.dialogueText = Format::Replace(dialogueText, subs);
   

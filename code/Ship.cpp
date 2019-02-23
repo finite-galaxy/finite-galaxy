@@ -128,7 +128,7 @@ void Ship::Load(const DataNode &node)
       thumbnail = SpriteSet::Get(child.Token(1));
     else if(key == "name" && child.Size() >= 2)
       // A ship name may contain wrong markups when loading an old save file.
-			name = Font::EscapeMarkupHasError(child.Token(1));
+      name = Font::EscapeMarkupHasError(child.Token(1));
     else if(key == "plural" && child.Size() >= 2)
       pluralModelName = child.Token(1);
     else if(key == "noun" && child.Size() >= 2)
@@ -784,6 +784,9 @@ string Ship::FlightCheck() const
     if(fuelCapacity < JumpFuel())
       return "no fuel?";
   }
+  for(const auto &it : outfits)
+    if(it.first->IsWeapon() && it.first->FiringEnergy() > energy)
+      return "insufficient energy to fire?";
   
   return "";
 }
@@ -1711,15 +1714,15 @@ void Ship::DoGeneration()
 void Ship::Launch(list<shared_ptr<Ship>> &ships, vector<Visual> &visuals)
 {
   // Allow fighters to launch from a disabled ship, but not from a ship that
-	// is landing, jumping, or cloaked. If already destroyed (e.g. self-destructing),
-	// eject any ships still docked, possibly destroying them in the process.
-	bool ejecting = IsDestroyed();
-	if(!ejecting && (!commands.Has(Command::DEPLOY) || zoom != 1.f || hyperspaceCount || cloak))
+  // is landing, jumping, or cloaked. If already destroyed (e.g. self-destructing),
+  // eject any ships still docked, possibly destroying them in the process.
+  bool ejecting = IsDestroyed();
+  if(!ejecting && (!commands.Has(Command::DEPLOY) || zoom != 1.f || hyperspaceCount || cloak))
     return;
   
   for(Bay &bay : bays)
-		if(bay.ship && ((bay.ship->Commands().Has(Command::DEPLOY) && !Random::Int(40 + 20 * bay.isFighter))
-				|| (ejecting && !Random::Int(6))))
+    if(bay.ship && ((bay.ship->Commands().Has(Command::DEPLOY) && !Random::Int(40 + 20 * bay.isFighter))
+        || (ejecting && !Random::Int(6))))
     {
       // Determine which of the fighter's weapons we can restock.
       set<const Outfit *> toRefill;
@@ -1739,8 +1742,8 @@ void Ship::Launch(list<shared_ptr<Ship>> &ships, vector<Visual> &visuals)
         }
       }
 
-			// Resupply any ships launching of their own accord.
-			if(!ejecting)
+      // Resupply any ships launching of their own accord.
+      if(!ejecting)
       {
         // This ship will refuel naturally based on the carrier's fuel
         // capacity, but the carrier may have some reserves to spare.
@@ -1758,16 +1761,16 @@ void Ship::Launch(list<shared_ptr<Ship>> &ships, vector<Visual> &visuals)
           }
         }
       }
-			// Those being ejected may be destroyed if they are already injured.
-			else if(bay.ship->Health() < Random::Real())
-				bay.ship->SelfDestruct();
+      // Those being ejected may be destroyed if they are already injured.
+      else if(bay.ship->Health() < Random::Real())
+        bay.ship->SelfDestruct();
 
       ships.push_back(bay.ship);
- 			double maxV = bay.ship->MaxVelocity() * (1 + bay.ship->IsDestroyed());
+       double maxV = bay.ship->MaxVelocity() * (1 + bay.ship->IsDestroyed());
       Point exitPoint = position + angle.Rotate(bay.point);
-			// When ejected, ships depart haphazardly.
-			Angle launchAngle = ejecting ? Angle(exitPoint - position) : angle + BAY_ANGLE[bay.facing];
-			Point v = velocity + (.3 * maxV) * launchAngle.Unit() + (.2 * maxV) * Angle::Random().Unit();
+      // When ejected, ships depart haphazardly.
+      Angle launchAngle = ejecting ? Angle(exitPoint - position) : angle + BAY_ANGLE[bay.facing];
+      Point v = velocity + (.3 * maxV) * launchAngle.Unit() + (.2 * maxV) * Angle::Random().Unit();
       bay.ship->Place(exitPoint, v, launchAngle);
       bay.ship->SetSystem(currentSystem);
       bay.ship->SetParent(shared_from_this());
