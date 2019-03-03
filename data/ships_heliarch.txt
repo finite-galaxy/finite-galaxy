@@ -52,8 +52,8 @@ ship "Interdictor"
     "Large Thrust Module" 2
     "Large Steering Module" 2
 
-    "Finisher Torpedo" 80
-    "Finisher Pod" 2
+    "Finisher" 80
+    "Finisher Launcher" 2
     "Attractor"
     "Repulsor"
 
@@ -66,8 +66,8 @@ ship "Interdictor"
   engine -20 163 .85
   engine 20 163 .85
   engine 30 163 .5
-  gun -20 -98 "Finisher Pod"
-  gun 20 -98 "Finisher Pod"
+  gun -20 -98
+  gun 20 -98
   turret -8 -63 "Attractor"
   turret 8 -63 "Repulsor"
   explode "small explosion" 20
@@ -90,8 +90,8 @@ ship "Interdictor" "Interdictor (Bombardment)"
     "Large Steering Module" 2
     "Small Steering Module"
 
-    "Finisher Torpedo" 80
-    "Finisher Pod" 2
+    "Finisher" 80
+    "Finisher Launcher" 2
     "Bombardment Turret" 2
 
     "Large Battery Module"
@@ -155,10 +155,10 @@ ship "Neutralizer"
   engine -17 82 .7
   engine 0 74 1
   engine 17 82 .7
-  gun -16 -59 "Ion Rain Gun"
-  gun 16 -59 "Ion Rain Gun"
-  gun -22 -57 "Ion Rain Gun"
-  gun 22 -57 "Ion Rain Gun"
+  gun -16 -59
+  gun 16 -59
+  gun -22 -57
+  gun 22 -57
   explode "small explosion" 30
   explode "medium explosion" 40
   explode "large explosion" 20
@@ -178,8 +178,8 @@ ship "Neutralizer" "Neutralizer (Missile)"
     "Large Steering Module"
     "Small Steering Module" 2
 
-    "Finisher Torpedo" 80
-    "Finisher Pod" 2
+    "Finisher" 80
+    "Finisher Launcher" 2
 
     "Large Battery Module"
     "Cooling Module"
@@ -272,8 +272,8 @@ ship "Punisher"
     "Large Steering Module" 2
     "Small Steering Module" 2
 
-    "Finisher Torpedo" 80
-    "Finisher Pod" 2
+    "Finisher" 80
+    "Finisher Launcher" 2
     "Ion Rain Gun" 4
     "Bombardment Turret" 4
 
@@ -290,8 +290,8 @@ ship "Punisher"
   gun 21 -121 "Ion Rain Gun"
   gun -27 -118 "Ion Rain Gun"
   gun 27 -118 "Ion Rain Gun"
-  gun -43 -43 "Finisher Pod"
-  gun 43 -43 "Finisher Pod"
+  gun -43 -43 "Finisher Launcher"
+  gun 43 -43 "Finisher Launcher"
   turret -13 -42 "Bombardment Turret"
   turret 13 -42 "Bombardment Turret"
   turret 0 -35 "Bombardment Turret"
@@ -316,8 +316,8 @@ ship "Punisher" "Punisher (Interdicting)"
     "Large Steering Module" 2
     "Small Steering Module" 2
 
-    "Finisher Torpedo" 80
-    "Finisher Pod" 2
+    "Finisher" 80
+    "Finisher Launcher" 2
     "Bombardment Cannon" 4
     "Attractor" 2
     "Repulsor"
@@ -333,8 +333,8 @@ ship "Punisher" "Punisher (Interdicting)"
   gun "Bombardment Cannon"
   gun "Bombardment Cannon"
   gun "Bombardment Cannon"
-  gun "Finisher Pod"
-  gun "Finisher Pod"
+  gun "Finisher Launcher"
+  gun "Finisher Launcher"
   turret "Attractor"
   turret "Attractor"
   turret "Repulsor"
@@ -351,8 +351,8 @@ ship "Punisher" "Punisher (Missile)"
     "Large Thrust Module" 3
     "Large Steering Module" 3
 
-    "Finisher Torpedo" 240
-    "Finisher Pod" 6
+    "Finisher" 240
+    "Finisher Launcher" 6
     "Repulsor"
 
     "Large Battery Module"

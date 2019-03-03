@@ -1,5 +1,4 @@
-outfit "Finisher Torpedo"
-  plural "Finisher Torpedoes"
+outfit "Finisher"
   category "Ammunition"
   thumbnail "outfit/finisher"
   licences
@@ -8,9 +7,9 @@ outfit "Finisher Torpedo"
   "mass" .5
   "plunderable" 1
   "finisher capacity" -1
-  description `This extremely powerful but also expensive missile is ammunition for the Heliarch Finisher Pod.`
+  description `This extremely powerful but also expensive missile is ammunition for the Heliarch Finisher Launcher.`
 
-outfit "Finisher Pod"
+outfit "Finisher Launcher"
   category "Secondary Weapons"
   thumbnail "outfit/finisher_launcher"
   licences
@@ -26,7 +25,7 @@ outfit "Finisher Pod"
       "frame rate" 1
       "no repeat"
     sound "finisher"
-    ammo "Finisher Torpedo"
+    ammo "Finisher"
     icon "icon/finisher"
     "fire effect" "finisher sparks" 8
     "hit effect" "finisher impact" 2
@@ -45,7 +44,7 @@ outfit "Finisher Pod"
     "radar tracking" .8
     "missile strength" 50
     "submunition" "Active Finisher" 1
-  description `Finisher Torpedoes are one of the Heliarch' most dreaded weapons. In fact, in one way or another most of their other weapons merely exist to hold a ship in place for long enough for a barrage of Finishers to destroy it.`
+  description `Finisher torpedoes are one of the Heliarch' most dreaded weapons. In fact, in one way or another most of their other weapons merely exist to hold a ship in place for long enough for a barrage of Finishers to destroy it.`
 
 outfit "Active Finisher"
   weapon

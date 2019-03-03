@@ -1,23 +1,23 @@
-outfit "Impact Missile"
+outfit "Impact"
   category "Ammunition"
   thumbnail "outfit/impact"
   cost 2000
   "mass" .4
   "plunderable" 1
   "impact capacity" -1
-  description "Impact Missiles are ammunition for the Impact Missile Launcher. You cannot install missiles unless you have also installed a launcher to fire them from."
+  description "Impact missiles are ammunition for the Impact Launcher. You cannot install missiles unless you have also installed a launcher to fire them from."
 
-outfit "Impact Missile Rack"
+outfit "Impact Storage Rack"
   category "Ammunition Storage"
   thumbnail "outfit/impact_storage"
   cost 8000
   "mass" .4
   "outfit space" -2
   "impact capacity" 4
-  ammo "Impact Missile"
-  description "The Impact Missile Rack is used to store extra ammunition for Impact Missile Launchers."
+  ammo "Impact"
+  description "The Impact Storage Rack is used to store extra ammunition for Impact Launchers."
 
-outfit "Impact Missile Launcher"
+outfit "Impact Launcher"
   category "Secondary Weapons"
   thumbnail "outfit/impact_launcher"
   cost 80000
@@ -31,7 +31,7 @@ outfit "Impact Missile Launcher"
       "frame rate" 2
       "random start frame"
     sound "impact"
-    ammo "Impact Missile"
+    ammo "Impact"
     icon "icon/impact"
     "hit effect" "impact hit"
     "die effect" "small explosion"

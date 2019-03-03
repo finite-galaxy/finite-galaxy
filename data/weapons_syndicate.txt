@@ -1,24 +1,24 @@
-outfit "Meteor Missile"
+outfit "Meteor"
   category "Ammunition"
   thumbnail "outfit/meteor"
   cost 500
   "mass" .2
   "plunderable" 1
   "meteor capacity" -1
-  description "A Meteor Missile serves as ammunition for the Meteor Missile Launcher. You cannot install missiles unless you have also installed a launcher to fire them from."
+  description "A Meteor missile serves as ammunition for the Meteor Launcher. You cannot install missiles unless you have also installed a launcher to fire them from."
 
-outfit "Meteor Missile Box"
-  plural "Meteor Missile Boxes"
+outfit "Meteor Storage Box"
+  plural "Meteor Storage Boxes"
   category "Ammunition Storage"
   thumbnail "outfit/meteor_storage"
   cost 18000
   "mass" 1.8
   "outfit space" -9
   "meteor capacity" 36
-  ammo "Meteor Missile"
-  description "The Meteor Missile Box is used to store extra ammunition for Meteor Missile Launchers."
+  ammo "Meteor"
+  description "The Meteor Storage Box is used to store extra ammunition for Meteor Launchers."
 
-outfit "Meteor Missile Launcher"
+outfit "Meteor Launcher"
   category "Secondary Weapons"
   thumbnail "outfit/meteor_launcher"
   cost 30000
@@ -32,7 +32,7 @@ outfit "Meteor Missile Launcher"
       "no repeat"
       "frame rate" .25
     sound "meteor"
-    ammo "Meteor Missile"
+    ammo "Meteor"
     icon "icon/meteor"
     "fire effect" "meteor fire"
     "die effect" "missile death"
@@ -56,7 +56,7 @@ outfit "Meteor Missile Launcher"
     "random hull damage" 40
     "hit force" 220
     "random hit force" 55
-  description "The Meteor Missile is the cheapest and simplest homing weapon available in human space. Meteors are quickly destroyed by anti-missile systems, and their infrared tracking systems have trouble homing in on targets with low heat levels. Nevertheless, their large warheads can spell doom for poorly-defended targets when the missiles are fired in great numbers."
+  description "The Meteor missile is the cheapest and simplest homing weapon available in human space. Meteors are quickly destroyed by anti-missile systems, and their infrared tracking systems have trouble homing in on targets with low heat levels. Nevertheless, their large warheads can spell doom for poorly-defended targets when the missiles are fired in great numbers."
 
 
 

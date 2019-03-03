@@ -61,26 +61,26 @@ outfit "gbullet"
     "hit effect" "bullet impact"
 
 
-outfit "Sidewinder Missile"
+outfit "Sidewinder"
   category "Ammunition"
   thumbnail "outfit/sidewinder"
   cost 1000
   "mass" .2
   "plunderable" 1
   "sidewinder capacity" -1
-  description "The Sidewinder Missile is ammunition for the Sidewinder Missile Launcher. You cannot install missiles unless you have also installed a launcher to fire them from."
+  description "The Sidewinder missile is ammunition for the Sidewinder Launcher. You cannot install missiles unless you have also installed a launcher to fire them from."
 
-outfit "Sidewinder Missile Rack"
+outfit "Sidewinder Storage Rack"
   category "Ammunition Storage"
   thumbnail "outfit/sidewinder_storage"
   cost 3000
   "mass" .4
   "outfit space" -1
   "sidewinder capacity" 3
-  ammo "Sidewinder Missile"
-  description "The Sidewinder Missile Rack is used to store extra ammunition for Sidewinder Missile Launchers."
+  ammo "Sidewinder"
+  description "The Sidewinder Storage Rack is used to store extra ammunition for Sidewinder Launchers."
 
-outfit "Sidewinder Missile Launcher"
+outfit "Sidewinder Launcher"
   category "Secondary Weapons"
   thumbnail "outfit/sidewinder_launcher"
   cost 60000
@@ -94,7 +94,7 @@ outfit "Sidewinder Missile Launcher"
       "no repeat"
       "frame rate" .25
     sound "sidewinder"
-    ammo "Sidewinder Missile"
+    ammo "Sidewinder"
     icon "icon/sidewinder"
     "fire effect" "sidewinder fire"
     "die effect" "missile death"
@@ -118,7 +118,7 @@ outfit "Sidewinder Missile Launcher"
     "random hull damage" 30
     "hit force" 160
     "random hit force" 40
-  description "The Sidewinder Missile is designed by Lovelace Labs, which is ironically also the designer of the Heavy Anti-Missile turret. Rumours say that the two engineering teams at Lovelace who make the missiles and the anti-missiles are locked in furious competition with each other: the result has been generation after generation of smarter missiles and then smarter turrets to fend them off."
+  description "The Sidewinder missile is designed by Lovelace Labs, which is ironically also the designer of the Heavy Anti-Missile turret. Rumours say that the two engineering teams at Lovelace who make the missiles and the anti-missiles are locked in furious competition with each other: the result has been generation after generation of smarter missiles and then smarter turrets to fend them off."
   description "  Although not as powerful or cheap as the popular Meteor missiles, Sidewinders have several advantages, including their superior manoeuvrability, better tracking systems, and protective casings that make them much harder for anti-missile systems to destroy."
 
 

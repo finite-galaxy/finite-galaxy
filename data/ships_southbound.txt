@@ -164,7 +164,7 @@ ship "Dreadnought" "Dreadnought (Javelin)"
 
     "Javelin" 256
     "Javelin Storage Crate" 4
-    "Javelin Pod" 4
+    "Javelin Launcher" 4
     "Plasma Turret" 4
     "Heavy Anti-Missile"
 
@@ -252,8 +252,8 @@ ship "Hag"
     "Tactical Scanner" 2
   engine -5 32
   engine 5 32
-  gun -7 -14 "Gatling Gun"
-  gun 7 -14 "Gatling Gun"
+  gun -7 -14
+  gun 7 -14
   leak "flame" 60 80
   explode "tiny explosion" 15
   explode "small explosion" 5
@@ -388,7 +388,7 @@ ship "Hauler I"
 
     "Javelin" 128
     "Javelin Storage Crate" 2
-    "Javelin Pod" 2
+    "Javelin Launcher" 2
     "Bolt Turret" 4
 
     "LP144a Battery Pack"
@@ -476,7 +476,7 @@ ship "Hauler II"
 
     "Javelin" 128
     "Javelin Storage Crate" 2
-    "Javelin Pod" 2
+    "Javelin Launcher" 2
     "Bolt Turret" 4
 
     "LP144a Battery Pack"
@@ -487,10 +487,10 @@ ship "Hauler II"
   engine 45 160
   gun -15 -128
   gun 15 -128
-  turret -26 -85 "Bolt Turret"
-  turret 26 -85 "Bolt Turret"
-  turret -19 115 "Bolt Turret"
-  turret 19 115 "Bolt Turret"
+  turret -26 -85
+  turret 26 -85
+  turret -19 115
+  turret 19 115
   leak "leak" 60 50
   leak "flame" 40 80
   leak "big leak" 80 30
@@ -564,7 +564,7 @@ ship "Hauler III"
 
     "Javelin" 128
     "Javelin Storage Crate" 2
-    "Javelin Pod" 2
+    "Javelin Launcher" 2
     "Bolt Turret" 4
 
     "LP144a Battery Pack"
@@ -575,10 +575,10 @@ ship "Hauler III"
   engine 45 196
   gun -15 -165
   gun 15 -165
-  turret -26 -122 "Bolt Turret"
-  turret 26 -122 "Bolt Turret"
-  turret -19 151 "Bolt Turret"
-  turret 19 151 "Bolt Turret"
+  turret -26 -122
+  turret 26 -122
+  turret -19 151
+  turret 19 151
   leak "leak" 50 50
   leak "flame" 40 80
   leak "big leak" 80 30
@@ -653,7 +653,7 @@ ship "Nest"
 
     "Javelin" 128
     "Javelin Storage Crate" 2
-    "Javelin Pod" 2
+    "Javelin Launcher" 2
     "Bolt Turret" 4
 
     "LP144a Battery Pack"
@@ -664,10 +664,10 @@ ship "Nest"
   engine 45 122
   gun -15 -91
   gun 15 -91
-  turret -26 -50 "Bolt Turret"
-  turret 26 -50 "Bolt Turret"
-  turret -18 75 "Bolt Turret"
-  turret 18 75 "Bolt Turret"
+  turret -26 -50
+  turret 26 -50
+  turret -18 75
+  turret 18 75
   fighter -47 12 under
   fighter 47 12 under
   leak "leak" 60 50
@@ -723,7 +723,7 @@ ship "Roost"
 
     "Javelin" 128
     "Javelin Storage Crate" 2
-    "Javelin Pod" 2
+    "Javelin Launcher" 2
     "Bolt Turret" 4
 
     "LP144a Battery Pack"
@@ -734,10 +734,10 @@ ship "Roost"
   engine 45 159
   gun -15 -128
   gun 15 -128
-  turret -26 -85 "Bolt Turret"
-  turret 26 -85 "Bolt Turret"
-  turret -18 114 "Bolt Turret"
-  turret 18 114 "Bolt Turret"
+  turret -26 -85
+  turret 26 -85
+  turret -18 114
+  turret 18 114
   fighter -47 -24 under
   fighter 47 -24 under
   fighter -47 50 under
@@ -795,7 +795,7 @@ ship "Skein"
 
     "Javelin" 128
     "Javelin Storage Crate" 2
-    "Javelin Pod" 2
+    "Javelin Launcher" 2
     "Bolt Turret" 4
 
     "LP144a Battery Pack"
@@ -806,10 +806,10 @@ ship "Skein"
   engine 45 197
   gun -15 -165
   gun 15 -165
-  turret -26 -123 "Bolt Turret"
-  turret 26 -123 "Bolt Turret"
-  turret -18.5 154 "Bolt Turret"
-  turret 18.5 154 "Bolt Turret"
+  turret -26 -123
+  turret 26 -123
+  turret -18.5 154
+  turret 18.5 154
   fighter -47 -61 under
   fighter 47 -61 under
   fighter -47 14 under
@@ -869,7 +869,7 @@ ship "Stymphalian"
 
     "Javelin" 256
     "Javelin Storage Crate" 4
-    "Javelin Pod" 4
+    "Javelin Launcher" 4
 
     "LP036a Battery Pack"
     "Fuel Pod" 23
@@ -879,10 +879,10 @@ ship "Stymphalian"
   engine 8 46
   gun -10 -30
   gun 10 -30
-  gun -27 -5 "Javelin Pod"
-  gun 27 -5 "Javelin Pod"
-  gun -17 -5 "Javelin Pod"
-  gun 17 -5 "Javelin Pod"
+  gun -27 -5 "Javelin Launcher"
+  gun 27 -5 "Javelin Launcher"
+  gun -17 -5 "Javelin Launcher"
+  gun 17 -5 "Javelin Launcher"
   leak "leak" 50 50
   explode "tiny explosion" 10
   explode "small explosion" 20

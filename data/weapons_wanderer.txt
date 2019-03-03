@@ -1,5 +1,4 @@
-outfit "Thunderstorm Torpedo"
-  plural "Thunderstorm Torpedoes"
+outfit "Thunderstorm"
   category "Ammunition"
   licences
     "Wanderer Weapons"
@@ -7,7 +6,7 @@ outfit "Thunderstorm Torpedo"
   thumbnail "outfit/thunderstorm"
   "mass" .4
   "thunderstorm capacity" -1
-  description "Thunderstorm Torpedoes are ammunition for the Thunderstorm Launcher. You cannot install torpedoes unless you have also installed a launcher to fire them from."
+  description "Thunderstorm torpedoes are ammunition for the Thunderstorm Launcher. You cannot install torpedoes unless you have also installed a launcher to fire them from."
 
 outfit "Thunderstorm Storage"
   category "Ammunition Storage"
@@ -18,8 +17,8 @@ outfit "Thunderstorm Storage"
   "mass" 4
   "outfit space" -16
   "thunderstorm capacity" 30
-  ammo "Thunderstorm Torpedo"
-  description "The Thunderstorm Torpedo Storage is used to store extra ammunition for Thunderstorm Launchers."
+  ammo "Thunderstorm"
+  description "The Thunderstorm Storage is used to store extra ammunition for Thunderstorm Launchers."
 
 outfit "Thunderstorm Launcher"
   category "Secondary Weapons"
@@ -37,7 +36,7 @@ outfit "Thunderstorm Launcher"
       "frame rate" 2
       "random start frame"
     sound "thunderstorm"
-    ammo "Thunderstorm Torpedo"
+    ammo "Thunderstorm"
     icon "icon/thunderstorm"
     "fire effect" "thunderstorm fire"
     "hit effect" "torpedo hit"
@@ -59,11 +58,10 @@ outfit "Thunderstorm Launcher"
     "shield damage" 550
     "hull damage" 400
     "hit force" 750
-  description "Thunderstorm Torpedoes are powerful, long range Wanderer missiles, useful against large targets or against clusters of small ships at times when they are too distracted to dodge."
+  description "Thunderstorm torpedoes are powerful, long range Wanderer missiles, useful against large targets or against clusters of small ships at times when they are too distracted to dodge."
 
 
-outfit "Tornado Torpedo"
-  plural "Tornado Torpedoes"
+outfit "Tornado"
   category "Ammunition"
   licences
     "Wanderer Weapons"
@@ -71,7 +69,7 @@ outfit "Tornado Torpedo"
   thumbnail "outfit/tornado"
   "mass" .6
   "tornado capacity" -1
-  description "Tornado Torpedoes are ammunition for the Tornado Launcher. You cannot install torpedoes unless you have also installed a launcher to fire them from."
+  description "Tornado torpedoes are ammunition for the Tornado Launcher. You cannot install torpedoes unless you have also installed a launcher to fire them from."
 
 outfit "Tornado Storage"
   category "Ammunition Storage"
@@ -82,8 +80,8 @@ outfit "Tornado Storage"
   "mass" 6
   "outfit space" -18
   "typhoon capacity" 20
-  ammo "Tornado Torpedo"
-  description "The Tornado Torpedo Storage is used to store extra ammunition for Tornado Launchers."
+  ammo "Tornado"
+  description "The Tornado Storage is used to store extra ammunition for Tornado Launchers."
 
 outfit "Tornado Launcher"
   category "Secondary Weapons"
@@ -101,7 +99,7 @@ outfit "Tornado Launcher"
       "frame rate" 4
       "random start frame"
     sound "tornado"
-    ammo "Tornado Torpedo"
+    ammo "Tornado"
     icon "icon/tornado"
     "fire effect" "tornado fire"
     "hit effect" "torpedo hit"
@@ -123,7 +121,7 @@ outfit "Tornado Launcher"
     "shield damage" 880
     "hull damage" 640
     "hit force" 1200
-  description "Typhoon Torpedoes are an improved Wanderer torpedo technology; they do considerably more damage than Thunderstorms. However, they are also slower, because they are intended mostly for use against large and slow-moving capital ships. As a result, sufficiently skilled pilots can often dodge around them."
+  description "Typhoon torpedoes are an improved Wanderer torpedo technology; they do considerably more damage than Thunderstorms. However, they are also slower, because they are intended mostly for use against large and slow-moving capital ships. As a result, sufficiently skilled pilots can often dodge around them."
 
 
 

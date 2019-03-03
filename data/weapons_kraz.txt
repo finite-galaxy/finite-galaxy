@@ -5,7 +5,7 @@ outfit "Javelin"
   "mass" .1
   "plunderable" 1
   "javelin capacity" -1
-  description "A Javelin missile is ammunition for the Javelin Pod. You cannot install missiles unless you have also installed a launcher to fire them from."
+  description "A Javelin missile is ammunition for the Javelin Launcher. You cannot install missiles unless you have also installed a launcher to fire them from."
 
 outfit "Javelin Storage Crate"
   category "Ammunition Storage"
@@ -15,9 +15,9 @@ outfit "Javelin Storage Crate"
   "outfit space" -6
   "javelin capacity" 49
   ammo "Javelin"
-  description "The Javelin Storage Crate is used to store extra ammunition for Javelin Pods."
+  description "The Javelin Storage Crate is used to store extra ammunition for Javelin Launchers."
 
-outfit "Javelin Pod"
+outfit "Javelin Launcher"
   category "Secondary Weapons"
   thumbnail "outfit/javelin_launcher"
   cost 20000
@@ -48,7 +48,7 @@ outfit "Javelin Pod"
     "random hull damage" 9
     "hit force" 50
     "random hit force" 12
-  description "The Javelin Pod fires rapid, unguided missiles in bursts of up to 15, after which it needs to cool down and reload. This allows it to overwhelm anti-missile systems, but also means it can not fire for a relatively longer time after each burst. A Javelin Pod does far more damage than any gun of a comparable size, and has a longer range as well, but once a ship has fired off all its ammunition it must leave combat and find a planet where it can buy more, which makes Javelins less useful in protracted battles. As a result, they are very popular with pirates as a way to quickly disable a small target."
+  description "The Javelin Launcher fires rapid, unguided missiles in bursts of up to 15, after which it needs to cool down and reload. This allows it to overwhelm anti-missile systems, but also means it can not fire for a relatively longer time after each burst. A Javelin Launcher does far more damage than any gun of a comparable size, and has a longer range as well, but once a ship has fired off all its ammunition it must leave combat and find a planet where it can buy more, which makes Javelins less useful in protracted battles. As a result, they are very popular with pirates as a way to quickly disable a small target."
 
 
 outfit "Flamethrower"
