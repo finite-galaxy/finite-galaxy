@@ -1283,11 +1283,11 @@ void Ship::Move(vector<Visual> &visuals, list<shared_ptr<Flotsam>> &flotsam)
         else if(isYours && landingPlanet->GetFuelPrice() > 0 && GetParent() && GetParent()->GetPlanet() != landingPlanet)
         {
           int amount = attributes.Get("fuel capacity")-fuel;
-          int price = amount*landingPlanet->GetFuelPrice();
+          int price = amount * landingPlanet->GetFuelPrice();
           if(price || !price)
           {
             ostringstream out;
-            out << "You paid " << price << " credits to buy " << Format::Round(amount) << " units of fuel for your escort on " << landingPlanet->Name() << ".";
+            out << "You paid " << Format::Credits(price) << " credits to buy " << Format::Round(amount) << " units of fuel for your escort on " << landingPlanet->Name() << ".";
             Messages::Add(out.str());
             player->AddCredits(price);
           }
@@ -2316,11 +2316,11 @@ double Ship::TransferFuel(double amount, Ship *to)
     to->fuel += amount;
     if(!to->IsDisabled() && to->isYours && player && !isYours)
     {
-      int price = amount*government->GetFuelPrice();
+      int price = amount * government->GetFuelPrice();
       if(price)
       {
         ostringstream out;
-        out << "You paid " << name << " " << price << " credits to buy " << Format::Round(amount) << " units of fuel.";
+        out << "You paid " << name << " " << Format::Credits(price) << " credits to buy " << Format::Round(amount) << " units of fuel.";
         Messages::Add(out.str());
         player->AddCredits(price);
       }

@@ -1372,9 +1372,9 @@ void PlayerInfo::Refuel()
   // Pays the fuel and messages the price that was paid.
   if(rechargedFuel && price > 0)
   {
-    int fuelPrice = rechargedFuel*price;
+    int fuelPrice = rechargedFuel * price;
     ostringstream out;
-    out << "You paid " << fuelPrice << " credits to buy " << rechargedFuel << " units of fuel.";
+    out << "You paid " << Format::Credits(fuelPrice) << " credits to buy " << Format::Round(rechargedFuel) << " units of fuel.";
     Messages::Add(out.str());
     accounts.AddCredits(-fuelPrice);
   }
@@ -1395,9 +1395,9 @@ void PlayerInfo::RefuelRatio(double ratio)
   // Pays the fuel and messages the price that was paid.
   if(rechargedFuel && price > 0)
   {
-    int fuelPrice = rechargedFuel*price;
+    int fuelPrice = rechargedFuel * price;
     ostringstream out;
-    out << "You paid " << fuelPrice << " credits to buy " << rechargedFuel << " units of fuel.";
+    out << "You paid " << Format::Credits(fuelPrice) << " credits to buy " << Format::Round(rechargedFuel) << " units of fuel.";
     Messages::Add(out.str());
     accounts.AddCredits(-fuelPrice);
   }
