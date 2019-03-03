@@ -17,7 +17,7 @@ namespace {
     int places = 0;
     do {
       if(places && !(places % 3) && (value >= 10))
-        result += ' ';
+        result += '\''; // ' ' U+202F narrow no-break space
       ++places;
       
       result += static_cast<char>('0' + value % 10);
@@ -25,7 +25,7 @@ namespace {
     } while(value);
     
     if(isNegative)
-      result += '-';
+      result += '-'; // '−' U+2212 minus sign
     
     reverse(result.begin(), result.end());
   }
@@ -61,7 +61,7 @@ string Format::Credits(int64_t value)
     if(absolute > THRESHOLD[i])
     {
       result += SUFFIX[i];
-      result += static_cast<char>(' ');
+      result += static_cast<wchar_t>(' ');
       int decimals = (absolute / (THRESHOLD[i] / 1000)) % 1000;
       for(int d = 0; d < 3; ++d)
       {
