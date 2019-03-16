@@ -146,6 +146,7 @@ You will also need libmingw32.a and libopengl32.a. Those should be included in t
 ### Major changes
 * Hyperjump fuel is based on your ship's effective mass (including cargo and carried ships)
 * Hyperjump fuel is no longer free, its price depends on the planet (when landing) or the government (when hailing ships in space)
+* Ships continuously consume energy, based upon the number of bunks, to represent life-support
 * Ship categories are based on total mass
   * `ship mass = hull mass + outfit space + cargo space`
 * Introduced core space, reserved for energy generators, shields and hull systems, and hyperdrives
