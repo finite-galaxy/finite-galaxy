@@ -17,9 +17,9 @@
 using namespace std;
 
 namespace {
-  const double WRAP = 4096.;
-  const int CELL_SIZE = 256;
-  const int CELL_COUNT = WRAP / CELL_SIZE;
+  constexpr double WRAP = 4096.;
+  constexpr unsigned CELL_SIZE = 256u;
+  constexpr unsigned CELL_COUNT = WRAP / CELL_SIZE;
 }
 
 

@@ -155,7 +155,7 @@ namespace {
 
 Engine::Engine(PlayerInfo &player)
   : player(player), ai(ships, asteroids.Minables(), flotsam),
-  shipCollisions(256, 32)
+  shipCollisions(256u, 32u)
 {
   zoom = Preferences::ViewZoom();
   

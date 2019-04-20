@@ -533,7 +533,7 @@ void PlayerInfo::IncrementDate()
       Messages::Add("You failed to meet the deadline for the mission \"" + mission.Name() + "\".");
   
   // Check what salaries and tribute the player receives.
-  int total[2] = {0, 0};
+  int64_t total[2] = {0, 0};
   static const string prefix[2] = {"salary: ", "tribute: "};
   for(int i = 0; i < 2; ++i)
   {
@@ -1736,7 +1736,7 @@ void PlayerInfo::HandleEvent(const ShipEvent &event, UI *ui)
   if(event.ActorGovernment()->IsPlayer())
     if((event.Type() & ShipEvent::DISABLE) && event.Target())
     {
-      int &rating = conditions["combat rating"];
+      auto &rating = conditions["combat rating"];
       static const int64_t maxRating = 2000'000'000;
       rating = min(maxRating, rating + (event.Target()->Cost() + 250'000) / 500'000);
     }
@@ -1752,7 +1752,7 @@ void PlayerInfo::HandleEvent(const ShipEvent &event, UI *ui)
 
 
 // Get the value of the given condition (default 0).
-int PlayerInfo::GetCondition(const string &name) const
+int64_t PlayerInfo::GetCondition(const string &name) const
 {
   auto it = conditions.find(name);
   return (it == conditions.end()) ? 0 : it->second;
@@ -1761,7 +1761,7 @@ int PlayerInfo::GetCondition(const string &name) const
 
 
 // Get mutable access to the player's list of conditions.
-map<string, int> &PlayerInfo::Conditions()
+map<string, int64_t> &PlayerInfo::Conditions()
 {
   return conditions;
 }
@@ -1769,7 +1769,7 @@ map<string, int> &PlayerInfo::Conditions()
 
 
 // Access the player's list of conditions.
-const map<string, int> &PlayerInfo::Conditions() const
+const map<string, int64_t> &PlayerInfo::Conditions() const
 {
   return conditions;
 }
@@ -1782,7 +1782,7 @@ void PlayerInfo::SetReputationConditions()
 {
   for(const auto &it : GameData::Governments())
   {
-    int rep = it.second.Reputation();
+    int64_t rep = it.second.Reputation();
     conditions["reputation: " + it.first] = rep;
   }
 }
@@ -1793,8 +1793,8 @@ void PlayerInfo::CheckReputationConditions()
 {
   for(const auto &it : GameData::Governments())
   {
-    int rep = it.second.Reputation();
-    int newRep = conditions["reputation: " + it.first];
+    int64_t rep = it.second.Reputation();
+    int64_t newRep = conditions["reputation: " + it.first];
     if(newRep != rep)
       it.second.AddReputation(newRep - rep);
   }
@@ -2355,8 +2355,8 @@ void PlayerInfo::ApplyChanges()
 // Update the conditions that reflect the current status of the player.
 void PlayerInfo::UpdateAutoConditions(bool isBoarding)
 {
-  // Set a condition for the player's net worth. Limit it to the range of a 32-bit int.
-  static const int64_t limit = 2000'000'000;
+  // Bound financial conditions to +/- 4.6 x 10^18 credits, within the range of a 64-bit int.
+  static constexpr int64_t limit = static_cast<int64_t>(1) << 62;
   conditions["net worth"] = min(limit, max(-limit, accounts.NetWorth()));
   conditions["credits"] = min(limit, accounts.Credits());
   conditions["unpaid mortgages"] = min(limit, accounts.TotalDebt("Mortgage"));
