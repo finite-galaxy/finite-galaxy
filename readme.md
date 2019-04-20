@@ -261,6 +261,7 @@ If you are posting a pull request, please:
     * avoid abbreviations (e.g., i.e., etc.); contractions (isn't) are fine
     * use an Oxford comma when giving more than two items (e.g. one, two, and three; *not* one, two and three)
     * use U+2013 – en-dash for number ranges (e.g. 10–12) and for parenthetical expressions – like this – instead of parentheses, em-dashes, or hyphens
+    * use U+2026 … horizontal ellipsis instead of three full stops
     * use U+202F   narrow non-breaking space as a thousands separator for numbers with five or more digits (e.g. 12 345)
     * use U+2212 − minus sign for negative numbers, subtractions, and deductions
     <!-- 0°1′2″3‴4⁗ -->

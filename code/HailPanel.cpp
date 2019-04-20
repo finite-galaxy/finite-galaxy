@@ -93,13 +93,13 @@ HailPanel::HailPanel(PlayerInfo &player, const shared_ptr<Ship> &ship)
     {
       message = "Looks like you've gotten yourself into a bit of trouble. "
         "Would you like us to ";
-      string sellMessage = "We could sell you fuel for " + Format::Number(ship->GetGovernment()->GetFuelPrice()) + " credits per unit of fuel.";
+      string fuelMessage = "We will charge you " + Format::Number(ship->GetGovernment()->GetFuelPrice()) + " credits per unit of fuel.";
       if(canGiveFuel && canRepair)
-        message += "patch you up and give you some fuel?"+sellMessage;
+        message += "patch you up and bring you some fuel? " + fuelMessage;
       else if(canGiveFuel)
-        message += "give you some fuel?"+sellMessage;
+        message += "bring you some fuel? " + fuelMessage;
       else if(canRepair)
-        message += "patch you up?";
+        message += "patch you up? ";
     }
   }
   
