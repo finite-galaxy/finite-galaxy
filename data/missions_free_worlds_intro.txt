@@ -406,14 +406,14 @@ mission "FW Recon 1"
       choice
         `  "I was just wondering what sort of engines you've got that let you move so fast."`
           goto engines
-        `  "Never mind sir, I was just admiring your... impressive equipment."`
+        `  "Never mind sir, I was just admiring your… impressive equipment."`
           goto equipment
       label engines
       `  "Nice, aren't they?" he says. "Atomic engines, the very latest in propulsion technology from Deep Sky. They're so smooth and responsive, I feel like I'm back piloting a shuttlecraft again."`
       `  He pauses, then adds, "They pay me a thousand credits every time I say that."`
         goto close
       label equipment
-      `  He looks awfully pleased with himself. "Yes, I suppose a ship like this is sure to turn a few heads. Next time we're on the same planet, stop by my berth and I'd be glad to give you a... private tour." He winks at you. You feel a little bit creepy.`
+      `  He looks awfully pleased with himself. "Yes, I suppose a ship like this is sure to turn a few heads. Next time we're on the same planet, stop by my berth and I'd be glad to give you a… private tour." He winks at you. You feel a little bit creepy.`
         goto close
       label close
       `  You cut the comlink and breathe a sigh of relief that the conversation is over.`
@@ -630,9 +630,9 @@ mission "FW Katya 1"
           decline
         `  "Oh yeah? Well you ARE a girl!"`
   
-      `  She turns back around, with a fearsome gleam in her eyes, and walks up to you until your faces are only inches apart. "Yeah, but I don't fight like one," she says. "I... fight like a she-badger."`
+      `  She turns back around, with a fearsome gleam in her eyes, and walks up to you until your faces are only inches apart. "Yeah, but I don't fight like one," she says. "I… fight like a she-badger."`
       choice
-        `  "A she... badger?"`
+        `  "A she… badger?"`
   
       `  "Fearsome creatures." She walks away, leaving you even more confused.`
         decline
@@ -671,7 +671,7 @@ mission "FW Katya 1B"
       `When you land on <planet>, before your engines have even had a chance to cool, Katya comes aboard your ship. When she sees your passengers, she breaks into a wide grin. "Lynn!" she says, running up and hugging the woman who introduced herself as "Sarah." Then she turns to "Marty" and says, "And Henry! So good to see you both. Captain <last>, allow me to introduce you to Professor Lynn Anderson, one of the galaxy's premier planetary scientists, and her husband Henry, a former Navy intelligence officer."`
       choice
         `  "Pleased to meet you both. Why the deception?"`
-        `  "Wait a minute... were they the secret cargo?"`
+        `  "Wait a minute… were they the secret cargo?"`
       
       `  Katya explains, "The Andersons are defecting to the Free Worlds. Their dream is to make terraforming a public service, supported by government funds, rather than a luxury available only to the richest of planets. We worked for years to get Parliament to accept that idea, but with no luck. And because of Henry's background and knowledge about the intelligence community, the Republic would have stopped them if they knew they were defecting."`
       `  She adds, "The real secret cargo, which arrived several days ago via a faster ship, was their personal possessions and Lynn's lab equipment and instruments, which were loaded onto a ship supposedly bound for Hestia."`
@@ -870,7 +870,7 @@ mission "FW Katya 2B"
       `  "And what do you do for work?" you ask.`
       `  "Vigilante nuclear power plant inspector," he says, nonchalantly.`
       choice
-        `  "Um... what?"`
+        `  "Um… what?"`
         `  "How does that even work?"`
         `  "Is that even legal?"`
       
@@ -934,7 +934,7 @@ mission "FW Katya 3"
     conversation
       `You find Eyes and Katya sitting in the shade of one of the few trees in the port, drinking some sort of frozen milkshakes while they stare out at the desert and talk in hushed voices. When you join them, Katya says, "I was just filling Eyes in on the Navy's recent fleet mobilization. Half the Dirt Belt is swarming with warships and surveillance drones right now. It's hard to believe that we can find the attackers before they do, unless they're somewhere the Navy hasn't thought to look."`
       `  "Agreed," says Eyes, "and to make matters worse, their sensors are probably much better than mine."`
-      `  Katya appears to be struck by a sudden idea. "The sensors on their drones," she says, "their unmanned drones..."`
+      `  Katya appears to be struck by a sudden idea. "The sensors on their drones," she says, "their unmanned drones…"`
       `  Eyes glances at her, sees her expression, and says, "No, Councillor, don't even think of it. That's a horrible idea."`
       `  "No," she says, "it's brilliant. Captain <last>, are you familiar with the Dereliction and Salvage Act of 2976?"`
       choice
@@ -1122,7 +1122,7 @@ mission "FW Katya 5B"
         goto morning
       
       label prayer
-      `  "Evening prayer" turns out to be a lengthy church service that apparently begins with the monks listing every bad thing they can possibly imagine and praying that it would not happen: "From lightning and tempest; from earthquake, fire, and flood; from plague, pestilence, and famine, good Lord, deliver us. From all oppression, conspiracy, and rebellion; from violence, battle, and murder; and from dying suddenly and unprepared, good Lord, deliver us..." It's very monotonous.`
+      `  "Evening prayer" turns out to be a lengthy church service that apparently begins with the monks listing every bad thing they can possibly imagine and praying that it would not happen: "From lightning and tempest; from earthquake, fire, and flood; from plague, pestilence, and famine, good Lord, deliver us. From all oppression, conspiracy, and rebellion; from violence, battle, and murder; and from dying suddenly and unprepared, good Lord, deliver us…" It's very monotonous.`
       `  At some point, they switch to praying for different people: for the Parliament of the Republic, and everyone in authority; for the governor of <origin>, their world; for the Quarg and all sentient species; for prisoners, for the homeless and poor, for orphans, for pregnant women and young children, for travellers, for starship crews and captains, for miners and oil crews, for mill and factory workers; for the abused; for the mentally ill; for pirates and street gangs; for all creatures and planets vulnerable to exploitation or ecological destruction. (Eyes, who is sitting next to you, responds to that last petition with a fervent "Amen!") The litany is so detailed and specific that you find it both exhausting and fascinating.`
       `  When the service ends, the monks depart for their rooms in silence, and Eyes, with a brief nod to you, does the same.`
       
@@ -1239,7 +1239,7 @@ mission "FW Katya 7"
     conversation
       `<origin> turns out no differently than the previous two. "We need a change in strategy," says Katya. "We've been talking about something while we were in transit."`
       `  Eyes says, "It occurred to me that underwater testing might be even easier than underground: no need to dig or find a mine shaft. And, the Navy's sensors are for atmosphere, not oceans. But I've still got my old test kits with me for seawater."`
-      `  Katya says, "So then we wondered, what sort of world would you go to if you wanted rumblings in the ocean to go unnoticed? Either an unpopulated one, or one with lots of meteorite activity. And that leads us to... Deep." She points out the system on your map. "Mild tidal surges on almost a weekly basis, due to impacts from all the asteroids in system. Perfect place to hide an undersea explosion."`
+      `  Katya says, "So then we wondered, what sort of world would you go to if you wanted rumblings in the ocean to go unnoticed? Either an unpopulated one, or one with lots of meteorite activity. And that leads us to… Deep." She points out the system on your map. "Mild tidal surges on almost a weekly basis, due to impacts from all the asteroids in system. Perfect place to hide an undersea explosion."`
       choice
         `  "Sounds like a good possibility. Let's give it a try!"`
           accept
@@ -1280,7 +1280,7 @@ mission "FW Katya 7B"
         goto last
       
       label last
-      `  "One more try," she says. "One last world, and then we give up. I want you to take me... there." She points at the moon, hanging just above the horizon.`
+      `  "One more try," she says. "One last world, and then we give up. I want you to take me… there." She points at the moon, hanging just above the horizon.`
       `  Eyes says, "Mining world. Dusty atmosphere. Frequent meteorite impacts. You could set off a nuke on the far side of that world and the miners would probably sleep right through it."`
       choice
         `  "Okay, I'll take you to this one last world, and then we're done."`
@@ -1466,7 +1466,7 @@ mission "FW Escort 1B"
   
   on offer
     conversation
-      `Your convoy of freighters reaches <origin> intact, despite numerous encounters with pirates. The merchant captains sell their trade goods and stock up with weapons and ship outfits that will be used to build new ships for the Free Worlds. Of course, now that you are carrying such valuable cargo, the pirate attacks are likely to get even worse...`
+      `Your convoy of freighters reaches <origin> intact, despite numerous encounters with pirates. The merchant captains sell their trade goods and stock up with weapons and ship outfits that will be used to build new ships for the Free Worlds. Of course, now that you are carrying such valuable cargo, the pirate attacks are likely to get even worse…`
         accept
   
   on complete

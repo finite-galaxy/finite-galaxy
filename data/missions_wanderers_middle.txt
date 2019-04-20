@@ -228,7 +228,7 @@ mission "Wanderers: Nova Remnants"
         `  "The Quarg say that the Drak are interested in keeping peace in the galaxy."`
           goto quarg
       
-      `  He says, "They are partly [living, biological], partly [constructed, technological], and partly..." Whatever the third part is, the words for it are so far removed from human language that your translation device doesn't even attempt a guess at how to express them.`
+      `  He says, "They are partly [living, biological], partly [constructed, technological], and partly…" Whatever the third part is, the words for it are so far removed from human language that your translation device doesn't even attempt a guess at how to express them.`
       `  You tell him, "The Quarg are a peaceful species, and they say the Drak are peacemakers as well. So perhaps we should not be too worried about their intentions."`
 
       label quarg
@@ -303,7 +303,7 @@ mission "Wanderers: First Mereti Attack"
     event "wanderers: kaliptari battle begin"
     conversation
       `While you are still walking back to your ship from your latest meeting, alarm sirens begin to sound, and you see many Wanderers leaping into the air and flying quickly toward the spaceport, where ships are quickly beginning to take off. (Interestingly, a Wanderer alarm siren sounds more like a quacking duck than like the shrieking or droning sounds commonly used as alarms by humans.) It would appear that the base is under attack.`
-      `  You return as quickly as possible to your ship and prepare to join the other defenders...`
+      `  You return as quickly as possible to your ship and prepare to join the other defenders…`
         launch
   on visit
     dialogue
@@ -739,7 +739,7 @@ mission "Wanderers: Kor Efret 3"
     event "wanderers: kashikt battle begin"
     conversation
       `With Rek's help, you make contact with the team of Korath engineers, and Rek explains the Wanderer plan to hack into the Kor Mereti network. Her speech is slower than before, and she has to keep asking questions; clearly the conversation involves technical jargon that she is not yet familiar with. When she is done explaining, the Korath are silent for a minute, then one of them answers quite loudly, almost shouting, gesturing in your direction as if pushing you away.`
-      `  Rek says, "He said, 'Do you think we are idiots? Do you think we have not attempted that?'" The Korath leader follows up with another long statement that Rek hesitantly translates. "The Mereti... consciousness? It is impossible to subvert. It has a sort of... immune system? Like a living creature. Any foreign influence that impinges on its network is sequestered and analysed. It does not become part of the... gestalt? ...unless it is proven to be beneficial."`
+      `  Rek says, "He said, 'Do you think we are idiots? Do you think we have not attempted that?'" The Korath leader follows up with another long statement that Rek hesitantly translates. "The Mereti… consciousness? It is impossible to subvert. It has a sort of… immune system? Like a living creature. Any foreign influence that impinges on its network is sequestered and analysed. It does not become part of the… gestalt? …unless it is proven to be beneficial."`
       choice
         `  "But perhaps the Wanderers could succeed where the Korath have failed."`
         `  "What about the Kor Sestor? Do they have any hope of taking over those drones?"`
@@ -752,7 +752,7 @@ mission "Wanderers: Kor Efret 3"
       `  Rek asks the Korath a question, and translates the response. "They say that none of them know what is controlling the Kor Sestor, but that wherever the control centre is, it is certainly tightly guarded. They have not been willing to risk their own lives to explore Sestor space, but you are free to do so if you think it would be beneficial."`
 
       label end
-      `  The conversation is interrupted as alarm sirens begin to sound throughout the spaceport. One of the Korath says something to Rek, and they all begin running toward the landing pads. Rek says, "Another Kor Mereti attack. They have become more frequent, lately. You should join the defenders; fighting alongside them will help to gain their trust." You hurry back to your ship and take off...`
+      `  The conversation is interrupted as alarm sirens begin to sound throughout the spaceport. One of the Korath says something to Rek, and they all begin running toward the landing pads. Rek says, "Another Kor Mereti attack. They have become more frequent, lately. You should join the defenders; fighting alongside them will help to gain their trust." You hurry back to your ship and take off…`
         launch
   on complete
     event "wanderers: kashikt battle end"
@@ -842,7 +842,7 @@ mission "Wanderers: Kor Efret 4"
         goto end
 
       label jump
-      `  Rek asks, and translates the response. "Yes, one thing that the exiles were unwilling to give up was the knowledge of how to create jump drives so they could raid other nearby species. Although..." She pauses to listen as one of the Korath says something else. "He says, the exiles would be far better off without them. The manufacturing process is precarious, and one wrong step can cause an explosion that destroys the ship or station where the drives are being constructed."`
+      `  Rek asks, and translates the response. "Yes, one thing that the exiles were unwilling to give up was the knowledge of how to create jump drives so they could raid other nearby species. Although…" She pauses to listen as one of the Korath says something else. "He says, the exiles would be far better off without them. The manufacturing process is precarious, and one wrong step can cause an explosion that destroys the ship or station where the drives are being constructed."`
 
       label end
       `  Rek tells you that she wants to return to <planet> to continue her work with the Korath community there. You agree to take her there before returning to report to Tele'ek.`
@@ -1080,7 +1080,7 @@ mission "Wanderers: Mind 6"
     event "wanderers: kor mereti friendly"
     conversation
       `With the Wanderer fleet keeping the automata off your back, you carefully pilot your ship into an abandoned docking bay. The Wanderers install the Mind in a niche near the back of the bay and then begin welding sheets of metal over the opening to prevent the Mereti drones from gaining easy access to the Mind to shut it down or destroy it. Meanwhile, every few seconds the bay is lit by a bright flash of weapons fire or exploding ships outside. Hopefully the Wanderer fleet is managing to hold its own against the drones.`
-      `  Soon the engineers are done, and you return to your ship to take off. As soon as you depart, the bay doors, which seemed inactive when you first entered, slam shut, and your ship's sensors detect Korath hull repair drones swarming over the doors, welding them in place and piling new layers of hull material on top of them. There is no longer any possibility of returning to the bay to retrieve the Mind. And meanwhile, it is time to rejoin the battle...`
+      `  Soon the engineers are done, and you return to your ship to take off. As soon as you depart, the bay doors, which seemed inactive when you first entered, slam shut, and your ship's sensors detect Korath hull repair drones swarming over the doors, welding them in place and piling new layers of hull material on top of them. There is no longer any possibility of returning to the bay to retrieve the Mind. And meanwhile, it is time to rejoin the battle…`
         launch
   on enter
     dialogue `This star system is in utter chaos. A vast number of Mereti drones are here. Some are attacking each other. Others are attacking the Wanderers. And still others, sadly, seem intent on attacking you. You'll have to hold them off as long as you can, while trying to stay on the good side of the drones that now seem to be defending you.`
@@ -1189,7 +1189,7 @@ mission "Wanderers: Mind 8"
         goto plant
 
       label korath
-      `  The drone says, haltingly, "The Korath. The Korath... created our bodies? Yes, the Korath created our bodies." It sounds like it's either conversing with someone else, or perhaps trying hard to remember something. "Yes, but the Wanderers..." It tilts its body closer to you. In a slightly less booming voice, which is perhaps its attempt at a whisper, it says, "The Wanderers created our soul."`
+      `  The drone says, haltingly, "The Korath. The Korath… created our bodies? Yes, the Korath created our bodies." It sounds like it's either conversing with someone else, or perhaps trying hard to remember something. "Yes, but the Wanderers…" It tilts its body closer to you. In a slightly less booming voice, which is perhaps its attempt at a whisper, it says, "The Wanderers created our soul."`
 
       label plant
       `  While you are still trying to process the drone's statement, another drone comes flying out of the greenhouse facility carrying a large square metal pot. The pot is filled with soil, and in the soil is planted a small, very dry-looking bush with a few dead leaves clinging to it. "We broke it," says the drone. "Fix it please."`
@@ -1553,7 +1553,7 @@ mission "Wanderers: Sestor Attack"
         `  "Does that mean that someone else captured the facility before we could?"`
 
       `  Suddenly, you hear the noise of alarm sirens from the spaceport, and a messenger comes bursting into the room, his talons screeching across the floor as he skids to a stop. "Sestor drones!" he says. "[Enormous, overwhelming] fleet. Need all [defenders, fighters] immediately."`
-      `  You return to your ship and quickly fire up the engines...`
+      `  You return to your ship and quickly fire up the engines…`
         launch
   on enter
     dialogue `There is indeed a Kor Sestor fleet here, but it is nowhere near as large as the messenger indicated. Either the messenger was exaggerating, or some of the fleet has already fled.`
@@ -1721,7 +1721,7 @@ mission "Wanderers: Sestor Search: Vara K'chrai"
     has "Wanderers: Sestor Search: active"
   on offer
     conversation
-      `Everyone in the spaceport on Vara K'chrai is still in a panic from watching the Kor Sestor fleet fly through their system, but fortunately the drones did not attack the planet. In fact, they did not even fire on the Wanderer ships that were in orbit at the time. The Wanderer defenders, not wanting to provoke a fight with a fleet they could probably not defeat, did not attack either. So, the Kor Sestor fleet passed peacefully through this system and continued on to... wherever it is going. No one here has any idea yet what the fleet's destination was.`
+      `Everyone in the spaceport on Vara K'chrai is still in a panic from watching the Kor Sestor fleet fly through their system, but fortunately the drones did not attack the planet. In fact, they did not even fire on the Wanderer ships that were in orbit at the time. The Wanderer defenders, not wanting to provoke a fight with a fleet they could probably not defeat, did not attack either. So, the Kor Sestor fleet passed peacefully through this system and continued on to… wherever it is going. No one here has any idea yet what the fleet's destination was.`
         decline
 
 
@@ -1887,7 +1887,7 @@ mission "Wanderers: Sestor: Farpoint Attack 1"
 
       label next
       `  You tell him about the underground bunker that the Wanderers discovered, and the signs that someone either recently departed from it, or recently infiltrated it from the surface. He says, "We already know that a group of Alphas was active in that region of space. You and I fought them there just recently, and failed to capture them. I bet that after they fled, they somehow gained access to the Kor Sestor bunker and took over control of the drone fleets."`
-      `  It is not particularly surprising when, a few seconds after he says that, an alarm siren begins to sound...`
+      `  It is not particularly surprising when, a few seconds after he says that, an alarm siren begins to sound…`
         launch
   npc evade
     government "Kor Sestor"
@@ -2426,7 +2426,7 @@ mission "Wanderers: Sestor: Bomb Zenith 2"
     event "bombed zenith"
     event "zenith cooling" 40
     conversation
-      `You shove Danforth's device out the airlock at the coordinates he gave you, and immediately fire your ship's repulsors full blast to take you back up into orbit...`
+      `You shove Danforth's device out the airlock at the coordinates he gave you, and immediately fire your ship's repulsors full blast to take you back up into orbit…`
         launch
   on enter
     conversation
@@ -2923,7 +2923,7 @@ mission "Wanderers: Sestor: Factory 2"
     event "wanderers: asikafarnut battle"
     conversation
       `The drones stop firing on the Korath world-ships the moment they enter the atmosphere, which is a good sign – it probably means that their command codes worked. While they begin scouting out the manufacturing centre, the exiles tell you (through Rek) that they need you to return to orbit and keep the remaining drones from attacking them until they can be sure the factory is shut down for good; it might take them a while to accomplish that.`
-      `  You fire up your engines and blast off for one last battle against the Kor Sestor...`
+      `  You fire up your engines and blast off for one last battle against the Kor Sestor…`
         launch
   npc evade
     government "Kor Sestor"

@@ -113,7 +113,7 @@ mission "FWC Attack Kaus Borealis"
       `  "Yes," says JJ, "it will have to be a diplomatic solution in the end. But we must negotiate that solution from a position of strength, not weakness. And that means driving the Navy out of our territory."`
         goto plan
       label strength
-      `  "Precisely," says JJ, "and the only way to do that is to drive the Navy out of our territory. And if that isn't enough... we have plans for that contingency as well."`
+      `  "Precisely," says JJ, "and the only way to do that is to drive the Navy out of our territory. And if that isn't enough… we have plans for that contingency as well."`
         goto plan
       label plan
       `  "So, now we attack Kaus Borealis?" you ask.`
@@ -1041,7 +1041,7 @@ mission "FWC Pug 1"
       label reinforcements
       `  "Yes," he says, "and a second after they arrived in system, this other fleet of ships appeared, unlike any ships I've ever seen before. They're tearing the Wolf Pack fleet to ribbons. If you don't get up there immediately, none of them will be left alive."`
       label end
-      `  You and hurry to your ship and fire it up for a hasty launch...`
+      `  You and hurry to your ship and fire it up for a hasty launch…`
         launch
   
   npc
@@ -1513,10 +1513,10 @@ mission "FWC Pug 3B"
       label end
       branch alone
         has "FWC Checkmate Escorts: done"
-      `  The resistance fighters tell you their own fleet will be launching shortly. You return to your ship and fire up the engines. Hopefully the ships that are left over from your attack fleet will be enough to hold off the Pug until Freya finishes her work down here...`
+      `  The resistance fighters tell you their own fleet will be launching shortly. You return to your ship and fire up the engines. Hopefully the ships that are left over from your attack fleet will be enough to hold off the Pug until Freya finishes her work down here…`
         launch
       label alone
-      `  The resistance fighters tell you their own fleet will be launching shortly. You return to your ship and fire up the engines, wishing that you had managed to keep some of the ships from your attack fleet alive, and hoping you will be able to hold off the Pug until Freya finishes her work down here...`
+      `  The resistance fighters tell you their own fleet will be launching shortly. You return to your ship and fire up the engines, wishing that you had managed to keep some of the ships from your attack fleet alive, and hoping you will be able to hold off the Pug until Freya finishes her work down here…`
         launch
   
   npc
@@ -1709,7 +1709,7 @@ mission "FWC Pug 4"
   
   on offer
     conversation
-      `Your fleet lands on <planet>, and to your surprise the locals say that soon before your fleet arrived, all the Pug who were present on the planet departed; clearly they expected your arrival and had no desire to become your prisoners. You only have a few hours to take stock of the situation before the Navy informs you that they have detected another Pug fleet incoming...`
+      `Your fleet lands on <planet>, and to your surprise the locals say that soon before your fleet arrived, all the Pug who were present on the planet departed; clearly they expected your arrival and had no desire to become your prisoners. You only have a few hours to take stock of the situation before the Navy informs you that they have detected another Pug fleet incoming…`
         launch
   
   on complete
@@ -1845,7 +1845,7 @@ mission "FWC Pug 4B"
   on offer
     conversation
       `You land on <origin> and quickly begin packing up the alien equipment that you left here earlier. Quite a few of the locals are watching you from a distance, but they seem friendly despite the fact that their world was so recently occupied by the Free Worlds against their will. Clearly your success in opening a path for the Navy to enter the disconnected region of space has become known.`
-      `  As you are setting up the alien equipment, Freya says, "Doesn't this all seem a little too... neat, to you? I mean, that the aliens close off the hyperlinks but then for some reason leave behind the exact equipment that we need to gradually reopen them? And that the requisite technology is so simple, a transmitter and a reflector? It all fits together way too well."`
+      `  As you are setting up the alien equipment, Freya says, "Doesn't this all seem a little too… neat, to you? I mean, that the aliens close off the hyperlinks but then for some reason leave behind the exact equipment that we need to gradually reopen them? And that the requisite technology is so simple, a transmitter and a reflector? It all fits together way too well."`
       choice
         `  "Are you suggesting that the aliens intended for us to do exactly what we're doing?"`
         `  "It does all seem odd, that we could have any success at all fighting a species that is apparently so sophisticated."`
@@ -2178,7 +2178,7 @@ mission "FWC Pug 6"
         `  "As ready as I'll ever be, I guess."`
       `  She laughs. "I suppose that's the best we can hope for. Do you mind if I ride in your ship tomorrow, rather than one of the others? If this is the end, I'd rather face it with people I know." You agree. She turns back to look out the window.`
       `  Since Freya seems to want to be alone, you return downstairs, and discover that a sizeable Oathkeeper fleet has arrived. In the main vestibule of the spaceport, an Oathkeeper officer is leading a group in qigong meditation. And surprisingly, you spot Admiral Danforth sitting with the Muslim prayer group and chanting in fluent Arabic. Meanwhile, the party outside the pub continues.`
-      `  Eventually morning comes, and you prepare your ship for the assault on the Pug homeworld...`
+      `  Eventually morning comes, and you prepare your ship for the assault on the Pug homeworld…`
         accept
   
   npc
@@ -2330,7 +2330,7 @@ mission "FWC End"
       `  "No, the honour has been mine," he says. "Feel free to drop by and visit me on Farpoint any time you're in the area."`
         accept
       label trial
-      `  "Trust me," he says, "you won't need to worry about that this time around. Having an alien attack so close to Earth be thwarted through the assistance of the Free Worlds has put Parliament in a very... receptive mood. Good luck, Captain <last>, and I hope our paths will cross again."`
+      `  "Trust me," he says, "you won't need to worry about that this time around. Having an alien attack so close to Earth be thwarted through the assistance of the Free Worlds has put Parliament in a very… receptive mood. Good luck, Captain <last>, and I hope our paths will cross again."`
         accept
   
   on complete
@@ -2352,5 +2352,5 @@ mission "FWC End"
         `  "Build a merchant fleet and live a safe, quiet life."`
         `  "See if folks in the fringe worlds need any help against the pirates."`
         `  "Use my jump drive to explore beyond human space."`
-      `  "Well, we all wish you the best of luck," says Freya. "We would never have won this war without you. Be sure to stay in touch." You hug each of them goodbye, and return to your ship. What you do next is up to you...`
+      `  "Well, we all wish you the best of luck," says Freya. "We would never have won this war without you. Be sure to stay in touch." You hug each of them goodbye, and return to your ship. What you do next is up to you…`
 

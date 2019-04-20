@@ -191,7 +191,7 @@ mission "Deep Archaeology 1"
       `  You say, "And, is the work you're asking me to do going to make me equally unpopular?"`
       label samples
       `  "Not if you are circumspect," he says. "I need two samples from a certain village. One is simple: wood from a living or recently deceased tree. Any tree will do."`
-      `  He pauses for a minute, then continues. "The other is more... sensitive. There is a historical site on Midgard, an ancient church. Not something they publish in the official tourist guides, mind you. I need a small sample of the wood that the church is built with. A small splinter would suffice."`
+      `  He pauses for a minute, then continues. "The other is more… sensitive. There is a historical site on Midgard, an ancient church. Not something they publish in the official tourist guides, mind you. I need a small sample of the wood that the church is built with. A small splinter would suffice."`
       choice
         `  "Sure, if it's in the interest of science, I can do that."`
           goto yes
@@ -326,7 +326,7 @@ mission "Deep Archaeology 5"
     conversation
       `You cruise high above the surface of <origin> as John calibrates his instruments. "Sorry it's taking so long," he says, "there's some sort of glitch in the gravitational sensors, messing up my measurements."`
       `  "What sort of glitch?" asks Albert.`
-      `  "Just a sensor artefact," he says, "some sort of echo. No, wait..." He trails off and starts turning dials on the instrument, then turns very pale.`
+      `  "Just a sensor artefact," he says, "some sort of echo. No, wait…" He trails off and starts turning dials on the instrument, then turns very pale.`
       `  Albert looks over his shoulder at the monitor, but clearly doesn't understand what he's looking at. "What is it?" he asks.`
       `  "It's not a sensor glitch," says John. "It's an artificial singularity."`
       choice
@@ -478,7 +478,7 @@ mission "Hallucination"
         `  (No, I never touch that stuff.)`
           defer
         `  (Sure, sounds like fun!)`
-      `  The room begins to spin, and strange things happen...`
+      `  The room begins to spin, and strange things happen…`
         launch
   
   npc kill
@@ -754,7 +754,7 @@ mission "Pookie 2"
         goto response
     
       label response
-      `  "Thank heavens," she says. "She's all yours." She hands you the leash and a large bag that appears to be full of chew toys. "Here are her toys, her food, and her... outfits. Which she hates. Feed her twice a day, or she will go berserk. Do not feed her more than twice a day, or she will throw up..."`
+      `  "Thank heavens," she says. "She's all yours." She hands you the leash and a large bag that appears to be full of chew toys. "Here are her toys, her food, and her… outfits. Which she hates. Feed her twice a day, or she will go berserk. Do not feed her more than twice a day, or she will throw up…"`
       `  As she continues rattling off instructions, you ask, "Wait, Pookie is the dog?"`
       `  "Short for 'Pocahontas,"' she explains. "Good luck, and I hope my sister pays you well." She walks away. There's nothing else you can do but bring Pookie back to your ship, where she immediately lifts her leg against the landing strut.`
         accept
@@ -859,7 +859,7 @@ mission "Rim Archaeology 1"
           goto scan
       `  "Air pockets," he says, "some of them filled in with ground water. Nothing out of the ordinary."`
       label scan
-      `  When the scan reaches about thirty meters below the surface, suddenly the view changes...`
+      `  When the scan reaches about thirty meters below the surface, suddenly the view changes…`
       `  "Great burning suns!" says Foster. "There is something down there! Roads in a triangular grid. That ain't no human city." You both stare at the monitor for a minute, then Foster says, "I'm going to need to pull some permits. Meet me in the spaceport in an hour if you're willing to help pick up some of the other stuff we'll need."`
 
 
@@ -1027,7 +1027,7 @@ mission "Rim Archaeology 5A"
         `  "My ship is not a warship."`
       `  "Then just get up there and lead them around in circles until reinforcements arrive," he says. "I don't care how you do it, just keep whoever is up there occupied."`
       label end
-      `  As you run for your ship, you see Yarthis pull out some sort of communication device and speak into it. Perhaps the Quarg will be joining in this fight as well...`
+      `  As you run for your ship, you see Yarthis pull out some sort of communication device and speak into it. Perhaps the Quarg will be joining in this fight as well…`
         launch
   
   npc evade
@@ -1557,10 +1557,10 @@ mission "There Might Be Riots part 2"
         `  "I'm just their transport. They're paying me to carry them to their next destination."`
           goto transport
         `  "They're friends of mine. Why? They haven't done anything illegal, that I can see."`
-      `  "Be careful what friends you choose," says the guard, "or you might find that no one in this sector will offer you any jobs. Now, get them packed up and get out of here." You have no choice but to leave the planet immediately...`
+      `  "Be careful what friends you choose," says the guard, "or you might find that no one in this sector will offer you any jobs. Now, get them packed up and get out of here." You have no choice but to leave the planet immediately…`
         launch
       label transport
-      `  "Then I suggest you do your job and transport them. Immediately." The guards leave. As soon as the band is packed up, you leave the planet...`
+      `  "Then I suggest you do your job and transport them. Immediately." The guards leave. As soon as the band is packed up, you leave the planet…`
         launch
   
   on complete
@@ -1609,7 +1609,7 @@ mission "There Might Be Riots part 3A"
         `  (Yes.)`
         `  (Not right now.)`
           defer
-      `  They're very happy to see you. "You always seem to have amazing timing," says Ulrich. "We were just wondering who could transport us to a... gig of sorts... up north, and then you come along. Any chance you could take us to <destination>?"`
+      `  They're very happy to see you. "You always seem to have amazing timing," says Ulrich. "We were just wondering who could transport us to a… gig of sorts… up north, and then you come along. Any chance you could take us to <destination>?"`
       `  You've heard of that planet. "The weapons testing world for Lovelace Labs?" you ask. "I'm surprised you'd be able to find a big audience there."`
       `  "Oh, we'll have an audience, all right," he says. "We've just put out a new album called 'Songs for the End of Civilization.' A war protest album. We want to film ourselves playing a concert right in the middle of the missile testing range. Of course we'll probably end up running out of there with Republic Intelligence nipping at our heels. What do you say?"`
       choice
@@ -1673,7 +1673,7 @@ mission "There Might Be Riots part 3B"
       `  "Did they hail us?" asks Ulrich.`
       `  "No," you say.`
       `  He swears, then shouts to the rest of the band, "Gentlemen, time to pack it up posthaste, before we get turned into a tragic industrial accident!"`
-      `  The band has just packed the last of their equipment away when the ships come into view. It's a swarm of unpiloted combat drones, and they seem to be engaged in mock combat with each other. But, their flight path is taking them straight in your direction. You power up your shields just as the first of the drones decide that your ship is a valid target for their lasers...`
+      `  The band has just packed the last of their equipment away when the ships come into view. It's a swarm of unpiloted combat drones, and they seem to be engaged in mock combat with each other. But, their flight path is taking them straight in your direction. You power up your shields just as the first of the drones decide that your ship is a valid target for their lasers…`
         launch
   
   npc

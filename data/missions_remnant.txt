@@ -38,7 +38,7 @@ mission "First Contact: Remnant"
           goto no
         `  (Run back to my ship and escape from here.)`
 
-      `  You run into your airlock, slam the door shut, and blast off from the planet. Already, several of their ships are moving to intercept you. It seems that you are no longer welcome in this region of space...`
+      `  You run into your airlock, slam the door shut, and blast off from the planet. Already, several of their ships are moving to intercept you. It seems that you are no longer welcome in this region of space…`
         launch
 
       label no
@@ -261,7 +261,7 @@ mission "Remnant: Void Sprites 1"
           goto end
         `  "Wait, that sounds super shady. Can you explain why you think it's safe for me to enter that star system, but not for you to do so?"`
 
-      `  He says, "We studied the organisms and determined that they could not possibly be sentient. Therefore we saw no moral issues with collecting, well, ah... a sample. Unexpected things happened and certain grudges have been, ah, borne against Remnant ships for centuries as a result."`
+      `  He says, "We studied the organisms and determined that they could not possibly be sentient. Therefore we saw no moral issues with collecting, well, ah… a sample. Unexpected things happened and certain grudges have been, ah, borne against Remnant ships for centuries as a result."`
       choice
         `  "Well, as long as you don't ask me to do something that will get me in similar trouble, I'll help you out."`
           goto end
@@ -284,7 +284,7 @@ mission "Remnant: Void Sprites 1"
         accept
   
       label name
-      `  He says, "My name is..." and then performs an elaborate gesture with his hands. "Don't worry if you can't perform my name," he says, "I will seek you out when you land. You won't need to ask around for me."`
+      `  He says, "My name is…" and then performs an elaborate gesture with his hands. "Don't worry if you can't perform my name," he says, "I will seek you out when you land. You won't need to ask around for me."`
         accept
   
   npc

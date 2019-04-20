@@ -207,15 +207,15 @@ mission "Wanderers: Translation Machine"
           goto communication
       
       label explorer
-      `  They respond, and Sayari translates, "They say that like you, they are travellers, and this region of space is not their home, so they will gladly welcome other sojourners here. But they warn you that if you betray their trust, you will not find that trust easy to regain. They also say..." She pauses as the Wanderers speak again, then continues translating. "They say that in their travels, they have met few species truly capable of living in peace, and they hope that yours is one of them, because..." Again she pauses as the Wanderers speak, then says, "Because, they hate to make new friends only to lose them again."`
+      `  They respond, and Sayari translates, "They say that like you, they are travellers, and this region of space is not their home, so they will gladly welcome other sojourners here. But they warn you that if you betray their trust, you will not find that trust easy to regain. They also say…" She pauses as the Wanderers speak again, then continues translating. "They say that in their travels, they have met few species truly capable of living in peace, and they hope that yours is one of them, because…" Again she pauses as the Wanderers speak, then says, "Because, they hate to make new friends only to lose them again."`
         goto end
       
       label trade
-      `  They respond, and Sayari translates, "They say that they would perhaps be willing to trade with you, although to form a broader trade agreement with humans would be a serious decision and one they cannot make lightly." She pauses to listen again, and then continues, "They also say that they will discuss among themselves whether you should be given access to Wanderer technology, but again, that will not be a swiftly made decision." She pauses as the Wanderers speak again, then continues translating. "They say that in their travels, they have met few species truly capable of living in peace, and they hope that yours is one of them, because..." Again she pauses as the Wanderers speak, then says, "Because, they hate to make new friends only to lose them again."`
+      `  They respond, and Sayari translates, "They say that they would perhaps be willing to trade with you, although to form a broader trade agreement with humans would be a serious decision and one they cannot make lightly." She pauses to listen again, and then continues, "They also say that they will discuss among themselves whether you should be given access to Wanderer technology, but again, that will not be a swiftly made decision." She pauses as the Wanderers speak again, then continues translating. "They say that in their travels, they have met few species truly capable of living in peace, and they hope that yours is one of them, because…" Again she pauses as the Wanderers speak, then says, "Because, they hate to make new friends only to lose them again."`
         goto end
       
       label communication
-      `  They respond, and Sayari translates, "They say that their species has encountered many other species in the past, and always has found those encounters to be valuable. Although..." She pauses to listen as the Wanderers continue speaking. "Although, they say that in their travels, far more often than they encounter living species, they instead only find themselves sifting through the refuse of a species that has destroyed itself through war or carelessness. They hope that you are not such a species, because..." Again she pauses as the Wanderers speak, then says, "Because, they hate to make new friends only to lose them again."`
+      `  They respond, and Sayari translates, "They say that their species has encountered many other species in the past, and always has found those encounters to be valuable. Although…" She pauses to listen as the Wanderers continue speaking. "Although, they say that in their travels, far more often than they encounter living species, they instead only find themselves sifting through the refuse of a species that has destroyed itself through war or carelessness. They hope that you are not such a species, because…" Again she pauses as the Wanderers speak, then says, "Because, they hate to make new friends only to lose them again."`
       
       label end
       `  Speaking through Sayari, you try to reassure the Wanderers that you have peaceful intentions. They speak with her for a while longer. She tells you, "They say that I will be allowed to stay here as an ambassador, and they will also let you land on most of their worlds. But they will not welcome any other Hai into their territory. I fear that they distrust the Hai because of the actions of the Unfettered, and being associated with me may harm your chances to win their favour. For your sake, we should find a different way for you to communicate with them."`
@@ -408,7 +408,7 @@ mission "Wanderers: Defend Vara Ke'sok"
       `  The Wanderer flies off to join the defence effort. A few hours later, the flashes in the sky end; the Unfettered have either been destroyed, or have gotten what they wanted and left.`
         defer
       label yes
-      `  The Wanderer leaves to join one of the ships that is taking off, and you quickly ready your own ship to follow...`
+      `  The Wanderer leaves to join one of the ships that is taking off, and you quickly ready your own ship to follow…`
         launch
   on accept
     "reputation: Hai (Unfettered)" <?= -1
@@ -645,7 +645,7 @@ mission "Wanderers: Jump Drive Source"
       choice
         `  "Agreed. How can I help you?"`
           goto help
-        `  "Umm... they may actually have gotten some of those jump drives from me."`
+        `  "Umm… they may actually have gotten some of those jump drives from me."`
       `  Rek seems startled, but finally says, "I see. It is [understandable, forgivable] that you would want to placate them. So I will not [fault, censure] you for that. In fact it may help us that you have done so. What we [ask, desire] of you is to sell them another drive, but this time find a [pretense, excuse] to ask who else supplies them with jump drives. Since you have [helped, abetted] them, they may trust you with that information."`
         goto end
       label help
@@ -859,7 +859,7 @@ mission "Wanderers: Alpha Surveillance C (Naughty)"
     conversation
       `Iktat Rek arrives carrying a handheld device with two long antennas. "You must [pardon, forgive] me," he says. "It appears you have [dropped, misplaced] one of the tracking devices. Fortunately I have the [means, capability] to determine where on your ship it is [located, concealed]. Shall I assist you in finding it?"`
       choice
-        `  "No, umm... I bet it just fell out of the box in my cargo hold. I'll look around and see if I can find it."`
+        `  "No, umm… I bet it just fell out of the box in my cargo hold. I'll look around and see if I can find it."`
         `  "I'm sorry, I kept one of them to try to figure out how it works. I'll go get it and give it back to you."`
           goto apologized
         `  (Get back in my ship and flee.)`
@@ -973,7 +973,7 @@ mission "Wanderers: Alpha Surveillance D"
   on enter "Makferuti"
     dialogue `Elias frowns as he looks at the tracker's readout. "I think we've taken a wrong turn. No sign of jump drives being used in this system," he says.`
   on enter "Host"
-    dialogue `When you enter this system, your sensors pick up a Navy Saturn in orbit around an Earth-like planet. It appears that you have found the Alpha base. "That's them," says Hanover. "I hope you're strong enough to destroy them." The Saturn starts to launch fighters: Korath ones, not human ships. This might be a difficult fight...`
+    dialogue `When you enter this system, your sensors pick up a Navy Saturn in orbit around an Earth-like planet. It appears that you have found the Alpha base. "That's them," says Hanover. "I hope you're strong enough to destroy them." The Saturn starts to launch fighters: Korath ones, not human ships. This might be a difficult fight…`
   
   npc
     government "Kor Sestor"
@@ -1113,7 +1113,7 @@ mission "Wanderers: Alpha Surveillance G"
         `  "So this was all for nothing?"`
         `  "I wish we had been able to catch them."`
       `  "Don't feel so bad," says Danforth. "At least you took out their Saturn. If you had come for me without engaging them, chances are they would still have figured their cover was blown and fled. And now they're on the run, which is going to limit their ability to make mischief."`
-      `  Danforth's ship collects his troops and takes off. A few seconds later he hails you. "Captain, we have incoming ships from the far side of the planet," he says. "My ship is no match for them. Let's get out of here." It looks like this world is not completely uninhabited, after all...`
+      `  Danforth's ship collects his troops and takes off. A few seconds later he hails you. "Captain, we have incoming ships from the far side of the planet," he says. "My ship is no match for them. Let's get out of here." It looks like this world is not completely uninhabited, after all…`
         launch
   
   npc accompany save
@@ -1734,7 +1734,7 @@ mission "Wanderers Solifuge Recon 1"
   on offer
     log `Returned to Wanderer space, and discovered that Iktat Rek has begun the "Molt." He is afraid that because the Eye has not yet opened, the Molt will not be viable and it will end up killing him.`
     conversation
-      `You have been gone for several weeks, and Iktat Rek's appearance has changed drastically in that time. Nearly half his head is bald, showing scaly grey skin and scattered white under-feathers in place of his usual plumage. Patches on other parts of his body have lost their feathers as well. His appearance is shocking. In a terrestrial animal you would attribute it to a mange... or to a molt.`
+      `You have been gone for several weeks, and Iktat Rek's appearance has changed drastically in that time. Nearly half his head is bald, showing scaly grey skin and scattered white under-feathers in place of his usual plumage. Patches on other parts of his body have lost their feathers as well. His appearance is shocking. In a terrestrial animal you would attribute it to a mange… or to a molt.`
       choice
         `  "What is happening to you? Are you ill?"`
         `  "Are you molting?"`
@@ -1902,7 +1902,7 @@ mission "Wanderers Defend Sich'ka'ara"
     event "battle for sich'ka'ara begin"
     conversation
       `Soon after the transports land, an alarm begins to sound and you see many Wanderers, the warriors in particular, rushing to board their ships. Sobari Tele'ek swoops down and lands next to your ship, and explains quickly, "We have detected a large Unfettered fleet [incoming, approaching]. Will you join in the defence?"`
-      `  You agree to help them, and begin preparing your ship for takeoff...`
+      `  You agree to help them, and begin preparing your ship for takeoff…`
         launch
   on visit
     dialogue "There are still Unfettered warships overhead. You should take off again and assist in the fight."
@@ -2289,7 +2289,7 @@ mission "Wanderers Ap'arak 3"
   to offer
     has "Wanderers Ap'arak 2: done"
   on offer
-    log `The Wanderers have begun producing even larger warships, and have succeeded in driving off yet another Unfettered assault. Afterwards the Pug, whom the Wanderers refer to as the "Keepers," finally sent assistance... in the form of two ships, which they claim are powerful enough to keep the entire Unfettered fleet at bay.`
+    log `The Wanderers have begun producing even larger warships, and have succeeded in driving off yet another Unfettered assault. Afterwards the Pug, whom the Wanderers refer to as the "Keepers," finally sent assistance… in the form of two ships, which they claim are powerful enough to keep the entire Unfettered fleet at bay.`
     conversation
       `The Wanderers here seem incredulous that they managed to drive off such a powerful Unfettered attack force. As you walk through the spaceport, many of them stop to thank you for your assistance in defending their home.`
       `  Just as you reach the pavilion where the military leaders are gathering, a shadow falls over you, and you look up to see two ships approaching with the unmistakable horned silhouettes of Pug warships. Throughout the spaceport you hear Wanderer voices raised in excitement, and hundreds of them leap into the air to accompany the Pug ships to the landing pad. Sobari Tele'ek says to you, "It is a [visitation, appearance] of the Keepers! In our hour of [need, desperation] they make themselves known at last." A small delegation of Pug disembarks from the ships and approaches the pavilion on foot.`

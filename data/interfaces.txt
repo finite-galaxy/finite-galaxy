@@ -122,7 +122,7 @@ interface "main menu"
     dimensions 90 30
   
   visible
-  button l "_Load / Save..."
+  button l "_Load / Save…"
     centre 300 155
     dimensions 120 30
   
@@ -130,7 +130,7 @@ interface "main menu"
   button q "_Quit"
     centre -285 155
     dimensions 90 30
-  button p "_Preferences..."
+  button p "_Preferences…"
     centre -420 155
     dimensions 120 30
 
@@ -283,7 +283,7 @@ interface "plugins"
 
 
 interface "preferences"
-  button b "_Back to Menu..."
+  button b "_Back to Menu…"
     centre 195 210
     dimensions 120 30
   bar "volume"
@@ -964,11 +964,11 @@ interface "info panel"
   button d "_Done"
     centre 455 305
     dimensions 90 30
-  button m "_Missions..."
+  button m "_Missions…"
     centre 355 305
     dimensions 90 30
   active if "enable logbook"
-  button l "_Logbook..."
+  button l "_Logbook…"
     centre 255 305
     dimensions 90 30
   active

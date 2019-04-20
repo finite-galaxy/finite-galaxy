@@ -365,7 +365,7 @@ mission "FW Syndicate Diplomacy 1B"
     conversation
       `As you land, Alondo says to you, "Let me do the talking, please." You are met almost immediately by two men in suits, who escort you to a room in the Syndicate headquarters. Six men are sitting on one side of a large mahogany conference table; they gesture for the two of you to be seated on the other side.`
       `  You introduce yourselves. "Thank you for meeting with us," says Alondo.`
-      `  "We are always open to new business opportunities," says one of the men, "although negotiating with known terrorists is... distasteful." He leafs through a folder of papers, pulls one out, and slides it over to you. It is a picture of Katya, and the caption under it reads, "Terrorist ringleader captured in raid on Kornephoros system." It is dated a few days after the Navy's initial assault, before you retook the system from them.`
+      `  "We are always open to new business opportunities," says one of the men, "although negotiating with known terrorists is… distasteful." He leafs through a folder of papers, pulls one out, and slides it over to you. It is a picture of Katya, and the caption under it reads, "Terrorist ringleader captured in raid on Kornephoros system." It is dated a few days after the Navy's initial assault, before you retook the system from them.`
       choice
         `  (Try to explain what Katya was doing in that system.)`
           goto explain
@@ -378,12 +378,12 @@ mission "FW Syndicate Diplomacy 1B"
       
       label alondo
       `  Alondo has turned very pale, but finally he says, "They have not announced this publicly."`
-      `  "No," says the man, "they have only shared it with certain... trusted friends of the Republic."`
+      `  "No," says the man, "they have only shared it with certain… trusted friends of the Republic."`
       `  Alondo says, "They haven't announced anything because they know she was innocent. She was hunting the terrorists, not helping them."`
         goto ijs
       
       label ijs
-      `  "That may be true," says the man. "I am willing to believe you were hunting the terrorists, because I am aware through my own sources that the Free Worlds secured the services of a certain Ijs Springborn, whose skills would be well suited to such a hunt. And who might not be alive today if you had not given him a reason to leave this sector of space, where he is... universally despised. Regardless, we cannot sell weapons to enemies of the Republic."`
+      `  "That may be true," says the man. "I am willing to believe you were hunting the terrorists, because I am aware through my own sources that the Free Worlds secured the services of a certain Ijs Springborn, whose skills would be well suited to such a hunt. And who might not be alive today if you had not given him a reason to leave this sector of space, where he is… universally despised. Regardless, we cannot sell weapons to enemies of the Republic."`
       `  "Piracy is on the rise in the Dirt Belt," says Alondo. "And I know you have customers there. Such as the Tarazed Corporation. If we can count you among our friends, we could ensure that your convoys reach Tarazed unmolested."`
       `  "And you would no doubt immediately purchase said weapons from Tarazed," says the man.`
       `  An older man sitting next to him says, "Of course, such weapons would end up being bought at a significant price markup." He is grinning.`
@@ -490,7 +490,7 @@ mission "FW Syndicate Diplomacy 1D"
         goto threat
       
       label aliens
-      `  She laughs. "You must watch far too many videos. The most powerful species in this galaxy are also the most peace-loving. Trust me, I should know. Here on the edge of human space, we receive... visitors, on occasion. They do not interfere in human events, but they came seeking information on a threat that concerns us both."`
+      `  She laughs. "You must watch far too many videos. The most powerful species in this galaxy are also the most peace-loving. Trust me, I should know. Here on the edge of human space, we receive… visitors, on occasion. They do not interfere in human events, but they came seeking information on a threat that concerns us both."`
         goto threat
       
       label threat
@@ -508,7 +508,7 @@ mission "FW Syndicate Diplomacy 1D"
       choice
         `  "Did you ever find out why they let you go?"`
       
-      `  "My parents said it was because I was so willful and stubborn, too hard to control," she says. "But years later, we began to discover that all of us who were passed over had one thing in common. We were all infertile. Had been already, the day of the Disappearance. Which means that either a bunch of pirates had suddenly decided they wanted to leave behind their lives of crime and settle down and raise families... or those girls were being used as incubators."`
+      `  "My parents said it was because I was so willful and stubborn, too hard to control," she says. "But years later, we began to discover that all of us who were passed over had one thing in common. We were all infertile. Had been already, the day of the Disappearance. Which means that either a bunch of pirates had suddenly decided they wanted to leave behind their lives of crime and settle down and raise families… or those girls were being used as incubators."`
       `  Alondo says, "I hear that was common during the Alpha wars. Alpha genetics were so unstable, they needed hundreds of test subjects to produce a handful of viable Alpha babies. Those were evil days."`
       `  "Days that may yet return," she says. "Somewhere, maybe even nearby on Bloodsea or Greenrock or Albatross, the remnants of the Alphas may still be hiding. Creatures bred to be strong and clever and able to kill without a hint of remorse. And now that this sector of space is yours, the duty of defending against them becomes yours, as well. That is why I agreed to talk with you: to warn you of that reality."`
       `  You and Alondo return to your ship with one more thing for the fledgling Free Worlds to worry about. "I guess now we should return to <planet> and report to the Council," he says.`
@@ -604,13 +604,13 @@ mission "FW Hope Recon 1C"
         decline
       
       label steal
-      `  The landing crew has absolutely nowhere to hide in this glacial field; you pick them off easily. There is no response from the ship, so you land beside it and prepare to board it. But, the moment you open your hatch, the other ship roars to life, powering up its engines and beating a hasty retreat while firing a few parting shots at you from its turret. You fire up your own engines and pursue it...`
+      `  The landing crew has absolutely nowhere to hide in this glacial field; you pick them off easily. There is no response from the ship, so you land beside it and prepare to board it. But, the moment you open your hatch, the other ship roars to life, powering up its engines and beating a hasty retreat while firing a few parting shots at you from its turret. You fire up your own engines and pursue it…`
         launch
       
       label spare
       apply
         karma ++
-      `  Most ships are equipped with external speakers for exactly this sort of situation. Speaking through them, you tell the Navy crew below, "Return to your ship and leave this system immediately." They beat a hasty retreat and fire up their engines. You follow their ship into orbit to make sure it truly does leave the system...`
+      `  Most ships are equipped with external speakers for exactly this sort of situation. Speaking through them, you tell the Navy crew below, "Return to your ship and leave this system immediately." They beat a hasty retreat and fire up their engines. You follow their ship into orbit to make sure it truly does leave the system…`
         launch
   
   
@@ -731,9 +731,9 @@ mission "FW Plasma Testing 1B"
       
       label explain
       `  "Of course," he says. "Anyway, I bet you're wondering what new toys we're going to let you play with." You nod. He says, "We've been trying to come up with a weapon for our capital ships, something that's a match for one of the Navy's pulse turrets. Something more efficient than those awful blaster turrets the Syndicate makes. So I thought, why not take the biggest thing we've got, and then mount a pair of them on a turret?" He beckons for you to follow, and leads you through a door and into a hangar.`
-      `  In front of you is a turret. It is almost absurdly large: a pair of plasma cannons mounted on a massive rotating base. "Sixty tons," says Barmy Edward. "Produces more heat than... well, than anything else, practically. Is a little power drain, too."`
+      `  In front of you is a turret. It is almost absurdly large: a pair of plasma cannons mounted on a massive rotating base. "Sixty tons," says Barmy Edward. "Produces more heat than… well, than anything else, practically. Is a little power drain, too."`
       choice
-        `  "It's so... big!"`
+        `  "It's so… big!"`
           goto big
         `  "I want one!"`
           goto want
@@ -839,7 +839,7 @@ mission "FW Supply Convoy 1"
   
   on offer
     conversation
-      `In the spaceport, you meet up with a woman wearing a militia uniform and carrying a clipboard. "Are you Captain <last>?" she asks. You nod. "We have a large shipment of weapons and equipment that needs to go to the militia base on <planet>. Your job is to make sure none of these ships get... lost in transit." She points to a large landing pad where you count ten Star Barges lined up next to each other.`
+      `In the spaceport, you meet up with a woman wearing a militia uniform and carrying a clipboard. "Are you Captain <last>?" she asks. You nod. "We have a large shipment of weapons and equipment that needs to go to the militia base on <planet>. Your job is to make sure none of these ships get… lost in transit." She points to a large landing pad where you count ten Star Barges lined up next to each other.`
       choice
         `  "Isn't it risky to transport valuable cargo in such flimsy and vulnerable ships?"`
           goto risky
@@ -1023,7 +1023,7 @@ mission "FW Senate 1B"
       `  She looks angry for a minute, then her expression softens. "Oh, pardon me," she says. "I was treating you like another scheming politician, but now I realize you're way too clueless for that. Tell me, Captain, do you know what makes politics similar to piloting a ship?"`
       choice
         `  "I have no idea."`
-        `  "Ummm... they both involve momentous decisions that have serious consequences?"`
+        `  "Ummm… they both involve momentous decisions that have serious consequences?"`
         `  "They both require someone skilled and decisive to be in command?"`
       `  "The correct answer," she says, "was, 'nothing whatsoever; they are entirely different disciplines.' Now, hurry up, I hope to be on Bourne a week from now." You consider explaining to her that it's impossible to get there that fast, but decide against it.`
         accept
@@ -1046,7 +1046,7 @@ mission "FW Senate 1B"
       `  "Which dream?" you ask.`
       `  "Terraforming for the masses. A publicly funded university and research centre. Are you familiar with the Free Worlds taxation model?"`
       `  "Not really," you say.`
-      `  "It's brilliant. And probably totally unsustainable. Each world that joins us negotiates a certain yearly tax amount based on their population and resources. In return they gain access to our defence fleet and other shared resources. Twenty percent of each planet's tax payments are 'unrestricted,' money the Free Worlds can use for whatever we think is most important. But the rest of the taxes can be earmarked for whatever projects that world thinks are most important. Those taxes can also be an in kind donation, such as supplying ships or crews for the common militia..."`
+      `  "It's brilliant. And probably totally unsustainable. Each world that joins us negotiates a certain yearly tax amount based on their population and resources. In return they gain access to our defence fleet and other shared resources. Twenty percent of each planet's tax payments are 'unrestricted,' money the Free Worlds can use for whatever we think is most important. But the rest of the taxes can be earmarked for whatever projects that world thinks are most important. Those taxes can also be an in kind donation, such as supplying ships or crews for the common militia…"`
       `  He continues talking for quite some time. You stop even trying to follow what he is saying. Finally he sees the blank expression on your face and stops babbling. "The point is," he says, "if we can convince enough worlds to pool their money, the Conservatory will become a reality. Our own public university."`
       choice
         `  "So you're here to talk to the senators?"`
@@ -1163,7 +1163,7 @@ mission "FW Pirates 2"
         `  "It seems like some people are a little bit hostile toward the Council."`
           goto council
       label pirates
-      `  "Not yet. This is why we wanted to get as much done as possible while we were still under a relatively agile leadership structure. Getting two dozen politicians to agree on any course of action is... difficult. What did your reconnaissance turn up?"`
+      `  "Not yet. This is why we wanted to get as much done as possible while we were still under a relatively agile leadership structure. Getting two dozen politicians to agree on any course of action is… difficult. What did your reconnaissance turn up?"`
         goto recon
       label council
       `  "You mean Arianna? Don't worry, she's one of those people who by reflex opposes any idea that comes from someone other than her. Most people appreciate what the Council has done, and in fact before you even arrived the Senate voted to give us a continued advisory role, under the Senate's supervision."`
