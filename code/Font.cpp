@@ -248,13 +248,19 @@ string Font::ReplaceCharacters(const string &str)
     }
     else
     {
-      // U+2018 LEFT_SINGLE_QUOTATION_MARK
-      // U+2019 RIGHT_SINGLE_QUOTATION_MARK
-      // U+201C LEFT_DOUBLE_QUOTATION_MARK
-      // U+201D RIGHT_DOUBLE_QUOTATION_MARK
-      if(str[pos] == '\'')
+      if(str[pos] == '|')
+        // ' ' U+202F narrow no-break space
+        buf.append("\xE2\x80\xAF");
+      else if(str[pos] == '-')
+        // − U+2212 minus sign
+        buf.append(isAfterWhitespace ? "\xe2\x88\x92" : "-");
+      else if(str[pos] == '\'')
+        // ‘ U+2018 LEFT_SINGLE_QUOTATION_MARK
+        // ’ U+2019 RIGHT_SINGLE_QUOTATION_MARK
         buf.append(isAfterWhitespace ? "\xE2\x80\x98" : "\xE2\x80\x99");
       else if(str[pos] == '"')
+        // “ U+201C LEFT_DOUBLE_QUOTATION_MARK
+        // ” U+201D RIGHT_DOUBLE_QUOTATION_MARK
         buf.append(isAfterWhitespace ? "\xE2\x80\x9C" : "\xE2\x80\x9D");
       else if(isAfterAccel && str[pos] == '_')
         // Remove an extra underbar.

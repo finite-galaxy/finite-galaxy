@@ -17,7 +17,7 @@ namespace {
     int places = 0;
     do {
       if(places && !(places % 3) && (value >= 10))
-        result += '\''; // ' ' U+202F narrow no-break space
+        result += '|'; // ' ' U+202F narrow no-break space
       ++places;
       
       result += static_cast<char>('0' + value % 10);
