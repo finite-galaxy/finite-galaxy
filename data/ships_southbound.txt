@@ -18,6 +18,7 @@ shipyard "Southbound Variants"
   "Skein"
   "Stymphalian"
   "Stymphalian (Flamethrower)"
+  "Warrior"
 
 
 
@@ -907,4 +908,61 @@ ship "Stymphalian" "Stymphalian (Flamethrower)"
     "Catalytic Ramscoop"
     "Large Radar Jammer"
     "Tactical Scanner"
+
+
+
+ship "Warrior"
+  sprite "ship/warrior"
+  thumbnail "thumbnail/warrior"
+  attributes
+    category "Interceptor"
+#    manufacturer "Southbound"
+    licences
+      Pilot
+    "cost" 670000
+    "shields" 2500
+    "hull" 500
+    "required crew" 2
+    "bunks" 4
+    "mass" 150
+    "drag" 2.1
+    "heat dissipation" .8
+    "cargo space" 20
+    "outfit space" 210
+    "core space" 90
+    "engine space" 70
+    "weapon space" 50
+    weapon
+      "blast radius" 76
+      "shield damage" 300
+      "random shield damage" 460
+      "hull damage" 450
+      "random hull damage" 690
+      "heat damage" 9000
+      "random heat damage" 13800
+      "hit force" 750
+      "random hit force" 1150
+  outfits
+    "D23-QP Shield Generator"
+    "RT-I Radiothermal"
+    "Hyperdrive"
+
+    "Greyhound Plasma Thruster"
+    "Greyhound Plasma Steering"
+
+    "Heavy Laser Cannon" 2
+
+    "LP036a Battery Pack"
+    "Liquid Water Cooler"
+    "Fuel Pod" 12
+    "Tactical Scanner" 2
+  engine -24 41
+  engine 24 41
+  gun -9 -17
+  gun 9 -17
+  leak "leak" 60 50
+  explode "tiny explosion" 15
+  explode "small explosion" 5
+  "final explode" "final explosion small"
+  description "The Warrior is one of the most affordable ships designed by Southbound: a versatile ship that can serve equally well for escorting freighters or for bounty hunting. As with many of Southbound's designs, the hull is mostly composite fiber rather than metal, sacrificing armour strength for the sake of lighter weight and faster movement."
 

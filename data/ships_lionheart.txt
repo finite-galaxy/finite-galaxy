@@ -21,12 +21,11 @@ shipyard "Lionheart Variants"
   "Manta"
   "Manta (Nuclear)"
   "Manta (Particle)"
+  "Manta (Patrol)"
   "Manta (Plasma)"
-  "Modified Lance (Engines)"
-  "Modified Lance (Shields)"
-  "Modified Lance (Weapons)"
-  "Warrior"
-  "Warrior (Electron)"
+  "Modified Manta (Engines)"
+  "Modified Manta (Shields)"
+  "Modified Manta (Weapons)"
   "Wasp"
   "Wasp (Gatling)"
   "Wasp (Miner)"
@@ -981,6 +980,25 @@ ship "Manta" "Manta (Particle)"
     "Tactical Scanner" 2
 
 
+ship "Manta" "Manta (Patrol)"
+  outfits
+    "D41-HY Shield Generator"
+    "Ogre Core"
+    "Hyperdrive"
+
+    "A250 Atomic Thruster"
+    "A255 Atomic Steering"
+
+    "Heavy Laser Cannon" 8
+
+    "DS-23 Battery Pack"
+    "Liquid Water Cooler"
+    "Cargo Scanner"
+    "Fuel Pod" 23
+    "Outfit Scanner"
+    "Tactical Scanner" 2
+
+
 ship "Manta" "Manta (Plasma)"
   outfits
     "D41-HY Shield Generator"
@@ -1169,81 +1187,6 @@ ship "Manta" "Modified Manta (Weapons)"
 
 
 
-ship "Warrior"
-  sprite "ship/warrior"
-  thumbnail "thumbnail/warrior"
-  attributes
-    category "Interceptor"
-#    manufacturer "Lionheart"
-    licences
-      Pilot
-    "cost" 670000
-    "shields" 2500
-    "hull" 500
-    "required crew" 2
-    "bunks" 4
-    "mass" 150
-    "drag" 2.1
-    "heat dissipation" .8
-    "cargo space" 20
-    "outfit space" 210
-    "core space" 90
-    "engine space" 70
-    "weapon space" 50
-    weapon
-      "blast radius" 76
-      "shield damage" 300
-      "random shield damage" 460
-      "hull damage" 450
-      "random hull damage" 690
-      "heat damage" 9000
-      "random heat damage" 13800
-      "hit force" 750
-      "random hit force" 1150
-  outfits
-    "D23-QP Shield Generator"
-    "Dwarf Core"
-    "Hyperdrive"
-
-    "A250 Atomic Thruster"
-    "A255 Atomic Steering"
-
-    "Heavy Laser Cannon" 2
-
-    "DS-11 Battery Pack"
-    "Fuel Pod" 12
-    "Tactical Scanner" 2
-  engine -24 41
-  engine 24 41
-  gun -9 -17
-  gun 9 -17
-  leak "leak" 60 50
-  explode "tiny explosion" 15
-  explode "small explosion" 5
-  "final explode" "final explosion small"
-  description "The Warrior is one of the most affordable ships designed by Lionheart: a versatile ship that can serve equally well for escorting freighters or for bounty hunting. As with many of Lionheart's designs, the hull is mostly composite fiber rather than metal, sacrificing armour strength for the sake of lighter weight and faster movement."
-
-
-ship "Warrior" "Warrior (Electron)"
-  outfits
-    "D23-QP Shield Generator"
-    "Dwarf Core"
-    "Hyperdrive"
-
-    "A250 Atomic Thruster"
-    "A255 Atomic Steering"
-
-    "Electron Cannon" 2
-
-    "DS-11 Battery Pack"
-    "Cargo Scanner"
-    "Fuel Pod" 12
-    "Outfit Scanner"
-    "Tactical Scanner" 2
-    "Extra Outfit Space"
-
-
-
 ship "Wasp"
   sprite "ship/wasp"
   thumbnail "thumbnail/wasp"
@@ -1296,7 +1239,7 @@ ship "Wasp"
   leak "leak" 60 50
   explode "tiny explosion" 20
   explode "small explosion" 10
-  description "The Wasp is a lightweight interceptor, designed by Vortex Shipyards primarily for asteroid mining. Like most Vortex ships, it is not particularly pretty, but it is reliable and serves the purpose it was made for."
+  description "The Wasp is a lightweight interceptor, designed by Lionheart Shipyards primarily for asteroid mining. Like most Lionheart ships, it is not particularly pretty, but it is reliable and serves the purpose it was made for."
 
 
 ship "Wasp" "Wasp (Gatling)"
