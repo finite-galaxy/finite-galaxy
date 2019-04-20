@@ -8,7 +8,10 @@
 #include "Information.h"
 #include "WrappedText.h"
 
+#include <map>
+
 class PlayerInfo;
+class Sprite;
 
 
 
@@ -33,6 +36,9 @@ private:
   bool hasNews = false;
   Information newsInfo;
   WrappedText newsMessage;
+  // After displaying a portrait for a particular profession,
+  // only show it for that same profession.
+  std::map<const Sprite *, std::string> displayedProfessions;
 };
 
 

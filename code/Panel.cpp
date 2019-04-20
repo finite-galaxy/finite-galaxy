@@ -83,7 +83,7 @@ void Panel::AddZone(const Rectangle &rect, const function<void()> &fun)
 
 void Panel::AddZone(const Rectangle &rect, SDL_Keycode key)
 {
-  AddZone(rect, [this, key](){ this->KeyDown(key, 0, Command()); });
+  AddZone(rect, [this, key](){ this->KeyDown(key, 0, Command(), true); });
 }
 
 
@@ -108,7 +108,7 @@ bool Panel::ZoneClick(const Point &point)
 
 
 // Only override the ones you need; the default action is to return false.
-bool Panel::KeyDown(SDL_Keycode key, Uint16 mod, const Command &command)
+bool Panel::KeyDown(SDL_Keycode key, Uint16 mod, const Command &command, bool isNewPress)
 {
   return false;
 }
@@ -204,7 +204,7 @@ UI *Panel::GetUI() const
 // user-defined command key will override it.
 bool Panel::DoKey(SDL_Keycode key, Uint16 mod)
 {
-  return KeyDown(key, mod, Command());
+  return KeyDown(key, mod, Command(), true);
 }
 
 

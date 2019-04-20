@@ -189,7 +189,7 @@ void Dialogue::ParseTextNode(const DataNode &node, size_t startingIndex, string 
 
 
 
-bool Dialogue::KeyDown(SDL_Keycode key, Uint16 mod, const Command &command)
+bool Dialogue::KeyDown(SDL_Keycode key, Uint16 mod, const Command &command, bool isNewPress)
 {
   auto it = KEY_MAP.find(key);
   bool isCloseRequest = key == SDLK_ESCAPE || (key == 'w' && (mod & (KMOD_CTRL | KMOD_GUI)));

@@ -100,6 +100,8 @@ public:
   // Check if the given ship has all the attributes necessary to allow it to
   // land on this planet.
   bool IsAccessible(const Ship *ship) const;
+  // Check if this planet has any required attributes that restrict landability.
+  bool IsUnrestricted() const;
   // Below are convenience functions which access the game state in Politics,
   // but do so with a less convoluted syntax:
   bool HasFuelFor(const Ship &ship) const;
@@ -139,7 +141,9 @@ private:
   double security = .25;
   // a negative fuel price always means there is no fuel on this planet.
   double fuelPrice = -1;
-  bool inhabited;
+  bool inhabited = false;
+  // Any required attributes needed to land on this planet.
+  std::set<std::string> requiredAttributes;
   bool bank;
   
   // The salary to be paid if this planet is dominated.

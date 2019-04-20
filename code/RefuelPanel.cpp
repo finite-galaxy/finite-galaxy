@@ -98,7 +98,7 @@ void RefuelPanel::RefreshUI()
 
 
 // Only override the ones you need; the default action is to return false.
-bool RefuelPanel::KeyDown(SDL_Keycode key, Uint16 mod, const Command &command)
+bool RefuelPanel::KeyDown(SDL_Keycode key, Uint16 mod, const Command &command, bool isNewPress)
 {
   // Refuel the defined ratios.
   if(key == 'r')

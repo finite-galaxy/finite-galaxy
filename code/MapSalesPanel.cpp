@@ -80,7 +80,7 @@ void MapSalesPanel::Draw()
 
 
 
-bool MapSalesPanel::KeyDown(SDL_Keycode key, Uint16 mod, const Command &command)
+bool MapSalesPanel::KeyDown(SDL_Keycode key, Uint16 mod, const Command &command, bool isNewPress)
 {
   if(key == SDLK_PAGEUP || key == SDLK_PAGEDOWN)
   {
@@ -103,7 +103,7 @@ bool MapSalesPanel::KeyDown(SDL_Keycode key, Uint16 mod, const Command &command)
     GetUI()->Push(new Dialogue(
       this, &MapSalesPanel::DoFind, "Search for:"));
   else
-    return MapPanel::KeyDown(key, mod, command);
+    return MapPanel::KeyDown(key, mod, command, isNewPress);
   
   return true;
 }
