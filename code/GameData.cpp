@@ -162,9 +162,9 @@ bool GameData::BeginLoad(const char * const *argv)
   // Generate a catalogue of music files.
   Music::Init(sources);
 
-	// Add font and config files.
-	for(const string &source : sources)
-		FontSet::Add(source + "fonts/");
+  // Add font and config files.
+  for(const string &source : sources)
+    FontSet::Add(source + "fonts/");
   
   for(const string &source : sources)
   {
@@ -217,20 +217,46 @@ void GameData::CheckReferences()
       categories["ship"].push_back(carried);
       knownShipCategories.emplace(carried);
     }
+
+  // Parse all GameEvents for object definitions & references.
+  auto deferred = map<string, set<string>>{};
+  const auto eventDefinitionNodes = set<string>{
+    "fleet",
+    "galaxy",
+    "government",
+    "outfitter",
+    "news",
+    "planet",
+    "shipyard",
+    "system"
+  };
+  for(const auto &it : events)
+  {
+    if(it.second.Name().empty())
+      Files::LogError("Warning: event \"" + it.first + "\" is referred to, but never defined.");
+    else
+    {
+      for(const DataNode &node : it.second.Changes())
+        if(node.Size() >= 2)
+        {
+          const string &key = node.Token(0);
+          if(eventDefinitionNodes.count(key))
+            deferred[key].emplace(node.Token(1));
+        }
+    }
+  }
+
   for(const auto &it : conversations)
     if(it.second.IsEmpty())
       Files::LogError("Warning: conversation \"" + it.first + "\" is referred to, but never defined.");
   for(const auto &it : effects)
     if(it.second.Name().empty())
       Files::LogError("Warning: effect \"" + it.first + "\" is referred to, but never defined.");
-  for(const auto &it : events)
-    if(it.second.Name().empty())
-      Files::LogError("Warning: event \"" + it.first + "\" is referred to, but never defined.");
   for(const auto &it : fleets)
-    if(!it.second.GetGovernment())
+    if(!it.second.GetGovernment() && !deferred["fleet"].count(it.first))
       Files::LogError("Warning: fleet \"" + it.first + "\" is referred to, but never defined.");
   for(const auto &it : governments)
-    if(it.second.GetName().empty())
+    if(it.second.GetName().empty() && !deferred["government"].count(it.first))
       Files::LogError("Warning: government \"" + it.first + "\" is referred to, but never defined.");
   for(const auto &it : minables)
     if(it.second.Name().empty())
@@ -246,13 +272,13 @@ void GameData::CheckReferences()
       Files::LogError("Warning: outfit \"" + it.first + "\" has category \"" + it.second.Category() + "\", which is not among known outfit categories.");
   }
   for(const auto &it : outfitSales)
-    if(it.second.empty())
+    if(it.second.empty() && !deferred["outfitter"].count(it.first))
       Files::LogError("Warning: outfitter \"" + it.first + "\" is referred to, but has no outfits.");
   for(const auto &it : phrases)
     if(it.second.Name().empty())
       Files::LogError("Warning: phrase \"" + it.first + "\" is referred to, but never defined.");
   for(const auto &it : planets)
-    if(it.second.Name().empty())
+    if(it.second.Name().empty() && !deferred["planet"].count(it.first))
       Files::LogError("Warning: planet \"" + it.first + "\" is referred to, but never defined.");
   for(const auto &it : ships)
   {
@@ -262,10 +288,10 @@ void GameData::CheckReferences()
       Files::LogError("Warning: ship \"" + it.first + "\" has category \"" + it.second.Attributes().Category() + "\", which is not among known ship categories.");
   }
   for(const auto &it : shipSales)
-    if(it.second.empty())
+    if(it.second.empty() && !deferred["shipyard"].count(it.first))
       Files::LogError("Warning: shipyard \"" + it.first + "\" is referred to, but has no ships.");
   for(const auto &it : systems)
-    if(it.second.Name().empty())
+    if(it.second.Name().empty() && !deferred["system"].count(it.first))
       Files::LogError("Warning: system \"" + it.first + "\" is referred to, but never defined.");
 }
 

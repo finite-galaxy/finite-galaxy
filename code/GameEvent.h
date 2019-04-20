@@ -39,6 +39,8 @@ public:
   void SetDate(const Date &date);
   
   void Apply(PlayerInfo &player);
+
+  const std::list<DataNode> &Changes() const;
   
   
 private:
