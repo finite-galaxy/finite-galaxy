@@ -94,7 +94,7 @@ outfit "Seeker"
 
 outfit "Gridfire Turret"
   category "Turrets"
-  thumbnail "outfit/unknown"
+  thumbnail "outfit/gridfire"
   licences
     Pug
   cost 24000000
@@ -104,6 +104,7 @@ outfit "Gridfire Turret"
   "weapon space" -83
   "turret mounts" -1
   weapon
+    "hardpoint sprite" "hardpoint/gridfire"
     "fire effect" "gridfire fire"
     "hit effect" "gridfire hit" 2
     "hit effect" "gridfire cloud"
@@ -147,7 +148,7 @@ outfit "Pug Anti-Missile"
 
 outfit "Ceasefire Anti-Missile"
   category "Anti-Missile"
-  thumbnail "outfit/unknown"
+  thumbnail "outfit/ceasefire"
   licences
     Pug
   cost 12000000
@@ -157,6 +158,7 @@ outfit "Ceasefire Anti-Missile"
   "weapon space" -67
   "turret mounts" -1
   weapon
+    "hardpoint sprite" "hardpoint/ceasefire"
     "fire effect" "anti-missile ceasefire fire"
     "die effect" "anti-missile ceasefire die" 2
     "anti-missile" 100
