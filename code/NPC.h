@@ -18,6 +18,7 @@ class DataNode;
 class DataWriter;
 class Government;
 class PlayerInfo;
+class Planet;
 class Ship;
 class ShipEvent;
 class System;
@@ -64,6 +65,8 @@ private:
   LocationFilter location;
   const System *system = nullptr;
   bool isAtDestination = false;
+  // Start out landed on this planet.
+  const Planet *planet = nullptr;
   
   // Dialogue or conversation to show when all requirements for this NPC are met:
   std::string dialogueText;
