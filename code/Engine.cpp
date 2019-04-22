@@ -251,7 +251,7 @@ void Engine::Place()
     Point pos;
     Angle angle = Angle::Random();
     // Any ships in the same system as the player should be either
-     // taking off from a specific planet or nearby.
+    // taking off from a specific planet or nearby.
     if(ship->GetSystem() == player.GetSystem() && !ship->IsDisabled())
     {
       const Personality &person = ship->GetPersonality();
@@ -294,7 +294,7 @@ void Engine::Place()
 
 // Add NPC ships to the known ships. These may have been freshly instantiated
 // from an accepted assisting/boarding mission, or from existing missions when
-// the player departs a planet.
+// the player departs from a planet.
 void Engine::Place(const list<NPC> &npcs, shared_ptr<Ship> flagship)
 {
   for(const NPC &npc : npcs)
@@ -322,7 +322,7 @@ void Engine::Place(const list<NPC> &npcs, shared_ptr<Ship> flagship)
       if(ship->IsDestroyed())
         continue;
       
-      // Avoid the exploit where the player can wear down an NPC's
+      // Avoid the exploit where the player can wear down a NPC's
       // crew by attrition over the course of many days.
       ship->AddCrew(max(0, ship->RequiredCrew() - ship->Crew()));
       if(!ship->IsDisabled())
@@ -345,12 +345,12 @@ void Engine::Place(const list<NPC> &npcs, shared_ptr<Ship> flagship)
       }
       
       ships.push_back(ship);
-      // The first (alive) ship in an NPC block
+      // The first (alive) ship in a NPC block
       // serves as the flagship of the group.
       if(!npcFlagship)
         npcFlagship = ship;
       
-      // Only the flagship of an NPC considers the
+      // Only the flagship of a NPC considers the
       // player: the rest of the NPC track it.
       if(npcFlagship && ship != npcFlagship)
         ship->SetParent(npcFlagship);
@@ -564,8 +564,7 @@ void Engine::Step(bool isActive)
     info.SetBar("energy", flagship->Energy());
     double heat = flagship->Heat();
     info.SetBar("heat", min(1., heat));
-    // If heat is above 100%, draw a second overlaid bar to indicate the
-    // total heat level.
+    // If heat is above 100%, draw a second overlaid bar to indicate the total heat level.
     if(heat > 1.)
       info.SetBar("overheat", min(1., heat - 1.));
     if(flagship->IsOverheated() && (step / 20) % 2)

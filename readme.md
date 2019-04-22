@@ -180,13 +180,16 @@ See `changelog.txt`, `ship_overview.txt`, and https://github.com/finite-galaxy/f
 * Add functionality to deposit credits at the bank for a fixed time (e.g. one year), receiving either the sum plus interest when it expires, or the sum minus a penalty when you claim it beforehand
 * Add planet landing fees support
 * Allow friendly fire
+* Allow sorting available jobs (by e.g. cargo size, distance, name, payment, etc.)
+* Allow sorting outfits by cost, mass, name
+* Allow sorting ships by cost, mass, name, outfit space, shields, etc.
 * Display flagship speed by default and display target's speed with tactical scanner
 * De-hardcode jump radius
 * Increase jump radius if you have multiple jump drives installed, perhaps 100*(jump drive)^0.5
 * Limit the commodities for sale on specific planets
-* Make ship explosion ‘weapon’ proportional to mass (base, empty, or total mass)
+* Make ship explosion ‘weapon’ automatically proportional to mass (base, empty, or total mass)
 * Separate fleet overview column in outfitter and shipyard from ship info display
-* Sort outfits and ships by cost, size, or mass instead of alphabetically
+* Ships entering a system from hyperspace should be positioned near the system's centre, instead of near the first inhabited planet
 * https://github.com/endless-sky/endless-sky/wiki/DevelopmentRoadmap
 
 [(return to top)](https://github.com/finite-galaxy/finite-galaxy#finite-galaxy)
