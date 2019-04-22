@@ -559,14 +559,13 @@ void Engine::Step(bool isActive)
   info.SetString("date", player.GetDate().ToString());
   if(flagship)
   {
-    //info.SetBar("fuel", flagship->Fuel(), flagship->Attributes().Get("fuel capacity") * .001);
-    info.SetBar("fuel", flagship->Fuel());
-    info.SetBar("energy", flagship->Energy());
+    info.SetBar("fuel", flagship->Fuel(), 10.);
+    info.SetBar("energy", flagship->Energy(), 10.);
     double heat = flagship->Heat();
-    info.SetBar("heat", min(1., heat));
+    info.SetBar("heat", min(1., heat), 10.);
     // If heat is above 100%, draw a second overlaid bar to indicate the total heat level.
     if(heat > 1.)
-      info.SetBar("overheat", min(1., heat - 1.));
+      info.SetBar("overheat", min(1., heat - 1.), 10.);
     if(flagship->IsOverheated() && (step / 20) % 2)
       info.SetBar("overheat blink", min(1., heat));
     info.SetBar("shields", flagship->Shields());
