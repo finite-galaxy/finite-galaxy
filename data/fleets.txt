@@ -498,28 +498,28 @@ fleet "Free Worlds Small"
     heroic disables opportunistic
   # total: 50
   variant 8
-    "Berserker"
+    "Stymphalian"
   variant 4
-    "Berserker" 2
+    "Stymphalian" 2
   variant 4
-    "Berserker"
+    "Stymphalian"
     "Harpy"
   variant 3
-    "Berserker"
+    "Stymphalian"
     "Harpy" 2
   variant 2
-    "Berserker"
+    "Stymphalian"
     "Harpy" 3
   variant 1
-    "Berserker"
+    "Stymphalian"
     "Harpy" 4
+  variant 6
+    "Stymphalian"
+    "Hawk"
   variant 8
     "Hawk"
   variant 4
     "Hawk" 2
-  variant 6
-    "Hawk"
-    "Berserker"
   variant 4
     "Hawk"
     "Harpy"
@@ -1295,7 +1295,7 @@ fleet "Merchants Deep Small"
   variant 60
     "Bounder"
   variant 10
-    "Warrior"
+    "Wasp"
 
 
 fleet "Merchants East Large"
@@ -1327,6 +1327,12 @@ fleet "Merchants East Large"
     "Behemoth"
   variant 10
     "Bulk Freighter"
+  variant 5
+    "Bulk Freighter"
+    "Berserker"
+  variant 5
+    "Bulk Freighter"
+    "Berserker" 2
   variant 6
     "Bulk Freighter"
     "Clipper"
@@ -1357,12 +1363,6 @@ fleet "Merchants East Large"
     "Bulk Freighter"
     "Clipper (Particle)"
     "Clipper (Speedy)"
-  variant 5
-    "Bulk Freighter"
-    "Warrior"
-  variant 5
-    "Bulk Freighter"
-    "Warrior" 2
   variant 2
     "Leviathan"
     "Star Freighter" 2
@@ -2926,14 +2926,20 @@ fleet "Pirates South Small"
     plunders harvests
     confusion 20
   # total: 25
-  variant 8
-    "Berserker"
   variant 12
     "Harpy"
-  variant 3
-    "Hawk"
+  variant 4
+    "Harpy" 2
+  variant 1
+    "Harpy" 3
   variant 2
+    "Hawk"
+  variant 1
     "Hawk (Laser)"
+  variant 2
+    "Stymphalian"
+  variant 3
+    "Warrior"
 
 
 fleet "Pirates West Large"
