@@ -552,7 +552,15 @@
   * improve landing message handling in AI::MovePlayer (@tehhowch)
   * add additional comments to AI class (@tehhowch)
   * ensure that hostile escorts are treated by `n` appropriately (@tehhowch)
-  * explicitly check for the "gun ports" attribute (@tehhowch)
+  * explicitly check for the "gun ports" attribute
+  * add missing ship reference for offered assisting/boarding missions (@tehhowch)
+  * cleanup & add comment (@tehhowch)
+  * check carried ship's parent system in NPC::HasSucceeded (@comnom)
+  * attach to / allocate a console output on Windows (@comnom)
+  * add nullptr check for (@comnom)
+  * add missing `min` when autorefilling ammunition (@jostephd)
+  * add additional sanity check when refilling ammo (@tehhowch)
+  * fix non-installed outfits showing depreciated plunder value (@tehhowch)
 
 
 
