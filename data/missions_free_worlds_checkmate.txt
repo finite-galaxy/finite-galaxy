@@ -54,10 +54,10 @@ mission "FWC Scouting 1"
     dialogue `You have failed an essential Free Worlds mission. If you want to complete the story line, revert to the autosave or another earlier snapshot of the game.`
   
   on offer
-    log `Drove the Navy out of Delta Sagittarii with the help of the "Wolf Pack," a militia group in favour of more extreme measures who launched a preemptive strike before the main Free Worlds force arrived. The Free Worlds are now committed to fighting the Republic to a standstill rather than proving their innocence; the defector has been recaptured by the Syndicate and whatever information he had to share is now lost.`
+    log `Drove the Navy out of Delta Sagittarii with the help of the "Wolf Pack," a militia group in favour of more extreme measures who launched a preemptive strike before the main Free Worlds force arrived. The Free Worlds are now committed to fighting the Republic to a standstill rather than proving their innocence; the defector has been recaptured by the Corporation and whatever information he had to share is now lost.`
     conversation
       `It was a close battle, and could have gone very differently if it were not for the Wolf Pack strike that happened before you arrived and that disabled or destroyed the majority of the Navy fleet. You can't help but wonder how the Wolf Pack managed to assemble a large enough fleet to do that sort of damage.`
-      `  "Well," says JJ, "the die is cast. It's too late now to wonder what that business with the Syndicate was about; now we're in a fight to the finish with the Republic. And that means we must strike soon, before they have time to bring in more reinforcements. Captain <last>, I'd like you to perform a scouting mission while I'm working on gathering a new fleet. Our next target has to be the Navy base on Clear Sky. If we can drive them out of that system, our position will be much better. So, I'd like you to fly through Kaus Borealis and return here to report on their fleet strength. Understood?"`
+      `  "Well," says JJ, "the die is cast. It's too late now to wonder what that business with the Corporation was about; now we're in a fight to the finish with the Republic. And that means we must strike soon, before they have time to bring in more reinforcements. Captain <last>, I'd like you to perform a scouting mission while I'm working on gathering a new fleet. Our next target has to be the Navy base on Clear Sky. If we can drive them out of that system, our position will be much better. So, I'd like you to fly through Kaus Borealis and return here to report on their fleet strength. Understood?"`
       choice
         `  "No problem."`
           goto freya
@@ -627,7 +627,7 @@ mission "FWC Checkmate 1"
   on offer
     event "fwc defend cebalrai"
     conversation
-      `When you land on Tundra, Tomek seems glad to see Katya back, but you sense that he's also a little wary of how she will respond to the choices the Free Worlds have been making. "Using nukes, threatening orbital bombardment," says Katya, "treating the Syndicate as an ally. Anything else I missed while I was gone?"`
+      `When you land on Tundra, Tomek seems glad to see Katya back, but you sense that he's also a little wary of how she will respond to the choices the Free Worlds have been making. "Using nukes, threatening orbital bombardment," says Katya, "treating the Corporation as an ally. Anything else I missed while I was gone?"`
       choice
         `  "We only want this war to be over as soon as possible."`
         `  "We've just been trying to avoid being destroyed by the Navy, and things have gotten a bit out of hand."`
@@ -1804,7 +1804,7 @@ mission "FWC Pug 4A"
         goto plan
       
       label positive
-      `  "You might be right," she says. "I wonder if instead of aiming for complete independence from the Republic, all along we should have tried for something closer to what the Syndicate has: relative autonomy, but within the framework of the Republic."`
+      `  "You might be right," she says. "I wonder if instead of aiming for complete independence from the Republic, all along we should have tried for something closer to what the Corporation has: relative autonomy, but within the framework of the Republic."`
         goto plan
       
       label plan
@@ -2320,7 +2320,7 @@ mission "FWC End"
     conversation
       `You find Admiral Danforth inspecting the Pug spaceport. "This is all very odd," he says. "I'm glad the aliens appear to have left, but I wish we knew where they came from and whether they're likely to return."`
       `  Freya says, "What should we do now?"`
-      `  "I've contacted Carbuncle and told them that Councillor Reynolds is free to leave," he says. "She told me that your Senate has agreed to the Free Worlds being a semi-autonomous district of the Republic, similar to the Syndicate systems. She also asked that you and Captain <last> meet up with her and Alondo Gruyere on Earth, where they will be meeting with Parliament. I sent a report to Earth that places a very heavy emphasis on the role that the Free Worlds played in this victory, so Parliament ought to be quite willing to negotiate with you."`
+      `  "I've contacted Carbuncle and told them that Councillor Reynolds is free to leave," he says. "She told me that your Senate has agreed to the Free Worlds being a semi-autonomous district of the Republic, similar to the Corporation systems. She also asked that you and Captain <last> meet up with her and Alondo Gruyere on Earth, where they will be meeting with Parliament. I sent a report to Earth that places a very heavy emphasis on the role that the Free Worlds played in this victory, so Parliament ought to be quite willing to negotiate with you."`
       choice
         `  "Thank you. It's been an honour to fight alongside you."`
           goto honour
@@ -2343,7 +2343,7 @@ mission "FWC End"
     conversation
       `You arrive in the Parliament building just as Alondo and Katya have finished meeting with them. "Good news," says Katya. "We're all officially pardoned. And you, Captain <last>, have become something of a hero."`
       `  "Better yet," says Alondo, "the war with the Republic is over. We agreed to accept a very minor tax to cover the cost of Navy protection if the aliens attack again or some other major catastrophe strikes, to limit our territory to its current size, and to allow any planet that does not want to be part of the Free Worlds to peacefully rejoin the Republic. In return, the Free Worlds have been formally granted autonomy from the Republic. The Navy announced they will start a new base on Alapia, in the Ascella system, to protect the Tarazed to Earth route, but they promised to abandon most of the new bases built during the war, keeping only the one on Bod."`
-      `  "Furthermore," says Katya, "you've been given permission to use the Navy arsenals. Also, as their own expression of gratitude, the Deep members of Parliament have offered to make some of their new technology, developed during the war, available to everyone at an affordable price. And the Syndicate offered interest-free loans to rebuild the planets damaged during the war."`
+      `  "Furthermore," says Katya, "you've been given permission to use the Navy arsenals. Also, as their own expression of gratitude, the Deep members of Parliament have offered to make some of their new technology, developed during the war, available to everyone at an affordable price. And the Corporation offered interest-free loans to rebuild the planets damaged during the war."`
       choice
         `  "That's very generous of them."`
         `  "I wonder if that's their way of buying our support and keeping us quiet about the supposed defector."`

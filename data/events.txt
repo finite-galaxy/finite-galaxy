@@ -97,10 +97,10 @@ event "flamethrower available"
 
 
 event "new regenerators available"
-  outfitter "Syndicate Advanced"
+  outfitter "Corporation Advanced"
     "S-270 Regenerator"
     "S-970 Regenerator"
-  outfitter "Syndicate Intermediate"
+  outfitter "Corporation Intermediate"
     "S-270 Regenerator"
 
 
@@ -246,15 +246,15 @@ event "war begins"
     fleet "Merchants North Large" 1100
     fleet "Merchants Paradise Small" 1000
     fleet "Merchants Paradise Large" 1500
-    fleet "Syndicate Small" 800
-    fleet "Syndicate Large" 400
+    fleet "Corporation Small" 800
+    fleet "Corporation Large" 400
   system "Pollux"
     fleet "Merchants North Small" 700
     fleet "Merchants North Large" 1100
     fleet "Merchants Paradise Small" 800
     fleet "Merchants Paradise Large" 1200
-    fleet "Syndicate Small" 700
-    fleet "Syndicate Large" 900
+    fleet "Corporation Small" 700
+    fleet "Corporation Large" 900
 
 
 event "initial deployment 1"
@@ -1027,8 +1027,8 @@ event "oathkeepers founded"
     fleet "Oathkeeper Large" 3000
     fleet "Oathkeeper Small" 1000
     fleet "Pirates North Large" 4000
-    fleet "Syndicate Small" 1500
-    fleet "Syndicate Large" 3000
+    fleet "Corporation Small" 1500
+    fleet "Corporation Large" 3000
   system "Rigel"
     fleet "Merchants North Large" 4000
     fleet "Merchants North Small" 2000
@@ -1637,8 +1637,8 @@ event "end battle of alioth"
     fleet "Navy Surveillance" 1600
 
 
-event "fw at war with Syndicate"
-  government "Syndicate"
+event "fw at war with Corporation"
+  government "Corporation"
     "attitude toward"
       "Free Worlds" -.3
       "Pirate" -.4
@@ -1892,22 +1892,22 @@ event "navy out of rastaban"
 event "fw reconciliation break"
 
 
-event "fw syndicate capture begin"
-  "reputation: Syndicate" <?= -100
-  government "Syndicate"
+event "fw corporation capture begin"
+  "reputation: Corporation" <?= -100
+  government "Corporation"
     "attitude toward"
       "Deep" -.01
       "Navy (Oathkeeper)" -.01
 
 
-event "fw syndicate capture end"
-  government "Syndicate"
+event "fw corporation capture end"
+  government "Corporation"
     "attitude toward"
       "Deep" 0
       "Navy (Oathkeeper)" 0
 
 
-event "syndicate occupies sol"
+event "corporation occupies sol"
   system "Sol"
     fleet "Merchants North Small" 500
     fleet "Merchants North Large" 700
@@ -1915,8 +1915,8 @@ event "syndicate occupies sol"
     fleet "Republic Large" 1200
     fleet "Merchants West Small" 900
     fleet "Merchants West Large" 1400
-    fleet "Syndicate Small" 400
-    fleet "Syndicate Large" 600
+    fleet "Corporation Small" 400
+    fleet "Corporation Large" 600
 
 
 event "pug invasion"
@@ -2062,18 +2062,18 @@ event "pug invasion 4"
     security 0
 
 
-event "fw syndicate welcoming"
-  government "Syndicate"
+event "fw corporation welcoming"
+  government "Corporation"
     "attitude toward"
       "Free Worlds" 0
       "Republic" 0
       "Navy (Oathkeeper)" 0
     bribe .08
   system "Alcyone"
-    government "Syndicate (Extremist)"
+    government "Corporation (Extremist)"
     fleet "Pirates West Small" 1500
     fleet "Pirates West Large" 2000
-    fleet "Syndicate Extremists" 200
+    fleet "Corporation Extremists" 200
 
 
 event "at war with the pug"
@@ -2082,8 +2082,8 @@ event "at war with the pug"
     "attitude toward"
       "Free Worlds" -.01
       "Republic" -.01
-      "Syndicate" -.01
-      "Syndicate (Extremist)" -.01
+      "Corporation" -.01
+      "Corporation (Extremist)" -.01
   system "Delta Capricorni"
     fleet "Merchants West Small" 1500
 
@@ -2316,13 +2316,13 @@ event "pug link restoration 4"
 event "battle of alcyone"
   government "Republic"
     "attitude toward"
-      "Syndicate (Extremist)" -.1
+      "Corporation (Extremist)" -.1
   government "Navy (Oathkeeper)"
     "attitude toward"
-      "Syndicate (Extremist)" -.1
+      "Corporation (Extremist)" -.1
   system "Alcyone"
     fleet "Republic Small" 5000
-  "reputation: Syndicate (Extremist)" <?= -1000
+  "reputation: Corporation (Extremist)" <?= -1000
 
 
 event "navy occupies alcyone"

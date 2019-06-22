@@ -61,7 +61,7 @@ mission "Hunted by State [0]"
   repeat
   destination Earth
   source
-    government "Deep" "Free Worlds" "Neutral" "Pirate" "Republic" "Syndicate" 
+    government "Deep" "Free Worlds" "Neutral" "Pirate" "Republic" "Corporation" 
   to offer
     random < 10
     "combat rating" > 150
@@ -71,7 +71,7 @@ mission "Hunted by State [0]"
     or
       "reputation: Free Worlds" < -10
       "reputation: Republic" < -10
-      "reputation: Syndicate" < -10
+      "reputation: Corporation" < -10
   to complete
     never
   npc save
@@ -87,7 +87,7 @@ mission "Hunted by State [1]"
   repeat
   destination Earth
   source
-    government "Deep" "Free Worlds" "Neutral" "Pirate" "Republic" "Syndicate"
+    government "Deep" "Free Worlds" "Neutral" "Pirate" "Republic" "Corporation"
   to offer
     random > 95
     "combat rating" > 1100
@@ -97,7 +97,7 @@ mission "Hunted by State [1]"
     or
       "reputation: Free Worlds" < -200
       "reputation: Republic" < -200
-      "reputation: Syndicate" < -200
+      "reputation: Corporation" < -200
   to complete
     never
   npc save
@@ -113,7 +113,7 @@ mission "Marauder Hunted"
   repeat
   destination Earth
   source
-    government "Deep" "Free Worlds" "Neutral" "Republic" "Syndicate"
+    government "Deep" "Free Worlds" "Neutral" "Republic" "Corporation"
   to offer
     "combat rating" > 8103
     random < 3
@@ -144,9 +144,9 @@ mission "Northern Pirate Attack"
     fleet "Pirates North Small"
     fleet "Pirates North Large" 2
   npc
-    government "Syndicate"
+    government "Corporation"
     personality heroic staying
-    fleet "Syndicate Small" 2
+    fleet "Corporation Small" 2
   on offer
     conversation
       `Suddenly you hear raised voices and shouting outside: "We are under attack! <planet> is under attack by pirates! We need every combat-worthy ship to join the defences!" The authorities will probably pay you quite well if you assist them, but this could also be an easy way to get yourself killed.`
@@ -158,7 +158,7 @@ mission "Northern Pirate Attack"
         launch
   on complete
     payment 250000
-    "reputation: Syndicate" += 1
+    "reputation: Corporation" += 1
     dialogue "The government of <planet> pays you <payment> for helping to drive off the pirates."
 
 mission "Southern Pirate Attack"
@@ -491,6 +491,6 @@ conversation "western pirate defence"
     `  (Stay here until the fight is over.)`
       decline
     `  (Join the defence fleet.)`
-  `  Local pirate forces are preparing to repel the Syndicate attack. You join them, and take off together…`
+  `  Local pirate forces are preparing to repel the Corporation attack. You join them, and take off together…`
     launch
 

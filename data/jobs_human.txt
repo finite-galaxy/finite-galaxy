@@ -91,7 +91,7 @@ mission "Bounty Hunting (Big)"
     "combat rating" > 500
     random < 20
   source
-    government "Deep" "Free Worlds" "Neutral" "Republic" "Syndicate"
+    government "Deep" "Free Worlds" "Neutral" "Republic" "Corporation"
     attributes core "dirt belt" frontier north rim south
   npc kill
     government "Bounty"
@@ -120,7 +120,7 @@ mission "Bounty Hunting (Medium)"
     "combat rating" > 400
     random < 20
   source
-    government "Deep" "Free Worlds" "Neutral" "Republic" "Syndicate"
+    government "Deep" "Free Worlds" "Neutral" "Republic" "Corporation"
     attributes core "dirt belt" frontier north rim south
   npc kill
     government "Bounty"
@@ -149,7 +149,7 @@ mission "Bounty Hunting (Small)"
     "combat rating" > 300
     random < 40
   source
-    government "Deep" "Free Worlds" "Neutral" "Republic" "Syndicate"
+    government "Deep" "Free Worlds" "Neutral" "Republic" "Corporation"
     attributes core "dirt belt" frontier north rim south
   npc kill
     government "Bounty"
@@ -183,7 +183,7 @@ mission "Bounty Hunting (Marauder I)"
         "combat rating" < 1200
         random < 35
   source
-    government "Deep" "Free Worlds" "Neutral" "Republic" "Syndicate"
+    government "Deep" "Free Worlds" "Neutral" "Republic" "Corporation"
     attributes core "dirt belt" frontier north rim south
   npc kill
     government "Bounty"
@@ -209,7 +209,7 @@ mission "Bounty Hunting (Marauder II)"
         "combat rating" < 1800
         random < 30
   source
-    government "Deep" "Free Worlds" "Neutral" "Republic" "Syndicate"
+    government "Deep" "Free Worlds" "Neutral" "Republic" "Corporation"
     attributes core "dirt belt" frontier north rim south
   npc kill
     government "Bounty"
@@ -235,7 +235,7 @@ mission "Bounty Hunting (Marauder III)"
         "combat rating" < 2200
         random < 25
   source
-    government "Deep" "Free Worlds" "Neutral" "Republic" "Syndicate"
+    government "Deep" "Free Worlds" "Neutral" "Republic" "Corporation"
     attributes core "dirt belt" frontier north rim south
   npc kill
     government "Bounty"
@@ -261,7 +261,7 @@ mission "Bounty Hunting (Marauder IV)"
         "combat rating" < 2700
         random < 30
   source
-    government "Deep" "Free Worlds" "Neutral" "Republic" "Syndicate"
+    government "Deep" "Free Worlds" "Neutral" "Republic" "Corporation"
     attributes core "dirt belt" frontier north rim south
   npc kill
     government "Bounty"
@@ -287,7 +287,7 @@ mission "Bounty Hunting (Marauder V)"
         "combat rating" < 3500
         random < 25
   source
-    government "Deep" "Free Worlds" "Neutral" "Republic" "Syndicate"
+    government "Deep" "Free Worlds" "Neutral" "Republic" "Corporation"
     attributes core "dirt belt" frontier north rim south
   npc kill
     government "Bounty"
@@ -313,7 +313,7 @@ mission "Bounty Hunting (Marauder VI)"
         "combat rating" < 5000
         random < 20
   source
-    government "Deep" "Free Worlds" "Neutral" "Republic" "Syndicate"
+    government "Deep" "Free Worlds" "Neutral" "Republic" "Corporation"
     attributes core "dirt belt" frontier north rim south
   npc kill
     government "Bounty"
@@ -335,7 +335,7 @@ mission "Bounty Hunting (Marauder VII)"
     "combat rating" > 2980
     random < 20
   source
-    government "Deep" "Free Worlds" "Neutral" "Republic" "Syndicate"
+    government "Deep" "Free Worlds" "Neutral" "Republic" "Corporation"
     attributes core "dirt belt" frontier north rim south
   npc kill
     government "Bounty"
@@ -357,7 +357,7 @@ mission "Bounty Hunting (Marauder VIII)"
     "combat rating" > 4000
     random < 15
   source
-    government "Deep" "Free Worlds" "Neutral" "Republic" "Syndicate"
+    government "Deep" "Free Worlds" "Neutral" "Republic" "Corporation"
     attributes core "dirt belt" frontier north rim south
   npc kill
     government "Bounty"
@@ -379,7 +379,7 @@ mission "Bounty Hunting (Marauder IX)"
     "combat rating" > 6000
     random < 10
   source
-    government "Deep" "Free Worlds" "Neutral" "Republic" "Syndicate"
+    government "Deep" "Free Worlds" "Neutral" "Republic" "Corporation"
     attributes core "dirt belt" frontier north rim south
   npc kill
     government "Bounty"
@@ -407,10 +407,10 @@ mission "Escort (Tiny, Northern, Dangerous Destination)"
       "combat rating" > 0
       has "ships: Interceptor"
   source
-    government "Deep" "Free Worlds" "Neutral" "Republic" "Syndicate"
+    government "Deep" "Free Worlds" "Neutral" "Republic" "Corporation"
     attributes deep paradise "near earth"
   destination
-    government "Deep" "Free Worlds" "Neutral" "Republic" "Syndicate"
+    government "Deep" "Free Worlds" "Neutral" "Republic" "Corporation"
     attributes frontier north
     distance 2 4
   npc
@@ -468,10 +468,10 @@ mission "Escort (Tiny, Northern, Dangerous Origin)"
       "combat rating" > 0
       has "ships: Interceptor"
   source
-    government "Deep" "Free Worlds" "Neutral" "Republic" "Syndicate"
+    government "Deep" "Free Worlds" "Neutral" "Republic" "Corporation"
     attributes frontier north
   destination
-    government "Deep" "Free Worlds" "Neutral" "Republic" "Syndicate"
+    government "Deep" "Free Worlds" "Neutral" "Republic" "Corporation"
     attributes deep paradise "near earth" core
     distance 2 4
   npc
@@ -526,10 +526,10 @@ mission "Escort (Small, Northern, Dangerous Destination)"
     random < 70
     "combat rating" > 5
   source
-    government "Deep" "Free Worlds" "Neutral" "Republic" "Syndicate"
+    government "Deep" "Free Worlds" "Neutral" "Republic" "Corporation"
     attributes deep paradise "near earth"
   destination
-    government "Deep" "Free Worlds" "Neutral" "Republic" "Syndicate"
+    government "Deep" "Free Worlds" "Neutral" "Republic" "Corporation"
     attributes frontier north
     distance 3 4
   npc
@@ -574,10 +574,10 @@ mission "Escort (Small, Northern, Dangerous Origin)"
     random < 40
     "combat rating" > 5
   source
-    government "Deep" "Free Worlds" "Neutral" "Republic" "Syndicate"
+    government "Deep" "Free Worlds" "Neutral" "Republic" "Corporation"
     attributes frontier north
   destination
-    government "Deep" "Free Worlds" "Neutral" "Republic" "Syndicate"
+    government "Deep" "Free Worlds" "Neutral" "Republic" "Corporation"
     attributes deep paradise "near earth" core
     distance 3 4
   npc
@@ -623,10 +623,10 @@ mission "Escort (Medium, Northern, Dangerous Destination)"
     random < 40
     "combat rating" > 20
   source
-    government "Deep" "Free Worlds" "Neutral" "Republic" "Syndicate"
+    government "Deep" "Free Worlds" "Neutral" "Republic" "Corporation"
     attributes deep paradise "near earth"
   destination
-    government "Deep" "Free Worlds" "Neutral" "Republic" "Syndicate"
+    government "Deep" "Free Worlds" "Neutral" "Republic" "Corporation"
     attributes frontier north
     distance 3 4
   npc
@@ -677,10 +677,10 @@ mission "Escort (Medium, Northern, Dangerous Origin)"
     random < 40
     "combat rating" > 20
   source
-    government "Deep" "Free Worlds" "Neutral" "Republic" "Syndicate"
+    government "Deep" "Free Worlds" "Neutral" "Republic" "Corporation"
     attributes frontier north
   destination
-    government "Deep" "Free Worlds" "Neutral" "Republic" "Syndicate"
+    government "Deep" "Free Worlds" "Neutral" "Republic" "Corporation"
     attributes deep paradise "near earth" core
     distance 3 4
   npc
@@ -731,10 +731,10 @@ mission "Escort (Large, Northern, Dangerous Destination)"
     random < 30
     "combat rating" > 60
   source
-    government "Deep" "Free Worlds" "Neutral" "Republic" "Syndicate"
+    government "Deep" "Free Worlds" "Neutral" "Republic" "Corporation"
     attributes deep paradise "near earth"
   destination
-    government "Deep" "Free Worlds" "Neutral" "Republic" "Syndicate"
+    government "Deep" "Free Worlds" "Neutral" "Republic" "Corporation"
     attributes frontier north
     distance 3 4
   npc
@@ -776,10 +776,10 @@ mission "Escort (Large, Northern, Dangerous Origin)"
     random < 30
     "combat rating" > 60
   source
-    government "Deep" "Free Worlds" "Neutral" "Republic" "Syndicate"
+    government "Deep" "Free Worlds" "Neutral" "Republic" "Corporation"
     attributes frontier north
   destination
-    government "Deep" "Free Worlds" "Neutral" "Republic" "Syndicate"
+    government "Deep" "Free Worlds" "Neutral" "Republic" "Corporation"
     attributes deep paradise "near earth" core
     distance 3 4
   npc
@@ -822,10 +822,10 @@ mission "Escort (Extra Large, Northern, Dangerous Destination)"
     random < 15
     "combat rating" > 100
   source
-    government "Deep" "Free Worlds" "Neutral" "Republic" "Syndicate"
+    government "Deep" "Free Worlds" "Neutral" "Republic" "Corporation"
     attributes deep paradise "near earth"
   destination
-    government "Deep" "Free Worlds" "Neutral" "Republic" "Syndicate"
+    government "Deep" "Free Worlds" "Neutral" "Republic" "Corporation"
     attributes frontier north
     distance 3 4
   npc
@@ -869,10 +869,10 @@ mission "Escort (Extra Large, Northern, Dangerous Origin)"
     random < 15
     "combat rating" > 100
   source
-    government "Deep" "Free Worlds" "Neutral" "Republic" "Syndicate"
+    government "Deep" "Free Worlds" "Neutral" "Republic" "Corporation"
     attributes frontier north
   destination
-    government "Deep" "Free Worlds" "Neutral" "Republic" "Syndicate"
+    government "Deep" "Free Worlds" "Neutral" "Republic" "Corporation"
     attributes deep paradise "near earth" core
     distance 3 4
   npc
@@ -925,10 +925,10 @@ mission "Escort (Tiny, Core, Dangerous Destination)"
       "combat rating" > 0
       has "ships: Interceptor"
   source
-    government "Deep" "Free Worlds" "Neutral" "Republic" "Syndicate"
+    government "Deep" "Free Worlds" "Neutral" "Republic" "Corporation"
     attributes core "near earth"
   destination
-    government "Deep" "Free Worlds" "Neutral" "Republic" "Syndicate"
+    government "Deep" "Free Worlds" "Neutral" "Republic" "Corporation"
     attributes core north frontier "dirt belt"
     distance 2 4
   npc
@@ -986,10 +986,10 @@ mission "Escort (Tiny, Core, Dangerous Origin)"
       "combat rating" > 0
       has "ships: Interceptor"
   source
-    government "Deep" "Free Worlds" "Neutral" "Republic" "Syndicate"
+    government "Deep" "Free Worlds" "Neutral" "Republic" "Corporation"
     attributes core north frontier
   destination
-    government "Deep" "Free Worlds" "Neutral" "Republic" "Syndicate"
+    government "Deep" "Free Worlds" "Neutral" "Republic" "Corporation"
     attributes paradise "near earth"
     distance 2 5
   npc
@@ -1044,10 +1044,10 @@ mission "Escort (Small, Core, Dangerous Destination)"
     random < 70
     "combat rating" > 5
   source
-    government "Deep" "Free Worlds" "Neutral" "Republic" "Syndicate"
+    government "Deep" "Free Worlds" "Neutral" "Republic" "Corporation"
     attributes paradise "near earth"
   destination
-    government "Deep" "Free Worlds" "Neutral" "Republic" "Syndicate"
+    government "Deep" "Free Worlds" "Neutral" "Republic" "Corporation"
     attributes core north frontier "dirt belt"
     distance 3 4
   npc
@@ -1092,10 +1092,10 @@ mission "Escort (Small, Core, Dangerous Origin)"
     random < 70
     "combat rating" > 5
   source
-    government "Deep" "Free Worlds" "Neutral" "Republic" "Syndicate"
+    government "Deep" "Free Worlds" "Neutral" "Republic" "Corporation"
     attributes core north frontier
   destination
-    government "Deep" "Free Worlds" "Neutral" "Republic" "Syndicate"
+    government "Deep" "Free Worlds" "Neutral" "Republic" "Corporation"
     attributes paradise "near earth"
     distance 3 5
   npc
@@ -1141,10 +1141,10 @@ mission "Escort (Medium, Core, Dangerous Destination)"
     random < 40
     "combat rating" > 20
   source
-    government "Deep" "Free Worlds" "Neutral" "Republic" "Syndicate"
+    government "Deep" "Free Worlds" "Neutral" "Republic" "Corporation"
     attributes paradise "near earth"
   destination
-    government "Deep" "Free Worlds" "Neutral" "Republic" "Syndicate"
+    government "Deep" "Free Worlds" "Neutral" "Republic" "Corporation"
     attributes core north frontier "dirt belt"
     distance 3 4
   npc
@@ -1189,10 +1189,10 @@ mission "Escort (Medium, Core, Dangerous Origin)"
     random < 40
     "combat rating" > 20
   source
-    government "Deep" "Free Worlds" "Neutral" "Republic" "Syndicate"
+    government "Deep" "Free Worlds" "Neutral" "Republic" "Corporation"
     attributes core north frontier
   destination
-    government "Deep" "Free Worlds" "Neutral" "Republic" "Syndicate"
+    government "Deep" "Free Worlds" "Neutral" "Republic" "Corporation"
     attributes paradise "near earth"
     distance 3 5
   npc
@@ -1245,10 +1245,10 @@ mission "Escort (Large, Core, Dangerous Destination)"
     random < 50
     "combat rating" > 60
   source
-    government "Deep" "Free Worlds" "Neutral" "Republic" "Syndicate"
+    government "Deep" "Free Worlds" "Neutral" "Republic" "Corporation"
     attributes paradise "near earth"
   destination
-    government "Deep" "Free Worlds" "Neutral" "Republic" "Syndicate"
+    government "Deep" "Free Worlds" "Neutral" "Republic" "Corporation"
     attributes core north frontier "dirt belt"
     distance 3 4
   npc
@@ -1290,10 +1290,10 @@ mission "Escort (Large, Core, Dangerous Origin)"
     random < 50
     "combat rating" > 60
   source
-    government "Deep" "Free Worlds" "Neutral" "Republic" "Syndicate"
+    government "Deep" "Free Worlds" "Neutral" "Republic" "Corporation"
     attributes core north frontier
   destination
-    government "Deep" "Free Worlds" "Neutral" "Republic" "Syndicate"
+    government "Deep" "Free Worlds" "Neutral" "Republic" "Corporation"
     attributes paradise "near earth"
     distance 3 5
   npc
@@ -1336,10 +1336,10 @@ mission "Escort (Extra Large, Core, Dangerous Destination)"
     random < 20
     "combat rating" > 100
   source
-    government "Deep" "Free Worlds" "Neutral" "Republic" "Syndicate"
+    government "Deep" "Free Worlds" "Neutral" "Republic" "Corporation"
     attributes paradise "near earth"
   destination
-    government "Deep" "Free Worlds" "Neutral" "Republic" "Syndicate"
+    government "Deep" "Free Worlds" "Neutral" "Republic" "Corporation"
     attributes core north frontier "dirt belt"
     distance 3 4
   npc
@@ -1383,10 +1383,10 @@ mission "Escort (Extra Large, Core, Dangerous Origin)"
     random < 20
     "combat rating" > 100
   source
-    government "Deep" "Free Worlds" "Neutral" "Republic" "Syndicate"
+    government "Deep" "Free Worlds" "Neutral" "Republic" "Corporation"
     attributes core north frontier
   destination
-    government "Deep" "Free Worlds" "Neutral" "Republic" "Syndicate"
+    government "Deep" "Free Worlds" "Neutral" "Republic" "Corporation"
     attributes paradise "near earth"
     distance 3 5
   npc
@@ -1440,10 +1440,10 @@ mission "Escort (Tiny, Southern, Dangerous Origin or Destination)"
       "combat rating" > 0
       has "ships: Interceptor"
   source
-    government "Deep" "Free Worlds" "Neutral" "Republic" "Syndicate"
+    government "Deep" "Free Worlds" "Neutral" "Republic" "Corporation"
     attributes frontier south rim "dirt belt"
   destination
-    government "Deep" "Free Worlds" "Neutral" "Republic" "Syndicate"
+    government "Deep" "Free Worlds" "Neutral" "Republic" "Corporation"
     attributes frontier south rim "dirt belt"
     distance 2 4
   npc
@@ -1497,10 +1497,10 @@ mission "Escort (Small, Southern, Dangerous Origin or Destination)"
     random < 70
     "combat rating" > 5
   source
-    government "Deep" "Free Worlds" "Neutral" "Republic" "Syndicate"
+    government "Deep" "Free Worlds" "Neutral" "Republic" "Corporation"
     attributes frontier south rim "dirt belt"
   destination
-    government "Deep" "Free Worlds" "Neutral" "Republic" "Syndicate"
+    government "Deep" "Free Worlds" "Neutral" "Republic" "Corporation"
     attributes frontier south rim "dirt belt"
     distance 3 4
   npc
@@ -1538,10 +1538,10 @@ mission "Escort (Medium, Southern, Dangerous Origin or Destination)"
     random < 40
     "combat rating" > 20
   source
-    government "Deep" "Free Worlds" "Neutral" "Republic" "Syndicate"
+    government "Deep" "Free Worlds" "Neutral" "Republic" "Corporation"
     attributes frontier south rim "dirt belt"
   destination
-    government "Deep" "Free Worlds" "Neutral" "Republic" "Syndicate"
+    government "Deep" "Free Worlds" "Neutral" "Republic" "Corporation"
     attributes frontier south rim "dirt belt"
     distance 3 4
   npc
@@ -1579,10 +1579,10 @@ mission "Escort (Large, Southern, Dangerous Origin or Destination)"
     random < 50
     "combat rating" > 60
   source
-    government "Deep" "Free Worlds" "Neutral" "Republic" "Syndicate"
+    government "Deep" "Free Worlds" "Neutral" "Republic" "Corporation"
     attributes frontier south rim "dirt belt"
   destination
-    government "Deep" "Free Worlds" "Neutral" "Republic" "Syndicate"
+    government "Deep" "Free Worlds" "Neutral" "Republic" "Corporation"
     attributes frontier south rim "dirt belt"
     distance 3 4
   npc
@@ -1618,10 +1618,10 @@ mission "Escort (Extra Large, Southern, Dangerous Origin or Destination)"
     random < 20
     "combat rating" > 100
   source
-    government "Deep" "Free Worlds" "Neutral" "Republic" "Syndicate"
+    government "Deep" "Free Worlds" "Neutral" "Republic" "Corporation"
     attributes frontier south rim "dirt belt"
   destination
-    government "Deep" "Free Worlds" "Neutral" "Republic" "Syndicate"
+    government "Deep" "Free Worlds" "Neutral" "Republic" "Corporation"
     attributes frontier south rim "dirt belt"
     distance 3 4
   npc
@@ -1657,10 +1657,10 @@ mission "Cargo [0]"
   description "Deliver <cargo> to <destination>. Payment is <payment>."
   cargo random 5 2 .1
   source
-    government "Deep" "Free Worlds" "Neutral" "Republic" "Syndicate"
+    government "Deep" "Free Worlds" "Neutral" "Republic" "Corporation"
   destination
     distance 2 8
-    government "Deep" "Free Worlds" "Neutral" "Republic" "Syndicate"
+    government "Deep" "Free Worlds" "Neutral" "Republic" "Corporation"
   on complete
     payment
     dialogue "You drop off your cargo of <commodity> and collect your payment of <payment>."
@@ -1674,10 +1674,10 @@ mission "Cargo [1]"
   to offer
     random < 90
   source
-    government "Deep" "Free Worlds" "Neutral" "Republic" "Syndicate"
+    government "Deep" "Free Worlds" "Neutral" "Republic" "Corporation"
   destination
     distance 2 10
-    government "Deep" "Free Worlds" "Neutral" "Republic" "Syndicate"
+    government "Deep" "Free Worlds" "Neutral" "Republic" "Corporation"
   on complete
     payment
     dialogue "You drop off your cargo of <commodity> and collect your payment of <payment>."
@@ -1692,10 +1692,10 @@ mission "Cargo [2]"
     random < 80
   source
     attributes mining textiles factory farming fishing oil
-    government "Deep" "Free Worlds" "Neutral" "Republic" "Syndicate"
+    government "Deep" "Free Worlds" "Neutral" "Republic" "Corporation"
   destination
     distance 2 12
-    government "Deep" "Free Worlds" "Neutral" "Republic" "Syndicate"
+    government "Deep" "Free Worlds" "Neutral" "Republic" "Corporation"
   on complete
     payment
     dialogue "You drop off your cargo of <commodity> and collect your payment of <payment>."
@@ -1710,10 +1710,10 @@ mission "Cargo [3]"
     random < 70
   source
     attributes mining textiles factory farming fishing oil
-    government "Deep" "Free Worlds" "Neutral" "Republic" "Syndicate"
+    government "Deep" "Free Worlds" "Neutral" "Republic" "Corporation"
   destination
     distance 3 14
-    government "Deep" "Free Worlds" "Neutral" "Republic" "Syndicate"
+    government "Deep" "Free Worlds" "Neutral" "Republic" "Corporation"
   on complete
     payment
     payment 2000
@@ -1729,10 +1729,10 @@ mission "Cargo [4]"
     random < 60
   source
     attributes mining textiles factory farming fishing oil
-    government "Deep" "Free Worlds" "Neutral" "Republic" "Syndicate"
+    government "Deep" "Free Worlds" "Neutral" "Republic" "Corporation"
   destination
     distance 4 16
-    government "Deep" "Free Worlds" "Neutral" "Republic" "Syndicate"
+    government "Deep" "Free Worlds" "Neutral" "Republic" "Corporation"
   on complete
     payment
     payment 4000
@@ -1747,10 +1747,10 @@ mission "Bulk Delivery [0]"
   to offer
     random < 70
   source
-    government "Deep" "Free Worlds" "Neutral" "Republic" "Syndicate"
+    government "Deep" "Free Worlds" "Neutral" "Republic" "Corporation"
   destination
     distance 2 8
-    government "Deep" "Free Worlds" "Neutral" "Republic" "Syndicate"
+    government "Deep" "Free Worlds" "Neutral" "Republic" "Corporation"
   on complete
     payment
     dialogue "You drop off your cargo of <commodity> and collect your payment of <payment>."
@@ -1764,10 +1764,10 @@ mission "Bulk Delivery [1]"
   to offer
     random < 60
   source
-    government "Deep" "Free Worlds" "Neutral" "Republic" "Syndicate"
+    government "Deep" "Free Worlds" "Neutral" "Republic" "Corporation"
   destination
     distance 3 12
-    government "Deep" "Free Worlds" "Neutral" "Republic" "Syndicate"
+    government "Deep" "Free Worlds" "Neutral" "Republic" "Corporation"
   on complete
     payment
     payment 2000
@@ -1783,10 +1783,10 @@ mission "Bulk Delivery [2]"
     random < 50
   source
     attributes mining textiles factory farming fishing oil
-    government "Deep" "Free Worlds" "Neutral" "Republic" "Syndicate"
+    government "Deep" "Free Worlds" "Neutral" "Republic" "Corporation"
   destination
     distance 4 16
-    government "Deep" "Free Worlds" "Neutral" "Republic" "Syndicate"
+    government "Deep" "Free Worlds" "Neutral" "Republic" "Corporation"
   on complete
     payment
     payment 4000
@@ -1802,10 +1802,10 @@ mission "Rush Delivery [0]"
   to offer
     random < 90
   source
-    government "Deep" "Free Worlds" "Neutral" "Republic" "Syndicate"
+    government "Deep" "Free Worlds" "Neutral" "Republic" "Corporation"
   destination
     distance 4 10
-    government "Deep" "Free Worlds" "Neutral" "Republic" "Syndicate"
+    government "Deep" "Free Worlds" "Neutral" "Republic" "Corporation"
   on complete
     payment
     payment 16000
@@ -1821,10 +1821,10 @@ mission "Rush Delivery [1]"
   to offer
     random < 80
   source
-    government "Deep" "Free Worlds" "Neutral" "Republic" "Syndicate"
+    government "Deep" "Free Worlds" "Neutral" "Republic" "Corporation"
   destination
     distance 5 12
-    government "Deep" "Free Worlds" "Neutral" "Republic" "Syndicate"
+    government "Deep" "Free Worlds" "Neutral" "Republic" "Corporation"
   on complete
     payment
     payment 18000
@@ -1841,10 +1841,10 @@ mission "Rush Delivery [2]"
     random < 70
   source
     attributes mining textiles factory farming fishing oil
-    government "Deep" "Free Worlds" "Neutral" "Republic" "Syndicate"
+    government "Deep" "Free Worlds" "Neutral" "Republic" "Corporation"
   destination
     distance 6 14
-    government "Deep" "Free Worlds" "Neutral" "Republic" "Syndicate"
+    government "Deep" "Free Worlds" "Neutral" "Republic" "Corporation"
   on complete
     payment
     payment 20000
@@ -1861,10 +1861,10 @@ mission "Rush Delivery [3]"
     random < 60
   source
     attributes mining textiles factory farming fishing oil
-    government "Deep" "Free Worlds" "Neutral" "Republic" "Syndicate"
+    government "Deep" "Free Worlds" "Neutral" "Republic" "Corporation"
   destination
     distance 7 16
-    government "Deep" "Free Worlds" "Neutral" "Republic" "Syndicate"
+    government "Deep" "Free Worlds" "Neutral" "Republic" "Corporation"
   on complete
     payment
     payment 22000
@@ -1879,10 +1879,10 @@ mission "Passengers [0]"
   description "Bring <fare> to <destination>. Payment is <payment>."
   passengers 1 10 .9
   source
-    government "Deep" "Free Worlds" "Neutral" "Republic" "Syndicate"
+    government "Deep" "Free Worlds" "Neutral" "Republic" "Corporation"
   destination
     distance 2 10
-    government "Deep" "Free Worlds" "Neutral" "Republic" "Syndicate"
+    government "Deep" "Free Worlds" "Neutral" "Republic" "Corporation"
   on complete
     payment
     payment 2000
@@ -1897,10 +1897,10 @@ mission "Passengers [1]"
   to offer
     random < 75
   source
-    government "Deep" "Free Worlds" "Neutral" "Republic" "Syndicate"
+    government "Deep" "Free Worlds" "Neutral" "Republic" "Corporation"
   destination
     distance 2 10
-    government "Deep" "Free Worlds" "Neutral" "Republic" "Syndicate"
+    government "Deep" "Free Worlds" "Neutral" "Republic" "Corporation"
   on complete
     payment
     dialogue "You wish your <passengers> the best of luck on <planet>, and collect your payment of <payment>."
@@ -1914,10 +1914,10 @@ mission "Passengers [2]"
   to offer
     random < 50
   source
-    government "Deep" "Free Worlds" "Neutral" "Republic" "Syndicate"
+    government "Deep" "Free Worlds" "Neutral" "Republic" "Corporation"
   destination
     distance 2 10
-    government "Deep" "Free Worlds" "Neutral" "Republic" "Syndicate"
+    government "Deep" "Free Worlds" "Neutral" "Republic" "Corporation"
   on complete
     payment
     dialogue "You wish your <passengers> the best of luck on <planet>, and collect your payment of <payment>."
@@ -1931,10 +1931,10 @@ mission "Passengers [3]"
   to offer
     random < 25
   source
-    government "Deep" "Free Worlds" "Neutral" "Republic" "Syndicate"
+    government "Deep" "Free Worlds" "Neutral" "Republic" "Corporation"
   destination
     distance 2 10
-    government "Deep" "Free Worlds" "Neutral" "Republic" "Syndicate"
+    government "Deep" "Free Worlds" "Neutral" "Republic" "Corporation"
   on complete
     payment
     dialogue "You wish your <passengers> the best of luck on <planet>, and collect your payment of <payment>."
@@ -1949,10 +1949,10 @@ mission "Passengers [4]"
     random < 50
   source
     attributes "urban"
-    government "Deep" "Free Worlds" "Neutral" "Republic" "Syndicate"
+    government "Deep" "Free Worlds" "Neutral" "Republic" "Corporation"
   destination
     distance 2 10
-    government "Deep" "Free Worlds" "Neutral" "Republic" "Syndicate"
+    government "Deep" "Free Worlds" "Neutral" "Republic" "Corporation"
   on complete
     payment
     payment 2000
@@ -1966,11 +1966,11 @@ mission "Transport miners to <planet>"
   to offer
     random < 50
   source
-    government "Deep" "Free Worlds" "Neutral" "Republic" "Syndicate"
+    government "Deep" "Free Worlds" "Neutral" "Republic" "Corporation"
   destination
     attributes "mining"
     distance 3 12
-    government "Deep" "Free Worlds" "Neutral" "Republic" "Syndicate"
+    government "Deep" "Free Worlds" "Neutral" "Republic" "Corporation"
   on complete
     payment
     payment 2000
@@ -1984,11 +1984,11 @@ mission "Transport farmers to <planet>"
   to offer
     random < 50
   source
-    government "Deep" "Free Worlds" "Neutral" "Republic" "Syndicate"
+    government "Deep" "Free Worlds" "Neutral" "Republic" "Corporation"
   destination
     attributes "farming"
     distance 3 12
-    government "Deep" "Free Worlds" "Neutral" "Republic" "Syndicate"
+    government "Deep" "Free Worlds" "Neutral" "Republic" "Corporation"
   on complete
     payment
     payment 2000
@@ -2002,11 +2002,11 @@ mission "Transport mill workers to <planet>"
   to offer
     random < 50
   source
-    government "Deep" "Free Worlds" "Neutral" "Republic" "Syndicate"
+    government "Deep" "Free Worlds" "Neutral" "Republic" "Corporation"
   destination
     attributes "textiles"
     distance 3 12
-    government "Deep" "Free Worlds" "Neutral" "Republic" "Syndicate"
+    government "Deep" "Free Worlds" "Neutral" "Republic" "Corporation"
   on complete
     payment
     payment 2000
@@ -2020,11 +2020,11 @@ mission "Transport workers to <planet>"
   to offer
     random < 80
   source
-    government "Deep" "Free Worlds" "Neutral" "Republic" "Syndicate"
+    government "Deep" "Free Worlds" "Neutral" "Republic" "Corporation"
   destination
     attributes "factory"
     distance 3 12
-    government "Deep" "Free Worlds" "Neutral" "Republic" "Syndicate"
+    government "Deep" "Free Worlds" "Neutral" "Republic" "Corporation"
   on complete
     payment
     payment 2000
@@ -2039,11 +2039,11 @@ mission "Tourists out [0]"
   to offer
     random < 20
   source
-    government "Deep" "Free Worlds" "Neutral" "Republic" "Syndicate"
+    government "Deep" "Free Worlds" "Neutral" "Republic" "Corporation"
   destination
     attributes "tourism"
     distance 6 35
-    government "Deep" "Free Worlds" "Neutral" "Republic" "Syndicate"
+    government "Deep" "Free Worlds" "Neutral" "Republic" "Corporation"
   on complete
     payment
     payment 6000
@@ -2058,11 +2058,11 @@ mission "Tourists out [1]"
   to offer
     random < 50
   source
-    government "Deep" "Free Worlds" "Neutral" "Republic" "Syndicate"
+    government "Deep" "Free Worlds" "Neutral" "Republic" "Corporation"
   destination
     attributes "tourism"
     distance 2 25
-    government "Deep" "Free Worlds" "Neutral" "Republic" "Syndicate"
+    government "Deep" "Free Worlds" "Neutral" "Republic" "Corporation"
   on complete
     payment
     payment 4000
@@ -2078,11 +2078,11 @@ mission "Tourists out [2]"
     random < 75
   source
     attributes "rich" "urban"
-    government "Deep" "Free Worlds" "Neutral" "Republic" "Syndicate"
+    government "Deep" "Free Worlds" "Neutral" "Republic" "Corporation"
   destination
     attributes "tourism"
     distance 4 30
-    government "Deep" "Free Worlds" "Neutral" "Republic" "Syndicate"
+    government "Deep" "Free Worlds" "Neutral" "Republic" "Corporation"
   on complete
     payment
     payment 8000
@@ -2097,11 +2097,11 @@ mission "Tourists back [0]"
   to offer
     random < 20
   source
-    government "Deep" "Free Worlds" "Neutral" "Republic" "Syndicate"
+    government "Deep" "Free Worlds" "Neutral" "Republic" "Corporation"
     attributes "tourism"
   destination
     distance 6 35
-    government "Deep" "Free Worlds" "Neutral" "Republic" "Syndicate"
+    government "Deep" "Free Worlds" "Neutral" "Republic" "Corporation"
   on complete
     payment
     payment 6000
@@ -2116,11 +2116,11 @@ mission "Tourists back [1]"
   to offer
     random < 50
   source
-    government "Deep" "Free Worlds" "Neutral" "Republic" "Syndicate"
+    government "Deep" "Free Worlds" "Neutral" "Republic" "Corporation"
     attributes "tourism"
   destination
     distance 2 25
-    government "Deep" "Free Worlds" "Neutral" "Republic" "Syndicate"
+    government "Deep" "Free Worlds" "Neutral" "Republic" "Corporation"
   on complete
     payment
     payment 4000
@@ -2136,11 +2136,11 @@ mission "Tourists back [2]"
     random < 75
   source
     attributes "tourism"
-    government "Deep" "Free Worlds" "Neutral" "Republic" "Syndicate"
+    government "Deep" "Free Worlds" "Neutral" "Republic" "Corporation"
   destination
     attributes "rich" "urban"
     distance 4 30
-    government "Deep" "Free Worlds" "Neutral" "Republic" "Syndicate"
+    government "Deep" "Free Worlds" "Neutral" "Republic" "Corporation"
   on complete
     payment
     payment 8000
@@ -2156,10 +2156,10 @@ mission "Family [0]"
     random < 60
     "passenger space" > 10
   source
-    government "Deep" "Free Worlds" "Neutral" "Republic" "Syndicate"
+    government "Deep" "Free Worlds" "Neutral" "Republic" "Corporation"
   destination
     distance 4 16
-    government "Deep" "Free Worlds" "Neutral" "Republic" "Syndicate"
+    government "Deep" "Free Worlds" "Neutral" "Republic" "Corporation"
   on complete
     payment
     payment 4000
@@ -2175,10 +2175,10 @@ mission "Family [1]"
     random < 50
     "passenger space" > 10
   source
-    government "Deep" "Free Worlds" "Neutral" "Republic" "Syndicate"
+    government "Deep" "Free Worlds" "Neutral" "Republic" "Corporation"
   destination
     distance 5 20
-    government "Deep" "Free Worlds" "Neutral" "Republic" "Syndicate"
+    government "Deep" "Free Worlds" "Neutral" "Republic" "Corporation"
   on complete
     payment
     payment 6000
@@ -2194,10 +2194,10 @@ mission "Family [2]"
     random < 40
     "passenger space" > 10
   source
-    government "Deep" "Free Worlds" "Neutral" "Republic" "Syndicate"
+    government "Deep" "Free Worlds" "Neutral" "Republic" "Corporation"
   destination
     distance 6 24
-    government "Deep" "Free Worlds" "Neutral" "Republic" "Syndicate"
+    government "Deep" "Free Worlds" "Neutral" "Republic" "Corporation"
   on complete
     payment
     payment 8000
@@ -2213,10 +2213,10 @@ mission "Family [3]"
     random < 30
     "passenger space" > 10
   source
-    government "Deep" "Free Worlds" "Neutral" "Republic" "Syndicate"
+    government "Deep" "Free Worlds" "Neutral" "Republic" "Corporation"
   destination
     distance 8 32
-    government "Deep" "Free Worlds" "Neutral" "Republic" "Syndicate"
+    government "Deep" "Free Worlds" "Neutral" "Republic" "Corporation"
   on complete
     payment
     payment 10000
@@ -2232,11 +2232,11 @@ mission "Strike Breakers [mining]"
     random < 10
     "passenger space" > 20
   source
-    government "Deep" "Free Worlds" "Neutral" "Republic" "Syndicate"
+    government "Deep" "Free Worlds" "Neutral" "Republic" "Corporation"
   destination
     attributes "mining"
     distance 2 20
-    government "Deep" "Free Worlds" "Neutral" "Republic" "Syndicate"
+    government "Deep" "Free Worlds" "Neutral" "Republic" "Corporation"
   on complete
     payment
     payment 10000
@@ -2252,11 +2252,11 @@ mission "Strike Breakers [textile]"
     random < 10
     "passenger space" > 20
   source
-    government "Deep" "Free Worlds" "Neutral" "Republic" "Syndicate"
+    government "Deep" "Free Worlds" "Neutral" "Republic" "Corporation"
   destination
     attributes "textiles"
     distance 2 20
-    government "Deep" "Free Worlds" "Neutral" "Republic" "Syndicate"
+    government "Deep" "Free Worlds" "Neutral" "Republic" "Corporation"
   on complete
     payment
     payment 10000
@@ -2272,11 +2272,11 @@ mission "Strike Breakers [factory]"
     random < 10
     "passenger space" > 20
   source
-    government "Deep" "Free Worlds" "Neutral" "Republic" "Syndicate"
+    government "Deep" "Free Worlds" "Neutral" "Republic" "Corporation"
   destination
     attributes "factory"
     distance 2 20
-    government "Deep" "Free Worlds" "Neutral" "Republic" "Syndicate"
+    government "Deep" "Free Worlds" "Neutral" "Republic" "Corporation"
   on complete
     payment
     payment 10000
@@ -2293,11 +2293,11 @@ mission "Colonists [0]"
     "passenger space" > 30
   source
     attributes "urban" "near earth" "core" "factory"
-    government "Deep" "Free Worlds" "Neutral" "Republic" "Syndicate"
+    government "Deep" "Free Worlds" "Neutral" "Republic" "Corporation"
   destination
     attributes "frontier" "dirt belt" "south" "farming" "mining" "rim" "forest"
     distance 2 20
-    government "Deep" "Free Worlds" "Neutral" "Republic" "Syndicate"
+    government "Deep" "Free Worlds" "Neutral" "Republic" "Corporation"
   on complete
     payment
     payment 8000
@@ -2314,11 +2314,11 @@ mission "Colonists [1]"
     "passenger space" > 30
   source
     attributes "urban" "near earth" "core" "factory"
-    government "Deep" "Free Worlds" "Neutral" "Republic" "Syndicate"
+    government "Deep" "Free Worlds" "Neutral" "Republic" "Corporation"
   destination
     attributes "frontier" "dirt belt" "south" "farming" "mining" "rim" "forest"
     distance 4 30
-    government "Deep" "Free Worlds" "Neutral" "Republic" "Syndicate"
+    government "Deep" "Free Worlds" "Neutral" "Republic" "Corporation"
   on complete
     payment
     payment 10000
@@ -2334,10 +2334,10 @@ mission "Large Bulk Delivery [0]"
     random < 70
     "cargo space" > 160
   source
-    government "Deep" "Free Worlds" "Neutral" "Republic" "Syndicate"
+    government "Deep" "Free Worlds" "Neutral" "Republic" "Corporation"
   destination
     distance 2 8
-    government "Deep" "Free Worlds" "Neutral" "Republic" "Syndicate"
+    government "Deep" "Free Worlds" "Neutral" "Republic" "Corporation"
   on complete
     payment
     payment 4000
@@ -2353,10 +2353,10 @@ mission "Large Bulk Delivery [1]"
     random < 60
     "cargo space" > 160
   source
-    government "Deep" "Free Worlds" "Neutral" "Republic" "Syndicate"
+    government "Deep" "Free Worlds" "Neutral" "Republic" "Corporation"
   destination
     distance 3 12
-    government "Deep" "Free Worlds" "Neutral" "Republic" "Syndicate"
+    government "Deep" "Free Worlds" "Neutral" "Republic" "Corporation"
   on complete
     payment
     payment 6000
@@ -2373,10 +2373,10 @@ mission "Large Bulk Delivery [2]"
     "cargo space" > 160
   source
     attributes mining textiles factory farming fishing oil
-    government "Deep" "Free Worlds" "Neutral" "Republic" "Syndicate"
+    government "Deep" "Free Worlds" "Neutral" "Republic" "Corporation"
   destination
     distance 4 16
-    government "Deep" "Free Worlds" "Neutral" "Republic" "Syndicate"
+    government "Deep" "Free Worlds" "Neutral" "Republic" "Corporation"
   on complete
     payment
     payment 8000
@@ -2393,10 +2393,10 @@ mission "Large Rush Delivery [0]"
     random < 90
     "cargo space" > 80
   source
-    government "Deep" "Free Worlds" "Neutral" "Republic" "Syndicate"
+    government "Deep" "Free Worlds" "Neutral" "Republic" "Corporation"
   destination
     distance 4 10
-    government "Deep" "Free Worlds" "Neutral" "Republic" "Syndicate"
+    government "Deep" "Free Worlds" "Neutral" "Republic" "Corporation"
   on complete
     payment
     payment 36000
@@ -2413,10 +2413,10 @@ mission "Large Rush Delivery [1]"
     random < 80
     "cargo space" > 80
   source
-    government "Deep" "Free Worlds" "Neutral" "Republic" "Syndicate"
+    government "Deep" "Free Worlds" "Neutral" "Republic" "Corporation"
   destination
     distance 5 12
-    government "Deep" "Free Worlds" "Neutral" "Republic" "Syndicate"
+    government "Deep" "Free Worlds" "Neutral" "Republic" "Corporation"
   on complete
     payment
     payment 38000
@@ -2434,10 +2434,10 @@ mission "Large Rush Delivery [2]"
     "cargo space" > 80
   source
     attributes mining textiles factory farming fishing oil
-    government "Deep" "Free Worlds" "Neutral" "Republic" "Syndicate"
+    government "Deep" "Free Worlds" "Neutral" "Republic" "Corporation"
   destination
     distance 6 14
-    government "Deep" "Free Worlds" "Neutral" "Republic" "Syndicate"
+    government "Deep" "Free Worlds" "Neutral" "Republic" "Corporation"
   on complete
     payment
     payment 40000
@@ -2455,10 +2455,10 @@ mission "Large Rush Delivery [3]"
     "cargo space" > 80
   source
     attributes mining textiles factory farming fishing oil
-    government "Deep" "Free Worlds" "Neutral" "Republic" "Syndicate"
+    government "Deep" "Free Worlds" "Neutral" "Republic" "Corporation"
   destination
     distance 7 16
-    government "Deep" "Free Worlds" "Neutral" "Republic" "Syndicate"
+    government "Deep" "Free Worlds" "Neutral" "Republic" "Corporation"
   on complete
     payment
     payment 42000

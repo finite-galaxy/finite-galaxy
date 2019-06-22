@@ -114,13 +114,13 @@
 #   "Navy Cargo"
 #   "Navy Patrol"
 #   "Navy Surveillance"
-# Syndicate:
-#   "Syndicate Invasion"
-#   "Syndicate Large"
-#   "Syndicate Patrol"
-#   "Syndicate Small"
-# Syndicate Extremists:
-#   "Syndicate Extremists"
+# Corporation:
+#   "Corporation Invasion"
+#   "Corporation Large"
+#   "Corporation Patrol"
+#   "Corporation Small"
+# Corporation Extremists:
+#   "Corporation Extremists"
 # Unfettered:
 #   "Unfettered Large"
 #   "Unfettered Raid"
@@ -3389,11 +3389,11 @@ fleet "Navy Surveillance"
 
 
 
-# Syndicate
-fleet "Syndicate Invasion"
-  government "Syndicate"
-  names "syndicate capital"
-  fighters "syndicate fighter"
+# Corporation
+fleet "Corporation Invasion"
+  government "Corporation"
+  names "corporation capital"
+  fighters "corporation fighter"
   cargo 2
   personality
     heroic
@@ -3405,10 +3405,10 @@ fleet "Syndicate Invasion"
     "Protector" 2
     "Vanguard" 3
 
-fleet "Syndicate Large"
-  government "Syndicate"
-  names "syndicate capital"
-  fighters "syndicate fighter"
+fleet "Corporation Large"
+  government "Corporation"
+  names "corporation capital"
+  fighters "corporation fighter"
   cargo 2
   personality
     heroic
@@ -3420,9 +3420,9 @@ fleet "Syndicate Large"
   variant 2
     "Vanguard"
 
-fleet "Syndicate Patrol"
-  government "Syndicate"
-  names "syndicate capital"
+fleet "Corporation Patrol"
+  government "Corporation"
+  names "corporation capital"
   cargo 2
   personality
     heroic
@@ -3431,9 +3431,9 @@ fleet "Syndicate Patrol"
     "Vanguard"
     "Argosy" 2
 
-fleet "Syndicate Small"
-  government "Syndicate"
-  names "syndicate small"
+fleet "Corporation Small"
+  government "Corporation"
+  names "corporation small"
   cargo 2
   personality
     heroic
@@ -3445,11 +3445,11 @@ fleet "Syndicate Small"
 
 
 
-# Syndicate Extremists
-fleet "Syndicate Extremists"
-  government "Syndicate (Extremist)"
-  names "syndicate capital"
-  fighters "syndicate fighter"
+# Corporation Extremists
+fleet "Corporation Extremists"
+  government "Corporation (Extremist)"
+  names "corporation capital"
+  fighters "corporation fighter"
   cargo 0
   personality
     heroic

@@ -1841,7 +1841,7 @@ mission "FW Rand 1B"
 mission "FW Defend Bod"
   landing
   name "Defend <planet>"
-  description "Defend <planet> from a Syndicate fleet that is attacking them, then land to rescue a Syndicate defector carrying vital evidence and information."
+  description "Defend <planet> from a Corporation fleet that is attacking them, then land to rescue a Corporation defector carrying vital evidence and information."
   source "Wayfarer"
   destination "Bod"
   passengers 2
@@ -1849,30 +1849,30 @@ mission "FW Defend Bod"
     has "FW Rand 1B: done"
   
   on offer
-    log "As a member of the Council, must make the deciding vote on a difficult decision. A defector from the Syndicate is claiming to have proof that the Syndicate was behind the bombings of Luna and Martini. If that is true, the Republic may agree to make peace with the Free Worlds. But, refusing to return the defector to the Syndicate would certainly earn their enmity."
+    log "As a member of the Council, must make the deciding vote on a difficult decision. A defector from the Corporation is claiming to have proof that the Corporation was behind the bombings of Luna and Martini. If that is true, the Republic may agree to make peace with the Free Worlds. But, refusing to return the defector to the Corporation would certainly earn their enmity."
     conversation
       `The fleet in orbit around Wayfarer is pitifully small, surely not enough to take on more than a couple of Navy capital ships. JJ orders one of their communication officers to try to establish a secure link to Bourne or to any Free Worlds post on the other side of the Navy blockade. After about ten minutes, the officer returns and says, "Sir, we're receiving communications from Bod. You need to talk to them."`
       `  "Our fleet is there?" asks JJ.`
-      `  "No sir, the Syndicate. They're under attack by the Syndicate."`
+      `  "No sir, the Corporation. They're under attack by the Corporation."`
       `  "What?" says JJ. He rushes into the communication room, and you and Freya follow. On the video screen is a Buddhist monk in a maroon robe; behind him, you see other monks rushing about with none of the serenity you would usually expect of them. "What's going on there?" asks JJ.`
-      `  The monk explains, "Yesterday a Syndicate ship landed near our monastery, and the pilot sought refuge with us. He brings evidence that the Syndicate, or some faction within the Syndicate, was behind the attacks on Luna and Martini."`
+      `  The monk explains, "Yesterday a Corporation ship landed near our monastery, and the pilot sought refuge with us. He brings evidence that the Corporation, or some faction within the Corporation, was behind the attacks on Luna and Martini."`
       choice
-        `  "Why would the Syndicate do that?"`
+        `  "Why would the Corporation do that?"`
         `  "What sort of evidence?"`
           goto evidence
-      `  "He claims that a certain faction within the Syndicate values economic growth above all else," says the monk, "and incited this war for that reason."`
+      `  "He claims that a certain faction within the Corporation values economic growth above all else," says the monk, "and incited this war for that reason."`
       `  "That's insane," says Freya.`
       `  "But not completely implausible," says JJ.`
       label evidence
-      `  The monk says, "He brought a great deal of evidence. Plans for a nuclear device. Data from underground testing. A manufactured bomb casing. Samples of fissile material. And he named the planet where the development was done: Serpens, in the Phact system. We hid his ship in a cave. A day later, a Syndicate fleet appeared in orbit. They do not know where the defector landed, but they say they will destroy whatever settlement is harbouring him unless he is returned to them immediately."`
+      `  The monk says, "He brought a great deal of evidence. Plans for a nuclear device. Data from underground testing. A manufactured bomb casing. Samples of fissile material. And he named the planet where the development was done: Serpens, in the Phact system. We hid his ship in a cave. A day later, a Corporation fleet appeared in orbit. They do not know where the defector landed, but they say they will destroy whatever settlement is harbouring him unless he is returned to them immediately."`
       `  After a moment, JJ says, "If these allegations are true, if we can prove that the Free Worlds was innocent of any involvement in those attacks, the Republic might make peace with us, or at least agree to a ceasefire. I vote that we try to shelter this defector and hear his story."`
-      `  "And if it's a lie," says Freya, "and we refuse the Syndicate's demands, we lose our only ally. And many civilians will be killed, as well. I care about justice, but trading a definite ally for a slim possibility of peace: that is an unwise investment. I vote that we hand this man over to the Syndicate."`
+      `  "And if it's a lie," says Freya, "and we refuse the Corporation's demands, we lose our only ally. And many civilians will be killed, as well. I care about justice, but trading a definite ally for a slim possibility of peace: that is an unwise investment. I vote that we hand this man over to the Corporation."`
       `  The monk says, "We want to see justice done, and peace prevail. If you ask us to, we will flee to the mountains and take refuge until help arrives."`
       `  As the third Council member present, you have the deciding vote, and the entire course of this war may rest on your decision.`
       choice
-        `  "I say we rescue the defector, even if it means war with the Syndicate."`
+        `  "I say we rescue the defector, even if it means war with the Corporation."`
           goto rescue
-        `  "I say we hand the defector over to the Syndicate, and focus on winning the battle against the Republic."`
+        `  "I say we hand the defector over to the Corporation, and focus on winning the battle against the Republic."`
           goto surrender
       label rescue
       `  "Are you sure?" asks Freya. "A lot of lives hang in the balance."`
@@ -1884,7 +1884,7 @@ mission "FW Defend Bod"
       label surrender
       `  "If Katya were here," says JJ, "she would tell us to choose justice over political expedience."`
       choice
-        `  "Well, she's not here, and I say we can't afford to lose the Syndicate as an ally."`
+        `  "Well, she's not here, and I say we can't afford to lose the Corporation as an ally."`
           goto "definitely surrender"
         `  "I suppose you're right. Let's mount a rescue operation."`
           goto "definitely rescue"
@@ -1896,20 +1896,20 @@ mission "FW Defend Bod"
         decline
       
       label "definitely rescue"
-      `  JJ seems very relieved at your choice. "I think that's the right choice, Captain," he says. "We can take the fleet we have here, sweep up north to avoid the thickest part of the Navy's occupying fleet, and cut over to Bod to drive the Syndicate ships away. Let's just hope these monks can stay hidden until then."`
+      `  JJ seems very relieved at your choice. "I think that's the right choice, Captain," he says. "We can take the fleet we have here, sweep up north to avoid the thickest part of the Navy's occupying fleet, and cut over to Bod to drive the Corporation ships away. Let's just hope these monks can stay hidden until then."`
         accept
   
   on accept
     event "battle of alioth"
-    event "fw at war with Syndicate"
-    "reputation: Syndicate" = -1000
+    event "fw at war with Corporation"
+    "reputation: Corporation" = -1000
   
   npc evade
-    government "Syndicate"
+    government "Corporation"
     personality heroic staying
     system "Alioth"
     fleet
-      names "syndicate capital"
+      names "corporation capital"
       variant
         "Vanguard" 2
         "Argosy" 3
@@ -1942,7 +1942,7 @@ mission "FW Defend Bod"
     conversation
       `It doesn't take long to find the monastery that contacted you earlier, but nothing is left of it but burnt-out shells of buildings. You land and look around for survivors. You find several corpses dressed in maroon robes, some of them badly burnt, but no sign of the defector or the monk you spoke with earlier.`
       choice
-        `  (Wait to see if anyone approaches now that the Syndicate fleet is gone.)`
+        `  (Wait to see if anyone approaches now that the Corporation fleet is gone.)`
         `  (Give up and contact the rest of the Free Worlds fleet to figure out what to do next.)`
           goto leave
       `  You wait around for a while, but this mountain valley seems to be entirely desolate. Then finally, when you are about to give up hope, Freya spots the distant figures of a few dozen people coming down the side of one of the mountains.`
@@ -1972,14 +1972,14 @@ mission "FW Defend Bod"
       `  "No!" says JJ. "We're staying here."`
       label present
       `  She hesitates for a long moment. This is probably going against whatever orders she is following. But finally she says, "Very well." The monks step aside. She approaches the defector, and reaches out her hands to him. Hesitantly, he takes her hands. It's an oddly intimate scene, the two of them quietly holding hands and locking eyes – not like any interrogation you have seen before. "Now," she says, "tell me your story."`
-      `  "My name is Sawyer," says the man. "I'm a physicist, a Syndicate employee. We had a secret project on Mutiny, a planet in a pirate system. We were developing nuclear weapons." He hesitates, and looks away for a second, then says, "They told me it was for fighting the pirates. I didn't realize otherwise until--"`
+      `  "My name is Sawyer," says the man. "I'm a physicist, a Corporation employee. We had a secret project on Mutiny, a planet in a pirate system. We were developing nuclear weapons." He hesitates, and looks away for a second, then says, "They told me it was for fighting the pirates. I didn't realize otherwise until--"`
       `  "That is a lie," says Raven, calmly.`
       `  He seems flustered. "Okay, they didn't tell me what the weapons were for, and I didn't ask."`
       choice
-        `  "Why would the Syndicate attack the Republic?"`
+        `  "Why would the Corporation attack the Republic?"`
         `  "Why did you wait so long to report this?"`
           goto wait
-      `  They both seem surprised at you asking a question. Sawyer says, "War is good for business, especially if you're in the business of making weapons. The Syndicate's profits have more than doubled since this conflict began."`
+      `  They both seem surprised at you asking a question. Sawyer says, "War is good for business, especially if you're in the business of making weapons. The Corporation's profits have more than doubled since this conflict began."`
       `  "What led you to report this?" asks Raven.`
       label wait
       `  He says, "It was when I heard that there had been another major battle. Up until then I had been telling myself that the worst of the damage was done. But after that battle, I knew that millions more could die because of our crime, and that I had the power to stop it."`

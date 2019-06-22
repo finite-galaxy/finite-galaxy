@@ -4,6 +4,8 @@
 #   "Bounty" 23
 #   "Bounty Hunter" 23
 #   "Coalition" 5
+#   "Corporation" 4
+#   "Corporation (Extremist)" 22
 #   "Deep" 1
 #   "Drak" 5
 #   " Drak "
@@ -31,8 +33,6 @@
 #   "Quarg" 0
 #   "Remnant" 0
 #   "Republic" 0
-#   "Syndicate" 4
-#   "Syndicate (Extremist)" 22
 #   "Team Red" 0
 #   "Team Blue" 5
 #   "Test Dummy" 3
@@ -75,6 +75,30 @@ government "Coalition"
   "attitude toward"
     "Heliarch" 1
   "fuel price" 2
+
+government "Corporation"
+  swizzle 4
+  colour .4 .1 .9
+  "player reputation" 2
+  "attitude toward"
+    "Merchant" .3
+    "Pirate" -.4
+    "Korath" -.5
+  "fuel price" 3
+  "bribe" .08
+  "friendly hail" "friendly corporation"
+  "hostile hail" "hostile corporation"
+  raid "pirate raid"
+
+government "Corporation (Extremist)"
+  swizzle 22
+  "player reputation" -1000
+  "attitude toward"
+    "Corporation" -.01
+    "Free Worlds" -.01
+    "Republic" -.01
+  "bribe" 0
+  "hostile hail" "hostile corporation"
 
 government "Deep"
   swizzle 1
@@ -228,11 +252,11 @@ government "Kor Sestor"
   language "Korath"  
   "attitude toward"
     "Kor Mereti" -.01
-    "Wanderer" -.01
-    "Republic" -.01
+    "Corporation" -.01  
     "Merchant" -.01
     "Navy (Oathkeeper)" -.01
-    "Syndicate" -.01  
+    "Republic" -.01
+    "Wanderer" -.01
   "player reputation" -1000
 
 government "Merchant"
@@ -261,7 +285,7 @@ government "Militia"
 government "Navy Intelligence"
   swizzle 0
   "attitude toward"
-    "Syndicate" -.1
+    "Corporation" -.1
     "Pirate" -.3
 
 government "Navy (Oathkeeper)"
@@ -299,6 +323,7 @@ government "Pirate"
   colour .8 0 0  
   "player reputation" -10
   "attitude toward"
+    "Corporation" -.01
     "Deep" -.01
     "Free Worlds" -.01
     "Hai" -.01
@@ -307,7 +332,6 @@ government "Pirate"
     "Militia" -.01
     "Neutral" -.01
     "Republic" -.01
-    "Syndicate" -.01
   "fuel price" 4
   "bribe" .05
   "fine" 0
@@ -363,30 +387,6 @@ government "Republic"
   "friendly hail" "friendly navy"
   "hostile hail" "hostile navy"
   raid "pirate raid"
-
-government "Syndicate"
-  swizzle 4
-  colour .4 .1 .9
-  "player reputation" 2
-  "attitude toward"
-    "Merchant" .3
-    "Pirate" -.4
-    "Korath" -.5
-  "fuel price" 3
-  "bribe" .08
-  "friendly hail" "friendly syndicate"
-  "hostile hail" "hostile syndicate"
-  raid "pirate raid"
-
-government "Syndicate (Extremist)"
-  swizzle 22
-  "player reputation" -1000
-  "attitude toward"
-    "Syndicate" -.01
-    "Republic" -.01
-    "Free Worlds" -.01
-  "bribe" 0
-  "hostile hail" "hostile syndicate"
 
 government "Team Red"
   swizzle 0

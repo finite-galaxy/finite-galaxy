@@ -31,7 +31,7 @@ mission "Care package to <planet>"
     attributes paradise
   destination
     distance 2 5
-    government "Deep" "Free Worlds" "Neutral" "Republic" "Syndicate"
+    government "Deep" "Free Worlds" "Neutral" "Republic" "Corporation"
     attributes paradise research rich
   on complete
     payment
@@ -51,7 +51,7 @@ mission "Birthday supplies to <planet>"
     attributes paradise
   destination
     distance 2 10
-    government "Deep" "Free Worlds" "Neutral" "Republic" "Syndicate"
+    government "Deep" "Free Worlds" "Neutral" "Republic" "Corporation"
     attributes paradise rich core "near earth"
   on complete
     payment
@@ -68,7 +68,7 @@ mission "Art delivery to <planet>"
   to offer
     random < 10
   source
-    government "Deep" "Free Worlds" "Neutral" "Republic" "Syndicate"
+    government "Deep" "Free Worlds" "Neutral" "Republic" "Corporation"
     attributes rich
   destination
     distance 2 5
@@ -92,7 +92,7 @@ mission "Newlyweds to <planet>"
     attributes paradise
   destination
     distance 2 15
-    government "Deep" "Free Worlds" "Neutral" "Republic" "Syndicate" Quarg
+    government "Deep" "Free Worlds" "Neutral" "Republic" "Corporation" Quarg
     attributes paradise rich core "near earth"
   on complete
     payment
@@ -109,7 +109,7 @@ mission "Theater props to <planet>"
   to offer
     random < 10
   source
-    government "Deep" "Free Worlds" "Neutral" "Republic" "Syndicate"
+    government "Deep" "Free Worlds" "Neutral" "Republic" "Corporation"
     attributes rich urban
   destination
     distance 2 8
@@ -129,7 +129,7 @@ mission "Fine food to <planet>"
   to offer
     random < 10
   source
-    government "Deep" "Free Worlds" "Neutral" "Republic" "Syndicate"
+    government "Deep" "Free Worlds" "Neutral" "Republic" "Corporation"
     attributes farming fishing
   destination
     distance 2 10
@@ -259,7 +259,7 @@ mission "Party goods to <planet>"
     attributes paradise
   stopover
     distance 5 9
-    government "Deep" "Free Worlds" "Neutral" "Republic" "Syndicate"
+    government "Deep" "Free Worlds" "Neutral" "Republic" "Corporation"
     attributes paradise rich
   on stopover
     dialogue "You oversee the loading as dockworkers carry box after box of <commodity> onto your ship. Must be some party."
@@ -300,7 +300,7 @@ mission "Contract labourers to <planet>"
     attributes paradise
   stopover
     distance 7 15
-    government "Deep" "Free Worlds" "Neutral" "Republic" "Syndicate"
+    government "Deep" "Free Worlds" "Neutral" "Republic" "Corporation"
     attributes mining fishing textiles factory farming oil
   on stopover
     dialogue "The shabbily-dressed young men and women in the group don't look nearly as happy to be boarding your ship as you expected, given the new opportunity that awaits them. They shuffle wearily up the ramp for the return trip to <planet>."

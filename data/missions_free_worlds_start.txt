@@ -2,10 +2,10 @@
 # "FW Prisoner Parole"
 # "FW Prisoner Parole 2"
 # "Oathkeepers founded"
-# "FW Syndicate Diplomacy 1"
-# "FW Syndicate Diplomacy 1B"
-# "FW Syndicate Diplomacy 1C"
-# "FW Syndicate Diplomacy 1D"
+# "FW Corporation Diplomacy 1"
+# "FW Corporation Diplomacy 1B"
+# "FW Corporation Diplomacy 1C"
+# "FW Corporation Diplomacy 1D"
 # "FW Hope Recon 1"
 # "FW Hope Recon 1B"
 # "FW Hope Recon 1C"
@@ -259,7 +259,7 @@ mission "FW Prisoner Parole 2"
       `  "So, what do we do now?" you ask.`
       
       label next
-      `  "The Navy has had two crushing defeats," he says. "They will be hesitant to attack again until their numbers are much stronger. That gives us some time for diplomacy, to strengthen our position and look for allies, or at least for sympathizers. Which is where you come in. I'm going to ask you to carry a diplomatic mission to the Syndicate. Meet us in the spaceport when you are ready."`
+      `  "The Navy has had two crushing defeats," he says. "They will be hesitant to attack again until their numbers are much stronger. That gives us some time for diplomacy, to strengthen our position and look for allies, or at least for sympathizers. Which is where you come in. I'm going to ask you to carry a diplomatic mission to the Corporation. Meet us in the spaceport when you are ready."`
     "reputation: Republic" <?= -1000
     event "oathkeepers founded" 50
 
@@ -282,9 +282,9 @@ mission "Oathkeepers founded"
 
 
 
-mission "FW Syndicate Diplomacy 1"
-  name "Syndicate Diplomacy"
-  description "Transport Alondo Gruyere to the Syndicate headquarters on <planet>."
+mission "FW Corporation Diplomacy 1"
+  name "Corporation Diplomacy"
+  description "Transport Alondo Gruyere to the Corporation headquarters on <planet>."
   autosave
   source "Deep"
   destination "Hephaestus"
@@ -299,11 +299,11 @@ mission "FW Syndicate Diplomacy 1"
   
   on offer
     conversation
-      `You meet Tomek and Alondo in the spaceport. "We've decided that now would be a good time for a diplomatic mission to the Syndicate," says Alondo. "We've proven that we are a force to reckon with, but also that we are open to working for peace. And a relationship with the Syndicate would be a significant advantage for us."`
+      `You meet Tomek and Alondo in the spaceport. "We've decided that now would be a good time for a diplomatic mission to the Corporation," says Alondo. "We've proven that we are a force to reckon with, but also that we are open to working for peace. And a relationship with the Corporation would be a significant advantage for us."`
       choice
         `  "Do you think they will fight on our side?"`
           goto fight
-        `  "Wait, isn't the Syndicate an evil megacorporation?"`
+        `  "Wait, isn't the Corporation an evil megacorporation?"`
           goto evil
       
       label fight
@@ -315,7 +315,7 @@ mission "FW Syndicate Diplomacy 1"
         goto time
       
       label time
-      `  "Reaching Syndicate space could be difficult once the Navy has time to regroup," says Tomek. "This may be the last window of opportunity we get for a while to meet with them in person."`
+      `  "Reaching Corporation space could be difficult once the Navy has time to regroup," says Tomek. "This may be the last window of opportunity we get for a while to meet with them in person."`
       `  "I have plenty of contacts in the Dirt Belt," says Alondo, "so if a planet won't let us land, we can just hail them and I should be able to negotiate with them. In fact, I'm hoping that a side effect of this trip will be to judge how much sympathy we have in the surrounding systems."`
       choice
         `  "Sounds good! Let's do it!"`
@@ -326,7 +326,7 @@ mission "FW Syndicate Diplomacy 1"
           goto navy
       
       label trap
-      `  "It's a risk, but not a large one. The Syndicate is driven by greed, and they want us as a customer."`
+      `  "It's a risk, but not a large one. The Corporation is driven by greed, and they want us as a customer."`
       choice
         `  "I hope you're right! Let's get going."`
           accept
@@ -339,14 +339,14 @@ mission "FW Syndicate Diplomacy 1"
 
 
 
-mission "FW Syndicate Diplomacy 1B"
+mission "FW Corporation Diplomacy 1B"
   landing
   name "Tarazed Diplomacy"
   description "Transport Alondo Gruyere to <planet> to negotiate with Tarazed Corporation."
   source "Hephaestus"
   destination "Wayfarer"
   to offer
-    has "FW Syndicate Diplomacy 1: done"
+    has "FW Corporation Diplomacy 1: done"
   clearance "Alondo has a brief chat with the spaceport controller and manages to get you permission to land."
     attributes "dirt belt"
   passengers 1
@@ -360,10 +360,10 @@ mission "FW Syndicate Diplomacy 1B"
     fleet "Republic Small" 3
   
   on offer
-    log "Visited the Syndicate and worked out a deal where they promised to stay neutral. They are expecting to profit from selling weapons to both sides in this war. Also discovered that Katya is in the Republic's custody and is accused of terrorist activity."
+    log "Visited the Corporation and worked out a deal where they promised to stay neutral. They are expecting to profit from selling weapons to both sides in this war. Also discovered that Katya is in the Republic's custody and is accused of terrorist activity."
     log "People" "Katya Reynolds" `Katya was on Clink when the Navy invaded the Kornephoros system, and was taken captive by them and imprisoned as a war criminal.`
     conversation
-      `As you land, Alondo says to you, "Let me do the talking, please." You are met almost immediately by two men in suits, who escort you to a room in the Syndicate headquarters. Six men are sitting on one side of a large mahogany conference table; they gesture for the two of you to be seated on the other side.`
+      `As you land, Alondo says to you, "Let me do the talking, please." You are met almost immediately by two men in suits, who escort you to a room in the Corporation headquarters. Six men are sitting on one side of a large mahogany conference table; they gesture for the two of you to be seated on the other side.`
       `  You introduce yourselves. "Thank you for meeting with us," says Alondo.`
       `  "We are always open to new business opportunities," says one of the men, "although negotiating with known terrorists is… distasteful." He leafs through a folder of papers, pulls one out, and slides it over to you. It is a picture of Katya, and the caption under it reads, "Terrorist ringleader captured in raid on Kornephoros system." It is dated a few days after the Navy's initial assault, before you retook the system from them.`
       choice
@@ -387,7 +387,7 @@ mission "FW Syndicate Diplomacy 1B"
       `  "Piracy is on the rise in the Dirt Belt," says Alondo. "And I know you have customers there. Such as the Tarazed Corporation. If we can count you among our friends, we could ensure that your convoys reach Tarazed unmolested."`
       `  "And you would no doubt immediately purchase said weapons from Tarazed," says the man.`
       `  An older man sitting next to him says, "Of course, such weapons would end up being bought at a significant price markup." He is grinning.`
-      `  You speak for a while longer, but Alondo manages to hash out a deal where the Free Worlds will defend any Syndicate ships they encounter in return for a promise that the Syndicate will not serve as Republic mercenaries and will not prevent you from purchasing their equipment indirectly through Tarazed. You thank the Syndicate leaders, and return to your ship.`
+      `  You speak for a while longer, but Alondo manages to hash out a deal where the Free Worlds will defend any Corporation ships they encounter in return for a promise that the Corporation will not serve as Republic mercenaries and will not prevent you from purchasing their equipment indirectly through Tarazed. You thank the Corporation leaders, and return to your ship.`
       `  "That was disgusting," says Alondo.`
       choice
         `  "I thought it went pretty well."`
@@ -405,14 +405,14 @@ mission "FW Syndicate Diplomacy 1B"
 
 
 
-mission "FW Syndicate Diplomacy 1C"
+mission "FW Corporation Diplomacy 1C"
   landing
   name "Poisonwood Diplomacy"
   description "Travel to <planet> with Alondo Gruyere, to make one final diplomatic visit."
   source "Wayfarer"
   destination "Poisonwood"
   to offer
-    has "FW Syndicate Diplomacy 1B: done"
+    has "FW Corporation Diplomacy 1B: done"
   clearance "Alondo has a brief chat with the spaceport controller and manages to get you permission to land."
     attributes "dirt belt" "south"
   passengers 1
@@ -428,10 +428,10 @@ mission "FW Syndicate Diplomacy 1C"
   on offer
     log "People" "Emily Lane" `Emily Lane is the CEO of Tarazed Corporation. Although sympathetic to the Free Worlds, she prefers Tarazed to remain nominally part of the Republic but unofficially neutral, to allow them to trade with everyone.`
     conversation
-      `You are led into the Tarazed board room, which is different from the Syndicate one in two respects. First, it is much less fancy. And second, there are women present: unlike the notoriously misogynistic Syndicate, Tarazed is in fact currently run by a female CEO, Emily Lane.`
+      `You are led into the Tarazed board room, which is different from the Corporation one in two respects. First, it is much less fancy. And second, there are women present: unlike the notoriously misogynistic Corporation, Tarazed is in fact currently run by a female CEO, Emily Lane.`
       `  "I'm pleased to welcome you here," says Emily. "Many of us are sympathetic to your cause."`
-      `  "Thank you," says Alondo, "although for the time being the best way to support us, may be for you to remain neutral in this conflict." He explains the idea of Tarazed being a go-between with the Syndicate.`
-      `  "I don't like dealing with the Syndicate," says Emily, "but like yourselves, we could not build ships without the systems they manufacture. Of course, the materials we receive from Free space are equally valuable. But if we remain nominally a part of the Republic, they will have full access to this system, including searching incoming and outgoing freighters."`
+      `  "Thank you," says Alondo, "although for the time being the best way to support us, may be for you to remain neutral in this conflict." He explains the idea of Tarazed being a go-between with the Corporation.`
+      `  "I don't like dealing with the Corporation," says Emily, "but like yourselves, we could not build ships without the systems they manufacture. Of course, the materials we receive from Free space are equally valuable. But if we remain nominally a part of the Republic, they will have full access to this system, including searching incoming and outgoing freighters."`
       `  "True," says Alondo, "but a Navy fleet here would be vulnerable to being cut off from Republic space, so unless they occupy the whole Dirt Belt, I do not think they would risk it."`
       `  "Yes, Navy fleets rarely visit Tarazed," Emily says, "even though they are one of our costumers. Off record, we've been secretly working on a highly efficient ramscoop for years and it's currently nearing completion. Once we start producing them, dozens will be shipped to the Navy's shipyards." She pauses. "Of course, we're willing to sell them to the Free Worlds as well, unofficially. Here in Tarazed we highly value free trade." They continue talking for a while, and you leave well convinced that Tarazed is willing to support you and that the best way they can do that for now is by remaining neutral.`
       `  "Now," says Alondo, "I'd like to make one more diplomatic visit. The planet Poisonwood has insisted on remaining loyal to the Republic, even though they are deep inside our space. I'd like to meet with their leaders and see if they will reconsider joining us."`
@@ -440,14 +440,14 @@ mission "FW Syndicate Diplomacy 1C"
   
   
   
-mission "FW Syndicate Diplomacy 1D"
+mission "FW Corporation Diplomacy 1D"
   landing
   name "Return to <planet>"
   description "Return to <planet> with Alondo, to report on the outcome of your diplomatic mission."
   source "Poisonwood"
   destination "Longjump"
   to offer
-    has "FW Syndicate Diplomacy 1C: done"
+    has "FW Corporation Diplomacy 1C: done"
   passengers 1
   on fail
     dialogue `You have failed an essential Free Worlds mission. If you want to complete the story line, revert to the autosave or another earlier snapshot of the game.`
@@ -477,7 +477,7 @@ mission "FW Syndicate Diplomacy 1D"
         goto threat
       
       label corporations
-      `  "Since there is only one corporation in the galaxy that fits that description," she says, "I assume you are talking about the Syndicate. Any human organization can take on a life of its own, and act in ways that any of its individual members would consider immoral. That is a danger the Syndicate does face. but I find myself more concerned with certain threats that are closer to home."`
+      `  "Since there is only one corporation in the galaxy that fits that description," she says, "I assume you are talking about the Corporation. Any human organization can take on a life of its own, and act in ways that any of its individual members would consider immoral. That is a danger the Corporation does face. but I find myself more concerned with certain threats that are closer to home."`
         goto threat
       
       label alphas
@@ -517,7 +517,7 @@ mission "FW Syndicate Diplomacy 1D"
   on complete
     payment 200000
     conversation
-      `You meet Tomek and Freya at the spaceport, and the entire Council quickly convenes. Alondo outlines the results of your diplomatic mission, which he believes has been a success. "There is one other thing," he says. "The Syndicate informed us that the Republic has Katya in custody, accused of terrorism."`
+      `You meet Tomek and Freya at the spaceport, and the entire Council quickly convenes. Alondo outlines the results of your diplomatic mission, which he believes has been a success. "There is one other thing," he says. "The Corporation informed us that the Republic has Katya in custody, accused of terrorism."`
       `  The news is a shock to everyone. "I had begun to worry that was the case," says Freya.`
       `  "Why have they not announced it publicly?" asks Tomek.`
       `  "I suspect it's because they know she is innocent," says Alondo. "They say it is impossible to tell a lie to the Questioners, and in this case that will work in her favour."`
@@ -532,7 +532,7 @@ mission "FW Hope Recon 1"
   source "Longjump"
   destination "Hope"
   to offer
-    has "FW Syndicate Diplomacy 1D: done"
+    has "FW Corporation Diplomacy 1D: done"
   cargo sensors 10
   blocked `Freya contacts you and says, "<first>, you're going to need ten tons of cargo space for this next mission." You should return here after freeing up <capacity>.`
   on fail
@@ -730,7 +730,7 @@ mission "FW Plasma Testing 1B"
         `  "Well, we try to only blow things up when strictly necessary."`
       
       label explain
-      `  "Of course," he says. "Anyway, I bet you're wondering what new toys we're going to let you play with." You nod. He says, "We've been trying to come up with a weapon for our capital ships, something that's a match for one of the Navy's pulse turrets. Something more efficient than those awful blaster turrets the Syndicate makes. So I thought, why not take the biggest thing we've got, and then mount a pair of them on a turret?" He beckons for you to follow, and leads you through a door and into a hangar.`
+      `  "Of course," he says. "Anyway, I bet you're wondering what new toys we're going to let you play with." You nod. He says, "We've been trying to come up with a weapon for our capital ships, something that's a match for one of the Navy's pulse turrets. Something more efficient than those awful blaster turrets the Corporation makes. So I thought, why not take the biggest thing we've got, and then mount a pair of them on a turret?" He beckons for you to follow, and leads you through a door and into a hangar.`
       `  In front of you is a turret. It is almost absurdly large: a pair of plasma cannons mounted on a massive rotating base. "Sixty tons," says Barmy Edward. "Produces more heat than… well, than anything else, practically. Is a little power drain, too."`
       choice
         `  "It's so… big!"`
@@ -1666,12 +1666,12 @@ mission "FW Refinery 1"
       `  "I suppose you're right," you say. "So, what's next?"`
       label repairs
       `  "Well, thanks to you, the Men system is no longer engaged in piracy," says JJ. "And that means the folks on Smuggler's Den are in need of new work. That station used to be a deuterium refinery. With a little work, it can be one, again."`
-      `  "A working refinery could bring more income to that system than piracy ever did," says Freya. "Only problem is, the replacement parts are rare, and hard to come by. The Syndicate agreed to sell us the parts, but only if we meet them halfway, on Alapia. That's in the Ascella system. Just one jump away from two of the new Navy bases."`
+      `  "A working refinery could bring more income to that system than piracy ever did," says Freya. "Only problem is, the replacement parts are rare, and hard to come by. The Corporation agreed to sell us the parts, but only if we meet them halfway, on Alapia. That's in the Ascella system. Just one jump away from two of the new Navy bases."`
       choice
         `  "We're going to take a supply convoy through Republic space?"`
           goto convoy
         `  "How do we know this isn't a trap?"`
-      `  "We don't," says Freya, "except that the Syndicate is greedy, and we have money. I don't think they're ready yet to give up on the chance to sell their wares to both sides in this war."`
+      `  "We don't," says Freya, "except that the Corporation is greedy, and we have money. I don't think they're ready yet to give up on the chance to sell their wares to both sides in this war."`
       `  "Still, how do they expect us to get a convoy safely to Alapia?"`
       label convoy
       `  "Not a convoy," says JJ. "Just you, captain. It's only ten tons of spare parts. Your job is to fly to Alapia, retrieve the parts, and return here."`
@@ -1699,7 +1699,7 @@ mission "FW Refinery 1A"
   
   on offer
     conversation
-      `Your landing site is an abandoned settlement a thousand kilometers from Alapia's main spaceport. It's an old oil field that ran dry decades ago, and only a few of the landing pads are still usable. The Syndicate employees quickly load the cargo onto your ship, and say, "Now, take off quickly, before the Navy sees us doing business with a ship flying Free Worlds colours."`
+      `Your landing site is an abandoned settlement a thousand kilometers from Alapia's main spaceport. It's an old oil field that ran dry decades ago, and only a few of the landing pads are still usable. The Corporation employees quickly load the cargo onto your ship, and say, "Now, take off quickly, before the Navy sees us doing business with a ship flying Free Worlds colours."`
         launch
   
   on complete

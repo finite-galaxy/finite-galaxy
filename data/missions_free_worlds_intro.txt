@@ -48,7 +48,7 @@
 mission "Remembrance Day"
   landing
   source
-    government "Deep" "Free Worlds" "Neutral" "Republic" "Syndicate"
+    government "Deep" "Free Worlds" "Neutral" "Republic" "Corporation"
   to offer
     has "event: remembrance day"
   on offer
@@ -65,7 +65,7 @@ mission "Remembrance Day"
 mission "War begins"
   landing
   source
-    government "Deep" "Free Worlds" "Neutral" "Republic" "Syndicate"
+    government "Deep" "Free Worlds" "Neutral" "Republic" "Corporation"
   to offer
     has "event: war begins"
   on offer
@@ -874,7 +874,7 @@ mission "FW Katya 2B"
         `  "How does that even work?"`
         `  "Is that even legal?"`
       
-      `  "I go from world to world checking out plant emissions, to see if they're leaking isotopes into the air, the sea, or the groundwater. And if they are I sic the Department of Atomic Safety on them. The Syndicate hates my guts right now."`
+      `  "I go from world to world checking out plant emissions, to see if they're leaking isotopes into the air, the sea, or the groundwater. And if they are I sic the Department of Atomic Safety on them. The Corporation hates my guts right now."`
       `  "So, what has Katya asked you to do for the Free Worlds?" you ask.`
       `  "Isn't it obvious?" he says. "We're going to hunt down certain naughty people who have been developing nuclear weapons, and the Free Worlds will turn them over to the Republic. Then the Republic will know that the Free Worlds weren't behind the attacks, and we'll stop this whole mess before it devolves into a civil war."`
       choice
@@ -948,7 +948,7 @@ mission "FW Katya 3"
         goto response
       
       label no
-      `  "Well," she says, "it started when the Syndicate began experimenting with fully automated mining facilities on uninhabitable planets. Pirates started raiding the mines to steal equipment, and the Syndicate claimed that these installations were 'colonies' and it was the Navy's job to defend them. The Act was Parliament's response, stating that taking goods from a human being is piracy, but if the owner or some living representative of theirs is not present in system, taking those goods is a legal salvage operation. The point was to keep the Navy from being obligated to defend every equipment cache or abandoned station in the galaxy. But by the same law, those Navy surveillance drones become abandoned goods the moment their motherships leave the system."`
+      `  "Well," she says, "it started when the Corporation began experimenting with fully automated mining facilities on uninhabitable planets. Pirates started raiding the mines to steal equipment, and the Corporation claimed that these installations were 'colonies' and it was the Navy's job to defend them. The Act was Parliament's response, stating that taking goods from a human being is piracy, but if the owner or some living representative of theirs is not present in system, taking those goods is a legal salvage operation. The point was to keep the Navy from being obligated to defend every equipment cache or abandoned station in the galaxy. But by the same law, those Navy surveillance drones become abandoned goods the moment their motherships leave the system."`
         goto response
       
       label response
