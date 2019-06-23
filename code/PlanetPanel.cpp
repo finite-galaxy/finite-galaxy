@@ -283,10 +283,9 @@ void PlanetPanel::TakeOffIfReady()
   for(const auto &it : player.Ships())
     if(!it->IsParked() && !it->IsDisabled() && it->GetSystem() == &system)
     {
-      const string &category = it->Attributes().Category();
-      droneCount += (category == "Drone") - it->BaysFree(false);
-      fighterCount += (category == "Fighter") - it->BaysFree(true);
-      bomberCount += (category == "Bomber") - it->BaysFree(true);
+      droneCount -= it->BaysFree("Drone");
+      fighterCount -= it->BaysFree("Fighter");
+      bomberCount -= it->BaysFree("Bomber");
     }
   
   if(droneCount > 0 || fighterCount > 0 || bomberCount > 0 || cargoToSell > 0 || overbooked > 0)
