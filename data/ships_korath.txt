@@ -22,7 +22,7 @@ ship "Chaser"
 #    manufacturer "Korath"
     licences
       Korath
-    "carried" 3
+#    "carried" 3
     "cost" 671000
     "shields" 3000
     "hull" 1500
@@ -120,8 +120,8 @@ ship "Raider"
   turret 34 -143
   turret 0 35 "Banisher"
   turret 0 90 "Warder"
-  fighter -75 100
-  fighter 75 100
+  bomber -75 100
+  bomber 75 100
   explode "tiny explosion" 20
   explode "small explosion" 45
   explode "medium explosion" 50

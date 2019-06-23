@@ -127,19 +127,6 @@ void ShipInfoDisplay::UpdateAttributes(const Ship &ship, const Depreciation &dep
   }
   attributeValues.push_back(Format::Credits(depreciated));
   attributesHeight += 20;
-  
-  int canBeCarried = attributes.Get("carried");
-  if(canBeCarried)
-  {
-    attributeLabels.push_back("carried, bay:");
-    if(canBeCarried == 1)
-      attributeValues.push_back("drone");
-    if(canBeCarried == 2)
-      attributeValues.push_back("fighter");
-    if(canBeCarried == 3)
-      attributeValues.push_back("bomber");
-    attributesHeight += 20;
-  }
 
   attributeLabels.push_back(string());
   attributeValues.push_back(string());
@@ -404,7 +391,7 @@ void ShipInfoDisplay::UpdateAttributes(const Ship &ship, const Depreciation &dep
     attributeValues.push_back(Format::Round(60. * turning / fullMass)
       + "° / " + Format::Round(60. * turning / emptyMass) + "°");
   attributesHeight += 20;
-  if(!canBeCarried && (attributes.Get("hyperdrive") || attributes.Get("jump drive")))
+  if(!ship.CanBeCarried() && (attributes.Get("hyperdrive") || attributes.Get("jump drive")))
   {
     if(attributes.Get("scram drive"))
     {
