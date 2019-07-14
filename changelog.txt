@@ -555,6 +555,8 @@
   * ensure that hostile escorts are treated by `n` appropriately (@tehhowch)
   * explicitly check for the "gun ports" attribute
   * add missing ship reference for offered assisting/boarding missions (@tehhowch)
+  * improve dynamic zooming (@CyberShadow)
+  * improve interpolation between game zoom levels (@thomasballinger)
   * cleanup & add comment (@tehhowch)
   * check carried ship's parent system in NPC::HasSucceeded (@comnom)
   * attach to / allocate a console output on Windows (@comnom)
@@ -568,7 +570,7 @@
   * fix failed OSX CI builds (@tehhowch)
   * bugfix: limit CargoHold::Transfer when size = 0 (@tehhowch)
   * escorts refuel more reasonably when they have both a hyperdrive and a jumpdrive (@oo13)
-  * update system colors when switching between Shipyard and Outfitter map panels (@ChamEV)
+  * update system colours when switching between Shipyard and Outfitter map panels (@ChamEV)
   * reorder some includes to match style (@petervdmeer)
   * some more style fixes (@petervdmeer)
   * reordered drawing on map mission panel so rings are behind UI elements (@ChamEV)

@@ -77,7 +77,7 @@ void Preferences::Save()
   
   out.Write("volume", Audio::Volume() / VOLUME_SCALE);
   out.Write("window size", Screen::RawWidth(), Screen::RawHeight());
-  out.Write("zoom", Screen::Zoom());
+  out.Write("zoom", Screen::UserZoom());
   out.Write("scroll speed", scrollSpeed);
   out.Write("view zoom", zoomIndex);
   out.Write("max refuel price", maxRefuelPrice);
