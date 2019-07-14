@@ -315,8 +315,8 @@ public:
   void UnloadBays();
   // Get a list of any ships this ship is carrying.
   const std::vector<Bay> &Bays() const;
-  // Adjust the positions and velocities of any visible carried drones, fighters,
-  // or bombers. If any are visible, return true.
+  // Adjust the positions and velocities of any visible carried ship.
+  // If any are visible, return true.
   bool PositionFighters() const;
   
   // Get cargo information.
