@@ -35,6 +35,7 @@ MapOutfitterPanel::MapOutfitterPanel(const MapPanel &panel, bool onlyHere)
 {
   Init();
   onlyShowSoldHere = onlyHere;
+  UpdateCache();
 }
 
 

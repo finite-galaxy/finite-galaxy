@@ -74,7 +74,17 @@ namespace {
           double mass = outfit->Mass();
           // Avoid free outfits, massless outfits, and those too large to fit.
           if(mass > 0. && mass < maxSize && outfit->Cost() > 0)
+          {
+            // Also avoid expansion outfits (e.g. Extra Bunks or Extra Cargo Space).
+            // TODO: Specify rejection criteria in datafiles as ConditionSets or similar.
+            const auto &attributes = outfit->Attributes();
+            if(attributes.Get("outfit space") > 0.
+                || attributes.Get("cargo space") > 0.
+                || attributes.Get("bunks"))
+              continue;
+
             outfits.push_back(outfit);
+          }
         }
       }
     }

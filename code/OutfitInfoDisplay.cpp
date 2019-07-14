@@ -370,7 +370,7 @@ void OutfitInfoDisplay::UpdateAttributes(const Outfit &outfit)
     attributeValues.emplace_back(Format::Number(60. / reload));
   attributesHeight += 20;
 
-  if (outfit.Lifetime() > 1)
+  if(outfit.Lifetime() > 1)
   {
     attributeLabels.emplace_back("velocity / range:");
     attributeValues.emplace_back(Format::Number(60. * outfit.Velocity())

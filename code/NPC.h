@@ -9,10 +9,10 @@
 #include "Personality.h"
 #include "Phrase.h"
 
-#include <string>
 #include <list>
 #include <map>
 #include <memory>
+#include <string>
 
 class DataNode;
 class DataWriter;

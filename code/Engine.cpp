@@ -25,8 +25,8 @@
 #include "Planet.h"
 #include "PlanetLabel.h"
 #include "PlayerInfo.h"
-#include "Politics.h"
 #include "PointerShader.h"
+#include "Politics.h"
 #include "Preferences.h"
 #include "Projectile.h"
 #include "Random.h"
@@ -246,7 +246,7 @@ void Engine::Place()
   }
   
   // Give each special ship we just added a random heading and position.
-  for (const shared_ptr<Ship> &ship : ships)
+  for(const shared_ptr<Ship> &ship : ships)
   {
     Point pos;
     Angle angle = Angle::Random();

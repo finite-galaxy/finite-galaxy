@@ -1,13 +1,13 @@
 // ItemInfoDisplay.h
 
-#ifndef INFO_DISPLAY_H_
-#define INFO_DISPLAY_H_
+#ifndef ITEM_INFO_DISPLAY_H_
+#define ITEM_INFO_DISPLAY_H_
 
 #include "Point.h"
 #include "WrappedText.h"
 
-#include <vector>
 #include <string>
+#include <vector>
 
 class Table;
 

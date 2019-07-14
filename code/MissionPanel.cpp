@@ -154,6 +154,16 @@ void MissionPanel::Draw()
     system = next;
   }
   
+  const Set<Colour> &colours = GameData::Colours();
+  const Colour &availableColour = *colours.Get("available back");
+  const Colour &unavailableColour = *colours.Get("unavailable back");
+  const Colour &currentColour = *colours.Get("active back");
+  const Colour &blockedColour = *colours.Get("blocked back");
+  if(availableIt != available.end() && availableIt->Destination())
+    DrawMissionSystem(*availableIt, CanAccept() ? availableColour : unavailableColour);
+  if(acceptedIt != accepted.end() && acceptedIt->Destination())
+    DrawMissionSystem(*acceptedIt, IsSatisfied(*acceptedIt) ? currentColour : blockedColour);
+  
   DrawKey();
   DrawSelectedSystem();
   Point pos = DrawPanel(
@@ -169,16 +179,6 @@ void MissionPanel::Draw()
   DrawList(accepted, pos);
   
   DrawMissionInfo();
-  
-  const Set<Colour> &colours = GameData::Colours();
-  const Colour &availableColour = *colours.Get("available back");
-  const Colour &unavailableColour = *colours.Get("unavailable back");
-  const Colour &currentColour = *colours.Get("active back");
-  const Colour &blockedColour = *colours.Get("blocked back");
-  if(availableIt != available.end() && availableIt->Destination())
-    DrawMissionSystem(*availableIt, CanAccept() ? availableColour : unavailableColour);
-  if(acceptedIt != accepted.end() && acceptedIt->Destination())
-    DrawMissionSystem(*acceptedIt, IsSatisfied(*acceptedIt) ? currentColour : blockedColour);
   
   DrawButtons("is missions");
 }
