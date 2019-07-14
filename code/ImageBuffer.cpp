@@ -5,8 +5,8 @@
 #include "File.h"
 #include "Files.h"
 
-#include <png.h>
 #include <jpeglib.h>
+#include <png.h>
 
 #include <cstdio>
 #include <vector>

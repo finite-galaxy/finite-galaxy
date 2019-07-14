@@ -75,7 +75,7 @@ icons = []
 for size in sizes:
 	destination = "$DESTDIR$PREFIX/share/icons/hicolor/" + size + "/apps/finite-galaxy.png"
 	icons.append(destination)
-	env.InstallAs(destination, "icons/" + size + ".png")
+	env.InstallAs(destination, "images/icons/" + size + ".png")
 
 # If any of those icons changed, also update the cache.
 # Do not update the cache if we're not installing into "usr".
