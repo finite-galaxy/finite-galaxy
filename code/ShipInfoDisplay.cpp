@@ -64,7 +64,7 @@ void ShipInfoDisplay::DrawAttributes(const Point &topLeft) const
   
   Table table;
   table.AddColumn(10, Table::LEFT);
-  table.AddColumn(WIDTH - 110, Table::RIGHT);
+  table.AddColumn(WIDTH - 120, Table::RIGHT);
   table.AddColumn(WIDTH - 60, Table::RIGHT);
   table.AddColumn(WIDTH - 10, Table::RIGHT);
   table.SetHighlight(0, WIDTH);
