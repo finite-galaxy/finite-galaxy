@@ -26,12 +26,13 @@
 #include "UI.h"
 
 #include <algorithm>
+#include <cmath>
 #include <sstream>
 
 using namespace std;
 
 namespace {
-  const int SIDE_WIDTH = 280;
+  constexpr int SIDE_WIDTH = 280;
   
   // Check if the mission involves the given system,
   bool Involves(const Mission &mission, const System *system)
@@ -52,10 +53,48 @@ namespace {
     
     return false;
   }
+
+  size_t MaxDisplayedMissions(bool onRight)
+  {
+    return static_cast<unsigned>(max(0, static_cast<int>(floor((Screen::Height() - (onRight ? 160. : 190.)) / 20.))));
+  }
+
+  // Compute the required scroll amount for the given list of jobs/missions.
+  void DoScroll(const list<Mission> &missionList, const list<Mission>::const_iterator &it, double &sideScroll, bool checkVisibility)
+  {
+    // We don't need to scroll at all if the selection must be within the viewport. The current
+    // scroll could be non-zero if missions were added/aborted, so return the delta that will reset it.
+    const auto maxViewable = MaxDisplayedMissions(checkVisibility);
+    const auto missionCount = missionList.size();
+    if(missionCount < maxViewable)
+      sideScroll = 0;
+    else
+    {
+      const auto countBefore = static_cast<size_t>(checkVisibility
+          ? count_if(missionList.begin(), it, [](const Mission &m) { return m.IsVisible(); })
+          : distance(missionList.begin(), it));
+
+      const auto maximumScroll = (missionCount - maxViewable) * 20.;
+      const auto pageScroll = maxViewable * 20.;
+      const auto desiredScroll = countBefore * 20.;
+      const auto bottomOfPage = sideScroll + pageScroll;
+      if(desiredScroll < sideScroll)
+      {
+        // Scroll upwards.
+        sideScroll = desiredScroll;
+      }
+      else if(desiredScroll > bottomOfPage)
+      {
+        // Scroll downwards (but not so far that the list's bottom sprite comes upwards further than needed).
+        sideScroll = min(maximumScroll, sideScroll + (desiredScroll - bottomOfPage));
+      }
+    }
+  }
 }
 
 
 
+// Open the missions panel directly.
 MissionPanel::MissionPanel(PlayerInfo &player)
   : MapPanel(player),
   available(player.AvailableJobs()),
@@ -81,10 +120,16 @@ MissionPanel::MissionPanel(PlayerInfo &player)
   }
   
   // Auto select the destination system for the current mission.
-  if(availableIt != available.end())
+    if(availableIt != available.end())
+  {
     selectedSystem = availableIt->Destination()->GetSystem();
+    DoScroll(available, availableIt, availableScroll, false);
+  }
   else if(acceptedIt != accepted.end())
+  {
     selectedSystem = acceptedIt->Destination()->GetSystem();
+    DoScroll(accepted, acceptedIt, acceptedScroll, true);
+  }
   
   // Centre on the selected system.
   CentreOnSystem(selectedSystem, true);
@@ -92,6 +137,7 @@ MissionPanel::MissionPanel(PlayerInfo &player)
 
 
 
+// Switch to the missions panel from another map panel.
 MissionPanel::MissionPanel(const MapPanel &panel)
   : MapPanel(panel),
   available(player.AvailableJobs()),
@@ -164,8 +210,6 @@ void MissionPanel::Draw()
   if(acceptedIt != accepted.end() && acceptedIt->Destination())
     DrawMissionSystem(*acceptedIt, IsSatisfied(*acceptedIt) ? currentColour : blockedColour);
   
-  DrawKey();
-  DrawSelectedSystem();
   Point pos = DrawPanel(
     Screen::TopLeft() + Point(0., -availableScroll),
     "Missions available here:",
@@ -177,9 +221,11 @@ void MissionPanel::Draw()
     "Your current missions:",
     AcceptedVisible());
   DrawList(accepted, pos);
-  
+
+  // Now that the mission lists and map elements are drawn, draw the top-most UI elements.
+  DrawKey();
+  DrawSelectedSystem();
   DrawMissionInfo();
-  
   DrawButtons("is missions");
 }
 
@@ -202,11 +248,13 @@ bool MissionPanel::KeyDown(SDL_Keycode key, Uint16 mod, const Command &command, 
   }
   else if(key == SDLK_LEFT && availableIt == available.end())
   {
+    // Switch to the first mission in the "available missions" list.
     acceptedIt = accepted.end();
     availableIt = available.begin();
   }
   else if(key == SDLK_RIGHT && acceptedIt == accepted.end() && AcceptedVisible())
   {
+    // Switch to the first mission in the "accepted missions" list.
     availableIt = available.end();
     acceptedIt = accepted.begin();
     while(acceptedIt != accepted.end() && !acceptedIt->IsVisible())
@@ -217,12 +265,14 @@ bool MissionPanel::KeyDown(SDL_Keycode key, Uint16 mod, const Command &command, 
     SelectAnyMission();
     if(availableIt != available.end())
     {
+      // All available missions are, by definition, visible.
       if(availableIt == available.begin())
         availableIt = available.end();
       --availableIt;
     }
     else if(acceptedIt != accepted.end())
     {
+      // Skip over any invisible, accepted missions.
       do {
         if(acceptedIt == accepted.begin())
           acceptedIt = accepted.end();
@@ -232,6 +282,8 @@ bool MissionPanel::KeyDown(SDL_Keycode key, Uint16 mod, const Command &command, 
   }
   else if(key == SDLK_DOWN && !SelectAnyMission())
   {
+    // Keyed "Down," and didn't auto-select the first mission on a side,
+    // so update the existing selected mission.
     if(availableIt != available.end())
     {
       ++availableIt;
@@ -250,10 +302,19 @@ bool MissionPanel::KeyDown(SDL_Keycode key, Uint16 mod, const Command &command, 
   else
     return MapPanel::KeyDown(key, mod, command, isNewPress);
   
+  // To reach here, we changed the selected mission. Scroll the active
+  // mission list, update the selected system, and pan the map.
   if(availableIt != available.end())
+  {
     selectedSystem = availableIt->Destination()->GetSystem();
+    DoScroll(available, availableIt, availableScroll, false);
+  }
   else if(acceptedIt != accepted.end())
+  {
     selectedSystem = acceptedIt->Destination()->GetSystem();
+    DoScroll(accepted, acceptedIt, acceptedScroll, true);
+  }
+
   if(selectedSystem)
     CentreOnSystem(selectedSystem);
   
@@ -280,6 +341,7 @@ bool MissionPanel::Click(int x, int y, int clicks)
       acceptedIt = accepted.end();
       dragSide = -1;
       selectedSystem = availableIt->Destination()->GetSystem();
+      DoScroll(available, availableIt, availableScroll, false);
       CentreOnSystem(selectedSystem);
       return true;
     }
@@ -298,6 +360,7 @@ bool MissionPanel::Click(int x, int y, int clicks)
       availableIt = available.end();
       dragSide = 1;
       selectedSystem = acceptedIt->Destination()->GetSystem();
+      DoScroll(accepted, acceptedIt, acceptedScroll, true);
       CentreOnSystem(selectedSystem);
       return true;
     }
@@ -773,7 +836,7 @@ bool MissionPanel::SelectAnyMission()
 {
   if(availableIt == available.end() && acceptedIt == accepted.end())
   {
-    // no previous selection, reset
+    // No previous selected mission, so select the first job/mission for any system.
     if(!available.empty())
       availableIt = available.begin();
     else
