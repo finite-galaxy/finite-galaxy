@@ -866,34 +866,34 @@ interface "mission" bottom
 
 
 
-interface "map buttons" bottom right
-  sprite "ui/dialogue cancel"
-    from -450 -50 to -360 0
-  button d "_Done"
-    from -450 -50 to -360 0
-  
-  active if "!is shipyards"
+interface "map buttons" bottom right  
+  active if "!is ports"
   sprite "ui/wide button"
-    from -370 -50 to -260 0
-  button s "_Shipyards"
-    from -370 -50 to -260 0
+    from -500 -50 to -390 0
+  button p "_Ports"
+    from -500 -50 to -390 0
+  
+  active if "!is missions"
+  sprite "ui/wide button"
+    from -400 -50 to -290 0
+  button i "M_issions"
+    from -400 -50 to -290 0
   
   active if "!is outfitters"
   sprite "ui/wide button"
-    from -270 -50 to -160 0
+    from -300 -50 to -190 0
   button o "_Outfitters"
-    from -270 -50 to -160 0
+    from -300 -50 to -190 0
   
-  active if "!is missions"
-  sprite "ui/dialogue cancel"
-    from -170 -50 to -80 0
-  button i "M_issions"
-    from -170 -50 to -80 0
-  
-  active if "!is ports"
+  active if "!is shipyards"
+  sprite "ui/wide button"
+    from -200 -50 to -90 0
+  button s "_Shipyards"
+    from -200 -50 to -90 0
+
   sprite "ui/dialogue cancel"
     from -90 -50 to 0 0
-  button p "_Ports"
+  button d "_Done"
     from -90 -50 to 0 0
   
   sprite "ui/zoom"
