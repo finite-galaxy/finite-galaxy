@@ -189,6 +189,7 @@ See `changelog.txt`, `ship_overview.txt`, and https://github.com/finite-galaxy/f
 * Limit the commodities for sale on specific planets
 * Make ship explosion ‘weapon’ automatically proportional to mass (base, empty, or total mass)
 * Separate fleet overview column in outfitter and shipyard from ship info display
+* Separate slots for guns and missile launchers
 * Ships entering a system from hyperspace should be positioned near the system's centre, instead of near the first inhabited planet
 * https://github.com/endless-sky/endless-sky/wiki/DevelopmentRoadmap
 
