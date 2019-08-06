@@ -282,13 +282,13 @@ ship "Mosquito"
     "hull" 1200
     "required crew" 1
     "bunks" 1
-    "mass" 30
+    "mass" 31
     "drag" 0.9
     "heat dissipation" .7
-    "outfit space" 99
-    "core space" 42
+    "outfit space" 98
+    "core space" 38
     "engine space" 38
-    "weapon space" 19
+    "weapon space" 22
     weapon
       "blast radius" 26
       "shield damage" 60
@@ -305,14 +305,13 @@ ship "Mosquito"
     "Dasrem Atomic Steering"
     "Dasrem Atomic Thruster"
 
-    "Tracker" 28
-    "Tracker Launcher"
+    "Proton Cannon"
 
     "Chasm Batteries"
     "Williwaw Cooling"
   engine -15 30
   engine 15 30
-  gun 0 -31 "Tracker Launcher"
+  gun 0 -31
   turret 0 5
   explode "tiny explosion" 15
   explode "small explosion" 5
@@ -450,10 +449,10 @@ ship "Shield Beetle"
   engine 44 133
   gun -22 -102 "Ion Cannon"
   gun 22 -102 "Ion Cannon"
-  gun -34 -68 "Tracker Launcher"
-  gun 34 -68 "Tracker Launcher"
   gun -49 -38 "Ion Cannon"
   gun 49 -38 "Ion Cannon"
+  gun -34 -68 "Tracker Launcher"
+  gun 34 -68 "Tracker Launcher"
   gun -61 -14 "Tracker Launcher"
   gun 61 -14 "Tracker Launcher"
   turret -39 48 "Proton Turret"
@@ -491,14 +490,6 @@ ship "Shield Beetle" "Shield Beetle (Thruster)"
     "Quantum Keystone"
     "Yoloy Scanner"
     "Force Field" 4
-  gun "Ion Cannon"
-  gun "Ion Cannon"
-  gun "Tracker Launcher"
-  gun "Tracker Launcher"
-  gun "Ion Cannon"
-  gun "Ion Cannon"
-  gun "Tracker Launcher"
-  gun "Tracker Launcher"
 
 
 ship "Shield Beetle" "Shield Beetle (Unfettered)"
@@ -524,14 +515,6 @@ ship "Shield Beetle" "Shield Beetle (Unfettered)"
     "Yoloy Scanner"
     "Force Field" 4
     "Extra Hull Armour" 4
-  gun "Ion Cannon"
-  gun "Ion Cannon"
-  gun "Tracker Launcher"
-  gun "Tracker Launcher"
-  gun "Ion Cannon"
-  gun "Ion Cannon"
-  gun "Tracker Launcher"
-  gun "Tracker Launcher"
 
 
 ship "Shield Beetle" "Shield Beetle (Unfettered, Jump)"
@@ -557,14 +540,6 @@ ship "Shield Beetle" "Shield Beetle (Unfettered, Jump)"
     "Yoloy Scanner"
     "Force Field" 4
     "Extra Hull Armour" 4
-  gun "Ion Cannon"
-  gun "Ion Cannon"
-  gun "Tracker Launcher"
-  gun "Tracker Launcher"
-  gun "Ion Cannon"
-  gun "Ion Cannon"
-  gun "Tracker Launcher"
-  gun "Tracker Launcher"
 
 
 

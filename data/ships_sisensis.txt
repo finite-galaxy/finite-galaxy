@@ -329,15 +329,15 @@ ship "Combat Drone"
       Navy
 #    "carried" 1
     "cost" 83000
-    "hull" 700
+    "hull" 900
     "automaton" 1
-    "mass" 20
+    "mass" 40
     "drag" .6
     "heat dissipation" .9
-    "outfit space" 75
-    "core space" 41
+    "outfit space" 60
+    "core space" 30
     "engine space" 22
-    "weapon space" 12
+    "weapon space" 8
     weapon
       "blast radius" 19
       "shield damage" 40
@@ -355,11 +355,8 @@ ship "Combat Drone"
 
 
 ship "Combat Drone" "Mark I Drone"
-  add attributes
-    "core space" 4
-    "weapon space" -4
   outfits
-    "nGVF-CC Fuel Cell"
+    "nGVF-BB Fuel Cell"
 
     "A120 Atomic Thruster"
     "A125 Atomic Steering"
@@ -374,8 +371,10 @@ ship "Combat Drone" "Mark I Drone"
 
 ship "Combat Drone" "Mark II Drone"
   add attributes
-    "core space" -3
-    "weapon space" 3
+    "hull" -200
+    "mass" -10
+    "outfit space" 8
+    "weapon space" 8
   outfits
     "nGVF-BB Fuel Cell"
 
@@ -384,7 +383,7 @@ ship "Combat Drone" "Mark II Drone"
 
     "Heavy Laser Cannon"
 
-    "Supercapacitor"
+    "Supercapacitor" 2
     "Small Radar Jammer"
     "Tactical Scanner"
   description "The Mark II Drone is used exclusively by the Republic Navy. Although very weak and easy to destroy, they can be quite effective in large numbers. Because drones do not need to accomodate life support systems, a cockpit, bunks, cargo space, or shield emitters, they can have similar firepower and a stronger hull than larger fighters or interceptors."
@@ -392,8 +391,10 @@ ship "Combat Drone" "Mark II Drone"
 
 ship "Combat Drone" "Mark III Drone"
   add attributes
-    "core space" -10
-    "weapon space" 10
+    "hull" -400
+    "mass" -20
+    "outfit space" 16
+    "weapon space" 16
   outfits
     "nGVF-BB Fuel Cell"
 
@@ -402,8 +403,8 @@ ship "Combat Drone" "Mark III Drone"
 
     "Electron Cannon"
 
-    "Supercapacitor"
+    "Supercapacitor" 3
     "Small Radar Jammer"
     "Tactical Scanner"
-  description "The Mark III Drone is externally identical to its predecessors, but internally it has reduced core space to increase its weapon space, sacrificing energy to accomodate a larger cannon."
+  description "The Mark III Drone is externally identical to its predecessors, but internally it has weakened its hull to increase its weapon space, sacrificing armour to accomodate a larger cannon."
 
