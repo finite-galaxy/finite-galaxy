@@ -67,7 +67,7 @@ government "Bounty Hunter"
 
 government "Coalition"
   swizzle 5
-  colour 1 .6 .7
+  colour 0 .6 .6
   "crew attack" 2
   "crew defence" 3
   language "Coalition"
@@ -78,7 +78,7 @@ government "Coalition"
 
 government "Corporation"
   swizzle 4
-  colour .4 .1 .9
+  colour .5 0 1
   "player reputation" 2
   "attitude toward"
     "Merchant" .3
@@ -102,7 +102,7 @@ government "Corporation (Extremist)"
 
 government "Deep"
   swizzle 1
-  colour .9 .4 .6
+  colour 1 0 .5
   "player reputation" 1
   "attitude toward"
     "Alpha" -.5
@@ -130,7 +130,7 @@ government "Escort"
 
 government "Free Worlds"
   swizzle 2
-  colour 0 .7 0
+  colour 0 1 0
   "player reputation" 1
   "attitude toward"
     "Merchant" .3
@@ -145,7 +145,7 @@ government "Free Worlds"
 
 government "Hai"
   swizzle 3
-  colour .8 .4 .8
+  colour .3 .3 .9
   "player reputation" 0
   "attitude toward"
     "Hai (Unfettered)" -.5
@@ -158,7 +158,7 @@ government "Hai"
 
 government "Hai (Unfettered)"
   swizzle 1
-  colour .8 .3 .4
+  colour .9 .3 .3
   "player reputation" -1000
   "attitude toward"
     "Hai" -.01
@@ -174,7 +174,7 @@ government "Hai (Unfettered)"
 
 government "Heliarch"
   swizzle 0
-  colour .5 .3 .7
+  colour 0 1 1
   "crew attack" 2
   "crew defence" 3
   "player reputation" 1
@@ -186,8 +186,8 @@ government "Heliarch"
   "fuel price" 2
 
 government "Independent"
-  swizzle 23
-  colour .8 .7 0
+  swizzle 19
+  colour 0 0 1
   "player reputation" 10
   "fuel price" 4
   "bribe" .05
@@ -210,7 +210,7 @@ government "Indigenous Lifeform"
 
 government "Korath"
   swizzle 0
-  colour .9 .8 0
+  colour .6 .6 0
   language "Korath"
   "attitude toward"
     "Kor Sestor" -.01
@@ -222,7 +222,7 @@ government "Korath Nanobots"
 
 government "Kor Efret"
   swizzle 4
-  colour .8 .6 .4
+  colour .2 .6 .2
   language "Korath"
   "attitude toward"
     "Kor Mereti" -.01
@@ -232,7 +232,7 @@ government "Kor Efret"
 
 government "Kor Mereti"
   swizzle 5
-  colour 0 .4 .7
+  colour .2 .2 .6
   language "Korath"
   "attitude toward"
     "Kor Sestor" -.01
@@ -248,7 +248,7 @@ government " Kor Mereti "
 
 government "Kor Sestor"
   swizzle 0
-  colour .8 .5 .1
+  colour .6 .2 .2
   language "Korath"  
   "attitude toward"
     "Kor Mereti" -.01
@@ -260,7 +260,7 @@ government "Kor Sestor"
   "player reputation" -1000
 
 government "Merchant"
-  swizzle 5  
+  swizzle 5
   "player reputation" 10
   "attitude toward"
     "Pirate" -.2
@@ -305,7 +305,7 @@ government "Navy (Oathkeeper)"
 
 government "Neutral"
   swizzle 3
-  colour .3 .4 .7
+  colour .8 .6 .4
   "player reputation" 1
   "attitude toward"
     "Merchant" .3
@@ -320,7 +320,7 @@ government "None"
 
 government "Pirate"
   swizzle 23
-  colour .8 0 0  
+  colour 1 0 0  
   "player reputation" -10
   "attitude toward"
     "Corporation" -.01
@@ -341,7 +341,7 @@ government "Pirate"
 
 government "Pug"
   swizzle 5
-  colour 1 .8 .5
+  colour 1 1 0
   "player reputation" 1
   "attitude toward"
     "Drak" -.01
@@ -351,7 +351,7 @@ government "Pug"
 
 government "Quarg"
   swizzle 0
-  colour 1 .9 .8
+  colour 1 0 1
   "player reputation" 1
   "attitude toward"
     "Merchant" .01
@@ -365,7 +365,7 @@ government "Quarg"
 
 government "Remnant"
   swizzle 0
-  colour .7 .3 .8
+  colour .6 0 .6
   "player reputation" 1
   "attitude toward"
     "Korath" -.01
@@ -373,7 +373,7 @@ government "Remnant"
 
 government "Republic"
   swizzle 0
-  colour .9 .5 .1
+  colour 1 .5 0
   "player reputation" 2
   "attitude toward"
     "Alpha" -.3
@@ -411,7 +411,7 @@ government "Uninhabited"
 
 government "Wanderer"
   swizzle 2
-  colour .7 .9 .1
+  colour .3 .9 .3
   "player reputation" 1
   "fuel price" 2
   language "Wanderer"
