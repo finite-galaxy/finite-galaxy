@@ -6,9 +6,6 @@ shipyard "Sisensis Variants"
   "Bastion (Plasma)"
   "Bastion (Patrol)"
   "Clipper"
-  "Clipper (Javelin)"
-  "Clipper (Miner)"
-  "Clipper (Particle)"
   "Clipper (Speedy)"
   "Combat Drone"
   "Mark I Drone"
@@ -189,7 +186,7 @@ ship "Clipper"
   sprite "ship/clipper"
   thumbnail "thumbnail/clipper"
   attributes
-    category "Corvette"
+    category "Interceptor"
 #    manufacturer "Sisensis"
     licences
       Pilot
@@ -202,10 +199,9 @@ ship "Clipper"
     "drag" 3.7
     "heat dissipation" .8
     "cargo space" 70
-    "outfit space" 290
+    "outfit space" 230
     "core space" 150
     "engine space" 80
-    "weapon space" 60
     weapon
       "blast radius" 102
       "shield damage" 300
@@ -224,78 +220,18 @@ ship "Clipper"
     "IT-3700 Ion Thruster"
     "IS-3200 Ion Steering"
 
-    "Meteor" 144
-    "Meteor Storage Box" 4
-    "Meteor Launcher" 4
-
     "LP036a Battery Pack"
-    "Fuel Pod" 26
+    "Fuel Pod" 23
     "Tactical Scanner"
   engine -20 45
   engine 20 45
-  gun -23 -19
-  gun 23 -19
-  gun -12 -7
-  gun 12 -7
   leak "leak" 60 50
   leak "flame" 50 80
   explode "tiny explosion" 15
   explode "small explosion" 20
   explode "medium explosion" 10
   "final explode" "final explosion small"
-  description "The Clipper is the smaller sister ship to the venerable Sisensis Bastion. Although not able to carry as much cargo, Clippers are versatile ships that can be used as passenger transports, couriers, or even warships in a pinch, and they come with enough free space to be customized based on an individual captain's needs."
-
-
-ship "Clipper" "Clipper (Javelin)"
-  outfits
-    "D41-HY Shield Generator"
-    "RT-I Radiothermal"
-    "Hyperdrive"
-
-    "IT-3700 Ion Thruster"
-    "IS-3200 Ion Steering"
-
-    "Javelin" 256
-    "Javelin Storage Crate" 4
-    "Javelin Launcher" 4
-
-    "LP036a Battery Pack"
-    "Fuel Pod" 26
-    "Tactical Scanner"
-
-
-ship "Clipper" "Clipper (Miner)"
-  outfits
-    "D41-HY Shield Generator"
-    "RT-I Radiothermal"
-    "Hyperdrive"
-
-    "IT-3700 Ion Thruster"
-    "IS-3200 Ion Steering"
-
-    "Heavy Laser Cannon" 4
-
-    "LP036a Battery Pack"
-    "Asteroid Scanner"
-    "Fuel Pod" 26
-    "Ramscoop"
-    "Tactical Scanner"
-
-
-ship "Clipper" "Clipper (Particle)"
-  outfits
-    "D41-HY Shield Generator"
-    "RT-I Radiothermal"
-    "Hyperdrive"
-
-    "IT-3700 Ion Thruster"
-    "IS-3200 Ion Steering"
-
-    "Particle Cannon" 2
-
-    "LP036a Battery Pack"
-    "Fuel Pod" 26
-    "Tactical Scanner"
+  description "The Clipper is the smaller sister ship to the venerable Sisensis Bastion. Although not able to carry as much cargo, Clippers are versatile ships that can be used as passenger transports, couriers, explorers, and they come with enough free space to be customized based on an individual captain's needs."
 
 
 ship "Clipper" "Clipper (Speedy)"
@@ -307,13 +243,9 @@ ship "Clipper" "Clipper (Speedy)"
     "A250 Atomic Thruster"
     "A255 Atomic Steering"
 
-    "Meteor" 144
-    "Meteor Storage Box" 4
-    "Meteor Launcher" 4
-
     "LP036a Battery Pack"
     "Liquid Water Cooler"
-    "Fuel Pod" 26
+    "Fuel Pod" 23
     "Tactical Scanner"
     "Extra Outfit Space" 2
 

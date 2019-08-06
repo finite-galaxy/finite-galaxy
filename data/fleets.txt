@@ -685,24 +685,9 @@ fleet "Independent Large"
   cargo 1
   personality
     plunders
-  # total: 27
+  # total: 15
   variant 3
     "Harpy" 4
-  variant 4
-    "Clipper"
-  variant 2
-    "Clipper (Particle)"
-  variant 2
-    "Clipper (Speedy)"
-  variant 2
-    "Clipper"
-    "Hawk"
-  variant 1
-    "Clipper (Particle)"
-    "Hawk (Laser)"
-  variant 1
-    "Clipper (Speedy)"
-    "Hawk (Laser)"
   variant 4
     "Bastion"
   variant 2
@@ -719,7 +704,7 @@ fleet "Independent Small"
   personality
     plunders
     confusion 20
-  # total: 39
+  # total: 35
   variant 12
     "Harpy"
   variant 8
@@ -751,12 +736,6 @@ fleet "Independent Small"
     "Hawk" 2
   variant 1
     "Hawk (Laser)" 2
-  variant 2
-    "Clipper"
-  variant 1
-    "Clipper (Particle)"
-  variant 1
-    "Clipper (Speedy)"
 
 
 
@@ -1201,8 +1180,6 @@ fleet "Merchant Miners East"
     confusion 20
     timid frugal mining harvests
   # total: 6
-  variant 3
-    "Clipper (Miner)"
   variant 1
     "Star Freighter (Miner)"
   variant 2
@@ -1333,36 +1310,12 @@ fleet "Merchants East Large"
   variant 5
     "Bulk Freighter"
     "Berserker" 2
-  variant 6
+  variant 10
     "Bulk Freighter"
-    "Clipper"
-  variant 2
+    "Stymphalian"
+  variant 10
     "Bulk Freighter"
-    "Clipper (Particle)"
-  variant 2
-    "Bulk Freighter"
-    "Clipper (Speedy)"
-  variant 5
-    "Bulk Freighter"
-    "Clipper" 2
-  variant 1
-    "Bulk Freighter"
-    "Clipper (Particle)" 2
-  variant 1
-    "Bulk Freighter"
-    "Clipper (Speedy)" 2
-  variant 1
-    "Bulk Freighter"
-    "Clipper"
-    "Clipper (Particle)"
-  variant 1
-    "Bulk Freighter"
-    "Clipper"
-    "Clipper (Speedy)"
-  variant 1
-    "Bulk Freighter"
-    "Clipper (Particle)"
-    "Clipper (Speedy)"
+    "Stymphalian" 2
   variant 2
     "Leviathan"
     "Star Freighter" 2
@@ -1388,10 +1341,8 @@ fleet "Merchants East Small"
   # total 100
   variant 10
     "Bounder"
-  variant 6
+  variant 8
     "Clipper"
-  variant 2
-    "Clipper (Particle)"
   variant 2
     "Clipper (Speedy)"
   variant 10
@@ -1480,10 +1431,8 @@ fleet "Merchants Hai Small"
     confusion 40
     timid frugal appeasing
   # total: 100
-  variant 3
+  variant 4
     "Clipper"
-  variant 1
-    "Clipper (Particle)"
   variant 1
     "Clipper (Speedy)"
   variant 8
@@ -1761,10 +1710,8 @@ fleet "Merchants Paradise Small"
     "Arrow"
   variant 10
     "Bounder"
-  variant 6
+  variant 8
     "Clipper"
-  variant 2
-    "Clipper (Particle)"
   variant 2
     "Clipper (Speedy)"
   variant 30
@@ -1905,10 +1852,8 @@ fleet "Merchants South Small"
     "Blackbird"
   variant 8
     "Blackbird (Anti-Missile)"
-  variant 6
+  variant 8
     "Clipper"
-  variant 2
-    "Clipper (Particle)"
   variant 2
     "Clipper (Speedy)"
   variant 3
@@ -2059,8 +2004,6 @@ fleet "Merchants West Small"
   variant 4
     "Clipper"
   variant 1
-    "Clipper (Particle)"
-  variant 1
     "Clipper (Speedy)"
   variant 3
     "Heavy Shuttle"
@@ -2185,8 +2128,6 @@ fleet "Militia Small"
     heroic frugal
     confusion 20
   # total: 100
-  variant 5
-    "Clipper"
   variant 10
     "Berserker" 2
   variant 10
@@ -2199,7 +2140,7 @@ fleet "Militia Small"
     "Harpy" 2
   variant 20
     "Harpy" 3
-  variant 15
+  variant 20
     "Hawk"
 
 
@@ -2840,10 +2781,10 @@ fleet "Pirates East Small"
     plunders harvests
     confusion 20
   # total: 25
-  variant 5
+  variant 6
     "Berserker"
-  variant 4
-    "Clipper"
+  variant 3
+    "Berserker" 2
   variant 3
     "Wasp"
   variant 3
@@ -3001,21 +2942,14 @@ fleet "pirate raid"
     "Argosy (Laser)"
   variant 3
     "Modified Argosy"
-  variant 2
-    "Clipper (Speedy)"
-  variant 1
-    "Clipper (Particle)"
-    "Warrior"
-  variant 1
-    "Clipper (Speedy)"
-    "Warrior"
-  variant 6
-    "Warrior" 3
-  variant 2
+  variant 4
     "Argosy"
     "Warrior"
   variant 1
     "Argosy (Laser)"
+    "Warrior"
+  variant 2
+    "Modified Argosy"
     "Warrior"
   variant 1
     "Modified Argosy"
@@ -3064,7 +2998,7 @@ fleet "pirate raid"
     "Raven" 2
   variant 2
     "Raven (Laser)" 2
-  variant 1
+  variant 7
     "Warrior" 3
   variant 4
     "Leviathan"
