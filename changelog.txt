@@ -259,7 +259,7 @@
       * Raider: fighter bays from 2 to 0, bomber bays from 0 to 2
     * stat tweaks:
       * Aerie: +45 core space, −5 engine space
-      * Aphid: −17 core space
+      * Aphid: +13 cargo space, −30 core space
       * Archon: cost from 1000 000 000 to 1234 567 890; +200 mass, +50 core space; +400 tactical scan power
       * Arfecta: −2000 shields, +90 mass, +50 core space; removed cloaking fuel; +3400 energy capacity, +15 200 fuel capacity, +2.0 fuel generation, +3 hull repair rate, +3 hull energy, +12 scan interference, +237 tactical scan power
       * Argosy: cost from 1960 000 to 2400 000; +30 core space
@@ -268,7 +268,7 @@
         * Modified Arrow (Engines): +15 core space, +5 weapon space
         * Modified Arrow (Shields): +15 core space, +5 weapon space
         * Modified Arrow (Weapons): +15 core space, +10 weapon space
-      * Autumn Leaf: +77 core space
+      * Autumn Leaf: +62 cargo space, +15 core space
       * Bactrian: +190 core space
       * Bastion: +60 core space, +3 required crew
       * Behemoth: +1800 hull, +60 core space
@@ -287,13 +287,13 @@
         * Mark I Drone: 
         * Mark II Drone: –200 hull, –10 mass, +7 weapon space
         * Mark III Drone: –400 hull, –20 mass, +14 weapon space
-      * Cool Breeze: +27 core space, +5 weapon space
+      * Cool Breeze: +12 cargo space, +15 core space, +5 weapon space
       * Courier: +10 cargo space
       * Dagger: −0.03 drag, +10 core space, −10 weapon space
-      * Deep River: +126 core space, −177 weapon space
-      * Derecho: +90 core space
+      * Deep River: +60 cargo space, +64 core space, −177 weapon space
+      * Derecho: +75 cargo space, +15 core space
       * Dreadnought: +1.0 drag, –10 cargo space, +120 core space, –10 weapon space
-      * Earth Shaper: +20 mass, +31 core space, −5 engine space
+      * Earth Shaper: +20 mass, +5 cargo space, +26 core space, −5 engine space
       * Enfolta: +2100 energy capacity, +5430 fuel capacity, +1.0 fuel generation, +4 hull repair rate, +4 hull energy, +6 scan interference, +30 tactical scan power
       * Far Lek 14: +1 core space; self destruct from 0.60 to 0.9
       * Far Osk 27: +1 core space; self destruct from 0.60 to 0.9
@@ -306,7 +306,7 @@
       * Flycatcher: +2 core space, −5 engine space, −4 weapon space
       * Foxhound: −10 core space, +1 engine space, −6 weapon space
       * Fury: +20 core space
-      * Gascraft: +16 core space; +1 outfit scan power, +1 outfit scan speed, +1 scan interference, +1 tactical scan power
+      * Gascraft: +14 cargo space, +2 core space; +1 outfit scan power, +1 outfit scan speed, +1 scan interference, +1 tactical scan power
       * Goose: +1 required crew, −5 bunks, +75 cargo space
         * Modified Goose (Engines): +55 core space, +5 weapon space
         * Modified Goose (Shields): +55 core space, +5 weapon space
@@ -319,14 +319,14 @@
       * Hawk: cost from 1850 000 to 1900 000; −800 shields, +300 hull, −10 cargo space, +40 core space, −10 engine space
       * Heavy Shuttle: +100 hull, −5 cargo space, +20 core space, –10 weapon space
       * Hulk: +83 cargo space
-      * Hurricane: +112 core space
+      * Hurricane: +98 cargo space, +29 core space, –7 weapon space
       * Interdictor: +90 cargo space
       * Kar Ik Vot 349: –30 cargo space, +38 core space, –8 engine space; self destruct from 0.80 to 0.9
       * Kestrel: cost from 10 300 000 to 14 700 000; +1600 shields, −200 hull, −20 cargo space, +90 core space, −30 weapon space
         * (Engines) variant: removed drag and fuel improvements
         * (Shields) variant: −500 hull
         * (Weapons) variant: +30 weapon space; removed extra gun ports
-      * Lampyrid: +70 core space
+      * Lampyrid: +50 cargo space
       * Lance: −12 required crew, −15 bunks, −10 mass, −40 cargo space, +100 core space, +10 weapon space
         * Modified Lance (Engines): −11 bunks, +110 core space, +20 engine space, –5 weapon space
         * Modified Lance (Shields): −11 bunks, +110 core space, +5 engine space, –5 weapon space
@@ -335,7 +335,7 @@
         * Marauder Leviathan (Engines): +11 bunks, +10 cargo space, +35 core space, +5 weapon space
         * Marauder Leviathan (Shields): +11 bunks, +10 cargo space, +35 core space, –40 engine space, +5 weapon space
         * Marauder Leviathan (Weapons): +11 bunks, +10 cargo space, +35 core space, +10 weapon space
-      * Lightning Bug: –30 mass, –20 cargo space, +60 core space, +10 weapon space
+      * Lightning Bug: –30 mass, +15 cargo space, +25 core space, +10 weapon space
       * Light Shuttle: +20 core space, –10 weapon space
       * Maboro: –100 mass; +3800 energy capacity, +7410 fuel capacity, +1.5 fuel generation, +6 hull repair rate, +6 hull energy, +9 scan interference, +42 tactical scan power
       * Manta: +40 core space, –20 weapon space
@@ -359,7 +359,7 @@
       * Neutralizer: +4 bunks, +68 cargo space, –4 core space, +4 engine space
       * Osprey: +300 shields, +900 hull, +7 required crew, +8 bunks, +50 core space
         * Modified Osprey: −30 cargo space, +70 core space, +60 weapon space
-      * Pond Strider: +37 core space
+      * Pond Strider: +38 cargo space
       * Protector: cost from 5500 000 to 6000 000; +6 required crew, –6 bunks, +40 mass, –10 cargo space, +30 core space, +40 weapon space
       * Punisher: +100 cargo space, +1 core space, +2 engine space
       * Quicksilver: +20 core space, +10 engine space
@@ -375,30 +375,30 @@
       * Runabout: +15 cargo space
       * Saturn: +2000 shields, +1000 hull; −0.05 heat dissipation, +5 cargo space, +160 core space, −10 engine space, +30 weapon space
       * Scout: +30 core space
-      * Shadow: +62 core space; +2 scan interference, +25 tactical scan power
-      * Shield Beetle: –110 cargo space, +171 core space, +6 engine capacity, +24 weapon space
+      * Shadow: +62 cargo space; +2 scan interference, +25 tactical scan power
+      * Shield Beetle: –15 cargo space, +81 core space, +6 engine capacity, +24 weapon space
       * Skein: cost from 3500 000 to 5000 000; +3 required crew, –1.1 heat dissipation, +90 mass, –30 cargo space, +100 core space
       * Skylark: −10 bunks, −20 required crew, +40 mass, +200 cargo space, +20 core space, −20 engine space; removed energy generation, hull energy, hull repair rate, and ramscoop
       * Sojourner: +113 cargo space
-      * Solifuge: −0.02 heat dissipation, –90 cargo space, +137 core space, –24 engine space, +70 weapon space
+      * Solifuge: −0.02 heat dissipation, +72 cargo space, +65 core space, –24 engine space, +70 weapon space
       * Spindle: +51 cargo space
       * Spire: +90 cargo space
       * Star Barge: +10 core space, −10 engine space, +10 weapon space
       * Star Freighter: +50 cargo space, +20 core space, −10 engine space, +10 weapon space
       * Star Queen: −9 required crew, +40 core space
-      * Strong Wind: +51 core space
+      * Strong Wind: +35 cargo space, +21 core space, −5 weapon space
       * Stymphalian: +10 core space, +10 engine space
-      * Summer Leaf: +58 core space
+      * Summer Leaf: +43 cargo space, +15 core space
       * Tek Far 71 Lek: +25 core space, −25 weapon space; self destruct from 0.70 to 0.9
       * Tek Far 78 Osk: +21 core space, −1 weapon space; self destruct from 0.70 to 0.9
       * Tek Far 109: +200 mass, +10 core space; self destruct from 0.70 to 0.9
-      * Tempest: +79 core space
+      * Tempest: +64 cargo space, +15 core space
       * Thistle: +45 cargo space
       * Thorn: +15 cargo space
       * Thunderbolt: +30 core space
       * Transport: +30 cargo space
       * Traveller: +55 cargo space
-      * Twilight: +30 core space, +10 weapon space; +4 scan interference, +81 tactical scan power
+      * Twilight: +86 cargo space, −60 core space, +10 weapon space; +4 scan interference, +81 tactical scan power
       * Vanguard: +30 core space, +20 weapon space
         * Modified Vanguard: +600 hull, +4 required crew, +50 mass, −10 cargo space, +60 engine space
       * Venus: +15 cargo space, +180 core space, −20 engine space, −20 weapon space
@@ -408,8 +408,8 @@
       * Warrior: +10 core space
       * Wasp: +10 cargo space, +38 core space, −35 engine space, −3 weapon space
       * Watch Dog: −0.03 drag, +15 core space, −8 engine space
-      * Water Bug: −5 cargo space, +59 core space
-      * Winter Gale: +64 core space
+      * Water Bug: +54 cargo space, +5 core space
+      * Winter Gale: +49 cargo space, +16 core space, −1 engine space
       * World-Ship A: cost from 27 690 000 to 47 690 000; +5000 shields, −5000 hull, −20 bunks, +20 required crew, +300 mass, −20 cargo space, +128 core space, +8 engine space, +14 weapon space
       * World-Ship B: cost from 27 690 000 to 47 690 000; −10 bunks, +10 required crew, +400 mass, +128 core space, +8 engine space, +14 weapon space
       * World-Ship C: cost from 27 690 000 to 47 690 000; −5000 shields, +5000 hull, +500 mass, +20 cargo space, +128 core space, +8 engine space, +14 weapon space
