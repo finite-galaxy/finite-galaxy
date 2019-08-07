@@ -2,13 +2,14 @@ shipyard "Heliarch Variants"
   "Interdictor"
   "Interdictor (Bombardment)"
   "Neutralizer"
-  "Neutralizer (Missile)"
-  "Neutralizer (Nimble)"
-  "Neutralizer (Scrappy)"
+  "Neutralizer (Bombardment)"
+  "Neutralizer (Steering)"
+  "Neutralizer (Thruster)"
   "Punisher"
   "Punisher (Interdicting)"
-  "Punisher (Missile)"
-  "Punisher (Scrappy)"
+  "Punisher (Nimble)"
+  "Punisher (Steering)"
+  "Punisher (Thruster)"
 
 
 
@@ -28,9 +29,9 @@ ship "Interdictor"
     "mass" 520
     "drag" 7.4
     "heat dissipation" .70
-    "cargo space" 79
-    "outfit space" 644
-    "core space" 330
+    "cargo space" 169
+    "outfit space" 544
+    "core space" 230
     "engine space" 135
     "weapon space" 179
     weapon
@@ -118,10 +119,10 @@ ship "Neutralizer"
     "mass" 270
     "drag" 4.1
     "heat dissipation" .75
-    "cargo space" 36
-    "outfit space" 442
-    "core space" 268
-    "engine space" 102
+    "cargo space" 104
+    "outfit space" 367
+    "core space" 189
+    "engine space" 106
     "weapon space" 72
     weapon
       "blast radius" 150
@@ -140,9 +141,9 @@ ship "Neutralizer"
     "Hyperdrive"
 
     "Large Thrust Module"
-    "Small Thrust Module" 2
+    "Small Thrust Module" 3
     "Large Steering Module"
-    "Small Steering Module" 2
+    "Small Steering Module" 3
 
     "Ion Rain Gun" 4
 
@@ -166,20 +167,21 @@ ship "Neutralizer"
   description `The most common Heliarch patrol ship, Neutralizers are designed to be just strong enough to keep an enemy vessel occupied until reinforcements can arrive.`
 
 
-ship "Neutralizer" "Neutralizer (Missile)"
+ship "Neutralizer" "Neutralizer (Bombardment)"
   outfits
     "Large Shield Module"
+    "Small Shield Module"
     "Large Repair Module"
+    "Small Repair Module"
     "Small Reactor Module" 2
     "Hyperdrive"
 
     "Large Thrust Module"
-    "Small Thrust Module" 2
+    "Small Thrust Module" 3
     "Large Steering Module"
-    "Small Steering Module" 2
+    "Small Steering Module" 3
 
-    "Finisher" 80
-    "Finisher Launcher" 2
+    "Bombardment Cannon" 4
 
     "Large Battery Module"
     "Cooling Module"
@@ -189,18 +191,19 @@ ship "Neutralizer" "Neutralizer (Missile)"
     "Ion Rifle" 27
 
 
-ship "Neutralizer" "Neutralizer (Nimble)"
+ship "Neutralizer" "Neutralizer (Steering)"
   outfits
     "Large Shield Module"
     "Large Repair Module"
     "Small Reactor Module" 2
     "Hyperdrive"
-
-    "Large Thrust Module" 2
-    "Large Steering Module" 
 
     "Ion Rain Gun" 4
 
+    "Large Thrust Module"
+    "Small Thrust Module" 2
+    "Large Steering Module" 2
+
     "Large Battery Module"
     "Cooling Module"
     "Large Fuel Module" 4
@@ -209,17 +212,18 @@ ship "Neutralizer" "Neutralizer (Nimble)"
     "Ion Rifle" 27
 
 
-ship "Neutralizer" "Neutralizer (Scrappy)"
+ship "Neutralizer" "Neutralizer (Thruster)"
   outfits
-    "Large Shield Module" 2
+    "Large Shield Module"
     "Large Repair Module"
     "Small Reactor Module" 2
     "Hyperdrive"
 
-    "Large Thrust Module"
-    "Large Steering Module" 2
+    "Ion Rain Gun" 4
 
-    "Bombardment Cannon" 4
+    "Large Thrust Module" 2
+    "Large Steering Module"
+    "Small Steering Module" 2
 
     "Large Battery Module"
     "Cooling Module"
@@ -246,10 +250,10 @@ ship "Punisher"
     "mass" 780
     "drag" 12.2
     "heat dissipation" .60
-    "cargo space" 94
-    "outfit space" 998
-    "core space" 487
-    "engine space" 187
+    "cargo space" 194
+    "outfit space" 888
+    "core space" 375
+    "engine space" 189
     "weapon space" 324
     weapon
       "blast radius" 374
@@ -341,19 +345,20 @@ ship "Punisher" "Punisher (Interdicting)"
   turret "Bombardment Turret"
 
 
-ship "Punisher" "Punisher (Missile)"
+ship "Punisher" "Punisher (Nimble)"
   outfits
     "Large Shield Module" 3
-    "Large Repair Module" 3
+    "Large Repair Module"
     "Large Reactor Module" 2
     "Hyperdrive"
 
     "Large Thrust Module" 3
     "Large Steering Module" 3
 
-    "Finisher" 240
-    "Finisher Launcher" 6
-    "Repulsor"
+    "Finisher" 80
+    "Finisher Launcher" 2
+    "Ion Rain Gun" 4
+    "Bombardment Turret" 4
 
     "Large Battery Module"
     "Cooling Module" 3
@@ -361,28 +366,48 @@ ship "Punisher" "Punisher (Missile)"
     "Small Fuel Module" 5
     "Scanning Module" 4
     "Ion Rifle" 125
-  turret
-  turret
-  turret "Repulsor"
-  turret
 
 
-ship "Punisher" "Punisher (Scrappy)"
+ship "Punisher" "Punisher (Steering)"
   outfits
-    "Large Shield Module" 4
+    "Large Shield Module" 2
     "Large Repair Module" 2
     "Large Reactor Module" 2
     "Hyperdrive"
 
     "Large Thrust Module" 2
-    "Large Steering Module" 4
+    "Large Steering Module" 5
 
-    "Bombardment Cannon" 6
+    "Finisher" 80
+    "Finisher Launcher" 2
+    "Ion Rain Gun" 4
     "Bombardment Turret" 4
 
     "Large Battery Module"
-    "Small Battery Module" 2
-    "Cooling Module" 4
+    "Cooling Module" 3
+    "Large Fuel Module" 6
+    "Small Fuel Module" 5
+    "Scanning Module" 4
+    "Ion Rifle" 125
+
+
+ship "Punisher" "Punisher (Thruster)"
+  outfits
+    "Large Shield Module" 2
+    "Large Repair Module" 2
+    "Large Reactor Module" 2
+    "Hyperdrive"
+
+    "Large Thrust Module" 4
+    "Large Steering Module" 2
+
+    "Finisher" 80
+    "Finisher Launcher" 2
+    "Ion Rain Gun" 4
+    "Bombardment Turret" 4
+
+    "Large Battery Module"
+    "Cooling Module" 3
     "Large Fuel Module" 6
     "Small Fuel Module" 5
     "Scanning Module" 4
