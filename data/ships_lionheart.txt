@@ -48,9 +48,9 @@ ship "Arrow"
     "mass" 130
     "drag" 2.2
     "heat dissipation" .85
-    "cargo space" 10
-    "outfit space" 190
-    "core space" 75
+    "cargo space" 20
+    "outfit space" 180
+    "core space" 65
     "engine space" 65
     "weapon space" 50
     weapon
@@ -115,11 +115,8 @@ ship "Arrow" "Modified Arrow (Engines)"
     "required crew" 1
     "mass" 15
     "drag" .5
-    "cargo space" -5
     "outfit space" 40
-    "core space" -5
-    "engine space" 35
-    "weapon space" 10
+    "engine space" 40
     "self destruct" .25
     weapon
       "blast radius" 10
@@ -165,10 +162,8 @@ ship "Arrow" "Modified Arrow (Shields)"
     "required crew" 1
     "mass" 15
     "drag" .5
-    "cargo space" -5
     "outfit space" 40
-    "core space" 15
-    "engine space" 15
+    "core space" 30
     "weapon space" 10
     "self destruct" .25
     weapon
@@ -216,11 +211,8 @@ ship "Arrow" "Modified Arrow (Weapons)"
     "required crew" 1
     "mass" 15
     "drag" .5
-    "cargo space" -5
     "outfit space" 40
-    "core space" 5
-    "engine space" 15
-    "weapon space" 20
+    "weapon space" 40
     "self destruct" .25
     weapon
       "blast radius" 10
@@ -276,9 +268,9 @@ ship "Bounder"
     "mass" 130
     "drag" 3.7
     "heat dissipation" .8
-    "cargo space" 40
-    "outfit space" 260
-    "core space" 125
+    "cargo space" 80
+    "outfit space" 220
+    "core space" 85
     "engine space" 90
     "weapon space" 45
     weapon
@@ -360,9 +352,9 @@ ship "Bounder" "Modified Bounder (Engines)"
     "mass" 15
     "cargo space" -20
     "outfit space" 40
-    "core space" -35
+    "core space" -15
     "engine space" 40
-    "weapon space" 35
+    "weapon space" 15
     "self destruct" .25
     weapon
       "blast radius" 7
@@ -411,8 +403,7 @@ ship "Bounder" "Modified Bounder (Shields)"
     "mass" 15
     "cargo space" -20
     "outfit space" 40
-    "core space" -15
-    "engine space" 20
+    "core space" 5
     "weapon space" 35
     "self destruct" .25
     weapon
@@ -460,9 +451,8 @@ ship "Bounder" "Modified Bounder (Weapons)"
     "mass" 15
     "cargo space" -20
     "outfit space" 40
-    "core space" -35
-    "engine space" 20
-    "weapon space" 55
+    "core space" -5
+    "weapon space" 45
     "self destruct" .25
     weapon
       "blast radius" 7
@@ -521,10 +511,10 @@ ship "Bulk Freighter"
     "drag" 16
     "heat dissipation" .5
     "cargo space" 750
-    "outfit space" 500
-    "core space" 200
+    "outfit space" 410
+    "core space" 120
     "engine space" 100
-    "weapon space" 200
+    "weapon space" 190
     weapon
       "blast radius" 406
       "shield damage" 1800
@@ -547,7 +537,7 @@ ship "Bulk Freighter"
     "Heavy Anti-Missile"
 
     "DS-11 Battery Pack"
-    "Fuel Pod" 86
+    "Fuel Pod" 84
     "Tactical Scanner" 2
   engine -22 198
   engine 22 198
@@ -572,8 +562,10 @@ ship "Bulk Freighter" "Class C Freighter"
     "cost" 3000000
     "shields" 10000
     "required crew" 12
+    "bunks" 12
     "cargo space" -600
     "outfit space" 60
+    "core space" 60
     weapon
       "random shield damage" -900
       "random hull damage" -1350
@@ -592,11 +584,12 @@ ship "Bulk Freighter" "Class C Freighter"
 
     "DS-11 Battery Pack"
     "Liquid Nitrogen Cooler"
-    "Fuel Pod" 86
+    "Fuel Pod" 84
     "Large Radar Jammer"
     "Ramscoop"
     "Tactical Scanner" 6
-    "Extra Bunks" 9
+    "Extra Bunks" 3
+    "Extra Outfit Space"
     "Fragmentation Grenades" 15
     "Laser Rifle" 30
   turret "X4 Blaster Turret"
@@ -636,9 +629,9 @@ ship "Lance"
     "mass" 500
     "drag" 6.7
     "heat dissipation" .7
-    "cargo space" 50
-    "outfit space" 650
-    "core space" 250
+    "cargo space" 120
+    "outfit space" 580
+    "core space" 180
     "engine space" 150
     "weapon space" 250
     weapon
@@ -733,11 +726,10 @@ ship "Lance" "Modified Lance (Engines)"
     "bunks" 9
     "mass" 60
     "heat dissipation" .1
-    "cargo space" 10
     "outfit space" 40
-    "core space" -60
+    "core space" -20
     "engine space" 90
-    "weapon space" 10
+    "weapon space" -30
     "self destruct" .15
     weapon
       "blast radius" 22
@@ -789,11 +781,8 @@ ship "Lance" "Modified Lance (Shields)"
     "bunks" 9
     "mass" 60
     "heat dissipation" .1
-    "cargo space" 10
     "outfit space" 40
-    "core space" 10
-    "engine space" 20
-    "weapon space" 10
+    "core space" 40
     "self destruct" .15
     weapon
       "blast radius" 22
@@ -844,10 +833,8 @@ ship "Lance" "Modified Lance (Weapons)"
     "bunks" 9
     "mass" 60
     "heat dissipation" .1
-    "cargo space" 10
     "outfit space" 40
-    "core space" -30
-    "engine space" 20
+    "core space" -10
     "weapon space" 50
     "self destruct" .15
     weapon
@@ -907,9 +894,9 @@ ship "Manta"
     "mass" 170
     "drag" 4.7
     "heat dissipation" .8
-    "cargo space" 20
-    "outfit space" 370
-    "core space" 150
+    "cargo space" 40
+    "outfit space" 350
+    "core space" 130
     "engine space" 100
     "weapon space" 120
     weapon
@@ -1034,7 +1021,6 @@ ship "Manta" "Modified Manta (Engines)"
     "hull" 250
     "required crew" 1
     "mass" 25
-    "cargo space" -10
     "outfit space" 50
     "core space" -20
     "engine space" 30
@@ -1093,7 +1079,6 @@ ship "Manta" "Modified Manta (Shields)"
     "hull" 250
     "required crew" 1
     "mass" 25
-    "cargo space" -10
     "outfit space" 50
     "engine space" 10
     "weapon space" 40
@@ -1150,7 +1135,6 @@ ship "Manta" "Modified Manta (Weapons)"
     "hull" 250
     "required crew" 1
     "mass" 25
-    "cargo space" -10
     "outfit space" 50
     "core space" -20
     "engine space" 10
@@ -1215,9 +1199,9 @@ ship "Wasp"
     "mass" 60
     "drag" 1.2
     "heat dissipation" .8
-    "cargo space" 20
-    "outfit space" 150
-    "core space" 100
+    "cargo space" 30
+    "outfit space" 140
+    "core space" 90
     "engine space" 25
     "weapon space" 25
     weapon

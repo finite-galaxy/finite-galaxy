@@ -98,9 +98,9 @@ ship "Dreadnought"
     "mass" 630
     "drag" 11.1
     "heat dissipation" .65
-    "cargo space" 90
-    "outfit space" 900
-    "core space" 370
+    "cargo space" 200
+    "outfit space" 800
+    "core space" 270
     "engine space" 180
     "weapon space" 350
     weapon
@@ -279,7 +279,7 @@ ship "Harpy"
     "mass" 50
     "drag" 1.3
     "heat dissipation" .8
-    "cargo space" 10
+    "cargo space" 20
     "outfit space" 140
     "core space" 70
     "engine space" 40
@@ -307,7 +307,7 @@ ship "Harpy"
     "Gatling Gun" 4
 
     "Supercapacitor"
-    "Fuel Pod" 6
+    "Fuel Pod" 7
     "Tactical Scanner"
   engine -5 35
   engine 5 35
@@ -326,13 +326,12 @@ ship "Harpy" "Harpy (Doombat)"
   add attributes
     "automaton" 1
     "required crew" -1
-    "bunks" -2
-    "outfit space" 15
-    "cargo space" -5
+    "bunks" -1
+    "outfit space" 10
     "weapon space" 10
     "self destruct" 1
   outfits
-    "D14-RN Shield Generator"
+    "D23-QP Shield Generator"
     "nGVF-BB Fuel Cell"
     "Hyperdrive"
 
@@ -342,7 +341,7 @@ ship "Harpy" "Harpy (Doombat)"
     "Flamethrower" 4
 
     "LP036a Battery Pack"
-    "Fuel Pod" 13
+    "Fuel Pod" 20
     "Tactical Scanner"
     "Measurement Systems"
 
@@ -364,9 +363,9 @@ ship "Hauler I"
     "mass" 250
     "drag" 10.5
     "heat dissipation" .6
-    "cargo space" 140
-    "outfit space" 390
-    "core space" 170
+    "cargo space" 150
+    "outfit space" 360
+    "core space" 140
     "engine space" 80
     "weapon space" 140
     weapon
@@ -393,7 +392,7 @@ ship "Hauler I"
     "Bolt Turret" 4
 
     "LP144a Battery Pack"
-    "Fuel Pod" 32
+    "Fuel Pod" 31
     "Large Radar Jammer"
     "Tactical Scanner" 2
   engine -45 122
@@ -429,7 +428,7 @@ ship "Hauler I" "Hauler I (Miner)"
 
     "LP144a Battery Pack"
     "Asteroid Scanner"
-    "Fuel Pod" 32
+    "Fuel Pod" 31
     "Ramscoop"
     "Large Radar Jammer"
     "Tactical Scanner" 2
@@ -452,9 +451,9 @@ ship "Hauler II"
     "mass" 360
     "drag" 11.5
     "heat dissipation" .6
-    "cargo space" 280
-    "outfit space" 400
-    "core space" 180
+    "cargo space" 300
+    "outfit space" 360
+    "core space" 140
     "engine space" 80
     "weapon space" 140
     weapon
@@ -481,7 +480,7 @@ ship "Hauler II"
     "Bolt Turret" 4
 
     "LP144a Battery Pack"
-    "Fuel Pod" 42
+    "Fuel Pod" 41
     "Large Radar Jammer"
     "Tactical Scanner" 2
   engine -45 160
@@ -517,7 +516,7 @@ ship "Hauler II" "Hauler II (Miner)"
 
     "LP144a Battery Pack"
     "Asteroid Scanner"
-    "Fuel Pod" 42
+    "Fuel Pod" 41
     "Ramscoop"
     "Large Radar Jammer"
     "Tactical Scanner" 2
@@ -540,9 +539,9 @@ ship "Hauler III"
     "mass" 470
     "drag" 12.5
     "heat dissipation" .6
-    "cargo space" 420
-    "outfit space" 410
-    "core space" 190
+    "cargo space" 450
+    "outfit space" 360
+    "core space" 140
     "engine space" 80
     "weapon space" 140
     weapon
@@ -626,12 +625,12 @@ ship "Nest"
     "hull" 3700
     "required crew" 6
     "bunks" 14
-    "mass" 280
+    "mass" 300
     "drag" 10.5
     "heat dissipation" .6
-    "cargo space" 30
-    "outfit space" 440
-    "core space" 220
+    "cargo space" 50
+    "outfit space" 410
+    "core space" 190
     "engine space" 80
     "weapon space" 140
     weapon
@@ -652,15 +651,15 @@ ship "Nest"
     "Greyhound Plasma Thruster"
     "Impala Plasma Steering"
 
-    "Javelin" 128
-    "Javelin Storage Crate" 2
+    "Javelin" 64
+    "Javelin Storage Crate"
     "Javelin Launcher" 2
     "Bolt Turret" 4
 
     "LP144a Battery Pack"
     "Fuel Pod" 43
     "Large Radar Jammer"
-    "Tactical Scanner" 2
+    "Tactical Scanner" 4
   engine -45 122
   engine 45 122
   gun -15 -91
@@ -696,12 +695,12 @@ ship "Roost"
     "hull" 5200
     "required crew" 8
     "bunks" 16
-    "mass" 420
+    "mass" 460
     "drag" 11.5
     "heat dissipation" .6
-    "cargo space" 60
-    "outfit space" 520
-    "core space" 300
+    "cargo space" 100
+    "outfit space" 460
+    "core space" 240
     "engine space" 80
     "weapon space" 140
     weapon
@@ -722,15 +721,15 @@ ship "Roost"
     "Greyhound Plasma Thruster"
     "Impala Plasma Steering"
 
-    "Javelin" 128
-    "Javelin Storage Crate" 2
+    "Javelin" 64
+    "Javelin Storage Crate"
     "Javelin Launcher" 2
     "Bolt Turret" 4
 
     "LP144a Battery Pack"
     "Fuel Pod" 65
     "Large Radar Jammer"
-    "Tactical Scanner" 2
+    "Tactical Scanner" 4
   engine -45 159
   engine 45 159
   gun -15 -128
@@ -768,12 +767,12 @@ ship "Skein"
     "hull" 6700
     "required crew" 10
     "bunks" 18
-    "mass" 560
+    "mass" 620
     "drag" 12.5
     "heat dissipation" .6
-    "cargo space" 90
-    "outfit space" 600
-    "core space" 380
+    "cargo space" 150
+    "outfit space" 510
+    "core space" 290
     "engine space" 80
     "weapon space" 140
     weapon
@@ -794,15 +793,15 @@ ship "Skein"
     "Greyhound Plasma Thruster"
     "Impala Plasma Steering"
 
-    "Javelin" 128
-    "Javelin Storage Crate" 2
+    "Javelin" 64
+    "Javelin Storage Crate"
     "Javelin Launcher" 2
     "Bolt Turret" 4
 
     "LP144a Battery Pack"
-    "Fuel Pod" 87
+    "Fuel Pod" 88
     "Large Radar Jammer"
-    "Tactical Scanner" 2
+    "Tactical Scanner" 4
   engine -45 197
   engine 45 197
   gun -15 -165
@@ -845,9 +844,9 @@ ship "Stymphalian"
     "mass" 180
     "drag" 3.8
     "heat dissipation" .8
-    "cargo space" 25
-    "outfit space" 250
-    "core space" 130
+    "cargo space" 50
+    "outfit space" 230
+    "core space" 110
     "engine space" 60
     "weapon space" 60
     weapon
@@ -927,7 +926,7 @@ ship "Warrior"
     "mass" 150
     "drag" 2.1
     "heat dissipation" .8
-    "cargo space" 20
+    "cargo space" 30
     "outfit space" 210
     "core space" 90
     "engine space" 70

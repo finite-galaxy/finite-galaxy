@@ -48,9 +48,9 @@ ship "Blackbird"
     "mass" 220
     "drag" 5.0
     "heat dissipation" .7
-    "cargo space" 60
-    "outfit space" 400
-    "core space" 200
+    "cargo space" 110
+    "outfit space" 350
+    "core space" 150
     "engine space" 110
     "weapon space" 90
     weapon
@@ -140,7 +140,7 @@ ship "Goose"
     "mass" 250
     "drag" 4.0
     "heat dissipation" .7
-    "cargo space" 150
+    "cargo space" 120
     "outfit space" 400
     "core space" 150
     "engine space" 100
@@ -160,14 +160,15 @@ ship "Goose"
     "NT-200 Nucleovoltaic"
     "Hyperdrive"
 
-    "Greyhound Plasma Thruster"
-    "Impala Plasma Steering"
+    "Impala Plasma Thruster"
+    "Greyhound Plasma Steering"
+    "Chipmunk Plasma Steering"
 
     "Bolt Cannon" 2
     "Bolt Turret" 3
 
     "LP144a Battery Pack"
-    "Fuel Pod" 48
+    "Fuel Pod" 47
     "Tactical Scanner" 3
   engine -15 115
   engine 15 115
@@ -193,16 +194,17 @@ ship "Goose" "Goose (Laser)"
     "NT-200 Nucleovoltaic"
     "Hyperdrive"
 
-    "Greyhound Plasma Thruster"
-    "Impala Plasma Steering"
+    "Impala Plasma Thruster"
+    "Greyhound Plasma Steering"
+    "Chipmunk Plasma Steering"
 
     "Heavy Laser Cannon" 2
     "Heavy Laser Turret" 3
 
     "LP144a Battery Pack"
-    "Fuel Pod" 48
+    "Fuel Pod" 47
     "Tactical Scanner" 3
-    "Extra Outfit Space" 4
+    "Extra Outfit Space"
 
 
 ship "Goose" "Modified Goose (Engines)"
@@ -215,9 +217,9 @@ ship "Goose" "Modified Goose (Engines)"
     "required crew" 6
     "bunks" 6
     "mass" 25
-    "cargo space" -110
-    "outfit space" 110
-    "core space" 60
+    "cargo space" -30
+    "outfit space" 60
+    "core space" 10
     "engine space" 30
     "weapon space" 20
     "self destruct" .25
@@ -261,9 +263,9 @@ ship "Goose" "Modified Goose (Shields)"
     "required crew" 6
     "bunks" 6
     "mass" 25
-    "cargo space" -110
-    "outfit space" 110
-    "core space" 80
+    "cargo space" -30
+    "outfit space" 60
+    "core space" 30
     "engine space" 10
     "weapon space" 20
     "self destruct" .25
@@ -305,9 +307,9 @@ ship "Goose" "Modified Goose (Weapons)"
     "required crew" 6
     "bunks" 6
     "mass" 25
-    "cargo space" -110
-    "outfit space" 110
-    "core space" 60
+    "cargo space" -30
+    "outfit space" 60
+    "core space" 10
     "engine space" 10
     "weapon space" 40
     "self destruct" .25
@@ -358,9 +360,9 @@ ship "Hawk"
     "mass" 120
     "drag" 2.6
     "heat dissipation" .8
-    "cargo space" 40
-    "outfit space" 260
-    "core space" 130
+    "cargo space" 70
+    "outfit space" 240
+    "core space" 110
     "engine space" 70
     "weapon space" 60
     weapon
@@ -433,13 +435,13 @@ ship "Hawk" "Hawk (Miner)"
 
     "LP036a Battery Pack"
     "Asteroid Scanner"
-    "Fuel Pod" 18
+    "Fuel Pod" 17
     "Tactical Scanner" 3
 
 
 ship "Hawk" "Hawk (Nuclear)"
   outfits
-    "D67-TM Shield Generator"
+    "D41-HY Shield Generator"
     "RT-I Radiothermal"
     "Hyperdrive"
 
@@ -471,9 +473,9 @@ ship "Kestrel"
     "mass" 740
     "drag" 11.0
     "heat dissipation" .6
-    "cargo space" 100
-    "outfit space" 900
-    "core space" 330
+    "cargo space" 210
+    "outfit space" 810
+    "core space" 240
     "engine space" 210
     "weapon space" 360
     weapon
@@ -500,7 +502,7 @@ ship "Kestrel"
     "LP072a Battery Pack"
     "LP036a Battery Pack"
     "Liquid Helium Cooler"
-    "Fuel Pod" 87
+    "Fuel Pod" 88
     "Tactical Scanner" 3
   engine -14 177
   engine 14 177
@@ -530,7 +532,8 @@ ship "Kestrel"
 
 ship "Kestrel" "Kestrel (Engines)"
   add attributes
-    "core space" -30
+    "cargo space" -30
+    "outfit space" 30
     "engine space" 30
 
 
@@ -542,7 +545,8 @@ ship "Kestrel" "Kestrel (Shields)"
 
 ship "Kestrel" "Kestrel (Weapons)"
   add attributes
-    "core space" -60
+    "cargo space" -60
+    "outfit space" 60
     "weapon space" 60
 
 
@@ -563,9 +567,9 @@ ship "Osprey"
     "mass" 270
     "drag" 6.1
     "heat dissipation" .8
-    "cargo space" 40
-    "outfit space" 500
-    "core space" 190
+    "cargo space" 90
+    "outfit space" 460
+    "core space" 150
     "engine space" 130
     "weapon space" 180
     weapon
@@ -591,7 +595,7 @@ ship "Osprey"
 
     "LP072a Battery Pack"
     "Liquid Nitrogen Cooler"
-    "Fuel Pod" 49
+    "Fuel Pod" 50
     "Tactical Scanner" 3
   engine -46 67 .7
   engine 46 67 .7
@@ -628,7 +632,7 @@ ship "Osprey" "Osprey (Electron)"
 
     "LP072a Battery Pack"
     "Liquid Water Cooler"
-    "Fuel Pod" 49
+    "Fuel Pod" 50
     "Tactical Scanner" 3
 
 
@@ -645,7 +649,7 @@ ship "Osprey" "Osprey (Ion)"
 
     "LP072a Battery Pack"
     "Liquid Water Cooler"
-    "Fuel Pod" 49
+    "Fuel Pod" 50
     "Tactical Scanner" 3
 
 
@@ -663,7 +667,7 @@ ship "Osprey" "Osprey (Laser)"
 
     "LP072a Battery Pack"
     "Liquid Water Cooler"
-    "Fuel Pod" 49
+    "Fuel Pod" 50
     "Tactical Scanner" 3
 
 
@@ -681,14 +685,14 @@ ship "Osprey" "Osprey (Particle)"
 
     "LP072a Battery Pack"
     "Liquid Water Cooler"
-    "Fuel Pod" 49
+    "Fuel Pod" 50
     "Tactical Scanner" 3
 
 
 ship "Osprey" "Modified Osprey"
   sprite "ship/osprey_m"
   add attributes
-    "cargo space" -20
+    "cargo space" -30
     "outfit space" 130
     "core space" 70
     "weapon space" 60
@@ -714,7 +718,7 @@ ship "Osprey" "Modified Osprey"
     
     "DS-11 Battery Pack"
     "Liquid Water Cooler"
-    "Fuel Pod" 49
+    "Fuel Pod" 50
     "Tactical Scanner" 3
   engine -46 67 .7
   engine 46 67 .7
@@ -758,10 +762,10 @@ ship "Raven"
     "hull" 1500
     "required crew" 4
     "bunks" 8
-    "mass" 170
+    "mass" 130
     "drag" 3.7
     "heat dissipation" .8
-    "cargo space" 20
+    "cargo space" 50
     "outfit space" 330
     "core space" 120
     "engine space" 90
@@ -786,9 +790,9 @@ ship "Raven"
 
     "Plasma Cannon" 4
 
-    "LP036a Battery Pack"
+    "LP072a Battery Pack"
     "Liquid Water Cooler"
-    "Fuel Pod" 24
+    "Fuel Pod" 26
     "Tactical Scanner" 3
   engine -12 43
   engine 12 43
@@ -817,9 +821,9 @@ ship "Raven" "Raven (Electron)"
 
     "Electron Cannon" 4
 
-    "LP036a Battery Pack"
+    "LP072a Battery Pack"
     "Liquid Water Cooler"
-    "Fuel Pod" 24
+    "Fuel Pod" 26
     "Tactical Scanner" 3
 
 
@@ -834,9 +838,9 @@ ship "Raven" "Raven (Laser)"
 
     "Heavy Laser Cannon" 4
 
-    "LP036a Battery Pack"
+    "LP072a Battery Pack"
     "Liquid Water Cooler"
-    "Fuel Pod" 24
+    "Fuel Pod" 26
     "Tactical Scanner" 3
 
 
@@ -851,11 +855,11 @@ ship "Raven" "Raven (Particle)"
 
     "Particle Cannon" 4
 
-    "LP036a Battery Pack"
+    "LP072a Battery Pack"
     "Liquid Water Cooler"
-    "Fuel Pod" 24
+    "Fuel Pod" 26
     "Tactical Scanner" 3
-    "Extra Outfit Space" 2
+    "Extra Outfit Space"
 
 
 ship "Raven" "Modified Raven (Engines)"
@@ -867,10 +871,9 @@ ship "Raven" "Modified Raven (Engines)"
     "hull" 100
     "required crew" 3
     "bunks" 6
-    "mass" -25
+    "mass" 15
     "outfit space" 30
-    "engine space" 40
-    "weapon space" -10
+    "engine space" 30
     "self destruct" .25
     weapon
       "blast radius" 1
@@ -919,11 +922,10 @@ ship "Raven" "Modified Raven (Shields)"
     "hull" 100
     "required crew" 3
     "bunks" 6
-    "mass" -25
+    "mass" 15
     "outfit space" 30
-    "core space" 30
+    "core space" 20
     "engine space" 10
-    "weapon space" -10
     "self destruct" .25
     weapon
       "blast radius" 1
@@ -972,11 +974,10 @@ ship "Raven" "Modified Raven (Weapons)"
     "hull" 100
     "required crew" 3
     "bunks" 6
-    "mass" -25
+    "mass" 15
     "outfit space" 30
-    "core space" 10
     "engine space" 10
-    "weapon space" 10
+    "weapon space" 20
     "self destruct" .25
     weapon
       "blast radius" 1
@@ -1033,9 +1034,9 @@ ship "Unknown Ship Type"
     "mass" 740
     "drag" 11.0
     "heat dissipation" .6
-    "cargo space" 100
-    "outfit space" 900
-    "core space" 330
+    "cargo space" 210
+    "outfit space" 810
+    "core space" 240
     "engine space" 210
     "weapon space" 360
     weapon
@@ -1049,7 +1050,7 @@ ship "Unknown Ship Type"
       "hit force" 3700
       "random hit force" 5000
   outfits
-    "D94-YV Shield Generator" 3
+    "D94-YV Shield Generator" 2
     "Fusion Reactor"
     "Hyperdrive"
 
@@ -1062,12 +1063,11 @@ ship "Unknown Ship Type"
 
     "LP288a Battery Pack"
     "Liquid Helium Cooler"
-    "Fuel Pod" 87
+    "Fuel Pod" 88
     "Interference Plating" 6
     "Large Radar Jammer" 2
     "Tactical Scanner" 3
     "Measurement Systems" 20
-    "Extra Outfit Space" 3
   engine -14 177
   engine 14 177
   gun -86 55

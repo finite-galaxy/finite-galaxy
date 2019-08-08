@@ -36,9 +36,9 @@ ship "Behemoth"
     "mass" 540
     "drag" 11.7
     "heat dissipation" .4
-    "cargo space" 490
-    "outfit space" 570
-    "core space" 200
+    "cargo space" 550
+    "outfit space" 510
+    "core space" 140
     "engine space" 90
     "weapon space" 280
     weapon
@@ -93,7 +93,7 @@ ship "Behemoth"
 
 ship "Behemoth" "Behemoth (Free Worlds)"
   outfits
-    "D94-YV Shield Generator"
+    "D41-HY Shield Generator"
     "Breeder Reactor"
     "Hyperdrive"
 
@@ -162,9 +162,9 @@ ship "Firebird"
     "mass" 290
     "drag" 4.5
     "heat dissipation" .6
-    "cargo space" 50
-    "outfit space" 440
-    "core space" 180
+    "cargo space" 80
+    "outfit space" 410
+    "core space" 150
     "engine space" 100
     "weapon space" 160
     weapon
@@ -264,11 +264,8 @@ ship "Firebird" "Modified Firebird (Engines)"
     "required crew" 3
     "bunks" 3
     "mass" 60
-    "cargo space" -30
-    "outfit space" 60
-    "core space" 10
+    "outfit space" 30
     "engine space" 30
-    "weapon space" 20
     "self destruct" .25
     weapon
       "blast radius" 172
@@ -281,7 +278,7 @@ ship "Firebird" "Modified Firebird (Engines)"
       "hit force" 300
       "random hit force" 150
   outfits
-    "S-970 Regenerator"
+    "S-270 Regenerator" 2
     "Fusion Reactor"
     "Hyperdrive"
 
@@ -289,9 +286,8 @@ ship "Firebird" "Modified Firebird (Engines)"
     "A525 Atomic Steering"
 
     "Plasma Cannon" 4
-    "X2 Blaster Turret" 2
 
-    "LP036a Battery Pack"
+    "Supercapacitor"
     "Liquid Helium Cooler"
     "Fuel Pod" 35
     "Tactical Scanner" 2
@@ -319,11 +315,8 @@ ship "Firebird" "Modified Firebird (Shields)"
     "required crew" 3
     "bunks" 3
     "mass" 60
-    "cargo space" -30
-    "outfit space" 60
+    "outfit space" 30
     "core space" 30
-    "engine space" 10
-    "weapon space" 20
     "self destruct" .25
     weapon
       "blast radius" 172
@@ -336,7 +329,7 @@ ship "Firebird" "Modified Firebird (Shields)"
       "hit force" 300
       "random hit force" 150
   outfits
-    "S-970 Regenerator"
+    "S-270 Regenerator" 2
     "Fusion Reactor"
     "Hyperdrive"
 
@@ -344,12 +337,10 @@ ship "Firebird" "Modified Firebird (Shields)"
     "A525 Atomic Steering"
 
     "Plasma Cannon" 4
-    "Heavy Laser Turret"
-    "Heavy Anti-Missile"
+    "Laser Turret" 2
 
-    "Supercapacitor" 6
-    "Liquid Nitrogen Cooler"
-    "Liquid Water Cooler"
+    "Supercapacitor"
+    "Liquid Helium Cooler"
     "Fuel Pod" 35
     "Tactical Scanner" 2
     "Interference Plating" 2
@@ -375,10 +366,8 @@ ship "Firebird" "Modified Firebird (Weapons)"
     "required crew" 3
     "bunks" 3
     "mass" 60
-    "cargo space" -30
-    "outfit space" 60
-    "engine space" 10
-    "weapon space" 50
+    "outfit space" 40
+    "weapon space" 40
     "self destruct" .25
     weapon
       "blast radius" 172
@@ -391,7 +380,7 @@ ship "Firebird" "Modified Firebird (Weapons)"
       "hit force" 300
       "random hit force" 150
   outfits
-    "S-970 Regenerator"
+    "S-270 Regenerator" 2
     "Fusion Reactor"
     "Hyperdrive"
 
@@ -399,13 +388,14 @@ ship "Firebird" "Modified Firebird (Weapons)"
     "A525 Atomic Steering"
 
     "Plasma Cannon" 4
-    "X4 Blaster Turret" 2
+    "Heavy Laser Turret" 2
 
-    "LP036a Battery Pack"
+    "Supercapacitor"
     "Liquid Helium Cooler"
     "Fuel Pod" 35
     "Tactical Scanner" 2
     "Interference Plating" 2
+    "Extra Outfit Space" 2
     "Laser Rifle" 25
   description "This warship with one of the heaviest armaments possible just got heavier. With more outfit space, giant gun ports, extra hull plating, and more shield emitters – this blast from the past will make its targets history."
 
@@ -428,10 +418,10 @@ ship "Fury"
     "mass" 70
     "drag" 1.6
     "heat dissipation" .9
-    "cargo space" 15
-    "outfit space" 180
-    "core space" 80
-    "engine space" 60
+    "cargo space" 30
+    "outfit space" 160
+    "core space" 70
+    "engine space" 50
     "weapon space" 40
     weapon
       "blast radius" 53
@@ -444,7 +434,7 @@ ship "Fury"
       "hit force" 350
       "random hit force" 975
   outfits
-    "D23-QP Shield Generator"
+    "D14-RN Shield Generator"
     "nGVF-CC Fuel Cell"
     "Hyperdrive"
 
@@ -453,7 +443,7 @@ ship "Fury"
 
     "X1 Blaster Cannon" 4
 
-    "LP036a Battery Pack"
+    "LP072a Battery Pack"
     "Small Radar Jammer"
     "Tactical Scanner"
     "Fuel Pod" 16
@@ -471,7 +461,7 @@ ship "Fury"
 
 ship "Fury" "Fury (Gatling)"
   outfits
-    "D23-QP Shield Generator"
+    "D14-RN Shield Generator"
     "nGVF-CC Fuel Cell"
     "Hyperdrive"
 
@@ -482,7 +472,7 @@ ship "Fury" "Fury (Gatling)"
     "Gatling Bullet Boxes" 4
     "Gatling Gun" 4
 
-    "Supercapacitor"
+    "LP036a Battery Pack"
     "Small Radar Jammer"
     "Tactical Scanner"
     "Fuel Pod" 18
@@ -523,9 +513,9 @@ ship "Heavy Shuttle"
     "mass" 110
     "drag" 2.1
     "heat dissipation" .8
-    "cargo space" 30
-    "outfit space" 130
-    "core space" 70
+    "cargo space" 50
+    "outfit space" 120
+    "core space" 60
     "engine space" 60
     weapon
       "blast radius" 56
@@ -570,12 +560,12 @@ ship "Leviathan"
     "hull" 6400
     "required crew" 50
     "bunks" 75
-    "mass" 600
+    "mass" 580
     "drag" 7.6
     "heat dissipation" .5
-    "cargo space" 80
-    "outfit space" 660
-    "core space" 280
+    "cargo space" 150
+    "outfit space" 620
+    "core space" 240
     "engine space" 140
     "weapon space" 240
     weapon
@@ -601,8 +591,8 @@ ship "Leviathan"
 
     "LP072a Battery Pack"
     "Liquid Nitrogen Cooler"
-    "Large Radar Jammer"
-    "Fuel Pod" 67
+    "Large Radar Jammer" 2
+    "Fuel Pod" 68
     "Tactical Scanner" 2
   engine -25 125
   engine 25 125
@@ -633,12 +623,9 @@ ship "Leviathan" "Modified Leviathan (Engines)"
     "shields" 3500
     "hull" -900
     "bunks" 5
-    "mass" 40
-    "cargo space" -30
-    "outfit space" 60
-    "core space" -10
+    "mass" 60
+    "outfit space" 40
     "engine space" 40
-    "weapon space" 30
     "self destruct" .15
     weapon
       "blast radius" 282
@@ -659,12 +646,12 @@ ship "Leviathan" "Modified Leviathan (Engines)"
     "A525 Atomic Steering"
     "Ionic Afterburner"
 
-    "Plasma Cannon" 4
-    "Laser Turret" 4
+    "Heavy Laser Cannon" 4
+    "Heavy Laser Turret" 4
 
     "LP144a Battery Pack"
     "Liquid Helium Cooler"
-    "Fuel Pod" 71
+    "Fuel Pod" 73
     "Large Radar Jammer" 2
     "Tactical Scanner" 2
     "Interference Plating" 3
@@ -690,11 +677,9 @@ ship "Leviathan" "Modified Leviathan (Shields)"
     "shields" 3500
     "hull" -900
     "bunks" 5
-    "mass" 40
-    "cargo space" -30
-    "outfit space" 60
-    "core space" 30
-    "weapon space" 30
+    "mass" 60
+    "outfit space" 40
+    "core space" 40
     "self destruct" .15
     weapon
       "blast radius" 282
@@ -715,12 +700,12 @@ ship "Leviathan" "Modified Leviathan (Shields)"
     "A525 Atomic Steering"
     "Afterburner"
 
-    "Plasma Cannon" 4
+    "Heavy Laser Cannon" 4
     "Heavy Laser Turret" 4
 
     "LP144a Battery Pack"
     "Liquid Helium Cooler"
-    "Fuel Pod" 71
+    "Fuel Pod" 73
     "Large Radar Jammer" 2
     "Tactical Scanner" 2
     "Interference Plating" 3
@@ -746,11 +731,9 @@ ship "Leviathan" "Modified Leviathan (Weapons)"
     "shields" 3500
     "hull" -900
     "bunks" 5
-    "mass" 40
-    "cargo space" -30
-    "outfit space" 60
-    "core space" -10
-    "weapon space" 70
+    "mass" 60
+    "outfit space" 40
+    "weapon space" 40
     "self destruct" .15
     weapon
       "blast radius" 282
@@ -776,7 +759,7 @@ ship "Leviathan" "Modified Leviathan (Weapons)"
 
     "LP144a Battery Pack"
     "Liquid Helium Cooler"
-    "Fuel Pod" 71
+    "Fuel Pod" 73
     "Large Radar Jammer" 2
     "Tactical Scanner" 2
     "Interference Plating" 3
@@ -811,9 +794,9 @@ ship "Light Shuttle"
     "mass" 70
     "drag" 1.7
     "heat dissipation" .8
-    "cargo space" 20
-    "outfit space" 130
-    "core space" 70
+    "cargo space" 30
+    "outfit space" 120
+    "core space" 60
     "engine space" 60
     weapon
       "blast radius" 44
