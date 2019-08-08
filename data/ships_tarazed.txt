@@ -4,8 +4,8 @@ shipyard "Tarazed Variants"
   "Blackbird (Laser)"
   "Goose"
   "Goose (Laser)"
+  "Modified Goose (Core)"
   "Modified Goose (Engines)"
-  "Modified Goose (Shields)"
   "Modified Goose (Weapons)"
   "Hawk"
   "Hawk (Laser)"
@@ -25,8 +25,8 @@ shipyard "Tarazed Variants"
   "Raven (Electron)"
   "Raven (Laser)"
   "Raven (Particle)"
+  "Modified Raven (Core)"
   "Modified Raven (Engines)"
-  "Modified Raven (Shields)"
   "Modified Raven (Weapons)"
   "Unknown Ship Type"
 
@@ -207,6 +207,50 @@ ship "Goose" "Goose (Laser)"
     "Extra Outfit Space"
 
 
+ship "Goose" "Modified Goose (Core)"
+  sprite "ship/goose_c"
+  thumbnail "thumbnail/goose_c"
+  add attributes
+    "cost" 300000
+    "shields" 500
+    "hull" 250
+    "required crew" 6
+    "bunks" 6
+    "mass" 25
+    "cargo space" -30
+    "outfit space" 60
+    "core space" 30
+    "engine space" 10
+    "weapon space" 20
+    "self destruct" .25
+  outfits
+    "S-270 Regenerator" 2
+    "Fusion Reactor"
+    "Hyperdrive"
+
+    "A250 Atomic Thruster"
+    "A525 Atomic Steering"
+
+    "Plasma Cannon" 2
+    "Heavy Laser Turret" 2
+    "Heavy Anti-Missile"
+
+    "LP036a Battery Pack"
+    "Liquid Nitrogen Cooler"
+    "Fuel Pod" 50
+    "Tactical Scanner" 2
+    "Interference Plating" 2
+    "Laser Rifle" 22
+  engine -14 112
+  engine 14 112
+  gun -15 -82
+  gun 15 -82
+  turret -17 -28
+  turret 0 -28 "Heavy Anti-Missile"
+  turret 17 -28
+  description "The Goose is the freighter-warship produced by Tarazed. Apparently someone wanted a bit more out of it, and has covered large sections of the hull with extra shield emitters and hull plating. Much of the stock cargo space has been converted to outfit, weapons and engines space, coupled with streamlining of existing internal systems make this Corvette an agile and flexible war machine."
+
+
 ship "Goose" "Modified Goose (Engines)"
   sprite "ship/goose_e"
   thumbnail "thumbnail/goose_e"
@@ -251,50 +295,6 @@ ship "Goose" "Modified Goose (Engines)"
   turret 0 -28 "Heavy Anti-Missile"
   turret 17 -28
   description "In a sub-kiloton warship, you're not likely to find one faster or more deadly than this one. Large sections of the hull have been covered with extra hull plating and shield emitters. Much of the cargo space has been converted to outfit space, a great deal of which is at the rear of the ship, which features a new engine port."
-
-
-ship "Goose" "Modified Goose (Shields)"
-  sprite "ship/goose_s"
-  thumbnail "thumbnail/goose_s"
-  add attributes
-    "cost" 300000
-    "shields" 500
-    "hull" 250
-    "required crew" 6
-    "bunks" 6
-    "mass" 25
-    "cargo space" -30
-    "outfit space" 60
-    "core space" 30
-    "engine space" 10
-    "weapon space" 20
-    "self destruct" .25
-  outfits
-    "S-270 Regenerator" 2
-    "Fusion Reactor"
-    "Hyperdrive"
-
-    "A250 Atomic Thruster"
-    "A525 Atomic Steering"
-
-    "Plasma Cannon" 2
-    "Heavy Laser Turret" 2
-    "Heavy Anti-Missile"
-
-    "LP036a Battery Pack"
-    "Liquid Nitrogen Cooler"
-    "Fuel Pod" 50
-    "Tactical Scanner" 2
-    "Interference Plating" 2
-    "Laser Rifle" 22
-  engine -14 112
-  engine 14 112
-  gun -15 -82
-  gun 15 -82
-  turret -17 -28
-  turret 0 -28 "Heavy Anti-Missile"
-  turret 17 -28
-  description "The Goose is the freighter-warship produced by Tarazed. Apparently someone wanted a bit more out of it, and has covered large sections of the hull with extra shield emitters and hull plating. Much of the stock cargo space has been converted to outfit, weapons and engines space, coupled with streamlining of existing internal systems make this Corvette an agile and flexible war machine."
 
 
 ship "Goose" "Modified Goose (Weapons)"
@@ -862,6 +862,58 @@ ship "Raven" "Raven (Particle)"
     "Extra Outfit Space"
 
 
+ship "Raven" "Modified Raven (Core)"
+  sprite "ship/raven_c"
+  thumbnail "thumbnail/raven_c"
+  add attributes
+    "cost" -150000
+    "shields" 700
+    "hull" 100
+    "required crew" 3
+    "bunks" 6
+    "mass" 15
+    "outfit space" 30
+    "core space" 20
+    "engine space" 10
+    "self destruct" .25
+    weapon
+      "blast radius" 1
+      "shield damage" -50
+      "random shield damage" 60
+      "hull damage" -75
+      "random hull damage" 90
+      "heat damage" -1500
+      "random heat damage" 3600
+      "hit force" -125
+      "random hit force" 150
+  outfits
+    "S-270 Regenerator"
+    "Breeder Reactor"
+    "Hyperdrive"
+
+    "A250 Atomic Thruster"
+    "A375 Atomic Steering"
+    "Afterburner"
+
+    "Heavy Laser Cannon" 4
+    "Heavy Laser Turret"
+
+    "Supercapacitor" 6
+    "Liquid Nitrogen Cooler"
+    "Fuel Pod" 27
+    "Tactical Scanner" 2
+    "Interference Plating" 2
+    "Laser Rifle" 14
+  engine -12 45
+  engine 12 45
+  gun -10 -33
+  gun 10 -33
+  gun -16 -28
+  gun 16 -28
+  turret 0 -19
+  description "The modifier of this Raven has given more heft to an agile and elegant vessel. They've added a turret and some apparently flimsy bulkheads over extra shield emitters and outfit space. If it weren't for the wingtips, you would barely recognize Tarazed's ship under the patchwork that you expect has made an already deadly warship even more so."
+
+
 ship "Raven" "Modified Raven (Engines)"
   sprite "ship/raven_e"
   thumbnail "thumbnail/raven_e"
@@ -911,58 +963,6 @@ ship "Raven" "Modified Raven (Engines)"
   gun 16 -28
   turret 0 -19
   description "Tarazed's elegant Raven has gained popularity with pirates because of its agility. This one appears to have been modified for even more of the latter, at the expense of the former, and You only recognize it as a Raven by the wingtips. A third engine bay, more outfit space, additional shield emitters, and a turret make this already deadly warship appear even more frightening."
-
-
-ship "Raven" "Modified Raven (Shields)"
-  sprite "ship/raven_s"
-  thumbnail "thumbnail/raven_s"
-  add attributes
-    "cost" -150000
-    "shields" 700
-    "hull" 100
-    "required crew" 3
-    "bunks" 6
-    "mass" 15
-    "outfit space" 30
-    "core space" 20
-    "engine space" 10
-    "self destruct" .25
-    weapon
-      "blast radius" 1
-      "shield damage" -50
-      "random shield damage" 60
-      "hull damage" -75
-      "random hull damage" 90
-      "heat damage" -1500
-      "random heat damage" 3600
-      "hit force" -125
-      "random hit force" 150
-  outfits
-    "S-270 Regenerator"
-    "Breeder Reactor"
-    "Hyperdrive"
-
-    "A250 Atomic Thruster"
-    "A375 Atomic Steering"
-    "Afterburner"
-
-    "Heavy Laser Cannon" 4
-    "Heavy Laser Turret"
-
-    "Supercapacitor" 6
-    "Liquid Nitrogen Cooler"
-    "Fuel Pod" 27
-    "Tactical Scanner" 2
-    "Interference Plating" 2
-    "Laser Rifle" 14
-  engine -12 45
-  engine 12 45
-  gun -10 -33
-  gun 10 -33
-  gun -16 -28
-  gun 16 -28
-  turret 0 -19
-  description "The modifier of this Raven has given more heft to an agile and elegant vessel. They've added a turret and some apparently flimsy bulkheads over extra shield emitters and outfit space. If it weren't for the wingtips, you would barely recognize Tarazed's ship under the patchwork that you expect has made an already deadly warship even more so."
 
 
 ship "Raven" "Modified Raven (Weapons)"

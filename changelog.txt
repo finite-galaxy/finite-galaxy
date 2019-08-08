@@ -265,9 +265,9 @@
       * Argosy: cost from 1960 000 to 2400 000; +30 cargo space
         * Modified Argosy: —
       * Arrow: −0.5 drag, +10 cargo space, −5 core space, +5 engine space
-        * Modified Arrow (Engines): +15 cargo space, +25 core space, −20 weapon space
-        * Modified Arrow (Shields): +15 cargo space, +45 core space, −25 engine capacity
-        * Modified Arrow (Weapons): +15 cargo space, −5 core space, −25 engine capacity, − weapon space
+        * Modified Arrow (Core): −0.5 drag, +15 cargo space, +20 core space, −15 engine capacity, +5 weapon space
+        * Modified Arrow (Engines): −0.5 drag, +15 cargo space, +10 core space, +5 engine space, −5 weapon space
+        * Modified Arrow (Weapons): −0.5 drag, +15 cargo space, −5 core space, −15 engine capacity, +30 weapon space
       * Autumn Leaf: +62 cargo space, +15 core space
       * Bactrian: +200 cargo space
       * Bastion: +60 cargo space, +10 core space, +3 required crew
@@ -275,8 +275,8 @@
       * Berserker: +20 cargo space, −10 core space
       * Blackbird: cost from 2230 000 to 2900 000; −400 shields, +1100 hull, +3 required crew, +14 bunks, +50 cargo space
       * Bounder: +1 required crew, +40 cargo space, +25 core space, −20 engine space, −5 weapon space
+        * Modified Bounder (Core): +40 cargo space, +45 core space, –25 engine space
         * Modified Bounder (Engines): +40 cargo space, +40 core space, −15 weapon space
-        * Modified Bounder (Shields): +40 cargo space, +45 core space, –25 engine space
         * Modified Bounder (Weapons): +40 cargo space, +55 core space, –25 engine space, −10 weapon space
       * Boxwing: +0.81 drag, +0.23 heat dissipation, −40 cargo space, +3 core space, +7 engine space
       * Briar: +30 cargo space
@@ -298,8 +298,8 @@
       * Far Lek 14: +1 core space; self destruct from 0.60 to 0.9
       * Far Osk 27: +1 core space; self destruct from 0.60 to 0.9
       * Firebird: +30 cargo space, +10 core space
+        * Modified Firebird (Core): +45 core space, −10 engine space, −15 weapon space
         * Modified Firebird (Engines): +35 core space, −15 weapon space
-        * Modified Firebird (Shields): +45 core space, −10 engine space, −15 weapon space
         * Modified Firebird (Weapons): +50 core space, −10 engine space, −20 weapon space
       * Flea: −0.05 drag, +13 core space, +4 weapon space
       * Flivver: −1 bunk, +10 cargo space, +10 core space, −10 weapon space
@@ -308,8 +308,8 @@
       * Fury: +15 cargo space, +10 core space, −10 engine space
       * Gascraft: +14 cargo space, +2 core space; +1 outfit scan power, +1 outfit scan speed, +1 scan interference, +1 tactical scan power
       * Goose: +1 required crew, −5 bunks, +45 cargo space
+        * Modified Goose (Core): +5 core space, +5 weapon space
         * Modified Goose (Engines): +5 core space, +5 weapon space
-        * Modified Goose (Shields): +5 core space, +5 weapon space
         * Modified Goose (Weapons): +10 weapon space
       * Hag: −200 shields, +100 hull, +0.27 drag, −10 core space
       * Harpy: +100 hull, +0.3 drag, +5 cargo space, +10 weapon space
@@ -328,19 +328,19 @@
         * (Weapons) variant: −60 cargo space, +30 weapon space; removed extra gun ports
       * Lampyrid: +50 cargo space
       * Lance: −12 required crew, −15 bunks, −10 mass, +30 cargo space, +30 core space, +10 weapon space
+        * Modified Lance (Core): −11 bunks, +110 cargo space, +5 core space, –25 weapon space
         * Modified Lance (Engines): −11 bunks, +110 cargo space, +45 core space, –40 engine space, –25 weapon space
-        * Modified Lance (Shields): −11 bunks, +110 cargo space, +5 core space, –25 weapon space
         * Modified Lance (Weapons): −11 bunks, +110 cargo space, +20 core space, –20 weapon space
       * Leviathan: –1900 shields, +1400 hull, +7 required crew, +11 bunks, +100 mass, +70 cargo space, –20 core space, +20 engine space
+        * Marauder Leviathan (Core): +11 bunks, +10 cargo space, +35 core space, –40 engine space, +5 weapon space
         * Marauder Leviathan (Engines): +11 bunks, +10 cargo space, +35 core space, +5 weapon space
-        * Marauder Leviathan (Shields): +11 bunks, +10 cargo space, +35 core space, –40 engine space, +5 weapon space
         * Marauder Leviathan (Weapons): +11 bunks, +10 cargo space, +35 core space, +10 weapon space
       * Lightning Bug: –30 mass, +15 cargo space, +25 core space, +10 weapon space
       * Light Shuttle: +10 cargo space, +10 core space, –10 weapon space
       * Maboro: –100 mass; +3800 energy capacity, +7410 fuel capacity, +1.5 fuel generation, +6 hull repair rate, +6 hull energy, +9 scan interference, +42 tactical scan power
       * Manta: +20 cargo space, +20 core space, –20 weapon space
+        * Modified Manta (Core): +20 cargo space, +5 core space, +5 weapon space
         * Modified Manta (Engines): +20 cargo space, +5 core space, +5 weapon space
-        * Modified Manta (Shields): +20 cargo space, +5 core space, +5 weapon space
         * Modified Manta (Weapons): +20 cargo space, +5 core space, +5 weapon space
       * Mars: +55 cargo space, +30 core space, +30 weapon space
       * Mercury: –0.1 heat dissipation, +10 cargo space, +30 core space, –20 engine space
@@ -363,13 +363,13 @@
       * Protector: cost from 5500 000 to 6000 000; +6 required crew, –6 bunks, +40 mass, +40 cargo space, –20 core space, +40 weapon space
       * Punisher: +100 cargo space, +1 core space, +2 engine space
       * Quicksilver: +20 cargo space, +10 engine space
+        * Modified Quicksilver (Core): +25 cargo space, +5 core space, +5 engine space, –5 weapon space
         * Modified Quicksilver (Engines): +25 cargo space, +25 core space, –15 engine space, –5 weapon space
-        * Modified Quicksilver (Shields): +25 cargo space, +5 core space, +5 engine space, –5 weapon space
         * Modified Quicksilver (Weapons): +25 cargo space, +5 engine space
       * Raider: +200 mass, +5 required crew
       * Raven: cost from 1800 000 to 2400 000; −200 shields, +100 hull, −2 required crew, −5 bunks, +20 cargo space, +40 core space, −10 engine space, +20 weapon space
+        * Modified Raven (Core): +45 core space, +5 weapon space
         * Modified Raven (Engines): +55 core space, –10 engine space, +5 weapon space
-        * Modified Raven (Shields): +45 core space, +5 weapon space
         * Modified Raven (Weapons): +55 core space, –5 weapon space
       * Roost: cost from 3000 000 to 4000 000; +1 required crew, –0.7 heat dissipation, +100 mass, +20 cargo space, +10 core space
       * Runabout: +15 cargo space

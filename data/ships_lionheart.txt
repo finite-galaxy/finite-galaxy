@@ -1,30 +1,30 @@
 shipyard "Lionheart Variants"
   "Arrow"
   "Arrow (Anti-Missile)"
+  "Modified Arrow (Core)"
   "Modified Arrow (Engines)"
-  "Modified Arrow (Shields)"
   "Modified Arrow (Weapons)"
   "Bounder"
   "Bounder (Laser)"
   "Bounder (Miner)"
+  "Modified Bounder (Core)"
   "Modified Bounder (Engines)"
-  "Modified Bounder (Shields)"
   "Modified Bounder (Weapons)"
   "Bulk Freighter"
   "Class C Freighter"
   "Lance"
   "Lance (Electron)"
   "Lance (Plasma)"
+  "Modified Lance (Core)"
   "Modified Lance (Engines)"
-  "Modified Lance (Shields)"
   "Modified Lance (Weapons)"
   "Manta"
   "Manta (Nuclear)"
   "Manta (Particle)"
   "Manta (Patrol)"
   "Manta (Plasma)"
+  "Modified Manta (Core)"
   "Modified Manta (Engines)"
-  "Modified Manta (Shields)"
   "Modified Manta (Weapons)"
   "Wasp"
   "Wasp (Gatling)"
@@ -105,63 +105,15 @@ ship "Arrow" "Arrow (Anti-Missile)"
     "Tactical Scanner"
 
 
-ship "Arrow" "Modified Arrow (Engines)"
-  sprite "ship/arrow_e"
-  thumbnail "thumbnail/arrow_e"
+ship "Arrow" "Modified Arrow (Core)"
+  sprite "ship/arrow_c"
+  thumbnail "thumbnail/arrow_c"
   add attributes
     "cost" 120000
     "shields" 300
     "hull" 100
     "required crew" 1
     "mass" 15
-    "drag" .5
-    "outfit space" 40
-    "engine space" 40
-    "self destruct" .25
-    weapon
-      "blast radius" 10
-      "shield damage" 30
-      "random shield damage" 70
-      "hull damage" 45
-      "random hull damage" 105
-      "heat damage" 900
-      "random heat damage" 2100
-      "hit force" 75
-      "random hit force" 175
-  outfits
-    "S-270 Regenerator"
-    "Dwarf Core"
-    "Hyperdrive"
-
-    "A370 Atomic Thruster"
-    "A375 Atomic Steering"
-
-    "Heavy Anti-Missile"
-
-    "LP036a Battery Pack"
-    "Liquid Water Cooler"
-    "Fuel Pod" 17
-    "Tactical Scanner"
-    "Interference Plating"
-    "Laser Rifle" 5
-  engine -10 57
-  engine 10 57
-  gun -6 -36
-  gun 6 -36
-  turret 0 15
-  description "With a third engine mount, you remark that this Arrow seems more like a missile. The beefed-up engines, a little extra outfit capacity, extra shield emitters, and thicker hull plating make this vessel a very competent Interceptor."
-
-
-ship "Arrow" "Modified Arrow (Shields)"
-  sprite "ship/arrow_s"
-  thumbnail "thumbnail/arrow_s"
-  add attributes
-    "cost" 120000
-    "shields" 300
-    "hull" 100
-    "required crew" 1
-    "mass" 15
-    "drag" .5
     "outfit space" 40
     "core space" 30
     "weapon space" 10
@@ -201,6 +153,52 @@ ship "Arrow" "Modified Arrow (Shields)"
   description "This Arrow has had numerous modifications to its hull and internal systems to make more room for outfits – mostly with combat in mind. More shields, weapons, engines, outfit space, and a turret mount nearly push this ship into the Corvette category, and definitely make it one of the heaviest Interceptors you're likely to find."
 
 
+ship "Arrow" "Modified Arrow (Engines)"
+  sprite "ship/arrow_e"
+  thumbnail "thumbnail/arrow_e"
+  add attributes
+    "cost" 120000
+    "shields" 300
+    "hull" 100
+    "required crew" 1
+    "mass" 15
+    "outfit space" 40
+    "engine space" 40
+    "self destruct" .25
+    weapon
+      "blast radius" 10
+      "shield damage" 30
+      "random shield damage" 70
+      "hull damage" 45
+      "random hull damage" 105
+      "heat damage" 900
+      "random heat damage" 2100
+      "hit force" 75
+      "random hit force" 175
+  outfits
+    "S-270 Regenerator"
+    "Dwarf Core"
+    "Hyperdrive"
+
+    "A370 Atomic Thruster"
+    "A375 Atomic Steering"
+
+    "Heavy Anti-Missile"
+
+    "LP036a Battery Pack"
+    "Liquid Water Cooler"
+    "Fuel Pod" 17
+    "Tactical Scanner"
+    "Interference Plating"
+    "Laser Rifle" 5
+  engine -10 57
+  engine 10 57
+  gun -6 -36
+  gun 6 -36
+  turret 0 15
+  description "With a third engine mount, you remark that this Arrow seems more like a missile. The beefed-up engines, a little extra outfit capacity, extra shield emitters, and thicker hull plating make this vessel a very competent Interceptor."
+
+
 ship "Arrow" "Modified Arrow (Weapons)"
   sprite "ship/arrow_w"
   thumbnail "thumbnail/arrow_w"
@@ -210,7 +208,6 @@ ship "Arrow" "Modified Arrow (Weapons)"
     "hull" 100
     "required crew" 1
     "mass" 15
-    "drag" .5
     "outfit space" 40
     "weapon space" 40
     "self destruct" .25
@@ -343,6 +340,54 @@ ship "Bounder" "Bounder (Miner)"
     "Extra Outfit Space"
 
 
+ship "Bounder" "Modified Bounder (Core)"
+  sprite "ship/bounder_c"
+  thumbnail "thumbnail/bounder_c"
+  add attributes
+    "cost" 110000
+    "shields" 300
+    "mass" 15
+    "cargo space" -20
+    "outfit space" 40
+    "core space" 5
+    "weapon space" 35
+    "self destruct" .25
+    weapon
+      "blast radius" 7
+      "shield damage" 30
+      "random shield damage" 40
+      "hull damage" 45
+      "random hull damage" 60
+      "heat damage" 900
+      "random heat damage" 1200
+      "hit force" 75
+      "random hit force" 100
+  outfits
+    "S-270 Regenerator"
+    "Dwarf Core"
+    "Hyperdrive"
+
+    "A250 Atomic Thruster"
+    "A255 Atomic Steering"
+    "Afterburner"
+
+    "Plasma Cannon"
+    "X4 Blaster Turret" 2
+
+    "LP072a Battery Pack"
+    "Liquid Water Cooler"
+    "Fuel Pod" 41
+    "Tactical Scanner"
+    "Interference Plating"
+    "Laser Rifle" 18
+  engine -12 44
+  engine 12 44
+  gun 0 -85
+  turret -38 7
+  turret 38 7
+  description "This Lionheart Bounder has been modified from a courier-scout into a heavy escort Interceptor – currently the largest in the class. A little extra outfit space, reinforced turret mounts, a new gun port in front of the pilot, and additional shield emitters bring this former Transport into combat with fearsome speed and armament."
+
+
 ship "Bounder" "Modified Bounder (Engines)"
   sprite "ship/bounder_e"
   thumbnail "thumbnail/bounder_e"
@@ -392,54 +437,6 @@ ship "Bounder" "Modified Bounder (Engines)"
   turret -38 7
   turret 38 7
   description "The previous owner of this Bounder has modified an already fast courier-scout into an even faster heavy escort Interceptor with some truly enormous engines, making it incredibly fast for its size."
-
-
-ship "Bounder" "Modified Bounder (Shields)"
-  sprite "ship/bounder_s"
-  thumbnail "thumbnail/bounder_s"
-  add attributes
-    "cost" 110000
-    "shields" 300
-    "mass" 15
-    "cargo space" -20
-    "outfit space" 40
-    "core space" 5
-    "weapon space" 35
-    "self destruct" .25
-    weapon
-      "blast radius" 7
-      "shield damage" 30
-      "random shield damage" 40
-      "hull damage" 45
-      "random hull damage" 60
-      "heat damage" 900
-      "random heat damage" 1200
-      "hit force" 75
-      "random hit force" 100
-  outfits
-    "S-270 Regenerator"
-    "Dwarf Core"
-    "Hyperdrive"
-
-    "A250 Atomic Thruster"
-    "A255 Atomic Steering"
-    "Afterburner"
-
-    "Plasma Cannon"
-    "X4 Blaster Turret" 2
-
-    "LP072a Battery Pack"
-    "Liquid Water Cooler"
-    "Fuel Pod" 41
-    "Tactical Scanner"
-    "Interference Plating"
-    "Laser Rifle" 18
-  engine -12 44
-  engine 12 44
-  gun 0 -85
-  turret -38 7
-  turret 38 7
-  description "This Megaparsec Bounder has been modified from a courier-scout into a heavy escort Interceptor – currently the largest in the class. A little extra outfit space, reinforced turret mounts, a new gun port in front of the pilot, and additional shield emitters bring this former Transport into combat with fearsome speed and armament."
 
 
 ship "Bounder" "Modified Bounder (Weapons)"
@@ -715,6 +712,58 @@ ship "Lance" "Lance (Plasma)"
     "Extra Outfit Space" 2
 
 
+ship "Lance" "Modified Lance (Core)"
+  sprite "ship/lance_c"
+  thumbnail "thumbnail/lance_c"
+  add attributes
+    "cost" 5100000
+    "shields" 1300
+    "hull" 400
+    "required crew" 3
+    "bunks" 9
+    "mass" 60
+    "heat dissipation" .1
+    "outfit space" 40
+    "core space" 40
+    "self destruct" .15
+    weapon
+      "blast radius" 22
+      "shield damage" 120
+      "random shield damage" 100
+      "hull damage" 180
+      "random hull damage" 150
+      "heat damage" 3600
+      "random heat damage" 3000
+      "hit force" 300
+      "random hit force" 250
+  outfits
+    "S-970 Regenerator"
+    "Fusion Reactor"
+    "Hyperdrive"
+
+    "A520 Atomic Thruster"
+    "A525 Atomic Steering"
+
+    "Plasma Cannon" 2
+    "X2 Blaster Turret" 4
+
+    "LP288a Battery Pack"
+    "Liquid Helium Cooler"
+    "Fuel Pod" 76
+    "Tactical Scanner" 2
+    "Interference Plating" 3
+    "Laser Rifle" 69
+  engine -16 143
+  engine 16 143
+  gun -16 -89
+  gun 16 -89
+  turret -16 -25
+  turret 16 -25
+  turret -57 32.5
+  turret 57 32.5
+  description "This Lionheart Lance has been heavily modified by some very dedicated craftsmen. The hull is riddled with extra shield emitters and expanded equipment bays, adding bulk and definitely voiding the warranty."
+
+
 ship "Lance" "Modified Lance (Engines)"
   sprite "ship/lance_e"
   thumbnail "thumbnail/lance_e"
@@ -768,58 +817,6 @@ ship "Lance" "Modified Lance (Engines)"
   turret -57 32.5
   turret 57 32.5
   description "Whoever modified this Lance clearly valued speed above all else. Major sections of the hull have been reconfigured to accommodate the largest possible engines. If hot-rodding across the galaxy in a 1000 ton warship that handles like a Flivver is your dream, look no further."
-
-
-ship "Lance" "Modified Lance (Shields)"
-  sprite "ship/lance_s"
-  thumbnail "thumbnail/lance_s"
-  add attributes
-    "cost" 5100000
-    "shields" 1300
-    "hull" 400
-    "required crew" 3
-    "bunks" 9
-    "mass" 60
-    "heat dissipation" .1
-    "outfit space" 40
-    "core space" 40
-    "self destruct" .15
-    weapon
-      "blast radius" 22
-      "shield damage" 120
-      "random shield damage" 100
-      "hull damage" 180
-      "random hull damage" 150
-      "heat damage" 3600
-      "random heat damage" 3000
-      "hit force" 300
-      "random hit force" 250
-  outfits
-    "S-970 Regenerator"
-    "Fusion Reactor"
-    "Hyperdrive"
-
-    "A520 Atomic Thruster"
-    "A525 Atomic Steering"
-
-    "Plasma Cannon" 2
-    "X2 Blaster Turret" 4
-
-    "LP288a Battery Pack"
-    "Liquid Helium Cooler"
-    "Fuel Pod" 76
-    "Tactical Scanner" 2
-    "Interference Plating" 3
-    "Laser Rifle" 69
-  engine -16 143
-  engine 16 143
-  gun -16 -89
-  gun 16 -89
-  turret -16 -25
-  turret 16 -25
-  turret -57 32.5
-  turret 57 32.5
-  description "This Lionheart Lance has been heavily modified by some very dedicated craftsmen. The hull is riddled with extra shield emitters and expanded equipment bays, adding bulk and definitely voiding the warranty."
 
 
 ship "Lance" "Modified Lance (Weapons)"
@@ -1012,6 +1009,62 @@ ship "Manta" "Manta (Plasma)"
     "Tactical Scanner" 2
 
 
+ship "Manta" "Modified Manta (Core)"
+  sprite "ship/manta_c"
+  thumbnail "thumbnail/manta_c"
+  add attributes
+    "cost" 340000
+    "shields" 600
+    "hull" 250
+    "required crew" 1
+    "mass" 25
+    "outfit space" 50
+    "engine space" 10
+    "weapon space" 40
+    "self destruct" .25
+    weapon
+      "blast radius" 13
+      "shield damage" 50
+      "random shield damage" 80
+      "hull damage" 75
+      "random hull damage" 120
+      "heat damage" 1500
+      "random heat damage" 2400
+      "hit force" 125
+      "random hit force" 200
+  outfits
+    "S-270 Regenerator"
+    "Dwarf Core"
+    "Hyperdrive"
+
+    "A250 Atomic Thruster"
+    "A525 Atomic Steering"
+
+    "Sidewinder" 36
+    "Sidewinder Storage Rack" 8
+    "Sidewinder Launcher" 2
+    "Plasma Cannon" 4
+    "X4 Blaster Turret"
+
+    "LP072a Battery Pack"
+    "LP036a Battery Pack"
+    "Liquid Nitrogen Cooler"
+    "Fuel Pod" 25
+    "Tactical Scanner" 2
+    "Interference Plating" 2
+    "Laser Rifle" 11
+  engine -33 38
+  engine 33 38
+  gun -66 -30
+  gun 66 -30
+  gun -27 -30
+  gun 27 -30
+  gun -20 -30
+  gun 20 -30
+  turret 0 -29
+  description `After the Corporation released their Vanguard, the Manta fell somewhat out of favour, lacking the ability to mount any anti-missile systems. The owner of this Manta rectified that, added some extra armour plating and shield emitters, and rearranged some of the internals to yield a little more outfit space.`
+
+
 ship "Manta" "Modified Manta (Engines)"
   sprite "ship/manta_e"
   thumbnail "thumbnail/manta_e"
@@ -1068,62 +1121,6 @@ ship "Manta" "Modified Manta (Engines)"
   gun 20 -30
   turret 0 -29
   description `A previous owner of this Manta has gone to great lengths to make sure they could bring all six gun ports to bear in a hurry and chase down smaller warships. Style was not lost on that captain, and a forked tail yielded a little more space for shield projectors in an area that would have been destabilized by engine exhaust.`
-
-
-ship "Manta" "Modified Manta (Shields)"
-  sprite "ship/manta_s"
-  thumbnail "thumbnail/manta_s"
-  add attributes
-    "cost" 340000
-    "shields" 600
-    "hull" 250
-    "required crew" 1
-    "mass" 25
-    "outfit space" 50
-    "engine space" 10
-    "weapon space" 40
-    "self destruct" .25
-    weapon
-      "blast radius" 13
-      "shield damage" 50
-      "random shield damage" 80
-      "hull damage" 75
-      "random hull damage" 120
-      "heat damage" 1500
-      "random heat damage" 2400
-      "hit force" 125
-      "random hit force" 200
-  outfits
-    "S-270 Regenerator"
-    "Dwarf Core"
-    "Hyperdrive"
-
-    "A250 Atomic Thruster"
-    "A525 Atomic Steering"
-
-    "Sidewinder" 36
-    "Sidewinder Storage Rack" 8
-    "Sidewinder Launcher" 2
-    "Plasma Cannon" 4
-    "X4 Blaster Turret"
-
-    "LP072a Battery Pack"
-    "LP036a Battery Pack"
-    "Liquid Nitrogen Cooler"
-    "Fuel Pod" 25
-    "Tactical Scanner" 2
-    "Interference Plating" 2
-    "Laser Rifle" 11
-  engine -33 38
-  engine 33 38
-  gun -66 -30
-  gun 66 -30
-  gun -27 -30
-  gun 27 -30
-  gun -20 -30
-  gun 20 -30
-  turret 0 -29
-  description `After the Corporation released their Vanguard, the Manta fell somewhat out of favour, lacking the ability to mount any anti-missile systems. The owner of this Manta rectified that, added some extra armour plating and shield emitters, and rearranged some of the internals to yield a little more outfit space.`
 
 
 ship "Manta" "Modified Manta (Weapons)"

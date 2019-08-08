@@ -4,8 +4,8 @@ shipyard "Megaparsec Variants"
   "Quicksilver (Patrol)"
   "Quicksilver (Plasma)"
   "Quicksilver Test Dummy"
+  "Modified Quicksilver (Core)"
   "Modified Quicksilver (Engines)"
-  "Modified Quicksilver (Shields)"
   "Modified Quicksilver (Weapons)"
   "Scout"
   "Scout (Afterburner)"
@@ -134,6 +134,54 @@ ship "Quicksilver" "Quicksilver Test Dummy"
     "self destruct" 1
 
 
+ship "Quicksilver" "Modified Quicksilver (Core)"
+  sprite "ship/quicksilver_c"
+  thumbnail "thumbnail/quicksilver_c"
+  add attributes
+    "cost" 110000
+    "shields" 500
+    "hull" 100
+    "required crew" 1
+    "bunks" 1
+    "mass" 20
+    "outfit space" 20
+    "core space" 20
+    "self destruct" .25
+    weapon
+      "blast radius" 5
+      "shield damage" 40
+      "random shield damage" 10
+      "hull damage" 60
+      "random hull damage" 15
+      "heat damage" 1200
+      "random heat damage" 300
+      "hit force" 100
+      "random hit force" 25
+  outfits
+    "S-270 Regenerator"
+    "Fission Reactor"
+    "Hyperdrive"
+
+    "A250 Atomic Thruster"
+    "A375 Atomic Steering"
+
+    "Heavy Laser Cannon" 2
+    "Heavy Anti-Missile"
+
+    "Supercapacitor" 6
+    "Liquid Nitrogen Cooler"
+    "Fuel Pod" 18
+    "Tactical Scanner" 2
+    "Interference Plating"
+    "Laser Rifle" 7
+  engine -16 52
+  engine 16 52
+  gun -7 -39
+  gun 7 -39
+  turret 0 15
+  description "This Megaparsec Quicksilver is a bit of a Hotrod, being a little faster, with extra shield projectors, hull plating, and an extra bunk. This aftermarket model also features a turret mount, perhaps in an answer to Tarazed's Hawk. The shop that built this ship is sure to see more customers."
+
+
 ship "Quicksilver" "Modified Quicksilver (Engines)"
   sprite "ship/quicksilver_e"
   thumbnail "thumbnail/quicksilver_e"
@@ -181,54 +229,6 @@ ship "Quicksilver" "Modified Quicksilver (Engines)"
   gun 7 -39
   turret 0 15
   description "This Quicksilver has even more space available for engine use – and even another thruster port! It's also got a few extra shield projectors, more hull plating and another bunk. This aftermarket model also features a turret mount, perhaps in response to Tarazed's Hawk. Whoever modified this ship wanted to chase their prey down with vicious speed."
-
-
-ship "Quicksilver" "Modified Quicksilver (Shields)"
-  sprite "ship/quicksilver_s"
-  thumbnail "thumbnail/quicksilver_s"
-  add attributes
-    "cost" 110000
-    "shields" 500
-    "hull" 100
-    "required crew" 1
-    "bunks" 1
-    "mass" 20
-    "outfit space" 20
-    "core space" 20
-    "self destruct" .25
-    weapon
-      "blast radius" 5
-      "shield damage" 40
-      "random shield damage" 10
-      "hull damage" 60
-      "random hull damage" 15
-      "heat damage" 1200
-      "random heat damage" 300
-      "hit force" 100
-      "random hit force" 25
-  outfits
-    "S-270 Regenerator"
-    "Fission Reactor"
-    "Hyperdrive"
-
-    "A250 Atomic Thruster"
-    "A375 Atomic Steering"
-
-    "Heavy Laser Cannon" 2
-    "Heavy Anti-Missile"
-
-    "Supercapacitor" 6
-    "Liquid Nitrogen Cooler"
-    "Fuel Pod" 18
-    "Tactical Scanner" 2
-    "Interference Plating"
-    "Laser Rifle" 7
-  engine -16 52
-  engine 16 52
-  gun -7 -39
-  gun 7 -39
-  turret 0 15
-  description "This Megaparsec Quicksilver is a bit of a Hotrod, being a little faster, with extra shield projectors, hull plating, and an extra bunk. This aftermarket model also features a turret mount, perhaps in an answer to Tarazed's Hawk. The shop that built this ship is sure to see more customers."
 
 
 ship "Quicksilver" "Modified Quicksilver (Weapons)"
