@@ -248,14 +248,20 @@ void ShipInfoDisplay::UpdateAttributes(const Ship &ship, const Depreciation &dep
   attributeValues.push_back(Format::Number(attributes.Get(NAMES[3]))
       + " / " + Format::Number(chassis[NAMES[3]]));
   attributesHeight += 20;
-  attributeLabels.push_back("gun ports free:");
-  attributeValues.push_back(Format::Number(attributes.Get(NAMES[4]))
-      + " / " + Format::Number(chassis[NAMES[4]]));
-  attributesHeight += 20;
-  attributeLabels.push_back("turret mounts free:");
-  attributeValues.push_back(Format::Number(attributes.Get(NAMES[5]))
-      + " / " + Format::Number(chassis[NAMES[5]]));
-  attributesHeight += 20;
+  if(chassis[NAMES[4]])
+  {
+    attributeLabels.push_back("gun ports free:");
+    attributeValues.push_back(Format::Number(attributes.Get(NAMES[4]))
+        + " / " + Format::Number(chassis[NAMES[4]]));
+    attributesHeight += 20;
+  }
+  if(chassis[NAMES[5]])
+  {
+    attributeLabels.push_back("turret mounts free:");
+    attributeValues.push_back(Format::Number(attributes.Get(NAMES[5]))
+        + " / " + Format::Number(chassis[NAMES[5]]));
+    attributesHeight += 20;
+  }
 
   // Print the number of bays for each bay-type we have
   for(auto bayType : Ship::BAY_TYPES())
