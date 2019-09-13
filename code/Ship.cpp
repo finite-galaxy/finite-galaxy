@@ -23,6 +23,7 @@
 #include "Random.h"
 #include "ShipEvent.h"
 #include "Sound.h"
+#include "Sprite.h"
 #include "SpriteSet.h"
 #include "StellarObject.h"
 #include "System.h"
@@ -574,6 +575,8 @@ void Ship::Save(DataWriter &out) const
     if(!noun.empty())
       out.Write("noun", noun);
     SaveSprite(out);
+    if(thumbnail)
+      out.Write("thumbnail", thumbnail->Name());
     
     if(neverDisabled)
       out.Write("never disabled");
