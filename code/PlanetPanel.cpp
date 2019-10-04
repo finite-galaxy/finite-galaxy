@@ -126,7 +126,7 @@ void PlanetPanel::Draw()
           info.SetCondition("has trade");
       }
     }
-    if(planet.GetFuelPrice() > 0)
+    if(flagship && planet.GetFuelPrice() > 0)
       info.SetCondition("has fuel");
   }
 
