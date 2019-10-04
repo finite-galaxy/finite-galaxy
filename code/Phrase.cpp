@@ -14,13 +14,13 @@ void Phrase::Load(const DataNode &node)
 {
   // Set the name of this phrase, so we know it has been loaded.
   name = node.Size() >= 2 ? node.Token(1) : "Unnamed Phrase";
-  
+
   parts.emplace_back();
   for(const DataNode &child : node)
   {
     parts.back().emplace_back();
     Part &part = parts.back().back();
-    
+
     if(child.Token(0) == "word")
     {
       for(const DataNode &grand : child)
@@ -39,7 +39,7 @@ void Phrase::Load(const DataNode &node)
     }
     else
       child.PrintTrace("Skipping unrecognized attribute:");
-    
+
     // If no words or phrases were given, discard this part of the phrase.
     if(part.words.empty() && part.phrases.empty())
       parts.back().pop_back();
@@ -60,7 +60,7 @@ string Phrase::Get() const
   string result;
   if(parts.empty())
     return result;
-  
+
   for(const Part &part : parts[Random::Int(parts.size())])
   {
     if(!part.phrases.empty())
@@ -68,7 +68,7 @@ string Phrase::Get() const
     else if(!part.words.empty())
       result += part.words[Random::Int(part.words.size())];
   }
-  
+
   return result;
 }
 
@@ -78,12 +78,12 @@ bool Phrase::ReferencesPhrase(const Phrase *phrase) const
 {
   if(phrase == this)
     return true;
-  
+
   for(const vector<Part> &alternative : parts)
     for(const Part &part : alternative)
       for(const Phrase *subphrase : part.phrases)
         if(subphrase->ReferencesPhrase(phrase))
           return true;
-  
+
   return false;
 }

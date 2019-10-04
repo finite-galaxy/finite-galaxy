@@ -60,7 +60,7 @@ void NPC::Load(const DataNode &node)
       failIf |= ShipEvent::DESTROY;
     }
   }
-  
+
   for(const DataNode &child : node)
   {
     if(child.Token(0) == "system")
@@ -164,7 +164,7 @@ void NPC::Load(const DataNode &node)
     else
       child.PrintTrace("Skipping unrecognized attribute:");
   }
-  
+
   // Since a ship's government is not serialized, set it now.
   for(const shared_ptr<Ship> &ship : ships)
   {
@@ -192,11 +192,11 @@ void NPC::Save(DataWriter &out) const
       out.Write("evade");
     if(mustAccompany)
       out.Write("accompany");
-    
+
     if(government)
       out.Write("government", government->GetName());
     personality.Save(out);
-    
+
     if(!dialogueText.empty())
     {
       out.Write("dialogue");
@@ -210,7 +210,7 @@ void NPC::Save(DataWriter &out) const
     }
     if(!conversation.IsEmpty())
       conversation.Save(out);
-    
+
     for(const shared_ptr<Ship> &ship : ships)
     {
       ship->Save(out);
@@ -270,27 +270,27 @@ void NPC::Do(const ShipEvent &event, PlayerInfo &player, UI *ui, bool isVisible)
     }
   if(!ship)
     return;
-  
+
   // Check if this NPC is already in the succeeded state.
   bool hasSucceeded = HasSucceeded(player.GetSystem());
   bool hasFailed = HasFailed();
-  
+
   // If this event was "ASSIST", the ship is now known as not disabled.
   if(type == ShipEvent::ASSIST)
     actions[ship.get()] &= ~(ShipEvent::DISABLE);
-  
+
   // Certain events only count towards the NPC's status if originated by
   // the player: scanning, boarding, or assisting.
   if(!event.ActorGovernment()->IsPlayer())
     type &= ~(ShipEvent::SCAN_CARGO | ShipEvent::SCAN_OUTFITS
         | ShipEvent::ASSIST | ShipEvent::BOARD);
-  
+
   // Apply this event to the ship and any ships it is carrying.
   actions[ship.get()] |= type;
   for(const Ship::Bay &bay : ship->Bays())
     if(bay.ship)
       actions[bay.ship.get()] |= type;
-  
+
   // Check if the success status has changed. If so, display a message.
   if(HasFailed() && !hasFailed && isVisible)
     Messages::Add("Mission failed.");
@@ -311,7 +311,7 @@ bool NPC::HasSucceeded(const System *playerSystem) const
 {
   if(HasFailed())
     return false;
-  
+
   // Evaluate the status of each ship in this NPC block. If it has `accompany`,
   // it cannot be disabled or destroyed, and must be in the player's system.
   // Destroyed `accompany` are handled in HasFailed(). If the NPC block has
@@ -342,17 +342,17 @@ bool NPC::HasSucceeded(const System *playerSystem) const
       if((isHere && !isImmobile) ^ mustAccompany)
         return false;
     }
-  
+
   if(!succeedIf)
     return true;
-  
+
   for(const shared_ptr<Ship> &ship : ships)
   {
     auto it = actions.find(ship.get());
     if(it == actions.end() || (it->second & succeedIf) != succeedIf)
       return false;
   }
-  
+
   return true;
 }
 
@@ -365,23 +365,23 @@ bool NPC::IsLeftBehind(const System *playerSystem) const
     return true;
   if(!mustAccompany)
     return false;
-  
+
   for(const shared_ptr<Ship> &ship : ships)
     if(ship->IsDisabled() || ship->GetSystem() != playerSystem)
       return true;
-  
+
   return false;
 }
 
 
 
 bool NPC::HasFailed() const
-{          
+{
   for(const auto &it : actions)
   {
     if(it.second & failIf)
       return true;
-  
+
     // If we still need to perform an action on this NPC, then that ship
     // being destroyed should cause the mission to fail.
     if((~it.second & succeedIf) && (it.second & ShipEvent::DESTROY))
@@ -406,7 +406,7 @@ NPC NPC::Instantiate(map<string, string> &subs, const System *origin, const Syst
   result.failIf = failIf;
   result.mustEvade = mustEvade;
   result.mustAccompany = mustAccompany;
-  
+
   // Pick the system for this NPC to start out in.
   result.system = system;
   if(!result.system && !location.IsEmpty())
@@ -416,7 +416,7 @@ NPC NPC::Instantiate(map<string, string> &subs, const System *origin, const Syst
   // If a planet was specified in the template, it must be in this system.
   if(planet && result.system->FindStellar(planet))
     result.planet = planet;
-  
+
   // Convert fleets into instances of ships.
   for(const shared_ptr<Ship> &ship : ships)
   {
@@ -443,7 +443,7 @@ NPC NPC::Instantiate(map<string, string> &subs, const System *origin, const Syst
     ship->SetPersonality(result.personality);
     if(result.personality.IsDerelict())
       ship->Disable();
-    
+
     if(personality.IsEntering())
       Fleet::Enter(*result.system, *ship);
     else if(result.planet)
@@ -455,22 +455,22 @@ NPC NPC::Instantiate(map<string, string> &subs, const System *origin, const Syst
     else
       Fleet::Place(*result.system, *ship);
   }
-  
+
   // String replacement:
   if(!result.ships.empty())
     subs["<npc>"] = result.ships.front()->Name();
-  
+
   // Do string replacement on any dialogue or conversation.
   string dialogueText = stockDialoguePhrase ? stockDialoguePhrase->Get()
     : (!dialoguePhrase.Name().empty() ? dialoguePhrase.Get()
     : this->dialogueText);
   if(!dialogueText.empty())
     result.dialogueText = Format::Replace(dialogueText, subs);
-  
+
   if(stockConversation)
     result.conversation = stockConversation->Substitute(subs);
   else if(!conversation.IsEmpty())
     result.conversation = conversation.Substitute(subs);
-  
+
   return result;
 }

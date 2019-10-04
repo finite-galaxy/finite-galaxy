@@ -25,7 +25,7 @@ void Outfit::Load(const DataNode &node)
     name = node.Token(1);
     pluralName = name + 's';
   }
-  
+
   for(const DataNode &child : node)
   {
     if(child.Token(0) == "category" && child.Size() >= 2)
@@ -68,7 +68,7 @@ void Outfit::Load(const DataNode &node)
     else
       child.PrintTrace("Skipping unrecognized attribute:");
   }
-  
+
   // Legacy support for turrets that don't specify a turn rate:
   if(IsWeapon() && attributes.Get("turret mounts") && !TurretTurn() && !AntiMissile())
   {
@@ -86,7 +86,7 @@ void Outfit::Load(const DataNode &node)
       attributes[label] = 0.;
       node.PrintTrace("Warning: Deprecated use of \"" + label + "\" instead of \""
           + label + " power\" and \"" + label + " speed\":");
-      
+
       // A scan value of 300 is equivalent to a scan power of 9.
       attributes[label + " power"] += initial * initial * .0001;
       // The default scan speed of 1 is unrelated to the magnitude of the scan value.
@@ -178,7 +178,7 @@ int Outfit::CanAdd(const Outfit &other, int count) const
     if(value + at.second * count < -EPS)
       count = value / -at.second + EPS;
   }
-  
+
   return count;
 }
 
@@ -196,14 +196,14 @@ void Outfit::Add(const Outfit &other, int count)
     if(fabs(attributes[at.first]) < EPS)
       attributes[at.first] = 0.;
   }
-  
+
   for(const auto &it : other.flareSprites)
   {
     auto oit = flareSprites.begin();
     for( ; oit != flareSprites.end(); ++oit)
       if(oit->first.GetSprite() == it.first.GetSprite())
         break;
-    
+
     if(oit == flareSprites.end())
       flareSprites.emplace_back(it.first, count * it.second);
     else
@@ -224,7 +224,7 @@ void Outfit::Set(const char *attribute, double value)
 }
 
 
-  
+
 // Get this outfit's engine flare sprite, if any.
 const vector<pair<Body, int>> &Outfit::FlareSprites() const
 {

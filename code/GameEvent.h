@@ -30,19 +30,19 @@ public:
   GameEvent() = default;
   // Construct and Load() at the same time.
   GameEvent(const DataNode &node);
-  
+
   void Load(const DataNode &node);
   void Save(DataWriter &out) const;
   const std::string &Name() const;
-  
+
   const Date &GetDate() const;
   void SetDate(const Date &date);
-  
+
   void Apply(PlayerInfo &player);
 
   const std::list<DataNode> &Changes() const;
-  
-  
+
+
 private:
   Date date;
   std::string name;

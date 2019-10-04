@@ -23,7 +23,7 @@ void Weapon::LoadWeapon(const DataNode &node)
   calculatedDamage = false;
   calculatedRandomDamage = false;
   doesDamage = false;
-  
+
   for(const DataNode &child : node)
   {
     const string &key = child.Token(0);
@@ -183,20 +183,20 @@ void Weapon::LoadWeapon(const DataNode &node)
   // Sanity check:
   if(burstReload > reload)
     burstReload = reload;
-  
+
   // Weapons of the same type will alternate firing (streaming) rather than
   // firing all at once (clustering) if the weapon is not an anti-missile and
   // is not vulnerable to anti-missile, or has the "stream" attribute.
   isStreamed |= !(MissileStrength() || AntiMissile());
   isStreamed &= !isClustered;
-  
+
   // Support legacy missiles with no tracking type defined:
   if(homing && !tracking && !opticalTracking && !infraredTracking && !radarTracking)
   {
     tracking = 1.;
     node.PrintTrace("Warning: Deprecated use of \"homing\" without use of \"[optical|infrared|radar] tracking.\"");
   }
-  
+
   // Convert the "live effect" counts from occurrences per projectile lifetime
   // into chance of occurring per frame.
   if(lifetime <= 0)
@@ -334,7 +334,7 @@ double Weapon::TotalDamage(int index) const
         damage[i] += it.first->TotalDamage(i) * it.second;
       doesDamage |= (damage[i] > 0.);
     }
-    
+
     calculatedDamage = true;
   }
   return damage[index];
@@ -352,7 +352,7 @@ double Weapon::TotalRandomDamage(int index) const
         randomDamage[i] += it.first->TotalRandomDamage(i) * it.second;
       doesDamage |= (randomDamage[i] > 0.);
     }
-    
+
     calculatedRandomDamage = true;
   }
   return randomDamage[index];

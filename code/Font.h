@@ -27,13 +27,13 @@ public:
   ~Font();
   Font(const Font &a) = delete;
   Font &operator=(const Font &a) = delete;
-  
+
   // Font settings.
   void SetFontDescription(const std::string &desc);
   void SetLayoutReference(const std::string &desc);
   void SetPixelSize(int size);
   void SetLanguage(const std::string &langCode);
-  
+
   // Layout parameters.
   enum Align {LEFT, CENTRE, RIGHT, JUSTIFIED};
   enum Truncate {TRUNC_NONE, TRUNC_FRONT, TRUNC_MIDDLE, TRUNC_BACK};
@@ -56,19 +56,19 @@ public:
     Layout &operator=(const Layout& a) noexcept = default;
     bool operator==(const Layout &a) const;
   };
-  
+
   void Draw(const std::string &str, const Point &point, const Colour &colour, const Layout *params = nullptr) const;
   void DrawAliased(const std::string &str, double x, double y, const Colour &colour, const Layout *params = nullptr) const;
-  
+
   // Get the height and width of the rendered text.
   int Width(const std::string &str, const Layout *params = nullptr) const;
   int Height(const std::string &str, const Layout *params = nullptr) const;
-  
+
   // Get the height of the fonts.
   int Height() const;
-  
+
   static void ShowUnderlines(bool show);
-  
+
   // Escape markup characters if it causes some errors.
   static std::string EscapeMarkupHasError(const std::string &str);
 
@@ -105,7 +105,7 @@ private:
   public:
     void operator()(RenderedText &v) const;
   };
-  
+
 private:
   void UpdateSurfaceSize() const;
   void UpdateFontDesc() const;
@@ -136,24 +136,24 @@ private:
   int TextFromViewCeilY(int y) const;
   int TextFromViewFloorX(int x) const;
   int TextFromViewFloorY(int y) const;
-  
-  
+
+
 private:
   Shader shader;
   GLuint vao;
   GLuint vbo;
-  
+
   // Shader parameters.
   GLint scaleI;
   GLint centreI;
   GLint sizeI;
   GLint colourI;
-  
+
   mutable int screenWidth;
   mutable int screenHeight;
   mutable int viewWidth;
   mutable int viewHeight;
-  
+
   mutable cairo_t *cr;
   std::string fontDescName;
   std::string refDescName;

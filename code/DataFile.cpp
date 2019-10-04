@@ -31,11 +31,11 @@ void DataFile::Load(const string &path)
   string data = Files::Read(path);
   if(data.empty())
     return;
-  
+
   // As a sentinel, make sure the file always ends in a newline.
   if(data.empty() || data.back() != '\n')
     data.push_back('\n');
-  
+
   // Note what file this node is in, so it will show up in error traces.
   root.tokens.push_back("file");
   root.tokens.push_back(path);
@@ -49,7 +49,7 @@ void DataFile::Load(const string &path)
 void DataFile::Load(istream &in)
 {
   string data;
-  
+
   static const size_t BLOCK = 4096;
   while(in)
   {
@@ -61,7 +61,7 @@ void DataFile::Load(istream &in)
   // As a sentinel, make sure the file always ends in a newline.
   if(data.empty() || data.back() != '\n')
     data.push_back('\n');
-  
+
   LoadData(data);
 }
 
@@ -93,7 +93,7 @@ void DataFile::LoadData(const string &data)
   vector<int> whiteStack(1, -1);
   bool fileIsSpaces = false;
   bool warned = false;
-  
+
   size_t end = data.length();
   for(size_t pos = 0; pos < end; pos = Utf8::NextCodePoint(data, pos))
   {
@@ -112,7 +112,7 @@ void DataFile::LoadData(const string &data)
           stack.back()->PrintTrace("Mixed whitespace usage in line");
         else
           fileIsSpaces = true;
-        
+
         isSpaces = true;
       }
       else if(fileIsSpaces && !warned && c != ' ')
@@ -125,7 +125,7 @@ void DataFile::LoadData(const string &data)
       pos = Utf8::NextCodePoint(data, pos);
       c = Utf8::DecodeCodePoint(data, pos);
     }
-    
+
     // If the line is a comment, skip to the end of the line.
     if(c == '#')
     {
@@ -138,7 +138,7 @@ void DataFile::LoadData(const string &data)
     // Skip empty lines (including comment lines).
     if(c == '\n')
       continue;
-    
+
     // Determine where in the node tree we are inserting this node, based on
     // whether it has more indentation that the previous node, less, or the same.
     while(whiteStack.back() >= white)
@@ -146,16 +146,16 @@ void DataFile::LoadData(const string &data)
       whiteStack.pop_back();
       stack.pop_back();
     }
-    
+
     // Add this node as a child of the proper node.
     list<DataNode> &children = stack.back()->children;
     children.emplace_back(stack.back());
     DataNode &node = children.back();
-    
+
     // Remember where in the tree we are.
     stack.push_back(&node);
     whiteStack.push_back(white);
-    
+
     // Tokenize the line. Skip comments and empty lines.
     while(c != '\n')
     {
@@ -168,16 +168,16 @@ void DataFile::LoadData(const string &data)
         pos = Utf8::NextCodePoint(data, pos);
         c = Utf8::DecodeCodePoint(data, pos);
       }
-      
+
       const size_t start = pos;
-      
+
       // Find the end of this token.
       while(c != '\n' && (isQuoted ? (c != endQuote) : (c > ' ')))
       {
         pos = Utf8::NextCodePoint(data, pos);
         c = Utf8::DecodeCodePoint(data, pos);
       }
-      
+
       // It ought to be legal to construct a string from an empty iterator
       // range, but it appears that some libraries do not handle that case
       // correctly. So:
@@ -188,7 +188,7 @@ void DataFile::LoadData(const string &data)
       // This is not a fatal error, but it may indicate a format mistake:
       if(isQuoted && c == '\n')
         node.PrintTrace("Closing quotation mark is missing:");
-      
+
       if(c != '\n')
       {
         // If we've not yet reached the end of the line of text, search
@@ -203,7 +203,7 @@ void DataFile::LoadData(const string &data)
           pos = Utf8::NextCodePoint(data, pos);
           c = Utf8::DecodeCodePoint(data, pos);
         }
-        
+
         // If a comment is encountered outside of a token, skip the rest
         // of this line of the file.
         if(c == '#')

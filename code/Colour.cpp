@@ -56,7 +56,7 @@ Colour Colour::Transparent(float alpha) const
   for(int i = 0; i < 3; ++i)
     result.colour[i] = colour[i] * alpha;
   result.colour[3] = alpha;
-  
+
   return result;
 }
 
@@ -67,6 +67,6 @@ Colour Colour::Additive(float alpha) const
 {
   Colour result = Transparent(alpha);
   result.colour[3] = 0.f;
-  
+
   return result;
 }

@@ -35,7 +35,7 @@ namespace {
       {"<?=", [](int64_t a, int64_t b) { return min(a, b); }},
       {">?=", [](int64_t a, int64_t b) { return max(a, b); }}
     };
-    
+
     auto it = opMap.find(op);
     return (it != opMap.end() ? it->second : nullptr);
   }
@@ -152,7 +152,7 @@ bool ConditionSet::Add(const string &firstToken, const string &secondToken)
     expressions.emplace_back(firstToken, "-=", 1);
   else
     return false;
-  
+
   return true;
 }
 
@@ -165,7 +165,7 @@ bool ConditionSet::Add(const string &name, const string &op, int64_t value)
   BinFun fun = Op(op);
   if(!fun)
     return false;
-  
+
   expressions.emplace_back(name, op, value);
   return true;
 }
@@ -179,7 +179,7 @@ bool ConditionSet::Add(const string &name, const string &op, const string &strVa
   BinFun fun = Op(op);
   if(!fun)
     return false;
-  
+
   expressions.emplace_back(name, op, 0);
   expressions.back().strValue = strValue;
   return true;

@@ -31,7 +31,7 @@ public:
   // An "outfit" can be loaded from an "outfit" node or from a ship's
   // "attributes" node.
   void Load(const DataNode &node);
-  
+
   const std::string &Name() const;
   const std::string &PluralName() const;
   const std::string &Category() const;
@@ -42,11 +42,11 @@ public:
   const std::vector<std::string> &Licences() const;
   // Get the image to display in the outfitter when buying this item.
   const Sprite *Thumbnail() const;
-  
+
   double Get(const char *attribute) const;
   double Get(const std::string &attribute) const;
   const Dictionary &Attributes() const;
-  
+
   // Determine whether the given number of instances of the given outfit can
   // be added to a ship with the attributes represented by this instance. If
   // not, return the maximum number that can be added.
@@ -57,7 +57,7 @@ public:
   // Modify this outfit's attributes. Note that this cannot be used to change
   // special attributes, like cost and mass.
   void Set(const char *attribute, double value);
-  
+
   // Get this outfit's engine flare sprites, if any.
   const std::vector<std::pair<Body, int>> &FlareSprites() const;
   const std::map<const Sound *, int> &FlareSounds() const;
@@ -65,8 +65,8 @@ public:
   const std::map<const Effect *, int> &AfterburnerEffects() const;
   // Get the sprite this outfit uses when dumped into space.
   const Sprite *FlotsamSprite() const;
-  
-  
+
+
 private:
   std::string name;
   std::string pluralName;
@@ -77,9 +77,9 @@ private:
   double mass = 0.;
   // Licences needed to purchase this item.
   std::vector<std::string> licences;
-  
+
   Dictionary attributes;
-  
+
   std::vector<std::pair<Body, int>> flareSprites;
   std::map<const Sound *, int> flareSounds;
   std::map<const Effect *, int> afterburnerEffects;

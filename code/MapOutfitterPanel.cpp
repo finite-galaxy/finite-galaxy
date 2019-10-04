@@ -73,7 +73,7 @@ const string &MapOutfitterPanel::KeyLabel(int index) const
   static const string MINE = "Mine this here";
   if(index == 2 && selected && selected->Get("installable") < 0)
     return MINE;
-  
+
   static const string LABEL[3] = {
     "Has no outfitter",
     "Has outfitter",
@@ -115,15 +115,15 @@ double MapOutfitterPanel::SystemValue(const System *system) const
 {
   if(!system)
     return numeric_limits<double>::quiet_NaN();
-  
+
   auto it = player.Harvested().lower_bound(pair<const System *, const Outfit *>(system, nullptr));
   for( ; it != player.Harvested().end() && it->first == system; ++it)
     if(it->second == selected)
       return 1.;
-  
+
   if(!system->IsInhabited(player.Flagship()))
     return numeric_limits<double>::quiet_NaN();
-  
+
   double value = -.5;
   for(const StellarObject &object : system->Objects())
     if(object.GetPlanet())
@@ -168,15 +168,15 @@ void MapOutfitterPanel::DrawItems()
     auto it = catalogue.find(category);
     if(it == catalogue.end())
       continue;
-    
+
     // Draw the header. If this category is collapsed, skip drawing the items.
     if(DrawHeader(corner, category))
       continue;
-    
+
     for(const Outfit *outfit : it->second)
     {
       string price = Format::Credits(outfit->Cost()) + " credits";
-      
+
       string info;
       if(outfit->Get("installable") < 0.)
         info = "(Mined from asteroids)";
@@ -193,7 +193,7 @@ void MapOutfitterPanel::DrawItems()
         else
           info += " of outfit space";
       }
-      
+
       bool isForSale = true;
       if(selectedSystem && player.HasVisited(selectedSystem))
       {
@@ -207,7 +207,7 @@ void MapOutfitterPanel::DrawItems()
       }
       if(!isForSale && onlyShowSoldHere)
         continue;
-      
+
       Draw(corner, outfit->Thumbnail(), isForSale, outfit == selected,
         outfit->Name(), price, info);
       list.push_back(outfit);
@@ -236,7 +236,7 @@ void MapOutfitterPanel::Init()
       catalogue[it.second->Category()].push_back(it.second);
       seen.insert(it.second);
     }
-  
+
   for(auto &it : catalogue)
     sort(it.second.begin(), it.second.end(),
       [](const Outfit *a, const Outfit *b) {return a->Name() < b->Name();});

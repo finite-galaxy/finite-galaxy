@@ -20,12 +20,12 @@ SpaceportPanel::SpaceportPanel(PlayerInfo &player)
   : player(player)
 {
   SetTrapAllEvents(false);
-  
+
   text.SetFont(FontSet::Get(18));
   text.SetAlignment(Font::JUSTIFIED);
   text.SetWrapWidth(480);
   text.Wrap(player.GetPlanet()->SpaceportDescription());
-  
+
   // Query the news interface to find out the wrap width.
   // TODO: Allow Interface to handle wrapped text directly.
   const Interface *interface = GameData::Interfaces().Get("news");
@@ -86,9 +86,9 @@ void SpaceportPanel::Draw()
 {
   if(player.IsDead())
     return;
-  
+
   text.Draw(Point(-300., 80.), *GameData::Colours().Get("bright"));
-  
+
   if(hasNews)
   {
     const Interface *interface = GameData::Interfaces().Get("news");

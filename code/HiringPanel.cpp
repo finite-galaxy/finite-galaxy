@@ -36,13 +36,13 @@ void HiringPanel::Draw()
   if(!player.Flagship())
     return;
   const Ship &flagship = *player.Flagship();
-  
+
   // Draw a line in the same place as the trading and bank panels.
   FillShader::Fill(Point(-60., 95.), Point(480., 1.), *GameData::Colours().Get("medium"));
-  
+
   const Interface *interface = GameData::Interfaces().Get("hiring");
   Information info;
-  
+
   int flagshipBunks = flagship.Attributes().Get("bunks");
   int flagshipRequired = flagship.RequiredCrew();
   int flagshipExtra = flagship.Crew() - flagshipRequired;
@@ -51,7 +51,7 @@ void HiringPanel::Draw()
   info.SetString("flagship required", to_string(flagshipRequired));
   info.SetString("flagship extra", to_string(flagshipExtra));
   info.SetString("flagship unused", to_string(flagshipUnused));
-  
+
   // Sum up the statistics for all your ships. You still pay the crew of
   // disabled or out-of-system ships, but any parked ships have no crew costs.
   int fleetBunks = 0;
@@ -68,25 +68,25 @@ void HiringPanel::Draw()
   info.SetString("fleet required", to_string(fleetRequired));
   info.SetString("fleet unused", to_string(fleetUnused));
   info.SetString("passengers", to_string(passengers));
-  
+
   static const int DAILY_SALARY = 100;
   int salary = DAILY_SALARY * (fleetRequired - 1);
   int extraSalary = DAILY_SALARY * flagshipExtra;
   info.SetString("salary required", to_string(salary));
   info.SetString("salary extra", to_string(extraSalary));
-  
+
   int modifier = Modifier();
   if(modifier > 1)
     info.SetString("modifier", "× " + to_string(modifier));
-  
+
   maxFire = max(flagshipExtra, 0);
   maxHire = max(min(flagshipUnused, fleetUnused - passengers), 0);
-  
+
   if(maxHire)
     info.SetCondition("can hire");
   if(maxFire)
     info.SetCondition("can fire");
-  
+
   interface->Draw(info, this);
 }
 
@@ -96,7 +96,7 @@ bool HiringPanel::KeyDown(SDL_Keycode key, Uint16 mod, const Command &command, b
 {
   if(!player.Flagship())
     return false;
-  
+
   if(key == 'h' || key == '=' || key == SDLK_RETURN || key == SDLK_SPACE)
   {
     player.Flagship()->AddCrew(min(maxHire, Modifier()));
@@ -107,6 +107,6 @@ bool HiringPanel::KeyDown(SDL_Keycode key, Uint16 mod, const Command &command, b
     player.Flagship()->AddCrew(-min(maxFire, Modifier()));
     player.UpdateCargoCapacities();
   }
-  
+
   return false;
 }

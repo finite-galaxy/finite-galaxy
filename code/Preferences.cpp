@@ -17,11 +17,11 @@ using namespace std;
 namespace {
   map<string, bool> settings;
   int scrollSpeed = 60;
-  
+
   // Strings for ammo expenditure:
   const string EXPEND_AMMO = "Escorts expend ammo";
   const string FRUGAL_ESCORTS = "Escorts use ammo frugally";
-  
+
   const vector<double> ZOOMS = {.06, .09, .13, .18, .25, .35, .50, .71, 1.00, 1.41, 2.00};
   int zoomIndex = 4;
   const double VOLUME_SCALE = .25;
@@ -48,7 +48,7 @@ void Preferences::Load()
   settings["Draw background haze"] = true;
   settings["Hide unexplored map regions"] = true;
   settings["Turrets focus fire"] = true;
-  
+
   DataFile prefs(Files::Config() + "preferences.txt");
   for(const DataNode &node : prefs)
   {
@@ -74,14 +74,14 @@ void Preferences::Load()
 void Preferences::Save()
 {
   DataWriter out(Files::Config() + "preferences.txt");
-  
+
   out.Write("volume", Audio::Volume() / VOLUME_SCALE);
   out.Write("window size", Screen::RawWidth(), Screen::RawHeight());
   out.Write("zoom", Screen::UserZoom());
   out.Write("scroll speed", scrollSpeed);
   out.Write("view zoom", zoomIndex);
   out.Write("max refuel price", maxRefuelPrice);
-  
+
   for(const auto &it : settings)
     out.Write(it.first, it.second);
 }
@@ -147,7 +147,7 @@ bool Preferences::ZoomViewIn()
 {
   if(zoomIndex == static_cast<int>(ZOOMS.size() - 1))
     return false;
-  
+
   ++zoomIndex;
   return true;
 }
@@ -158,7 +158,7 @@ bool Preferences::ZoomViewOut()
 {
   if(zoomIndex == 0)
     return false;
-  
+
   --zoomIndex;
   return true;
 }

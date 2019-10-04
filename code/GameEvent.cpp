@@ -33,7 +33,7 @@ void GameEvent::Load(const DataNode &node)
     name = node.Token(1);
     conditionsToApply.Add("set", "event: " + name);
   }
-  
+
   static const set<string> allowedChanges = {
     "fleet",
     "galaxy",
@@ -46,7 +46,7 @@ void GameEvent::Load(const DataNode &node)
     "system",
     "unlink"
   };
-  
+
   for(const DataNode &child : node)
   {
     const string &key = child.Token(0);
@@ -77,21 +77,21 @@ void GameEvent::Save(DataWriter &out) const
     if(date)
       out.Write("date", date.Day(), date.Month(), date.Year());
     conditionsToApply.Save(out);
-    
+
     for(const System *system : systemsToUnvisit)
       if(system && !system->Name().empty())
         out.Write("unvisit", system->Name());
     for(const Planet *planet : planetsToUnvisit)
       if(planet && !planet->Name().empty())
         out.Write("unvisit planet", planet->Name());
-    
+
     for(const System *system : systemsToVisit)
       if(system && !system->Name().empty())
         out.Write("visit", system->Name());
     for(const Planet *planet : planetsToVisit)
       if(planet && !planet->Name().empty())
         out.Write("visit planet", planet->Name());
-    
+
     for(const DataNode &change : changes)
       out.Write(change);
   }
@@ -125,22 +125,22 @@ void GameEvent::Apply(PlayerInfo &player)
 {
   // Serialize the current reputation with other governments.
   player.SetReputationConditions();
-  
+
   // Apply this event's ConditionSet to the player's conditions.
   conditionsToApply.Apply(player.Conditions());
   // Apply (and store a record of applying) this event's other general
   // changes (e.g. updating an outfitter's inventory).
   player.AddChanges(changes);
-  
+
   // Update the current reputation with other governments (e.g. this
   // event's ConditionSet may have altered some reputations).
   player.CheckReputationConditions();
-  
+
   for(const System *system : systemsToUnvisit)
     player.Unvisit(system);
   for(const Planet *planet : planetsToUnvisit)
     player.Unvisit(planet);
-  
+
   // Perform visits after unvisits, as "unvisit <system>"
   // will unvisit any planets in that system.
   for(const System *system : systemsToVisit)

@@ -19,25 +19,25 @@ public:
   // Effective zoom level, as restricted by the current resolution / window size.
   static int Zoom();
   static void SetZoom(int percent);
-  
+
   // Specify that this is a high-DPI window.
   static void SetHighDPI(bool isHighDPI = true);
   // This is true if the screen is high DPI, or if the zoom is above 100%.
   static bool IsHighResolution();
-  
+
   static Point Dimensions();
   static int Width();
   static int Height();
-  
+
   static int RawWidth();
   static int RawHeight();
-  
+
   // Get the positions of the edges and corners of the viewport.
   static int Left();
   static int Top();
   static int Right();
   static int Bottom();
-  
+
   static Point TopLeft();
   static Point TopRight();
   static Point BottomLeft();

@@ -16,9 +16,9 @@ using namespace std;
 
 namespace {
   const int MIN_X = -310;
-  
+
   const int FIRST_Y = 80;
-  
+
   // Determines what ratio is used to refuel ships.
   double ratio = 1;
 }
@@ -34,7 +34,7 @@ RefuelPanel::RefuelPanel(PlayerInfo &player)
 }
 
 
-  
+
 void RefuelPanel::Step()
 {
   DoHelp("refuel");
@@ -44,13 +44,13 @@ void RefuelPanel::Step()
 
 void RefuelPanel::Draw()
 {
-  
+
   string localPrice = "The fuel price on this planet is " + Format::Number(player.GetPlanet()->GetFuelPrice()) + " credits per unit of fuel.";
-  
+
   const Font &font = FontSet::Get(18);
   const Colour &colour = *GameData::Colours().Get("medium");
   Information info;
-  
+
   if(fuel && empty)
   {
     string price1 = "To refuel all your ships to " + Format::Round(ratio*100) + "% which will take " + Format::Round(fuel) + " units of fuel";
@@ -71,12 +71,12 @@ void RefuelPanel::Draw()
     font.Draw(message1, Point(MIN_X+10, FIRST_Y+100), colour);
     info.SetCondition("empty");
   }
-    
-  
-  
-  
+
+
+
+
   font.Draw(localPrice, Point(MIN_X+10, FIRST_Y), colour);
-  
+
   info.SetBar("ratio", ratio);
   const Interface *interface = GameData::Interfaces().Get("refuel");
   interface->Draw(info, this);
@@ -126,6 +126,6 @@ bool RefuelPanel::Click(int x, int y, int clicks)
     Audio::Play(Audio::Get("warder"));
     return true;
   }
-  
+
   return false;
 }

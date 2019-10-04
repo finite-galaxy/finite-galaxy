@@ -8,7 +8,7 @@ using namespace std;
 
 namespace {
   mutex incomingMutex;
-  
+
   vector<pair<string, bool>> incoming;
   vector<Messages::Entry> list;
 }
@@ -30,13 +30,13 @@ void Messages::Add(const string &message, bool isImportant)
 const vector<Messages::Entry> &Messages::Get(int step)
 {
   lock_guard<mutex> lock(incomingMutex);
-  
+
   // Load the incoming messages.
   for(const pair<string, bool> &item : incoming)
   {
     const string &message = item.first;
     bool isImportant = item.second;
-    
+
     // If this message is not important and it is already being shown in the
     // list, ignore it.
     if(!isImportant)
@@ -47,7 +47,7 @@ const vector<Messages::Entry> &Messages::Get(int step)
       if(skip)
         continue;
     }
-    
+
     // For each incoming message, if it exactly matches an existing message,
     // replace that one with this new one.
     auto it = list.begin();

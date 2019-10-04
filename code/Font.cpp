@@ -20,7 +20,7 @@ namespace {
   bool showUnderlines = false;
   const int TOTAL_TAB_STOPS = 8;
   const Font::Layout defaultParams;
-  
+
   // 95 and x5f means "_".
   const vector<string> acceptableCharacterReferences{ "gt;", "lt;", "amp;", "#95;", "#x5f;", "#x5F;" };
 
@@ -449,7 +449,7 @@ const Font::RenderedText &Font::Render(const string &str, const Layout *params) 
 
   // Replaces straight quotation marks with curly ones.
   const string text = ReplaceCharacters(str);
-  
+
   // Keyboard accelerator
   char *removeMarkupText;
   const char *rawText;
@@ -587,7 +587,7 @@ const Font::RenderedText &Font::Render(const string &str, const Layout *params) 
     glGenTextures(1, &renderedText.texture);
   glBindTexture(GL_TEXTURE_2D, renderedText.texture);
   const auto &cachedText = cache.New(key, move(renderedText));
-  
+
   // Use linear interpolation and no wrapping.
   glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
   glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
@@ -641,7 +641,7 @@ void Font::SetUpShader()
     "void main() {\n"
     "  finalColour = colour * texture(tex, texCoord);\n"
     "}\n";
-  
+
   shader = Shader(vertexCode, fragmentCode);
   scaleI = shader.Uniform("scale");
   centreI = shader.Uniform("centre");
@@ -652,14 +652,14 @@ void Font::SetUpShader()
   glUseProgram(shader.Object());
   glUniform1i(shader.Uniform("tex"), 0);
   glUseProgram(0);
-  
+
   // Create the VAO and VBO.
   glGenVertexArrays(1, &vao);
   glBindVertexArray(vao);
-  
+
   glGenBuffers(1, &vbo);
   glBindBuffer(GL_ARRAY_BUFFER, vbo);
-  
+
   // Triangle strip.
   GLfloat vertexData[] = {
     -.5f, -.5f,
@@ -668,14 +668,14 @@ void Font::SetUpShader()
      .5f,  .5f
   };
   glBufferData(GL_ARRAY_BUFFER, sizeof(vertexData), vertexData, GL_STATIC_DRAW);
-  
+
   glEnableVertexAttribArray(shader.Attrib("vert"));
   glVertexAttribPointer(shader.Attrib("vert"), 2, GL_FLOAT, GL_FALSE, 2 * sizeof(GLfloat), nullptr);
-  
+
   // Unbind the VBO and VAO.
   glBindBuffer(GL_ARRAY_BUFFER, 0);
   glBindVertexArray(0);
-  
+
   // We must update the screen size next time we draw.
   screenWidth = 1;
   screenHeight = 1;

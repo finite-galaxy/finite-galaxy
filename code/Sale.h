@@ -17,9 +17,9 @@ template <class Item>
 class Sale : public std::set<const Item *> {
 public:
   void Load(const DataNode &node, const Set<Item> &items);
-  
+
   void Add(const Sale<Item> &other);
-  
+
   bool Has(const Item *item) const;
 };
 

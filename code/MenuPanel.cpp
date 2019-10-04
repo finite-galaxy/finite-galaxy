@@ -44,7 +44,7 @@ MenuPanel::MenuPanel(PlayerInfo &player, UI &gamePanels)
   : player(player), gamePanels(gamePanels), scroll(0)
 {
   SetIsFullScreen(true);
-  
+
   credits = Format::Split(Files::Read(Files::Resources() + "credits.txt"), "\n");
 }
 
@@ -80,7 +80,7 @@ void MenuPanel::Draw()
   glClear(GL_COLOR_BUFFER_BIT);
   GameData::Background().Draw(Point(), Point());
   const Font &font = FontSet::Get(18);
-  
+
   Information info;
   const Font::Layout layout(Font::TRUNC_MIDDLE, 165);
   if(player.IsLoaded() && !player.IsDead())
@@ -111,11 +111,11 @@ void MenuPanel::Draw()
     info.SetCondition("no pilot loaded");
     info.SetString("pilot", "No Pilot Loaded");
   }
-  
+
   GameData::Interfaces().Get("menu background")->Draw(info, this);
   GameData::Interfaces().Get("main menu")->Draw(info, this);
   GameData::Interfaces().Get("menu player info")->Draw(info, this);
-  
+
   if(progress == 60)
     alpha -= .02f;
   if(alpha > 0.f)
@@ -129,7 +129,7 @@ void MenuPanel::Draw()
       a += da;
     }
   }
-  
+
   int y = 120 - scroll / scrollSpeed;
   for(const string &line : credits)
   {
@@ -172,7 +172,7 @@ bool MenuPanel::KeyDown(SDL_Keycode key, Uint16 mod, const Command &command, boo
 {
   if(!isReady)
     return false;
-  
+
   if(player.IsLoaded() && (key == 'e' || command.Has(Command::MENU)))
   {
     gamePanels.CanSave(true);
@@ -186,7 +186,7 @@ bool MenuPanel::KeyDown(SDL_Keycode key, Uint16 mod, const Command &command, boo
   {
     // If no player is loaded, the "Enter Ship" button becomes "New Pilot."
     player.New();
-    
+
     ConversationPanel *panel = new ConversationPanel(
       player, *GameData::Conversations().Get("intro"));
     GetUI()->Push(panel);
@@ -196,6 +196,6 @@ bool MenuPanel::KeyDown(SDL_Keycode key, Uint16 mod, const Command &command, boo
     GetUI()->Quit();
   else
     return false;
-  
+
   return true;
 }

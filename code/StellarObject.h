@@ -18,7 +18,7 @@ class Ship;
 class StellarObject : public Body {
 public:
   StellarObject();
-  
+
   /* Functions provided by the Body base class:
   bool HasSprite() const;
   int Width() const;
@@ -29,7 +29,7 @@ public:
   const Angle &Facing() const;
   Point Unit() const;
   */
-  
+
   // Get the radius of this planet, i.e. how close you must be to land.
   double Radius() const;
   // If it is possible to land on this planet, this returns the Planet
@@ -41,7 +41,7 @@ public:
   // If it is impossible to land on this planet, get the message
   // explaining why (e.g. too hot, too cold, etc.).
   const std::string &LandingMessage() const;
-  
+
   // Get the radar colour to be used for displaying this object.
   int RadarType(const Ship *ship) const;
   // Check if this is a star.
@@ -54,21 +54,21 @@ public:
   int Parent() const;
   // Find out how far this object is from its parent.
   double Distance() const;
-  
-  
+
+
 private:
   const Planet *planet;
-  
+
   double distance;
   double speed;
   double offset;
   int parent;
-  
+
   const std::string *message;
   bool isStar;
   bool isStation;
   bool isMoon;
-  
+
   // Let System handle setting all the values of an Object.
   friend class System;
 };

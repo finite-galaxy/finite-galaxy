@@ -16,16 +16,16 @@ namespace {
   {
     uint32_t on = 0xFF00'0000;
     const uint32_t *begin = image.Pixels() + frame * image.Width() * image.Height();
-    
+
     // Convert the pitch to uint32_ts instead of bytes.
     int pitch = image.Width();
-    
+
     // First, find a non-empty pixel.
     // This points to the current pixel.
     const uint32_t *it = begin;
     // This is where we will store the point:
     Point point;
-    
+
     for(int y = 0; y < image.Height(); ++y)
       for(int x = 0; x < image.Width(); ++x)
       {
@@ -39,7 +39,7 @@ namespace {
         }
         ++it;
       }
-    
+
     // Now "it" points to the first pixel, whose coordinates are in "point".
     // We will step around the outline in these 8 basic directions:
     static const Point step[8] = {
@@ -52,12 +52,12 @@ namespace {
     // All points must be less than this,
     const double maxX = image.Width() - .5;
     const double maxY = image.Height() - .5;
-    
+
     // Loop until we come back here.
     begin = it;
     do {
       raw->push_back(point);
-      
+
       Point next;
       int firstD = d;
       while(true)
@@ -68,24 +68,24 @@ namespace {
         if((next.X() >= -.5) & (next.Y() >= -.5) & (next.X() < maxX) & (next.Y() < maxY))
           if(it[off[d]] & on)
             break;
-        
+
         // Advance to the next direction.
         d = (d + 1) & 7;
         // If this point is alone, bail out.
         if(d == firstD)
           return;
       }
-      
+
       point = next;
       it += off[d];
       // Rotate the direction backward ninety degrees.
       d = (d + 6) & 7;
-      
+
       // Loop until we are back where we started.
     } while(it != begin);
   }
-  
-  
+
+
   void SmoothAndCentre(vector<Point> *raw, Point size)
   {
     // Smooth out the outline by averaging neighbouring points.
@@ -100,8 +100,8 @@ namespace {
       swap(prev, p);
     }
   }
-  
-  
+
+
   // Distance from a point to a line, squared.
   double Distance(Point p, Point a, Point b)
   {
@@ -118,21 +118,21 @@ namespace {
     }
     return p.LengthSquared();
   }
-  
-  
+
+
   void Simplify(const vector<Point> &p, int first, int last, vector<Point> *result)
   {
     // Find the most divergent point.
     double dmax = 0.;
     int imax = 0;
-    
+
     for(int i = first + 1; true; ++i)
     {
       if(static_cast<unsigned>(i) == p.size())
         i = 0;
       if(i == last)
         break;
-      
+
       double d = Distance(p[i], p[first], p[last]);
       // Enforce symmetry by using y position as a tiebreaker rather than
       // just the order in the list.
@@ -142,25 +142,25 @@ namespace {
         imax = i;
       }
     }
-    
+
     // If the most divergent point is close enough to the outline, stop.
     if(dmax < 1.)
       return;
-    
+
     // Recursively simplify the lines to both sides of that point.
     Simplify(p, first, imax, result);
-  
+
     result->push_back(p[imax]);
-  
+
     Simplify(p, imax, last, result);
   }
-  
-  
+
+
   // Simplify the given outline using the Ramer-Douglas-Peucker algorithm.
   void Simplify(const vector<Point> &raw, vector<Point> *result)
   {
     result->clear();
-    
+
     // Out of all the top-most and bottom-most pixels, find the ones that
     // are closest to the centre of the image.
     int top = -1;
@@ -176,18 +176,18 @@ namespace {
       else if(y < raw[top].Y() || (y == raw[top].Y() && ax < fabs(raw[top].X())))
         top = i;
     }
-    
+
     // Bail out if we couldn't find top and bottom vertices.
     if(top == bottom)
       return;
-    
+
     result->push_back(raw[top]);
     Simplify(raw, top, bottom, result);
     result->push_back(raw[bottom]);
     Simplify(raw, bottom, top, result);
   }
-  
-  
+
+
   // Find the radius of the object.
   double ComputeRadius(const vector<Point> &outline)
   {
@@ -214,11 +214,11 @@ void Mask::Create(const ImageBuffer &image, int frame)
 {
   vector<Point> raw;
   Trace(image, frame, &raw);
-  
+
   SmoothAndCentre(&raw, Point(image.Width(), image.Height()));
-  
+
   Simplify(raw, &outline);
-  
+
   radius = ComputeRadius(outline);
 }
 
@@ -243,21 +243,21 @@ double Mask::Collide(Point sA, Point vA, Angle facing) const
   double distance = sA.Length();
   if(outline.empty() || distance > radius + vA.Length())
     return 1.;
-  
+
   // Rotate into the mask's frame of reference.
   sA = (-facing).Rotate(sA);
   vA = (-facing).Rotate(vA);
-  
+
   // If this point is contained within the mask, a ray drawn out from it will
   // intersect the mask an even number of times. If that ray coincides with an
   // edge, ignore that edge, and count all segments as closed at the start and
   // open at the end to avoid double-counting.
-  
+
   // For simplicity, use a ray pointing straight downwards. A segment then
   // intersects only if its x coordinates span the point's coordinates.
   if(distance <= radius && Contains(sA))
     return 0.;
-  
+
   return Intersection(sA, vA);
 }
 
@@ -268,7 +268,7 @@ bool Mask::Contains(Point point, Angle facing) const
 {
   if(outline.empty() || point.Length() > radius)
     return false;
-  
+
   // Rotate into the mask's frame of reference.
   return Contains((-facing).Rotate(point));
 }
@@ -282,16 +282,16 @@ bool Mask::WithinRange(Point point, Angle facing, double range) const
   // Bail out if the object is too far away to possible be touched.
   if(outline.empty() || range < point.Length() - radius)
     return false;
-  
+
   // Rotate into the mask's frame of reference.
   point = (-facing).Rotate(point);
   // For efficiency, compare to range^2 instead of range.
   range *= range;
-  
+
   for(const Point &p : outline)
     if(p.DistanceSquared(point) < range)
       return true;
-  
+
   return false;
 }
 
@@ -303,15 +303,15 @@ double Mask::Range(Point point, Angle facing) const
   double range = numeric_limits<double>::infinity();
   if(outline.empty())
     return range;
-  
+
   // Rotate into the mask's frame of reference.
   point = (-facing).Rotate(point);
   if(Contains(point))
     return 0.;
-  
+
   for(const Point &p : outline)
     range = min(range, p.Distance(point));
-  
+
   return range;
 }
 
@@ -336,7 +336,7 @@ double Mask::Intersection(Point sA, Point vA) const
 {
   // Keep track of the closest intersection point found.
   double closest = 1.;
-  
+
   Point prev = outline.back();
   for(const Point &next : outline)
   {
@@ -356,7 +356,7 @@ double Mask::Intersection(Point sA, Point vA) const
       if((uB >= 0.) & (uB < cross) & (uA >= 0.))
         closest = min(closest, uA / cross);
     }
-    
+
     prev = next;
   }
   return closest;
@@ -370,7 +370,7 @@ bool Mask::Contains(Point point) const
   // intersect the mask an even number of times. If that ray coincides with an
   // edge, ignore that edge, and count all segments as closed at the start and
   // open at the end to avoid double-counting.
-  
+
   // For simplicity, use a ray pointing straight downwards. A segment then
   // intersects only if its x coordinates span the point's coordinates.
   int intersections = 0;

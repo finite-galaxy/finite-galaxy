@@ -15,8 +15,8 @@ class Sprite;
 class SpriteSet {
 public:
   static const Sprite *Get(const std::string &name);
-  
-  
+
+
 private:
   // Only SpriteQueue is allowed to modify the sprites.
   friend class SpriteQueue;

@@ -30,20 +30,20 @@ Projectile::Projectile(const Ship &parent, Point position, Angle angle, const We
   weapon(weapon), targetShip(parent.GetTargetShip()), lifetime(weapon->Lifetime())
 {
   government = parent.GetGovernment();
-  
+
   // If you are boarding your target, do not fire on it.
   if(parent.IsBoarding() || parent.Commands().Has(Command::BOARD))
     targetShip.reset();
-  
+
   cachedTarget = TargetPtr().get();
   if(cachedTarget)
     targetGovernment = cachedTarget->GetGovernment();
   double inaccuracy = weapon->Inaccuracy();
   if(inaccuracy)
     this->angle += Angle::Random(inaccuracy) - Angle::Random(inaccuracy);
-  
+
   velocity += this->angle.Unit() * (weapon->Velocity() + Random::Real() * weapon->RandomVelocity());
-  
+
   // If a random lifetime is specified, add a random amount up to that amount.
   if(weapon->RandomLifetime())
     lifetime += Random::Int(weapon->RandomLifetime() + 1);
@@ -57,7 +57,7 @@ Projectile::Projectile(const Projectile &parent, const Weapon *weapon)
 {
   government = parent.government;
   targetGovernment = parent.targetGovernment;
-  
+
   cachedTarget = TargetPtr().get();
   double inaccuracy = weapon->Inaccuracy();
   if(inaccuracy)
@@ -71,7 +71,7 @@ Projectile::Projectile(const Projectile &parent, const Weapon *weapon)
     }
   }
   velocity += this->angle.Unit() * (weapon->Velocity() + Random::Real() * weapon->RandomVelocity());
-  
+
   // If a random lifetime is specified, add a random amount up to that amount.
   if(weapon->RandomLifetime())
     lifetime += Random::Int(weapon->RandomLifetime() + 1);
@@ -100,7 +100,7 @@ void Projectile::Move(vector<Visual> &visuals, vector<Projectile> &projectiles)
       for(const auto &it : weapon->DieEffects())
         for(int i = 0; i < it.second; ++i)
           visuals.emplace_back(*it.first, position, velocity, angle);
-      
+
       for(const auto &it : weapon->Submunitions())
         for(int i = 0; i < it.second; ++i)
           projectiles.emplace_back(*this, it.first);
@@ -111,7 +111,7 @@ void Projectile::Move(vector<Visual> &visuals, vector<Projectile> &projectiles)
   for(const auto &it : weapon->LiveEffects())
     if(!Random::Int(it.second))
       visuals.emplace_back(*it.first, position, velocity, angle);
-  
+
   // If the target has left the system, stop following it. Also stop if the
   // target has been captured by a different government.
   const Ship *target = cachedTarget;
@@ -125,7 +125,7 @@ void Projectile::Move(vector<Visual> &visuals, vector<Projectile> &projectiles)
       target = nullptr;
     }
   }
-  
+
   double turn = weapon->Turn();
   double accel = weapon->Acceleration();
   int homing = weapon->Homing();
@@ -140,7 +140,7 @@ void Projectile::Move(vector<Visual> &visuals, vector<Projectile> &projectiles)
     double trueVelocity = drag ? accel / drag : velocity.Length();
     double stepsToReach = d.Length() / trueVelocity;
     bool isFacingAway = d.Dot(angle.Unit()) < 0.;
-    
+
     // At the highest homing level, compensate for target motion.
     if(homing >= 4)
     {
@@ -163,9 +163,9 @@ void Projectile::Move(vector<Visual> &visuals, vector<Projectile> &projectiles)
       }
       unit = d.Unit();
     }
-    
+
     double cross = angle.Unit().Cross(unit);
-    
+
     // The very dumbest of homing missiles lose their target if pointed
     // away from it.
     if(isFacingAway && homing == 1)
@@ -177,12 +177,12 @@ void Projectile::Move(vector<Visual> &visuals, vector<Projectile> &projectiles)
         turn = copysign(turn, desiredTurn);
       else
         turn = desiredTurn;
-      
+
       // Levels 3 and 4 stop accelerating when facing away.
       if(homing >= 3)
       {
         double stepsToFace = desiredTurn / turn;
-    
+
         // If you are facing away from the target, stop accelerating.
         if(stepsToFace * 1.5 > stepsToReach)
           accel = 0.;
@@ -192,18 +192,18 @@ void Projectile::Move(vector<Visual> &visuals, vector<Projectile> &projectiles)
   // If a weapon is homing but has no target, do not turn it.
   else if(homing)
     turn = 0.;
-  
+
   if(turn)
     angle += Angle(turn);
-  
+
   if(accel)
   {
     velocity *= 1. - weapon->Drag();
     velocity += accel * angle.Unit();
   }
-  
+
   position += velocity;
-  
+
   // If this projectile is now within its "split range," it should split into
   // sub-munitions next turn.
   if(target && (position - target->Position()).Length() < weapon->SplitRange() && !Random::Int(10))
@@ -259,7 +259,7 @@ const Weapon &Projectile::GetWeapon() const
 }
 
 
-  
+
 // Find out which ship this projectile is targeting.
 const Ship *Projectile::Target() const
 {
@@ -279,13 +279,13 @@ void Projectile::CheckLock(const Ship &target)
 {
   double base = hasLock ? 1. : .5;
   hasLock = false;
-  
+
   // For each tracking type, calculate the probability that a lock will be
   // lost in a given five-second period. Then, since this check is done about
   // every 0.2 second (twelve frames), test against the 25th root of the probability.
   if(weapon->Tracking())
     hasLock |= Check(weapon->Tracking(), base);
-  
+
   // Optical tracking is about 15% for interceptors and 75% for medium warships.
   if(weapon->OpticalTracking())
   {
@@ -293,14 +293,14 @@ void Projectile::CheckLock(const Ship &target)
     double probability = weapon->OpticalTracking() * weight / (200'000. + weight);
     hasLock |= Check(probability, base);
   }
-  
+
   // Infrared tracking is 10% when heat is zero and 100% when heat is full.
   if(weapon->InfraredTracking())
   {
     double probability = weapon->InfraredTracking() * min(1., target.Heat() + .1);
     hasLock |= Check(probability, base);
   }
-  
+
   // Radar tracking depends on whether the target ship has jamming capabilities.
   // Jamming of 1 is enough to increase your chance of dodging to 50%.
   if(weapon->RadarTracking())

@@ -20,24 +20,24 @@ public:
   // Clear the list, also setting the global time step for animation.
   void Clear(int step = 0, double zoom = 1.);
   void SetCentre(const Point &centre);
-  
+
   // Add an object based on the Body class.
   bool Add(const Body &body, float clip = 1.);
-  
+
   // Draw all the items in this list.
   void Draw() const;
-  
-  
+
+
 private:
   bool Cull(const Body &body, const Point &position) const;
-  
-  
+
+
 private:
   int step = 0;
   double zoom = 1.;
   bool isHighDPI = false;
   Point centre;
-  
+
   // Each sprite consists of six vertices (four vertices to form a quad and
   // two dummy vertices to mark the break in between them). Each of those
   // vertices has five attributes: (x, y) position in pixels, (s, t) texture

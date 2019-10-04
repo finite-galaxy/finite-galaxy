@@ -57,10 +57,10 @@ public:
   // done with all landscapes to speed up the program's startup.
   static void Preload(const Sprite *sprite);
   static void FinishLoading();
-  
+
   // Get the list of resource sources (i.e. plugin folders).
   static const std::vector<std::string> &Sources();
-  
+
   // Revert any changes that have been made to the universe.
   static void Revert();
   static void SetDate(const Date &date);
@@ -74,13 +74,13 @@ public:
   // Update the neighbour lists of all the systems. This must be done any time
   // that a change creates or moves a system.
   static void UpdateNeighbours();
-  
+
   // Re-activate any special persons that were created previously but that are
   // still alive.
   static void ResetPersons();
   // Mark all persons in the given list as dead.
   static void DestroyPersons(std::vector<std::string> &names);
-  
+
   static const Set<Colour> &Colours();
   static const Set<Conversation> &Conversations();
   static const Set<Effect> &Effects();
@@ -99,44 +99,44 @@ public:
   static const Set<Ship> &Ships();
   static const Set<Sale<Ship>> &Shipyards();
   static const Set<System> &Systems();
-  
+
   static const Government *PlayerGovernment();
   static Politics &GetPolitics();
   static const StartConditions &Start();
-  
+
   static const std::vector<Trade::Commodity> &Commodities();
   static const std::vector<Trade::Commodity> &SpecialCommodities();
-  
+
   // Custom messages to be shown when trying to land on certain stellar objects.
   static bool HasLandingMessage(const Sprite *sprite);
   static const std::string &LandingMessage(const Sprite *sprite);
   // Get the solar power and wind output of the given stellar object sprite.
   static double SolarPower(const Sprite *sprite);
   static double SolarWind(const Sprite *sprite);
-  
+
   // Pick a random news object that applies to the given planet. If there is
   // no applicable news, this returns null.
   static const News *PickNews(const Planet *planet);
-  
+
   // Strings for combat rating levels, etc.
   static const std::string &Rating(const std::string &type, int level);
   static const std::vector<std::string> &Categories(const std::string &type); 
-  
+
   static const StarField &Background();
   static void SetHaze(const Sprite *sprite);
-  
+
   static const std::string &Tooltip(const std::string &label);
   static std::string HelpMessage(const std::string &name);
   static const std::map<std::string, std::string> &HelpTemplates();
-  
+
   static const std::map<std::string, std::string> &PluginAboutText();
-  
-  
+
+
 private:
   static void LoadSources();
   static void LoadFile(const std::string &path, bool debugMode);
   static std::map<std::string, std::shared_ptr<ImageSet>> FindImages();
-  
+
   static void PrintShipTable();
   static void PrintWeaponTable();
 };

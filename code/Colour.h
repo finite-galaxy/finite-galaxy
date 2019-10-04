@@ -16,12 +16,12 @@ public:
   explicit Colour(float i = 1.f, float a = 1.f);
   // Constructor for colours, opaque unless an alpha is also given.
   Colour(float r, float g, float b, float a = 1.f);
-  
+
   // Set this colour to the given RGBA values.
   void Load(double r, double g, double b, double a);
   // Get the colour as a float vector, suitable for use by OpenGL.
   const float *Get() const;
-  
+
   // Get this colour, but entirely opaque. That is, this is the colour you would
   // get if drawing this colour on top of opaque black.
   Colour Opaque() const;
@@ -31,8 +31,8 @@ public:
   // Assuming that this is an opaque colour, get its additive equivalent with
   // the given fraction of its full brightness.
   Colour Additive(float alpha) const;
-  
-  
+
+
 private:
   // Store the colour as a float vector for easy interfacing with OpenGL.
   float colour[4];

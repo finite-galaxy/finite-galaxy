@@ -38,7 +38,7 @@ void StarField::Init(int stars, int width)
 {
   SetUpGraphics();
   MakeStars(stars, width);
-  
+
   const Sprite *sprite = SpriteSet::Get("_menu/haze");
   for(size_t i = 0; i < HAZE_COUNT; ++i)
   {
@@ -71,7 +71,7 @@ void StarField::SetHaze(const Sprite *sprite)
   // If no sprite is given, set the default one.
   if(!sprite)
     sprite = SpriteSet::Get("_menu/haze");
-  
+
   for(Body &body : haze)
     body.SetSprite(sprite);
 }
@@ -82,25 +82,25 @@ void StarField::Draw(const Point &pos, const Point &vel, double zoom) const
 {
   glUseProgram(shader.Object());
   glBindVertexArray(vao);
-  
+
   float length = vel.Length();
   Point unit = length ? vel.Unit() : Point(1., 0.);
   // Don't zoom the stars at the same rate as the field; otherwise, at the
   // farthest out zoom they are too small to draw well.
   unit /= pow(zoom, .75);
-  
+
   float baseZoom = static_cast<float>(2. * zoom);
   GLfloat scale[2] = {baseZoom / Screen::Width(), -baseZoom / Screen::Height()};
   glUniform2fv(scaleI, 1, scale);
-  
+
   GLfloat rotate[4] = {
     static_cast<float>(unit.Y()), static_cast<float>(-unit.X()),
     static_cast<float>(unit.X()), static_cast<float>(unit.Y())};
   glUniformMatrix2fv(rotateI, 1, false, rotate);
-  
+
   glUniform1f(elongationI, length * zoom);
   glUniform1f(brightnessI, min(1., pow(zoom, .5)));
-  
+
   // Stars this far beyond the border may still overlap the screen.
   double borderX = fabs(vel.X()) + 1.;
   double borderY = fabs(vel.Y()) + 1.;
@@ -112,7 +112,7 @@ void StarField::Draw(const Point &pos, const Point &vel, double zoom) const
   // Round down to the start of the nearest tile.
   minX &= ~(TILE_SIZE - 1l);
   minY &= ~(TILE_SIZE - 1l);
-  
+
   for(int gy = minY; gy < maxY; gy += TILE_SIZE)
     for(int gx = minX; gx < maxX; gx += TILE_SIZE)
     {
@@ -122,24 +122,24 @@ void StarField::Draw(const Point &pos, const Point &vel, double zoom) const
         static_cast<float>(off.Y())
       };
       glUniform2fv(translateI, 1, translate);
-      
+
       int index = (gx & widthMod) / TILE_SIZE + ((gy & widthMod) / TILE_SIZE) * tileCols;
       int first = 6 * tileIndex[index];
       int count = 6 * tileIndex[index + 1] - first;
       glDrawArrays(GL_TRIANGLES, first, count);
     }
-  
+
   glBindVertexArray(0);
   glUseProgram(0);
-  
+
   // Draw the background haze unless it is disabled in the preferences.
   if(!Preferences::Has("Draw background haze"))
     return;
-  
+
   DrawList drawList;
   drawList.Clear(0, zoom);
   drawList.SetCentre(pos);
-  
+
   // Any object within this range must be drawn. Some haze sprites may repeat
   // more than once if the view covers a very large area.
   Point size = Point(1., 1.) * haze.front().Radius();
@@ -153,7 +153,7 @@ void StarField::Draw(const Point &pos, const Point &vel, double zoom) const
     startX += topLeft.X() + HAZE_WRAP * (startX < 0.);
     double startY = fmod(it.Position().Y() - topLeft.Y(), HAZE_WRAP);
     startY += topLeft.Y() + HAZE_WRAP * (startY < 0.);
-  
+
     // Draw any instances of this haze that are on screen.
     for(double y = startY; y < bottomRight.Y(); y += HAZE_WRAP)
       for(double x = startX; x < bottomRight.X(); x += HAZE_WRAP)
@@ -172,13 +172,13 @@ void StarField::SetUpGraphics()
     "uniform vec2 scale;\n"
     "uniform float elongation;\n"
     "uniform float brightness;\n"
-    
+
     "in vec2 offset;\n"
     "in float size;\n"
     "in float corner;\n"
     "out float fragmentAlpha;\n"
     "out vec2 coord;\n"
-    
+
     "void main() {\n"
     "  fragmentAlpha = brightness * (4. / (4. + elongation)) * size * .2 + .05;\n"
     "  coord = vec2(sin(corner), cos(corner));\n"
@@ -190,26 +190,26 @@ void StarField::SetUpGraphics()
     "in float fragmentAlpha;\n"
     "in vec2 coord;\n"
     "out vec4 finalColour;\n"
-    
+
     "void main() {\n"
     "  float alpha = fragmentAlpha * (1. - abs(coord.x) - abs(coord.y));\n"
     "  finalColour = vec4(1, 1, 1, 1) * alpha;\n"
     "}\n";
-  
+
   shader = Shader(vertexCode, fragmentCode);
-  
+
   // make and bind the VAO
   glGenVertexArrays(1, &vao);
   glBindVertexArray(vao);
-  
+
   // make and bind the VBO
   glGenBuffers(1, &vbo);
   glBindBuffer(GL_ARRAY_BUFFER, vbo);
-  
+
   offsetI = shader.Attrib("offset");
   sizeI = shader.Attrib("size");
   cornerI = shader.Attrib("corner");
-  
+
   scaleI = shader.Uniform("scale");
   rotateI = shader.Uniform("rotate");
   elongationI = shader.Uniform("elongation");
@@ -224,13 +224,13 @@ void StarField::MakeStars(int stars, int width)
   // We can only work with power-of-two widths above 256.
   if(width < TILE_SIZE || (width & (width - 1)))
     return;
-  
+
   widthMod = width - 1;
-  
+
   tileCols = (width / TILE_SIZE);
   tileIndex.clear();
   tileIndex.resize(tileCols * tileCols, 0);
-  
+
   vector<int> off;
   static const int MAX_OFF = 50;
   static const int MAX_D = MAX_OFF * MAX_OFF;
@@ -242,16 +242,16 @@ void StarField::MakeStars(int stars, int width)
       int d = x * x + y * y;
       if(d < MIN_D || d > MAX_D)
         continue;
-      
+
       off.push_back(x);
       off.push_back(y);
     }
-  
+
   // Generate random points in a temporary vector.
   // Keep track of how many fall into each tile, for sorting out later.
   vector<int> temp;
   temp.reserve(2 * stars);
-  
+
   int x = Random::Int(width);
   int y = Random::Int(width);
   for(int i = 0; i < stars; ++i)
@@ -269,13 +269,13 @@ void StarField::MakeStars(int stars, int width)
     int index = (x / TILE_SIZE) + (y / TILE_SIZE) * tileCols;
     ++tileIndex[index];
   }
-  
+
   // Accumulate item counts so that tileIndex[i] is the index in the array of
   // the first star that falls within tile i, and tileIndex.back() == stars.
   tileIndex.insert(tileIndex.begin(), 0);
   tileIndex.pop_back();
   partial_sum(tileIndex.begin(), tileIndex.end(), tileIndex.begin());
-  
+
   // Each star consists of five vertices, each with four data elements.
   vector<GLfloat> data(6 * 4 * stars, 0.f);
   for(auto it = temp.begin(); it != temp.end(); )
@@ -284,13 +284,13 @@ void StarField::MakeStars(int stars, int width)
     int x = *it++;
     int y = *it++;
     int index = (x / TILE_SIZE) + (y / TILE_SIZE) * tileCols;
-    
+
     // Randomize its sub-pixel position and its size / brightness.
     int random = Random::Int(4096);
     float fx = (x & (TILE_SIZE - 1)) + (random & 15) * 0.0625f;
     float fy = (y & (TILE_SIZE - 1)) + (random >> 8) * 0.0625f;
     float size = (((random >> 4) & 15) + 20) * 0.0625f;
-    
+
     // Fill in the data array.
     auto dataIt = data.begin() + 6 * 4 * tileIndex[index]++;
     const float CORNER[6] = {
@@ -313,20 +313,20 @@ void StarField::MakeStars(int stars, int width)
   tileIndex.insert(tileIndex.begin(), 0);
 
   glBufferData(GL_ARRAY_BUFFER, sizeof(data.front()) * data.size(), data.data(), GL_STATIC_DRAW);
-  
+
   // connect the xy to the "vert" attribute of the vertex shader
   glEnableVertexAttribArray(offsetI);
   glVertexAttribPointer(offsetI, 2, GL_FLOAT, GL_FALSE,
     4 * sizeof(GLfloat), nullptr);
-  
+
   glEnableVertexAttribArray(sizeI);
   glVertexAttribPointer(sizeI, 1, GL_FLOAT, GL_FALSE,
     4 * sizeof(GLfloat), (const GLvoid*)(2 * sizeof(GLfloat)));
-  
+
   glEnableVertexAttribArray(cornerI);
   glVertexAttribPointer(cornerI, 1, GL_FLOAT, GL_FALSE,
     4 * sizeof(GLfloat), (const GLvoid*)(3 * sizeof(GLfloat)));
-  
+
   // unbind the VBO and VAO
   glBindBuffer(GL_ARRAY_BUFFER, 0);
   glBindVertexArray(0);

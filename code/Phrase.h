@@ -14,23 +14,23 @@ class DataNode;
 class Phrase {
 public:
   void Load(const DataNode &node);
-  
+
   const std::string &Name() const;
   std::string Get() const;
-  
-  
+
+
 private:
   bool ReferencesPhrase(const Phrase *phrase) const;
-  
-  
+
+
 private:
   class Part {
   public:
     std::vector<std::string> words;
     std::vector<const Phrase *> phrases;
   };
-  
-  
+
+
 private:
   std::string name;
   std::vector<std::vector<Part>> parts;

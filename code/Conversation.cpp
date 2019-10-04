@@ -22,7 +22,7 @@ namespace {
     {"die", Conversation::DIE},
     {"explode", Conversation::EXPLODE}
   };
-  
+
   // Get the index of the given special string. 0 means it is "goto", a number
   // less than 0 means it is an outcome, and 1 means no match.
   int TokenIndex(const string &token)
@@ -30,17 +30,17 @@ namespace {
     auto it = TOKEN_INDEX.find(token);
     return (it == TOKEN_INDEX.end() ? 0 : it->second);
   }
-  
+
   // Map an index back to a string, for saving the conversation to a file.
   string TokenName(int index)
   {
     for(const auto &it : TOKEN_INDEX)
       if(it.second == index)
         return it.first;
-    
+
     return to_string(index);
   }
-  
+
   // Write a "goto" or endpoint.
   void WriteToken(int index, DataWriter &out)
   {
@@ -81,10 +81,10 @@ void Conversation::Load(const DataNode &node)
   // Make sure this really is a conversation specification.
   if(node.Token(0) != "conversation")
     return;
-  
+
   // Free any previously loaded data.
   nodes.clear();
-  
+
   for(const DataNode &child : node)
   {
     if(child.Token(0) == "scene" && child.Size() >= 2)
@@ -110,7 +110,7 @@ void Conversation::Load(const DataNode &node)
         // just bring you to the next node in the script.
         nodes.back().data.emplace_back(grand.Token(0), nodes.size());
         nodes.back().data.back().first += '\n';
-        
+
         LoadGotos(grand);
       }
       if(nodes.back().data.empty())
@@ -161,23 +161,23 @@ void Conversation::Load(const DataNode &node)
       // paragraph into the previous node.
       if(nodes.empty() || !nodes.back().canMergeOnto)
         AddNode();
-      
+
       // Always append a newline to the end of the text.
       nodes.back().data.back().first += child.Token(0);
       nodes.back().data.back().first += '\n';
-      
+
       // Check whether there is a goto attached to this block of text. If
       // so, future nodes can't merge onto this one.
       if(LoadGotos(child))
         nodes.back().canMergeOnto = false;
     }
   }
-  
+
   // Display a warning if a label was not resolved.
   if(!unresolved.empty())
     for(const auto &it : unresolved)
       node.PrintTrace("Conversation contains unrecognized label \"" + it.first + "\":");
-  
+
   // Check for any loops in the conversation.
   for(const auto &it : labels)
   {
@@ -193,7 +193,7 @@ void Conversation::Load(const DataNode &node)
       }
     }
   }
-  
+
   // Free the working buffers that we no longer need.
   labels.clear();
   unresolved.clear();
@@ -213,9 +213,9 @@ void Conversation::Save(DataWriter &out) const
       // the label for every node is just its node index.
       out.Write("label", i);
       const Node &node = nodes[i];
-      
+
       if(node.scene)
-        out.Write("scene", node.scene->Name());  
+        out.Write("scene", node.scene->Name());
       if(!node.conditions.IsEmpty())
       {
         // The only thing differentiating a "branch" from an "apply" node
@@ -224,7 +224,7 @@ void Conversation::Save(DataWriter &out) const
           out.Write("branch", TokenName(node.data[0].second), TokenName(node.data[1].second));
         else
           out.Write("apply", TokenName(node.data[0].second));
-        
+
         // Write the condition set as a child of this node.
         out.BeginChild();
         {
@@ -247,7 +247,7 @@ void Conversation::Save(DataWriter &out) const
         int index = it.second;
         if(index > 0 && static_cast<unsigned>(index) >= nodes.size())
           index = Conversation::DECLINE;
-        
+
         // Write the node that we go to next after this.
         WriteToken(index, out);
       }
@@ -285,7 +285,7 @@ bool Conversation::IsChoice(int node) const
 {
   if(static_cast<unsigned>(node) >= nodes.size())
     return false;
-  
+
   return nodes[node].isChoice;
 }
 
@@ -296,7 +296,7 @@ int Conversation::Choices(int node) const
 {
   if(static_cast<unsigned>(node) >= nodes.size())
     return 0;
-  
+
   return nodes[node].isChoice ? nodes[node].data.size() : 0;
 }
 
@@ -307,7 +307,7 @@ bool Conversation::IsBranch(int node) const
 {
   if(static_cast<unsigned>(node) >= nodes.size())
     return false;
-  
+
   return !nodes[node].conditions.IsEmpty() && nodes[node].data.size() > 1;
 }
 
@@ -319,7 +319,7 @@ bool Conversation::IsApply(int node) const
 {
   if(static_cast<unsigned>(node) >= nodes.size())
     return false;
-  
+
   return !nodes[node].conditions.IsEmpty() && nodes[node].data.size() == 1;
 }
 
@@ -331,7 +331,7 @@ const ConditionSet &Conversation::Conditions(int node) const
   static ConditionSet empty;
   if(static_cast<unsigned>(node) >= nodes.size())
     return empty;
-  
+
   return nodes[node].conditions;
 }
 
@@ -341,11 +341,11 @@ const ConditionSet &Conversation::Conditions(int node) const
 const string &Conversation::Text(int node, int choice) const
 {
   static const string empty;
-  
+
   if(static_cast<unsigned>(node) >= nodes.size()
       || static_cast<unsigned>(choice) >= nodes[node].data.size())
     return empty;
-  
+
   return nodes[node].data[choice].first;
 }
 
@@ -356,7 +356,7 @@ const Sprite *Conversation::Scene(int node) const
 {
   if(static_cast<unsigned>(node) >= nodes.size())
     return nullptr;
-  
+
   return nodes[node].scene;
 }
 
@@ -368,7 +368,7 @@ int Conversation::NextNode(int node, int choice) const
   if(static_cast<unsigned>(node) >= nodes.size()
       || static_cast<unsigned>(choice) >= nodes[node].data.size())
     return DECLINE;
-  
+
   return nodes[node].data[choice].second;
 }
 
@@ -415,16 +415,16 @@ void Conversation::AddLabel(const string &label, const DataNode &node)
     node.PrintTrace("Conversation: label \"" + label + "\" is used more than once:");
     return;
   }
-  
+
   // If there are any unresolved references to this label, we can now set
   // their indices correctly.
   auto range = unresolved.equal_range(label);
-  
+
   for(auto it = range.first; it != range.second; ++it)
     nodes[it->second.first].data[it->second.second].second = nodes.size();
-  
+
   unresolved.erase(range.first, range.second);
-  
+
   // Remember what index this label points to.
   labels[label] = nodes.size();
 }
@@ -436,7 +436,7 @@ void Conversation::AddLabel(const string &label, const DataNode &node)
 void Conversation::Goto(const string &label, int node, int choice)
 {
   auto it = labels.find(label);
-  
+
   if(it == labels.end())
     unresolved.insert({label, {node, choice}});
   else

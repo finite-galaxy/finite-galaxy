@@ -110,7 +110,7 @@ double MapShipyardPanel::SystemValue(const System *system) const
 {
   if(!system || !system->IsInhabited(player.Flagship()))
     return numeric_limits<double>::quiet_NaN();
-  
+
   double value = -.5;
   for(const StellarObject &object : system->Objects())
     if(object.GetPlanet())
@@ -155,18 +155,18 @@ void MapShipyardPanel::DrawItems()
     auto it = catalogue.find(category);
     if(it == catalogue.end())
       continue;
-    
+
     // Draw the header. If this category is collapsed, skip drawing the items.
     if(DrawHeader(corner, category))
       continue;
-    
+
     for(const Ship *ship : it->second)
     {
       string price = Format::Credits(ship->Cost()) + " credits";
-      
+
       string info = Format::Number(ship->Attributes().Get("shields")) + " shields / ";
       info += Format::Number(ship->Attributes().Get("hull")) + " hull";
-      
+
       bool isForSale = true;
       if(selectedSystem && player.HasVisited(selectedSystem))
       {
@@ -180,7 +180,7 @@ void MapShipyardPanel::DrawItems()
       }
       if(!isForSale && onlyShowSoldHere)
         continue;
-      
+
       const Sprite *sprite = ship->Thumbnail();
       if(!sprite)
         sprite = ship->GetSprite();
@@ -205,7 +205,7 @@ void MapShipyardPanel::Init()
           catalogue[ship->Attributes().Category()].push_back(ship);
           seen.insert(ship);
         }
-  
+
   for(auto &it : catalogue)
     sort(it.second.begin(), it.second.end(),
       [](const Ship *a, const Ship *b) {return a->ModelName() < b->ModelName();});

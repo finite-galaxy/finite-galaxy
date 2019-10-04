@@ -15,12 +15,12 @@ public:
   File(const File &) = delete;
   File(File &&other);
   ~File();
-  
+
   File &operator=(const File &) = delete;
-  
+
   operator bool() const;
   operator FILE*() const;
-  
+
 private:
   FILE *file = nullptr;
 };

@@ -34,44 +34,44 @@ public:
   Fleet() = default;
   // Construct and Load() at the same time.
   Fleet(const DataNode &node);
-  
+
   void Load(const DataNode &node);
-  
+
   // Get the government of this fleet.
   const Government *GetGovernment() const;
-  
+
   // Choose a fleet to be created during flight, and have it enter the system via jump or planetary departure.
   void Enter(const System &system, std::list<std::shared_ptr<Ship>> &ships, const Planet *planet = nullptr) const;
   // Place a fleet in the given system, already "in action." If the carried flag is set, only
   // uncarried ships will be added to the list (as any carryables will be stored in bays).
   void Place(const System &system, std::list<std::shared_ptr<Ship>> &ships, bool carried = true) const;
-  
+
   // Do the randomization to make a ship enter or be in the given system.
   // Return the system that was chosen for the ship to enter from.
   static const System *Enter(const System &system, Ship &ship, const System *source = nullptr);
   static void Place(const System &system, Ship &ship);
-  
+
   int64_t Strength() const;
-  
-  
+
+
 private:
   class Variant {
   public:
     explicit Variant(const DataNode &node);
-    
+
     int weight;
     std::vector<const Ship *> ships;
   };
-  
-  
+
+
 private:
   const Variant &ChooseVariant() const;
   static std::pair<Point, double> ChooseCentre(const System &system);
   std::vector<std::shared_ptr<Ship>> Instantiate(const Variant &variant) const;
   bool PlaceFighter(std::shared_ptr<Ship> fighter, std::vector<std::shared_ptr<Ship>> &placed) const;
   void SetCargo(Ship *ship) const;
-  
-  
+
+
 private:
   std::string fleetName;
   const Government *government = nullptr;
@@ -84,7 +84,7 @@ private:
   int cargo = 3;
   std::vector<std::string> commodities;
   std::set<const Sale<Outfit> *> outfitters;
-  
+
   Personality personality;
 };
 

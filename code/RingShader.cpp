@@ -22,7 +22,7 @@ namespace {
   GLint startAngleI;
   GLint dashI;
   GLint colourI;
-  
+
   GLuint vao;
   GLuint vbo;
 }
@@ -36,10 +36,10 @@ void RingShader::Init()
     "uniform vec2 position;\n"
     "uniform float radius;\n"
     "uniform float width;\n"
-    
+
     "in vec2 vert;\n"
     "out vec2 coord;\n"
-    
+
     "void main() {\n"
     "  coord = (radius + width) * vert;\n"
     "  gl_Position = vec4((coord + position) * scale, 0, 1);\n"
@@ -53,10 +53,10 @@ void RingShader::Init()
     "uniform float startAngle;\n"
     "uniform float dash;\n"
     "const float pi = 3.1415926535897932384626433832795;\n"
-    
+
     "in vec2 coord;\n"
     "out vec4 finalColour;\n"
-    
+
     "void main() {\n"
     "  float arc = mod(atan(coord.x, coord.y) + pi + startAngle, 2 * pi);\n"
     "  float arcFalloff = 1 - min(2 * pi - arc, arc - angle) * radius;\n"
@@ -70,7 +70,7 @@ void RingShader::Init()
     "  float alpha = clamp(min(arcFalloff, lenFalloff), 0, 1);\n"
     "  finalColour = colour * alpha;\n"
     "}\n";
-  
+
   shader = Shader(vertexCode, fragmentCode);
   scaleI = shader.Uniform("scale");
   positionI = shader.Uniform("position");
@@ -80,14 +80,14 @@ void RingShader::Init()
   startAngleI = shader.Uniform("startAngle");
   dashI = shader.Uniform("dash");
   colourI = shader.Uniform("colour");
-  
+
   // Generate the vertex data for drawing sprites.
   glGenVertexArrays(1, &vao);
   glBindVertexArray(vao);
-  
+
   glGenBuffers(1, &vbo);
   glBindBuffer(GL_ARRAY_BUFFER, vbo);
-  
+
   GLfloat vertexData[] = {
     -1.f, -1.f,
     -1.f,  1.f,
@@ -95,10 +95,10 @@ void RingShader::Init()
      1.f,  1.f
   };
   glBufferData(GL_ARRAY_BUFFER, sizeof(vertexData), vertexData, GL_STATIC_DRAW);
-  
+
   glEnableVertexAttribArray(shader.Attrib("vert"));
   glVertexAttribPointer(shader.Attrib("vert"), 2, GL_FLOAT, GL_FALSE, 2 * sizeof(GLfloat), nullptr);
-  
+
   // unbind the VBO and VAO
   glBindBuffer(GL_ARRAY_BUFFER, 0);
   glBindVertexArray(0);
@@ -117,9 +117,9 @@ void RingShader::Draw(const Point &pos, float out, float in, const Colour &colou
 void RingShader::Draw(const Point &pos, float radius, float width, float fraction, const Colour &colour, float dash, float startAngle)
 {
   Bind();
-  
+
   Add(pos, radius, width, fraction, colour, dash, startAngle);
-  
+
   Unbind();
 }
 
@@ -129,10 +129,10 @@ void RingShader::Bind()
 {
   if(!shader.Object())
     throw runtime_error("RingShader: Bind() called before Init().");
-  
+
   glUseProgram(shader.Object());
   glBindVertexArray(vao);
-  
+
   GLfloat scale[2] = {2.f / Screen::Width(), -2.f / Screen::Height()};
   glUniform2fv(scaleI, 1, scale);
 }
@@ -151,15 +151,15 @@ void RingShader::Add(const Point &pos, float radius, float width, float fraction
 {
   GLfloat position[2] = {static_cast<float>(pos.X()), static_cast<float>(pos.Y())};
   glUniform2fv(positionI, 1, position);
-  
+
   glUniform1f(radiusI, radius);
   glUniform1f(widthI, width);
   glUniform1f(angleI, fraction * 2. * PI);
   glUniform1f(startAngleI, startAngle * TO_RAD);
   glUniform1f(dashI, dash ? 2. * PI / dash : 0.);
-  
+
   glUniform4fv(colourI, 1, colour.Get());
-  
+
   glDrawArrays(GL_TRIANGLE_STRIP, 0, 4);
 }
 

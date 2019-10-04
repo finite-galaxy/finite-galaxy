@@ -25,15 +25,15 @@ using namespace std;
 namespace {
   string resources;
   string config;
-  
+
   string data;
   string images;
   string sounds;
   string saves;
-  
+
   mutex errorMutex;
   FILE *errorLog = nullptr;
-  
+
   // Convert windows-style directory separators ('\\') to standard '/'.
 #if defined _WIN32
   void FixWindowsSlashes(string &path)
@@ -47,12 +47,12 @@ namespace {
     wstring result;
     if(path.empty())
       return result;
-    
+
     bool endsInSlash = (path.back() == '/' || path.back() == '\\');
     int size = MultiByteToWideChar(CP_UTF8, 0, &path[0], path.length() - endsInSlash, nullptr, 0);
     result.resize(size);
     MultiByteToWideChar(CP_UTF8, 0, &path[0], path.length() - endsInSlash, &result[0], size);
-    
+
     return result;
   }
   string ToUTF8(const wchar_t *str)
@@ -60,12 +60,12 @@ namespace {
     string result;
     if(!str || !*str)
       return result;
-    
+
     // The returned size will include the null character at the end.
     int size = WideCharToMultiByte(CP_UTF8, 0, str, -1, nullptr, 0, nullptr, nullptr) - 1;
     result.resize(size);
     WideCharToMultiByte(CP_UTF8, 0, str, -1, &result[0], size, nullptr, nullptr);
-    
+
     return result;
   }
 #endif
@@ -84,9 +84,9 @@ void Files::Init(const char * const *argv)
       resources = *it;
     else if((arg == "-c" || arg == "--config") && *++it)
       config = *it;
-      
+
   }
-  
+
   if(resources.empty())
   {
     // Find the path to the resource directory. This will depend on the
@@ -94,7 +94,7 @@ void Files::Init(const char * const *argv)
     char *str = SDL_GetBasePath();
     if(!str)
       throw runtime_error("Unable to get path to resource directory!");
-    
+
     resources = str;
     SDL_free(str);
   }
@@ -131,7 +131,7 @@ void Files::Init(const char * const *argv)
   data = resources + "data/";
   images = resources + "images/";
   sounds = resources + "sounds/";
-  
+
   if(config.empty())
   {
     // Find the path to the directory for saved games (and create it if it does
@@ -139,7 +139,7 @@ void Files::Init(const char * const *argv)
     char *str = SDL_GetPrefPath("finite-galaxy", "saves");
     if(!str)
       throw runtime_error("Unable to get path to saves directory!");
-    
+
     saves = str;
 #if defined _WIN32
     FixWindowsSlashes(saves);
@@ -158,7 +158,7 @@ void Files::Init(const char * const *argv)
       config += '/';
     saves = config + "saves/";
   }
-  
+
   // Create the "plugins" directory if it does not yet exist, so that it is
   // clear to the user where plugins should go.
   {
@@ -166,7 +166,7 @@ void Files::Init(const char * const *argv)
     if(str != nullptr)
       SDL_free(str);
   }
-  
+
   // Check that all the directories exist.
   if(!Exists(data) || !Exists(images) || !Exists(sounds))
     throw runtime_error("Unable to find the resource directories!");
@@ -222,29 +222,29 @@ vector<string> Files::List(string directory)
 {
   if(directory.empty() || directory.back() != '/')
     directory += '/';
-  
+
   vector<string> list;
-  
+
 #if defined _WIN32
   WIN32_FIND_DATAW ffd;
   HANDLE hFind = FindFirstFileW(ToUTF16(directory + '*').c_str(), &ffd);
   if(!hFind)
     return list;
-  
+
   do {
     if(!ffd.cFileName || ffd.cFileName[0] == '.')
       continue;
-    
+
     if(!(ffd.dwFileAttributes & FILE_ATTRIBUTE_DIRECTORY))
       list.push_back(directory + ToUTF8(ffd.cFileName));
   } while(FindNextFileW(hFind, &ffd));
-  
+
   FindClose(hFind);
 #else
   DIR *dir = opendir(directory.c_str());
   if(!dir)
     return list;
-  
+
   while(true)
   {
     dirent *ent = readdir(dir);
@@ -253,18 +253,18 @@ vector<string> Files::List(string directory)
     // Skip dotfiles (including "." and "..").
     if(ent->d_name[0] == '.')
       continue;
-    
+
     string name = directory + ent->d_name;
     // Don't assume that this operating system's implementation of dirent
     // includes the t_type field; in particular, on Windows it will not.
     struct stat buf;
     stat(name.c_str(), &buf);
     bool isRegularFile = S_ISREG(buf.st_mode);
-    
+
     if(isRegularFile)
       list.push_back(name);
   }
-  
+
   closedir(dir);
 #endif
   return list;
@@ -277,7 +277,7 @@ vector<string> Files::ListDirectories(string directory)
 {
   if(directory.empty() || directory.back() != '/')
     directory += '/';
-  
+
   vector<string> list;
 
 #if defined _WIN32
@@ -285,21 +285,21 @@ vector<string> Files::ListDirectories(string directory)
   HANDLE hFind = FindFirstFileW(ToUTF16(directory + '*').c_str(), &ffd);
   if(!hFind)
     return list;
-  
+
   do {
     if(!ffd.cFileName || ffd.cFileName[0] == '.')
       continue;
-    
+
     if(ffd.dwFileAttributes & FILE_ATTRIBUTE_DIRECTORY)
       list.push_back(directory + ToUTF8(ffd.cFileName) + '/');
   } while(FindNextFileW(hFind, &ffd));
-  
+
   FindClose(hFind);
 #else
   DIR *dir = opendir(directory.c_str());
   if(!dir)
     return list;
-  
+
   while(true)
   {
     dirent *ent = readdir(dir);
@@ -308,14 +308,14 @@ vector<string> Files::ListDirectories(string directory)
     // Skip dotfiles (including "." and "..").
     if(ent->d_name[0] == '.')
       continue;
-    
+
     string name = directory + ent->d_name;
     // Don't assume that this operating system's implementation of dirent
     // includes the t_type field; in particular, on Windows it will not.
     struct stat buf;
     stat(name.c_str(), &buf);
     bool isDirectory = S_ISDIR(buf.st_mode);
-    
+
     if(isDirectory)
     {
       if(name.back() != '/')
@@ -323,9 +323,9 @@ vector<string> Files::ListDirectories(string directory)
       list.push_back(name);
     }
   }
-  
+
   closedir(dir);
-#endif  
+#endif
   return list;
 }
 
@@ -344,29 +344,29 @@ void Files::RecursiveList(string directory, vector<string> *list)
 {
   if(directory.empty() || directory.back() != '/')
     directory += '/';
-  
+
 #if defined _WIN32
   WIN32_FIND_DATAW ffd;
   HANDLE hFind = FindFirstFileW(ToUTF16(directory + '*').c_str(), &ffd);
   if(hFind == INVALID_HANDLE_VALUE)
     return;
-  
+
   do {
     if(!ffd.cFileName || ffd.cFileName[0] == '.')
       continue;
-    
+
     if(!(ffd.dwFileAttributes & FILE_ATTRIBUTE_DIRECTORY))
       list->push_back(directory + ToUTF8(ffd.cFileName));
     else
       RecursiveList(directory + ToUTF8(ffd.cFileName) + '/', list);
   } while(FindNextFileW(hFind, &ffd));
-  
+
   FindClose(hFind);
 #else
   DIR *dir = opendir(directory.c_str());
   if(!dir)
     return;
-  
+
   while(true)
   {
     dirent *ent = readdir(dir);
@@ -375,7 +375,7 @@ void Files::RecursiveList(string directory, vector<string> *list)
     // Skip dotfiles (including "." and "..").
     if(ent->d_name[0] == '.')
       continue;
-    
+
     string name = directory + ent->d_name;
     // Don't assume that this operating system's implementation of dirent
     // includes the t_type field; in particular, on Windows it will not.
@@ -383,13 +383,13 @@ void Files::RecursiveList(string directory, vector<string> *list)
     stat(name.c_str(), &buf);
     bool isRegularFile = S_ISREG(buf.st_mode);
     bool isDirectory = S_ISDIR(buf.st_mode);
-    
+
     if(isRegularFile)
       list->push_back(name);
     else if(isDirectory)
       RecursiveList(name + '/', list);
   }
-  
+
   closedir(dir);
 #endif
 }
@@ -500,7 +500,7 @@ string Files::Read(FILE *file)
   string result;
   if(!file)
     return result;
-  
+
   // Find the remaining number of bytes in the file.
   size_t start = ftell(file);
   fseek(file, 0, SEEK_END);
@@ -510,12 +510,12 @@ string Files::Read(FILE *file)
   result.reserve(size + 1);
   result.resize(size);
   fseek(file, start, SEEK_SET);
-  
+
   // Read the file data.
   size_t bytes = fread(&result[0], 1, result.size(), file);
   if(bytes != result.size())
     throw runtime_error("Error reading file!");
-  
+
   return result;
 }
 
@@ -533,7 +533,7 @@ void Files::Write(FILE *file, const string &data)
 {
   if(!file)
     return;
-  
+
   fwrite(&data[0], 1, data.size(), file);
 }
 
@@ -545,7 +545,7 @@ void Files::LogError(const string &message)
   cerr << message << endl;
   if(!errorLog)
     errorLog = Open(config + "errors.txt", true);
-  
+
   Write(errorLog, message);
   fwrite("\n", 1, 1, errorLog);
   fflush(errorLog);

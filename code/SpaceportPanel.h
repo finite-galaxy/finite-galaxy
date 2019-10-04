@@ -21,17 +21,17 @@ class Sprite;
 class SpaceportPanel : public Panel {
 public:
   explicit SpaceportPanel(PlayerInfo &player);
-  
+
   void UpdateNews();
-  
+
   virtual void Step() override;
   virtual void Draw() override;
-  
-  
+
+
 private:
   PlayerInfo &player;
   WrappedText text;
-  
+
   // Current news item (if any):
   bool hasNews = false;
   Information newsInfo;

@@ -33,13 +33,13 @@ public:
   // Determine whether the given path or name is to a sprite for which a
   // collision mask ought to be generated.
   static bool IsMasked(const std::string &path);
-  
-  
+
+
 public:
   // Constructor, optionally specifying the name (for image sets like the
   // plugin icons, whose name can't be determined from the path names).
   ImageSet(const std::string &name = "");
-  
+
   // Get the name of the sprite for this image set.
   const std::string &Name() const;
   // Add a single image to this set. Assume the name of the image has already
@@ -55,8 +55,8 @@ public:
   // called, the internal image buffers and mask vector will be cleared, but
   // the paths are saved in case the sprite needs to be loaded again.
   void Upload(Sprite *sprite);
-  
-  
+
+
 private:
   // Name of the sprite that will be initialized with these images.
   std::string name;

@@ -22,14 +22,14 @@ class ShipEvent;
 class MainPanel : public Panel {
 public:
   explicit MainPanel(PlayerInfo &player);
-  
+
   virtual void Step() override;
   virtual void Draw() override;
-  
+
   // The planet panel calls this when it closes.
   void OnCallback();
-  
-  
+
+
 protected:
   // Only override the ones you need; the default action is to return false.
   virtual bool KeyDown(SDL_Keycode key, Uint16 mod, const Command &command, bool isNewPress) override;
@@ -38,34 +38,34 @@ protected:
   virtual bool Drag(double dx, double dy) override;
   virtual bool Release(int x, int y) override;
   virtual bool Scroll(double dx, double dy) override;
-  
-  
+
+
 private:
   void ShowScanDialogue(const ShipEvent &event);
   bool ShowHailPanel();
   void StepEvents(bool &isActive);
-  
-  
+
+
 private:
   PlayerInfo &player;
-  
+
   Engine engine;
-  
+
   // These are the pending ShipEvents that have yet to be processed.
   std::list<ShipEvent> eventQueue;
   bool handledFront = false;
-  
+
   Command show;
-  
+
   // For displaying the GPU load.
   double load = 0.;
   double loadSum = 0.;
   int loadCount = 0;
-  
+
   // Keep track of how long a starting player has spent drifting in deep space.
   int lostness = 0;
   int lostCount = 0;
-  
+
   Point dragSource;
   Point dragPoint;
   bool isDragging = false;

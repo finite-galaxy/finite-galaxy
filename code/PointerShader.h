@@ -12,9 +12,9 @@ class Point;
 class PointerShader {
 public:
   static void Init();
-  
+
   static void Draw(const Point &centre, const Point &angle, float width, float height, float offset, const Colour &colour);
-  
+
   static void Bind();
   static void Add(const Point &centre, const Point &angle, float width, float height, float offset, const Colour &colour);
   static void Unbind();

@@ -19,14 +19,14 @@ namespace {
       if(places && !(places % 3) && (value >= 10))
         result += '|'; // ' ' U+202F narrow no-break space
       ++places;
-      
+
       result += static_cast<char>('0' + value % 10);
       value /= 10;
     } while(value);
-    
+
     if(isNegative)
       result += '-'; // '−' U+2212 minus sign
-    
+
     reverse(result.begin(), result.end());
   }
 }
@@ -40,7 +40,7 @@ string Format::Credits(int64_t value)
 {
   bool isNegative = (value < 0);
   int64_t absolute = abs(value);
-  
+
   // If the value is above one quintillion (short scale), show it in scientific notation.
   if(absolute > 1000'000'000'000'000'000ll)
   {
@@ -49,11 +49,11 @@ string Format::Credits(int64_t value)
     out << static_cast<double>(value);
     return out.str();
   }
-  
+
   // Reserve enough space for something like "-123.456 T".
   string result;
   result.reserve(8);
-  
+
   // Handle numbers bigger than a billion (short scale).
   static const vector<char> SUFFIX = {'Q', 'T', 'B'};
   static const vector<int64_t> THRESHOLD = {1000'000'000'000'000ll, 1000'000'000'000ll, 1000'000'000ll};
@@ -72,7 +72,7 @@ string Format::Credits(int64_t value)
       absolute /= THRESHOLD[i];
       break;
     }
-  
+
   // Convert the number to a string, adding commas if needed.
   FormatInteger(absolute, isNegative, result);
   return result;
@@ -86,7 +86,7 @@ string Format::Number(double value)
 {
   if(!value)
     return "0";
-  
+
   string result;
   bool isNegative = (value < 0.);
   value = fabs(value);
@@ -142,7 +142,7 @@ string Format::Decimal(double value, int places)
 {
   double integer;
   double fraction = fabs(modf(value, &integer));
-  
+
   string result = to_string(static_cast<int>(integer)) + ".";
   while(places--)
   {
@@ -160,12 +160,12 @@ double Format::Parse(const string &str)
 {
   double place = 1.;
   double value = 0.;
-  
+
   string::const_iterator it = str.begin();
   string::const_iterator end = str.end();
   while(it != end && (*it < '0' || *it > '9') && *it != '.')
     ++it;
-  
+
   for( ; it != end; ++it)
   {
     if(*it == '.')
@@ -187,7 +187,7 @@ double Format::Parse(const string &str)
       }
     }
   }
-  
+
   if(it != end)
   {
     if(*it == 'k' || *it == 'K')
@@ -201,7 +201,7 @@ double Format::Parse(const string &str)
     else if(*it == 'q' || *it == 'Q')
       value *= 1e15;
   }
-  
+
   return value;
 }
 
@@ -211,7 +211,7 @@ string Format::Replace(const string &source, const map<string, string> keys)
 {
   string result;
   result.reserve(source.length());
-  
+
   size_t start = 0;
   size_t search = start;
   while(search < source.length())
@@ -219,11 +219,11 @@ string Format::Replace(const string &source, const map<string, string> keys)
     size_t left = source.find('<', search);
     if(left == string::npos)
       break;
-    
+
     size_t right = source.find('>', left);
     if(right == string::npos)
       break;
-    
+
     bool matched = false;
     ++right;
     size_t length = right - left;
@@ -237,11 +237,11 @@ string Format::Replace(const string &source, const map<string, string> keys)
         matched = true;
         break;
       }
-    
+
     if(!matched)
       search = left + 1;
   }
-  
+
   result.append(source, start, source.length() - start);
   return result;
 }

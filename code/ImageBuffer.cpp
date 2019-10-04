@@ -53,7 +53,7 @@ void ImageBuffer::Allocate(int width, int height)
   // is set to zero.
   if(pixels || !width || !height || !frames)
     return;
-  
+
   this->width = width;
   this->height = height;
   pixels = new uint32_t[width * height * frames];
@@ -114,7 +114,7 @@ void ImageBuffer::ShrinkToHalfSize()
 {
   ImageBuffer result(frames);
   result.Allocate(width / 2, height / 2);
-  
+
   unsigned char *begin = reinterpret_cast<unsigned char *>(pixels);
   unsigned char *out = reinterpret_cast<unsigned char *>(result.pixels);
   // Loop through every line of every frame of the buffer.
@@ -148,12 +148,12 @@ bool ImageBuffer::Read(const string &path, int frame)
   bool isJPG = (extension.compare(".jpg") == 0 || extension.compare(".JPG") == 0);
   if(!isPNG && !isJPG)
     return false;
-  
+
   if(isPNG && !ReadPNG(path, *this, frame))
     return false;
   if(isJPG && !ReadJPG(path, *this, frame))
     return false;
-  
+
   // Check if the sprite uses additive blending. Start by getting the index of
   // the last character before the frame number (if one is specified).
   int pos = path.length() - 4;
@@ -182,28 +182,28 @@ namespace {
     File file(path);
     if(!file)
       return false;
-    
+
     // Set up libpng.
     png_struct *png = png_create_read_struct(PNG_LIBPNG_VER_STRING, nullptr, nullptr, nullptr);
     if(!png)
       return false;
-    
+
     png_info *info = png_create_info_struct(png);
     if(!info)
     {
       png_destroy_read_struct(&png, nullptr, nullptr);
       return false;
     }
-    
+
     if(setjmp(png_jmpbuf(png)))
     {
       png_destroy_read_struct(&png, &info, nullptr);
       return false;
     }
-    
+
     png_init_io(png, file);
     png_set_sig_bytes(png, 0);
-    
+
     png_read_info(png, info);
     int width = png_get_image_width(png, info);
     int height = png_get_image_height(png, info);
@@ -215,11 +215,11 @@ namespace {
       png_destroy_read_struct(&png, &info, nullptr);
       return false;
     }
-    
+
     // Adjust settings to make sure the result will be a BGRA file.
     int colourType = png_get_color_type(png, info);
     int bitDepth = png_get_bit_depth(png, info);
-    
+
     png_set_strip_16(png);
     png_set_packing(png);
     if(colourType == PNG_COLOR_TYPE_PALETTE)
@@ -233,37 +233,37 @@ namespace {
     // Let libpng handle any interlaced image decoding.
     png_set_interlace_handling(png);
     png_read_update_info(png, info);
-    
+
     // Read the file.
     vector<png_byte *> rows(height, nullptr);
     for(int y = 0; y < height; ++y)
       rows[y] = reinterpret_cast<png_byte *>(buffer.Begin(y, frame));
-    
+
     png_read_image(png, &rows.front());
-    
+
     // Clean up. The file will be closed automatically.
     png_destroy_read_struct(&png, &info, nullptr);
-    
+
     return true;
   }
-  
-  
-  
+
+
+
   bool ReadJPG(const string &path, ImageBuffer &buffer, int frame)
   {
     File file(path);
     if(!file)
       return false;
-    
+
     jpeg_decompress_struct cinfo;
     struct jpeg_error_mgr jerr;
     cinfo.err = jpeg_std_error(&jerr);
     jpeg_create_decompress(&cinfo);
-    
+
     jpeg_stdio_src(&cinfo, file);
     jpeg_read_header(&cinfo, true);
     cinfo.out_color_space = JCS_EXT_BGRA;
-    
+
     jpeg_start_decompress(&cinfo);
     int width = cinfo.image_width;
     int height = cinfo.image_height;
@@ -276,44 +276,44 @@ namespace {
       jpeg_destroy_decompress(&cinfo);
       return false;
     }
-    
+
     // Read the file.
     vector<JSAMPLE *> rows(height, nullptr);
     for(int y = 0; y < height; ++y)
       rows[y] = reinterpret_cast<JSAMPLE *>(buffer.Begin(y, frame));
-    
+
     while(height)
       height -= jpeg_read_scanlines(&cinfo, &rows.front() + cinfo.output_scanline, height);
-    
+
     jpeg_finish_decompress(&cinfo);
     jpeg_destroy_decompress(&cinfo);
-    
+
     return true;
   }
-  
-  
-  
+
+
+
   void Premultiply(ImageBuffer &buffer, int frame, int additive)
   {
     for(int y = 0; y < buffer.Height(); ++y)
     {
       uint32_t *it = buffer.Begin(y, frame);
-      
+
       for(uint32_t *end = it + buffer.Width(); it != end; ++it)
       {
         uint64_t value = *it;
         uint64_t alpha = (value & 0xFF00'0000) >> 24;
-        
+
         uint64_t red = (((value & 0xFF0000) * alpha) / 255) & 0xFF0000;
         uint64_t green = (((value & 0xFF00) * alpha) / 255) & 0xFF00;
         uint64_t blue = (((value & 0xFF) * alpha) / 255) & 0xFF;
-        
+
         value = red | green | blue;
         if(additive == 1)
           alpha >>= 2;
         if(additive != 2)
           value |= (alpha << 24);
-        
+
         *it = static_cast<uint32_t>(value);
       }
     }
