@@ -539,7 +539,7 @@ void Engine::Step(bool isActive)
       {
         double width = min(it->Width(), it->Height());
         statuses.emplace_back(it->Position() - centre, it->Shields(), it->Hull(),
-          max(20., width * .5), isEnemy);
+          min(it->Hull(), it->DisabledHull()), max(20., width * .5), isEnemy);
       }
     }
 
@@ -832,13 +832,15 @@ void Engine::Draw() const
 
   for(const auto &it : statuses)
   {
-    static const Colour colour[6] = {
+    static const Colour colour[8] = {
       *colours.Get("overlay friendly shields"),
       *colours.Get("overlay hostile shields"),
       *colours.Get("overlay outfit scan"),
       *colours.Get("overlay friendly hull"),
       *colours.Get("overlay hostile hull"),
-      *colours.Get("overlay cargo scan")
+      *colours.Get("overlay cargo scan"),
+      *colours.Get("overlay friendly disabled"),
+      *colours.Get("overlay hostile disabled")
     };
     Point pos = it.position * zoom;
     double radius = it.radius * zoom;
@@ -847,6 +849,8 @@ void Engine::Draw() const
     double dashes = (it.type >= 2) ? 0. : 20. * min(1., zoom);
     if(it.inner > 0.)
       RingShader::Draw(pos, radius, 1.5f, it.inner, colour[3 + it.type], dashes, it.angle);
+    if(it.disabled > 0.)
+      RingShader::Draw(pos, radius, 1.5f, it.disabled, colour[6 + it.type], dashes, it.angle);
   }
 
   // Draw the flagship highlight, if any.
@@ -2095,7 +2099,7 @@ void Engine::DoGrudge(const shared_ptr<Ship> &target, const Government *attacker
 
 
 // Constructor for the ship status display rings.
-Engine::Status::Status(const Point &position, double outer, double inner, double radius, int type, double angle)
-  : position(position), outer(outer), inner(inner), radius(radius), type(type), angle(angle)
+Engine::Status::Status(const Point &position, double outer, double inner, double disabled, double radius, int type, double angle)
+  : position(position), outer(outer), inner(inner), disabled(disabled), radius(radius), type(type), angle(angle)
 {
 }
