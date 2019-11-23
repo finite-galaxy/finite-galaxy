@@ -60,6 +60,10 @@ public:
   // Check if this planet is inhabited and has the "bank" attribute.
   bool HasBank() const;
 
+  // Check if the security of this planet has been changed from the default so
+  // that we can check if an uninhabited world should fine the player.
+  bool HasCustomSecurity() const;
+
   // Check if this planet has a shipyard.
   bool HasShipyard() const;
   // Get the list of ships in the shipyard.
@@ -142,9 +146,10 @@ private:
   // a negative fuel price always means there is no fuel on this planet.
   double fuelPrice = -1;
   bool inhabited = false;
+  bool customSecurity = false;
+  bool bank;
   // Any required attributes needed to land on this planet.
   std::set<std::string> requiredAttributes;
-  bool bank;
 
   // The salary to be paid if this planet is dominated.
   int tribute = 0;

@@ -264,11 +264,17 @@ tip "jump heat:"
 tip "jump speed:"
   `The maximum velocity below which the ship must be moving in order to make a hyperspace jump.`
 
+tip "maintenance costs:"
+  `How many credits per day you need to spend to maintain this outfit. Even if a ship is parked or an outfit is in cargo, you still need to pay for its maintenance.`
+
 tip "map:"
   `How many star systems are included in this map.`
 
 tip "mass:"
   `Mass, in tons. A ship's mass determines how fast it turns and accelerates. Each ton also requires one unit of fuel to make a hyperspace jump.`
+
+tip "operating costs:"
+  `How many credits per day you need to spend to maintain this outfit while it is in active use.`
 
 tip "outfit scan:"
   `Lets you scan your target ship's outfits from up to this distance away.`
@@ -413,6 +419,9 @@ tip "    firing force"
 
 tip "ammunition:"
   `When this weapon fires it consumes one outfit of this type.`
+
+tip "ammunition usage:"
+  `The number of units of ammo that this weapon consumes when fired.`
 
 tip "shots per second:"
   `How many projectiles per second this weapon fires. Weapons that fire continuously do not require batteries if the ship's energy generation is higher than the weapon's energy consumption.`

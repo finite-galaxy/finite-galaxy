@@ -27,7 +27,7 @@ mission "Deep Mystery Cube [0]"
     dialogue "You pick up the mystery package in an unmarked and uninhabited warehouse. It is a small black cube about two centimeters to a side, surprisingly heavy for its size, with no markings of any kind. Odd."
   on complete
     payment 5000 1000
-    dialogue `As instructed, you leave the mystery cube by the side of the road a few miles away from the spaceport. "This has to be legal, or they couldn't post it to the job board," you remind yourself as you collect the payment of <payment>.`
+    dialogue `As instructed, you leave the mystery cube by the side of the road a few kilometers away from the spaceport. "This has to be legal, or they couldn't post it to the job board," you remind yourself as you collect the payment of <payment>.`
   npc
     government "Bounty Hunter"
     personality nemesis disables waiting

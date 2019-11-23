@@ -165,7 +165,10 @@ void Planet::Load(const DataNode &node)
     else if(key == "bribe")
       bribe = child.Value(valueIndex);
     else if(key == "security")
+    {
+      customSecurity = true;
       security = child.Value(valueIndex);
+    }
     else if(key == "tribute")
     {
       tribute = child.Value(valueIndex);
@@ -391,6 +394,13 @@ double Planet::GetBribeFraction() const
 double Planet::Security() const
 {
   return security;
+}
+
+
+
+bool Planet::HasCustomSecurity() const
+{
+  return customSecurity;
 }
 
 

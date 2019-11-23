@@ -592,6 +592,19 @@
   * copy requiredOutfits in MissionAction::Instantiate() (@MageKing17)
   * separating a list of contraband into its own phrase to provide more variety in hail messages (@Thunderforge)
   * allow restriction of scanning / fining by governments (@tehhowch)
+  * fix std::out-of-range when checking scan permissions
+  * feat: Uninhabited planets do not fine by default (@Amazinite)
+  * feat: Implement maintenance and operating cost attributes (@Amazinite)
+  * fix: Specify the `std::max` overload to use (@tehhowch)
+  * feat: Support algebra in ConditionSet expressions (@tehhowch)
+  * ci(travis): Update the Travis CI config (@tehhowch)
+  * refactor: Remove copies identified by OSX CI build (@tehhowch)
+  * fix: If CXX defined in env, use it (@pkubaj)
+  * style: Rename auto-pilot variables to make their function more clear (@petervdmeer)
+  * fix: Jump-capable carried ships no longer behave independently if the player leaves them alone in a system (@tehhowch)
+  * refactor(AI): Improve reparenting of carried ships (@tehhowch)
+  * add a preference to toggle the starfield (@Disiuze)
+  * feat(weapons): Support variable ammo quantity consumption (@Amazinite)
 
 
 
