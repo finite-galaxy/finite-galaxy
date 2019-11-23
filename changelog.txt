@@ -592,7 +592,7 @@
   * copy requiredOutfits in MissionAction::Instantiate() (@MageKing17)
   * separating a list of contraband into its own phrase to provide more variety in hail messages (@Thunderforge)
   * allow restriction of scanning / fining by governments (@tehhowch)
-  * fix std::out-of-range when checking scan permissions
+  * fix std::out-of-range when checking scan permissions (@tehhowch)
   * feat: Uninhabited planets do not fine by default (@Amazinite)
   * feat: Implement maintenance and operating cost attributes (@Amazinite)
   * fix: Specify the `std::max` overload to use (@tehhowch)
@@ -602,7 +602,9 @@
   * fix: If CXX defined in env, use it (@pkubaj)
   * style: Rename auto-pilot variables to make their function more clear (@petervdmeer)
   * fix: Jump-capable carried ships no longer behave independently if the player leaves them alone in a system (@tehhowch)
+  * replaced the station1 planet sprite (@beccabunny)
   * refactor(AI): Improve reparenting of carried ships (@tehhowch)
+  * added Coalition space stations (@beccabunny)
   * add a preference to toggle the starfield (@Disiuze)
   * feat(weapons): Support variable ammo quantity consumption (@Amazinite)
 
