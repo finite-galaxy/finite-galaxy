@@ -58,12 +58,12 @@ mission "Liberate Kornephoros"
       `  "Indeed," you say.`
       `  "We have a large fleet of reinforcements coming in from the Rim," he continues, "and a few ships here that are able to fight another battle. I need you to take off with them, wait for the reinforcements to arrive, and then retake Kornephoros. If the Navy ships retreat, let them retreat. If they surrender, let them surrender. If they stay and fight, disable them if you can, destroy them if you must. Understood?"`
       choice
-        `  "Yes, sir."`
+        `  "Understood."`
           accept
         `  "I wish it hadn't come to this."`
       
       `  "We all do," he says. "No one wanted this. Not us, certainly not the Navy. But if they attack us to take our freedom, we must defend ourselves in order to keep it. Understood?"`
-      `  "Yes, sir," you say. "I'll prepare my ship for another battle."`
+      `  "Yes," you say. "I'll prepare my ship for another battle."`
         accept
     event "prepare for battle of Kornephoros"
   
@@ -713,13 +713,13 @@ mission "FW Plasma Testing 1B"
     conversation
       `You are met in the spaceport by a junior engineer from Kraz Cybernetics, who leads you to their facility and introduces you to his boss, who is known as "Barmy Edward." Edward is wearing a set of thick welding glasses and smoking a cigarette. "Pleased to meet you," he says, extending a hand that is encased in a heavy leather glove.`
       choice
-        `  "Pleased to meet you, too, sir."`
-          goto sir
+        `  "Pleased to meet you, it's an honour."`
+          goto honour
         `  "Same here."`
           goto same
       
-      label sir
-      `  "Don't call me 'sir,'" he says. "I'm not wearing a suit."`
+      label honour
+      `  "No need to be formal," he says. "I'm not wearing a suit."`
       `  "Sorry," you say. "It's just all these militia habits I'm learning."`
         goto explain
       

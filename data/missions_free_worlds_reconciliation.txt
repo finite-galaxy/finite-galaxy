@@ -380,7 +380,7 @@ mission "FW Reconciliation 2B"
       label know
       `On Farpoint, you are met by Admiral Daroth, the leader of the Oathkeepers who previously assisted you to drive the Alphas and their mercenary fleet away from Poisonwood. She is glad to see you again, and you express your sympathy over the loss of Commander Nguyen; Daroth tells you that his killer was never found.`
       label introductions
-      `  Ijs and Katya introduce themselves to Daroth, and Katya says, "Sir, I was a child on Hope when the colony was evacuated. Your ship carried my family to safety, and I've never forgotten how every night during our journey, you would walk through the cargo bay where we were staying and check to make sure all our needs were met. I've never had a chance before now to thank you in person."`
+      `  Ijs and Katya introduce themselves to Daroth, and Katya says, "Admiral Daroth, I was a child on Hope when the colony was evacuated. Your ship carried my family to safety, and I've never forgotten how every night during our journey, you would walk through the cargo bay where we were staying and check to make sure all our needs were met. I've never had a chance before now to thank you in person."`
       `  Daroth is surprised. "Councillor Reynolds," she says, "thank you. I followed your career in Parliament with some interest, but it is a shame that we never met in person until now. But I am glad we have this chance to work together at last."`
       `  Raven says, "Governor Edricka mentioned a plan for tracking down the Corporation executives who were behind the attacks in the Castor and Pollux systems."`
       `  "Indeed," says Daroth. "Southeast of here is a region of uninhabited star systems, a sort of back entrance into Corporation space. Few ships travel through there, because there is nowhere to refuel, but with a ramscoop or enough fuel capacity, travel is possible. One of the first inhabited worlds on the other side is the lawless world of Stormhold. There, you can surely find a contact who knows enough about the inner workings of the Corporation to tell you the home of at least a few of our targets… for a price." She hands Katya a large stack of credit chips.`
@@ -429,8 +429,8 @@ mission "FW Defend Farpoint"
   on offer
     conversation
       `When you land back on Farpoint, Daroth eagerly meets you and asks what information you were able to obtain. You tell her. "So," she says, "one executive on Prime, and one on Hephaestus. Both of those are core Corporation planets, with billions of people on them. No way that would work. But this financial guy, Alexander Soylent… your contact says he lives on a giant yacht that sails around the ocean on Mainsail. Now, that's a much more inviting target. And from what Sawyer says, the Corporation's financial arm were the ones who decided war would be beneficial in the first place."`
-      `  As you're talking, one of Daroth's officers runs into the room. "Sir," he says, "we're detecting a pirate fleet incoming."`
-      `  Daroth swears. "This is my real job, of course," he explains, "defending the North from pirate invasion. This isn't the first attack we've had to repulse, and lately Parliament has been finding reasons to reassign my best ships elsewhere. Captain <last>, would you be willing to join the defence fleet? We'll finish this conversation once they've been driven off."`
+      `  As you're talking, one of Daroth's officers bursts into the room. "Admiral," he says, "we're detecting a pirate fleet incoming."`
+      `  Daroth swears. "This is my real job, of course," she explains, "defending the North from pirate invasion. This isn't the first attack we've had to repulse, and lately Parliament has been finding reasons to reassign my best ships elsewhere. Captain <last>, would you be willing to join the defence fleet? We'll finish this conversation once they've been driven off."`
       `  You hurry to your ship and join the defenders…`
         launch
   
@@ -502,13 +502,13 @@ mission "FW Embassy 1"
   on offer
     conversation
       `As you are landing, Katya tells you, "<first>, we just received a message from the Free Worlds Senate. They've arranged for a Republic embassy to be set up on Bourne, and a Free Worlds embassy on Earth. We've been asked to meet the ambassadors on Earth and escort them to Bourne."`
-      `  A few minutes later, Admiral Daroth arrives at your ship. "Captain <last>," he says, "I'd like to thank you for your assistance." He hands you a million-credit chip.`
+      `  A few minutes later, Admiral Daroth arrives at your ship. "Captain <last>," she says, "I'd like to thank you for your assistance." She hands you a million-credit chip.`
       choice
-        `  "Thank you, sir."`
+        `  "Thank you, Admiral."`
           goto next
         `  "Wow, this is the biggest planetary defence bounty I've ever heard of."`
       `  "That's purely for you as a private captain, to compensate you for your assistance," he says. "I wouldn't want you to think that I am in any way giving financial support to the Free Worlds, since that would be illegal."`
-      `  "Of course not, sir," you say. "Thank you."`
+      `  "Of course not," you say. "Thank you."`
       label next
       `  "Don't mention it," he says, with a wink. "And now, I think it's best that you head to Earth and pick up those ambassadors. From what I hear, now that Raven is not travelling with you, people are beginning to ask questions about what this Free Worlds captain is doing flying all around Republic space unescorted."`
         accept
@@ -2200,7 +2200,7 @@ mission "FW Corporation Extremists 1"
   
   on offer
     conversation
-      `When you and Freya get back to the spaceport, Daroth pulls you aside. "We should talk," he says. He leads you to a private room aboard his ship, and says, "It seems that we've reached the end of whatever game these aliens were playing with us. And that means we need to get back to what we were doing before they interrupted us: bringing the Corporation to justice."`
+      `When you and Freya get back to the spaceport, Daroth pulls you aside. "We should talk," she says. She leads you to a private room aboard his ship, and says, "It seems that we've reached the end of whatever game these aliens were playing with us. And that means we need to get back to what we were doing before they interrupted us: bringing the Corporation to justice."`
       choice
         `  "Sounds good. What's your plan?"`
           goto plan
@@ -2258,13 +2258,13 @@ mission "FW Corporation Extremists 1A"
       `  "Was that knowledge accurate?" asks Freya.`
       label information
       `  "Very accurate," he says. "Our business flourished like never before. But then a month came when instead, the Oracle's predictions were bleak. A massive recession was coming, an end to the golden days of the Republic. We tried altering the model in every way we could: changing our production, our wages. We even asked the Oracle if dissolving the Corporation would avert the recession. But its predictions remained the same. Then we learned from our contacts in Parliament about the Southern Defence Pact, and the fear that they were about to declare independence. So we asked the Oracle what would happen if war broke out."`
-      `  "You started a war… to save the economy?" says Daroth. He sounds disgusted.`
+      `  "You started a war… to save the economy?" says Daroth. She sounds disgusted.`
       `  Alastair nods. "The Alphas were only too glad to help. Especially with the nuclear research. Which, incidentally, is why I'm telling you all this, because if your fleet tries to take out the Alphas, they'll strike back with nukes."`
       choice
         `  "Do you have an alternative to attacking them?"`
         `  "Is there any way we could disable the nukes?"`
       
-      `  "We gave the Alphas most of the alien technology we recovered," he says, "but one device, we managed to keep secret from them. We found it in a Korath cargo hold, and it took us a long time to even figure out how to activate it. But when we did, we discovered that it's a cloaking device. It obscures a ship not just from the visible spectrum, but from radar as well, and every other sensor we've tested except for gravitational ones. I'm certain it would hide you from the tracking systems on the nukes."`
+      `  "We gave the Alphas most of the alien technology we recovered," he says, "but one device, we managed to keep secret from them. We found it in an alien cargo hold, and it took us a long time to even figure out how to activate it. But when we did, we discovered that it's a cloaking device. It obscures a ship not just from the visible spectrum, but from radar as well, and every other sensor we've tested except for gravitational ones. I'm certain it would hide you from the tracking systems on the nukes."`
       `  Freya says, "But it would only hide one ship. That doesn't sound like it would do much good."`
       `  Alastair says, "They have a limited number of nukes. Our plan was to send a ship in cloaked, have it uncloak long enough to draw their fire, and then cloak to avoid the missiles. Basically, see how many missiles we can get them to spend before the main attack fleet arrives."`
       `  Daroth says, "That's not a bad idea. Captain <last>, would you be willing to serve as the decoy?"`
@@ -2275,7 +2275,7 @@ mission "FW Corporation Extremists 1A"
       
       `  "I don't see why not," says Daroth, fixing Alastair with a piercing gaze. "It's certainly better than leaving it in Corporation hands."`
       label end
-      `  Alastair tells you that the device is being kept on Hephaestus, and the engineers there can install it in your ship. Meanwhile, Daroth will call in the rest of his Oathkeeper fleet. "The Alphas are holed up on Stormhold," says Alastair, "an old pirate world. Good luck in defeating them."`
+      `  Alastair tells you that the device is being kept on Hephaestus, and the engineers there can install it in your ship. Meanwhile, Daroth will call in the rest of her Oathkeeper fleet. "The Alphas are holed up on Stormhold," says Alastair, "an old pirate world. Good luck in defeating them."`
         accept
   
   npc accompany save
@@ -2307,7 +2307,7 @@ mission "FW Corporation Extremists 1B"
     outfit "Cloaking Device" 1
     conversation
       `You land in the same private hangar that you visited previously to have the jump drive installed, and you think these engineers are the same crew that met you back then. "This thing is almost as bizarre as the jump drive itself," one of them says. "We have no clue how it works, and we weren't done studying it when Korban ordered us to give it to you, so please don't get yourself blown up. Okay?"`
-      `  Meanwhile, Daroth is on his way back to Deneb to rally the Oathkeepers. You should head directly for the <system> system, so that you arrive there far enough in advance of the Oathkeeper fleet.`
+      `  Meanwhile, Daroth is on her way back to Deneb to rally the Oathkeepers. You should head directly for the <system> system, so that you arrive there far enough in advance of the Oathkeeper fleet.`
         accept
   
   npc evade
@@ -2390,11 +2390,11 @@ mission "FW Corporation Extremists 1C"
     event "navy occupies alcyone"
     event "navy done with alcyone" 50
     conversation
-      `Soon after you land, more Navy ships begin pouring into the system, including Admiral Daroth's own Venus. Navy soldiers and ships are scouring the whole surface of the planet; there is very little chance that any of the Alphas who remain here will be able to escape their detection. Admiral Daroth meets with you and Freya and thanks you for providing the decoy that kept his own ships from bearing the brunt of the Alphas' nuclear arsenal.`
+      `Soon after you land, more Navy ships begin pouring into the system, including Admiral Daroth's own Venus. Navy soldiers and ships are scouring the whole surface of the planet; there is very little chance that any of the Alphas who remain here will be able to escape their detection. Admiral Daroth meets with you and Freya and thanks you for providing the decoy that kept her own ships from bearing the brunt of the Alphas' nuclear arsenal.`
       `  "Do you need us to do anything more here?" asks Freya.`
       `  "No," he says, "and I hear that Parliament wants to speak with you, Captain <last>. Something about an official commendation for your part in the battle against the Pug, I think. Meanwhile, this may not be the end of our trouble with the Corporation, but at least it's a good start. It's been an honour to fight alongside you."`
       choice
-        `  "You too, sir."`
+        `  "You too, Admiral."`
           goto end
         `  "You mean this is the end? No more battles to fight?"`
       

@@ -393,7 +393,7 @@ mission "FW Recon 1"
       choice
         `  "I was just wondering what sort of engines you've got that let you move so fast."`
           goto engines
-        `  "Never mind sir, I was just admiring your… impressive equipment."`
+        `  "Never mind, I was just admiring your… impressive equipment."`
           goto equipment
       label engines
       `  "Nice, aren't they?" he says. "Atomic engines, the very latest in propulsion technology from Deep Sky. They're so smooth and responsive, I feel like I'm back piloting a shuttlecraft again."`
@@ -506,9 +506,9 @@ mission "FW Recon 3B"
         `  (Follow them and listen in.)`
       
       `  You follow the officers into a supply yard and hide behind a large stack of crates. "Lieutenant," says one of them, "we just received word that the Free Worlds have contracted with someone to spy on this facility."`
-      `  "A professional, sir?"`
+      `  "A professional?"`
       `  "Hardly. My grandmother would make a better spy. It's a merchant captain, clearly an amateur." They are both speaking quite loudly; you are having no trouble listening in.`
-      `  "What are we going to do, sir?" asks the lieutenant.`
+      `  "What are we going to do?" asks the lieutenant.`
       `  "Nothing. If gawking at our ships were a crime, we'd have half the local population in prison by now. But if this captain should accept any further assignments, we may have to take action."`
       `  "Should we at least inform this individual that those crates make terrible cover?" asks the lieutenant, grinning.`
       `  "Now, now," says the other officer, "no need to be spiteful." They walk off, leaving you thoroughly embarrassed.`
@@ -702,7 +702,7 @@ mission "FW Katya 1C"
       
       label medical
       `  "Any biological material or restricted medications?" he asks.`
-      `  "No, sir," you say.`
+      `  "No, nothing at all," you say.`
         goto search
       
       label illegal
@@ -1655,7 +1655,7 @@ mission "FW Escort Second Chance"
       label responsible
       `  "If we offer you a mission in the future," he says, "we have to be able to trust that you will complete it. No excuses, no second tries. Do you understand?" You nod. "Fine," he says, with a long sigh. "Katya said she trusted you, and Jean Jacques as well, so I'll recommend that they give you a chance. But please try to be more responsible in the future, okay?"`
       choice
-        `  "I will. Thank you for giving me a second chance, sir."`
+        `  "I will. Thank you for giving me a second chance."`
         `  "I'll try my best."`
       `  He shakes your hand and leaves, without ordering anything to drink. You get the feeling that he still does not think very highly of you.`
       apply
