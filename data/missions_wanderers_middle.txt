@@ -1833,8 +1833,8 @@ mission "Wanderers: Sestor Search: Human Spaceport"
 
 mission "Wanderers: Sestor Search: Human Hint"
   landing
-  name "Warn Admiral Danforth"
-  description "Meet with Admiral Danforth on <planet> as soon as possible, to warn him of the possible threat from the Kor Sestor fleet."
+  name "Warn Admiral Daroth"
+  description "Meet with Admiral Daroth on <planet> as soon as possible, to warn her of the possible threat from the Kor Sestor fleet."
   source
     near "Alnitak" 1 100
   destination "Farpoint"
@@ -1844,15 +1844,15 @@ mission "Wanderers: Sestor Search: Human Hint"
     not "Wanderers: Sestor: Farpoint Attack 1: offered"
   on offer
     conversation
-      `You've located the Kor Sestor fleet, in the Alnilam system. The Republic Navy is probably ill-equipped to fight such powerful alien ships, but they may be the only thing standing in the way of an outright invasion of human space. You should warn Admiral Danforth and the Oathkeepers of the impending threat as soon as possible.`
+      `You've located the Kor Sestor fleet, in the Alnilam system. The Republic Navy is probably ill-equipped to fight such powerful alien ships, but they may be the only thing standing in the way of an outright invasion of human space. You should warn Admiral Daroth and the Oathkeepers of the impending threat as soon as possible.`
         accept
 
 
 
 mission "Wanderers: Sestor Search: Wanderer Hint"
   landing
-  name "Warn Admiral Danforth"
-  description "Meet with Admiral Danforth on <planet> as soon as possible, to warn him of the possible threat from the Kor Sestor fleet."
+  name "Warn Admiral Daroth"
+  description "Meet with Admiral Daroth on <planet> as soon as possible, to warn her of the possible threat from the Kor Sestor fleet."
   source
     government "Wanderer"
   destination "Farpoint"
@@ -1862,7 +1862,7 @@ mission "Wanderers: Sestor Search: Wanderer Hint"
     not "Wanderers: Sestor: Farpoint Attack 1: offered"
   on offer
     conversation
-      `You've located the Kor Sestor fleet, in the Alnilam system. The Republic Navy is probably ill-equipped to fight such powerful alien ships, but they may be the only thing standing in the way of an outright invasion of human space. You should warn Admiral Danforth and the Oathkeepers of the impending threat as soon as possible.`
+      `You've located the Kor Sestor fleet, in the Alnilam system. The Republic Navy is probably ill-equipped to fight such powerful alien ships, but they may be the only thing standing in the way of an outright invasion of human space. You should warn Admiral Daroth and the Oathkeepers of the impending threat as soon as possible.`
         accept
 
 
@@ -1870,24 +1870,24 @@ mission "Wanderers: Sestor Search: Wanderer Hint"
 mission "Wanderers: Sestor: Farpoint Attack 1"
   landing
   name "Defend Farpoint"
-  description "Farpoint is under attack by a Kor Sestor fleet. Drive them off, then return to the planet to speak with Admiral Danforth."
+  description "Farpoint is under attack by a Kor Sestor fleet. Drive them off, then return to the planet to speak with Admiral Daroth."
   source "Farpoint"
   to offer
     has "wanderers: found the sestor fleet"
   on offer
-    log "The Kor Sestor fleet has somehow made its way into northern human space, perhaps using a small number of jump drives to ferry ships back and forth the same way that the Unfettered invaders did. Admiral Danforth says that the system where the Korath ships have gathered is home to a secret Alpha base, so he is concerned that the Kor Sestor drones are under Alpha control."
+    log "The Kor Sestor fleet has somehow made its way into northern human space, perhaps using a small number of jump drives to ferry ships back and forth the same way that the Unfettered invaders did. Admiral Daroth says that the system where the Korath ships have gathered is home to a secret Alpha base, so she is concerned that the Kor Sestor drones are under Alpha control."
     conversation
-      `As you are coming in for a landing, you contact Admiral Danforth and ask to speak with him as soon as possible. He meets you at the landing pad and invites you back to his office, where you explain about the large Kor Sestor fleet that is now gathering to the north of here. He tells you, "For the past several months, Intelligence has been tracking a hidden Alpha base on Zenith and making plans to trap and exterminate them. And now you tell me that Zenith is being guarded by Korath drones. It seems unlikely to be a coincidence."`
+      `As you are coming in for a landing, you contact Admiral Daroth and ask to speak with her as soon as possible. She meets you at the landing pad and invites you back to her office, where you explain about the large Kor Sestor fleet that is now gathering to the north of here. She tells you, "For the past several months, Intelligence has been tracking a hidden Alpha base on Zenith and making plans to trap and exterminate them. And now you tell me that Zenith is being guarded by Korath drones. It seems unlikely to be a coincidence."`
       choice
         `  "Could the Kor Sestor have made some sort of deal with the Alphas?"`
         `  "Maybe the Alphas gained control of the Kor Sestor fleet somehow?"`
           goto next
 
-      `  "That would assume that some of the Korath who controlled the Sestor fleet are still alive," he says. "Is there evidence that that is the case?"`
+      `  "That would assume that some of the Korath who controlled the Sestor fleet are still alive," she says. "Is there evidence that that is the case?"`
 
       label next
-      `  You tell him about the underground bunker that the Wanderers discovered, and the signs that someone either recently departed from it, or recently infiltrated it from the surface. He says, "We already know that a group of Alphas was active in that region of space. You and I fought them there just recently, and failed to capture them. I bet that after they fled, they somehow gained access to the Kor Sestor bunker and took over control of the drone fleets."`
-      `  It is not particularly surprising when, a few seconds after he says that, an alarm siren begins to sound…`
+      `  You tell her about the underground bunker that the Wanderers discovered, and the signs that someone either recently departed from it, or recently infiltrated it from the surface. She says, "We already know that a group of Alphas was active in that region of space. You and I fought them there just recently, and failed to capture them. I bet that after they fled, they somehow gained access to the Kor Sestor bunker and took over control of the drone fleets."`
+      `  It is not particularly surprising when, a few seconds after she says that, an alarm siren begins to sound…`
         launch
   npc evade
     government "Kor Sestor"
@@ -1914,7 +1914,7 @@ mission "Wanderers: Sestor: Farpoint Attack 1"
       variant
         "Kar Ik Vot 349 (Defender)"
         "Kar Ik Vot 349 (Trapper)"
-    dialogue `The Kor Sestor fleet has been driven off. Time to land and see what Danforth thinks you should do next.`
+    dialogue `The Kor Sestor fleet has been driven off. Time to land and see what Daroth thinks you should do next.`
   npc
     government "Navy (Oathkeeper)"
     personality heroic
@@ -1970,7 +1970,7 @@ mission "Wanderers: Sestor: Farpoint Attack 1"
 mission "Wanderers: Sestor: Quarg Help 1"
   landing
   name "Ask the Quarg for help"
-  description "Admiral Danforth asked you to visit <planet> and ask the Quarg if they can provide any ships to help you fight off the Kor Sestor fleet (now presumably under Alpha control)."
+  description "Admiral Daroth asked you to visit <planet> and ask the Quarg if they can provide any ships to help you fight off the Kor Sestor fleet (now presumably under Alpha control)."
   autosave
   source "Farpoint"
   destination "Alta Hai"
@@ -1979,9 +1979,9 @@ mission "Wanderers: Sestor: Quarg Help 1"
     has "Wanderers: Sestor: Farpoint Attack 1: done"
   on offer
     conversation
-      `Admiral Danforth looks like he is still in shock from the carnage and loss of life in the battle that you just fought. "Please tell me that that was the entire drone fleet," he says.`
+      `Admiral Daroth looks like she is still in shock from the carnage and loss of life in the battle that you just fought. "Please tell me that that was the entire drone fleet," she says.`
       `  Sadly, you shake your head. "They have dozens of capital ships," you say. "That was probably just the vanguard of their fleet."`
-      `  Danforth sighs. "I got a taste of how powerful these Korath ships are during our attack on the previous Alpha base," he says. "I'm not sure I can stand up against a whole fleet of them. Our only hope may be the Quarg. They have a ringworld in Hai space. In fact, isn't that where we left your friend Elias?" You nod. "You should go there immediately," says Danforth. "Hopefully, you will be able to bring back help in time."`
+      `  Daroth sighs. "I got a taste of how powerful these Korath ships are during our attack on the previous Alpha base," he says. "I'm not sure I can stand up against a whole fleet of them. Our only hope may be the Quarg. They have a ringworld in Hai space. In fact, isn't that where we left your friend Elias?" You nod. "You should go there immediately," says Daroth. "Hopefully, you will be able to bring back help in time."`
         accept
 
 
@@ -1998,9 +1998,9 @@ mission "Wanderers: Sestor: Quarg Help 2"
     has "Wanderers: Sestor: Quarg Help 1: done"
   on offer
     conversation
-      `As you are coming in for a landing, you contact the Quarg and discover that Elias Hanover is indeed still living here. He meets you the moment you dock with the station, and you describe the situation. "This must be retaliation," he says. "They want to wipe Danforth and the Oathkeepers off the map to get revenge for him driving them out of their base on Avalon."`
+      `As you are coming in for a landing, you contact the Quarg and discover that Elias Hanover is indeed still living here. He meets you the moment you dock with the station, and you describe the situation. "This must be retaliation," he says. "They want to wipe Daroth and the Oathkeepers off the map to get revenge for him driving them out of their base on Avalon."`
       `  He leaves to try to find help, and returns about fifteen minutes later. "I've got four Quarg ships who volunteered to help," he says. "That may not seem like a lot, but their ships pack quite a punch. And, they've offered some medical supplies as well, which they'll load onto your ship. Good luck, captain."`
-      `  You thank him for his assistance, and hurry to fire up your ship and return to human space. Hopefully Danforth's base has not already been overrun in your absence.`
+      `  You thank him for his assistance, and hurry to fire up your ship and return to human space. Hopefully Daroth's base has not already been overrun in your absence.`
         accept
   on accept
     log "Recruited some Quarg warships to help defend human space from the Kor Sestor drones, which are now presumably under Alpha control."
@@ -2044,7 +2044,7 @@ mission "Wanderers: Sestor: Alnilam Fleet 2"
 mission "Wanderers: Sestor: Bomb Zenith 1"
   landing
   name "Deliver device to Zenith"
-  description "Admiral Danforth asked you to drop this device (presumably a bomb) above the Alpha base on <destination>."
+  description "Admiral Daroth asked you to drop this device (presumably a bomb) above the Alpha base on <destination>."
   source "Farpoint"
   destination "Zenith"
   clearance
@@ -2053,29 +2053,29 @@ mission "Wanderers: Sestor: Bomb Zenith 1"
     has "Wanderers: Sestor: Quarg Help 2: done"
   cargo "unknown device" 2
   on offer
-    log "Danforth believes that he has located the Alpha base from which the drones are being controlled; if the base is destroyed the drones ought to become aimless and be easily defeated."
+    log "Daroth believes that she has located the Alpha base from which the drones are being controlled; if the base is destroyed the drones ought to become aimless and be easily defeated."
     conversation
-      `Danforth is still alive, and still holding out against the Alpha-controlled drones. After directing several recruits to unload the medical supplies, he tells you, "The Alpha base we've been watching on <planet> is buried deep underground. I'm hoping that the Alphas either don't know we're aware of their base's location, or have chosen to remain there anyway because it is so well defended. If the drones are being controlled from there, taking out the base might deactivate the drones."`
+      `Daroth is still alive, and still holding out against the Alpha-controlled drones. After directing several recruits to unload the medical supplies, she tells you, "The Alpha base we've been watching on <planet> is buried deep underground. I'm hoping that the Alphas either don't know we're aware of their base's location, or have chosen to remain there anyway because it is so well defended. If the drones are being controlled from there, taking out the base might deactivate the drones."`
       choice
         `  "Do you think your troops could capture the base?"`
         `  "Do you have a plan for destroying the Alphas?"`
 
-      `  Danforth says, "The base is several kilometers underground. Before it was guarded by Sestor drones, we had a chance. We could have landed dozens of troop transports and fought our way inside, albeit with heavy losses. But now, I doubt our troops could even make it to the surface."`
-      `  As he is speaking, two Navy officers approach your ship with a hover-cart carrying something that looks a little bit like a retrofitted Impact missile. They salute Danforth, and he tells them, "Put it aboard Captain <last>'s ship." Then he turns to you. "I'm going to give you the coordinates of the Alpha base," he says. "It's on the polar continent, deep under the ice. Fortunately there are no other human settlements nearby."`
-      `  He pauses, as if to resign himself to what he is about to command you to do, and then says, "Land on the planet, drop this device at the coordinates, and then get the hell out of there. You'll have fifteen seconds after you deploy the device to get at least a thousand kilometers away."`
+      `  Daroth says, "The base is several kilometers underground. Before it was guarded by Sestor drones, we had a chance. We could have landed dozens of troop transports and fought our way inside, albeit with heavy losses. But now, I doubt our troops could even make it to the surface."`
+      `  As she is speaking, two Navy officers approach your ship with a hover-cart carrying something that looks a little bit like a retrofitted Impact missile. They salute Daroth, and she tells them, "Put it aboard Captain <last>'s ship." Then she turns to you. "I'm going to give you the coordinates of the Alpha base," she says. "It's on the polar continent, deep under the ice. Fortunately there are no other human settlements nearby."`
+      `  She pauses, as if to resign herself to what she is about to command you to do, and then says, "Land on the planet, drop this device at the coordinates, and then get the hell out of there. You'll have fifteen seconds after you deploy the device to get at least a thousand kilometers away."`
       choice
         `  "Wait, is this a nuke? I thought the Navy was too principled to use them."`
         `  "Okay, I'll do what you say."`
           goto end
 
-      `  "Just drop the damn thing and get out of there, fast," he says. Clearly he doesn't want to tell you anything more about the weapon's origin.`
+      `  "Just drop the damn thing and get out of there, fast," she says. Clearly she doesn't want to tell you anything more about the weapon's origin.`
 
       label end
-      `  Alarm sirens begin to sound. "Don't wait here to defend us," says Danforth. "Go straight to <planet> and deploy the device. It may be the only way you can save us."`
+      `  Alarm sirens begin to sound. "Don't wait here to defend us," says Daroth. "Go straight to <planet> and deploy the device. It may be the only way you can save us."`
         launch
   on enter
     dialogue
-      `Danforth wasn't joking when he said that the device may be your only chance. There are almost a dozen Sestor capital ships in the system, and countless smaller craft tearing the Navy to shreds.`
+      `Daroth wasn't joking when she said that the device may be your only chance. There are almost a dozen Sestor capital ships in the system, and countless smaller craft tearing the Navy to shreds.`
       `Even the Quarg warships are having trouble with an opposing fleet this size. Perhaps a more powerful fleet could defeat the automata, but it would be a difficult battle.`
   on complete
     fail "Wanderers: Sestor: Farpoint Attack 2"
@@ -2245,7 +2245,7 @@ mission "Wanderers: Sestor: Farpoint Attack 2"
         "Far Lek 14" 17
         "Far Osk 27" 13
         "Met Par Tek 53" 2
-    dialogue `Against all odds, all the Kor Sestor ships attacking the Oathkeepers have been destroyed. Maybe you won't have to use Danforth's bomb after all.`
+    dialogue `Against all odds, all the Kor Sestor ships attacking the Oathkeepers have been destroyed. Maybe you won't have to use Daroth's bomb after all.`
 
 
 
@@ -2416,7 +2416,7 @@ mission "Wanderers: Sestor: Scattered Remnant"
 mission "Wanderers: Sestor: Bomb Zenith 2"
   landing
   name "Return to <planet>"
-  description "You have destroyed the Alpha base on Zenith. Return to Farpoint and find out if your intervention allowed Danforth to gain the upper hand against the Kor Sestor fleet."
+  description "You have destroyed the Alpha base on Zenith. Return to Farpoint and find out if your intervention allowed Daroth to gain the upper hand against the Kor Sestor fleet."
   source "Zenith"
   destination "Farpoint"
   to offer
@@ -2426,11 +2426,11 @@ mission "Wanderers: Sestor: Bomb Zenith 2"
     event "bombed zenith"
     event "zenith cooling" 40
     conversation
-      `You shove Danforth's device out the airlock at the coordinates he gave you, and immediately fire your ship's repulsors full blast to take you back up into orbit…`
+      `You shove Daroth's device out the airlock at the coordinates he gave you, and immediately fire your ship's repulsors full blast to take you back up into orbit…`
         launch
   on enter
     conversation
-      `The way Danforth talked about the device he gave you made you assume that it was a nuclear bomb, but the explosion that rocks <origin> a few seconds after you depart is far too powerful for that. The light of the explosion is many times brighter than this system's sun. And unless your sensors are lying to you, there is now a crater near <origin>'s south pole that goes all the way down to the mantle. Lava is filling the hole, and the entire planet's crust is shifting and shivering in response.`
+      `The way Daroth talked about the device he gave you made you assume that it was a nuclear bomb, but the explosion that rocks <origin> a few seconds after you depart is far too powerful for that. The light of the explosion is many times brighter than this system's sun. And unless your sensors are lying to you, there is now a crater near <origin>'s south pole that goes all the way down to the mantle. Lava is filling the hole, and the entire planet's crust is shifting and shivering in response.`
       `  You are glad that no human settlements were near the explosion, but your sensors are picking up compression waves travelling along the whole planet's surface, bouncing across it again and again as the planet rings like a bell. Anyone who lived anywhere on <origin> just got hit by an earthquake of deadly proportions.`
       `  You can only hope that it was worth it, and that the control station has indeed been destroyed.`
 
@@ -2459,17 +2459,17 @@ mission "Wanderers: Sestor: Kill Southern Remnant"
   waypoint "Wazn"
   on offer
     conversation
-      `The base on <planet> appears to have survived the attack, despite the Kor Sestor drones that were overhead. You meet with Danforth and tell him that you destroyed the Alpha base using the weapon he gave you.`
-      `  He says, "When you destroyed the base, the Sestor drones suddenly stopped acting as a unified fleet. A few stayed here, but most of them have spread throughout this sector of space, and we are receiving reports that they are attacking Navy and civilian ships indiscriminately. My own fleet is too damaged to do anything to stop them, but other Navy bases are sending in reinforcements. Can you join them to help eliminate the drones?"`
+      `The base on <planet> appears to have survived the attack, despite the Kor Sestor drones that were overhead. You meet with Daroth and tell her that you destroyed the Alpha base using the weapon she gave you.`
+      `  She says, "When you destroyed the base, the Sestor drones suddenly stopped acting as a unified fleet. A few stayed here, but most of them have spread throughout this sector of space, and we are receiving reports that they are attacking Navy and civilian ships indiscriminately. My own fleet is too damaged to do anything to stop them, but other Navy bases are sending in reinforcements. Can you join them to help eliminate the drones?"`
       choice
         `  "Of course, I would be glad to."`
           goto end
         `  "Of course. But first, what the hell was that bomb you had me drop on Zenith? It cracked the whole planet open."`
 
-      `  Danforth sighs. "Unfortunately," he says, "I am not permitted to tell you what that weapon was or how we acquired it. And already news agencies throughout the Republic are questioning our use of such a terrible weapon. I wish we had been able to defeat the Kor Sestor fleet without resorting to such extreme measures, but we had no choice."`
+      `  Daroth sighs. "Unfortunately," she says, "I am not permitted to tell you what that weapon was or how we acquired it. And already news agencies throughout the Republic are questioning our use of such a terrible weapon. I wish we had been able to defeat the Kor Sestor fleet without resorting to such extreme measures, but we had no choice."`
 
       label end
-      `  Danforth gives you a map of the systems where there have been reports of Kor Sestor drones attacking civilian ships. "These, plus any that were left alive in the Alnilam system, are all the automata that we have been able to track," he says. "Report back here once you have succeeded in completely destroying them. We can't risk letting some local warlord capture them. The Navy will hopefully send some ships to help you."`
+      `  Daroth gives you a map of the systems where there have been reports of Kor Sestor drones attacking civilian ships. "These, plus any that were left alive in the Alnilam system, are all the automata that we have been able to track," she says. "Report back here once you have succeeded in completely destroying them. We can't risk letting some local warlord capture them. The Navy will hopefully send some ships to help you."`
         accept
 
 
@@ -2482,7 +2482,7 @@ mission "Wanderers: Sestor: Remnant Visit"
     not "Wanderers: Sestor: Scattered Remnant: done"
   on offer
     conversation
-      `You check in with Danforth, but he tells you that there are still reports of Kor Sestor drones in human space. "You'll have to be sure to destroy them completely," he says. "We can't risk letting some local warlord capture them."`
+      `You check in with Daroth, but she tells you that there are still reports of Kor Sestor drones in human space. "You'll have to be sure to destroy them completely," she says. "We can't risk letting some local warlord capture them."`
         defer
 
 
@@ -2503,12 +2503,12 @@ mission "Wanderers: Sestor: Drones in Alnilam"
   waypoint "Alnilam"
   on offer
     conversation
-      `When you return to <planet>, Danforth tells you, "It seems that you have dealt with the last of the Kor Sestor drones that were terrorizing Republic space, but we still need to deal with the fleet in the Alnilam system. Do you think you can destroy that fleet on your own?"`
+      `When you return to <planet>, Daroth tells you, "It seems that you have dealt with the last of the Kor Sestor drones that were terrorizing Republic space, but we still need to deal with the fleet in the Alnilam system. Do you think you can destroy that fleet on your own?"`
       choice
         `  "Yes, I think I can manage it."`
           defer
         `  "Are any of your ships repaired yet? I could use some assistance."`
-      `  He agrees to send some Oathkeeper ships with you to destroy the remaining drones, but it is clear that it pains him to risk the last few ships he has that are still spaceworthy.`
+      `  She agrees to send some Oathkeeper ships with you to destroy the remaining drones, but it is clear that it pains her to risk the last few ships she has that are still spaceworthy.`
         accept
   npc
     government "Navy (Oathkeeper)"
@@ -2555,9 +2555,9 @@ mission "Wanderers: Sestor: Return to Wanderers"
     has "Wanderers: Sestor: Alnilam Fleet 2: done"
   on offer
     fail "Wanderers: Sestor: Drones in Alnilam"
-    log "Succeeded in destroying the last of the Kor Sestor drones that the Alphas brought into human space. Danforth and his Navy base also survived, but he is worried about the political fallout of having to use such a destructive weapon on a populated planet in order to eliminate the Alphas."
+    log "Succeeded in destroying the last of the Kor Sestor drones that the Alphas brought into human space. Daroth and her Navy base also survived, but she is worried about the political fallout of having to use such a destructive weapon on a populated planet in order to eliminate the Alphas."
     conversation
-      `Danforth breathes a sigh of relief when you tell him that the last of the Kor Sestor drones have been destroyed. "I am grateful for your help, Captain <last>," he says. "And now that we have finished with that battle, the public relations nightmare over what we did to Zenith begins. We don't need you to get involved in that, though; perhaps you should return to Wanderer space until things cool down a bit around here."`
+      `Daroth breathes a sigh of relief when you tell her that the last of the Kor Sestor drones have been destroyed. "I am grateful for your help, Captain <last>," she says. "And now that we have finished with that battle, the public relations nightmare over what we did to Zenith begins. We don't need you to get involved in that, though; perhaps you should return to Wanderer space until things cool down a bit around here."`
         accept
   on complete
     event "jupiter available" 500
@@ -2567,7 +2567,7 @@ mission "Wanderers: Sestor: Return to Wanderers"
 mission "Wanderers: Sestor Alt: Alnilam 1"
   landing
   name "Destroy remaining drones"
-  description "Rather than bombing Zenith, destroy any Kor Sestor drones that are left over in the Alnilam system, then report back to Admiral Danforth on Farpoint."
+  description "Rather than bombing Zenith, destroy any Kor Sestor drones that are left over in the Alnilam system, then report back to Admiral Daroth on Farpoint."
   autosave
   source "Farpoint"
   waypoint "Alnilam"
@@ -2579,7 +2579,7 @@ mission "Wanderers: Sestor Alt: Alnilam 1"
       not "Wanderers: Sestor: Alnilam Fleet 2: done"
   on offer
     conversation
-      `Danforth is impressed that you were able to eliminate the attacking Kor Sestor fleet. "The weapon I gave you was a last resort, and one that I would be ashamed to use," he says. "I have no ships to give you until we have had time to make repairs, but if you are able to destroy whatever Kor Sestor ships remain in the Alnilam system on your own, return here and I will send my troop transports with you to destroy the Alpha base the old-fashioned way."`
+      `Daroth is impressed that you were able to eliminate the attacking Kor Sestor fleet. "The weapon I gave you was a last resort, and one that I would be ashamed to use," she says. "I have no ships to give you until we have had time to make repairs, but if you are able to destroy whatever Kor Sestor ships remain in the Alnilam system on your own, return here and I will send my troop transports with you to destroy the Alpha base the old-fashioned way."`
         accept
   to complete
     has "Wanderers: Sestor: Alnilam Fleet 1: done"
@@ -2601,13 +2601,13 @@ mission "Wanderers: Sestor Alt: Alnilam 2"
     has "Wanderers: Sestor: Alnilam Fleet 2: done"
   on offer
     conversation
-      `You tell Danforth that you have destroyed the entire Kor Sestor fleet, without needing to bomb <planet>. He is impressed, and grateful. "I'll send some troop transports with you to take out the Alpha base," he says. "It is riskier destroying it this way, but at least the civilians on <planet> will not be harmed."`
+      `You tell Daroth that you have destroyed the entire Kor Sestor fleet, without needing to bomb <planet>. She is impressed, and grateful. "I'll send some troop transports with you to take out the Alpha base," she says. "It is riskier destroying it this way, but at least the civilians on <planet> will not be harmed."`
       choice
         `  "Understood. We'll go directly to <planet>."`
           goto end
         `  "The anarchist settlers, you mean? You're willing to lose your own troops just to avoid harming the anarchists and pirates by bombing their planet?"`
 
-      `  Danforth says, "If we had used such a terrible weapon on an inhabited planet, even an anarchist one, it would have sullied the good name of the Navy. Compared to that, the loss of a few Navy lives is acceptable, and the troops who volunteered for this mission are willing to risk their lives for that cause."`
+      `  Daroth says, "If we had used such a terrible weapon on an inhabited planet, even an anarchist one, it would have sullied the good name of the Navy. Compared to that, the loss of a few Navy lives is acceptable, and the troops who volunteered for this mission are willing to risk their lives for that cause."`
 
       label end
       `  You return to your ship and prepare to escort the troop transports to <planet>.`
@@ -2631,7 +2631,7 @@ mission "Wanderers: Sestor Alt: Alnilam 3"
     has "Wanderers: Sestor Alt: Alnilam 2: done"
   on offer
     conversation
-      `Danforth's troops set up a defensive circle around the entrance to the Alpha base. It appears that they have achieved the element of surprise: the Alphas did not know that the Navy had already located their base, and were probably counting on having a longer time to evacuate. The troop transports were carrying cement mixers and mining drills; apparently their plan is to seal the Alphas underground and then drill down through the ice and bedrock to bomb and collapse the bunker.`
+      `Daroth's troops set up a defensive circle around the entrance to the Alpha base. It appears that they have achieved the element of surprise: the Alphas did not know that the Navy had already located their base, and were probably counting on having a longer time to evacuate. The troop transports were carrying cement mixers and mining drills; apparently their plan is to seal the Alphas underground and then drill down through the ice and bedrock to bomb and collapse the bunker.`
       `  As the Navy troops begin pouring the cement, the massive gate to the tunnel bursts open and more Alphas than you have ever seen in one place come flooding out, several dozen of them. But even these superhuman soldiers cannot survive the concentrated firepower of hundreds of Navy troops. The air fills with explosions and smoke and powdered snow, but as far as you can tell not one of the Alphas escapes alive.`
       `  When the battle is over, the Navy troops explore the bunker, hoping to find prisoners, but they find no one alive. They seal up the entrance and collapse the bunker, and prepare to travel back with you to <planet>.`
         accept
@@ -2654,9 +2654,9 @@ mission "Wanderers: Sestor Alt: Return to Wanderers"
   to offer
     has "Wanderers: Sestor Alt: Alnilam 3: done"
   on offer
-    log "Succeeded in destroying the Kor Sestor fleet and eliminating the Alpha base on the anarchist world of Zenith. He is very grateful that the bomb or super-weapon, whatever it was, did not need to be used."
+    log "Succeeded in destroying the Kor Sestor fleet and eliminating the Alpha base on the anarchist world of Zenith. Admiral Daroth is very grateful that the bomb or super-weapon, whatever it was, did not need to be used."
     conversation
-      `The Navy officers report the results of the battle on Zenith's surface to Danforth. "So it's over," he says. "Captain <last>, thank you for your assistance. This battle would have gone very differently if you were not here."`
+      `The Navy officers report the results of the battle on Zenith's surface to Daroth. "So it's over," she says. "Captain <last>, thank you for your assistance. This battle would have gone very differently if you were not here."`
       `  Now that the Kor Sestor fleet has been dealt with, you should probably return and see how things are going for the Wanderers in Korath space.`
         accept
   on complete

@@ -1026,8 +1026,8 @@ mission "Wanderers: Alpha Surveillance D (Avalon)"
 
 
 mission "Wanderers: Alpha Surveillance E"
-  name "Visit Danforth"
-  description "Visit Admiral Danforth on <planet> and see if he is able to supply you with an attack force to locate and destroy the Alpha base."
+  name "Visit Daroth"
+  description "Visit Admiral Daroth on <planet> and see if she is able to supply you with an attack force to locate and destroy the Alpha base."
   source "Alta Hai"
   destination "Farpoint"
   passengers 1
@@ -1039,24 +1039,24 @@ mission "Wanderers: Alpha Surveillance E"
       `When you meet up with Elias Hanover in the spaceport, he says, "I can't think of any way to go about it: we need to involve the Navy in this. No one else has the capability to launch a ground attack."`
       choice
         `  "Are you sure we can trust them? The Alphas were in a Navy ship, after all."`
-        `  "We could go to Admiral Danforth. He's a Navy officer who I trust to be on the right side."`
+        `  "We could go to Admiral Daroth. She's a Navy officer who I trust to be on the right side."`
           goto danforth
       `  "Can you think of any other option?" he says.`
-      `  "There's a branch of the Navy called the 'Oathkeepers,'" you tell him, "led by Admiral Danforth. If there is anyone in the Navy whom we can trust, it's them."`
+      `  "There's a branch of the Navy called the 'Oathkeepers,'" you tell him, "led by Admiral Daroth. If there is anyone in the Navy whom we can trust, it's them."`
       label danforth
-      `  "Danforth?" says Elias. "William Danforth? The Hero of Hope? He's still in the service?" You nod. "Well then yes, let's go to him," says Elias.`
-      `  He comes back aboard your ship, and you prepare to travel to Danforth's base on <destination>.`
+      `  "Daroth?" says Elias. "Helga Daroth? The Hero of Hope? She's still in the service?" You nod. "Well then yes, let's go to her," says Elias.`
+      `  He comes back aboard your ship, and you prepare to travel to Daroth's base on <destination>.`
         accept
   
   on complete
     conversation
-      `Admiral Danforth is very pleased to see you, but his expression turns grim when you explain why you have come. When you mention the Alphas, he hushes you. "Let's not speak of that, out here in the open," he says. "Not that I do not trust my people, but it is best to be safe. I will gather troops who I know are able to operate discreetly and have them be ready to join us on an expedition. Meet me in my private office at the spaceport when you're ready."`
+      `Admiral Daroth is very pleased to see you, but her expression turns grim when you explain why you have come. When you mention the Alphas, she hushes you. "Let's not speak of that, out here in the open," she says. "Not that I do not trust my people, but it is best to be safe. I will gather troops who I know are able to operate discretely and have them be ready to join us on an expedition. Meet me in my private office at the spaceport when you're ready."`
 
 
 
 mission "Wanderers: Alpha Surveillance F"
   name "Invade Avalon"
-  description "Escort Admiral Danforth's Navy Venus to <destination> and land on the planet with them. They will attempt to locate and eliminate the Alpha base."
+  description "Escort Admiral Daroth's Navy Venus to <destination> and land on the planet with them. They will attempt to locate and eliminate the Alpha base."
   autosave
   source "Farpoint"
   destination "Avalon"
@@ -1065,27 +1065,27 @@ mission "Wanderers: Alpha Surveillance F"
     has "Wanderers: Alpha Surveillance E: done"
   
   on offer
-    log "Admiral Danforth agreed to bring his Venus to the planet in Korath space where the Alphas seem to be hiding, with enough troops and equipment to launch an assault on the base."
+    log "Admiral Daroth agreed to bring her Venus to the planet in Korath space where the Alphas seem to be hiding, with enough troops and equipment to launch an assault on the base."
     log "Factions" "Oathkeepers" `However, the true reason that the powerful Oathkeeper fleet is positioned in the North is not just to keep the pirates at bay, but also to be able to defend and counter-attack in case the Hai decide to invade human space. Apparently the Navy has known about the Hai and the wormhole linking their space to human space for some time, but chooses not to make that knowledge public.`
     conversation
-      `Danforth welcomes you into his private office and uses a device to sweep the room for bugs. "Please forgive my caution," he says when he is done. "Now, show me where this planet is."`
-      `  You show him the planet on your map. "That's a long way out from human space," says Danforth. "All the way on the other side of Hai territory. Are the Hai rebels still occupying these systems?" He points to the three systems where the Unfettered live.`
+      `Daroth welcomes you into his private office and uses a device to sweep the room for bugs. "Please forgive my caution," she says when she is done. "Now, show me where this planet is."`
+      `  You show her the planet on your map. "That's a long way out from human space," says Daroth. "All the way on the other side of Hai territory. Are the Hai rebels still occupying these systems?" She points to the three systems where the Unfettered live.`
       choice
         `  "Yes."`
           goto jump
         `  "Wait, you know about the Hai?"`
-      `  Danforth looks bemused. "Living on their doorstep? Of course I do. Why do you think the Navy maintains such a large presence here on Farpoint in the first place? Or the base on Sunracer? It's not like those human anarchists up north pose that much of a threat."`
+      `  Daroth looks bemused. "Living on their doorstep? Of course I do. Why do you think the Navy maintains such a large presence here on Farpoint in the first place? Or the base on Sunracer? It's not like those human anarchists up north pose that much of a threat."`
       label jump
       `  "It's not just the distance," says Elias. "The only way to get there is by jump drive. Fortunately Captain <last> has one."`
-      `  "As do I," says Danforth, a bit smugly. When he sees your surprised expressions he elaborates. "Recovered it from the Pug. Accidentally forgot to file the paperwork reporting it. You know how it is. Old men like me can be absent-minded." He smiles. "My engineers are installing it in my flagship even as we speak."`
+      `  "As do I," says Daroth, a bit smugly. When she sees your surprised expressions she elaborates. "Recovered it from the Pug. Accidentally forgot to file the paperwork reporting it. You know how it is. Old ladies like me can be absent-minded." She smiles. "My engineers are installing it in my flagship even as we speak."`
       choice
         `  "So you're willing to come with us?"`
         `  "Are you sure you want to take the risk of travelling with us?"`
-      `  "Wouldn't miss it for the world," he says. "With a mission like this, if I want it done right, I need to be there in person. Now, let's get going before the rumours start to fly. It's hard for three squadrons to prep for a secret mission without anyone else noticing."`
+      `  "Wouldn't miss it for the world," she says. "With a mission like this, if I want it done right, I need to be there in person. Now, let's get going before the rumours start to fly. It's hard for three squadrons to prep for a secret mission without anyone else noticing."`
         accept
   
   on visit
-    dialogue "You have reached <planet>, but you left Danforth's ship behind. Wait for him to arrive (or go back and refuel him, if necessary) and then return here."
+    dialogue "You have reached <planet>, but you left Daroth's ship behind. Wait for her to arrive (or go back and refuel her, if necessary) and then return here."
   
   npc accompany save
     government "Navy (Oathkeeper)"
@@ -1097,7 +1097,7 @@ mission "Wanderers: Alpha Surveillance F"
 mission "Wanderers: Alpha Surveillance G"
   landing
   name "Return to <planet>"
-  description "Escort Admiral Danforth's ship safely back to <destination>."
+  description "Escort Admiral Daroth's ship safely back to <destination>."
   source "Avalon"
   destination "Farpoint"
   passengers 1
@@ -1107,13 +1107,13 @@ mission "Wanderers: Alpha Surveillance G"
   on offer
     log "The Alphas have fled from the base on Avalon. The Oathkeepers destroyed what is left of the base, which will hopefully set the Alphas back quite a bit."
     conversation
-      `It does not take long for Danforth's team to locate the Alpha base, buried deep underground in a network of limestone caves. You and Danforth hover your ships above the site to catch anyone who tries to take off and escape. Danforth keeps you updated on the progress of the troops. "Breached the perimeter. Dealing with some booby traps. Explosives, poison gas. Nasty stuff. No sign of inhabitants, but they were here recently. Place looks cleaned out. Extensive base. Hangars, labs, supply rooms. Probably took them a century to build."`
-      `  His troops spend a while exploring the base and eventually conclude that the Alphas packed up and left soon after you destroyed the Saturn. Once the place has been thoroughly explored and they are sure there are no more clues to be found, Danforth tells them, "Okay, blow the place. No sense in leaving them a base to return to."`
+      `It does not take long for Daroth's team to locate the Alpha base, buried deep underground in a network of limestone caves. You and Daroth hover your ships above the site to catch anyone who tries to take off and escape. Daroth keeps you updated on the progress of the troops. "Breached the perimeter. Dealing with some booby traps. Explosives, poison gas. Nasty stuff. No sign of inhabitants, but they were here recently. Place looks cleaned out. Extensive base. Hangars, labs, supply rooms. Probably took them a century to build."`
+      `  Her troops spend a while exploring the base and eventually conclude that the Alphas packed up and left soon after you destroyed the Saturn. Once the place has been thoroughly explored and they are sure there are no more clues to be found, Daroth tells them, "Okay, blow the place. No sense in leaving them a base to return to."`
       choice
         `  "So this was all for nothing?"`
         `  "I wish we had been able to catch them."`
-      `  "Don't feel so bad," says Danforth. "At least you took out their Saturn. If you had come for me without engaging them, chances are they would still have figured their cover was blown and fled. And now they're on the run, which is going to limit their ability to make mischief."`
-      `  Danforth's ship collects his troops and takes off. A few seconds later he hails you. "Captain, we have incoming ships from the far side of the planet," he says. "My ship is no match for them. Let's get out of here." It looks like this world is not completely uninhabited, after all…`
+      `  "Don't feel so bad," says Daroth. "At least you took out their Saturn. If you had come for me without engaging them, chances are they would still have figured their cover was blown and fled. And now they're on the run, which is going to limit their ability to make mischief."`
+      `  Daroth's ship collects his troops and takes off. A few seconds later she hails you. "Captain, we have incoming ships from the far side of the planet," she says. "My ship is no match for them. Let's get out of here." It looks like this world is not completely uninhabited, after all…`
         launch
   
   npc accompany save
@@ -1130,12 +1130,12 @@ mission "Wanderers: Alpha Surveillance G"
         "Met Par Tek 53 (Jump)" 2
   
   on visit
-    dialogue "You have reached <planet>, but you left Danforth's ship behind. Wait for him to arrive (or go back and refuel him, if necessary) and then return here."
+    dialogue "You have reached <planet>, but you left Daroth's ship behind. Wait for her to arrive (or go back and refuel him, if necessary) and then return here."
   
   on complete
     conversation
-      `You and Elias return to Danforth's private office to debrief, but a few minutes after you arrive there is a knock on the door. Danforth pulls up a video monitor to check who it is, swears, takes a brief glance around the room as if to check that he hasn't left anything incriminating out in plain sight, then opens the door. An officer in an unmarked uniform walks in along with several armed guards. "Admiral Danforth," says the officer, "I trust your expedition went well?"`
-      `  Danforth mumbles something in reply. "And you, Captain <last>," says the officer, "Always in the thick of things, eh?"`
+      `You and Elias return to Daroth's private office to debrief, but a few minutes after you arrive there is a knock on the door. Daroth pulls up a video monitor to check who it is, swears, takes a brief glance around the room as if to check that she hasn't left anything incriminating out in plain sight, then opens the door. An officer in an unmarked uniform walks in along with several armed guards. "Admiral Daroth," says the officer, "I trust your expedition went well?"`
+      `  Daroth mumbles something in reply. "And you, Captain <last>," says the officer, "Always in the thick of things, eh?"`
       choice
         `  "I suppose so."`
         `  "Only when the galaxy needs saving."`
@@ -1159,8 +1159,8 @@ mission "Wanderers: Alpha Surveillance G"
 
 
 mission "Wanderers: Alpha Surveillance H"
-  name "Meet up with Danforth"
-  description "Meet Admiral Danforth in the spaceport on <origin>, and talk about what to do next about the Alphas."
+  name "Meet up with Daroth"
+  description "Meet Admiral Daroth in the spaceport on <origin>, and talk about what to do next about the Alphas."
   landing
   source "Farpoint"
   to offer
@@ -1223,7 +1223,7 @@ mission "Wanderers: Alpha Surveillance H"
         `  "If you're convinced that neither of us is an Alpha, will you please let us go?"`
       `  "I suppose so," says the officer. As they release you from the chairs, he says to Elias, "If you are what I believe you are, we can help you to complete your work at last. Gather your siblings. Join us. Together we can put an end to the Alphas." Still, Elias says nothing.`
       `  They lead you out into the hallway and you realize you are on board a Navy Venus. As you leave the ship, the officer tells Elias, "Think about what I said."`
-      `  Elias remains quiet while you are in earshot of the ship, then says, "Let's meet up with Danforth back in the spaceport and see what he thinks we should do next."`
+      `  Elias remains quiet while you are in earshot of the ship, then says, "Let's meet up with Daroth back in the spaceport and see what she thinks we should do next."`
         accept
 
 
@@ -1242,17 +1242,17 @@ mission "Wanderers: Alpha Surveillance I"
   on offer
     fail "Wanderers: Alpha Surveillance H"
     conversation
-      `Danforth looks relieved to see you both alive. "Damned Republic Intelligence Agency," he says. "They think they're above the law. And after all that they decided you both are clean?" He looks intently at Elias.`
+      `Daroth looks relieved to see you both alive. "Damned Republic Intelligence Agency," she says. "They think they're above the law. And after all that they decided you both are clean?" She looks intently at Elias.`
       choice
         `  "Yes, in fact now they're trying to get us to work together with them against the Alphas."`
         `  "Yes, and they think Elias can help them against the Alphas."`
-      `  "I see," says Danforth. "I wish I could tell you that they can be trusted. I wish I could tell you that there is no safer place for an enemy of the Alphas than here with me."`
+      `  "I see," says Daroth. "I wish I could tell you that they can be trusted. I wish I could tell you that there is no safer place for an enemy of the Alphas than here with me."`
       branch know
         has "event: death of nguyen"
-      `  He pauses to pull out a data pad from his desk and call up a file on it. "Recently," says Danforth, "an officer of mine assisted in taking down an Alpha enclave, like you have done." He's looking specifically at Elias as he says that. "A month later he was somehow assassinated, right here in my Naval base. Here's a photo of him." Danforth slides the data pad across the desk. It's showing a man you do not recognize, but Elias stifles a cry of dismay when he sees who it is. Danforth says, "I can't pretend you would be safe here. I think the safest thing for both of you would be to leave human space for a while."`
+      `  She pauses to pull out a data pad from his desk and call up a file on it. "Recently," says Daroth, "an officer of mine assisted in taking down an Alpha enclave, like you have done." She's looking specifically at Elias as she says that. "A month later he was somehow assassinated, right here in my Naval base. Here's a photo of him." Daroth slides the data pad across the desk. It's showing a man you do not recognize, but Elias stifles a cry of dismay when he sees who it is. Daroth says, "I can't pretend you would be safe here. I think the safest thing for both of you would be to leave human space for a while."`
         goto leave
       label know
-      `  He pauses to pull out a data pad from his desk and call up a file on it. "Recently," says Danforth, "an officer of mine assisted in taking down an Alpha enclave, like you have done." He's looking specifically at Elias as he says that. "A month later he was somehow assassinated, right here in my Naval base. Here's a photo of him." Danforth slides the data pad across the desk. It's showing a photo of Commander Nguyen, and to your surprise Elias stifles a cry of dismay when he sees who it is. Danforth says, "I can't pretend you would be safe here. I think the safest thing for both of you would be to leave human space for a while."`
+      `  She pauses to pull out a data pad from his desk and call up a file on it. "Recently," says Daroth, "an officer of mine assisted in taking down an Alpha enclave, like you have done." She's looking specifically at Elias as she says that. "A month later he was somehow assassinated, right here in my Naval base. Here's a photo of him." Daroth slides the data pad across the desk. It's showing a photo of Commander Nguyen, and to your surprise Elias stifles a cry of dismay when he sees who it is. Daroth says, "I can't pretend you would be safe here. I think the safest thing for both of you would be to leave human space for a while."`
         goto leave
       label leave
       `  You agree that you will take Elias back to Alta Hai. Whatever Elias is, whoever might wish him harm, you can only hope that a Quarg ringworld is the safest place for him right now.`

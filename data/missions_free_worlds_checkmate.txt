@@ -1444,25 +1444,25 @@ mission "FWC Pug 3A"
     conversation
       branch know
         has "FW Alphas 1.1: done"
-      `Surprisingly, the Navy lets you land without firing on you; the fact that you entered the system via jump drive probably made a big impression on them. But when your ship lands, it is immediately surrounded by Navy troops. Hesitantly, you and Katya disembark. You are greeted by a Navy admiral who you recognize as William Danforth, the leader of the Navy Oathkeepers. Even among the Free Worlds Danforth is spoken of with respect due to his courage and levelheadedness in battle and his leadership of countless humanitarian missions.`
+      `Surprisingly, the Navy lets you land without firing on you; the fact that you entered the system via jump drive probably made a big impression on them. But when your ship lands, it is immediately surrounded by Navy troops. Hesitantly, you and Katya disembark. You are greeted by a Navy admiral who you recognize as Helga Daroth, the leader of the Navy Oathkeepers. Even among the Free Worlds Daroth is spoken of with respect due to her courage and levelheadedness in battle and her leadership of countless humanitarian missions.`
         goto introductions
       label know
-      `Surprisingly, the Navy lets you land without firing on you; the fact that you entered the system via jump drive probably made a big impression on them. But when your ship lands, it is immediately surrounded by Navy troops. Hesitantly, you and Katya disembark. You are greeted by Admiral Danforth, the leader of the Oathkeepers who previously assisted you to drive the Alphas and their mercenary fleet away from Poisonwood.`
+      `Surprisingly, the Navy lets you land without firing on you; the fact that you entered the system via jump drive probably made a big impression on them. But when your ship lands, it is immediately surrounded by Navy troops. Hesitantly, you and Katya disembark. You are greeted by Admiral Daroth, the leader of the Oathkeepers who previously assisted you to drive the Alphas and their mercenary fleet away from Poisonwood.`
         goto introductions
       label introductions
-      `  Standing next to Danforth is someone you think might be his bodyguard: a dark-skinned woman dressed entirely in black. Even the whites of her eyes are black: when she gets closer, you can see that it is actually a scleric tattoo, an intricate Celtic knotwork pattern inked into the whites of her eyes. Surprisingly, Katya recognizes her. "Raven!" says Katya. You aren't sure if Katya sounds happy to see her, or scared.`
+      `  Standing next to Daroth is someone you think might be her bodyguard: a dark-skinned woman dressed entirely in black. Even the whites of her eyes are black: when she gets closer, you can see that it is actually a scleric tattoo, an intricate Celtic knotwork pattern inked into the whites of her eyes. Surprisingly, Katya recognizes her. "Raven!" says Katya. You aren't sure if Katya sounds happy to see her, or scared.`
       `  "Hello Councillor," says the woman.`
-      `  Danforth says, "We hear you have come from the disconnected territory, and that you bring word of a potential alien invasion. Come with us, please." He ushers you into one of the Navy warships that are parked nearby, and into a room you assume is his private office; the guards check you and Katya for weapons and then leave you alone with Danforth and Raven. "Now," says Danforth, "you will answer our questions."`
-      `  He gestures to Raven, who walks up to you and holds out her hands. "Take my hands, please, Captain," she says.`
+      `  Daroth says, "We hear you have come from the disconnected territory, and that you bring word of a potential alien invasion. Come with us, please." She ushers you into one of the Navy warships that are parked nearby, and into a room you assume is her private office; the guards check you and Katya for weapons and then leave you alone with Daroth and Raven. "Now," says Daroth, "you will answer our questions."`
+      `  She gestures to Raven, who walks up to you and holds out her hands. "Take my hands, please, Captain," she says.`
       choice
         `  (Take her hands.)`
           goto hands
         `  "Um, why? What are you going to do to me?"`
       `  "She's a Questioner, <first>," says Katya, quietly. "One of the ones who interrogated me when I was their prisoner. Just take her hands, and tell her nothing but the truth."`
       label hands
-      `  Reluctantly, you take her hands, and she begins asking you questions about the aliens. You answer as truthfully as you can. Holding hands with a total stranger while she stares unblinkingly into your eyes and questions you is an uncomfortably invasive and intimate experience, heightened by your suspicion that if you tell a lie, she will somehow know. By the time she is done questioning you, you are soaked in sweat and your hands are shaking. Raven turns to Danforth and says, "They're telling the truth."`
-      `  You and Katya both breath a sign of relief, and Danforth says, "Very well. Let's take them to see Miss Winters."`
-      `  He leads you back out of his ship and to a warehouse where people in overalls and lab coats are busy working on one of the strangest machines you have ever seen. Freya is one of them. "Katya!" she says. "<first>! Glad you could join us."`
+      `  Reluctantly, you take her hands, and she begins asking you questions about the aliens. You answer as truthfully as you can. Holding hands with a total stranger while she stares unblinkingly into your eyes and questions you is an uncomfortably invasive and intimate experience, heightened by your suspicion that if you tell a lie, she will somehow know. By the time she is done questioning you, you are soaked in sweat and your hands are shaking. Raven turns to Daroth and says, "They're telling the truth."`
+      `  You and Katya both breath a sign of relief, and Daroth says, "Very well. Let's take them to see Miss Winters."`
+      `  She leads you back out of her ship and to a warehouse where people in overalls and lab coats are busy working on one of the strangest machines you have ever seen. Freya is one of them. "Katya!" she says. "<first>! Glad you could join us."`
       choice
         `  "Are you working for the Navy now?"`
         `  "We heard you might have a way to reopen the hyperspace links."`
@@ -1473,7 +1473,7 @@ mission "FWC Pug 3A"
       
       label reopen
       `  "No," says Freya, "but I at least discovered it might be possible. The links aren't severed completely, you see. There's some sort of distortion signal, actively interfering with them. If we can eliminate the interference, the links might come back. But the interference is coming from the other end."`
-      `  Danforth says, "Captain <last>, we will release Miss Winters to travel with you, provided that Councillor Reynolds remains here in her place. If you succeed in restoring a hyperspace link to the disconnected systems, we will release both of them. Is that an acceptable deal?"`
+      `  Daroth says, "Captain <last>, we will release Miss Winters to travel with you, provided that Councillor Reynolds remains here in her place. If you succeed in restoring a hyperspace link to the disconnected systems, we will release both of them. Is that an acceptable deal?"`
       choice
         `  "Okay, we will agree to that."`
           goto end
@@ -1808,9 +1808,9 @@ mission "FWC Pug 4A"
         goto plan
       
       label plan
-      `  You meet up with Danforth, and he says, "Well, we have a beachhead now, but it's a fragile one. Miss Winters, do you think you can open up more of the hyperspace links?"`
+      `  You meet up with Daroth, and she says, "Well, we have a beachhead now, but it's a fragile one. Miss Winters, do you think you can open up more of the hyperspace links?"`
       `  Freya says, "Sure, if we retrieve the equipment from Tundra. But, the transmitter station wasn't exactly portable, so if we want to open up other systems not linked to this one, we'll have to find transmitters already installed there, too."`
-      `  Danforth says, "Let's start by trying to reestablish the connection from here to the Ascella system. If that works, I'll send part of my fleet to take Zeta Aquilae and see if they can secure another transmitter station. That would give us two routes into Pug space instead of the single bottleneck we have now. Captain <last>, would you be willing to travel back with Freya to <planet>?"`
+      `  Daroth says, "Let's start by trying to reestablish the connection from here to the Ascella system. If that works, I'll send part of my fleet to take Zeta Aquilae and see if they can secure another transmitter station. That would give us two routes into Pug space instead of the single bottleneck we have now. Captain <last>, would you be willing to travel back with Freya to <planet>?"`
       choice
         `  "Sure, we can leave immediately."`
           accept
@@ -1820,10 +1820,10 @@ mission "FWC Pug 4A"
           goto attack
       
       label defend
-      `  "Don't worry," he says, "Navy reinforcements are arriving constantly. Soon our fleet here will be twice as strong as the one we committed to yesterday's attack." Reluctantly, you agree to trust the defences to him while you bring Freya back into Free space to help open more of the hyperlinks.`
+      `  "Don't worry," she says, "Navy reinforcements are arriving constantly. Soon our fleet here will be twice as strong as the one we committed to yesterday's attack." Reluctantly, you agree to trust the defences to her while you bring Freya back into Free space to help open more of the hyperlinks.`
         accept
       label attack
-      `  "'Such a big fleet'?" he says. "This is not even a twentieth of the Navy's current fighting power. And I think we'll need many more ships before we're ready to take on the alien homeworld. But don't worry, reinforcements are arriving here constantly. You go do your part, and we'll see to ours."`
+      `  "'Such a big fleet'?" she says. "This is not even a twentieth of the Navy's current fighting power. And I think we'll need many more ships before we're ready to take on the alien homeworld. But don't worry, reinforcements are arriving here constantly. You go do your part, and we'll see to ours."`
         accept
 
 
@@ -1938,13 +1938,13 @@ mission "FWC Pug 4C"
   on offer
     event "fwc reconnect hintar"
     conversation
-      `You help Freya to unload and set up the reflector equipment, then contact the Navy on Oblivion and instruct them to point the transmitter in your direction. A few minutes later Admiral Danforth contacts you. "This link appears to be returning too," he says. "So, let's move on. We're going to make an attack on the <system> system, now, and we would welcome your assistance in this battle." You leave the equipment on <origin> and return to your ship with Freya.`
+      `You help Freya to unload and set up the reflector equipment, then contact the Navy on Oblivion and instruct them to point the transmitter in your direction. A few minutes later Admiral Daroth contacts you. "This link appears to be returning too," she says. "So, let's move on. We're going to make an attack on the <system> system, now, and we would welcome your assistance in this battle." You leave the equipment on <origin> and return to your ship with Freya.`
         accept
   
   on complete
     log "Succeeded in restoring a few more hyperspace connections, and in driving back the Pug (with the help of the Navy). But, Freya thinks it is way too coincidental that the aliens have left behind the exact technology needed to fix the hyperspace disruptions; it feels like the Pug are playing a game rather than fighting a serious war."
     event "fwc reconnect zeta aquilae"
-    dialogue `After a few minutes of scanning the surface of <planet>, Freya locates another transmitter station that matches the one you found on Oblivion. You contact Admiral Danforth to tell him its location, and he dispatches a crew to take control of it. He also reports to you that once again, apparently all the Pug left the planet during the course of the battle. "A pity," he says. "If we had taken prisoners, maybe we could have gotten some answers from them. Anyway, meet me in the spaceport whenever you're ready to help with our next mission."`
+    dialogue `After a few minutes of scanning the surface of <planet>, Freya locates another transmitter station that matches the one you found on Oblivion. You contact Admiral Daroth to tell her its location, and she dispatches a crew to take control of it. She also reports to you that once again, apparently all the Pug left the planet during the course of the battle. "A pity," she says. "If we had taken prisoners, maybe we could have gotten some answers from them. Anyway, meet me in the spaceport whenever you're ready to help with our next mission."`
   
   npc evade
     personality disables heroic staying
@@ -2010,23 +2010,23 @@ mission "FWC Pug 5"
   
   on offer
     conversation
-      `You find Admiral Danforth supervising the repairs of the damaged Navy ships. "Glad you survived that battle!" he says. "These alien ships are much more advanced than ours, but we outnumber them, so now that we've established a strong beachhead I think we actually have a chance at defeating them. The only problem is, the majority of our fleet is still up north. With the Vega system cut off, our supply lines are having to go all the way around through the dirt belt. So I'd like to propose liberating Vega next."`
+      `You find Admiral Daroth supervising the repairs of the damaged Navy ships. "Glad you survived that battle!" she says. "These alien ships are much more advanced than ours, but we outnumber them, so now that we've established a strong beachhead I think we actually have a chance at defeating them. The only problem is, the majority of our fleet is still up north. With the Vega system cut off, our supply lines are having to go all the way around through the dirt belt. So I'd like to propose liberating Vega next."`
       choice
         `  "That does sound like a good strategic choice."`
         `  "How will your fleet get to Vega without travelling through the Pug home system? That system is swarming with their ships."`
-      `  Danforth says, "During the battle, we managed to salvage jump drives from a few of the Pug ships. We've installed them in three of our Saturns. Hopefully, with your help, that will be enough to overcome any resistance in the Vega system. Then Miss Winters can work her magic with the hyperlinks again, and we'll be able to bring a massive reinforcement fleet from Sol."`
+      `  Daroth says, "During the battle, we managed to salvage jump drives from a few of the Pug ships. We've installed them in three of our Saturns. Hopefully, with your help, that will be enough to overcome any resistance in the Vega system. Then Miss Winters can work her magic with the hyperlinks again, and we'll be able to bring a massive reinforcement fleet from Sol."`
       `  "Sounds good to me," says Freya. "I wish more of our own ships had jump drives, so we could assist you."`
-      `  "Indeed," says Danforth. "That's why it's so important for Captain <last>'s ship to be part of this battle. When it's all over, I want to be able to tell Parliament that this war was won by the Free Worlds and the Navy fighting side by side every step of the way. And I hope you will be able to tell your Senate the same thing, so that they will be more amenable to a compromise between us."`
+      `  "Indeed," says Daroth. "That's why it's so important for Captain <last>'s ship to be part of this battle. When it's all over, I want to be able to tell Parliament that this war was won by the Free Worlds and the Navy fighting side by side every step of the way. And I hope you will be able to tell your Senate the same thing, so that they will be more amenable to a compromise between us."`
       choice
         `  "I'm glad to hear you say that. Your fleet is so much stronger than ours that you could easily take all the credit."`
           goto navy
         `  "We were the ones who discovered the aliens and the way to restore the hyperspace links. The Free Worlds deserve the real credit here."`
           goto free
       label navy
-      `  "I don't want the credit," he says, "I want peace." He wishes you the best of luck in your attack on Vega, and says to contact him as soon as the link is restored and the reinforcements are ready.`
+      `  "I don't want the credit," she says, "I want peace." She wishes you the best of luck in your attack on Vega, and says to contact her as soon as the link is restored and the reinforcements are ready.`
         accept
       label free
-      `  "Captain," he says, "the point isn't who deserves more credit. The point is, how do we tell this story in a way that makes people on my side and on yours more willing to make peace with each other? That's all I care about." He wishes you the best of luck in your attack on Vega, and says to contact him as soon as the link is restored and the reinforcements are ready.`
+      `  "Captain," she says, "the point isn't who deserves more credit. The point is, how do we tell this story in a way that makes people on my side and on yours more willing to make peace with each other? That's all I care about." She wishes you the best of luck in your attack on Vega, and says to contact her as soon as the link is restored and the reinforcements are ready.`
         accept
   
   on complete
@@ -2125,8 +2125,8 @@ mission "FWC Pug 5C"
   on offer
     event "fwc reconnect vega"
     conversation
-      `As soon as Freya has set up her equipment and verified that it is working, you contact Admiral Danforth. "We're on Mars," you tell him, "and we should have the hyperspace link to Vega restored soon."`
-      `  "Excellent," he says. "Please contact your Council and arrange for your fleet to strike from the south at the same time as the fleet from Vega jumps in from the north."`
+      `As soon as Freya has set up her equipment and verified that it is working, you contact Admiral Daroth. "We're on Mars," you tell her, "and we should have the hyperspace link to Vega restored soon."`
+      `  "Excellent," she says. "Please contact your Council and arrange for your fleet to strike from the south at the same time as the fleet from Vega jumps in from the north."`
       `  You contact Tomek and tell him the Navy is ready for a final assault, and he agrees to send as many ships as he can spare to join you. Now it's time to return to <planet> and await the attack signal.`
         accept
   
@@ -2177,7 +2177,7 @@ mission "FWC Pug 6"
         `  "Sure, with the Navy at our backs I think we've got a good chance."`
         `  "As ready as I'll ever be, I guess."`
       `  She laughs. "I suppose that's the best we can hope for. Do you mind if I ride in your ship tomorrow, rather than one of the others? If this is the end, I'd rather face it with people I know." You agree. She turns back to look out the window.`
-      `  Since Freya seems to want to be alone, you return downstairs, and discover that a sizeable Oathkeeper fleet has arrived. In the main vestibule of the spaceport, an Oathkeeper officer is leading a group in qigong meditation. And surprisingly, you spot Admiral Danforth sitting with the Muslim prayer group and chanting in fluent Arabic. Meanwhile, the party outside the pub continues.`
+      `  Since Freya seems to want to be alone, you return downstairs, and discover that a sizeable Oathkeeper fleet has arrived. In the main vestibule of the spaceport, an Oathkeeper officer is leading a group in qigong meditation. And surprisingly, you spot Admiral Daroth sitting with the Muslim prayer group and chanting in fluent Arabic. Meanwhile, the party outside the pub continues.`
       `  Eventually morning comes, and you prepare your ship for the assault on the Pug homeworld…`
         accept
   
@@ -2318,19 +2318,19 @@ mission "FWC End"
     log "Clear Sky (Kaus Borealis), Tundra (Cebalrai), Oblivion (Rasalhague), and Shiver (Vega), which were taken by force, and. Wayfarer (Tarazed), Whenua (Dabih), and Hopper (Kaus Australis), appalled at the use of nuclear weapons by the Free Worlds, have also rejoined the Republic."
     "reputation: Republic" += 20
     conversation
-      `You find Admiral Danforth inspecting the Pug spaceport. "This is all very odd," he says. "I'm glad the aliens appear to have left, but I wish we knew where they came from and whether they're likely to return."`
+      `You find Admiral Daroth inspecting the Pug spaceport. "This is all very odd," she says. "I'm glad the aliens appear to have left, but I wish we knew where they came from and whether they're likely to return."`
       `  Freya says, "What should we do now?"`
-      `  "I've contacted Carbuncle and told them that Councillor Reynolds is free to leave," he says. "She told me that your Senate has agreed to the Free Worlds being a semi-autonomous district of the Republic, similar to the Corporation systems. She also asked that you and Captain <last> meet up with her and Alondo Gruyere on Earth, where they will be meeting with Parliament. I sent a report to Earth that places a very heavy emphasis on the role that the Free Worlds played in this victory, so Parliament ought to be quite willing to negotiate with you."`
+      `  "I've contacted Carbuncle and told them that Councillor Reynolds is free to leave," she says. "She told me that your Senate has agreed to the Free Worlds being a semi-autonomous district of the Republic, similar to the Corporation systems. She also asked that you and Captain <last> meet up with her and Alondo Gruyere on Earth, where they will be meeting with Parliament. I sent a report to Earth that places a very heavy emphasis on the role that the Free Worlds played in this victory, so Parliament ought to be quite willing to negotiate with you."`
       choice
         `  "Thank you. It's been an honour to fight alongside you."`
           goto honour
         `  "Last time we visited Parliament, they violated our safe passage agreement and put us on trial."`
           goto trial
       label honour
-      `  "No, the honour has been mine," he says. "Feel free to drop by and visit me on Farpoint any time you're in the area."`
+      `  "No, the honour has been mine," she says. "Feel free to drop by and visit me on Farpoint any time you're in the area."`
         accept
       label trial
-      `  "Trust me," he says, "you won't need to worry about that this time around. Having an alien attack so close to Earth be thwarted through the assistance of the Free Worlds has put Parliament in a very… receptive mood. Good luck, Captain <last>, and I hope our paths will cross again."`
+      `  "Trust me," she says, "you won't need to worry about that this time around. Having an alien attack so close to Earth be thwarted through the assistance of the Free Worlds has put Parliament in a very… receptive mood. Good luck, Captain <last>, and I hope our paths will cross again."`
         accept
   
   on complete

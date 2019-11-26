@@ -1107,8 +1107,8 @@ mission "FW Alphas 1.1"
         `  "Are you insane? You're letting the Navy come here?"`
         `  "We're going to work side by side with the Navy right after that awful battle?"`
       `  Alondo explains, "It's only one Venus, an 'Oathkeeper' ship, sworn to take no part in our war. The Free Worlds have almost no troops trained for ground combat, so without the Navy's help we would be unlikely to be able to eliminate the Alphas."`
-      `  The Navy ship lands, and a man steps off who you recognize immediately: Admiral William Danforth, who is something of a folk hero throughout human space, and who you have heard is the commander of the entire Oathkeepers regiment. With him is a man who he introduces as Commander Aaron Nguyen of the Navy Humanitarian Corps. As Nguyen shakes your hand, you are struck by the fact that although he is your enemy, you see no trace of hostility in his eyes – in fact, his expression is surprisingly warm and affectionate.`
-      `  "We have no room for error," says Danforth. "These Alphas must be eliminated, and they must not be allowed to escape. On that, at least, we can all agree."`
+      `  The Navy ship lands, and a woman steps off who you recognize immediately: Admiral Helga Daroth, who is something of a folk hero throughout human space, and who you have heard is the commander of the entire Oathkeepers regiment. With her is a man whom she introduces as Commander Aaron Nguyen of the Navy Humanitarian Corps. As Nguyen shakes your hand, you are struck by the fact that although he is your enemy, you see no trace of hostility in his eyes – in fact, his expression is surprisingly warm and affectionate.`
+      `  "We have no room for error," says Daroth. "These Alphas must be eliminated, and they must not be allowed to escape. On that, at least, we can all agree."`
       `  Freya says, "Captain <last> will lead the attack." She beckons to two of the Free Worlds captains. "Marco, Emily, you will join them with your Lances. Destroy any pirate ships in orbit, then land and secure the facility. Understood?" You nod, and prepare to take off for the <system> system.`
         accept
   
@@ -1137,7 +1137,7 @@ mission "FW Alphas 1.1"
   on complete
     event "liberation of Poisonwood"
     conversation
-      `The ships in orbit are eliminated, but there are still the Alphas and their servants here on the ground to take care of. Danforth's ship unloads a squadron of troops in heavy battle suits. The Navy troops move with far more precision and purpose than you have ever seen among the poorly trained Free Worlds soldiers.`
+      `The ships in orbit are eliminated, but there are still the Alphas and their servants here on the ground to take care of. Daroth's ship unloads a squadron of troops in heavy battle suits. The Navy troops move with far more precision and purpose than you have ever seen among the poorly trained Free Worlds soldiers.`
       `  They sweep the city and quickly ascertain that the Alphas are holed up in a large factory. The troops encircle the building and burst through the doors, and soon you hear the sounds of explosions and gunfire within. You wait with Commander Nguyen in an alley facing the building. "I'm with the Humanitarian Corps," he explains. "Killing things is not in my job description."`
       `  Just then, one of the second floor windows shatters and a figure comes tumbling out, rolls, and starts running in your direction. Then it does something you would swear no human being is capable of: while still moving in your direction, it begins leaping from one wall of the alley to the other as easily as you would run up a staircase, gaining altitude with each jump so that soon it will pass two or three meters above your heads. Several Navy troops are running after it, but they hold their fire to avoid hitting you and Nguyen.`
       choice
@@ -1228,8 +1228,8 @@ mission "FW Alphas 1.2"
 
 
 mission "FW Alphas 1.1A"
-  name "Danforth to <planet>"
-  description "Escort Admiral Danforth's ship to <destination> so that he can leave Free Worlds space without being accidentally attacked."
+  name "Daroth to <planet>"
+  description "Escort Admiral Daroth's ship to <destination> so that she can leave Free Worlds space without being accidentally attacked."
   autosave
   source "Poisonwood"
   destination "Clark"
@@ -1262,20 +1262,20 @@ mission "FW Alphas 1.1A"
         `  "Couldn't we let the children be born, if that's what the women want, then imprison them or something if they do turn out to be Alphas?"`
           goto live
       label street
-      `  "Yes," he says. "Silly, isn't it? Anyway, this is my job to deal with; you need to go find Danforth."`
+      `  "Yes," he says. "Silly, isn't it? Anyway, this is my job to deal with; you need to go find Daroth."`
         goto end
       label kill
-      `  "Well," he says, "I envy you for living in a universe where decision like this are easy. But to me it's still a painful choice to make. Anyway, that's my problem to deal with, not yours; you need to go find Danforth."`
+      `  "Well," he says, "I envy you for living in a universe where decision like this are easy. But to me it's still a painful choice to make. Anyway, that's my problem to deal with, not yours; you need to go find Daroth."`
         goto end
       label live
-      `  "The Alphas were originally bred to be super-soldiers," he says, "a weapon in the hands of a despotic government. As much as I hate to admit it, there are certain branches of the Republic who would love to get their hands on a small army of impressionable Alpha children. Far better for them to die than for that to happen. Anyway, that's my job to deal with; you need to go find Danforth."`
+      `  "The Alphas were originally bred to be super-soldiers," he says, "a weapon in the hands of a despotic government. As much as I hate to admit it, there are certain branches of the Republic who would love to get their hands on a small army of impressionable Alpha children. Far better for them to die than for that to happen. Anyway, that's my job to deal with; you need to go find Daroth."`
         goto end
       label end
-      `  He leaves, and you return to Danforth's ship. Danforth says, "Hello there, temporary ally. It was an honour to fight alongside you, while it lasted."`
+      `  He leaves, and you return to Daroth's ship. Daroth says, "Hello there, temporary ally. It was an honour to fight alongside you, while it lasted."`
       choice
         `  "You too. I wish we could bring this war to an end."`
         `  "If the Republic would just leave us alone, we wouldn't need to be enemies."`
-      `  "I know," he says. "But for now, I need to return to my fleet. Which means I'll be needing an escort out of your territory, just to make sure no one attacks me. Maybe you could take us to <planet>?" You agree, and he begins preparing his ship for takeoff.`
+      `  "I know," she says. "But for now, I need to return to my fleet. Which means I'll be needing an escort out of your territory, just to make sure no one attacks me. Maybe you could take us to <planet>?" You agree, and she begins preparing her ship for takeoff.`
         accept
   
   on complete
@@ -1292,7 +1292,7 @@ mission "FW Death of Nguyen"
   
   on offer
     conversation
-      `Soon after landing on <origin>, you receive an encoded message from Admiral Danforth, the leader of the Oathkeepers. "Captain <last>," he says, "I would like to thank you once again for allowing us to assist you on Poisonwood. Unfortunately, I have bad news that may concern you. Commander Nguyen, who was with you when one of the Alphas was apprehended, has been assassinated, shot in the head at point blank range. His attacker has not been found. We fear that this may be retribution for his part in the action on Poisonwood, and we urge you and your crew to be cautious. With deepest regards – Danforth."`
+      `Soon after landing on <origin>, you receive an encoded message from Admiral Daroth, the leader of the Oathkeepers. "Captain <last>," she says, "I would like to thank you once again for allowing us to assist you on Poisonwood. Unfortunately, I have bad news that may concern you. Commander Nguyen, who was with you when one of the Alphas was apprehended, has been assassinated, shot in the head at point blank range. His attacker has not been found. We fear that this may be retribution for his part in the action on Poisonwood, and we urge you and your crew to be cautious. With deepest regards – Daroth."`
         decline
 
 
