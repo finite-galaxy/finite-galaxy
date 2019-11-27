@@ -1056,7 +1056,7 @@ mission "Wanderers: Alpha Surveillance E"
 
 mission "Wanderers: Alpha Surveillance F"
   name "Invade Avalon"
-  description "Escort Admiral Daroth's Navy Venus to <destination> and land on the planet with them. They will attempt to locate and eliminate the Alpha base."
+  description "Escort Admiral Daroth's Navy Jupiter to <destination> and land on the planet with them. They will attempt to locate and eliminate the Alpha base."
   autosave
   source "Farpoint"
   destination "Avalon"
@@ -1065,7 +1065,7 @@ mission "Wanderers: Alpha Surveillance F"
     has "Wanderers: Alpha Surveillance E: done"
   
   on offer
-    log "Admiral Daroth agreed to bring her Venus to the planet in Korath space where the Alphas seem to be hiding, with enough troops and equipment to launch an assault on the base."
+    log "Admiral Daroth agreed to bring her Jupiter to the planet in Korath space where the Alphas seem to be hiding, with enough troops and equipment to launch an assault on the base."
     log "Factions" "Oathkeepers" `However, the true reason that the powerful Oathkeeper fleet is positioned in the North is not just to keep the pirates at bay, but also to be able to defend and counter-attack in case the Hai decide to invade human space. Apparently the Navy has known about the Hai and the wormhole linking their space to human space for some time, but chooses not to make that knowledge public.`
     conversation
       `Daroth welcomes you into his private office and uses a device to sweep the room for bugs. "Please forgive my caution," she says when she is done. "Now, show me where this planet is."`
@@ -1090,7 +1090,7 @@ mission "Wanderers: Alpha Surveillance F"
   npc accompany save
     government "Navy (Oathkeeper)"
     personality escort heroic
-    ship "Venus (Mark II, Jump)" "R.N.S. Peacemaker"
+    ship "Jupiter (Jump)" "R.N.S. February"
 
 
 
@@ -1119,7 +1119,7 @@ mission "Wanderers: Alpha Surveillance G"
   npc accompany save
     government "Navy (Oathkeeper)"
     personality escort heroic
-    ship "Venus (Mark II, Jump)" "R.N.S. Peacemaker"
+    ship "Jupiter (Jump)" "R.N.S. February"
   npc
     government "Alpha"
     personality heroic staying vindictive

@@ -1,5 +1,6 @@
 shipyard "Navy Variants"
   "Jupiter"
+  "Jupiter (Jump)"
   "Mars"
   "Mars (Mark II)"
   "Mercury"
@@ -105,7 +106,41 @@ ship "Jupiter"
   explode "large explosion" 30
   explode "huge explosion" 15
   "final explode" "final explosion large"
-  description "The Jupiter is the result of a building programme triggered by the Kor Sestor invasion of human space. It is much larger than any known warship: the Jupiter is practically a moving battle station, equipped with powerful cannons and capable of carrying a dozen fighters."
+  description "The Jupiter is by far the largest, most powerful, and most expensive human starship, dwarfing everything else. It is practically a moving battle station, equipped with powerful cannons and capable of carrying a dozen fighters. Only a small number of Jupiters has been produced and those are mostly kept in reserve, due to their very high running costs and replacement price: they are simply too valuable to risk losing."
+
+
+ship "Jupiter" "Jupiter (Jump)"
+  outfits
+    "D94-YV Shield Generator" 2
+    "Fusion Reactor" 3
+    "Hyperdrive"
+    "Jump Drive"
+
+    "A520 Atomic Thruster"
+    "A525 Atomic Steering"
+    "A370 Atomic Thruster"
+    "A375 Atomic Steering"
+
+    "Pulse Cannon" 6
+    "Pulse Turret" 3
+    "Heavy Anti-Missile" 3
+
+    "LP144a Battery Pack"
+    "Liquid Helium Cooler" 2
+    "Fuel Pod" 346
+    "Catalytic Ramscoop" 2
+    "Large Radar Jammer" 2
+    "Tactical Scanner" 25
+    "Extra Outfit Space" 3
+    "Fragmentation Grenades" 200
+    "Laser Rifle" 400
+#    "Security Station" 5
+  turret "Pulse Turret"
+  turret "Heavy Anti-Missile"
+  turret "Pulse Turret"
+  turret "Heavy Anti-Missile"
+  turret "Pulse Turret"
+  turret "Heavy Anti-Missile"
 
 
 
@@ -440,8 +475,8 @@ ship "Saturn" "Saturn (Jump)"
     "Ramscoop" 3
     "Tactical Scanner" 16
     "Extra Outfit Space" 3
-    "Fragmentation Grenades" 80
-    "Laser Rifle" 160
+    "Fragmentation Grenades" 100
+    "Laser Rifle" 200
 #    "Security Station" 4
   turret "Pulse Turret"
   turret "Heavy Anti-Missile"

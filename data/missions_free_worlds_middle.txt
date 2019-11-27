@@ -1024,7 +1024,7 @@ mission "FW Northern 4.1A"
     government "Navy (Oathkeeper)"
     personality heroic staying uninterested
     system Alioth
-    ship "Venus (Mark II)" "R.N.S. Peacemaker"
+    ship "Jupiter" "R.N.S. February"
 
 
 
@@ -1102,11 +1102,11 @@ mission "FW Alphas 1.1"
       choice
         `  "It must be a trick. There can't still be Alphas around. Maybe the pirates dyed their skin green to make people fear them."`
         `  "How is it possible that some of the Alphas are still alive?"`
-      `  Alondo says, "This may be a trick, but we can't afford to take that risk. The Alphas were the greatest threat humanity has ever faced. And before they contacted us for help, <planet> reached out to the Navy." As he is speaking, a shadow passes overhead. You look up and see the unmistakable silhouette of a Navy Venus, coming in for a landing.`
+      `  Alondo says, "This may be a trick, but we can't afford to take that risk. The Alphas were the greatest threat humanity has ever faced. And before they contacted us for help, <planet> reached out to the Navy." As he is speaking, a shadow passes overhead. You look up and see the unmistakable silhouette of a Navy J, coming in for a landing.`
       choice
         `  "Are you insane? You're letting the Navy come here?"`
         `  "We're going to work side by side with the Navy right after that awful battle?"`
-      `  Alondo explains, "It's only one Venus, an 'Oathkeeper' ship, sworn to take no part in our war. The Free Worlds have almost no troops trained for ground combat, so without the Navy's help we would be unlikely to be able to eliminate the Alphas."`
+      `  Alondo explains, "It's only one vessel, an 'Oathkeeper' ship, sworn to take no part in our war. The Free Worlds have almost no troops trained for ground combat, so without the Navy's help we would be unlikely to be able to eliminate the Alphas."`
       `  The Navy ship lands, and a woman steps off whom you recognize immediately: Admiral Helga Daroth, who is something of a folk hero throughout human space, and who you have heard is the commander of the entire Oathkeepers regiment. With her is a man whom she introduces as Commander Aaron Nguyen of the Navy Humanitarian Corps. As Nguyen shakes your hand, you are struck by the fact that although he is your enemy, you see no trace of hostility in his eyes – in fact, his expression is surprisingly warm and affectionate.`
       `  "We have no room for error," says Daroth. "These Alphas must be eliminated, and they must not be allowed to escape. On that, at least, we can all agree."`
       `  Freya says, "Captain <last> will lead the attack." She beckons to two of the Free Worlds captains. "Marco, Emily, you will join them with your Lances. Destroy any pirate ships in orbit, then land and secure the facility. Understood?" You nod, and prepare to take off for the <system> system.`
@@ -1115,21 +1115,26 @@ mission "FW Alphas 1.1"
   npc accompany save
     government "Navy (Oathkeeper)"
     personality escort heroic
-    ship "Venus (Mark II)" "R.N.S. Peacemaker"
+    ship "Jupiter" "R.N.S. February"
   npc
     government "Free Worlds"
     personality heroic escort
     ship "Lance (Plasma)" "F.W.S. Alder"
-    ship "Lance (Plasma)" "F.W.S. Starry Warrior"
+    ship "Lance" "F.W.S. Starry Warrior"
   npc kill
     government "Pirate"
     personality heroic staying target
     system "Graffias"
-    ship "Leviathan" "Dominator"
-    ship "Leviathan" "Dread Lord"
-    ship "Firebird" "Draugbreath"
-    ship "Firebird (Impact)" "Revenant"
-    ship "Firebird (Laser)" "Vengeance"
+    ship "Modified Leviathan (Core)" "Dauntless"
+    ship "Modified Leviathan (Engines)" "Dominator"
+    ship "Modified Leviathan (Weapons)" "Dread Lord"
+    ship "Firebird" "Envy"
+    ship "Firebird" "Gluttony"
+    ship "Firebird" "Greed"
+    ship "Firebird" "Lust"
+    ship "Firebird" "Pride"
+    ship "Firebird" "Sloth"
+    ship "Firebird" "Wrath"
   
   on visit
     dialogue "You have reached <planet>, but the battle is not over – you've either failed to kill one of the pirates, or left one of your ships behind in a different system."
@@ -1211,7 +1216,7 @@ mission "FW Alphas 1.2"
     personality heroic escort
     ship "Lance (Plasma)" "F.W.S. Alder"
     ship "Lance (Plasma)" "F.W.S. Oak"
-    ship "Lance (Plasma)" "F.W.S. Starry Warrior"
+    ship "Lance" "F.W.S. Starry Warrior"
   npc kill
     government "Pirate"
     personality heroic staying target
@@ -1241,7 +1246,7 @@ mission "FW Alphas 1.1A"
   npc accompany save
     government "Navy (Oathkeeper)"
     personality escort heroic
-    ship "Venus (Mark II)" "R.N.S. Peacemaker"
+    ship "Jupiter" "R.N.S. February"
   
   on visit
     dialogue "You have reached <planet>, but you left the <npc> behind! Better depart and wait for them to arrive in this star system."
