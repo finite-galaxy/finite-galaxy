@@ -17,6 +17,7 @@ Both games can be installed alongside and played independently of each other. Al
   * [Minor changes](https://github.com/finite-galaxy/finite-galaxy#minor-changes)
   * [Not yet implemented ideas](https://github.com/finite-galaxy/finite-galaxy#not-yet-implemented-ideas)
 * [Contributing](https://github.com/finite-galaxy/finite-galaxy#contributing)
+  * [Help wanted](https://github.com/finite-galaxy/finite-galaxy#help-wanted)
   * [Posting issues](https://github.com/finite-galaxy/finite-galaxy#posting-issues)
   * [Posting pull requests](https://github.com/finite-galaxy/finite-galaxy#posting-pull-requests)
 * [Reveal entire map](https://github.com/finite-galaxy/finite-galaxy#reveal-entire-map)
@@ -26,7 +27,7 @@ Both games can be installed alongside and played independently of each other. Al
 ## Introduction
 Why did I start this project? Why not contribute to Endless Sky instead?
 * Although I like Endless Sky as a whole, it also contains things I don't like. Conversation scenes, news and portraits, tribute, and plundering of installed outfits are just a few examples.
-* The pace of development seemed to slow down: there were only nine commits in September 2018 and zero in October. (I started Finite Galaxy on October 18.)
+* The original creator, Michael Zahniser, seemed to disappear and pace of development appeared to slow down: there were only nine commits in September 2018 and zero in October. (I started Finite Galaxy on October 18.)
 * Numerous pull requests over there have been open for over a year, reviews are haphazard, there are many lengthy discussions on unimportant things, while useful proposals were often ignored.
 * The direction and vision is not always clear.
 * Support for plug-ins is rather limited.
@@ -42,31 +43,9 @@ Finite Galaxy is very much a work in progress. Nevertheless, it can be compiled 
 ## Installation
 
 ### GNU Linux
-Dependencies (version numbers may vary depending on your distribution):
-
-DEB-based distros: \
-   g++ \
-   scons \
-   libsdl2-dev \
-   libpng-dev \
-   libjpeg-dev \
-   libgl1-mesa-dev \
-   libglew-dev \
-   libopenal-dev \
-   libmad0-dev
-
-RPM-based distros: \
-   gcc-c++ \
-   scons \
-   SDL2-devel \
-   libpng-devel \
-   libjpeg-turbo-devel \
-   mesa-libGL-devel \
-   glew-devel \
-   openal-soft-devel \
-   libmad-devel
-
-Open your terminal and enter:
+Open your terminal and enter: 
+* `sudo apt-get install g++ scons libsdl2-dev libpng-dev libjpeg-dev libgl1-mesa-dev libglew-dev libopenal-dev libmad0-dev` to install dependencies on Debian/Ubuntu.
+* `sudo dnf install gcc-c++ scons SDL2-devel libpng-devel libjpeg-turbo-devel mesa-libGL-devel glew-devel openal-soft-devel libmad-devel` on Fedora/RHEL/CentOS (replace `dnf` with `yum` on some versions).
 * `git clone https://github.com/finite-galaxy/finite-galaxy.git` to get a local copy of the repository
 * `cd finite-galaxy/` to open the directory
 * `git pull` to update the game
@@ -216,9 +195,30 @@ Furthermore, there is still that wormhole with a large Quarg fleet on one end an
 -->
 
 
-
 ## Contributing
 Contributions are welcome; anyone can contribute; feel free to open issues or make pull requests.
+
+### Help wanted
+**Code**:
+* De-hardcode Drone/Fighter classes (currently a boolean is used), to allow for multiple, customizable fighter/bay types (e.g. small, medium, large).
+* De-hardcode hardpoint slots (currently a boolean is used), to allow for multiple, customizable hardpoint types (e.g. gun slots, missile bays, turret mounts).
+* Implementing the ideas listed [above](https://github.com/finite-galaxy/finite-galaxy#not-yet-implemented-ideas).
+* Other new mechanics that make the game more enjoyable.
+* Update code to C++17.
+
+**Art**:
+Because my Blender skills are non-existent, I could use help from people who are capable and willing to:
+* Make new outfit sprites and turret hardpoints (e.g. six-gun blaster turret).
+* Modify existing ship sprites and thumbnails.
+* Produce ship thumbnails for ships that only have sprites.
+* Create new ships.
+See [open issues](https://github.com/finite-galaxy/finite-galaxy/issues).
+
+**Miscellaneous**:
+Unfortunately I'm unable to test things on platforms other than my own (Fedora Linux). BSD, MacOS X, and Windows users could help by trying compiling and running the game, and if necessary, correct the appropiate files accordingly.
+
+[(return to top)](https://github.com/finite-galaxy/finite-galaxy#finite-galaxy)
+
 
 ### Posting issues
 The [issues page](https://github.com/finite-galaxy/finite-galaxy/issues) on GitHub is for tracking bugs and for art, content, and feature requests. When posting a new issue, please:
