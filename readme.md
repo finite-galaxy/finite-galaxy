@@ -45,7 +45,7 @@ Finite Galaxy is very much a work in progress. Nevertheless, it can be compiled 
 ### GNU Linux
 Open your terminal and enter: 
 * to install dependencies:
-  * on ArchLinux: `pacman -S --needed git scons sdl2 hicolor-icon-theme libjpeg-turbo glew openal libmad pango ttf-linux-libertine`
+  * on ArchLinux: `pacman -S --needed git gcc scons sdl2 libpng libjpeg-turbo mesa glew openal libmad pango ttf-linux-libertine`
   * on Debian/Ubuntu: `sudo apt-get install git g++ scons libsdl2-dev libpng-dev libjpeg-dev libgl1-mesa-dev libglew-dev libopenal-dev libmad0-dev libpango fonts-linuxlibertine`
   * on Fedora/RHEL/CentOS: `sudo dnf install git gcc-c++ scons SDL2-devel libpng-devel libjpeg-turbo-devel mesa-libGL-devel glew-devel openal-soft-devel libmad-devel pango linux-libertine-fonts` (replace `dnf` with `yum` on some versions).
 * `git clone https://github.com/finite-galaxy/finite-galaxy.git` to get a local copy of the repository
