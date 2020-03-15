@@ -44,7 +44,7 @@ template <class Type>
   void IssueShipTarget(const PlayerInfo &player, const std::shared_ptr<Ship> &target);
   void IssueMoveTarget(const PlayerInfo &player, const Point &target, const System *moveToSystem);
   // Commands issued via the keyboard (mostly, to the flagship).
-  void UpdateKeys(PlayerInfo &player, Command &clickCommands, bool isActive);
+  void UpdateKeys(PlayerInfo &player, Command &clickCommands);
 
   // Allow the AI to track any events it is interested in.
   void UpdateEvents(const std::list<ShipEvent> &events);
@@ -146,7 +146,7 @@ private:
     static const int GATHER = 0x101;
     static const int ATTACK = 0x102;
     static const int FINISH_OFF = 0x103;
-    // Bit mask to figure out which orders are canceled if their target
+    // Bit mask to figure out which orders are cancelled if their target
     // ceases to be targetable or present.
     static const int REQUIRES_TARGET = 0x100;
 
@@ -178,8 +178,6 @@ private:
 
   bool isLaunching = false;
   bool isCloaking = false;
-  // Whether the `Shift` modifier key was pressed for this step.
-  bool shift = false;
 
   bool escortsAreFrugal = true;
   bool escortsUseAmmo = true;

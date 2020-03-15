@@ -23,8 +23,6 @@
 #include "System.h"
 #include "Weapon.h"
 
-#include <SDL2/SDL.h>
-
 #include <algorithm>
 #include <cmath>
 #include <limits>
@@ -33,11 +31,11 @@
 using namespace std;
 
 namespace {
-  // If the player issues any of those commands, then any auto-pilot actions for the player get cancelled
+  // If the player issues any of those commands, then any auto-pilot actions for the player get cancelled.
   const Command &AutopilotCancelCommands()
   {
     static const Command cancellers(Command::LAND | Command::JUMP | Command::BOARD | Command::AFTERBURNER
-      | Command::BACK | Command::FORWARD | Command::LEFT | Command::RIGHT);
+      | Command::BACK | Command::FORWARD | Command::LEFT | Command::RIGHT | Command::STOP);
 
     return cancellers;
   }
@@ -267,26 +265,29 @@ void AI::IssueMoveTarget(const PlayerInfo &player, const Point &target, const Sy
 
 
 // Commands issued via the keyboard (mostly, to the flagship).
-void AI::UpdateKeys(PlayerInfo &player, Command &activeCommands, bool isActive)
+void AI::UpdateKeys(PlayerInfo &player, Command &activeCommands)
 {
-  shift = (SDL_GetModState() & KMOD_SHIFT);
   escortsUseAmmo = Preferences::Has("Escorts expend ammo");
   escortsAreFrugal = Preferences::Has("Escorts use ammo frugally");
 
   autoPilot |= activeCommands;
   if(activeCommands.Has(AutopilotCancelCommands()))
   {
-    bool canceled = (autoPilot.Has(Command::JUMP) && !activeCommands.Has(Command::JUMP));
-    canceled |= (autoPilot.Has(Command::LAND) && !activeCommands.Has(Command::LAND));
-    canceled |= (autoPilot.Has(Command::BOARD) && !activeCommands.Has(Command::BOARD));
-    if(canceled)
+    bool cancelled = (autoPilot.Has(Command::JUMP) && !activeCommands.Has(Command::JUMP));
+    cancelled |= (autoPilot.Has(Command::STOP) && !activeCommands.Has(Command::STOP));
+    cancelled |= (autoPilot.Has(Command::LAND) && !activeCommands.Has(Command::LAND));
+    cancelled |= (autoPilot.Has(Command::BOARD) && !activeCommands.Has(Command::BOARD));
+    if(cancelled)
       Messages::Add("Disengaging autopilot.");
     autoPilot.Clear();
   }
   const Ship *flagship = player.Flagship();
 
-  if(!isActive || !flagship || flagship->IsDestroyed())
+  if(!flagship || flagship->IsDestroyed())
     return;
+
+  if(activeCommands.Has(Command::STOP))
+    Messages::Add("Coming to a stop.");
 
   // Only toggle the "cloak" command if one of your ships has a cloaking device.
   if(activeCommands.Has(Command::CLOAK))
@@ -459,7 +460,7 @@ void AI::Step(const PlayerInfo &player, Command &activeCommands)
 
     const Government *gov = it->GetGovernment();
     const Personality &personality = it->GetPersonality();
-    double health = .5 * it->Shields() + it->Hull();
+    double healthRemaining = it->Health();
     bool isPresent = (it->GetSystem() == playerSystem);
     bool isStranded = IsStranded(*it);
     bool thisIsLaunching = (isLaunching && isPresent);
@@ -483,6 +484,7 @@ void AI::Step(const PlayerInfo &player, Command &activeCommands)
         // Avoid jettisoning cargo as soon as this ship is repaired.
         if(personality.IsAppeasing())
         {
+          double health = .5 * it->Shields() + it->Hull();
           double &threshold = appeasmentThreshold[it.get()];
           threshold = max((1. - health) + .1, threshold);
         }
@@ -555,8 +557,8 @@ void AI::Step(const PlayerInfo &player, Command &activeCommands)
       continue;
     }
 
-    // Special actions when a ship is near death:
-    if(health < 1.)
+    // Special actions when a ship is heavily damaged.
+    if(healthRemaining < RETREAT_HEALTH + .1)
     {
       // Cowards abandon their fleets.
       if(parent && personality.IsCoward())
@@ -567,10 +569,10 @@ void AI::Step(const PlayerInfo &player, Command &activeCommands)
       // Appeasing ships jettison cargo to distract their pursuers.
       if(personality.IsAppeasing() && it->Cargo().Used())
       {
+        double health = .5 * it->Shields() + it->Hull();
         double &threshold = appeasmentThreshold[it.get()];
         if(1. - health > threshold)
         {
-          // "Appeasing" ships will dump some fraction of their cargo.
           int toDump = 11 + (1. - health) * .5 * it->Cargo().Size();
           for(const auto &commodity : it->Cargo().Commodities())
             if(commodity.second && toDump > 0)
@@ -842,8 +844,10 @@ void AI::Step(const PlayerInfo &player, Command &activeCommands)
     // jump, always follow.
     else if(parent->Commands().Has(Command::JUMP) && it->JumpsRemaining())
       MoveEscort(*it, command);
-    // Timid ships always stay near their parent.
-    else if(personality.IsTimid() && parent->Position().Distance(it->Position()) > 500.)
+    // Timid ships always stay near their parent. Injured player
+    // escorts will stay nearby until they have repaired a bit.
+    else if((personality.IsTimid() || (it->IsYours() && healthRemaining < RETREAT_HEALTH))
+        && parent->Position().Distance(it->Position()) > 500.)
       MoveEscort(*it, command);
     // Otherwise, attack targets depending on how heroic you are.
     else if(target && (targetDistance < 2000. || personality.IsHeroic()))
@@ -1346,7 +1350,7 @@ void AI::MoveIndependent(Ship &ship, Command &command) const
   const System *origin = ship.GetSystem();
   if(!ship.GetTargetSystem() && !ship.GetTargetStellar() && !shouldStay)
   {
-    int jumps = ship.JumpsRemaining();
+    int jumps = ship.JumpsRemaining(false);
     // Each destination system has an average priority of 10.
     // If you only have one jump left, landing should be high priority.
     int planetWeight = jumps ? (1 + 40 / jumps) : 1;
@@ -2256,7 +2260,7 @@ void AI::DoSurveillance(Ship &ship, Command &command, shared_ptr<Ship> &target) 
 
     // If this ship can jump away, consider travelling to a nearby system.
     vector<const System *> targetSystems;
-    if(ship.JumpsRemaining())
+    if(ship.JumpsRemaining(false))
     {
       const auto &links  = ship.Attributes().Get("jump drive") ? system->Neighbours() : system->Links();
       targetSystems.insert(targetSystems.end(), links.begin(), links.end());
@@ -3017,6 +3021,7 @@ double AI::RendezvousTime(const Point &p, const Point &v, double vp)
 void AI::MovePlayer(Ship &ship, const PlayerInfo &player, Command &activeCommands)
 {
   Command command;
+  bool shift = activeCommands.Has(Command::SHIFT);
 
   bool isWormhole = false;
   if(player.HasTravelPlan())
@@ -3455,6 +3460,12 @@ void AI::MovePlayer(Ship &ship, const PlayerInfo &player, Command &activeCommand
       MoveToPlanet(ship, command);
       command |= Command::LAND;
     }
+  }
+  else if(autoPilot.Has(Command::STOP))
+  {
+    // STOP is automatically cleared once the ship has stopped.
+    if(Stop(ship, command))
+      autoPilot.Clear(Command::STOP);
   }
   else if(autoPilot.Has(Command::JUMP))
   {

@@ -64,7 +64,7 @@ namespace {
       {
         next = point + step[d];
         // Use padded comparisons in case errors somehow accumulate and
-        // the doubles are no longer canceling out to 0.
+        // the doubles are no longer cancelling out to 0.
         if((next.X() >= -.5) & (next.Y() >= -.5) & (next.X() < maxX) & (next.Y() < maxY))
           if(it[off[d]] & on)
             break;
