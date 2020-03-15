@@ -684,10 +684,10 @@ int64_t PlayerInfo::Salaries() const
 int64_t PlayerInfo::Maintenance() const
 {
   int64_t maintenance = 0;
-  // If the player is landed, then cargo will be in the player's 
+  // If the player is landed, then cargo will be in the player's
   // pooled cargo. Check there so that the bank panel can display the
   // correct total maintenance costs. When launched all cargo will be
-  // in the player's ships instead of in the pooled cargo, so no outfit 
+  // in the player's ships instead of in the pooled cargo, so no outfit
   // will be counted twice.
   for(const auto &outfit : Cargo().Outfits())
     maintenance += max<int64_t>(0, outfit.first->Get("maintenance costs")) * outfit.second;
@@ -723,6 +723,7 @@ Ship *PlayerInfo::Flagship()
 
 
 
+// Determine which ship is the flagship and return the shared pointer to it.
 const shared_ptr<Ship> &PlayerInfo::FlagshipPtr()
 {
   if(!flagship)
@@ -745,6 +746,64 @@ const shared_ptr<Ship> &PlayerInfo::FlagshipPtr()
 const vector<shared_ptr<Ship>> &PlayerInfo::Ships() const
 {
   return ships;
+}
+
+
+
+// Inspect the flightworthiness of the player's active fleet, individually and
+// as a whole, to determine which ships cannot travel with the group.
+// Returns a mapping of ships to the reason their flight check failed.
+std::map<const shared_ptr<Ship>, const string> PlayerInfo::FlightCheck() const
+{
+  // Count of all bay types in the active fleet.
+  auto bayCount = map<string, size_t>{};
+  // Classification of the present ships by category. Parked ships are ignored.
+  auto categoryCount = map<string, vector<shared_ptr<Ship>>>{};
+
+  auto flightChecks = map<const shared_ptr<Ship>, const string>{};
+  for(const auto &ship : ships)
+    if(ship->GetSystem() == system && !ship->IsDisabled() && !ship->IsParked())
+    {
+      string check = ship->FlightCheck();
+      if(!check.empty())
+        flightChecks.emplace(ship, check);
+
+      categoryCount[ship->Attributes().Category()].emplace_back(ship);
+      if(ship->CanBeCarried() || ship->Bays().empty())
+        continue;
+
+      for(auto &bay : ship->Bays())
+      {
+        ++bayCount[bay.forCategory];
+        // The bays should always be empty. But if not, count that ship too.
+        if(bay.ship)
+        {
+          Files::LogError("Expected bay to be empty for " + ship->ModelName() + ": " + ship->Name());
+          categoryCount[bay.ship->Attributes().Category()].emplace_back(bay.ship);
+        }
+      }
+    }
+
+  // Identify transportable ships that cannot jump and have no bay to be carried in.
+  for(auto &bayType : bayCount)
+  {
+    const auto &shipsOfType = categoryCount[bayType.first];
+    if(shipsOfType.empty())
+      continue;
+    for(const auto &carriable : shipsOfType)
+    {
+      if(carriable->JumpsRemaining() != 0)
+      {
+        // This ship can travel between systems and does not require a bay.
+      }
+      // This ship requires a bay to travel between systems.
+      else if(bayType.second > 0)
+        --bayType.second;
+      else
+        flightChecks.emplace(carriable, "no bays?");
+    }
+  }
+  return flightChecks;
 }
 
 
@@ -826,7 +885,7 @@ void PlayerInfo::DisownShip(const Ship *selected)
 
 
 // Park or unpark the given ship. A parked ship remains on a planet instead of
-// flying with the player, and requires no daily upkeep.
+// flying with the player, and requires no crew, nor daily salary payments.
 void PlayerInfo::ParkShip(const Ship *selected, bool isParked)
 {
   for(auto it = ships.begin(); it != ships.end(); ++it)
@@ -1184,85 +1243,46 @@ bool PlayerInfo::TakeOff(UI *ui)
     flagship->Cargo().SetBunks(flagship->Attributes().Get("bunks") - flagship->Crew());
   }
 
-  // For each drone, fighter, and bomber you own, try to find a ship that has a bay to
-  // carry it in. Any excess ships will need to be sold.
-  int shipsSold[3] = {0, 0, 0};
-  int64_t income = 0;
-  int day = date.DaysSinceEpoch();
-  for(auto it = ships.begin(); it != ships.end(); )
-  {
-    shared_ptr<Ship> &ship = *it;
-    if(ship->IsParked() || ship->IsDisabled())
+  // For each active, carriable ship you own, try to find an active ship that has a bay for it.
+  auto carriers = vector<Ship *>{};
+  auto toLoad = vector<shared_ptr<Ship>>{};
+  for(auto &ship : ships)
+    if(!ship->IsParked() && !ship->IsDisabled())
     {
-      ++it;
-      continue;
+      if(ship->CanBeCarried())
+        toLoad.emplace_back(ship);
+      else if(ship->HasBays())
+        carriers.emplace_back(ship.get());
     }
-
-    bool fit = true;
-    const string &category = ship->Attributes().Category();
-    bool isFighter = (category == "Fighter");
-    if(isFighter || category == "Drone")
+  if(!toLoad.empty())
+  {
+    size_t uncarried = toLoad.size();
+    if(!carriers.empty())
     {
-      fit = false;
-      for(shared_ptr<Ship> &parent : ships)
-        if(parent->GetSystem() == ship->GetSystem() && !parent->IsParked()
-            && !parent->IsDisabled() && parent->Carry(ship))
+      // Order carried ships such that those requiring bays are loaded first. For
+      // jump-capable carried ships, prefer loading those with a shorter range.
+      stable_sort(toLoad.begin(), toLoad.end(),
+        [](const shared_ptr<Ship> &a, const shared_ptr<Ship> &b)
         {
-          fit = true;
-          break;
-        }
+          return a->JumpsRemaining() < b->JumpsRemaining();
+        });
+      // We are guaranteed that each carried `ship` is not parked and not disabled, and that
+      // all possible parents are also not parked, not disabled, and not `ship`.
+      for(auto &ship : toLoad)
+        for(auto &parent : carriers)
+          if(parent->GetSystem() == ship->GetSystem() && parent->Carry(ship))
+          {
+            --uncarried;
+            break;
+          }
     }
-    if(!fit && ship->GetSystem() == system)
-    {
-      ++shipsSold[isFighter];
-      int64_t cost = depreciation.Value(*ship, day);
-      stockDepreciation.Buy(*ship, day, &depreciation);
-      income += cost;
-      it = ships.erase(it);
-    }
-    else
-      ++it;
-  }
-  if(shipsSold[0] || shipsSold[1] || shipsSold[2])
-  {
-    // If your fleet contains more drones, fighters, or bombers than you can carry,
-    // some of them must be sold.
-    ostringstream out;
-    out << "Because none of your ships can carry them, you sold ";
-/*
-    if(shipsSold[1])
-      out << shipsSold[1]
-        << (shipsSold[1] == 1 ? " fighter" : " fighters");
-    if(shipsSold[0] && shipsSold[1])
-      out << " and ";
-    if(shipsSold[0])
-      out << shipsSold[0]
-        << (shipsSold[0] == 1 ? " drone" : " drones");
-*/
-    if(shipsSold[0]) {
-      out << shipsSold[0] << (shipsSold[0] == 1 ? " drone" : " drones");
-      if(shipsSold[1] || shipsSold[2]) {
-        if(shipsSold[1] && shipsSold[2])
-          out << ", ";
-        else
-          out << " and ";
-      }
-    }
-    if(shipsSold[1]) {
-      out << shipsSold[1] << (shipsSold[1] == 1 ? " fighter" : " fighters");
-      if(shipsSold[2]) {
-        if(shipsSold[0])
-           out << ", and ";
-        else
-          out << " and ";
-      }
-    }
-    if(shipsSold[2])
-      out << shipsSold[2] << (shipsSold[2] == 1 ? " bomber" : " bombers");
 
-    out << ", earning " << Format::Credits(income) << " credits.";
-    accounts.AddCredits(income);
-    Messages::Add(out.str());
+    if(uncarried)
+    {
+      // The remaining uncarried ships are launched alongside the player.
+      string message = (uncarried > 1) ? "Some escorts were" : "One escort was";
+      Messages::Add(message + " unable to dock with a carrier.");
+    }
   }
 
   // By now, all cargo should have been divvied up among your ships. So, any
@@ -1290,8 +1310,9 @@ bool PlayerInfo::TakeOff(UI *ui)
     RemoveMission(Mission::FAIL, *mission, ui);
 
   // Any ordinary cargo left behind can be sold.
+  int64_t income = 0;
+  int day = date.DaysSinceEpoch();
   int64_t sold = cargo.Used();
-  income = 0;
   int64_t totalBasis = 0;
   if(sold)
   {
@@ -2415,6 +2436,20 @@ void PlayerInfo::UpdateAutoConditions(bool isBoarding)
     conditions["passenger space"] = flagship->Cargo().BunksFree();
   }
 
+  // Store conditions for flagship current crew, required crew, and bunks.
+  if(flagship)
+  {
+    conditions["flagship crew"] = flagship->Crew();
+    conditions["flagship required crew"] = flagship->RequiredCrew();
+    conditions["flagship bunks"] = flagship->Attributes().Get("bunks");
+  }
+  else
+  {
+    conditions["flagship crew"] = 0;
+    conditions["flagship required crew"] = 0;
+    conditions["flagship bunks"] = 0;
+  }
+
   // Conditions for your fleet's attractiveness to pirates:
   pair<double, double> factors = RaidFleetFactors();
   conditions["cargo attractiveness"] = factors.first;
@@ -2499,6 +2534,15 @@ void PlayerInfo::StepMissions(UI *ui)
         if(ship->IsDestroyed())
           mission.Do(ShipEvent(nullptr, ship, ShipEvent::DESTROY), *this, ui);
 
+  string visitText;
+  int missionVisits = 0;
+  auto substitutions = map<string, string>{
+    {"<first>", firstName},
+    {"<last>", lastName}
+  };
+  if(Flagship())
+    substitutions["<ship>"] = Flagship()->Name();
+
   auto mit = missions.begin();
   while(mit != missions.end())
   {
@@ -2513,7 +2557,29 @@ void PlayerInfo::StepMissions(UI *ui)
     else if(mission.CanComplete(*this))
       RemoveMission(Mission::COMPLETE, mission, ui);
     else if(mission.Destination() == GetPlanet() && !freshlyLoaded)
+    {
       mission.Do(Mission::VISIT, *this, ui);
+      if(mission.IsUnique() || !mission.IsVisible())
+        continue;
+
+      // On visit dialogues are handled separately as to avoid a player
+      // getting spammed by on visit dialogues if they are stacking jobs
+      // from the same destination.
+      if(visitText.empty())
+      {
+        const auto &text = mission.GetAction(Mission::VISIT).DialogueText();
+        if(!text.empty())
+          visitText = Format::Replace(text, substitutions);
+      }
+      ++missionVisits;
+    }
+  }
+  if(!visitText.empty())
+  {
+    if(missionVisits > 1)
+      visitText += "\n\t(You have " + Format::Number(missionVisits - 1) + " other unfinished " 
+        + ((missionVisits > 2) ? "missions" : "mission") + " at this location.)";
+    ui->Push(new Dialogue(visitText));
   }
   // One mission's actions may influence another mission, so loop through one
   // more time to see if any mission is now completed or failed due to a change

@@ -194,7 +194,7 @@ void NPC::Save(DataWriter &out) const
       out.Write("accompany");
 
     if(government)
-      out.Write("government", government->GetName());
+      out.Write("government", government->GetTrueName());
     personality.Save(out);
 
     if(!dialogueText.empty())

@@ -37,7 +37,6 @@ using namespace std;
 
 namespace {
   const string FIGHTER_REPAIR = "Repair fighters in";
-  const set<string> BAY_TYPE = {"Drone", "Fighter", "Bomber"};
   const vector<string> BAY_SIDE = {"inside", "over", "under"};
   const vector<string> BAY_FACING = {"forward", "left", "right", "back"};
   const vector<Angle> BAY_ANGLE = {Angle(0.), Angle(-90.), Angle(90.), Angle(180.)};
@@ -82,10 +81,16 @@ namespace {
 
 
 
-const set<string> Ship::BAY_TYPES()
-{
-  return BAY_TYPE;
-}
+// Set of ship types that can be carried in bays.
+const set<string> Ship::BAY_TYPES = {
+  "Drone",
+  "Fighter",
+  "Bomber"
+};
+
+
+
+
 
 
 
@@ -1743,7 +1748,7 @@ void Ship::Launch(list<shared_ptr<Ship>> &ships, vector<Visual> &visuals)
     return;
 
   for(Bay &bay : bays)
-    if(bay.ship && ((bay.ship->Commands().Has(Command::DEPLOY) && !Random::Int(50))
+    if(bay.ship && ((bay.ship->Commands().Has(Command::DEPLOY) && !Random::Int(40 + 20 * (crew > 0)))
       || (ejecting && !Random::Int(6))))
     {
       // Determine which of the fighter's weapons we can restock.
@@ -2792,7 +2797,7 @@ bool Ship::HasBays() const
 
 
 
-int Ship::BaysFree(string category) const
+int Ship::BaysFree(const string &category) const
 {
   int count = 0;
   for(const Bay &bay : bays)
@@ -2808,8 +2813,8 @@ bool Ship::CanCarry(const Ship &ship) const
 {
   if(!ship.CanBeCarried())
     return false;
-  // Check only for the category that we are interrested in.
-  string category = ship.attributes.Category();
+  // Check only for the category that we are interested in.
+  const string &category = ship.attributes.Category();
 
   int free = BaysFree(category);
   if(!free)
@@ -2826,9 +2831,9 @@ bool Ship::CanCarry(const Ship &ship) const
 
 
 
-int Ship::CanBeCarried() const
+bool Ship::CanBeCarried() const
 {
-  return (BAY_TYPE.count(attributes.Category()) > 0);
+  return (BAY_TYPES.count(attributes.Category()) > 0);
 }
 
 
@@ -2839,7 +2844,7 @@ bool Ship::Carry(const shared_ptr<Ship> &ship)
     return false;
 
   // Check only for the category that we are interrested in.
-  string category = ship->attributes.Category();
+  const string &category = ship->attributes.Category();
 
   for(Bay &bay : bays)
     if((bay.forCategory == category) && !bay.ship)

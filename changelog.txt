@@ -611,6 +611,20 @@ Version 0.10.0:
   * feat(weapons): Support variable ammo quantity consumption (@Amazinite)
   * moved the flamethrower missions to side plots instead of start (@Bladewood)
   * updated the remaining human station sprites (@beccabunny)
+  * fix: Scanning rings properly scale to the ship again (@petervdmeer)
+  * refactor(input-handling): Move kb/m reads from AI & Engine to only Engine (@petervdmeer)
+  * feat(controls): Make fast-forward key configurable (@bojidar-bg)
+  * feat(conditions): Add flagship crew info to computed conditions (@Fzzr)
+  * feat(ux): Limit pop-ups when multiple missions have "on visit" dialogs (@Amazinite)
+  * fix: add missing null check for flagship conditions (@NomadicVolcano)
+  * fix(input-handling): allow jump/board/land autopilot to resume while held (@NomadicVolcano)
+  * fix: avoid possible divide-by-zero in Shipyard & Outfitter (@tehhowch)
+  * fix(mappanel): Evaluate completion conditions when coloring missions in map panel (@NomadicVolcano)
+  * feat(government): Allow customization of the government's displayed name (@tehhowch)
+  * refactor: Require a new press to exit a conversation or select a choice (@tehhowch)
+  * feat: If not carried, fighters and drones are launched instead of sold (@petervdmeer)
+  * feat: The display for a ship's total outfit space will now scale with installed outfits expansions (@Amazinite)
+  * feat: Created an " Independent " government that allows the player to destroy the Oxyrhynchus to evade it without negative consequences (@Amazinite)
 
 
 

@@ -45,7 +45,7 @@ class Visual;
 class Ship : public Body, public std::enable_shared_from_this<Ship> {
 public:
   // Allow retrieving the available bay types for the current game;
-  static const std::set<std::string> BAY_TYPES();
+  static const std::set<std::string> BAY_TYPES;
 
   class Bay {
   public:
@@ -301,12 +301,12 @@ public:
   bool HasBays() const;
   // Check how many bays are not occupied at present. This does not check
   // whether one of your escorts plans to use that bay.
-  int BaysFree(const std::string forCategory) const;
+  int BaysFree(const std::string &category) const;
   // Check if this ship has a bay free for the given other ship, and the
   // bay is not reserved for one of its existing escorts.
   bool CanCarry(const Ship &ship) const;
   // Check if this is a ship of a type that can be carried.
-  int CanBeCarried() const;
+  bool CanBeCarried() const;
   // Move the given ship into one of the bays, if possible.
   bool Carry(const std::shared_ptr<Ship> &ship);
   // Empty the bays. If the carried ships are not special ships that are

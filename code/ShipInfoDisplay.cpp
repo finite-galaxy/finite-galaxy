@@ -230,7 +230,7 @@ void ShipInfoDisplay::UpdateAttributes(const Ship &ship, const Depreciation &dep
     chassis[NAMES[i]] = attributes.Get(NAMES[i]);
   for(const auto &it : ship.Outfits())
     for(auto &cit : chassis)
-      cit.second -= it.second * it.first->Get(cit.first);
+      cit.second -= min(0., it.second * it.first->Get(cit.first));
 
   attributeLabels.push_back("free outfit space:");
   attributeValues.push_back(Format::Number(attributes.Get(NAMES[0]))
@@ -263,11 +263,11 @@ void ShipInfoDisplay::UpdateAttributes(const Ship &ship, const Depreciation &dep
     attributesHeight += 20;
   }
 
-  // Print the number of bays for each bay-type we have
-  for(auto bayType : Ship::BAY_TYPES())
+  // Print the number of bays for each bay-type we have.
+  for(auto bayType : Ship::BAY_TYPES)
     if(ship.BaysFree(bayType))
     {
-      // make sure the label is printed in lower case
+      // Make sure the label is printed in lower case.
       string bayLabel = bayType;
       transform(bayLabel.begin(), bayLabel.end(), bayLabel.begin(), ::tolower);
 

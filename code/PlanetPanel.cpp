@@ -251,19 +251,18 @@ void PlanetPanel::TakeOffIfReady()
 
   // Check if any of the player's ships are configured in such a way that they
   // will be impossible to fly.
-  for(const shared_ptr<Ship> &ship : player.Ships())
-  {
-    if(ship->GetSystem() != &system || ship->IsDisabled() || ship->IsParked())
-      continue;
-
-    string check = ship->FlightCheck();
-    if(!check.empty() && check.back() == '!')
+  const auto flightChecks = player.FlightCheck();
+  if(!flightChecks.empty())
+    for(const auto &result : flightChecks)
     {
-      GetUI()->Push(new ConversationPanel(player,
-        *GameData::Conversations().Get("flight check: " + check), nullptr, ship));
-      return;
+      const string &check = result.second;
+      if(check.back() == '!')
+      {
+        GetUI()->Push(new ConversationPanel(player,
+          *GameData::Conversations().Get("flight check: " + check), nullptr, result.first));
+        return;
+      }
     }
-  }
 
   // The checks that follow are typically caused by parking or selling
   // ships or changing outfits.
@@ -277,18 +276,17 @@ void PlanetPanel::TakeOffIfReady()
   int missionCargoToSell = cargo.MissionCargoSize() - cargo.Size();
   // Will you have to sell something other than regular cargo?
   int cargoToSell = -(cargo.Free() + cargo.CommoditiesSize());
-  int droneCount = 0;
-  int fighterCount = 0;
-  int bomberCount = 0;
-  for(const auto &it : player.Ships())
-    if(!it->IsParked() && !it->IsDisabled() && it->GetSystem() == &system)
-    {
-      droneCount -= it->BaysFree("Drone");
-      fighterCount -= it->BaysFree("Fighter");
-      bomberCount -= it->BaysFree("Bomber");
-    }
+  // Count how many active ships we have that cannot make the jump (e.g. due to lack of fuel,
+  // drive, or carrier). All such ships will have been logged in the player's flightcheck.
+  size_t nonJumpCount = 0;
+  if(!flightChecks.empty())
+  {
+    for(const auto &result : flightChecks)
+      if(result.second == "no hyperdrive?" || result.second == "no fuel?" || result.second == "no bays?")
+        ++nonJumpCount;
+  }
 
-  if(droneCount > 0 || fighterCount > 0 || bomberCount > 0 || cargoToSell > 0 || overbooked > 0)
+  if(nonJumpCount > 0 || cargoToSell > 0 || overbooked > 0)
   {
     ostringstream out;
     if(missionCargoToSell > 0 || overbooked > 0)
@@ -310,31 +308,18 @@ void PlanetPanel::TakeOffIfReady()
         out << " of your mission cargo.";
       }
     }
+    else if(nonJumpCount > 0)
+    {
+      out << "If you take off now you will launch with ";
+      if(nonJumpCount == 1)
+        out << "a ship";
+      else
+        out << nonJumpCount << " ships";
+      out << " that will not be able to leave the system.";
+    }
     else
     {
       out << "If you take off now you will have to sell ";
-      bool triple = (droneCount > 0 && fighterCount > 0 && bomberCount > 0 && cargoToSell > 0);
-
-      if(droneCount == 1)
-        out << "a drone";
-      else if(droneCount > 0)
-        out << droneCount << " drones";
-      if(droneCount > 0 && (fighterCount > 0 || bomberCount > 0 || cargoToSell > 0))
-        out << (triple ? ", " : " and ");
-
-      if(fighterCount == 1)
-        out << "a fighter";
-      else if(fighterCount > 0)
-        out << fighterCount << " fighters";
-      if(fighterCount > 0 && (bomberCount > 0 || cargoToSell > 0))
-        out << (triple ? ", " : " and ");
-
-      if(bomberCount == 1)
-        out << "a bomber";
-      else if(bomberCount > 0)
-        out << bomberCount << " bombers";
-      if(bomberCount > 0 && cargoToSell > 0)
-        out << (triple ? ", and " : " and ");
 
       if(cargoToSell == 1)
         out << "a ton of cargo";

@@ -35,8 +35,10 @@ public:
   // Load a government's definition from a file.
   void Load(const DataNode &node);
 
-  // Get the name of this government.
+  // Get the display name of this government.
   const std::string &GetName() const;
+  // Get the name used for this government in the data files.
+  const std::string &GetTrueName() const;
   // Get the colour swizzle to use for ships of this government.
   int GetSwizzle() const;
   // Get the colour to use for displaying this government on the map.
@@ -110,6 +112,7 @@ public:
 private:
   unsigned id;
   std::string name;
+  std::string displayName;
   int swizzle = 0;
   Colour colour;
   double fuelPrice = 0;

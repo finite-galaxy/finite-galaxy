@@ -15,6 +15,7 @@
 #   "Hai (Unfettered)" 1
 #   "Heliarch" 17
 #   "Independent" 3
+#   " Independent " 3
 #   "Indigenous Lifeform"
 #   "Korath" 7
 #   "Korath Nanobots"
@@ -123,6 +124,7 @@ government "Drak"
     "Indigenous Lifeform" 1
 
 government " Drak "
+  "display name" "Drak"
   "player reputation" -1000
 
 government "Escort"
@@ -195,7 +197,18 @@ government "Independent"
   "fine" 0
   "friendly hail" "friendly civilian"
   "hostile hail" "hostile civilian"
-  raid "Pirates South Large"
+  raid "Pirates South Large
+
+"government " Independent "
+  "display name" "Independent"
+  swizzle 3
+  colour .8 .6 .4
+  "player reputation" 10
+  "fuel price" 4
+  "bribe" .05
+  "fine" 0
+  "friendly hail" "friendly civilian"
+  "hostile hail" "hostile civilian"
 
 government "Indigenous Lifeform"
   # Nothing you do permanently angers indigenous creatures, because they are
@@ -241,6 +254,7 @@ government "Kor Mereti"
   "player reputation" -1000
 
 government " Kor Mereti "
+  "display name" "Kor Mereti"
   swizzle 12
   language "Korath"
   "attitude toward"
