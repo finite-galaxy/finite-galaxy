@@ -101,6 +101,7 @@
 # "void sprite adult death"
 # "void sprite chewing"
 # "void sprite infant death"
+# "void sprite subsidurial death"
 # "warder"
 
 
@@ -1061,6 +1062,13 @@ effect "void sprite infant death"
     "no repeat"
     "frame rate" 15
   "lifetime" 21
+  "velocity scale" .01
+
+effect "void sprite subsidurial death"
+  sprite "effect/void_sprite/subsidurial_death"
+    "no repeat"
+    "frame rate" 20
+  "lifetime" 16
   "velocity scale" .01
 
 
