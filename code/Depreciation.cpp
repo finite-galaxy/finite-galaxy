@@ -17,10 +17,10 @@ namespace {
   // Names for the two kinds of depreciation records.
   string NAME[2] = {"fleet depreciation", "stock depreciation"};
   // Depreciation parameters.
-  double FULL_DEPRECIATION = 0.50;
-  double DAILY_DEPRECIATION = 0.99;
-  int MAX_AGE = 365;
-  int GRACE_PERIOD = 0;
+  constexpr double FULL_DEPRECIATION = 0.50;
+  constexpr double DAILY_DEPRECIATION = 0.99;
+  constexpr int GRACE_PERIOD = 0;
+  constexpr int MAX_AGE = 365 + GRACE_PERIOD;
 }
 
 
@@ -324,11 +324,11 @@ double Depreciation::Depreciate(int age) const
 {
   if(age <= GRACE_PERIOD)
     return 1.;
-  if(age >= MAX_AGE + GRACE_PERIOD)
+  if(age >= MAX_AGE)
     return FULL_DEPRECIATION;
 
   double daily = pow(DAILY_DEPRECIATION, age - GRACE_PERIOD);
-  double linear = static_cast<double>(MAX_AGE - (age - GRACE_PERIOD)) / MAX_AGE;
+  double linear = static_cast<double>(MAX_AGE - age) / (MAX_AGE - GRACE_PERIOD);
   return FULL_DEPRECIATION + (1. - FULL_DEPRECIATION) * daily * linear;
 }
 

@@ -643,6 +643,11 @@ Version 0.10.0:
   * build(linux): Support subdirectories in SConstruct (@tehhowch)
   * fix(ci): Call CheckReferences even when no save exists (@tehhowch)
   * fix(input-handling): Only handle inputs given when the engine is fully active (@petervdmeer and @tehhowch)
+  * refactor: Swap target parameter type of some AI methods from `Ship` to `Body` (@petervdmeer)
+  * fix(input-handling): Allow the UI to handle keys before checking Fast Forward, Fullscreen (@tehhowch)
+  * feat(mechanics): Update the automatic conditions daily (@petervdmeer)
+  * feat(mechanics): Add flagship System and Planet to player conditions (@petervdmeer)
+  * fix(mechanics): Account for the depreciation grace period in the max age of an outfit or ship (@Amazinite)
 
 
 

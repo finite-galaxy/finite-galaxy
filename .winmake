@@ -12,8 +12,7 @@
 # Intended Usage
 # CAPS VARIABLE -> override on command line or alter name in script
 # lowercase variable -> should not need modification
-#
-#     avoid paths with spaces. (escape with \ if necessary)
+#   avoid paths with spaces. (escape with \ if necessary)
 #
 
 # Preliminary configuration
@@ -59,8 +58,8 @@ WINDRES = windres.exe
 LD = g++.exe
 
 # Compiler and linker flags
- include_dir = -I$(DIR_ESLIB)/include
-CXXFLAGS += -std=c++11 -Wall -MMD $(cxx_extra) $(include_dir)
+include_dir = -I$(DIR_ESLIB)/include
+CXXFLAGS += -std=c++14 -Wall -MMD $(cxx_extra) $(include_dir)
 # Require the linker uses WinMainCRTStartup as the entry point.
 LDFLAGS += -mwindows -L$(DIR_ESLIB)\lib $(ldd_extra)
 # Include the Windows Multimedia API.
@@ -92,7 +91,7 @@ $(foreach bdir,$(obj_build_dirs),$(eval $(call make-goal,$(bdir))))
 $(obj_dir)/WinApp.o: $(SRC_ROOT)/WinApp.rc | $(obj_dir)
   $(WINDRES) --input-format rc --output-format coff $(include_dir) $< $@
 # Pattern rule for main.cpp
- $(obj_dir)/main.o: $(SRC_ROOT)/main.cpp | $(obj_dir)
+$(obj_dir)/main.o: $(SRC_ROOT)/main.cpp | $(obj_dir)
   $(CXX) -c $(CXXFLAGS) $< -o $@
 
 # Rules for making the output and build directories
