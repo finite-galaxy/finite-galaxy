@@ -67,13 +67,19 @@ Angle Hardpoint::HarmonizedAngle() const
   if(!outfit)
     return Angle();
 
-  // Find the point of convergence of shots fired from this gun. That is,
-  // find the angle where the projectile's X offset will be zero when it
-  // reaches the very end of its range.
-  double d = outfit->Range();
-  // Projectiles with a range of zero should fire straight forward. A
-  // special check is needed to avoid divide by zero errors.
-  return Angle(d <= 0. ? 0. : -asin(point.X() / d) * TO_DEG);
+  if(outfit->Converges())
+  {
+    // Find the point of convergence of shots fired from this gun. That is,
+    // find the angle where the projectile's X offset will be zero when it
+    // reaches the very end of its range.
+    double d = outfit->Range();
+    // Projectiles with a range of zero should fire straight forward. A
+    // special check is needed to avoid divide by zero errors.
+    return Angle(d <= 0. ? 0. : -asin(point.X() / d) * TO_DEG);
+  }
+  // By default guns fire in parallel and thus don't have harmonized angles.
+  else
+    return Angle();
 }
 
 

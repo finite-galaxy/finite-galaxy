@@ -225,6 +225,13 @@ bool Weapon::IsWeapon() const
 
 
 
+bool Weapon::Converges() const
+{
+  return converges;
+}
+
+
+
 // Get assets used by this weapon.
 const Body &Weapon::WeaponSprite() const
 {

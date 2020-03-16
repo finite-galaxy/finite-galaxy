@@ -135,6 +135,7 @@ You will also need libmingw32.a and libopengl32.a. Those should be included in t
 * Installed outfits can no longer be plundered by default; outfits in cargo still can
 * Minimum depreciation value raised to 50%, time lowered to one year
 * Weapon projectile damage is a random number between `damage` and `damage + random damage`
+* Guns fire in parallel by default, i.e. no harmonized angle convergence.
 * Ship info display shows more stats
 * Redistributed most human ships and many outfits to have more regional specialization
 * Removed tribute from planets (relevant code is still present for plug-ins)
