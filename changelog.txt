@@ -236,7 +236,8 @@ Version 0.10.0:
       * Bulk Freighter from 2 to 0
       * Clipper from 4 to 0
       * Deep River from 6 to 0
-      * Harpy from 2 to 4
+      * Hag from 2 to 4
+      * Harpy from 2 to 6
       * Heavy Shuttle from 2 to 0
       * Lance from 4 to 2
       * Light Shuttle from 1 to 0
@@ -252,6 +253,7 @@ Version 0.10.0:
       * Tek Far 71 Lek from 3 to 2
       * Venus from 4 to 2
     * turret mount changes:
+      * Bulk Freighter from 5 to 2
       * Kar Ik Vot 349 from 8 to 10
       * Model 8 from 0 to 1
       * Modified Osprey from 7 to 6
@@ -281,7 +283,7 @@ Version 0.10.0:
         * Modified Bounder (Weapons): +40 cargo space, +55 core space, –25 engine space, −10 weapon space
       * Boxwing: +0.81 drag, +0.23 heat dissipation, −40 cargo space, +3 core space, +7 engine space
       * Briar: +30 cargo space
-      * Bulk Freighter: cost from 9 400 000 to 9 000 000; −1000 shields, +1400 hull, +0.2 drag, +30 mass, +150 cargo space, −25 core space, +15 engine space, +10 weapon space
+      * Bulk Freighter: cost from 9 400 000 to 9 000 000; −1000 shields, +1400 hull, +0.2 drag, +30 mass, +150 cargo space, −25 core space, +15 engine space, −100 weapon space
       * Chaser: +700 shields, +600 hull, +1 required crew, +1 bunk, +30 mass, +33 core space
       * Clipper: +30 cargo space, −10 core space, −60 weapon space
       * Combat Drone: +200 hull, +20 mass, +0.01 drag, +8 core space, –6 engine space
@@ -461,19 +463,24 @@ Version 0.10.0:
     * normalized derivatives of ship/*@2x.png
   * ship:
     * antiarch, ao, ao_m, cachalot, chilong, chimaera, colony_ship, craterustig, excalibur, gladius, harrier, hatchling, hatchling_m, hourglass, longinus, mako, marlin, myrmex, myrmidon, piranha, pollaxe, raja, scorpion, scorpion_m, swordbreaker, tianlong, twin_crescent, typhon, typhon_m, winged_serpent, yisnith (@comnom)
+    * bulk freighter has two turret mounts instead of five
+    * hag has four guns instead of two
+    * harpy has six guns instead of two
     * hawk has four guns instead of two (@MCOfficer)
-    * harpy_m (@KiLEdEnNis)
     * jupiter (@puzzlecube)
     * kestrel has twelve guns instead of six
     * manta has eight guns instead of four
     * mistral (@Brick63)
+    * faes_mar, maeri_het, selii_mar, subsidurial, telis_het (@beccabunny)
   * star: —
   * thumbnail:
     * ao, excalibur, gladius, hatchling, longinus, myrmex, pollaxe, scorpion, swordbreaker, tianlong, twin_crescent, typhon, winged_serpent (@comnom)
-    * arfecta, enfolta, maboro, zibruka (@Amazinite)
+    * archon, arfecta, enfolta, lampyrid, maboro, skylark, wardragon, world-ship_a, world-ship_c, zibruka (@Amazinite)
+    * arrow_c, arrow_e, arrow_w, bounder_c, bounder_e, bounder_w, firebird_c, firebird_e, firebird_w, goose_c, goose_e, goose_w, lance_c, lance_e, lance_w, leviathan_c, leviathan_e, leviathan_w, manta_c, manta_e, manta_w, quicksilver_c, quicksilver_e, quicksilver_w, raven_c, raven_e, raven_w (@Amazinite)
     * jupiter (@puzzlecube)
     * mistral (@Brick63)
     * hawk has four guns instead of two (@MCOfficer)
+    * faes_mar, maeri_het, selii_mar, subsidurial, telis_het (@beccabunny)
   * ui: —
 * sounds:
   * ares~.wav, artemis.wav, athena.wav, dragonsfire.wav, dragonsice.wav, poseidon.wav, poseidon_double.wav, scan~.wav, spit.wav, unused_large~.wav, unused_medium~.wav, unused_small~.wav, unused_tiny~.wav (@comnom)

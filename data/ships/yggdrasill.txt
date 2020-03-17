@@ -495,7 +495,7 @@ ship "Bulk Freighter"
   sprite "ship/bulk_freighter"
   thumbnail "thumbnail/bulk_freighter"
   attributes
-    category "Cruiser"
+    category "Destroyer"
 #    manufacturer "Yggdrasill"
     licences
       Pilot
@@ -508,10 +508,10 @@ ship "Bulk Freighter"
     "drag" 16
     "heat dissipation" .5
     "cargo space" 750
-    "outfit space" 410
+    "outfit space" 300
     "core space" 120
     "engine space" 100
-    "weapon space" 190
+    "weapon space" 80
     weapon
       "blast radius" 406
       "shield damage" 1800
@@ -530,19 +530,15 @@ ship "Bulk Freighter"
     "A370 Atomic Thruster"
     "A375 Atomic Steering"
 
-    "Heavy Laser Turret" 4
-    "Heavy Anti-Missile"
+    "Heavy Anti-Missile" 2
 
     "DS-11 Battery Pack"
-    "Fuel Pod" 84
+    "Fuel Pod" 78
     "Tactical Scanner" 2
   engine -22 198
   engine 22 198
   turret -12 -155
   turret 12 -155
-  turret 0 5 "Heavy Anti-Missile"
-  turret -30 175
-  turret 30 175
   leak "leak" 40 50
   leak "flame" 30 80
   leak "big leak" 50 30
@@ -576,8 +572,7 @@ ship "Bulk Freighter" "Class C Freighter"
     "A370 Atomic Thruster"
     "A375 Atomic Steering"
 
-    "X4 Blaster Turret" 4
-    "Heavy Anti-Missile"
+    "Heavy Anti-Missile" 2
 
     "DS-11 Battery Pack"
     "Liquid Nitrogen Cooler"
@@ -589,11 +584,6 @@ ship "Bulk Freighter" "Class C Freighter"
     "Extra Outfit Space"
     "Fragmentation Grenades" 15
     "Laser Rifle" 30
-  turret "X4 Blaster Turret"
-  turret "X4 Blaster Turret"
-  turret "Heavy Anti-Missile"
-  turret "X4 Blaster Turret"
-  turret "X4 Blaster Turret"
   drone -66 -115 left
   drone 66 -115 right
   drone -66 -65 left
@@ -922,14 +912,14 @@ ship "Manta"
     "Tactical Scanner" 2
   engine -33 38
   engine 33 38
-  gun -21 -35
-  gun 21 -35
-  gun -27 -35
-  gun 27 -35
-  gun -44 -35
-  gun 44 -35
-  gun -50 -35
-  gun 50 -35
+  gun -20 -30
+  gun 20 -30
+  gun -26 -30
+  gun 26 -30
+  gun -40 -30
+  gun 40 -30
+  gun -46 -30
+  gun 46 -30
   leak "leak" 60 50
   leak "flame" 40 80
   explode "tiny explosion" 10
