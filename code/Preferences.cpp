@@ -25,7 +25,7 @@ namespace {
   const vector<double> ZOOMS = {.06, .09, .13, .18, .25, .35, .50, .71, 1.00, 1.41, 2.00};
   int zoomIndex = 4;
   const double VOLUME_SCALE = .25;
-  // refuel preferences, standard value: always refuel(-1)
+  // Refuel preferences, standard value: always refuel(-1).
   double maxRefuelPrice = 10;
 }
 

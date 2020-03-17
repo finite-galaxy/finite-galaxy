@@ -69,7 +69,7 @@ void PreferencesPanel::Draw()
   GameData::Interfaces().Get("menu background")->Draw(info, this);
   string pageName = (page == 'c' ? "controls" : page == 's' ? "settings" : "plugins");
   if(page == 's')
-    info.SetBar("refuel behaviour", Preferences::GetMaxPrice()/10);
+    info.SetBar("refuel behaviour", Preferences::GetMaxPrice() / 10);
   GameData::Interfaces().Get(pageName)->Draw(info, this);
   GameData::Interfaces().Get("preferences")->Draw(info, this);
 
@@ -126,9 +126,9 @@ bool PreferencesPanel::Click(int x, int y, int clicks)
 
   if(page == 's' && x >= 25 && x < 235 && y >= 95 && y < 125)
   {
-    double max = (x-30)/20.;
-    if(max > 10)
-      max = 10;
+    double max = (x - 30) / 20.;
+    if(max > 20)
+      max = 20;
     if(max < 0)
       max = 0;
     Preferences::SetMaxPrice(max);
@@ -563,7 +563,7 @@ void PreferencesPanel::DrawSettings()
   else if(maxPrice)
   {
     refuelText = "Only refuel if the price is less than ";
-    refuelText2 = Format::Number(maxPrice)+" credits per unit.";
+    refuelText2 = Format::Number(maxPrice) + " credits per unit.";
   }
   else
     refuelText = "Only refuel if it is for free.";
