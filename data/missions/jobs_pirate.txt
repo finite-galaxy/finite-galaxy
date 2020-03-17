@@ -1169,8 +1169,8 @@ mission "Wanted Passengers [3]"
   repeat
   description "These <bunks> wanted individuals wish to reach <destination> without being caught by local law enforcement. They also wish to bring with them <cargo>. Payment is <payment>."
   passengers 2 10 .9
-  cargo "aged wine" 1
-  illegal 75000 `Upon scanning your vessel, law enforcement notice the criminals that you have on board. Entering your ship to detain them, they find them all passed out in their bunks rooms, having drank too much of the wine that they had brought with them. After carrying the criminals out, they give you a moderate fine and leave.`
+  cargo "counterfeit drinks" 1
+  illegal 75000 `Upon scanning your vessel, law enforcement notice the criminals that you have on board. Entering your ship to detain them, they find them all passed out in their bunks rooms, having consumed too much of the drinks that they had brought with them. After carrying the criminals out, they give you a moderate fine and leave.`
   stealth
   to offer
     random < 25
