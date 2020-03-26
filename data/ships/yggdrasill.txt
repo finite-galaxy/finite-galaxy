@@ -11,7 +11,8 @@ shipyard "Yggdrasill Variants"
   "Modified Bounder (Engines)"
   "Modified Bounder (Weapons)"
   "Bulk Freighter"
-  "Class C Freighter"
+  "Bulk Transport"
+  "Bulk Carrier"
   "Lance"
   "Lance (Electron)"
   "Lance (Plasma)"
@@ -505,7 +506,7 @@ ship "Bulk Freighter"
     "required crew" 6
     "bunks" 18
     "mass" 900
-    "drag" 16
+    "drag" 18
     "heat dissipation" .5
     "cargo space" 750
     "outfit space" 300
@@ -547,15 +548,26 @@ ship "Bulk Freighter"
   explode "large explosion" 35
   explode "huge explosion" 20
   "final explode" "final explosion large"
-  description "The Bulk Freighter is the ultimate freighter, able to carry more cargo than any other human ship. It is also, however, an incredibly slow ship and difficult to manoeuvre, especially when fully loaded. Some freight caravans use multiple smaller freighters instead of bulk freighters just to avoid the hassle of constantly having to wait for the Bulk Freighter to properly align itself for hyperspace travel."
+  description "The Bulk Freighter is the ultimate freighter, able to carry more cargo than any other human ship. It is also, however, an incredibly slow ship and difficult to manoeuvre, especially when fully loaded. Some freight caravans use multiple smaller freighters instead of Bulk Freighters just to avoid the hassle of constantly having to wait for the Bulk Freighter to properly align itself for hyperspace travel."
 
 
-ship "Bulk Freighter" "Class C Freighter"
+ship "Bulk Freighter" "Bulk Transport"
+  add attributes
+    "cost" 1500000
+    "required crew" 12
+    "bunks" 240
+    "mass" 150
+    "cargo space" -600
+  description `This "Bulk Freighter" has its cargo space converted into bunks, allowing it to serve as a mass transport.`
+
+
+ship "Bulk Freighter" "Bulk Carrier"
   add attributes
     "cost" 3000000
     "shields" 10000
-    "required crew" 12
-    "bunks" 12
+    "required crew" 18
+    "bunks" 18
+    "mass" 180
     "cargo space" -600
     "outfit space" 60
     "core space" 60
@@ -580,7 +592,6 @@ ship "Bulk Freighter" "Class C Freighter"
     "Large Radar Jammer"
     "Ramscoop"
     "Tactical Scanner" 6
-    "Extra Bunks" 3
     "Extra Outfit Space"
     "Fragmentation Grenades" 15
     "Laser Rifle" 30
@@ -596,7 +607,7 @@ ship "Bulk Freighter" "Class C Freighter"
   drone 66 85 right
   drone -66 135 left
   drone 66 135 right
-  description `The Class C "Star Freighter" is a stealth warship designed by Yggdrasill for baiting pirates with the offer of a seemingly helpless, ordinary bulk freighter. Inside, its cargo space has all been converted into drone bays, allowing it to carry a dozen combat drones.`
+  description `This "Bulk Freighter" is a stealth warship designed by Yggdrasill for baiting pirates with the offer of a seemingly helpless, ordinary Bulk Freighter. Inside, its cargo space has all been converted into drone bays, allowing it to carry a dozen combat drones.`
 
 
 
