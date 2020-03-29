@@ -21,8 +21,8 @@ shipyard "Betelgeuse Variants"
 
 
 ship "Aerie"
-  sprite "ship/aerie"
-  thumbnail "thumbnail/aerie"
+  sprite "ship/sprite/aerie"
+  thumbnail "ship/thumbnail/aerie"
   attributes
     category "Corvette"
 #    manufacturer "Betelgeuse"
@@ -92,8 +92,8 @@ ship "Aerie"
 
 ship "Argosy"
   plural "Argosies"
-  sprite "ship/argosy"
-  thumbnail "thumbnail/argosy"
+  sprite "ship/sprite/argosy"
+  thumbnail "ship/thumbnail/argosy"
   attributes
     category "Corvette"
 #    manufacturer "Betelgeuse"
@@ -178,8 +178,8 @@ ship "Argosy" "Argosy Test Dummy"
 
 
 ship "Argosy" "Modified Argosy"
-  sprite "ship/argosy_m"
-  thumbnail "thumbnail/argosy_m"
+  sprite "ship/sprite/argosy_m"
+  thumbnail "ship/thumbnail/argosy_m"
   add attributes
     "shields" 600
     "hull" 700
@@ -211,8 +211,8 @@ ship "Argosy" "Modified Argosy"
 
 
 ship "Berserker"
-  sprite "ship/berserker"
-  thumbnail "thumbnail/berserker"
+  sprite "ship/sprite/berserker"
+  thumbnail "ship/thumbnail/berserker"
   attributes
     category "Interceptor"
 #    manufacturer "Betelgeuse"
@@ -338,8 +338,8 @@ ship "Berserker" "Berserker Test Dummy"
 
 
 ship "Dagger"
-  sprite "ship/dagger"
-  thumbnail "thumbnail/dagger"
+  sprite "ship/sprite/dagger"
+  thumbnail "ship/thumbnail/dagger"
   attributes
     category "Fighter"
 #    manufacturer "Betelgeuse"
@@ -391,8 +391,8 @@ ship "Dagger"
 
 
 ship "Protector"
-  sprite "ship/protector"
-  thumbnail "thumbnail/protector"
+  sprite "ship/sprite/protector"
+  thumbnail "ship/thumbnail/protector"
   attributes
     category "Frigate"
 #    manufacturer "Betelgeuse"
@@ -508,8 +508,8 @@ ship "Protector" "Protector (Laser)"
 
 
 ship "Vanguard"
-  sprite "ship/vanguard"
-  thumbnail "thumbnail/vanguard"
+  sprite "ship/sprite/vanguard"
+  thumbnail "ship/thumbnail/vanguard"
   attributes
     category "Frigate"
 #    manufacturer "Betelgeuse"
@@ -597,7 +597,7 @@ ship "Vanguard" "Vanguard Test Dummy"
     "self destruct" 1
 
 ship "Vanguard" "Modified Vanguard"
-  sprite "ship/vanguard_m"
+  sprite "ship/sprite/vanguard_m"
   add attributes
     "hull" 600
     "required crew" 4

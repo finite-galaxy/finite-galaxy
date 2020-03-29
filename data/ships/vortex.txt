@@ -21,8 +21,8 @@ shipyard "Vortex Variants"
 
 
 ship "Behemoth"
-  sprite "ship/behemoth"
-  thumbnail "thumbnail/behemoth"
+  sprite "ship/sprite/behemoth"
+  thumbnail "ship/thumbnail/behemoth"
   attributes
     category "Destroyer"
 #    manufacturer "Vortex"
@@ -149,8 +149,8 @@ ship "Behemoth" "Behemoth (Navy)"
 
 
 ship "Firebird"
-  sprite "ship/firebird"
-  thumbnail "thumbnail/firebird"
+  sprite "ship/sprite/firebird"
+  thumbnail "ship/thumbnail/firebird"
   attributes
     category "Corvette"
 #    manufacturer "Vortex"
@@ -257,8 +257,8 @@ ship "Firebird" "Firebird (Laser)"
 
 
 ship "Firebird" "Modified Firebird (Core)"
-  sprite "ship/firebird_c"
-  thumbnail "thumbnail/firebird_c"
+  sprite "ship/sprite/firebird_c"
+  thumbnail "ship/thumbnail/firebird_c"
   add attributes
     "cost" 400000
     "shields" 600
@@ -308,8 +308,8 @@ ship "Firebird" "Modified Firebird (Core)"
 
 
 ship "Firebird" "Modified Firebird (Engines)"
-  sprite "ship/firebird_e"
-  thumbnail "thumbnail/firebird_e"
+  sprite "ship/sprite/firebird_e"
+  thumbnail "ship/thumbnail/firebird_e"
   add attributes
     "cost" 400000
     "shields" 600
@@ -359,8 +359,8 @@ ship "Firebird" "Modified Firebird (Engines)"
 
 
 ship "Firebird" "Modified Firebird (Weapons)"
-  sprite "ship/firebird_w"
-  thumbnail "thumbnail/firebird_w"
+  sprite "ship/sprite/firebird_w"
+  thumbnail "ship/thumbnail/firebird_w"
   add attributes
     "cost" 400000
     "shields" 600
@@ -405,8 +405,8 @@ ship "Firebird" "Modified Firebird (Weapons)"
 
 ship "Fury"
   plural "Furies"
-  sprite "ship/fury"
-  thumbnail "thumbnail/fury"
+  sprite "ship/sprite/fury"
+  thumbnail "ship/thumbnail/fury"
   attributes
     category "Interceptor"
 #    manufacturer "Vortex"
@@ -483,7 +483,7 @@ ship "Fury" "Fury (Gatling)"
 
 ship "Fury" "Modified Fury"
   plural "Modified Furies"
-  sprite "ship/fury_m"
+  sprite "ship/sprite/fury_m"
   engine -21 42
   engine 21 42
   engine 0 48
@@ -500,8 +500,8 @@ ship "Fury" "Modified Fury"
 
 
 ship "Heavy Shuttle"
-  sprite "ship/shuttle_heavy"
-  thumbnail "thumbnail/shuttle_heavy"
+  sprite "ship/sprite/shuttle_heavy"
+  thumbnail "ship/thumbnail/shuttle_heavy"
   attributes
     category "Interceptor"
 #    manufacturer "Vortex"
@@ -550,8 +550,8 @@ ship "Heavy Shuttle"
 
 
 ship "Leviathan"
-  sprite "ship/leviathan"
-  thumbnail "thumbnail/leviathan"
+  sprite "ship/sprite/leviathan"
+  thumbnail "ship/thumbnail/leviathan"
   attributes
     category "Frigate"
 #    manufacturer "Vortex"
@@ -618,8 +618,8 @@ ship "Leviathan"
 
 
 ship "Leviathan" "Modified Leviathan (Core)"
-  sprite "ship/leviathan_c"
-  thumbnail "thumbnail/leviathan_c"
+  sprite "ship/sprite/leviathan_c"
+  thumbnail "ship/thumbnail/leviathan_c"
   add attributes
     "cost" 1000000
     "shields" 3500
@@ -672,8 +672,8 @@ ship "Leviathan" "Modified Leviathan (Core)"
 
 
 ship "Leviathan" "Modified Leviathan (Engines)"
-  sprite "ship/leviathan_e"
-  thumbnail "thumbnail/leviathan_e"
+  sprite "ship/sprite/leviathan_e"
+  thumbnail "ship/thumbnail/leviathan_e"
   add attributes
     "cost" 1000000
     "shields" 3500
@@ -726,8 +726,8 @@ ship "Leviathan" "Modified Leviathan (Engines)"
 
 
 ship "Leviathan" "Modified Leviathan (Weapons)"
-  sprite "ship/leviathan_w"
-  thumbnail "thumbnail/leviathan_w"
+  sprite "ship/sprite/leviathan_w"
+  thumbnail "ship/thumbnail/leviathan_w"
   add attributes
     "cost" 1000000
     "shields" 3500
@@ -781,8 +781,8 @@ ship "Leviathan" "Modified Leviathan (Weapons)"
 
 
 ship "Light Shuttle"
-  sprite "ship/shuttle_light"
-  thumbnail "thumbnail/shuttle_light"
+  sprite "ship/sprite/shuttle_light"
+  thumbnail "ship/thumbnail/shuttle_light"
   attributes
     category "Interceptor"
 #    manufacturer "Vortex"

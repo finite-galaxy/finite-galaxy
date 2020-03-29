@@ -38,7 +38,7 @@ ship "Asteroid"
 
 # Hallucination
 ship "Hallucination"
-  sprite "ship/hallucination"
+  sprite "ship/sprite/hallucination"
     "frame rate" 1
     "random start frame"
   "never disabled"
@@ -63,8 +63,8 @@ ship "Hallucination"
 
 # Lampyrid
 ship "Lampyrid"
-  sprite "ship/lampyrid"
-  thumbnail "thumbnail/lampyrid"
+  sprite "ship/sprite/lampyrid"
+  thumbnail "ship/thumbnail/lampyrid"
   attributes
     category "Corvette"
 #    manufacturer "Unknown"
@@ -141,7 +141,7 @@ ship "Nanobot"
 
 # Science Drone
 ship "Science Drone"
-  sprite "ship/science_drone"
+  sprite "ship/sprite/science_drone"
   attributes
     category "Drone"
     hull 200
@@ -172,7 +172,7 @@ ship "Timer Ship"
 # Void Sprites
 ship "Void Sprite"
   noun "creature"
-  sprite "ship/void_sprite_adult"
+  sprite "ship/sprite/void_sprite_adult"
     "frame rate" 3.2
     rewind
   "never disabled"
@@ -200,7 +200,7 @@ ship "Void Sprite"
 
 ship "Void Sprite (Infant)"
   noun "creature"
-  sprite "ship/void_sprite_infant"
+  sprite "ship/sprite/void_sprite_infant"
     "frame rate" 7.4
     rewind
   "never disabled"

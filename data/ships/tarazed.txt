@@ -33,8 +33,8 @@ shipyard "Tarazed Variants"
 
 
 ship "Blackbird"
-  sprite "ship/blackbird"
-  thumbnail "thumbnail/blackbird"
+  sprite "ship/sprite/blackbird"
+  thumbnail "ship/thumbnail/blackbird"
   attributes
     category "Corvette"
 #    manufacturer "Tarazed"
@@ -125,8 +125,8 @@ ship "Blackbird" "Blackbird (Laser)"
 
 ship "Goose"
   plural "Geese"
-  sprite "ship/goose"
-  thumbnail "thumbnail/goose"
+  sprite "ship/sprite/goose"
+  thumbnail "ship/thumbnail/goose"
   attributes
     category "Corvette"
 #    manufacturer "Tarazed"
@@ -208,8 +208,8 @@ ship "Goose" "Goose (Laser)"
 
 
 ship "Goose" "Modified Goose (Core)"
-  sprite "ship/goose_c"
-  thumbnail "thumbnail/goose_c"
+  sprite "ship/sprite/goose_c"
+  thumbnail "ship/thumbnail/goose_c"
   add attributes
     "cost" 300000
     "shields" 500
@@ -252,8 +252,8 @@ ship "Goose" "Modified Goose (Core)"
 
 
 ship "Goose" "Modified Goose (Engines)"
-  sprite "ship/goose_e"
-  thumbnail "thumbnail/goose_e"
+  sprite "ship/sprite/goose_e"
+  thumbnail "ship/thumbnail/goose_e"
   add attributes
     "cost" 300000
     "shields" 500
@@ -298,8 +298,8 @@ ship "Goose" "Modified Goose (Engines)"
 
 
 ship "Goose" "Modified Goose (Weapons)"
-  sprite "ship/goose_w"
-  thumbnail "thumbnail/goose_w"
+  sprite "ship/sprite/goose_w"
+  thumbnail "ship/thumbnail/goose_w"
   add attributes
     "cost" 300000
     "shields" 500
@@ -345,8 +345,8 @@ ship "Goose" "Modified Goose (Weapons)"
 
 
 ship "Hawk"
-  sprite "ship/hawk"
-  thumbnail "thumbnail/hawk"
+  sprite "ship/sprite/hawk"
+  thumbnail "ship/thumbnail/hawk"
   attributes
     category "Interceptor"
 #    manufacturer "Tarazed"
@@ -457,8 +457,8 @@ ship "Hawk" "Hawk (Nuclear)"
 
 
 ship "Kestrel"
-  sprite "ship/kestrel"
-  thumbnail "thumbnail/kestrel"
+  sprite "ship/sprite/kestrel"
+  thumbnail "ship/thumbnail/kestrel"
   attributes
     category "Destroyer"
 #    manufacturer "Tarazed"
@@ -554,8 +554,8 @@ ship "Kestrel" "Kestrel (Weapons)"
 
 
 ship "Osprey"
-  sprite "ship/osprey"
-  thumbnail "thumbnail/osprey"
+  sprite "ship/sprite/osprey"
+  thumbnail "ship/thumbnail/osprey"
   attributes
     category "Corvette"
 #    manufacturer "Tarazed"
@@ -692,7 +692,7 @@ ship "Osprey" "Osprey (Particle)"
 
 
 ship "Osprey" "Modified Osprey"
-  sprite "ship/osprey_m"
+  sprite "ship/sprite/osprey_m"
   add attributes
     "cargo space" -30
     "outfit space" 130
@@ -752,8 +752,8 @@ ship "Osprey" "Modified Osprey"
 
 
 ship "Raven"
-  sprite "ship/raven"
-  thumbnail "thumbnail/raven"
+  sprite "ship/sprite/raven"
+  thumbnail "ship/thumbnail/raven"
   attributes
     category "Corvette"
 #    manufacturer "Tarazed"
@@ -865,8 +865,8 @@ ship "Raven" "Raven (Particle)"
 
 
 ship "Raven" "Modified Raven (Core)"
-  sprite "ship/raven_c"
-  thumbnail "thumbnail/raven_c"
+  sprite "ship/sprite/raven_c"
+  thumbnail "ship/thumbnail/raven_c"
   add attributes
     "cost" -150000
     "shields" 700
@@ -917,8 +917,8 @@ ship "Raven" "Modified Raven (Core)"
 
 
 ship "Raven" "Modified Raven (Engines)"
-  sprite "ship/raven_e"
-  thumbnail "thumbnail/raven_e"
+  sprite "ship/sprite/raven_e"
+  thumbnail "ship/thumbnail/raven_e"
   add attributes
     "cost" -150000
     "shields" 700
@@ -968,8 +968,8 @@ ship "Raven" "Modified Raven (Engines)"
 
 
 ship "Raven" "Modified Raven (Weapons)"
-  sprite "ship/raven_w"
-  thumbnail "thumbnail/raven_w"
+  sprite "ship/sprite/raven_w"
+  thumbnail "ship/thumbnail/raven_w"
   add attributes
     "cost" -150000
     "shields" 700
@@ -1021,8 +1021,8 @@ ship "Raven" "Modified Raven (Weapons)"
 
 
 ship "Unknown Ship Type"
-  sprite "ship/kestrel"
-  thumbnail "thumbnail/kestrel"
+  sprite "ship/sprite/kestrel"
+  thumbnail "ship/thumbnail/kestrel"
   attributes
     category "Destroyer"
 #    manufacturer "Tarazed"

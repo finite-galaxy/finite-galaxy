@@ -6,8 +6,8 @@ shipyard "Flivver Variants"
 
 
 ship "Flivver"
-  sprite "ship/flivver"
-  thumbnail "thumbnail/flivver"
+  sprite "ship/sprite/flivver"
+  thumbnail "ship/thumbnail/flivver"
   attributes
     category "Interceptor"
 #    manufacturer "Flivver"
@@ -74,7 +74,7 @@ ship "Flivver" "Flivver (Hai)"
 
 
 ship "Flivver" "Modified Flivver"
-  sprite "ship/flivver_m"
+  sprite "ship/sprite/flivver_m"
   add attributes
     "engine space" 15
     "weapon space" -15
