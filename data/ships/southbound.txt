@@ -4,6 +4,12 @@ shipyard "Southbound Variants"
   "Dreadnought"
   "Dreadnought (Javelin)"
   "Dreadnought (Jump)"
+  "Firebird"
+  "Firebird (Laser)"
+  "Firebird (Particle)"
+  "Modified Firebird (Core)"
+  "Modified Firebird (Engines)"
+  "Modified Firebird (Weapons)"
   "Hag"
   "Harpy"
   "Harpy (Doombat)"
@@ -13,12 +19,16 @@ shipyard "Southbound Variants"
   "Hauler II (Miner)"
   "Hauler III"
   "Hauler III (Miner)"
+  "Leviathan"
+  "Leviathan (Plasma)"
+  "Modified Leviathan (Core)"
+  "Modified Leviathan (Engines)"
+  "Modified Leviathan (Weapons)"
   "Nest"
   "Roost"
   "Skein"
   "Stymphalian"
   "Stymphalian (Flamethrower)"
-  "Warrior"
 
 
 
@@ -204,6 +214,259 @@ ship "Dreadnought" "Dreadnought (Jump)"
     "Tactical Scanner" 4
     "Fragmentation Grenades" 50
     "Laser Rifle" 100
+
+
+
+ship "Firebird"
+  sprite "ship/sprite/firebird"
+  thumbnail "ship/thumbnail/firebird"
+  attributes
+    category "Corvette"
+#    manufacturer "Southbound"
+    licences
+      Pilot
+    "cost" 3700000
+    "shields" 6400
+    "hull" 2800
+    "required crew" 7
+    "bunks" 21
+    "mass" 290
+    "drag" 4.5
+    "heat dissipation" .6
+    "cargo space" 80
+    "outfit space" 410
+    "core space" 150
+    "engine space" 100
+    "weapon space" 160
+    weapon
+      "blast radius" 156
+      "shield damage" 580
+      "random shield damage" 980
+      "hull damage" 870
+      "random hull damage" 1470
+      "heat damage" 17400
+      "random heat damage" 29400
+      "hit force" 1450
+      "random hit force" 2450
+  outfits
+    "D41-HY Shield Generator"
+    "RT-I Radiothermal"
+    "Hyperdrive"
+
+    "Greyhound Plasma Thruster"
+    "Impala Plasma Steering"
+    "Afterburner"
+
+    "Plasma Cannon" 4
+    "Bolt Turret" 2
+
+    "LP144a Battery Pack"
+    "Liquid Water Cooler"
+    "Fuel Pod" 32
+    "Large Radar Jammer"
+    "Tactical Scanner" 3
+  engine -33 65
+  engine 33 65
+  gun -28 -27
+  gun 28 -27
+  gun -39 -13
+  gun 39 -13
+  turret -5 3
+  turret 5 3
+  leak "leak" 50 50
+  leak "flame" 30 80
+  explode "tiny explosion" 18
+  explode "small explosion" 36
+  explode "medium explosion" 24
+  explode "large explosion" 8
+  "final explode" "final explosion medium"
+  description "The Firebird is a warship with a long and storied past; Firebirds fought on both sides of the Alpha Wars over half a millennium ago, and although the equipment and systems have been upgraded continuously since then, the basic design remains almost the same. The Firebird is also a very rugged ship and easy to repair; supposedly a few of the Firebirds that fought in those wars are still in service today."
+
+
+ship "Firebird" "Firebird (Laser)"
+  outfits
+    "D41-HY Shield Generator"
+    "RT-I Radiothermal"
+    "Hyperdrive"
+
+    "Greyhound Plasma Thruster"
+    "Impala Plasma Steering"
+    "Afterburner"
+
+    "Heavy Laser Cannon" 4
+    "Heavy Laser Turret" 2
+
+    "LP144a Battery Pack"
+    "Liquid Water Cooler"
+    "Fuel Pod" 32
+    "Large Radar Jammer"
+    "Tactical Scanner" 3
+
+
+ship "Firebird" "Firebird (Particle)"
+  outfits
+    "D41-HY Shield Generator"
+    "RT-I Radiothermal"
+    "Hyperdrive"
+
+    "Greyhound Plasma Thruster"
+    "Impala Plasma Steering"
+    "Afterburner"
+
+    "Particle Cannon" 4
+    "X2 Blaster Turret" 2
+
+    "LP144a Battery Pack"
+    "Liquid Water Cooler"
+    "Fuel Pod" 32
+    "Large Radar Jammer"
+    "Tactical Scanner" 3
+
+
+ship "Firebird" "Modified Firebird (Core)"
+  sprite "ship/sprite/firebird_c"
+  thumbnail "ship/thumbnail/firebird_c"
+  add attributes
+    "cost" 400000
+    "shields" 600
+    "hull" 200
+    "required crew" 3
+    "bunks" 4
+    "mass" 45
+    "outfit space" 30
+    "core space" 30
+    "self destruct" .25
+    weapon
+      "blast radius" 15
+      "shield damage" 90
+      "random shield damage" 60
+      "hull damage" 135
+      "random hull damage" 90
+      "heat damage" 2700
+      "random heat damage" 1800
+      "hit force" 225
+      "random hit force" 150
+  outfits
+    "S-270 Regenerator" 2
+    "Fusion Reactor"
+    "Hyperdrive"
+
+    "A250 Atomic Thruster"
+    "A525 Atomic Steering"
+
+    "Plasma Cannon" 4
+    "Laser Turret" 2
+
+    "Supercapacitor"
+    "Liquid Helium Cooler"
+    "Fuel Pod" 35
+    "Tactical Scanner" 3
+    "Interference Plating" 2
+    "Laser Rifle" 25
+  engine -32 62
+  engine 32 62
+  gun -27 -32
+  gun 27 -32
+  gun -38 -18
+  gun 38 -18
+  turret -5 3
+  turret 5 3
+  description "By the looks of the modification that have taken place, you suspect that this ship contains no original parts. With extra shield emitters, hull plating, and outfit space, this half-millennium young ship is finding new life with its heavy modification."
+
+
+ship "Firebird" "Modified Firebird (Engines)"
+  sprite "ship/sprite/firebird_e"
+  thumbnail "ship/thumbnail/firebird_e"
+  add attributes
+    "cost" 400000
+    "shields" 600
+    "hull" 200
+    "required crew" 3
+    "bunks" 4
+    "mass" 45
+    "outfit space" 30
+    "engine space" 30
+    "self destruct" .25
+    weapon
+      "blast radius" 15
+      "shield damage" 90
+      "random shield damage" 60
+      "hull damage" 135
+      "random hull damage" 90
+      "heat damage" 2700
+      "random heat damage" 1800
+      "hit force" 225
+      "random hit force" 150
+  outfits
+    "S-270 Regenerator" 2
+    "Fusion Reactor"
+    "Hyperdrive"
+
+    "A370 Atomic Thruster"
+    "A525 Atomic Steering"
+
+    "Plasma Cannon" 4
+
+    "Supercapacitor"
+    "Liquid Helium Cooler"
+    "Fuel Pod" 35
+    "Tactical Scanner" 3
+    "Interference Plating" 2
+    "Laser Rifle" 25
+  engine -34 62
+  engine 0 74
+  engine 34 62
+  gun -26.5 -33
+  gun 26.5 -33
+  gun -38 -18
+  gun 38 -18
+  turret -5 3
+  turret 5 3
+  description "One of the biggest complaints about the venerable classic from younger pilots is that it's heavy and slow. A previous owner of this ship also believed so, and has fitted another engine port, in addition to setting aside more space for outfits and giving the old ship some new hull plating and shield emitters."
+
+
+ship "Firebird" "Modified Firebird (Weapons)"
+  sprite "ship/sprite/firebird_w"
+  thumbnail "ship/thumbnail/firebird_w"
+  add attributes
+    "cost" 400000
+    "shields" 600
+    "hull" 200
+    "required crew" 3
+    "bunks" 4
+    "mass" 45
+    "outfit space" 30
+    "weapon space" 30
+    "self destruct" .25
+    weapon
+      "blast radius" 15
+      "shield damage" 90
+      "random shield damage" 60
+      "hull damage" 135
+      "random hull damage" 90
+      "heat damage" 2700
+      "random heat damage" 1800
+      "hit force" 225
+      "random hit force" 150
+  outfits
+    "S-270 Regenerator" 2
+    "Fusion Reactor"
+    "Hyperdrive"
+
+    "A250 Atomic Thruster"
+    "A525 Atomic Steering"
+
+    "Plasma Cannon" 4
+    "X4 Blaster Turret" 2
+
+    "Supercapacitor"
+    "Liquid Helium Cooler"
+    "Fuel Pod" 35
+    "Tactical Scanner" 3
+    "Interference Plating" 2
+    "Extra Outfit Space"
+    "Laser Rifle" 25
+  description "This warship with one of the heaviest armaments possible just got heavier. With more outfit space, giant gun ports, extra hull plating, and more shield emitters – this blast from the past will make its targets history."
 
 
 
@@ -613,6 +876,254 @@ ship "Hauler III" "Hauler III (Miner)"
 
 
 
+ship "Leviathan"
+  sprite "ship/sprite/leviathan"
+  thumbnail "ship/thumbnail/leviathan"
+  attributes
+    category "Frigate"
+#    manufacturer "Southbound"
+    licences
+      Pilot
+    "cost" 9800000
+    "shields" 12500
+    "hull" 6400
+    "required crew" 48
+    "bunks" 60
+    "mass" 480
+    "drag" 7.6
+    "heat dissipation" .5
+    "cargo space" 120
+    "outfit space" 600
+    "core space" 240
+    "engine space" 120
+    "weapon space" 240
+    weapon
+      "blast radius" 268
+      "shield damage" 960
+      "random shield damage" 1480
+      "hull damage" 1440
+      "random hull damage" 2220
+      "heat damage" 28800
+      "random heat damage" 44400
+      "hit force" 2400
+      "random hit force" 3700
+  outfits
+    "D67-TM Shield Generator"
+    "Breeder Reactor"
+    "Hyperdrive"
+
+    "Impala Plasma Thruster"
+    "Impala Plasma Steering"
+
+    "Plasma Cannon" 4
+    "Bolt Turret" 4
+
+    "LP144a Battery Pack"
+    "Liquid Nitrogen Cooler"
+    "Large Radar Jammer" 2
+    "Fuel Pod" 60
+    "Tactical Scanner" 4
+  engine -25 125
+  engine 25 125
+  gun -39 -33
+  gun 39 -33
+  gun -51 -21
+  gun 51 -21
+  turret -15 -50
+  turret 15 -50
+  turret -25 10
+  turret 25 10
+  leak "leak" 50 50
+  leak "flame" 30 80
+  leak "big leak" 60 30
+  explode "tiny explosion" 18
+  explode "small explosion" 36
+  explode "medium explosion" 24
+  explode "large explosion" 8
+  "final explode" "final explosion large"
+  description "The Leviathan has been in service since long before the Republic or the Free Worlds existed. Nowadays Southbound is the only shipyard still producing them. Although considered today to be an outdated and clunky model, it is still a force to be reckoned with."
+
+
+ship "Leviathan" "Leviathan (Plasma)"
+  outfits
+    "D67-TM Shield Generator"
+    "Breeder Reactor"
+    "Hyperdrive"
+
+    "Impala Plasma Thruster"
+    "Impala Plasma Steering"
+
+    "Plasma Turret" 4
+
+    "LP144a Battery Pack"
+    "Liquid Helium Cooler"
+    "Large Radar Jammer" 2
+    "Fuel Pod" 60
+    "Tactical Scanner" 4
+
+
+ship "Leviathan" "Modified Leviathan (Core)"
+  sprite "ship/sprite/leviathan_c"
+  thumbnail "ship/thumbnail/leviathan_c"
+  add attributes
+    "cost" 1000000
+    "shields" 3500
+    "hull" -900
+    "required crew" 2
+    "bunks" 5
+    "mass" 60
+    "outfit space" 40
+    "core space" 40
+    "self destruct" .15
+    weapon
+      "blast radius" 20
+      "shield damage" 120
+      "random shield damage" 80
+      "hull damage" 180
+      "random hull damage" 120
+      "heat damage" 3600
+      "random heat damage" 2400
+      "hit force" 300
+      "random hit force" 200
+  outfits
+    "S-970 Regenerator"
+    "Fusion Reactor"
+    "Hyperdrive"
+
+    "A370 Atomic Thruster"
+    "A525 Atomic Steering"
+
+    "Plasma Cannon" 4
+    "Laser Turret" 4
+
+    "LP144a Battery Pack"
+    "Liquid Helium Cooler"
+    "Fuel Pod" 65
+    "Large Radar Jammer" 2
+    "Tactical Scanner" 4
+    "Interference Plating" 3
+    "Laser Rifle" 80
+  engine -25 120
+  engine 25 120
+  gun -38 -34
+  gun 38 -34
+  gun -50 -23
+  gun 50 -23
+  turret -15 -50
+  turret 15 -50
+  turret -25 10
+  turret 25 10
+  description "The Leviathan has been in service for a long time, and captains have had some very interesting ideas about how to modify them for optimum performance. This one has had the hull surface completely stripped off and replaced with a surface containing more shield projectors per square meter."
+
+
+ship "Leviathan" "Modified Leviathan (Engines)"
+  sprite "ship/sprite/leviathan_e"
+  thumbnail "ship/thumbnail/leviathan_e"
+  add attributes
+    "cost" 1000000
+    "shields" 3500
+    "hull" -900
+    "required crew" 2
+    "bunks" 5
+    "mass" 60
+    "outfit space" 40
+    "engine space" 40
+    "self destruct" .15
+    weapon
+      "blast radius" 20
+      "shield damage" 120
+      "random shield damage" 80
+      "hull damage" 180
+      "random hull damage" 120
+      "heat damage" 3600
+      "random heat damage" 2400
+      "hit force" 300
+      "random hit force" 200
+  outfits
+    "S-970 Regenerator"
+    "Fusion Reactor"
+    "Hyperdrive"
+
+    "A520 Atomic Thruster"
+    "A525 Atomic Steering"
+
+    "Plasma Cannon" 4
+    "Laser Turret" 4
+
+    "LP144a Battery Pack"
+    "Liquid Helium Cooler"
+    "Fuel Pod" 65
+    "Large Radar Jammer" 2
+    "Tactical Scanner" 4
+    "Interference Plating" 3
+    "Laser Rifle" 80
+  engine -25 125
+  engine 25 125
+  gun -38 -34
+  gun 38 -34
+  gun -50 -23
+  gun 50 -23
+  turret -15 -50
+  turret 15 -50
+  turret -25 10
+  turret 25 10
+  description "As if the Leviathan isn't a terrifying enough ship already, this one has been heavily modified with special attention paid to the engine space, enabling it to bring its guns to bear even faster."
+
+
+ship "Leviathan" "Modified Leviathan (Weapons)"
+  sprite "ship/sprite/leviathan_w"
+  thumbnail "ship/thumbnail/leviathan_w"
+  add attributes
+    "cost" 1000000
+    "shields" 3500
+    "hull" -900
+    "bunks" 5
+    "mass" 60
+    "outfit space" 40
+    "weapon space" 40
+    "self destruct" .15
+    weapon
+      "blast radius" 20
+      "shield damage" 120
+      "random shield damage" 80
+      "hull damage" 180
+      "random hull damage" 120
+      "heat damage" 3600
+      "random heat damage" 2400
+      "hit force" 300
+      "random hit force" 200
+  outfits
+    "S-970 Regenerator"
+    "Fusion Reactor"
+    "Hyperdrive"
+
+    "A370 Atomic Thruster"
+    "A525 Atomic Steering"
+
+    "Plasma Cannon" 4
+    "Heavy Laser Turret" 4
+
+    "LP144a Battery Pack"
+    "Liquid Helium Cooler"
+    "Fuel Pod" 65
+    "Large Radar Jammer" 2
+    "Tactical Scanner" 4
+    "Interference Plating" 3
+    "Laser Rifle" 80
+  engine -25 120
+  engine 25 120
+  gun -38 -55
+  gun 38 -55
+  gun -50 -44
+  gun 50 -44
+  turret -15 -50
+  turret 15 -50
+  turret -25 10
+  turret 25 10
+  description "This Leviathan once belonged to an infamous pirate captain whose name has been lost to the ages. It's had so much custom work done to it that can hardly even be considered the same ship. The weapons capacity, in particular has been massively increased."
+
+
+
 
 ship "Nest"
   sprite "ship/sprite/nest"
@@ -909,60 +1420,4 @@ ship "Stymphalian" "Stymphalian (Flamethrower)"
     "Catalytic Ramscoop"
     "Large Radar Jammer"
     "Tactical Scanner"
-
-
-
-ship "Warrior"
-  sprite "ship/sprite/warrior"
-  thumbnail "ship/thumbnail/warrior"
-  attributes
-    category "Interceptor"
-#    manufacturer "Southbound"
-    licences
-      Pilot
-    "cost" 670000
-    "shields" 2500
-    "hull" 500
-    "required crew" 2
-    "bunks" 4
-    "mass" 150
-    "drag" 2.1
-    "heat dissipation" .8
-    "cargo space" 30
-    "outfit space" 210
-    "core space" 90
-    "engine space" 70
-    "weapon space" 50
-    weapon
-      "blast radius" 76
-      "shield damage" 300
-      "random shield damage" 460
-      "hull damage" 450
-      "random hull damage" 690
-      "heat damage" 9000
-      "random heat damage" 13800
-      "hit force" 750
-      "random hit force" 1150
-  outfits
-    "D23-QP Shield Generator"
-    "nGVF-DD Fuel Cell"
-    "Hyperdrive"
-
-    "Chipmunk Plasma Thruster"
-    "Greyhound Plasma Steering"
-
-    "Plasma Cannon" 2
-
-    "LP036a Battery Pack"
-    "Fuel Pod" 12
-    "Tactical Scanner" 2
-  engine -24 41
-  engine 24 41
-  gun -9 -17
-  gun 9 -17
-  leak "leak" 60 50
-  explode "tiny explosion" 15
-  explode "small explosion" 5
-  "final explode" "final explosion small"
-  description "The Warrior is one of the most affordable ships designed by Southbound: a versatile ship that can serve equally well for escorting freighters or for bounty hunting. As with many of Southbound's designs, the hull is mostly composite fibre rather than metal, sacrificing armour strength for the sake of lighter weight and faster movement."
 

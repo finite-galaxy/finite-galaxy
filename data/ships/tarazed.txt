@@ -7,10 +7,6 @@ shipyard "Tarazed Variants"
   "Modified Goose (Core)"
   "Modified Goose (Engines)"
   "Modified Goose (Weapons)"
-  "Hawk"
-  "Hawk (Laser)"
-  "Hawk (Miner)"
-  "Hawk (Nuclear)"
   "Kestrel"
   "Kestrel (Engines)"
   "Kestrel (Shields)"
@@ -29,6 +25,7 @@ shipyard "Tarazed Variants"
   "Modified Raven (Engines)"
   "Modified Raven (Weapons)"
   "Unknown Ship Type"
+  "Warrior"
 
 
 
@@ -341,118 +338,6 @@ ship "Goose" "Modified Goose (Weapons)"
   turret 0 -28 "Heavy Anti-Missile"
   turret 17 -28
   description "This Goose has had extensive modification to its weapons space, with two new forward hard points on either side of the bridge. Large sections of the hull are covered with extra shield emitters and hull plating. Much of the stock cargo space has been converted to space for outfits, weapons and engines, coupled with streamlining of existing internal systems make the prospect of meeting this flexible war machine in an uninhabited system seem pretty unappealing."
-
-
-
-ship "Hawk"
-  sprite "ship/sprite/hawk"
-  thumbnail "ship/thumbnail/hawk"
-  attributes
-    category "Interceptor"
-#    manufacturer "Tarazed"
-    licences
-      Pilot
-    "cost" 1900000
-    "shields" 3000
-    "hull" 1000
-    "required crew" 2
-    "bunks" 4
-    "mass" 120
-    "drag" 2.6
-    "heat dissipation" .8
-    "cargo space" 70
-    "outfit space" 240
-    "core space" 110
-    "engine space" 70
-    "weapon space" 60
-    weapon
-      "blast radius" 84
-      "shield damage" 240
-      "random shield damage" 600
-      "hull damage" 360
-      "random hull damage" 900
-      "heat damage" 7200
-      "random heat damage" 18000
-      "hit force" 600
-      "random hit force" 1500
-  outfits
-    "D23-QP Shield Generator"
-    "NT-200 Nucleovoltaic"
-    "Hyperdrive"
-
-    "Greyhound Plasma Thruster"
-    "Greyhound Plasma Steering"
-
-    "Bolt Cannon" 4
-    "Bolt Turret"
-
-    "LP036a Battery Pack"
-    "Fuel Pod" 18
-    "Tactical Scanner" 3
-  engine 0 47 1.4
-  gun -12 -27
-  gun 12 -27
-  gun -17 -18
-  gun 17 -18
-  turret 0 9
-  leak "leak" 60 50
-  leak "flame" 80 80
-  explode "tiny explosion" 20
-  explode "small explosion" 25
-  explode "medium explosion" 15
-  "final explode" "final explosion small"
-  description "The Tarazed Hawk is an interceptor-class warship often used as an escort for freighters or in a planetary militia's patrol squadron. Hawks are fast enough to chase down most smaller ships, but are capable of mounting much more weapons, including a turret. They are also, of course, a favorite ship of pirate captains who have earned enough money to afford one."
-
-
-ship "Hawk" "Hawk (Laser)"
-  outfits
-    "D23-QP Shield Generator"
-    "NT-200 Nucleovoltaic"
-    "Hyperdrive"
-
-    "Greyhound Plasma Thruster"
-    "Greyhound Plasma Steering"
-
-    "Heavy Laser Cannon" 4
-
-    "LP036a Battery Pack"
-    "Fuel Pod" 18
-    "Tactical Scanner" 3
-
-
-ship "Hawk" "Hawk (Miner)"
-  outfits
-    "D23-QP Shield Generator"
-    "NT-200 Nucleovoltaic"
-    "Hyperdrive"
-
-    "Greyhound Plasma Thruster"
-    "Greyhound Plasma Steering"
-
-    "Laser Cannon" 4
-    "Laser Turret"
-
-    "LP036a Battery Pack"
-    "Asteroid Scanner"
-    "Fuel Pod" 17
-    "Tactical Scanner" 3
-
-
-ship "Hawk" "Hawk (Nuclear)"
-  outfits
-    "D41-HY Shield Generator"
-    "RT-I Radiothermal"
-    "Hyperdrive"
-
-    "Greyhound Plasma Thruster"
-    "Greyhound Plasma Steering"
-
-    "Nuclear Missile" 4
-
-    "LP036a Battery Pack"
-    "Fuel Pod" 18
-    "Large Radar Jammer"
-    "Tactical Scanner" 3
 
 
 
@@ -1093,4 +978,60 @@ ship "Unknown Ship Type"
   explode "large explosion" 45
   explode "huge explosion" 30
   "final explode" "final explosion large"
+
+
+
+ship "Warrior"
+  sprite "ship/sprite/warrior"
+  thumbnail "ship/thumbnail/warrior"
+  attributes
+    category "Interceptor"
+#    manufacturer "Tarazed"
+    licences
+      Pilot
+    "cost" 670000
+    "shields" 2500
+    "hull" 500
+    "required crew" 2
+    "bunks" 4
+    "mass" 150
+    "drag" 2.1
+    "heat dissipation" .8
+    "cargo space" 30
+    "outfit space" 210
+    "core space" 90
+    "engine space" 70
+    "weapon space" 50
+    weapon
+      "blast radius" 76
+      "shield damage" 300
+      "random shield damage" 460
+      "hull damage" 450
+      "random hull damage" 690
+      "heat damage" 9000
+      "random heat damage" 13800
+      "hit force" 750
+      "random hit force" 1150
+  outfits
+    "D23-QP Shield Generator"
+    "nGVF-DD Fuel Cell"
+    "Hyperdrive"
+
+    "Chipmunk Plasma Thruster"
+    "Greyhound Plasma Steering"
+
+    "Plasma Cannon" 2
+
+    "LP036a Battery Pack"
+    "Fuel Pod" 12
+    "Tactical Scanner" 2
+  engine -24 41
+  engine 24 41
+  gun -9 -17
+  gun 9 -17
+  leak "leak" 60 50
+  explode "tiny explosion" 15
+  explode "small explosion" 5
+  "final explode" "final explosion small"
+  description "The Warrior is the most affordable ships designed by Tarazed: a versatile ship that can serve equally well for escorting freighters or for bounty hunting. As with many of Tarazed's designs, the hull is mostly composite fibre rather than metal, sacrificing armour strength for the sake of lighter weight and faster movement."
 

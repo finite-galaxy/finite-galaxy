@@ -453,42 +453,54 @@ fleet "Free Worlds Large"
   cargo 1
   personality
     heroic disables opportunistic
-  # total: 50
-  variant 8
-    "Osprey"
+  # total: 40
+  variant 1
+    "Bastion"
   variant 4
-    "Osprey" 2
+    "Leviathan"
   variant 6
+    "Firebird"
+  variant 3
+    "Firebird" 2
+  variant 1
+    "Firebird"
     "Osprey"
+  variant 1
+    "Firebird"
     "Raven"
-  variant 4
-    "Osprey"
+  variant 1
+    "Firebird"
+    "Raven"
     "Stymphalian"
   variant 3
-    "Osprey"
-    "Stymphalian" 2
+    "Firebird"
+    "Stymphalian"
   variant 2
-    "Osprey"
+    "Firebird"
+    "Stymphalian" 2
+  variant 1
+    "Firebird"
     "Stymphalian" 3
+  variant 3
+    "Osprey"
+  variant 1
+    "Osprey" 2
   variant 1
     "Osprey"
-    "Stymphalian" 4
-  variant 8
     "Raven"
   variant 4
+    "Raven"
+  variant 2
     "Raven" 2
-  variant 4
-    "Raven"
-    "Stymphalian"
   variant 3
     "Raven"
-    "Stymphalian" 2
+    "Stymphalian"
   variant 2
     "Raven"
-    "Stymphalian" 3
+    "Stymphalian" 2
   variant 1
     "Raven"
-    "Stymphalian" 4
+    "Stymphalian" 3
 
 fleet "Free Worlds Small"
   government "Free Worlds"
@@ -515,22 +527,22 @@ fleet "Free Worlds Small"
     "Harpy" 4
   variant 6
     "Stymphalian"
-    "Hawk"
+    "Warrior"
   variant 8
-    "Hawk"
+    "Warrior"
   variant 4
-    "Hawk" 2
+    "Warrior" 2
   variant 4
-    "Hawk"
+    "Warrior"
     "Harpy"
   variant 3
-    "Hawk"
+    "Warrior"
     "Harpy" 2
   variant 2
-    "Hawk"
+    "Warrior"
     "Harpy" 3
   variant 1
-    "Hawk"
+    "Warrior"
     "Harpy" 4
 
 
@@ -687,17 +699,15 @@ fleet "Independent Large"
   cargo 1
   personality
     plunders
-  # total: 15
-  variant 3
-    "Harpy" 4
-  variant 4
-    "Bastion"
+  # total: 10
   variant 2
-    "Bastion (Heavy)"
-  variant 2
-    "Bastion (Laser)"
-  variant 4
-    "Lance"
+    "Firebird"
+  variant 1
+    "Firebird" 2
+  variant 1
+    "Leviathan"
+  variant 1
+    "Osprey"
 
 fleet "Independent Small"
   government "Independent"
@@ -1319,16 +1329,16 @@ fleet "Merchants East Large"
     "Bulk Freighter"
     "Stymphalian" 2
   variant 2
-    "Leviathan"
+    "Thunderbolt"
     "Star Freighter" 2
   variant 3
-    "Leviathan"
+    "Thunderbolt"
     "Star Freighter" 3
   variant 3
-    "Leviathan"
+    "Thunderbolt"
     "Star Freighter" 4
   variant 2
-    "Leviathan"
+    "Thunderbolt"
     "Star Freighter" 5
   variant 10
     "Star Freighter" 3
@@ -1369,26 +1379,22 @@ fleet "Merchants Hai Large"
     confusion 30
     timid frugal appeasing
   # total: 100
-  variant 7
+  variant 9
     "Argosy"
+  variant 3
+    "Argosy" 2
   variant 3
     "Argosy (Laser)"
   variant 5
     "Behemoth"
   variant 16
     "Bulk Freighter"
-  variant 4
-    "Firebird"
-  variant 1
-    "Firebird (Laser)"
   variant 3
     "Hauler I"
   variant 3
     "Hauler II"
   variant 3
     "Hauler III"
-  variant 5
-    "Leviathan"
   variant 4
     "Mule"
   variant 4
@@ -1422,6 +1428,8 @@ fleet "Merchants Hai Large"
     "Star Freighter (Fancy)" 3
   variant 10
     "Star Queen"
+  variant 5
+    "Thunderbolt"
   variant 5
     "Vanguard"
 
@@ -1908,6 +1916,17 @@ fleet "Merchants West Large"
     confusion 20
     timid frugal appeasing
   # total: 100
+  variant 6
+    "Aerie"
+  variant 2
+    "Aerie"
+    "Bulk Freighter"
+  variant 8
+    "Aerie"
+    "Star Freighter"
+  variant 4
+    "Aerie"
+    "Star Freighter" 2
   variant 1
     "Bactrian"
     "Foxhound" 3
@@ -1931,15 +1950,12 @@ fleet "Merchants West Large"
   variant 1
     "Bulk Freighter"
     "Bastion"
-  variant 1
+  variant 2
     "Bulk Freighter"
     "Clipper"
   variant 1
     "Bulk Freighter"
     "Clipper" 2
-  variant 3
-    "Bulk Freighter"
-    "Firebird"
   variant 1
     "Bulk Freighter"
     "Manta"
@@ -1967,14 +1983,6 @@ fleet "Merchants West Large"
   variant 1
     "Bulk Freighter"
     "Fury" 5
-  variant 6
-    "Firebird"
-  variant 8
-    "Firebird"
-    "Star Freighter"
-  variant 4
-    "Firebird"
-    "Star Freighter" 2
   variant 15
     "Mule"
     "Foxhound"
@@ -2212,11 +2220,14 @@ fleet "Vortex Large"
     heroic opportunistic
   # total: 10
   variant 5
-    "Firebird"
+    "Aerie"
+    "Dagger" 2
   variant 3
-    "Firebird" 2
+    "Aerie" 2
+    "Dagger" 4
   variant 2
-    "Firebird" 3
+    "Aerie" 3
+    "Dagger" 6
 
 fleet "Vortex Small"
   government "Militia"
@@ -2561,17 +2572,17 @@ fleet "Marauder fleet VII"
     "Modified Leviathan (Core)"
     "Firebird"
     "Firebird (Laser)"
-    "Firebird (Impact)"
+    "Firebird (Particle)"
   variant 1
     "Modified Leviathan (Engines)"
     "Firebird"
     "Firebird (Laser)"
-    "Firebird (Impact)"
+    "Firebird (Particle)"
   variant 1
     "Modified Leviathan (Weapons)"
     "Firebird"
     "Firebird (Laser)"
-    "Firebird (Impact)"
+    "Firebird (Particle)"
 
 fleet "Marauder fleet VIII"
   government "Pirate"
@@ -2599,17 +2610,17 @@ fleet "Marauder fleet VIII"
     "Modified Leviathan (Core)"
     "Firebird"
     "Firebird (Laser)"
-    "Firebird (Impact)"
+    "Firebird (Particle)"
   variant 1
     "Modified Leviathan (Engines)"
     "Firebird"
     "Firebird (Laser)"
-    "Firebird (Impact)"
+    "Firebird (Particle)"
   variant 1
     "Modified Leviathan (Weapons)"
     "Firebird"
     "Firebird (Laser)"
-    "Firebird (Impact)"
+    "Firebird (Particle)"
 
 fleet "Marauder fleet IX"
   government "Pirate"
@@ -2637,17 +2648,17 @@ fleet "Marauder fleet IX"
     "Modified Leviathan (Core)"
     "Firebird"
     "Firebird (Laser)"
-    "Firebird (Impact)"
+    "Firebird (Particle)"
   variant 1
     "Modified Leviathan (Engines)"
     "Firebird"
     "Firebird (Laser)"
-    "Firebird (Impact)"
+    "Firebird (Particle)"
   variant 1
     "Modified Leviathan (Weapons)"
     "Firebird"
     "Firebird (Laser)"
-    "Firebird (Impact)"
+    "Firebird (Particle)"
 
 fleet "Marauder fleet X"
   government "Pirate"
@@ -2854,11 +2865,20 @@ fleet "Pirates South Large"
   personality
     plunders harvests
   # total: 16
-  variant 4
-    "Osprey"
-  variant 9
+  variant 1
+    "Leviathan"
+  variant 6
+    "Firebird"
+  variant 2
+    "Firebird" 2
+  variant 1
+    "Firebird"
     "Raven"
+  variant 2
+    "Osprey"
   variant 3
+    "Raven"
+  variant 1
     "Raven" 2 
 
 fleet "Pirates South Small"
@@ -2875,13 +2895,9 @@ fleet "Pirates South Small"
     "Harpy" 2
   variant 1
     "Harpy" 3
-  variant 2
-    "Hawk"
-  variant 1
-    "Hawk (Laser)"
-  variant 2
+  variant 4
     "Stymphalian"
-  variant 3
+  variant 4
     "Warrior"
 
 
@@ -2892,12 +2908,11 @@ fleet "Pirates West Large"
   personality
     plunders harvests
   # total: 10
-  variant 1
-    "Leviathan"
   variant 7
-    "Firebird"
-  variant 2
-    "Firebird" 2
+    "Aerie"
+  variant 3
+    "Aerie"
+    "Dagger" 2
 
 fleet "Pirates West Small"
   government "Pirate"

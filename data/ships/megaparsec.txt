@@ -1,4 +1,8 @@
 shipyard "Megaparsec Variants"
+  "Hawk"
+  "Hawk (Laser)"
+  "Hawk (Miner)"
+  "Hawk (Nuclear)"
   "Quicksilver"
   "Quicksilver (Mark II)"
   "Quicksilver (Patrol)"
@@ -14,6 +18,125 @@ shipyard "Megaparsec Variants"
   "Scout (Miner)"
   "Scout (Speedy)"
   "Thunderbolt"
+
+
+
+ship "Hawk"
+  sprite "ship/sprite/hawk"
+  thumbnail "ship/thumbnail/hawk"
+  attributes
+    category "Interceptor"
+#    manufacturer "Megaparsec"
+    licences
+      Pilot
+    "cost" 1900000
+    "shields" 3800
+    "hull" 700
+    "required crew" 2
+    "bunks" 4
+    "mass" 120
+    "drag" 2.6
+    "heat dissipation" .8
+    "cargo space" 70
+    "outfit space" 240
+    "core space" 100
+    "engine space" 80
+    "weapon space" 60
+    weapon
+      "blast radius" 84
+      "shield damage" 240
+      "random shield damage" 600
+      "hull damage" 360
+      "random hull damage" 900
+      "heat damage" 7200
+      "random heat damage" 18000
+      "hit force" 600
+      "random hit force" 1500
+  outfits
+    "D23-QP Shield Generator"
+    "RT-I Radiothermal"
+    "Hyperdrive"
+
+    "IT-3700 Ion Thruster"
+    "IS-3200 Ion Steering"
+
+    "X1 Blaster Cannon" 4
+    "X4 Blaster Turret"
+
+    "LP036a Battery Pack"
+    "Liquid Water Cooler"
+    "Fuel Pod" 18
+    "Tactical Scanner" 2
+  engine 0 47 1.4
+  gun -12 -27
+  gun 12 -27
+  gun -17 -18
+  gun 17 -18
+  turret 0 9
+  leak "leak" 60 50
+  leak "flame" 80 80
+  explode "tiny explosion" 20
+  explode "small explosion" 25
+  explode "medium explosion" 15
+  "final explode" "final explosion small"
+  description "The Megaparsec Hawk is an interceptor-class warship often used as an escort for freighters or in a planetary militia's patrol squadron. Hawks are fast enough to chase down most smaller ships, but are capable of mounting much more weapons, including a turret. They are also, of course, a favorite ship of pirate captains who have earned enough money to afford one."
+
+
+ship "Hawk" "Hawk (Laser)"
+  outfits
+    "D23-QP Shield Generator"
+    "RT-I Radiothermal"
+    "Hyperdrive"
+
+    "IT-3700 Ion Thruster"
+    "IS-3200 Ion Steering"
+
+    "Heavy Laser Cannon" 4
+
+    "LP036a Battery Pack"
+    "Liquid Water Cooler"
+    "Fuel Pod" 18
+    "Tactical Scanner" 2
+    "Extra Outfit Space"
+
+
+ship "Hawk" "Hawk (Miner)"
+  outfits
+    "D23-QP Shield Generator"
+    "RT-I Radiothermal"
+    "Hyperdrive"
+
+    "IT-3700 Ion Thruster"
+    "IS-3200 Ion Steering"
+
+    "Laser Cannon" 4
+    "Laser Turret"
+
+    "LP036a Battery Pack"
+    "Liquid Water Cooler"
+    "Asteroid Scanner"
+    "Fuel Pod" 17
+    "Tactical Scanner" 2
+    "Extra Outfit Space"
+
+
+ship "Hawk" "Hawk (Nuclear)"
+  outfits
+    "D41-HY Shield Generator"
+    "RT-I Radiothermal"
+    "Hyperdrive"
+
+    "IT-3700 Ion Thruster"
+    "IS-3200 Ion Steering"
+
+    "Nuclear Missile" 4
+
+    "LP036a Battery Pack"
+    "Liquid Water Cooler"
+    "Fuel Pod" 18
+    "Large Radar Jammer"
+    "Tactical Scanner" 2
+    "Extra Outfit Space"
 
 
 
@@ -179,7 +302,7 @@ ship "Quicksilver" "Modified Quicksilver (Core)"
   gun -7 -39
   gun 7 -39
   turret 0 15
-  description "This Megaparsec Quicksilver is a bit of a Hotrod, being a little faster, with extra shield projectors, hull plating, and an extra bunk. This aftermarket model also features a turret mount, perhaps in an answer to Tarazed's Hawk. The shop that built this ship is sure to see more customers."
+  description "This Megaparsec Quicksilver is a bit of a Hotrod, being a little faster, with extra shield projectors, hull plating, and an extra bunk. This aftermarket model also features a turret mount, perhaps in an answer to Megaparsec's Hawk. The shop that built this ship is sure to see more customers."
 
 
 ship "Quicksilver" "Modified Quicksilver (Engines)"
@@ -228,7 +351,7 @@ ship "Quicksilver" "Modified Quicksilver (Engines)"
   gun -7 -39
   gun 7 -39
   turret 0 15
-  description "This Quicksilver has even more space available for engine use – and even another thruster port! It's also got a few extra shield projectors, more hull plating and another bunk. This aftermarket model also features a turret mount, perhaps in response to Tarazed's Hawk. Whoever modified this ship wanted to chase their prey down with vicious speed."
+  description "This Quicksilver has even more space available for engine use – and even another thruster port! It's also got a few extra shield projectors, more hull plating and another bunk. This aftermarket model also features a turret mount, perhaps in response to Megaparsec's Hawk. Whoever modified this ship wanted to chase their prey down with vicious speed."
 
 
 ship "Quicksilver" "Modified Quicksilver (Weapons)"
@@ -276,7 +399,7 @@ ship "Quicksilver" "Modified Quicksilver (Weapons)"
   gun -7 -39
   gun 7 -39
   turret 0 15
-  description "This Quicksilver has even bigger gun ports. It's also got a few extra shield emitters, more hull plating, and an extra bunk. Outfitted right, this aftermarket model could be even faster than a stock model, bringing a couple of extra cannons and a turret to the fight, to mimic Tarazed's Hawk perhaps a little more menacingly."
+  description "This Quicksilver has even bigger gun ports. It's also got a few extra shield emitters, more hull plating, and an extra bunk. Outfitted right, this aftermarket model could be even faster than a stock model, bringing a couple of extra cannons and a turret to the fight, to mimic Megaparsec's Hawk perhaps a little more menacingly."
 
 
 

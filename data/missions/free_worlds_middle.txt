@@ -427,7 +427,7 @@ mission "FW Southern Battle 2"
     fleet
       names "free worlds capital"
       variant
-        "Lance" 2
+        "Leviathan" 2
   
   npc evade
     system Rastaban
@@ -1109,7 +1109,7 @@ mission "FW Alphas 1.1"
       `  Alondo explains, "It's only one vessel, an 'Oathkeeper' ship, sworn to take no part in our war. The Free Worlds have almost no troops trained for ground combat, so without the Navy's help we would be unlikely to be able to eliminate the Alphas."`
       `  The Navy ship lands, and a woman steps off whom you recognize immediately: Admiral Helga Daroth, who is something of a folk hero throughout human space, and who you have heard is the commander of the entire Oathkeepers regiment. With her is a man whom she introduces as Commander Aaron Nguyen of the Navy Humanitarian Corps. As Nguyen shakes your hand, you are struck by the fact that although he is your enemy, you see no trace of hostility in his eyes – in fact, his expression is surprisingly warm and affectionate.`
       `  "We have no room for error," says Daroth. "These Alphas must be eliminated, and they must not be allowed to escape. On that, at least, we can all agree."`
-      `  Freya says, "Captain <last> will lead the attack." She beckons to two of the Free Worlds captains. "Marco, Emily, you will join them with your Lances. Destroy any pirate ships in orbit, then land and secure the facility. Understood?" You nod, and prepare to take off for the <system> system.`
+      `  Freya says, "Captain <last> will lead the attack." She beckons to two of the Free Worlds captains. "Marco, Emily, you will join them with your Leviathans. Destroy any pirate ships in orbit, then land and secure the facility. Understood?" You nod, and prepare to take off for the <system> system.`
         accept
   
   npc accompany save
@@ -1119,8 +1119,8 @@ mission "FW Alphas 1.1"
   npc
     government "Free Worlds"
     personality heroic escort
-    ship "Lance (Plasma)" "F.W.S. Alder"
-    ship "Lance" "F.W.S. Starry Warrior"
+    ship "Leviathan (Plasma)" "F.W.S. Alder"
+    ship "Leviathan" "F.W.S. Starry Warrior"
   npc kill
     government "Pirate"
     personality heroic staying target
@@ -1214,9 +1214,9 @@ mission "FW Alphas 1.2"
   npc accompany save
     government "Free Worlds"
     personality heroic escort
-    ship "Lance (Plasma)" "F.W.S. Alder"
-    ship "Lance (Plasma)" "F.W.S. Oak"
-    ship "Lance" "F.W.S. Starry Warrior"
+    ship "Leviathan (Plasma)" "F.W.S. Alder"
+    ship "Leviathan (Plasma)" "F.W.S. Oak"
+    ship "Leviathan" "F.W.S. Starry Warrior"
   npc kill
     government "Pirate"
     personality heroic staying target
@@ -1224,7 +1224,7 @@ mission "FW Alphas 1.2"
     ship "Leviathan" "Dominator"
     ship "Leviathan" "Dread Lord"
     ship "Firebird" "Draugbreath"
-    ship "Firebird (Impact)" "Revenant"
+    ship "Firebird (Particle)" "Revenant"
     ship "Firebird (Laser)" "Vengeance"
   
   on visit
@@ -1524,8 +1524,8 @@ mission "FW Bloodsea 1.2A"
     government "Free Worlds"
     personality heroic escort
     ship "Dreadnought" "F.W.S. Bombastic"
-    ship "Lance (Plasma)" "F.W.S. Equalizer"
-    ship "Lance (Plasma)" "F.W.S. Enforcer"
+    ship "Leviathan (Plasma)" "F.W.S. Equalizer"
+    ship "Leviathan (Plasma)" "F.W.S. Enforcer"
   
   npc evade
     personality heroic staying
@@ -1759,7 +1759,7 @@ mission "FW Rand 1"
     government "Free Worlds"
     personality heroic disables escort
     ship "Dreadnought" "F.W.S. Elder"
-    ship "Lance (Plasma)" "F.W.S. Reliant"
+    ship "Leviathan (Plasma)" "F.W.S. Reliant"
     ship "Bastion (Plasma)" "F.W.S. Bismark"
     ship "Skein" "F.W.S. Lapwing"
     ship "Hag" "Orange 8-4"
@@ -1824,7 +1824,7 @@ mission "FW Rand 1B"
     personality staying timid
     system "Tarazed"
     ship "Dreadnought" "F.W.S. Holly"
-    ship "Lance (Plasma)" "F.W.S. Nebula"
+    ship "Leviathan (Plasma)" "F.W.S. Nebula"
     ship "Skein" "F.W.S. Larkspur"
     ship "Hag" "Cyan 6-2"
     ship "Hag" "Cyan 0-9"
@@ -1923,7 +1923,7 @@ mission "FW Defend Bod"
     government "Free Worlds"
     personality heroic escort disables
     ship "Dreadnought" "F.W.S. Holly"
-    ship "Lance (Plasma)" "F.W.S. Nebula"
+    ship "Leviathan (Plasma)" "F.W.S. Nebula"
     ship "Skein" "F.W.S. Larkspur"
     ship "Hag" "Cyan 6-2"
     ship "Hag" "Cyan 0-9"

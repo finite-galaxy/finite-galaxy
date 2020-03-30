@@ -113,17 +113,10 @@ event "plasma turret available"
   outfitter "Delta V Advanced"
     "Plasma Turret"
   fleet "Free Worlds Large"
-    add variant 4
-      "Bastion (Plasma)"
-    add variant 3
-      "Bastion (Plasma)"
-      "Stymphalian"
-    add variant 2
-      "Bastion (Plasma)"
-      "Stymphalian" 2
     add variant 1
       "Bastion (Plasma)"
-      "Stymphalian" 3
+    add variant 4
+      "Leviathan (Plasma)"
 
 
 event "stack core available"
@@ -1486,15 +1479,8 @@ event "dreadnought deployment"
       heroic
     add variant 4
       "Dreadnought"
-    add variant 3
-      "Dreadnought"
-      "Stymphalian"
-    add variant 2
-      "Dreadnought"
-      "Stymphalian" 2
     add variant 1
-      "Dreadnought"
-      "Stymphalian" 3
+      "Dreadnought (Javelin)"
 
 
 event "battle for bloodsea"
