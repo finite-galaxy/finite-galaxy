@@ -10,9 +10,9 @@ shipyard "Yggdrasill Variants"
   "Modified Bounder (Core)"
   "Modified Bounder (Engines)"
   "Modified Bounder (Weapons)"
-  "Bulk Freighter"
-  "Bulk Transport"
-  "Bulk Carrier"
+  "Centipede"
+  "Centipede (Carrier)"
+  "Centipede (Transport)"
   "Lance"
   "Lance (Electron)"
   "Modified Lance (Core)"
@@ -491,9 +491,9 @@ ship "Bounder" "Modified Bounder (Weapons)"
 
 
 
-ship "Bulk Freighter"
-  sprite "ship/sprite/bulk_freighter"
-  thumbnail "ship/thumbnail/bulk_freighter"
+ship "Centipede"
+  sprite "ship/sprite/centipede"
+  thumbnail "ship/thumbnail/centipede"
   attributes
     category "Destroyer"
 #    manufacturer "Yggdrasill"
@@ -503,7 +503,7 @@ ship "Bulk Freighter"
     "shields" 3000
     "hull" 9000
     "required crew" 6
-    "bunks" 18
+    "bunks" 15
     "mass" 900
     "drag" 18
     "heat dissipation" .5
@@ -547,34 +547,29 @@ ship "Bulk Freighter"
   explode "large explosion" 35
   explode "huge explosion" 20
   "final explode" "final explosion large"
-  description "The Bulk Freighter is the ultimate freighter, able to carry more cargo than any other human ship. It is also, however, an incredibly slow ship and difficult to manoeuvre, especially when fully loaded. Some freight caravans use multiple smaller freighters instead of Bulk Freighters just to avoid the hassle of constantly having to wait for the Bulk Freighter to properly align itself for hyperspace travel."
+  description "The Centipede is the ultimate freighter, able to carry more cargo than any other human ship. It is also, however, an incredibly slow ship and difficult to manoeuvre, especially when fully loaded. Some freight caravans use multiple smaller freighters instead of Centipedes just to avoid the hassle of constantly having to wait for the Centipede to properly align itself for hyperspace travel."
 
 
-ship "Bulk Freighter" "Bulk Transport"
-  add attributes
-    "cost" 1500000
-    "required crew" 12
-    "bunks" 240
-    "mass" 150
-    "cargo space" -600
-  description `This "Bulk Freighter" has its cargo space converted into bunks, allowing it to serve as a mass transport.`
-
-
-ship "Bulk Freighter" "Bulk Carrier"
+ship "Centipede" "Centipede (Carrier)"
   add attributes
     "cost" 3000000
     "shields" 10000
     "required crew" 18
-    "bunks" 18
+    "bunks" 15
     "mass" 180
     "cargo space" -600
     "outfit space" 60
     "core space" 60
     weapon
-      "random shield damage" -900
-      "random hull damage" -1350
-      "random heat damage" -27000
-      "random hit force" -2250
+      "blast radius" -72
+      "shield damage" 360
+      "random shield damage" -1080
+      "hull damage" 540
+      "random hull damage" -1620
+      "heat damage" 11400
+      "random heat damage" -32400
+      "hit force" 900
+      "random hit force" -2800
   outfits
     "D94-YV Shield Generator"
     "Fusion Reactor"
@@ -606,7 +601,27 @@ ship "Bulk Freighter" "Bulk Carrier"
   drone 66 85 right
   drone -66 135 left
   drone 66 135 right
-  description `This "Bulk Freighter" is a stealth warship designed by Yggdrasill for baiting pirates with the offer of a seemingly helpless, ordinary Bulk Freighter. Inside, its cargo space has all been converted into drone bays, allowing it to carry a dozen combat drones.`
+  description `This "Centipede" is a stealth warship designed by Yggdrasill for baiting pirates with the offer of a seemingly helpless, ordinary Centipede. Inside, its cargo space has all been converted into drone bays, allowing it to carry a dozen combat drones.`
+
+
+ship "Centipede" "Centipede (Transport)"
+  add attributes
+    "cost" 1500000
+    "required crew" 9
+    "bunks" 240
+    "mass" 150
+    "cargo space" -600
+    weapon
+      "blast radius" -90
+      "shield damage" 300
+      "random shield damage" -900
+      "hull damage" 450
+      "random hull damage" -1350
+      "heat damage" 9000
+      "random heat damage" -27000
+      "hit force" 750
+      "random hit force" -2250
+  description `This "Centipede" has its cargo space converted into bunks, allowing it to serve as a mass transport.`
 
 
 

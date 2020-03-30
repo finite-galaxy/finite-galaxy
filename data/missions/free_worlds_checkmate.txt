@@ -281,18 +281,18 @@ mission "FWC Cebalrai 1B"
       variant
         "Dreadnought"
         "Bastion"
-        "Stymphalian (Flamethrower)" 4
+        "Rainmaker (Flamethrower)" 4
     fleet
       names "free worlds capital"
       variant
         "Dreadnought"
         "Leviathan (Plasma)"
-        "Hawk" 2
+        "Headhunter" 2
     fleet
       names "free worlds capital"
       variant
         "Osprey"
-        "Stymphalian" 2
+        "Rainmaker" 2
   
   npc evade
     personality staying heroic
@@ -413,13 +413,13 @@ mission "FWC Nuke Supply 1B"
   
   on offer
     conversation
-      `You land on <origin> and meet up with the grim-faced captain of a Bulk Freighter named the Blue Yonder. "The cargo is already loaded up," he says, "and I'm ready to go. The sooner we get this stuff out of my cargo hold and I can get back to shipping food and medicine, the better. I really hope you folks on Council know what you're doing."`
+      `You land on <origin> and meet up with the grim-faced captain of a Centipede named the Blue Yonder. "The cargo is already loaded up," he says, "and I'm ready to go. The sooner we get this stuff out of my cargo hold and I can get back to shipping food and medicine, the better. I really hope you folks on Council know what you're doing."`
         accept
   
   npc accompany save
     personality escort timid
     government "Merchant"
-    ship "Bulk Freighter" "F.W.S. Blue Yonder"
+    ship "Centipede" "F.W.S. Blue Yonder"
   
   on visit
     dialogue "You have reached <planet>, but the Blue Yonder is not here yet! Better depart and wait for them to arrive in this star system."
@@ -446,7 +446,7 @@ mission "FWC Nuke Supply 1C"
   npc accompany save
     personality escort timid
     government "Merchant"
-    ship "Bulk Freighter" "F.W.S. Blue Yonder"
+    ship "Centipede" "F.W.S. Blue Yonder"
 
 
 
@@ -647,18 +647,18 @@ mission "FWC Checkmate 1"
         "Dreadnought"
         "Skein"
         "Hag" 6
-        "Stymphalian (Flamethrower)" 4
+        "Rainmaker (Flamethrower)" 4
     fleet
       names "free worlds capital"
       variant
         "Dreadnought"
         "Leviathan (Plasma)"
-        "Hawk" 2
+        "Headhunter" 2
     fleet
       names "free worlds capital"
       variant
         "Osprey"
-        "Stymphalian" 2
+        "Rainmaker" 2
   
   npc
     personality heroic waiting
@@ -842,7 +842,7 @@ mission "FWC Checkmate 1B"
   on offer
     event "fwc attack menkent"
     conversation
-      `You meet up with Tomek in the spaceport. He is talking with the captain of one of a group of four Hawks that have landed next to each other some distance away from the rest of the Free Worlds fleet. The Hawks appear to have unusually powerful engines, and in place of guns they are each carrying four missiles. Tomek sees you approaching and says, "And here's Captain <last>. Captain, are you ready to lead the attack?"`
+      `You meet up with Tomek in the spaceport. He is talking with the captain of one of a group of four Headhunters that have landed next to each other some distance away from the rest of the Free Worlds fleet. The Headhunters appear to have unusually powerful engines, and in place of guns they are each carrying four missiles. Tomek sees you approaching and says, "And here's Captain <last>. Captain, are you ready to lead the attack?"`
       choice
         `  "Yes, I'm ready."`
           goto ready
@@ -880,10 +880,10 @@ mission "FWC Checkmate 1B"
     personality staying heroic uninterested disables
     government "Free Worlds"
     system "Rasalhague"
-    ship "Hawk (Nuclear)" "F.W.S. Disease"
-    ship "Hawk (Nuclear)" "F.W.S. Famine"
-    ship "Hawk (Nuclear)" "F.W.S. Pestilence"
-    ship "Hawk (Nuclear)" "F.W.S. Warmaker"
+    ship "Headhunter (Nuclear)" "F.W.S. Disease"
+    ship "Headhunter (Nuclear)" "F.W.S. Famine"
+    ship "Headhunter (Nuclear)" "F.W.S. Pestilence"
+    ship "Headhunter (Nuclear)" "F.W.S. Warmaker"
   
   npc evade
     personality heroic staying
@@ -975,7 +975,7 @@ mission "FWC Checkmate Escorts"
       variant
         "Dreadnought"
         "Bastion (Plasma)"
-        "Stymphalian" 2
+        "Rainmaker" 2
     fleet
       names "free worlds capital"
       fighters "free worlds fighter"
@@ -995,7 +995,7 @@ mission "FWC Checkmate Escorts"
       variant
         "Leviathan (Plasma)"
         "Osprey"
-        "Stymphalian"
+        "Rainmaker"
 
 
 
@@ -1057,12 +1057,12 @@ mission "FWC Pug 1"
     fleet 4
       names "free worlds small"
       variant
-        "Hawk (Nuclear)"
+        "Headhunter (Nuclear)"
     fleet
       names "free worlds small"
       variant
         "Bastion (Plasma)"
-        "Stymphalian" 3
+        "Rainmaker" 3
   
   npc evade
     personality staying disables heroic
@@ -1528,9 +1528,9 @@ mission "FWC Pug 3B"
       variant
         "Skein"
         "Hag" 6
-        "Stymphalian"
-        "Stymphalian"
-        "Stymphalian"
+        "Rainmaker"
+        "Rainmaker"
+        "Rainmaker"
   
   npc disable
     personality entering disables heroic
@@ -1676,7 +1676,7 @@ mission "FWC Pug 3D: Reinforcements"
       variant
         "Dreadnought"
         "Bastion (Plasma)"
-        "Stymphalian"
+        "Rainmaker"
     fleet
       names "free worlds capital"
       fighters "free worlds fighter"
@@ -1690,7 +1690,7 @@ mission "FWC Pug 3D: Reinforcements"
       variant
         "Leviathan (Plasma)"
         "Osprey (Particle)"
-        "Stymphalian"
+        "Rainmaker"
 
 
 
@@ -2223,7 +2223,7 @@ mission "FWC Pug 6"
       variant
         "Dreadnought"
         "Bastion (Plasma)"
-        "Stymphalian" 2
+        "Rainmaker" 2
     fleet
       names "free worlds capital"
       fighters "free worlds fighter"
@@ -2243,7 +2243,7 @@ mission "FWC Pug 6"
       variant
         "Leviathan (Plasma)"
         "Osprey (Particle)"
-        "Stymphalian"
+        "Rainmaker"
   
   on complete
     log `The Pug have fled, apparently travelling through an artificial wormhole back to whatever galaxy they came from. And, it turns out that many of their cities on "Pugglemug" were only for show: buildings with no inhabitants, and with holograms creating the appearance of a heavily populated world. They left no advanced technology behind, and no sign of what their true intentions were, but it turns out that the fake cities here were designed for human habitation. They must have been planning this departure for a very long time.`

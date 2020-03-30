@@ -75,10 +75,10 @@ mission "Liberate Kornephoros"
         "Raven" 2
       variant
         "Bastion"
-        "Stymphalian" 2
+        "Rainmaker" 2
       variant
         "Raven"
-        "Hawk" 3
+        "Headhunter" 3
   npc
     personality heroic disables
     government "Free Worlds"
@@ -87,17 +87,17 @@ mission "Liberate Kornephoros"
       names "free worlds capital"
       variant
         "Osprey"
-        "Hawk" 2
+        "Headhunter" 2
     fleet
       names "free worlds small"
       variant
-        "Hawk"
+        "Headhunter"
         "Harpy" 2
     fleet
       names "free worlds small"
       variant
-        "Hawk"
-        "Stymphalian" 2
+        "Headhunter"
+        "Rainmaker" 2
     fleet
       names "free worlds capital"
       variant
@@ -107,13 +107,13 @@ mission "Liberate Kornephoros"
       variant
         "Bastion"
         "Osprey" 2
-        "Hawk" 3
+        "Headhunter" 3
         "Harpy" 5
     fleet
       names "free worlds capital"
       variant
         "Bastion" 2
-        "Stymphalian" 4
+        "Rainmaker" 4
         "Berserker" 6
   
   npc evade
@@ -853,7 +853,7 @@ mission "FW Supply Convoy 1"
           accept
       
       label cattle
-      `  She grins. "Yes, I know it's not terribly glamorous work, and keeping track of a big fleet of slow ships is a pain. But, bulk freighters are just too expensive to use on internal cargo convoys. Just make sure you do a head count when you arrive in each system."`
+      `  She grins. "Yes, I know it's not terribly glamorous work, and keeping track of a big fleet of slow ships is a pain. But, Centipedes are just too expensive to use on internal cargo convoys. Just make sure you do a head count when you arrive in each system."`
       choice
         `  "Okay, whatever it takes to further the cause of freedom, I'll do it."`
           accept

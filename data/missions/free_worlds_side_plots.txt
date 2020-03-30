@@ -281,7 +281,7 @@ mission "FW Stack Core 1B"
   
   on offer
     conversation
-      `Following Freya's instructions, you land on <origin> and tell the spaceport quartermaster that you've been assigned to escort a convoy to <planet>. "Ah yes," he says, "the last of their cargo was just made ready yesterday." He leads you to a cluster of landing pads where three Bulk Freighters are parked. "The pirates have not been much trouble lately," he says, "but the cargo is important enough that they wanted an escort anyway." He leaves before you have a chance to ask any questions about what the freighters are carrying.`
+      `Following Freya's instructions, you land on <origin> and tell the spaceport quartermaster that you've been assigned to escort a convoy to <planet>. "Ah yes," he says, "the last of their cargo was just made ready yesterday." He leads you to a cluster of landing pads where three Centipedes are parked. "The pirates have not been much trouble lately," he says, "but the cargo is important enough that they wanted an escort anyway." He leaves before you have a chance to ask any questions about what the freighters are carrying.`
         accept
   
   npc accompany save
@@ -291,7 +291,7 @@ mission "FW Stack Core 1B"
       names "civilian"
       cargo 3
       variant
-        "Bulk Freighter" 3
+        "Centipede" 3
   
   on visit
     dialogue "You have reached <planet>, but you left part of your convoy behind! Better depart and wait for them to arrive in this star system."
@@ -505,7 +505,7 @@ mission "FW Wolf Pack 2A"
 mission "FW Wolf Pack 3"
   landing
   name "Attack Food Convoy"
-  description "Destroy two Republic bulk freighters in the Gacrux system that are carrying food, then report back to <planet> for payment."
+  description "Destroy two Republic Centipedes in the Gacrux system that are carrying food, then report back to <planet> for payment."
   source
     government "Free Worlds"
   destination "Solace"
@@ -519,7 +519,7 @@ mission "FW Wolf Pack 3"
   
   on offer
     dialogue
-      `You receive another message from the Wolf Pack: "Great work with those freighters, Captain! We've got another target for you, if you're interested: a pair of bulk freighters, which you ought to be able to intercept in the Gacrux system. It's an uninhabited system, so you shouldn't have much interference from the Navy. As before, you only need to destroy the freighters, not any other ships you encounter."`
+      `You receive another message from the Wolf Pack: "Great work with those freighters, Captain! We've got another target for you, if you're interested: a pair of Centipedes, which you ought to be able to intercept in the Gacrux system. It's an uninhabited system, so you shouldn't have much interference from the Navy. As before, you only need to destroy the freighters, not any other ships you encounter."`
       `  Every one of these missions you complete will create more animosity between the Republic and the Free Worlds. But on the other hand, they may be right that it's the fastest way to bring this war to a close.`
   
   on accept
@@ -531,8 +531,8 @@ mission "FW Wolf Pack 3"
     government "Republic"
     system "Gacrux"
     personality timid staying target
-    ship "Bulk Freighter" "Dew of the Morning"
-    ship "Bulk Freighter" "Heaven's Blessing"
+    ship "Centipede" "Dew of the Morning"
+    ship "Centipede" "Heaven's Blessing"
     dialogue "The food convoy has been destroyed. You can now return to Solace."
   
   npc

@@ -206,6 +206,7 @@ Version 0.10.0:
       * "Albatross" to "Twilight"
       * "Arach Freighter" to "Wagon"
       * "Barb" to "Mongrel"
+      * "Bulk Freighter" to "Centipede"
       * "Carrier" to "Saturn"
       * "Corvette" to "Thunderbolt"
       * "Cruiser" to "Venus"
@@ -215,13 +216,10 @@ Version 0.10.0:
       * "Frigate" to "Mars"
       * "Gunboat" to "Mercury"
       * "Hauler" to "Hauler I"
-      * "Hawk" to "Warrior"
-      * "Headhunter" to "Hawk"
       * "Lampyrid-Class Transport" to "Lampyrid"
       * "Lance" to "Foxhound"
       * "Modified Argosy" to "Marauder Argosy"
       * "Marauder Fury" to "Modified Fury"
-      * "Rainmaker" to "Stymphalian"
       * "Shuttle" to "Light Shuttle"
       * "Sparrow" to "Harpy"
       * "Splinter" to "Goose"
@@ -233,11 +231,12 @@ Version 0.10.0:
       * Argosy from 4 to 2
       * Bactrian from 4 to 3
       * Bastion from 4 to 2
-      * Bulk Freighter from 2 to 0
+      * Centipede from 2 to 0
       * Clipper from 4 to 0
       * Deep River from 6 to 0
       * Hag from 2 to 4
       * Harpy from 2 to 6
+      * Headhunter from 2 to 4
       * Heavy Shuttle from 2 to 0
       * Lance from 4 to 2
       * Light Shuttle from 1 to 0
@@ -253,7 +252,7 @@ Version 0.10.0:
       * Tek Far 71 Lek from 3 to 2
       * Venus from 4 to 2
     * turret mount changes:
-      * Bulk Freighter from 5 to 2
+      * Centipede from 5 to 2
       * Kar Ik Vot 349 from 8 to 10
       * Kestrel from 4 to 6
       * Model 8 from 0 to 1
@@ -284,7 +283,7 @@ Version 0.10.0:
         * Modified Bounder (Weapons): +40 cargo space, +55 core space, –25 engine space, −10 weapon space
       * Boxwing: +0.81 drag, +0.23 heat dissipation, −40 cargo space, +3 core space, +7 engine space
       * Briar: +30 cargo space
-      * Bulk Freighter: cost from 9 400 000 to 9 000 000; −1000 shields, +1400 hull, +2.2 drag, +30 mass, +150 cargo space, −25 core space, +15 engine space, −100 weapon space
+      * Centipede: cost from 9 400 000 to 9 000 000; −1000 shields, +1400 hull, −3 bunks, +30 mass, +2.2 drag, +150 cargo space, −25 core space, +15 engine space, −100 weapon space
       * Chaser: +700 shields, +600 hull, +1 required crew, +1 bunk, +30 mass, +33 core space
       * Clipper: +30 cargo space, −10 core space, −60 weapon space
       * Combat Drone: +200 hull, +20 mass, +0.01 drag, +8 core space, –6 engine space
@@ -320,7 +319,8 @@ Version 0.10.0:
       * Hauler I: +1 required crew, +20 cargo space, +10 core space
       * Hauler II: +1 required crew, +40 cargo space, +10 core space
       * Hauler III: +1 required crew, +60 cargo space, +10 core space
-      * Hawk: cost from 1850 000 to 1900 000; +20 cargo space, +10 core space
+      * Hawk: +10 cargo space, +10 core space
+      * Headhunter: cost from 1850 000 to 1900 000; +20 cargo space, +10 core space
       * Heavy Shuttle: +100 hull, +15 cargo space, +10 core space, –10 weapon space
       * Hulk: +83 cargo space
       * Hurricane: +98 cargo space, +29 core space, –7 weapon space
@@ -371,6 +371,7 @@ Version 0.10.0:
         * Modified Quicksilver (Engines): +25 cargo space, +25 core space, –15 engine space, –5 weapon space
         * Modified Quicksilver (Weapons): +25 cargo space, +5 engine space
       * Raider: +200 mass, +5 required crew
+      * Rainmaker: +25 cargo space, −10 core space, +10 engine space
       * Raven: cost from 1800 000 to 2400 000; −200 shields, +100 hull, −2 required crew, −5 bunks, +20 cargo space, +40 core space, −10 engine space, +20 weapon space
         * Modified Raven (Core): +45 core space, +5 weapon space
         * Modified Raven (Engines): +55 core space, –10 engine space, +5 weapon space
@@ -391,7 +392,6 @@ Version 0.10.0:
       * Star Freighter: +50 cargo space, −10 core space, −10 engine space, +10 weapon space
       * Star Queen: −9 required crew, −1.0 drag, +40 cargo space, +10 core space, −10 engine space
       * Strong Wind: +35 cargo space, +21 core space, −5 weapon space
-      * Stymphalian: +25 cargo space, −10 core space, +10 engine space
       * Summer Leaf: +43 cargo space, +15 core space
       * Tek Far 71 Lek: +25 core space, −25 weapon space; self destruct from 0.70 to 0.9
       * Tek Far 78 Osk: +21 core space, −1 weapon space; self destruct from 0.70 to 0.9
@@ -409,7 +409,6 @@ Version 0.10.0:
       * Visitor: +27 cargo space
       * Wagon: +49 cargo space
       * Wardragon: −95 bunks, −100 required crew, −60 mass, +50 cargo space, +20 core space, −20 engine space; removed energy generation, hull energy, hull repair rate, and ramscoop
-      * Warrior: +10 cargo space, +10 core space
       * Wasp: +20 cargo space, +28 core space, −35 engine space, −3 weapon space
       * Watch Dog: −0.03 drag, +15 core space, −8 engine space
       * Water Bug: +54 cargo space, +5 core space
@@ -465,10 +464,10 @@ Version 0.10.0:
       * normalized (100×100 pixels) derivatives of ship/*@2x.png
     * sprite:
       * antiarch, ao, ao_m, cachalot, chilong, chimaera, colony_ship, craterustig, excalibur, gladius, harrier, hatchling, hatchling_m, hourglass, longinus, mako, marlin, myrmex, myrmidon, piranha, pollaxe, raja, scorpion, scorpion_m, swordbreaker, tianlong, twin_crescent, typhon, typhon_m, winged_serpent, yisnith (@comnom)
-      * bulk freighter has two turret mounts instead of five
+      * centipede has two turret mounts instead of five
       * hag has four guns instead of two
       * harpy has six guns instead of two
-      * hawk has four guns instead of two (@MCOfficer)
+      * headhunter has four guns instead of two (@MCOfficer)
       * jupiter (@puzzlecube)
       * kestrel
       * manta has eight guns instead of four
@@ -480,7 +479,7 @@ Version 0.10.0:
       * arrow_c, arrow_e, arrow_w, bounder_c, bounder_e, bounder_w, firebird_c, firebird_e, firebird_w, goose_c, goose_e, goose_w, lance_c, lance_e, lance_w, leviathan_c, leviathan_e, leviathan_w, manta_c, manta_e, manta_w, quicksilver_c, quicksilver_e, quicksilver_w, raven_c, raven_e, raven_w (@Amazinite)
       * jupiter (@puzzlecube)
       * mistral (@Brick63)
-      * hawk has four guns instead of two (@MCOfficer)
+      * headhunter has four guns instead of two (@MCOfficer)
       * faes_mar, maeri_het, selii_mar, subsidurial, telis_het (@beccabunny)
   * star: —
   * ui: —

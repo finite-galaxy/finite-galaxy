@@ -25,10 +25,10 @@ shipyard "Southbound Variants"
   "Modified Leviathan (Engines)"
   "Modified Leviathan (Weapons)"
   "Nest"
+  "Rainmaker"
+  "Rainmaker (Flamethrower)"
   "Roost"
   "Skein"
-  "Stymphalian"
-  "Stymphalian (Flamethrower)"
 
 
 
@@ -1195,6 +1195,88 @@ ship "Nest"
 
 
 
+ship "Rainmaker"
+  sprite "ship/sprite/rainmaker"
+  thumbnail "ship/thumbnail/rainmaker"
+  attributes
+    category "Interceptor"
+#    manufacturer "Navy"
+    licences
+      Pilot
+    "cost" 1580000
+    "shields" 3500
+    "hull" 1200
+    "required crew" 7
+    "bunks" 14
+    "mass" 180
+    "drag" 3.8
+    "heat dissipation" .8
+    "cargo space" 50
+    "outfit space" 230
+    "core space" 110
+    "engine space" 60
+    "weapon space" 60
+    weapon
+      "blast radius" 91
+      "shield damage" 360
+      "random shield damage" 550
+      "hull damage" 540
+      "random hull damage" 825
+      "heat damage" 10800
+      "random heat damage" 16500
+      "hit force" 900
+      "random hit force" 1375
+  outfits
+    "D23-QP Shield Generator"
+    "nGVF-CC Fuel Cell"
+    "Hyperdrive"
+
+    "Greyhound Plasma Thruster"
+    "Greyhound Plasma Steering"
+
+    "Javelin" 256
+    "Javelin Storage Crate" 4
+    "Javelin Launcher" 4
+
+    "LP036a Battery Pack"
+    "Fuel Pod" 23
+    "Large Radar Jammer"
+    "Tactical Scanner"
+  engine -8 46
+  engine 8 46
+  gun -10 -30
+  gun 10 -30
+  gun -27 -5 "Javelin Launcher"
+  gun 27 -5 "Javelin Launcher"
+  gun -17 -5 "Javelin Launcher"
+  gun 17 -5 "Javelin Launcher"
+  leak "leak" 50 50
+  explode "tiny explosion" 10
+  explode "small explosion" 20
+  explode "medium explosion" 15
+  "final explode" "final explosion small"
+  description "The Rainmaker is a missile boat and comes equipped with four missile launchers and enough ammunition to destroy ships many times its size. Because of their lack of manoeuvrability and relatively light shielding, Rainmakers serve best in hit-and-run attack waves. Once their missile supply is spent, they are relatively useless in combat."
+
+
+ship "Rainmaker" "Rainmaker (Flamethrower)"
+  outfits
+    "D23-QP Shield Generator"
+    "nGVF-CC Fuel Cell"
+    "Hyperdrive"
+
+    "Greyhound Plasma Thruster"
+    "Greyhound Plasma Steering"
+
+    "Flamethrower" 6
+
+    "LP036a Battery Pack"
+    "Fuel Pod" 23
+    "Catalytic Ramscoop"
+    "Large Radar Jammer"
+    "Tactical Scanner"
+
+
+
 ship "Roost"
   sprite "ship/sprite/roost"
   thumbnail "ship/thumbnail/roost"
@@ -1338,86 +1420,4 @@ ship "Skein"
   explode "huge explosion" 5
   "final explode" "final explosion large"
   description `This particular cockpit and engine set has found itself attached to three of Southbound Shipyards' new "Type F" Fighter-carrier pods. When the Free Worlds asked for a carrier, they did not expect one that would be able to carry more fighters than even the heaviest Navy warships. Given this fact, the Free Worlds have asked Southbound to restrict sale of the "Hauler III: Type F", "Skein" to its military only.`
-
-
-
-ship "Stymphalian"
-  sprite "ship/sprite/stymphalian"
-  thumbnail "ship/thumbnail/stymphalian"
-  attributes
-    category "Interceptor"
-#    manufacturer "Navy"
-    licences
-      Pilot
-    "cost" 1580000
-    "shields" 3500
-    "hull" 1200
-    "required crew" 7
-    "bunks" 14
-    "mass" 180
-    "drag" 3.8
-    "heat dissipation" .8
-    "cargo space" 50
-    "outfit space" 230
-    "core space" 110
-    "engine space" 60
-    "weapon space" 60
-    weapon
-      "blast radius" 91
-      "shield damage" 360
-      "random shield damage" 550
-      "hull damage" 540
-      "random hull damage" 825
-      "heat damage" 10800
-      "random heat damage" 16500
-      "hit force" 900
-      "random hit force" 1375
-  outfits
-    "D23-QP Shield Generator"
-    "nGVF-CC Fuel Cell"
-    "Hyperdrive"
-
-    "Greyhound Plasma Thruster"
-    "Greyhound Plasma Steering"
-
-    "Javelin" 256
-    "Javelin Storage Crate" 4
-    "Javelin Launcher" 4
-
-    "LP036a Battery Pack"
-    "Fuel Pod" 23
-    "Large Radar Jammer"
-    "Tactical Scanner"
-  engine -8 46
-  engine 8 46
-  gun -10 -30
-  gun 10 -30
-  gun -27 -5 "Javelin Launcher"
-  gun 27 -5 "Javelin Launcher"
-  gun -17 -5 "Javelin Launcher"
-  gun 17 -5 "Javelin Launcher"
-  leak "leak" 50 50
-  explode "tiny explosion" 10
-  explode "small explosion" 20
-  explode "medium explosion" 15
-  "final explode" "final explosion small"
-  description "The Stymphalian is a missile boat and comes equipped with four missile launchers and enough ammunition to destroy ships many times its size. Because of their lack of manoeuvrability and relatively light shielding, Stymphalians serve best in hit-and-run attack waves. Once their missile supply is spent, they are relatively useless in combat."
-
-
-ship "Stymphalian" "Stymphalian (Flamethrower)"
-  outfits
-    "D23-QP Shield Generator"
-    "nGVF-CC Fuel Cell"
-    "Hyperdrive"
-
-    "Greyhound Plasma Thruster"
-    "Greyhound Plasma Steering"
-
-    "Flamethrower" 6
-
-    "LP036a Battery Pack"
-    "Fuel Pod" 23
-    "Catalytic Ramscoop"
-    "Large Radar Jammer"
-    "Tactical Scanner"
 
