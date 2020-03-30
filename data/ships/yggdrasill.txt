@@ -13,6 +13,7 @@ shipyard "Yggdrasill Variants"
   "Centipede"
   "Centipede (Carrier)"
   "Centipede (Transport)"
+  "Centipede (Weapons)"
   "Lance"
   "Lance (Electron)"
   "Modified Lance (Core)"
@@ -622,6 +623,49 @@ ship "Centipede" "Centipede (Transport)"
       "hit force" 750
       "random hit force" -2250
   description `This "Centipede" has its cargo space converted into bunks, allowing it to serve as a mass transport.`
+
+
+ship "Centipede" "Centipede (Weapons)"
+  add attributes
+    "cost" 1500000
+    "required crew" 3
+    "mass" 60
+    "cargo space" -150
+    "outfit space" 120
+    "weapon space" 120
+    weapon
+      "blast radius" 150
+      "shield damage" 120
+      "random shield damage" -60
+      "hull damage" 180
+      "random hull damage" -90
+      "heat damage" 3600
+      "random heat damage" -1800
+      "hit force" 300
+      "random hit force" -150
+  outfits
+    "D41-HY Shield Generator"
+    "Ogre Core"
+    "Hyperdrive"
+
+    "A370 Atomic Thruster"
+    "A375 Atomic Steering"
+
+    "Laser Turret" 6
+    "Heavy Anti-Missile" 2
+
+    "DS-11 Battery Pack"
+    "Fuel Pod" 78
+    "Tactical Scanner" 2
+  turret 0 -155 "Heavy Anti-Missile"
+  turret 0 -116
+  turret 0 -66
+  turret 0 -16
+  turret 0 34
+  turret 0 84
+  turret 0 134
+  turret 0 175 "Heavy Anti-Missile"
+  description `This "Centipede" has six additional turret mounts installed, sacrificing cargo space for firepower.`
 
 
 
