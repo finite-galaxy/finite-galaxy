@@ -13,11 +13,13 @@ shipyard "Tarazed Variants"
   "Kestrel (Shields)"
   "Kestrel (Weapons)"
   "Osprey"
+  "Osprey (Atomic)"
   "Osprey (Electron)"
   "Osprey (Ion)"
   "Osprey (Laser)"
+  "Osprey (Modified)"
   "Osprey (Particle)"
-  "Modified Osprey"
+  "Osprey (Plasma)"
   "Raven"
   "Raven (Electron)"
   "Raven (Laser)"
@@ -502,7 +504,7 @@ ship "Osprey"
 #    manufacturer "Tarazed"
     licences
       Pilot
-    "cost" 4900000
+    "cost" 6000000
     "shields" 7500
     "hull" 2500
     "required crew" 16
@@ -533,23 +535,27 @@ ship "Osprey"
     "Impala Plasma Thruster"
     "Impala Plasma Steering"
 
-    "Plasma Cannon" 4
-    "Bolt Turret" 2
+    "Bolt Cannon" 5
+    "Bolt Turret" 5
 
     "LP072a Battery Pack"
-    "Liquid Nitrogen Cooler"
+    "Liquid Water Cooler"
     "Fuel Pod" 50
     "Tactical Scanner" 3
-  engine -46 67 .7
-  engine 46 67 .7
-  engine -17 106 .7
-  engine 17 106 .7
-  gun -8 -100
-  gun 8 -100
-  gun -26 -53
-  gun 26 -53
-  turret -16 -16
-  turret 16 -16
+  engine -47 75 .7
+  engine 47 75 .7
+  engine -18 115 .7
+  engine 18 115 .7
+  gun 0 -117
+  gun -6 -103
+  gun 6 -103
+  gun -13 -90
+  gun 13 -90
+  turret -20 -9
+  turret 20 -9
+  turret -46 27
+  turret 46 27
+  turret 0 36
   leak "leak" 40 50
   leak "flame" 80 80
   leak "big leak" 80 30
@@ -561,6 +567,25 @@ ship "Osprey"
   description "After the Blackbird gained surprising popularity as an agile light warship despite its original design as a transport, Tarazed decided to produce a new design specifically intended as a warship. The Osprey was the result. Although it is considered overpriced by most savvy pilots, it is nevertheless a perennial favourite among those who have the extra cash to spend on it."
 
 
+ship "Osprey" "Osprey (Atomic)"
+  outfits
+    "D67-TM Shield Generator"
+    "Breeder Reactor"
+    "Hyperdrive"
+
+    "A370 Atomic Thruster"
+    "A525 Atomic Steering"
+
+    "Bolt Cannon" 5
+    "Bolt Turret" 5
+
+    "LP072a Battery Pack"
+    "Liquid Water Cooler"
+    "Fuel Pod" 50
+    "Tactical Scanner" 3
+    "Extra Outfit Space"
+
+
 ship "Osprey" "Osprey (Electron)"
   outfits
     "D67-TM Shield Generator"
@@ -570,13 +595,18 @@ ship "Osprey" "Osprey (Electron)"
     "Impala Plasma Thruster"
     "Impala Plasma Steering"
 
-    "Electron Cannon" 4
-    "Bolt Turret" 2
+    "Electron Cannon" 5
+    "Electron Turret"
 
     "LP072a Battery Pack"
     "Liquid Water Cooler"
     "Fuel Pod" 50
     "Tactical Scanner" 3
+  turret
+  turret
+  turret
+  turret
+  turret "Electron Turret"
 
 
 ship "Osprey" "Osprey (Ion)"
@@ -606,12 +636,22 @@ ship "Osprey" "Osprey (Laser)"
     "Impala Plasma Steering"
 
     "Heavy Laser Cannon" 4
-    "Heavy Laser Turret" 2
+    "Heavy Laser Turret" 3
 
     "LP072a Battery Pack"
     "Liquid Water Cooler"
     "Fuel Pod" 50
     "Tactical Scanner" 3
+  gun
+  gun "Heavy Laser Cannon"
+  gun "Heavy Laser Cannon"
+  gun "Heavy Laser Cannon"
+  gun "Heavy Laser Cannon"
+  turret
+  turret
+  turret "Heavy Laser Turret"
+  turret "Heavy Laser Turret"
+  turret "Heavy Laser Turret"
 
 
 ship "Osprey" "Osprey (Particle)"
@@ -623,72 +663,69 @@ ship "Osprey" "Osprey (Particle)"
     "Impala Plasma Thruster"
     "Impala Plasma Steering"
 
-    "Particle Cannon" 4
-    "Bolt Turret" 2
+    "Particle Cannon" 5
+    "Heavy Anti-Missile"
 
     "LP072a Battery Pack"
     "Liquid Water Cooler"
     "Fuel Pod" 50
     "Tactical Scanner" 3
+    "Extra Outfit Space"
+  turret
+  turret
+  turret
+  turret
+  turret "Heavy Anti-Missile"
 
 
-ship "Osprey" "Modified Osprey"
-  sprite "ship/sprite/osprey_m"
-  add attributes
-    "cargo space" -30
-    "outfit space" 130
-    "core space" 70
-    "weapon space" 60
-    weapon
-      "blast radius" 20
-      "random shield damage" 200
-      "random hull damage" 300
-      "random heat damage" 6000
-      "random hit force" 500
+ship "Osprey" "Osprey (Plasma)"
   outfits
     "D67-TM Shield Generator"
-    "Fusion Reactor"
+    "Breeder Reactor"
+    "Hyperdrive"
+
+    "Impala Plasma Thruster"
+    "Impala Plasma Steering"
+
+    "Plasma Turret" 3
+
+    "LP072a Battery Pack"
+    "Liquid Nitrogen Cooler"
+    "Fuel Pod" 50
+    "Tactical Scanner" 3
+    "Extra Outfit Space" 2
+  turret "Plasma Turret"
+  turret "Plasma Turret"
+  turret
+  turret
+  turret "Plasma Turret"
+
+
+ship "Osprey" "Osprey (Modified)"
+  outfits
+    "D67-TM Shield Generator"
+    "Breeder Reactor"
     "Hyperdrive"
 
     "A370 Atomic Thruster"
-    "A525 Atomic Steering"
+    "A375 Atomic Steering"
 
-    "Sidewinder" 90
-    "Sidewinder Storage Rack" 30
-    "Sidewinder Launcher" 6
-    "Bolt Turret" 5
+    "Meteor" 108
+    "Meteor Storage Box" 3
+    "Meteor Launcher" 5
+    "Bolt Turret" 4
     "Heavy Anti-Missile"
-    
-    "DS-11 Battery Pack"
+
+    "LP072a Battery Pack"
     "Liquid Water Cooler"
     "Fuel Pod" 50
     "Tactical Scanner" 3
-  engine -46 67 .7
-  engine 46 67 .7
-  engine -17 106 .7
-  engine 17 106 .7
-#  gun 0 -108
-  gun -9 -99
-  gun 9 -99
-  gun -21 -61
-  gun 21 -61
-  gun -26 -53
-  gun 26 -53
-#  gun -60 17
-#  gun 60 17
-#  turret 0 -91
-  turret -20 -16
-  turret 20 -16
-  turret -60 17
-  turret 60 17
-  turret 0 29 "Heavy Anti-Missile"
-  turret 0 90
-  explode "medium explosion" 24
-  explode "large explosion" 16
-  explode "small explosion" 40
-  explode "tiny explosion" 28
-  "final explode" "final explosion large" 1
-
+    "Extra Outfit Space" 3
+  turret
+  turret
+  turret
+  turret
+  turret "Heavy Anti-Missile"
 
 
 

@@ -74,11 +74,11 @@ mission "Liberate Kornephoros"
         "Osprey"
         "Raven" 2
       variant
-        "Bastion"
+        "Firebird"
         "Rainmaker" 2
       variant
         "Raven"
-        "Headhunter" 3
+        "Hawk" 3
   npc
     personality heroic disables
     government "Free Worlds"
@@ -87,16 +87,16 @@ mission "Liberate Kornephoros"
       names "free worlds capital"
       variant
         "Osprey"
-        "Headhunter" 2
+        "Hawk" 2
     fleet
       names "free worlds small"
       variant
-        "Headhunter"
+        "Hawk"
         "Harpy" 2
     fleet
       names "free worlds small"
       variant
-        "Headhunter"
+        "Hawk"
         "Rainmaker" 2
     fleet
       names "free worlds capital"
@@ -105,16 +105,16 @@ mission "Liberate Kornephoros"
     fleet
       names "free worlds capital"
       variant
-        "Bastion"
-        "Osprey" 2
-        "Headhunter" 3
+        "Osprey"
+        "Firebird" 2
+        "Hawk" 3
         "Harpy" 5
     fleet
       names "free worlds capital"
       variant
-        "Bastion" 2
+        "Firebird" 2
         "Rainmaker" 4
-        "Berserker" 6
+        "Harpy" 6
   
   npc evade
     personality staying heroic

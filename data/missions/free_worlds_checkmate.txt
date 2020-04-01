@@ -280,18 +280,18 @@ mission "FWC Cebalrai 1B"
       names "free worlds capital"
       variant
         "Dreadnought"
-        "Bastion"
+        "Firebird"
         "Rainmaker (Flamethrower)" 4
     fleet
       names "free worlds capital"
       variant
         "Dreadnought"
         "Leviathan (Plasma)"
-        "Headhunter" 2
+        "Hawk" 2
     fleet
       names "free worlds capital"
       variant
-        "Osprey"
+        "Osprey (Plasma)"
         "Rainmaker" 2
   
   npc evade
@@ -657,7 +657,7 @@ mission "FWC Checkmate 1"
     fleet
       names "free worlds capital"
       variant
-        "Osprey"
+        "Osprey (Plasma)"
         "Rainmaker" 2
   
   npc
@@ -667,7 +667,7 @@ mission "FWC Checkmate 1"
       names "free worlds capital"
       variant
         "Dreadnought"
-        "Bastion (Plasma)"
+        "Osprey"
     fleet
       names "free worlds capital"
       variant
@@ -746,7 +746,7 @@ mission "FWC Checkmate 1"
       names "free worlds capital"
       variant
         "Dreadnought"
-        "Bastion"
+        "Osprey"
     fleet
       names "free worlds capital"
       variant
@@ -783,7 +783,7 @@ mission "FWC Checkmate 1"
       names "free worlds capital"
       variant
         "Dreadnought"
-        "Osprey (Laser)"
+        "Osprey (Plasma)"
   
   on complete
     log "Defended Tundra against a major Navy counter-offensive. From here, the only recourse available to the Free Worlds seems to be to push deep into Republic territory and capture the Sol system, forcing the Navy to surrender. Nuclear weapons are now for sale on Solace to aid in the final assault."
@@ -874,7 +874,7 @@ mission "FWC Checkmate 1B"
       names "free worlds capital"
       variant
         "Dreadnought"
-        "Osprey (Laser)"
+        "Osprey (Plasma)"
   
   npc
     personality staying heroic uninterested disables
@@ -974,7 +974,7 @@ mission "FWC Checkmate Escorts"
       names "free worlds capital"
       variant
         "Dreadnought"
-        "Bastion (Plasma)"
+        "Osprey (Plasma)"
         "Rainmaker" 2
     fleet
       names "free worlds capital"
@@ -1061,7 +1061,7 @@ mission "FWC Pug 1"
     fleet
       names "free worlds small"
       variant
-        "Bastion (Plasma)"
+        "Osprey (Plasma)"
         "Rainmaker" 3
   
   npc evade
@@ -1675,7 +1675,7 @@ mission "FWC Pug 3D: Reinforcements"
       names "free worlds capital"
       variant
         "Dreadnought"
-        "Bastion (Plasma)"
+        "Osprey (Plasma)"
         "Rainmaker"
     fleet
       names "free worlds capital"
@@ -1689,7 +1689,7 @@ mission "FWC Pug 3D: Reinforcements"
       names "free worlds capital"
       variant
         "Leviathan (Plasma)"
-        "Osprey (Particle)"
+        "Osprey (Plasma)"
         "Rainmaker"
 
 
@@ -2222,7 +2222,7 @@ mission "FWC Pug 6"
       names "free worlds capital"
       variant
         "Dreadnought"
-        "Bastion (Plasma)"
+        "Osprey"
         "Rainmaker" 2
     fleet
       names "free worlds capital"
@@ -2237,12 +2237,12 @@ mission "FWC Pug 6"
       variant
         "Dreadnought"
         "Leviathan (Plasma)"
-        "Osprey (Particle)"
+        "Osprey"
     fleet
       names "free worlds capital"
       variant
         "Leviathan (Plasma)"
-        "Osprey (Particle)"
+        "Osprey (Plasma)"
         "Rainmaker"
   
   on complete
