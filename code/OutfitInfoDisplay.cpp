@@ -255,6 +255,7 @@ void OutfitInfoDisplay::UpdateAttributes(const Outfit &outfit)
     "firing force"
   };
 
+  // Disruption, ionization, and slowness effects lose 1% per frame, and sum(0.99^n) = 100.
   vector<double> values = {
     outfit.ShieldDamage(),
     outfit.HullDamage(),
