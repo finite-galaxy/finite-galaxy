@@ -286,11 +286,12 @@ void Projectile::CheckLock(const Ship &target)
   if(weapon->Tracking())
     hasLock |= Check(weapon->Tracking(), base);
 
-  // Optical tracking is about 15% for interceptors and 75% for medium warships.
+  // Optical tracking is determined by the ship's total mass to the third power,
+  // e.g. 20% for 500 mass, 67% for 1000 mass, 87% for 1500 mass, and 94% for mass 2000.
   if(weapon->OpticalTracking())
   {
-    double weight = target.Mass() * target.Mass();
-    double probability = weapon->OpticalTracking() * weight / (200'000. + weight);
+    double weight = target.Mass() * target.Mass() * target.Mass();
+    double probability = weapon->OpticalTracking() * weight / (500'000'000. + weight);
     hasLock |= Check(probability, base);
   }
 
