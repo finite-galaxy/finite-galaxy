@@ -31,8 +31,8 @@
 using namespace std;
 
 namespace {
-  constexpr int ICON_TILE = 62;
-  constexpr int ICON_COLS = 4;
+  constexpr int ICON_TILE = 50;
+  constexpr int ICON_COLS = 5;
   constexpr float ICON_SIZE = ICON_TILE - 8;
 
   bool CanShowInSidebar(const Ship &ship, const System *here)
@@ -365,8 +365,8 @@ void ShopPanel::DrawMain()
       break;
 
     Point side(Screen::Left() + 5., point.Y() - TILE_SIZE / 2 + 10);
-    point.Y() += bigFont.Height() + 20;
-    nextY += bigFont.Height() + 20;
+    point.Y() += bigFont.Height() + 10;
+    nextY += bigFont.Height() + 10;
 
     bool isCollapsed = collapsed.count(category);
     bool isEmpty = true;
@@ -435,21 +435,21 @@ void ShopPanel::DrawMain()
         nextY += TILE_SIZE;
         scrollY = -mainDetailHeight;
       }
-      point.Y() += 40;
-      nextY += 40;
+      point.Y() += 10;
+      nextY += 10;
     }
     else
     {
-      point.Y() -= bigFont.Height() + 20;
-      nextY -= bigFont.Height() + 20;
+      point.Y() -= bigFont.Height() + 10;
+      nextY -= bigFont.Height() + 10;
     }
   }
   // This is how much Y space was actually used.
-  nextY -= 40 + TILE_SIZE;
+  nextY -= 10 + TILE_SIZE;
 
   // What amount would mainScroll have to equal to make nextY equal the
   // bottom of the screen? (Also leave space for the "key" at the bottom.)
-  maxMainScroll = max(0., nextY + mainScroll - Screen::Height() / 2 - TILE_SIZE / 2 + 40.);
+  maxMainScroll = max(0., nextY + mainScroll - Screen::Height() / 2 - TILE_SIZE / 2 + 10.);
 
   PointerShader::Draw(Point(Screen::Right() - 10 - SIDE_WIDTH, Screen::Top() + 10),
     Point(0., -1.), 10.f, 10.f, 5.f, Colour(mainScroll > 0 ? .8f : .2f, 0.f));
@@ -656,16 +656,16 @@ bool ShopPanel::Click(int x, int y, int clicks)
   // Check for clicks in the scroll arrows.
   if(x >= Screen::Right() - 20)
   {
-    if(y < Screen::Top() + 20)
+    if(y < Screen::Top() + 10)
       return Scroll(0, 4);
-    if(y < Screen::Bottom() - BUTTON_HEIGHT && y >= Screen::Bottom() - BUTTON_HEIGHT - 20)
+    if(y < Screen::Bottom() - BUTTON_HEIGHT && y >= Screen::Bottom() - BUTTON_HEIGHT - 10)
       return Scroll(0, -4);
   }
   else if(x >= Screen::Right() - SIDE_WIDTH - 20 && x < Screen::Right() - SIDE_WIDTH)
   {
-    if(y < Screen::Top() + 20)
+    if(y < Screen::Top() + 10)
       return Scroll(0, 4);
-    if(y >= Screen::Bottom() - 20)
+    if(y >= Screen::Bottom() - 10)
       return Scroll(0, -4);
   }
 
