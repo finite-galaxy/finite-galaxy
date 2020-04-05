@@ -300,6 +300,20 @@ void ShipInfoDisplay::UpdateAttributes(const Ship &ship, const Depreciation &dep
         - 100. * pow(.9, attributes.Get("disruption resistance"))) + "%");
       attributesHeight += 20;
     }
+    if(attributes.Get("fuel resistance"))
+    {
+      attributeLabels.push_back("fuel resistance:");
+      attributeValues.push_back(Format::Number(100. 
+        - 100. * pow(.9, attributes.Get("fuel resistance"))) + "%");
+      attributesHeight += 20;
+    }
+    if(attributes.Get("heat resistance"))
+    {
+      attributeLabels.push_back("heat resistance:");
+      attributeValues.push_back(Format::Number(100. 
+        - 100. * pow(.9, attributes.Get("heat resistance"))) + "%");
+      attributesHeight += 20;
+    }
     if(attributes.Get("ion resistance"))
     {
       attributeLabels.push_back("ion resistance:");

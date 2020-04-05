@@ -2736,6 +2736,19 @@ int Ship::TakeDamage(const Projectile &projectile, bool isBlast)
   double hitForce = (weapon.HitForce() + rr * weapon.RandomHitForce()) * damageScaling;
   bool wasDisabled = IsDisabled();
   bool wasDestroyed = IsDestroyed();
+  // Next, apply special damage resistances, if any. 
+  // Each point of resistance means a 10% damage reduction, e.g. slowing resistance
+  // of 20 means only 0.9^20 = 0.121577 (i.e. 12%) of slowing damage is taken.
+  if(attributes.Get("fuel resistance"))
+    fuelDamage  *= pow(.9, attributes.Get("fuel resistance"));
+  if(attributes.Get("disruption resistance"))
+    disruptionDamage *= pow(.9, attributes.Get("disruption resistance"));
+  if(attributes.Get("heat resistance"))
+    heatDamage  *= pow(.9, attributes.Get("heat resistance"));
+  if(attributes.Get("ion resistance"))
+    ionDamage *= pow(.9, attributes.Get("ion resistance"));
+  if(attributes.Get("slowing resistance"))
+    slowingDamage *= pow(.9, attributes.Get("slowing resistance"));
 
   double shieldFraction = 1. - weapon.Piercing();
   shieldFraction *= 1. / (1. + disruption * .01);
@@ -2748,16 +2761,14 @@ int Ship::TakeDamage(const Projectile &projectile, bool isBlast)
   // For the following damage types, the total effect depends on how much is
   // "leaking" through the shields, and how high the target's resistance 
   // for that particular damage type is.
-  // Each point of resistance means a 10% damage reduction, e.g. slowing resistance
-  // of 20 means only 0.9^20 = 0.121577 (i.e. 12%) of slowing damage is taken.
   double leakage = (1. - .5 * shieldFraction);
-  disruption += disruptionDamage * pow(.9, attributes.Get("disruption resistance")) * leakage;
   // Code in Ship::Move() will handle making sure the fuel amount stays in the
   // allowable range.
-  fuel -= fuelDamage  * pow(.9, attributes.Get("fuel resistance")) * leakage;
-  heat += heatDamage  * pow(.9, attributes.Get("heat resistance")) * leakage;
-  ionization += ionDamage * pow(.9, attributes.Get("ion resistance")) * leakage;
-  slowness += slowingDamage * pow(.9, attributes.Get("slowing resistance")) * leakage;
+  fuel -= fuelDamage * leakage;
+  disruption += disruptionDamage * leakage;
+  heat += heatDamage * leakage;
+  ionization += ionDamage * leakage;
+  slowness += slowingDamage * leakage;
 
   if(hitForce)
   {
