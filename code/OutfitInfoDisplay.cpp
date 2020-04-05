@@ -66,10 +66,6 @@ namespace {
     {"turn", 60.},
     {"turning energy", 60.},
     {"turning heat", 60.},
-
-    {"disruption resistance", 60. * 100.},
-    {"ion resistance", 60. * 100.},
-    {"slowing resistance", 60. * 100.}
   };
 }
 

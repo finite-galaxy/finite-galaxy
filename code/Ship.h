@@ -470,8 +470,8 @@ private:
   double fuel = 0.;
   double energy = 0.;
   double heat = 0.;
-  double ionization = 0.;
   double disruption = 0.;
+  double ionization = 0.;
   double slowness = 0.;
   // Acceleration can be created by engines, firing weapons, or weapon impacts.
   Point acceleration;

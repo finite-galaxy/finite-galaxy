@@ -845,8 +845,8 @@ void Ship::Place(Point position, Point velocity, Angle angle)
     zoom = 1.;
   // Make sure various special status values are reset.
   heat = IdleHeat();
-  ionization = 0.;
   disruption = 0.;
+  ionization = 0.;
   slowness = 0.;
   isInvisible = !HasSprite();
   jettisoned.clear();
@@ -1016,11 +1016,11 @@ void Ship::Move(vector<Visual> &visuals, list<shared_ptr<Flotsam>> &flotsam)
   // Generate energy, heat, etc.
   DoGeneration();
 
-  // Handle ionization effects, etc.
-  if(ionization)
-    CreateSparks(visuals, "ion spark", ionization * .1);
+  // Handle special damage effects.
   if(disruption)
     CreateSparks(visuals, "disruption spark", disruption * .1);
+  if(ionization)
+    CreateSparks(visuals, "ion spark", ionization * .1);
   if(slowness)
     CreateSparks(visuals, "slowing spark", slowness * .1);
   // Jettisoned cargo effects (only for ships in the current system).
@@ -1643,14 +1643,13 @@ void Ship::DoGeneration()
     if(shieldsAvailable)
       heat += (shieldsAvailable - shieldsRemaining) * shieldsHeat;
   }
-  // Handle ionization effects, etc.
-  if(ionization)
-    ionization = max(0., .99 * ionization - attributes.Get("ion resistance"));
+  // Make disruption effects etc. slowly decrease over time.
   if(disruption)
-    disruption = max(0., .99 * disruption - attributes.Get("disruption resistance"));
+    disruption *= .99;
+  if(ionization)
+    ionization *= .99;
   if(slowness)
-    slowness = max(0., .99 * slowness - attributes.Get("slowing resistance"));
-
+    slowness *= .99;
   // When ships recharge, what actually happens is that they can exceed their
   // maximum capacity for the rest of the turn, but must be clamped to the
   // maximum here before they gain more. This is so that, for example, a ship
@@ -2284,8 +2283,8 @@ void Ship::Recharge(bool atSpaceport)
     energy = attributes.Get("energy capacity");
 
   heat = IdleHeat();
-  ionization = 0.;
   disruption = 0.;
+  ionization = 0.;
   slowness = 0.;
 }
 
@@ -2306,8 +2305,8 @@ void Ship::Recharge()
   energy = attributes.Get("energy capacity");
 
   heat = IdleHeat();
-  ionization = 0.;
   disruption = 0.;
+  ionization = 0.;
   slowness = 0.;
 }
 
@@ -2729,10 +2728,10 @@ int Ship::TakeDamage(const Projectile &projectile, bool isBlast)
   double rr = Random::Real();
   double shieldDamage = (weapon.ShieldDamage() + rr * weapon.RandomShieldDamage()) * damageScaling;
   double hullDamage = (weapon.HullDamage() + rr * weapon.RandomHullDamage()) * damageScaling;
+  double disruptionDamage = (weapon.DisruptionDamage() + rr * weapon.RandomDisruptionDamage()) * damageScaling;
   double fuelDamage = (weapon.FuelDamage() + rr * weapon.RandomFuelDamage()) * damageScaling;
   double heatDamage = (weapon.HeatDamage() + rr * weapon.RandomHeatDamage()) * damageScaling;
   double ionDamage = (weapon.IonDamage() + rr * weapon.RandomIonDamage()) * damageScaling;
-  double disruptionDamage = (weapon.DisruptionDamage() + rr * weapon.RandomDisruptionDamage()) * damageScaling;
   double slowingDamage = (weapon.SlowingDamage() + rr * weapon.RandomSlowingDamage()) * damageScaling;
   double hitForce = (weapon.HitForce() + rr * weapon.RandomHitForce()) * damageScaling;
   bool wasDisabled = IsDisabled();
@@ -2747,15 +2746,18 @@ int Ship::TakeDamage(const Projectile &projectile, bool isBlast)
   shields -= shieldDamage * shieldFraction;
   hull -= hullDamage * (1. - shieldFraction);
   // For the following damage types, the total effect depends on how much is
-  // "leaking" through the shields.
+  // "leaking" through the shields, and how high the target's resistance 
+  // for that particular damage type is.
+  // Each point of resistance means a 10% damage reduction, e.g. slowing resistance
+  // of 20 means only 0.9^20 = 0.121577 (i.e. 12%) of slowing damage is taken.
   double leakage = (1. - .5 * shieldFraction);
+  disruption += disruptionDamage * pow(.9, attributes.Get("disruption resistance")) * leakage;
   // Code in Ship::Move() will handle making sure the fuel amount stays in the
   // allowable range.
-  fuel -= fuelDamage * leakage;
-  heat += heatDamage * leakage;
-  ionization += ionDamage * leakage;
-  disruption += disruptionDamage * leakage;
-  slowness += slowingDamage * leakage;
+  fuel -= fuelDamage  * pow(.9, attributes.Get("fuel resistance")) * leakage;
+  heat += heatDamage  * pow(.9, attributes.Get("heat resistance")) * leakage;
+  ionization += ionDamage * pow(.9, attributes.Get("ion resistance")) * leakage;
+  slowness += slowingDamage * pow(.9, attributes.Get("slowing resistance")) * leakage;
 
   if(hitForce)
   {

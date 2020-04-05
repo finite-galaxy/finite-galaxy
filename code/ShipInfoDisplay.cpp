@@ -296,19 +296,22 @@ void ShipInfoDisplay::UpdateAttributes(const Ship &ship, const Depreciation &dep
     if(attributes.Get("disruption resistance"))
     {
       attributeLabels.push_back("disruption resistance:");
-      attributeValues.push_back(Format::Number(100. * 60. * attributes.Get("disruption resistance")));
+      attributeValues.push_back(Format::Number(100. 
+        - 100. * pow(.9, attributes.Get("disruption resistance"))) + "%");
       attributesHeight += 20;
     }
     if(attributes.Get("ion resistance"))
     {
       attributeLabels.push_back("ion resistance:");
-      attributeValues.push_back(Format::Number(100. * 60. * attributes.Get("ion resistance")));
+      attributeValues.push_back(Format::Number(100. 
+        - 100. * pow(.9, attributes.Get("ion resistance"))) + "%");
       attributesHeight += 20;
     }
     if(attributes.Get("slowing resistance"))
     {
       attributeLabels.push_back("slowing resistance:");
-      attributeValues.push_back(Format::Number(100. * 60. * attributes.Get("slowing resistance")));
+      attributeValues.push_back(Format::Number(100. 
+        - 100. * pow(.9, attributes.Get("slowing resistance"))) + "%");
       attributesHeight += 20;
     }
     if(attributes.Get("scan interference"))
