@@ -228,37 +228,36 @@ bool ShipyardPanel::CanSell(bool toCargo) const
 
 void ShipyardPanel::Sell(bool toCargo)
 {
-  static const int MAX_LIST = 20;
+  static const int MAX_LIST = 12;
 
   int count = playerShips.size();
-  int initialCount = count;
   string message = "Sell ";
   if(count == 1)
-    message += playerShip->Name();
+    message += "\"" + playerShip->Name() + "\"";
   else if(count <= MAX_LIST)
   {
     auto it = playerShips.begin();
-    message += (*it++)->Name();
+    message += "\"" + (*it++)->Name() + "\"";
     --count;
 
     if(count == 1)
-      message += " and ";
+      message += "\nand ";
     else
     {
       while(count-- > 1)
-        message += ",\n" + (*it++)->Name();
+        message += ",\n\"" + (*it++)->Name() + "\"";
       message += ",\nand ";
     }
-    message += (*it)->Name();
+    message += "\"" + (*it)->Name() + "\"";
   }
   else
   {
     auto it = playerShips.begin();
-    message += (*it++)->Name() + ",\n";
-    for(int i = 1; i < MAX_LIST - 1; ++i)
-      message += (*it++)->Name() + ",\n";
+    message += "\"" + (*it++)->Name() + "\",\n";
+    for(int i = 1; i < MAX_LIST - 2; ++i)
+      message += "\"" + (*it++)->Name() + "\",\n";
 
-    message += "and " + to_string(count - (MAX_LIST - 1)) + " other ships";
+    message += "and " + to_string(count - (MAX_LIST - 2)) + " other ships";
   }
   // To allow calculating the sale price of all the ships in the list,
   // temporarily copy into a shared_ptr vector:
@@ -267,7 +266,7 @@ void ShipyardPanel::Sell(bool toCargo)
     toSell.push_back(it->shared_from_this());
   int64_t total = player.FleetDepreciation().Value(toSell, day);
 
-  message += ((initialCount > 2) ? "\nfor " : " for ") + Format::Credits(total) + " credits?";
+  message += "\nfor " + Format::Credits(total) + " credits?";
   GetUI()->Push(new Dialogue(this, &ShipyardPanel::SellShip, message, Font::TRUNC_MIDDLE));
 }
 
