@@ -715,7 +715,7 @@ mission "FW Corporation Capture 1"
     planet "Mars"
     personality escort heroic waiting
     government "Deep"
-    ship "Lance" "D.D.S. Unbreakable"
+    ship "Blade (Electron)" "D.D.S. Unbreakable"
 
 
 
@@ -762,7 +762,7 @@ mission "FW Corporation Capture 1B"
   npc
     personality escort heroic waiting
     government "Deep"
-    ship "Lance" "D.D.S. Unbreakable"
+    ship "Blade (Electron)" "D.D.S. Unbreakable"
   
   npc
     government "Corporation"
@@ -2346,14 +2346,10 @@ mission "FW Corporation Extremists 1B"
     government "Corporation (Extremist)"
     system "Alcyone"
     personality staying heroic
-    fleet 3
+    fleet 5
       names "corporation capital"
       variant
         "Protector" 2
-    fleet 2
-      names "corporation capital"
-      variant
-        "Vanguard" 2
   
   npc
     government "Navy (Oathkeeper)"

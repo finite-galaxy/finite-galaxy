@@ -4,6 +4,17 @@ shipyard "Yggdrasill Variants"
   "Modified Arrow (Core)"
   "Modified Arrow (Engines)"
   "Modified Arrow (Weapons)"
+  "Blade"
+  "Blade (Electron)"
+  "Blade (Patrol)"
+  "Blade I"
+  "Blade II"
+  "Blade III"
+  "Blade IV"
+  "Blade V"
+  "Modified Blade (Core)"
+  "Modified Blade (Engines)"
+  "Modified Blade (Weapons)"
   "Bounder"
   "Bounder (Laser)"
   "Bounder (Miner)"
@@ -14,11 +25,6 @@ shipyard "Yggdrasill Variants"
   "Centipede (Carrier)"
   "Centipede (Transport)"
   "Centipede (Weapons)"
-  "Lance"
-  "Lance (Electron)"
-  "Modified Lance (Core)"
-  "Modified Lance (Engines)"
-  "Modified Lance (Weapons)"
   "Manta"
   "Manta (Nuclear)"
   "Manta (Particle)"
@@ -246,7 +252,527 @@ ship "Arrow" "Modified Arrow (Weapons)"
   gun -7 -34
   gun 7 -34
   turret 0 15 "Heavy Laser Turret"
-  description "The weapons systems on this Arrow have been enhanced almost to the point of competing with Yggdrasill's Argosy. The ship can still outrun all but the fastest ships, if things get a little too hairy."
+  description "The weapons systems on this Arrow have been enhanced almost to the point of competing with Betelgeuse's Argosy. The ship can still outrun all but the fastest ships, if things get a little too hairy."
+
+
+
+ship "Blade"
+  sprite "ship/sprite/blade"
+  thumbnail "ship/thumbnail/blade"
+  attributes
+    category "Frigate"
+#    manufacturer "Yggdrasill"
+    licences
+      Pilot
+    "cost" 11100000
+    "shields" 13500
+    "hull" 4500
+    "required crew" 40
+    "bunks" 60
+    "mass" 500
+    "drag" 6.7
+    "heat dissipation" .7
+    "cargo space" 150
+    "outfit space" 600
+    "core space" 200
+    "engine space" 150
+    "weapon space" 250
+    weapon
+      "blast radius" 240
+      "shield damage" 1000
+      "random shield damage" 1500
+      "hull damage" 1500
+      "random hull damage" 2250
+      "heat damage" 30000
+      "random heat damage" 45000
+      "hit force" 2500
+      "random hit force" 3750
+  outfits
+    "D94-YV Shield Generator"
+    "Cyclops Core"
+    "Hyperdrive"
+
+    "A520 Atomic Thruster"
+    "A525 Atomic Steering"
+
+    "Impact" 24
+    "Impact Storage Rack" 6
+    "Impact Launcher" 2
+    "Heavy Laser Turret" 5
+
+    "DS-11 Battery Pack"
+    "Liquid Nitrogen Cooler"
+    "Fuel Pod" 75
+    "Tactical Scanner" 2
+  engine -20 146 .8
+  engine 0 146 .8
+  engine 20 146 .8
+  gun -49 9
+  gun 49 9
+  turret 0 -79
+  turret 0 -54
+  turret 0 -29
+  turret 0 -4
+  turret 0 21
+  leak "leak" 30 50
+  leak "flame" 50 80
+  leak "big leak" 60 30
+  explode "tiny explosion" 40
+  explode "small explosion" 55
+  explode "medium explosion" 60
+  explode "large explosion" 40
+  "final explode" "final explosion medium"
+  description "The Yggdrasill Blade is one of the most powerful warships that civilians can buy, a sleeker and more manoeuvrable alternative to the venerable and somewhat outdated Leviathan."
+
+
+ship "Blade" "Blade (Electron)"
+  outfits
+    "D94-YV Shield Generator"
+    "Cyclops Core"
+    "Hyperdrive"
+
+    "A520 Atomic Thruster"
+    "A525 Atomic Steering"
+
+    "Electron Turret" 4
+    "Heavy Anti-Missile"
+
+    "DS-11 Battery Pack"
+    "Liquid Nitrogen Cooler"
+    "Fuel Pod" 75
+    "Tactical Scanner" 2
+    "Extra Outfit Space"
+
+
+ship "Blade" "Blade (Patrol)"
+  outfits
+    "D94-YV Shield Generator"
+    "Cyclops Core"
+    "Hyperdrive"
+
+    "A520 Atomic Thruster"
+    "A525 Atomic Steering"
+
+    "Impact" 24
+    "Impact Storage Rack" 6
+    "Impact Launcher" 2
+    "Heavy Laser Turret" 4
+    "Heavy Anti-Missile"
+
+    "DS-11 Battery Pack"
+    "Liquid Nitrogen Cooler"
+    "Cargo Scanner"
+    "Fuel Pod" 75
+    "Tactical Scanner" 2
+    "Outfit Scanner"
+    "Laser Rifle" 60
+  turret
+  turret
+  turret
+  turret
+  turret "Heavy Anti-Missile"
+
+
+ship "Blade" "Blade I"
+  sprite "ship/sprite/blade_i"
+  thumbnail "ship/thumbnail/blade_i"
+  attributes
+    licences
+      "Blade I"
+  add attributes
+    "cost" 400000
+    "mass" 20
+    "drag" 0.3
+    "outfit space" 30
+    "core space" 40
+    "weapon space" -10
+    weapon
+      "blast radius" 10
+      "shield damage" 40
+      "random shield damage" 60
+      "hull damage" 60
+      "random hull damage" 90
+      "heat damage" 1200
+      "random heat damage" 1800
+      "hit force" 100
+      "random hit force" 150
+  outfits
+    "D94-YV Shield Generator"
+    "Cyclops Core"
+    "Hyperdrive"
+
+    "A520 Atomic Thruster"
+    "A525 Atomic Steering"
+
+    "Heavy Laser Cannon" 2
+    "Heavy Laser Turret" 5
+
+    "DS-47 Battery Pack"
+    "Liquid Nitrogen Cooler"
+    "Fuel Pod" 78
+    "Tactical Scanner" 2
+    "Laser Rifle" 60
+  gun -8 -146
+  gun 8 -146
+  description "This Blade has two gun ports, unlike the Yggdrasill stock model."
+
+
+ship "Blade" "Blade II"
+  sprite "ship/sprite/blade_ii"
+  thumbnail "ship/thumbnail/blade_ii"
+  attributes
+    licences
+      "Blade II"
+  add attributes
+    "cost" 800000
+    "mass" 40
+    "drag" 0.6
+    "outfit space" 60
+    "core space" 30
+    "weapon space" 30
+    weapon
+      "blast radius" 20
+      "shield damage" 80
+      "random shield damage" 120
+      "hull damage" 120
+      "random hull damage" 180
+      "heat damage" 2400
+      "random heat damage" 3600
+      "hit force" 200
+      "random hit force" 300
+  outfits
+    "D94-YV Shield Generator"
+    "Cyclops Core"
+    "Hyperdrive"
+
+    "A520 Atomic Thruster"
+    "A525 Atomic Steering"
+
+    "Heavy Laser Cannon" 4
+    "Heavy Laser Turret" 5
+
+    "DS-47 Battery Pack"
+    "Liquid Nitrogen Cooler"
+    "Fuel Pod" 81
+    "Tactical Scanner" 2
+    "Laser Rifle" 60
+  gun -8 -146
+  gun 8 -146
+  gun -16 -121
+  gun 16 -121
+  description "This Blade has four gun ports, unlike the Yggdrasill stock model."
+
+
+ship "Blade" "Blade III"
+  sprite "ship/sprite/blade_iii"
+  thumbnail "ship/thumbnail/blade_iii"
+  attributes
+    licences
+      "Blade III"
+  add attributes
+    "cost" 1200000
+    "mass" 60
+    "drag" 0.9
+    "outfit space" 90
+    "core space" 20
+    "weapon space" 70
+    weapon
+      "blast radius" 30
+      "shield damage" 120
+      "random shield damage" 180
+      "hull damage" 180
+      "random hull damage" 270
+      "heat damage" 3600
+      "random heat damage" 5400
+      "hit force" 300
+      "random hit force" 450
+  outfits
+    "D94-YV Shield Generator"
+    "Cyclops Core"
+    "Hyperdrive"
+
+    "A520 Atomic Thruster"
+    "A525 Atomic Steering"
+
+    "Heavy Laser Cannon" 6
+    "Heavy Laser Turret" 5
+
+    "DS-47 Battery Pack"
+    "Liquid Nitrogen Cooler"
+    "Fuel Pod" 84
+    "Tactical Scanner" 2
+    "Laser Rifle" 60
+  gun -8 -146
+  gun 8 -146
+  gun -16 -121
+  gun 16 -121
+  gun -25 -96
+  gun 25 -96
+  description "This Blade has six gun ports, unlike the Yggdrasill stock model."
+
+
+ship "Blade" "Blade IV"
+  sprite "ship/sprite/blade_iv"
+  thumbnail "ship/thumbnail/blade_iv"
+  attributes
+    licences
+      "Blade IV"
+  add attributes
+    "cost" 1600000
+    "mass" 80
+    "drag" 1.2
+    "outfit space" 120
+    "core space" 10
+    "weapon space" 110
+    weapon
+      "blast radius" 40
+      "shield damage" 160
+      "random shield damage" 240
+      "hull damage" 240
+      "random hull damage" 360
+      "heat damage" 4800
+      "random heat damage" 7200
+      "hit force" 400
+      "random hit force" 600
+  outfits
+    "D94-YV Shield Generator"
+    "Cyclops Core"
+    "Hyperdrive"
+
+    "A520 Atomic Thruster"
+    "A525 Atomic Steering"
+
+    "Heavy Laser Cannon" 8
+    "Heavy Laser Turret" 5
+
+    "DS-47 Battery Pack"
+    "Liquid Nitrogen Cooler"
+    "Fuel Pod" 87
+    "Tactical Scanner" 2
+    "Laser Rifle" 60
+  gun -8 -146
+  gun 8 -146
+  gun -16 -121
+  gun 16 -121
+  gun -25 -96
+  gun 25 -96
+  gun -33 -71
+  gun 33 -71
+  description "This Blade has eight gun ports, unlike the Yggdrasill stock model."
+
+
+ship "Blade" "Blade V"
+  sprite "ship/sprite/blade_v"
+  thumbnail "ship/thumbnail/blade_v"
+  attributes
+    licences
+      "Blade V"
+  add attributes
+    "cost" 2000000
+    "mass" 100
+    "drag" 1.5
+    "outfit space" 150
+    "weapon space" 150
+    weapon
+      "blast radius" 50
+      "shield damage" 200
+      "random shield damage" 300
+      "hull damage" 300
+      "random hull damage" 450
+      "heat damage" 6000
+      "random heat damage" 9000
+      "hit force" 500
+      "random hit force" 750
+  outfits
+    "D94-YV Shield Generator"
+    "Cyclops Core"
+    "Hyperdrive"
+
+    "A520 Atomic Thruster"
+    "A525 Atomic Steering"
+
+    "Heavy Laser Cannon" 10
+    "Heavy Laser Turret" 5
+
+    "DS-47 Battery Pack"
+    "Liquid Nitrogen Cooler"
+    "Fuel Pod" 90
+    "Tactical Scanner" 2
+    "Laser Rifle" 60
+  gun -8 -146
+  gun 8 -146
+  gun -16 -121
+  gun 16 -121
+  gun -25 -96
+  gun 25 -96
+  gun -33 -71
+  gun 33 -71
+  gun -41 -46
+  gun 41 -46
+  description "This Blade has ten gun ports, unlike the Yggdrasill stock model."
+
+
+ship "Blade" "Modified Blade (Core)"
+  sprite "ship/sprite/blade_c"
+  thumbnail "ship/thumbnail/blade_c"
+  add attributes
+    "cost" 2800000
+    "shields" 1500
+    "hull" 500
+    "required crew" 3
+    "bunks" 9
+    "mass" 60
+    "heat dissipation" .1
+    "outfit space" 40
+    "core space" 40
+    "self destruct" .15
+    weapon
+      "blast radius" 20
+      "shield damage" 120
+      "random shield damage" 80
+      "hull damage" 180
+      "random hull damage" 120
+      "heat damage" 3600
+      "random heat damage" 2400
+      "hit force" 300
+      "random hit force" 200
+  outfits
+    "S-970 Regenerator"
+    "Fusion Reactor"
+    "Hyperdrive"
+
+    "A520 Atomic Thruster"
+    "A525 Atomic Steering"
+
+    "Plasma Cannon" 2
+    "X2 Blaster Turret" 4
+
+    "LP288a Battery Pack"
+    "Liquid Helium Cooler"
+    "Fuel Pod" 81
+    "Tactical Scanner" 2
+    "Interference Plating" 3
+    "Laser Rifle" 69
+  engine -16 143
+  engine 16 143
+  gun -16 -89
+  gun 16 -89
+  turret -16 -25
+  turret 16 -25
+  turret -57 32.5
+  turret 57 32.5
+  description "This Yggdrasill Blade has been heavily modified by some very dedicated craftsmen. The hull is riddled with extra shield emitters and expanded equipment bays, adding bulk and definitely voiding the warranty."
+
+
+ship "Blade" "Modified Blade (Engines)"
+  sprite "ship/sprite/blade_e"
+  thumbnail "ship/thumbnail/blade_e"
+  add attributes
+    "cost" 2800000
+    "shields" 1500
+    "hull" 500
+    "required crew" 3
+    "bunks" 9
+    "mass" 60
+    "heat dissipation" .1
+    "outfit space" 40
+    "core space" -20
+    "engine space" 90
+    "weapon space" -30
+    "self destruct" .15
+    weapon
+      "blast radius" 20
+      "shield damage" 120
+      "random shield damage" 80
+      "hull damage" 180
+      "random hull damage" 120
+      "heat damage" 3600
+      "random heat damage" 2400
+      "hit force" 300
+      "random hit force" 200
+  outfits
+    "S-970 Regenerator"
+    "Fusion Reactor"
+    "Hyperdrive"
+
+    "A520 Atomic Thruster" 2
+    "A525 Atomic Steering"
+
+    "Heavy Laser Cannon" 2
+    "X2 Blaster Turret" 4
+
+    "LP144a Battery Pack"
+    "Liquid Helium Cooler"
+    "Fuel Pod" 81
+    "Tactical Scanner" 2
+    "Interference Plating" 3
+    "Laser Rifle" 69
+  engine -21 138 .7
+  engine 0 144
+  engine 21 138 .7
+  gun -16 -88
+  gun 16 -88
+  turret -16 -24
+  turret 16 -24
+  turret -57 32.5
+  turret 57 32.5
+  description "Whoever modified this Blade clearly valued speed above all else. Major sections of the hull have been reconfigured to accommodate the largest possible engines. If hot-rodding across the galaxy in a 1000 ton warship that handles like a Flivver is your dream, look no further."
+
+
+ship "Blade" "Modified Blade (Weapons)"
+  sprite "ship/sprite/blade_w"
+  thumbnail "ship/thumbnail/blade_w"
+  add attributes
+    "cost" 2800000
+    "shields" 1500
+    "hull" 500
+    "required crew" 3
+    "bunks" 9
+    "mass" 60
+    "heat dissipation" .1
+    "outfit space" 40
+    "core space" -10
+    "weapon space" 50
+    "self destruct" .15
+    weapon
+      "blast radius" 20
+      "shield damage" 120
+      "random shield damage" 80
+      "hull damage" 180
+      "random hull damage" 120
+      "heat damage" 3600
+      "random heat damage" 2400
+      "hit force" 300
+      "random hit force" 200
+  outfits
+    "S-970 Regenerator"
+    "Fusion Reactor"
+    "Hyperdrive"
+
+    "A370 Atomic Thruster"
+    "A525 Atomic Steering"
+
+    "Plasma Cannon" 4
+    "X2 Blaster Turret" 4
+
+    "LP144a Battery Pack"
+    "Liquid Helium Cooler"
+    "Fuel Pod" 81
+    "Tactical Scanner" 2
+    "Interference Plating" 3
+    "Laser Rifle" 69
+  engine -16 142
+  engine 16 142
+  gun -18.5 -88
+  gun 18.5 -88
+  gun -21.5 -77
+  gun 21.5 -77
+  turret -16 -25
+  turret 16 -25
+  turret -57 32.5
+  turret 57 32.5
+  description "Whoever modified this Blade clearly believed that firepower was everything. Two additional gun ports have been integrated into the hull, and the ship's interior space has been reconfigured to accommodate nearly any set of weapons you can imagine."
+
 
 
 
@@ -669,253 +1195,6 @@ ship "Centipede" "Centipede (Weapons)"
 
 
 
-ship "Lance"
-  sprite "ship/sprite/lance"
-  thumbnail "ship/thumbnail/lance"
-  attributes
-    category "Frigate"
-#    manufacturer "Yggdrasill"
-    licences
-      Pilot
-    "cost" 9800000
-    "shields" 12800
-    "hull" 3700
-    "required crew" 40
-    "bunks" 60
-    "mass" 500
-    "drag" 6.7
-    "heat dissipation" .7
-    "cargo space" 120
-    "outfit space" 580
-    "core space" 180
-    "engine space" 150
-    "weapon space" 250
-    weapon
-      "blast radius" 240
-      "shield damage" 1000
-      "random shield damage" 1400
-      "hull damage" 1500
-      "random hull damage" 2100
-      "heat damage" 30000
-      "random heat damage" 42000
-      "hit force" 2500
-      "random hit force" 3500
-  outfits
-    "D94-YV Shield Generator"
-    "Cyclops Core"
-    "Hyperdrive"
-
-    "A520 Atomic Thruster"
-    "A525 Atomic Steering"
-
-    "Impact" 48
-    "Impact Storage Rack" 12
-    "Impact Launcher" 2
-    "Heavy Laser Turret" 4
-
-    "DS-11 Battery Pack"
-    "Liquid Nitrogen Cooler"
-    "Fuel Pod" 72
-    "Tactical Scanner" 2
-  engine -17 143
-  engine 17 143
-  gun -17 -88
-  gun 17 -88
-  turret -16 -24
-  turret 16 -24
-  turret -57 40
-  turret 57 40
-  leak "leak" 30 50
-  leak "flame" 50 80
-  leak "big leak" 60 30
-  explode "tiny explosion" 40
-  explode "small explosion" 55
-  explode "medium explosion" 60
-  explode "large explosion" 40
-  "final explode" "final explosion medium"
-  description "The Yggdrasill Lance is one of the most powerful warships that civilians can buy, a sleeker and more manoeuvrable alternative to the venerable and somewhat outdated Leviathan."
-
-
-ship "Lance" "Lance (Electron)"
-  outfits
-    "D94-YV Shield Generator"
-    "Cyclops Core"
-    "Hyperdrive"
-
-    "A520 Atomic Thruster"
-    "A525 Atomic Steering"
-
-    "Electron Turret" 4
-
-    "DS-11 Battery Pack"
-    "Liquid Nitrogen Cooler"
-    "Fuel Pod" 72
-    "Tactical Scanner" 2
-
-
-ship "Lance" "Modified Lance (Core)"
-  sprite "ship/sprite/lance_c"
-  thumbnail "ship/thumbnail/lance_c"
-  add attributes
-    "cost" 5100000
-    "shields" 1300
-    "hull" 400
-    "required crew" 3
-    "bunks" 9
-    "mass" 60
-    "heat dissipation" .1
-    "outfit space" 40
-    "core space" 40
-    "self destruct" .15
-    weapon
-      "blast radius" 22
-      "shield damage" 120
-      "random shield damage" 100
-      "hull damage" 180
-      "random hull damage" 150
-      "heat damage" 3600
-      "random heat damage" 3000
-      "hit force" 300
-      "random hit force" 250
-  outfits
-    "S-970 Regenerator"
-    "Fusion Reactor"
-    "Hyperdrive"
-
-    "A520 Atomic Thruster"
-    "A525 Atomic Steering"
-
-    "Plasma Cannon" 2
-    "X2 Blaster Turret" 4
-
-    "LP288a Battery Pack"
-    "Liquid Helium Cooler"
-    "Fuel Pod" 76
-    "Tactical Scanner" 2
-    "Interference Plating" 3
-    "Laser Rifle" 69
-  engine -16 143
-  engine 16 143
-  gun -16 -89
-  gun 16 -89
-  turret -16 -25
-  turret 16 -25
-  turret -57 32.5
-  turret 57 32.5
-  description "This Yggdrasill Lance has been heavily modified by some very dedicated craftsmen. The hull is riddled with extra shield emitters and expanded equipment bays, adding bulk and definitely voiding the warranty."
-
-
-ship "Lance" "Modified Lance (Engines)"
-  sprite "ship/sprite/lance_e"
-  thumbnail "ship/thumbnail/lance_e"
-  add attributes
-    "cost" 5100000
-    "shields" 1300
-    "hull" 400
-    "required crew" 3
-    "bunks" 9
-    "mass" 60
-    "heat dissipation" .1
-    "outfit space" 40
-    "core space" -20
-    "engine space" 90
-    "weapon space" -30
-    "self destruct" .15
-    weapon
-      "blast radius" 22
-      "shield damage" 120
-      "random shield damage" 100
-      "hull damage" 180
-      "random hull damage" 150
-      "heat damage" 3600
-      "random heat damage" 3000
-      "hit force" 300
-      "random hit force" 250
-  outfits
-    "S-970 Regenerator"
-    "Fusion Reactor"
-    "Hyperdrive"
-
-    "A520 Atomic Thruster" 2
-    "A525 Atomic Steering"
-
-    "Heavy Laser Cannon" 2
-    "X2 Blaster Turret" 4
-
-    "LP144a Battery Pack"
-    "Liquid Helium Cooler"
-    "Fuel Pod" 76
-    "Tactical Scanner" 2
-    "Interference Plating" 3
-    "Laser Rifle" 69
-  engine -21 138 .7
-  engine 0 144
-  engine 21 138 .7
-  gun -16 -88
-  gun 16 -88
-  turret -16 -24
-  turret 16 -24
-  turret -57 32.5
-  turret 57 32.5
-  description "Whoever modified this Lance clearly valued speed above all else. Major sections of the hull have been reconfigured to accommodate the largest possible engines. If hot-rodding across the galaxy in a 1000 ton warship that handles like a Flivver is your dream, look no further."
-
-
-ship "Lance" "Modified Lance (Weapons)"
-  sprite "ship/sprite/lance_w"
-  thumbnail "ship/thumbnail/lance_w"
-  add attributes
-    "cost" 5100000
-    "shields" 1300
-    "hull" 400
-    "required crew" 3
-    "bunks" 9
-    "mass" 60
-    "heat dissipation" .1
-    "outfit space" 40
-    "core space" -10
-    "weapon space" 50
-    "self destruct" .15
-    weapon
-      "blast radius" 22
-      "shield damage" 120
-      "random shield damage" 100
-      "hull damage" 180
-      "random hull damage" 150
-      "heat damage" 3600
-      "random heat damage" 3000
-      "hit force" 300
-      "random hit force" 250
-  outfits
-    "S-970 Regenerator"
-    "Fusion Reactor"
-    "Hyperdrive"
-
-    "A370 Atomic Thruster"
-    "A525 Atomic Steering"
-
-    "Plasma Cannon" 4
-    "X2 Blaster Turret" 4
-
-    "LP144a Battery Pack"
-    "Liquid Helium Cooler"
-    "Fuel Pod" 76
-    "Tactical Scanner" 2
-    "Interference Plating" 3
-    "Laser Rifle" 69
-  engine -16 142
-  engine 16 142
-  gun -18.5 -88
-  gun 18.5 -88
-  gun -21.5 -77
-  gun 21.5 -77
-  turret -16 -25
-  turret 16 -25
-  turret -57 32.5
-  turret 57 32.5
-  description "Whoever modified this Lance clearly believed that firepower was everything. Two additional gun ports have been integrated into the hull, and the ship's interior space has been reconfigured to accommodate nearly any set of weapons you can imagine."
-
-
-
 ship "Manta"
   sprite "ship/sprite/manta"
   thumbnail "ship/thumbnail/manta"
@@ -925,8 +1204,8 @@ ship "Manta"
     licences
       Pilot
     "cost" 3400000
-    "shields" 5900
-    "hull" 1500
+    "shields" 5400
+    "hull" 1800
     "required crew" 6
     "bunks" 10
     "mass" 170
@@ -1031,6 +1310,7 @@ ship "Manta" "Manta (Patrol)"
     "Fuel Pod" 23
     "Outfit Scanner"
     "Tactical Scanner" 2
+    "Laser Rifle" 10
 
 
 ship "Manta" "Manta (Plasma)"
@@ -1056,7 +1336,7 @@ ship "Manta" "Modified Manta (Core)"
   add attributes
     "cost" 340000
     "shields" 600
-    "hull" 250
+    "hull" 200
     "required crew" 1
     "mass" 25
     "outfit space" 50
@@ -1103,7 +1383,7 @@ ship "Manta" "Modified Manta (Core)"
   gun -20 -30
   gun 20 -30
   turret 0 -29
-  description `After the Corporation released their Vanguard, the Manta fell somewhat out of favour, lacking the ability to mount any anti-missile systems. The owner of this Manta rectified that, added some extra armour plating and shield emitters, and rearranged some of the internals to yield a little more outfit space.`
+  description `After Tarazed released their Osprey, the Manta fell somewhat out of favour, lacking the ability to mount any anti-missile systems. The owner of this Manta rectified that, added some extra armour plating and shield emitters, and rearranged some of the internals to yield a little more outfit space.`
 
 
 ship "Manta" "Modified Manta (Engines)"
@@ -1112,7 +1392,7 @@ ship "Manta" "Modified Manta (Engines)"
   add attributes
     "cost" 340000
     "shields" 600
-    "hull" 250
+    "hull" 200
     "required crew" 1
     "mass" 25
     "outfit space" 50
@@ -1170,7 +1450,7 @@ ship "Manta" "Modified Manta (Weapons)"
   add attributes
     "cost" 340000
     "shields" 600
-    "hull" 250
+    "hull" 200
     "required crew" 1
     "mass" 25
     "outfit space" 50

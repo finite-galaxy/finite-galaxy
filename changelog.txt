@@ -201,8 +201,9 @@ Version 0.10.0:
       * random heat damage = (outfit space + cargo space) * 60
       * hit force = hull mass * 5
       * random hit force = (outfit space + cargo space) * 5
-    * ships have 0 fuel capacity; equipped them with fuel pods; core space increased accordingly
+    * ships have 0 fuel capacity; equipped them with fuel pods; cargo space increased accordingly
     * renamed:
+      * removed species from ship names
       * "Albatross" to "Twilight"
       * "Arach Freighter" to "Wagon"
       * "Barb" to "Mongrel"
@@ -210,35 +211,34 @@ Version 0.10.0:
       * "Carrier" to "Saturn"
       * "Corvette" to "Thunderbolt"
       * "Cruiser" to "Venus"
-      * "Falcon" to "Lance"
+      * "Falcon" to "Blade"
       * "Finch" to "Hag"
       * "Freighter" to "Star Freighter"
       * "Frigate" to "Mars"
       * "Gunboat" to "Mercury"
       * "Hauler" to "Hauler I"
+      * "Hawk" to "Headhunter"
+      * "Headhunter" to "Falcon"
       * "Lampyrid-Class Transport" to "Lampyrid"
       * "Lance" to "Foxhound"
       * "Modified Argosy" to "Marauder Argosy"
       * "Marauder Fury" to "Modified Fury"
       * "Shuttle" to "Light Shuttle"
       * "Sparrow" to "Harpy"
-      * "Splinter" to "Goose"
       * "Starling" to "Shadow"
       * "Surveillance Drone" to "Watch Dog"
       * "Violin Spider" to "Mosquito"
-      * removed species from ship names
     * gun port changes:
-      * Argosy from 4 to 2
       * Bactrian from 4 to 3
       * Bastion from 4 to 2
+      * Blade from 4 to 2
       * Centipede from 2 to 0
       * Clipper from 4 to 0
       * Deep River from 6 to 0
+      * Falcon from 2 to 4
       * Hag from 2 to 4
       * Harpy from 2 to 6
-      * Headhunter from 2 to 4
       * Heavy Shuttle from 2 to 0
-      * Lance from 4 to 2
       * Light Shuttle from 1 to 0
       * Jupiter from 8 to 4
       * Kestrel from 6 to 12
@@ -249,9 +249,11 @@ Version 0.10.0:
       * Osprey from 4 to 5
       * Protector from 2 to 0
       * Saturn from 6 to 4
+      * Star Queen from 3 to 0
       * Tek Far 71 Lek from 3 to 2
       * Venus from 4 to 2
     * turret mount changes:
+      * Blade from 4 to 5
       * Centipede from 5 to 2
       * Kar Ik Vot 349 from 8 to 10
       * Kestrel from 4 to 6
@@ -265,18 +267,21 @@ Version 0.10.0:
       * Aphid: +13 cargo space, −30 core space
       * Archon: cost from 1000 000 000 to 1234 567 890; +200 mass, +50 core space; +400 tactical scan power
       * Arfecta: −2000 shields, +90 mass, +50 core space; removed cloaking fuel; +3400 energy capacity, +15 200 fuel capacity, +2.0 fuel generation, +3 hull repair rate, +3 hull energy, +12 scan interference, +237 tactical scan power
-      * Argosy: cost from 1960 000 to 2400 000; +30 cargo space
-        * Modified Argosy: —
+      * Argosy: cost from 1960 000 to 2400 000; +30 cargo space, +10 engine space, −10 weapon space
       * Arrow: −0.8 drag, +10 cargo space, −5 core space, +5 engine space
         * Modified Arrow (Core): −0.8 drag, +15 cargo space, +20 core space, −15 engine capacity, +5 weapon space
         * Modified Arrow (Engines): −0.8 drag, +15 cargo space, +10 core space, +5 engine space, −5 weapon space
         * Modified Arrow (Weapons): −0.8 drag, +15 cargo space, −5 core space, −15 engine capacity, +30 weapon space
       * Autumn Leaf: +62 cargo space, +15 core space
       * Bactrian: +200 cargo space
-      * Bastion: +60 cargo space, +10 core space, +3 required crew
+      * Bastion: +700 hull, +60 cargo space, +10 core space, +3 required crew
       * Behemoth: +1800 hull, +60 cargo space
       * Berserker: +20 cargo space, −10 core space
       * Blackbird: cost from 2230 000 to 2900 000; −400 shields, +1100 hull, +3 required crew, +14 bunks, −0.8 drag, +50 cargo space
+      * Blade: cost from 9 800 000 to 11 100 000; +700 shields, +800 hull, −12 required crew, −15 bunks, −10 mass, +80 cargo space, +50 core space, +10 weapon space
+        * Modified Blade (Core): +900 shields, +900 hull, −11 bunks, +90 cargo space, +50 core space, –15 engine space, –15 weapon space
+        * Modified Blade (Engines): +900 shields, +900 hull, −11 bunks, +90 cargo space, +35 core space, +20 engine space, –35 weapon space
+        * Modified Blade (Weapons): +900 shields, +900 hull, −11 bunks, +90 cargo space, +35 core space, –15 engine space
       * Bounder: +1 required crew, +40 cargo space, +25 core space, −20 engine space, −5 weapon space
         * Modified Bounder (Core): +40 cargo space, +45 core space, –25 engine space
         * Modified Bounder (Engines): +40 cargo space, +40 core space, −15 weapon space
@@ -298,6 +303,7 @@ Version 0.10.0:
       * Dreadnought: +1.0 drag, +100 cargo space, +40 core space, –10 engine space, –10 weapon space
       * Earth Shaper: +20 mass, +5 cargo space, +26 core space, −5 engine space
       * Enfolta: +2100 energy capacity, +5430 fuel capacity, +1.0 fuel generation, +4 hull repair rate, +4 hull energy, +6 scan interference, +30 tactical scan power
+      * Falcon: cost from 1850 000 to 1900 000; +10 cargo space, +30 core space, –10 engine space
       * Far Lek 14: +1 core space; self destruct from 0.60 to 0.9
       * Far Osk 27: +1 core space; self destruct from 0.60 to 0.9
       * Firebird: −1 bunks, +30 cargo space, +10 core space
@@ -310,31 +316,22 @@ Version 0.10.0:
       * Foxhound: −10 core space, +1 engine space, −6 weapon space
       * Fury: +15 cargo space, +10 core space, −10 engine space
       * Gascraft: +14 cargo space, +2 core space; +1 outfit scan power, +1 outfit scan speed, +1 scan interference, +1 tactical scan power
-      * Goose: +1 required crew, −5 bunks, +45 cargo space
-        * Modified Goose (Core): +5 core space, +5 weapon space
-        * Modified Goose (Engines): +5 core space, +5 weapon space
-        * Modified Goose (Weapons): +10 weapon space
       * Hag: −200 shields, +100 hull, +0.27 drag, −10 core space
       * Harpy: +100 hull, +0.3 drag, +5 cargo space, +10 weapon space
       * Hauler I: +1 required crew, +20 cargo space, +10 core space
       * Hauler II: +1 required crew, +40 cargo space, +10 core space
       * Hauler III: +1 required crew, +60 cargo space, +10 core space
-      * Hawk: +10 cargo space, +10 core space
-      * Headhunter: cost from 1850 000 to 1900 000; +20 cargo space, +10 core space
+      * Headhunter: +10 cargo space
       * Heavy Shuttle: +100 hull, +15 cargo space, +10 core space, –10 weapon space
       * Hulk: +83 cargo space
       * Hurricane: +98 cargo space, +29 core space, –7 weapon space
       * Interdictor: +90 cargo space
       * Kar Ik Vot 349: –30 cargo space, +38 core space, –8 engine space; self destruct from 0.80 to 0.9
-      * Kestrel: cost from 10 300 000 to 14 700 000; +1600 shields, −200 hull, +90 cargo space, +30 core space, −30 weapon space
+      * Kestrel: cost from 10 300 000 to 18 000 000; +1600 shields, −200 hull, +90 cargo space, +30 core space, −30 weapon space
         * (Engines) variant: −30 cargo space, removed drag and fuel improvements
         * (Shields) variant: −500 hull
         * (Weapons) variant: −60 cargo space, +30 weapon space; removed extra gun ports
       * Lampyrid: +50 cargo space
-      * Lance: −12 required crew, −15 bunks, −10 mass, +30 cargo space, +30 core space, +10 weapon space
-        * Modified Lance (Core): −11 bunks, +110 cargo space, +5 core space, –25 weapon space
-        * Modified Lance (Engines): −11 bunks, +110 cargo space, +45 core space, –40 engine space, –25 weapon space
-        * Modified Lance (Weapons): −11 bunks, +110 cargo space, +20 core space, –20 weapon space
       * Leviathan: –1900 shields, +1400 hull, +5 required crew, –4 bunks, +40 cargo space, –20 core space
         * Modified Leviathan (Core): –4 bunks, +10 cargo space, +35 core space, –40 engine space, +5 weapon space
         * Modified Leviathan (Engines): –4 bunks, +10 cargo space, +35 core space, +5 weapon space
@@ -342,10 +339,10 @@ Version 0.10.0:
       * Lightning Bug: –30 mass, +15 cargo space, +25 core space, +10 weapon space
       * Light Shuttle: +10 cargo space, +10 core space, –10 weapon space
       * Maboro: –100 mass; +3800 energy capacity, +7410 fuel capacity, +1.5 fuel generation, +6 hull repair rate, +6 hull energy, +9 scan interference, +42 tactical scan power
-      * Manta: +20 cargo space, +20 core space, –20 weapon space
-        * Modified Manta (Core): +20 cargo space, +5 core space, +5 weapon space
-        * Modified Manta (Engines): +20 cargo space, +5 core space, +5 weapon space
-        * Modified Manta (Weapons): +20 cargo space, +5 core space, +5 weapon space
+      * Manta: –500 shields, +300 hull, +20 cargo space, +20 core space, –20 weapon space
+        * Modified Manta (Core): –500 shields, +250 hull, +20 cargo space, +5 core space, +5 weapon space
+        * Modified Manta (Engines): –500 shields, +250 hull, +20 cargo space, +5 core space, +5 weapon space
+        * Modified Manta (Weapons): –500 shields, +250 hull, +20 cargo space, +5 core space, +5 weapon space
       * Mars: +55 cargo space, +30 core space, +30 weapon space
       * Mercury: –0.1 heat dissipation, +10 cargo space, +30 core space, –20 engine space
       * Met Par Tek 53: self destruct from 0.65 to 0.9
@@ -363,7 +360,7 @@ Version 0.10.0:
       * Neutralizer: +4 bunks, +68 cargo space, –4 core space, +4 engine space
       * Osprey: cost from 4900 000 to 6000 000; +300 shields, +900 hull, +7 required crew, +8 bunks, +50 cargo space, +10 core space
       * Pond Strider: +38 cargo space
-      * Protector: cost from 5500 000 to 6000 000; +6 required crew, –6 bunks, +40 mass, +40 cargo space, –20 core space, +40 weapon space
+      * Protector: cost from 5500 000 to 6000 000; +500 shields, −500 hull, +6 required crew, –6 bunks, +40 mass, +40 cargo space, –20 core space, +40 weapon space
       * Punisher: +100 cargo space, +1 core space, +2 engine space
       * Quicksilver: +20 cargo space, +10 engine space
         * Modified Quicksilver (Core): +25 cargo space, +5 core space, +5 engine space, –5 weapon space
@@ -387,9 +384,13 @@ Version 0.10.0:
       * Solifuge: −0.02 heat dissipation, +72 cargo space, +65 core space, –24 engine space, +70 weapon space
       * Spindle: +51 cargo space
       * Spire: +90 cargo space
+      * Splinter: +1 required crew, −5 bunks, +45 cargo space
+        * Modified Splinter (Core): +5 core space, +5 weapon space
+        * Modified Splinter (Engines): +5 core space, +5 weapon space
+        * Modified Splinter (Weapons): +10 weapon space
       * Star Barge: −10 core space, −10 engine space, +10 weapon space
       * Star Freighter: +50 cargo space, −10 core space, −10 engine space, +10 weapon space
-      * Star Queen: −9 required crew, −1.0 drag, +40 cargo space, +10 core space, −10 engine space
+      * Star Queen: cost from 5500 000 to 8500 000; +4400 hull, +112 bunks, +400 mass, +2.0 drag, −0.15 heat dissipation, +80 cargo space, +40 core space, +20 engine space, −60 weapon space
       * Strong Wind: +35 cargo space, +21 core space, −5 weapon space
       * Summer Leaf: +43 cargo space, +15 core space
       * Tek Far 71 Lek: +25 core space, −25 weapon space; self destruct from 0.70 to 0.9
@@ -460,26 +461,23 @@ Version 0.10.0:
   * deleted all conversation scenes
   * ship:
     * shape (new): 
-      * normalized (100×100 pixels) derivatives of ship/*@2x.png
+      * normalized (100×100 pixels) derivatives of ship/sprite/*@2x.png
     * sprite:
       * antiarch, ao, ao_m, cachalot, chilong, chimaera, colony_ship, craterustig, excalibur, gladius, harrier, hatchling, hatchling_m, hourglass, longinus, mako, marlin, myrmex, myrmidon, piranha, pollaxe, raja, scorpion, scorpion_m, swordbreaker, tianlong, twin_crescent, typhon, typhon_m, winged_serpent, yisnith (@comnom)
-      * centipede has two turret mounts instead of five
-      * hag has four guns instead of two
-      * harpy has six guns instead of two
-      * headhunter has four guns instead of two (@MCOfficer)
-      * jupiter (@puzzlecube)
-      * kestrel
-      * manta has eight guns instead of four
-      * mistral (@Brick63)
+      * blade, centipede, hag, harpy, kestrel, manta, osprey, protector, star queen were altered
       * faes_mar, maeri_het, selii_mar, subsidurial, telis_het (@beccabunny)
+      * falcon has four guns instead of two (@MCOfficer)
+      * jupiter (@puzzlecube)
+      * mistral (@Brick63)
     * thumbnail:
       * ao, excalibur, gladius, hatchling, longinus, myrmex, pollaxe, scorpion, swordbreaker, tianlong, twin_crescent, typhon, winged_serpent (@comnom)
       * archon, arfecta, enfolta, lampyrid, maboro, skylark, wardragon, world-ship_a, world-ship_c, zibruka (@Amazinite)
-      * arrow_c, arrow_e, arrow_w, bounder_c, bounder_e, bounder_w, firebird_c, firebird_e, firebird_w, goose_c, goose_e, goose_w, lance_c, lance_e, lance_w, leviathan_c, leviathan_e, leviathan_w, manta_c, manta_e, manta_w, quicksilver_c, quicksilver_e, quicksilver_w, raven_c, raven_e, raven_w (@Amazinite)
+      * arrow_c, arrow_e, arrow_w, blade_c, blade_e, blade_w, bounder_c, bounder_e, bounder_w, firebird_c, firebird_e, firebird_w, leviathan_c, leviathan_e, leviathan_w, manta_c, manta_e, manta_w, quicksilver_c, quicksilver_e, quicksilver_w, raven_c, raven_e, raven_w, splinter_c, splinter_e, splinter_w (@Amazinite)
+      * blade, centipede, hag, harpy, kestrel, manta, osprey, protector, star queen were altered
+      * faes_mar, maeri_het, selii_mar, subsidurial, telis_het (@beccabunny)
+      * falcon has four guns instead of two (@MCOfficer)
       * jupiter (@puzzlecube)
       * mistral (@Brick63)
-      * headhunter has four guns instead of two (@MCOfficer)
-      * faes_mar, maeri_het, selii_mar, subsidurial, telis_het (@beccabunny)
   * star: —
   * ui: —
 * sounds:

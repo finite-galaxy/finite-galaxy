@@ -4,9 +4,7 @@ shipyard "Vortex Variants"
   "Behemoth (Free Worlds)"
   "Behemoth (Navy)"
   "Dagger"
-  "Fury"
-  "Fury (Gatling)"
-  "Modified Fury"
+  "Headhunter"
   "Heavy Shuttle"
   "Light Shuttle"
 
@@ -263,99 +261,60 @@ ship "Dagger"
 
 
 
-ship "Fury"
-  plural "Furies"
-  sprite "ship/sprite/fury"
-  thumbnail "ship/thumbnail/fury"
+ship "Headhunter"
+  sprite "ship/sprite/headhunter"
+  thumbnail "ship/thumbnail/headhunter"
   attributes
     category "Interceptor"
 #    manufacturer "Vortex"
     licences
       Pilot
-    "cost" 490000
-    "shields" 2000
-    "hull" 400
-    "required crew" 1
-    "bunks" 3
-    "mass" 70
-    "drag" 1.6
-    "heat dissipation" .9
+    "cost" 670000
+    "shields" 2500
+    "hull" 500
+    "required crew" 2
+    "bunks" 4
+    "mass" 150
+    "drag" 2.1
+    "heat dissipation" .8
     "cargo space" 30
-    "outfit space" 160
-    "core space" 70
-    "engine space" 50
-    "weapon space" 40
+    "outfit space" 200
+    "core space" 80
+    "engine space" 70
+    "weapon space" 50
     weapon
-      "blast radius" 53
-      "shield damage" 140
-      "random shield damage" 390
-      "hull damage" 210
-      "random hull damage" 585
-      "heat damage" 4200
-      "random heat damage" 11700
-      "hit force" 350
-      "random hit force" 975
+      "blast radius" 76
+      "shield damage" 300
+      "random shield damage" 460
+      "hull damage" 450
+      "random hull damage" 690
+      "heat damage" 9000
+      "random heat damage" 13800
+      "hit force" 750
+      "random hit force" 1150
   outfits
-    "D14-RN Shield Generator"
+    "D23-QP Shield Generator"
     "nGVF-CC Fuel Cell"
     "Hyperdrive"
 
-    "IT-2700 Ion Thruster"
+    "IT-3700 Ion Thruster"
     "IS-2200 Ion Steering"
 
-    "X1 Blaster Cannon" 4
-
-    "LP072a Battery Pack"
-    "Small Radar Jammer"
-    "Tactical Scanner"
-    "Fuel Pod" 16
-  engine -17 35
-  engine 17 35
-  gun -10 -26
-  gun 10 -26
-  gun -16 -20
-  gun 16 -20
-  leak "flame" 50 80
-  explode "tiny explosion" 10
-  explode "small explosion" 20
-  description "Once one of the most popular interceptor-class ships, the Fury's popularity is now waning in favour of more modern and versatile ships like the Headhunter. Although large numbers are still produced by Vortex Shipyards, many other Furies that are in service today are more than half a century old."
-
-
-ship "Fury" "Fury (Gatling)"
-  outfits
-    "D14-RN Shield Generator"
-    "nGVF-CC Fuel Cell"
-    "Hyperdrive"
-
-    "IT-2700 Ion Thruster"
-    "IS-2200 Ion Steering"
-
-    "Gatling Round" 6000
-    "Gatling Bullet Boxes" 4
-    "Gatling Gun" 4
+    "X1 Blaster Cannon" 2
 
     "LP036a Battery Pack"
-    "Small Radar Jammer"
-    "Tactical Scanner"
-    "Fuel Pod" 18
-    "Extra Outfit Space"
-
-
-ship "Fury" "Modified Fury"
-  plural "Modified Furies"
-  sprite "ship/sprite/fury_m"
-  engine -21 42
-  engine 21 42
-  engine 0 48
-  gun -12 -33
-  gun 12 -33
-  gun -20 -25
-  gun 20 -25
-  gun -43.5 2
-  gun 43.5 2
-  explode "tiny explosion" 10
-  explode "small explosion" 20
+    "Fuel Pod" 12
+    "Tactical Scanner" 2
+  engine -24 41
+  engine 24 41
+  gun -9 -17
+  gun 9 -17
+  leak "leak" 60 50
+  explode "tiny explosion" 15
+  explode "small explosion" 5
   "final explode" "final explosion small"
+  description "The Headhunter is the most affordable ships designed by Vortex: a versatile ship that can serve equally well for escorting freighters or for bounty hunting. Unlike many of Vortex's designs, the hull is mostly composite fibre rather than metal, sacrificing armour strength for the sake of lighter weight and faster movement."
+
 
 
 

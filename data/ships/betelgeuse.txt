@@ -1,19 +1,24 @@
 shipyard "Betelgeuse Variants"
   "Argosy"
+  "Argosy (Blaster)"
+  "Argosy (Gatling)"
+  "Argosy (Heavy Laser)"
   "Argosy (Laser)"
   "Argosy Test Dummy"
-  "Modified Argosy"
   "Berserker"
   "Berserker (Gatling)"
   "Berserker (Miner)"
-  "Berserker (Patrol)"
-  "Berserker Test Dummy"
+  "Fury"
+  "Fury (Gatling)"
+  "Fury (Miner)"
+  "Fury (Patrol)"
+  "Fury Test Dummy"
+  "Modified Fury"
   "Protector"
   "Protector (Electron)"
   "Protector (Laser)"
+  "Protector Test Dummy"
   "Vanguard"
-  "Vanguard (Electron)"
-  "Vanguard Test Dummy"
   "Modified Vanguard"
 
 
@@ -38,8 +43,8 @@ ship "Argosy"
     "cargo space" 150
     "outfit space" 270
     "core space" 100
-    "engine space" 80
-    "weapon space" 90
+    "engine space" 90
+    "weapon space" 80
     weapon
       "blast radius" 150
       "shield damage" 660
@@ -51,23 +56,24 @@ ship "Argosy"
       "hit force" 1650
       "random hit force" 2100
   outfits
-    "D41-HY Shield Generator"
+    "D23-QP Shield Generator"
     "RT-I Radiothermal"
     "Hyperdrive"
 
     "IT-3700 Ion Thruster"
     "IS-3200 Ion Steering"
 
-    "Meteor" 36
-    "Meteor Storage Box"
-    "Meteor Launcher" 2
-    "X4 Blaster Turret" 2
+    "X1 Blaster Cannon" 4
+    "X4 Blaster Turret"
+    "AM5 Anti-Missile"
 
-    "LP036a Battery Pack"
+    "LP072a Battery Pack"
     "Fuel Pod" 30
     "Tactical Scanner"
   engine -20 91
   engine 20 91
+  gun -22 -37
+  gun 22 -37
   gun -22 -37
   gun 22 -37
   turret 0 -12
@@ -79,13 +85,52 @@ ship "Argosy"
   explode "medium explosion" 25
   explode "large explosion" 10
   "final explode" "final explosion medium"
-  description "The Argosy from Vortex Shipyards is very popular with merchants not because of its capacity, which is actually slightly smaller than the Star Freighter, but because it can hold its own in combat against pirate interceptors."
+  description "The Argosy from Vortex Shipyards is very popular with merchants not because of its capacity, which is actually smaller than the Star Freighter, but because it can hold its own in combat against pirate interceptors."
   description "  The Argosy is also a very easy ship to upgrade with faster engines or more powerful weapons as needed, so many privately owned Argosies have very different capabilities than the stock model."
 
 
-ship "Argosy" "Argosy (Laser)"
+ship "Argosy" "Argosy (Blaster)"
   outfits
-    "D41-HY Shield Generator"
+    "D23-QP Shield Generator"
+    "RT-I Radiothermal"
+    "Hyperdrive"
+
+    "IT-3700 Ion Thruster"
+    "IS-3200 Ion Steering"
+    
+    "X6 Blaster Turret" 2
+
+    "LP072a Battery Pack"
+    "Fuel Pod" 30
+    "Tactical Scanner"
+    "Extra Outfit Space"
+    "Interference Plating" 2
+    "Laser Rifle" 12
+
+
+ship "Argosy" "Argosy (Gatling)"
+  outfits
+    "D23-QP Shield Generator"
+    "RT-I Radiothermal"
+    "Hyperdrive"
+
+    "IT-3700 Ion Thruster"
+    "IS-3200 Ion Steering"
+
+    "Gatling Round" 6000
+    "Gatling Bullet Boxes" 4
+    "Gatling Gun" 4
+    "X4 Blaster Turret" 2
+
+    "LP072a Battery Pack"
+    "Fuel Pod" 30
+    "Tactical Scanner"
+    "Extra Outfit Space"
+
+
+ship "Argosy" "Argosy (Heavy Laser)"
+  outfits
+    "D23-QP Shield Generator"
     "RT-I Radiothermal"
     "Hyperdrive"
 
@@ -94,7 +139,24 @@ ship "Argosy" "Argosy (Laser)"
 
     "Heavy Laser Turret" 2
 
-    "LP036a Battery Pack"
+    "LP072a Battery Pack"
+    "Fuel Pod" 30
+    "Tactical Scanner"
+
+
+ship "Argosy" "Argosy (Laser)"
+  outfits
+    "D23-QP Shield Generator"
+    "RT-I Radiothermal"
+    "Hyperdrive"
+
+    "IT-3700 Ion Thruster"
+    "IS-3200 Ion Steering"
+
+    "Laser Cannon" 4
+    "Laser Turret" 2
+
+    "LP072a Battery Pack"
     "Fuel Pod" 30
     "Tactical Scanner"
 
@@ -103,38 +165,6 @@ ship "Argosy" "Argosy Test Dummy"
   add attributes
     "automaton" 1
     "self destruct" 1
-
-
-ship "Argosy" "Modified Argosy"
-  sprite "ship/sprite/argosy_m"
-  thumbnail "ship/thumbnail/argosy_m"
-  add attributes
-    "shields" 600
-    "hull" 700
-    "required crew" 1
-    "drag" .3
-    "heat dissipation" -.1
-    "cargo space" -60
-    "outfit space" 60
-    "core space" 20
-    "weapon space" 40
-  outfits
-    "S-270 Regenerator"
-    "NT-200 Nucleovoltaic"
-    "Hyperdrive"
-
-    "A250 Atomic Thruster"
-    "A375 Atomic Steering"
-
-    "Heavy Laser Cannon" 2
-    "Heavy Laser Turret" 2
-
-    "LP072a Battery Pack"
-    "Fuel Pod" 27
-    "Tactical Scanner" 2
-    "Interference Plating" 2
-    "Laser Rifle" 12
-  description "The Argosy has long been a favourite ship for pirates, who have come up with many tricks for modifying them to be more suitable as warships."
 
 
 
@@ -177,10 +207,7 @@ ship "Berserker"
     "IT-2700 Ion Thruster"
     "IS-2200 Ion Steering"
 
-    "Meteor" 36
-    "Meteor Storage Box"
-    "Meteor Launcher" 2
-    "X1 Blaster Cannon" 2
+    "Laser Cannon" 4
 
     "LP036a Battery Pack"
     "Fuel Pod" 14
@@ -196,7 +223,7 @@ ship "Berserker"
   explode "tiny explosion" 10
   explode "small explosion" 15
   "final explode" "final explosion small"
-  description "The Berserker is Betelgeuse Shipyard's popular design of escort ship. They have greater firepower than most other interceptor-class vessels, meaning that any pirate flying solo will think twice before attacking a convoy that is accompanied by a Berserker. However, Berserkers are also less manoeuvrable than other small ships."
+  description "Once one of the most popular interceptor-class ships, the Berserker's popularity is now waning in favour of more modern and versatile ships like the Falcon. Although large numbers are still produced by Betelgeuse Shipyards, many other Furies that are in service today are more than half a century old."
 
 
 ship "Berserker" "Berserker (Gatling)"
@@ -235,19 +262,111 @@ ship "Berserker" "Berserker (Miner)"
     "Tactical Scanner"
 
 
-ship "Berserker" "Berserker (Patrol)"
+
+ship "Fury"
+  plural "Furies"
+  sprite "ship/sprite/fury"
+  thumbnail "ship/thumbnail/fury"
+  attributes
+    category "Interceptor"
+#    manufacturer "Betelgeuse"
+    licences
+      Pilot
+    "cost" 490000
+    "shields" 2000
+    "hull" 400
+    "required crew" 1
+    "bunks" 3
+    "mass" 70
+    "drag" 1.6
+    "heat dissipation" .9
+    "cargo space" 30
+    "outfit space" 160
+    "core space" 70
+    "engine space" 50
+    "weapon space" 40
+    weapon
+      "blast radius" 53
+      "shield damage" 140
+      "random shield damage" 390
+      "hull damage" 210
+      "random hull damage" 585
+      "heat damage" 4200
+      "random heat damage" 11700
+      "hit force" 350
+      "random hit force" 975
   outfits
-    "D23-QP Shield Generator"
+    "D14-RN Shield Generator"
     "nGVF-CC Fuel Cell"
     "Hyperdrive"
 
     "IT-2700 Ion Thruster"
     "IS-2200 Ion Steering"
 
-    "Meteor" 36
-    "Meteor Storage Box"
-    "Meteor Launcher" 2
-    "X1 Blaster Cannon" 2
+    "X1 Blaster Cannon" 4
+
+    "LP072a Battery Pack"
+    "Tactical Scanner"
+    "Fuel Pod" 16
+  engine -17 35
+  engine 17 35
+  gun -10 -26
+  gun 10 -26
+  gun -16 -20
+  gun 16 -20
+  leak "flame" 50 80
+  explode "tiny explosion" 10
+  explode "small explosion" 20
+  description "The Fury is Betelgeuse Shipyard's popular design of escort ship. They have greater firepower than most other interceptor-class vessels, meaning that any pirate flying solo will think twice before attacking a convoy that is accompanied by a Fury. However, Berserkers are also less manoeuvrable than other small ships."
+
+
+ship "Fury" "Fury (Gatling)"
+  outfits
+    "D14-RN Shield Generator"
+    "nGVF-CC Fuel Cell"
+    "Hyperdrive"
+
+    "IT-2700 Ion Thruster"
+    "IS-2200 Ion Steering"
+
+    "Gatling Round" 6000
+    "Gatling Bullet Boxes" 4
+    "Gatling Gun" 4
+
+    "LP036a Battery Pack"
+    "Tactical Scanner"
+    "Fuel Pod" 18
+    "Extra Outfit Space"
+
+
+ship "Fury" "Fury (Miner)"
+  outfits
+    "D14-RN Shield Generator"
+    "nGVF-CC Fuel Cell"
+    "Hyperdrive"
+
+    "IT-2700 Ion Thruster"
+    "IS-2200 Ion Steering"
+
+    "Laser Cannon" 4
+
+    "LP036a Battery Pack"
+    "Asteroid Scanner"
+    "Tactical Scanner"
+    "Fuel Pod" 18
+    "Extra Outfit Space"
+
+
+ship "Fury" "Fury (Patrol)"
+  outfits
+    "D14-RN Shield Generator"
+    "nGVF-CC Fuel Cell"
+    "Hyperdrive"
+
+    "IT-2700 Ion Thruster"
+    "IS-2200 Ion Steering"
+
+    "X1 Blaster Cannon" 4
 
     "LP036a Battery Pack"
     "Cargo Scanner"
@@ -258,11 +377,27 @@ ship "Berserker" "Berserker (Patrol)"
     "Laser Rifle"
 
 
-ship "Berserker" "Berserker Test Dummy"
+ship "Fury" "Fury Test Dummy"
   add attributes
     "automaton" 1
     "self destruct" 1
 
+
+ship "Fury" "Modified Fury"
+  plural "Modified Furies"
+  sprite "ship/sprite/fury_m"
+  engine -21 42
+  engine 21 42
+  engine 0 48
+  gun -12 -33
+  gun 12 -33
+  gun -20 -25
+  gun 20 -25
+  gun -43.5 2
+  gun 43.5 2
+  explode "tiny explosion" 10
+  explode "small explosion" 20
+  "final explode" "final explosion small"
 
 
 ship "Protector"
@@ -274,8 +409,8 @@ ship "Protector"
     licences
       Pilot
     "cost" 6000000
-    "shields" 9500
-    "hull" 6500
+    "shields" 10000
+    "hull" 6000
     "required crew" 36
     "bunks" 63
     "mass" 540
@@ -330,6 +465,7 @@ ship "Protector"
   description `Voted the "ugliest ship in the sky" by Stars and Starships Magazine, the Protector is a typical example of brutally efficient Corporation engineering. It is basically nothing more than seven turrets attached to a set of engines and crew's quarters, designed as a defence platform that can accompany merchant convoys.`
 
 
+
 ship "Protector" "Protector (Electron)"
   outfits
     "D67-TM Shield Generator"
@@ -379,6 +515,12 @@ ship "Protector" "Protector (Laser)"
   turret
   turret
   turret
+
+
+ship "Protector" "Protector Test Dummy"
+  add attributes
+    "automaton" 1
+    "self destruct" 1
 
 
 
@@ -447,29 +589,6 @@ ship "Vanguard"
   "final explode" "final explosion medium"
   description "The Vanguard is Betelgeuse's newest warship intended for the heavy anti-pirate defence market. Vanguards offer an unusual feature set, focusing on powerful fixed guns and featuring Corporation Systems' latest automation technologies, resulting in an atypically low crew complement for a ship its size. Few capital ships will endure for long under the withering fusillade of gunfire that it can unleash against those in front of it."
 
-
-ship "Vanguard" "Vanguard (Electron)"
-  outfits
-    "D67-TM Shield Generator"
-    "Fusion Reactor"
-    "Hyperdrive"
-
-    "IT-3700 Ion Thruster"
-    "IS-4200 Ion Steering"
-
-    "Electron Cannon" 7
-    "Electron Turret"
-
-    "LP072a Battery Pack"
-    "Liquid Nitrogen Cooler"
-    "Fuel Pod" 47
-    "Tactical Scanner" 3
-
-
-ship "Vanguard" "Vanguard Test Dummy"
-  add attributes
-    "automaton" 1
-    "self destruct" 1
 
 ship "Vanguard" "Modified Vanguard"
   sprite "ship/sprite/vanguard_m"

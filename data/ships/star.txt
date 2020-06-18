@@ -211,54 +211,50 @@ ship "Star Queen"
   sprite "ship/sprite/star_queen"
   thumbnail "ship/thumbnail/star_queen"
   attributes
-    category "Corvette"
+    category "Frigate"
 #    manufacturer "Star"
     licences
       Pilot
-    "cost" 5500000
+    "cost" 8500000
     "shields" 4100
-    "hull" 2200
-    "required crew" 34
-    "bunks" 112
-    "mass" 230
-    "drag" 4.5
-    "heat dissipation" .65
-    "cargo space" 100
+    "hull" 6600
+    "required crew" 43
+    "bunks" 224
+    "mass" 630
+    "drag" 7.5
+    "heat dissipation" .5
+    "cargo space" 140
     "outfit space" 360
-    "core space" 150
-    "engine space" 90
-    "weapon space" 120
+    "core space" 180
+    "engine space" 120
+    "weapon space" 60
     weapon
-      "blast radius" 138
-      "shield damage" 460
-      "random shield damage" 920
-      "hull damage" 690
-      "random hull damage" 1380
-      "heat damage" 13800
-      "random heat damage" 27600
-      "hit force" 1150
-      "random hit force" 2300
+      "blast radius" 226
+      "shield damage" 1260
+      "random shield damage" 1000
+      "hull damage" 1890
+      "random hull damage" 1500
+      "heat damage" 37800
+      "random heat damage" 30000
+      "hit force" 3150
+      "random hit force" 2500
   outfits
     "D94-YV Shield Generator"
     "Fission Reactor"
     "Hyperdrive"
 
     "IT-3700 Ion Thruster"
-    "IS-3200 Ion Steering"
-    "IR-3700 Ion Reverse"
+    "IS-4200 Ion Steering"
 
     "Heavy Anti-Missile" 2
 
-    "LP072a Battery Pack"
-    "Fuel Pod" 36
+    "LP144a Battery Pack"
+    "Fuel Pod" 80
     "Tactical Scanner" 3
-  engine -18 116
-  engine 18 116
-  gun 0 -116
-  gun -22 -80
-  gun 22 -80
-  turret -28 -9
-  turret 28 -9
+  engine -18 114
+  engine 18 114
+  turret -34 0
+  turret 34 0
   leak "leak" 50 50
   leak "big leak" 80 30
   explode "tiny explosion" 10

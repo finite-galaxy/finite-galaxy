@@ -287,7 +287,7 @@ mission "FWC Cebalrai 1B"
       variant
         "Dreadnought"
         "Leviathan (Plasma)"
-        "Hawk" 2
+        "Falcon" 2
     fleet
       names "free worlds capital"
       variant
@@ -653,7 +653,7 @@ mission "FWC Checkmate 1"
       variant
         "Dreadnought"
         "Leviathan (Plasma)"
-        "Headhunter" 2
+        "Falcon" 2
     fleet
       names "free worlds capital"
       variant
@@ -842,7 +842,7 @@ mission "FWC Checkmate 1B"
   on offer
     event "fwc attack menkent"
     conversation
-      `You meet up with Tomek in the spaceport. He is talking with the captain of one of a group of four Headhunters that have landed next to each other some distance away from the rest of the Free Worlds fleet. The Headhunters appear to have unusually powerful engines, and in place of guns they are each carrying four missiles. Tomek sees you approaching and says, "And here's Captain <last>. Captain, are you ready to lead the attack?"`
+      `You meet up with Tomek in the spaceport. He is talking with the captain of one of a group of four Falcons that have landed next to each other some distance away from the rest of the Free Worlds fleet. The Falcons appear to have unusually powerful engines, and in place of guns they are each carrying four missiles. Tomek sees you approaching and says, "And here's Captain <last>. Captain, are you ready to lead the attack?"`
       choice
         `  "Yes, I'm ready."`
           goto ready
@@ -880,10 +880,10 @@ mission "FWC Checkmate 1B"
     personality staying heroic uninterested disables
     government "Free Worlds"
     system "Rasalhague"
-    ship "Headhunter (Nuclear)" "F.W.S. Disease"
-    ship "Headhunter (Nuclear)" "F.W.S. Famine"
-    ship "Headhunter (Nuclear)" "F.W.S. Pestilence"
-    ship "Headhunter (Nuclear)" "F.W.S. Warmaker"
+    ship "Falcon (Nuclear)" "F.W.S. Disease"
+    ship "Falcon (Nuclear)" "F.W.S. Famine"
+    ship "Falcon (Nuclear)" "F.W.S. Pestilence"
+    ship "Falcon (Nuclear)" "F.W.S. Warmaker"
   
   npc evade
     personality heroic staying
@@ -1053,11 +1053,11 @@ mission "FWC Pug 1"
       variant
         "Skein"
         "Hag" 6
-        "Berserker" 4
+        "Raven"
     fleet 4
       names "free worlds small"
       variant
-        "Headhunter (Nuclear)"
+        "Falcon (Nuclear)"
     fleet
       names "free worlds small"
       variant
