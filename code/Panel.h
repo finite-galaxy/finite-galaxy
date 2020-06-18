@@ -9,6 +9,7 @@
 #include <list>
 
 #include <SDL2/SDL.h>
+#include <string>
 
 class Command;
 class Point;

@@ -180,18 +180,34 @@ void MapOutfitterPanel::DrawItems()
       string info;
       if(outfit->Get("installable") < 0.)
         info = "(Mined from asteroids)";
-      else
+      // TODO: Support outfits that require multiple space types.
+      else if(outfit->Get("core space") != 0)
       {
-        double space = -outfit->Get("outfit space");
-        info = Format::Number(space) + (abs(space) == 1. ? " ton" : " tons");
-        if(space && -outfit->Get("core space") == space)
-          info += " of core space";
-        else if(space && -outfit->Get("engine space") == space)
-          info += " of engine space";
-        else if(space && -outfit->Get("weapon space") == space)
-          info += " of weapon space";
-        else
-          info += " of outfit space";
+        double space = -outfit->Get("core space");
+        info = Format::Number(space) + (abs(space) == 1. ? " ton" : " tons") + " of core space";
+      }
+      else if(outfit->Get("engine space") != 0)
+      {
+        double space = -outfit->Get("engine space");
+        info = Format::Number(space) + (abs(space) == 1. ? " ton" : " tons") + " of engine space";
+      }
+      else if(outfit->Get("weapon space") != 0)
+      {
+        double space = -outfit->Get("weapon space");
+        info = Format::Number(space) + (abs(space) == 1. ? " ton" : " tons") + " of weapon space";
+      }
+      else if(outfit->Get("outfit space") != 0)
+      {
+        if(outfit->Get("cargo space") == 0)
+        {
+          double space = -outfit->Get("outfit space");
+          info = Format::Number(space) + (abs(space) == 1. ? " ton" : " tons") + " of outfit space";
+        }
+      }
+      else if(outfit->Get("cargo space") != 0)
+      {
+          double space = -outfit->Get("cargo space");
+          info = Format::Number(space) + (abs(space) == 1. ? " ton" : " tons") + " of cargo space";
       }
 
       bool isForSale = true;
@@ -207,9 +223,8 @@ void MapOutfitterPanel::DrawItems()
       }
       if(!isForSale && onlyShowSoldHere)
         continue;
-
-      Draw(corner, outfit->Thumbnail(), isForSale, outfit == selected,
-        outfit->Name(), price, info);
+      
+      Draw(corner, outfit->Thumbnail(), isForSale, outfit == selected, outfit->Name(), price, info);
       list.push_back(outfit);
     }
   }

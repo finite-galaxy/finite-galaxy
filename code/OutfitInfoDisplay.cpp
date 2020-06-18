@@ -150,6 +150,7 @@ void OutfitInfoDisplay::UpdateRequirements(const Outfit &outfit, const PlayerInf
   bool hasContent = true;
   static const vector<string> NAMES = {
     "", "",
+    "cargo space needed:", "cargo space",
     "outfit space needed:", "outfit space",
     "core space needed:", "core space",
     "engine space needed:", "engine space",
@@ -189,6 +190,7 @@ void OutfitInfoDisplay::UpdateAttributes(const Outfit &outfit)
   for(const pair<const char *, double> &it : outfit.Attributes())
   {
     static const set<string> SKIP = {
+      "cargo space",
       "outfit space",
       "core space",
       "engine space",
