@@ -465,13 +465,6 @@ void ShopPanel::DrawShip(const Ship &ship, const Point &centre, bool isSelected)
     isSelected ? "ui/shipyard selected" : "ui/shipyard unselected");
   SpriteShader::Draw(back, centre);
 
-  // Draw the ship name.
-  const Font &font = FontSet::Get(18);
-  const Font::Layout layout{Font::TRUNC_MIDDLE, SIDE_WIDTH - 61};
-  const string &name = ship.Name().empty() ? ship.ModelName() : ship.Name();
-  Point offset(-.5f * font.Width(name, &layout), -.5f * SHIP_SIZE + 10.f);
-  font.Draw(name, centre + offset, *GameData::Colours().Get("bright"), &layout);
-
   const Sprite *thumbnail = ship.Thumbnail();
   const Sprite *sprite = ship.GetSprite();
   int swizzle = ship.CustomSwizzle() >= 0 ? ship.CustomSwizzle() : GameData::PlayerGovernment()->GetSwizzle();
@@ -484,6 +477,13 @@ void ShopPanel::DrawShip(const Ship &ship, const Point &centre, bool isSelected)
     float zoom = min(1.f, zoomSize / max(sprite->Width(), sprite->Height()));
     SpriteShader::Draw(sprite, centre, zoom, swizzle);
   }
+
+  // Draw the ship name.
+  const Font &font = FontSet::Get(18);
+  const Font::Layout layout{Font::TRUNC_MIDDLE, SIDE_WIDTH - 61};
+  const string &name = ship.Name().empty() ? ship.ModelName() : ship.Name();
+  Point offset(-.5f * font.Width(name, &layout), -.5f * SHIP_SIZE + 10.f);
+  font.Draw(name, centre + offset, *GameData::Colours().Get("bright"), &layout);
 }
 
 
