@@ -7,14 +7,14 @@
 #include <string>
 
 namespace Utf8 {
-  // Skip to the next unicode code point after pos in utf8.
+  // Skip to the next unicode code point after pos in UTF-8.
   // Return the string length when there are no more code points.
   std::size_t NextCodePoint(const std::string &str, std::size_t pos);
 
-  // Returns the start of the unicode code point at pos in utf8.
+  // Returns the start of the unicode code point at pos in UTF-8.
   std::size_t CodePointStart(const std::string &str, std::size_t pos);
 
-  // Decodes a unicode code point in utf8.
+  // Decodes a unicode code point in UTF-8.
   // Invalid codepoints are converted to 0xFFFFFFFF.
   char32_t DecodeCodePoint(const std::string &str, std::size_t pos);
 }

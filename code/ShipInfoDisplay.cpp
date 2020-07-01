@@ -63,10 +63,10 @@ void ShipInfoDisplay::DrawAttributes(const Point &topLeft) const
   const Colour &valueColour = *GameData::Colours().Get("bright");
 
   Table table;
-  table.AddColumn(10, Table::LEFT);
-  table.AddColumn(WIDTH - 120, Table::RIGHT);
-  table.AddColumn(WIDTH - 60, Table::RIGHT);
-  table.AddColumn(WIDTH - 10, Table::RIGHT);
+  table.AddColumn(10, Font::Layout{Font::TRUNC_NONE, WIDTH - 10, Font::LEFT});
+  table.AddColumn(WIDTH - 120, Font::Layout{Font::TRUNC_NONE, WIDTH - 110, Font::RIGHT});
+  table.AddColumn(WIDTH - 60, Font::Layout{Font::TRUNC_NONE, WIDTH - 70, Font::RIGHT});
+  table.AddColumn(WIDTH - 10, Font::Layout{Font::TRUNC_NONE, WIDTH - 20, Font::RIGHT});
   table.SetHighlight(0, WIDTH);
   table.DrawAt(point);
   table.DrawGap(10.);

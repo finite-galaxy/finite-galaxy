@@ -82,7 +82,7 @@ void MenuPanel::Draw()
   const Font &font = FontSet::Get(18);
 
   Information info;
-  const Font::Layout layout(Font::TRUNC_MIDDLE, 165);
+  const Font::Layout layout{Font::TRUNC_MIDDLE, 165};
   if(player.IsLoaded() && !player.IsDead())
   {
     info.SetCondition("pilot loaded");

@@ -21,13 +21,12 @@ namespace {
   const int TOTAL_TAB_STOPS = 8;
   const Font::Layout defaultParams;
 
-  // 95 and x5f means "_".
-  const vector<string> acceptableCharacterReferences{ "gt;", "lt;", "amp;", "#95;", "#x5f;", "#x5F;" };
+  const vector<string> acceptableCharacterReferences{ "gt;", "lt;", "amp;" };
 
   // Convert from PANGO to pixel scale.
-  int PixelFromPangoCeil(int pangoScale)
+  int PixelFromPangoCeil(int pangoSize)
   {
-    return (pangoScale + PANGO_SCALE - 1) / PANGO_SCALE;
+    return ceil(static_cast<double>(pangoSize) / PANGO_SCALE);
   }
 }
 
@@ -36,7 +35,7 @@ namespace {
 Font::Font()
   : shader(), vao(0), vbo(0), scaleI(0), centreI(0), sizeI(0), colourI(0),
   screenWidth(1), screenHeight(1), viewWidth(1), viewHeight(1), cr(nullptr),
-  fontDescName(), refDescName(), context(nullptr), layout(nullptr), lang(nullptr),
+  fontDescName(), context(nullptr), layout(nullptr), lang(nullptr),
   pixelSize(0), fontViewHeight(0), surfaceWidth(256), surfaceHeight(64), cache()
 {
   lang = pango_language_from_string("en");
@@ -61,14 +60,6 @@ Font::~Font()
 void Font::SetFontDescription(const std::string &desc)
 {
   fontDescName = desc;
-  UpdateFontDesc();
-}
-
-
-
- void Font::SetLayoutReference(const std::string &desc)
-{
-  refDescName = desc;
   UpdateFontDesc();
 }
 
@@ -190,12 +181,10 @@ void Font::UpdateFontDesc() const
 
   // Get font descriptions.
   PangoFontDescription *fontDesc = pango_font_description_from_string(fontDescName.c_str());
-  PangoFontDescription *refDesc = pango_font_description_from_string(refDescName.c_str());
 
   // Set the pixel size.
   const int fontSize = ViewFromTextFloorY(pixelSize) * PANGO_SCALE;
   pango_font_description_set_absolute_size(fontDesc, fontSize);
-  pango_font_description_set_absolute_size(refDesc, fontSize);
 
   // Update the context.
   pango_context_set_language(context, lang);
@@ -204,7 +193,7 @@ void Font::UpdateFontDesc() const
   pango_layout_set_font_description(layout, fontDesc);
 
   // Update layout parameters.
-  PangoFontMetrics *metrics = pango_context_get_metrics(context, refDesc, lang);
+  PangoFontMetrics *metrics = pango_context_get_metrics(context, fontDesc, lang);
   const int ascent = pango_font_metrics_get_ascent(metrics);
   const int descent = pango_font_metrics_get_descent(metrics);
   fontViewHeight = PixelFromPangoCeil(ascent + descent);
@@ -212,10 +201,9 @@ void Font::UpdateFontDesc() const
   // Clean up.
   pango_font_metrics_unref(metrics);
   pango_font_description_free(fontDesc);
-  pango_font_description_free(refDesc);
   cache.Clear();
 
-  // Tab Stop
+  // Tab size.
   space = ViewWidth(" ");
   const int tabSize = 4 * space * PANGO_SCALE;
   PangoTabArray *tb = pango_tab_array_new(TOTAL_TAB_STOPS, FALSE);
@@ -227,7 +215,8 @@ void Font::UpdateFontDesc() const
 
 
 
-// Replaces straight quotation marks with curly ones,
+// Replaces vertical bar with narrow non-breaking space, hyphen-minus 
+// with proper minus sign, straight quotation marks with curly ones,
 // and escapes "&" except for minimum necessaries because a pilot name may
 // contain "&" and that representation should be the same as the old version.
 string Font::ReplaceCharacters(const string &str)
@@ -235,7 +224,6 @@ string Font::ReplaceCharacters(const string &str)
   string buf;
   buf.reserve(str.length());
   bool isAfterWhitespace = true;
-  bool isAfterAccel = false;
   bool isTag = false;
   const size_t len = str.length();
   for(size_t pos = 0; pos < len; ++pos)
@@ -262,9 +250,6 @@ string Font::ReplaceCharacters(const string &str)
         // “ U+201C LEFT_DOUBLE_QUOTATION_MARK
         // ” U+201D RIGHT_DOUBLE_QUOTATION_MARK
         buf.append(isAfterWhitespace ? "\xE2\x80\x9C" : "\xE2\x80\x9D");
-      else if(isAfterAccel && str[pos] == '_')
-        // Remove an extra underbar.
-        ;
       else if(str[pos] == '&')
       {
         buf.append(1, '&');
@@ -284,7 +269,6 @@ string Font::ReplaceCharacters(const string &str)
       else
         buf.append(1, str[pos]);
       isAfterWhitespace = (str[pos] == ' ');
-      isAfterAccel = (str[pos] == '_');
       isTag = (str[pos] == '<');
     }
   }
@@ -297,8 +281,11 @@ string Font::RemoveAccelerator(const string &str)
 {
   string dest;
   bool isTag = false;
+  bool isAccel = false;
   for(char c : str)
   {
+    const bool isAfterAccel = isAccel;
+    isAccel = false;
     if(isTag)
     {
       dest += c;
@@ -309,8 +296,10 @@ string Font::RemoveAccelerator(const string &str)
       dest += c;
       isTag = true;
     }
-    else if(c != '_')
+    else if(c != '_' || isAfterAccel)
       dest += c;
+    else
+      isAccel = true;
   }
   return dest;
 }
@@ -378,7 +367,7 @@ void Font::DrawCommon(const std::string &str, double x, double y, const Colour &
 // Render the text.
 const Font::RenderedText &Font::Render(const string &str, const Layout *params) const
 {
-    if(!params)
+  if(!params)
     params = &defaultParams;
 
   // Return if already cached.
@@ -396,7 +385,7 @@ const Font::RenderedText &Font::Render(const string &str, const Layout *params) 
   if(params->paragraphBreak != 0)
     viewParams.paragraphBreak = ViewFromTextFloorY(params->paragraphBreak);
 
-  // Truncate
+  // Truncate.
   const int layoutWidth = viewParams.width < 0 ? -1 : viewParams.width * PANGO_SCALE;
   pango_layout_set_width(layout, layoutWidth);
   PangoEllipsizeMode ellipsize;
@@ -419,7 +408,7 @@ const Font::RenderedText &Font::Render(const string &str, const Layout *params) 
   }
   pango_layout_set_ellipsize(layout, ellipsize);
 
-  // Align and justification
+  // Alignment and justification.
   PangoAlignment align;
   gboolean justify;
   switch(viewParams.align)
@@ -450,25 +439,25 @@ const Font::RenderedText &Font::Render(const string &str, const Layout *params) 
   // Replaces straight quotation marks with curly ones.
   const string text = ReplaceCharacters(str);
 
-  // Keyboard accelerator
-  char *removeMarkupText;
-  const char *rawText;
+  // Keyboard Accelerator
+  char *TextRemovedMarkup;
+  const char *drawingText;
   PangoAttrList *al = nullptr;
   GError *error = nullptr;
   const char accel = showUnderlines ? '_' : '\0';
   const string &nonAccelText = RemoveAccelerator(text);
   const string &parseText = showUnderlines ? text : nonAccelText;
-  if(pango_parse_markup(parseText.c_str(), -1, accel, &al, &removeMarkupText, 0, &error))
-    rawText = removeMarkupText;
+  if(pango_parse_markup(parseText.c_str(), -1, accel, &al, &TextRemovedMarkup, 0, &error))
+    drawingText = TextRemovedMarkup;
   else
   {
     if(error->message)
       Files::LogError(error->message);
-    rawText = nonAccelText.c_str();
+    drawingText = nonAccelText.c_str();
   }
 
   // Set the text and attributes to layout.
-  pango_layout_set_text(layout, rawText, -1);
+  pango_layout_set_text(layout, drawingText, -1);
   pango_layout_set_attributes(layout, al);
   pango_attr_list_unref(al);
 
@@ -490,7 +479,7 @@ const Font::RenderedText &Font::Render(const string &str, const Layout *params) 
     return Render(str, params);
   }
 
-  // Render
+  // Render.
   const bool isDefaultLineHeight = viewParams.lineHeight == DEFAULT_LINE_HEIGHT;
   const bool isDefaultSkip = isDefaultLineHeight && viewParams.paragraphBreak == 0;
   cairo_set_source_rgb(cr, 1.0, 1.0, 1.0);
@@ -689,7 +678,7 @@ int Font::ViewWidth(const std::string &str, const Layout *params) const
 {
   if(str.empty())
     return 0;
-const RenderedText &text = Render(str, params);
+  const RenderedText &text = Render(str, params);
   if(!text.texture)
     return 0;
   return text.width;
@@ -713,42 +702,42 @@ double Font::ViewFromTextY(double y) const
 
 int Font::ViewFromTextX(int x) const
 {
-  return (x * viewWidth + screenWidth/2) / screenWidth;
+  return floor(static_cast<double>(x * viewWidth + screenWidth / 2.) / screenWidth);
 }
 
 
 
 int Font::ViewFromTextY(int y) const
 {
-  return (y * viewHeight + screenHeight/2) / screenHeight;
+  return floor(static_cast<double>(y * viewHeight + screenHeight / 2.) / screenHeight);
 }
 
 
 
 int Font::ViewFromTextCeilX(int x) const
 {
-  return (x * viewWidth + screenWidth - 1) / screenWidth;
+  return ceil(static_cast<double>(x * viewWidth) / screenWidth);
 }
 
 
 
 int Font::ViewFromTextCeilY(int y) const
 {
-  return (y * viewHeight + screenHeight - 1) / screenHeight;
+  return ceil(static_cast<double>(y * viewHeight) / screenHeight);
 }
 
 
 
 int Font::ViewFromTextFloorX(int x) const
 {
-  return (x * viewWidth) / screenWidth;
+  return floor(static_cast<double>(x * viewWidth) / screenWidth);
 }
 
 
 
 int Font::ViewFromTextFloorY(int y) const
 {
-  return (y * viewHeight) / screenHeight;
+  return floor(static_cast<double>(y * viewHeight) / screenHeight);
 }
 
 
@@ -769,41 +758,41 @@ double Font::TextFromViewY(double y) const
 
 int Font::TextFromViewX(int x) const
 {
-  return (x * screenWidth + viewWidth/2) / viewWidth;
+  return floor(static_cast<double>(x * screenWidth + viewWidth / 2.) / viewWidth);
 }
 
 
 
 int Font::TextFromViewY(int y) const
 {
-  return (y * screenHeight + viewHeight/2) / viewHeight;
+  return floor(static_cast<double>(y * screenHeight + viewHeight / 2.) / viewHeight);
 }
 
 
 
 int Font::TextFromViewCeilX(int x) const
 {
-  return (x * screenWidth + viewWidth - 1) / viewWidth;
+  return ceil(static_cast<double>(x * screenWidth) / viewWidth);
 }
 
 
 
 int Font::TextFromViewCeilY(int y) const
 {
-  return (y * screenHeight + viewHeight - 1) / viewHeight;
+  return ceil(static_cast<double>(y * screenHeight) / viewHeight);
 }
 
 
 
 int Font::TextFromViewFloorX(int x) const
 {
-  return (x * screenWidth) / viewWidth;
+  return floor(static_cast<double>(x * screenWidth) / viewWidth);
 }
 
 
 
 int Font::TextFromViewFloorY(int y) const
 {
-  return (y * screenHeight) / viewHeight;
+  return floor(static_cast<double>(y * screenHeight) / viewHeight);
 }
 

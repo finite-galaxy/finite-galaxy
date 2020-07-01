@@ -34,7 +34,7 @@ using namespace std;
 
 namespace {
 #if defined _WIN32
-	size_t PATH_LENGTH;
+  size_t PATH_LENGTH;
 #endif
   // Width of the conversation text.
   const int WIDTH = 540;
@@ -49,7 +49,7 @@ ConversationPanel::ConversationPanel(PlayerInfo &player, const Conversation &con
   : player(player), conversation(conversation), scroll(0.), system(system), ship(ship)
 {
 #if defined _WIN32
-	PATH_LENGTH = Files::Saves().size();
+  PATH_LENGTH = Files::Saves().size();
 #endif
   // These substitutions need to be applied on the fly as each paragraph of
   // text is prepared for display.
@@ -125,8 +125,8 @@ void ConversationPanel::Draw()
   else if(choices.empty())
   {
     // This conversation node is prompting the player to enter their name.
- 		Point fieldSize(150, 20);
-    const Font::Layout layout(Font::TRUNC_FRONT, fieldSize.X() - 10);
+    Point fieldSize(150, 20);
+    const Font::Layout layout{Font::TRUNC_FRONT, static_cast<int>(fieldSize.X() - 10)};
     for(int side = 0; side < 2; ++side)
     {
       Point centre = point + Point(side ? 420 : 190, 7);
@@ -145,10 +145,10 @@ void ConversationPanel::Draw()
     }
 
     font.Draw("First name:", point + Point(35, 0), dim);
- 		font.Draw(firstName, point + Point(120, 0), choice ? grey : bright, &layout);
+    font.Draw(firstName, point + Point(120, 0), choice ? grey : bright, &layout);
 
     font.Draw("Last name:", point + Point(265, 0), dim);
- 		font.Draw(lastName, point + Point(350, 0), choice ? bright : grey, &layout);
+    font.Draw(lastName, point + Point(350, 0), choice ? bright : grey, &layout);
 
     // Draw the OK button, and remember its location.
     static const string ok = "[ok]";
@@ -219,13 +219,13 @@ bool ConversationPanel::KeyDown(SDL_Keycode key, Uint16 mod, const Command &comm
         c += 'A' - 'a';
       // Don't allow characters that can't be used in a file name.
       static const string FORBIDDEN = "/\\?*:|\"<>~";
-			// Prevent the name from being so large that it cannot be saved.
-			// Most path components can be at most 255 bytes.
-			size_t MAX_NAME_LENGTH = 250;
+      // Prevent the name from being so large that it cannot be saved.
+      // Most path components can be at most 255 bytes.
+      size_t MAX_NAME_LENGTH = 250;
 #if defined _WIN32
-			MAX_NAME_LENGTH -= PATH_LENGTH;
+      MAX_NAME_LENGTH -= PATH_LENGTH;
 #endif
-			if(FORBIDDEN.find(c) == string::npos && (name.size() + otherName.size()) < MAX_NAME_LENGTH)
+      if(FORBIDDEN.find(c) == string::npos && (name.size() + otherName.size()) < MAX_NAME_LENGTH)
         name += c;
     }
     else if((key == SDLK_DELETE || key == SDLK_BACKSPACE) && !name.empty())
@@ -300,9 +300,10 @@ void ConversationPanel::Goto(int index, int choice)
     // Scroll to the start of the new text, unless the conversation ended.
     if(index >= 0)
     {
-      scroll = -11;
+      scroll = -MARGIN;
       for(const Paragraph &it : text)
         scroll -= it.Height();
+      scroll += text.back().BottomMargin();
     }
   }
 
@@ -441,3 +442,12 @@ Point ConversationPanel::Paragraph::Draw(Point point, const Colour &colour) cons
   point.Y() += wrap.Height();
   return point;
 }
+
+
+
+// Bottom margin.
+int ConversationPanel::Paragraph::BottomMargin() const
+{
+  return wrap.BottomMargin();
+}
+

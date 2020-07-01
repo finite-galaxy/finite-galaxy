@@ -15,10 +15,8 @@ public:
   static void Add(const std::string &fontsDir);
   static const Font &Get(int size);
 
-  // Set the font description. "desc" is a comma separated family name list.
+  // Set the font description. "desc" is a comma separated list of font families.
   static void SetFontDescription(const std::string &desc);
-  // Set the reference for layouting a text.
-  static void SetReferenceForLayout(const std::string &desc);
   // Set the language for layouting.
   static void SetLanguage(const std::string &lang);
 };
@@ -26,3 +24,4 @@ public:
 
 
 #endif
+

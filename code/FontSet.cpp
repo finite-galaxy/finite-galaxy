@@ -14,8 +14,8 @@ using namespace std;
 namespace {
   map<int, Font> fonts;
 
-  string fontDescription("Linux Libertine Display");
-  string fontDescriptionForLayout("Linux Libertine Display");
+  const string defaultFontDescription("Linux Libertine Display");
+  string fontDescription = defaultFontDescription;
   string fontLanguage("en");
   char envBackend[] = "PANGOCAIRO_BACKEND=fc";
 }
@@ -43,7 +43,6 @@ const Font &FontSet::Get(int size)
     putenv(envBackend);
     Font &font = fonts[size];
     font.SetFontDescription(fontDescription);
-    font.SetLayoutReference(fontDescriptionForLayout);
     font.SetPixelSize(size);
     font.SetLanguage(fontLanguage);
   }
@@ -52,25 +51,16 @@ const Font &FontSet::Get(int size)
 
 
 
-void SetFontDescription(const std::string &desc)
+void FontSet::SetFontDescription(const string &desc)
 {
-  fontDescription = desc;
+  fontDescription = desc.empty() ? defaultFontDescription : desc;
   for(auto &it : fonts)
-    it.second.SetFontDescription(desc);
+    it.second.SetFontDescription(fontDescription);
 }
 
 
 
-void SetReferenceForLayout(const std::string &desc)
-{
-  fontDescriptionForLayout = desc;
-  for(auto &it : fonts)
-    it.second.SetLayoutReference(desc);
-}
-
-
-
-void SetLanguage(const std::string &lang)
+void FontSet::SetLanguage(const string &lang)
 {
   fontLanguage = lang;
   for(auto &it : fonts)

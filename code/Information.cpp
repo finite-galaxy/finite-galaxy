@@ -52,7 +52,7 @@ void Information::SetString(const string &name, const string &value, const Font:
 
 
 
- const pair<std::string, Font::Layout> &Information::GetString(const string &name) const
+const pair<std::string, Font::Layout> &Information::GetString(const string &name) const
 {
   static const pair<std::string, Font::Layout> empty;
 

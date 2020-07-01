@@ -518,8 +518,8 @@ void MapDetailPanel::DrawInfo()
     else
       price = (hasVisited ? "n/a" : "?");
 
-    Point pos = uiPoint + Point(140. - font.Width(price), 0.);
-    font.Draw(price, pos, colour);
+    Font::Layout layout{Font::TRUNC_BACK, 140, Font::RIGHT};
+    font.Draw(price, uiPoint, colour, &layout);
 
     if(isSelected)
       PointerShader::Draw(uiPoint + Point(0., 10.), Point(1., 0.), 10.f, 10.f, 0.f, colour);

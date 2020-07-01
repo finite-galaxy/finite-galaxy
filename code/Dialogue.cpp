@@ -158,7 +158,7 @@ void Dialogue::Draw()
     Point stringPos(
       inputPos.X() - (WIDTH - 20) * .5 + 5.,
       inputPos.Y() - .5 * font.Height());
-    const Font::Layout layout(Font::TRUNC_FRONT, WIDTH - 30);
+    const Font::Layout layout{Font::TRUNC_FRONT, WIDTH - 30};
     const string validatedInput(Font::EscapeMarkupHasError(input));
     font.Draw(validatedInput, stringPos, bright, &layout);
 

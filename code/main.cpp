@@ -274,6 +274,8 @@ void GameLoop(PlayerInfo &player, Conversation &conversation, bool &debugMode)
 
     GameWindow::Step();
 
+    CacheBase::Step();
+
     timer.Wait();
   }
 

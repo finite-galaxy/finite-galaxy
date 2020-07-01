@@ -74,6 +74,9 @@ private:
     // next paragraph below this one should be drawn at.
     Point Draw(Point point, const Colour &colour) const;
 
+    // Bottom margin.
+    int BottomMargin() const;
+
   private:
     const Sprite *scene = nullptr;
     WrappedText wrap;

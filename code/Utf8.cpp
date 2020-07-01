@@ -18,7 +18,7 @@ namespace Utf8 {
 
 
 
-  // Returns the start of the unicode code point at pos in utf8.
+  // Returns the start of the unicode code point at pos in UTF-8.
   size_t CodePointStart(const string &str, size_t pos)
   {
     // 0xxxxxxx and 11?????? start a code point
@@ -29,7 +29,7 @@ namespace Utf8 {
 
 
 
-  // Determines the number of bytes used by the unicode code point in utf8.
+  // Determines the number of bytes used by the unicode code point in UTF-8.
   int CodePointBytes(const char *str)
   {
     // end - 00000000
@@ -70,7 +70,7 @@ namespace Utf8 {
 
 
 
-  // Decodes a unicode code point in utf8.
+  // Decodes a unicode code point in UTF-8.
   // Invalid codepoints are converted to 0xFFFFFFFF.
   char32_t DecodeCodePoint(const string &str, size_t pos)
   {

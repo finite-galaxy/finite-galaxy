@@ -284,8 +284,8 @@ void ShopPanel::DrawButtons()
   point.X() = Screen::Right() - SIDE_WIDTH + 10;
   font.Draw("Fleet cargo space free:", point, dim);
   string space = Format::Number(player.Cargo().Free()) + " / " + Format::Number(player.Cargo().Size());
-  Point right(Screen::Right() - font.Width(space) - 10, point.Y());
-  font.Draw(space, right, bright);
+    const Font::Layout layout{Font::TRUNC_NONE, SIDE_WIDTH - 20, Font::RIGHT};
+    font.Draw(space, point, bright, &layout);
 
   const Font &bigFont = FontSet::Get(24);
   const Colour &hover = *GameData::Colours().Get("hover");
@@ -467,7 +467,7 @@ void ShopPanel::DrawShip(const Ship &ship, const Point &centre, bool isSelected)
 
   // Draw the ship name.
   const Font &font = FontSet::Get(18);
-  const Font::Layout layout(Font::TRUNC_MIDDLE, SIDE_WIDTH - 61);
+  const Font::Layout layout{Font::TRUNC_MIDDLE, SIDE_WIDTH - 61};
   const string &name = ship.Name().empty() ? ship.ModelName() : ship.Name();
   Point offset(-.5f * font.Width(name, &layout), -.5f * SHIP_SIZE + 10.f);
   font.Draw(name, centre + offset, *GameData::Colours().Get("bright"), &layout);

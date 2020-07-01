@@ -53,6 +53,11 @@
           <Add library="C:\dev32\lib\libopenal.dll.a" />
           <Add library="C:\dev32\lib\libglew32.dll.a" />
           <Add library="C:\Program Files (x86)\mingw-w64\i686-5.2.0-posix-dwarf-rt_v4-rev0\mingw32\i686-w64-mingw32\lib\libopengl32.a" />
+          <Add library="C:\dev32\lib\libgobject-2.0.dll.a" />
+          <Add library="C:\dev32\lib\libcairo.dll.a" />
+          <Add library="C:\dev32\lib\libfontconfig.dll.a" />
+          <Add library="C:\dev32\lib\libpango-1.0.dll.a" />
+          <Add library="C:\dev32\lib\libpangocairo-1.0.dll.a" />
           <Add directory="C:/dev32/lib" />
         </Linker>
       </Target>
@@ -75,6 +80,11 @@
       <Add library="C:\dev64\lib\libopenal.dll.a" />
       <Add library="C:\dev64\lib\libglew32.dll.a" />
       <Add library="C:\Program Files\mingw64\x86_64-w64-mingw32\lib\libopengl32.a" />
+      <Add library="C:\dev64\lib\libgobject-2.0.dll.a" />
+      <Add library="C:\dev64\lib\libcairo.dll.a" />
+      <Add library="C:\dev64\lib\libfontconfig.dll.a" />
+      <Add library="C:\dev64\lib\libpango-1.0.dll.a" />
+      <Add library="C:\dev64\lib\libpangocairo-1.0.dll.a" />
       <Add directory="C:/dev64/lib" />
     </Linker>
     <Unit filename="code/AI.cpp" />

@@ -10,7 +10,13 @@ using namespace std;
 
 
 
+int WrappedText::lineHeightScale = 112;
+int WrappedText::paragraphBreakScale = 36;
+
+
+
 WrappedText::WrappedText()
+  : font(nullptr), text(), layout()
 {
   layout.align = Font::JUSTIFIED;
   layout.truncate = Font::TRUNC_NONE;
@@ -81,8 +87,8 @@ void WrappedText::SetFont(const Font &font)
 {
   this->font = &font;
 
-  SetLineHeight(font.Height() * 112 / 100);
-  SetParagraphBreak(font.Height() * 36 / 100);
+  SetLineHeight(font.Height() * lineHeightScale / 100);
+  SetParagraphBreak(font.Height() * paragraphBreakScale / 100);
 }
 
 
@@ -145,5 +151,29 @@ int WrappedText::Height() const
 void WrappedText::Draw(const Point &topLeft, const Colour &colour) const
 {
   font->Draw(text, topLeft, colour, &layout);
+}
+
+
+
+// Bottom Margin
+int WrappedText::BottomMargin() const
+{
+  return ParagraphBreak() + LineHeight() - font->Height();
+}
+
+
+
+// Set the default scale for the line height.
+void WrappedText::SetDefaultLineHeightScale(double scale)
+{
+  lineHeightScale = scale * 100;
+}
+
+
+
+// Set the default scale for the paragraph break.
+void WrappedText::SetDefaultParagraphBreakScale(double scale)
+{
+  paragraphBreakScale = scale * 100;
 }
 

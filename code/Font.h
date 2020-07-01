@@ -20,7 +20,7 @@ class ImageBuffer;
 
 
 // Class for drawing text in OpenGL.
-// The encoding of the text is utf8.
+// The encoding of the text is UTF-8.
 class Font {
 public:
   Font();
@@ -30,7 +30,6 @@ public:
 
   // Font settings.
   void SetFontDescription(const std::string &desc);
-  void SetLayoutReference(const std::string &desc);
   void SetPixelSize(int size);
   void SetLanguage(const std::string &langCode);
 
@@ -51,7 +50,7 @@ public:
     uint_fast8_t paragraphBreak = 0;
 
     Layout() noexcept = default;
-    Layout(Truncate t, int w) noexcept;
+    Layout(Truncate t, int w, Align a = LEFT) noexcept;
     Layout(const Layout& a) noexcept = default;
     Layout &operator=(const Layout& a) noexcept = default;
     bool operator==(const Layout &a) const;
@@ -119,7 +118,7 @@ private:
 
   int ViewWidth(const std::string &str, const Layout *params = nullptr) const;
 
-  // Convert Viewport to/from Text coordinates.
+  // Convert Viewport to or from Text coordinates.
   double ViewFromTextX(double x) const;
   double ViewFromTextY(double y) const;
   int ViewFromTextX(int x) const;
@@ -139,6 +138,7 @@ private:
 
 
 private:
+
   Shader shader;
   GLuint vao;
   GLuint vbo;
@@ -156,7 +156,6 @@ private:
 
   mutable cairo_t *cr;
   std::string fontDescName;
-  std::string refDescName;
   mutable PangoContext *context;
   mutable PangoLayout *layout;
   PangoLanguage *lang;
@@ -173,8 +172,8 @@ private:
 
 
 inline
-Font::Layout::Layout(Truncate t, int w) noexcept
-  : truncate(t), width(w)
+Font::Layout::Layout(Truncate t, int w, Align a) noexcept
+  : align(a), truncate(t), width(w)
 {
 }
 

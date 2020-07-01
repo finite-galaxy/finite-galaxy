@@ -38,9 +38,9 @@ void Table::Clear()
 
 
 
-void Table::AddColumn(int x, Align align)
+ void Table::AddColumn(int x, const Font::Layout &layout)
 {
-  columns.emplace_back(x, align == LEFT ? 0. : align == RIGHT ? -1. : -.5);
+  columns.emplace_back(x, layout);
 
   // This may invalidate iterators, so:
   it = columns.begin();
@@ -133,23 +133,27 @@ void Table::Advance(int fields) const
 
 
 // Draw a single text field, and move on to the next one.
-void Table::Draw(const string &text, const Font::Layout *layout) const
+ void Table::Draw(const string &text, const Font::Layout *special) const
 {
-  Draw(text, colour, layout);
+  Draw(text, colour, special);
 }
 
 
 
 // If a colour is given, this field is drawn using that colour, 
 // but the previously set colour will be used for future fields.
-void Table::Draw(const string &text, const Colour &colour, const Font::Layout *layout) const
+void Table::Draw(const string &text, const Colour &colour, const Font::Layout *special) const
 {
   if(font)
   {
     Point pos = point;
+    const Font::Layout layout = special ? *special :
+      it != columns.end() ? it->layout : Font::Layout{};
+    const double alignAdjust = layout.align == Font::CENTRE ? -.5 :
+      layout.align == Font::RIGHT ? -1. : 0.;
     if(it != columns.end())
-      pos += Point(it->offset + it->align * font->Width(text, layout), 0.);
-    font->Draw(text, pos, colour, layout);
+      pos += Point(it->offset + alignAdjust * layout.width, 0.);
+    font->Draw(text, pos, colour, &layout);
   }
 
   Advance();
@@ -157,16 +161,16 @@ void Table::Draw(const string &text, const Colour &colour, const Font::Layout *l
 
 
 
-void Table::Draw(double value) const
+ void Table::Draw(double value, const Font::Layout *special) const
 {
-  Draw(value, colour);
+  Draw(value, colour, special);
 }
 
 
 
-void Table::Draw(double value, const Colour &colour) const
+void Table::Draw(double value, const Colour &colour, const Font::Layout *special) const
 {
-  Draw(Format::Number(value), colour);
+  Draw(Format::Number(value), colour, special);
 }
 
 
@@ -243,13 +247,13 @@ Rectangle Table::GetRowBounds() const
 
 
 Table::Column::Column()
-  : offset(0.), align(0.)
+  : offset(0.), layout()
 {
 }
 
 
 
-Table::Column::Column(double offset, double align)
-  : offset(offset), align(align)
+Table::Column::Column(double offset, const Font::Layout &layout)
+  : offset(offset), layout(layout)
 {
 }

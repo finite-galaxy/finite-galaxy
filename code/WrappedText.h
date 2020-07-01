@@ -20,11 +20,11 @@ public:
 
   // Set the alignment mode.
   Font::Align Alignment() const;
-	void SetAlignment(Font::Align align);
+  void SetAlignment(Font::Align align);
 
-	// Set the truncate mode.
-	Font::Truncate Truncate() const;
-	void SetTruncate(Font::Truncate trunc);
+  // Set the truncate mode.
+  Font::Truncate Truncate() const;
+  void SetTruncate(Font::Truncate trunc);
 
   // Set the wrap width. This does not include any margins.
   int WrapWidth() const;
@@ -53,6 +53,16 @@ public:
   // Draw the text.
   void Draw(const Point &topLeft, const Colour &colour) const;
 
+  // Bottom margin.
+  int BottomMargin() const;
+
+  // Set the default scale for the line height.
+  // The line height is the font height multiplied by this scale.
+  static void SetDefaultLineHeightScale(double scale);
+  // Set the default scale for the paragraph break.
+  // The paragraph break is the font height multiplied by this scale.
+  static void SetDefaultParagraphBreakScale(double scale);
+
 
 
 private:
@@ -60,6 +70,9 @@ private:
 
   std::string text;
   Font::Layout layout;
+
+  static int lineHeightScale;
+  static int paragraphBreakScale;
 };
 
 

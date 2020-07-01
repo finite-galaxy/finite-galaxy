@@ -293,8 +293,8 @@ void PreferencesPanel::DrawControls()
   Colour red(.3f, 0.f, 0.f, .3f);
 
   Table table;
-  table.AddColumn(-115, Table::LEFT);
-  table.AddColumn(115, Table::RIGHT);
+  table.AddColumn(-115, Font::Layout{Font::TRUNC_NONE, 230, Font::LEFT});
+  table.AddColumn(115, Font::Layout{Font::TRUNC_NONE, 230, Font::RIGHT});
   table.SetUnderline(-120, 120);
 
   int firstY = -248;
@@ -392,7 +392,7 @@ void PreferencesPanel::DrawControls()
   }
 
   Table shiftTable;
-  shiftTable.AddColumn(125, Table::RIGHT);
+  shiftTable.AddColumn(125, Font::Layout{Font::TRUNC_NONE, 150, Font::RIGHT});
   shiftTable.SetUnderline(0, 130);
   shiftTable.DrawAt(Point(-400, 52));
 
@@ -415,8 +415,8 @@ void PreferencesPanel::DrawSettings()
   const Colour &bright = *GameData::Colours().Get("bright");
 
   Table table;
-  table.AddColumn(-115, Table::LEFT);
-  table.AddColumn(115, Table::RIGHT);
+  table.AddColumn(-115, Font::Layout{Font::TRUNC_NONE, 230, Font::LEFT});
+  table.AddColumn(115, Font::Layout{Font::TRUNC_NONE, 230, Font::RIGHT});
   table.SetUnderline(-120, 120);
 
   int firstY = -248;
@@ -583,8 +583,9 @@ void PreferencesPanel::DrawPlugins()
   const Colour &medium = *GameData::Colours().Get("medium");
   const Colour &bright = *GameData::Colours().Get("bright");
 
+  const int MAX_TEXT_WIDTH = 230;
   Table table;
-  table.AddColumn(-115, Table::LEFT);
+  table.AddColumn(-115, Font::Layout{Font::TRUNC_MIDDLE, MAX_TEXT_WIDTH, Font::LEFT});
   table.SetUnderline(-120, 120);
 
   int firstY = -238;
@@ -593,7 +594,6 @@ void PreferencesPanel::DrawPlugins()
   table.Draw("Installed plugins:", bright);
   table.DrawGap(5);
 
-  const int MAX_TEXT_WIDTH = 230;
   const Font &font = FontSet::Get(18);
   for(const auto &plugin : GameData::PluginAboutText())
   {
@@ -602,8 +602,7 @@ void PreferencesPanel::DrawPlugins()
     bool isSelected = (plugin.first == selectedPlugin);
     if(isSelected || plugin.first == hoverPlugin)
       table.DrawHighlight(back);
-    const Font::Layout layout(Font::TRUNC_MIDDLE, MAX_TEXT_WIDTH);
-    table.Draw(plugin.first, isSelected ? bright : medium, &layout);
+    table.Draw(plugin.first, isSelected ? bright : medium);
 
     if(isSelected)
     {

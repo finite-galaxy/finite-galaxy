@@ -98,9 +98,9 @@ void DataFile::LoadData(const string &data)
   size_t end = data.length();
   for(size_t pos = 0; pos < end; pos = Utf8::NextCodePoint(data, pos))
   {
+    ++lineNumber;
     char32_t c = Utf8::DecodeCodePoint(data, pos);
 
-    ++lineNumber;
     // Find the first non-white character in this line.
     bool isSpaces = false;
     int white = 0;
