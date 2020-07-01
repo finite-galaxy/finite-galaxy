@@ -9,15 +9,9 @@ matrix:
         env: MODE=Release
 
 addons:
-    homebrew:
-        packages:
-        - libmad
-        - libpng
-        - jpeg-turbo
-        - sdl2
-        update: true
     apt:
         packages:
+        - g++
         - libsdl2-dev
         - libpng-dev
         - libjpeg-turbo8-dev
@@ -27,7 +21,18 @@ addons:
         - libgl1-mesa-dev
         - libegl1-mesa-dev
         - libgles2-mesa-dev
+        - libpango
+        - fonts-linuxlibertine
         - scons
+    homebrew:
+        packages:
+        - gcc
+        - libmad
+        - libpng
+        - jpeg-turbo
+        - sdl2
+        - pango
+        update: true
 
 git:
     quiet: true
