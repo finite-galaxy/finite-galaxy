@@ -1,0 +1,639 @@
+## Overview of finite-galaxy changes since forking endless-sky
+## See also https://github.com/finite-galaxy/finite-galaxy/commits/master
+
+Version 0.10.0:
+* code:
+  * C++14
+  * replaced tabs with two spaces
+  * unicode font support with pangocairo (@flaviojs, @oo13)
+  * move ship and outfit categories to data files (@Hadron1776)
+  * change bay type identification to categories (@petervdmeer)
+  * hyperjump fuel is equal to the ship's effective mass (including cargo and carried ships) plus best outfit fuel
+    * include cargo and fighter mass to estimate route when on planet (@IntegratedQuantum)
+  * fuel is no longer free, price depends on planet when landing or government when hailing ships in space (@IntegratedQuantum)
+  * introduced core space, used by energy generators and some other outfits
+    * outfit space = core space + engine space + weapon space
+  * introduced random damage attributes for all weapon damage types
+    * weapon projectile damage = random(damage, damage + random damage)
+  * added support for jump heat, a percentage of a ship's maximum heat
+  * added support for bombers [work in progress]
+  * stat info display:
+    * numbers display up to three decimals by default
+    * thousand separators are only inserted if there will be at least two digits before it
+    * display projectile velocity on same line as range
+    * display per shot on same line as per second values
+    * reordered weapon outfit display stats
+    * include fuel in energy and heat ship info display table
+    * active cooling is included with shield recharge and hull repair, instead of under idle
+    * display more stats in the ship info display
+    * reordered ship info display
+    * ship details in shop above fleet overview instead of below
+    * fleet overview from four to five ship icon columns
+  * self-destruct is performed only once: upon boarding
+  * display distance to target even if you have no tactical scanner
+  * only display target's shields and hull if within tactical range
+  * installed outfits are no longer plunderable by default
+  * minimum deprecation from 25% to 50%, time from 1000 to 365 days
+  * ships consume energy based on the number of bunks, to represent life support systems
+  * trebled distances between stars and planets
+  * more zoom out levels (@Nescio0)
+  * more map zoom levels
+  * more swizzle options (4^3=64 options)
+  * escorts refuel 5× as fast when landing on planets
+* data:
+  * Oxford spelling
+  * replaced tabs with two spaces
+  * reorganized files
+  * deleted news
+  * updated tooltips
+  * doubled initial loan, halved interest rate
+  * changed outfit and ship categories
+  * map:
+    * redistributed most ships and many outfits to have more regional specialization
+    * disabled planet tribute
+    * renamed “New {Country}” planets to less culturally biased names
+    * the Deep has its own regional government
+    * Free Worlds exists at the start of the game in the Rim, up to and including Zubeneschamali; later expands beyond Zubenelgenubi into the South
+    * Republic controls the Core
+    * replaced the Syndicate with the Corporation; controls the Paradise Planets
+    * new systems:
+      * Algedi (Republic), connected to Alniyat, Graffias, and Pherkad
+      * Chalawan (Republic), connected to Algieba, Alphard, and Zosma
+      * Charm (Quarg), unconnected, south of Sadachbia, Sadalmelik, and Sadalsuud
+      * Enif (Pirate), connected to Algenib
+      * Nashira (Deep), connected to Algenubi, Aspidiske, and Avior
+      * Ruwarku (Quarg), unconnected, between Ekuarik, Ki War Ek, and Quaru
+      * Salm (Republic), connected to Alcyone, Moktar, and Oblate
+      * Situla (Deep), connected to Adhara and Zosma
+      * Tarf (Republic), connected to Hamal
+      * Zubenelhakrabi (Free Worlds), connected to Zubenelgenubi and Zubeneschamali
+    * connections:
+      * linked Achernar and Alpha Hydri
+      * linked Albaldah and Lurata
+      * unlinked Albireo and Tarazed
+      * unlinked Alcyone and Zaurak
+      * linked Alderamin and Matar
+      * unlinked Algieba and Alphard
+      * unlinked Algieba and Zosma
+      * linked Alheka and Phact
+      * linked Alhena and Capella
+      * linked Alhena and Kursa
+      * unlinked Alhena and Wazn
+      * unlinked Alioth and Alphecca
+      * unlinked Alnasl and Kaus Borealis
+      * unlinked Alniyat and Graffias
+      * unlinked Alniyat and Han
+      * unlinked Alniyat and Pherkad
+      * unlinked Alpha Hydri and Ruchbah
+      * linked Alphard and Zosma
+      * unlinked Alphecca and Boral
+      * linked Alpheratz and Ankaa
+      * unlinked Arcturus and Rutilicus
+      * linked Ascella and Hintar
+      * unlinked Ascella and Rasalhague
+      * unlinked Ascella and Zeta Aquilae
+      * unlinked Beginning and Belonging
+      * linked Bellatrix and Kugel
+      * linked Belonging and Hunter
+      * linked Boral and Kaus Borealis
+      * unlinked Canopus and Mirzam
+      * unlinked Canopus and Phurad
+      * unlinked Capella and Menkalinan
+      * linked Caph and Fomalhaut
+      * linked Castor and Procyon
+      * unlinked Castor and Mankalinan
+      * unlinked Chikatip and Sekreta
+      * unlinked Cor Caroli and Mizar
+      * linked Dschubba and Han
+      * linked Dubhe and Gomeisa
+      * linked Eber and Sargas
+      * linked Fala and Phecda
+      * unlinked Fomalhaut and Markab
+      * linked Hadar and Kochab
+      * linked Hamal and Sheratan
+      * linked Hamal and Zaurak
+      * unlinked Hassaleh and Rajak
+      * linked Hintar and Kaus Borealis
+      * linked Hintar and Rasalhague
+      * linked Hintar and Zeta Aquilae
+      * linked Homeward and Last Word
+      * unlinked Ildaria and Zubeneschamali
+      * linked Kugel and Menkar
+      * unlinked Last Word and Silver Bell
+      * linked Lurata and Tarazed
+      * linked Menkalinan and Tejat
+      * linked Menkalinan and Wazn
+      * unlinked Menkar and Zaurak
+      * unlinked Menkent and Vega
+      * linked Mimosa and Spica
+      * linked Mirzam and Saiph
+      * unlinked Muphrid and Porrima
+      * linked Oblate and Zaurak
+      * unlinked Phecda and Tania Australis
+      * unlinked Phurad and Wazn
+      * linked Rasalhague and Vega
+      * unlinked Ruchbah and Sheratan
+      * unlinked Sheratan and Zaurak
+    * new planets:
+      * Obscurity (Pirate) in Orbona
+      * Strange (Quarg) in Charm
+    * planets:
+      * attributes and description from Maker to Hermes, from Hermes to Pilot, from Pilot to Maker
+      * attributes and description of Oberon Station swapped with Triton Station
+      * moved Ada to Markab, Hephaestus to Aldebaran
+      * moved Amazon to Gamma Cassiopeiae
+      * moved Arahas to Algieba
+      * moved Big Sky to Vindemiatrix and Bos to Sarin
+      * moved Crossroads to Ankaa and Lodestone to Ruchbah
+      * moved Hope to Eber
+      * moved Shiver to Vega, Silver to Altair
+      * moved Thrall to Mizar, Millrace to Pollux, Glory to Fomalhaut, Moonshake to Wazn
+  * outfits:
+    * turrets and scanners increase drag by mass/100
+    * turret turn rate standardized to 60/mass
+    * turrets no longer increase required crew
+    * non-missile guns and non-anti-missile turrets have range increased by about a third
+    * all missile weapons have a blast radius
+    * numerous tweaks to stats of many outfits
+    * new:
+      * "Bolt Cannon"
+      * "Bolt Turret"
+      * "Bosonic Fuel Storage"
+      * "Century Cell"
+      * "Cyclops Core"
+      * "DS-05 Battery Pack"
+      * "DS-11 Battery Pack"
+      * "DS-23 Battery Pack"
+      * "DS-47 Battery Pack"
+      * "DS-97 Battery Pack"
+      * "Extra Armour Plating"
+      * "Extra Shield Emitters"
+      * "Graviton Engines"
+      * "Ion Rifle"
+      * "IR-1700 Ion Reverse"
+      * "IR-2700 Ion Reverse"
+      * "IR-3700 Ion Reverse"
+      * "IR-4700 Ion Reverse"
+      * "IR-5700 Ion Reverse"
+      * "Large Fuel Module"
+      * "Neutrino Cooling"
+      * "Ogre Core"
+      * "Particle Turret"
+      * "Quantum Hull Repair"
+      * "Quarg Ramscoop"
+      * "Scanning Module" (@Nescio0)
+      * "Small Fuel Module"
+      * "X6 Blaster Turret"
+      * "X8 Blaster Turret"
+      * "Yoloy Scanner"
+    * renamed:
+      * removed species from outfit names
+  * ships:
+    * changed outfits of practically all ships and variants
+    * ship categories are determined by a ship's total mass = hull mass + outfit space + cargo space
+    * ship weapon explosion:
+      * blast radius = (hull mass + outfit space + cargo space) / 5
+      * shield damage = hull mass * 2
+      * random shield damage = (outfit space + cargo space) * 2
+      * hull damage = hull mass * 3
+      * random hull damage = (outfit space + cargo space) * 3
+      * heat damage = hull mass * 60
+      * random heat damage = (outfit space + cargo space) * 60
+      * hit force = hull mass * 5
+      * random hit force = (outfit space + cargo space) * 5
+    * ships have 0 fuel capacity; equipped them with fuel pods; cargo space increased accordingly
+    * renamed:
+      * removed species from ship names
+      * "Albatross" to "Twilight"
+      * "Arach Freighter" to "Wagon"
+      * "Barb" to "Mongrel"
+      * "Bulk Freighter" to "Centipede"
+      * "Carrier" to "Saturn"
+      * "Corvette" to "Thunderbolt"
+      * "Cruiser" to "Venus"
+      * "Falcon" to "Blade"
+      * "Finch" to "Hag"
+      * "Freighter" to "Star Freighter"
+      * "Frigate" to "Mars"
+      * "Gunboat" to "Mercury"
+      * "Hauler" to "Hauler I"
+      * "Hawk" to "Headhunter"
+      * "Headhunter" to "Falcon"
+      * "Lampyrid-Class Transport" to "Lampyrid"
+      * "Lance" to "Foxhound"
+      * "Modified Argosy" to "Marauder Argosy"
+      * "Marauder Fury" to "Modified Fury"
+      * "Shuttle" to "Light Shuttle"
+      * "Sparrow" to "Harpy"
+      * "Starling" to "Shadow"
+      * "Surveillance Drone" to "Watch Dog"
+      * "Violin Spider" to "Mosquito"
+    * gun port changes:
+      * Bactrian from 4 to 3
+      * Bastion from 4 to 2
+      * Blade from 4 to 2
+      * Centipede from 2 to 0
+      * Clipper from 4 to 0
+      * Deep River from 6 to 0
+      * Falcon from 2 to 4
+      * Hag from 2 to 4
+      * Harpy from 2 to 6
+      * Heavy Shuttle from 2 to 0
+      * Light Shuttle from 1 to 0
+      * Jupiter from 8 to 4
+      * Kestrel from 6 to 12
+      * Manta from 6 to 8
+      * Model 8 from 2 to 0
+      * Modified Vanguard from 15 to 7
+      * Mule from 2 to 1
+      * Osprey from 4 to 5
+      * Protector from 2 to 0
+      * Saturn from 6 to 4
+      * Star Queen from 3 to 0
+      * Tek Far 71 Lek from 3 to 2
+      * Venus from 4 to 2
+    * turret mount changes:
+      * Blade from 4 to 5
+      * Centipede from 5 to 2
+      * Kar Ik Vot 349 from 8 to 10
+      * Kestrel from 4 to 6
+      * Model 8 from 0 to 1
+      * Osprey from 2 to 5
+      * Scout from 1 to 0
+    * carried bay changes: 
+      * Raider: fighter bays from 2 to 0, bomber bays from 0 to 2
+    * stat tweaks:
+      * Aerie: +40 cargo space, +5 core space, −5 engine space
+      * Aphid: +13 cargo space, −30 core space
+      * Archon: cost from 1000 000 000 to 1234 567 890; +200 mass, +50 core space; +400 tactical scan power
+      * Arfecta: −2000 shields, +90 mass, +50 core space; removed cloaking fuel; +3400 energy capacity, +15 200 fuel capacity, +2.0 fuel generation, +3 hull repair rate, +3 hull energy, +12 scan interference, +237 tactical scan power
+      * Argosy: cost from 1960 000 to 2400 000; +30 cargo space, +10 engine space, −10 weapon space
+      * Arrow: −0.8 drag, +10 cargo space, −5 core space, +5 engine space
+        * Modified Arrow (Core): −0.8 drag, +15 cargo space, +20 core space, −15 engine capacity, +5 weapon space
+        * Modified Arrow (Engines): −0.8 drag, +15 cargo space, +10 core space, +5 engine space, −5 weapon space
+        * Modified Arrow (Weapons): −0.8 drag, +15 cargo space, −5 core space, −15 engine capacity, +30 weapon space
+      * Autumn Leaf: +62 cargo space, +15 core space
+      * Bactrian: +200 cargo space
+      * Bastion: +700 hull, +60 cargo space, +10 core space, +3 required crew
+      * Behemoth: +1800 hull, +60 cargo space
+      * Berserker: +20 cargo space, −10 core space
+      * Blackbird: cost from 2230 000 to 2900 000; −400 shields, +1100 hull, +3 required crew, +14 bunks, −0.8 drag, +50 cargo space
+      * Blade: cost from 9 800 000 to 11 100 000; +700 shields, +800 hull, −12 required crew, −15 bunks, −10 mass, +80 cargo space, +50 core space, +10 weapon space
+        * Modified Blade (Core): +900 shields, +900 hull, −11 bunks, +90 cargo space, +50 core space, –15 engine space, –15 weapon space
+        * Modified Blade (Engines): +900 shields, +900 hull, −11 bunks, +90 cargo space, +35 core space, +20 engine space, –35 weapon space
+        * Modified Blade (Weapons): +900 shields, +900 hull, −11 bunks, +90 cargo space, +35 core space, –15 engine space
+      * Bounder: +1 required crew, +40 cargo space, +25 core space, −20 engine space, −5 weapon space
+        * Modified Bounder (Core): +40 cargo space, +45 core space, –25 engine space
+        * Modified Bounder (Engines): +40 cargo space, +40 core space, −15 weapon space
+        * Modified Bounder (Weapons): +40 cargo space, +55 core space, –25 engine space, −10 weapon space
+      * Boxwing: +0.81 drag, +0.23 heat dissipation, −40 cargo space, +3 core space, +7 engine space
+      * Briar: +30 cargo space
+      * Centipede: cost from 9 400 000 to 9 000 000; −1000 shields, +1400 hull, −3 bunks, +30 mass, +2.2 drag, +150 cargo space, −25 core space, +15 engine space, −100 weapon space
+      * Chaser: +700 shields, +600 hull, +1 required crew, +1 bunk, +30 mass, +33 core space
+      * Clipper: +30 cargo space, −10 core space, −60 weapon space
+      * Combat Drone: +200 hull, +20 mass, +0.01 drag, +8 core space, –6 engine space
+        * Mark I Drone: 
+        * Mark II Drone: –200 hull, –10 mass, +7 weapon space
+        * Mark III Drone: –400 hull, –20 mass, +14 weapon space
+      * Cool Breeze: +12 cargo space, +15 core space, +5 weapon space
+      * Courier: +10 cargo space
+      * Dagger: −0.03 drag, +10 core space, −10 weapon space
+      * Deep River: +60 cargo space, +64 core space, −177 weapon space
+      * Derecho: +75 cargo space, +15 core space
+      * Dreadnought: +1.0 drag, +100 cargo space, +40 core space, –10 engine space, –10 weapon space
+      * Earth Shaper: +20 mass, +5 cargo space, +26 core space, −5 engine space
+      * Enfolta: +2100 energy capacity, +5430 fuel capacity, +1.0 fuel generation, +4 hull repair rate, +4 hull energy, +6 scan interference, +30 tactical scan power
+      * Falcon: cost from 1850 000 to 1900 000; +10 cargo space, +30 core space, –10 engine space
+      * Far Lek 14: +1 core space; self destruct from 0.60 to 0.9
+      * Far Osk 27: +1 core space; self destruct from 0.60 to 0.9
+      * Firebird: −1 bunks, +30 cargo space, +10 core space
+        * Modified Firebird (Core): −5 mass, +45 core space, −10 engine space, −15 weapon space
+        * Modified Firebird (Engines): −5 mass, +35 core space, −15 weapon space
+        * Modified Firebird (Weapons): −5 mass, +50 core space, −10 engine space, −20 weapon space
+      * Flea: −0.05 drag, +13 core space, +4 weapon space
+      * Flivver: −1 bunk, +10 cargo space, +10 core space, −10 weapon space
+      * Flycatcher: +2 core space, −5 engine space, −4 weapon space
+      * Foxhound: −10 core space, +1 engine space, −6 weapon space
+      * Fury: +15 cargo space, +10 core space, −10 engine space
+      * Gascraft: +14 cargo space, +2 core space; +1 outfit scan power, +1 outfit scan speed, +1 scan interference, +1 tactical scan power
+      * Hag: −200 shields, +100 hull, +0.27 drag, −10 core space
+      * Harpy: +100 hull, +0.3 drag, +5 cargo space, +10 weapon space
+      * Hauler I: +1 required crew, +20 cargo space, +10 core space
+      * Hauler II: +1 required crew, +40 cargo space, +10 core space
+      * Hauler III: +1 required crew, +60 cargo space, +10 core space
+      * Headhunter: +10 cargo space
+      * Heavy Shuttle: +100 hull, +15 cargo space, +10 core space, –10 weapon space
+      * Hulk: +83 cargo space
+      * Hurricane: +98 cargo space, +29 core space, –7 weapon space
+      * Interdictor: +90 cargo space
+      * Kar Ik Vot 349: –30 cargo space, +38 core space, –8 engine space; self destruct from 0.80 to 0.9
+      * Kestrel: cost from 10 300 000 to 18 000 000; +1600 shields, −200 hull, +90 cargo space, +30 core space, −30 weapon space
+        * (Engines) variant: −30 cargo space, removed drag and fuel improvements
+        * (Shields) variant: −500 hull
+        * (Weapons) variant: −60 cargo space, +30 weapon space; removed extra gun ports
+      * Lampyrid: +50 cargo space
+      * Leviathan: –1900 shields, +1400 hull, +5 required crew, –4 bunks, +40 cargo space, –20 core space
+        * Modified Leviathan (Core): –4 bunks, +10 cargo space, +35 core space, –40 engine space, +5 weapon space
+        * Modified Leviathan (Engines): –4 bunks, +10 cargo space, +35 core space, +5 weapon space
+        * Modified Leviathan (Weapons): –4 bunks, +10 cargo space, +35 core space, +10 weapon space
+      * Lightning Bug: –30 mass, +15 cargo space, +25 core space, +10 weapon space
+      * Light Shuttle: +10 cargo space, +10 core space, –10 weapon space
+      * Maboro: –100 mass; +3800 energy capacity, +7410 fuel capacity, +1.5 fuel generation, +6 hull repair rate, +6 hull energy, +9 scan interference, +42 tactical scan power
+      * Manta: –500 shields, +300 hull, +20 cargo space, +20 core space, –20 weapon space
+        * Modified Manta (Core): –500 shields, +250 hull, +20 cargo space, +5 core space, +5 weapon space
+        * Modified Manta (Engines): –500 shields, +250 hull, +20 cargo space, +5 core space, +5 weapon space
+        * Modified Manta (Weapons): –500 shields, +250 hull, +20 cargo space, +5 core space, +5 weapon space
+      * Mars: +55 cargo space, +30 core space, +30 weapon space
+      * Mercury: –0.1 heat dissipation, +10 cargo space, +30 core space, –20 engine space
+      * Met Par Tek 53: self destruct from 0.65 to 0.9
+      * Model 8: –3 core space, –7 engine space, +10 weapon space; +1 ramscoop, self destruct from 0.60 to 0.9
+      * Model 16: −4 core space, −6 engine space; +1 ramscoop, self destruct from 0.65 to 0.9
+      * Model 32: +0.1 heat dissipation, −24 core space, −1 engine space; +1 ramscoop, self destruct from 0.70 to 0.9
+      * Model 64: +27 core space, +5 engine space, –12 weapon space; +1 ramscoop, self destruct from 0.74 to 0.9
+      * Model 128: +4 core space, −1 engine space; +1 ramscoop, self destruct from 0.77 to 0.9
+      * Model 256: +1 ramscoop, self destruct from 0.79 to 0.9
+      * Model 512: +1 ramscoop, self destruct from 0.80 to 0.9
+      * Mongrel: −100 shields, +100 hull, −0.03 heat dissipation, +20 mass, +1 core space, −2 engine space, +6 weapon space
+      * Mosquito: −5 core space, +8 engine space, +3 weapon space
+      * Mule: +6 required crew, +80 cargo space
+      * Nest: cost from 2500 000 to 3000 000; +1 required crew, –0.7 heat dissipation, +50 mass, +10 cargo space, +10 core space
+      * Neutralizer: +4 bunks, +68 cargo space, –4 core space, +4 engine space
+      * Osprey: cost from 4900 000 to 6000 000; +300 shields, +900 hull, +7 required crew, +8 bunks, +50 cargo space, +10 core space
+      * Pond Strider: +38 cargo space
+      * Protector: cost from 5500 000 to 6000 000; +500 shields, −500 hull, +6 required crew, –6 bunks, +40 mass, +40 cargo space, –20 core space, +40 weapon space
+      * Punisher: +100 cargo space, +1 core space, +2 engine space
+      * Quicksilver: +20 cargo space, +10 engine space
+        * Modified Quicksilver (Core): +25 cargo space, +5 core space, +5 engine space, –5 weapon space
+        * Modified Quicksilver (Engines): +25 cargo space, +25 core space, –15 engine space, –5 weapon space
+        * Modified Quicksilver (Weapons): +25 cargo space, +5 engine space
+      * Raider: +200 mass, +5 required crew
+      * Rainmaker: +25 cargo space, −10 core space, +10 engine space
+      * Raven: cost from 1800 000 to 2400 000; −200 shields, +100 hull, −2 required crew, −5 bunks, +20 cargo space, +40 core space, −10 engine space, +20 weapon space
+        * Modified Raven (Core): +45 core space, +5 weapon space
+        * Modified Raven (Engines): +55 core space, –10 engine space, +5 weapon space
+        * Modified Raven (Weapons): +55 core space, –5 weapon space
+      * Roost: cost from 3000 000 to 4000 000; +1 required crew, –0.7 heat dissipation, +100 mass, +20 cargo space, +10 core space
+      * Runabout: +15 cargo space
+      * Saturn: +2000 shields, +1000 hull; −0.05 heat dissipation, +200 cargo space, +70 core space, −10 engine space, +30 weapon space
+      * Scout: −0.3 drag, +35 cargo space
+      * Shadow: +62 cargo space; +2 scan interference, +25 tactical scan power
+      * Shield Beetle: –15 cargo space, +81 core space, +6 engine capacity, +24 weapon space
+      * Skein: cost from 3500 000 to 5000 000; +3 required crew, –1.1 heat dissipation, +150 mass, +30 cargo space, +10 core space
+      * Skylark: −10 bunks, −20 required crew, +40 mass, +200 cargo space, +20 core space, −20 engine space; removed energy generation, hull energy, hull repair rate, and ramscoop
+      * Sojourner: +113 cargo space
+      * Solifuge: −0.02 heat dissipation, +72 cargo space, +65 core space, –24 engine space, +70 weapon space
+      * Spindle: +51 cargo space
+      * Spire: +90 cargo space
+      * Splinter: +1 required crew, −5 bunks, +45 cargo space
+        * Modified Splinter (Core): +5 core space, +5 weapon space
+        * Modified Splinter (Engines): +5 core space, +5 weapon space
+        * Modified Splinter (Weapons): +10 weapon space
+      * Star Barge: −10 core space, −10 engine space, +10 weapon space
+      * Star Freighter: +50 cargo space, −10 core space, −10 engine space, +10 weapon space
+      * Star Queen: cost from 5500 000 to 8500 000; +4400 hull, +112 bunks, +400 mass, +2.0 drag, −0.15 heat dissipation, +80 cargo space, +40 core space, +20 engine space, −60 weapon space
+      * Strong Wind: +35 cargo space, +21 core space, −5 weapon space
+      * Summer Leaf: +43 cargo space, +15 core space
+      * Tek Far 71 Lek: +25 core space, −25 weapon space; self destruct from 0.70 to 0.9
+      * Tek Far 78 Osk: +21 core space, −1 weapon space; self destruct from 0.70 to 0.9
+      * Tek Far 109: +200 mass, +10 core space; self destruct from 0.70 to 0.9
+      * Tempest: +64 cargo space, +15 core space
+      * Thistle: +45 cargo space
+      * Thorn: +15 cargo space
+      * Thunderbolt: +30 cargo space
+      * Transport: +30 cargo space
+      * Traveller: +55 cargo space
+      * Twilight: +86 cargo space, −60 core space, +10 weapon space; +4 scan interference, +81 tactical scan power
+      * Vanguard: +50 cargo space, −20 core space, +20 weapon space
+        * Modified Vanguard: +600 hull, +4 required crew, +50 mass, −10 cargo space, +60 engine space
+      * Venus: +0.05 heat dissipation, +120 cargo space, +180 core space, −20 engine space, −20 weapon space
+      * Visitor: +27 cargo space
+      * Wagon: +49 cargo space
+      * Wardragon: −95 bunks, −100 required crew, −60 mass, +50 cargo space, +20 core space, −20 engine space; removed energy generation, hull energy, hull repair rate, and ramscoop
+      * Wasp: +20 cargo space, +28 core space, −35 engine space, −3 weapon space
+      * Watch Dog: −0.03 drag, +15 core space, −8 engine space
+      * Water Bug: +54 cargo space, +5 core space
+      * Winter Gale: +49 cargo space, +16 core space, −1 engine space
+      * World-Ship A: cost from 27 690 000 to 47 690 000; +5000 shields, −5000 hull, −20 bunks, +20 required crew, +300 mass, −20 cargo space, +128 core space, +8 engine space, +14 weapon space
+      * World-Ship B: cost from 27 690 000 to 47 690 000; −10 bunks, +10 required crew, +400 mass, +128 core space, +8 engine space, +14 weapon space
+      * World-Ship C: cost from 27 690 000 to 47 690 000; −5000 shields, +5000 hull, +500 mass, +20 cargo space, +128 core space, +8 engine space, +14 weapon space
+      * Zibruka: +1400 energy capacity, +4320 fuel capacity, +0.5 fuel generation, +2 hull repair rate, +2 hull energy, +3 scan interference, +16 tactical scan power
+* fonts:
+  * Linux Libertine Display
+* images:
+  * include Eternals images (@comnom)
+  * icons:
+    * replaced icons with scaled Andromeda
+  * outfit:
+    * renamed many images for consistency
+    * deleted some licences and a few other images
+    * scanner_coalition (@Kryes-Omega)
+    * corrected laser_turret (@Brick63)
+    * more colour versions of the screwdriver, created using GIMP's Channel Mixer:
+      * 100, 100, 100: white
+      * 100, 100, 001: yellow
+      * 100, 001, 100: magenta
+      * 100, 001, 001: red
+      * 001, 100, 100: cyan
+      * 001, 100, 001: green
+      * 001, 001, 100: blue
+      * 001, 001, 001: black
+  * planet:
+    * made @2x versions the default, doubling their size in game
+  * deleted all news portraits
+  * projectile:
+    * lengthened beam weapon projectiles
+  * deleted all conversation scenes
+  * ship:
+    * shape (new): 
+      * normalized (100×100 pixels) derivatives of ship/sprite/*@2x.png
+    * sprite:
+      * antiarch, ao, ao_m, cachalot, chilong, chimaera, colony_ship, craterustig, excalibur, gladius, harrier, hatchling, hatchling_m, hourglass, longinus, mako, marlin, myrmex, myrmidon, piranha, pollaxe, raja, scorpion, scorpion_m, swordbreaker, tianlong, twin_crescent, typhon, typhon_m, winged_serpent, yisnith (@comnom)
+      * blade, centipede, hag, harpy, kestrel, manta, osprey, protector, star queen were altered
+      * faes_mar, maeri_het, selii_mar, subsidurial, telis_het (@beccabunny)
+      * falcon has four guns instead of two (@MCOfficer)
+      * jupiter (@puzzlecube)
+      * mistral (@Brick63)
+    * thumbnail:
+      * ao, excalibur, gladius, hatchling, longinus, myrmex, pollaxe, scorpion, swordbreaker, tianlong, twin_crescent, typhon, winged_serpent (@comnom)
+      * archon, arfecta, enfolta, lampyrid, maboro, skylark, wardragon, world-ship_a, world-ship_c, zibruka (@Amazinite)
+      * arrow_c, arrow_e, arrow_w, blade_c, blade_e, blade_w, bounder_c, bounder_e, bounder_w, firebird_c, firebird_e, firebird_w, leviathan_c, leviathan_e, leviathan_w, manta_c, manta_e, manta_w, quicksilver_c, quicksilver_e, quicksilver_w, raven_c, raven_e, raven_w, splinter_c, splinter_e, splinter_w (@Amazinite)
+      * blade, centipede, hag, harpy, kestrel, manta, osprey, protector, star queen were altered
+      * faes_mar, maeri_het, selii_mar, subsidurial, telis_het (@beccabunny)
+      * falcon has four guns instead of two (@MCOfficer)
+      * jupiter (@puzzlecube)
+      * mistral (@Brick63)
+* sounds:
+  * ares~.wav, artemis.wav, athena.wav, dragonsfire.wav, dragonsice.wav, poseidon.wav, poseidon_double.wav, scan~.wav, spit.wav, unused_large~.wav, unused_medium~.wav, unused_small~.wav, unused_tiny~.wav (@comnom)
+  * thrasher (@Lineth)
+* added several scripts and configuration files (@tehhowch): test_parse.ps1, test_parse.sh, .appveyor.yml, .editorconfig, .travis.yml, .winmake
+
+
+
+## Commits incorporated from Endless Sky since 18 October 2018
+  * fix XCode libraries (@tiennou)
+  * enable save-aware data parsing without modifying the save (@tehhowch)
+  * remove compiler warnings issued by clang-902.0.39.2 (@tehhowch)
+  * extend LocationFilter's supported criteria (@tehhowch)
+  * ships cannot have negative outfit counts (@tehhowch)
+  * support launch effects for carried ships when departing from their carrier (@tehhowch)
+  * issue deprecation warnings and simplify some code (@tehhowch)
+  * check if the picked boarding/assisting mission has space before offering (@tehhowch)
+  * add mission cargo from boarding/assisting missions only to the flagship (@tehhowch)
+  * place NPCs from boarding missions while in-flight (@tehhowch)
+  * update "require <outfit> n" handling of out-of-system escorts (@tehhowch)
+  * use a preference to control fighter repair strategy (@tehhowch)
+  * more syntax warnings (@tehhowch)
+  * handle "outfit <outfit> 0" while loading (@tehhowch)
+  * remove unneeded check (@tehhowch)
+  * print warnings for ships with negative space (@tehhowch)
+  * fix erroneous warning about unrecognized attribute (@tehhowch)
+  * made fast-forward only apply when the player is in flight, not in any of the UI panels (@endless-sky)
+  * avoid attempting to scan a hostile target (@tehhowch)
+  * surveillance personality also do not scan hostiles (@tehhowch)
+  * improve UX for PlayerInfo / ShipInfo panels (@tehhowch)
+  * fix bug where music mp3s could not have extension ".MP3" (@tehhowch)
+  * fix bug where GameEvents could not alter news (@tehhowch)
+  * carried ships unload collected cargo into carrier's cargo bay (@tehhowch)
+  * fighters return to the carrier for ammo and fuel (@zwparchman)
+  * split reboarding logic to own method (@tehhowch)
+  * increase the cached carried mass when resupplying fighters with ammo (@tehhowch)
+  * increase warning visibility on Windows systems (@tehhowch)
+  * 'outfitters' specifies possible carried outfits (@tehhowch)
+  * fleet cargo chooses commodity, outfit, or both (@tehhowch)
+  * treat "shipyard" and "outfitter" as other game data (@tehhowch)
+  * allow asking for help when near harmless enemies (@tehhowch)
+  * use class member function to express intent (@tehhowch)
+  * destroy any still-docked carried ships (@tehhowch)
+  * add last-chance fleeing opportunity to docked ships (@tehhowch)
+  * retain helper-helpee link across jumps (@tehhowch)
+  * fix "turn jitter" in escort AI when following a ship (@tehhowch)
+  * limit player name size (@tehhowch)
+  * remove unused `step` parameter from AF::Collide (@tehhowch)
+  * remove some -Wuseless-cast warnings (@tehhowch)
+  * using float v. double in some cases of -Wdouble-promotion (@tehhowch)
+  * explicitly track "failed" and "declined" mission statuses (@Fzzr)
+  * reduce duplicated checks in PlanetPanel::Draw (@tehhowch)
+  * reorder PlanetPanel::KeyDown checks (@tehhowch)
+  * remove trailing whitespace in payment failure message (@tehhowch)
+  * introduce new fuel-based Outfit attributes (@Nescio0)
+  * use a Point to allow asymmetric "hardpoint offset" specification (@tehhowch)
+  * ships depart from their previously-specified planet (@tehhowch)
+  * show a single news item per day (@tehhowch)
+  * suppress libpng warning for interlaced PNGs (@tehhowch)
+  * add a "battery too small to fire weapon" flight check warning (@mattsoulanille) 
+  * cache friend/foe list for each government to limit ship iteration (@tehhowch)
+  * fix std::out_of_range for out-of-system cloaking NPCs (@tehhowch)
+  * allow phrase-based randomized dialog (@tehhowch)
+  * added shipyard thumbnails for Pug ships (@Amazinite)
+  * specify an initial planet for mission NPCs (@tehhowch)
+  * fix a bug for carriers to get lost. (@oo13)
+  * new lagrange image (@beccabunny)
+  * parse GameEvents for additional definitions (@comnom)
+  * cast pre-multiplication & increase variable size (@tehhowch)
+  * cap projectile velocities to 450000 (@tehhowch)
+  * check for user-supplied unrepresentable values (@tehhowch)
+  * use 64-bit int for ConditionSet (@tehhowch)
+  * fix possible overflows for high-income players (@tehhowch)
+  * "fail" audio no longer plays on loop (@tehhowch)
+  * use singular or plural credit amount (@tehhowch)
+  * new Pug Gridfire Turret and T3 anti missile image (@beccabunny)
+  * enforce required attributes for in-flight spawns (@tehhowch)
+  * remember the name used for a news portrait (@tehhowch)
+  * specify whether KeyDown event was a repeat or not (@tehhowch)
+  * correct osprey sprite (@beccabunny)
+  * improve landing message handling in AI::MovePlayer (@tehhowch)
+  * add additional comments to AI class (@tehhowch)
+  * ensure that hostile escorts are treated by `n` appropriately (@tehhowch)
+  * explicitly check for the "gun ports" attribute
+  * add missing ship reference for offered assisting/boarding missions (@tehhowch)
+  * improve dynamic zooming (@CyberShadow)
+  * improve interpolation between game zoom levels (@thomasballinger)
+  * cleanup & add comment (@tehhowch)
+  * check carried ship's parent system in NPC::HasSucceeded (@comnom)
+  * attach to / allocate a console output on Windows (@comnom)
+  * add nullptr check for (@comnom)
+  * add missing `min` when autorefilling ammunition (@jostephd)
+  * add additional sanity check when refilling ammo (@tehhowch)
+  * fix non-installed outfits showing depreciated plunder value (@tehhowch)
+  * added shipyard thumbnails for the remaining ships that didn't have them yet (@Amazinite)
+  * fixed the world-ship thumbnails (@Amazinite)
+  * add more eligibility criteria to NPC-carried outfits (@tehhowch)
+  * fix failed OSX CI builds (@tehhowch)
+  * bugfix: limit CargoHold::Transfer when size = 0 (@tehhowch)
+  * escorts refuel more reasonably when they have both a hyperdrive and a jumpdrive (@oo13)
+  * update system colours when switching between Shipyard and Outfitter map panels (@ChamEV)
+  * reorder some includes to match style (@petervdmeer)
+  * some more style fixes (@petervdmeer)
+  * reordered drawing on map mission panel so rings are behind UI elements (@ChamEV)
+  * removed dead code, these buttons are handled by the interface class (@ChamEV)
+  * Buy, Sell, Leave button size fix (@ChamEV)
+  * really minor code comment tweaks (@petervdmeer)
+  * add scrolling to MissionPanel job/mission panes (@tehhowch)
+  * change aim to be explicitly signed (@sdennie)
+  * minor spelling fixes (@petervdmeer)
+  * fixed a typo that was preventing cargo text replacements in some pirate jobs (@Amazinite)
+  * restrict reparenting of mission-affiliated carried ships to the same mission (@tehhowch)
+  * save thumbnails, just as we save sprites (@MageKing17)
+  * the " Kor Mereti " government now uses the Korath language (@Amazinite)
+  * fix typo (@RestingImmortal)
+  * typo fix (@warp-core)
+  * copy requiredOutfits in MissionAction::Instantiate() (@MageKing17)
+  * separating a list of contraband into its own phrase to provide more variety in hail messages (@Thunderforge)
+  * allow restriction of scanning / fining by governments (@tehhowch)
+  * fix std::out-of-range when checking scan permissions (@tehhowch)
+  * feat: Uninhabited planets do not fine by default (@Amazinite)
+  * feat: Implement maintenance and operating cost attributes (@Amazinite)
+  * fix: Specify the `std::max` overload to use (@tehhowch)
+  * feat: Support algebra in ConditionSet expressions (@tehhowch)
+  * ci(travis): Update the Travis CI config (@tehhowch)
+  * refactor: Remove copies identified by OSX CI build (@tehhowch)
+  * fix: If CXX defined in env, use it (@pkubaj)
+  * style: Rename auto-pilot variables to make their function more clear (@petervdmeer)
+  * fix: Jump-capable carried ships no longer behave independently if the player leaves them alone in a system (@tehhowch)
+  * replaced the station1 planet sprite (@beccabunny)
+  * refactor(AI): Improve reparenting of carried ships (@tehhowch)
+  * added Coalition space stations (@beccabunny)
+  * add a preference to toggle the starfield (@Disiuze)
+  * the status overlay now shows the disabled threshold (@Amazinite)
+  * feat(weapons): Support variable ammo quantity consumption (@Amazinite)
+  * moved the flamethrower missions to side plots instead of start (@Bladewood)
+  * updated the remaining human station sprites (@beccabunny)
+  * fix: Scanning rings properly scale to the ship again (@petervdmeer)
+  * refactor(input-handling): Move kb/m reads from AI & Engine to only Engine (@petervdmeer)
+  * feat(controls): Make fast-forward key configurable (@bojidar-bg)
+  * feat(conditions): Add flagship crew info to computed conditions (@Fzzr)
+  * feat(ux): Limit pop-ups when multiple missions have "on visit" dialogs (@Amazinite)
+  * fix: add missing null check for flagship conditions (@NomadicVolcano)
+  * fix(input-handling): allow jump/board/land autopilot to resume while held (@NomadicVolcano)
+  * fix: avoid possible divide-by-zero in Shipyard & Outfitter (@tehhowch)
+  * fix(mappanel): Evaluate completion conditions when coloring missions in map panel (@NomadicVolcano)
+  * feat(government): Allow customization of the government's displayed name (@tehhowch)
+  * refactor: Require a new press to exit a conversation or select a choice (@tehhowch)
+  * feat: If not carried, fighters and drones are launched instead of sold (@petervdmeer)
+  * feat: The display for a ship's total outfit space will now scale with installed outfits expansions (@Amazinite)
+  * feat: Created an " Independent " government that allows the player to destroy the Oxyrhynchus to evade it without negative consequences (@Amazinite)
+  * feat: Print line numbers in DataNode traces (@tehhowch)
+  * fix: Call fclose on the error log (@tehhowch)
+  * feat: Unique sprites for every human station (@beccabunny)
+  * feat: New alien looking sprite for the Quarg station "Lagrange" (@beccabunny)
+  * feat(escorts): Allow "next fuel cost" calculation to use parent's destination (@oo13)
+  * fix(conditions): Remove use of non-integer value in FW intro (@tehhowch)
+  * feat(escorts): Injured, player-owned escorts regroup with the player's flagship (@tehhowch)
+  * fix(input-handling): Only update AI with player commands when actively in-flight (@petervdmeer)
+  * feat(phrases): Support nested phrase interpolation via ${phrase name} syntax (@oo13)
+  * feat(News): Add support for add/remove syntax (@tehhowch)
+  * refactor(main): Extract SDL window initialization & management into separate class (@AdamKauffman)
+  * feat(mechanics): Added a command that will bring the flagship to a stop (@petervdmeer and @NomadicVolcano)
+  * fix(mechanics): Restore cursor-hiding in fullscreen (@tehhowch)
+  * build(win): Support source subdirectories in .winmake (@tehhowch)
+  * fix: Check proper ship when using keyboard in Shipyard (@tehhowch)
+  * build(linux): Support subdirectories in SConstruct (@tehhowch)
+  * fix(ci): Call CheckReferences even when no save exists (@tehhowch)
+  * fix(input-handling): Only handle inputs given when the engine is fully active (@petervdmeer and @tehhowch)
+  * refactor: Swap target parameter type of some AI methods from `Ship` to `Body` (@petervdmeer)
+  * fix(input-handling): Allow the UI to handle keys before checking Fast Forward, Fullscreen (@tehhowch)
+  * feat(mechanics): Update the automatic conditions daily (@petervdmeer)
+  * feat(mechanics): Add flagship System and Planet to player conditions (@petervdmeer)
+  * fix(mechanics): Account for the depreciation grace period in the max age of an outfit or ship (@Amazinite)
+  * feat: Negative repair costs no longer block repairing (@Amazinite)
+
