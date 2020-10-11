@@ -36,6 +36,10 @@ shipyard "Yggdrasill Variants"
   "Wasp"
   "Wasp (Gatling)"
   "Wasp (Miner)"
+  "Whale"
+  "Whale (Blaster)"
+  "Whale (Electron)"
+  "Whale (Pulse)"
 
 
 
@@ -1589,4 +1593,177 @@ ship "Wasp" "Wasp (Miner)"
     "Fuel Pod" 10
     "Asteroid Scanner"
     "Tactical Scanner"
+
+
+
+ship "Whale"
+  sprite "ship/sprite/whale"
+  thumbnail "ship/thumbnail/whale"
+  attributes
+    category "Cruiser"
+#    manufacturer "Yggdrasill"
+    licences
+      Pilot
+      Whale
+    "cost" 28400000
+    "shields" 18000
+    "hull" 12000
+    "required crew" 90
+    "bunks" 180
+    "mass" 1100
+    "drag" 15
+    "heat dissipation" .4
+    "cargo space" 100
+    "outfit space" 1100
+    "core space" 400
+    "engine space" 200
+    "weapon space" 500
+    weapon
+      "blast radius" 460
+      "shield damage" 2200
+      "random shield damage" 2400
+      "hull damage" 3300
+      "random hull damage" 3600
+      "heat damage" 66000
+      "random heat damage" 72000
+      "hit force" 5500
+      "random hit force" 6000
+  outfits
+    "D94-YV Shield Generator" 2
+    "Cyclops Core" 2
+    "Hyperdrive"
+
+    "A370 Atomic Thruster" 2
+    "A375 Atomic Steering" 2
+
+    "Impact" 80
+    "Impact Storage Rack" 20
+    "Impact Launcher" 2
+    "Heavy Laser Turret" 10
+
+    "DS-47 Battery Pack"
+    "Liquid Helium Cooler"
+    "Fuel Pod" 92
+    "Large Radar Jammer" 2
+    "Tactical Scanner" 4
+  engine -46 227 .7
+  engine 46 227 .7
+  engine -15 243 .7
+  engine 15 243 .7
+  gun -47 -217
+  gun 47 -217
+  turret 0 -147
+  turret -35 -100
+  turret 35 -100
+  turret 0 -53
+  turret -35 -6
+  turret 35 -6
+  turret 0 40
+  turret -35 87
+  turret 35 87
+  turret 0 134
+  leak "leak" 30 50
+  leak "flame" 50 80
+  leak "big leak" 60 30
+  explode "small explosion" 30
+  explode "medium explosion" 40
+  explode "large explosion" 40
+  explode "huge explosion" 30
+  "final explode" "final explosion large"
+  description "The Whale is a formidable warship, with powerful shields, a lot of hull armour, and more firepower than any ship sold in human space, allowing it to deal out and absorb a significant amount of damage. A single Whale can hold its own against a small fleet of lesser vessels. Its main drawback is its costs: deploying a few smaller ships is practically always more effective."
+
+
+ship "Whale" "Whale (Blaster)"
+  outfits
+    "D94-YV Shield Generator" 2
+    "Cyclops Core" 2
+    "Hyperdrive"
+
+    "A520 Atomic Thruster"
+    "A525 Atomic Steering"
+
+    "Impact" 40
+    "Impact Storage Rack" 10
+    "Impact Launcher" 2
+    "X8 Blaster Turret" 8
+    "Heavy Anti-Missile" 2
+
+    "DS-47 Battery Pack"
+    "Liquid Helium Cooler"
+    "Liquid Nitrogen Cooler"
+    "Fuel Pod" 92
+    "Tactical Scanner" 4
+    "Laser Rifle" 120
+  turret
+  turret
+  turret
+  turret "Heavy Anti-Missile"
+  turret
+  turret
+  turret "Heavy Anti-Missile"
+  turret
+  turret
+  turret
+
+
+ship "Whale" "Whale (Electron)"
+  outfits
+    "D94-YV Shield Generator" 2
+    "Cyclops Core" 2
+    "Hyperdrive"
+
+    "A370 Atomic Thruster" 2
+    "A375 Atomic Steering" 2
+
+    "Electron Turret" 8
+    "Heavy Anti-Missile" 2
+
+    "DS-23 Battery Pack"
+    "DS-11 Battery Pack"
+    "Liquid Helium Cooler"
+    "Fuel Pod" 92
+    "Tactical Scanner" 4
+    "Laser Rifle" 120
+  turret
+  turret
+  turret
+  turret "Heavy Anti-Missile"
+  turret
+  turret
+  turret "Heavy Anti-Missile"
+  turret
+  turret
+  turret
+
+
+ship "Whale" "Whale (Pulse)"
+  outfits
+    "D94-YV Shield Generator" 2
+    "Cyclops Core" 2
+    "Hyperdrive"
+
+    "A520 Atomic Thruster"
+    "A525 Atomic Steering"
+
+    "Impact" 40
+    "Impact Storage Rack" 10
+    "Impact Launcher" 2
+    "Pulse Turret" 8
+    "Heavy Anti-Missile" 2
+
+    "DS-47 Battery Pack"
+    "Liquid Helium Cooler"
+    "Fuel Pod" 92
+    "Tactical Scanner" 4
+    "Laser Rifle" 120
+  turret
+  turret
+  turret
+  turret "Heavy Anti-Missile"
+  turret
+  turret
+  turret "Heavy Anti-Missile"
+  turret
+  turret
+  turret
 
