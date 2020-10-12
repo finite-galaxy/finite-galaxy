@@ -110,7 +110,7 @@ void LoadPanel::Draw()
 
   // The list has space for 14 entries. Alpha should be 100% for Y = -157 to
   // 103, and fade to 0 at 10 pixels beyond that.
-  Point point(-470., -157. - sideScroll);
+  Point point(-460., -157. - sideScroll);
   for(const auto &it : files)
   {
     Rectangle zone(point + Point(110., 7.), Point(230., 20.));

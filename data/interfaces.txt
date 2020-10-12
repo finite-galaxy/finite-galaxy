@@ -4,9 +4,9 @@ colour "active" .75 .75 .75 0.
 colour "inactive" .25 .25 .25 0.
 
 # Colours generally used for drawing text or lines.
-colour "bright" .75 .75 .75 0.
-colour "medium" .5 .5 .5 0.
-colour "dim" .25 .25 .25 0.
+colour "bright" .9 .9 .9 0.
+colour "medium" .6 .6 .6 0.
+colour "dim" .3 .3 .3 0.
 colour "faint" .1 .1 .1 0.
 
 # Colours used for certain UI elements. These elements generally have a variable
@@ -95,125 +95,152 @@ colour "map unused wormhole" .165 .066 .3 .333
 
 
 interface "menu background"
-  sprite "_menu/g0"
+  sprite "planet/cloud7-b"
     centre 0 -280
-  sprite "_menu/forest2"
+  sprite "star/m8"
     centre 0 280
-  sprite "_menu/oberon"
-    centre 140 180
-
+  sprite "star/m4"
+    centre 70 350
+  sprite "star/m0"
+    centre -140 420
 
 
 interface "main menu"
-  sprite "_menu/compass"
+  label "Finite"
+    centre -10 0
+    align right
+    size 60
+    colour 1. 1. 1. 0
+  label "Galaxy"
+    centre 10 0
+    align left
+    size 60
+    colour 1. 1. 1. 0
+  sprite "gui/compass"
     centre 0 0
-  sprite "_menu/title"
-    centre 0 -170
-  sprite "_menu/side_panel"
-    centre -360 0
-  sprite "_menu/side_panel"
-    centre 360 0
-  
+
+  sprite "gui/menu_panel"
+    centre 350 -20
+  sprite "gui/button_4"
+    centre 285 155
+  sprite "gui/button_4"
+    centre 415 155
+  sprite "gui/button_4"
+    centre 285 195
+  sprite "gui/button_4"
+    centre 415 195
+
   visible if "pilot loaded"
   button e "_Enter Ship"
-    centre 435 155
-    dimensions 90 30
+    centre 415 155
+    dimensions 120 30
   visible if "!pilot loaded"
   button n "_New Pilot"
-    centre 435 155
-    dimensions 90 30
-  
+    centre 415 155
+    dimensions 120 30
+
   visible
   button l "_Load / Save…"
-    centre 300 155
+    centre 285 155
     dimensions 120 30
-  
-  # Left panel (credits):
-  button q "_Quit"
-    centre -285 155
-    dimensions 90 30
+
   button p "_Preferences…"
-    centre -420 155
+    centre 285 195
+    dimensions 120 30
+  button q "_Quit"
+    centre 415 195
     dimensions 120 30
 
 
 
 interface "menu player info"
   outline "ship sprite"
-    centre 360 -90
+    centre 350 -90
     dimensions 120 120
   label "pilot:"
-    from 250 -15
+    from 240 -15
     align left
   string "pilot"
-    from 310 -15
+    from 300 -15
     align left
   label "ship:"
-    from 250 5
+    from 240 5
     align left
   string "ship"
-    from 310 5
+    from 300 5
     align left
   label "planet:"
-    from 250 35
+    from 240 35
     align left
   string "planet"
-    from 310 35
+    from 300 35
     align left
   label "system:"
-    from 250 55
+    from 240 55
     align left
   string "system"
-    from 310 55
+    from 300 55
     align left
   label "credits:"
-    from 250 85
+    from 240 85
     align left
   string "credits"
-    from 310 85
+    from 300 85
     align left
   label "date:"
-    from 250 105
+    from 240 105
     align left
   string "date"
-    from 310 105
+    from 300 105
     align left
 
 
 
 interface "load menu"
-  sprite "_menu/side_panel"
-    centre -360 0
-  sprite "_menu/side_panel"
-    centre 0 0
-  sprite "_menu/side_panel"
-    centre 360 0
-  
+  sprite "gui/menu_panel"
+    centre -350 -20
+  sprite "gui/menu_panel"
+    centre 0 -20
+  sprite "gui/menu_panel"
+    centre 350 -20
+  sprite "gui/button_4"
+    centre -415 155
+  sprite "gui/button_4"
+    centre -285 155
+  sprite "gui/button_4"
+    centre -65 155
+  sprite "gui/button_4"
+    centre 65 155
+  sprite "gui/button_4"
+    centre 285 155
+  sprite "gui/button_4"
+    centre 415 155
+
   button n "_New Pilot"
-    centre -420 155
+    centre -415 155
     dimensions 120 30
   active if "pilot selected"
   button D "Delete"
     centre -285 155
-    dimensions 90 30
-  
+    dimensions 120 30
+
   active if "pilot alive"
   button a "_Add Snapshot"
-    centre -60 155
+    centre -65 155
     dimensions 120 30
   active if "snapshot selected"
   button R "Remove"
-    centre 75 155
-    dimensions 90 30
-  
+    centre 65 155
+    dimensions 120 30
+
   active
   button b "_Back to Menu"
-    centre 300 155
+    centre 285 155
     dimensions 120 30
   active if "pilot loaded"
   button l "_Load Game"
-    centre 435 155
-    dimensions 90 30
+    centre 415 155
+    dimensions 120 30
 
 
 
@@ -299,11 +326,11 @@ interface "preferences"
 interface "hud"
   # Player status.
   anchor top right
-  
+
   sprite "ui/status"
     from 0 0
     align top right
-  
+
   string "location"
     from -20 25
     colour "medium"
@@ -316,7 +343,7 @@ interface "hud"
     from -20 65
     colour "medium"
     align right
-  
+
   outline "player sprite"
     centre -75 155
     dimensions 70 70
@@ -363,14 +390,14 @@ interface "hud"
 
   # Targets.
   anchor top left
-  sprite "ui/radar"
+  sprite "gui/radar"
     from 0 0
     align top left
   point "radar"
     centre 128 128
   value "radar radius" 110
   value "radar pointer radius" 130
-  
+
   sprite "ui/navigation"
     from 200 0
     align top left
@@ -382,8 +409,8 @@ interface "hud"
     from 230 40
     align left
     colour "medium"
-  
-  sprite "ui/target"
+
+  sprite "gui/target"
     from 0 240
     align top left
   point "target"
@@ -409,7 +436,7 @@ interface "hud"
     dimensions 110 110
     colour "disabled hull"
     size 1.5
-  
+
   visible if "range display"
   sprite "ui/range"
     from 130 263
@@ -434,7 +461,7 @@ interface "hud"
     from 147 358
     align top left
   visible
-  
+
   string "target name"
     centre 75 395
     colour "bright"
@@ -449,7 +476,7 @@ interface "hud"
   string "mission target"
     centre 75 455
     colour "medium"
-  
+
   # Other HUD elements:
   box "escorts"
     from 0 460 top left
@@ -467,99 +494,101 @@ interface "hud"
 
 
 interface "planet"
+  sprite "gui/planet_view"
+    centre 0 -140
   image "land"
-    centre -60 -140
-  sprite "ui/planet dialogue"
-    centre -60 0
+    centre 0 -140
+  sprite "gui/planet_panel"
+    centre 0 200
   button l
-    centre -60 -140
+    centre 0 -140
     dimensions 720 360
-  
+
   visible if "has trade"
-  sprite "ui/planet dialogue button"
-    centre -400 90
+  sprite "gui/planet_button"
+    centre -340 90
   button t "_Trading"
-    centre -400 90
+    centre -340 90
     dimensions 140 40
     size 24
     align left
     pad 10 0
 
   visible if "has hiring"
-  sprite "ui/planet dialogue button"
-    centre -400 145
+  sprite "gui/planet_button"
+    centre -340 145
   button h "_Hire Crew"
-    centre -400 145
+    centre -340 145
     dimensions 140 40
     size 24
     align left
     pad 10 0
-  
+
   visible if "has jobs"
-  sprite "ui/planet dialogue button"
-    centre -400 200
+  sprite "gui/planet_button"
+    centre -340 200
   button j "_Job Board"
-    centre -400 200
+    centre -340 200
     dimensions 140 40
     size 24
     align left
     pad 10 0
-  
+
   visible if "has spaceport"
-  sprite "ui/planet dialogue button"
-    centre -400 310
+  sprite "gui/planet_button"
+    centre -340 310
   button p "Space_port"
-    centre -400 310
+    centre -340 310
     dimensions 140 40
     size 24
     align left
     pad 10 0
-  
+
   visible if "has fuel"
-  sprite "ui/planet dialogue button"
-    centre 280 255
+  sprite "gui/planet_button"
+    centre 340 255
   button r "_Refuel"
-    centre 280 255
+    centre 340 255
     dimensions 140 40
     size 24
     align right
     pad 10 0
-  
+
   visible if "has shipyard"
-  sprite "ui/planet dialogue button"
-    centre 280 90
+  sprite "gui/planet_button"
+    centre 340 90
   button s "_Shipyard"
-    centre 280 90
+    centre 340 90
     dimensions 140 40
     size 24
     align right
     pad 10 0
-  
+
   visible if "has outfitter"
-  sprite "ui/planet dialogue button"
-    centre 280 145
+  sprite "gui/planet_button"
+    centre 340 145
   button o "_Outfitter"
-    centre 280 145
+    centre 340 145
     dimensions 140 40
     size 24
     align right
     pad 10 0
-  
+
   visible if "has bank"
-  sprite "ui/planet dialogue button"
-    centre 280 200
+  sprite "gui/planet_button"
+    centre 340 200
   button b "_Bank"
-    centre 280 200
+    centre 340 200
     dimensions 140 40
     size 24
     align right
     pad 10 0
-  
+
   visible if "has ship"
-  sprite "ui/planet dialogue button"
-    centre 280 310
+  sprite "gui/planet_button"
+    centre 340 310
   button d "_Depart"
-    centre 280 310
+    centre 340 310
     dimensions 140 40
     size 24
     align right
@@ -568,7 +597,7 @@ interface "planet"
 
 
 interface "news"
-  sprite "ui/news"
+  sprite "gui/news_panel"
     centre -160 -45
   image "portrait"
     centre -340 -40
@@ -584,7 +613,7 @@ interface "news"
 
 interface "boarding"
   sprite "ui/boarding dialogue"
-  
+
   label "item"
     from -320 -189
     align left
@@ -594,14 +623,14 @@ interface "boarding"
   label "size"
     from 10 -189
     align right
-  
+
   label "cargo space free:"
     from -320 75
     align left
   string "cargo space"
     from 10 75
     align right
-  
+
   label "crew"
     from 190 -112
     align right
@@ -611,7 +640,7 @@ interface "boarding"
   label "defence"
     from 330 -112
     align right
-  
+
   label "your ship:"
     from 50 -92
     align left
@@ -624,7 +653,7 @@ interface "boarding"
   string "your defence"
     from 330 -92
     align right
-  
+
   label "enemy ship:"
     from 50 -72
     align left
@@ -637,7 +666,7 @@ interface "boarding"
   string "enemy defence"
     from 330 -72
     align right
-  
+
   label "capture odds (attacking):"
     from 50 -42
     align left
@@ -650,7 +679,7 @@ interface "boarding"
   string "attack casualties"
     from 330 -22
     align right
-  
+
   label "survival odds (defending):"
     from 50 8
     align left
@@ -663,27 +692,27 @@ interface "boarding"
   string "defence casualties"
     from 330 28
     align right
-  
+
   active if "can take"
   button t "_Take"
     centre -235 115
     dimensions 70 30
-  
+
   active if "can exit"
   button x "_Done"
     centre -155 115
     dimensions 70 30
-  
+
   active if "can capture"
   button c "Attempt _Capture"
     centre -40 115
     dimensions 140 30
-  
+
   active if "can attack"
   button a "_Attack"
     centre 120 185
     dimensions 80 30
-  
+
   active if "can defend"
   button d "_Defend"
     centre 210 185
@@ -705,7 +734,7 @@ interface "hiring"
     centre 170 85
     colour "bright"
     align right
-  
+
   label "bunks"
     centre -290 110
     align left
@@ -715,7 +744,7 @@ interface "hiring"
   string "fleet bunks"
     centre 50 110
     align right
-  
+
   label "required crew"
     centre -290 130
     align left
@@ -728,7 +757,7 @@ interface "hiring"
   string "salary required"
     centre 170 130
     align right
-  
+
   label "extra crew"
     centre -290 150
     align left
@@ -738,27 +767,27 @@ interface "hiring"
   string "salary extra"
     centre 170 150
     align right
-  
+
   active if "can hire"
-  sprite "ui/dialogue cancel"
+  sprite "gui/button_3"
     centre 140 355
   button h "_Hire"
     centre 140 355
-    dimensions 80 40
-  
+    dimensions 100 40
+
   active if "can fire"
-  sprite "ui/dialogue cancel"
-    centre 60 355
+  sprite "gui/button_3"
+    centre 40 355
   button f "_Fire"
-    centre 60 355
-    dimensions 80 40
-  
+    centre 40 355
+    dimensions 100 40
+
   active
   string "modifier"
     from -65 150
     colour "dim"
     align left
-  
+
   label "passenger space"
     centre -290 180
     align left
@@ -768,14 +797,14 @@ interface "hiring"
   string "fleet unused"
     centre 50 180
     align right
-  
+
   label "passengers"
     centre -290 200
     align left
   string "passengers"
     centre 50 200
     align right
-  
+
   label "(Extra crew for your flagship increases your odds of capturing ships,"
     centre -60 290
   label "and once you capture a ship you need crew members to serve on it.)"
@@ -785,32 +814,32 @@ interface "hiring"
 
 interface "trade"
   active if "can buy"
-  sprite "ui/dialogue cancel"
+  sprite "gui/button_3"
     centre 40 355
   button B "Buy All"
     centre 40 355
-    dimensions 70 30
-  
-  sprite "ui/wide button"
-    centre 130 355
-  
+    dimensions 90 30
+
+  sprite "gui/button_3"
+    centre 140 355
+
   active if "can sell"
   visible if "!can sell outfits"
   button S "Sell All"
-    centre 130 355
+    centre 140 355
     dimensions 90 30
-  
+
   active if "can sell outfits"
   visible if "can sell outfits"
   button S "Sell Outfits"
-    centre 130 355
+    centre 140 355
     dimensions 90 30
 
 
 
 interface "bank"
   active if "can pay"
-  sprite "ui/dialogue cancel"
+  sprite "gui/button_3"
     centre 140 355
   button a "Pay _All"
     centre 140 355
@@ -820,12 +849,12 @@ interface "bank"
 
 interface "refuel"
   active if "can refuel"
-  sprite "ui/dialogue cancel"
+  sprite "gui/button_3"
     centre 140 355
   button r "_Refuel"
     centre 140 355
-    dimensions 80 40
-  
+    dimensions 90 30
+
   visible if "empty"
   sprite "ui/empty bar"
     centre -180 150
@@ -838,94 +867,99 @@ interface "refuel"
 
 
 interface "mission" bottom
-  sprite "ui/mission"
-    align bottom
-  
+  sprite "gui/mission_panel"
+    centre 0 -135
+
   label "cargo space free:"
     centre -130 -85
   string "cargo free"
     centre -130 -65
-  
+
   label "passenger space:"
     centre 0 -85
   string "bunks free"
     centre 0 -65
-  
+
   label "today's date:"
     centre 130 -85
   string "today"
     centre 130 -65
-  
+
   active if "can accept"
+  sprite "gui/button_4"
+    centre -65 -20
   button a "_Accept Mission"
-    centre -45 -25
+    centre -65 -20
     dimensions 130 30
-  
+
   active if "can abort"
-  button A "Abort"
-    centre 70 -25
-    dimensions 80 30
+  sprite "gui/button_4"
+    centre 65 -20
+  button A "Abort Mission"
+    centre 65 -20
+    dimensions 130 30
 
 
 
-interface "map buttons" bottom right  
+interface "map buttons" bottom right
   active if "!is ports"
-  sprite "ui/wide button"
-    from -500 -50 to -390 0
+  sprite "gui/button_3"
+    centre -450 -20
   button p "_Ports"
-    from -500 -50 to -390 0
-  
-  active if "!is missions"
-  sprite "ui/wide button"
-    from -400 -50 to -290 0
-  button i "M_issions"
-    from -400 -50 to -290 0
-  
-  active if "!is outfitters"
-  sprite "ui/wide button"
-    from -300 -50 to -190 0
-  button o "_Outfitters"
-    from -300 -50 to -190 0
-  
-  active if "!is shipyards"
-  sprite "ui/wide button"
-    from -200 -50 to -90 0
-  button s "_Shipyards"
-    from -200 -50 to -90 0
+    from -500 -40 to -400 0
 
-  sprite "ui/dialogue cancel"
-    from -90 -50 to 0 0
+  active if "!is missions"
+  sprite "gui/button_3"
+    centre -350 -20
+  button i "M_issions"
+    from -400 -40 to -300 0
+
+  active if "!is outfitters"
+  sprite "gui/button_3"
+    centre -250 -20
+  button o "_Outfitters"
+    from -300 -40 to -200 0
+
+  active if "!is shipyards"
+  sprite "gui/button_3"
+    centre -150 -20
+  button s "_Shipyards"
+    from -200 -40 to -100 0
+
+  active
+  sprite "gui/button_3"
+    centre -50 -20
   button d "_Done"
-    from -90 -50 to 0 0
-  
-  sprite "ui/zoom"
-    from 0 -40 to -90 -90
+    from -100 -40 to 0 0
+
   active if "!max zoom"
+  sprite "gui/button_1"
+    centre -25 -65
   button + "_+"
     from -10 -50 to -40 -80
     size 24
   active if "!min zoom"
-  button - "_-"
+  sprite "gui/button_1"
+    centre -65 -65
+  button - "_−"
     from -50 -50 to -80 -80
     size 24
 
 
 
 interface "info panel"
-  sprite "ui/info panel"
+  sprite "gui/tab"
+    centre -400 -310
+  sprite "gui/tab"
+    centre -280 -310
+  sprite "gui/information_panel"
     centre 0 -5
-  visible if "five buttons"
-  sprite "ui/five info buttons"
-    centre 0 305
-  visible if "three buttons"
-  sprite "ui/three info buttons"
-    centre 0 305
-  
+
   box "player"
     from -500 -290 to -250 280
   box "fleet"
     from -250 -290 to 500 280
-  
+
   box "stats"
     from -500 -290 to -250 280
   box "outfits"
@@ -934,98 +968,108 @@ interface "info panel"
     from -250 30 to 250 280
   box "cargo"
     from 250 -290 to 500 280
-  
+
+  visible if "player tab"
+  sprite "gui/tab"
+    centre -400 -310
+  label "_Ship Info"
+    centre -280 -310
+  label "Player Info"
+    centre -400 -310
+    colour "bright"
+  button s
+    centre -280 -310
+    dimensions 120 30
+
   visible if "ship tab"
   button R
     centre -375 -270
     dimensions 250 30
-  sprite "ui/ship tab"
-    centre 0 -310
+  sprite "gui/tab"
+    centre -280 -310
   label "Ship Info"
-    centre -300 -305
+    centre -280 -310
     colour "bright"
   label "Player _Info"
-    centre -420 -305
+    centre -400 -310
   button i
-    centre -420 -305
+    centre -400 -310
     dimensions 120 30
-  
-  visible if "player tab"
-  sprite "ui/player tab"
-    centre 0 -310
-  label "_Ship Info"
-    centre -300 -305
-  label "Player Info"
-    centre -420 -305
-    colour "bright"
-  button s
-    centre -300 -305
-    dimensions 120 30
-  
+
   visible
+  sprite "gui/button_3"
+    centre 460 305
   button d "_Done"
-    centre 455 305
+    centre 460 305
     dimensions 90 30
+  sprite "gui/button_3"
+    centre 360 305
   button m "_Missions…"
-    centre 355 305
+    centre 360 305
     dimensions 90 30
+  sprite "gui/button_3"
+    centre 260 305
   active if "enable logbook"
   button l "_Logbook…"
-    centre 255 305
+    centre 260 305
     dimensions 90 30
   active
-  
+
   visible if "five buttons"
+  sprite "gui/button_3"
+    centre 140 305
   button n "_Next"
-    centre 145 305
+    centre 140 305
     dimensions 90 30
+  sprite "gui/button_3"
+    centre 40 305
   button p "_Previous"
-    centre 45 305
+    centre 40 305
     dimensions 90 30
-  
+
   visible if "show park"
   active if "can park"
-  sprite "ui/dialogue cancel"
-    centre -55 305
+  sprite "gui/button_3"
+    centre -80 305
   button P "Park"
-    centre -55 305
-    dimensions 70 30
+    centre -80 305
+    dimensions 90 30
   active
-  
+
   visible if "show unpark"
-  sprite "ui/dialogue cancel"
-    centre -55 305
+  sprite "gui/button_3"
+    centre -80 305
   button P "Unpark"
-    centre -55 305
-    dimensions 70 30
-  
+    centre -80 305
+    dimensions 90 30
+
   visible if "show disown"
-  sprite "ui/dialogue cancel"
-    centre -150 305
+  sprite "gui/button_3"
+    centre -180 305
   button D "Disown"
-    centre -150 305
-    dimensions 70 30
-  
+    centre -180 305
+    dimensions 90 30
+
   visible if "show dump"
   active if "enable dump"
-  sprite "ui/wide button"
-    centre -65 305
+  sprite "gui/button_3"
+    centre -80 305
   button c "Dump _Cargo"
-    centre -65 305
+    centre -80 305
     dimensions 90 30
   active
-  
+
   visible if "show park all"
-  sprite "ui/wide button"
-    centre 145 305
+  sprite "gui/button_3"
+    centre 20 305
   button A "Park All"
-    centre 145 305
+    centre 20 305
     dimensions 90 30
   visible if "show unpark all"
-  sprite "ui/wide button"
-    centre 145 305
+  sprite "gui/button_3"
+    centre 20 305
   button A "Unpark All"
-    centre 145 305
+    centre 20 305
     dimensions 90 30
 
 
@@ -1044,7 +1088,7 @@ interface "hail panel"
   button b "Offer _Bribe"
     centre -20 115
     dimensions 140 30
-    
+
   visible if "show dominate"
   active if "can dominate"
   button t "Demand _Tribute"

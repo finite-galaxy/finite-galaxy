@@ -39,7 +39,7 @@ void StarField::Init(int stars, int width)
   SetUpGraphics();
   MakeStars(stars, width);
 
-  const Sprite *sprite = SpriteSet::Get("_menu/haze");
+  const Sprite *sprite = SpriteSet::Get("haze/default");
   for(size_t i = 0; i < HAZE_COUNT; ++i)
   {
     Point next;
@@ -70,7 +70,7 @@ void StarField::SetHaze(const Sprite *sprite)
 {
   // If no sprite is given, set the default one.
   if(!sprite)
-    sprite = SpriteSet::Get("_menu/haze");
+    sprite = SpriteSet::Get("haze/default");
 
   for(Body &body : haze)
     body.SetSprite(sprite);
