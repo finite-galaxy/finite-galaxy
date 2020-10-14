@@ -124,7 +124,7 @@ void MenuPanel::Draw()
     Angle a(0.);
     for(int i = 0; i < progress; ++i)
     {
-      Colour colour(.5f * alpha, 0.f);
+      Colour colour(.9f * alpha, 0.f);
       PointerShader::Draw(Point(), a.Unit(), 8.f, 20.f, 140.f * alpha, colour);
       a += da;
     }
@@ -134,13 +134,13 @@ void MenuPanel::Draw()
   for(const string &line : credits)
   {
     float fade = 1.f;
-    if(y < -145)
-      fade = max(0.f, (y + 165) / 20.f);
-    else if(y > 95)
-      fade = max(0.f, (115 - y) / 20.f);
+    if(y < -300)
+      fade = max(0.f, (y + 320) / 20.f);
+    else if(y > 300)
+      fade = max(0.f, (320 - y) / 20.f);
     if(fade)
     {
-      Colour colour(((line.empty() || line[0] == ' ') ? .2f : .4f) * fade, 0.f);
+      Colour colour(((line.empty() || line[0] == ' ') ? .2f : .6f) * fade, 0.f);
       font.Draw(line, Point(-470., y), colour);
     }
     y += 20;
