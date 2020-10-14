@@ -32,15 +32,15 @@ namespace {
     "(very high)"
   };
 
-  const int MIN_X = -310;
-  const int MAX_X = 190;
+  const int MIN_X = -250;
+  const int MAX_X = 250;
 
-  const int NAME_X = -290;
-  const int PRICE_X = -150;
-  const int LEVEL_X = -110;
-  const int BUY_X = 0;
-  const int SELL_X = 60;
-  const int HOLD_X = 120;
+  const int NAME_X = -230;
+  const int PRICE_X = -90;
+  const int LEVEL_X = -40;
+  const int BUY_X = 60;
+  const int SELL_X = 120;
+  const int HOLD_X = 180;
 
   const int FIRST_Y = 80;
 }
@@ -92,7 +92,7 @@ void TradingPanel::Draw()
   const Colour &selected = *GameData::Colours().Get("bright");
 
   int y = FIRST_Y;
-  FillShader::Fill(Point(-60., y + 18.), Point(480., 1.), unselected);
+  FillShader::Fill(Point(0., y + 18.), Point(480., 1.), unselected);
 
   font.Draw("Commodity", Point(NAME_X, y), selected);
   font.Draw("Price", Point(PRICE_X, y), selected);

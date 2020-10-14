@@ -19,8 +19,8 @@ using namespace std;
 
 namespace {
   // Dimensions of the table.
-  const int MIN_X = -310;
-  const int MAX_X = 190;
+  const int MIN_X = -250;
+  const int MAX_X = 250;
 
   // Column headings.
   const string HEADING[6] = {"Type", "Principal", "Interest", "Term", "Payment", ""};
@@ -32,11 +32,11 @@ namespace {
   };
   // The last column is for the "pay extra" button.
   const Columns COLUMNS[6] = {
-    { -290, 110, Font::LEFT },
-    { -180, 80, Font::LEFT },
-    { -100, 70, Font::LEFT },
-    { -30, 50, Font::LEFT },
-    { 20, 70, Font::LEFT },
+    { -230, 110, Font::LEFT },
+    { -120, 80, Font::LEFT },
+    { -40, 70, Font::LEFT },
+    { 30, 50, Font::LEFT },
+    { 80, 70, Font::LEFT },
     { MAX_X - 20, 80, Font::RIGHT },
   };
   const int EXTRA_X = 100;

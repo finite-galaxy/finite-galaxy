@@ -15,7 +15,7 @@
 using namespace std;
 
 namespace {
-  const int MIN_X = -310;
+  const int MIN_X = -250;
 
   const int FIRST_Y = 80;
 
