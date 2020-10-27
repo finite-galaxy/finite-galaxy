@@ -116,18 +116,18 @@ interface "main menu"
     align left
     size 60
     colour 1. 1. 1. 0
-  sprite "gui/compass"
+  sprite "interface/compass"
     centre 0 0
 
-  sprite "gui/menu_panel"
+  sprite "interface/panel/menu"
     centre 350 -20
-  sprite "gui/button_4"
+  sprite "interface/button/120x30"
     centre 285 155
-  sprite "gui/button_4"
+  sprite "interface/button/120x30"
     centre 415 155
-  sprite "gui/button_4"
+  sprite "interface/button/120x30"
     centre 285 195
-  sprite "gui/button_4"
+  sprite "interface/button/120x30"
     centre 415 195
 
   visible if "pilot loaded"
@@ -197,23 +197,23 @@ interface "menu player info"
 
 
 interface "load menu"
-  sprite "gui/menu_panel"
+  sprite "interface/panel/menu"
     centre -350 -20
-  sprite "gui/menu_panel"
+  sprite "interface/panel/menu"
     centre 0 -20
-  sprite "gui/menu_panel"
+  sprite "interface/panel/menu"
     centre 350 -20
-  sprite "gui/button_4"
+  sprite "interface/button/120x30"
     centre -415 155
-  sprite "gui/button_4"
+  sprite "interface/button/120x30"
     centre -285 155
-  sprite "gui/button_4"
+  sprite "interface/button/120x30"
     centre -65 155
-  sprite "gui/button_4"
+  sprite "interface/button/120x30"
     centre 65 155
-  sprite "gui/button_4"
+  sprite "interface/button/120x30"
     centre 285 155
-  sprite "gui/button_4"
+  sprite "interface/button/120x30"
     centre 415 155
 
   button n "_New Pilot"
@@ -390,7 +390,7 @@ interface "hud"
 
   # Targets.
   anchor top left
-  sprite "gui/radar"
+  sprite "interface/radar"
     from 0 0
     align top left
   point "radar"
@@ -410,7 +410,7 @@ interface "hud"
     align left
     colour "medium"
 
-  sprite "gui/target"
+  sprite "interface/target"
     from 0 240
     align top left
   point "target"
@@ -494,18 +494,18 @@ interface "hud"
 
 
 interface "planet"
-  sprite "gui/planet_view"
+  sprite "interface/panel/landscape"
     centre 0 -140
   image "land"
     centre 0 -140
-  sprite "gui/planet_panel"
+  sprite "interface/panel/planet"
     centre 0 200
   button l
     centre 0 -140
     dimensions 720 360
 
   visible if "has trade"
-  sprite "gui/planet_button"
+  sprite "interface/button/140x40"
     centre -340 90
   button t "_Trading"
     centre -340 90
@@ -515,7 +515,7 @@ interface "planet"
     pad 10 0
 
   visible if "has fuel"
-  sprite "gui/planet_button"
+  sprite "interface/button/140x40"
     centre -340 145
   button r "_Refuel"
     centre -340 145
@@ -525,7 +525,7 @@ interface "planet"
     pad 10 0
 
   visible if "has hiring"
-  sprite "gui/planet_button"
+  sprite "interface/button/140x40"
     centre -340 200
   button h "_Hire Crew"
     centre -340 200
@@ -535,7 +535,7 @@ interface "planet"
     pad 10 0
 
   visible if "has bank"
-  sprite "gui/planet_button"
+  sprite "interface/button/140x40"
     centre -340 255
   button b "_Bank"
     centre -340 255
@@ -545,7 +545,7 @@ interface "planet"
     pad 10 0
 
   visible if "has spaceport"
-  sprite "gui/planet_button"
+  sprite "interface/button/140x40"
     centre -340 310
   button p "Space_port"
     centre -340 310
@@ -555,7 +555,7 @@ interface "planet"
     pad 10 0
 
   visible if "has shipyard"
-  sprite "gui/planet_button"
+  sprite "interface/button/140x40"
     centre 340 90
   button s "_Shipyard"
     centre 340 90
@@ -565,7 +565,7 @@ interface "planet"
     pad 10 0
 
   visible if "has outfitter"
-  sprite "gui/planet_button"
+  sprite "interface/button/140x40"
     centre 340 145
   button o "_Outfitter"
     centre 340 145
@@ -575,7 +575,7 @@ interface "planet"
     pad 10 0
 
   visible if "has jobs"
-  sprite "gui/planet_button"
+  sprite "interface/button/140x40"
     centre 340 200
   button j "_Job Board"
     centre 340 200
@@ -585,7 +585,7 @@ interface "planet"
     pad 10 0
 
   visible if "has ship"
-  sprite "gui/planet_button"
+  sprite "interface/button/140x40"
     centre 340 310
   button d "_Depart"
     centre 340 310
@@ -597,7 +597,7 @@ interface "planet"
 
 
 interface "news"
-  sprite "gui/news_panel"
+  sprite "interface/panel/news"
     centre -160 -45
   image "portrait"
     centre -340 -40
@@ -769,14 +769,14 @@ interface "hiring"
     align right
 
   active if "can hire"
-  sprite "gui/button_3"
+  sprite "interface/button/90x30"
     centre 200 355
   button h "_Hire"
     centre 200 355
     dimensions 100 40
 
   active if "can fire"
-  sprite "gui/button_3"
+  sprite "interface/button/90x30"
     centre 100 355
   button f "_Fire"
     centre 100 355
@@ -814,13 +814,13 @@ interface "hiring"
 
 interface "trade"
   active if "can buy"
-  sprite "gui/button_3"
+  sprite "interface/button/90x30"
     centre 100 355
   button B "Buy All"
     centre 100 355
     dimensions 90 30
 
-  sprite "gui/button_3"
+  sprite "interface/button/90x30"
     centre 200 355
 
   active if "can sell"
@@ -839,7 +839,7 @@ interface "trade"
 
 interface "bank"
   active if "can pay"
-  sprite "gui/button_3"
+  sprite "interface/button/90x30"
     centre 200 355
   button a "Pay _All"
     centre 200 355
@@ -849,7 +849,7 @@ interface "bank"
 
 interface "refuel"
   active if "can refuel"
-  sprite "gui/button_3"
+  sprite "interface/button/90x30"
     centre 200 355
   button r "_Refuel"
     centre 200 355
@@ -867,7 +867,7 @@ interface "refuel"
 
 
 interface "mission" bottom
-  sprite "gui/mission_panel"
+  sprite "interface/panel/mission"
     centre 0 -135
 
   label "cargo space free:"
@@ -886,14 +886,14 @@ interface "mission" bottom
     centre 130 -65
 
   active if "can accept"
-  sprite "gui/button_4"
+  sprite "interface/button/120x30"
     centre -65 -20
   button a "_Accept Mission"
     centre -65 -20
     dimensions 130 30
 
   active if "can abort"
-  sprite "gui/button_4"
+  sprite "interface/button/120x30"
     centre 65 -20
   button A "Abort Mission"
     centre 65 -20
@@ -903,43 +903,43 @@ interface "mission" bottom
 
 interface "map buttons" bottom right
   active if "!is ports"
-  sprite "gui/button_3"
+  sprite "interface/button/90x30"
     centre -450 -20
   button p "_Ports"
     from -500 -40 to -400 0
 
   active if "!is missions"
-  sprite "gui/button_3"
+  sprite "interface/button/90x30"
     centre -350 -20
   button i "M_issions"
     from -400 -40 to -300 0
 
   active if "!is outfitters"
-  sprite "gui/button_3"
+  sprite "interface/button/90x30"
     centre -250 -20
   button o "_Outfitters"
     from -300 -40 to -200 0
 
   active if "!is shipyards"
-  sprite "gui/button_3"
+  sprite "interface/button/90x30"
     centre -150 -20
   button s "_Shipyards"
     from -200 -40 to -100 0
 
   active
-  sprite "gui/button_3"
+  sprite "interface/button/90x30"
     centre -50 -20
   button d "_Done"
     from -100 -40 to 0 0
 
   active if "!max zoom"
-  sprite "gui/button_1"
+  sprite "interface/button/30x30"
     centre -25 -65
   button + "_+"
     from -10 -50 to -40 -80
     size 24
   active if "!min zoom"
-  sprite "gui/button_1"
+  sprite "interface/button/30x30"
     centre -65 -65
   button - "_−"
     from -50 -50 to -80 -80
@@ -948,11 +948,11 @@ interface "map buttons" bottom right
 
 
 interface "info panel"
-  sprite "gui/tab"
+  sprite "interface/button/tab"
     centre -400 -310
-  sprite "gui/tab"
+  sprite "interface/button/tab"
     centre -280 -310
-  sprite "gui/information_panel"
+  sprite "interface/panel/information"
     centre 0 -5
 
   box "player"
@@ -970,7 +970,7 @@ interface "info panel"
     from 250 -290 to 500 280
 
   visible if "player tab"
-  sprite "gui/tab"
+  sprite "interface/button/tab"
     centre -400 -310
   label "_Ship Info"
     centre -280 -310
@@ -985,7 +985,7 @@ interface "info panel"
   button R
     centre -375 -270
     dimensions 250 30
-  sprite "gui/tab"
+  sprite "interface/button/tab"
     centre -280 -310
   label "Ship Info"
     centre -280 -310
@@ -997,17 +997,17 @@ interface "info panel"
     dimensions 120 30
 
   visible
-  sprite "gui/button_3"
+  sprite "interface/button/90x30"
     centre 460 305
   button d "_Done"
     centre 460 305
     dimensions 90 30
-  sprite "gui/button_3"
+  sprite "interface/button/90x30"
     centre 360 305
   button m "_Missions"
     centre 360 305
     dimensions 90 30
-  sprite "gui/button_3"
+  sprite "interface/button/90x30"
     centre 260 305
   active if "enable logbook"
   button l "_Logbook"
@@ -1016,12 +1016,12 @@ interface "info panel"
   active
 
   visible if "five buttons"
-  sprite "gui/button_3"
+  sprite "interface/button/90x30"
     centre 140 305
   button n "_Next"
     centre 140 305
     dimensions 90 30
-  sprite "gui/button_3"
+  sprite "interface/button/90x30"
     centre 40 305
   button p "_Previous"
     centre 40 305
@@ -1029,7 +1029,7 @@ interface "info panel"
 
   visible if "show park"
   active if "can park"
-  sprite "gui/button_3"
+  sprite "interface/button/90x30"
     centre -80 305
   button P "Park"
     centre -80 305
@@ -1037,14 +1037,14 @@ interface "info panel"
   active
 
   visible if "show unpark"
-  sprite "gui/button_3"
+  sprite "interface/button/90x30"
     centre -80 305
   button P "Unpark"
     centre -80 305
     dimensions 90 30
 
   visible if "show disown"
-  sprite "gui/button_3"
+  sprite "interface/button/90x30"
     centre -180 305
   button D "Disown"
     centre -180 305
@@ -1052,7 +1052,7 @@ interface "info panel"
 
   visible if "show dump"
   active if "enable dump"
-  sprite "gui/button_3"
+  sprite "interface/button/90x30"
     centre -80 305
   button c "Dump _Cargo"
     centre -80 305
@@ -1060,13 +1060,13 @@ interface "info panel"
   active
 
   visible if "show park all"
-  sprite "gui/button_3"
+  sprite "interface/button/90x30"
     centre 20 305
   button A "Park All"
     centre 20 305
     dimensions 90 30
   visible if "show unpark all"
-  sprite "gui/button_3"
+  sprite "interface/button/90x30"
     centre 20 305
   button A "Unpark All"
     centre 20 305
