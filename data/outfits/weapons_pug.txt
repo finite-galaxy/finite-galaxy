@@ -40,7 +40,7 @@ outfit "Zapper Turret"
     sprite "projectile/lightning"
       "frame rate" 60
       "random start frame"
-    "hardpoint sprite" "hardpoint/zapper_turret"
+    "hardpoint sprite" "outfit/sprite/zapper_turret"
     "hardpoint offset" 7.
     sound "zapper"
     "hit effect" "skylance impact"
@@ -104,7 +104,7 @@ outfit "Gridfire Turret"
   "weapon space" -83
   "turret mounts" -1
   weapon
-    "hardpoint sprite" "hardpoint/gridfire"
+    "hardpoint sprite" "outfit/sprite/gridfire"
     "fire effect" "gridfire fire"
     "hit effect" "gridfire hit" 2
     "hit effect" "gridfire cloud"
@@ -135,7 +135,7 @@ outfit "Pug Anti-Missile"
   "weapon space" -41
   "turret mounts" -1
   weapon
-    "hardpoint sprite" "hardpoint/anti-missile_pug"
+    "hardpoint sprite" "outfit/sprite/anti-missile_pug"
     "hardpoint offset" 6.
     "hit effect" "anti-missile pug"
     "anti-missile" 5
@@ -158,7 +158,7 @@ outfit "Ceasefire Anti-Missile"
   "weapon space" -67
   "turret mounts" -1
   weapon
-    "hardpoint sprite" "hardpoint/ceasefire"
+    "hardpoint sprite" "outfit/sprite/ceasefire"
     "fire effect" "anti-missile ceasefire fire"
     "die effect" "anti-missile ceasefire die" 2
     "anti-missile" 100

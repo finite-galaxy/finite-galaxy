@@ -214,4 +214,24 @@ mission "Drak guarding Void Sprites"
     personality heroic vindictive staying
     system Nenia
     ship "Archon (Cloaked)" "Sleeping Dragon"
+        decline
+
+mission "Whale test"
+  landing
+  invisible
+  npc kill
+    government "Team Blue"
+    personality heroic vindictive staying
+    system Umbral
+    ship "Whale (Electron)" "Moby Dick"
+  npc kill
+    government "Team Red"
+    personality heroic vindictive staying
+    system Umbral
+    ship "Dreadnought" "Castor"
+  npc kill
+    government "Team Red"
+    personality heroic vindictive staying
+    system Umbral
+    ship "Dreadnought" "Pollux"
 

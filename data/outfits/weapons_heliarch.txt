@@ -26,7 +26,7 @@ outfit "Finisher Launcher"
       "no repeat"
     sound "finisher"
     ammo "Finisher"
-    icon "weapon/finisher"
+    icon "outfit/icon/finisher"
     "fire effect" "finisher sparks" 8
     "hit effect" "finisher impact" 2
     "hit effect" "finisher fragment" 12
@@ -111,7 +111,7 @@ outfit "Bombardment Turret"
     sprite "projectile/bombardment"
       "frame rate" 3.2
       "no repeat"
-    "hardpoint sprite" "hardpoint/bombardment_turret"
+    "hardpoint sprite" "outfit/sprite/bombardment_turret"
     "hardpoint offset" 10.
     sound "bombardment"
     "hit effect" "bombardment impact"
@@ -176,7 +176,7 @@ outfit "Attractor"
     sprite "projectile/attractor"
       "frame rate" 5.2
       "random start frame"
-    "hardpoint sprite" "hardpoint/attractor"
+    "hardpoint sprite" "outfit/sprite/attractor"
     "hardpoint offset" 9.
     sound "heliarch attractor"
     "hit effect" "attractor impact"
@@ -209,7 +209,7 @@ outfit "Repulsor"
     sprite "projectile/repulsor"
       "frame rate" 3.2
       "random start frame"
-    "hardpoint sprite" "hardpoint/repulsor"
+    "hardpoint sprite" "outfit/sprite/repulsor"
     "hardpoint offset" 9.
     sound "heliarch repulsor"
     "hit effect" "repulsor impact"

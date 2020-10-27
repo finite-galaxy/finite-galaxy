@@ -32,7 +32,7 @@ outfit "Impact Launcher"
       "random start frame"
     sound "impact"
     ammo "Impact"
-    icon "weapon/impact"
+    icon "outfit/icon/impact"
     "hit effect" "impact hit"
     "die effect" "small explosion"
     "inaccuracy" 5
@@ -93,7 +93,7 @@ outfit "Laser Turret"
   weapon
     sprite "projectile/2x_laser"
       "frame rate" 1
-    "hardpoint sprite" "hardpoint/laser_turret"
+    "hardpoint sprite" "outfit/sprite/laser_turret"
     "hardpoint offset" 7.
     sound "laser"
     "hit effect" "laser impact"
@@ -144,7 +144,7 @@ outfit "Heavy Laser Turret"
   weapon
     sprite "projectile/2x_heavy_laser"
       "frame rate" 1
-    "hardpoint sprite" "hardpoint/heavy_laser_turret"
+    "hardpoint sprite" "outfit/sprite/heavy_laser_turret"
     "hardpoint offset" 8.
     sound "heavy laser"
     "hit effect" "heavy laser impact"
@@ -195,7 +195,7 @@ outfit "Electron Turret"
   weapon
     sprite "projectile/2x_electron"
       "frame rate" 60
-    "hardpoint sprite" "hardpoint/electron_turret"
+    "hardpoint sprite" "outfit/sprite/electron_turret"
     "hardpoint offset" 8.
     sound "electron beam"
     "hit effect" "electron impact"

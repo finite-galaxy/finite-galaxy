@@ -32,7 +32,7 @@ outfit "Tracker Launcher"
       "random start frame"
     sound "tracker"
     ammo "Tracker"
-    icon "weapon/tracker"
+    icon "outfit/icon/tracker"
     "fire effect" "tracker fire"
     "hit effect" "tracker impact"
     "hit effect" "tracker cloud" 3
@@ -91,7 +91,7 @@ outfit "Proton Turret"
   "turret mounts" -1
   weapon
     sprite "projectile/proton"
-    "hardpoint sprite" "hardpoint/proton_turret"
+    "hardpoint sprite" "outfit/sprite/proton_turret"
     "hardpoint offset" 7.
     sound "proton"
     "hit effect" "proton impact"
@@ -149,7 +149,7 @@ outfit "Chameleon Anti-Missile"
   "weapon space" -22
   "turret mounts" -1
   weapon
-    "hardpoint sprite" "hardpoint/anti-missile_chameleon"
+    "hardpoint sprite" "outfit/sprite/anti-missile_chameleon"
     "hardpoint offset" 4.
     "hit effect" "anti-missile large"
     "anti-missile" 16

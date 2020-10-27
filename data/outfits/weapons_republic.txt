@@ -32,7 +32,7 @@ outfit "Gatling Gun"
       "random start frame"
     sound "explosion tiny"
     ammo "Gatling Round"
-    icon "weapon/gat"
+    icon "outfit/icon/bullet"
     "inaccuracy" 2
     "velocity" 16
     "lifetime" 1
@@ -95,7 +95,7 @@ outfit "Sidewinder Launcher"
       "frame rate" .25
     sound "sidewinder"
     ammo "Sidewinder"
-    icon "weapon/sidewinder"
+    icon "outfit/icon/sidewinder"
     "fire effect" "sidewinder fire"
     "die effect" "missile death"
     "hit effect" "missile hit"
@@ -189,7 +189,7 @@ outfit "Pulse Turret"
   weapon
     sprite "projectile/pulse"
       "frame rate" 5
-    "hardpoint sprite" "hardpoint/pulse_turret"
+    "hardpoint sprite" "outfit/sprite/pulse_turret"
     "hardpoint offset" 14.
     sound "pulse"
     "hit effect" "pulse impact"
@@ -218,7 +218,7 @@ outfit "Heavy Anti-Missile"
   "weapon space" -28
   "turret mounts" -1
   weapon
-    "hardpoint sprite" "hardpoint/anti-missile_heavy"
+    "hardpoint sprite" "outfit/sprite/anti-missile_heavy"
     "hardpoint offset" 5.
     "hit effect" "anti-missile large"
     "anti-missile" 8

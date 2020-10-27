@@ -33,7 +33,7 @@ outfit "Mine Launcher"
       "no repeat"
     sound "minelayer"
     ammo "Mine"
-    icon "weapon/mine"
+    icon "outfit/icon/mine"
     "fire effect" "minelayer fire"
     "hit effect" "huge explosion"
     "die effect" "minelayer split" 5
@@ -113,7 +113,7 @@ outfit "Piercer Launcher"
       "random start frame"
     sound "piercer"
     ammo "Piercer"
-    icon "weapon/piercer"
+    icon "outfit/icon/piercer"
     "fire effect" "piercer fire"
     "hit effect" "piercer impact"
     "hit effect" "piercer explosion"
@@ -152,7 +152,7 @@ outfit "Banisher"
   weapon
     sprite "projectile/banisher"
       "frame rate" 60
-    "hardpoint sprite" "hardpoint/banisher"
+    "hardpoint sprite" "outfit/sprite/banisher"
     "hardpoint offset" 5.
     sound "banisher"
     "hit effect" "banisher impact"
@@ -215,7 +215,7 @@ outfit "Disruptor"
   weapon
     sprite "projectile/disruptor"
       "frame rate" 15
-    "hardpoint sprite" "hardpoint/disruptor"
+    "hardpoint sprite" "outfit/sprite/disruptor"
     "hardpoint offset" 15.
     sound "disruptor"
     "hit effect" "disruptor impact"
@@ -272,7 +272,7 @@ outfit "Grab-Striker"
     sprite "projectile/grab-striker"
       "frame rate" 25
       "random start frame"
-    "hardpoint sprite" "hardpoint/grab-striker"
+    "hardpoint sprite" "outfit/sprite/grab-striker"
     "hardpoint offset" 7.
     sound "grab-strike"
     "hit effect" "grab-striker impact"
@@ -336,7 +336,7 @@ outfit "Repeater Turret"
   weapon
     sprite "projectile/repeater"
       "frame rate" 5
-    "hardpoint sprite" "hardpoint/repeater turret"
+    "hardpoint sprite" "outfit/sprite/repeater turret"
     "hardpoint offset" 7.
     sound "repeater"
     "hit effect" "repeater impact"
@@ -368,7 +368,7 @@ outfit "Slicer"
   weapon
     sprite "projectile/slicer"
       "frame rate" 6
-    "hardpoint sprite" "hardpoint/slicer"
+    "hardpoint sprite" "outfit/sprite/slicer"
     "hardpoint offset" 17.
     sound "slicer"
     "hit effect" "slicer impact"
@@ -398,7 +398,7 @@ outfit "Warder"
   "energy capacity" 50
   "turret mounts" -1
   weapon
-    "hardpoint sprite" "hardpoint/warder"
+    "hardpoint sprite" "outfit/sprite/warder"
     "hardpoint offset" 3.
     "hit effect" "warder"
     "anti-missile" 10

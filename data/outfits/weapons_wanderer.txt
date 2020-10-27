@@ -38,7 +38,7 @@ outfit "Thunderstorm Launcher"
       "random start frame"
     sound "thunderstorm"
     ammo "Thunderstorm"
-    icon "weapon/thunderstorm"
+    icon "outfit/icon/thunderstorm"
     "fire effect" "thunderstorm fire"
     "hit effect" "torpedo hit"
     "die effect" "tiny explosion"
@@ -102,7 +102,7 @@ outfit "Tornado Launcher"
       "random start frame"
     sound "tornado"
     ammo "Tornado"
-    icon "weapon/tornado"
+    icon "outfit/icon/tornado"
     "fire effect" "tornado fire"
     "hit effect" "torpedo hit"
     "die effect" "small explosion"
@@ -167,7 +167,7 @@ outfit "Moonbeam Turret"
   weapon
     sprite "projectile/moonbeam"
       "random start frame"
-    "hardpoint sprite" "hardpoint/moonbeam_turret"
+    "hardpoint sprite" "outfit/sprite/moonbeam_turret"
     "hardpoint offset" 9.
     sound "sunbeam"
     "fire effect" "moonbeam fleck"
@@ -226,7 +226,7 @@ outfit "Sunbeam Turret"
     sprite "projectile/sunbeam"
       "frame rate" 1.3
       "random start frame"
-    "hardpoint sprite" "hardpoint/sunbeam_turret"
+    "hardpoint sprite" "outfit/sprite/sunbeam_turret"
     "hardpoint offset" 12.
     sound "sunbeam"
     "hit effect" "sunbeam impact"
@@ -258,7 +258,7 @@ outfit "Dual Sunbeam Turret"
     sprite "projectile/2x_sunbeam"
       "frame rate" 1.3
       "random start frame"
-    "hardpoint sprite" "hardpoint/sunbeam_dual_turret"
+    "hardpoint sprite" "outfit/sprite/sunbeam_dual_turret"
     "hardpoint offset" 12.
     sound "sunbeam"
     "hit effect" "sunbeam impact"
@@ -288,7 +288,7 @@ outfit "Wanderer Anti-Missile"
   "weapon space" -24
   "turret mounts" -1
   weapon
-    "hardpoint sprite" "hardpoint/anti-missile_wanderer"
+    "hardpoint sprite" "outfit/sprite/anti-missile_wanderer"
     "hardpoint offset" 6.
     "hit effect" "anti-missile wanderer"
     "anti-missile" 40
