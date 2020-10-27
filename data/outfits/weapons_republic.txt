@@ -1,6 +1,6 @@
 outfit "Gatling Round"
   category "Ammunition"
-  thumbnail "outfit/bullet"
+  thumbnail "outfit/thumbnail/weapon/bullet"
   cost 2
   "mass" .001
   "plunderable" 1
@@ -10,7 +10,7 @@ outfit "Gatling Round"
 outfit "Gatling Bullet Boxes"
   plural "Gatling Bullet Boxes"
   category "Ammunition Storage"
-  thumbnail "outfit/bullet_storage"
+  thumbnail "outfit/thumbnail/weapon/bullet_storage"
   cost 3000
   "mass" .5
   "outfit space" -2
@@ -20,7 +20,7 @@ outfit "Gatling Bullet Boxes"
 
 outfit "Gatling Gun"
   category "Secondary Weapons"
-  thumbnail "outfit/bullet_launcher"
+  thumbnail "outfit/thumbnail/weapon/bullet_launcher"
   cost 10000
   "mass" 7
   "outfit space" -7
@@ -63,7 +63,7 @@ outfit "gbullet"
 
 outfit "Sidewinder"
   category "Ammunition"
-  thumbnail "outfit/sidewinder"
+  thumbnail "outfit/thumbnail/weapon/sidewinder"
   cost 1000
   "mass" .2
   "plunderable" 1
@@ -72,7 +72,7 @@ outfit "Sidewinder"
 
 outfit "Sidewinder Storage Rack"
   category "Ammunition Storage"
-  thumbnail "outfit/sidewinder_storage"
+  thumbnail "outfit/thumbnail/weapon/sidewinder_storage"
   cost 3000
   "mass" .4
   "outfit space" -1
@@ -82,7 +82,7 @@ outfit "Sidewinder Storage Rack"
 
 outfit "Sidewinder Launcher"
   category "Secondary Weapons"
-  thumbnail "outfit/sidewinder_launcher"
+  thumbnail "outfit/thumbnail/weapon/sidewinder_launcher"
   cost 60000
   "mass" 14
   "outfit space" -14
@@ -125,7 +125,7 @@ outfit "Sidewinder Launcher"
 
 outfit "Particle Cannon"
   category "Cannons"
-  thumbnail "outfit/particle_cannon"
+  thumbnail "outfit/thumbnail/weapon/particle_cannon"
   cost 220000
   "mass" 30
   "outfit space" -30
@@ -151,7 +151,7 @@ outfit "Particle Cannon"
 outfit "Pulse Cannon"
   category "Cannons"
   cost 390000
-  thumbnail "outfit/pulse_cannon"
+  thumbnail "outfit/thumbnail/weapon/pulse_cannon"
   licences
     Navy
   "mass" 40
@@ -178,7 +178,7 @@ outfit "Pulse Cannon"
 outfit "Pulse Turret"
   category "Turrets"
   cost 520000
-  thumbnail "outfit/pulse_turret"
+  thumbnail "outfit/thumbnail/weapon/pulse_turret"
   licences
     Navy
   "mass" 50
@@ -210,7 +210,7 @@ outfit "Pulse Turret"
 
 outfit "Heavy Anti-Missile"
   category "Anti-Missile"
-  thumbnail "outfit/anti-missile_heavy"
+  thumbnail "outfit/thumbnail/weapon/anti-missile_heavy"
   cost 300000
   "mass" 28
   "drag" .28
