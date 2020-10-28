@@ -123,7 +123,7 @@ void Audio::Init(const vector<string> &sources)
   // The listener is looking "into" the screen. This orientation vector is
   // used to determine what sounds should be in the right or left speaker.
   ALfloat zero[3] = {0., 0., 0.};
-  ALfloat  orientation[6] = {0., 0., -1., 0., 1., 0.};
+  ALfloat orientation[6] = {0., 0., -1., 0., 1., 0.};
 
   alListenerf(AL_GAIN, volume);
   alListenerfv(AL_POSITION, zero);
@@ -135,13 +135,13 @@ void Audio::Init(const vector<string> &sources)
   // Get all the sound files in the game data and all plugins.
   for(const string &source : sources)
   {
-    string root = source + "sounds/";
+    string root = source + "audio/";
     vector<string> files = Files::RecursiveList(root);
     for(const string &path : files)
     {
       if(!path.compare(path.length() - 4, 4, ".wav"))
       {
-        // The "name" of the sound is its full path within the "sounds/"
+        // The "name" of the sound is its full path within the "audio/"
         // folder, without the ".wav" or "~.wav" suffix.
         size_t end = path.length() - 4;
         if(path[end - 1] == '~')

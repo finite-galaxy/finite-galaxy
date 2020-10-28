@@ -130,7 +130,7 @@ void Files::Init(const char * const *argv)
   }
   data = resources + "data/";
   images = resources + "images/";
-  sounds = resources + "sounds/";
+  sounds = resources + "audio/";
 
   if(config.empty())
   {

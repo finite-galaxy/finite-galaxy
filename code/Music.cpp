@@ -29,7 +29,7 @@ void Music::Init(const vector<string> &sources)
   for(const string &source : sources)
   {
     // Find all the sound files that this resource source provides.
-    string root = source + "sounds/";
+    string root = source + "audio/";
     vector<string> files = Files::RecursiveList(root);
 
     for(const string &path : files)

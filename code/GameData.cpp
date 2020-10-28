@@ -882,14 +882,14 @@ void GameData::LoadSources()
   vector<string> globalPlugins = Files::ListDirectories(Files::Resources() + "plugins/");
   for(const string &path : globalPlugins)
   {
-    if(Files::Exists(path + "data") || Files::Exists(path + "images") || Files::Exists(path + "sounds"))
+    if(Files::Exists(path + "data") || Files::Exists(path + "images") || Files::Exists(path + "audio"))
       sources.push_back(path);
   }
 
   vector<string> localPlugins = Files::ListDirectories(Files::Config() + "plugins/");
   for(const string &path : localPlugins)
   {
-    if(Files::Exists(path + "data") || Files::Exists(path + "images") || Files::Exists(path + "sounds"))
+    if(Files::Exists(path + "data") || Files::Exists(path + "images") || Files::Exists(path + "audio"))
       sources.push_back(path);
   }
 

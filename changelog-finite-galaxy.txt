@@ -2,6 +2,7 @@
 ## See also https://github.com/finite-galaxy/finite-galaxy/commits/master
 
 Version 0.10.0:
+
 * code:
   * C++14
   * replaced tabs with two spaces
@@ -40,6 +41,7 @@ Version 0.10.0:
   * more map zoom levels
   * more swizzle options (4^3=64 options)
   * escorts refuel 5× as fast when landing on planets
+
 * data:
   * Oxford spelling
   * replaced tabs with two spaces
@@ -417,8 +419,10 @@ Version 0.10.0:
       * World-Ship B: cost from 27 690 000 to 47 690 000; −10 bunks, +10 required crew, +400 mass, +128 core space, +8 engine space, +14 weapon space
       * World-Ship C: cost from 27 690 000 to 47 690 000; −5000 shields, +5000 hull, +500 mass, +20 cargo space, +128 core space, +8 engine space, +14 weapon space
       * Zibruka: +1400 energy capacity, +4320 fuel capacity, +0.5 fuel generation, +2 hull repair rate, +2 hull energy, +3 scan interference, +16 tactical scan power
+
 * fonts:
   * Linux Libertine Display
+
 * images:
   * include Eternals images (@comnom)
   * icons:
@@ -462,9 +466,6 @@ Version 0.10.0:
       * falcon has four guns instead of two (@MCOfficer)
       * jupiter (@puzzlecube)
       * mistral (@Brick63)
-* sounds:
-  * ares~.wav, artemis.wav, athena.wav, dragonsfire.wav, dragonsice.wav, poseidon.wav, poseidon_double.wav, scan~.wav, spit.wav, unused_large~.wav, unused_medium~.wav, unused_small~.wav, unused_tiny~.wav (@comnom)
-  * thrasher (@Lineth)
 * added several scripts and configuration files (@tehhowch): test_parse.ps1, test_parse.sh, .appveyor.yml, .editorconfig, .travis.yml, .winmake
 
 
@@ -636,4 +637,15 @@ Version 0.10.0:
   * feat(mechanics): Add flagship System and Planet to player conditions (@petervdmeer)
   * fix(mechanics): Account for the depreciation grace period in the max age of an outfit or ship (@Amazinite)
   * feat: Negative repair costs no longer block repairing (@Amazinite)
+  * fix(mechanics): Count all ships which cannot depart the system even if they have a different warning displayed. (@tehhowch)
+  * fix(mechanics): Update Mission::IsSatisfied (@tehhowch)
+  * fix(mechanics): Ships with mission passengers must be in-system to satisfy requirements (@tehhowch)
+  * fix(graphics): Avoid enabling adaptive VSync by default (@tehhowch)
+  * fix: Restore behavior for showing error alerts (@tehhowch)
+  * feat: Attribute whitelist that allows negative attributes (@Amazinite)
+  * fix: Illegal stealth missions can no longer be fined for multiple times (@Amazinite)
+  * feat: Added velocity and range override attributes for weapons (@Amazinite)
+  * (@Amazinite)
+  * (@Amazinite)
+
 
