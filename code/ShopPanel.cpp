@@ -333,8 +333,8 @@ void ShopPanel::DrawMain()
   const Colour &bright = *GameData::Colours().Get("bright");
   mainDetailHeight = 0;
 
-  const Sprite *collapsedArrow = SpriteSet::Get("ui/collapsed");
-  const Sprite *expandedArrow = SpriteSet::Get("ui/expanded");
+  const Sprite *collapseArrow = SpriteSet::Get("interface/button/collapse");
+  const Sprite *expandArrow = SpriteSet::Get("interface/button/expand");
 
   // Draw all the available items.
   // First, figure out how many columns we can draw.
@@ -425,7 +425,7 @@ void ShopPanel::DrawMain()
     {
       Point size(bigFont.Width(category) + 25., bigFont.Height());
       categoryZones.emplace_back(Point(Screen::Left(), side.Y()) + .5 * size, size, category);
-      SpriteShader::Draw(isCollapsed ? collapsedArrow : expandedArrow, side + Point(10., 10.));
+      SpriteShader::Draw(isCollapsed ? expandArrow : collapseArrow, side + Point(10., 10.));
       bigFont.Draw(category, side + Point(25., 0.), isCollapsed ? dim : bright);
 
       if(point.X() != begin.X())
@@ -1168,3 +1168,4 @@ char ShopPanel::CheckButton(int x, int y)
 
   return ' ';
 }
+

@@ -301,7 +301,7 @@ bool MapSalesPanel::DrawHeader(Point &corner, const string &category)
     corner.Y() += 50.;
   hidPrevious = hide;
 
-  const Sprite *arrow = SpriteSet::Get(hide ? "ui/collapsed" : "ui/expanded");
+  const Sprite *arrow = SpriteSet::Get(hide ? "interface/button/expand" : "interface/button/collapse");
   SpriteShader::Draw(arrow, corner + Point(15., 25.));
 
   const Colour &textColour = *GameData::Colours().Get(hide ? "medium" : "bright");
