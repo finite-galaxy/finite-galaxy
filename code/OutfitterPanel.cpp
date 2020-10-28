@@ -626,7 +626,7 @@ void OutfitterPanel::DrawKey()
 
   const Font &font = FontSet::Get(18);
   Colour colour[2] = {*GameData::Colours().Get("medium"), *GameData::Colours().Get("bright")};
-  const Sprite *box[2] = {SpriteSet::Get("ui/unchecked"), SpriteSet::Get("ui/checked")};
+  const Sprite *box[2] = {SpriteSet::Get("interface/button/check"), SpriteSet::Get("interface/button/uncheck")};
 
   Point pos = Screen::BottomLeft() + Point(10., -30.);
   Point off = Point(10., -.5 * font.Height());
