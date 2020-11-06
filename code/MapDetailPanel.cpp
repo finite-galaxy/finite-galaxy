@@ -530,9 +530,9 @@ void MapDetailPanel::DrawInfo()
   if(selectedPlanet && !selectedPlanet->Description().empty()
       && player.HasVisited(selectedPlanet) && !selectedPlanet->IsWormhole())
   {
-    static const int X_OFFSET = 240;
+    static const int X_OFFSET = 250;
     static const int WIDTH = 500;
-    const Sprite *panelSprite = SpriteSet::Get("ui/description panel");
+    const Sprite *panelSprite = SpriteSet::Get("interface/panel/planet");
     Point pos(Screen::Right() - X_OFFSET - .5f * panelSprite->Width(),
       Screen::Top() + .5f * panelSprite->Height());
     SpriteShader::Draw(panelSprite, pos);
@@ -541,7 +541,7 @@ void MapDetailPanel::DrawInfo()
     text.SetAlignment(Font::JUSTIFIED);
     text.SetWrapWidth(WIDTH - 20);
     text.Wrap(selectedPlanet->Description());
-    text.Draw(Point(Screen::Right() - X_OFFSET - WIDTH, Screen::Top() + 20), medium);
+    text.Draw(Point(Screen::Right() - X_OFFSET - WIDTH + 5, Screen::Top() + 15), medium);
   }
 
   DrawButtons("is ports");

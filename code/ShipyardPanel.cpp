@@ -34,8 +34,8 @@ namespace {
     {
       Dialogue::Draw();
 
-      randomPos = cancelPos - Point(80., 0.);
-      SpriteShader::Draw(SpriteSet::Get("ui/dialogue cancel"), randomPos);
+      randomPos = (cancelPos + okPos) / 2;
+      SpriteShader::Draw(SpriteSet::Get("interface/button/90x30"), randomPos);
 
       const Font &font = FontSet::Get(18);
       static const string label = "Random";

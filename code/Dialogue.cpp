@@ -25,7 +25,7 @@
 using namespace std;
 
 namespace {
-  const int WIDTH = 250;
+  const int WIDTH = 280;
 
   // Map any conceivable numeric keypad keys to their ASCII values. Most of
   // these will presumably only exist on special programming keyboards.
@@ -97,15 +97,16 @@ void Dialogue::Draw()
 {
   DrawBackdrop();
 
-  const Sprite *top = SpriteSet::Get("ui/dialogue top");
-  const Sprite *middle = SpriteSet::Get("ui/dialogue middle");
-  const Sprite *bottom = SpriteSet::Get("ui/dialogue bottom");
-  const Sprite *cancel = SpriteSet::Get("ui/dialogue cancel");
+  const Sprite *top = SpriteSet::Get("interface/panel/message_top");
+  const Sprite *middle = SpriteSet::Get("interface/panel/message_middle");
+  const Sprite *bottom = SpriteSet::Get("interface/panel/message_bottom");
+  const Sprite *ok = SpriteSet::Get("interface/button/90x30");
+  const Sprite *cancel = SpriteSet::Get("interface/button/90x30");
 
   // Get the position of the top of this dialogue, and of the text and input.
   Point pos(0., (top->Height() + height * middle->Height() + bottom->Height()) * -.5f);
   Point textPos(WIDTH * -.5 + 10., pos.Y() + 20.);
-  Point inputPos = Point(0., -70.) - pos;
+  Point inputPos = Point(0., -20.) - pos;
 
   // Draw the top section of the dialogue box.
   pos.Y() += top->Height() * .5;
@@ -124,16 +125,17 @@ void Dialogue::Draw()
   const Font &font = FontSet::Get(18);
   pos.Y() += bottom->Height() * .5;
   SpriteShader::Draw(bottom, pos);
-  pos.Y() += bottom->Height() * .5 - 25.;
+  pos.Y() += bottom->Height() * .5;
 
   // Draw the buttons, including optionally the cancel button.
   const Colour &bright = *GameData::Colours().Get("bright");
   const Colour &dim = *GameData::Colours().Get("medium");
   const Colour &back = *GameData::Colours().Get("faint");
+  pos.Y() += 20;
   if(canCancel)
   {
     string cancelText = isMission ? "Decline" : "Cancel";
-    cancelPos = pos + Point(10., 0.);
+    cancelPos = pos + Point(-100., 0.);
     SpriteShader::Draw(cancel, cancelPos);
     Point labelPos(
       cancelPos.X() - .5 * font.Width(cancelText),
@@ -141,7 +143,8 @@ void Dialogue::Draw()
     font.Draw(cancelText, labelPos, !okIsActive ? bright : dim);
   }
   string okText = isMission ? "Accept" : "OK";
-  okPos = pos + Point(90., 0.);
+  okPos = pos + Point(100., 0.);
+  SpriteShader::Draw(ok, okPos);
   Point labelPos(
     okPos.X() - .5 * font.Width(okText),
     okPos.Y() - .5 * font.Height());
@@ -156,7 +159,7 @@ void Dialogue::Draw()
     FillShader::Fill(inputPos, Point(WIDTH - 20., 20.), back);
 
     Point stringPos(
-      inputPos.X() - (WIDTH - 20) * .5 + 5.,
+      inputPos.X() - (WIDTH - 20) * .5 + 10.,
       inputPos.Y() - .5 * font.Height());
     const Font::Layout layout{Font::TRUNC_FRONT, WIDTH - 30};
     const string validatedInput(Font::EscapeMarkupHasError(input));
