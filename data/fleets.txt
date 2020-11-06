@@ -2249,39 +2249,19 @@ fleet "Marauder fleet I"
   cargo 1
   personality
     plunders
-  # total: 20
-  variant 9
-    "Modified Quicksilver (Core)"
-    "Modified Arrow (Weapons)"
-    "Modified Bounder (Engines)"
-  variant 9
-    "Modified Quicksilver (Core)"
-    "Modified Arrow (Engines)"
-    "Modified Bounder (Weapons)"
+  # total: 9
   variant 1
-    "Modified Quicksilver (Engines)"
-    "Modified Arrow (Core)" 2
-    "Modified Bounder (Core)" 2
-  variant 1
-    "Modified Quicksilver (Weapons)"
-    "Modified Arrow (Core)" 2
-    "Modified Bounder (Core)" 2
-  variant 9
     "Modified Raven (Core)"
-    "Modified Arrow (Engines)"
-    "Modified Bounder (Weapons)"
-  variant 9
-    "Modified Raven (Core)"
-    "Modified Arrow (Weapons)"
-    "Modified Bounder (Engines)"
   variant 1
     "Modified Raven (Engines)"
-    "Modified Arrow (Core)" 2
-    "Modified Bounder (Core)" 2
   variant 1
     "Modified Raven (Weapons)"
-    "Modified Arrow (Core)" 2
-    "Modified Bounder (Core)" 2
+  variant 2
+    "Modified Quicksilver (Core)"
+  variant 2
+    "Modified Quicksilver (Engines)"
+  variant 2
+    "Modified Quicksilver (Weapons)"
 
 fleet "Marauder fleet II"
   government "Pirate"
@@ -2289,39 +2269,46 @@ fleet "Marauder fleet II"
   cargo 1
   personality
     plunders
-  # total: 20
-  variant 4
-    "Modified Quicksilver (Core)"
-    "Modified Arrow (Weapons)"
-    "Modified Bounder (Engines)"
-  variant 4
-    "Modified Quicksilver (Core)"
-    "Modified Arrow (Engines)"
-    "Modified Bounder (Weapons)"
+  # total: 30
+  variant 2
+    "Modified Manta (Core)"
+  variant 2
+    "Modified Manta (Engines)"
+  variant 2
+    "Modified Manta (Weapons)"
   variant 1
+    "Modified Raven (Core)"
+    "Modified Quicksilver (Core)"
+  variant 1
+    "Modified Raven (Core)"
     "Modified Quicksilver (Engines)"
-    "Modified Arrow (Core)" 2
-    "Modified Bounder (Core)" 2
   variant 1
+    "Modified Raven (Core)"
     "Modified Quicksilver (Weapons)"
-    "Modified Arrow (Core)" 2
-    "Modified Bounder (Core)" 2
-  variant 4
-    "Modified Raven (Core)"
-    "Modified Arrow (Engines)"
-    "Modified Bounder (Weapons)"
-  variant 4
-    "Modified Raven (Core)"
-    "Modified Arrow (Weapons)"
-    "Modified Bounder (Engines)"
   variant 1
     "Modified Raven (Engines)"
-    "Modified Arrow (Core)" 2
-    "Modified Bounder (Core)" 2
+    "Modified Quicksilver (Core)"
+  variant 1
+    "Modified Raven (Engines)"
+    "Modified Quicksilver (Engines)"
+  variant 1
+    "Modified Raven (Engines)"
+    "Modified Quicksilver (Weapons)"
   variant 1
     "Modified Raven (Weapons)"
-    "Modified Arrow (Core)" 2
-    "Modified Bounder (Core)" 2
+    "Modified Quicksilver (Core)" 
+  variant 1
+    "Modified Raven (Weapons)"
+    "Modified Quicksilver (Engines)" 
+  variant 1
+    "Modified Raven (Weapons)"
+    "Modified Quicksilver (Weapons)" 
+  variant 5
+    "Modified Quicksilver (Core)" 2
+  variant 5
+    "Modified Quicksilver (Engines)" 2
+  variant 5
+    "Modified Quicksilver (Weapons)" 2
 
 fleet "Marauder fleet III"
   government "Pirate"
@@ -2329,39 +2316,52 @@ fleet "Marauder fleet III"
   cargo 1
   personality
     plunders
-  # total: 16
-  variant 3
-    "Modified Quicksilver (Core)"
-    "Modified Arrow (Weapons)"
-    "Modified Bounder (Engines)"
-  variant 3
-    "Modified Quicksilver (Core)"
-    "Modified Arrow (Engines)"
-    "Modified Bounder (Weapons)"
+  # total: 30
+  variant 2
+    "Modified Splinter (Core)"
+  variant 2
+    "Modified Splinter (Engines)"
+  variant 2
+    "Modified Splinter (Weapons)"
   variant 1
+    "Modified Manta (Core)"
+    "Modified Quicksilver (Core)"
+  variant 1
+    "Modified Manta (Core)"
     "Modified Quicksilver (Engines)"
-    "Modified Arrow (Core)" 2
-    "Modified Bounder (Core)" 2
   variant 1
+    "Modified Manta (Core)"
     "Modified Quicksilver (Weapons)"
-    "Modified Arrow (Core)" 2
-    "Modified Bounder (Core)" 2
-  variant 3
-    "Modified Raven (Core)"
-    "Modified Arrow (Engines)"
-    "Modified Bounder (Weapons)"
-  variant 3
-    "Modified Raven (Core)"
-    "Modified Arrow (Weapons)"
-    "Modified Bounder (Engines)"
   variant 1
-    "Modified Raven (Engines)"
-    "Modified Arrow (Core)" 2
-    "Modified Bounder (Core)" 2
+    "Modified Manta (Engines)"
+    "Modified Quicksilver (Core)"
   variant 1
-    "Modified Raven (Weapons)"
-    "Modified Arrow (Core)" 2
-    "Modified Bounder (Core)" 2
+    "Modified Manta (Engines)"
+    "Modified Quicksilver (Engines)"
+  variant 1
+    "Modified Manta (Engines)"
+    "Modified Quicksilver (Weapons)"
+  variant 1
+    "Modified Manta (Weapons)"
+    "Modified Quicksilver (Core)" 
+  variant 1
+    "Modified Manta (Weapons)"
+    "Modified Quicksilver (Engines)" 
+  variant 1
+    "Modified Manta (Weapons)"
+    "Modified Quicksilver (Weapons)" 
+  variant 3
+    "Modified Raven (Core)" 2
+  variant 3
+    "Modified Raven (Engines)" 2
+  variant 3
+    "Modified Raven (Weapons)" 2
+  variant 2
+    "Modified Quicksilver (Core)" 3
+  variant 2
+    "Modified Quicksilver (Engines)" 3
+  variant 2
+    "Modified Quicksilver (Weapons)" 3
 
 fleet "Marauder fleet IV"
   government "Pirate"
@@ -2621,57 +2621,41 @@ fleet "Marauder fleet X"
     "Modified Firebird (Core)"
     "Modified Raven (Weapons)"
     "Modified Quicksilver (Engines)"
-    "Modified Arrow (Weapons)"
-    "Modified Bounder (Engines)"
   variant 3
     "Modified Blade (Core)"
     "Modified Firebird (Core)"
     "Modified Raven (Engines)"
     "Modified Quicksilver (Weapons)"
-    "Modified Arrow (Engines)"
-    "Modified Bounder (Weapons)"
   variant 2
     "Modified Blade (Weapons)"
     "Modified Firebird (Engines)"
     "Modified Raven (Core)"
     "Modified Quicksilver (Core)"
-    "Modified Arrow (Core)"
-    "Modified Bounder (Core)"
   variant 2
     "Modified Blade (Engines)"
     "Modified Firebird (Weapons)"
     "Modified Raven (Core)"
     "Modified Quicksilver (Core)"
-    "Modified Arrow (Core)"
-    "Modified Bounder (Core)"
   variant 3
     "Modified Leviathan (Core)"
     "Modified Firebird (Core)"
     "Modified Raven (Engines)"
     "Modified Quicksilver (Weapons)"
-    "Modified Arrow (Engines)"
-    "Modified Bounder (Weapons)"
   variant 3
     "Modified Leviathan (Core)"
     "Modified Firebird (Core)"
     "Modified Raven (Weapons)"
     "Modified Quicksilver (Engines)"
-    "Modified Arrow (Weapons)"
-    "Modified Bounder (Engines)"
   variant 2
     "Modified Leviathan (Engines)"
     "Modified Firebird (Weapons)"
     "Modified Raven (Core)"
     "Modified Quicksilver (Core)"
-    "Modified Arrow (Core)"
-    "Modified Bounder (Core)"
   variant 2
     "Modified Leviathan (Weapons)"
     "Modified Firebird (Engines)"
     "Modified Raven (Core)"
     "Modified Quicksilver (Core)"
-    "Modified Arrow (Core)"
-    "Modified Bounder (Core)"
 
 
 fleet "Pirate Miners East"

@@ -271,9 +271,6 @@ Version 0.10.0:
       * Arfecta: −2000 shields, +90 mass, +50 core space; removed cloaking fuel; +3400 energy capacity, +15 200 fuel capacity, +2.0 fuel generation, +3 hull repair rate, +3 hull energy, +12 scan interference, +237 tactical scan power
       * Argosy: cost from 1960 000 to 2400 000; +30 cargo space, +10 engine space, −10 weapon space
       * Arrow: −0.8 drag, +10 cargo space, −5 core space, +5 engine space
-        * Modified Arrow (Core): −0.8 drag, +15 cargo space, +20 core space, −15 engine capacity, +5 weapon space
-        * Modified Arrow (Engines): −0.8 drag, +15 cargo space, +10 core space, +5 engine space, −5 weapon space
-        * Modified Arrow (Weapons): −0.8 drag, +15 cargo space, −5 core space, −15 engine capacity, +30 weapon space
       * Autumn Leaf: +62 cargo space, +15 core space
       * Bactrian: +200 cargo space
       * Bastion: +700 hull, +60 cargo space, +10 core space, +3 required crew
@@ -285,9 +282,6 @@ Version 0.10.0:
         * Modified Blade (Engines): +900 shields, +900 hull, −11 bunks, +90 cargo space, +35 core space, +20 engine space, –35 weapon space
         * Modified Blade (Weapons): +900 shields, +900 hull, −11 bunks, +90 cargo space, +35 core space, –15 engine space
       * Bounder: +1 required crew, +40 cargo space, +25 core space, −20 engine space, −5 weapon space
-        * Modified Bounder (Core): +40 cargo space, +45 core space, –25 engine space
-        * Modified Bounder (Engines): +40 cargo space, +40 core space, −15 weapon space
-        * Modified Bounder (Weapons): +40 cargo space, +55 core space, –25 engine space, −10 weapon space
       * Boxwing: +0.81 drag, +0.23 heat dissipation, −40 cargo space, +3 core space, +7 engine space
       * Briar: +30 cargo space
       * Centipede: cost from 9 400 000 to 9 000 000; −1000 shields, +1400 hull, −3 bunks, +30 mass, +2.2 drag, +150 cargo space, −25 core space, +15 engine space, −100 weapon space
@@ -637,15 +631,5 @@ Version 0.10.0:
   * feat(mechanics): Add flagship System and Planet to player conditions (@petervdmeer)
   * fix(mechanics): Account for the depreciation grace period in the max age of an outfit or ship (@Amazinite)
   * feat: Negative repair costs no longer block repairing (@Amazinite)
-  * fix(mechanics): Count all ships which cannot depart the system even if they have a different warning displayed. (@tehhowch)
-  * fix(mechanics): Update Mission::IsSatisfied (@tehhowch)
-  * fix(mechanics): Ships with mission passengers must be in-system to satisfy requirements (@tehhowch)
-  * fix(graphics): Avoid enabling adaptive VSync by default (@tehhowch)
-  * fix: Restore behavior for showing error alerts (@tehhowch)
-  * feat: Attribute whitelist that allows negative attributes (@Amazinite)
-  * fix: Illegal stealth missions can no longer be fined for multiple times (@Amazinite)
-  * feat: Added velocity and range override attributes for weapons (@Amazinite)
-  * (@Amazinite)
-  * (@Amazinite)
 
 
