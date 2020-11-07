@@ -15,7 +15,22 @@ using namespace std;
 
 namespace {
   const double EPS = 0.000'000'0001;
+
+  // A list of attributes which are allowed to have a minimum value other than 0.
+  // The key is the attribute name and the value is the minimum value
+  // that the ship's attribute is allowed to have. A value of 0 means that the
+  // attribute can have any value. Non-zero values mean that the ship's attributes
+  // are not allowed to go below that value when installing or selling outfits.
+  const map<string, double> ALLOWLIST = {
+    {"hull energy", 0.},
+    {"hull fuel", 0.},
+    {"hull heat", 0.},
+    {"shield energy", 0.},
+    {"shield fuel", 0.},
+    {"shield heat", 0.}
+  };
 }
+
 
 
 void Outfit::Load(const DataNode &node)
@@ -178,10 +193,22 @@ int Outfit::CanAdd(const Outfit &other, int count) const
 {
   for(const auto &at : other.attributes)
   {
+    // The minimum allowed value of most attributes is 0. Some attributes
+    // have special functionality when negative, though, and are therefore
+    // allowed to have values less than 0.
+    double minimum = 0.;
+    auto it = ALLOWLIST.find(at.first);
+    if(it != ALLOWLIST.end())
+    {
+      minimum = it->second;
+      // Attributes listed with a minimum value of 0 can have any value.
+      if(!minimum)
+        continue;
+    }
     double value = Get(at.first);
     // Allow for rounding errors:
-    if(value + at.second * count < -EPS)
-      count = value / -at.second + EPS;
+    if(value + at.second * count < minimum - EPS)
+      count = (value - minimum) / -at.second + EPS;
   }
 
   return count;

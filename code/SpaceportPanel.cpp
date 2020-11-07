@@ -87,7 +87,7 @@ void SpaceportPanel::Draw()
   if(player.IsDead())
     return;
 
-  text.Draw(Point(-300., 80.), *GameData::Colours().Get("bright"));
+  text.Draw(Point(-240., 80.), *GameData::Colours().Get("bright"));
 
   if(hasNews)
   {

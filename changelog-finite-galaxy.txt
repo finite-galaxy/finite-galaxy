@@ -631,5 +631,12 @@ Version 0.10.0:
   * feat(mechanics): Add flagship System and Planet to player conditions (@petervdmeer)
   * fix(mechanics): Account for the depreciation grace period in the max age of an outfit or ship (@Amazinite)
   * feat: Negative repair costs no longer block repairing (@Amazinite)
-
+  * fix(mechanics): Count all ships which cannot depart the system even if they have a different warning displayed. (@tehhowch)
+  * fix(mechanics): Update Mission::IsSatisfied (@tehhowch)
+  * fix(mechanics): Ships with mission passengers must be in-system to satisfy requirements (@tehhowch)
+  * fix(graphics): Avoid enabling adaptive VSync by default (@tehhowch)
+  * fix: Restore behavior for showing error alerts (@tehhowch)
+  * feat: Attribute whitelist that allows negative attributes (@Amazinite)
+  * fix: Illegal stealth missions can no longer be fined for multiple times (@Amazinite)
+  * feat: Added velocity and range override attributes for weapons (@Amazinite)
 

@@ -233,7 +233,7 @@ void ShopPanel::DrawSidebar()
     const auto checkIt = flightChecks.find(ship);
     if(checkIt != flightChecks.end())
     {
-      const string &check = (*checkIt).second;
+      const string &check = (*checkIt).second.front();
       const Sprite *icon = SpriteSet::Get(check.back() == '!' ? "ui/error" : "ui/warning");
       SpriteShader::Draw(icon, point + .5 * Point(ICON_TILE - icon->Width(), ICON_TILE - icon->Height()));
       if(zones.back().Contains(mouse))
@@ -1168,4 +1168,3 @@ char ShopPanel::CheckButton(int x, int y)
 
   return ' ';
 }
-
