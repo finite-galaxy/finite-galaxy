@@ -101,15 +101,15 @@ public:
   double HullDamage() const;
   double FuelDamage() const;
   double HeatDamage() const;
-  double IonDamage() const;
   double DisruptionDamage() const;
+  double IonDamage() const;
   double SlowingDamage() const;
   double RandomShieldDamage() const;
   double RandomHullDamage() const;
   double RandomFuelDamage() const;
   double RandomHeatDamage() const;
-  double RandomIonDamage() const;
   double RandomDisruptionDamage() const;
+  double RandomIonDamage() const;
   double RandomSlowingDamage() const;
   // Check if this weapon does damage. If not, attacking a ship with this
   // weapon is not a provocation (even if you push or pull it).
@@ -201,8 +201,8 @@ private:
   static const int HULL_DAMAGE = 1;
   static const int FUEL_DAMAGE = 2;
   static const int HEAT_DAMAGE = 3;
-  static const int ION_DAMAGE = 4;
-  static const int DISRUPTION_DAMAGE = 5;
+  static const int DISRUPTION_DAMAGE = 4;
+  static const int ION_DAMAGE = 5;
   static const int SLOWING_DAMAGE = 6;
   static const int HIT_FORCE = 7;
   mutable double damage[DAMAGE_TYPES] = {0., 0., 0., 0., 0., 0., 0., 0.};
@@ -268,16 +268,16 @@ inline double Weapon::ShieldDamage() const { return TotalDamage(SHIELD_DAMAGE); 
 inline double Weapon::HullDamage() const { return TotalDamage(HULL_DAMAGE); }
 inline double Weapon::FuelDamage() const { return TotalDamage(FUEL_DAMAGE); }
 inline double Weapon::HeatDamage() const { return TotalDamage(HEAT_DAMAGE); }
-inline double Weapon::IonDamage() const { return TotalDamage(ION_DAMAGE); }
 inline double Weapon::DisruptionDamage() const { return TotalDamage(DISRUPTION_DAMAGE); }
+inline double Weapon::IonDamage() const { return TotalDamage(ION_DAMAGE); }
 inline double Weapon::SlowingDamage() const { return TotalDamage(SLOWING_DAMAGE); }
 
 inline double Weapon::RandomShieldDamage() const { return TotalRandomDamage(SHIELD_DAMAGE); }
 inline double Weapon::RandomHullDamage() const { return TotalRandomDamage(HULL_DAMAGE); }
 inline double Weapon::RandomFuelDamage() const { return TotalRandomDamage(FUEL_DAMAGE); }
 inline double Weapon::RandomHeatDamage() const { return TotalRandomDamage(HEAT_DAMAGE); }
-inline double Weapon::RandomIonDamage() const { return TotalRandomDamage(ION_DAMAGE); }
 inline double Weapon::RandomDisruptionDamage() const { return TotalRandomDamage(DISRUPTION_DAMAGE); }
+inline double Weapon::RandomIonDamage() const { return TotalRandomDamage(ION_DAMAGE); }
 inline double Weapon::RandomSlowingDamage() const { return TotalRandomDamage(SLOWING_DAMAGE); }
 
 inline bool Weapon::DoesDamage() const { if(!calculatedDamage) TotalDamage(0); return doesDamage; }

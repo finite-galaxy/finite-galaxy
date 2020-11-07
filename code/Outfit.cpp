@@ -27,7 +27,18 @@ namespace {
     {"hull heat", 0.},
     {"shield energy", 0.},
     {"shield fuel", 0.},
-    {"shield heat", 0.}
+    {"shield heat", 0.},
+    // resistances
+    {"disruption resistance", 0.},
+    {"force resistance", 0.},
+    {"fuel resistance", 0.},
+    {"heat resistance", 0.},
+    {"hit force resistance", 0.},
+    {"hull resistance", 0.},
+    {"ion resistance", 0.},
+    {"pierce resistance", 0.},
+    {"shield resistance", 0.},
+    {"slowing resistance", 0.}
   };
 }
 

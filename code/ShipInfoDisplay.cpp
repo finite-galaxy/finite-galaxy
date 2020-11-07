@@ -293,41 +293,6 @@ void ShipInfoDisplay::UpdateAttributes(const Ship &ship, const Depreciation &dep
       attributeValues.push_back(Format::Number(attributes.Get("ramscoop")));
       attributesHeight += 20;
     }
-    if(attributes.Get("disruption resistance"))
-    {
-      attributeLabels.push_back("disruption resistance:");
-      attributeValues.push_back(Format::Number(100. 
-        - 100. * pow(.9, attributes.Get("disruption resistance"))) + "%");
-      attributesHeight += 20;
-    }
-    if(attributes.Get("fuel resistance"))
-    {
-      attributeLabels.push_back("fuel resistance:");
-      attributeValues.push_back(Format::Number(100. 
-        - 100. * pow(.9, attributes.Get("fuel resistance"))) + "%");
-      attributesHeight += 20;
-    }
-    if(attributes.Get("heat resistance"))
-    {
-      attributeLabels.push_back("heat resistance:");
-      attributeValues.push_back(Format::Number(100. 
-        - 100. * pow(.9, attributes.Get("heat resistance"))) + "%");
-      attributesHeight += 20;
-    }
-    if(attributes.Get("ion resistance"))
-    {
-      attributeLabels.push_back("ion resistance:");
-      attributeValues.push_back(Format::Number(100. 
-        - 100. * pow(.9, attributes.Get("ion resistance"))) + "%");
-      attributesHeight += 20;
-    }
-    if(attributes.Get("slowing resistance"))
-    {
-      attributeLabels.push_back("slowing resistance:");
-      attributeValues.push_back(Format::Number(100. 
-        - 100. * pow(.9, attributes.Get("slowing resistance"))) + "%");
-      attributesHeight += 20;
-    }
     if(attributes.Get("scan interference"))
     {
       attributeLabels.push_back("chance to block scan:");
@@ -357,6 +322,70 @@ void ShipInfoDisplay::UpdateAttributes(const Ship &ship, const Depreciation &dep
     {
       attributeLabels.push_back("tactical scan range:");
       attributeValues.push_back(Format::Round(100. * sqrt(attributes.Get("tactical scan power"))));
+      attributesHeight += 20;
+    }
+    // Resistances
+    if(attributes.Get("shield resistance"))
+    {
+      attributeLabels.push_back("shield resistance:");
+      attributeValues.push_back(Format::Number(100. 
+        - 100. * pow(.9, attributes.Get("shield resistance"))) + "%");
+      attributesHeight += 20;
+    }
+    if(attributes.Get("hull resistance"))
+    {
+      attributeLabels.push_back("hull resistance:");
+      attributeValues.push_back(Format::Number(100. 
+        - 100. * pow(.9, attributes.Get("hull resistance"))) + "%");
+      attributesHeight += 20;
+    }
+    if(attributes.Get("fuel resistance"))
+    {
+      attributeLabels.push_back("fuel resistance:");
+      attributeValues.push_back(Format::Number(100. 
+        - 100. * pow(.9, attributes.Get("fuel resistance"))) + "%");
+      attributesHeight += 20;
+    }
+    if(attributes.Get("heat resistance"))
+    {
+      attributeLabels.push_back("heat resistance:");
+      attributeValues.push_back(Format::Number(100. 
+        - 100. * pow(.9, attributes.Get("heat resistance"))) + "%");
+      attributesHeight += 20;
+    }
+    if(attributes.Get("pierce resistance"))
+    {
+      attributeLabels.push_back("pierce resistance:");
+      attributeValues.push_back(Format::Number(100. 
+        - 100. * pow(.9, attributes.Get("pierce resistance"))) + "%");
+      attributesHeight += 20;
+    }
+    if(attributes.Get("disruption resistance"))
+    {
+      attributeLabels.push_back("disruption resistance:");
+      attributeValues.push_back(Format::Number(100. 
+        - 100. * pow(.9, attributes.Get("disruption resistance"))) + "%");
+      attributesHeight += 20;
+    }
+    if(attributes.Get("ion resistance"))
+    {
+      attributeLabels.push_back("ion resistance:");
+      attributeValues.push_back(Format::Number(100. 
+        - 100. * pow(.9, attributes.Get("ion resistance"))) + "%");
+      attributesHeight += 20;
+    }
+    if(attributes.Get("slowing resistance"))
+    {
+      attributeLabels.push_back("slowing resistance:");
+      attributeValues.push_back(Format::Number(100. 
+        - 100. * pow(.9, attributes.Get("slowing resistance"))) + "%");
+      attributesHeight += 20;
+    }
+    if(attributes.Get("force resistance"))
+    {
+      attributeLabels.push_back("force resistance:");
+      attributeValues.push_back(Format::Number(100. 
+        - 100. * pow(.9, attributes.Get("force resistance"))) + "%");
       attributesHeight += 20;
     }
   }

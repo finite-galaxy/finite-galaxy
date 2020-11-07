@@ -2740,29 +2740,34 @@ int Ship::TakeDamage(const Projectile &projectile, bool isBlast)
   double rr = Random::Real();
   double shieldDamage = (weapon.ShieldDamage() + rr * weapon.RandomShieldDamage()) * damageScaling;
   double hullDamage = (weapon.HullDamage() + rr * weapon.RandomHullDamage()) * damageScaling;
-  double disruptionDamage = (weapon.DisruptionDamage() + rr * weapon.RandomDisruptionDamage()) * damageScaling;
   double fuelDamage = (weapon.FuelDamage() + rr * weapon.RandomFuelDamage()) * damageScaling;
   double heatDamage = (weapon.HeatDamage() + rr * weapon.RandomHeatDamage()) * damageScaling;
+  double disruptionDamage = (weapon.DisruptionDamage() + rr * weapon.RandomDisruptionDamage()) * damageScaling;
   double ionDamage = (weapon.IonDamage() + rr * weapon.RandomIonDamage()) * damageScaling;
   double slowingDamage = (weapon.SlowingDamage() + rr * weapon.RandomSlowingDamage()) * damageScaling;
   double hitForce = (weapon.HitForce() + rr * weapon.RandomHitForce()) * damageScaling;
   bool wasDisabled = IsDisabled();
   bool wasDestroyed = IsDestroyed();
-  // Next, apply special damage resistances, if any. 
+  // Next, apply resistances, if any. 
   // Each point of resistance means a 10% damage reduction, e.g. slowing resistance
   // of 20 means only 0.9^20 = 0.121577 (i.e. 12%) of slowing damage is taken.
+  if(attributes.Get("shield resistance"))
+    shieldDamage  *= pow(.9, attributes.Get("shield resistance"));
+  if(attributes.Get("hull resistance"))
+    hullDamage  *= pow(.9, attributes.Get("hull resistance"));
   if(attributes.Get("fuel resistance"))
     fuelDamage  *= pow(.9, attributes.Get("fuel resistance"));
-  if(attributes.Get("disruption resistance"))
-    disruptionDamage *= pow(.9, attributes.Get("disruption resistance"));
   if(attributes.Get("heat resistance"))
     heatDamage  *= pow(.9, attributes.Get("heat resistance"));
+  if(attributes.Get("disruption resistance"))
+    disruptionDamage *= pow(.9, attributes.Get("disruption resistance"));
   if(attributes.Get("ion resistance"))
     ionDamage *= pow(.9, attributes.Get("ion resistance"));
   if(attributes.Get("slowing resistance"))
     slowingDamage *= pow(.9, attributes.Get("slowing resistance"));
 
-  double shieldFraction = 1. - weapon.Piercing();
+  double piercing = weapon.Piercing() * pow(.9, attributes.Get("pierce resistance"));
+  double shieldFraction = max(0., 1. - piercing);
   shieldFraction *= 1. / (1. + disruption * .01);
   if(shields <= 0.)
     shieldFraction = 0.;
@@ -2817,10 +2822,7 @@ void Ship::ApplyForce(const Point &force)
   if(!currentMass)
     return;
 
-  // Reduce acceleration of small ships and increase acceleration of large
-  // ones by having 30% of the force be based on a fixed mass of 400, i.e. the
-  // mass of a typical light warship:
-  acceleration += force * (.3 / 400. + .7 / currentMass);
+  acceleration += force * pow(.9, attributes.Get("force resistance")) / currentMass;
 }
 
 

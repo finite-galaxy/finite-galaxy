@@ -149,14 +149,14 @@ void Weapon::LoadWeapon(const DataNode &node)
         damage[SHIELD_DAMAGE] = value;
       else if(key == "hull damage")
         damage[HULL_DAMAGE] = value;
+      else if(key == "disruption damage")
+        damage[DISRUPTION_DAMAGE] = value;
       else if(key == "fuel damage")
         damage[FUEL_DAMAGE] = value;
       else if(key == "heat damage")
         damage[HEAT_DAMAGE] = value;
       else if(key == "ion damage")
         damage[ION_DAMAGE] = value;
-      else if(key == "disruption damage")
-        damage[DISRUPTION_DAMAGE] = value;
       else if(key == "slowing damage")
         damage[SLOWING_DAMAGE] = value;
       else if(key == "hit force")
@@ -165,14 +165,14 @@ void Weapon::LoadWeapon(const DataNode &node)
         randomDamage[SHIELD_DAMAGE] = value;
       else if(key == "random hull damage")
         randomDamage[HULL_DAMAGE] = value;
+      else if(key == "random disruption damage")
+        randomDamage[DISRUPTION_DAMAGE] = value;
       else if(key == "random fuel damage")
         randomDamage[FUEL_DAMAGE] = value;
       else if(key == "random heat damage")
         randomDamage[HEAT_DAMAGE] = value;
       else if(key == "random ion damage")
         randomDamage[ION_DAMAGE] = value;
-      else if(key == "random disruption damage")
-        randomDamage[DISRUPTION_DAMAGE] = value;
       else if(key == "random slowing damage")
         randomDamage[SLOWING_DAMAGE] = value;
       else if(key == "random hit force")
