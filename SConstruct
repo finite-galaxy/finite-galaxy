@@ -57,7 +57,7 @@ else:
 
 
 buildDirectory = env["BUILDDIR"] + "/" + env["mode"]
-VariantDir(buildDirectory, "code", duplicate = 0)
+VariantDir(buildDirectory, "source", duplicate = 0)
 
 # Find all source files.
 def RecursiveGlob(pattern, dir_name=buildDirectory):
