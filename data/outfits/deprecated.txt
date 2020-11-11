@@ -103,6 +103,7 @@
 # "Point Defense Turret"
 # "Pug Akfar Steering"
 # "Pug Akfar Thruster"
+# "Pug Anti-Missile"
 # "Pug Biodefenses"
 # "Pug Cormet Steering"
 # "Pug Cormet Thruster"
@@ -136,6 +137,7 @@
 # "Typhoon Launcher"
 # "Typhoon Storage Tube"
 # "Typhoon Torpedo"
+# "Wanderer Anti-Missile"
 # "Wanderer Heat Sink"
 # "Wanderer License"
 # "Wanderer Military License"
@@ -198,8 +200,8 @@ outfit "Anti-Missile Turret"
   "weapon space" -16
   "turret mounts" -1
   weapon
-    "hit effect" "anti-missile small"
-    "anti-missile" 5
+    "hit effect" "antimissile small"
+    "antimissile" 5
     "velocity" 150
     "lifetime" 1
     "reload" 8
@@ -424,8 +426,8 @@ outfit "Bullfrog Anti-Missile"
   "weapon space" -10
   "turret mounts" -1
   weapon
-    "hit effect" "anti-missile small"
-    "anti-missile" 12
+    "hit effect" "antimissile small"
+    "antimissile" 12
     "velocity" 150
     "lifetime" 1
     "reload" 20
@@ -442,8 +444,8 @@ outfit "Bullfrog Anti-Missile Turret"
   "weapon space" -10
   "turret mounts" -1
   weapon
-    "hit effect" "anti-missile small"
-    "anti-missile" 12
+    "hit effect" "antimissile small"
+    "antimissile" 12
     "velocity" 150
     "lifetime" 1
     "reload" 20
@@ -489,8 +491,8 @@ outfit "Chameleon Anti-Missile Turret"
   "weapon space" -22
   "turret mounts" -1
   weapon
-    "hit effect" "anti-missile large"
-    "anti-missile" 16
+    "hit effect" "antimissile large"
+    "antimissile" 16
     "velocity" 200
     "lifetime" 1
     "reload" 15
@@ -576,7 +578,7 @@ outfit "Drak Anti-Missile Field"
     "reload" 1
     "firing energy" 10
     "firing heat" 1
-    "anti-missile" 100
+    "antimissile" 100
 
 outfit "Drak Distancer"
   category "Deprecated"
@@ -916,8 +918,8 @@ outfit "Heavy Anti-Missile Turret"
   "weapon space" -30
   "turret mounts" -1
   weapon
-    "hit effect" "anti-missile large"
-    "anti-missile" 8
+    "hit effect" "antimissile large"
+    "antimissile" 8
     "velocity" 200
     "lifetime" 1
     "reload" 6
@@ -1553,7 +1555,7 @@ outfit "Korath Warder"
   "turret mounts" -1
   weapon
     "hit effect" "warder"
-    "anti-missile" 10
+    "antimissile" 10
     "velocity" 350
     "lifetime" 1
     "reload" 5
@@ -1730,7 +1732,7 @@ outfit "Point Defense Turret"
     "fire effect" "point defence fire"
     "die effect" "point defence hit"
     "die effect" "point defence die"
-    "anti-missile" 42
+    "antimissile" 42
     "velocity" 270
     "lifetime" 1
     "reload" 10
@@ -1761,6 +1763,23 @@ outfit "Pug Akfar Thruster"
   "flare sprite" "effect/flare/ion_medium"
     "frame rate" 8
   "flare sound" "ion medium"
+
+outfit "Pug Anti-Missile"
+  category "Deprecated"
+  thumbnail "outfit/thumbnail/unknown"
+  cost 350000
+  "mass" 41
+  "outfit space" -41
+  "weapon capacity" -41
+  "turret mounts" -1
+  weapon
+    "hit effect" "antimissile pug"
+    "antimissile" 5
+    "velocity" 200
+    "lifetime" 1
+    "reload" 2
+    "firing energy" 8
+    "firing heat" 2
 
 outfit "Pug Biodefenses"
   plural "Pug Biodefenses"
@@ -1964,8 +1983,8 @@ outfit "Quarg Anti-Missile"
   "weapon space" -40
   "turret mounts" -1
   weapon
-    "hit effect" "anti-missile quarg"
-    "anti-missile" 25
+    "hit effect" "antimissile quarg"
+    "antimissile" 25
     "velocity" 500
     "lifetime" 1
     "reload" 10
@@ -2205,9 +2224,9 @@ outfit "Tier 3 Anti-Missile"
   "weapon space" -67
   "turret mounts" -1
   weapon
-    "fire effect" "anti-missile ceasefire fire"
-    "die effect" "anti-missile ceasefire die" 2
-    "anti-missile" 100
+    "fire effect" "antimissile ceasefire fire"
+    "die effect" "antimissile ceasefire die" 2
+    "antimissile" 100
     "velocity" 570
     "lifetime" 1
     "reload" 6
@@ -2318,6 +2337,23 @@ outfit "Typhoon Torpedo"
   "mass" .5
   "typhoon capacity" -1
 
+
+outfit "Wanderer Anti-Missile"
+  category "Deprecated"
+  thumbnail "outfit/thumbnail/unknown"
+  cost 850000
+  "mass" 24
+  "outfit space" -24
+  "weapon capacity" -24
+  "turret mounts" -1
+  weapon
+    "hit effect" "antimissile wanderer"
+    "antimissile" 40
+    "velocity" 360
+    "lifetime" 1
+    "reload" 20
+    "firing energy" 50
+    "firing heat" 12
 
 outfit "Wanderer Heat Sink"
   category "Deprecated"

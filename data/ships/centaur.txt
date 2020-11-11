@@ -3,7 +3,7 @@ shipyard "Centaur Variants"
   "Bactrian (Hired Gun)"
   "Foxhound"
   "Mongrel"
-  "Mongrel (Anti-Missile)"
+  "Mongrel (Antimissile)"
   "Mongrel (Electron)"
   "Mongrel (Particle)"
   "Mongrel (Plasma)"
@@ -56,7 +56,7 @@ ship "Bactrian"
     "Sidewinder Storage Rack" 30
     "Sidewinder Launcher" 3
     "X8 Blaster Turret" 4
-    "Heavy Anti-Missile" 2
+    "Heavy Antimissile" 2
 
     "LP144a Battery Pack"
     "Liquid Nitrogen Cooler"
@@ -70,11 +70,11 @@ ship "Bactrian"
   gun -15 -226
   gun 15 -226
   turret -22 -148
-  turret 26 -80 "Heavy Anti-Missile"
+  turret 26 -80 "Heavy Antimissile"
   turret -41 -20
   turret 32 -7
   turret 53 82
-  turret -37 186 "Heavy Anti-Missile"
+  turret -37 186 "Heavy Antimissile"
   fighter -38 -26
   fighter 35 36
   fighter -47 97
@@ -216,14 +216,14 @@ ship "Mongrel"
   description "The design of the Mongrel seems to be a Mule condensed to the level of a Dagger, and as you look at the cockpit nestled between the massive gun port and turret mount, you wonder where the power systems are supposed to go. Needless to say, there is no room for a hyperdrive, fuel barrels, or cargo. The Mongrel is categorized as a bomber rather than a fighter, because of its relatively high weapon space, and because its awkward shape makes it unable to fit into ordinary fighter bays. Though its operation range is currently rather limited, it seems flexible enough to become a dangerous addition to warfleets, if ever any bomber carriers will be designed."
 
 
-ship "Mongrel" "Mongrel (Anti-Missile)"
+ship "Mongrel" "Mongrel (Antimissile)"
   outfits
     "D14-RN Shield Generator"
     "nGVF-AA Fuel Cell"
 
     "IC-900 Ion Engines"
 
-    "Heavy Anti-Missile"
+    "Heavy Antimissile"
 
     "LP036a Battery Pack"
 
@@ -308,7 +308,7 @@ ship "Mule"
     "Sidewinder Storage Rack" 10
     "Sidewinder Launcher"
     "X6 Blaster Turret" 3
-    "Heavy Anti-Missile"
+    "Heavy Antimissile"
 
     "Liquid Nitrogen Cooler"
     "LP144a Battery Pack"
@@ -322,7 +322,7 @@ ship "Mule"
   turret 22 -65
   turret -37 -21
   turret 39 35
-  turret -9 59 "Heavy Anti-Missile"
+  turret -9 59 "Heavy Antimissile"
   fighter -16 -9
   leak "leak" 50 50
   leak "flame" 80 80

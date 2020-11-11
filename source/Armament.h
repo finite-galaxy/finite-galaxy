@@ -19,7 +19,7 @@ class Visual;
 
 // This class handles the logic for a ship's set of weapons. All weapons of the
 // same type coordinate their fire with each other, either firing in clusters
-// (if the projectiles are vulnerable to anti-missile) or in a "stream" where
+// (if the projectiles are vulnerable to antimissile) or in a "stream" where
 // the guns take turns firing. Instead of firing straight, guns (that is, non-
 // turreted weapons) fire aimed slightly inward in a convergence pattern so
 // that even if the guns are spaced out horizontally on the ship, their
@@ -55,7 +55,7 @@ public:
   // Fire the given weapon, if it is ready. If it did not fire because it is
   // not ready, return false.
   void Fire(int index, Ship &ship, std::vector<Projectile> &projectiles, std::vector<Visual> &visuals);
-  // Fire the given anti-missile system.
+  // Fire the given antimissile system.
   bool FireAntiMissile(int index, Ship &ship, const Projectile &projectile, std::vector<Visual> &visuals);
 
   // Update the reload counters.

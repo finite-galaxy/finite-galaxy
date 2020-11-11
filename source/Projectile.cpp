@@ -235,7 +235,7 @@ double Projectile::Clip() const
 
 
 
-// This projectile was killed, e.g. by an anti-missile system.
+// This projectile was killed, e.g. by an antimissile system.
 void Projectile::Kill()
 {
   lifetime = 0;
@@ -244,7 +244,7 @@ void Projectile::Kill()
 
 
 // Find out if this is a missile, and if so, how strong it is (i.e. what
-// chance an anti-missile shot has of destroying it).
+// chance an antimissile shot has of destroying it).
 int Projectile::MissileStrength() const
 {
   return weapon->MissileStrength();

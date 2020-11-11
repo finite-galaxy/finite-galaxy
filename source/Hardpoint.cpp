@@ -100,7 +100,7 @@ bool Hardpoint::IsHoming() const
 
 
 
-// Find out if this hardpoint has an anti-missile installed.
+// Find out if this hardpoint has an antimissile installed.
 bool Hardpoint::IsAntiMissile() const
 {
   return outfit && outfit->AntiMissile() > 0;
@@ -204,15 +204,15 @@ void Hardpoint::Fire(Ship &ship, vector<Projectile> &projectiles, vector<Visual>
 
 
 
-// Fire an anti-missile. Returns true if the missile should be killed.
+// Fire an antimissile. Returns true if the missile should be killed.
 bool Hardpoint::FireAntiMissile(Ship &ship, const Projectile &projectile, vector<Visual> &visuals)
 {
-  // Make sure this hardpoint really is an anti-missile.
+  // Make sure this hardpoint really is an antimissile.
   int strength = outfit->AntiMissile();
   if(!strength)
     return false;
 
-  // Get the anti-missile range. Anti-missile shots always last a single frame,
+  // Get the antimissile range. Antimissile shots always last a single frame,
   // so their range is equal to their velocity.
   double range = outfit->Velocity();
 
@@ -222,13 +222,13 @@ bool Hardpoint::FireAntiMissile(Ship &ship, const Projectile &projectile, vector
   if(offset.Length() > range)
     return false;
 
-  // Firing effects are displayed at the anti-missile hardpoint that just fired.
+  // Firing effects are displayed at the antimissile hardpoint that just fired.
   Angle aim(offset);
   angle = aim - ship.Facing();
   start += aim.Rotate(outfit->HardpointOffset());
   CreateEffects(outfit->FireEffects(), start, ship.Velocity(), aim, visuals);
 
-  // Figure out where the effect should be placed. Anti-missiles do not create
+  // Figure out where the effect should be placed. Antimissiles do not create
   // projectiles; they just create a blast animation.
   CreateEffects(outfit->HitEffects(), start + (.5 * range) * aim.Unit(), ship.Velocity(), aim, visuals);
 
@@ -300,7 +300,7 @@ void Hardpoint::Fire(Ship &ship, const Point &start, const Angle &aim)
   --burstCount;
   isFiring = true;
 
-  // Anti-missile sounds can be specified either in the outfit itself or in
+  // Antimissile sounds can be specified either in the outfit itself or in
   // the effect they create.
   if(outfit->WeaponSound())
     Audio::Play(outfit->WeaponSound(), start);

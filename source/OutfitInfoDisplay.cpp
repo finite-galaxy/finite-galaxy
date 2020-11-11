@@ -437,7 +437,7 @@ void OutfitInfoDisplay::UpdateAttributes(const Outfit &outfit)
     "inaccuracy:",
     "blast radius:",
     "missile strength:",
-    "anti-missile:"
+    "antimissile:"
   };
   vector<double> otherValues = {
     outfit.Inaccuracy(),

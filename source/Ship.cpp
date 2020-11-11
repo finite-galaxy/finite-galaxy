@@ -1985,7 +1985,7 @@ double Ship::OutfitScanFraction() const
 
 
 
-// Fire any weapons that are ready to fire. If an anti-missile is ready,
+// Fire any weapons that are ready to fire. If an antimissile is ready,
 // instead of firing here this function returns true and it can be fired if
 // collision detection finds a missile in range.
 bool Ship::Fire(vector<Projectile> &projectiles, vector<Visual> &visuals)
@@ -2023,7 +2023,7 @@ bool Ship::Fire(vector<Projectile> &projectiles, vector<Visual> &visuals)
 
 
 
-// Fire an anti-missile.
+// Fire an antimissile.
 bool Ship::FireAntiMissile(const Projectile &projectile, vector<Visual> &visuals)
 {
   if(projectile.Position().Distance(position) > antiMissileRange)

@@ -118,8 +118,8 @@ outfit "Sidewinder Launcher"
     "random hull damage" 30
     "hit force" 160
     "random hit force" 40
-  description "The Sidewinder missile is designed by Lovelace Labs, which is ironically also the designer of the Heavy Anti-Missile turret. Rumours say that the two engineering teams at Lovelace who make the missiles and the anti-missiles are locked in furious competition with each other: the result has been generation after generation of smarter missiles and then smarter turrets to fend them off."
-  description "  Although not as powerful or cheap as the popular Meteor missiles, Sidewinders have several advantages, including their superior manoeuvrability, better tracking systems, and protective casings that make them much harder for anti-missile systems to destroy."
+  description "The Sidewinder missile is designed by Lovelace Labs, which is ironically also the designer of the Heavy Antimissile turret. Rumours say that the two engineering teams at Lovelace who make the missiles and the antimissiles are locked in furious competition with each other: the result has been generation after generation of smarter missiles and then smarter turrets to fend them off."
+  description "  Although not as powerful or cheap as the popular Meteor missiles, Sidewinders have several advantages, including their superior manoeuvrability, better tracking systems, and protective casings that make them much harder for antimissile systems to destroy."
 
 
 
@@ -208,9 +208,9 @@ outfit "Pulse Turret"
 
 
 
-outfit "Heavy Anti-Missile"
-  category "Anti-Missile"
-  thumbnail "outfit/thumbnail/weapon/anti-missile_heavy"
+outfit "Heavy Antimissile"
+  category "Antimissile"
+  thumbnail "outfit/thumbnail/weapon/antimissile_heavy"
   cost 300000
   "mass" 28
   "drag" .28
@@ -218,10 +218,10 @@ outfit "Heavy Anti-Missile"
   "weapon space" -28
   "turret mounts" -1
   weapon
-    "hardpoint sprite" "outfit/sprite/anti-missile_heavy"
+    "hardpoint sprite" "outfit/sprite/antimissile_heavy"
     "hardpoint offset" 5.
-    "hit effect" "anti-missile large"
-    "anti-missile" 8
+    "hit effect" "antimissile large"
+    "antimissile" 8
     "velocity" 200
     "lifetime" 1
     "reload" 6

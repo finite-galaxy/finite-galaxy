@@ -56,8 +56,8 @@ public:
   int MissileStrength() const;
   int AntiMissile() const;
   // Weapons of the same type will alternate firing (streaming) rather than
-  // firing all at once (clustering) if the weapon is not an anti-missile and
-  // is not vulnerable to anti-missile, or has the "stream" attribute.
+  // firing all at once (clustering) if the weapon is not an antimissile and
+  // is not vulnerable to antimissile, or has the "stream" attribute.
   bool IsStreamed() const;
 
   double Velocity() const;

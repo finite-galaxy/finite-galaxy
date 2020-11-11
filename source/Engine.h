@@ -141,7 +141,7 @@ private:
   std::list<std::shared_ptr<Flotsam>> newFlotsam;
   std::vector<Visual> newVisuals;
 
-  // Track which ships currently have anti-missiles ready to fire.
+  // Track which ships currently have antimissiles ready to fire.
   std::vector<Ship *> hasAntiMissile;
 
   AI ai;

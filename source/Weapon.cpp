@@ -94,7 +94,7 @@ void Weapon::LoadWeapon(const DataNode &node)
         homing = value;
       else if(key == "missile strength")
         missileStrength = max(0., value);
-      else if(key == "anti-missile")
+      else if(key == "antimissile")
         antiMissile = max(0., value);
       else if(key == "velocity")
         velocity = value;
@@ -192,8 +192,8 @@ void Weapon::LoadWeapon(const DataNode &node)
     burstReload = reload;
 
   // Weapons of the same type will alternate firing (streaming) rather than
-  // firing all at once (clustering) if the weapon is not an anti-missile and
-  // is not vulnerable to anti-missile, or has the "stream" attribute.
+  // firing all at once (clustering) if the weapon is not an antimissile and
+  // is not vulnerable to antimissile, or has the "stream" attribute.
   isStreamed |= !(MissileStrength() || AntiMissile());
   isStreamed &= !isClustered;
 

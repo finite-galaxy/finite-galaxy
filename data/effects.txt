@@ -1,13 +1,13 @@
 # "acid impact"
 # "antimatter dust"
 # "antimatter spark"
-# "anti-missile ceasefire fire"
-# "anti-missile ceasefire die"
-# "anti-missile large"
-# "anti-missile pug"
-# "anti-missile quarg"
-# "anti-missile small"
-# "anti-missile wanderer"
+# "antimissile ceasefire fire"
+# "antimissile ceasefire die"
+# "antimissile large"
+# "antimissile pug"
+# "antimissile quarg"
+# "antimissile small"
+# "antimissile wanderer"
 # "attractor impact"
 # "banisher impact"
 # "basic launch"
@@ -135,59 +135,59 @@ effect "antimatter spark"
   "random velocity" 8
   "velocity scale" .6
 
-effect "anti-missile ceasefire fire"
-  sprite "effect/anti-missile/ceasefire_fire"
+effect "antimissile ceasefire fire"
+  sprite "effect/antimissile/ceasefire_fire"
     "no repeat"
     "frame rate" 20
   "lifetime" 3
   "random angle" 360
   "velocity scale" 1
 
-effect "anti-missile ceasefire die"
-  sprite "effect/anti-missile/ceasefire_die"
+effect "antimissile ceasefire die"
+  sprite "effect/antimissile/ceasefire_die"
     "no repeat"
     "frame rate" 10
   "lifetime" 31
   "random angle" 360
   "velocity scale" .4
 
-effect "anti-missile large"
-  sprite "effect/anti-missile/large"
+effect "antimissile large"
+  sprite "effect/antimissile/large"
     "no repeat"
     "frame rate" 2
-  sound "heavy anti-missile"
+  sound "heavy antimissile"
   "lifetime" 31
   "velocity scale" 1
 
-effect "anti-missile pug"
-  sprite "effect/anti-missile/large"
+effect "antimissile pug"
+  sprite "effect/antimissile/large"
     "no repeat"
     "frame rate" 6
-  sound "pug anti-missile"
+  sound "pug antimissile"
   "lifetime" 11
   "velocity scale" 1
 
-effect "anti-missile quarg"
-  sprite "effect/anti-missile/quarg"
+effect "antimissile quarg"
+  sprite "effect/antimissile/quarg"
     "no repeat"
     "frame rate" 3
-  sound "quarg anti-missile"
+  sound "quarg antimissile"
   "lifetime" 21
   "velocity scale" 1
 
-effect "anti-missile small"
-  sprite "effect/anti-missile/small"
+effect "antimissile small"
+  sprite "effect/antimissile/small"
     "no repeat"
     "frame rate" 3
-  sound "anti-missile"
+  sound "antimissile"
   "lifetime" 21
   "velocity scale" 1
 
-effect "anti-missile wanderer"
-  sprite "effect/anti-missile/wanderer"
+effect "antimissile wanderer"
+  sprite "effect/antimissile/wanderer"
     "no repeat"
     "frame rate" 6
-  sound "heavy anti-missile"
+  sound "heavy antimissile"
   "lifetime" 31
   "velocity scale" 1
 
@@ -841,21 +841,21 @@ effect "plasma impact"
   "velocity scale" -.05
 
 effect "point defence die"
-  sprite "effect/anti-missile/point_defence_die"
+  sprite "effect/antimissile/point_defence_die"
     "frame rate" 20
     "no repeat"
   lifetime 15
   "velocity scale" .2
 
 effect "point defence fire"
-  sprite "effect/anti-missile/point_defence_fire"
+  sprite "effect/antimissile/point_defence_fire"
     "frame rate" 17
     "no repeat"
   lifetime 10
   "velocity scale" .5
 
 effect "point defence hit"
-  sprite "effect/anti-missile/point_defence_hit"
+  sprite "effect/antimissile/point_defence_hit"
     "frame rate" 13
     "no repeat"
   lifetime 10

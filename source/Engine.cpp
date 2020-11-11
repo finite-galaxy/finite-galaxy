@@ -1443,7 +1443,7 @@ void Engine::MoveShip(const shared_ptr<Ship> &ship)
   // Launch fighters.
   ship->Launch(newShips, newVisuals);
 
-  // Fire weapons. If this returns true the ship has at least one anti-missile
+  // Fire weapons. If this returns true the ship has at least one antimissile
   // system ready to fire.
   if(ship->Fire(newProjectiles, newVisuals))
     hasAntiMissile.push_back(ship.get());
@@ -1843,7 +1843,7 @@ void Engine::DoCollisions(Projectile &projectile)
   }
   else if(projectile.MissileStrength())
   {
-    // If the projectile did not hit anything, give the anti-missile systems
+    // If the projectile did not hit anything, give the antimissile systems
     // a chance to shoot it down.
     for(Ship *ship : hasAntiMissile)
       if(ship == projectile.Target() || gov->IsEnemy(ship->GetGovernment()))

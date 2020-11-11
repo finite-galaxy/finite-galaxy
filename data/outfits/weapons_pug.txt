@@ -123,9 +123,9 @@ outfit "Gridfire Turret"
 
 
 
-outfit "Pug Anti-Missile"
-  category "Anti-Missile"
-  thumbnail "outfit/thumbnail/weapon/anti-missile_pug"
+outfit "Pug Antimissile"
+  category "Antimissile"
+  thumbnail "outfit/thumbnail/weapon/antimissile_pug"
   licences
     Pug
   cost 350000
@@ -135,19 +135,19 @@ outfit "Pug Anti-Missile"
   "weapon space" -41
   "turret mounts" -1
   weapon
-    "hardpoint sprite" "outfit/sprite/anti-missile_pug"
+    "hardpoint sprite" "outfit/sprite/antimissile_pug"
     "hardpoint offset" 6.
-    "hit effect" "anti-missile pug"
-    "anti-missile" 5
+    "hit effect" "antimissile pug"
+    "antimissile" 5
     "velocity" 190
     "lifetime" 1
     "reload" 2
     "firing energy" 8
     "firing heat" 2
-  description "This anti-missile system designed by the Pug draws a lot of energy, but its fast firing rate makes it twice as effective as anything that Lovelace Labs has been able to come up with. A ship with one of these turrets will be very difficult to hit with missiles."
+  description "This antimissile system designed by the Pug draws a lot of energy, but its fast firing rate makes it twice as effective as anything that Lovelace Labs has been able to come up with. A ship with one of these turrets will be very difficult to hit with missiles."
 
-outfit "Ceasefire Anti-Missile"
-  category "Anti-Missile"
+outfit "Ceasefire Antimissile"
+  category "Antimissile"
   thumbnail "outfit/thumbnail/weapon/ceasefire"
   licences
     Pug
@@ -159,9 +159,9 @@ outfit "Ceasefire Anti-Missile"
   "turret mounts" -1
   weapon
     "hardpoint sprite" "outfit/sprite/ceasefire"
-    "fire effect" "anti-missile ceasefire fire"
-    "die effect" "anti-missile ceasefire die" 2
-    "anti-missile" 100
+    "fire effect" "antimissile ceasefire fire"
+    "die effect" "antimissile ceasefire die" 2
+    "antimissile" 100
     "velocity" 570
     "lifetime" 1
     "reload" 6

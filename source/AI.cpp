@@ -57,7 +57,7 @@ namespace {
     return target.IsDisabled();
   }
 
-  // Check if the given ship can "swarm" the targeted ship, e.g. to provide anti-missile cover.
+  // Check if the given ship can "swarm" the targeted ship, e.g. to provide antimissile cover.
   bool CanSwarm(const Ship &ship, const Ship &target)
   {
     if(target.GetPersonality().IsSwarming() || target.IsHyperspacing())

@@ -19,7 +19,7 @@ class Weapon;
 
 
 // Class representing a projectile (a moving object which can hit ships or
-// asteroids and can potentially be hit by anti-missile systems). A projectile
+// asteroids and can potentially be hit by antimissile systems). A projectile
 // may either move at a constant heading and velocity, or may accelerate or
 // change course to track its target. Also, when they hit their target or reach
 // the end of their lifetime, some projectiles split into "sub-munitions," new
@@ -47,11 +47,11 @@ public:
   void Explode(std::vector<Visual> &visuals, double intersection, Point hitVelocity = Point());
   // Get the amount of clipping that should be applied when drawing this projectile.
   double Clip() const;
-  // This projectile was killed, e.g. by an anti-missile system.
+  // This projectile was killed, e.g. by an antimissile system.
   void Kill();
 
   // Find out if this is a missile, and if so, how strong it is (i.e. what
-  // chance an anti-missile shot has of destroying it).
+  // chance an antimissile shot has of destroying it).
   int MissileStrength() const;
   // Get information on the weapon that fired this projectile.
   const Weapon &GetWeapon() const;

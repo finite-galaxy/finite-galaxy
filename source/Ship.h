@@ -177,11 +177,11 @@ public:
   double CargoScanFraction() const;
   double OutfitScanFraction() const;
 
-  // Fire any weapons that are ready to fire. If an anti-missile is ready,
+  // Fire any weapons that are ready to fire. If an antimissile is ready,
   // instead of firing here this function returns true and it can be fired if
   // collision detection finds a missile in range.
   bool Fire(std::vector<Projectile> &projectiles, std::vector<Visual> &visuals);
-  // Fire an anti-missile. Returns true if the missile was killed.
+  // Fire an antimissile. Returns true if the missile was killed.
   bool FireAntiMissile(const Projectile &projectile, std::vector<Visual> &visuals);
 
   // Get the system this ship is in.
@@ -433,7 +433,7 @@ private:
   int customSwizzle = -1;
   double cloak = 0.;
   double cloakDisruption = 0.;
-  // Cached values for figuring out when anti-missile is in range.
+  // Cached values for figuring out when antimissile is in range.
   double antiMissileRange = 0.;
   double weaponRadius = 0.;
   // Cargo and outfit scanning takes time.
