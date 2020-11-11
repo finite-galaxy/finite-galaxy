@@ -332,36 +332,40 @@ ship "Firebird" "Modified Firebird (Core)"
     "hull" 200
     "required crew" 3
     "bunks" 4
-    "mass" 45
-    "outfit space" 30
-    "core space" 30
+    "mass" 30
+    "cargo space" -20
+    "outfit space" 40
+    "core space" 40
     "self destruct" .25
     weapon
-      "blast radius" 15
-      "shield damage" 90
-      "random shield damage" 60
-      "hull damage" 135
-      "random hull damage" 90
-      "heat damage" 2700
-      "random heat damage" 1800
-      "hit force" 225
-      "random hit force" 150
+      "blast radius" 10
+      "shield damage" 60
+      "random shield damage" 40
+      "hull damage" 90
+      "random hull damage" 60
+      "heat damage" 1800
+      "random heat damage" 1200
+      "hit force" 150
+      "random hit force" 100
   outfits
-    "S-270 Regenerator" 2
-    "Fusion Reactor"
+    "S-270 Regenerator" 4
+    "Ogre Core"
+    "Dwarf Core"
     "Hyperdrive"
 
     "A250 Atomic Thruster"
-    "A525 Atomic Steering"
+    "A375 Atomic Steering"
+    "Afterburner"
 
     "Plasma Cannon" 4
-    "Laser Turret" 2
+    "X4 Blaster Turret"
+    "Heavy Anti-Missile"
 
-    "Supercapacitor"
-    "Liquid Helium Cooler"
-    "Fuel Pod" 35
+    "DS-11 Battery Pack"
+    "Liquid Nitrogen Cooler"
+    "Fuel Pod" 34
     "Tactical Scanner" 3
-    "Interference Plating" 2
+    "Interference Plating" 3
     "Laser Rifle" 25
   engine -32 68
   engine 32 68
@@ -383,35 +387,40 @@ ship "Firebird" "Modified Firebird (Engines)"
     "hull" 200
     "required crew" 3
     "bunks" 4
-    "mass" 45
-    "outfit space" 30
-    "engine space" 30
+    "mass" 30
+    "cargo space" -20
+    "outfit space" 40
+    "engine space" 40
     "self destruct" .25
     weapon
-      "blast radius" 15
-      "shield damage" 90
-      "random shield damage" 60
-      "hull damage" 135
-      "random hull damage" 90
-      "heat damage" 2700
-      "random heat damage" 1800
-      "hit force" 225
-      "random hit force" 150
+      "blast radius" 10
+      "shield damage" 60
+      "random shield damage" 40
+      "hull damage" 90
+      "random hull damage" 60
+      "heat damage" 1800
+      "random heat damage" 1200
+      "hit force" 150
+      "random hit force" 100
   outfits
     "S-270 Regenerator" 2
-    "Fusion Reactor"
+    "Ogre Core"
+    "Dwarf Core"
     "Hyperdrive"
 
     "A370 Atomic Thruster"
     "A525 Atomic Steering"
+    "Afterburner"
 
     "Plasma Cannon" 4
+    "X2 Blaster Turret"
+    "Heavy Anti-Missile"
 
-    "Supercapacitor"
-    "Liquid Helium Cooler"
-    "Fuel Pod" 35
+    "DS-05 Battery Pack"
+    "Liquid Nitrogen Cooler"
+    "Fuel Pod" 34
     "Tactical Scanner" 3
-    "Interference Plating" 2
+    "Interference Plating" 3
     "Laser Rifle" 25
   engine -32 76 .8
   engine 32 76 .8
@@ -434,37 +443,40 @@ ship "Firebird" "Modified Firebird (Weapons)"
     "hull" 200
     "required crew" 3
     "bunks" 4
-    "mass" 45
-    "outfit space" 30
-    "weapon space" 30
+    "mass" 30
+    "cargo space" -20
+    "outfit space" 40
+    "weapon space" 40
     "self destruct" .25
     weapon
-      "blast radius" 15
-      "shield damage" 90
-      "random shield damage" 60
-      "hull damage" 135
-      "random hull damage" 90
-      "heat damage" 2700
-      "random heat damage" 1800
-      "hit force" 225
-      "random hit force" 150
+      "blast radius" 10
+      "shield damage" 60
+      "random shield damage" 40
+      "hull damage" 90
+      "random hull damage" 60
+      "heat damage" 1800
+      "random heat damage" 1200
+      "hit force" 150
+      "random hit force" 100
   outfits
     "S-270 Regenerator" 2
-    "Fusion Reactor"
+    "Ogre Core"
+    "Dwarf Core"
     "Hyperdrive"
 
     "A250 Atomic Thruster"
-    "A525 Atomic Steering"
+    "A375 Atomic Steering"
+    "Afterburner"
 
     "Plasma Cannon" 4
-    "X4 Blaster Turret" 2
+    "X8 Blaster Turret"
+    "Heavy Anti-Missile"
 
-    "Supercapacitor"
-    "Liquid Helium Cooler"
-    "Fuel Pod" 35
+    "DS-05 Battery Pack"
+    "Liquid Nitrogen Cooler"
+    "Fuel Pod" 34
     "Tactical Scanner" 3
-    "Interference Plating" 2
-    "Extra Outfit Space"
+    "Interference Plating" 3
     "Laser Rifle" 25
   engine -32 68
   engine 32 68
@@ -979,37 +991,41 @@ ship "Leviathan" "Modified Leviathan (Core)"
     "hull" -900
     "required crew" 2
     "bunks" 5
-    "mass" 60
-    "outfit space" 40
-    "core space" 40
-    "self destruct" .15
+    "mass" 50
+    "cargo space" -30
+    "outfit space" 60
+    "core space" 60
+    "self destruct" .25
     weapon
-      "blast radius" 20
-      "shield damage" 120
-      "random shield damage" 80
-      "hull damage" 180
-      "random hull damage" 120
-      "heat damage" 3600
-      "random heat damage" 2400
-      "hit force" 300
-      "random hit force" 200
+      "blast radius" 16
+      "shield damage" 100
+      "random shield damage" 60
+      "hull damage" 150
+      "random hull damage" 90
+      "heat damage" 3000
+      "random heat damage" 1800
+      "hit force" 250
+      "random hit force" 150
   outfits
-    "S-970 Regenerator"
-    "Fusion Reactor"
+    "S-970 Regenerator" 2
+    "Cyclops Core"
+    "Dwarf Core"
     "Hyperdrive"
 
     "A370 Atomic Thruster"
-    "A525 Atomic Steering"
+    "A375 Atomic Steering"
+    "Afterburner"
 
     "Plasma Cannon" 4
-    "Laser Turret" 4
+    "X6 Blaster Turret" 2
+    "Heavy Anti-Missile" 2
 
-    "LP144a Battery Pack"
+    "DS-23 Battery Pack"
+    "DS-11 Battery Pack"
     "Liquid Helium Cooler"
-    "Fuel Pod" 65
-    "Large Radar Jammer" 2
+    "Fuel Pod" 64
     "Tactical Scanner" 4
-    "Interference Plating" 3
+    "Interference Plating" 5
     "Laser Rifle" 80
   engine -23 127
   engine 23 127
@@ -1033,37 +1049,40 @@ ship "Leviathan" "Modified Leviathan (Engines)"
     "hull" -900
     "required crew" 2
     "bunks" 5
-    "mass" 60
-    "outfit space" 40
-    "engine space" 40
-    "self destruct" .15
+    "mass" 50
+    "cargo space" -30
+    "outfit space" 60
+    "engine space" 60
+    "self destruct" .25
     weapon
-      "blast radius" 20
-      "shield damage" 120
-      "random shield damage" 80
-      "hull damage" 180
-      "random hull damage" 120
-      "heat damage" 3600
-      "random heat damage" 2400
-      "hit force" 300
-      "random hit force" 200
+      "blast radius" 16
+      "shield damage" 100
+      "random shield damage" 60
+      "hull damage" 150
+      "random hull damage" 90
+      "heat damage" 3000
+      "random heat damage" 1800
+      "hit force" 250
+      "random hit force" 150
   outfits
     "S-970 Regenerator"
-    "Fusion Reactor"
+    "Cyclops Core"
+    "Dwarf Core"
     "Hyperdrive"
 
     "A520 Atomic Thruster"
     "A525 Atomic Steering"
+    "Afterburner"
 
     "Plasma Cannon" 4
-    "Laser Turret" 4
+    "X6 Blaster Turret" 2
+    "Heavy Anti-Missile" 2
 
-    "LP144a Battery Pack"
+    "DS-23 Battery Pack"
     "Liquid Helium Cooler"
-    "Fuel Pod" 65
-    "Large Radar Jammer" 2
+    "Fuel Pod" 64
     "Tactical Scanner" 4
-    "Interference Plating" 3
+    "Interference Plating" 5
     "Laser Rifle" 80
   engine -41 119 .6
   engine 41 119 .6
@@ -1088,37 +1107,40 @@ ship "Leviathan" "Modified Leviathan (Weapons)"
     "shields" 3500
     "hull" -900
     "bunks" 5
-    "mass" 60
-    "outfit space" 40
-    "weapon space" 40
-    "self destruct" .15
+    "mass" 50
+    "cargo space" -30
+    "outfit space" 60
+    "weapon space" 60
+    "self destruct" .25
     weapon
-      "blast radius" 20
-      "shield damage" 120
-      "random shield damage" 80
-      "hull damage" 180
-      "random hull damage" 120
-      "heat damage" 3600
-      "random heat damage" 2400
-      "hit force" 300
-      "random hit force" 200
+      "blast radius" 16
+      "shield damage" 100
+      "random shield damage" 60
+      "hull damage" 150
+      "random hull damage" 90
+      "heat damage" 3000
+      "random heat damage" 1800
+      "hit force" 250
+      "random hit force" 150
   outfits
     "S-970 Regenerator"
-    "Fusion Reactor"
+    "Cyclops Core"
+    "Dwarf Core"
     "Hyperdrive"
 
     "A370 Atomic Thruster"
-    "A525 Atomic Steering"
+    "A375 Atomic Steering"
+    "Afterburner"
 
-    "Plasma Cannon" 4
-    "Heavy Laser Turret" 4
+    "Plasma Cannon" 6
+    "X6 Blaster Turret" 2
+    "Heavy Anti-Missile" 2
 
-    "LP144a Battery Pack"
+    "DS-23 Battery Pack"
     "Liquid Helium Cooler"
-    "Fuel Pod" 65
-    "Large Radar Jammer" 2
+    "Fuel Pod" 64
     "Tactical Scanner" 4
-    "Interference Plating" 3
+    "Interference Plating" 5
     "Laser Rifle" 80
   engine -23 127
   engine 23 127
@@ -1131,7 +1153,7 @@ ship "Leviathan" "Modified Leviathan (Weapons)"
   turret -26 11
   turret 26 11
   description "This Leviathan once belonged to an infamous pirate captain whose name has been lost to the ages. It's had so much custom work done to it that can hardly even be considered the same ship. The weapons capacity, in particular has been massively increased."
-
+# TODO: edit sprite and thumbnail to add two more visible guns
 
 
 

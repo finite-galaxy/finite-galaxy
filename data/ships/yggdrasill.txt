@@ -501,37 +501,40 @@ ship "Blade" "Modified Blade (Core)"
     "hull" 500
     "required crew" 3
     "bunks" 9
-    "mass" 60
-    "heat dissipation" .1
-    "outfit space" 40
-    "core space" 40
-    "self destruct" .15
+    "mass" 50
+    "cargo space" -30
+    "outfit space" 60
+    "core space" 60
+    "self destruct" .25
     weapon
-      "blast radius" 20
-      "shield damage" 120
-      "random shield damage" 80
-      "hull damage" 180
-      "random hull damage" 120
-      "heat damage" 3600
-      "random heat damage" 2400
-      "hit force" 300
-      "random hit force" 200
+      "blast radius" 16
+      "shield damage" 100
+      "random shield damage" 60
+      "hull damage" 150
+      "random hull damage" 90
+      "heat damage" 3000
+      "random heat damage" 1800
+      "hit force" 250
+      "random hit force" 150
   outfits
-    "S-970 Regenerator"
-    "Fusion Reactor"
+    "S-970 Regenerator" 2
+    "Cyclops Core"
+    "Dwarf Core"
     "Hyperdrive"
 
-    "A520 Atomic Thruster"
+    "A370 Atomic Thruster"
     "A525 Atomic Steering"
+    "Afterburner" 2
 
     "Plasma Cannon" 2
-    "X2 Blaster Turret" 4
+    "X8 Blaster Turret" 3
+    "Heavy Anti-Missile"
 
-    "LP288a Battery Pack"
+    "DS-11 Battery Pack"
     "Liquid Helium Cooler"
-    "Fuel Pod" 81
-    "Tactical Scanner" 2
-    "Interference Plating" 3
+    "Fuel Pod" 80
+    "Tactical Scanner" 3
+    "Interference Plating" 5
     "Laser Rifle" 69
   engine -16 143
   engine 16 143
@@ -553,39 +556,42 @@ ship "Blade" "Modified Blade (Engines)"
     "hull" 500
     "required crew" 3
     "bunks" 9
-    "mass" 60
-    "heat dissipation" .1
-    "outfit space" 40
-    "core space" -20
-    "engine space" 90
-    "weapon space" -30
-    "self destruct" .15
+    "mass" 50
+    "cargo space" -30
+    "outfit space" 60
+    "engine space" 60
+    "self destruct" .25
     weapon
-      "blast radius" 20
-      "shield damage" 120
-      "random shield damage" 80
-      "hull damage" 180
-      "random hull damage" 120
-      "heat damage" 3600
-      "random heat damage" 2400
-      "hit force" 300
-      "random hit force" 200
+      "blast radius" 16
+      "shield damage" 100
+      "random shield damage" 60
+      "hull damage" 150
+      "random hull damage" 90
+      "heat damage" 3000
+      "random heat damage" 1800
+      "hit force" 250
+      "random hit force" 150
   outfits
     "S-970 Regenerator"
-    "Fusion Reactor"
+    "Cyclops Core"
+    "Dwarf Core"
     "Hyperdrive"
 
-    "A520 Atomic Thruster" 2
+    "A520 Atomic Thruster"
+    "A120 Atomic Thruster"
     "A525 Atomic Steering"
+    "A125 Atomic Steering"
+    "Afterburner" 2
 
-    "Heavy Laser Cannon" 2
-    "X2 Blaster Turret" 4
+    "Plasma Cannon" 2
+    "X8 Blaster Turret" 3
+    "Heavy Anti-Missile"
 
-    "LP144a Battery Pack"
+    "DS-05 Battery Pack"
     "Liquid Helium Cooler"
-    "Fuel Pod" 81
-    "Tactical Scanner" 2
-    "Interference Plating" 3
+    "Fuel Pod" 80
+    "Tactical Scanner" 3
+    "Interference Plating" 5
     "Laser Rifle" 69
   engine -21 138 .7
   engine 0 144
@@ -608,38 +614,40 @@ ship "Blade" "Modified Blade (Weapons)"
     "hull" 500
     "required crew" 3
     "bunks" 9
-    "mass" 60
-    "heat dissipation" .1
-    "outfit space" 40
-    "core space" -10
-    "weapon space" 50
-    "self destruct" .15
+    "mass" 50
+    "cargo space" -30
+    "outfit space" 60
+    "weapon space" 60
+    "self destruct" .25
     weapon
-      "blast radius" 20
-      "shield damage" 120
-      "random shield damage" 80
-      "hull damage" 180
-      "random hull damage" 120
-      "heat damage" 3600
-      "random heat damage" 2400
-      "hit force" 300
-      "random hit force" 200
+      "blast radius" 16
+      "shield damage" 100
+      "random shield damage" 60
+      "hull damage" 150
+      "random hull damage" 90
+      "heat damage" 3000
+      "random heat damage" 1800
+      "hit force" 250
+      "random hit force" 150
   outfits
     "S-970 Regenerator"
-    "Fusion Reactor"
+    "Cyclops Core"
+    "Dwarf Core"
     "Hyperdrive"
 
     "A370 Atomic Thruster"
     "A525 Atomic Steering"
+    "Afterburner" 2
 
     "Plasma Cannon" 4
-    "X2 Blaster Turret" 4
+    "X8 Blaster Turret" 3
+    "Heavy Anti-Missile"
 
-    "LP144a Battery Pack"
+    "DS-05 Battery Pack"
     "Liquid Helium Cooler"
-    "Fuel Pod" 81
-    "Tactical Scanner" 2
-    "Interference Plating" 3
+    "Fuel Pod" 80
+    "Tactical Scanner" 3
+    "Interference Plating" 5
     "Laser Rifle" 69
   engine -16 142
   engine 16 142
@@ -1068,46 +1076,41 @@ ship "Manta" "Modified Manta (Core)"
     "shields" 600
     "hull" 200
     "required crew" 1
-    "mass" 25
-    "outfit space" 50
-    "engine space" 10
-    "weapon space" 40
+    "mass" 15
+    "cargo space" -15
+    "outfit space" 30
+    "core space" 30
     "self destruct" .25
     weapon
-      "blast radius" 13
-      "shield damage" 50
-      "random shield damage" 80
-      "hull damage" 75
-      "random hull damage" 120
-      "heat damage" 1500
-      "random heat damage" 2400
-      "hit force" 125
-      "random hit force" 200
+      "blast radius" 6
+      "shield damage" 30
+      "random shield damage" 30
+      "hull damage" 45
+      "random hull damage" 45
+      "heat damage" 900
+      "random heat damage" 900
+      "hit force" 75
+      "random hit force" 75
   outfits
-    "S-270 Regenerator"
-    "Dwarf Core"
+    "S-270 Regenerator" 2
+    "Ogre Core"
     "Hyperdrive"
 
     "A250 Atomic Thruster"
-    "A525 Atomic Steering"
+    "A375 Atomic Steering"
+    "Afterburner"
 
-    "Sidewinder" 36
-    "Sidewinder Storage Rack" 8
-    "Sidewinder Launcher" 2
     "Plasma Cannon" 4
-    "X4 Blaster Turret"
+    "AM5 Anti-Missile"
 
-    "LP072a Battery Pack"
-    "LP036a Battery Pack"
+    "DS-23 Battery Pack"
     "Liquid Nitrogen Cooler"
     "Fuel Pod" 25
-    "Tactical Scanner" 2
+    "Tactical Scanner" 3
     "Interference Plating" 2
     "Laser Rifle" 11
   engine -33 38
   engine 33 38
-  gun -66 -30
-  gun 66 -30
   gun -27 -30
   gun 27 -30
   gun -20 -30
@@ -1124,48 +1127,43 @@ ship "Manta" "Modified Manta (Engines)"
     "shields" 600
     "hull" 200
     "required crew" 1
-    "mass" 25
-    "outfit space" 50
-    "core space" -20
+    "mass" 15
+    "cargo space" -15
+    "outfit space" 30
     "engine space" 30
-    "weapon space" 40
     "self destruct" .25
     weapon
-      "blast radius" 13
-      "shield damage" 50
-      "random shield damage" 80
-      "hull damage" 75
-      "random hull damage" 120
-      "heat damage" 1500
-      "random heat damage" 2400
-      "hit force" 125
-      "random hit force" 200
+      "blast radius" 6
+      "shield damage" 30
+      "random shield damage" 30
+      "hull damage" 45
+      "random hull damage" 45
+      "heat damage" 900
+      "random heat damage" 900
+      "hit force" 75
+      "random hit force" 75
   outfits
     "S-270 Regenerator"
-    "Dwarf Core"
+    "Ogre Core"
     "Hyperdrive"
 
     "A370 Atomic Thruster"
-    "A525 Atomic Steering"
+    "A375 Atomic Steering"
+    "A125 Atomic Steering"
+    "Afterburner"
 
-    "Meteor" 108
-    "Meteor Storage Box" 3
-    "Meteor Launcher" 4
-    "Plasma Cannon" 2
-    "X4 Blaster Turret"
+    "Plasma Cannon" 4
+    "AM5 Anti-Missile"
 
-    "LP072a Battery Pack"
-    "LP036a Battery Pack"
+    "DS-11 Battery Pack"
     "Liquid Nitrogen Cooler"
     "Fuel Pod" 25
-    "Tactical Scanner" 2
+    "Tactical Scanner" 3
     "Interference Plating" 2
     "Laser Rifle" 11
   engine -33.5 38
   engine 0 76
   engine 33.5 38
-  gun -66 -30
-  gun 66 -30
   gun -27 -30
   gun 27 -30
   gun -20 -30
@@ -1182,40 +1180,36 @@ ship "Manta" "Modified Manta (Weapons)"
     "shields" 600
     "hull" 200
     "required crew" 1
-    "mass" 25
-    "outfit space" 50
-    "core space" -20
-    "engine space" 10
-    "weapon space" 60
+    "mass" 15
+    "cargo space" -15
+    "outfit space" 30
+    "weapon space" 30
     "self destruct" .25
     weapon
-      "blast radius" 13
-      "shield damage" 50
-      "random shield damage" 80
-      "hull damage" 75
-      "random hull damage" 120
-      "heat damage" 1500
-      "random heat damage" 2400
-      "hit force" 125
-      "random hit force" 200
+      "blast radius" 6
+      "shield damage" 30
+      "random shield damage" 30
+      "hull damage" 45
+      "random hull damage" 45
+      "heat damage" 900
+      "random heat damage" 900
+      "hit force" 75
+      "random hit force" 75
   outfits
     "S-270 Regenerator"
-    "Fission Reactor"
+    "Ogre Core"
     "Hyperdrive"
 
     "A250 Atomic Thruster"
     "A375 Atomic Steering"
+    "Afterburner"
 
-    "Impact" 32
-    "Impact Storage Rack" 8
-    "Impact Launcher" 2
-    "Plasma Cannon" 4
-    "X4 Blaster Turret"
+    "Plasma Cannon" 6
 
-    "Supercapacitor" 6
+    "DS-11 Battery Pack"
     "Liquid Nitrogen Cooler"
     "Fuel Pod" 25
-    "Tactical Scanner" 2
+    "Tactical Scanner" 3
     "Interference Plating" 2
     "Laser Rifle" 11
   engine -33.5 38

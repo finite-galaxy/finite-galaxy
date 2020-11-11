@@ -148,35 +148,38 @@ ship "Quicksilver" "Modified Quicksilver (Core)"
     "hull" 100
     "required crew" 1
     "bunks" 1
-    "mass" 20
+    "mass" 10
+    "cargo space" -10
     "outfit space" 20
     "core space" 20
     "self destruct" .25
     weapon
-      "blast radius" 5
-      "shield damage" 40
-      "random shield damage" 10
-      "hull damage" 60
-      "random hull damage" 15
-      "heat damage" 1200
-      "random heat damage" 300
-      "hit force" 100
-      "random hit force" 25
+      "blast radius" 4
+      "shield damage" 20
+      "random shield damage" 20
+      "hull damage" 30
+      "random hull damage" 30
+      "heat damage" 600
+      "random heat damage" 600
+      "hit force" 50
+      "random hit force" 50
   outfits
-    "S-270 Regenerator"
-    "Fission Reactor"
+    "S-270 Regenerator" 2
+    "Dwarf Core"
     "Hyperdrive"
 
     "A250 Atomic Thruster"
-    "A375 Atomic Steering"
+    "A255 Atomic Steering"
+    "Afterburner"
 
-    "Heavy Laser Cannon" 2
-    "Heavy Anti-Missile"
+    "Plasma Cannon" 2
+    "AM3 Anti-Missile"
 
-    "Supercapacitor" 6
+    "DS-11 Battery Pack"
+    "DS-05 Battery Pack"
     "Liquid Nitrogen Cooler"
     "Fuel Pod" 18
-    "Tactical Scanner" 2
+    "Tactical Scanner" 3
     "Interference Plating"
     "Laser Rifle" 7
   engine -16 52
@@ -196,35 +199,37 @@ ship "Quicksilver" "Modified Quicksilver (Engines)"
     "hull" 100
     "required crew" 1
     "bunks" 1
-    "mass" 20
+    "mass" 10
+    "cargo space" -10
     "outfit space" 20
     "engine space" 20
     "self destruct" .25
     weapon
-      "blast radius" 5
-      "shield damage" 40
-      "random shield damage" 10
-      "hull damage" 60
-      "random hull damage" 15
-      "heat damage" 1200
-      "random heat damage" 300
-      "hit force" 100
-      "random hit force" 25
+      "blast radius" 4
+      "shield damage" 20
+      "random shield damage" 20
+      "hull damage" 30
+      "random hull damage" 30
+      "heat damage" 600
+      "random heat damage" 600
+      "hit force" 50
+      "random hit force" 50
   outfits
     "S-270 Regenerator"
-    "Fission Reactor"
+    "Dwarf Core"
     "Hyperdrive"
 
     "A370 Atomic Thruster"
-    "A375 Atomic Steering"
+    "A255 Atomic Steering"
+    "Afterburner"
 
-    "Heavy Laser Cannon" 2
+    "Plasma Cannon" 2
     "AM3 Anti-Missile"
 
-    "Supercapacitor" 5
+    "DS-11 Battery Pack"
     "Liquid Nitrogen Cooler"
     "Fuel Pod" 18
-    "Tactical Scanner" 2
+    "Tactical Scanner" 3
     "Interference Plating"
     "Laser Rifle" 7
   engine -16 52
@@ -245,35 +250,37 @@ ship "Quicksilver" "Modified Quicksilver (Weapons)"
     "hull" 100
     "required crew" 1
     "bunks" 1
-    "mass" 20
+    "mass" 10
+    "cargo space" -10
     "outfit space" 20
     "weapon space" 20
     "self destruct" .25
     weapon
-      "blast radius" 5
-      "shield damage" 40
-      "random shield damage" 10
-      "hull damage" 60
-      "random hull damage" 15
-      "heat damage" 1200
-      "random heat damage" 300
-      "hit force" 100
-      "random hit force" 25
+      "blast radius" 4
+      "shield damage" 20
+      "random shield damage" 20
+      "hull damage" 30
+      "random hull damage" 30
+      "heat damage" 600
+      "random heat damage" 600
+      "hit force" 50
+      "random hit force" 50
   outfits
     "S-270 Regenerator"
-    "Fission Reactor"
+    "Dwarf Core"
     "Hyperdrive"
 
     "A250 Atomic Thruster"
     "A255 Atomic Steering"
+    "Afterburner"
 
-    "Heavy Laser Cannon" 2
-    "Heavy Laser Turret"
+    "Plasma Cannon" 2
+    "Heavy Anti-Missile"
 
-    "LP036a Battery Pack"
+    "DS-11 Battery Pack"
     "Liquid Nitrogen Cooler"
     "Fuel Pod" 18
-    "Tactical Scanner" 2
+    "Tactical Scanner" 3
     "Interference Plating"
     "Laser Rifle" 7
   engine -17 54
@@ -516,33 +523,43 @@ ship "Splinter" "Modified Splinter (Core)"
   add attributes
     "cost" 300000
     "shields" 500
-    "hull" 250
+    "hull" 300
     "required crew" 6
     "bunks" 6
     "mass" 25
-    "cargo space" -30
-    "outfit space" 60
-    "core space" 30
-    "engine space" 10
-    "weapon space" 20
+    "cargo space" -20
+    "outfit space" 40
+    "core space" 40
     "self destruct" .25
+    weapon
+      "blast radius" 9
+      "shield damage" 50
+      "random shield damage" 40
+      "hull damage" 75
+      "random hull damage" 60
+      "heat damage" 1500
+      "random heat damage" 1200
+      "hit force" 125
+      "random hit force" 100
   outfits
-    "S-270 Regenerator" 2
-    "Fusion Reactor"
+    "S-270 Regenerator" 4
+    "Ogre Core"
+    "Dwarf Core"
     "Hyperdrive"
 
     "A250 Atomic Thruster"
-    "A525 Atomic Steering"
+    "A375 Atomic Steering"
+    "Afterburner"
 
     "Plasma Cannon" 2
-    "Heavy Laser Turret" 2
+    "X4 Blaster Turret" 2
     "Heavy Anti-Missile"
 
-    "LP036a Battery Pack"
+    "DS-23 Battery Pack"
     "Liquid Nitrogen Cooler"
-    "Fuel Pod" 50
-    "Tactical Scanner" 2
-    "Interference Plating" 2
+    "Fuel Pod" 49
+    "Tactical Scanner" 3
+    "Interference Plating" 3
     "Laser Rifle" 22
   engine -14 112
   engine 14 112
@@ -560,34 +577,43 @@ ship "Splinter" "Modified Splinter (Engines)"
   add attributes
     "cost" 300000
     "shields" 500
-    "hull" 250
+    "hull" 300
     "required crew" 6
     "bunks" 6
     "mass" 25
-    "cargo space" -30
-    "outfit space" 60
-    "core space" 10
-    "engine space" 30
-    "weapon space" 20
+    "cargo space" -20
+    "outfit space" 40
+    "engine space" 40
     "self destruct" .25
+    weapon
+      "blast radius" 9
+      "shield damage" 50
+      "random shield damage" 40
+      "hull damage" 75
+      "random hull damage" 60
+      "heat damage" 1500
+      "random heat damage" 1200
+      "hit force" 125
+      "random hit force" 100
   outfits
     "S-270 Regenerator" 2
-    "Fusion Reactor"
+    "Ogre Core"
+    "Dwarf Core"
     "Hyperdrive"
 
     "A370 Atomic Thruster"
     "A525 Atomic Steering"
+    "Afterburner"
 
     "Plasma Cannon" 2
     "X4 Blaster Turret" 2
     "Heavy Anti-Missile"
 
-    "LP036a Battery Pack"
+    "DS-05 Battery Pack"
     "Liquid Nitrogen Cooler"
-    "Liquid Water Cooler"
-    "Fuel Pod" 50
-    "Tactical Scanner" 2
-    "Interference Plating" 2
+    "Fuel Pod" 49
+    "Tactical Scanner" 3
+    "Interference Plating" 3
     "Laser Rifle" 22
   engine -15 114 .7
   engine 0 118
@@ -606,33 +632,43 @@ ship "Splinter" "Modified Splinter (Weapons)"
   add attributes
     "cost" 300000
     "shields" 500
-    "hull" 250
+    "hull" 300
     "required crew" 6
     "bunks" 6
     "mass" 25
-    "cargo space" -30
-    "outfit space" 60
-    "core space" 10
-    "engine space" 10
+    "cargo space" -20
+    "outfit space" 40
     "weapon space" 40
     "self destruct" .25
+    weapon
+      "blast radius" 9
+      "shield damage" 50
+      "random shield damage" 40
+      "hull damage" 75
+      "random hull damage" 60
+      "heat damage" 1500
+      "random heat damage" 1200
+      "hit force" 125
+      "random hit force" 100
   outfits
     "S-270 Regenerator" 2
-    "Fusion Reactor"
+    "Ogre Core"
+    "Dwarf Core"
     "Hyperdrive"
 
     "A250 Atomic Thruster"
-    "A525 Atomic Steering"
+    "A375 Atomic Steering"
+    "Afterburner"
 
     "Plasma Cannon" 4
     "X4 Blaster Turret" 2
     "Heavy Anti-Missile"
 
-    "LP036a Battery Pack"
+    "DS-05 Battery Pack"
     "Liquid Nitrogen Cooler"
-    "Fuel Pod" 50
-    "Tactical Scanner" 2
-    "Interference Plating" 2
+    "Fuel Pod" 49
+    "Tactical Scanner" 3
+    "Interference Plating" 3
     "Laser Rifle" 22
   engine -14 112
   engine 14 112

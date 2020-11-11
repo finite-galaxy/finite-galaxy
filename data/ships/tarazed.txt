@@ -690,36 +690,36 @@ ship "Raven" "Modified Raven (Core)"
     "required crew" 3
     "bunks" 6
     "mass" 15
+    "cargo space" -15
     "outfit space" 30
-    "core space" 20
-    "engine space" 10
+    "core space" 30
     "self destruct" .25
     weapon
-      "blast radius" 1
-      "shield damage" -50
-      "random shield damage" 60
-      "hull damage" -75
-      "random hull damage" 90
-      "heat damage" -1500
-      "random heat damage" 3600
-      "hit force" -125
-      "random hit force" 150
+      "blast radius" 6
+      "shield damage" 30
+      "random shield damage" 30
+      "hull damage" 45
+      "random hull damage" 45
+      "heat damage" 900
+      "random heat damage" 900
+      "hit force" 75
+      "random hit force" 75
   outfits
-    "S-270 Regenerator"
-    "Breeder Reactor"
+    "S-270 Regenerator" 2
+    "Ogre Core"
     "Hyperdrive"
 
     "A250 Atomic Thruster"
-    "A375 Atomic Steering"
+    "A255 Atomic Steering"
     "Afterburner"
 
-    "Heavy Laser Cannon" 4
-    "Heavy Laser Turret"
+    "Plasma Cannon" 4
+    "AM5 Anti-Missile"
 
-    "Supercapacitor" 6
+    "DS-23 Battery Pack"
     "Liquid Nitrogen Cooler"
     "Fuel Pod" 27
-    "Tactical Scanner" 2
+    "Tactical Scanner" 3
     "Interference Plating" 2
     "Laser Rifle" 14
   engine -12 45
@@ -742,34 +742,36 @@ ship "Raven" "Modified Raven (Engines)"
     "required crew" 3
     "bunks" 6
     "mass" 15
+    "cargo space" -15
     "outfit space" 30
     "engine space" 30
     "self destruct" .25
     weapon
-      "blast radius" 1
-      "shield damage" -50
-      "random shield damage" 60
-      "hull damage" -75
-      "random hull damage" 90
-      "heat damage" -1500
-      "random heat damage" 3600
-      "hit force" -125
-      "random hit force" 150
+      "blast radius" 6
+      "shield damage" 30
+      "random shield damage" 30
+      "hull damage" 45
+      "random hull damage" 45
+      "heat damage" 900
+      "random heat damage" 900
+      "hit force" 75
+      "random hit force" 75
   outfits
     "S-270 Regenerator"
-    "Breeder Reactor"
+    "Ogre Core"
     "Hyperdrive"
 
     "A370 Atomic Thruster"
     "A375 Atomic Steering"
+    "Afterburner"
 
-    "Heavy Laser Cannon" 4
-    "Heavy Laser Turret"
+    "Plasma Cannon" 4
+    "AM5 Anti-Missile"
 
-    "Supercapacitor"
+    "DS-11 Battery Pack"
     "Liquid Nitrogen Cooler"
     "Fuel Pod" 27
-    "Tactical Scanner" 2
+    "Tactical Scanner" 3
     "Interference Plating" 2
 #    "Laser Rifle" 14
   engine -12 45 .7
@@ -793,35 +795,36 @@ ship "Raven" "Modified Raven (Weapons)"
     "required crew" 3
     "bunks" 6
     "mass" 15
+    "cargo space" -15
     "outfit space" 30
-    "engine space" 10
-    "weapon space" 20
+    "weapon space" 30
     "self destruct" .25
     weapon
-      "blast radius" 1
-      "shield damage" -50
-      "random shield damage" 60
-      "hull damage" -75
-      "random hull damage" 90
-      "heat damage" -1500
-      "random heat damage" 3600
-      "hit force" -125
-      "random hit force" 150
+      "blast radius" 6
+      "shield damage" 30
+      "random shield damage" 30
+      "hull damage" 45
+      "random hull damage" 45
+      "heat damage" 900
+      "random heat damage" 900
+      "hit force" 75
+      "random hit force" 75
   outfits
     "S-270 Regenerator"
-    "Breeder Reactor"
+    "Ogre Core"
     "Hyperdrive"
 
     "A250 Atomic Thruster"
-    "A375 Atomic Steering"
+    "A255 Atomic Steering"
+    "Afterburner"
 
     "Plasma Cannon" 4
-    "X2 Blaster Turret"
+    "Heavy Anti-Missile"
 
-    "Supercapacitor" 4
+    "DS-11 Battery Pack"
     "Liquid Nitrogen Cooler"
     "Fuel Pod" 27
-    "Tactical Scanner" 2
+    "Tactical Scanner" 3
     "Interference Plating" 2
     "Laser Rifle" 14
   engine -12 45
