@@ -38,11 +38,11 @@ Files:
  images/effect/anti-missile/athena*
  images/effect/flare/unused*
  images/effect/impact/2x_poseidon*
+ images/effect/impact/acid*
  images/effect/impact/ares*
  images/effect/impact/hypnos*
  images/effect/impact/hypnos_sub*
  images/effect/impact/poseidon*
- images/effect/impact/pulse*
  images/effect/artemis_fire*
  images/effect/dragonf_die*
  images/effect/dragonf_fire*
@@ -313,8 +313,6 @@ Files:
  images/outfit/sprite/anti-missile_wanderer*
  images/outfit/sprite/attractor*
  images/outfit/sprite/banisher*
- images/outfit/sprite/blaster_turret*
- images/outfit/sprite/blaster_quad_turret*
  images/outfit/sprite/bombardment_turret*
  images/outfit/sprite/disruptor*
  images/outfit/sprite/electron_turret*
@@ -331,7 +329,9 @@ Files:
  images/outfit/sprite/sunbeam_dual_turret*
  images/outfit/sprite/sunbeam_turret*
  images/outfit/sprite/thrasher_turret*
- images/outfit/sprite/unused_turret_a*
+ images/outfit/sprite/unused/quad_turret_b*
+ images/outfit/sprite/unused/turret_a*
+ images/outfit/sprite/unused/turret_b*
  images/outfit/sprite/warder*
  images/outfit/thumbnail/core/command_centre*
  images/outfit/thumbnail/core/control_transceiver*
@@ -486,20 +486,20 @@ Files:
  images/outfit/thumbnail/unknown*
  images/outfit/thumbnail/unused/android*
  images/outfit/thumbnail/unused/cannon_a*
+ images/outfit/thumbnail/unused/cannon_b*
  images/outfit/thumbnail/unused/cooling_a*
  images/outfit/thumbnail/unused/miscellaneous_a*
  images/outfit/thumbnail/unused/miscellaneous_c*
  images/outfit/thumbnail/unused/missile_b*
  images/outfit/thumbnail/unused/missile_b_launcher*
+ images/outfit/thumbnail/unused/quad_turret_b*
  images/outfit/thumbnail/unused/turret_a*
+ images/outfit/thumbnail/unused/turret_b*
  images/outfit/thumbnail/weapon/anti-missile_heavy*
  images/outfit/thumbnail/weapon/anti_missile_tiny*
  images/outfit/thumbnail/weapon/anti-missile_wanderer*
  images/outfit/thumbnail/weapon/attractor*
  images/outfit/thumbnail/weapon/banisher*
- images/outfit/thumbnail/weapon/blaster_cannon*
- images/outfit/thumbnail/weapon/blaster_quad_turret*
- images/outfit/thumbnail/weapon/blaster_turret*
  images/outfit/thumbnail/weapon/bombardment_cannon*
  images/outfit/thumbnail/weapon/bombardment_turret*
  images/outfit/thumbnail/weapon/detainer*
@@ -577,8 +577,8 @@ Files:
  images/outfit/sprite/anti-missile_pug*
  images/outfit/sprite/bolt*
  images/outfit/sprite/skylance*
- images/outfit/sprite/unused_turret_b*
- images/outfit/sprite/unused_turret_c*
+ images/outfit/sprite/unused/turret_c*
+ images/outfit/sprite/unused/turret_f*
  images/outfit/sprite/zapper_turret*
  images/outfit/thumbnail/core/reactor_aeon*
  images/outfit/thumbnail/core/reactor_century*
@@ -617,8 +617,8 @@ Files:
  images/outfit/thumbnail/unused/missile_a*
  images/outfit/thumbnail/unused/missile_a_launcher*
  images/outfit/thumbnail/unused/missile_a_storage*
- images/outfit/thumbnail/unused/turret_b*
  images/outfit/thumbnail/unused/turret_c*
+ images/outfit/thumbnail/unused/turret_f*
  images/outfit/thumbnail/weapon/anti-missile_pug*
  images/outfit/thumbnail/weapon/bolt_cannon*
  images/outfit/thumbnail/weapon/bolt_turret*
@@ -641,8 +641,8 @@ License: CC-BY-SA-4.0
 Comment: Derived from works by Frederick Goy IV (under the same license).
 
 Files:
- images/outfit/sprite/unused_turret_d*
- images/outfit/sprite/unused_turret_e*
+ images/outfit/sprite/unused/turret_d*
+ images/outfit/sprite/unused/turret_e*
  images/outfit/thumbnail/element/unused*
  images/outfit/thumbnail/unused/cannon_d*
  images/outfit/thumbnail/unused/cannon_e*
@@ -660,7 +660,7 @@ License: CC-BY-SA-4.0
 
 Files:
  images/outfit/sprite/pulse_turret*
- images/outfit/sprite/unused_quad_turret_a*
+ images/outfit/sprite/unused/quad_turret_a*
  images/outfit/thumbnail/unused/quad_turret_a*
  images/outfit/thumbnail/weapon/pulse_turret*
 Copyright: Nate Graham <pointedstick@zoho.com> (https://github.com/Pointedstick)
@@ -668,6 +668,7 @@ License: CC-BY-SA-4.0
 Comment: Derived from works by Michael Zahniser (under the same license).
 
 Files:
+ images/outfit/sprite/x1_blaster_cannon*
  images/outfit/sprite/x2_blaster_turret*
  images/outfit/sprite/x4_blaster_turret*
  images/outfit/sprite/x6_blaster_turret*
@@ -789,7 +790,7 @@ Copyright: Zachary Siple (https://github.com/Kryes-Omega)
 License: CC-BY-SA-4.0
 
 Files:
- images/outfit/thumbnail/unused/cannon_c*
+ images/outfit/thumbnail/unused/cannon_f*
 Copyright: Matthew Smestad (https://github.com/mdsmestad)
 License: CC-BY-SA-4.0
 
@@ -904,6 +905,7 @@ License: CC-BY-SA-4.0
 Files:
  images/projectile/2x_ares*
  images/projectile/2x_poseidon*
+ images/projectile/acid*
  images/projectile/ares*
  images/projectile/artemis*
  images/projectile/dragonfparticle*
@@ -912,7 +914,6 @@ Files:
  images/projectile/hypnosmain*
  images/projectile/hypnossub*
  images/projectile/poseidon*
- images/projectile/pulse*
 Copyright: Frederick Goy IV <fredgoy2003@gmail.com> (https://github.com/comnom)
 License: CC-BY-SA-4.0
 
@@ -950,6 +951,7 @@ Files:
  images/projectile/piercer*
  images/projectile/plasma*
  images/projectile/proton*
+ images/projectile/pulse*
  images/projectile/rainbow*
  images/projectile/repeater*
  images/projectile/repulsor*

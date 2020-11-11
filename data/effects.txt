@@ -1,3 +1,4 @@
+# "acid impact"
 # "antimatter dust"
 # "antimatter spark"
 # "anti-missile ceasefire fire"
@@ -106,6 +107,15 @@
 
 
 
+effect "acid impact"
+  sprite "effect/impact/acid"
+    "no repeat"
+    "frame rate" 15
+  "lifetime" 30
+  "random angle" 2
+  "random spin" 1
+  "velocity scale" -.003
+  
 effect "antimatter dust"
   sprite "effect/smoke"
     "no repeat"
@@ -242,10 +252,9 @@ effect "bolt impact"
   sprite "effect/impact/bolt"
     "no repeat"
     "frame rate" 30
-  sound "explosion small"
-  "lifetime" 20
-  "random angle" 2
-  "velocity scale" -.005
+  "lifetime" 7
+  "random angle" 40
+  "velocity scale" -.05
 
 effect "bombardment impact"
   sprite "effect/impact/bombardment"
@@ -873,11 +882,11 @@ effect "puff"
 effect "pulse impact"
   sprite "effect/impact/pulse"
     "no repeat"
-    "frame rate" 15
-  "lifetime" 30
+    "frame rate" 30
+  sound "explosion small"
+  "lifetime" 20
   "random angle" 2
-  "random spin" 1
-  "velocity scale" -.003
+  "velocity scale" -.005
 
 
 effect "rail sparks"
