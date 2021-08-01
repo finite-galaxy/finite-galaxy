@@ -8,17 +8,17 @@
 # months
 # zodiac
 # heraldic tinctures
-# colours
+# colour
 # adjectives
 # singular nouns
 # plural nouns
 # nouns of indeterminate quantity
 # the-nouns
 # things you can be of
-# male titles
-# female titles
-# gender-neutral titles
-# all titles
+# male title
+# female title
+# gender-neutral title
+# all title
 # plural quantities
 # successor start
 # successor low end
@@ -26,7 +26,6 @@
 # successor high end
 # successor
 # sometimes a successor
-# standalone civilian ship names
 #
 # civilian
 #
@@ -188,7 +187,7 @@ phrase "heraldic tinctures"
     "Vert"
     "Purpure"
 
-phrase "colours"
+phrase "colour"
   word
     "Azure"
     "Black"
@@ -335,21 +334,10 @@ phrase "adjectives"
     "Fair"
     "Pure"
     "Loyal"
-    "Inca"
-    "Mayan"
-    "Atlantean"
-    "Roman"
-    "Byzantine"
-    "Zulu"
-    "Maori"
-    "Prussian"
     "Smoky"
     "Cloudy"
     "Silly"
     "Leaky"
-    "African"
-    "Etruscan"
-    "Trojan"
     "Unknown"
     "Saucy"
     "Seawise"
@@ -720,7 +708,6 @@ phrase "nouns of indeterminate quantity"
     "Strength"
     "Power"
     "Salt"
-    "Atlantis"
     "Herring"
     "Doubt"
     "Flint"
@@ -768,7 +755,6 @@ phrase "nouns of indeterminate quantity"
     "Myth"
     "Victory"
     "Defiance"
-    "Borneo"
 
 phrase "the-nouns"
   word
@@ -789,7 +775,7 @@ phrase "things you can be of"
     "nouns of indeterminate quantity"
 
 # Make sure to add any additions to the "plural nouns" list in plural form
-phrase "male titles"
+phrase "male title"
   word
     "Baron"
     "Count"
@@ -803,7 +789,7 @@ phrase "male titles"
     "Viscount"
 
 # Make sure to add any additions to the "plural nouns" list in plural form.
-phrase "female titles"
+phrase "female title"
   word
     "Baroness"
     "Countess"
@@ -816,7 +802,7 @@ phrase "female titles"
     "Queen"
     "Viscountess"
 
-phrase "gender-neutral titles"
+phrase "gender-neutral title"
   word
     "Ambassador"
     "Bishop"
@@ -827,7 +813,7 @@ phrase "gender-neutral titles"
     "Saint"
     "Sovereign"
 
-phrase "military titles"
+phrase "military title"
   word
     "Admiral"
     "Captain"
@@ -839,12 +825,12 @@ phrase "military titles"
     "Lieutenant"
     "Marshal"
 
-phrase "all titles"
+phrase "all title"
   phrase
-    "male titles"
-    "female titles"
-    "gender-neutral titles"
-    "military titles"
+    "male title"
+    "female title"
+    "gender-neutral title"
+    "military title"
 
 phrase "plural quantities"
   word
@@ -949,468 +935,9 @@ phrase "sometimes a successor"
     "empty"
     "successor"
 
-phrase "standalone civilian ship names"
-  word
-    "Horizon"
-    "Enterprise"
-    "Rabbit"
-    "Napoleon"
-    "Khagan"
-    "Yokozuna"
-    "Ozeki"
-    "Black Bear"
-    "Indefatigable"
-    "Dauntless"
-    "Nautilus"
-    "Dolphin"
-    "Humboldt"
-    "Eagle"
-    "Endeavour"
-    "Slipstream"
-    "Stargazer"
-    "Venture"
-    "Union"
-    "Sunrise"
-    "Laotzu"
-    "Mencius"
-    "Hawk"
-    "Confucius"
-    "Megalith"
-    "Istanbul"
-    "Constantinople"
-    "Winchester"
-    "Magellan"
-    "Constellation"
-    "Orion"
-    "Oracle"
-    "Promised Land"
-    "Garden of Eden"
-    "George Washington"
-    "Odysseus"
-    "Poseidon"
-    "Sinbad"
-    "Falling Snow"
-    "Quetzal"
-    "Quetzlcoatl"
-    "Icebreaker"
-    "Gorgon"
-    "Winston Churchill"
-    "Saint Felix"
-    "Orca"
-    "Snowy Owl"
-    "Bombay"
-    "Arethusa"
-    "Crown Point"
-    "Botany Bay"
-    "Medway"
-    "Allure"
-    "Bazinje"
-    "Nomad"
-    "Redoubtable"
-    "Primarch"
-    "Great Egret"
-    "Jeanne d'Arc"
-    "Geronimo"
-    "Sitting Bull"
-    "Pocahontas"
-    "Crazy Horse"
-    "Toreador"
-    "Chelmsford"
-    "Argo"
-    "The Golden Fleece"
-    "Pequod"
-    "Beagle"
-    "Santa Maria"
-    "Bismark"
-    "Golden Hind"
-    "Mayflower"
-    "Monitor"
-    "Merrimack"
-    "Potemkin"
-    "Yamato"
-    "Fujiyama"
-    "Pretoria"
-    "Xiao Yi"
-    "Lou Chuan"
-    "Zheng He"
-    "Baychimo"
-    "Constitution"
-    "Excelsior"
-    "Renaissance"
-    "Yellowstone"
-    "Jim Jones"
-    "John Henry"
-    "Paul Bunyan"
-    "Robin Hood"
-    "Annie Oakley"
-    "Emiliano Zapata"
-    "North Star"
-    "Wanderer"
-    "Tears in Rain"
-    "Happy Returns"
-    "No Gods, No Masters"
-    "Majestic"
-    "Santa Fe"
-    "Hunk of Junk"
-    "Bucket of Bolts"
-    "Slag Heap"
-    "Flying Junkyard"
-    "Hammerhead"
-    "Heliopolis"
-    "Cornwall"
-    "Chichen Itza"
-    "Small Potatoes"
-    "Simon Bolivar"
-    "Spartacus"
-    "Harriet Tubman"
-    "Stonewall Jackson"
-    "Shaka Zulu"
-    "Silk Road"
-    "Good Egg"
-    "Terrible Swift Sword"
-    "Loaves and Fishes"
-    "Hero of Old"
-    "Ties That Bind"
-    "A Quiet Truth"
-    "Fantastic Planet"
-    "Observer"
-    "Times of Woe"
-    "Henry Ford"
-    "Charles de Gaulle"
-    "Circe"
-    "Amelia Earhart"
-    "Charles Lindbergh"
-    "Roald Dahl"
-    "Larry the Ship"
-    "Jim Bowie"
-    "Pax Republica"
-    "Riga"
-    "Yerevan"
-    "Brasilia"
-    "Cape Town"
-    "Borealis"
-    "Narcissus"
-    "Tea Clipper"
-    "Close-Hauled"
-    "Windjammer"
-    "Windstar"
-    "Potosi"
-    "Minotaur"
-    "Ouroboros"
-    "Tiamat"
-    "Artemis"
-    "Annabel Lee"
-    "Old Ironsides"
-    "Spice of Life"
-    "Purifying Gaze"
-    "Chateau Gaillard"
-    "Sacramento"
-    "Labnathia"
-    "Brick by Brick"
-    "Murano"
-    "Johannesburg"
-    "Stapleton"
-    "Righteous"
-    "Venerable"
-    "Mjolnir"
-    "Starscreamer"
-    "Barrabas"
-    "Musashi"
-    "Misaka"
-    "Belo Horizonte"
-    "Visby"
-    "Pyotr Velikiy"
-    "Invincible"
-    "Renowned"
-    "Courageous"
-    "Indomitable"
-    "Endurance"
-    "Avenger"
-    "Unrivaled"
-    "Retribution"
-    "Allegiance"
-    "The Mountain and I"
-    "Washed Away"
-    "Cash is King"
-    "Equality"
-    "Equanimity"
-    "Eudamonia"
-    "Independence"
-    "Interdependence"
-    "Mutuality"
-    "Proteus"
-    "William Rockefeller"
-    "Lewis and Clark"
-    "Leif Erikson"
-    "Marco Polo"
-    "Zheng He"
-    "Vasco de Gama"
-    "Amerigo Vespucci"
-    "Jacques Cartier"
-    "James Cook"
-    "Horatio Hornblower"
-    "Thorstein Veblen"
-    "Karl Marx"
-    "John Maynard Keynes"
-    "Milton Friedman"
-    "Missouri"
-    "Montana"
-    "Essex"
-    "Karaboudjan"
-    "Immer Essen"
-    "Scotia"
-    "Sherwood"
-    "Thunderfish"
-    "Venture"
-    "Arabella"
-    "Baalbek"
-    "Barracuda"
-    "Bellipotent"
-    "Calypso"
-    "Forrestal"
-    "Compass Rose"
-    "Covenant"
-    "Dazzler"
-    "Fenton"
-    "Keeling"
-    "Marie Celeste"
-    "Hodgson"
-    "Okinawa"
-    "Orcus"
-    "Pharaoh"
-    "Pyramus"
-    "Reluctant"
-    "Saltash"
-    "Sturgeon"
-    "Swordfish"
-    "Seaview"
-    "Starview"
-    "Umbriago"
-    "Valparaiso"
-    "Kandahar"
-    "Colonia"
-    "Shenandoah"
-    "Destiny"
-    "Rockingham"
-    "Atropos"
-    "Hotspur"
-    "Speedwell"
-    "Sutherland"
-    "Magicienne"
-    "Papillion"
-    "Vestal"
-    "Remembrance"
-    "Ark"
-    "Sardine"
-    "Pinafore"
-    "Minnow"
-    "Skydiver"
-    "Vondel"
-    "Elisabeth Dane"
-    "Valkyrie"
-    "Geofon"
-    "Beowulf"
-    "Nunki"
-    "Mercury"
-    "Venus"
-    "Mars"
-    "Jupiter"
-    "Saturn"
-    "Uranus"
-    "Neptune"
-    "Pluto"
-    "Aries"
-    "Taurus"
-    "Gemini"
-    "Cancer"
-    "Leo"
-    "Virgo"
-    "Libra"
-    "Scorpio"
-    "Sagittarius"
-    "Capricorn"
-    "Aquarius"
-    "Pisces"
-    "Rat"
-    "Ox"
-    "Tiger"
-    "Rabbit"
-    "Dragon"
-    "Snake"
-    "Horse"
-    "Goat"
-    "Monkey"
-    "Rooster"
-    "Dog"
-    "Pig"
-    "Saman Kunan"
-    "Wat Phra Kaew"
-    "Hakuho"
-    "Tochinoshin"
-    "Frida Kahlo"
-    "Garcia Marquez"
-    "Carrack"
-    "Lizard"
-    "Jack Tar"
-    "Landsman"
-    "Marlinspike"
-    "Sultana"
-    "Maidstone"
-    "Gibraltar"
-    "Donegal"
-    "Preble"
-    "Chesapeake"
-    "Tripoli"
-    "Mastico"
-    "Syracuse"
-    "Argus"
-    "Syren"
-    "Malaga"
-    "Leopard"
-    "Aeolus"
-    "Africa"
-    "Belvidera"
-    "Guerriere"
-    "Bonne Citoyenne"
-    "Java"
-    "Bainbridge"
-    "Pictou"
-    "Marblehead"
-    "Cocteau"
-    "Guinea"
-    "Puna"
-    "Turon"
-    "Singapore"
-    "Savannah"
-    "Gambrill"
-    "Cuyler"
-    "Dewey"
-    "Bodger"
-    "Anzio"
-    "Ardent"
-    "Choson"
-    "Coronado"
-    "Berwick"
-    "Firebolt"
-    "Kersarge"
-    "Laboon"
-    "Manzanita"
-    "Momsen"
-    "Somerset"
-    "Tortuga"
-    "Colossus"
-    "Benavidez"
-    "Brittin"
-    "Charlton"
-    "Eagleview"
-    "Guadalupe"
-    "Alvaro de Bazan"
-    "La Loba"
-    "Swiftsure"
-    "Laramie"
-    "Pecos"
-    "Taos"
-    "Souverain"
-    "Almaak"
-    "Chakra"
-    "Kalvari"
-    "Shisumar"
-    "Kolkata"
-    "Rajput"
-    "Vympel"
-    "Shivalik"
-    "Talwar"
-    "Godavari"
-    "Shardul"
-    "Magar"
-    "Kamorta"
-    "Kora"
-    "Khukri"
-    "Abhay"
-    "Saryu"
-    "Sukanya"
-    "Tinkat"
-    "Shalki"
-    "Chennai"
-    "Mysore"
-    "Ranvir"
-    "Tabar"
-    "Tarkash"
-    "Galerna"
-    "Mistral"
-    "Castilla"
-    "Lezo"
-    "Serviola"
-    "Canabrava"
-    "Toralla"
-    "Aresa"
-    "Alboran"
-    "Centinela"
-    "Patino"
-    "Elcano"
-    "Toulon"
-    "Richelieu"
-    "Dunquerque"
-    "Mers-el-Kebir"
-    "Rubis"
-    "Forbin"
-    "Cassard"
-    "Aquitaine"
-    "Auvergne"
-    "Blaison"
-    "Belleisle"
-    "Tonnant"
-    "Bellerophon"
-    "Mont Blanc"
-    "Pluton"
-    "Hortense"
-    "Shohei Maru"
-    "Asahi Maru"
-    "Choyo"
-    "Kaiten"
-    "Mikaho"
-    "Moshun"
-    "Ryoju"
-    "Kongo"
-    "Tsukushi"
-    "Katsuragi"
-    "Akagi"
-    "Kotetsu"
-    "Fuso"
-    "Yashima"
-    "Mishima"
-    "Okinoshima"
-    "Satsuma"
-    "Katori"
-    "Kirishima"
-    "Nagato"
-    "Matsushima"
-    "Yoshino"
-    "Kasagi"
-    "Takasago"
-    "Chikuma"
-    "Tenryu"
-    "Kuma"
-    "Sendai"
-    "Soryu"
-    "Izumo"
-    "Hyuga"
-    "Osumi"
-    "Kunisaki"
-    "Hatakaze"
-    "Scheherazade"
-    "Gormand"
-    "Firstborn"
-    "Adir"
-    "Zumwalt"
-    "Throckmorton"
-    "Normandy"
-    "Magna Carta"
-    "Casablanca"
 
 
-
-# Final phrases that make ship names
+# Final phrases that make ship names.
 
 # e.g.
 # Honourable Guardian
@@ -1423,9 +950,9 @@ phrase "civilian"
   word
     " "
   phrase
-    "male names"
-    "female names"
-    # The following are doubled up so we have more nouns than names
+    "male name"
+    "female name"
+    # The following are doubled up so we have more nouns than names.
     "singular nouns"
     "singular nouns"
     "plural nouns"
@@ -1457,14 +984,14 @@ phrase "civilian"
 # Lord's Whispers
 phrase "civilian"
   phrase
-    "male names"
-    "male names"
-    "male titles"
-    "female names"
-    "female names"
-    "female titles"
-    "gender-neutral titles"
-    "military titles"
+    "male name"
+    "male name"
+    "male title"
+    "female name"
+    "female name"
+    "female title"
+    "gender-neutral title"
+    "military title"
   word
     "'s "
   phrase
@@ -1503,12 +1030,12 @@ phrase "civilian"
 # Champion Ivan
 phrase "civilian"
   phrase
-    "male titles"
-    "gender-neutral titles"
+    "male title"
+    "gender-neutral title"
   word
     " "
   phrase
-    "male names"
+    "male name"
     "things you can be of"
 
 # e.g.
@@ -1516,12 +1043,12 @@ phrase "civilian"
 # Lady Caroline
 phrase "civilian"
   phrase
-    "female titles"
-    "gender-neutral titles"
+    "female title"
+    "gender-neutral title"
   word
     " "
   phrase
-    "female names"
+    "female name"
     "things you can be of"
 
 # e.g.
@@ -1548,7 +1075,7 @@ phrase "civilian"
   word
     " "
   phrase
-    "all titles"
+    "all title"
   phrase
     "sometimes a successor"
 
@@ -1578,7 +1105,7 @@ phrase "civilian"
   phrase
     "singular nouns"
     "plural nouns"
-    "all titles"
+    "all title"
   phrase
     "sometimes a successor"
 
@@ -1587,8 +1114,8 @@ phrase "civilian"
     "adjectives"
     "nouns of indeterminate quantity"
     "singular nouns"
-    "all titles"
-    "female names"
+    "all title"
+    "female name"
   phrase
     "sometimes a successor"
 
@@ -1868,154 +1395,14 @@ phrase "deep"
 phrase "free worlds capital"
   word
     "F.W.S. "
-  word
-    Alder
-    Aloe
-    Ash
-    Aspen
-    Asphodel
-    Balsam
-    Banyan
-    Baobab
-    Bartlett
-    Beech
-    Birch
-    Borage
-    Brisbane
-    Buckthorn
-    Carob
-    Cedar
-    Coral
-    Cork
-    Cottonwood
-    Crabwood
-    Cypress
-    Dogwood
-    Douglas
-    Ebony
-    Elder
-    Elm
-    Eucalyptus
-    Ginko
-    Hawthorn
-    Hazel
-    Heath
-    Hemlock
-    Hickory
-    Holly
-    Hophorn
-    Ironwood
-    Joshua
-    Juniper
-    Lancewood
-    Larch
-    Laurel
-    Linden
-    Locust
-    Magnolia
-    Mangrove
-    Maple
-    Medlar
-    Myrtle
-    Nightshade
-    Persimmon
-    Pinyon
-    Ponderosa
-    Poplar
-    Primrose
-    Privet
-    Quince
-    Raywood
-    Redbud
-    Redwood
-    Sassafras
-    Senna
-    Sequoia
-    Spurge
-    Sumac
-    Sycamore
-    Tallow
-    Tamarack
-    Tamarisk
-    Teak
-    Terebinth
-    Torrey
-    Traveller
-    Willow
-    Winterthorn
-    Yucca
+  phrase
+    "tree"
 
 phrase "free worlds small"
   word
     "F.W.S. "
-  word
-    Amaranth
-    Amaryllis
-    Ambrosia
-    Aster
-    Banksia
-    Bell
-    Bergamot
-    Berry
-    Bittersweet
-    Brier
-    Burdock
-    Buttercup
-    Carnation
-    Cherry
-    Chrysanthemum
-    Clover
-    Columbine
-    Daffodil
-    Daisy
-    Foxglove
-    Foxtail
-    Gentian
-    Gillyflower
-    Ginger
-    Goldenrod
-    Holly
-    Hyacinth
-    Ivy
-    Larkspur
-    Lavender
-    Lilac
-    Lily
-    Loosestrife
-    Marigold
-    Mimosa
-    Morel
-    Mum
-    Nettle
-    Nightshade
-    Orchid
-    Peony
-    Poke
-    Primrose
-    Purslane
-    Rose
-    Rosemary
-    Rye
-    Safflower
-    Saffron
-    Sage
-    Scarlet
-    Sedum
-    Slipper
-    Snapdragon
-    Snowdrop
-    Sorrel
-    Spurge
-    Stonecrop
-    Sunflower
-    Thistle
-    Thyme
-    Trillium
-    Tulip
-    Vetch
-    Viburnum
-    Violet
-    Yarrow
+  phrase
+    "flower"
 
 phrase "militia"
   word
@@ -2033,7 +1420,7 @@ phrase "tarazed"
   word
     "T.C.S. "
   phrase
-    "roman names"
+    "roman name"
 
 phrase "corporation fighter"
   word
@@ -2055,7 +1442,7 @@ phrase "deep fighter"
 
 phrase "free worlds fighter"
   phrase 
-    "colours"
+    "colour"
   word
     " "
   phrase
