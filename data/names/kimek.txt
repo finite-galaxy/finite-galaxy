@@ -1,0 +1,68 @@
+# kimek start
+# kimek middle
+# kimek next
+# kimek
+
+
+
+phrase "kimek start"
+  word
+    "A"
+    "Chi"
+    "Ee"
+    "I"
+    "Ie"
+    "Ka"
+    "Ki"
+    "Ky"
+    "Pa"
+    "Pai"
+    "Pi"
+    "Ree"
+    "Ri"
+    "Ry"
+
+phrase "kimek middle"
+  word
+    "'a"
+    "'ee"
+    "'i"
+    "'ie"
+    "cha"
+    "chee"
+    "chi"
+    "ka"
+    "kee"
+    "ki"
+    "kie"
+    "pa"
+    "pri"
+    "ree"
+    "rra"
+    "rri"
+    "rrie"
+    "ry"
+    "ya"
+    "yee"
+    "yi"
+
+phrase "kimek next"
+  word
+    " "
+  phrase
+    "kimek start"
+
+phrase "kimek"
+  phrase
+    "kimek start"
+  phrase
+    "kimek middle"
+  phrase
+    "kimek next"
+    "kimek middle"
+  phrase
+    "kimek next"
+    "kimek middle"
+  phrase
+    "kimek middle"
+

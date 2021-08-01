@@ -1,0 +1,101 @@
+# arachi start
+# arachi middle
+# arachi next
+# arachi
+
+
+
+phrase "arachi start"
+  word
+    "Blog"
+    "Bloob"
+    "Bloog"
+    "Blop"
+    "Blub"
+    "Drub"
+    "Dub"
+    "Floot"
+    "Flop"
+    "Flug"
+    "Flut"
+    "Glub"
+    "Log"
+    "Loob"
+    "Lub"
+    "Lug"
+    "Mob"
+    "Mog"
+    "Moog"
+    "Mug"
+    "Mup"
+    "Ploog"
+    "Ploot"
+    "Plort"
+    "Plub"
+    "Plug"
+    "Pot"
+    "Put"
+    "Toop"
+    "Tug"
+    "Tum"
+    "Tup"
+
+phrase "arachi middle"
+  word
+    "abug"
+    "alop"
+    "alug"
+    "amog"
+    "amug"
+    "ap"
+    "arub"
+    "at"
+    "atug"
+    "blag"
+    "blot"
+    "blug"
+    "blut"
+    "glob"
+    "glop"
+    "glub"
+    "glug"
+    "goom"
+    "goot"
+    "mog"
+    "moog"
+    "mug"
+    "oob"
+    "oot"
+    "ploot"
+    "plug"
+    "poot"
+    "ptup"
+    "put"
+    "root"
+    "rub"
+    "rup"
+    "talug"
+    "tup"
+    "ub"
+    "ug"
+    "up"
+
+phrase "arachi next"
+  word
+    " "
+  phrase
+    "arachi start"
+
+phrase "arachi"
+  phrase
+    "arachi start"
+  phrase
+    "arachi middle"
+  phrase
+    "arachi middle"
+    "arachi next"
+    "empty"
+  phrase
+    "arachi middle"
+    "empty"
+
