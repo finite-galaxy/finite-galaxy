@@ -22,6 +22,9 @@
 # male names
 # female names
 # plural quantities
+# successor start
+# successor end
+# successor
 # sometimes a successor
 # standalone civilian ship names
 #
@@ -642,22 +645,28 @@ phrase "plural nouns"
     "Sparks"
     "Shores"
     "Tides"
-    # Need to duplicate these because not all the words in the 'female titles' phrase could be pluralized by simply adding 's' to the end
+    # Need to duplicate these because not all the words in the 'female titles' phrase could be pluralized by simply adding 's' to the end.
+    "Baronesses"
+    "Countesses"
+    "Duchesses"
+    "Empresses"
     "Ladies"
+    "Marchionesses"
+    "Mistresses"
     "Princesses"
     "Queens"
-    "Empresses"
-    "Duchesses"
-    "Mistresses"
-    # Need to duplicate these here as well to prevent the male titles from showing up way too often relative to the female ones
-    "Lords"
-    "Princes"
-    "Kings"
-    "Emperors"
-    "Dukes"
+    "Viscountesses"
+    # Need to duplicate these here as well to prevent the male titles from showing up way too often relative to the female ones.
     "Barons"
+    "Counts"
+    "Dukes"
+    "Emperors"
+    "Kings"
+    "Lords"
+    "Marquesses"
     "Masters"
-    "Forms"
+    "Princes"
+    "Viscounts"
 
 phrase "nouns of indeterminate quantity"
   word
@@ -782,38 +791,60 @@ phrase "things you can be of"
 # Make sure to add any additions to the "plural nouns" list in plural form
 phrase "male titles"
   word
-    "Lord"
-    "Prince"
-    "King"
-    "Emperor"
-    "Duke"
     "Baron"
+    "Count"
+    "Duke"
+    "Emperor"
+    "King"
+    "Lord"
+    "Marquess"
     "Master"
+    "Prince"
+    "Viscount"
 
-# Make sure to add any additions to the "plural nouns" list in plural form
+# Make sure to add any additions to the "plural nouns" list in plural form.
 phrase "female titles"
   word
+    "Baroness"
+    "Countess"
+    "Duchess"
+    "Empress"
     "Lady"
+    "Marchioness"
+    "Mistress"
     "Princess"
     "Queen"
-    "Empress"
-    "Duchess"
-    "Mistress"
+    "Viscountess"
 
 phrase "gender-neutral titles"
   word
-    "Saint"
-    "Captain"
+    "Ambassador"
+    "Bishop"
     "Champion"
-    "Admiral"
+    "Governor"
+    "Minister"
+    "President"
+    "Saint"
     "Sovereign"
+
+phrase "military titles"
+  word
+    "Admiral"
+    "Captain"
+    "Colonel"
+    "Commandant"
+    "Commander"
     "Commodore"
+    "General"
+    "Lieutenant"
+    "Marshal"
 
 phrase "all titles"
   phrase
     "male titles"
     "female titles"
     "gender-neutral titles"
+    "military titles"
 
 phrase "male names"
   word
@@ -1088,30 +1119,77 @@ phrase "plural quantities"
     "Enough"
     "All the"
 
-phrase "sometimes a successor"
+phrase "successor start"
   word
-    ""
-    ""
-    ""
-    ""
-    ""
-    ""
-    ""
-    ""
-    ""
-    ""
-    ""
-    ""
-    ""
-    ""
-    ""
-    ""
-    ""
-    ""
-    ""
-    ""
-    " II"
-    " III"
+    "X"
+    "X"
+    "X"
+    "X"
+    "XX"
+
+phrase "successor low end"
+  word
+    "II"
+    "II"
+    "II"
+    "III"
+    "III"
+    "IV"
+
+phrase "successor middle end"
+  word
+    "V"
+    "V"
+    "V"
+    "V"
+    "VI"
+    "VI"
+    "VI"
+    "VII"
+    "VII"
+    "VIII"
+
+phrase "successor high end"
+  word
+    "IX"
+    "IX"
+    "IX"
+    "IX"
+    "X"
+    "X"
+    "X"
+    "XI"
+    "XI"
+    "XII"
+
+phrase "successor"
+  word
+    " "
+  phrase
+    "empty"
+    "empty"
+    "empty"
+    "empty"
+    "successor start"
+  phrase
+    "successor low end"
+    "successor low end"
+    "successor low end"
+    "successor low end"
+    "successor low end"
+    "successor low end"
+    "successor middle end"
+    "successor middle end"
+    "successor middle end"
+    "successor high end"
+
+phrase "sometimes a successor"
+  phrase
+    "empty"
+    "empty"
+    "empty"
+    "empty"
+    "successor"
 
 phrase "standalone civilian ship names"
   word
