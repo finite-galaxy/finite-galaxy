@@ -183,14 +183,14 @@ bool MapSalesPanel::Scroll(double dx, double dy)
 
 void MapSalesPanel::DrawKey() const
 {
-  const Sprite *back = SpriteSet::Get("ui/sales key");
-  SpriteShader::Draw(back, Screen::TopLeft() + Point(WIDTH + 10, 0) + .5 * Point(back->Width(), back->Height()));
+  const Sprite *back = SpriteSet::Get("interface/panel/key_sales");
+  SpriteShader::Draw(back, Screen::BottomLeft() + Point(WIDTH, 0) + .5 * Point(back->Width(), -back->Height()));
 
   Colour bright(.6f, .6f);
   Colour dim(.3f, .3f);
   const Font &font = FontSet::Get(18);
 
-  Point pos(Screen::Left() + 50. + WIDTH, Screen::Top() + 12.);
+  Point pos(Screen::Left() + 25. + WIDTH, Screen::Bottom() - 55.);
   Point textOff(10., -.5 * font.Height());
 
   static const double VALUE[] = {
@@ -224,7 +224,7 @@ void MapSalesPanel::DrawPanel() const
     Point(WIDTH, Screen::Height()), 
     back);
 
-  const Sprite *edgeSprite = SpriteSet::Get("ui/right edge");
+  const Sprite *edgeSprite = SpriteSet::Get("interface/panel/edge_right");
   if(edgeSprite->Height())
   {
     int steps = Screen::Height() / edgeSprite->Height();
@@ -244,8 +244,8 @@ void MapSalesPanel::DrawInfo() const
 {
   if(selected >= 0)
   {
-    const Sprite *left = SpriteSet::Get("ui/left edge");
-    const Sprite *bottom = SpriteSet::Get(compare >= 0 ? "ui/bottom edges" : "ui/bottom edge");
+    const Sprite *left = SpriteSet::Get("interface/panel/edge_left");
+    const Sprite *bottom = SpriteSet::Get("interface/panel/edge_bottom");
     const Sprite *box = SpriteSet::Get(compare >= 0 ? "ui/thumb boxes" : "ui/thumb box");
 
     const ItemInfoDisplay &selectedInfo = SelectedInfo();
@@ -258,7 +258,7 @@ void MapSalesPanel::DrawInfo() const
       width += box->Width() + compareInfo.PanelWidth();
     }
 
-    const Colour &back = *GameData::Colours().Get("map side panel background");
+    const Colour &back = *GameData::Colours().Get("map info panel background");
     Point size(width, height);
     Point topLeft(Screen::Right() - size.X(), Screen::Top());
     FillShader::Fill(topLeft + .5 * size, size, back);
@@ -270,7 +270,7 @@ void MapSalesPanel::DrawInfo() const
     // The top left corner of the bottom sprite should be 10 x units right
     // of the bottom left corner of the left edge sprite.
     Point bottomPos = leftPos + Point(
-      10. + .5 * (bottom->Width() - left->Width()),
+      .5 * (bottom->Width() - left->Width()),
       .5 * (left->Height() + bottom->Height()));
     SpriteShader::Draw(bottom, bottomPos);
 

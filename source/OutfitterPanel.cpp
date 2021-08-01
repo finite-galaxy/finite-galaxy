@@ -621,14 +621,12 @@ bool OutfitterPanel::ShouldHighlight(const Ship *ship)
 
 void OutfitterPanel::DrawKey()
 {
-  const Sprite *back = SpriteSet::Get("ui/outfitter key");
-  SpriteShader::Draw(back, Screen::BottomLeft() + .5 * Point(back->Width(), -back->Height()));
-
   const Font &font = FontSet::Get(18);
   Colour colour[2] = {*GameData::Colours().Get("medium"), *GameData::Colours().Get("bright")};
   const Sprite *box[2] = {SpriteSet::Get("interface/button/check"), SpriteSet::Get("interface/button/uncheck")};
 
-  Point pos = Screen::BottomLeft() + Point(10., -30.);
+  // 250 is the width of the shop panel, which displays the ship and fleet.
+  Point pos = Screen::TopRight() + Point(-180. - 250., 10.);
   Point off = Point(10., -.5 * font.Height());
   SpriteShader::Draw(box[showForSale], pos);
   font.Draw("Show outfits for sale", pos + off, colour[showForSale]);

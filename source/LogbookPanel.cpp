@@ -72,7 +72,7 @@ void LogbookPanel::Draw()
     Point(1., Screen::Height()),
     lineColour);
 
-  const Sprite *edgeSprite = SpriteSet::Get("ui/right edge");
+  const Sprite *edgeSprite = SpriteSet::Get("interface/panel/edge_right");
   if(edgeSprite->Height())
   {
     // If the screen is high enough, the edge sprite should repeat.
