@@ -19,13 +19,6 @@ namespace {
 
 
 
-CacheBase::CacheBase()
-  : stepCount(0), updateInterval(3600)
-{
-}
-
-
-
 void CacheBase::SetUpdateInterval(size_t newInterval)
 {
   updateInterval = newInterval;
@@ -69,4 +62,3 @@ void CacheBase::UnregisterCacheObject(CacheBase *cacheObject)
 {
   GetCacheObjectSet().erase(cacheObject);
 }
-

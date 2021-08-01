@@ -3,6 +3,7 @@
 #ifndef CACHE_H_
 #define CACHE_H_
 
+#include <cstddef>
 #include <functional>
 #include <list>
 #include <unordered_map>
@@ -13,18 +14,21 @@
 // This is the common timer class for the Cache class.
 class CacheBase {
 public:
-  CacheBase();
+  CacheBase() = default;
+  virtual ~CacheBase() = default;
 
   // Set an interval to change the generations.
   // An auto expired cache may recycle a value after changing 2 generations.
   // The newInterval's unit is a number of steps.
-  void SetUpdateInterval(size_t newInterval);
+  void SetUpdateInterval(std::size_t newInterval);
 
   // Notify to progress a frame time.
   // This function will call StepThis() for all instances of Cache.
   static void Step();
 
 protected:
+  CacheBase &operator=(CacheBase &a) noexcept = default;
+
   // Register an instance of CacheBase when constructing it.
   static void RegisterCacheObject(CacheBase *cacheObject);
   // Unregister an instance of CacheBase when destructing it.
@@ -36,8 +40,8 @@ private:
   // Notify to progress a generation.
   virtual void NextGeneration() = 0;
 
-  size_t stepCount;
-  size_t updateInterval;
+  std::size_t stepCount = 0;
+  std::size_t updateInterval = 3600;
 };
 
 
@@ -46,8 +50,7 @@ private:
 template<class T>
 class DoNothingAtRecycle {
 public:
-  void operator()(T& data) const
-  {}
+  void operator()(T& data) const {};
 };
 
 
@@ -63,7 +66,7 @@ template<class Key, class T, bool autoExpired = false, class Hash = std::hash<Ke
 class Cache : public CacheBase {
 public:
   Cache();
-  virtual ~Cache() noexcept;
+  virtual ~Cache();
   // Don't copy this instance.
   Cache(const Cache &a) = delete;
   Cache &operator=(const Cache &a) = delete;
@@ -95,12 +98,12 @@ private:
   // Cached data and information for control.
   struct Element {
     T data;
-    size_t useCount;
+    std::size_t useCount = 0;
     Key key;
 
-    Element();
+    Element() = default;
     Element(const Element &a) = default;
-    Element(const T &d, size_t c, const Key &k);
+    Element(const T &d, std::size_t c, const Key &k);
     Element &operator=(const Element &a) = default;
   };
 
@@ -136,7 +139,7 @@ Cache<Key, T, autoExpired, Hash, AtRecycle>::Cache()
 
 
 template<class Key, class T, bool autoExpired, class Hash, class AtRecycle>
-Cache<Key, T, autoExpired, Hash, AtRecycle>::~Cache() noexcept
+Cache<Key, T, autoExpired, Hash, AtRecycle>::~Cache()
 {
   Clear();
   UnregisterCacheObject(this);
@@ -160,6 +163,7 @@ Cache<Key, T, autoExpired, Hash, AtRecycle>
   if(this == &a)
     return *this;
   Clear();
+  CacheBase::operator=(a);
   const bool noExpired = a.expired == a.container.end();
   const bool noReadyToRecycle = a.readyToRecycle == a.container.end();
   container = std::move(a.container);
@@ -283,15 +287,7 @@ void Cache<Key, T, autoExpired, Hash, AtRecycle>::Clear()
 
 
 template<class Key, class T, bool autoExpired, class Hash, class AtRecycle>
-Cache<Key, T, autoExpired, Hash, AtRecycle>::Element::Element()
-  : data(), useCount(0), key()
-{
-}
-
-
-
-template<class Key, class T, bool autoExpired, class Hash, class AtRecycle>
-Cache<Key, T, autoExpired, Hash, AtRecycle>::Element::Element(const T &d, size_t c, const Key &k)
+Cache<Key, T, autoExpired, Hash, AtRecycle>::Element::Element(const T &d, std::size_t c, const Key &k)
   : data(d), useCount(c), key(k)
 {
 }
