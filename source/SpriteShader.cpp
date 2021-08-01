@@ -27,12 +27,12 @@ namespace {
 
   const vector<vector<GLint>> SWIZZLE = {
     // three different colours
-    {GL_RED,   GL_GREEN, GL_BLUE,  GL_ALPHA}, //  0: red + yellow (republic)
-    {GL_RED,   GL_BLUE,  GL_GREEN, GL_ALPHA}, //  1: red + magenta (deep)
-    {GL_GREEN, GL_RED,   GL_BLUE,  GL_ALPHA}, //  2: green + yellow (free worlds)
-    {GL_BLUE,  GL_RED,   GL_GREEN, GL_ALPHA}, //  3: green + cyan (militia)
-    {GL_GREEN, GL_BLUE,  GL_RED,   GL_ALPHA}, //  4: blue + magenta (syndicate)
-    {GL_BLUE,  GL_GREEN, GL_RED,   GL_ALPHA}, //  5: blue + cyan (merchant)
+    {GL_RED,   GL_GREEN, GL_BLUE,  GL_ALPHA}, //  0: red + yellow
+    {GL_RED,   GL_BLUE,  GL_GREEN, GL_ALPHA}, //  1: red + magenta
+    {GL_GREEN, GL_RED,   GL_BLUE,  GL_ALPHA}, //  2: green + yellow
+    {GL_BLUE,  GL_RED,   GL_GREEN, GL_ALPHA}, //  3: green + cyan
+    {GL_GREEN, GL_BLUE,  GL_RED,   GL_ALPHA}, //  4: blue + magenta
+    {GL_BLUE,  GL_GREEN, GL_RED,   GL_ALPHA}, //  5: blue + cyan
     // two red
     {GL_RED,   GL_RED,   GL_GREEN, GL_ALPHA}, //  6:
     {GL_RED,   GL_RED,   GL_BLUE,  GL_ALPHA}, //  7:
@@ -52,8 +52,8 @@ namespace {
     {GL_BLUE,  GL_BLUE,  GL_GREEN, GL_ALPHA}, // 19:
     {GL_BLUE,  GL_RED,   GL_BLUE,  GL_ALPHA}, // 20:
     {GL_BLUE,  GL_GREEN, GL_BLUE,  GL_ALPHA}, // 21:
-    {GL_RED,   GL_BLUE,  GL_BLUE,  GL_ALPHA}, // 22: (alpha)
-    {GL_GREEN, GL_BLUE,  GL_BLUE,  GL_ALPHA}, // 23: red and black (pirate)
+    {GL_RED,   GL_BLUE,  GL_BLUE,  GL_ALPHA}, // 22:
+    {GL_GREEN, GL_BLUE,  GL_BLUE,  GL_ALPHA}, // 23: red and black
     // three identical
     {GL_RED,   GL_RED,   GL_RED,   GL_ALPHA}, // 24:
     {GL_GREEN, GL_GREEN, GL_GREEN, GL_ALPHA}, // 25:

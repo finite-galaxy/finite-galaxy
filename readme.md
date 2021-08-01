@@ -189,7 +189,6 @@ Contributions are welcome; anyone can contribute; feel free to open issues or ma
 * De-hardcode hardpoint slots (currently a boolean is used), to allow for multiple, customizable hardpoint types (e.g. gun slots, missile bays, turret mounts).
 * Implementing the ideas listed [above](https://github.com/finite-galaxy/finite-galaxy#not-yet-implemented-ideas).
 * Other new mechanics that make the game more enjoyable.
-* Update code to C++17.
 
 **Art**:
 Because my Blender skills are non-existent, I could use help from people who are capable and willing to:
@@ -223,13 +222,16 @@ If you are posting a pull request, please:
 * Do not combine multiple unrelated changes into a single pull.
 * Check the diff and make sure the pull request does not contain unintended changes.
 * If proposing a major pull request, start by posting an issue and discussing the best way to implement it. Often the first strategy that occurs to you will not be the cleanest or most effective way to implement a new feature.
+* `audio/`:
+  * file names are lower case and use underscores instead of spaces
+  * insert yourself in the `copyright.txt` file
 * `code/`:
   * follow the [coding standard](http://endless-sky.github.io/styleguide/styleguide.xml).
-  * C++14
+  * C++17
   * do not use tabs; use two spaces instead
   * make numbers with many digits easier to read for humans by inserting `'`
-    * (decimal numbers) at intervals of three digits if there are more than four in a row
-    * (hexadecimal numbers) at intervals of four digits if there are more than six in a row
+    * (decimal numbers) at intervals of three digits if there are more than four in a row (e.g. `100'000`)
+    * (hexadecimal numbers) at intervals of four digits if there are more than six in a row (e.g. `FFFF'FFFF`)
   * use Oxford English
 * `data/`:
   * do not use tabs; use two spaces instead
@@ -263,9 +265,6 @@ If you are posting a pull request, please:
     * for turrets, also create hardpoints
   * insert yourself in the copyright.txt file
   * include all assets (Blender, GIMP, other files) in the opening post
-* `sounds/`:
-  * file names are lower case and use underscores instead of spaces
-  * insert yourself in the `copyright.txt` file
 
 [(return to top)](https://github.com/finite-galaxy/finite-galaxy#finite-galaxy)
 

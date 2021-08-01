@@ -26,7 +26,7 @@ namespace {
   string resources;
   string config;
 
-  string data;
+  string contents;
   string images;
   string sounds;
   string saves;
@@ -128,7 +128,7 @@ void Files::Init(const char * const *argv)
       throw runtime_error("Unable to find the resource directories!");
     resources.erase(pos + 1);
   }
-  data = resources + "data/";
+  contents = resources + "data/";
   images = resources + "images/";
   sounds = resources + "audio/";
 
@@ -168,7 +168,7 @@ void Files::Init(const char * const *argv)
   }
 
   // Check that all the directories exist.
-  if(!Exists(data) || !Exists(images) || !Exists(sounds))
+  if(!Exists(contents) || !Exists(images) || !Exists(sounds))
     throw runtime_error("Unable to find the resource directories!");
   if(!Exists(saves))
     throw runtime_error("Unable to create config directory!");
@@ -190,9 +190,9 @@ const string &Files::Config()
 
 
 
-const string &Files::Data()
+const string &Files::Contents()
 {
-  return data;
+  return contents;
 }
 
 

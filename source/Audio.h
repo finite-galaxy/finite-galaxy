@@ -31,7 +31,7 @@ public:
   static void SetVolume(double level);
 
   // Get a pointer to the named sound. The name is the path relative to the
-  // "sound/" folder, and without ~ if it's on the end, or the extension.
+  // "audio/" folder, and without ~ if it's on the end, or the extension.
   // Do not call this function until Progress() is 100%.
   static const Sound *Get(const std::string &name);
 
