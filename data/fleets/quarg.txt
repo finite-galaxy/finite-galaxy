@@ -1,0 +1,40 @@
+# "Quarg Large"
+# "Quarg Small"
+
+
+
+fleet "Quarg Large"
+  government "Quarg"
+  names "quarg"
+  cargo 1
+  personality
+    forbearing opportunistic
+  # total: 7
+  variant 2
+    "Skylark" 2
+    "Wardragon"
+  variant 2
+    "Wardragon" 2
+    "Skylark"
+  variant 1
+    "Skylark" 2
+    "Wardragon" 2
+  variant 1
+    "Wardragon" 3
+    "Skylark"
+  variant 1
+    "Skylark" 3
+    "Wardragon"
+
+fleet "Quarg Small"
+  government "Quarg"
+  names "quarg"
+  cargo 3
+  personality
+    forbearing opportunistic
+  # total: 2
+  variant 1
+    "Skylark"
+  variant 1
+    "Wardragon"
+

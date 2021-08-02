@@ -1,0 +1,51 @@
+# "Pug Large"
+# "Pug Small"
+ 
+
+
+fleet "Pug Large"
+  government "Pug"
+  names "pug"
+  cargo 1
+  personality
+    heroic
+  # total: 11
+  variant 1
+    "Enfolta"
+    "Zibruka" 2
+  variant 1
+    "Enfolta" 2
+  variant 1
+    "Zibruka" 5
+  variant 2
+    "Maboro"
+    "Zibruka" 2
+  variant 3
+    "Maboro"
+    "Enfolta"
+    "Zibruka"
+  variant 2
+    "Maboro"
+    "Enfolta" 2
+  variant 1
+    "Maboro"
+    "Enfolta"
+    "Zibruka" 2
+
+fleet "Pug Small"
+  government "Pug"
+  names "pug"
+  cargo 1
+  personality
+    heroic
+  # total: 6
+  variant 1
+    "Zibruka"
+  variant 2
+    "Zibruka" 2
+  variant 2
+    "Enfolta"
+  variant 1
+    "Enfolta"
+    "Zibruka"
+

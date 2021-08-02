@@ -1,0 +1,133 @@
+# "Militia Large"
+# "Militia Small"
+# "Megaparsec Large"
+# "Megaparsec Small"
+# "Tarazed Large"
+# "Tarazed Small"
+# "Vortex Large"
+# "Vortex Small"
+
+
+
+fleet "Militia Large"
+  government "Militia"
+  names "militia"
+  cargo 1
+  personality
+    heroic frugal
+    confusion 20
+  # total: 90
+  variant 30
+    "Firebird"
+  variant 20
+    "Osprey"
+  variant 40
+    "Raven"
+
+fleet "Militia Small"
+  government "Militia"
+  names "militia"
+  cargo 1
+  personality
+    heroic frugal
+    confusion 20
+  # total: 100
+  variant 30
+    "Falcon"
+  variant 20
+    "Rainmaker"
+  variant 30
+    "Harpy" 2
+  variant 20
+    "Harpy" 3
+
+
+fleet "Megaparsec Large"
+  government "Militia"
+  names "militia"
+  cargo 0
+  personality
+    heroic opportunistic
+  # total: 10
+  variant 5
+    "Splinter"
+  variant 3
+    "Splinter" 2
+  variant 2
+    "Splinter" 3
+
+fleet "Megaparsec Small"
+  government "Militia"
+  names "militia"
+  cargo 0
+  personality
+    heroic opportunistic
+  # total: 10
+  variant 5
+    "Quicksilver"
+  variant 3
+    "Quicksilver" 2
+  variant 2
+    "Quicksilver" 3
+
+
+fleet "Tarazed Large"
+  government "Militia"
+  names "tarazed"
+  cargo 0
+  personality
+    heroic opportunistic
+  # total: 10
+  variant 5
+    "Osprey"
+  variant 3
+    "Osprey" 2
+  variant 2
+    "Osprey" 3
+
+fleet "Tarazed Small"
+  government "Militia"
+  names "militia"
+  cargo 0
+  personality
+    heroic opportunistic
+  # total: 10
+  variant 5
+    "Falcon"
+  variant 3
+    "Falcon" 2
+  variant 2
+    "Falcon" 3
+
+
+fleet "Vortex Large"
+  government "Militia"
+  names "militia"
+  cargo 0
+  personality
+    heroic opportunistic
+  # total: 10
+  variant 5
+    "Aerie"
+    "Dagger" 2
+  variant 3
+    "Aerie" 2
+    "Dagger" 4
+  variant 2
+    "Aerie" 3
+    "Dagger" 6
+
+fleet "Vortex Small"
+  government "Militia"
+  names "militia"
+  cargo 0
+  personality
+    heroic opportunistic
+  # total: 10
+  variant 5
+    "Fury"
+  variant 3
+    "Fury" 2
+  variant 2
+    "Fury" 3 
+

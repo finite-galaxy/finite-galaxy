@@ -1,0 +1,51 @@
+# "Oathkeeper Large"
+# "Oathkeeper Small"
+
+
+
+fleet "Oathkeeper Large"
+  government "Navy (Oathkeeper)"
+  names "republic"
+  fighters "republic fighter"
+  cargo 0
+  personality
+    heroic opportunistic
+  # total: 15
+  variant 3
+    "Venus"
+    "Mark II Drone" 4
+  variant 1
+    "Venus"
+    "Mark II Drone" 4
+    "Mars"
+  variant 1
+    "Venus"
+    "Mark II Drone" 4
+    "Mercury"
+  variant 1
+    "Venus"
+    "Mark II Drone" 4
+    "Mercury" 2
+  variant 5
+    "Mars" 2
+  variant 3
+    "Mars"
+    "Mercury" 2
+  variant 1
+    "Mars"
+    "Mercury" 3
+
+fleet "Oathkeeper Small"
+  government "Navy (Oathkeeper)"
+  names "republic"
+  cargo 0
+  personality
+    heroic opportunistic
+  # total: 15
+  variant 5
+    "Mars"
+  variant 6
+    "Mercury" 2
+  variant 4
+    "Mercury" 3 
+

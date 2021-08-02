@@ -1,0 +1,51 @@
+# "Heliarch"
+# "Heliarch Convoy" 
+
+
+
+fleet "Heliarch"
+  government "Heliarch"
+  names "heliarch"
+  cargo 1
+  personality
+    heroic opportunistic
+  # total: 84
+  variant 32
+    "Neutralizer"
+  variant 16
+    "Interdictor"
+  variant 8
+    "Punisher"
+  variant 6
+    "Neutralizer (Bombardment)"
+  variant 5
+    "Neutralizer (Steering)"
+  variant 5
+    "Neutralizer (Thruster)"
+  variant 8
+    "Interdictor (Bombardment)"
+  variant 1
+    "Punisher (Interdicting)"
+  variant 1
+    "Punisher (Nimble)"
+  variant 1
+    "Punisher (Steering)"
+  variant 1
+    "Punisher (Thruster)"
+
+
+fleet "Heliarch Convoy"
+  government "Heliarch"
+  names "heliarch"
+  names "saryd"
+  cargo 3
+  personality
+    timid opportunistic
+  # total: 1
+  variant 1
+    "Hulk" 3
+    "Sojourner" 3
+    "Spire" 3
+    "Interdictor" 3
+    "Neutralizer" 6
+

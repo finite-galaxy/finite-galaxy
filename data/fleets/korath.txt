@@ -1,0 +1,32 @@
+# "Korath Home"
+# "Korath Raid"
+
+
+
+fleet "Korath Home"
+  government "Korath"
+  names "korath"
+  fighters "korath"
+  cargo 3
+  personality
+    timid opportunistic
+  # total: 36
+  variant 12
+    "World-Ship A"
+  variant 12
+    "World-Ship B"
+  variant 12
+    "World-Ship C"
+
+fleet "Korath Raid"
+  government "Korath"
+  names "korath"
+  fighters "korath"
+  cargo 1
+  personality
+    disables plunders opportunistic harvests
+  # total: 3
+  variant 3
+    "Raider"
+    "Chaser" 2
+

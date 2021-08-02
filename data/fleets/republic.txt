@@ -1,0 +1,163 @@
+# "Republic Large"
+# "Republic Small"
+# "Gunboat Only"
+# "Jupiter"
+# "Navy Cargo"
+# "Navy Patrol"
+# "Navy Surveillance" 
+
+
+
+fleet "Republic Large"
+  government "Republic"
+  names "republic"
+  fighters "republic fighter"
+  cargo 0
+  personality
+    heroic opportunistic
+  # total: 25
+  variant 2
+    "Saturn"
+    "Foxhound" 4
+    "Mark II Drone" 6
+  variant 1
+    "Saturn"
+    "Foxhound" 4
+    "Mark II Drone" 6
+    "Mars"
+  variant 1
+    "Saturn"
+    "Foxhound" 4
+    "Mark II Drone" 6
+    "Mercury"
+  variant 1
+    "Saturn"
+    "Foxhound" 4
+    "Mark II Drone" 6
+    "Mercury" 2
+  variant 3
+    "Venus"
+    "Mark II Drone" 4
+  variant 1
+    "Venus"
+    "Mark II Drone" 4
+    "Mars"
+  variant 2
+    "Venus"
+    "Mark II Drone" 4
+    "Mars" 2
+  variant 1
+    "Venus"
+    "Mark II Drone" 4
+    "Mars"
+    "Mercury"
+  variant 1
+    "Venus"
+    "Mark II Drone" 4
+    "Mars"
+    "Mercury" 2
+  variant 1
+    "Venus"
+    "Mark II Drone" 4
+    "Mercury"
+  variant 1
+    "Venus"
+    "Mark II Drone" 4
+    "Mercury" 2
+  variant 1
+    "Venus"
+    "Mark II Drone" 4
+    "Mercury" 3
+  variant 5
+    "Mars" 2
+  variant 3
+    "Mars"
+    "Mercury" 2
+  variant 1
+    "Mars"
+    "Mercury" 3
+
+fleet "Republic Small"
+  government "Republic"
+  names "republic"
+  cargo 0
+  personality
+    heroic opportunistic
+  # total: 25
+  variant 5
+    "Mars"
+  variant 10
+    "Mercury"
+  variant 6
+    "Mercury" 2
+  variant 4
+    "Mercury" 3
+
+
+fleet "Gunboat Only"
+  government "Republic"
+  names "republic"
+  cargo 0
+  personality
+    heroic
+  # total: 1
+  variant 1
+    "Mercury (Mark II)"
+
+
+fleet "Jupiter"
+  government "Republic"
+  names "republic"
+  fighters "republic fighter"
+  cargo 0
+  personality
+    heroic opportunistic
+  # total: 1
+  variant 1
+    "Jupiter"
+    "Foxhound" 12
+    "Mars" 4
+
+
+fleet "Navy Cargo"
+  government "Republic"
+  names "republic"
+  fighters "republic fighter"
+  cargo 5
+  personality
+    opportunistic
+  # total: 1
+  variant 1
+    "Behemoth (Navy)" 5
+    "Mars"
+    "Mercury" 2
+
+
+fleet "Navy Patrol"
+  government "Republic"
+  names "republic"
+  fighters "republic fighter"
+  cargo 0
+  personality
+    heroic opportunistic
+  # total: 1
+  variant 1
+    "Venus"
+    "Mark II Drone" 4
+    "Mars" 2
+
+
+fleet "Navy Surveillance"
+  government "Republic"
+  names "republic"
+  fighters "republic fighter"
+  cargo 0
+  personality
+    surveillance opportunistic
+  # total: 4
+  variant 1
+    "Venus (Surveillance)"
+    "Watch Dog" 4
+  variant 3
+    "Mercury" 2
+

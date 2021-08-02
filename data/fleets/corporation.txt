@@ -1,0 +1,52 @@
+# "Corporation Large"
+# "Corporation Small"
+# "Corporation Extremists"
+
+
+
+fleet "Corporation Large"
+  government "Corporation"
+  names "corporation capital"
+  fighters "corporation fighter"
+  cargo 2
+  personality
+    heroic
+  # total: 5
+  variant 5
+    "Protector"
+
+fleet "Corporation Small"
+  government "Corporation"
+  names "corporation small"
+  cargo 2
+  personality
+    heroic
+  # total: 5
+  variant 2
+    "Quicksilver (Atomic, Patrol)" 3
+  variant 3
+    "Fury (Patrol)" 5
+
+
+
+# Corporation Extremists
+fleet "Corporation Extremists"
+  government "Corporation (Extremist)"
+  names "corporation capital"
+  fighters "corporation fighter"
+  cargo 0
+  personality
+    heroic
+  # total: 5
+  variant 1
+    "Blade"
+    "Quicksilver (Atomic)" 2
+  variant 2
+    "Protector"
+    "Quicksilver (Atomic)" 2
+  variant 1
+    "Bastion"
+    "Quicksilver (Atomic)" 2
+  variant 1
+    "Quicksilver (Atomic)" 5 
+

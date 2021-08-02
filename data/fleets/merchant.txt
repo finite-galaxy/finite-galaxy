@@ -1,0 +1,948 @@
+# "Merchant Miners Deep"
+# "Merchant Miners East"
+# "Merchant Miners North"
+# "Merchant Miners Rim"
+# "Merchant Miners South"
+# "Merchant Miners West"
+# "Merchants Deep Large"
+# "Merchants Deep Small"
+# "Merchants East Large"
+# "Merchants East Small"
+# "Merchants Hai Large"
+# "Merchants Hai Small"
+# "Merchants North Large"
+# "Merchants North Small"
+# "Merchants Paradise Large"
+# "Merchants Paradise Small"
+# "Merchants South Large"
+# "Merchants South Small"
+# "Merchants West Large"
+# "Merchants West Small"
+
+
+
+fleet "Merchant Miners Deep"
+  government "Merchant"
+  names "civilian"
+  cargo 0
+  personality
+    confusion 20
+    timid frugal mining harvests
+  # total: 1
+  variant 1
+    "Bounder (Miner)"
+  variant 2
+    "Wasp (Miner)"
+
+fleet "Merchant Miners East"
+  government "Merchant"
+  names "civilian"
+  cargo 0
+  personality
+    confusion 20
+    timid frugal mining harvests
+  # total: 6
+  variant 1
+    "Star Freighter (Miner)"
+  variant 2
+    "Wasp (Miner)"
+
+fleet "Merchant Miners North"
+  government "Merchant"
+  names "civilian"
+  cargo 0
+  personality
+    confusion 20
+    timid frugal mining harvests
+  # total: 6
+  variant 2
+    "Fury (Miner)"
+  variant 3
+    "Star Barge (Miner)"
+  variant 1
+    "Star Freighter (Miner)"
+
+fleet "Merchant Miners Rim"
+  government "Merchant"
+  names "civilian"
+  cargo 0
+  personality
+    confusion 20
+    timid frugal mining harvests
+  # total: 6
+  variant 1
+    "Hauler III (Miner)"
+  variant 2
+    "Hauler II (Miner)"
+  variant 3
+    "Hauler I (Miner)"
+
+fleet "Merchant Miners South"
+  government "Merchant"
+  names "civilian"
+  cargo 0
+  personality
+    confusion 20
+    timid frugal mining harvests
+  # total: 10
+  variant 1
+    "Hauler III (Miner)"
+  variant 2
+    "Hauler II (Miner)"
+  variant 3
+    "Hauler I (Miner)"
+  variant 4
+    "Falcon (Miner)"
+
+fleet "Merchant Miners West"
+  government "Merchant"
+  names "civilian"
+  cargo 0
+  personality
+    confusion 20
+    timid frugal mining harvests
+  # total: 10
+  variant 3
+    "Scout (Miner)"
+  variant 2
+    "Star Barge (Miner)"
+  variant 1
+    "Star Freighter (Miner)"
+
+
+fleet "Merchants Deep Large"
+  government "Merchant"
+  names "civilian"
+  cargo 4
+  personality
+    confusion 20
+    timid frugal appeasing
+  # total: 100
+  variant 100
+    "Centipede"
+
+fleet "Merchants Deep Small"
+  government "Merchant"
+  names "civilian"
+  cargo 2
+  personality
+    confusion 30
+    timid frugal appeasing
+  # total: 100
+  variant 30
+    "Arrow"
+  variant 60
+    "Bounder"
+  variant 10
+    "Wasp"
+
+
+fleet "Merchants East Large"
+  government "Merchant"
+  names "civilian"
+  cargo 4
+  personality
+    confusion 30
+    timid frugal appeasing
+  # total: 100
+  variant 6
+    "Argosy" 2
+  variant 4
+    "Argosy" 3
+  variant 6
+    "Bastion"
+  variant 2
+    "Bastion" 2
+  variant 3
+    "Bastion"
+    "Star Freighter"
+  variant 5
+    "Bastion"
+    "Star Freighter" 2
+  variant 4
+    "Bastion"
+    "Star Freighter" 3
+  variant 10
+    "Behemoth"
+  variant 10
+    "Centipede"
+  variant 5
+    "Centipede"
+    "Fury"
+  variant 5
+    "Centipede"
+    "Fury" 2
+  variant 10
+    "Centipede"
+    "Rainmaker"
+  variant 5
+    "Centipede"
+    "Rainmaker" 2
+  variant 2
+    "Splinter"
+    "Star Freighter" 2
+  variant 3
+    "Splinter"
+    "Star Freighter" 3
+  variant 3
+    "Splinter"
+    "Star Freighter" 4
+  variant 2
+    "Splinter"
+    "Star Freighter" 5
+  variant 10
+    "Star Freighter" 3
+  variant 5
+    "Thunderbolt"
+
+fleet "Merchants East Small"
+  government "Merchant"
+  names "civilian"
+  cargo 3
+  personality
+    confusion 40
+    timid frugal appeasing
+  # total 100
+  variant 10
+    "Bounder"
+  variant 8
+    "Clipper"
+  variant 2
+    "Clipper (Speedy)"
+  variant 10
+    "Heavy Shuttle"
+  variant 30
+    "Light Shuttle"
+  variant 5
+    "Splinter"
+  variant 20
+    "Star Barge"
+  variant 12
+    "Star Freighter"
+  variant 3
+    "Star Freighter (Fancy)"
+
+
+fleet "Merchants Hai Large"
+  government "Merchant"
+  names "civilian"
+  cargo 4
+  personality
+    confusion 30
+    timid frugal appeasing
+  # total: 80
+  variant 5
+    "Behemoth"
+  variant 16
+    "Centipede"
+  variant 3
+    "Hauler I"
+  variant 3
+    "Hauler II"
+  variant 3
+    "Hauler III"
+  variant 4
+    "Mule"
+  variant 4
+    "Mule"
+    "Foxhound"
+  variant 1
+    "Mule (Heavy)"
+  variant 1
+    "Mule (Heavy)"
+    "Foxhound"
+  variant 4
+    "Protector"
+  variant 1
+    "Protector (Laser)"
+  variant 5
+    "Star Freighter" 2
+  variant 3
+    "Star Freighter"
+    "Star Freighter (Fancy)"
+  variant 2
+    "Star Freighter (Fancy)" 2
+  variant 4
+    "Star Freighter" 3
+  variant 3
+    "Star Freighter" 2
+    "Star Freighter (Fancy)"
+  variant 2
+    "Star Freighter"
+    "Star Freighter (Fancy)" 2
+  variant 1
+    "Star Freighter (Fancy)" 3
+  variant 10
+    "Star Queen"
+  variant 5
+    "Thunderbolt"
+
+fleet "Merchants Hai Small"
+  government "Merchant"
+  names "civilian"
+  cargo 3
+  personality
+    confusion 40
+    timid frugal appeasing
+  # total: 100
+  variant 6
+    "Argosy"
+  variant 2
+    "Argosy (Heavy Laser)"
+  variant 2
+    "Argosy (Laser)"
+  variant 8
+    "Flivver"
+  variant 2
+    "Flivver (Hai)"
+  variant 4
+    "Fury"
+  variant 1
+    "Fury (Gatling)"
+  variant 5
+    "Heavy Shuttle"
+  variant 15
+    "Light Shuttle"
+  variant 5
+    "Quicksilver"
+  variant 4
+    "Scout"
+  variant 2
+    "Scout (Afterburner)"
+  variant 2
+    "Scout (Hai)"
+  variant 2
+    "Scout (Speedy)"
+  variant 20
+    "Star Barge"
+  variant 15
+    "Star Freighter"
+  variant 5
+    "Star Freighter (Fancy)"
+
+
+fleet "Merchants North Large"
+  government "Merchant"
+  names "civilian"
+  cargo 4
+  personality
+    confusion 30
+    timid frugal appeasing
+  # total: 100
+  variant 5
+    "Argosy"
+  variant 2
+    "Argosy"
+    "Star Freighter"
+  variant 5
+    "Argosy"
+    "Star Freighter" 2
+  variant 3
+    "Argosy"
+    "Star Freighter" 3
+  variant 3
+    "Argosy" 2
+  variant 1
+    "Argosy" 2
+    "Star Freighter"
+  variant 1
+    "Argosy" 2
+    "Star Freighter" 2
+  variant 1
+    "Argosy" 2
+    "Star Freighter" 3
+  variant 2
+    "Argosy" 3
+  variant 1
+    "Argosy" 3
+    "Star Freighter"
+  variant 1
+    "Argosy" 3
+    "Star Freighter" 2
+  variant 10
+    "Centipede"
+  variant 2
+    "Centipede"
+    "Manta"
+  variant 4
+    "Centipede"
+    "Quicksilver"
+  variant 4
+    "Centipede"
+    "Quicksilver" 2
+  variant 1
+    "Centipede"
+    "Splinter"
+  variant 1
+    "Centipede"
+    "Fury"
+  variant 1
+    "Centipede"
+    "Fury"
+    "Fury (Gatling)"
+  variant 1
+    "Centipede"
+    "Fury"
+    "Fury (Gatling)" 2
+  variant 1
+    "Centipede"
+    "Fury" 2
+  variant 1
+    "Centipede"
+    "Fury" 2
+    "Fury (Gatling)"
+  variant 1
+    "Centipede"
+    "Fury" 3
+  variant 1
+    "Centipede"
+    "Fury (Gatling)"
+  variant 1
+    "Centipede"
+    "Fury (Gatling)" 2
+  variant 1
+    "Centipede"
+    "Fury (Gatling)" 3
+  variant 2
+    "Manta"
+    "Star Freighter"
+  variant 5
+    "Manta"
+    "Star Freighter" 2
+  variant 3
+    "Manta"
+    "Star Freighter" 3
+  variant 3
+    "Protector"
+    "Star Freighter" 2
+  variant 5
+    "Protector"
+    "Star Freighter" 3
+  variant 3
+    "Protector"
+    "Star Freighter" 4
+  variant 1
+    "Protector (Laser)"
+    "Star Freighter" 2
+  variant 2
+    "Protector (Laser)"
+    "Star Freighter" 3
+  variant 1
+    "Protector (Laser)"
+    "Star Freighter" 4
+  variant 2
+    "Splinter"
+    "Star Freighter"
+  variant 5
+    "Splinter"
+    "Star Freighter" 2
+  variant 3
+    "Splinter"
+    "Star Freighter" 3
+  variant 2
+    "Star Freighter" 2
+  variant 5
+    "Star Freighter" 3
+  variant 3
+    "Star Freighter" 4
+
+fleet "Merchants North Small"
+  government "Merchant"
+  names "civilian"
+  cargo 3
+  personality
+    confusion 40
+    timid frugal appeasing
+  # total: 100
+  variant 4
+    "Fury"
+  variant 2
+    "Fury" 2
+  variant 2
+    "Fury" 3
+  variant 2
+    "Fury"
+    "Star Barge"
+  variant 4
+    "Fury"
+    "Star Barge" 2
+  variant 2
+    "Fury" 2
+    "Star Barge" 2
+  variant 2
+    "Fury"
+    "Star Barge" 3
+  variant 2
+    "Fury" 2
+    "Star Barge" 3
+  variant 2
+    "Fury (Gatling)"
+  variant 1
+    "Fury (Gatling)" 2
+  variant 1
+    "Fury (Gatling)" 3
+  variant 1
+    "Fury (Gatling)"
+    "Star Barge"
+  variant 2
+    "Fury (Gatling)"
+    "Star Barge" 2
+  variant 1
+    "Fury (Gatling)" 2
+    "Star Barge" 2
+  variant 1
+    "Fury (Gatling)"
+    "Star Barge" 3
+  variant 1
+    "Fury (Gatling)" 2
+    "Star Barge" 3
+  variant 2
+    "Quicksilver"
+  variant 2
+    "Quicksilver"
+    "Star Barge"
+  variant 3
+    "Quicksilver"
+    "Star Barge" 2
+  variant 2
+    "Quicksilver"
+    "Star Barge" 3
+  variant 1
+    "Quicksilver"
+    "Star Barge" 4
+  variant 7
+    "Scout"
+  variant 1
+    "Scout (Afterburner)"
+  variant 1
+    "Scout (Javelin)"
+  variant 1
+    "Scout (Speedy)"
+  variant 15
+    "Star Barge"
+  variant 4
+    "Star Barge" 2
+  variant 3
+    "Star Barge" 3
+  variant 2
+    "Star Barge" 4
+  variant 1
+    "Star Barge" 5
+  variant 20
+    "Star Freighter"
+  variant 5
+    "Star Freighter (Fancy)"
+
+
+fleet "Merchants Paradise Large"
+  government "Merchant"
+  names "civilian"
+  cargo 2
+  personality
+    confusion 50
+    timid frugal appeasing
+  # total: 100
+  variant 100
+    "Star Queen"
+
+fleet "Merchants Paradise Small"
+  government "Merchant"
+  names "civilian"
+  cargo 2
+  personality
+    confusion 50
+    timid frugal appeasing
+  # total: 100
+  variant 20
+    "Arrow"
+  variant 10
+    "Bounder"
+  variant 8
+    "Clipper"
+  variant 2
+    "Clipper (Speedy)"
+  variant 30
+    "Flivver"
+  variant 8
+    "Flivver" 2
+  variant 6
+    "Flivver" 3
+  variant 4
+    "Flivver" 4
+  variant 2
+    "Flivver" 5
+  variant 5
+    "Heavy Shuttle"
+  variant 15
+    "Light Shuttle"
+
+
+fleet "Merchants South Large"
+  government "Merchant"
+  names "civilian"
+  cargo 4
+  personality
+    confusion 30
+    timid frugal appeasing
+  # total: 100
+  variant 3
+    "Bastion"
+  variant 1
+    "Bastion" 2
+  variant 2
+    "Bastion"
+    "Star Freighter"
+  variant 2
+    "Bastion"
+    "Star Freighter" 2
+  variant 2
+    "Bastion"
+    "Star Freighter" 3
+  variant 5
+    "Centipede"
+  variant 5
+    "Centipede"
+    "Raven"
+  variant 8
+    "Splinter"
+  variant 4
+    "Splinter" 2
+  variant 2
+    "Splinter" 3
+  variant 1
+    "Splinter"
+    "Raven"
+  variant 2
+    "Hauler I"
+    "Hauler II"
+    "Hauler III"
+  variant 1
+    "Hauler I" 3
+  variant 1
+    "Hauler II" 3
+  variant 1
+    "Hauler III" 3
+  variant 1
+    "Hauler I"
+    "Hauler II" 2
+  variant 1
+    "Hauler I" 2
+    "Hauler II"
+  variant 1
+    "Hauler I"
+    "Hauler III" 2
+  variant 1
+    "Hauler I" 2
+    "Hauler III"
+  variant 1
+    "Hauler II"
+    "Hauler III" 2
+  variant 1
+    "Hauler II" 2
+    "Hauler III"
+  variant 6
+    "Hauler I" 2
+  variant 4
+    "Hauler II" 2
+  variant 2
+    "Hauler III" 2
+  variant 5
+    "Hauler I"
+    "Hauler II"
+  variant 4
+    "Hauler I"
+    "Hauler III"
+  variant 3
+    "Hauler II"
+    "Hauler III"
+  variant 3
+    "Osprey"
+    "Star Freighter" 2
+  variant 4
+    "Osprey"
+    "Star Freighter" 3
+  variant 3
+    "Osprey"
+    "Star Freighter" 4
+  variant 3
+    "Raven"
+    "Star Freighter"
+  variant 5
+    "Raven"
+    "Star Freighter" 2
+  variant 4
+    "Raven"
+    "Star Freighter" 3
+  variant 1
+    "Raven (Particle)"
+    "Star Freighter"
+  variant 1
+    "Raven (Particle)"
+    "Star Freighter" 2
+  variant 1
+    "Raven (Particle)"
+    "Star Freighter" 3
+  variant 3
+    "Star Freighter" 2
+  variant 2
+    "Star Freighter" 3
+
+fleet "Merchants South Small"
+  government "Merchant"
+  names "civilian"
+  cargo 3
+  personality
+    confusion 40
+    timid frugal appeasing
+  # total: 100
+  variant 12
+    "Blackbird"
+  variant 8
+    "Blackbird (Antimissile)"
+  variant 8
+    "Clipper"
+  variant 2
+    "Clipper (Speedy)"
+  variant 5
+    "Harpy"
+    "Star Barge"
+  variant 10
+    "Harpy"
+    "Star Barge" 2
+  variant 1
+    "Harpy"
+    "Star Barge" 3
+  variant 7
+    "Hauler I"
+  variant 5
+    "Hauler II"
+  variant 3
+    "Hauler III"
+  variant 3
+    "Falcon"
+    "Star Barge"
+  variant 3
+    "Falcon"
+    "Star Barge" 2
+  variant 1
+    "Falcon (Laser)"
+    "Star Barge"
+  variant 1
+    "Falcon (Laser)"
+    "Star Barge" 2
+  variant 5
+    "Heavy Shuttle"
+  variant 15
+    "Light Shuttle"
+  variant 1
+    "Star Barge"
+  variant 8
+    "Star Freighter"
+  variant 2
+    "Star Freighter (Fancy)"
+
+
+fleet "Merchants West Large"
+  government "Merchant"
+  names "civilian"
+  cargo 4
+  personality
+    confusion 20
+    timid frugal appeasing
+  # total: 100
+  variant 6
+    "Aerie"
+  variant 2
+    "Aerie"
+    "Centipede"
+  variant 8
+    "Aerie"
+    "Star Freighter"
+  variant 4
+    "Aerie"
+    "Star Freighter" 2
+  variant 1
+    "Bactrian"
+    "Foxhound" 3
+  variant 3
+    "Bastion"
+  variant 1
+    "Bastion" 2
+  variant 2
+    "Bastion"
+    "Star Freighter"
+  variant 2
+    "Bastion"
+    "Star Freighter" 2
+  variant 2
+    "Bastion"
+    "Star Freighter" 3
+  variant 5
+    "Behemoth"
+  variant 10
+    "Centipede"
+  variant 1
+    "Centipede"
+    "Bastion"
+  variant 2
+    "Centipede"
+    "Clipper"
+  variant 1
+    "Centipede"
+    "Clipper" 2
+  variant 1
+    "Centipede"
+    "Manta"
+  variant 3
+    "Centipede"
+    "Quicksilver"
+  variant 3
+    "Centipede"
+    "Quicksilver" 2
+  variant 1
+    "Centipede"
+    "Splinter"
+  variant 1
+    "Centipede"
+    "Fury"
+  variant 1
+    "Centipede"
+    "Fury" 2
+  variant 1
+    "Centipede"
+    "Fury" 3
+  variant 1
+    "Centipede"
+    "Fury" 4
+  variant 1
+    "Centipede"
+    "Fury" 5
+  variant 15
+    "Mule"
+    "Foxhound"
+  variant 2
+    "Splinter"
+  variant 3
+    "Splinter"
+    "Star Freighter"
+  variant 4
+    "Splinter"
+    "Star Freighter" 2
+  variant 4
+    "Star Freighter" 2
+  variant 5
+    "Star Freighter" 3
+  variant 3
+    "Star Freighter" 4
+  variant 1
+    "Star Freighter" 5
+
+fleet "Merchants West Small"
+  government "Merchant"
+  names "civilian"
+  cargo 3
+  personality
+    confusion 30
+    timid frugal appeasing
+  # total: 100
+  variant 4
+    "Clipper"
+  variant 1
+    "Clipper (Speedy)"
+  variant 3
+    "Heavy Shuttle"
+  variant 2
+    "Heavy Shuttle" 2
+  variant 1
+    "Heavy Shuttle" 3
+  variant 1
+    "Heavy Shuttle"
+    "Light Shuttle"
+  variant 1
+    "Heavy Shuttle" 2
+    "Light Shuttle"
+  variant 1
+    "Heavy Shuttle"
+    "Light Shuttle" 2
+  variant 1
+    "Heavy Shuttle"
+    "Light Shuttle"
+    "Wasp" 2
+  variant 2
+    "Heavy Shuttle"
+    "Wasp"
+  variant 1
+    "Heavy Shuttle" 2
+    "Wasp"
+  variant 1
+    "Heavy Shuttle"
+    "Wasp" 2
+  variant 12
+    "Light Shuttle"
+  variant 6
+    "Light Shuttle" 2
+  variant 3
+    "Light Shuttle" 3
+  variant 6
+    "Light Shuttle"
+    "Wasp"
+  variant 3
+    "Light Shuttle" 2
+    "Wasp"
+  variant 3
+    "Light Shuttle"
+    "Wasp" 2
+  variant 4
+    "Quicksilver"
+  variant 3
+    "Scout"
+  variant 1
+    "Scout (Afterburner)"
+  variant 1
+    "Scout (Javelin)"
+  variant 1
+    "Scout (Speedy)"
+  variant 3
+    "Star Barge"
+  variant 2
+    "Star Barge" 2
+  variant 2
+    "Star Barge"
+    "Wasp"
+  variant 1
+    "Star Barge" 3
+  variant 1
+    "Star Barge" 2
+    "Wasp"
+  variant 1
+    "Star Barge"
+    "Wasp" 2
+  variant 6
+    "Star Freighter"
+  variant 2
+    "Star Freighter"
+    "Quicksilver"
+  variant 2
+    "Star Freighter"
+    "Wasp"
+  variant 2
+    "Star Freighter"
+    "Wasp" 2
+  variant 3
+    "Star Freighter (Fancy)"
+  variant 1
+    "Star Freighter (Fancy)"
+    "Quicksilver"
+  variant 1
+    "Star Freighter (Fancy)"
+    "Wasp"
+  variant 1
+    "Star Freighter (Fancy)"
+    "Wasp" 2
+  variant 5
+    "Wasp"
+  variant 3
+    "Wasp" 2
+  variant 1
+    "Wasp" 3 
+
