@@ -1,7 +1,7 @@
 shipyard "Megaparsec Variants"
   "Quicksilver"
-  "Quicksilver (Mark II)"
-  "Quicksilver (Patrol)"
+  "Quicksilver (Atomic)"
+  "Quicksilver (Atomic, Patrol)"
   "Quicksilver (Plasma)"
   "Quicksilver Test Dummy"
   "Modified Quicksilver (Core)"
@@ -55,7 +55,7 @@ ship "Quicksilver"
       "random hit force" 1400
   outfits
     "D23-QP Shield Generator"
-    "RT-I Radiothermal"
+    "S3 Thermionic"
     "Hyperdrive"
 
     "IT-3700 Ion Thruster"
@@ -64,8 +64,8 @@ ship "Quicksilver"
     "Particle Cannon" 2
 
     "LP036a Battery Pack"
-    "Cooling Ducts"
     "Fuel Pod" 16
+    "Small Radar Jammer"
     "Tactical Scanner" 2
   engine -17 54
   engine 17 54
@@ -78,40 +78,41 @@ ship "Quicksilver"
   description "The Megaparsec Quicksilver is a warship built around a single concept: to design the smallest and fastest ship capable of carrying two particle cannons. Because of its speed and long weapons range, the Quicksilver can keep a safe distance from most targets and bombard them with particle bursts until they are destroyed."
 
 
-ship "Quicksilver" "Quicksilver (Mark II)"
+ship "Quicksilver" "Quicksilver (Atomic)"
   outfits
     "D23-QP Shield Generator"
-    "Fission Reactor"
+    "S3 Thermionic"
     "Hyperdrive"
 
     "A250 Atomic Thruster"
     "A255 Atomic Steering"
 
-    "Electron Cannon" 2
+    "Particle Cannon" 2
 
     "LP036a Battery Pack"
     "Liquid Water Cooler"
     "Fuel Pod" 16
+    "Small Radar Jammer"
     "Tactical Scanner" 2
-    "Laser Rifle" 6
 
 
-ship "Quicksilver" "Quicksilver (Patrol)"
+ship "Quicksilver" "Quicksilver (Atomic, Patrol)"
   outfits
     "D23-QP Shield Generator"
-    "RT-I Radiothermal"
+    "S3 Thermionic"
     "Hyperdrive"
 
-    "IT-3700 Ion Thruster"
-    "IS-3200 Ion Steering"
+    "A250 Atomic Thruster"
+    "A255 Atomic Steering"
 
     "Particle Cannon" 2
 
     "LP036a Battery Pack"
+    "Liquid Water Cooler"
     "Cargo Scanner"
-    "Cooling Ducts"
     "Fuel Pod" 16
     "Outfit Scanner"
+    "Small Radar Jammer"
     "Tactical Scanner" 2
     "Laser Rifle" 6
 
@@ -119,7 +120,7 @@ ship "Quicksilver" "Quicksilver (Patrol)"
 ship "Quicksilver" "Quicksilver (Plasma)"
   outfits
     "D23-QP Shield Generator"
-    "RT-I Radiothermal"
+    "S3 Thermionic"
     "Hyperdrive"
 
     "IT-3700 Ion Thruster"
@@ -130,6 +131,7 @@ ship "Quicksilver" "Quicksilver (Plasma)"
     "LP036a Battery Pack"
     "Liquid Water Cooler"
     "Fuel Pod" 16
+    "Small Radar Jammer"
     "Tactical Scanner" 2
 
 
@@ -179,6 +181,7 @@ ship "Quicksilver" "Modified Quicksilver (Core)"
     "DS-05 Battery Pack"
     "Liquid Nitrogen Cooler"
     "Fuel Pod" 18
+    "Small Radar Jammer"
     "Tactical Scanner" 3
     "Interference Plating"
     "Laser Rifle" 7
@@ -229,6 +232,7 @@ ship "Quicksilver" "Modified Quicksilver (Engines)"
     "DS-11 Battery Pack"
     "Liquid Nitrogen Cooler"
     "Fuel Pod" 18
+    "Small Radar Jammer"
     "Tactical Scanner" 3
     "Interference Plating"
     "Laser Rifle" 7
@@ -280,6 +284,7 @@ ship "Quicksilver" "Modified Quicksilver (Weapons)"
     "DS-11 Battery Pack"
     "Liquid Nitrogen Cooler"
     "Fuel Pod" 18
+    "Small Radar Jammer"
     "Tactical Scanner" 3
     "Interference Plating"
     "Laser Rifle" 7
@@ -325,7 +330,7 @@ ship "Scout"
       "random hit force" 1525
   outfits
     "D14-RN Shield Generator"
-    "RT-I Radiothermal"
+    "nGVF-CC Fuel Cell"
     "Hyperdrive"
 
     "IT-3700 Ion Thruster"
@@ -333,8 +338,7 @@ ship "Scout"
 
     "X1 Blaster Cannon" 2
 
-    "LP036a Battery Pack"
-    "Cooling Ducts"
+    "LP072a Battery Pack"
     "Fuel Pod" 34
     "Tactical Scanner" 2
   engine -8 46
@@ -353,7 +357,7 @@ ship "Scout"
 ship "Scout" "Scout (Afterburner)"
   outfits
     "D14-RN Shield Generator"
-    "RT-I Radiothermal"
+    "nGVF-CC Fuel Cell"
     "Hyperdrive"
 
     "IT-3700 Ion Thruster"
@@ -362,8 +366,7 @@ ship "Scout" "Scout (Afterburner)"
 
     "X1 Blaster Cannon" 2
 
-    "LP036a Battery Pack"
-    "Cooling Ducts"
+    "LP072a Battery Pack"
     "Fuel Pod" 34
     "Tactical Scanner" 2
 
@@ -386,7 +389,7 @@ ship "Scout" "Scout (Hai)"
 ship "Scout" "Scout (Javelin)"
   outfits
     "D14-RN Shield Generator"
-    "RT-I Radiothermal"
+    "nGVF-CC Fuel Cell"
     "Hyperdrive"
 
     "IT-3700 Ion Thruster"
@@ -396,8 +399,7 @@ ship "Scout" "Scout (Javelin)"
     "Javelin Storage Crate" 2
     "Javelin Launcher" 2
 
-    "LP036a Battery Pack"
-    "Cooling Ducts"
+    "LP072a Battery Pack"
     "Fuel Pod" 34
     "Tactical Scanner" 2
 
@@ -405,7 +407,7 @@ ship "Scout" "Scout (Javelin)"
 ship "Scout" "Scout (Miner)"
   outfits
     "D14-RN Shield Generator"
-    "RT-I Radiothermal"
+    "nGVF-CC Fuel Cell"
     "Hyperdrive"
 
     "IT-3700 Ion Thruster"
@@ -413,8 +415,7 @@ ship "Scout" "Scout (Miner)"
 
     "Heavy Laser Cannon" 2
 
-    "LP036a Battery Pack"
-    "Cooling Ducts"
+    "LP072a Battery Pack"
     "Asteroid Scanner"
     "Fuel Pod" 34
     "Tactical Scanner" 2
@@ -423,14 +424,13 @@ ship "Scout" "Scout (Miner)"
 ship "Scout" "Scout (Speedy)"
   outfits
     "D14-RN Shield Generator"
-    "RT-I Radiothermal"
+    "nGVF-CC Fuel Cell"
     "Hyperdrive"
 
     "A370 Atomic Thruster"
     "A375 Atomic Steering"
 
     "LP072a Battery Pack"
-    "Cooling Ducts"
     "Fuel Pod" 34
     "Tactical Scanner" 2
 
@@ -468,8 +468,8 @@ ship "Splinter"
       "hit force" 1250
       "random hit force" 2750
   outfits
-    "D23-QP Shield Generator"
-    "RT-I Radiothermal"
+    "D41-HY Shield Generator"
+    "S3 Thermionic"
     "Hyperdrive"
 
     "IT-3700 Ion Thruster"
@@ -502,8 +502,8 @@ ship "Splinter"
 
 ship "Splinter" "Splinter (Laser)"
   outfits
-    "D23-QP Shield Generator"
-    "RT-I Radiothermal"
+    "D41-HY Shield Generator"
+    "S3 Thermionic"
     "Hyperdrive"
 
     "IT-3700 Ion Thruster"
@@ -695,49 +695,41 @@ ship "Thunderbolt"
     "shields" 6100
     "hull" 1200
     "required crew" 8
-    "bunks" 32
-    "mass" 150
+    "bunks" 40
+    "mass" 180
     "drag" 3.5
     "heat dissipation" .7
     "cargo space" 70
-    "outfit space" 420
+    "outfit space" 340
     "core space" 170
     "engine space" 100
-    "weapon space" 150
+    "weapon space" 70
     weapon
-      "blast radius" 128
-      "shield damage" 300
-      "random shield damage" 980
-      "hull damage" 450
-      "random hull damage" 1470
-      "heat damage" 9000
-      "random heat damage" 29400
-      "hit force" 750
-      "random hit force" 2450
+      "blast radius" 118
+      "shield damage" 360
+      "random shield damage" 820
+      "hull damage" 540
+      "random hull damage" 1230
+      "heat damage" 10800
+      "random heat damage" 24600
+      "hit force" 900
+      "random hit force" 2050
   outfits
     "D67-TM Shield Generator"
-    "RT-I Radiothermal"
+    "S3 Thermionic"
     "Hyperdrive"
 
     "IT-3700 Ion Thruster"
     "IS-3200 Ion Steering"
 
-    "Sidewinder" 120
-    "Sidewinder Storage Rack" 40
-    "Sidewinder Launcher" 4
-    "X8 Blaster Turret"
-    "Heavy Antimissile"
+    "Heavy Antimissile" 2
 
     "LP144a Battery Pack"
     "Cooling Ducts"
-    "Fuel Pod" 33
+    "Fuel Pod" 30
     "Tactical Scanner" 2
   engine -11 118
   engine 11 118
-  gun -12 -68
-  gun 12 -68
-  gun -14 -60
-  gun 14 -60
   turret 0 -11
   turret 0 74
   leak "leak" 40 50
@@ -748,5 +740,5 @@ ship "Thunderbolt"
   explode "medium explosion" 24
   explode "large explosion" 8
   "final explode" "final explosion medium"
-  description "Incorporating new, experimental lightweight materials, the Megaparsec Thunderbolt combines the speed and agility of a fighter with the armament of a heavy warship. Its weak hull is more than compensated for by its advanced shielding matrix."
+  description "Incorporating new, experimental lightweight materials and a sleek design, the Megaparsec Thunderbolt is a nimble and elegant ship. Its weak hull is more than compensated for by its advanced shielding matrix. The Thunderbolt is very suitable as a passenger transport, or for boarding and capturing smaller ships."
   

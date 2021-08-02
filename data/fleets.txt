@@ -13,6 +13,8 @@
 # Corporation:
 #   "Corporation Large"
 #   "Corporation Small"
+# Corporation Extremists:
+#   "Corporation Extremists"
 # Deep:
 #   "Deep Large"
 #   "Deep Small"
@@ -117,8 +119,6 @@
 #   "Navy Cargo"
 #   "Navy Patrol"
 #   "Navy Surveillance"
-# Corporation Extremists:
-#   "Corporation Extremists"
 # Unfettered:
 #   "Unfettered Large"
 #   "Unfettered Raid"
@@ -401,6 +401,55 @@ fleet "Saryd Small"
   variant 5
     "Visitor"
     "Courier"
+
+
+
+# Corporation
+fleet "Corporation Large"
+  government "Corporation"
+  names "corporation capital"
+  fighters "corporation fighter"
+  cargo 2
+  personality
+    heroic
+  # total: 5
+  variant 5
+    "Protector"
+
+fleet "Corporation Small"
+  government "Corporation"
+  names "corporation small"
+  cargo 2
+  personality
+    heroic
+  # total: 5
+  variant 2
+    "Quicksilver (Atomic, Patrol)" 3
+  variant 3
+    "Fury (Patrol)" 5
+
+
+
+# Corporation Extremists
+fleet "Corporation Extremists"
+  government "Corporation (Extremist)"
+  names "corporation capital"
+  fighters "corporation fighter"
+  cargo 0
+  personality
+    heroic
+  # total: 5
+  variant 1
+    "Blade"
+    "Quicksilver (Atomic)" 2
+  variant 2
+    "Protector"
+    "Quicksilver (Atomic)" 2
+  variant 1
+    "Bastion"
+    "Quicksilver (Atomic)" 2
+  variant 1
+    "Quicksilver (Atomic)" 5
 
 
 
@@ -1298,23 +1347,25 @@ fleet "Merchants East Large"
   variant 10
     "Centipede"
     "Rainmaker"
-  variant 10
+  variant 5
     "Centipede"
     "Rainmaker" 2
   variant 2
-    "Thunderbolt"
+    "Splinter"
     "Star Freighter" 2
   variant 3
-    "Thunderbolt"
+    "Splinter"
     "Star Freighter" 3
   variant 3
-    "Thunderbolt"
+    "Splinter"
     "Star Freighter" 4
   variant 2
-    "Thunderbolt"
+    "Splinter"
     "Star Freighter" 5
   variant 10
     "Star Freighter" 3
+  variant 5
+    "Thunderbolt"
 
 fleet "Merchants East Small"
   government "Merchant"
@@ -1493,7 +1544,7 @@ fleet "Merchants North Large"
     "Quicksilver" 2
   variant 1
     "Centipede"
-    "Thunderbolt"
+    "Splinter"
   variant 1
     "Centipede"
     "Fury"
@@ -1552,20 +1603,20 @@ fleet "Merchants North Large"
     "Protector (Laser)"
     "Star Freighter" 4
   variant 2
+    "Splinter"
+    "Star Freighter"
+  variant 5
+    "Splinter"
+    "Star Freighter" 2
+  variant 3
+    "Splinter"
+    "Star Freighter" 3
+  variant 2
     "Star Freighter" 2
   variant 5
     "Star Freighter" 3
   variant 3
     "Star Freighter" 4
-  variant 2
-    "Thunderbolt"
-    "Star Freighter"
-  variant 5
-    "Thunderbolt"
-    "Star Freighter" 2
-  variant 3
-    "Thunderbolt"
-    "Star Freighter" 3
 
 fleet "Merchants North Small"
   government "Merchant"
@@ -1922,7 +1973,7 @@ fleet "Merchants West Large"
     "Quicksilver" 2
   variant 1
     "Centipede"
-    "Thunderbolt"
+    "Splinter"
   variant 1
     "Centipede"
     "Fury"
@@ -1941,6 +1992,14 @@ fleet "Merchants West Large"
   variant 15
     "Mule"
     "Foxhound"
+  variant 2
+    "Splinter"
+  variant 3
+    "Splinter"
+    "Star Freighter"
+  variant 4
+    "Splinter"
+    "Star Freighter" 2
   variant 4
     "Star Freighter" 2
   variant 5
@@ -1949,14 +2008,6 @@ fleet "Merchants West Large"
     "Star Freighter" 4
   variant 1
     "Star Freighter" 5
-  variant 3
-    "Star Freighter"
-    "Thunderbolt"
-  variant 4
-    "Star Freighter" 2
-    "Thunderbolt"
-  variant 2
-    "Thunderbolt"
 
 fleet "Merchants West Small"
   government "Merchant"
@@ -2111,11 +2162,11 @@ fleet "Megaparsec Large"
     heroic opportunistic
   # total: 10
   variant 5
-    "Thunderbolt"
+    "Splinter"
   variant 3
-    "Thunderbolt" 2
+    "Splinter" 2
   variant 2
-    "Thunderbolt" 3
+    "Splinter" 3
 
 fleet "Megaparsec Small"
   government "Militia"
@@ -3655,55 +3706,6 @@ fleet "Navy Surveillance"
     "Watch Dog" 4
   variant 3
     "Mercury" 2
-
-
-
-# Corporation
-fleet "Corporation Large"
-  government "Corporation"
-  names "corporation capital"
-  fighters "corporation fighter"
-  cargo 2
-  personality
-    heroic
-  # total: 5
-  variant 5
-    "Protector"
-
-fleet "Corporation Small"
-  government "Corporation"
-  names "corporation small"
-  cargo 2
-  personality
-    heroic
-  # total: 5
-  variant 2
-    "Quicksilver (Patrol)" 3
-  variant 3
-    "Fury (Patrol)" 5
-
-
-
-# Corporation Extremists
-fleet "Corporation Extremists"
-  government "Corporation (Extremist)"
-  names "corporation capital"
-  fighters "corporation fighter"
-  cargo 0
-  personality
-    heroic
-  # total: 5
-  variant 1
-    "Blade"
-    "Quicksilver" 2
-  variant 2
-    "Protector"
-    "Quicksilver" 2
-  variant 1
-    "Thunderbolt"
-    "Quicksilver" 2
-  variant 1
-    "Quicksilver" 5
 
 
 
