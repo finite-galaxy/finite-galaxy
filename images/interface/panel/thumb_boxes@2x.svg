@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="200" height="400" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="fading" x1="100%" y1="0%" x2="0%" y2="0%">
+      <stop offset="0%" style="stop-color:rgb(255,255,255);stop-opacity:1"/>
+      <stop offset="100%" style="stop-color:rgb(255,255,255);stop-opacity:0"/>
+    </linearGradient>
+  </defs>
+  <path fill="none" stroke="white" stroke-width="4" d="
+     m 2,-2
+     l 0,160
+     a 40,40 0 0,0 40,40
+     l 116,0
+     a 40,40 0 0,1 40,40
+     l 0,120
+     a 40,40 0 0,1 -40,40
+     l -6,0
+     "/>
+   <rect x="0" y="396" rx="0" ry="0" width="150" height="4" stroke-width="4" stroke="none" fill="url(#fading)"/>
+</svg>

@@ -246,7 +246,7 @@ void MapSalesPanel::DrawInfo() const
   {
     const Sprite *left = SpriteSet::Get("interface/panel/edge_left");
     const Sprite *bottom = SpriteSet::Get("interface/panel/edge_bottom");
-    const Sprite *box = SpriteSet::Get(compare >= 0 ? "ui/thumb boxes" : "ui/thumb box");
+    const Sprite *box = SpriteSet::Get(compare >= 0 ? "interface/panel/thumb_boxes" : "ui/thumb box");
 
     const ItemInfoDisplay &selectedInfo = SelectedInfo();
     const ItemInfoDisplay &compareInfo = CompareInfo();
