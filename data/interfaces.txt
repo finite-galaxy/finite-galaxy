@@ -15,7 +15,8 @@ colour "panel background" .1 .1 .1 1.
 colour "dialogue backdrop" 0. 0. 0. .7
 colour "conversation background" .125 .125 .125 1.
 colour "map info panel background" 0. 0. 0. 1.
-colour "map side panel background" .125 .125 .125 1.
+colour "map side panel background" 0. 0. 0. 1.
+colour "map side panel selection" .125 .125 .125 .25
 colour "shop side panel background" .2 .2 .2 1.
 colour "shop side panel footer" .3 .3 .3 1.
 colour "tooltip background" .2 .2 .2 1.
@@ -86,6 +87,7 @@ colour "warning back" .21 .18 .08 1.
 # Colours used when drawing the map (system names, links, and the player's desired route).
 # (The colour of the ring that represents a given system is context-sensitive.)
 colour "map link" .6 .6 .6 .6
+colour "map mission route" .2 .1 0. 0.
 colour "map name" .6 .6 .6 .6
 colour "map travel ok fleet" .2 .5 0. 0.
 colour "map travel ok flagship" .5 .4 0. 0.

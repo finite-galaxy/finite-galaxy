@@ -218,11 +218,11 @@ void MapSalesPanel::DrawKey() const
 
 void MapSalesPanel::DrawPanel() const
 {
-  const Colour &back = *GameData::Colours().Get("map side panel background");
+  const Colour &backgroundColour = *GameData::Colours().Get("map side panel background");
   FillShader::Fill(
     Point(Screen::Width() * -.5 + WIDTH * .5, 0.),
     Point(WIDTH, Screen::Height()), 
-    back);
+    backgroundColour);
 
   const Sprite *edgeSprite = SpriteSet::Get("interface/panel/edge_right");
   if(edgeSprite->Height())
@@ -258,10 +258,10 @@ void MapSalesPanel::DrawInfo() const
       width += box->Width() + compareInfo.PanelWidth();
     }
 
-    const Colour &back = *GameData::Colours().Get("map info panel background");
+    const Colour &backgroundColour = *GameData::Colours().Get("map info panel background");
     Point size(width, height);
     Point topLeft(Screen::Right() - size.X(), Screen::Top());
-    FillShader::Fill(topLeft + .5 * size, size, back);
+    FillShader::Fill(topLeft + .5 * size, size, backgroundColour);
 
     Point leftPos = topLeft + Point(
       -.5 * left->Width(),
@@ -331,7 +331,7 @@ void MapSalesPanel::Draw(Point &corner, const Sprite *sprite, bool isForSale, bo
     const string &name, const string &price, const string &info)
 {
   const Font &font = FontSet::Get(18);
-  Colour selectionColour(0.f, .3f);
+  const Colour &selectionColour = *GameData::Colours().Get("map side panel selection");
 
   Point nameOffset(ICON_HEIGHT, .5 * ICON_HEIGHT - PAD - 1.5 * font.Height());
   Point priceOffset(ICON_HEIGHT, nameOffset.Y() + font.Height() + PAD);

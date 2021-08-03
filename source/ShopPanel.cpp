@@ -425,7 +425,7 @@ void ShopPanel::DrawMain()
     {
       Point size(bigFont.Width(category) + 25., bigFont.Height());
       categoryZones.emplace_back(Point(Screen::Left(), side.Y()) + .5 * size, size, category);
-      SpriteShader::Draw(isCollapsed ? expandArrow : collapseArrow, side + Point(10., 10.));
+      SpriteShader::Draw(isCollapsed ? expandArrow : collapseArrow, side + Point(10., 15.));
       bigFont.Draw(category, side + Point(25., 0.), isCollapsed ? dim : bright);
 
       if(point.X() != begin.X())
