@@ -1,20 +1,19 @@
-# Colours used to reflect the active or hovered interface button.
-colour "hover" 1. 1. 1. 0.
-colour "active" .75 .75 .75 0.
-colour "inactive" .25 .25 .25 0.
-
 # Colours generally used for drawing text or lines.
 colour "bright" .9 .9 .9 0.
 colour "medium" .6 .6 .6 0.
 colour "dim" .3 .3 .3 0.
 colour "faint" .1 .1 .1 0.
 
+# Colours used to reflect the active or hovered interface button.
+colour "hover" 1. 1. 1. 0.
+colour "active" .75 .75 .75 0.
+colour "inactive" .25 .25 .25 0.
+
 # Colours used for certain UI elements. These elements generally have a variable
 # size (e.g. they may fit to the current screen dimensions).
 colour "panel background" .1 .1 .1 1.
 colour "dialogue backdrop" 0. 0. 0. .7
 colour "conversation background" .125 .125 .125 1.
-colour "map info panel background" 0. 0. 0. 1.
 colour "map side panel background" 0. 0. 0. 1.
 colour "map side panel selection" .125 .125 .125 .25
 colour "shop side panel background" .2 .2 .2 1.
@@ -36,20 +35,6 @@ colour "overheat" .70 .43 .62 .75
 colour "flagship highlight" .5 .8 .2 0.
 
 colour "drag select" .2 1. 0. 0.
-
-# Colours used for drawing mission or job pointers on the map,
-# to indicate where the player should go.
-colour "available job" .9 .6 0. 1.
-colour "available back" .5 .3 0. .5
-colour "unavailable job" .5 .3 0. 1.
-colour "unavailable back" .3 .1 0. .5
-colour "active mission" .2 .7 1. 1.
-colour "active back" 0. .4 .5 .5
-colour "blocked mission" 0. .4 .6 1.
-colour "blocked back" 0. .15 .2 .5
-colour "special mission" 1. 1. 1. 1.
-colour "waypoint" .1 .2 .9 1.
-colour "waypoint back" 0. .3 .7 .5
 
 # Colours for the Escort HUD that is displayed in-flight.
 colour "escort present" .8 .8 .8 1.
@@ -94,6 +79,20 @@ colour "map travel ok flagship" .5 .4 0. 0.
 colour "map travel ok none" .55 .1 0. 0.
 colour "map used wormhole" .5 .2 .9 1.
 colour "map unused wormhole" .165 .066 .3 .333
+
+# Colours used for drawing mission or job pointers on the map,
+# to indicate where the player should go.
+colour "available job" .9 .6 0. 1.
+colour "available back" .5 .3 0. .5
+colour "unavailable job" .5 .3 0. 1.
+colour "unavailable back" .3 .1 0. .5
+colour "active mission" .2 .7 1. 1.
+colour "active back" 0. .4 .5 .5
+colour "blocked mission" 0. .4 .6 1.
+colour "blocked back" 0. .15 .2 .5
+colour "special mission" 1. 1. 1. 1.
+colour "waypoint" .1 .2 .9 1.
+colour "waypoint back" 0. .3 .7 .5
 
 
 

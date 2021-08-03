@@ -183,7 +183,7 @@ void MissionPanel::Draw()
 {
   MapPanel::Draw();
 
-  const Colour &routeColour= *GameData::Colours().Get("map mission route");
+  const Colour &routeColour = *GameData::Colours().Get("map mission route");
   const System *system = selectedSystem;
   while(distance.Days(system) > 0)
   {

@@ -258,7 +258,7 @@ void MapSalesPanel::DrawInfo() const
       width += box->Width() + compareInfo.PanelWidth();
     }
 
-    const Colour &backgroundColour = *GameData::Colours().Get("map info panel background");
+    const Colour &backgroundColour = *GameData::Colours().Get("map side panel background");
     Point size(width, height);
     Point topLeft(Screen::Right() - size.X(), Screen::Top());
     FillShader::Fill(topLeft + .5 * size, size, backgroundColour);
