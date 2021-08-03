@@ -1,19 +1,20 @@
+# Colours used to reflect the active or hovered interface button.
+colour "hover" 1. 1. 1. 0.
+colour "active" .75 .75 .75 0.
+colour "inactive" .25 .25 .25 0.
+
 # Colours generally used for drawing text or lines.
 colour "bright" .9 .9 .9 0.
 colour "medium" .6 .6 .6 0.
 colour "dim" .3 .3 .3 0.
 colour "faint" .1 .1 .1 0.
 
-# Colours used to reflect the active or hovered interface button.
-colour "hover" 1. 1. 1. 0.
-colour "active" .75 .75 .75 0.
-colour "inactive" .25 .25 .25 0.
-
 # Colours used for certain UI elements. These elements generally have a variable
 # size (e.g. they may fit to the current screen dimensions).
 colour "panel background" .1 .1 .1 1.
 colour "dialogue backdrop" 0. 0. 0. .7
 colour "conversation background" .125 .125 .125 1.
+colour "map info panel background" 0. 0. 0. 1.
 colour "map side panel background" 0. 0. 0. 1.
 colour "map side panel selection" .125 .125 .125 .25
 colour "shop side panel background" .2 .2 .2 1.
