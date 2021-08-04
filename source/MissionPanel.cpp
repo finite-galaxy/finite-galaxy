@@ -596,32 +596,33 @@ void MissionPanel::DrawMissionSystem(const Mission &mission, const Colour &colou
 // Draw the background for the lists of available and accepted missions (based on pos).
 Point MissionPanel::DrawPanel(Point pos, const string &label, int entries) const
 {
-  const Colour &back = *GameData::Colours().Get("map mission panel background");
+  const Colour &backgroundColour = *GameData::Colours().Get("map mission panel background");
+  const Colour &lineColour = *GameData::Colours().Get("map mission panel border");
   const Colour &unselected = *GameData::Colours().Get("medium");
   const Colour &selected = *GameData::Colours().Get("bright");
 
   // Draw the panel.
   Point size(SIDE_WIDTH, 20 * entries + 40);
-  FillShader::Fill(pos + .5 * size, size, back);
+  FillShader::Fill(pos + .5 * size, size, backgroundColour);
+  // Draw the left border.
+  FillShader::Fill(
+    Point((pos.X() - .5), pos.Y() + 0.5 * size.Y()),
+    Point(1., size.Y()),
+    lineColour);
+  // Draw the right border.
+  FillShader::Fill(
+    Point((pos.X() + 0.5 + size.X()), pos.Y() + 0.5 * size.Y()),
+    Point(1., size.Y()),
+    lineColour);
 
-  // Edges:
-  const Sprite *bottom = SpriteSet::Get("interface/panel/message_bottom");
-  Point edgePos = pos + Point(.5 * size.X(), size.Y());
-  Point bottomOff(0., .5 * bottom->Height());
-  SpriteShader::Draw(bottom, edgePos + bottomOff);
-
-  const Sprite *left = SpriteSet::Get("interface/panel/edge_left");
-  const Sprite *right = SpriteSet::Get("interface/panel/edge_right");
-  double dy = .5 * left->Height();
-  Point leftOff(-.5 * (size.X() + left->Width()), 0.);
-  Point rightOff(.5 * (size.X() + right->Width()), 0.);
-  while(dy && edgePos.Y() > Screen::Top())
-  {
-    edgePos.Y() -= dy;
-    SpriteShader::Draw(left, edgePos + leftOff);
-    SpriteShader::Draw(right, edgePos + rightOff);
-    edgePos.Y() -= dy;
-  }
+  // Add the bottom.
+  const Sprite *bottom = SpriteSet::Get("interface/panel/edge_bottom");
+  Point bottomPos = pos + Point(0., size.Y() + .5 * bottom->Height());
+  if(pos.X() < 0.)
+    bottomPos += Point(size.X() + 3. - .5 * bottom->Width(), 0.);
+  else
+    bottomPos += Point(-3. + .5 * bottom->Width(), 0.);
+  SpriteShader::Draw(bottom, bottomPos);
 
   const Font &font = FontSet::Get(18);
   pos += Point(10., 10. + (20. - font.Height()) * .5);

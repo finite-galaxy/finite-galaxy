@@ -236,9 +236,10 @@ void MapSalesPanel::DrawInfo() const
 {
   if(selected >= 0)
   {
-    const Sprite *left = SpriteSet::Get("interface/panel/edge_left");
+    const Colour &backgroundColour = *GameData::Colours().Get("map sales info background");
+    const Colour &lineColour = *GameData::Colours().Get("map sales info border");
     const Sprite *bottom = SpriteSet::Get("interface/panel/edge_bottom");
-    const Sprite *box = SpriteSet::Get(compare >= 0 ? "interface/panel/thumb_boxes" : "ui/thumb box");
+    const Sprite *box = SpriteSet::Get(compare >= 0 ? "interface/panel/thumb_boxes" : "interface/panel/thumb_box");
 
     const ItemInfoDisplay &selectedInfo = SelectedInfo();
     const ItemInfoDisplay &compareInfo = CompareInfo();
@@ -250,36 +251,38 @@ void MapSalesPanel::DrawInfo() const
       width += box->Width() + compareInfo.PanelWidth();
     }
 
-    const Colour &backgroundColour = *GameData::Colours().Get("map sales info background");
+    // Draw the panel.
     Point size(width, height);
     Point topLeft(Screen::Right() - size.X(), Screen::Top());
     FillShader::Fill(topLeft + .5 * size, size, backgroundColour);
+    // Draw the left border.
+    FillShader::Fill(topLeft + Point(-.5, 0.5 * height), Point(1., height), lineColour);
 
-    Point leftPos = topLeft + Point(
-      -.5 * left->Width(),
-      size.Y() - .5 * left->Height());
-    SpriteShader::Draw(left, leftPos);
-    // The top left corner of the bottom sprite should be 10 x units right
-    // of the bottom left corner of the left edge sprite.
-    Point bottomPos = leftPos + Point(
-      .5 * (bottom->Width() - left->Width()),
-      .5 * (left->Height() + bottom->Height()));
+    // Add the bottom.
+    Point bottomPos = topLeft + Point(
+      -3. + .5 * bottom->Width(),
+      size.Y() + .5 * bottom->Height());
     SpriteShader::Draw(bottom, bottomPos);
 
+    // List the attributes of the secondary outfit or ship, if any.
     if(compare >= 0)
     {
       compareInfo.DrawAttributes(topLeft);
       topLeft.X() += compareInfo.PanelWidth() + box->Width();
+    }
 
-      SpriteShader::Draw(box, topLeft + Point(-50., 100.));
-      DrawSprite(topLeft + Point(-95., 5.), SelectedSprite());
+    // Add the thumbbox(es).
+    Point boxOffset = 0.5 * Point(4. - box->Width(), box->Height());
+    SpriteShader::Draw(box, topLeft + boxOffset);
+
+    // Add the sprite of the selected outfit or ship, if any.
+    if(compare >= 0)
       DrawSprite(topLeft + Point(-95., 105.), CompareSprite());
-    }
-    else
-    {
-      SpriteShader::Draw(box, topLeft + Point(-60., 50.));
-      DrawSprite(topLeft + Point(-95., 5.), SelectedSprite());
-    }
+
+    // Add the sprite of the selected outfit or ship.
+    DrawSprite(topLeft + Point(-95., 5.), SelectedSprite());
+
+    // List the attributes of the selected outfit or ship.
     selectedInfo.DrawAttributes(topLeft);
   }
 }
