@@ -56,33 +56,25 @@ void LogbookPanel::Draw()
   DrawBackdrop();
 
   // Draw the panel. The sidebar should be slightly darker than the rest.
-  const Colour &sideColour = *GameData::Colours().Get("logbook sidebar");
+  const Colour &sideColour = *GameData::Colours().Get("logbook sidebar background");
   FillShader::Fill(
     Point(Screen::Left() + .5 * SIDEBAR_WIDTH, 0.),
     Point(SIDEBAR_WIDTH, Screen::Height()),
     sideColour);
-  const Colour &backColour = *GameData::Colours().Get("logbook background");
+  const Colour &backColour = *GameData::Colours().Get("logbook panel background");
   FillShader::Fill(
     Point(Screen::Left() + SIDEBAR_WIDTH + .5 * TEXT_WIDTH, 0.),
     Point(TEXT_WIDTH, Screen::Height()),
     backColour);
-  const Colour &lineColour = *GameData::Colours().Get("logbook line");
+  const Colour &lineColour = *GameData::Colours().Get("logbook panel border");
   FillShader::Fill(
-    Point(Screen::Left() + SIDEBAR_WIDTH - .5, 0.),
+    Point(Screen::Left() + SIDEBAR_WIDTH - 1., 0.),
     Point(1., Screen::Height()),
     lineColour);
-
-  const Sprite *edgeSprite = SpriteSet::Get("interface/panel/edge_right");
-  if(edgeSprite->Height())
-  {
-    // If the screen is high enough, the edge sprite should repeat.
-    double spriteHeight = edgeSprite->Height();
-    Point pos(
-      Screen::Left() + WIDTH + .5 * edgeSprite->Width(),
-      Screen::Top() + .5 * spriteHeight);
-    for( ; pos.Y() - .5 * spriteHeight < Screen::Bottom(); pos.Y() += spriteHeight)
-      SpriteShader::Draw(edgeSprite, pos);
-  }
+  FillShader::Fill(
+    Point(Screen::Left() + WIDTH - 1., 0.),
+    Point(1., Screen::Height()),
+    lineColour);
 
   // Colours to be used for drawing the log.
   const Font &font = FontSet::Get(18);

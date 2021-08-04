@@ -112,7 +112,7 @@ void ShopPanel::Draw()
 
     bool isError = (warningType.back() == '!');
     const Colour &textColour = *GameData::Colours().Get("medium");
-    const Colour &backColour = *GameData::Colours().Get(isError ? "error back" : "warning back");
+    const Colour &backColour = *GameData::Colours().Get(isError ? "error background" : "warning background");
 
     Point size(WIDTH, wrap.Height() + 2 * PAD);
     Point anchor = Point(warningPoint.X(), min<double>(warningPoint.Y() + size.Y(), Screen::Bottom()));
@@ -148,17 +148,19 @@ void ShopPanel::DrawSidebar()
 {
   const Font &font = FontSet::Get(18);
   const Colour &bright = *GameData::Colours().Get("bright");
+  const Colour &backgroundColour = *GameData::Colours().Get("shop panel background");
+  const Colour &lineColour = *GameData::Colours().Get("shop panel border");
   sideDetailHeight = 0;
 
   // Fill in the background.
   FillShader::Fill(
     Point(Screen::Right() - SIDE_WIDTH / 2, 0.),
     Point(SIDE_WIDTH, Screen::Height()),
-    *GameData::Colours().Get("panel background"));
+    backgroundColour);
   FillShader::Fill(
     Point(Screen::Right() - SIDE_WIDTH, 0.),
     Point(1, Screen::Height()),
-    *GameData::Colours().Get("shop side panel background"));
+    lineColour);
 
   Point point(
     Screen::Right() - SIDE_WIDTH / 2,
@@ -173,6 +175,11 @@ void ShopPanel::DrawSidebar()
     Point offset(SIDE_WIDTH / -2, SHIP_SIZE / 2);
     sideDetailHeight = DrawPlayerShipInfo(point + offset);
     point.Y() += sideDetailHeight + SHIP_SIZE / 2 + sideScroll;
+
+    FillShader::Fill(
+      Point(Screen::Right() - SIDE_WIDTH / 2, point.Y() - sideScroll),
+      Point(SIDE_WIDTH, 1),
+      lineColour);
   }
 
   // Draw this string, centred in the side panel:
@@ -183,8 +190,8 @@ void ShopPanel::DrawSidebar()
   font.Draw(YOURS, yoursPoint, bright);
 
   // Start below the "Your Ships" label, and draw them.
-  point.X() = Screen::Right() - SIDE_WIDTH / 2 - 93;
-  point.Y() += SIDE_WIDTH / 2 - sideScroll + 40 - 93;
+  point.X() = Screen::Right() - SIDE_WIDTH / 2 - 98;
+  point.Y() += SIDE_WIDTH / 2 - sideScroll + 40 - 98;
 
   const System *here = player.GetSystem();
   int shipsHere = 0;
@@ -259,17 +266,22 @@ void ShopPanel::DrawSidebar()
 
 void ShopPanel::DrawButtons()
 {
-  // The last 90 pixels on the end of the side panel are for the buttons:
-  Point buttonSize(SIDE_WIDTH, BUTTON_HEIGHT);
-  FillShader::Fill(Screen::BottomRight() - .5 * buttonSize, buttonSize, *GameData::Colours().Get("shop side panel background"));
-  FillShader::Fill(
-    Point(Screen::Right() - SIDE_WIDTH / 2, Screen::Bottom() - BUTTON_HEIGHT),
-    Point(SIDE_WIDTH, 1), *GameData::Colours().Get("shop side panel footer"));
-
   const Font &font = FontSet::Get(18);
   const Colour &bright = *GameData::Colours().Get("bright");
   const Colour &dim = *GameData::Colours().Get("medium");
-  const Colour &back = *GameData::Colours().Get("panel background");
+  const Colour &footerColour = *GameData::Colours().Get("shop footer background");
+  const Colour &lineColour = *GameData::Colours().Get("shop panel border");
+  const Colour &buttonColour = *GameData::Colours().Get("shop footer buttons");
+  // The last 90 pixels on the end of the side panel are for the buttons:
+  Point buttonSize(SIDE_WIDTH, BUTTON_HEIGHT);
+  FillShader::Fill(
+    Screen::BottomRight() - .5 * buttonSize,
+    buttonSize,
+    footerColour);
+  FillShader::Fill(
+    Point(Screen::Right() - SIDE_WIDTH / 2, Screen::Bottom() - BUTTON_HEIGHT),
+    Point(SIDE_WIDTH, 1),
+    lineColour);
 
   Point point(
     Screen::Right() - SIDE_WIDTH + 10,
@@ -293,21 +305,21 @@ void ShopPanel::DrawButtons()
   const Colour &inactive = *GameData::Colours().Get("inactive");
 
   Point buyCentre = Screen::BottomRight() - Point(210, 25);
-  FillShader::Fill(buyCentre, Point(60, 30), back);
+  FillShader::Fill(buyCentre, Point(60, 30), buttonColour);
   string BUY = (playerShip && selectedOutfit && player.Cargo().Get(selectedOutfit)) ? "_Install" : "_Buy";
   bigFont.Draw(BUY,
     buyCentre - .5 * Point(bigFont.Width(BUY), bigFont.Height()),
     CanBuy() ? hoverButton == 'b' ? hover : active : inactive);
 
   Point sellCentre = Screen::BottomRight() - Point(130, 25);
-  FillShader::Fill(sellCentre, Point(60, 30), back);
+  FillShader::Fill(sellCentre, Point(60, 30), buttonColour);
   static const string SELL = "_Sell";
   bigFont.Draw(SELL,
     sellCentre - .5 * Point(bigFont.Width(SELL), bigFont.Height()),
     CanSell() ? hoverButton == 's' ? hover : active : inactive);
 
   Point leaveCentre = Screen::BottomRight() - Point(45, 25);
-  FillShader::Fill(leaveCentre, Point(70, 30), back);
+  FillShader::Fill(leaveCentre, Point(70, 30), buttonColour);
   static const string LEAVE = "_Leave";
   bigFont.Draw(LEAVE,
     leaveCentre - .5 * Point(bigFont.Width(LEAVE), bigFont.Height()),

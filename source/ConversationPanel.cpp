@@ -75,24 +75,17 @@ void ConversationPanel::Draw()
   // Draw the panel itself, stretching from top to bottom of the screen on
   // the left side. The edge sprite contains 10 pixels of the margin; the rest
   // of the margin is included in the filled rectangle drawn here:
-  const Colour &back = *GameData::Colours().Get("conversation background");
+  const Colour &back = *GameData::Colours().Get("conversation panel background");
   double boxWidth = WIDTH + 2. * MARGIN - 10.;
   FillShader::Fill(
     Point(Screen::Left() + .5 * boxWidth, 0.),
     Point(boxWidth, Screen::Height()),
     back);
-
-  const Sprite *edgeSprite = SpriteSet::Get("interface/panel/edge_right");
-  if(edgeSprite->Height())
-  {
-    // If the screen is high enough, the edge sprite should repeat.
-    double spriteHeight = edgeSprite->Height();
-    Point pos(
-      Screen::Left() + boxWidth + .5 * edgeSprite->Width(),
-      Screen::Top() + .5 * spriteHeight);
-    for( ; pos.Y() - .5 * spriteHeight < Screen::Bottom(); pos.Y() += spriteHeight)
-      SpriteShader::Draw(edgeSprite, pos);
-  }
+  const Colour &lineColour = *GameData::Colours().Get("conversation panel border");
+  FillShader::Fill(
+    Point(Screen::Left() + boxWidth - 1., 0.),
+    Point(1., Screen::Height()),
+    lineColour);
 
   // Get the font and colours we'll need for drawing everything.
   const Font &font = FontSet::Get(18);

@@ -218,24 +218,16 @@ void MapSalesPanel::DrawKey() const
 
 void MapSalesPanel::DrawPanel() const
 {
-  const Colour &backgroundColour = *GameData::Colours().Get("map side panel background");
+  const Colour &backgroundColour = *GameData::Colours().Get("map sales panel background");
   FillShader::Fill(
     Point(Screen::Width() * -.5 + WIDTH * .5, 0.),
     Point(WIDTH, Screen::Height()), 
     backgroundColour);
-
-  const Sprite *edgeSprite = SpriteSet::Get("interface/panel/edge_right");
-  if(edgeSprite->Height())
-  {
-    int steps = Screen::Height() / edgeSprite->Height();
-    for(int y = -steps; y <= steps; ++y)
-    {
-      Point pos(
-        Screen::Width() * -.5f + WIDTH + .5f * edgeSprite->Width(),
-        y * edgeSprite->Height());
-      SpriteShader::Draw(edgeSprite, pos);
-    }
-  }
+  const Colour &lineColour = *GameData::Colours().Get("map sales panel border");
+  FillShader::Fill(
+    Point(Screen::Left() + WIDTH - 1., 0.),
+    Point(1., Screen::Height()),
+    lineColour);
 }
 
 
@@ -258,7 +250,7 @@ void MapSalesPanel::DrawInfo() const
       width += box->Width() + compareInfo.PanelWidth();
     }
 
-    const Colour &backgroundColour = *GameData::Colours().Get("map side panel background");
+    const Colour &backgroundColour = *GameData::Colours().Get("map sales info background");
     Point size(width, height);
     Point topLeft(Screen::Right() - size.X(), Screen::Top());
     FillShader::Fill(topLeft + .5 * size, size, backgroundColour);
@@ -331,7 +323,7 @@ void MapSalesPanel::Draw(Point &corner, const Sprite *sprite, bool isForSale, bo
     const string &name, const string &price, const string &info)
 {
   const Font &font = FontSet::Get(18);
-  const Colour &selectionColour = *GameData::Colours().Get("map side panel selection");
+  const Colour &highlightColour = *GameData::Colours().Get("map sales panel highlight");
 
   Point nameOffset(ICON_HEIGHT, .5 * ICON_HEIGHT - PAD - 1.5 * font.Height());
   Point priceOffset(ICON_HEIGHT, nameOffset.Y() + font.Height() + PAD);
@@ -341,7 +333,7 @@ void MapSalesPanel::Draw(Point &corner, const Sprite *sprite, bool isForSale, bo
   if(corner.Y() < Screen::Bottom() && corner.Y() + ICON_HEIGHT >= Screen::Top())
   {
     if(isSelected)
-      FillShader::Fill(corner + .5 * blockSize, blockSize, selectionColour);
+      FillShader::Fill(corner + .5 * blockSize, blockSize, highlightColour);
 
     DrawSprite(corner, sprite);
 

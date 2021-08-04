@@ -1,28 +1,40 @@
-# Colours used to reflect the active or hovered interface button.
-colour "hover" 1. 1. 1. 0.
-colour "active" .75 .75 .75 0.
-colour "inactive" .25 .25 .25 0.
-
 # Colours generally used for drawing text or lines.
 colour "bright" .9 .9 .9 0.
 colour "medium" .6 .6 .6 0.
 colour "dim" .3 .3 .3 0.
 colour "faint" .1 .1 .1 0.
 
+# Colours used to reflect the active or hovered interface button.
+colour "hover" 1. 1. 1. 0.
+colour "active" .75 .75 .75 0.
+colour "inactive" .25 .25 .25 0.
+
 # Colours used for certain UI elements. These elements generally have a variable
 # size (e.g. they may fit to the current screen dimensions).
-colour "panel background" .1 .1 .1 1.
+colour "boarding panel background" 0. 0. 0. 1.
+colour "conversation panel background" .125 .125 .125 1.
+colour "conversation panel border" 1. 1. 1. 1.
 colour "dialogue backdrop" 0. 0. 0. .7
-colour "conversation background" .125 .125 .125 1.
-colour "map info panel background" 0. 0. 0. 1.
-colour "map side panel background" 0. 0. 0. 1.
-colour "map side panel selection" .125 .125 .125 .25
-colour "shop side panel background" .2 .2 .2 1.
-colour "shop side panel footer" .3 .3 .3 1.
+colour "logbook panel background" 0. 0. 0. 1.
+colour "logbook panel border" 1. 1. 1. 1.
+colour "logbook sidebar background" .125 .125 .125 1.
+colour "map mission panel background" 0. 0. 0. 1.
+colour "map mission panel border" 1. 1. 1. 1.
+colour "map mission panel highlight" .125 .125 .125 .25
+colour "map sales panel background" 0. 0. 0. 1.
+colour "map sales panel border" 1. 1. 1. 1.
+colour "map sales panel highlight" .125 .125 .125 .25
+colour "map sales info background" 0. 0. 0. 1.
+colour "map sales info border" 1. 1. 1. 1.
+colour "shop panel background" 0. 0. 0. 1.
+colour "shop panel border" 1. 1. 1. 1.
+colour "shop footer background" .2 .2 .2 1.
+colour "shop footer buttons" 0. 0. 0. 1.
 colour "tooltip background" .2 .2 .2 1.
-colour "logbook sidebar" .125 .125 .125 1.
-colour "logbook background" 0. 0. 0. 1.
-colour "logbook line" .2 .2 .2 1.
+
+# Colours used for warning and error tooltip backdrops.
+colour "error background" .25 .1 .1 1.
+colour "warning background" .21 .18 .08 1.
 
 # Colours used to draw certain HUD elements in-flight.
 colour "shields" .43 .62 .70 .75
@@ -65,10 +77,6 @@ colour "radar special" 1. 1. 1. 0.
 colour "radar anomalous" .7 0. 1. 0.
 colour "radar blink" 1. 1. 1. 0.
 colour "radar viewport" 0. .3 0. 0.
-
-# Colours used for warning and error tooltip backdrops.
-colour "error back" .25 .1 .1 1.
-colour "warning back" .21 .18 .08 1.
 
 # Colours used when drawing the map (system names, links, and the player's desired route).
 # (The colour of the ring that represents a given system is context-sensitive.)

@@ -596,7 +596,7 @@ void MissionPanel::DrawMissionSystem(const Mission &mission, const Colour &colou
 // Draw the background for the lists of available and accepted missions (based on pos).
 Point MissionPanel::DrawPanel(Point pos, const string &label, int entries) const
 {
-  const Colour &back = *GameData::Colours().Get("map info panel background");
+  const Colour &back = *GameData::Colours().Get("map mission panel background");
   const Colour &unselected = *GameData::Colours().Get("medium");
   const Colour &selected = *GameData::Colours().Get("bright");
 
@@ -640,7 +640,7 @@ Point MissionPanel::DrawPanel(Point pos, const string &label, int entries) const
 Point MissionPanel::DrawList(const list<Mission> &list, Point pos) const
 {
   const Font &font = FontSet::Get(18);
-  const Colour &highlight = *GameData::Colours().Get("faint");
+  const Colour &highlightColour = *GameData::Colours().Get("map mission panel highlight");
   const Colour &unselected = *GameData::Colours().Get("medium");
   const Colour &selected = *GameData::Colours().Get("bright");
   const Colour &dim = *GameData::Colours().Get("dim");
@@ -655,9 +655,9 @@ Point MissionPanel::DrawList(const list<Mission> &list, Point pos) const
     bool isSelected = (it == availableIt || it == acceptedIt);
     if(isSelected)
       FillShader::Fill(
-        pos + Point(.5 * SIDE_WIDTH - 5., 8.),
-        Point(SIDE_WIDTH - 10., 20.),
-        highlight);
+        pos + Point(.5 * SIDE_WIDTH - 10., 12.),
+        Point(SIDE_WIDTH + 10., 20.),
+        highlightColour);
 
     bool canAccept = (&list == &available ? it->HasSpace(player) : IsSatisfied(*it));
     font.Draw(it->Name(), pos,

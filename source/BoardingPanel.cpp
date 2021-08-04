@@ -109,7 +109,7 @@ void BoardingPanel::Draw()
   DrawBackdrop();
 
   // Draw the list of plunder.
-  const Colour &opaque = *GameData::Colours().Get("panel background");
+  const Colour &opaque = *GameData::Colours().Get("boarding panel background");
   const Colour &back = *GameData::Colours().Get("faint");
   const Colour &dim = *GameData::Colours().Get("dim");
   const Colour &medium = *GameData::Colours().Get("medium");
