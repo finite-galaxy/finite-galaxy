@@ -926,7 +926,7 @@ event "capture of Kornephoros"
     description `The mining outpost is swarming with Navy guards; they seem to have turned this moon into a temporary base of operations. The mine has been shut down, and no one is being allowed in or out of the mining outpost. It is not clear whether the miners are prisoners, or merely under a very tight watch.`
     security 1
   planet "Deep"
-    spaceport `The spaceport is built on a large island, a now-extinct volcano with an elevation of several kilometers at its centre. Most of the large-scale fishing here is done by a single company, Poseidon Industries, who also built and maintain the spaceport. Steep winding roads and sturdy cement homes and warehouses line the mountain slopes, and below you in the harbour several massive trawling vessels are moored. On the outskirts of the spaceport are the ramshackle houses and open-air marketplace used by the smaller, independent fishing families.`
+    spaceport `The spaceport is built on a large island, a now-extinct volcano with an elevation of several kilometres at its centre. Most of the large-scale fishing here is done by a single company, Poseidon Industries, who also built and maintain the spaceport. Steep winding roads and sturdy cement homes and warehouses line the mountain slopes, and below you in the harbour several massive trawling vessels are moored. On the outskirts of the spaceport are the ramshackle houses and open-air marketplace used by the smaller, independent fishing families.`
     spaceport `  There are hundreds of Navy officers patrolling this small spaceport, looking for any signs of local resistance.`
     security 1
 
@@ -977,7 +977,7 @@ event "recapture of Kornephoros"
     description `The miners who work here are a tight-knit group, since most of them were part of the original colonization team. They are not particularly open to outsiders, and the facilities here are so rudimentary that they do not even stock fuel for visiting ships.`
     security .5
   planet "Deep"
-    spaceport `The spaceport is built on a large island, a now-extinct volcano with an elevation of several kilometers at its centre. Most of the large-scale fishing here is done by a single company, Poseidon Industries, who also built and maintain the spaceport. Steep winding roads and sturdy cement homes and warehouses line the mountain slopes, and below you in the harbour several massive trawling vessels are moored. On the outskirts of the spaceport are the ramshackle houses and open-air marketplace used by the smaller, independent fishing families.`
+    spaceport `The spaceport is built on a large island, a now-extinct volcano with an elevation of several kilometres at its centre. Most of the large-scale fishing here is done by a single company, Poseidon Industries, who also built and maintain the spaceport. Steep winding roads and sturdy cement homes and warehouses line the mountain slopes, and below you in the harbour several massive trawling vessels are moored. On the outskirts of the spaceport are the ramshackle houses and open-air marketplace used by the smaller, independent fishing families.`
     security .5
 
   fleet "Republic Small"
@@ -3187,7 +3187,7 @@ event "wanderers: more systems lost"
   planet "Vara Ke'sok"
     attributes "unfettered" "fishing"
     description `The surface of this world is almost entirely ocean. The Wanderer settlements were built on massive floating algae mats, some of them the size of a small city. Engines are attached to some of these floating villages, allowing them to be slowly propelled from one part of the planet's surface to another, and the only native industries are fishing and seaweed farming.`
-    spaceport `The raft of algae that supports the spaceport is probably at least a dozen meters thick, but flexible enough that it bends as the ocean swells pass underneath, causing individual buildings to rise up or tilt slightly relative to their neighbours. Now that this world has been captured by the Unfettered, nearly all the buildings are empty; it appears that the Hai are not too fond of the idea of inhabiting a water world, so they are using it mostly as a military base.`
+    spaceport `The raft of algae that supports the spaceport is probably at least a dozen metres thick, but flexible enough that it bends as the ocean swells pass underneath, causing individual buildings to rise up or tilt slightly relative to their neighbours. Now that this world has been captured by the Unfettered, nearly all the buildings are empty; it appears that the Hai are not too fond of the idea of inhabiting a water world, so they are using it mostly as a military base.`
   system "Chy'chra"
     government "Hai (Unfettered)"
     fleet "Unfettered Raid" 1000
@@ -3436,7 +3436,7 @@ event "wanderers: desi seledrak"
     government "Wanderer"
   planet "Desi Seledrak"
     attributes wanderer
-    description `Plumes of soot and ash rise from a cluster of several dozen volcanoes on this planet's main continent, shrouding the planet in a thick layer of clouds and choking out the sunlight. The ruins of several Korath cities and the geometric grids of cleared land surrounding them show that this was once a farming world, but now few plants are able to survive and kilometer-high glaciers have begun creeping down from the poles.`
+    description `Plumes of soot and ash rise from a cluster of several dozen volcanoes on this planet's main continent, shrouding the planet in a thick layer of clouds and choking out the sunlight. The ruins of several Korath cities and the geometric grids of cleared land surrounding them show that this was once a farming world, but now few plants are able to survive and kilometre-high glaciers have begun creeping down from the poles.`
     description `  With some help from the Mereti drones, the Wanderers have set up factories here that are pumping out carbon dioxide and methane to warm the atmosphere. In a few decades, the glaciers may start to recede.`
     spaceport `This odd settlement was built half by the Wanderers and half by the Mereti drones. The layout of the streets is completely chaotic, and they have planted rows of trees and bushes everywhere: some inside greenhouses, and some hardier species out in the open air. The settlement is near the equator, but it is still not particularly warm.`
 
@@ -3481,6 +3481,7 @@ event "wanderers: kor sestor are aimless"
     add description `  There used to be a thriving spaceport here, but it has been razed to the ground by the Kor Sestor fleet.`
     remove spaceport
     remove outfitter
+    remove fuel
     remove "required reputation"
     remove tribute
   planet "Zenith"

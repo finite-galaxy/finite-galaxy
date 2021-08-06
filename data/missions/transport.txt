@@ -546,7 +546,7 @@ mission "Expedition to Hope 2"
   
   on offer
     conversation
-      `You fly around the planet to several different sites that the scientists have identified as good places for their equipment. They also make some deep radar scans of the glaciers. "That's my old house, down there," says one of the scientists, pointing to the radar picture of one of the buried villages. "Under thirty meters of ice, now."`
+      `You fly around the planet to several different sites that the scientists have identified as good places for their equipment. They also make some deep radar scans of the glaciers. "That's my old house, down there," says one of the scientists, pointing to the radar picture of one of the buried villages. "Under thirty metres of ice, now."`
       `  The lead scientist hands you forty thousand credits, and says, "Here's the first part of your payment. Now we need to get home to <planet>. I'll pay you the rest once we get there."`
         accept
   
@@ -859,7 +859,7 @@ mission "Rim Archaeology 1"
           goto scan
       `  "Air pockets," he says, "some of them filled in with ground water. Nothing out of the ordinary."`
       label scan
-      `  When the scan reaches about thirty meters below the surface, suddenly the view changes…`
+      `  When the scan reaches about thirty metres below the surface, suddenly the view changes…`
       `  "Great burning suns!" says Foster. "There is something down there! Roads in a triangular grid. That ain't no human city." You both stare at the monitor for a minute, then Foster says, "I'm going to need to pull some permits. Meet me in the spaceport in an hour if you're willing to help pick up some of the other stuff we'll need."`
 
 
@@ -874,7 +874,7 @@ mission "Rim Archaeology 2A"
   
   on offer
     conversation
-      `When you meet up with Foster, he tells you, "This is going to be tricky. We're going to have to dig through a twenty meter thick slab of solid basalt to get at those ruins. We have to work fast, or my competitors will catch wind of what we're doing and beat us to the punch. But we have to work delicately, too, or we'll damage what's underneath. Blasting won't work. I think some of the Corporation's strip mining equipment could do the job, though. Would you be able to pick up maybe twenty or thirty tons of heavy machinery from <planet>?"`
+      `When you meet up with Foster, he tells you, "This is going to be tricky. We're going to have to dig through a twenty metre thick slab of solid basalt to get at those ruins. We have to work fast, or my competitors will catch wind of what we're doing and beat us to the punch. But we have to work delicately, too, or we'll damage what's underneath. Blasting won't work. I think some of the Corporation's strip mining equipment could do the job, though. Would you be able to pick up maybe twenty or thirty tons of heavy machinery from <planet>?"`
       choice
         `  "Sure."`
           accept
@@ -920,7 +920,7 @@ mission "Rim Archaeology 3A"
   
   on offer
     conversation
-      `You drop off the excavation machines at the dig site on Zuq, and receive your payment of three hundred thousand credits. Foster has already marked out lines of where he wants to dig and has completed a much more detailed geological scan. "We'll be starting with a narrow trench," he tells you, "and expanding out from there. It'll need to be wide enough to include a ramp for the vehicles, of course, so we'll still need to move a lot of rock. And when we get within the last five meters or so, I'm worried that the vibration from the grinders may be too destructive. So, I need some laser excavation equipment from <planet>, next."`
+      `You drop off the excavation machines at the dig site on Zuq, and receive your payment of three hundred thousand credits. Foster has already marked out lines of where he wants to dig and has completed a much more detailed geological scan. "We'll be starting with a narrow trench," he tells you, "and expanding out from there. It'll need to be wide enough to include a ramp for the vehicles, of course, so we'll still need to move a lot of rock. And when we get within the last five metres or so, I'm worried that the vibration from the grinders may be too destructive. So, I need some laser excavation equipment from <planet>, next."`
       `  You agree to fetch the equipment, and he begins directing the work crews to get the digging started.`
         accept
 
@@ -968,7 +968,7 @@ mission "Rim Archaeology 4A"
   
   on offer
     conversation
-      `When you return to the dig, Foster's trench is already almost ten meters deep. You tell him that you saw the Oxyrhynchus on your scanners, but you were able to evade it. "Good job," he says. "Now, we need a xenobiologist who can help us make sense of what we find. A friend of mine, Amelia Lee, has been living on the Quarg ringworld for the last decade or so, and she agreed to come visit the dig, and also to see what the Quarg can tell us about this old alien civilization. Also, here's your pay for transporting the laser cutter." He hands you another three hundred thousand credits.`
+      `When you return to the dig, Foster's trench is already almost ten metres deep. You tell him that you saw the Oxyrhynchus on your scanners, but you were able to evade it. "Good job," he says. "Now, we need a xenobiologist who can help us make sense of what we find. A friend of mine, Amelia Lee, has been living on the Quarg ringworld for the last decade or so, and she agreed to come visit the dig, and also to see what the Quarg can tell us about this old alien civilization. Also, here's your pay for transporting the laser cutter." He hands you another three hundred thousand credits.`
       `  You agree to pick her up, and he returns to supervising the excavation.`
         accept
 
@@ -1086,7 +1086,7 @@ mission "Rim Archaeology 6"
     log "Factions" "Sheragi" `Recent archaeological discoveries on Zuq, a planet in the southern rim of human space, have turned up evidence of a lost alien civilization. The Quarg say that the ruins were left behind by a species called the Sheragi.`
     conversation
       `When you give your name to the spaceport traffic controller, he says, "Wait, you're Captain <first> <last>? You're all over the news right now!"`
-      `  You land and find that Albert Foster has published an initial report on the dig on Zuq. The ruins under the lava flow did indeed turn out to be an alien city. The houses are built on a gargantuan scale, with most of the doorways at least ten meters tall. What's more, some of the buildings have no exterior doors on the street level, just doors facing balconies or inner courtyards, which supports the theory that the inhabitants were capable of flight. Most of the artefacts left behind are just everyday items, and in fact the technology seems less advanced than present human society, but scientists are studying the artefacts eagerly to glean hints about how these aliens lived.`
+      `  You land and find that Albert Foster has published an initial report on the dig on Zuq. The ruins under the lava flow did indeed turn out to be an alien city. The houses are built on a gargantuan scale, with most of the doorways at least ten metres tall. What's more, some of the buildings have no exterior doors on the street level, just doors facing balconies or inner courtyards, which supports the theory that the inhabitants were capable of flight. Most of the artefacts left behind are just everyday items, and in fact the technology seems less advanced than present human society, but scientists are studying the artefacts eagerly to glean hints about how these aliens lived.`
       `  The Quarg, who at other times seem quite willing to share their knowledge with human beings, are being surprisingly reticent with information about this lost civilization. Aside from telling Foster that the aliens were known as the Sheragi, their only comments have been vague warnings that if human beings persist in developing weapons of war, they will end up like the Sheragi. From this, Foster has surmised that the alien civilization was most likely destroyed by a civil war, not by natural disaster or an attack by another species.`
       `  It may not yield any great advances in human technology, but the dig will be providing clues to the history of the galaxy for years to come, and you can be proud to have played a part in that.`
         decline
@@ -1461,7 +1461,7 @@ mission "Terraforming 5"
     payment 60000
     log `Amy's theory to terraform Rand seems to have worked. Precipitation around the planet has greatly increased with the introduction of new water into the water cycle.`
     conversation
-      `When you get back to <planet>, Amy has you fly in a random path a few kilometers above the surface while she periodically dumps loads of seeds and plant material out the airlock. In the process, you fly through several rainstorms. This world's climate has indeed been altered. But you can't help wonder how a few tons of seed spread out over the entire surface of a planet is really going to help anything.`
+      `When you get back to <planet>, Amy has you fly in a random path a few kilometres above the surface while she periodically dumps loads of seeds and plant material out the airlock. In the process, you fly through several rainstorms. This world's climate has indeed been altered. But you can't help wonder how a few tons of seed spread out over the entire surface of a planet is really going to help anything.`
       `  Then you meet up with Eric and Alaric. Eric is elated. "We just got a massive rainstorm here!" he says. "We haven't had that much precipitation in a decade!"`
       `  Alaric is less enthusiastic. "Flash floods washed out the road through the canyon," he says, "and very nearly flooded one of the mines, too."`
       `  Amy says, "It will take a year or two for things to begin to settle down. Then we can figure out what our next steps should be."`
@@ -1659,7 +1659,7 @@ mission "There Might Be Riots part 3B"
   on offer
     conversation
       `You bring your ship to a gingerly landing in a section of the testing range that doesn't look too pockmarked with craters, and the band begins setting up their equipment and video cameras. "This is great," says Ulrich. "We'll be broadcasting live over the Net. It's time people started asking why the government thinks it needs all these weapons of war."`
-      `  The band plays through about a third of their set without any evidence that the locals even know you are here, which is surprising for such a tightly secured planet. Then, right in the middle of a particularly crunchy anti-war song, your long range radar picks up something: a large number of ships approaching from a hundred kilometers away.`
+      `  The band plays through about a third of their set without any evidence that the locals even know you are here, which is surprising for such a tightly secured planet. Then, right in the middle of a particularly crunchy anti-war song, your long range radar picks up something: a large number of ships approaching from a hundred kilometres away.`
       choice
         `  "Guys, I think we should get out of here."`
         `  "We've got ships incoming. Could be trouble."`
