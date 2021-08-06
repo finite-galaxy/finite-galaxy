@@ -7,18 +7,13 @@ shipyard "Megaparsec Variants"
   "Modified Quicksilver (Core)"
   "Modified Quicksilver (Engines)"
   "Modified Quicksilver (Weapons)"
-  "Scout"
-  "Scout (Afterburner)"
-  "Scout (Hai)"
-  "Scout (Javelin)"
-  "Scout (Miner)"
-  "Scout (Speedy)"
   "Splinter"
   "Splinter (Laser)"
   "Modified Splinter (Core)"
   "Modified Splinter (Engines)"
   "Modified Splinter (Weapons)"
-  "Thunderbolt"
+  "Vanguard"
+  "Modified Vanguard"
 
 
 
@@ -297,145 +292,6 @@ ship "Quicksilver" "Modified Quicksilver (Weapons)"
 
 
 
-ship "Scout"
-  sprite "ship/sprite/scout"
-  thumbnail "ship/thumbnail/scout"
-  attributes
-    category "Interceptor"
-#    manufacturer "Megaparsec"
-    licences
-      Pilot
-    "cost" 850000
-    "shields" 1200
-    "hull" 400
-    "required crew" 2
-    "bunks" 12
-    "mass" 110
-    "drag" 3.1
-    "heat dissipation" .7
-    "cargo space" 90
-    "outfit space" 220
-    "core space" 80
-    "engine space" 100
-    "weapon space" 40
-    weapon
-      "blast radius" 83
-      "shield damage" 220
-      "random shield damage" 610
-      "hull damage" 330
-      "random hull damage" 915
-      "heat damage" 6600
-      "random heat damage" 18300
-      "hit force" 550
-      "random hit force" 1525
-  outfits
-    "D14-RN Shield Generator"
-    "nGVF-CC Fuel Cell"
-    "Hyperdrive"
-
-    "IT-3700 Ion Thruster"
-    "IS-3200 Ion Steering"
-
-    "X1 Blaster Cannon" 2
-
-    "LP072a Battery Pack"
-    "Fuel Pod" 34
-    "Tactical Scanner" 2
-  engine -8 46
-  engine 8 46
-  gun -20 -7
-  gun 20 -7
-  explode "tiny explosion" 10
-  explode "small explosion" 20
-  explode "medium explosion" 15
-  leak "leak" 50 50
-  leak "flame" 60 80
-  "final explode" "final explosion small"
-  description "The Megaparsec Scout is a scout ship and courier, designed not for battle but for carrying passengers and small amounts of cargo across large distances quickly."
-
-
-ship "Scout" "Scout (Afterburner)"
-  outfits
-    "D14-RN Shield Generator"
-    "nGVF-CC Fuel Cell"
-    "Hyperdrive"
-
-    "IT-3700 Ion Thruster"
-    "IS-3200 Ion Steering"
-    "Afterburner"
-
-    "X1 Blaster Cannon" 2
-
-    "LP072a Battery Pack"
-    "Fuel Pod" 34
-    "Tactical Scanner" 2
-
-
-ship "Scout" "Scout (Hai)"
-  outfits
-    "Corundum Regenerator"
-    "Century Cell"
-    "Hyperdrive"
-
-    "Biroo Atomic Thruster"
-    "Biroo Atomic Steering"
-
-    "Fissure Batteries"
-    "Williwaw Cooling"
-    "Fuel Pod" 34
-    "Yoloy Scanner"
-
-
-ship "Scout" "Scout (Javelin)"
-  outfits
-    "D14-RN Shield Generator"
-    "nGVF-CC Fuel Cell"
-    "Hyperdrive"
-
-    "IT-3700 Ion Thruster"
-    "IS-3200 Ion Steering"
-
-    "Javelin" 128
-    "Javelin Storage Crate" 2
-    "Javelin Launcher" 2
-
-    "LP072a Battery Pack"
-    "Fuel Pod" 34
-    "Tactical Scanner" 2
-
-
-ship "Scout" "Scout (Miner)"
-  outfits
-    "D14-RN Shield Generator"
-    "nGVF-CC Fuel Cell"
-    "Hyperdrive"
-
-    "IT-3700 Ion Thruster"
-    "IS-3200 Ion Steering"
-
-    "Heavy Laser Cannon" 2
-
-    "LP072a Battery Pack"
-    "Asteroid Scanner"
-    "Fuel Pod" 34
-    "Tactical Scanner" 2
-
-
-ship "Scout" "Scout (Speedy)"
-  outfits
-    "D14-RN Shield Generator"
-    "nGVF-CC Fuel Cell"
-    "Hyperdrive"
-
-    "A370 Atomic Thruster"
-    "A375 Atomic Steering"
-
-    "LP072a Battery Pack"
-    "Fuel Pod" 34
-    "Tactical Scanner" 2
-
-
-
 ship "Splinter"
   sprite "ship/sprite/splinter"
   thumbnail "ship/thumbnail/splinter"
@@ -683,62 +539,122 @@ ship "Splinter" "Modified Splinter (Weapons)"
 
 
 
-ship "Thunderbolt"
-  sprite "ship/sprite/thunderbolt"
-  thumbnail "ship/thumbnail/thunderbolt"
+ship "Vanguard"
+  sprite "ship/sprite/vanguard"
+  thumbnail "ship/thumbnail/vanguard"
   attributes
-    category "Corvette"
+    category "Frigate"
 #    manufacturer "Megaparsec"
     licences
       Pilot
-    "cost" 4400000
-    "shields" 6100
-    "hull" 1200
-    "required crew" 8
-    "bunks" 40
-    "mass" 180
-    "drag" 3.5
-    "heat dissipation" .7
-    "cargo space" 70
-    "outfit space" 340
-    "core space" 170
-    "engine space" 100
-    "weapon space" 70
+    "cost" 7200000
+    "shields" 9800
+    "hull" 6000
+    "required crew" 23
+    "bunks" 45
+    "mass" 500
+    "drag" 8
+    "heat dissipation" .6
+    "cargo space" 100
+    "outfit space" 560
+    "core space" 200
+    "engine space" 120
+    "weapon space" 240
     weapon
-      "blast radius" 118
-      "shield damage" 360
-      "random shield damage" 820
-      "hull damage" 540
-      "random hull damage" 1230
-      "heat damage" 10800
-      "random heat damage" 24600
-      "hit force" 900
-      "random hit force" 2050
+      "blast radius" 232
+      "shield damage" 1000
+      "random shield damage" 1320
+      "hull damage" 1500
+      "random hull damage" 1980
+      "heat damage" 30000
+      "random heat damage" 39600
+      "hit force" 2500
+      "random hit force" 3300
   outfits
     "D67-TM Shield Generator"
-    "S3 Thermionic"
+    "Fusion Reactor"
     "Hyperdrive"
 
     "IT-3700 Ion Thruster"
-    "IS-3200 Ion Steering"
+    "IS-4200 Ion Steering"
 
-    "Heavy Antimissile" 2
+    "Particle Cannon" 7
+    "Heavy Antimissile"
 
-    "LP144a Battery Pack"
-    "Cooling Ducts"
-    "Fuel Pod" 30
-    "Tactical Scanner" 2
-  engine -11 118
-  engine 11 118
-  turret 0 -11
-  turret 0 74
-  leak "leak" 40 50
-  leak "flame" 50 80
-  leak "big leak" 90 30
+    "LP072a Battery Pack"
+    "Liquid Nitrogen Cooler"
+    "Fuel Pod" 47
+    "Tactical Scanner" 3
+  engine -15 130
+  engine 15 130
+  gun 0 -132
+  gun -22 -122
+  gun 22 -122
+  gun -21 -45
+  gun 21 -45
+  gun -31 -45
+  gun 31 -45
+  turret 0 42
+  leak "leak" 60 50
+  leak "flame" 30 80
   explode "tiny explosion" 18
   explode "small explosion" 36
   explode "medium explosion" 24
   explode "large explosion" 8
   "final explode" "final explosion medium"
-  description "Incorporating new, experimental lightweight materials and a sleek design, the Megaparsec Thunderbolt is a nimble and elegant ship. Its weak hull is more than compensated for by its advanced shielding matrix. The Thunderbolt is very suitable as a passenger transport, or for boarding and capturing smaller ships."
+  description "The Vanguard is Megaparsec's newest warship intended for the heavy anti-pirate defence market. Vanguards offer an unusual feature set, focusing on powerful fixed guns and featuring Corporation Systems' latest automation technologies, resulting in an atypically low crew complement for a ship its size. Few capital ships will endure for long under the withering fusillade of gunfire that it can unleash against those in front of it."
+
+
+ship "Vanguard" "Modified Vanguard"
+  sprite "ship/sprite/vanguard_m"
+  add attributes
+    "hull" 600
+    "required crew" 4
+    "mass" 50
+    "cargo space" -10
+    "outfit space" 60
+    "engine space" 60
+    weapon
+      "blast radius" 20
+      "shield damage" 100
+      "random shield damage" 100
+      "hull damage" 150
+      "random hull damage" 150
+      "heat damage" 3000
+      "random heat damage" 3000
+      "hit force" 250
+      "random hit force" 250
+  outfits
+    "D67-TM Shield Generator"
+    "Fusion Reactor"
+    "Hyperdrive"
+
+    "A520 Atomic Thruster"
+    "A525 Atomic Steering"
+
+    "Particle Cannon" 7
+    "Heavy Antimissile"
+
+    "LP144a Battery Pack"
+    "Liquid Nitrogen Cooler"
+    "Fuel Pod" 47
+    "Tactical Scanner" 3
+    "Fragmentation Grenades" 20
+    "Laser Rifle" 40
+  engine -31 128 .7
+  engine 31 128 .7
+  engine 0 130
+  gun 0 -132
+  gun -22 -122
+  gun 22 -122
+  gun -21 -45
+  gun 21 -45
+  gun -31 -45
+  gun 31 -45
+  turret 0 42
+  explode "tiny explosion" 18
+  explode "small explosion" 36
+  explode "medium explosion" 24
+  explode "large explosion" 8
+  "final explode" "final explosion large"
   

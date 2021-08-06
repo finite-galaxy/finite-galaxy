@@ -7,10 +7,6 @@ shipyard "Sisensis Variants"
   "Bastion (Plasma)"
   "Clipper"
   "Clipper (Speedy)"
-  "Combat Drone"
-  "Mark I Drone"
-  "Mark II Drone"
-  "Mark III Drone"
 
 
 
@@ -248,95 +244,4 @@ ship "Clipper" "Clipper (Speedy)"
     "Fuel Pod" 22
     "Tactical Scanner"
     "Extra Outfit Space" 2
-
-
-
-ship "Combat Drone"
-  sprite "ship/sprite/drone"
-  thumbnail "ship/thumbnail/drone"
-  attributes
-    category "Drone"
-#    manufacturer "Sisensis"
-    licences
-      Navy
-#    "carried" 1
-    "cost" 83000
-    "hull" 900
-    "automaton" 1
-    "mass" 40
-    "drag" .6
-    "heat dissipation" .9
-    "outfit space" 60
-    "core space" 30
-    "engine space" 22
-    "weapon space" 8
-    weapon
-      "blast radius" 19
-      "shield damage" 40
-      "random shield damage" 150
-      "hull damage" 60
-      "random hull damage" 225
-      "heat damage" 1200
-      "random heat damage" 4500
-      "hit force" 100
-      "random hit force" 375
-  engine -9 29
-  engine 9 29
-  gun 0 -29
-  explode "tiny explosion" 15
-
-
-ship "Combat Drone" "Mark I Drone"
-  outfits
-    "nGVF-BB Fuel Cell"
-
-    "A120 Atomic Thruster"
-    "A125 Atomic Steering"
-
-    "Laser Cannon"
-
-    "Supercapacitor"
-    "Small Radar Jammer"
-    "Tactical Scanner"
-  description "The Mark I Drone is a very fast, pilotless attack ship, designed at the request of the Navy, to reduce their fighter pilot death rate. Although the Mark I Drone is still for sale, the Navy now uses its newer incranations."
-
-
-ship "Combat Drone" "Mark II Drone"
-  add attributes
-    "hull" -200
-    "mass" -10
-    "outfit space" 8
-    "weapon space" 8
-  outfits
-    "nGVF-BB Fuel Cell"
-
-    "A120 Atomic Thruster"
-    "A125 Atomic Steering"
-
-    "Heavy Laser Cannon"
-
-    "Supercapacitor" 2
-    "Small Radar Jammer"
-    "Tactical Scanner"
-  description "The Mark II Drone is used exclusively by the Republic Navy. Although very weak and easy to destroy, they can be quite effective in large numbers. Because drones do not need to accomodate life support systems, a cockpit, bunks, cargo space, or shield emitters, they can have similar firepower and a stronger hull than larger fighters or interceptors."
-
-
-ship "Combat Drone" "Mark III Drone"
-  add attributes
-    "hull" -400
-    "mass" -20
-    "outfit space" 16
-    "weapon space" 16
-  outfits
-    "nGVF-BB Fuel Cell"
-
-    "A120 Atomic Thruster"
-    "A125 Atomic Steering"
-
-    "Electron Cannon"
-
-    "Supercapacitor" 3
-    "Small Radar Jammer"
-    "Tactical Scanner"
-  description "The Mark III Drone is externally identical to its predecessors, but internally it has weakened its hull to increase its weapon space, sacrificing armour to accomodate a larger cannon."
 

@@ -1,7 +1,6 @@
 shipyard "Centaur Variants"
   "Bactrian"
   "Bactrian (Hired Gun)"
-  "Foxhound"
   "Mongrel"
   "Mongrel (Antimissile)"
   "Mongrel (Electron)"
@@ -9,6 +8,13 @@ shipyard "Centaur Variants"
   "Mongrel (Plasma)"
   "Mule"
   "Mule (Heavy)"
+  "Scout"
+  "Scout (Afterburner)"
+  "Scout (Hai)"
+  "Scout (Javelin)"
+  "Scout (Miner)"
+  "Scout (Speedy)"
+  "Thunderbolt"
   "Watch Dog"
 
 
@@ -63,7 +69,7 @@ ship "Bactrian"
     "Fuel Pod" 198
     "Large Radar Jammer" 2
     "Ramscoop" 2
-    "Tactical Scanner" 3
+    "Tactical Scanner" 4
   engine -18 230
   engine 18 230
   gun 0 -232
@@ -108,60 +114,9 @@ ship "Bactrian" "Bactrian (Hired Gun)"
     "Liquid Helium Cooler"
     "Liquid Nitrogen Cooler"
     "Fuel Pod" 198
-    "Tactical Scanner" 3
+    "Tactical Scanner" 4
     "Extra Outfit Space" 9
     "Laser Rifle" 240
-
-
-
-ship "Foxhound"
-  sprite "ship/sprite/foxhound"
-  thumbnail "ship/thumbnail/foxhound"
-  attributes
-    category "Fighter"
-#    manufacturer "Centaur"
-    "carried" 2
-    "cost" 93000
-    "shields" 800
-    "hull" 400
-    "required crew" 1
-    "bunks" 1
-    "mass" 30
-    "drag" .7
-    "heat dissipation" .8
-    "outfit space" 90
-    "core space" 45
-    "engine space" 31
-    "weapon space" 14
-    weapon
-      "blast radius" 24
-      "shield damage" 60
-      "random shield damage" 180
-      "hull damage" 90
-      "random hull damage" 270
-      "heat damage" 1800
-      "random heat damage" 5400
-      "hit force" 150
-      "random hit force" 450
-  outfits
-    "D14-RN Shield Generator"
-    "nGVF-BB Fuel Cell"
-
-    "IT-1700 Ion Thruster"
-    "IS-1200 Ion Steering"
-
-    "X1 Blaster Cannon" 2
-
-    "LP036a Battery Pack"
-    "Small Radar Jammer"
-    "Tactical Scanner"
-  engine -15 30
-  engine 15 30
-  gun -14 -10
-  gun 14 -10
-  explode "tiny explosion" 15
-  explode "small explosion" 5
-  description "The Foxhound is the primary fighter used by the Republic Navy. As with all fighters, it is weak by itself but very effective as part of a larger squadron."
 
 
 
@@ -310,12 +265,12 @@ ship "Mule"
     "X6 Blaster Turret" 3
     "Heavy Antimissile"
 
-    "Liquid Nitrogen Cooler"
     "LP144a Battery Pack"
+    "Liquid Nitrogen Cooler"
     "Fuel Pod" 76
     "Large Radar Jammer"
     "Ramscoop"
-    "Tactical Scanner" 2
+    "Tactical Scanner" 3
   engine -12 123
   engine 12 123
   gun 0 -123
@@ -331,7 +286,7 @@ ship "Mule"
   explode "small explosion" 30
   explode "medium explosion" 20
   "final explode" "final explosion medium"
-  description "The Mule is as much of a hodgepodge as its looks suggest. The Centaur ship designers combined a good deal of cargo space with a decent amount of weaponry and even a fighter bay, and ended up with a ship that is mostly used as a freighter but must be classified as a warship because of its heavy armament and shields."
+  description "The Mule is as much of a hodgepodge as its looks suggest. The ship designers combined a good deal of cargo space with a decent amount of weaponry and even a fighter bay, and ended up with a ship that is mostly used as a freighter but must be classified as a warship because of its heavy armament and shields."
 
 
 ship "Mule" "Mule (Heavy)"
@@ -355,6 +310,206 @@ ship "Mule" "Mule (Heavy)"
     "Tactical Scanner" 2
     "Extra Outfit Space"
     "Laser Rifle" 40
+
+
+
+ship "Scout"
+  sprite "ship/sprite/scout"
+  thumbnail "ship/thumbnail/scout"
+  attributes
+    category "Interceptor"
+#    manufacturer "Centaur"
+    licences
+      Pilot
+    "cost" 850000
+    "shields" 1200
+    "hull" 400
+    "required crew" 2
+    "bunks" 12
+    "mass" 110
+    "drag" 3.1
+    "heat dissipation" .7
+    "cargo space" 90
+    "outfit space" 220
+    "core space" 80
+    "engine space" 100
+    "weapon space" 40
+    weapon
+      "blast radius" 83
+      "shield damage" 220
+      "random shield damage" 610
+      "hull damage" 330
+      "random hull damage" 915
+      "heat damage" 6600
+      "random heat damage" 18300
+      "hit force" 550
+      "random hit force" 1525
+  outfits
+    "D14-RN Shield Generator"
+    "nGVF-CC Fuel Cell"
+    "Hyperdrive"
+
+    "IT-3700 Ion Thruster"
+    "IS-3200 Ion Steering"
+
+    "X1 Blaster Cannon" 2
+
+    "LP072a Battery Pack"
+    "Fuel Pod" 34
+    "Tactical Scanner" 2
+  engine -8 46
+  engine 8 46
+  gun -20 -7
+  gun 20 -7
+  explode "tiny explosion" 10
+  explode "small explosion" 20
+  explode "medium explosion" 15
+  leak "leak" 50 50
+  leak "flame" 60 80
+  "final explode" "final explosion small"
+  description "The Centaur Scout is a scout ship and courier, designed not for battle but for carrying passengers and small amounts of cargo across large distances quickly."
+
+
+ship "Scout" "Scout (Afterburner)"
+  outfits
+    "D14-RN Shield Generator"
+    "nGVF-CC Fuel Cell"
+    "Hyperdrive"
+
+    "IT-3700 Ion Thruster"
+    "IS-3200 Ion Steering"
+    "Afterburner"
+
+    "X1 Blaster Cannon" 2
+
+    "LP072a Battery Pack"
+    "Fuel Pod" 34
+    "Tactical Scanner" 2
+
+
+ship "Scout" "Scout (Hai)"
+  outfits
+    "Corundum Regenerator"
+    "Century Cell"
+    "Hyperdrive"
+
+    "Biroo Atomic Thruster"
+    "Biroo Atomic Steering"
+
+    "Fissure Batteries"
+    "Williwaw Cooling"
+    "Fuel Pod" 34
+    "Yoloy Scanner"
+
+
+ship "Scout" "Scout (Javelin)"
+  outfits
+    "D14-RN Shield Generator"
+    "nGVF-CC Fuel Cell"
+    "Hyperdrive"
+
+    "IT-3700 Ion Thruster"
+    "IS-3200 Ion Steering"
+
+    "Javelin" 128
+    "Javelin Storage Crate" 2
+    "Javelin Launcher" 2
+
+    "LP072a Battery Pack"
+    "Fuel Pod" 34
+    "Tactical Scanner" 2
+
+
+ship "Scout" "Scout (Miner)"
+  outfits
+    "D14-RN Shield Generator"
+    "nGVF-CC Fuel Cell"
+    "Hyperdrive"
+
+    "IT-3700 Ion Thruster"
+    "IS-3200 Ion Steering"
+
+    "Heavy Laser Cannon" 2
+
+    "LP072a Battery Pack"
+    "Asteroid Scanner"
+    "Fuel Pod" 34
+    "Tactical Scanner" 2
+
+
+ship "Scout" "Scout (Speedy)"
+  outfits
+    "D14-RN Shield Generator"
+    "nGVF-CC Fuel Cell"
+    "Hyperdrive"
+
+    "A370 Atomic Thruster"
+    "A375 Atomic Steering"
+
+    "LP072a Battery Pack"
+    "Fuel Pod" 34
+    "Tactical Scanner" 2
+
+
+
+ship "Thunderbolt"
+  sprite "ship/sprite/thunderbolt"
+  thumbnail "ship/thumbnail/thunderbolt"
+  attributes
+    category "Corvette"
+#    manufacturer "Centaur"
+    licences
+      Pilot
+    "cost" 4400000
+    "shields" 6100
+    "hull" 1200
+    "required crew" 8
+    "bunks" 40
+    "mass" 180
+    "drag" 3.5
+    "heat dissipation" .7
+    "cargo space" 70
+    "outfit space" 340
+    "core space" 170
+    "engine space" 100
+    "weapon space" 70
+    weapon
+      "blast radius" 118
+      "shield damage" 360
+      "random shield damage" 820
+      "hull damage" 540
+      "random hull damage" 1230
+      "heat damage" 10800
+      "random heat damage" 24600
+      "hit force" 900
+      "random hit force" 2050
+  outfits
+    "D67-TM Shield Generator"
+    "S3 Thermionic"
+    "Hyperdrive"
+
+    "IT-3700 Ion Thruster"
+    "IS-3200 Ion Steering"
+
+    "Heavy Antimissile" 2
+
+    "LP144a Battery Pack"
+    "Cooling Ducts"
+    "Fuel Pod" 30
+    "Tactical Scanner" 2
+  engine -11 118
+  engine 11 118
+  turret 0 -11
+  turret 0 74
+  leak "leak" 40 50
+  leak "flame" 50 80
+  leak "big leak" 90 30
+  explode "tiny explosion" 18
+  explode "small explosion" 36
+  explode "medium explosion" 24
+  explode "large explosion" 8
+  "final explode" "final explosion medium"
+  description "Incorporating new, experimental lightweight materials and a sleek design, the Centaur Thunderbolt is a nimble and elegant ship. Its weak hull is more than compensated for by its advanced shielding matrix. The Thunderbolt is very suitable as a passenger transport, or for boarding and capturing smaller ships."
 
 
 
