@@ -191,7 +191,8 @@ void MapSalesPanel::DrawKey() const
   const Colour &medium = *colours.Get("medium");
   const Font &font = FontSet::Get(18);
 
-  Point pos(Screen::Left() + 25. + WIDTH, Screen::Bottom() - 55.);
+  const int ROWS = 3;
+  Point pos(Screen::Left() + 10. + WIDTH, Screen::Bottom() - ROWS * 20. + 5.);
   Point textOff(10., -.5 * font.Height());
 
   static const double VALUE[] = {
@@ -201,7 +202,7 @@ void MapSalesPanel::DrawKey() const
   };
 
   double selectedValue = (selectedSystem ? SystemValue(selectedSystem) : -1.);
-  for(int i = 0; i < 3; ++i)
+  for(int i = 0; i < ROWS; ++i)
   {
     bool isSelected = (VALUE[i] == selectedValue);
     RingShader::Draw(pos, OUTER, INNER, MapColour(VALUE[i]));

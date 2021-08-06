@@ -266,14 +266,15 @@ bool MapDetailPanel::Click(int x, int y, int clicks)
 // selected "commodity," which may be reputation level, outfitter size, etc.
 void MapDetailPanel::DrawKey()
 {
-  const Sprite *back = SpriteSet::Get("interface/panel/key_map");
+  const Sprite *back = SpriteSet::Get("interface/panel/map_details_key");
   SpriteShader::Draw(back, Screen::BottomLeft() + .5 * Point(back->Width(), -back->Height()));
 
   const Colour &bright = *GameData::Colours().Get("bright");
   const Colour &medium = *GameData::Colours().Get("medium");
   const Font &font = FontSet::Get(18);
 
-  Point pos = Screen::BottomLeft() + Point(10., -160.);
+  int ROWS = 8;
+  Point pos = Screen::BottomLeft() - Point(-10., ROWS * 20. + 5.);
   Point headerOff(-5., -.5 * font.Height());
   Point textOff(10., -.5 * font.Height());
 
@@ -376,8 +377,9 @@ void MapDetailPanel::DrawKey()
     RingShader::Draw(pos, OUTER, INNER, ReputationColour(0., false, true));
     font.Draw("Dominated", pos + textOff, medium);
   }
-  
-  pos = Screen::BottomLeft() + Point(10., -20. - .5 * font.Height());
+
+  ROWS = 2;
+  pos = Point(Screen::Left() + 10., Screen::Bottom() - ROWS * 20. + 5.);
   RingShader::Draw(pos, OUTER, INNER, UninhabitedColour());
   font.Draw("Uninhabited", pos + textOff, medium);
   pos.Y() += 20.;
@@ -536,7 +538,6 @@ void MapDetailPanel::DrawInfo()
       && player.HasVisited(selectedPlanet) && !selectedPlanet->IsWormhole())
   {
     static const int X_OFFSET = 250;
-    static const int WIDTH = 500;
     const Sprite *panelSprite = SpriteSet::Get("interface/panel/planet");
     Point pos(Screen::Right() - X_OFFSET - .5f * panelSprite->Width(),
       Screen::Top() + .5f * panelSprite->Height());
@@ -544,9 +545,9 @@ void MapDetailPanel::DrawInfo()
 
     WrappedText text(font);
     text.SetAlignment(Font::JUSTIFIED);
-    text.SetWrapWidth(WIDTH - 20);
+    text.SetWrapWidth(480);
     text.Wrap(selectedPlanet->Description());
-    text.Draw(Point(Screen::Right() - X_OFFSET - WIDTH + 5, Screen::Top() + 15), medium);
+    text.Draw(pos + Point(-240., -120.), medium);
   }
 
   DrawButtons("is ports");
@@ -633,9 +634,9 @@ void MapDetailPanel::DrawOrbits()
         object.Radius() * scale + 5., object.Radius() * scale + 4.,
         habitColour[6]);
 
-  // Draw the name of the selected planet.
+  // Draw the name of the selected planet or system.
   const string &name = selectedPlanet ? selectedPlanet->Name() : selectedSystem->Name();
-  Point namePos(Screen::Right() - .5 * font.Width(name) - 100., Screen::Top() + 7.);
+  Point namePos(Screen::Right() - .5 * font.Width(name) - 100., Screen::Top() + 5.);
   font.Draw(name, namePos, *GameData::Colours().Get("medium"));
 }
 

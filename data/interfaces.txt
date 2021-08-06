@@ -506,12 +506,13 @@ interface "hud"
 
 
 interface "planet"
+  sprite "interface/panel/planet"
+    centre 0 200
+
   sprite "interface/panel/landscape"
     centre 0 -140
   image "land"
     centre 0 -140
-  sprite "interface/panel/planet"
-    centre 0 200
   button l
     centre 0 -140
     dimensions 720 360
