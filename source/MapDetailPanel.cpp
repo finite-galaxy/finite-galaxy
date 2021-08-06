@@ -266,11 +266,14 @@ bool MapDetailPanel::Click(int x, int y, int clicks)
 // selected "commodity," which may be reputation level, outfitter size, etc.
 void MapDetailPanel::DrawKey()
 {
-  const Colour &dim = *GameData::Colours().Get("dim");
+  const Sprite *back = SpriteSet::Get("interface/panel/key_map");
+  SpriteShader::Draw(back, Screen::BottomLeft() + .5 * Point(back->Width(), -back->Height()));
+
+  const Colour &bright = *GameData::Colours().Get("bright");
   const Colour &medium = *GameData::Colours().Get("medium");
   const Font &font = FontSet::Get(18);
 
-  Point pos = Screen::TopRight() + Point(-110., 310.);
+  Point pos = Screen::BottomLeft() + Point(10., -160.);
   Point headerOff(-5., -.5 * font.Height());
   Point textOff(10., -.5 * font.Height());
 
@@ -284,7 +287,7 @@ void MapDetailPanel::DrawKey()
     "System:"
   };
   const string &header = HEADER[-min(0, max(-6, commodity))];
-  font.Draw(header, pos + headerOff, medium);
+  font.Draw(header, pos + headerOff, bright);
   pos.Y() += 20.;
 
   if(commodity >= 0)
@@ -296,26 +299,27 @@ void MapDetailPanel::DrawKey()
     if(static_cast<unsigned>(commodity) >= commodities.size())
       return;
 
-    for(int i = 0; i <= 3; ++i)
+    for(int i = 0; i <= 4; ++i)
     {
-      RingShader::Draw(pos, OUTER, INNER, MapColour(i * (2. / 3.) - 1.));
-      int price = range.low + ((range.high - range.low) * i) / 3;
-      font.Draw(to_string(price), pos + textOff, dim);
+      RingShader::Draw(pos, OUTER, INNER, MapColour(i * (1. / 2.) - 1.));
+      int price = range.low + ((range.high - range.low) * i) / 4;
+      font.Draw(to_string(price), pos + textOff, medium);
       pos.Y() += 20.;
     }
   }
   else if(commodity >= SHOW_OUTFITTER)
   {
     // Each system is coloured by the number of outfits for sale.
-    static const string LABEL[2][4] = {
-      {"None", "1", "5", "10+"},
-      {"None", "1", "30", "60+"}};
-    static const double VALUE[4] = {-1., 0., .5, 1.};
+    static const string LABEL[2][5] = {
+      {"None", "≥ 1", "≥ 5", "≥ 10", "≥ 20"},
+      {"None", "≥ 1", "≥ 20", "≥ 40", "≥ 80"}
+    };
+    static const double VALUE[5] = {-1., 0., .25, .5, 1.};
 
-    for(int i = 0; i < 4; ++i)
+    for(int i = 0; i < 5; ++i)
     {
       RingShader::Draw(pos, OUTER, INNER, MapColour(VALUE[i]));
-      font.Draw(LABEL[commodity == SHOW_OUTFITTER][i], pos + textOff, dim);
+      font.Draw(LABEL[commodity == SHOW_OUTFITTER][i], pos + textOff, medium);
       pos.Y() += 20.;
     }
   }
@@ -329,7 +333,7 @@ void MapDetailPanel::DrawKey()
     for(int i = 0; i < 3; ++i)
     {
       RingShader::Draw(pos, OUTER, INNER, MapColour(1 - i));
-      font.Draw(LABEL[i], pos + textOff, dim);
+      font.Draw(LABEL[i], pos + textOff, medium);
       pos.Y() += 20.;
     }
   }
@@ -341,10 +345,10 @@ void MapDetailPanel::DrawKey()
     for(const auto &it : closeGovernments)
       distances.emplace_back(it.second, it.first);
     sort(distances.begin(), distances.end());
-    for(unsigned i = 0; i < 4 && i < distances.size(); ++i)
+    for(unsigned i = 0; i < 5 && i < distances.size(); ++i)
     {
       RingShader::Draw(pos, OUTER, INNER, GovernmentColour(distances[i].second));
-      font.Draw(distances[i].second->GetName(), pos + textOff, dim);
+      font.Draw(distances[i].second->GetName(), pos + textOff, medium);
       pos.Y() += 20.;
     }
   }
@@ -356,30 +360,30 @@ void MapDetailPanel::DrawKey()
     RingShader::Draw(pos, OUTER, INNER, ReputationColour(1e-1, true, false));
     RingShader::Draw(pos + Point(12., 0.), OUTER, INNER, ReputationColour(1e2, true, false));
     RingShader::Draw(pos + Point(24., 0.), OUTER, INNER, ReputationColour(1e4, true, false));
-    font.Draw("Friendly", pos + textOff + Point(24., 0.), dim);
+    font.Draw("Friendly", pos + textOff + Point(24., 0.), medium);
     pos.Y() += 20.;
 
     RingShader::Draw(pos, OUTER, INNER, ReputationColour(-1e-1, false, false));
     RingShader::Draw(pos + Point(12., 0.), OUTER, INNER, ReputationColour(-1e2, false, false));
     RingShader::Draw(pos + Point(24., 0.), OUTER, INNER, ReputationColour(-1e4, false, false));
-    font.Draw("Hostile", pos + textOff + Point(24., 0.), dim);
+    font.Draw("Hostile", pos + textOff + Point(24., 0.), medium);
     pos.Y() += 20.;
 
     RingShader::Draw(pos, OUTER, INNER, ReputationColour(0., false, false));
-    font.Draw("Restricted", pos + textOff, dim);
+    font.Draw("Restricted", pos + textOff, medium);
     pos.Y() += 20.;
 
     RingShader::Draw(pos, OUTER, INNER, ReputationColour(0., false, true));
-    font.Draw("Dominated", pos + textOff, dim);
-    pos.Y() += 20.;
+    font.Draw("Dominated", pos + textOff, medium);
   }
-
+  
+  pos = Screen::BottomLeft() + Point(10., -20. - .5 * font.Height());
   RingShader::Draw(pos, OUTER, INNER, UninhabitedColour());
-  font.Draw("Uninhabited", pos + textOff, dim);
+  font.Draw("Uninhabited", pos + textOff, medium);
   pos.Y() += 20.;
 
   RingShader::Draw(pos, OUTER, INNER, UnexploredColour());
-  font.Draw("Unexplored", pos + textOff, dim);
+  font.Draw("Unexplored", pos + textOff, medium);
 }
 
 

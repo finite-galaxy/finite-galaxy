@@ -486,7 +486,7 @@ bool MissionPanel::Scroll(double dx, double dy)
 
 void MissionPanel::DrawKey() const
 {
-  const Sprite *back = SpriteSet::Get("interface/panel/key_missions");
+  const Sprite *back = SpriteSet::Get("interface/panel/map_missions_key");
   SpriteShader::Draw(back, Screen::BottomLeft() + .5 * Point(back->Width(), -back->Height()));
 
   const Font &font = FontSet::Get(18);
@@ -499,7 +499,7 @@ void MissionPanel::DrawKey() const
 
   const Set<Colour> &colours = GameData::Colours();
   const Colour &bright = *colours.Get("bright");
-  const Colour &dim = *colours.Get("dim");
+  const Colour &medium = *colours.Get("medium");
   const Colour COLOUR[ROWS] = {
     *colours.Get("available job"),
     *colours.Get("unavailable job"),
@@ -523,7 +523,7 @@ void MissionPanel::DrawKey() const
   for(int i = 0; i < ROWS; ++i)
   {
     PointerShader::Draw(pos + pointerOff, angle, 10.f, 18.f, 0.f, COLOUR[i]);
-    font.Draw(LABEL[i], pos + textOff, i == selected ? bright : dim);
+    font.Draw(LABEL[i], pos + textOff, i == selected ? bright : medium);
     pos.Y() += 20.;
   }
 }

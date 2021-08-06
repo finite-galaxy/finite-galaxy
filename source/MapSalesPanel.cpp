@@ -183,11 +183,12 @@ bool MapSalesPanel::Scroll(double dx, double dy)
 
 void MapSalesPanel::DrawKey() const
 {
-  const Sprite *back = SpriteSet::Get("interface/panel/key_sales");
+  const Sprite *back = SpriteSet::Get("interface/panel/map_sales_key");
   SpriteShader::Draw(back, Screen::BottomLeft() + Point(WIDTH, 0) + .5 * Point(back->Width(), -back->Height()));
 
-  Colour bright(.6f, .6f);
-  Colour dim(.3f, .3f);
+  const Set<Colour> &colours = GameData::Colours();
+  const Colour &bright = *colours.Get("bright");
+  const Colour &medium = *colours.Get("medium");
   const Font &font = FontSet::Get(18);
 
   Point pos(Screen::Left() + 25. + WIDTH, Screen::Bottom() - 55.);
@@ -204,7 +205,7 @@ void MapSalesPanel::DrawKey() const
   {
     bool isSelected = (VALUE[i] == selectedValue);
     RingShader::Draw(pos, OUTER, INNER, MapColour(VALUE[i]));
-    font.Draw(KeyLabel(i), pos + textOff, isSelected ? bright : dim);
+    font.Draw(KeyLabel(i), pos + textOff, isSelected ? bright : medium);
     if(onlyShowSoldHere && i == 2)
     {
       // If we're filtering out items not sold here, draw a pointer.
