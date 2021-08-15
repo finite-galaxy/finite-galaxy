@@ -95,8 +95,8 @@ void MapDetailPanel::Draw()
 {
   MapPanel::Draw();
 
-  DrawInfo();
   DrawOrbits();
+  DrawInfo();
   DrawKey();
 }
 
@@ -266,7 +266,7 @@ bool MapDetailPanel::Click(int x, int y, int clicks)
 // selected "commodity," which may be reputation level, outfitter size, etc.
 void MapDetailPanel::DrawKey()
 {
-  const Sprite *back = SpriteSet::Get("interface/panel/map_details_key");
+  const Sprite *back = SpriteSet::Get("interface/panel/map_detail_key");
   SpriteShader::Draw(back, Screen::BottomLeft() + .5 * Point(back->Width(), -back->Height()));
 
   const Colour &bright = *GameData::Colours().Get("bright");
@@ -398,26 +398,27 @@ void MapDetailPanel::DrawInfo()
   const Colour &dim = *GameData::Colours().Get("dim");
   const Colour &medium = *GameData::Colours().Get("medium");
 
-  Point uiPoint(Screen::Left() + 100., Screen::Top() + 45.);
+  Point uiPoint(Screen::Left() + 10., Screen::Top() + 5.);
 
   // System sprite goes from 0 to 90.
-  const Sprite *systemSprite = SpriteSet::Get("ui/map system");
-  SpriteShader::Draw(systemSprite, uiPoint);
+  // const Sprite *systemSprite = SpriteSet::Get("ui/map system");
+  // SpriteShader::Draw(systemSprite, uiPoint);
 
   const Font &font = FontSet::Get(18);
   string systemName = player.KnowsName(selectedSystem) ?
     selectedSystem->Name() : "Unexplored System";
-  font.Draw(systemName, uiPoint + Point(-90., -7.), medium);
+  font.Draw(systemName, uiPoint, medium);
 
-  governmentY = uiPoint.Y() + 10.;
+  uiPoint.Y() += 20.;
+  governmentY = uiPoint.Y();
   string gov = player.HasVisited(selectedSystem) ?
     selectedSystem->GetGovernment()->GetName() : "Unknown Government";
-  font.Draw(gov, uiPoint + Point(-90., 13.), (commodity == SHOW_GOVERNMENT) ? medium : dim);
+  font.Draw(gov, uiPoint, (commodity == SHOW_GOVERNMENT) ? medium : dim);
   if(commodity == SHOW_GOVERNMENT)
-    PointerShader::Draw(uiPoint + Point(-90., 23.), Point(1., 0.),
+    PointerShader::Draw(uiPoint + Point(0., 10.), Point(1., 0.),
       10.f, 10.f, 0.f, medium);
 
-  uiPoint.Y() += 115.;
+  uiPoint.Y() += 95.;
 
   planetY.clear();
   // Draw the basic information for visitable planets in this system.
@@ -440,7 +441,7 @@ void MapDetailPanel::DrawInfo()
 
 //        font.Draw(planet->IsInhabited() ? object.Name() + " (" + planet->GetGovernment()->GetName() + ")" : object.Name() + " (Uninhabited)",
         font.Draw(object.Name(),
-          uiPoint + Point(-70., -55.),
+          uiPoint + Point(0., -55.),
           planet == selectedPlanet ? medium : dim);
 
         string reputationLabel = !planet->IsInhabited() ? "Uninhabited" :
@@ -448,47 +449,45 @@ void MapDetailPanel::DrawInfo()
           planet->GetGovernment()->IsEnemy() ? "Hostile" :
           planet->CanLand() ? "Friendly" : "Restricted";
         font.Draw(reputationLabel,
-          uiPoint + Point(-60., -35.),
+          uiPoint + Point(10., -35.),
           planet->IsInhabited() ? medium : faint);
         if(commodity == SHOW_REPUTATION)
-          PointerShader::Draw(uiPoint + Point(-60., -25.), Point(1., 0.),
+          PointerShader::Draw(uiPoint + Point(10., -25.), Point(1., 0.),
             10.f, 10.f, 0.f, medium);
 
         font.Draw("Shipyard",
-          uiPoint + Point(-60., -15.),
+          uiPoint + Point(10., -15.),
           planet->HasShipyard() ? medium : faint);
         if(commodity == SHOW_SHIPYARD)
-          PointerShader::Draw(uiPoint + Point(-60., -5.), Point(1., 0.),
+          PointerShader::Draw(uiPoint + Point(10., -5.), Point(1., 0.),
             10.f, 10.f, 0.f, medium);
 
         font.Draw("Outfitter",
-          uiPoint + Point(-60., 5.),
+          uiPoint + Point(10., 5.),
           planet->HasOutfitter() ? medium : faint);
         if(commodity == SHOW_OUTFITTER)
-          PointerShader::Draw(uiPoint + Point(-60., 15.), Point(1., 0.),
+          PointerShader::Draw(uiPoint + Point(10., 15.), Point(1., 0.),
             10.f, 10.f, 0.f, medium);
 
         bool hasVisited = player.HasVisited(planet);
         font.Draw(hasVisited ? "(has been visited)" : "(not yet visited)",
-          uiPoint + Point(-70., 25.),
+          uiPoint + Point(0., 25.),
           dim);
         if(commodity == SHOW_VISITED)
-          PointerShader::Draw(uiPoint + Point(-70., 35.), Point(1., 0.),
+          PointerShader::Draw(uiPoint + Point(0., 35.), Point(1., 0.),
             10.f, 10.f, 0.f, medium);
 
         uiPoint.Y() += 130.;
       }
   }
 
-  uiPoint.Y() += 45.;
-  tradeY = uiPoint.Y() - 95.;
+  tradeY = -40.;
+  uiPoint.Y() = tradeY;
 
   // Trade sprite goes from 310 to 540.
-  const Sprite *tradeSprite = SpriteSet::Get("ui/map trade");
-  SpriteShader::Draw(tradeSprite, uiPoint);
+  const Sprite *tradeSprite = SpriteSet::Get("interface/panel/map_detail_commodities");
+  SpriteShader::Draw(tradeSprite, Point(Screen::Left(), tradeY - 10.) + 0.5 * Point(tradeSprite->Width(), tradeSprite->Height()));
 
-  uiPoint.X() -= 90.;
-  uiPoint.Y() -= 97.;
   for(const Trade::Commodity &commodity : GameData::Commodities())
   {
     bool isSelected = false;
@@ -525,7 +524,7 @@ void MapDetailPanel::DrawInfo()
     else
       price = (hasVisited ? "n/a" : "?");
 
-    Font::Layout layout{Font::TRUNC_BACK, 140, Font::RIGHT};
+    Font::Layout layout{Font::TRUNC_BACK, 180, Font::RIGHT};
     font.Draw(price, uiPoint, colour, &layout);
 
     if(isSelected)
@@ -537,9 +536,8 @@ void MapDetailPanel::DrawInfo()
   if(selectedPlanet && !selectedPlanet->Description().empty()
       && player.HasVisited(selectedPlanet) && !selectedPlanet->IsWormhole())
   {
-    static const int X_OFFSET = 250;
     const Sprite *panelSprite = SpriteSet::Get("interface/panel/planet");
-    Point pos(Screen::Right() - X_OFFSET - .5f * panelSprite->Width(),
+    Point pos(Screen::Right() - .5f * panelSprite->Width(),
       Screen::Top() + .5f * panelSprite->Height());
     SpriteShader::Draw(panelSprite, pos);
 
@@ -558,9 +556,9 @@ void MapDetailPanel::DrawInfo()
 // Draw the planet orbits in the currently selected system, on the current day.
 void MapDetailPanel::DrawOrbits()
 {
-  const Sprite *orbitSprite = SpriteSet::Get("ui/orbits and key");
-  SpriteShader::Draw(orbitSprite, Screen::TopRight() + .5 * Point(-orbitSprite->Width(), orbitSprite->Height()));
-  Point orbitCentre = Screen::TopRight() + Point(-120., 160.);
+  const Sprite *orbitSprite = SpriteSet::Get("interface/panel/map_detail_orbits");
+  SpriteShader::Draw(orbitSprite, Screen::TopLeft() + .5 * Point(orbitSprite->Width(), orbitSprite->Height()));
+  Point orbitCentre = Screen::TopLeft() + Point(120., 180.);
 
   if(!selectedSystem || !player.HasVisited(selectedSystem))
     return;
@@ -636,7 +634,7 @@ void MapDetailPanel::DrawOrbits()
 
   // Draw the name of the selected planet or system.
   const string &name = selectedPlanet ? selectedPlanet->Name() : selectedSystem->Name();
-  Point namePos(Screen::Right() - .5 * font.Width(name) - 100., Screen::Top() + 5.);
+  Point namePos(Screen::Left() + 100. - .5 * font.Width(name), Screen::Top() + 5.);
   font.Draw(name, namePos, *GameData::Colours().Get("medium"));
 }
 
