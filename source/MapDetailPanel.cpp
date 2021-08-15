@@ -424,8 +424,9 @@ void MapDetailPanel::DrawInfo()
   // Draw the basic information for visitable planets in this system.
   if(player.HasVisited(selectedSystem))
   {
+    uiPoint = Point(Screen::Left() + 270., Screen::Top() + 5.);
     set<const Planet *> shown;
-    const Sprite *planetSprite = SpriteSet::Get("ui/map planet");
+    const Sprite *planetSprite = SpriteSet::Get("interface/panel/map_detail_planet");
     for(const StellarObject &object : selectedSystem->Objects())
       if(object.GetPlanet())
       {
@@ -436,12 +437,12 @@ void MapDetailPanel::DrawInfo()
           continue;
         shown.insert(planet);
 
-        SpriteShader::Draw(planetSprite, uiPoint);
-        planetY[planet] = uiPoint.Y() - 60;
+        SpriteShader::Draw(planetSprite, uiPoint - Point(20., 5.) + 0.5 * Point(planetSprite->Width(), planetSprite->Height()));
+        planetY[planet] = uiPoint.Y();
 
 //        font.Draw(planet->IsInhabited() ? object.Name() + " (" + planet->GetGovernment()->GetName() + ")" : object.Name() + " (Uninhabited)",
         font.Draw(object.Name(),
-          uiPoint + Point(0., -55.),
+          uiPoint,
           planet == selectedPlanet ? medium : dim);
 
         string reputationLabel = !planet->IsInhabited() ? "Uninhabited" :
@@ -449,40 +450,40 @@ void MapDetailPanel::DrawInfo()
           planet->GetGovernment()->IsEnemy() ? "Hostile" :
           planet->CanLand() ? "Friendly" : "Restricted";
         font.Draw(reputationLabel,
-          uiPoint + Point(10., -35.),
+          uiPoint + Point(10., 20.),
           planet->IsInhabited() ? medium : faint);
         if(commodity == SHOW_REPUTATION)
-          PointerShader::Draw(uiPoint + Point(10., -25.), Point(1., 0.),
+          PointerShader::Draw(uiPoint + Point(10., 30.), Point(1., 0.),
             10.f, 10.f, 0.f, medium);
 
         font.Draw("Shipyard",
-          uiPoint + Point(10., -15.),
+          uiPoint + Point(10., 40.),
           planet->HasShipyard() ? medium : faint);
         if(commodity == SHOW_SHIPYARD)
-          PointerShader::Draw(uiPoint + Point(10., -5.), Point(1., 0.),
+          PointerShader::Draw(uiPoint + Point(10., 50.), Point(1., 0.),
             10.f, 10.f, 0.f, medium);
 
         font.Draw("Outfitter",
-          uiPoint + Point(10., 5.),
+          uiPoint + Point(10., 60.),
           planet->HasOutfitter() ? medium : faint);
         if(commodity == SHOW_OUTFITTER)
-          PointerShader::Draw(uiPoint + Point(10., 15.), Point(1., 0.),
+          PointerShader::Draw(uiPoint + Point(10., 70.), Point(1., 0.),
             10.f, 10.f, 0.f, medium);
 
         bool hasVisited = player.HasVisited(planet);
         font.Draw(hasVisited ? "(has been visited)" : "(not yet visited)",
-          uiPoint + Point(0., 25.),
+          uiPoint + Point(0., 80.),
           dim);
         if(commodity == SHOW_VISITED)
-          PointerShader::Draw(uiPoint + Point(0., 35.), Point(1., 0.),
+          PointerShader::Draw(uiPoint + Point(0., 90.), Point(1., 0.),
             10.f, 10.f, 0.f, medium);
 
-        uiPoint.Y() += 130.;
+        uiPoint.X() += 170.;
       }
   }
 
-  tradeY = -40.;
-  uiPoint.Y() = tradeY;
+  uiPoint = Point(Screen::Left() + 10., Screen::Top() + 320.);
+  tradeY = uiPoint.Y();
 
   // Trade sprite goes from 310 to 540.
   const Sprite *tradeSprite = SpriteSet::Get("interface/panel/map_detail_commodities");
