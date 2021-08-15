@@ -194,18 +194,39 @@ bool MapDetailPanel::KeyDown(SDL_Keycode key, Uint16 mod, const Command &command
 
 bool MapDetailPanel::Click(int x, int y, int clicks)
 {
-  if(x < Screen::Left() + 160)
+  if(x <= Screen::Left() + 240 && y <= Screen::Top() + 270)
   {
-    if(y >= tradeY && y < tradeY + 200)
-    {
-      SetCommodity((y - tradeY) / 20);
-      return true;
-    }
-    else if(y < governmentY)
+    if(y < governmentY)
       SetCommodity(SHOW_REPUTATION);
     else if(y >= governmentY && y < governmentY + 20)
       SetCommodity(SHOW_GOVERNMENT);
     else
+    {
+      Point click = Point(x, y);
+      selectedPlanet = nullptr;
+      double distance = numeric_limits<double>::infinity();
+      for(const auto &it : planets)
+      {
+        double d = click.Distance(it.second);
+        if(d < distance)
+        {
+          distance = d;
+          selectedPlanet = it.first;
+        }
+      }
+      if(selectedPlanet && player.Flagship())
+        player.SetTravelDestination(selectedPlanet);
+
+      return true;
+    }
+  }
+  else if(x < Screen::Left() + 200 && y >= tradeY && y < tradeY + 200)
+  {
+    SetCommodity((y - tradeY) / 20);
+    return true;
+  }
+  else if(y < Screen::Top() + 130)
+  {
     {
       for(const auto &it : planetY)
         if(y >= it.second && y < it.second + 110)
@@ -233,25 +254,6 @@ bool MapDetailPanel::Click(int x, int y, int clicks)
           return true;
         }
     }
-  }
-  else if(x >= Screen::Right() - 240 && y <= Screen::Top() + 270)
-  {
-    Point click = Point(x, y);
-    selectedPlanet = nullptr;
-    double distance = numeric_limits<double>::infinity();
-    for(const auto &it : planets)
-    {
-      double d = click.Distance(it.second);
-      if(d < distance)
-      {
-        distance = d;
-        selectedPlanet = it.first;
-      }
-    }
-    if(selectedPlanet && player.Flagship())
-      player.SetTravelDestination(selectedPlanet);
-
-    return true;
   }
 
   MapPanel::Click(x, y, clicks);
@@ -399,10 +401,6 @@ void MapDetailPanel::DrawInfo()
   const Colour &medium = *GameData::Colours().Get("medium");
 
   Point uiPoint(Screen::Left() + 10., Screen::Top() + 5.);
-
-  // System sprite goes from 0 to 90.
-  // const Sprite *systemSprite = SpriteSet::Get("ui/map system");
-  // SpriteShader::Draw(systemSprite, uiPoint);
 
   const Font &font = FontSet::Get(18);
   string systemName = player.KnowsName(selectedSystem) ?
