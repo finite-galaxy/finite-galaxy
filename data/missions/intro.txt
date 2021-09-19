@@ -218,7 +218,7 @@ mission "Intro [3 Freighter]"
 
 
 
-mission "Intro [1 Interceptor]"
+#mission "Intro [1 Interceptor]"
   priority
   name "Escort convoy to <planet>"
   description "Escort a merchant convoy to <destination>, along with your new friend James."
@@ -262,7 +262,7 @@ mission "Intro [1 Interceptor]"
 
 
 
-mission "Intro [2 Interceptor]"
+#mission "Intro [2 Interceptor]"
   priority
   name "Delivery to <planet>"
   description "Deliver <commodity> to <destination>, while avoiding pirate attacks."
@@ -309,7 +309,7 @@ mission "Intro [2 Interceptor]"
 
 
 
-mission "Intro [3 Interceptor]"
+#mission "Intro [3 Interceptor]"
   priority
   name "Bring James to <planet>"
   description "Drop James off on <destination>, where he has a spot reserved in a retirement home."
@@ -354,7 +354,7 @@ mission "Intro [1 Transport]"
   passengers 5
   to offer
     has "Intro [0]: done"
-    has "ships: Transport"
+    has "ships: Interceptor"
     not "Intro [1 Freighter]: offered"
     not "Intro [1 Interceptor]: offered"
   
